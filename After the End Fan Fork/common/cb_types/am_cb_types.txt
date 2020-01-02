@@ -3035,8 +3035,8 @@ reconquista_huasteca = {
 }
 
 cetic_holy_war = { #Adapted from Buddhist holy war
-	name = CB_NAME_RELIGIOUS
-	war_name = WAR_NAME_RELIGIOUS
+	name = CB_NAME_CETIC_RELIGIOUS
+	war_name = WAR_NAME_CETIC_RELIGIOUS
 	sprite = 9
 	truce_days = 3650
 	is_permanent = yes
@@ -3049,7 +3049,7 @@ cetic_holy_war = { #Adapted from Buddhist holy war
 	
 	can_use_gui = {
 		ROOT = {
-			religion = cetic
+			government = bureaucratic_government
 			OR = {
 				NOT = { has_character_modifier = holy_war_cooldown }
 				has_game_rule = { name = holy_war_cooldown_rule value = off }
@@ -3072,13 +3072,18 @@ cetic_holy_war = { #Adapted from Buddhist holy war
 	
 	can_use = {
 		ROOT = {
-			religion = cetic
+			government = bureaucratic_government
 			is_nomadic = no
 			NOT = { same_realm = FROM }
 			OR = {
-				NOT = { religion = FROM }
-				AND = {
+				NOT = {
+					government = FROM
+				}
+				NOT = {
 					religion = FROM
+				}
+				AND = {
+					government = FROM
 					FROM = {
 						has_character_modifier = known_satanist
 					}
@@ -3090,9 +3095,9 @@ cetic_holy_war = { #Adapted from Buddhist holy war
 			top_liege = {
 				religion = ROOT
 				OR = {
-					NOT = { religion = FROM }
+					NOT = { government = FROM }
 					AND = {
-						religion = FROM
+						government = FROM
 						FROM = {
 							has_character_modifier = known_satanist
 						}
@@ -3176,12 +3181,12 @@ cetic_holy_war = { #Adapted from Buddhist holy war
 
 	is_valid = {
 		ROOT = {
-			religion = cetic
+			government = bureaucratic_government
 			NOT = { same_realm = FROM }
 			OR = {
-				NOT = { religion = FROM }
+				NOT = { government = FROM }
 				AND = {
-					religion_group = FROM
+					government = FROM
 					FROM = {
 						has_character_modifier = known_satanist
 					}
@@ -3192,9 +3197,9 @@ cetic_holy_war = { #Adapted from Buddhist holy war
 			}
 			top_liege = {
 				OR = {
-					NOT = { religion = FROM }
+					NOT = { government = FROM }
 					AND = {
-						religion_group = FROM
+						government = FROM
 						FROM = {
 							has_character_modifier = known_satanist
 						}

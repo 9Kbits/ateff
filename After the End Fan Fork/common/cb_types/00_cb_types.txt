@@ -5663,6 +5663,11 @@ religious = {
 	can_use = { #American Natives no longer have access to the Holy War CB, are given County Conquest CB instead.
 		ROOT = {
 			NOT = { religion = cetic }
+			NOT = {
+				religion = imamite
+				trait = sympathy_pacific
+			}
+
 			is_nomadic = no
 			NOR = {
 				religion_group = pagan_group
