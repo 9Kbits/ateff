@@ -61,6 +61,7 @@ harass_tactic = {
 				value = 0.05
 			}
 			camel_cavalry = 0.05
+			cowboys = 0.05
 		}
 		OR = {
 			NOT = { 
@@ -70,6 +71,7 @@ harass_tactic = {
 						value = 0.45
 					}
 					camel_cavalry = 0.45
+					cowboys = 0.45
 				}
 			}
 			AND = {
@@ -82,6 +84,7 @@ harass_tactic = {
 							value = 0.75
 						}
 						camel_cavalry = 0.75
+						cowboys = 0.75
 					}
 				}
 			}
@@ -105,6 +108,10 @@ harass_tactic = {
 					who = camel_cavalry
 					value = 0.3
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -120,6 +127,10 @@ harass_tactic = {
 				}
 				light_troops = { 
 					who = camel_cavalry
+					value = 0.4
+				}
+				light_troops = { 
+					who = cowboys
 					value = 0.4
 				}
 			}
@@ -139,6 +150,10 @@ harass_tactic = {
 					who = camel_cavalry
 					value = 0.5
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.5
+				}
 			}
 		}
 	}
@@ -150,6 +165,8 @@ harass_tactic = {
 	light_cavalry_defensive = -0.4
 	camel_cavalry_defensive = -0.4
 	mushers_offensive = -1.5
+	cowboys_offensive = 3
+	cowboys_defensive = -0.4
 	enemy = {
 		group = swarm
 		factor = 1
@@ -169,6 +186,7 @@ disorganised_harass_tactic = {
 				value = 0.4
 			}
 			camel_cavalry = 0.4
+			cowboys = 0.4
 		}
 		OR = {
 			flank_has_leader = no
@@ -179,6 +197,7 @@ disorganised_harass_tactic = {
 					value = 0.75
 				}
 				camel_cavalry = 0.75
+				cowboys = 0.75
 			}
 		}
 	}
@@ -196,6 +215,10 @@ disorganised_harass_tactic = {
 					who = camel_cavalry
 					value = 0.5
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.5
+				}
 			}
 		}
 		modifier = {
@@ -207,6 +230,10 @@ disorganised_harass_tactic = {
 				}
 				light_troops = { 
 					who = camel_cavalry
+					value = 0.7
+				}
+				light_troops = { 
+					who = cowboys
 					value = 0.7
 				}
 			}
@@ -220,6 +247,10 @@ disorganised_harass_tactic = {
 				}
 				light_troops = { 
 					who = camel_cavalry
+					value = 0.9
+				}
+				light_troops = { 
+					who = cowboys
 					value = 0.9
 				}
 			}
@@ -253,6 +284,8 @@ disorganised_harass_tactic = {
 	light_cavalry_defensive = -0.6
 	camel_cavalry_defensive = -0.6
 	mushers_offensive = -1.5
+	cowboys_offensive = 1.0
+	cowboys_defensive = -0.6
 	enemy = {
 		group = swarm
 		factor = 0.5
@@ -272,6 +305,7 @@ volly_harass_tactic = {
 				value = 0.01
 			}
 			camel_cavalry = 0.01
+			cowboys = 0.01
 		}
 		archers = 0.01
 		NOT = { archers = 0.3 }
@@ -333,6 +367,7 @@ volly_harass_tactic = {
 	light_infantry_offensive = 0.8
 	horse_archers_offensive = -1.8
 	mushers_offensive = -1.8
+	cowboys_offensive = 1.0
 	enemy = {
 		group = swarm
 		factor = 1
@@ -392,6 +427,7 @@ volley_tactic = {
 	horse_archers_offensive = -1.5
 	mushers_offensive = -1.5
 	archers_offensive = 2.0
+	cowboys_offensive = -1.5
 	enemy = {
 		group = harass
 		factor = 1
@@ -408,6 +444,7 @@ swarm_volley_tactic = {
 		archers = 0.01
 		horse_archers = 0.01
 		mushers = 0.01
+		cowboys = 0.01
 
 		location = { 
 			NOT = { terrain = forest }
@@ -440,6 +477,10 @@ swarm_volley_tactic = {
 					who = mushers
 					value = 0.3
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -459,6 +500,10 @@ swarm_volley_tactic = {
 				}
 				heavy_troops = {
 					who = mushers
+					value = 0.3
+				}
+				light_troops = { 
+					who = cowboys
 					value = 0.3
 				}
 			}
@@ -482,6 +527,10 @@ swarm_volley_tactic = {
 					who = mushers
 					value = 0.3
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.3
+				}
 			}
 		}	
 	}
@@ -491,6 +540,7 @@ swarm_volley_tactic = {
 	horse_archers_offensive =  0.6
 	archers_offensive = 1.2
 	mushers_offensive = 0.6
+	cowboys_offensive =  0.6
 	enemy = {
 		group = harass
 		factor = 1
@@ -506,9 +556,11 @@ swarm_tactic = {
 		phase = skirmish
 		horse_archers = 0.01
 		mushers = 0.01
+		cowboys = 0.01
 		OR = {
 			NOT = { horse_archers = 0.35 }
 			NOT = { mushers = 0.35 }
+			NOT = { cowboys = 0.35 }
 			AND = {
 				flank_has_leader = yes
 				leader = { martial = 12 }
@@ -518,6 +570,11 @@ swarm_tactic = {
 				flank_has_leader = yes
 				leader = { martial = 12 }
 				NOT = { mushers = 0.65 }
+			}
+			AND = {
+				flank_has_leader = yes
+				leader = { martial = 12 }
+				NOT = { cowboys = 0.65 }
 			}
 		}
 		location = { 
@@ -547,6 +604,10 @@ swarm_tactic = {
 					who = mushers
 					value = 0.2
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.2
+				}
 			}
 		}
 		modifier = {
@@ -562,6 +623,10 @@ swarm_tactic = {
 				}
 				heavy_troops = { 
 					who = mushers
+					value = 0.3
+				}
+				light_troops = { 
+					who = cowboys
 					value = 0.3
 				}
 			}
@@ -581,6 +646,10 @@ swarm_tactic = {
 					who = mushers
 					value = 0.4
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.4
+				}
 			}
 		}	
 	}
@@ -590,6 +659,7 @@ swarm_tactic = {
 	horse_archers_offensive = 1.0	
 	archers_offensive = -1.5
 	mushers_offensive = 1.0
+	cowboys_offensive = 1.0
 	enemy = {
 		group = volley
 		factor = 1
@@ -605,11 +675,13 @@ disorganised_swarm_tactic = {
 		phase = skirmish
 		horse_archers = 0.30
 		mushers = 0.30
+		cowboys = 0.30
 		OR = {
 			flank_has_leader = no
 			NOT = { leader = { martial = 12 } }
 			horse_archers = 0.65
 			mushers = 0.65
+			cowboys = 0.65
 		}
 		location = { 
 			NOT = { terrain = forest }
@@ -634,6 +706,10 @@ disorganised_swarm_tactic = {
 					who = mushers
 					value = 0.5
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.5
+				}
 			}
 		}
 		modifier = {
@@ -647,6 +723,10 @@ disorganised_swarm_tactic = {
 					who = mushers
 					value = 0.7
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.7
+				}
 			}
 		}	
 		modifier = {
@@ -658,6 +738,10 @@ disorganised_swarm_tactic = {
 				}
 				heavy_troops = { 
 					who = mushers
+					value = 0.9
+				}
+				light_troops = { 
+					who = cowboys
 					value = 0.9
 				}
 			}
@@ -691,6 +775,8 @@ disorganised_swarm_tactic = {
 	archers_offensive = -1.5
 	mushers_offensive = 0.5
 	mushers_defensive = -1.0
+	cowboys_offensive = 0.5
+	cowboys_defensive = -1.0
 	enemy = {
 		group = volley
 		factor = 0.5
@@ -706,9 +792,11 @@ harras_swarm_tactic = {
 		phase = skirmish 
 		horse_archers = 0.01
 		mushers = 0.01
+		cowboys = 0.01
 		OR = {
 			NOT = { horse_archers = 0.35 }
 			NOT = { mushers = 0.35 }
+			NOT = { cowboys = 0.35 }
 			AND = {
 				flank_has_leader = yes
 				leader = { martial = 12 }
@@ -718,6 +806,11 @@ harras_swarm_tactic = {
 				flank_has_leader = yes
 				leader = { martial = 12 }
 				NOT = { mushers = 0.65 }
+			}
+			AND = {
+				flank_has_leader = yes
+				leader = { martial = 12 }
+				NOT = { cowboys = 0.65 }
 			}
 		}
 		location = { 
@@ -747,6 +840,10 @@ harras_swarm_tactic = {
 					who = mushers
 					value = 0.2
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.2
+				}
 			}
 			OR = {
 				light_troops = { 
@@ -772,6 +869,10 @@ harras_swarm_tactic = {
 				}
 				heavy_troops = { 
 					who = mushers
+					value = 0.3
+				}
+				light_troops = { 
+					who = cowboys
 					value = 0.3
 				}
 			}
@@ -801,6 +902,10 @@ harras_swarm_tactic = {
 					who = mushers
 					value = 0.4
 				}
+				light_troops = { 
+					who = cowboys
+					value = 0.4
+				}
 			}
 			OR = {
 				light_troops = { 
@@ -820,6 +925,7 @@ harras_swarm_tactic = {
 	horse_archers_offensive = 1.2
 	archers_offensive = -1.8
 	mushers_offensive = 1.2
+	cowboys_offensive = 1.2
 	enemy = {
 		group = volley
 		factor = 1
@@ -891,9 +997,15 @@ shieldwall_tactic = {
 		modifier = {
 			factor = 0.8
 			OR = {
-				light_troops = {
-					who = light_cavalry
-					value > 0.3
+				OR = {
+					light_troops = {
+						who = light_cavalry
+						value > 0.3
+					}
+					light_troops = {
+						who = cowboys
+						value > 0.3
+					}
 				}
 				OR = {
 					light_troops = {
@@ -920,6 +1032,7 @@ shieldwall_tactic = {
 	knights_defensive = -0.5
 	horse_archers_defensive = -0.5
 	mushers_defensive = -0.5
+	cowboys_defensive = -0.5
 }
 
 fient_tactic = {
@@ -959,9 +1072,15 @@ fient_tactic = {
 		}
 		modifier = {
 			factor = 0.8
-			light_troops = {
-				who = light_cavalry
-				value = 0.5
+			OR = {
+				light_troops = {
+					who = light_cavalry
+					value = 0.5
+				}
+				light_troops = {
+					who = cowboys
+					value = 0.5
+				}
 			}
 		}
 	}
@@ -1086,6 +1205,7 @@ charge_of_opportunity_tactic = {
 	horse_archers_offensive = 3
 	heavy_infantry_offensive = 1.2
 	mushers_offensive = 3
+	cowboys_offensive = 3
 }
 
 charge_tactic = {
@@ -1110,6 +1230,10 @@ charge_tactic = {
 			OR = {
 				light_troops = {
 					who = horse_archers
+					value = 0.3
+				}
+				light_troops = {
+					who = cowboys
 					value = 0.3
 				}
 			}
@@ -1150,6 +1274,7 @@ charge_tactic = {
 	horse_archers_offensive = 3
 	heavy_infantry_offensive = 1.2
 	mushers_offensive = 3
+	cowboys_offensive = 3
 }
 
 wait_tactic = {
@@ -1695,6 +1820,10 @@ barrage_tactic = {
 					who = mushers
 					value = 0.3
 				}
+				light_troops = {
+					who = cowboys
+					value = 0.3
+				}
 			}
 		}
 	}
@@ -1702,6 +1831,7 @@ barrage_tactic = {
 	archers_offensive = 2.4
 	horse_archers_offensive = 2.4
 	mushers_offensive = 2.4
+	cowboys_offensive = 2.4
 }
 
 raid_tactic = {
@@ -1717,6 +1847,7 @@ raid_tactic = {
 				value = 0.2
 			}
 			camel_cavalry = 0.2
+			cowboys = 0.2
 		}
 	}
 
@@ -1737,6 +1868,10 @@ raid_tactic = {
 					who = camel_cavalry
 					value = 0.3
 				}
+				troops = {
+					who = cowboys
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -1755,6 +1890,7 @@ raid_tactic = {
 	light_cavalry_offensive = 2.4
 	camel_cavalry_offensive = 2.4
 	light_infantry_offensive = 2.4
+	cowboys_offensive = 2.4
 }
 
 pursue_tactic = {
@@ -1803,9 +1939,15 @@ reckless_charge_tactic = {
 			leader = {
 				NOT = { martial = 7 }
 			}
-			light_troops = {
-				who = horse_archers
-				value = 0.3
+			OR = {
+				light_troops = {
+					who = horse_archers
+					value = 0.3
+				}
+				light_troops = {
+					who = cowboys
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -1844,11 +1986,13 @@ reckless_charge_tactic = {
 	horse_archers_defensive = -0.5
 	heavy_infantry_defensive = -0.3
 	mushers_defensive = -0.5
+	cowboys_defensive = -0.5
 	
 	knights_offensive = 1.2
 	horse_archers_offensive = 1.2
 	heavy_infantry_offensive = 0.6
 	mushers_offensive = 1.2
+	cowboys_offensive = 1.2
 }
 
 
@@ -1930,6 +2074,7 @@ confused_orders_tactic = {
 	archers_offensive = -1.2
 	horse_archers_offensive = -1.2
 	mushers_offensive = -1.2
+	cowboys_offensive = -1.2
 	
 	enemy = {
 		group = charge
@@ -2016,6 +2161,10 @@ charging_own_skirmishers_tactic = {
 					who = camel_cavalry
 					value = 0.1
 				}
+				light_troops = {
+					who = cowboys
+					value = 0.1
+				}
 			}
 		}
 	}
@@ -2032,6 +2181,8 @@ charging_own_skirmishers_tactic = {
 	horse_archers_defensive = -0.3
 	mushers_offensive = 3
 	mushers_defensive = -0.3
+	cowboys_offensive = 1.8
+	cowboys_defensive = -0.3
 }
 
 # Good tactics
@@ -2081,6 +2232,7 @@ inspired_defense_tactic = {
 	pikemen_defensive = 1.5
 	war_elephants_defensive = 1.5
 	mushers_defensive = 1.5
+	cowboys_defensive = 1.5
 	
 	enemy = {
 		group = charge
@@ -2109,6 +2261,7 @@ heroic_countercharge_tactic = {
 				value = 0.01
 			}
 			camel_cavalry = 0.01
+			cowboys = 0.01
 		}
 		mushers = 0.01
 		flank_has_leader = yes
@@ -2148,6 +2301,7 @@ heroic_countercharge_tactic = {
 	heavy_infantry_offensive = 0.6
 	pikemen_offensive = 0.6
 	mushers_offensive = 3.6
+	cowboys_offensive = 3.6
 
 	enemy = {
 		group = charge
@@ -2171,6 +2325,7 @@ glorious_countercharge_tactic = { #Call to Glory tactic. - Generic
 			pikemen = 0.01
 			horse_archers = 0.01
 			mushers = 0.01
+			cowboys = 0.01
 		}
 		flank_has_leader = yes
 		leader = {
@@ -2186,9 +2341,15 @@ glorious_countercharge_tactic = { #Call to Glory tactic. - Generic
 			leader = {
 				martial = 14
 			}
-			light_troops = { 
-				who = light_cavalry
-				value = 0.1
+			OR = {
+				light_troops = { 
+					who = light_cavalry
+					value = 0.1
+				}
+				light_troops = { 
+					who = cowboys
+					value = 0.1
+				}
 			}
 		}
 	}
@@ -2201,6 +2362,7 @@ glorious_countercharge_tactic = { #Call to Glory tactic. - Generic
 	horse_archers_offensive = 1.75
 	pikemen_offensive = 1.75
 	mushers_offensive = 1.75
+	cowboys_offensive = 1.75
 
 	enemy = {
 		group = charge
@@ -2298,6 +2460,7 @@ glorious_peyotist_tactic = {
 		phase = melee
 		horse_archers = 0.05
 		mushers = 0.05
+		cowboys = 0.05
 		leader = {
 			has_character_modifier = call_to_glory
 			society_member_of = warrior_lodge_peyotist
@@ -2339,6 +2502,10 @@ glorious_peyotist_tactic = {
 					who = mushers
 					value = 0.3
 				}
+				light_troops = {
+					who = cowboys
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -2356,6 +2523,10 @@ glorious_peyotist_tactic = {
 					who = mushers
 					value = 0.4
 				}
+				light_troops = {
+					who = cowboys
+					value = 0.4
+				}
 			}
 		}
 	}
@@ -2365,6 +2536,7 @@ glorious_peyotist_tactic = {
 	horse_archers_offensive =  2.0
 	light_cavalry_offensive = 1.2
 	mushers_offensive = 2.0
+	cowboys_offensive =  2.0
 }
 
 #Call to Glory - Second Strike Tactic - Atonicist (light infantry)
@@ -2422,6 +2594,7 @@ glorious_celtic_tactic = {
 	light_infantry_offensive = 1.25
 	light_infantry_defensive = 2.5
 	light_cavalry_defensive = 1.25
+	cowboys_defensive = 1.25
 
 	enemy = {
 		group = charge
@@ -2689,6 +2862,7 @@ glorious_rust_cultist_tactic = {
 				who = light_cavalry
 				value = 0.01
 		}
+		cowboys = 0.01
 		leader = {
 			has_character_modifier = call_to_glory
 			society_member_of = warrior_lodge_rust_cultist
@@ -2707,9 +2881,15 @@ glorious_rust_cultist_tactic = {
 				who = light_infantry
 				value = 0.6
 			}
-			light_troops = { 
-				who = light_cavalry
-				value = 0.6
+			OR = {
+				light_troops = { 
+					who = light_cavalry
+					value = 0.6
+				}
+				light_troops = { 
+					who = cowboys
+					value = 0.6
+				}
 			}
 		}
 		modifier = {
@@ -2722,9 +2902,15 @@ glorious_rust_cultist_tactic = {
 				who = light_infantry
 				value = 0.5
 			}
-			light_troops = { 
-				who = light_cavalry
-				value = 0.3
+			OR = {
+				light_troops = { 
+					who = light_cavalry
+					value = 0.3
+				}
+				light_troops = { 
+					who = cowboys
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -2737,9 +2923,15 @@ glorious_rust_cultist_tactic = {
 				who = light_infantry
 				value = 0.4
 			}
-			light_troops = { 
-				who = light_cavalry
-				value = 0.2
+			OR = {
+				light_troops = { 
+					who = light_cavalry
+					value = 0.2
+				}
+				light_troops = { 
+					who = cowboys
+					value = 0.2
+				}
 			}
 		}
 	}
@@ -2748,6 +2940,8 @@ glorious_rust_cultist_tactic = {
 	light_infantry_defensive = 1.5
 	light_cavalry_offensive = 1.5
 	light_cavalry_defensive = 1.5
+	cowboys_offensive = 1.5
+	cowboys_defensive = 1.5
 	
 	enemy = {
 		group = charge
@@ -2834,6 +3028,7 @@ clever_ambush_tactic = {
 			horse_archers = 0.1
 			camel_cavalry = 0.1
 			mushers = 0.1
+			cowboys = 0.1
 		}
 		light_infantry = 0.1
 		flank_has_leader = yes
@@ -2889,6 +3084,10 @@ clever_ambush_tactic = {
 					who = mushers
 					value = 0.2
 				}
+				troops = {
+					who = cowboys
+					value = 0.2
+				}
 			}
 			troops = {
 				who = light_infantry
@@ -2919,6 +3118,10 @@ clever_ambush_tactic = {
 					who = mushers
 					value = 0.2
 				}
+				troops = {
+					who = cowboys
+					value = 0.2
+				}
 			}
 			troops = { 
 				who = light_infantry
@@ -2933,6 +3136,7 @@ clever_ambush_tactic = {
 	horse_archers_offensive = 1.2
 	archers_offensive = 1.2
 	mushers_offensive = 1.2
+	cowboys_offensive = 2.4
 	enemy = {
 		group = advance
 		factor = 3
@@ -2978,6 +3182,7 @@ religious_fervour_tactic = {
 	pikemen_offensive = 1.5
 	war_elephants_offensive = 1.5
 	mushers_offensive = 1.5
+	cowboys_offensive = 1.5
 }
 
 ############################
@@ -2994,6 +3199,7 @@ retreat_and_ambush_tactic = {
 		phase = melee
 		horse_archers = 0.2
 		mushers = 0.2
+		cowboys = 0.2
 		flank_has_leader = yes
 		leader = { 
 			OR = {
@@ -3044,6 +3250,10 @@ retreat_and_ambush_tactic = {
 					who = mushers
 					value = 0.3
 				}
+				light_troops = {
+					who = cowboys
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -3061,6 +3271,10 @@ retreat_and_ambush_tactic = {
 					who = mushers
 					value = 0.4
 				}
+				light_troops = {
+					who = cowboys
+					value = 0.4
+				}
 			}
 		}
 	}
@@ -3071,6 +3285,7 @@ retreat_and_ambush_tactic = {
 	light_cavalry_offensive = 1.2
 	archers_offensive = 1.0
 	mushers_offensive = 2.0
+	cowboys_offensive =  2.0
 }
 
 # Northlander/related
@@ -3202,6 +3417,7 @@ schiltron_formation_tactic = {
 	knights_defensive = -0.4
 	horse_archers_defensive = -0.4
 	mushers_defensive = -0.4
+	cowboys_defensive = -0.4
 	
 	enemy = {
 		group = charge
@@ -3500,6 +3716,7 @@ mountain_ambush_tactic = {
 	horse_archers_offensive = 1.5
 	archers_offensive = 1.2
 	mushers_offensive = 1.5
+	cowboys_offensive = 2.4
 	enemy = {
 		group = advance
 		factor = 3
@@ -3528,6 +3745,7 @@ desert_ambush_tactic = {
 				value = 0.1
 			}
 			camel_cavalry = 0.1
+			cowboys = 0.1
 		}
 		light_infantry = 0.1
 		flank_has_leader = yes
@@ -3582,6 +3800,10 @@ desert_ambush_tactic = {
 					who = mushers
 					value = 0.2
 				}
+				troops = {
+					who = cowboys
+					value = 0.2
+				}
 			}
 			troops = { 
 				who = light_infantry
@@ -3612,6 +3834,10 @@ desert_ambush_tactic = {
 					who = mushers
 					value = 0.2
 				}
+				troops = {
+					who = cowboys
+					value = 0.2
+				}
 			}
 			troops = { 
 				who = light_infantry
@@ -3626,6 +3852,7 @@ desert_ambush_tactic = {
 	horse_archers_offensive = 1.2
 	archers_offensive = 1.2
 	mushers_offensive = 1.2
+	cowboys_offensive = 1.8
 	enemy = {
 		group = advance
 		factor = 3
@@ -3715,6 +3942,7 @@ dragoon_charge_tactic = {
 	pikemen_offensive = 0.6
 	horse_archers_offensive = 1.2
 	mushers_offensive = 2.4
+	cowboys_offensive = 0.6
 	enemy = {
 		group = advance
 		factor = 3
@@ -3851,6 +4079,7 @@ river_ambush_tactic = {
 	horse_archers_offensive = 1.5
 	archers_offensive = 1.2
 	mushers_offensive = 1.5
+	cowboys_offensive = 2.4
 	enemy = {
 		group = advance
 		factor = 3
@@ -3869,6 +4098,7 @@ rapid_charge_tactic = {
 			who = light_cavalry
 			value = 0.01
 		}
+		cowboys = 0.01
 		flank_has_leader = yes
 		leader = {
 			OR = {
@@ -3896,9 +4126,15 @@ rapid_charge_tactic = {
 			leader = {
 				martial = 8
 			}
-			heavy_troops = { 
-				who = light_cavalry
-				value = 0.6
+			OR = {
+				light_troops = { 
+					who = light_cavalry
+					value = 0.6
+				}
+				light_troops = { 
+					who = cowboys
+					value = 0.6
+				}
 			}
 		}
 		modifier = {
@@ -3907,9 +4143,15 @@ rapid_charge_tactic = {
 			leader = {
 				martial = 12
 			}
-			heavy_troops = { 
-				who = light_cavalry
-				value = 0.5
+			OR = {
+				light_troops = { 
+					who = light_cavalry
+					value = 0.5
+				}
+				light_troops = { 
+					who = cowboys
+					value = 0.5
+				}
 			}
 		}
 		modifier = {
@@ -3918,9 +4160,15 @@ rapid_charge_tactic = {
 			leader = {
 				martial = 16
 			}
-			heavy_troops = { 
-				who = light_cavalry
-				value = 0.4
+			OR = {
+				light_troops = { 
+					who = light_cavalry
+					value = 0.4
+				}
+				light_troops = { 
+					who = cowboys
+					value = 0.4
+				}
 			}
 		}
 	}
@@ -3928,6 +4176,7 @@ rapid_charge_tactic = {
 	light_cavalry_offensive = 3.0
 	heavy_infantry_offensive = -0.6
 	pikemen_offensive = 0.6
+	cowboys_offensive = 3.0
 	enemy = {
 		group = advance
 		factor = 3
@@ -4061,6 +4310,7 @@ gray_wall_tactic = {
 	knights_defensive = -0.5
 	horse_archers_defensive = -0.5
 	mushers_defensive = -0.5
+	cowboys_defensive = -0.5
 }
 
 force_back_tactic = {
@@ -4152,6 +4402,7 @@ force_back_tactic = {
 	pikemen_offensive = 2.4
 	war_elephants_offensive = 1.2
 	mushers_offensive = -1.8
+	cowboys_defensive = -0.2
 	enemy = {
 		group = charge
 		factor = 3
@@ -4269,6 +4520,8 @@ elephant_trample_tactic = {
 	archers_offensive = -1.0
 	horse_archers_offensive = -1.0
 	mushers_offensive = 2.0
+	cowboys_offensive = 0.5
+	cowboys_defensive = -0.2
 }
 
 ##########################################################################
