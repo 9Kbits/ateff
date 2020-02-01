@@ -81,68 +81,38 @@ objectTypes = {
 	}
 
 #Cowboys
-	#Early
-	pdxmesh = {
-		name = "southerngfx_cowboys_early"
-		file = "gfx\models\westerngfx_early_light_horse.mesh"
+	EMFXActorType = {
+		name = "westerngfx_cowboys"
+		actorfile = "gfx\models\Horse.xac"
 		
-		animation = { id = "attack"		type = "char_horse_attack_animation" }
-		animation = { id = "idle"		type = "char_horse_idle_animation" }
-		animation = { id = "move"		type = "char_horse_moving_animation" }
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Attack.xsm"
 		
 		scale = 0.9f
 	}
 	
-	pdxmesh = {
-		name = "southerngfx_cowboys_rider_early"
-		file = "gfx\models\westerngfx_early_light_cavalry.mesh"
+	EMFXActorType = {
+		name = "westerngfx_cowboys_rider"
+		actorfile = "gfx\models\Western_Light_Cavalry.xac"
 		
-		animation = { id = "attack"		type = "char_light_cavalry_attack_animation" }
-		animation = { id = "idle"		type = "char_light_cavalry_idle_animation" }
-		animation = { id = "move"		type = "char_light_cavalry_moving_animation" }
+		idle   = "gfx\models\Light_Cavalry_Idle.xsm"
+		move   = "gfx\models\Light_Cavalry_Moving.xsm"
+		attack = "gfx\models\Light_Cavalry_Attack.xsm"
 		
 		scale = 1.0f
 	}
 	
-	pdxmesh = {
-		name = "southerngfx_cowboys_weapon_early"
-		file = "gfx\models\Attachments\char_early_pike.mesh"
+	EMFXActorType = {
+		name = "westerngfx_cowboys_weapon"
+		actorfile = "gfx\models\Attachments\Spear_01.xac"
 		scale = 1.0f
 	}
 	
-	pdxmesh = {
-		name = "southerngfx_cowboys_helmet_early"
-		file = "gfx\models\Attachments\westerngfx_early_helmet_light_cavalry.mesh"
+	EMFXActorType = {
+		name = "westerngfx_cowboys_helmet"
+		actorfile = "gfx\models\Attachments\Helmet_01.xac"
 		scale = 1.0f
-	}
-	
-	#Late
-	pdxmesh = {
-		name = "southerngfx_cowboys"
-		file = "gfx\models\ibup_light_horse.mesh"
-		
-		animation = { id = "attack"		type = "ibup_horse_attack_animation" }
-		animation = { id = "idle"		type = "ibup_horse_idle_animation" }
-		animation = { id = "move"		type = "ibup_horse_moving_animation" }
-		
-		scale = 0.9f
-	}
-	
-	pdxmesh = {
-		name = "southerngfx_cowboys_rider"
-		file = "gfx\models\ibup_light_cavalry.mesh"
-		
-		animation = { id = "attack"		type = "ibup_light_cavalry_attack_animation" }
-		animation = { id = "idle"		type = "ibup_light_cavalry_idle_animation" }
-		animation = { id = "move"		type = "ibup_light_cavalry_moving_animation" }
-		
-		scale = 0.9f
-	}
-	
-	pdxmesh = {
-		name = "southerngfx_cowboys_weapon"
-		file = "gfx\models\Attachments\ibup_spear.mesh"
-		scale = 0.9f
 	}
 
 }
