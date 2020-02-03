@@ -197,6 +197,7 @@ harass_tactic = {
 	ballestero_offensive = -1.5
 	pike_cavalry_offensive = 3
 	cossacks_offensive = 3
+	samurai_offensive = -1.5
 	
 	light_cavalry_defensive = -0.4
 	camel_cavalry_defensive = -0.4
@@ -350,6 +351,7 @@ disorganised_harass_tactic = {
 	ballestero_offensive = -1.5
 	pike_cavalry_offensive = 1.0
 	cossacks_offensive = 1.0
+	samurai_offensive = -1.5
 	
 	light_cavalry_defensive = -0.6
 	camel_cavalry_defensive = -0.6
@@ -385,6 +387,7 @@ volly_harass_tactic = {
 				value = 0.01
 			}
 			ballestero = 0.01
+			samurai = 0.01
 		}
 		NOT = { 
 			OR = {
@@ -415,6 +418,10 @@ volly_harass_tactic = {
 					who = ballestero
 					value = 0.2
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.2
+				}
 			}
 			light_troops = {
 				who = light_infantry
@@ -434,6 +441,10 @@ volly_harass_tactic = {
 				}
 				light_troops = { 
 					who = ballestero
+					value = 0.2
+				}
+				heavy_troops = { 
+					who = samurai
 					value = 0.2
 				}
 			}
@@ -457,6 +468,10 @@ volly_harass_tactic = {
 					who = ballestero
 					value = 0.2
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.2
+				}
 			}
 			light_troops = {
 				who = light_infantry
@@ -475,6 +490,7 @@ volly_harass_tactic = {
 	ballestero_offensive = 0.6
 	pike_cavalry_offensive = 1.0
 	cossacks_offensive = 1.0
+	samurai_offensive = 0.6
 	enemy = {
 		group = swarm
 		factor = 1
@@ -493,6 +509,7 @@ volley_tactic = {
 			value = 0.01
 		}
 		ballestero = 0.01
+		samurai = 0.01
 		NOT = {
 			OR = {
 				troops = {
@@ -500,6 +517,7 @@ volley_tactic = {
 					value = 0.4
 				}
 				ballestero = 0.4
+				samurai = 0.4
 			}
 		}
 	}
@@ -521,6 +539,10 @@ volley_tactic = {
 					who = ballestero
 					value = 0.1
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.1
+				}
 			}
 		}
 		modifier = {
@@ -536,6 +558,10 @@ volley_tactic = {
 				}
 				light_troops = { 
 					who = ballestero
+					value = 0.2
+				}
+				heavy_troops = { 
+					who = samurai
 					value = 0.2
 				}
 			}
@@ -555,6 +581,10 @@ volley_tactic = {
 					who = ballestero
 					value = 0.3
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 	}
@@ -568,6 +598,7 @@ volley_tactic = {
 	ballestero_offensive = 2.0
 	pike_cavalry_offensive = -1.5
 	cossacks_offensive = -1.5
+	samurai_offensive = 2.0
 	enemy = {
 		group = harass
 		factor = 1
@@ -589,6 +620,7 @@ swarm_volley_tactic = {
 		mushers = 0.01
 		cowboys = 0.01
 		ballestero = 0.01
+		samurai = 0.01
 
 		location = { 
 			NOT = { terrain = forest }
@@ -615,6 +647,10 @@ swarm_volley_tactic = {
 				}
 				light_troops = { 
 					who = ballestero
+					value = 0.7
+				}
+				heavy_troops = { 
+					who = samurai
 					value = 0.7
 				}
 			}
@@ -646,6 +682,10 @@ swarm_volley_tactic = {
 				}
 				light_troops = { 
 					who = ballestero
+					value = 0.6
+				}
+				heavy_troops = { 
+					who = samurai
 					value = 0.6
 				}
 			}
@@ -677,6 +717,10 @@ swarm_volley_tactic = {
 				}
 				light_troops = { 
 					who = ballestero
+					value = 0.5
+				}
+				heavy_troops = { 
+					who = samurai
 					value = 0.5
 				}
 			}
@@ -706,6 +750,7 @@ swarm_volley_tactic = {
 	ballestero_offensive = 1.2
 	pike_cavalry_offensive = -1.8
 	cossacks_offensive = -1.8
+	samurai_offensive = 1.2
 	enemy = {
 		group = harass
 		factor = 1
@@ -828,6 +873,7 @@ swarm_tactic = {
 	ballestero_offensive = -1.5
 	pike_cavalry_offensive = -1.5
 	cossacks_offensive = -1.5
+	samurai_offensive = -1.5
 	enemy = {
 		group = volley
 		factor = 1
@@ -945,6 +991,7 @@ disorganised_swarm_tactic = {
 	ballestero_offensive = -1.5
 	pike_cavalry_offensive = -1.5
 	cossacks_offensive = -1.5
+	samurai_offensive = -1.5
 	
 	horse_archers_defensive = -1.0
 	mushers_defensive = -1.0
@@ -1125,6 +1172,7 @@ harras_swarm_tactic = {
 	ballestero_offensive = -1.8
 	pike_cavalry_offensive = 0.6
 	cossacks_offensive = 0.6
+	samurai_offensive = -1.8
 	enemy = {
 		group = volley
 		factor = 1
@@ -1139,10 +1187,14 @@ shieldwall_tactic = {
 	trigger = {
 		phase = skirmish
 		OR = {
-			heavy_infantry = 0.2
+			troops = {
+				who = heavy_infantry
+				value = 0.2
+			}
 			light_infantry = 0.2
 			pikemen = 0.2
 			pike_cavalry = 0.2
+			samurai = 0.2
 		}
 		troops = {
 			who = archers
@@ -1170,9 +1222,15 @@ shieldwall_tactic = {
 			leader = {
 				martial = 12
 			}
-			heavy_troops = {
-				who = heavy_infantry
-				value = 0.3
+			OR = {
+				heavy_troops = {
+					who = heavy_infantry
+					value = 0.3
+				}
+				heavy_troops = {
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -1203,9 +1261,15 @@ shieldwall_tactic = {
 			leader = {
 				martial = 16
 			}
-			heavy_troops = {
-				who = heavy_infantry
-				value = 0.3
+			OR = {
+				heavy_troops = {
+					who = heavy_infantry
+					value = 0.3
+				}
+				heavy_troops = {
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -1252,6 +1316,7 @@ shieldwall_tactic = {
 
 	archers_offensive = 0.6
 	ballestero_offensive = 0.6
+	samurai_offensive = 0.6
 	
 	light_infantry_defensive = 1.2
 	heavy_infantry_defensive = 3
@@ -1264,6 +1329,7 @@ shieldwall_tactic = {
 	cowboys_defensive = -0.5
 	pike_cavalry_defensive = 2.4
 	cossacks_defensive = -0.5
+	samurai_defensive = 3
 }
 
 fient_tactic = {
@@ -1279,6 +1345,7 @@ fient_tactic = {
 			value = 0.2
 		}
 		ballestero = 0.2
+		samurai = 0.2
 	}
 
 	mean_time_to_happen = {
@@ -1296,6 +1363,10 @@ fient_tactic = {
 				}
 				light_troops = {
 					who = ballestero
+					value = 0.3
+				}
+				heavy_troops = {
+					who = samurai
 					value = 0.3
 				}
 			}
@@ -1340,11 +1411,13 @@ fient_tactic = {
 	knights_offensive = -0.5
 	mushers_offensive = -0.5
 	ballestero_offensive = 1.5
+	samurai_offensive = 1.5
 	
 	light_infantry_defensive = 0.5
 	heavy_infantry_defensive = -0.5
 	knights_defensive = -0.5
 	mushers_defensive = -0.5
+	samurai_defensive = -0.5
 }
 
 
@@ -1423,13 +1496,19 @@ charge_on_undefended_tactic = {
 		modifier = {
 			factor = 100
 			enemy = {
-				troops = {
-					who = archers
-					value = 0.6
-				}
-				troops = {
-					who = ballestero
-					value = 0.6
+				OR = {
+					troops = {
+						who = archers
+						value = 0.6
+					}
+					troops = {
+						who = ballestero
+						value = 0.6
+					}
+					troops = {
+						who = samurai
+						value = 0.6
+					}
 				}
 			}
 		}
@@ -1460,6 +1539,7 @@ charge_of_opportunity_tactic = {
 	heavy_infantry_offensive = 1.2
 	mushers_offensive = 3
 	cowboys_offensive = 3
+	samurai_offensive = 1.2
 }
 
 charge_tactic = {
@@ -1515,9 +1595,15 @@ charge_tactic = {
 			leader = {
 				martial = 12
 			}
-			heavy_troops = {
-				who = heavy_infantry
-				value = 0.1
+			OR = {
+				heavy_troops = {
+					who = heavy_infantry
+					value = 0.1
+				}
+				heavy_troops = {
+					who = samurai
+					value = 0.1
+				}
 			}
 		}
 	}
@@ -1529,6 +1615,7 @@ charge_tactic = {
 	heavy_infantry_offensive = 1.2
 	mushers_offensive = 3
 	cowboys_offensive = 3
+	samurai_offensive = 1.2
 }
 
 wait_tactic = {
@@ -1593,7 +1680,11 @@ advance_tactic = {
 
 	trigger = {
 		phase = melee
-		heavy_infantry = 0.01
+		troops = {
+			who = heavy_infantry
+			value = 0.01
+		}
+		samurai = 0.01
 	}
 
 	mean_time_to_happen = {
@@ -1604,9 +1695,15 @@ advance_tactic = {
 			leader = {
 				martial = 8
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.7
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.7
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.7
+				}
 			}
 		}
 		modifier = {
@@ -1615,9 +1712,15 @@ advance_tactic = {
 			leader = {
 				martial = 12
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.6
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.6
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.6
+				}
 			}
 		}	
 		modifier = {
@@ -1626,9 +1729,15 @@ advance_tactic = {
 			leader = {
 				martial = 16
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.5
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.5
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.5
+				}
 			}
 		}	
 	}
@@ -1638,6 +1747,7 @@ advance_tactic = {
 	pikemen_offensive = -1.5
 	mushers_offensive = -1.5
 	pike_cavalry_offensive = -1.5
+	samurai_offensive = 3
 	enemy = {
 		group = stand_fast
 		factor = 3
@@ -1651,12 +1761,16 @@ awesome_advance_tactic = {
 
 	trigger = {
 		phase = melee
-		heavy_infantry = 0.01
+		troops = {
+			who = heavy_infantry
+			value = 0.01
+		}
 		troops = {
 			who = knights
 			value = 0.01
 		}
 		mushers = 0.01
+		samurai = 0.01
 	}
 
 	mean_time_to_happen = {
@@ -1667,9 +1781,15 @@ awesome_advance_tactic = {
 			leader = {
 				martial = 9
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.7
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.7
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.7
+				}
 			}
 			OR = {
 				heavy_troops = {
@@ -1688,9 +1808,15 @@ awesome_advance_tactic = {
 			leader = {
 				martial = 13
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.6
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.6
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.6
+				}
 			}
 			OR = {
 				heavy_troops = {
@@ -1709,9 +1835,15 @@ awesome_advance_tactic = {
 			leader = {
 				martial = 17
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.5
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.5
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.5
+				}
 			}
 			OR = {
 				heavy_troops = {
@@ -1731,6 +1863,7 @@ awesome_advance_tactic = {
 	pikemen_offensive = -1.8
 	mushers_offensive = 0.6
 	pike_cavalry_offensive = -1.8
+	samurai_offensive = 2.4
 	enemy = {
 		group = stand_fast
 		factor = 3
@@ -1811,6 +1944,7 @@ stand_fast_tactic = {
 	pikemen_offensive = 3
 	mushers_offensive = -1.5
 	pike_cavalry_offensive = 3
+	samurai_offensive = -1.5
 	enemy = {
 		group = charge
 		factor = 3
@@ -1825,8 +1959,12 @@ slow_advance_tactic = {
 	trigger = {
 		phase = melee
 		pikemen = 0.01
-		heavy_infantry = 0.01
+		troops = {
+			who = heavy_infantry
+			value = 0.01
+		}
 		pike_cavalry = 0.01
+		samurai = 0.01
 	}
 
 	mean_time_to_happen = {
@@ -1847,9 +1985,15 @@ slow_advance_tactic = {
 					value = 0.7
 				}
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.3
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.3
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -1868,9 +2012,15 @@ slow_advance_tactic = {
 					value = 0.6
 				}
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.3
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.3
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -1889,9 +2039,15 @@ slow_advance_tactic = {
 					value = 0.5
 				}
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.3
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.3
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 	}
@@ -1901,6 +2057,7 @@ slow_advance_tactic = {
 	pikemen_offensive = 2.4
 	mushers_offensive = -1.8
 	pike_cavalry_offensive = 2.4
+	samurai_offensive = 0.6
 	enemy = {
 		group = charge
 		factor = 3
@@ -1981,6 +2138,7 @@ awesome_charge_tactic = {
 	pikemen_offensive = -1.5
 	mushers_offensive = 3
 	pike_cavalry_offensive = -1.5
+	samurai_offensive = -1.5
 	enemy = {
 		group = advance
 		factor = 3
@@ -2093,6 +2251,7 @@ awesomer_charge_tactic = {
 	pikemen_offensive = 0.6
 	mushers_offensive = 2.4
 	pike_cavalry_offensive = 0.6
+	samurai_offensive = -1.8
 	enemy = {
 		group = advance
 		factor = 3
@@ -2111,6 +2270,7 @@ barrage_tactic = {
 			value = 0.2
 		}
 		ballestero = 0.2
+		samurai = 0.2
 	}
 
 	mean_time_to_happen = {
@@ -2128,6 +2288,10 @@ barrage_tactic = {
 				}
 				light_troops = {
 					who = ballestero
+					value = 0.3
+				}
+				heavy_troops = {
+					who = samurai
 					value = 0.3
 				}
 			}
@@ -2160,6 +2324,7 @@ barrage_tactic = {
 	mushers_offensive = 2.4
 	cowboys_offensive = 2.4
 	ballestero_offensive = 2.4
+	samurai_offensive = 2.4
 }
 
 raid_tactic = {
@@ -2313,9 +2478,15 @@ reckless_charge_tactic = {
 			leader = {
 				NOT = { martial = 7 }
 			}
-			heavy_troops = {
-				who = heavy_infantry
-				value = 0.1
+			OR = {
+				heavy_troops = {
+					who = heavy_infantry
+					value = 0.1
+				}
+				heavy_troops = {
+					who = samurai
+					value = 0.1
+				}
 			}
 		}
 	}
@@ -2327,12 +2498,14 @@ reckless_charge_tactic = {
 	heavy_infantry_offensive = 0.6
 	mushers_offensive = 1.2
 	cowboys_offensive = 1.2
+	samurai_offensive = 0.6
 	
 	knights_defensive = -0.5
 	horse_archers_defensive = -0.5
 	heavy_infantry_defensive = -0.3
 	mushers_defensive = -0.5
 	cowboys_defensive = -0.5
+	samurai_defensive = -0.3
 }
 
 
@@ -2343,7 +2516,11 @@ timid_advance_tactic = {
 
 	trigger = {
 		phase = melee
-		heavy_infantry = 0.01
+		troops = {
+			who = heavy_infantry
+			value = 0.01
+		}
+		samurai = 0.01
 		flank_has_leader = yes
 		leader = {
 			OR = {
@@ -2361,9 +2538,15 @@ timid_advance_tactic = {
 			leader = {
 				NOT = { martial = 7 }
 			}
-			heavy_troops = {
-				who = heavy_infantry
-				value = 0.5
+			OR = {
+				heavy_troops = {
+					who = heavy_infantry
+					value = 0.5
+				}
+				heavy_troops = {
+					who = samurai
+					value = 0.5
+				}
 			}
 		}	
 	}
@@ -2373,7 +2556,7 @@ timid_advance_tactic = {
 	pikemen_offensive = 1.2
 	mushers_offensive = -2.1
 	pike_cavalry_offensive = 1.2
-	
+	samurai_offensive = -2.1
 	enemy = {
 		group = stand_fast
 		factor = 1.2
@@ -2392,6 +2575,7 @@ confused_orders_tactic = {
 			value = 0.01
 		}
 		ballestero = 0.01
+		samurai = 0.01
 		flank_has_leader = yes
 		leader = {
 			OR = {
@@ -2418,6 +2602,10 @@ confused_orders_tactic = {
 					who = ballestero
 					value = 0.5
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.5
+				}
 			}
 		}
 	}
@@ -2427,7 +2615,7 @@ confused_orders_tactic = {
 	mushers_offensive = -1.2
 	cowboys_offensive = -1.2
 	ballestero_offensive = -1.2
-	
+	samurai_offensive = -1.2
 	enemy = {
 		group = charge
 		factor = -1.2
@@ -2464,6 +2652,7 @@ hesitant_commander_tactic = {
 	knights_offensive = -1.5
 	heavy_infantry_offensive = -1.5
 	mushers_offensive = -1.5
+	samurai_offensive = -1.5
 }
 
 charging_own_skirmishers_tactic = {
@@ -2541,12 +2730,14 @@ charging_own_skirmishers_tactic = {
 	ballestero_offensive = -4.2
 	pike_cavalry_offensive = 1.8
 	cossacks_offensive = 1.8
+	samurai_offensive = -4.2
 	
 	archers_defensive = -0.5
 	horse_archers_defensive = -0.3
 	mushers_defensive = -0.3
 	cowboys_defensive = -0.3
 	ballestero_defensive = -0.5
+	samurai_defensive = -0.5
 }
 
 # Good tactics
@@ -2600,6 +2791,7 @@ inspired_defense_tactic = {
 	ballestero_defensive = 1.5
 	pike_cavalry_defensive = 1.5
 	cossacks_defensive = 1.5
+	samurai_defensive = 1.5
 	enemy = {
 		group = charge
 		factor = 1.2
@@ -2672,6 +2864,7 @@ heroic_countercharge_tactic = {
 	cowboys_offensive = 3.6
 	pike_cavalry_offensive = 3.6
 	cossacks_offensive = 3.6
+	samurai_offensive = 0.6
 	enemy = {
 		group = charge
 		factor = 3
@@ -2745,6 +2938,7 @@ glorious_countercharge_tactic = { #Call to Glory tactic. - Generic
 	ballestero_offensive = 1.75
 	pike_cavalry_offensive = 1.75
 	cossacks_offensive = 1.75
+	samurai_offensive = 1.75
 	enemy = {
 		group = charge
 		factor = 3
@@ -2778,7 +2972,11 @@ glorious_norse_tactic = {
 
 	trigger = {
 		phase = melee
-		heavy_infantry = 0.01
+		troops = {
+			who = heavy_infantry
+			value = 0.01
+		}
+		samurai = 0.01
 		leader = {
 			has_character_modifier = call_to_glory
 			society_member_of = warrior_lodge_norse
@@ -2793,9 +2991,15 @@ glorious_norse_tactic = {
 			leader = {
 				martial = 8
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.7
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.7
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.7
+				}
 			}
 		}
 		modifier = {
@@ -2804,9 +3008,15 @@ glorious_norse_tactic = {
 			leader = {
 				martial = 12
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.6
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.6
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.6
+				}
 			}
 		}
 		modifier = {
@@ -2815,15 +3025,23 @@ glorious_norse_tactic = {
 			leader = {
 				martial = 16
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.5
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.5
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.5
+				}
 			}
 		}
 	}
 
-	light_infantry_defensive = 1.5
 	heavy_infantry_offensive = 2.75
+	samurai_offensive = 2.75
+	
+	light_infantry_defensive = 1.5
 	enemy = {
 		group = stand_fast
 		factor = 1
@@ -2994,7 +3212,11 @@ glorious_occultist_tactic = {
 
 	trigger = {
 		phase = melee
-		heavy_infantry = 0.01
+		troops = {
+			who = heavy_infantry
+			value = 0.01
+		}
+		samurai = 0.01
 		leader = {
 			has_character_modifier = call_to_glory
 			society_member_of = warrior_lodge_occultist
@@ -3009,9 +3231,15 @@ glorious_occultist_tactic = {
 			leader = {
 				martial = 8
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.7
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.7
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.7
+				}
 			}
 		}
 		modifier = {
@@ -3020,9 +3248,15 @@ glorious_occultist_tactic = {
 			leader = {
 				martial = 12
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.6
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.6
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.6
+				}
 			}
 		}
 		modifier = {
@@ -3031,17 +3265,25 @@ glorious_occultist_tactic = {
 			leader = {
 				martial = 16
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.5
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.5
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.5
+				}
 			}
 		}
 	}
 
 	heavy_infantry_offensive = 1.25
+	samurai_offensive = 1.25
 	
 	heavy_infantry_defensive = 2.5
 	light_infantry_defensive = 1.25
+	samurai_defensive = 2.5
 	enemy = {
 		group = charge
 		factor = 3
@@ -3061,6 +3303,7 @@ glorious_raven_tales_tactic = {
 			value = 0.05
 		}
 		ballestero = 0.05
+		samurai = 0.05
 		leader = {
 			has_character_modifier = call_to_glory
 			society_member_of = warrior_lodge_raven_tales
@@ -3097,6 +3340,10 @@ glorious_raven_tales_tactic = {
 					who = ballestero
 					value = 0.3
 				}
+				heavy_troops = {
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -3114,6 +3361,10 @@ glorious_raven_tales_tactic = {
 					who = ballestero
 					value = 0.4
 				}
+				heavy_troops = {
+					who = samurai
+					value = 0.4
+				}
 			}
 		}
 	}
@@ -3122,6 +3373,7 @@ glorious_raven_tales_tactic = {
 	
 	archers_offensive =  2.5
 	ballestero_offensive =  2.5
+	samurai_offensive =  2.5
 	
 	light_infantry_defensive = 1.5
 }
@@ -3202,6 +3454,7 @@ glorious_thelemic_tactic = {
 	pikemen_offensive = 2.5
 	ballestero_offensive = 1.5
 	pike_cavalry_offensive = 2.5
+	samurai_offensive = 1.5
 	enemy = {
 		group = advance
 		factor = 3
@@ -3221,6 +3474,7 @@ glorious_revelationist_tactic = {
 			value = 0.01
 		}
 		ballestero = 0.01
+		samurai = 0.01
 		leader = {
 			has_character_modifier = call_to_glory
 			society_member_of = warrior_lodge_revelationist
@@ -3244,6 +3498,10 @@ glorious_revelationist_tactic = {
 					who = ballestero
 					value = 0.6
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.6
+				}
 			}
 		}
 		modifier = {
@@ -3259,6 +3517,10 @@ glorious_revelationist_tactic = {
 				}
 				light_troops = { 
 					who = ballestero
+					value = 0.5
+				}
+				heavy_troops = { 
+					who = samurai
 					value = 0.5
 				}
 			}
@@ -3278,15 +3540,21 @@ glorious_revelationist_tactic = {
 					who = ballestero
 					value = 0.4
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.4
+				}
 			}
 		}
 	}
 
 	archers_offensive = 3.75
 	ballestero_offensive = 3.75
+	samurai_offensive = 3.75
 	
 	archers_defensive = 1.25
 	ballestero_defensive = 1.25
+	samurai_defensive = 1.25
 	enemy = {
 		group = harass
 		factor = 1
@@ -3656,6 +3924,7 @@ clever_ambush_tactic = {
 	ballestero_offensive = 1.2
 	pike_cavalry_offensive = 2.4
 	cossacks_offensive = 2.4
+	samurai_offensive = 1.2
 	enemy = {
 		group = advance
 		factor = 3
@@ -3705,6 +3974,7 @@ religious_fervour_tactic = {
 	ballestero_offensive = 1.5
 	pike_cavalry_offensive = 1.5
 	cossacks_offensive = 1.5
+	samurai_offensive = 1.5
 }
 
 ############################
@@ -3822,7 +4092,11 @@ berserker_charge_tactic = {
 
 	trigger = {
 		phase = melee 
-		heavy_infantry = 0.01
+		troops = {
+			who = heavy_infantry
+			value = 0.01
+		}
+		samurai = 0.01
 		flank_has_leader = yes
 		leader = {
 			OR = {
@@ -3843,18 +4117,26 @@ berserker_charge_tactic = {
 			leader = {
 				martial = 10
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.3
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.3
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 	}
 
 	heavy_infantry_offensive = 3.6
 	light_infantry_offensive = 1.2
+	samurai_offensive = 3.6
 
 	heavy_infantry_defensive = -0.5
 	light_infantry_defensive = -0.3
+	samurai_defensive = -0.5
 	enemy = {
 		group = stand_fast
 		factor = 1
@@ -3900,9 +4182,15 @@ schiltron_formation_tactic = {
 					value = 0.6
 				}
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.3
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.3
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -3921,9 +4209,15 @@ schiltron_formation_tactic = {
 					value = 0.5
 				}
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.3
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.3
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -3942,9 +4236,15 @@ schiltron_formation_tactic = {
 					value = 0.4
 				}
 			}
-			heavy_troops = { 
-				who = heavy_infantry
-				value = 0.2
+			OR = {
+				heavy_troops = { 
+					who = heavy_infantry
+					value = 0.3
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 	}
@@ -3952,6 +4252,7 @@ schiltron_formation_tactic = {
 	archers_offensive = 0.6
 	pikemen_offensive = 2.4
 	ballestero_offensive = 0.6
+	samurai_offensive = 0.6
 
 	light_infantry_defensive = 1.2
 	heavy_infantry_defensive = 2.4
@@ -3963,6 +4264,7 @@ schiltron_formation_tactic = {
 	cowboys_defensive = -0.4
 	pike_cavalry_defensive = 3.6
 	cossacks_defensive = -0.4
+	samurai_defensive = 2.4
 	enemy = {
 		group = charge
 		factor = 3
@@ -4051,6 +4353,7 @@ pike_column_advance_tactic = {
 	pikemen_offensive = 3
 	mushers_offensive = 0.6
 	pike_cavalry_offensive = 3
+	samurai_offensive = 1.2
 	enemy = {
 		group = stand_fast
 		factor = 3
@@ -4070,6 +4373,7 @@ massive_longbow_volley_tactic = {
 			value = 0.01
 		}
 		ballestero = 0.01
+		samurai = 0.01
 		flank_has_leader = yes
 		leader = {
 			OR = {
@@ -4098,6 +4402,10 @@ massive_longbow_volley_tactic = {
 					who = ballestero
 					value = 0.6
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.6
+				}
 			}
 		}
 		modifier = {
@@ -4113,6 +4421,10 @@ massive_longbow_volley_tactic = {
 				}
 				light_troops = { 
 					who = ballestero
+					value = 0.5
+				}
+				heavy_troops = { 
+					who = samurai
 					value = 0.5
 				}
 			}
@@ -4132,12 +4444,17 @@ massive_longbow_volley_tactic = {
 					who = ballestero
 					value = 0.4
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.4
+				}
 			}
 		}
 	}
 
 	archers_offensive = 3.5
 	ballestero_offensive = 3.5
+	samurai_offensive = 3.5
 	enemy = {
 		group = harass
 		factor = 1
@@ -4233,6 +4550,7 @@ couched_lance_charge_tactic = {
 	pikemen_offensive = 0.6
 	mushers_offensive = 4.2
 	pike_cavalry_offensive = 0.6
+	samurai_offensive = -0.6
 	enemy = {
 		group = advance
 		factor = 3
@@ -4307,6 +4625,7 @@ mountain_ambush_tactic = {
 	ballestero_offensive = 1.2
 	pike_cavalry_offensive = 2.4
 	cossacks_offensive = 2.4
+	samurai_offensive = 1.2
 	enemy = {
 		group = advance
 		factor = 3
@@ -4458,6 +4777,7 @@ desert_ambush_tactic = {
 	ballestero_offensive = 1.2
 	pike_cavalry_offensive = 1.8
 	cossacks_offensive = 1.8
+	samurai_offensive = 1.2
 	enemy = {
 		group = advance
 		factor = 3
@@ -4550,6 +4870,7 @@ dragoon_charge_tactic = {
 	cowboys_offensive = 0.6
 	pike_cavalry_offensive = 0.6
 	cossacks_offensive = 0.6
+	samurai_offensive = -1.2
 	enemy = {
 		group = advance
 		factor = 3
@@ -4569,6 +4890,7 @@ massive_atlatlist_volley_tactic = {
 			value = 0.01
 		}
 		ballestero = 0.01
+		samurai = 0.01
 		flank_has_leader = yes
 		leader = {
 			OR = {
@@ -4594,6 +4916,10 @@ massive_atlatlist_volley_tactic = {
 					who = ballestero
 					value = 0.6
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.6
+				}
 			}
 		}
 		modifier = {
@@ -4609,6 +4935,10 @@ massive_atlatlist_volley_tactic = {
 				}
 				light_troops = { 
 					who = ballestero
+					value = 0.5
+				}
+				heavy_troops = { 
+					who = samurai
 					value = 0.5
 				}
 			}
@@ -4628,12 +4958,17 @@ massive_atlatlist_volley_tactic = {
 					who = ballestero
 					value = 0.4
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.4
+				}
 			}
 		}
 	}
 
 	archers_offensive = 3.5
 	ballestero_offensive = 3.5
+	samurai_offensive = 3.5
 	enemy = {
 		group = harass
 		factor = 1
@@ -4712,6 +5047,7 @@ river_ambush_tactic = {
 	ballestero_offensive = 1.2
 	pike_cavalry_offensive = 2.4
 	cossacks_offensive = 2.4
+	samurai_offensive = 1.2
 	enemy = {
 		group = advance
 		factor = 3
@@ -4837,6 +5173,7 @@ rapid_charge_tactic = {
 	cowboys_offensive = 3.0
 	pike_cavalry_offensive = 3.0
 	cossacks_offensive = 3.0
+	samurai_offensive = -0.6
 	enemy = {
 		group = advance
 		factor = 3
@@ -4944,6 +5281,10 @@ gray_wall_tactic = {
 					who = ballestero
 					value = 0.3
 				}
+				heavy_troops = {
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -4966,6 +5307,7 @@ gray_wall_tactic = {
 	
 	archers_offensive = 1.2
 	ballestero_offensive = 1.2
+	samurai_offensive = 1.2
 
 	light_infantry_defensive = 1.2
 	heavy_infantry_defensive = 3
@@ -4980,6 +5322,7 @@ gray_wall_tactic = {
 	ballestero_defensive = 0.6
 	pike_cavalry_defensive = 2.4
 	cossacks_defensive = -0.5
+	samurai_defensive = 3
 }
 
 force_back_tactic = {
@@ -4991,9 +5334,13 @@ force_back_tactic = {
 		phase = melee
 		OR = {
 			war_elephants = 0.005
-			heavy_infantry = 0.25
+			troops = {
+				who = heavy_infantry
+				value = 0.25
+			}
 			pikemen = 0.25
 			pike_cavalry = 0.25
+			samurai = 0.25
 		}
 	}
 
@@ -5022,6 +5369,10 @@ force_back_tactic = {
 					who = pike_cavalry
 					value = 0.7
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -5046,6 +5397,10 @@ force_back_tactic = {
 				light_troops = { 
 					who = pike_cavalry
 					value = 0.6
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
 				}
 			}
 		}
@@ -5072,6 +5427,10 @@ force_back_tactic = {
 					who = pike_cavalry
 					value = 0.5
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 	}
@@ -5085,6 +5444,7 @@ force_back_tactic = {
 	mushers_offensive = -1.8
 	ballestero_offensive = -1.0
 	pike_cavalry_offensive = 2.4
+	samurai_offensive = 1.6
 	
 	light_cavalry_defensive = -0.2
 	cowboys_defensive = -0.2
@@ -5138,6 +5498,10 @@ elephant_trample_tactic = {
 					who = pike_cavalry
 					value = 0.7
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -5170,6 +5534,10 @@ elephant_trample_tactic = {
 				light_troops = { 
 					who = pike_cavalry
 					value = 0.6
+				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
 				}
 			}
 		}
@@ -5204,6 +5572,10 @@ elephant_trample_tactic = {
 					who = pike_cavalry
 					value = 0.5
 				}
+				heavy_troops = { 
+					who = samurai
+					value = 0.3
+				}
 			}
 		}
 	}
@@ -5220,6 +5592,7 @@ elephant_trample_tactic = {
 	ballestero_offensive = -1.0
 	pike_cavalry_offensive = 2.0
 	cossacks_offensive = 0.5
+	samurai_offensive = 2.0
 	
 	war_elephants_defensive = -0.4
 	light_cavalry_defensive = -0.2
