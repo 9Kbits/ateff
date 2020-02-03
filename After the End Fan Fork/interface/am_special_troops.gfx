@@ -1,50 +1,6 @@
 objectTypes = {
 
 #Mushers
-	#Early
-	pdxmesh = {
-		name = "englishgfx_mushers_early"
-		file = "gfx\models\westerngfx_early_light_horse.mesh"
-		
-		animation = { id = "attack"		type = "char_horse_attack_animation" }
-		animation = { id = "idle"		type = "char_horse_idle_animation" }
-		animation = { id = "move"		type = "char_horse_moving_animation" }
-		
-		scale = 0.9f
-	}
-	
-	pdxmesh = {
-		name = "englishgfx_mushers_rider_early"
-		file = "gfx\models\westerngfx_early_heavy_cavalry.mesh"
-		
-		animation = { id = "attack"		type = "char_heavy_cavalry_attack_animation" }
-		animation = { id = "idle"		type = "char_heavy_cavalry_idle_animation" }
-		animation = { id = "move"		type = "char_heavy_cavalry_moving_animation" }
-		
-		
-		scale = 1.0f
-	}
-	
-	pdxmesh = {
-		name = "englishgfx_mushers_weapon_early"
-		file = "gfx\models\Attachments\westerngfx_early_sword.mesh"		
-				
-		scale = 1.0f
-	}
-	
-	pdxmesh = {
-		name = "englishgfx_mushers_helmet_early"
-		file = "gfx\models\Attachments\westerngfx_early_helmet_infantry.mesh"		
-		scale = 1.0f
-	}
-	
-	pdxmesh = {
-		name = "englishgfx_mushers_shield_early"
-		file = "gfx\models\Attachments\westerngfx_early_cavalry_heavy_shield.mesh"		
-		scale = 1.0f
-	}
-	
-	#Late
 	pdxmesh = {
 		name = "englishgfx_mushers"
 		file = "gfx\models\engup_heavy_horse.mesh"
@@ -116,47 +72,6 @@ objectTypes = {
 	}
 	
 #Ballestero
-	#Early
-	pdxmesh = {
-		name = "southerngfx_ballestero_early"
-		file = "gfx\models\westerngfx_early_archer.mesh"
-		
-		animation = { id = "attack"		type = "char_archer_attack_animation" }
-		animation = { id = "idle"		type = "char_archer_idle_animation" }
-		animation = { id = "move"		type = "char_archer_moving_animation" }
-		
-		scale = 1.0f
-	}	
-	
-	pdxmesh = {
-		name = "southerngfx_ballestero_weapon_early"
-		file = "gfx\models\Attachments\char_early_arrow.mesh"
-		
-		animation = { id = "attack"		type = "char_early_arrow_attack_animation" }
-		animation = { id = "idle"		type = "char_early_arrow_idle_animation" }
-		animation = { id = "move"		type = "char_early_arrow_moving_animation" }
-
-		scale = 0.8f
-	}
-	
-	pdxmesh = {
-		name = "southerngfx_ballestero_shield_early"
-		file = "gfx\models\Attachments\westerngfx_early_compositebow.mesh"
-		
-		animation = { id = "attack"		type = "char_early_bow_attack_animation" }
-		animation = { id = "idle"		type = "char_early_bow_idle_animation" }
-		animation = { id = "move"		type = "char_early_bow_moving_animation" }
-
-		scale = 1.0f
-	}	
-	
-	pdxmesh = {
-		name = "southerngfx_ballestero_helmet_early"
-		file = "gfx\models\Attachments\westerngfx_early_helmet_southern_archer.mesh"  
-		scale = 1.0f
-	}
-
-	#Late
 	pdxmesh = {
 		name = "southerngfx_ballestero"
 		file = "gfx\models\ibup_archer.mesh"
@@ -191,42 +106,6 @@ objectTypes = {
 	}
 
 #Pike Cavalry
-	#Early
-	pdxmesh = {
-		name = "germangfx_pike_cavalry_early"
-		file = "gfx\models\gerup_early_light_horse.mesh"
-		
-		animation = { id = "attack"		type = "gerup_early_horse_attack_animation" }
-		animation = { id = "idle"		type = "gerup_early_horse_idle_animation" }
-		animation = { id = "move"		type = "gerup_early_horse_moving_animation" }
-		
-		scale = 0.9f
-	}
-	
-	pdxmesh = {
-		name = "germangfx_pike_cavalry_rider_early"
-		file = "gfx\models\gerup_early_light_cavalry.mesh"
-		
-		animation = { id = "attack"		type = "gerup_early_light_cavalry_attack_animation" }
-		animation = { id = "idle"		type = "gerup_early_light_cavalry_idle_animation" }
-		animation = { id = "move"		type = "gerup_early_light_cavalry_moving_animation" }
-		
-		scale = 0.9f
-	}
-	
-		pdxmesh = {
-		name = "germangfx_pike_cavalry_helmet_early"
-		file = "gfx\models\Attachments\gerup_early_dummyhelmet.mesh"
-		scale = 1.0f
-	}
-	
-	pdxmesh = {
-		name = "germangfx_pike_cavalry_weapon_early"
-		file = "gfx\models\Attachments\gerup_early_spear.mesh"
-		scale = 0.9f
-	}
-	
-	#Late
 	pdxmesh = {
 		name = "germangfx_pike_cavalry"
 		file = "gfx\models\gerup_light_horse.mesh"
@@ -256,38 +135,37 @@ objectTypes = {
 	}
 
 #Cossacks
-	pdxmesh = {
-		name = "easternslavicgfx_cossacks_early"
-		file = "gfx\models\westerngfx_early_light_horse.mesh"
+	EMFXActorType = {
+		name = "westerngfx_cossacks"
+		actorfile = "gfx\models\Horse.xac"
 		
-		animation = { id = "attack"		type = "char_horse_attack_animation" }
-		animation = { id = "idle"		type = "char_horse_idle_animation" }
-		animation = { id = "move"		type = "char_horse_moving_animation" }
+		idle   = "gfx\models\Horse_Idle.xsm"
+		move   = "gfx\models\Horse_Moving.xsm"
+		attack = "gfx\models\Horse_Attack.xsm"
 		
 		scale = 0.9f
 	}
 	
-	pdxmesh = {
-		name = "easternslavicgfx_cossacks_rider_early"
-		file = "gfx\models\easterngfx_early_light_cavalry.mesh"
+	EMFXActorType = {
+		name = "westerngfx_cossacks_rider"
+		actorfile = "gfx\models\Western_Light_Cavalry.xac"
 		
-		animation = { id = "attack"		type = "char_light_cavalry_attack_animation" }
-		animation = { id = "idle"		type = "char_light_cavalry_idle_animation" }
-		animation = { id = "move"		type = "char_light_cavalry_moving_animation" }
+		idle   = "gfx\models\Light_Cavalry_Idle.xsm"
+		move   = "gfx\models\Light_Cavalry_Moving.xsm"
+		attack = "gfx\models\Light_Cavalry_Attack.xsm"
 		
 		scale = 1.0f
 	}
 	
-	pdxmesh = {
-		name = "easternslavicgfx_cossacks_weapon_early"
-		file = "gfx\models\Attachments\char_early_pike.mesh"
+	EMFXActorType = {
+		name = "westerngfx_cossacks_weapon"
+		actorfile = "gfx\models\Attachments\Spear_01.xac"
 		scale = 1.0f
 	}
 	
-	pdxmesh = {
-		name = "easternslavicgfx_cossacks_helmet_early"
-		file = "gfx\models\Attachments\easterngfx_early_helmet_light_cavalry.mesh"
-
+	EMFXActorType = {
+		name = "westerngfx_cossacks_helmet"
+		actorfile = "gfx\models\Attachments\Helmet_01.xac"
 		scale = 1.0f
 	}
 
