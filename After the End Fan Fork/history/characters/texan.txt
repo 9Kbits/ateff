@@ -69,7 +69,7 @@
 
 1836010={
 	name="Josh"
-	dynasty=1814001
+	dynasty=1814044
 	dna="akljhoblbde"
 	culture=texan
 	religion=catholic
@@ -110,7 +110,7 @@
 
 1836012={
 	name="Mack"
-	dynasty=1814001
+	dynasty=1814044
 	dna="agdlhfoiblc"
 	culture=texan
 	religion=catholic
@@ -127,17 +127,9 @@
 	father=1836010
 	mother=1836011
 	2632.6.25={birth=yes}
-	2666.1.1={
-		raise_levies={
-			location=1235 # Travis
-			force_mult=1.0
-		}
-	}
-	2668.1.1={
-		raise_levies={
-			dismiss=yes
-			location=1235 # Travis
-			force_mult=1.0
+	2660.1.1={
+		effect={
+			add_rival=1836016
 		}
 	}
 	2678.1.16={death=yes}
@@ -145,7 +137,7 @@
 
 1836013={
 	name="Cotton"
-	dynasty=1814001
+	dynasty=1814044
 	dna="akljhaoiblc"
 	culture=texan
 	religion=catholic
@@ -165,7 +157,7 @@
 
 1836014={
 	name="Ben"
-	dynasty=1814001
+	dynasty=1814044
 	dna="agljhfblkde"
 	culture=texan
 	religion=catholic
@@ -186,7 +178,7 @@
 
 1836015={
 	name="Farley"
-	dynasty=1814001
+	dynasty=1814044
 	dna="bkkjhfblbdc"
 	culture=texan
 	religion=catholic
@@ -208,7 +200,7 @@
 
 1836016={
 	name="Floyd"
-	dynasty=1814002
+	dynasty=1814045
 	dna="fpgdcamjagf"
 	culture=texan
 	religion=catholic
@@ -225,17 +217,9 @@
 	2601.5.13={birth=yes}
 	2620.4.14={add_spouse=1836017}
 	2630.1.1={add_claim=c_mclennan}
-	2666.1.1={
-		raise_levies={
-			location=1255 # Brazos
-			force_mult=1.0
-		}
-	}
-	2668.1.1={
-		raise_levies={
-			dismiss=yes
-			location=1255 # Brazos
-			force_mult=1.0
+	2660.1.1={
+		effect={
+			add_rival=1836012
 		}
 	}
 	2674.10.19={death=yes}
@@ -264,7 +248,7 @@
 1836018={
 	name="Henrietta"
 	female=yes
-	dynasty=1814002
+	dynasty=1814045
 	dna="fogdcamjdhm"
 	culture=texan
 	religion=catholic
@@ -286,7 +270,7 @@
 1836019={
 	name="Annie"
 	female=yes
-	dynasty=1814002
+	dynasty=1814045
 	dna="bojdgamjdhf"
 	culture=texan
 	religion=catholic
@@ -308,7 +292,7 @@
 
 1836020={
 	name="Russell"
-	dynasty=1814002
+	dynasty=1814045
 	dna="fojncamgdgm"
 	culture=texan
 	religion=catholic
@@ -331,7 +315,7 @@
 1836021={
 	name="Beth"
 	female=yes
-	dynasty=1814002
+	dynasty=1814045
 	dna="bpjnpamjdgf"
 	culture=texan
 	religion=catholic
@@ -441,9 +425,8 @@
 
 1836026={
 	name="Carl"
-	dynasty=1779202
-	culture=deitsch
-	religion=americanist
+	culture=texan
+	religion=catholic
 	martial=1
 	diplomacy=3
 	stewardship=7
@@ -458,15 +441,15 @@
 }
 
 1836027={
-	name="Elvira"
+	name="Eva"
 	female=yes
-	dynasty=1814035 # Murchison
+	dynasty=1779209 # Solms
 	martial=4
 	diplomacy=6
 	intrigue=5
 	stewardship=7
 	learning=6
-	culture=texan
+	culture=deitsch
 	religion=catholic
 	trait=fair
 	trait=charismatic_negotiator
@@ -487,14 +470,14 @@
 }
 
 1836028={
-	name="Jayarr"
-	dynasty=1814036
+	name="Jared"
+	dynasty=1779142
 	martial=5
 	diplomacy=5
 	intrigue=5
 	stewardship=5
 	learning=5
-	culture=texan
+	culture=deitsch
 	religion=catholic
 	trait=gregarious
 	2631.1.1={birth=yes}
@@ -503,8 +486,8 @@
 }
 
 1836029={
-	name="Beaumont"
-	dynasty=1814035
+	name="Bruno"
+	dynasty=1779209
 	mother=1836027
 	father=1836028
 	martial=5
@@ -512,15 +495,15 @@
 	intrigue=5
 	stewardship=5
 	learning=5
-	culture=texan
+	culture=deitsch
 	religion=catholic
 	2657.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
 
-1836030={
+1836030={ #I'm eventually gonna add an entire family history for this guy, watch this space.
 	name="Denton"
-	dynasty=1814038 # Wise
+	dynasty=1814017 # Maverick
 	martial=8
 	diplomacy=3
 	intrigue=3
@@ -528,9 +511,28 @@
 	learning=5
 	culture=texan
 	religion=catholic
+	trait=shrewd
 	trait=brave
-	trait=misguided_warrior
-	2626.2.6={birth=yes}
+	trait=erudite
+	trait=just
+	trait=humble
+	trait=skilled_tactician
+	2626.2.6={birth=yes
+		give_nickname=nick_the_wise
+	}
+	2666.1.1={
+		raise_levies={
+			location=1242 # Dallas
+			force_mult=1.0
+		}
+	}
+	2668.1.1={
+		raise_levies={
+			dismiss=yes
+			location=1242 # Dallas
+			force_mult=1.0
+		}
+	}
 	2700.1.1={death=yes}
 }
 
