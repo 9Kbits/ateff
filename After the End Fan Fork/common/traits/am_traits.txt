@@ -319,6 +319,7 @@ figurehead = {
 		strong_emperor
 		governator
 		governator_heir
+		sanctioned_governator
 	}
 	
 	male_insult_adj = INSULT_INEFFECTUAL
@@ -1796,6 +1797,7 @@ weak_emperor = {
 		cali_emperor
 		strong_emperor
 		governator
+		sanctioned_governator
 	}
 	
 	male_insult_adj = INSULT_INEFFECTUAL
@@ -1814,6 +1816,7 @@ cali_emperor = {
 		weak_emperor
 		strong_emperor
 		governator
+		sanctioned_governator
 	}
 	
 	male_insult_adj = INSULT_INEFFECTUAL
@@ -1835,6 +1838,7 @@ strong_emperor = {
 		weak_emperor
 		cali_emperor
 		governator
+		sanctioned_governator
 	}
 	
 	male_compliment_adj = COMPL_STRONG
@@ -1856,6 +1860,7 @@ governator = {
 		cali_emperor
 		strong_emperor
 		governator_heir
+		sanctioned_governator
 	}
 	
 	male_insult_adj = INSULT_SCHEMING
@@ -1872,6 +1877,11 @@ governator_heir = {
 	customizer = no
 	opposites = {
 		governator
+		figurehead
+		weak_emperor
+		cali_emperor
+		strong_emperor
+		sanctioned_governator
 	}
 }
 
@@ -1883,6 +1893,10 @@ sanctioned_governator = {
 	opposites = {
 		governator
 		governator_heir
+		figurehead
+		weak_emperor
+		cali_emperor
+		strong_emperor
 	}
 	
 	opposite_opinion = -100
@@ -2260,10 +2274,7 @@ jeffersonian_lea = {
 
 bloodlet = {
 	mesoamerican_gods_opinion = 10
-	vassal_opinion = 5
 	christian_opinion = -10
-	cult_of_saints_opinion = -10
-	monthly_character_piety = 0.1
 
 	potential = {
 		OR = {
