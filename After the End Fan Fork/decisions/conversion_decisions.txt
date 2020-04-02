@@ -2371,4 +2371,97 @@ decisions = {
 			}
 		}
 	}
+	
+	convert_to_neomoor = {
+		only_playable = yes
+		
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			is_playable = yes
+			NOT = { culture = neomoor }
+			capital_scope = {
+				region = custom_florida
+			}
+			any_realm_province = {
+				culture = neomoor
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			NOT = { culture = neomoor }
+			religion = orientalist
+		}
+		effect = {
+			culture = neomoor
+			any_courtier = {
+				limit = {
+					religion = orientalist
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = neomoor
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 # Slow it down a bit
+			}
+			
+			modifier = {
+				factor = 0.01
+				capital_scope = {
+					NOT = { culture = neomoor }
+				}
+			}
+			modifier = {
+				factor = 2.0
+				liege = { culture = neomoor }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
+					culture = neomoor
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = neomoor
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = neomoor
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = neomoor
+				}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = neomoor
+				}
+			}
+		}
+	}
 }

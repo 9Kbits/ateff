@@ -1038,3 +1038,115 @@ character_event = {
 		culture = omedulac
 	}
 }
+
+# Province culture changes from Gulfard to Neomoor
+province_event = {
+	id = meltingpot.19
+	desc = EVTDESC_neomoor_1
+	picture = GFX_evt_stone_church #placeholder
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		culture_group = south_anglo
+		religion = orientalist
+		region = custom_florida
+		owner = { 
+			top_liege = {
+				religion = orientalist
+				OR = {
+					tier = king
+					tier = emperor
+					num_of_duke_titles = 2
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2800
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA_neomoor_1
+		trigger = {
+			NOT = {
+				owner = { culture = neomoor }
+			}
+		}
+		culture = neomoor
+	}
+	option = {
+		name = EVTOPTB_neomoor_1
+		trigger = {
+			owner = { culture = neomoor }
+		}
+		culture = neomoor
+	}
+}
+
+# Province culture changes from Neomoor to Gulfard
+province_event = {
+	id = meltingpot.20
+	desc = EVTDESC_neomoor_2
+	picture = GFX_evt_stone_church #placeholder
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		culture = neomoor
+		NOT = { religion = orientalist }
+		region = custom_florida
+		owner = { 
+			top_liege = { 
+				NOT = { culture = neomoor }
+				NOT = { religion = orientalist }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1400
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA_neomoor_2
+		trigger = {
+			NOT = {
+				owner = { culture = gulfard }
+			}
+		}
+		culture = gulfard
+	}
+	option = {
+		name = EVTOPTB_neomoor_2
+		trigger = {
+			owner = { culture = gulfard }
+		}
+		culture = gulfard
+	}
+}
