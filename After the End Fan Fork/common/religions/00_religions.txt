@@ -706,6 +706,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 	neognostic = {
 		graphical_culture = westerngfx
@@ -750,6 +751,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 		
 		intermarry = cetic
 		intermarry = gaian
@@ -792,6 +794,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 	nestorian = {
 		graphical_culture = westerngfx
@@ -835,6 +838,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 	ursuline = {
 		graphical_culture = westerngfx
@@ -897,6 +901,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 	
 	angeline = {
@@ -940,6 +945,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 	
 	confederated = {
@@ -997,6 +1003,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 
 	anabaptist = {
@@ -1058,6 +1065,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 	
 	batenburger = {
@@ -1102,6 +1110,7 @@ christian = {
 		intermarry = nonconformist
 		#intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 
 	evangelical = {
@@ -1160,6 +1169,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 
 	antinomian = {
@@ -1199,6 +1209,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 
 	charismatic = {
@@ -1247,6 +1258,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 		
 		intermarry = revelationist
 		intermarry = revelationist_reformed
@@ -1290,6 +1302,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 	
 	falling_star = {
@@ -1344,6 +1357,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 		
 		intermarry = sacred_heart
 		intermarry = gracia_divina
@@ -1396,6 +1410,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		#intermarry = moravian
+		intermarry = celeste
 		
 		intermarry = sacred_heart
 		intermarry = gracia_divina
@@ -1456,6 +1471,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 	
 	#someone pointed out that Anglo-Catholicsm doesn't make much sense as a heresy, because this would logically be the defining characteristic that separates Anglicanism from normal Protestantism.
@@ -1501,6 +1517,7 @@ christian = {
 		#intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 	}
 	
 	apostolic = { #Brazilian Christianity
@@ -1557,6 +1574,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		intermarry = celeste
 		
 		intermarry = sacred_heart
 		intermarry = gracia_divina
@@ -1565,42 +1583,41 @@ christian = {
 		intermarry = candomble
 	}
 	
-	folclorista = { #Argentinian Christianity
+	celeste = { #Gaucho Christianity
 		graphical_culture = westerngfx
 		
 		icon = 74
 		heresy_icon = 83
 		
-		color = { 0.7 0.7 0.1 }
+		color = { 0.65 0.7 0.1 }
 		
 		parent = apostolic
 		
-		high_god_name = GOD_O_PADRE
+		high_god_name = GOD_GOD
 		
 		god_names = {
-			GOD_O_PADRE GOD_DIOS GOD_JESUS GOD_O_GAUCHINHO GOD_THE_BLESSED_VIRGIN GOD_THE_SAINTS GOD_O_PASTOR
+			GOD_DEUS GOD_JESUS GOD_CRISTO_MOCA THE_MONGES GOD_THE_BLESSED_VIRGIN
 		}
 		
 		evil_god_names = {
-			THE_DEVIL SATAN A_LUZ A_BOITATA A_TEINIAGUA AS_BRUXAS 
+			THE_DEVIL SATAN LUCIFER
 		}
 		
+		piety_name = PURITY
 		can_excommunicate = yes
 		can_grant_divorce = yes
-		can_grant_invasion_cb = invasion
-		can_grant_claim = yes
-		priests_can_inherit = no
+		priests_can_inherit = yes
 		priests_can_marry = yes
 		allow_rivermovement = yes
-		can_retire_to_monastery = yes
-		aggression = 0.5 # not as likely to expand
+		uses_decadence = yes
+		female_temple_holders = yes
 		
 		religious_clothing_head = 2
 		religious_clothing_priest = 2
 		
 		crusade_name = CRUSADE
 		scripture_name = THE_BIBLE
-		priest_title = TROVADOR
+		priest_title = MONGE
 		
 		intermarry = catholic
 		intermarry = evangelical
@@ -1609,7 +1626,8 @@ christian = {
 		intermarry = anabaptist
 		intermarry = confederated
 		intermarry = falling_star
-		#intermarry = apostolic
+		intermarry = apostolic
+
 
 		intermarry = neognostic
 		intermarry = sedevacantist
@@ -1621,6 +1639,7 @@ christian = {
 		intermarry = nonconformist
 		intermarry = batenburger
 		intermarry = moravian
+		# intermarry = celeste
 		
 		intermarry = sacred_heart
 		intermarry = gracia_divina
