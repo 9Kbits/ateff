@@ -259,7 +259,7 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 					factor = 0
 					AND = {
 						religion_group = jewish_group
-						has_artifact = ate_left_hand_lubavitcher_rebbe
+						has_artifact = ate_shofar_lubavitcher_rebbe
 					}
 				}
 				modifier = {
@@ -426,7 +426,7 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 						has_artifact = famous_foot
 						has_artifact = famous_ancient_weapon
 						has_artifact = old_tefillah
-						has_artifact = ate_fingerbone_of_rabbi
+						has_artifact = ate_yad_of_rabbi
 						has_artifact = ancient_torah
 					}
 				}
@@ -1360,10 +1360,10 @@ character_event = {
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
 					modifier = {
 						factor = 0
-						has_artifact = ate_left_hand_lubavitcher_rebbe
+						has_artifact = ate_shofar_lubavitcher_rebbe
 					}
 					#Insert artifact event here
-					narrative_event = { id = MNM.9812 } #Left Hand of the Lubavitcher Rebbe
+					narrative_event = { id = MNM.9812 } #Shofar of the Lubavitcher Rebbe
 				}
 				5 = {
 					modifier = {
@@ -1408,10 +1408,10 @@ character_event = {
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_minor } }
 					modifier = {
 						factor = 0
-						has_artifact = ate_fingerbone_of_rabbi
+						has_artifact = ate_yad_of_rabbi
 					}
 					#Insert artifact event here
-					character_event = { id = MNM.9853 } #Fingerbone of a Rabbi
+					character_event = { id = MNM.9853 } #Yad of a Rabbi
 				}
 
 
@@ -4656,7 +4656,7 @@ narrative_event = {
 	after = { clr_artifact_flagsmodifiers_effect = yes }
 }
 
-#Left Hand of the Lubavitcher Rebbe
+#Shofar of the Lubavitcher Rebbe
 #Quality 4
 narrative_event = {
 	id = MNM.9812
@@ -4677,7 +4677,7 @@ narrative_event = {
 			modifier = opinion_extremely_disappointed
 			years = 20
 		}
-		add_artifact = ate_left_hand_lubavitcher_rebbe
+		add_artifact = ate_shofar_lubavitcher_rebbe
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
@@ -4702,7 +4702,7 @@ narrative_event = {
 			min = 50
 		}
 
-		add_artifact = ate_left_hand_lubavitcher_rebbe
+		add_artifact = ate_shofar_lubavitcher_rebbe
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
@@ -4722,7 +4722,7 @@ narrative_event = {
 			years = 15
 		}
 		reverse_add_favor = FROM
-		add_artifact = ate_left_hand_lubavitcher_rebbe
+		add_artifact = ate_shofar_lubavitcher_rebbe
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
@@ -4749,7 +4749,7 @@ narrative_event = {
 			chance = 20
 			add_friend = FROM
 		}
-		add_artifact = ate_left_hand_lubavitcher_rebbe
+		add_artifact = ate_shofar_lubavitcher_rebbe
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
@@ -4957,7 +4957,7 @@ character_event = {
 	after = { clr_artifact_flagsmodifiers_effect = yes }
 }
 
-#Fingerbone of a rabbi
+#Yad of a rabbi
 #Quality 3
 character_event = {
 	id = MNM.9853
@@ -4977,7 +4977,7 @@ character_event = {
 			modifier = opinion_very_disappointed
 			years = 15
 		}
-		add_artifact = ate_fingerbone_of_rabbi
+		add_artifact = ate_yad_of_rabbi
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
@@ -5002,7 +5002,7 @@ character_event = {
 			min = 35
 		}
 
-		add_artifact = ate_fingerbone_of_rabbi
+		add_artifact = ate_yad_of_rabbi
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
@@ -5022,7 +5022,7 @@ character_event = {
 			years = 15
 		}
 		reverse_add_favor = FROM
-		add_artifact = ate_fingerbone_of_rabbi
+		add_artifact = ate_yad_of_rabbi
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
@@ -5049,7 +5049,7 @@ character_event = {
 			chance = 20
 			add_friend = FROM
 		}
-		add_artifact = ate_fingerbone_of_rabbi
+		add_artifact = ate_yad_of_rabbi
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
