@@ -438,8 +438,6 @@ consumerist_rising = {
 	}
 
 	on_success = {
-		clr_global_flag = consumerist_revolt_ongoing
-		set_global_flag = consumerist_revolt_successful
 		ROOT = {
 			piety = 500
 			religion_authority = {
@@ -523,7 +521,6 @@ consumerist_rising = {
 	}
 
 	on_fail = {
-		clr_global_flag = consumerist_revolt_ongoing
 		FROM = {
 			piety = 250
 		}
@@ -534,7 +531,6 @@ consumerist_rising = {
 	}
 
 	on_reverse_demand = {
-		clr_global_flag = consumerist_revolt_ongoing
 		ROOT = {
 			piety = -500
 			clr_character_flag = consumerist_prophet
@@ -556,7 +552,6 @@ consumerist_rising = {
 	}
 	
 	on_attacker_leader_death = {
-		clr_global_flag = consumerist_revolt_ongoing
 		ROOT = {
 			clr_character_flag = consumerist_prophet
 			clr_character_flag = the_prophet
