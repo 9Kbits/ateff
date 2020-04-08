@@ -294,7 +294,7 @@ decisions = {
 					limit = {
 						OR = {
 							culture_group = plains
-							culture_group = southwestern
+							culture_group = plateau
 							religion_group = american_native
 						}
 					}
@@ -305,7 +305,7 @@ decisions = {
 				if = {
 					limit = {
 						NOT = { culture_group = plains }
-						NOT = { culture_group = southwestern }
+						NOT = { culture_group = plateau }
 						religion_group = mesoamerican_gods
 					}
 					narrative_event = { id = vision.2 }
@@ -315,7 +315,7 @@ decisions = {
 				if = {
 					limit = {
 						NOT = { culture_group = plains }
-						NOT = { culture_group = southwestern }
+						NOT = { culture_group = plateau }
 						religion_group = afro_syncretic
 					}
 					narrative_event = { id = vision.3 }
@@ -325,7 +325,7 @@ decisions = {
 				if = {
 					limit = {
 						NOT = { culture_group = plains }
-						NOT = { culture_group = southwestern }
+						NOT = { culture_group = plateau }
 						OR = {
 							religion = atomicist
 							religion = revelationist_reformed
