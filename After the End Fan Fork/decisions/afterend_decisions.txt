@@ -294,7 +294,7 @@ decisions = {
 					limit = {
 						OR = {
 							culture_group = plains
-							culture_group = southwestern
+							culture_group = plateau
 							religion_group = american_native
 						}
 					}
@@ -305,7 +305,7 @@ decisions = {
 				if = {
 					limit = {
 						NOT = { culture_group = plains }
-						NOT = { culture_group = southwestern }
+						NOT = { culture_group = plateau }
 						religion_group = mesoamerican_gods
 					}
 					narrative_event = { id = vision.2 }
@@ -315,7 +315,7 @@ decisions = {
 				if = {
 					limit = {
 						NOT = { culture_group = plains }
-						NOT = { culture_group = southwestern }
+						NOT = { culture_group = plateau }
 						religion_group = afro_syncretic
 					}
 					narrative_event = { id = vision.3 }
@@ -325,7 +325,7 @@ decisions = {
 				if = {
 					limit = {
 						NOT = { culture_group = plains }
-						NOT = { culture_group = southwestern }
+						NOT = { culture_group = plateau }
 						OR = {
 							religion = atomicist
 							religion = revelationist_reformed
@@ -472,166 +472,6 @@ decisions = {
 							change_variable = { which = prosperity_value value = 4 }
 						}
 					}
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = { factor = 0.3 }
-			modifier = { factor = 2	trait = zealous }
-			modifier = { factor = 2	trait = diligent }
-			modifier = { factor = 0.3 trait = slothful }
-			modifier = { factor = 0.3 trait = cynical }
-		}
-	}
-	
-	aphite_quarantine = {
-		is_high_prio = yes
-		potential = {
-			religion = aphite
-			is_ruler = yes
-			age = 16
-			prisoner = no
-			NOT = { is_incapable = yes }
-		}
-		allow = {
-			war = no
-			OR = {
-				AND = {
-					completely_controls = c_knox
-					151 = {
-						NOT = { has_province_modifier = atomic_quarantine }
-					}
-				}
-				AND = {
-					completely_controls = c_three_mile_island
-					190 = {
-						NOT = { has_province_modifier = atomic_quarantine }
-					}
-				}
-				AND = {
-					completely_controls = c_chicago
-					170 = {
-						NOT = { has_province_modifier = atomic_quarantine }
-					}
-				}
-				AND = {
-					completely_controls = c_white_sands
-					755 = {
-						NOT = { has_province_modifier = atomic_quarantine }
-					}
-				}
-				AND = {
-					completely_controls = c_los_alamos
-					423 = {
-						NOT = { has_province_modifier = atomic_quarantine }
-					}
-				}
-			}
-		}
-		effect = {
-			hidden_tooltip = {
-				character_event = {
-					id = event_atomicist.300
-				}
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = { factor = 0.3 }
-			modifier = { factor = 2	trait = zealous }
-			modifier = { factor = 2	trait = diligent }
-			modifier = { factor = 0.3 trait = slothful }
-			modifier = { factor = 0.3 trait = cynical }
-		}
-	}
-	
-	destroy_quarantine = {
-		is_high_prio = yes
-		potential = {
-			religion = atomicist
-			is_ruler = yes
-			age = 16
-			prisoner = no
-			NOT = { is_incapable = yes }
-			OR = {
-				AND = {
-					completely_controls = c_knox
-					151 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_three_mile_island
-					190 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_chicago
-					170 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_white_sands
-					755 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_los_alamos
-					423 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-			}
-		}
-		allow = {
-			war = no
-			OR = {
-				AND = {
-					completely_controls = c_knox
-					151 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_three_mile_island
-					190 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_chicago
-					170 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_white_sands
-					755 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-				AND = {
-					completely_controls = c_los_alamos
-					423 = {
-						has_province_modifier = atomic_quarantine
-					}
-				}
-			}
-		}
-		effect = {
-			hidden_tooltip = {
-				character_event = {
-					id = event_atomicist.306
 				}
 			}
 		}

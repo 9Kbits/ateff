@@ -18,7 +18,7 @@ narrative_event = {
 		is_landed = yes
 		is_tribal = no
 		realm_size = 15
-		NOT = { has_global_flag = consumerist_revolt_successful }
+		NOT = { has_global_flag = consumerist_revolt_ocurred }
 		capital_scope = { region = custom_usa } #what the hell was with those old requirements 
 		#I'll tell you what was up with those old requirements, they included all this important stuff. Pay attention!
 		NOT = { religion = consumerist }
@@ -26,7 +26,6 @@ narrative_event = {
 		d_consumerist = {
 			has_holder = no
 		}
-		NOT = { has_global_flag = consumerist_revolt_ongoing }
 		any_realm_province = {
 			kingdom = {
 				OR = {
@@ -94,7 +93,7 @@ narrative_event = {
 	
 	immediate = {
 		set_character_flag = consumerist_revolt
-		set_global_flag = consumerist_revolt_ongoing
+		set_global_flag = consumerist_revolt_ocurred
 		clear_global_event_target = consumerist_prophet
 		
 		activate_title = { title = d_consumerist status = yes }
@@ -1332,6 +1331,5 @@ narrative_event = {
 			}
 			religion = ROOT
 		}
-		set_global_flag = consumerist_revolt_successful
 	}
 }
