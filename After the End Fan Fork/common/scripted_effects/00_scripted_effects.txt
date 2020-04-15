@@ -9965,13 +9965,13 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
-					religion = folclorista
+					religion = celeste
 				}
-				has_character_flag = character_was_folclorista
+				has_character_flag = character_was_celeste
 			}
 		}
-		set_secret_religion = folclorista
-		clr_character_flag = character_was_folclorista
+		set_secret_religion = celeste
+		clr_character_flag = character_was_celeste
 		break = yes
 	}
 	if = {
@@ -9981,13 +9981,13 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
-					religion = folclorista
+					religion = celeste
 				}
-				has_character_flag = character_was_folclorista
+				has_character_flag = character_was_celeste
 			}
 		}
-		set_secret_religion = folclorista
-		clr_character_flag = character_was_folclorista
+		set_secret_religion = celeste
+		clr_character_flag = character_was_celeste
 		break = yes
 	}
 	if = {
@@ -10942,8 +10942,8 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_apostolic
 	}
 	if = {
-		limit = { religion = folclorista }
-		set_character_flag = character_was_folclorista
+		limit = { religion = celeste }
+		set_character_flag = character_was_celeste
 	}
 	if = {
 		limit = { religion = sacred_heart }
@@ -11184,7 +11184,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_high_church
 	clr_character_flag = character_was_nonconformist
 	clr_character_flag = character_was_apostolic
-	clr_character_flag = character_was_folclorista
+	clr_character_flag = character_was_celeste
 	clr_character_flag = character_was_sacred_heart
 	clr_character_flag = character_was_gracia_divina
 	clr_character_flag = character_was_cetic
@@ -11451,9 +11451,9 @@ event_target_old_religion_from_flag_effect = {
 		}
 	}
 	if = {
-		limit = { has_character_flag = character_was_folclorista }
+		limit = { has_character_flag = character_was_celeste }
 		random_character = {
-			limit = { religion = folclorista }
+			limit = { religion = celeste }
 			save_event_target_as = old_religion
 		}
 	}
@@ -13616,14 +13616,14 @@ flip_secret_religious_community_provinces = {
 				}
 			}
 		}
-		secret_religious_society_folclorista = {
+		secret_religious_society_celeste = {
 			ROOT = {
 				any_demesne_province = {
 					limit = {
-						has_province_modifier = secret_folclorista_community
+						has_province_modifier = secret_celeste_community
 					}
-					religion = folclorista
-					remove_province_modifier = secret_folclorista_community
+					religion = celeste
+					remove_province_modifier = secret_celeste_community
 				}
 			}
 		}
@@ -18332,14 +18332,14 @@ root_secret_religion_provinces_convert_effect = {
 					}
 				}
 			}
-			secret_religious_society_folclorista = {
+			secret_religious_society_celeste = {
 				PREV = {
 					any_demesne_province = {
 						limit = {
-							has_province_modifier = secret_folclorista_community
+							has_province_modifier = secret_celeste_community
 						}
-						religion = folclorista
-						remove_province_modifier = secret_folclorista_community
+						religion = celeste
+						remove_province_modifier = secret_celeste_community
 					}
 				}
 			}
