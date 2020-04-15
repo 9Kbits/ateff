@@ -5157,3 +5157,108 @@ narrative_event = {
 		}
 	}
 }
+
+# Northern Expansion of the Twelve Pairs of France
+narrative_event = {
+	id = 39840
+	desc = EVTDESC39840
+	title = EVTTITLE39840
+	major = yes
+	
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		activate_title = { title = d_twelve_pairs_of_france = yes }
+		create_character = {
+			random_traits = no
+			dynasty = random
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 28
+			trait = brilliant_strategist
+			trait = zealous
+			trait = mystic
+			trait = strategist
+			trait = holy_warrior
+		}
+		new_character = {
+			wealth = 500
+			d_twelve_pairs_of_france = {
+				grant_title = PREV
+			}
+			set_government_type = order_government
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = ROOT
+				culture = gaucho
+				female = no
+				age = 16
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = ROOT
+				culture = gaucho
+				female = no
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = ROOT
+				culture = gaucho
+				female = no
+				age = 18
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = ROOT
+				culture = gaucho
+				female = no
+				age = 26
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 28
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 16
+			}
+			create_character = {
+				random_traits = yes
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 17
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_39840religion
+		trigger = {
+			religion = ROOT
+		}
+	}
+	option = {
+		name = EVTOPTB_39840notreligion
+		trigger = {
+			NOT = { religion = ROOT	}
+		}
+	}
+}

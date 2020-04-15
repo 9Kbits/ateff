@@ -3175,5 +3175,31 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	expand_twelve_pairs = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 60
+
+		potential = {
+			has_dlc = "Sons of Abraham"
+			religion = celeste
+			NOT = { is_title_active = d_twelve_pairs_of_france }
+		}
+		allow = {
+			piety = 800
+			wealth = 600
+			religion_authority = 0.5
+			has_landed_title = k_celeste
+		}
+		effect = {
+			piety = -800
+			wealth = -600
+			narrative_event = { id = 39840 tooltip = EVT_39840_TT }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
 
