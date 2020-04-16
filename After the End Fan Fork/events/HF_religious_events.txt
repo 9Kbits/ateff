@@ -4116,9 +4116,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { gracia_divina = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { patria_grande = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
 			random_playable_ruler = {
-				limit = { religion = gracia_divina }
+				limit = { religion = patria_grande }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
@@ -4641,9 +4641,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { gracia_divina = { has_religion_feature = religion_dogmatic } }
+			limit = { patria_grande = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
-				limit = { religion = gracia_divina }
+				limit = { religion = patria_grande }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}

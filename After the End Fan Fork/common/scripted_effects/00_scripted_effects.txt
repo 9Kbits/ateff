@@ -10013,13 +10013,13 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
-					religion = gracia_divina
+					religion = patria_grande
 				}
-				has_character_flag = character_was_gracia_divina
+				has_character_flag = character_was_patria_grande
 			}
 		}
-		set_secret_religion = gracia_divina
-		clr_character_flag = character_was_gracia_divina
+		set_secret_religion = patria_grande
+		clr_character_flag = character_was_patria_grande
 		break = yes
 	}
 	if = {
@@ -10950,8 +10950,8 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_sacred_heart
 	}
 	if = {
-		limit = { religion = gracia_divina }
-		set_character_flag = character_was_gracia_divina
+		limit = { religion = patria_grande }
+		set_character_flag = character_was_patria_grande
 	}
 	if = {
 		limit = { religion = cetic }
@@ -11186,7 +11186,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_apostolic
 	clr_character_flag = character_was_celeste
 	clr_character_flag = character_was_sacred_heart
-	clr_character_flag = character_was_gracia_divina
+	clr_character_flag = character_was_patria_grande
 	clr_character_flag = character_was_cetic
 	clr_character_flag = character_was_gaian
 	clr_character_flag = character_was_shinto
@@ -11465,9 +11465,9 @@ event_target_old_religion_from_flag_effect = {
 		}
 	}
 	if = {
-		limit = { has_character_flag = character_was_gracia_divina }
+		limit = { has_character_flag = character_was_patria_grande }
 		random_character = {
-			limit = { religion = gracia_divina }
+			limit = { religion = patria_grande }
 			save_event_target_as = old_religion
 		}
 	}
@@ -13638,14 +13638,14 @@ flip_secret_religious_community_provinces = {
 				}
 			}
 		}
-		secret_religious_society_gracia_divina = {
+		secret_religious_society_patria_grande = {
 			ROOT = {
 				any_demesne_province = {
 					limit = {
-						has_province_modifier = secret_gracia_divina_community
+						has_province_modifier = secret_patria_grande_community
 					}
-					religion = gracia_divina
-					remove_province_modifier = secret_gracia_divina_community
+					religion = patria_grande
+					remove_province_modifier = secret_patria_grande_community
 				}
 			}
 		}
@@ -18354,14 +18354,14 @@ root_secret_religion_provinces_convert_effect = {
 					}
 				}
 			}
-			secret_religious_society_gracia_divina = {
+			secret_religious_society_patria_grande = {
 				PREV = {
 					any_demesne_province = {
 						limit = {
-							has_province_modifier = secret_gracia_divina_community
+							has_province_modifier = secret_patria_grande_community
 						}
-						religion = gracia_divina
-						remove_province_modifier = secret_gracia_divina_community
+						religion = patria_grande
+						remove_province_modifier = secret_patria_grande_community
 					}
 				}
 			}
@@ -30901,17 +30901,17 @@ abdicate_holy_order_if_religion_changes_effect = { #why. why did you add this ef
 		}
 	}	
 	
-	d_albion_legion = {
+	d_batallon_colombia = {
 		if = {
 			limit = {
-				is_title_active = d_albion_legion
+				is_title_active = d_batallon_colombia
 				owner = { 
 					ai = yes
 					holy_order = yes 
-					NOT = { religion = gracia_divina } 
+					NOT = { religion = patria_grande } 
 				}
 			}
-			log = "[d_albion_legion.owner.GetTitledFirstName] was found to be unfit to lead the [d_albion_legion.GetName] and therefore removed by the abdicate holy order effect!"
+			log = "[d_batallon_colombia.owner.GetTitledFirstName] was found to be unfit to lead the [d_batallon_colombia.GetName] and therefore removed by the abdicate holy order effect!"
 		}
 	}	
 	

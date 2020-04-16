@@ -104,3 +104,18 @@ e_new_california = {
 		}
 	}
 }
+
+e_gran_colombia = {
+	color={ 141 10 149 }
+	color2={ 220 220 0 }
+	capital = 1897 # c_bogota
+	
+	allow = {
+		religion = patria_grande
+		FROM = { # FROM = this title
+			any_previous_holder = {
+				always = yes # The title has existed before
+			}
+		}
+	}
+}

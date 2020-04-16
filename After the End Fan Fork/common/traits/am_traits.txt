@@ -822,39 +822,41 @@ lore_pact_ref = {
 	ruler_designer_cost = 0
 }
 
-gracia_dorado = {
+patria_santander = {
 	opposites = {
-		gracia_chiquinquira
-		gracia_libertador
+		patria_bolivar
+		patria_manuelita
 	}
 	opposite_opinion = -5
 	
-	global_tax_modifier = 0.05
+	learning = 1
+	monthly_character_piety = 0.05
+	#how do i raise demesne??
 
-	potential = { religion = gracia_divina }
-	religious_branch = gracia_divina
+	potential = { religion = patria_grande }
+	religious_branch = patria_grande
 	random = no
 	religious = yes
 	ruler_designer_cost = 0
 	ai_greed = 10
 	
-	male_insult_adj = INSULT_COVETOUS
-	female_insult_adj = INSULT_VENAL
-	child_insult_adj = INSULT_STUPID
+	male_compliment_adj = COMPL_LEARNED
+	female_compliment_adj = COMPL_LEARNED
+	child_compliment_adj = COMPL_BLESSED
 }
 
-gracia_chiquinquira = {
+patria_bolivar = {
 	opposites = {
-		gracia_dorado
-		gracia_libertador
+		patria_manuelita
+		patria_santander
 	}
 	opposite_opinion = -5
 	
-	diplomacy = 1
-	monthly_character_piety = 0.25
+	martial = 1
+	monthly_character_prestige = 0.5
 
-	potential = { religion = gracia_divina }
-	religious_branch = gracia_divina
+	potential = { religion = patria_grande }
+	religious_branch = patria_grande
 	random = no
 	religious = yes
 	ruler_designer_cost = 0
@@ -862,23 +864,24 @@ gracia_chiquinquira = {
 	ai_honor = 5
 	ai_ambition = -10
 	
-	male_compliment_adj = COMPL_KINDHEARTED
-	female_compliment_adj = COMPL_KINDHEARTED
-	child_compliment_adj = COMPL_NICE
+	male_compliment_adj = COMPL_BRAVE
+	female_compliment_adj = COMPL_BRAVE
+	child_compliment_adj = COMPL_STRONG
 }
 
-gracia_libertador = {
+patria_manuelita = {
 	opposites = {
-		gracia_dorado
-		gracia_chiquinquira
+		patria_bolivar
+		patria_santander
 	}
 	opposite_opinion = -5
 	
-	martial = 1
-	monthly_character_prestige = 0.25
+	diplomacy = 1
+	fertility = 0.15
+	sex_appeal_opinion = 5
 
-	potential = { religion = gracia_divina }
-	religious_branch = gracia_divina
+	potential = { religion = patria_grande }
+	religious_branch = patria_grande
 	random = no
 	religious = yes
 	ruler_designer_cost = 0
@@ -1069,7 +1072,7 @@ cavalier = {
 
 libertador_descendant = {
 	
-	gracia_divina_opinion = 5
+	patria_grande_opinion = 5
 	combat_rating = 5 #new value!
 	agnatic = yes
 	enatic = yes
