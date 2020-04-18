@@ -4305,6 +4305,13 @@ character_event = {
 			}
 		}
 		if = {
+			limit = { aria_de_machete = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			random_playable_ruler = {
+				limit = { religion = aria_de_machete }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
+		if = {
 			limit = { brethren = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
 			random_playable_ruler = {
 				limit = { religion = brethren }
@@ -4826,6 +4833,13 @@ character_event = {
 			limit = { celtic_pagan = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = celtic_pagan }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { aria_de_machete = { has_religion_feature = religion_dogmatic } }
+			random_playable_ruler = {
+				limit = { religion = aria_de_machete }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
@@ -11263,6 +11277,12 @@ character_event = {
 		} 
 		text = EVTDESCFHF23470
 	}
+	desc = { 
+		trigger = { 
+			religion = aria_de_machete
+		} 
+		text = EVTDESCFHF23470
+	}
 	picture = GFX_evt_irminsul_shrine
 	border = GFX_event_normal_frame_religion
 	
@@ -11347,6 +11367,10 @@ character_event = {
 					AND = {
 						has_province_flag = flag_great_pillar_celtic_pagan
 						ROOT = { religion_openly_in_celtic_subgroup_trigger = no }
+					}
+					AND = {
+						has_province_flag = flag_great_pillar_aria_de_machete
+						ROOT = { religion_openly_aria_de_machete_or_reformed_trigger = no }
 					}
 					AND = {
 						has_province_flag = flag_great_pillar_trailwalker
@@ -11498,6 +11522,30 @@ character_event = {
 						any_realm_character = {
 							limit = {  
 								religion = celtic_pagan
+							}
+							character_event = { id = HF.23474 }
+						}
+					}
+				}
+				if = { 
+					limit = {
+						location = { has_province_flag = flag_great_pillar_aria_de_machete }
+					}
+					location = { 
+						clr_province_flag = flag_great_pillar_aria_de_machete
+						set_province_flag = flag_just_destroyed_aria_de_machete_pillar #Needed for next event.
+						province_event = { id = HF.23475 days = 60 } #Clean up flag.
+					}
+					aria_de_machete = {
+						religion_authority = {
+							modifier = destroyed_great_pillar
+							years = 10
+						}
+					}	
+					owner = {
+						any_realm_character = {
+							limit = {  
+								religion = aria_de_machete
 							}
 							character_event = { id = HF.23474 }
 						}
@@ -11713,6 +11761,31 @@ character_event = {
 		}
 		if = { 
 			limit = {
+				FROMFROM = { location = { has_province_flag = flag_just_destroyed_aria_de_machete_pillar } }
+				religion = aria_de_machete
+			}
+			tooltip = { #Already removed in previous event.
+				religion_authority = {
+					modifier = destroyed_great_pillar
+					years = 10
+				}
+			}
+			if = { 
+				limit = { has_character_modifier = recently_built_great_pillar }
+				remove_character_modifier = recently_built_great_pillar
+			}
+			add_character_modifier = { #Prevents rebuilding one immediately after.
+				name = recently_destroyed_great_pillar_cooldown
+				years = 30
+			}
+			opinion = {
+				who = FROM
+				modifier = opinion_sacrilege
+				years = 10
+			}
+		}
+		if = { 
+			limit = {
 				FROMFROM = { location = { has_province_flag = flag_just_destroyed_trailwalker_pillar } }
 				religion = trailwalker
 			}
@@ -11756,6 +11829,7 @@ province_event = {
 		clr_province_flag = flag_just_destroyed_occultist_pillar
 		clr_province_flag = flag_just_destroyed_thelemic_pillar
 		clr_province_flag = flag_just_destroyed_celtic_pagan_pillar
+		clr_province_flag = flag_just_destroyed_aria_de_machete_pillar
 		clr_province_flag = flag_just_destroyed_trailwalker_pillar
 	}
 }

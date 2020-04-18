@@ -176,6 +176,12 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
+			event_target:sponsoring_king = { religion = aria_de_machete_reformed }
+		}
+		text = EVTDESCHFH20003
+	}
+	desc = {
+		trigger = {
 			event_target:sponsoring_king = { religion_group = cult_of_saints }
 		}
 		text = EVTDESCHFI20003
@@ -753,6 +759,12 @@ narrative_event = {
 	desc = {
 		trigger = {
 			religion = celtic_pagan_reformed
+		}
+		text = EVTDESCHFH20004
+	}
+	desc = {
+		trigger = {
+			religion = aria_de_machete_reformed
 		}
 		text = EVTDESCHFH20004
 	}
@@ -1676,6 +1688,13 @@ narrative_event = {
 	desc = {
 		trigger = {
 			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			event_target:sponsoring_king = { religion = aria_de_machete_reformed }
+		}
+		text = EVTDESCHFH20008
+	}
+	desc = {
+		trigger = {
+			NOT  = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion_group = cult_of_saints }
 		}
 		text = EVTDESCHFI20008
@@ -1792,6 +1811,13 @@ narrative_event = {
 		trigger = {
 			has_character_flag = ai_flag_refuse_conversion
 			event_target:sponsoring_king = { religion = celtic_pagan_reformed }
+		}
+		text = EVTDESCHFTT20008
+	}
+	desc = {
+		trigger = {
+			has_character_flag = ai_flag_refuse_conversion
+			event_target:sponsoring_king = { religion = aria_de_machete_reformed }
 		}
 		text = EVTDESCHFTT20008
 	}
@@ -3376,6 +3402,18 @@ character_event = {
 					chance = 80
 					add_province_modifier = { 
 						name = secret_celtic_pagan_community
+						duration = -1
+					} 
+				}
+			}
+		}
+		if = { 
+			limit = { secret_religion = aria_de_machete }
+			any_demesne_province = {
+				random = {
+					chance = 80
+					add_province_modifier = { 
+						name = secret_aria_de_machete_community
 						duration = -1
 					} 
 				}

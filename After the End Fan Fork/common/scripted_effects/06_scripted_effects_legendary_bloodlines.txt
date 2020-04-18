@@ -1737,6 +1737,10 @@ set_bloodline_founder_religion_flag_effect = {
 		new_bloodline = { set_bloodline_flag = requires_celtic_pagan_religion }
 	}
 	else_if = {
+		limit = { religion_openly_aria_de_machete_or_reformed_trigger = yes }
+		new_bloodline = { set_bloodline_flag = requires_aria_de_machete_religion }
+	}
+	else_if = {
 		limit = { religion_openly_espiritista_or_reformed_trigger = yes }
 		new_bloodline = { set_bloodline_flag = requires_espiritista_religion }
 	}

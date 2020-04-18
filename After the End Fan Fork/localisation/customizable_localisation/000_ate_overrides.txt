@@ -516,7 +516,15 @@ defined_text = {
 			}
 		}
 	}
-	
+	text = {
+		localisation_key = String_Machetero
+		trigger = {
+			OR = {
+				religion = aria_de_machete
+				religion = aria_de_machete_reformed
+			}
+		}
+	}
 	text = {
 		localisation_key = String_Trailwalker
 		trigger = {
@@ -752,6 +760,16 @@ defined_text = {
 	}
 	
 	text = {
+		localisation_key = String_Machetero
+		trigger = {
+			OR = {
+				religion = aria_de_machete
+				religion = aria_de_machete_reformed
+			}
+		}
+	}
+	
+	text = {
 		localisation_key = String_Trailwalker
 		trigger = {
 			OR = {
@@ -968,6 +986,16 @@ defined_text = {
 			OR = {
 				true_religion_celtic_pagan_trigger = yes
 				true_religion_celtic_pagan_reformed_trigger = yes
+			}
+		}
+	}
+	
+	text = {
+		localisation_key = String_Macheteros
+		trigger = {
+			OR = {
+				true_religion_aria_de_machete_trigger = yes
+				true_religion_aria_de_machete_reformed_trigger = yes
 			}
 		}
 	}
@@ -1416,6 +1444,16 @@ defined_text = {
 	}
 	
 	text = {
+		localisation_key = String_Machetero
+		trigger = {
+			OR = {
+				true_religion_aria_de_machete_trigger = yes
+				true_religion_aria_de_machete_reformed_trigger = yes
+			}
+		}
+	}
+	
+	text = {
 		localisation_key = String_Trailwalker
 		trigger = {
 			OR = {
@@ -1614,6 +1652,15 @@ defined_text = {
 	text = {
 		localisation_key = GOD_LUGH
 		trigger = { true_religion_celtic_pagan_reformed_trigger = yes }
+	}
+	text = { 
+		localisation_key = GOD_RUCIO_MORO
+		trigger = { 
+			OR = {
+				true_religion_aria_de_machete_reformed_trigger = yes 
+				true_religion_aria_de_machete_trigger = yes
+			}
+		}
 	}
 	text = {
 		localisation_key = GOD_SEDNA
@@ -1841,6 +1888,14 @@ defined_text = {
 		localisation_key = THE_STONES
 		trigger = { true_religion_celtic_pagan_reformed_trigger = yes }
 	}
+	text = {
+		localisation_key = THE_SONGS_OF_MACHETE
+		trigger = { true_religion_aria_de_machete_trigger = yes }
+	}
+	text = {
+		localisation_key = THE_SONGS_OF_MACHETE
+		trigger = { true_religion_aria_de_machete_reformed_trigger = yes }
+	}
 }
 
 defined_text = {
@@ -2058,6 +2113,16 @@ defined_text = {
 	}
 	
 	text = {
+		localisation_key = String_Machetero
+		trigger = {
+			OR = {
+				true_religion_aria_de_machete_trigger = yes
+				true_religion_aria_de_machete_reformed_trigger = yes
+			}
+		}
+	}
+	
+	text = {
 		localisation_key = String_Trailwalker
 		trigger = {
 			OR = {
@@ -2229,6 +2294,16 @@ defined_text = {
 	}
 	
 	text = {
+		localisation_key = String_Machetes_blessings
+		trigger = {
+			OR = {
+				society_member_of = secret_religious_society_aria_de_machete
+				society_member_of = secret_religious_society_aria_de_machete_reformed
+			}
+		}
+	}
+	
+	text = {
 		localisation_key = String_Neptunes_blessings
 		trigger = {
 			OR = {
@@ -2329,6 +2404,16 @@ defined_text = {
 			OR = {
 				society_member_of = secret_religious_society_trailwalker
 				society_member_of = secret_religious_society_trailwalker_reformed
+			}
+		}
+	}
+	
+	text = {
+		localisation_key = String_May_the_Gods_protect_you
+		trigger = {
+			OR = {
+				society_member_of = secret_religious_society_aria_de_machete
+				society_member_of = secret_religious_society_aria_de_machete_reformed
 			}
 		}
 	}
@@ -2447,6 +2532,16 @@ defined_text = {
 			OR = {
 				society_member_of = secret_religious_society_celtic_pagan
 				society_member_of = secret_religious_society_celtic_pagan_reformed
+			}
+		}
+	}
+	
+	text = {
+		localisation_key = String_May_the_Gods_protect_you
+		trigger = {
+			OR = {
+				society_member_of = secret_religious_society_aria_de_machete
+				society_member_of = secret_religious_society_aria_de_machete_reformed
 			}
 		}
 	}
@@ -2590,6 +2685,15 @@ defined_text = {
 			OR = {
 				society_member_of = secret_religious_society_trailwalker
 				society_member_of = secret_religious_society_trailwalker_reformed
+			}
+		}
+	}
+	text = {
+		localisation_key = String_machete
+		trigger = {
+			OR = {
+				society_member_of = secret_religious_society_aria_de_machete
+				society_member_of = secret_religious_society_aria_de_machete_reformed
 			}
 		}
 	}
@@ -3677,6 +3781,7 @@ defined_text = {
 			}
 		}
 	}
+	#Aria de Machete will use satanists for now, because I am lazy.
 }
 
 defined_text = {
@@ -4216,6 +4321,7 @@ defined_text = {
 			}
 		}
 	}
+	#Aria de Machete will use satanists for now, because I am lazy.
 }
 
 defined_text = {
@@ -4310,6 +4416,7 @@ defined_text = {
 		}
 		localisation_key = String_Sluagh
 	}
+	#Aria de Machete will use satanists for now, because I am lazy.
 }
 
 defined_text = {
@@ -4655,6 +4762,7 @@ defined_text = {
 		}
 		localisation_key = String_Cailleach
 	}
+	#Aria de Machete will use satanists for now, because I am lazy.
 }
 
 ##MIB##
@@ -5872,6 +5980,14 @@ defined_text = {
 		}
 		localisation_key = string_reformed_religion_espiritista
 	}
+	text = {
+		trigger = { 
+			ROOT = { 
+				religion = aria_de_machete_reformed
+			} 
+		}
+		localisation_key = string_reformed_religion_aria_de_machete
+	}
 }
 
 defined_text = {
@@ -6619,6 +6735,24 @@ defined_text = {
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_REAL_celtic_pagan
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_aria_de_machete_reformed
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_aria_de_machete_reformed
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_aria_de_machete_reformed
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_aria_de_machete
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_aria_de_machete
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_aria_de_machete
 	}
 }
 defined_text = {

@@ -1455,6 +1455,7 @@ targetted_decisions = {
 				religion = norse_pagan
 				religion = celtic_pagan
 				religion = espiritista
+				religion = aria_de_machete
 			}
 		}
 		allow = {
@@ -1486,6 +1487,10 @@ targetted_decisions = {
 			if = {
 				limit = { religion = espiritista }
 				religion = espiritista_reformed
+			}
+			if = {
+				limit = { religion = aria_de_machete }
+				religion = aria_de_machete_reformed
 			}
 			
 			hidden_tooltip = {
@@ -1582,6 +1587,10 @@ targetted_decisions = {
 					AND = {
 						religion = celtic_pagan
 						celtic_pagan_reformed = { has_religion_feature = religion_proselytizing }
+					}
+					AND = {
+						religion = aria_de_machete
+						aria_de_machete_reformed = { has_religion_feature = religion_proselytizing }
 					}
 					AND = {
 						religion = espiritista

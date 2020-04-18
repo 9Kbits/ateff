@@ -4527,6 +4527,16 @@ narrative_event = {
 					}
 				}
 			}
+			if = { 
+				limit = { ROOT = { NOT = { religion = aria_de_machete_reformed } } }
+				random_playable_ruler = { 
+					limit = { religion = aria_de_machete }	
+					religion_authority = {
+						modifier = pagan_revival
+						years = 20
+					}
+				}
+			}
 		}
 		if = {
 			limit = { #Modifier not applied correctly by pagan reformation screen.
@@ -4629,6 +4639,8 @@ narrative_event = {
 				remove_intermarry = norse_pagan
 				remove_intermarry = celtic_pagan_reformed
 				remove_intermarry = celtic_pagan
+				remove_intermarry = aria_de_machete_reformed
+				remove_intermarry = aria_de_machete
 				remove_intermarry = brethren
 				remove_intermarry = jewish
 				remove_intermarry = reform
@@ -5001,6 +5013,34 @@ narrative_event = {
 			} 
 		}
 		if = {
+			limit = { #Apply default special features if player doesn't have dlc.
+				NOT = { has_dlc = "Holy Fury" } 
+				ROOT = {
+					religion = aria_de_machete_reformed
+				}
+			}
+			ROOT = { 
+				set_ignores_defensive_attrition = yes
+				set_seafaring = yes
+				set_unit_modifier = { 
+					light_infantry_offensive = 0.1
+					heavy_infantry_offensive = 0.1
+					light_cavalry_offensive = 0.1 
+					knights_offensive = 0.1 
+					pikemen_offensive = 0.1 
+					archers_offensive = 0.1
+					horse_archers_offensive = 0.1
+					camel_cavalry_offensive = 0.1
+					war_elephants_offensive = 0.1
+					key = "RELENTLESS_RELIGION"
+				}
+				set_can_excommunicate = yes
+				set_can_grant_divorce = yes
+				set_can_grant_invasion_cb = yes
+				set_can_grant_claim = yes
+			} 
+		}
+		if = {
 			limit = { ai = no }
 			set_character_flag = achievement_new_ways
 		}
@@ -5064,6 +5104,14 @@ narrative_event = {
 
 			}
 			add_artifact = crown_celtic_fylkir
+		}
+		if = {
+			limit = { 
+				has_religion_feature = religion_temporal_head 
+				religion = aria_de_machete_reformed 
+
+			}
+			add_artifact = crown_aria_de_machete_fylkir
 		}
 		if = {
 			limit = { 
@@ -5164,6 +5212,10 @@ narrative_event = {
 		if = {
 			limit = { religion = raven_tales_reformed }
 			set_global_flag = raven_tales_reformation
+		}
+		if = {
+			limit = { religion = aria_de_machete_reformed }
+			set_global_flag = aria_de_machete_reformation
 		}
 	}
 	}

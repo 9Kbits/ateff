@@ -1687,6 +1687,64 @@ character_event = {
 							set_society_grandmaster = yes
 						}
 					}
+					200 = {
+						trigger = {
+							can_join_society = secret_religious_society_aria_de_machete
+						}
+						join_society = secret_religious_society_aria_de_machete
+						random_list = { # Artificially increase society influence for balance purposes
+							75 = {
+								modifier = {
+									factor = 0
+									society_influence >= 30
+								}
+								add_mission_succeed_influence_effect = yes
+							}
+							25 = {
+							}
+						}
+						if = {
+							limit = {
+								NOT = {
+									society = {
+										any_society_member = {
+											is_society_grandmaster = yes
+										}
+									}
+								}
+							}
+							set_society_grandmaster = yes
+						}
+					}
+					200 = {
+						trigger = {
+							can_join_society = secret_religious_society_aria_de_machete_reformed
+						}
+						join_society = secret_religious_society_aria_de_machete_reformed
+						random_list = { # Artificially increase society influence for balance purposes
+							75 = {
+								modifier = {
+									factor = 0
+									society_influence >= 30
+								}
+								add_mission_succeed_influence_effect = yes
+							}
+							25 = {
+							}
+						}
+						if = {
+							limit = {
+								NOT = {
+									society = {
+										any_society_member = {
+											is_society_grandmaster = yes
+										}
+									}
+								}
+							}
+							set_society_grandmaster = yes
+						}
+					}
 					150 = {
 						trigger = {
 							can_join_society = hermetics
