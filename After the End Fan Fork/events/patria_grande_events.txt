@@ -6,13 +6,13 @@ character_event = {
 	id = patria.1
 	desc = EVTDESC_patria_choose
 	picture = GFX_evt_bishop
+	religion = patria_grande
 	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = patria_grande
 	}
 
 	option = {

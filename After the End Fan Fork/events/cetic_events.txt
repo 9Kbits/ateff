@@ -649,10 +649,13 @@ character_event = {
 	id = cetic.19
 	desc = EVTDESC_cetic_choose_way
 	picture = GFX_evt_chinese_bureaucrat
+	religion = cetic
 	is_triggered_only = yes
 
 	trigger = {
-		religion = cetic
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
 	}
 	
 	option = {

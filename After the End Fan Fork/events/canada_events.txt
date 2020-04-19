@@ -221,13 +221,13 @@ character_event = {
 	id = canada.4	
 	desc = EVTDESC_canada_4
 	picture = GFX_evt_bishop
+	religion = high_church
 	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = high_church
 	}
 	
 	option = {
@@ -274,6 +274,8 @@ character_event = {
 character_event = {
 	id = canada.5	
 	hide_window = yes
+	religion = high_church
+	ai = yes
 	is_triggered_only = yes
 
 	trigger = {

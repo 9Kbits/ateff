@@ -30,13 +30,14 @@ character_event = {
 	id = sacredheart.1
 	desc = EVTDESC_Sacredheart_1
 	picture = GFX_evt_bishop
+	religion = sacred_heart
 	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = sacred_heart
+		
 	}
 	
 	option = {

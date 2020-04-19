@@ -837,3 +837,530 @@ character_event = {
 }
 
 #No diamonds
+#No thugs either
+
+# Local Hindu temple asks for donations
+character_event = {
+	id = RoI.410
+	desc = EVTDESC_RoI_410
+	picture = GFX_evt_india_temple
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+	
+	ai = no
+	only_capable = yes
+	prisoner = no
+	religion = hindu
+	
+	trigger = {
+		has_dlc = "Rajas of India"
+		in_command = no
+	}
+
+	option = {
+		name = EVTOPTG_RoI_410
+		scaled_wealth = -0.1
+		piety = 5
+	}
+	option = {
+		name = EVTOPTA_RoI_410
+		trigger = {
+			has_character_modifier = patron_shiva
+		}
+		scaled_wealth = -0.3
+		piety = 30
+		add_character_modifier = {
+			name = religious_appreciate
+			duration = 1460
+		}
+	}
+	option = {
+		name = EVTOPTB_RoI_410
+		trigger = {
+			has_character_modifier = patron_vishnu
+		}
+		scaled_wealth = -0.3
+		piety = 30
+		add_character_modifier = {
+			name = religious_appreciate
+			duration = 1460
+		}
+	}
+	option = {
+		name = EVTOPTC_RoI_410
+		trigger = {
+			has_character_modifier = patron_brahma
+		}
+		scaled_wealth = -0.3
+		piety = 30
+		add_character_modifier = {
+			name = religious_appreciate
+			duration = 1460
+		}
+	}
+	option = {
+		name = EVTOPTD_RoI_410
+		trigger = {
+			has_character_modifier = patron_kali
+		}
+		scaled_wealth = -0.3
+		piety = 30
+		add_character_modifier = {
+			name = religious_appreciate
+			duration = 1460
+		}
+	}
+	option = {
+		name = EVTOPTE_RoI_410
+		trigger = {
+			has_character_modifier = patron_ganesha
+		}
+		scaled_wealth = -0.3
+		piety = 30
+		add_character_modifier = {
+			name = religious_appreciate
+			duration = 1460
+		}
+	}
+	option = {
+		name = EVTOPTF_RoI_410
+		trigger = {
+			has_character_modifier = patron_ganga
+		}
+		scaled_wealth = -0.3
+		piety = 30
+		add_character_modifier = {
+			name = religious_appreciate
+			duration = 1460
+		}
+	}
+	option = {
+		name = EVTOPTH_RoI_410
+		add_character_modifier = {
+			name = annoyed_religious
+			duration = 1460
+		}
+	}
+}
+
+# Tolerant character making Indian friend
+character_event = {
+	id = RoI.400
+	desc = EVTDESC_RoI_400
+	picture = GFX_evt_courtiers_talking
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+	
+	only_rulers = yes
+	only_capable = yes
+	prisoner = no
+	min_age = 16
+	
+	trigger = {
+		has_dlc = "Rajas of India"
+		trait = sympathy_indian
+		any_realm_character = {
+			religion_group = indian_group
+			NOT = { is_friend = ROOT }
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_RoI_400
+		random_realm_character = {
+			limit = {
+				religion_group = indian_group
+			}
+			add_friend = ROOT
+		}
+	}
+}
+
+###########################################
+# Low religion authority events           #
+###########################################
+
+# Temple corruption
+character_event = {
+	id = RoI.3500
+
+	hide_window = yes
+	
+	religion_group = indian_group
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dharmic_religion_trigger = yes
+		NOT = { religion_authority = 0.3 }
+		any_demesne_province = {
+			religion = ROOT
+			NOT = { has_province_modifier = temple_corruption }
+			NOT = { has_province_modifier = local_death_cult }
+			NOT = { has_province_modifier = religious_tension }
+		}
+	}
+
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				religion = ROOT
+				NOT = { has_province_modifier = temple_corruption }
+				NOT = { has_province_modifier = local_death_cult }
+				NOT = { has_province_modifier = religious_tension }
+			}
+			province_event = { id = RoI.3501 }
+		}
+	}
+}
+
+# Province bounce event
+province_event = {
+	id = RoI.3501
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			character_event = { id = RoI.3505 }
+		}
+	}
+}
+
+character_event = {
+	id = RoI.3505
+	desc = EVTDESC_RoI_3505
+	picture = GFX_evt_india_temple
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_RoI_3505
+		FROM = {
+			add_province_modifier = {
+				name = temple_corruption
+				duration = -1
+			}
+		}
+	}
+}
+
+# Temple corruption removed - Indian
+character_event = {
+	id = RoI.3506
+
+	hide_window = yes
+	
+	religion_group = indian_group
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion_authority = 0.5
+		any_demesne_province = {
+			religion = ROOT
+			has_province_modifier = temple_corruption
+		}
+	}
+
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				religion = ROOT
+				has_province_modifier = temple_corruption
+			}
+			province_event = { id = RoI.3507 }
+		}
+	}
+}
+
+# Province bounce event
+province_event = {
+	id = RoI.3507
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			character_event = { id = RoI.3509 }
+		}
+	}
+}
+
+character_event = {
+	id = RoI.3509
+	desc = EVTDESC_RoI_3509
+	picture = GFX_evt_india_temple
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_RoI_3509
+		FROM = {
+			remove_province_modifier = temple_corruption
+		}
+	}
+}
+
+# Local death cult
+character_event = {
+	id = RoI.3510
+
+	hide_window = yes
+	
+	religion_group = indian_group
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dharmic_religion_trigger = yes
+		NOT = { religion_authority = 0.3 }
+		any_demesne_province = {
+			religion = ROOT
+			NOT = { has_province_modifier = temple_corruption }
+			NOT = { has_province_modifier = local_death_cult }
+			NOT = { has_province_modifier = religious_tension }
+		}
+	}
+
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				religion = ROOT
+				NOT = { has_province_modifier = temple_corruption }
+				NOT = { has_province_modifier = local_death_cult }
+				NOT = { has_province_modifier = religious_tension }
+			}
+			province_event = { id = RoI.3511 }
+		}
+	}
+}
+
+# Province bounce event
+province_event = {
+	id = RoI.3511
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			character_event = { id = RoI.3515 }
+		}
+	}
+}
+
+character_event = {
+	id = RoI.3515
+	desc = EVTDESC_RoI_3515
+	picture = GFX_evt_india_temple
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_RoI_3515
+		FROM = {
+			add_province_modifier = {
+				name = local_death_cult
+				duration = -1
+			}
+		}
+	}
+}
+
+# Local death cult removed - Indian
+character_event = {
+	id = RoI.3516
+
+	hide_window = yes
+	
+	religion_group = indian_group
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		religion_authority = 0.5
+		any_demesne_province = {
+			religion = ROOT
+			has_province_modifier = local_death_cult
+		}
+	}
+
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				religion = ROOT
+				has_province_modifier = local_death_cult
+			}
+			province_event = { id = RoI.3517 }
+		}
+	}
+}
+
+# Province bounce event
+province_event = {
+	id = RoI.3517
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			character_event = { id = RoI.3519 }
+		}
+	}
+}
+
+character_event = {
+	id = RoI.3519
+	desc = EVTDESC_RoI_3519
+	picture = GFX_evt_india_temple
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_RoI_3519
+		FROM = {
+			remove_province_modifier = local_death_cult
+		}
+	}
+}
+
+# Religious tensions
+character_event = {
+	id = RoI.3530
+
+	hide_window = yes
+	
+	religion_group = indian_group
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { religion_authority = 0.3 }
+		any_demesne_province = {
+			religion = ROOT
+			NOT = { has_province_modifier = temple_corruption }
+			NOT = { has_province_modifier = local_death_cult }
+			NOT = { has_province_modifier = religious_tension }
+		}
+	}
+
+	immediate = {
+		random_demesne_province = {
+			limit = {
+				religion = ROOT
+				NOT = { has_province_modifier = temple_corruption }
+				NOT = { has_province_modifier = local_death_cult }
+				NOT = { has_province_modifier = religious_tension }
+			}
+			province_event = { id = RoI.3531 }
+		}
+	}
+}
+
+# Province bounce event
+province_event = {
+	id = RoI.3531
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		FROM = {
+			character_event = { id = RoI.3535 }
+		}
+	}
+}
+
+character_event = {
+	id = RoI.3535
+	desc = EVTDESC_RoI_3535
+	picture = GFX_evt_india_temple
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_RoI_3535
+		FROM = {
+			add_province_modifier = {
+				name = religious_tension
+				duration = 730
+			}
+		}
+	}
+}
+
+# Religious unrest removed
+#character_event = {
+#	id = RoI.3536
+#
+#	hide_window = yes
+#	
+#	is_triggered_only = yes
+#	
+#	trigger = {
+#		has_dlc = "Rajas of India"
+#		religion_group = indian_group
+#		religion_authority = 0.5
+#		any_demesne_province = {
+#			religion = ROOT
+#			has_province_modifier = religious_tension
+#		}
+#	}
+#
+#	immediate = {
+#		random_demesne_province = {
+#			limit = {
+#				religion = ROOT
+#				has_province_modifier = religious_tension
+#			}
+#			province_event = { id = RoI.3537 }
+#		}
+#	}
+#}
+
+# Province bounce event
+#province_event = {
+#	id = RoI.3537
+#
+#	hide_window = yes
+#	
+#	is_triggered_only = yes
+#	
+#	immediate = {
+#		FROM = {
+#			character_event = { id = RoI.3539 }
+#		}
+#	}
+#}
+
+#character_event = {
+#	id = RoI.3539
+#	desc = EVTDESC_RoI_3539
+#	picture = GFX_evt_india_temple
+#	border = GFX_event_normal_frame_religion
+#
+#	is_triggered_only = yes
+#
+#	option = {
+#		name = EVTOPTA_RoI_3539
+#		FROM = {
+#			remove_province_modifier = religious_tension
+#		}
+#	}
+#}

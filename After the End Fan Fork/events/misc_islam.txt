@@ -1994,12 +1994,14 @@ character_event = {
 	trigger = {
 		has_landed_title = k_papal_state
 		is_alternate_start = no
+		NOT = { has_global_flag = detroit_muslims_expelled }
 	}
 	
 	option = {
 		118 = {
 			add_province_modifier = { name = expelled_muslim_settlement years = 1 }
 		}
+		set_global_flag = detroit_muslims_expelled
 	}
 }
 narrative_event = {
@@ -3059,13 +3061,13 @@ character_event = {
 	desc = "EVTDESC_islamate86"
 	picture = GFX_evt_open_book_hf
 	border = GFX_event_normal_frame_religion
+	religion = traditionalist
 	is_triggered_only = yes
 	
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = traditionalist
 	}
 	
 	option = {

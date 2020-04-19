@@ -29,7 +29,12 @@ character_event = {
 			independent = yes
 			higher_tier_than = DUKE
 		}
-		NOT = { religion_group = pagan_group }
+		NOR = {
+			religion_group = pagan_group
+			religion_group = afro_syncretic
+			religion_group = amero_syncretic
+			religion_group = mesoamerican_gods
+		}
 		job_spiritual = {
 			ai = yes
 			trait = zealous

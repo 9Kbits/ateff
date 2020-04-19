@@ -83,6 +83,9 @@ character_event = {
 	religion = occultist
 
 	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
 		NOR = {
 			trait = lore_pact
 			trait = lore_old_ones
@@ -148,6 +151,9 @@ character_event = {
 	religion = occultist_reformed
 
 	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
 		NOR = {
 			trait = lore_pact_ref
 			trait = lore_old_ones_ref

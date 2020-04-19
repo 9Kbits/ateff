@@ -2714,3 +2714,172 @@ character_event = { # Alternate Start general maintenance
 		#No castes in AtE
 	}
 }
+
+# A hooded mystic visits your private chambers and tells you signs foreboded by your stars
+character_event = {
+	id = HF.6
+	is_triggered_only = yes
+	
+	picture = GFX_evt_hooded_figure_hf
+	desc = EVTDESCHF6 
+	
+	only_playable = yes
+	
+	trigger = {
+		graphical_culture = horsegfx
+		NOT = { has_character_flag = horse_falling_star }
+		NOT = { block_general_event_trigger = yes }
+		NOT = {
+			has_game_rule = {
+				name = supernatural_events
+				value = off
+			}
+		}
+		NOT = { age = 45 }
+		is_adult = yes
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 0.025
+			ai = yes
+		}
+	}
+	
+	immediate = {
+		set_character_flag = horse_falling_star
+	}
+	
+	# Take a trip to the mountains - follow advice
+	option = {
+		name = EVTOPTAHF6 
+		custom_tooltip = {
+			text = EVTTOOLTIPAHF6
+		}
+		character_event = { id = HF.7 days = 90 }
+	}
+	
+	# Guards! Arrest this mad intruder!
+	option = {
+		name = EVTOPTBHF6
+		random_list = {
+			20 = {
+				add_trait_paranoid_effect = yes
+			}
+		}
+		character_event = { id = HF.8 days = 90 }
+	}
+}
+
+# Head out on a hike to the mountains without my entourage & witness a falling star fall in the nearby woods
+character_event = {
+	id = HF.7
+	is_triggered_only = yes
+	
+	picture = GFX_evt_comet
+	desc = EVTDESCHF7
+	
+	#investigate alone
+	option = {
+		name = EVTOPTAHF7
+		custom_tooltip = { text = EVTTOOLTIPAHF7 }
+		character_event = { id = HF.9 days = 30 }
+	}
+	
+	#gather a search party - OUT
+	option = {
+		name = EVTOPTBHF7
+		custom_tooltip = { text = EVTTOOLTIPBHF7 }
+		character_event = { id = HF.10 days = 90 }
+	}
+}
+
+# Can't stop thinking about the prophecy - follow the mystics advice anyway?
+character_event = {
+	id = HF.8
+	is_triggered_only = yes
+	
+	picture = GFX_evt_whispers
+	desc = EVTDESCHF8
+	
+	# Follow the advice
+	option = {
+		name = EVTOPTAHF8
+		custom_tooltip = { text = EVTTOOLTIPAHF8 }
+		character_event = { id = HF.7 days = 30 }
+	}
+	
+	# It could be a trap! - OUT
+	option = {
+		name = EVTOPTBHF8
+		custom_tooltip = { text = EVTTOOLTIPBHF8 }
+		add_character_modifier = { modifier = cautious_decision_making years = 8 }
+	}
+}
+
+# Search the woods and come across a pond in a glade and next to it is a dead unicorn in a silver blood spot
+narrative_event = {
+	id = HF.9
+	is_triggered_only = yes
+	
+	picture = GFX_evt_mysterious_forest
+	title = EVTTITLEHF9
+	desc = EVTDESCHF9
+	
+	# Give it a proper burial
+	option = {
+		name = EVTOPTAHF9
+		character_event = { id = HF.11 days = 30 }
+		piety = 111
+	}
+	
+	# Drink the silver blood - become strong
+	option = {
+		name = EVTOPTBHF9
+		add_trait = strong
+		add_character_modifier = { modifier = argent_blood_vessels duration = -1 }
+	}
+	
+	# Remove the mane - gain artifact
+	option = {
+		name = EVTOPTCHF9
+		add_artifact = sparkling_mane
+	}
+	
+	# Cut the horn - WOOP WOOP portrait!
+	option = {
+		name = EVTOPTDHF9
+		add_artifact = crown_unicorn_helmet
+	}
+}
+
+# Search the woods with a party - find nothing
+character_event = {
+	id = HF.10
+	is_triggered_only = yes
+	
+	picture = GFX_evt_rider_adventure
+	desc = EVTDESCHF10
+	
+	# End of chain
+	option = {
+		name = EVTOPTAHF10
+		add_trait_patient_effect = yes
+	}
+}
+
+# Ever since I visited the glade with the unicorn I've felt like I have a radiating a faded light
+character_event = {
+	id = HF.11
+	is_triggered_only = yes
+	
+	picture = GFX_evt_rider_adventure
+	desc = EVTDESCHF11
+	
+	#Awesome
+	option = {
+		name = EVTOPTAHF11
+		add_character_modifier = { modifier = unicorns_blessing duration = -1 }
+	}
+}
