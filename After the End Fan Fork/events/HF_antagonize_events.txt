@@ -5,9 +5,10 @@ namespace=HF
 character_event = {
 	id = HF.22999
 	hide_window = yes
+	has_dlc = "Holy Fury"
+	prisoner = no
 	
 	trigger = {
-		has_dlc = "Holy Fury"
 		NOT = { is_incapable = yes }
 		NOT = { 
 			has_opinion_modifier = { 
@@ -15,7 +16,6 @@ character_event = {
 				modifier = antagonize_stop_cooldown 
 			}
 		}
-		prisoner = no
 		persistent_event_target:antagonize_target = {	#If character has become incapable, out of reach or otherwise unable to be interacted with, a notification event will be sent.
 			is_alive = yes
 		}

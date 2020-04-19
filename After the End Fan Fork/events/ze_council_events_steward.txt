@@ -148,12 +148,12 @@ character_event = {
 	picture = GFX_evt_courtiers_talking
 	border = GFX_event_normal_frame_economy
 	desc = EVTDESC_ZE_3000
-
+	
+	has_dlc = "Zeus"
 	is_triggered_only = yes
 	only_playable = yes
 
 	trigger = {
-		has_dlc = "Zeus"
 		ROOT = {
 			is_adult = yes
 			NOR = { 
@@ -269,13 +269,13 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	desc = EVTDESC_ZE_3004
 
+	has_dlc = "Zeus"
+	min_age = 16
 	is_triggered_only = yes
 	only_playable = yes
 
 	trigger = {
-		has_dlc = "Zeus"
 		scaled_wealth = 2
-		is_adult = yes
 		NOR = { 
 			has_character_flag = ZE.3004_flag
 			trait = blinded
@@ -527,11 +527,11 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	desc = EVTDESC_ZE_3011
 
+	has_dlc = "Zeus"
 	is_triggered_only = yes
 	only_playable = yes
 
 	trigger = {
-		has_dlc = "Zeus"
 		job_treasurer = { 
 			NOR = { is_incapable = yes is_inaccessible_trigger = yes }
 			prisoner = no

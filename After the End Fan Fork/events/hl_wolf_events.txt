@@ -21,9 +21,9 @@ character_event = {
 	hide_window = yes
 	
 	is_triggered_only = yes
-	
+	has_dlc = "Horse Lords"
+
 	trigger = {
-		has_dlc = "Horse Lords"
 		NOT = {
 			has_game_rule = {
 				name = supernatural_events
@@ -140,9 +140,9 @@ narrative_event = {
 	
 	capable_only = yes
 	only_playable = yes
-	
+	has_dlc = "Horse Lords"
+
 	trigger = {
-		has_dlc = "Horse Lords"
 		OR = {
 			ai = no
 			has_game_rule = {
@@ -202,11 +202,11 @@ narrative_event = {
 
 	is_triggered_only = yes
 	
-	capable_only = yes	
+	capable_only = yes
+	has_dlc = "Horse Lords"
+	culture_group = plains
 	
 	trigger = {
-		has_dlc = "Horse Lords"
-		culture_group = plains
 		age = 5
 		NOT = { age = 10 }
 		NOT = {	any_sibling = { is_older_than = ROOT } }
@@ -942,13 +942,13 @@ narrative_event = {
 	border = GFX_event_narrative_frame_war
 
 	is_triggered_only = yes
-
+	
+	has_dlc = "Horse Lords"
 	capable_only = yes
 	prisoner = no
 	min_age = 18
 	
 	trigger = {
-		has_dlc = "Horse Lords"
 		OR = {
 			ai = no
 			has_game_rule = {
@@ -2059,9 +2059,9 @@ character_event = {
 	hide_window = yes
 	
 	is_triggered_only = yes
-	
+	has_dlc = "Horse Lords"
+
 	trigger = {
-		has_dlc = "Horse Lords"
 		OR = {
 			father_even_if_dead = {
 				has_character_modifier = wolf_blood

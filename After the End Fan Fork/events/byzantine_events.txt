@@ -17,14 +17,13 @@ character_event = {
 	id = LoR.800
 	desc = EVTDESCLoR.800
 	picture = GFX_evt_chinese_bureaucrat
-	
+	has_dlc = "Legacy of Rome"
 	capable_only = yes
 	prisoner = no
 	only_playable = yes
 	min_age = 16
 	
 	trigger = {
-		has_dlc = "Legacy of Rome"
 		OR = {
 			has_landed_title = e_california
 		}
@@ -246,7 +245,7 @@ character_event = {
 	id = LoR.885
 	desc = EVTDESCLoR.885
 	picture = GFX_evt_carriage
-	
+	has_dlc = "Legacy of Rome"
 	ai = no
 	capable_only = yes
 	only_playable = yes
@@ -254,7 +253,6 @@ character_event = {
 	min_age = 16
 	
 	trigger = {
-		has_dlc = "Legacy of Rome"
 		in_command = no
 		NOT = { culture_group = portuguese }
 		NOT = { is_inaccessible_trigger = yes }

@@ -22,7 +22,8 @@ character_event = {
 	id = CM.2000
 	desc = EVTDESC_CM_2000
 	picture = GFX_evt_emissary
-
+	
+	has_dlc = "Charlemagne"
 	ai = no
 	min_age = 16
 	capable_only = yes
@@ -30,7 +31,6 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		has_dlc = "Charlemagne"
 		OR = {
 			primary_title = { tier = EMPEROR }
 			primary_title = { tier = KING }
@@ -84,14 +84,15 @@ character_event = {
 
 	is_triggered_only = yes
 	
-	trigger = {
-		has_dlc = "Charlemagne"
-		ai = no
-		age = 16
-		is_female = no
-		NOT = { is_incapable = yes }
-		prisoner = no
-		in_command = no
+	has_dlc = "Charlemagne"
+	ai = no
+	min_age = 16
+	is_female = no
+	only_capable = yes
+	prisoner = no
+	in_command = no
+	
+	trigger = { #BRUH MOMENT
 		NOT = { has_character_flag = do_not_disturb }
 		any_child = {
 			age = 9

@@ -19,13 +19,13 @@ character_event = {
 	id = WoL.1000
 	hide_window = yes
 	
+	has_dlc = "Way of Life"
 	capable_only = yes
 	prisoner = no
 	min_age = 16
 	is_married = yes
 	
 	trigger = {
-		has_dlc = "Way of Life"
 		OR = {
 			has_polygamy = no
 			is_female = no
@@ -3397,11 +3397,11 @@ character_event = {
 	id = WoL.1100
 	hide_window = yes
 	
+	has_dlc = "Way of Life"
 	capable_only = yes
 	min_age = 16
 	
 	trigger = {
-		has_dlc = "Way of Life"
 		has_lover = yes
 		any_lover = {
 			NOT = {
@@ -3710,12 +3710,12 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	hide_from = yes
 	
+	has_dlc = "Way of Life"
 	min_age = 16
 	prisoner = no
 	capable_only = yes
 	
 	trigger = {
-		has_dlc = "Way of Life"
 		NOT = { trait = stressed }
 		num_of_lovers = 2
 

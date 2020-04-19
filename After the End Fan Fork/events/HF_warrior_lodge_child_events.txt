@@ -16,11 +16,13 @@ character_event = {
 	hide_window = yes
 
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
+	max_age = 20
+	only_capable = yes
+	is_in_society = yes
 
 	trigger = { 
-		has_dlc = "Holy Fury"
-		NOT = { age = 20 }
-		NOT = { is_incapable = yes }
 		society_member_of = event_target:warrior_lodge_to_join
 		event_target:recruiting_parent = { 
 			same_society_as = ROOT 		#Events will keep firing as long as both parent and child are in the same society and capable.
@@ -328,9 +330,11 @@ character_event = {
 	hide_new = yes
 	portrait = FROM
 
+	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = {
-		has_dlc = "Holy Fury"
 		FROM = { 
 			NOT = { age = 20 }
 			NOT = { is_incapable = yes }
@@ -338,8 +342,6 @@ character_event = {
 			same_society_as = ROOT
 		}
 	}
-
-	is_triggered_only = yes
 
 	option = { 
 		name = EVTOPTAHF25401
@@ -442,10 +444,12 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	hide_new = yes
 	portrait = FROM
-
+	
+	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = {
-		has_dlc = "Holy Fury"
 		FROM = { 
 			NOT = { age = 20 }
 			NOT = { is_incapable = yes }
@@ -453,8 +457,6 @@ character_event = {
 			same_society_as = ROOT
 		}
 	}
-
-	is_triggered_only = yes
 
 	option = { 
 		name = EVTOPTAHF25404
@@ -557,9 +559,12 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	hide_new = yes
 	portrait = FROM
+	
+	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = {
-		has_dlc = "Holy Fury"
 		FROM = { 
 			NOT = { age = 20 }
 			NOT = { is_incapable = yes }
@@ -567,8 +572,6 @@ character_event = {
 			same_society_as = ROOT
 		}
 	}
-
-	is_triggered_only = yes
 
 	option = { 
 		name = EVTOPTAHF25407
@@ -671,9 +674,12 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	hide_new = yes
 	portrait = FROM
-
+	
+	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
+		
 	trigger = {
-		has_dlc = "Holy Fury"
 		FROM = { 
 			NOT = { age = 20 }
 			NOT = { is_incapable = yes }
@@ -681,8 +687,6 @@ character_event = {
 			same_society_as = ROOT
 		}
 	}
-
-	is_triggered_only = yes
 
 	option = { #A smart fighter is a good fighter.
 		name = EVTOPTAHF25410
@@ -838,9 +842,12 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	hide_new = yes
 	portrait = FROM
+	
+	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = {
-		has_dlc = "Holy Fury"
 		FROM = { 
 			NOT = { age = 20 }
 			NOT = { is_incapable = yes }
@@ -848,8 +855,6 @@ character_event = {
 			same_society_as = ROOT
 		}
 	}
-
-	is_triggered_only = yes
 
 	option = { #Intolerable.
 		name = EVTOPTAHF25413
@@ -1039,9 +1044,10 @@ character_event = {
 	portrait = event_target:child_hero_mentor
 
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = {
-		has_dlc = "Holy Fury"
 		FROM = { 
 			NOT = { age = 20 }
 			NOT = { is_incapable = yes }
@@ -1139,9 +1145,10 @@ character_event = {
 	portrait = event_target:child_hero_mentor
 
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = {
-		has_dlc = "Holy Fury"
 		FROM = { 
 			NOT = { age = 20 }
 			NOT = { is_incapable = yes }
@@ -1355,9 +1362,10 @@ character_event = {
 	portrait = event_target:child_hero_mentor
 
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = {
-		has_dlc = "Holy Fury"
 		FROM = { 
 			NOT = { age = 20 }
 			NOT = { is_incapable = yes }

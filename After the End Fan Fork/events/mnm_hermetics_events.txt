@@ -3971,9 +3971,10 @@ character_event = {
 	picture = GFX_evt_dark_prayer
 	border = GFX_event_normal_frame_religion
 	is_triggered_only = yes
+	
+	has_dlc = "Mystics"
 
 	trigger = {
-		has_dlc = "Mystics"
 		has_an_omen_modifier_trigger = no
 	}
 
@@ -4093,9 +4094,10 @@ character_event = { # You see something in the water and react well or poorly to
 	picture = GFX_evt_dark_prayer
 	border = GFX_event_normal_frame_religion
 	is_triggered_only = yes
+	
+	has_dlc = "Mystics"
 
 	trigger = {
-		has_dlc = "Mystics"
 		has_an_omen_modifier_trigger = no
 		society_member_of = hermetics
 	}
@@ -4242,9 +4244,10 @@ character_event = { # Gain a leadership trait (fired from on_combat_pulse)
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
+	
+	has_dlc = "Mystics"
 
 	trigger = {
-		has_dlc = "Mystics"
 		is_alive = yes
 		can_have_more_leadership_traits = yes
 		OR = {
@@ -4321,8 +4324,9 @@ character_event = { # Fight goes badly (fired from on_combat_pulse)
 	border = GFX_event_normal_frame_war
 	is_triggered_only = yes
 	
+	has_dlc = "Mystics"
+	
 	trigger = {
-		has_dlc = "Mystics"
 		is_alive = yes
 		has_battle_omen_modifier_trigger = yes
 	}
@@ -4394,11 +4398,11 @@ character_event = { # A Child is born - you have a good feeling about the kid! (
 	picture = GFX_evt_state_diplomacy
 	border = GFX_event_normal_frame_religion
 	is_triggered_only = yes
+	
+	has_dlc = "Mystics"
 
 	trigger = {
-		has_dlc = "Mystics"
 		is_alive = yes
-
 		FROM = {
 			is_alive = yes
 			OR = {
@@ -4467,9 +4471,10 @@ character_event = { # A Child is born - you're not impressed (fired from on_birt
 	picture = GFX_evt_secluded_in_prayer
 	border = GFX_event_normal_frame_religion
 	is_triggered_only = yes
+	
+	has_dlc = "Mystics"
 
 	trigger = {
-		has_dlc = "Mystics"
 		is_alive = yes
 
 		FROM = {
@@ -6770,9 +6775,10 @@ character_event = { # Upgrade modifiers (for horoscope_child, fired from on_adul
 	id = MNM.1269
 	hide_window = yes
 	is_triggered_only = yes
+	
+	has_dlc = "Mystics"
 
 	trigger = {
-		has_dlc = "Mystics"
 		has_childhood_horoscope_modifier_trigger = yes
 		NOT = { has_character_flag = avoided_destiny }
 	}
@@ -16908,8 +16914,11 @@ character_event = {
 	is_triggered_only = yes
 	capable_only = yes
 	
+	has_dlc = "Mystics"
+	
+	is_in_society = yes
+	
 	trigger = {
-		has_dlc = "Mystics"
 		society_member_of = hermetics
 		NOT = { has_character_flag = small_defense_against_dark_forces }
 		NOT = { has_character_flag = medium_defense_against_dark_forces }

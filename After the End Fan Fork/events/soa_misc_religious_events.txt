@@ -1734,8 +1734,9 @@ character_event = {
 
 	is_triggered_only = yes				# Checked for pope on death on_event
 
+	has_dlc = "Sons of Abraham"
+
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		has_landed_title = k_papal_state
 		trait = bad_priest_christian
 		#NOT = { year = 1049 }
@@ -1774,6 +1775,7 @@ character_event = {
 	
 	hide_window = yes
 	
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	min_age = 16
 	only_capable = yes
@@ -1782,7 +1784,6 @@ character_event = {
 
 	trigger = {
 		controls_religion = yes
-		has_dlc = "Sons of Abraham"
 		trait = bad_priest_christian
 		NOT = { has_character_modifier = bad_rel_head }
 	}
@@ -1827,7 +1828,8 @@ character_event = {
 	id = SoA.5313
 	
 	hide_window = yes
-	
+
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	min_age = 16
 	only_capable = yes
@@ -1836,7 +1838,6 @@ character_event = {
 
 	trigger = {
 		controls_religion = yes
-		has_dlc = "Sons of Abraham"
 		trait = bad_priest_muslim
 		NOT = { has_character_modifier = bad_rel_head }
 	}
@@ -1882,7 +1883,8 @@ character_event = {
 	id = SoA.53131
 	
 	hide_window = yes
-	
+
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	min_age = 16
 	only_capable = yes
@@ -1892,7 +1894,6 @@ character_event = {
 	trigger = {
 		religion = americanist
 		controls_religion = yes
-		has_dlc = "Sons of Abraham"
 		trait = bad_priest_americanist
 		NOT = { has_character_modifier = bad_rel_head }
 	}
@@ -1939,6 +1940,7 @@ character_event = {
 	
 	hide_window = yes
 	
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	min_age = 16
 	only_capable = yes
@@ -1946,7 +1948,6 @@ character_event = {
 	religion = norse_pagan_reformed
 
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		has_landed_title = d_norse_pagan_reformed
 		trait = bad_priest_norse
 		NOT = { has_character_modifier = bad_rel_head }
@@ -1993,7 +1994,8 @@ character_event = {
 	id = SoA.5317
 	
 	hide_window = yes
-	
+
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	min_age = 16
 	only_capable = yes
@@ -2001,7 +2003,6 @@ character_event = {
 	religion = mormon
 
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		has_landed_title = d_quorum_of_the_twelve
 		trait = bad_priest_mormon
 		NOT = { has_character_modifier = bad_rel_head }
@@ -2056,7 +2057,8 @@ character_event = {
 	id = SoA.5340
 
 	hide_window = yes
-
+	
+	has_dlc = "Sons of Abraham"
 	only_rulers = yes
 	min_age = 16
 	ai = yes
@@ -2080,8 +2082,6 @@ character_event = {
 			any_claim = { title = k_papal_state }
 			any_claim = { title = d_nestorian }
 		}
-		
-		has_dlc = "Sons of Abraham"
 	}
 	
 	mean_time_to_happen = {
@@ -2101,7 +2101,7 @@ narrative_event = {
 	desc = EVTDESC_SoA_5341
 	picture = GFX_evt_monastery_monks
 	border = GFX_event_narrative_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	min_age = 16
 	only_capable = yes
@@ -2110,7 +2110,6 @@ narrative_event = {
 
 	trigger = {
 		wealth = 200
-		has_dlc = "Sons of Abraham"
 		#year = 950
 		OR = {
 			religion = catholic
@@ -2185,7 +2184,7 @@ narrative_event = {
 	desc = EVTDESC_SoA_5342
 	picture = GFX_evt_monastery_monks
 	border = GFX_event_narrative_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	ai = no
 	prisoner = no
 	only_capable = yes
@@ -2193,7 +2192,6 @@ narrative_event = {
 	religion_group = christian
 	
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		#year = 950
 		in_command = no
 		NOT = { trait = blinded }
@@ -2320,7 +2318,8 @@ character_event = {
 	id = SoA.5344
 
 	hide_window = yes
-
+	
+	has_dlc = "Sons of Abraham"
 	only_rulers = yes
 	ai = yes
 	only_capable = yes
@@ -2328,7 +2327,6 @@ character_event = {
 	religion_group = christian
 
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		#year = 885
 		is_priest = yes
 		has_landed_title = b_chapel_hill_NC
@@ -2356,7 +2354,7 @@ narrative_event = {
 	desc = EVTDESC_SoA_5345
 	picture = GFX_evt_monastery_monks
 	border = GFX_event_narrative_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	min_age = 16
 	only_capable = yes
@@ -2365,7 +2363,6 @@ narrative_event = {
 
 	trigger = {
 		wealth = 200
-		has_dlc = "Sons of Abraham"
 		#year = 885
 		b_chapel_hill_NC = {
 			holder_scope = {
@@ -2423,7 +2420,7 @@ narrative_event = {
 	desc = EVTDESC_SoA_5346
 	picture = GFX_evt_icon
 	border = GFX_event_narrative_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	ai = no
 	prisoner = no
 	only_capable = yes
@@ -2432,7 +2429,6 @@ narrative_event = {
 	religion_group = christian
 	
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		#year = 885
 		in_command = no
 		NOT = { trait = blinded }
@@ -3610,11 +3606,11 @@ narrative_event = {
 	border = GFX_event_narrative_frame_war
 	
 	is_triggered_only = yes
-
+	
+	has_dlc = "Sons of Abraham"
 	only_rulers = yes
 	
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		any_war = {
 			using_cb = crusade
 		}
@@ -3699,7 +3695,7 @@ character_event = {
 	desc = EVTDESC_SoA_5410
 	picture = GFX_evt_courtiers_talking
 	border = GFX_event_normal_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	prisoner = no
 	only_capable = yes
@@ -3707,7 +3703,6 @@ character_event = {
 	
 	trigger = {
 		trait = sympathy_christendom
-		has_dlc = "Sons of Abraham"
 		any_courtier = {
 			religion_group = christian
 			prisoner = no
@@ -3742,7 +3737,7 @@ character_event = {
 	desc = EVTDESC_SoA_5411
 	picture = GFX_evt_courtiers_talking
 	border = GFX_event_normal_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	prisoner = no
 	only_capable = yes
@@ -3750,7 +3745,6 @@ character_event = {
 	
 	trigger = {
 		trait = sympathy_islam
-		has_dlc = "Sons of Abraham"
 		any_courtier = {
 			religion_group = muslim
 			prisoner = no
@@ -3785,7 +3779,7 @@ character_event = {
 	desc = EVTDESC_SoA_5412
 	picture = GFX_evt_courtiers_talking
 	border = GFX_event_normal_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	prisoner = no
 	only_capable = yes
@@ -3793,7 +3787,6 @@ character_event = {
 	
 	trigger = {
 		trait = sympathy_pagans
-		has_dlc = "Sons of Abraham"
 		any_courtier = {
 			religion_group = pagan_group
 			prisoner = no
@@ -3828,7 +3821,7 @@ character_event = {
 	desc = EVTDESC_SoA_5413
 	picture = GFX_evt_courtiers_talking
 	border = GFX_event_normal_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	prisoner = no
 	only_capable = yes
@@ -3836,7 +3829,6 @@ character_event = {
 	
 	trigger = {
 		trait = sympathy_latter_day_saints
-		has_dlc = "Sons of Abraham"
 		any_courtier = {
 			religion_group = latter_day_saints
 			prisoner = no
@@ -3871,7 +3863,7 @@ character_event = {
 	desc = EVTDESC_SoA_5414
 	picture = GFX_evt_courtiers_talking
 	border = GFX_event_normal_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	prisoner = no
 	only_capable = yes
@@ -3879,7 +3871,6 @@ character_event = {
 	
 	trigger = {
 		trait = sympathy_judaism
-		has_dlc = "Sons of Abraham"
 		any_courtier = {
 			religion_group = jewish_group
 			prisoner = no
@@ -3914,7 +3905,7 @@ character_event = {
 	desc = EVTDESC_SoA_54111
 	picture = GFX_evt_courtiers_talking
 	border = GFX_event_normal_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	prisoner = no
 	only_capable = yes
@@ -3922,7 +3913,6 @@ character_event = {
 	
 	trigger = {
 		trait = sympathy_cult_of_saints
-		has_dlc = "Sons of Abraham"
 		any_courtier = {
 			religion_group = cult_of_saints
 			prisoner = no
@@ -3957,7 +3947,7 @@ character_event = {
 	desc = EVTDESC_SoA_5420
 	picture = GFX_evt_scandal
 	border = GFX_event_normal_frame_religion
-
+	has_dlc = "Sons of Abraham"
 	only_playable = yes
 	prisoner = no
 	only_capable = yes
@@ -3967,7 +3957,6 @@ character_event = {
 		trait = zealous
 		trait = wroth
 		NOT = { diplomacy = 5 }
-		has_dlc = "Sons of Abraham"
 		higher_tier_than = COUNT
 	}
 	

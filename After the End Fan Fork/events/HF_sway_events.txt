@@ -7,14 +7,13 @@ character_event = {
 	id = HF.21997
 	hide_window = yes
 	only_playable = yes
-
+	has_dlc = "Holy Fury"
 	ai = yes
+	capable_only = yes
+	prisoner = no
+	min_age = 16
 
 	trigger = {
-		has_dlc = "Holy Fury"
-		NOT = { is_incapable = yes }
-		prisoner = no
-		is_adult = yes
 		is_landed = yes
 		is_inaccessible_trigger = no
 		NOT = {	
@@ -400,14 +399,15 @@ character_event = {
 	id = HF.21998
 	hide_window = yes
 	only_playable = yes
-
+	has_dlc = "Holy Fury"
 	ai = yes
+	only_capable = yes
+	prisoner = no
+	min_age = 16
+	
+	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Holy Fury"
-		NOT = { is_incapable = yes }
-		prisoner = no
-		is_adult = yes
 		is_landed = yes
 		is_inaccessible_trigger = no
 		NOT = {	
@@ -416,8 +416,6 @@ character_event = {
 			}
 		}
 	}
-
-	is_triggered_only = yes
 
 	immediate = { 
 		if = { 
@@ -866,17 +864,17 @@ character_event = {
 character_event = {
 	id = HF.21999
 	hide_window = yes
+	has_dlc = "Holy Fury"
+	only_capable = yes
+	prisoner = no
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Holy Fury"
-		NOT = { is_incapable = yes }
-		prisoner = no
 		persistent_event_target:sway_target = {	#If character has become incapable, out of reach or otherwise unable to be interacted with, a notification event will be sent.
 			is_alive = yes
 		}
 	}
-
-	is_triggered_only = yes
 
 	immediate = { character_event = { id = HF.21000 days = 30 random = 30 } }
 
@@ -885,16 +883,16 @@ character_event = {
 character_event = {
 	id = HF.21000
 	hide_window = yes
+	only_capable = yes
+	prisoner = no
+	
+	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { is_incapable = yes }
-		prisoner = no
 		persistent_event_target:sway_target = {	#If character has become incapable, out of reach or otherwise unable to be interacted with, a notification event will be sent.
 			is_alive = yes
 		}
 	}
-
-	is_triggered_only = yes
 
 	immediate = { 
 		#This event fires for the Appeaser, but all the DELAYED events below this one should be sent to the Appeased WITHOUT triggers. They need to be hidden events that simply check the trigger with an "if" and ping back to the Appeaser. If the trigger has become invalid during the delay, then the hidden event can simply call this event again after a couple of weeks, this way the Appeaser doesn't have to wait another year to receive an event from this list.

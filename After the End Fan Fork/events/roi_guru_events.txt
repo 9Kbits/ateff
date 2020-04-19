@@ -196,14 +196,15 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = pacific
-
 
 	trigger = {
-		religion_group = pacific
 		OR = {
 			has_dlc = "Rajas of India"
 			has_dlc = "Jade Dragon"
+		}
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
 		}
 		any_courtier = {
 			has_minor_title = title_guru
@@ -253,7 +254,10 @@ character_event = {
 			has_dlc = "Rajas of India"
 			has_dlc = "Jade Dragon"
 		}
-		religion_group = pacific
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
+		}
 		any_courtier = {
 			has_minor_title = title_guru
 			NOT = { has_character_flag = fake_guru }
@@ -296,13 +300,15 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = pacific
 	
 	trigger = {
-		religion_group = pacific
 		OR = {
 			has_dlc = "Rajas of India"
 			has_dlc = "Jade Dragon"
+		}
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
 		}
 		any_courtier = {
 			has_minor_title = title_guru
@@ -346,7 +352,12 @@ character_event = {
 		custom_tooltip = { text = sacrilege_tooltip }
 		hidden_tooltip = {
 			any_realm_character  = {
-				limit = { religion_group = pacific }
+				limit = {
+					OR = {
+						religion_group = pacific
+						religion_group = indian_group
+					}
+				}
 				opinion = {
 					who = ROOT
 					years = 2
@@ -354,7 +365,12 @@ character_event = {
 				}
 			}
 			any_playable_ruler  = {
-				limit = { religion_group = pacific }
+				limit = {
+					OR = {
+						religion_group = pacific
+						religion_group = indian_group
+					}
+				}
 				opinion = {
 					who = ROOT
 					years = 2
@@ -373,15 +389,18 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
-
+	
+	has_dlc = "Rajas of India"
 	ai = no
 	only_capable = yes
 	prisoner = no
 	min_age = 16
 	
 	trigger = {
-		has_dlc = "Rajas of India"
-		religion_group = pacific
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
+		}
 		any_courtier = {
 			has_minor_title = title_guru
 			NOT = { has_character_flag = fake_guru }
@@ -420,14 +439,17 @@ character_event = {
 
 	is_triggered_only = yes
 
+	has_dlc = "Rajas of India"
 	ai = no
 	only_capable = yes
 	prisoner = no
 	min_age = 16
 	
 	trigger = {
-		has_dlc = "Rajas of India"
-		religion_group = pacific
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
+		}
 		any_courtier = {
 			has_minor_title = title_guru
 			NOT = { has_character_flag = fake_guru }
@@ -470,13 +492,15 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = indian_group
 	
 	trigger = {
-		religion_group = pacific
 		OR = {
 			has_dlc = "Rajas of India"
 			has_dlc = "Jade Dragon"
+		}
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
 		}
 		any_courtier = {
 			has_minor_title = title_guru
@@ -520,13 +544,15 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = indian_group
 	
 	trigger = {
-		religion_group = pacific
 		OR = {
 			has_dlc = "Rajas of India"
 			has_dlc = "Jade Dragon"
+		}
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
 		}
 		any_courtier = {
 			has_minor_title = title_guru
@@ -570,13 +596,15 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = pacific
 	
 	trigger = {
-		religion_group = pacific
 		OR = {
 			has_dlc = "Rajas of India"
 			has_dlc = "Jade Dragon"
+		}
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
 		}
 		any_courtier = {
 			has_minor_title = title_guru
@@ -648,15 +676,17 @@ character_event = {
 
 	is_triggered_only = yes
 
+	has_dlc = "Rajas of India"
 	ai = no
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = pacific
 	
 	trigger = {
-		has_dharmic_religion_trigger = yes
-		has_dlc = "Rajas of India"
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
+		}
 		any_courtier = {
 			has_minor_title = title_guru
 			NOT = { has_character_flag = fake_guru }
@@ -733,13 +763,15 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = pacific
 	
 	trigger = {
-		religion_group = pacific
 		OR = {
 			has_dlc = "Rajas of India"
 			has_dlc = "Jade Dragon"
+		}
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
 		}
 		any_courtier = {
 			has_minor_title = title_guru
@@ -784,13 +816,15 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = pacific
 	
 	trigger = {
-		religion_group = pacific
 		OR = {
 			has_dlc = "Rajas of India"
 			has_dlc = "Jade Dragon"
+		}
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
 		}
 		any_courtier = {
 			has_minor_title = title_guru
@@ -835,13 +869,15 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = pacific
 	
 	trigger = {
-		religion_group = pacific
 		OR = {
 			has_dlc = "Rajas of India"
 			has_dlc = "Jade Dragon"
+		}
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
 		}
 		any_courtier = {
 			has_minor_title = title_guru
@@ -882,6 +918,7 @@ character_event = {
 
 	is_triggered_only = yes
 
+	has_dlc = "Rajas of India"
 	ai = no
 	only_capable = yes
 	prisoner = no
@@ -889,7 +926,6 @@ character_event = {
 	religion = gaian
 	
 	trigger = {
-		has_dlc = "Rajas of India"
 		any_courtier = {
 			has_minor_title = title_guru
 			NOT = { has_character_flag = fake_guru }
@@ -928,6 +964,7 @@ character_event = {
 
 	is_triggered_only = yes
 
+	has_dlc = "Rajas of India"
 	ai = no
 	only_capable = yes
 	prisoner = no
@@ -935,7 +972,6 @@ character_event = {
 	religion = gaian
 	
 	trigger = {
-		has_dlc = "Rajas of India"
 		any_courtier = {
 			has_minor_title = title_guru
 			NOT = { has_character_flag = fake_guru }
@@ -985,13 +1021,15 @@ character_event = {
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = pacific
 	
 	trigger = {
-		religion_group = pacific
 		OR = {
 			has_dlc = "Rajas of India"
 			has_dlc = "Jade Dragon"
+		}
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
 		}
 		any_courtier = {
 			has_minor_title = title_guru
@@ -1193,13 +1231,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "Rajas of India"
 	only_capable = yes
 	prisoner = no
 	min_age = 16
 	religion = cetic
 	
 	trigger = {
-		has_dlc = "Rajas of India"
 		OR = {
 			has_ambition = obj_buddhist_stop_drinking
 			has_ambition = obj_buddhist_abstain_sexual_excess
@@ -1384,13 +1422,16 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "Rajas of India"
 	only_capable = yes
 	prisoner = no
 	min_age = 16
-	religion_group = pacific
 	
 	trigger = {
-		has_dlc = "Rajas of India"
+		OR = {
+			religion_group = pacific
+			religion_group = indian_group
+		}
 		OR = {
 			trait = stressed
 			trait = depressed

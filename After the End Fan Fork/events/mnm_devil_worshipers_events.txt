@@ -14,11 +14,12 @@ character_event = {
 
 	hide_window = yes
 	is_triggered_only = yes
+	
+	has_dlc = Mystics
 
 	trigger = {
 		is_devil_worshiper_trigger = yes
 		days_in_society > 1095
-		has_dlc = Mystics
 	}
 
 	immediate = {
@@ -6868,12 +6869,12 @@ character_event = {
 	hide_window = yes
 	
 	is_triggered_only = yes
-	
+
+	has_dlc = "Mystics"
 	ai = yes
 	is_in_society = yes
 	
 	trigger = {
-		has_dlc = "Mystics"
 		is_devil_worshiper_trigger = yes
 		society_rank >= 3
 		NOT = { has_character_flag = disciple_arriving }
@@ -13099,9 +13100,10 @@ character_event = {
 	id = MNM.7854
 	hide_window = yes
 	is_triggered_only = yes
+	
+	has_dlc = "Mystics"
 
 	trigger = {
-		has_dlc = "Mystics"
 		is_devil_worshiper_trigger = yes
 		OR = {
    			has_character_modifier = known_satanist
@@ -13300,9 +13302,10 @@ character_event = {
 	is_triggered_only = yes
 
 	hide_from = yes
+	
+	has_dlc = "Mystics"
 
 	trigger = {
-		has_dlc = "Mystics"
 		is_devil_worshiper_trigger = yes
 		OR = {
    			has_character_modifier = known_satanist

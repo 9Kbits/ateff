@@ -3661,10 +3661,11 @@ letter_event = {
 	desc = "EVTDESC290"
 	
 	is_triggered_only = yes
+	has_dlc = "Zeus"
+	ai = no
+
 	
 	trigger = {
-		has_dlc = "Zeus"
-		ai = no
 		is_voter = yes
 	}
 
@@ -3715,9 +3716,11 @@ letter_event = {
 letter_event = {
 	id = 676
 	is_triggered_only = yes
+	
+	has_dlc = "Zeus"
+	ai = no
+	
 	trigger = {
-		has_dlc = "Zeus"
-		ai = no
 		is_voter = yes
 		FROM = {
 			holder_scope = {
@@ -5551,7 +5554,8 @@ character_event = {
 	id = 63103
 	desc = EVTDESC_63103
 	picture = GFX_evt_throne_room
-
+	
+	has_dlc = "Charlemagne"
 	capable_only = yes
 	prisoner = no
 	min_age = 16
@@ -5559,7 +5563,6 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Charlemagne"
 		top_liege = {
 			in_revolt = no
 		}

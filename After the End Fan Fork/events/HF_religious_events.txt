@@ -8416,8 +8416,9 @@ character_event = {
 character_event = {
 	id = HF.23430
 	hide_window = yes
+	has_dlc = "Holy Fury"
+
 	trigger = { 
-		has_dlc = "Holy Fury"
 		death_sacrificed_trigger = yes
 		killer = { 
 			is_playable = yes
@@ -11335,11 +11336,10 @@ character_event = {
 	title = EVTTITLEHF23473
 	desc = EVTDESCAHF23473
 	picture = GFX_evt_irminsul_burning
-
+	has_dlc = "Holy Fury"
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Holy Fury"
 		OR = {
 			NOT = { religion_group = pagan_group }
 			is_reformed_religion = yes
@@ -14757,10 +14757,10 @@ character_event = {
 character_event = {
 	id = HF.23775
 	hide_window = yes
+	has_dlc = "Holy Fury"
 	only_capable = yes
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			dynasty = none
 		}

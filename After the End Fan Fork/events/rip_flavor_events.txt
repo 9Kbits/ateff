@@ -25,6 +25,7 @@ character_event = {
 	picture = GFX_evt_court_physician
 	border = GFX_event_normal_frame_religion
 
+	has_dlc = "Reapers"
 	min_age = 16
 	capable_only = yes
 	only_playable = yes
@@ -33,7 +34,6 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Reapers"
 		NOR = { 
 			has_character_flag = stress_relief
 			is_tribal = yes
@@ -194,6 +194,7 @@ character_event = {
 	picture = GFX_evt_court_physician
 	border = GFX_event_normal_frame_religion
 
+	has_dlc = "Reapers"
 	min_age = 16
 	capable_only = yes
 	only_playable = yes
@@ -202,7 +203,6 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Reapers"
 		trait = blinded
 		NOR = {
 			has_character_modifier = guide_dog
@@ -2533,6 +2533,7 @@ character_event = {
 	picture = GFX_evt_court_physician
 	border = GFX_event_normal_frame_religion
 
+	has_dlc = "Reapers"
 	min_age = 16
 	capable_only = yes
 	only_playable = yes
@@ -2541,7 +2542,6 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Reapers"
 		higher_tier_than = BARON
 		OR = {
 			is_tribal = yes
@@ -3818,10 +3818,11 @@ character_event = { # Execution nicknames
 	hide_window = yes
 	is_triggered_only = yes
 	
+	has_dlc = "Reapers"
+	
 	trigger = {
 		death_execution_trigger = yes
 		killer = { always = yes }
-		has_dlc = "Reapers"
 	}
 	
 	immediate = {

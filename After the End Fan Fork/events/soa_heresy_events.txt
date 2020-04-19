@@ -20,10 +20,9 @@ province_event = {
 	desc = EVTDESC39000
 	picture = GFX_evt_heretic
 	border = GFX_event_normal_frame_religion
-	
+	has_dlc = "Sons of Abraham"
+
 	trigger = {
-		has_dlc = "Sons of Abraham"
-		
 		is_heretic = no
 		
 		has_heresies = yes
@@ -289,6 +288,7 @@ character_event = {
 	picture = GFX_evt_heretic
 	border = GFX_event_normal_frame_religion
 	
+	has_dlc = "Sons of Abraham"
 	min_age = 16
 	max_age = 50
 	capable_only = yes
@@ -297,9 +297,11 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Sons of Abraham"
-		
-		NOT = { religion_group = pagan_group }
+		NOR = {
+			religion_group = pagan_group
+			religion_group = afro_syncretic
+			religion_group = mesoamerican_gods
+		}
 
 		is_heretic = no # Heretics, already people of strong conviction, never change religion spontaneously
 
@@ -317,7 +319,11 @@ character_event = {
 			
 		
 		location = {
-			NOT = { religion_group = pagan_group }
+			NOR = {
+				religion_group = pagan_group
+				religion_group = afro_syncretic
+				religion_group = mesoamerican_gods
+			}
 			religion_group = ROOT
 			NOT = { religion = ROOT }
 			OR = {
@@ -680,7 +686,7 @@ character_event = {
 	desc = OK
 	picture = GFX_evt_heretic
 	border = GFX_event_normal_frame_religion
-	
+	has_dlc = "Sons of Abraham"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
@@ -710,8 +716,6 @@ character_event = {
 			mercenary = no
 			holy_order = no
 		}
-		
-		has_dlc = "Sons of Abraham"
 	}
 	
 	mean_time_to_happen = {
@@ -1008,11 +1012,10 @@ letter_event = {
 
 province_event = {
 	id = SoA.4100
+	has_dlc = "Sons of Abraham"
 	hide_window = yes
 	
 	trigger = {
-		has_dlc = "Sons of Abraham"
-		
 		is_heretic = yes
 		
 		owner = {
@@ -1294,12 +1297,12 @@ character_event = {
 # SoA.4121 - The heresy is eradicated in the county. On-action.
 province_event = {
 	id = SoA.4121
+	has_dlc = "Sons of Abraham"
 	hide_window = yes
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		has_province_modifier = promised_to_clear_out_heresy
 		owner = {
 			top_liege = {

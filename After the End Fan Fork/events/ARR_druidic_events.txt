@@ -3024,9 +3024,9 @@ character_event = {
 	only_women = yes
 	min_age = 16
 	prisoner = no
+	has_dlc = "The Old Gods"
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		is_pregnant = yes
 		spouse = {
 			supernatural_events_trigger = yes
@@ -3109,9 +3109,9 @@ character_event = {
 	hide_window = yes
 	
 	is_triggered_only = yes
+	has_dlc = "The Old Gods"
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		mother = { has_character_flag = child_stolen_sidhe }
 	}
 	
@@ -3128,15 +3128,14 @@ character_event = {
 character_event = {
 	id = ancrel.0216
 	hide_window = yes
-	
+	has_dlc = "The Old Gods"
 	ai = yes
+	min_age = 4
+	max_age = 16
+	has_character_flag = changeling_child
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		age = 4
-		NOT = { age = 16 }
 		NOT = { has_character_flag = changeling_child_strange_1 }
-		has_character_flag = changeling_child
 		father = { is_alive = yes }
 	}
 	
@@ -3169,15 +3168,14 @@ character_event = {
 character_event = {
 	id = ancrel.0218
 	hide_window = yes
-	
+	has_dlc = "The Old Gods"
 	ai = yes
+	min_age = 4
+	max_age = 16
+	has_character_flag = changeling_child
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		age = 4
-		NOT = { age = 16 }
 		NOT = { has_character_flag = changeling_child_strange_2 }
-		has_character_flag = changeling_child
 		father = { is_alive = yes }
 	}
 	
@@ -3210,15 +3208,14 @@ character_event = {
 character_event = {
 	id = ancrel.0220
 	hide_window = yes
-	
+	has_dlc = "The Old Gods"
 	ai = yes
+	min_age = 4
+	max_age = 16
+	has_character_flag = changeling_child
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		age = 4
-		NOT = { age = 16 }
 		NOT = { has_character_flag = changeling_child_strange_3 }
-		has_character_flag = changeling_child
 		father = { is_alive = yes }
 	}
 	
@@ -3251,15 +3248,14 @@ character_event = {
 character_event = {
 	id = ancrel.0222
 	hide_window = yes
-	
+	has_dlc = "The Old Gods"
 	ai = yes
+	min_age = 4
+	max_age = 16
+	has_character_flag = changeling_child
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		age = 4
-		NOT = { age = 16 }
 		NOT = { has_character_flag = changeling_child_kills_1 }
-		has_character_flag = changeling_child
 		father = { is_alive = yes }
 		OR = {
 			has_character_flag = changeling_child_strange_1
@@ -3357,15 +3353,14 @@ character_event = {
 character_event = {
 	id = ancrel.0225
 	hide_window = yes
-	
+	has_dlc = "The Old Gods"
 	ai = yes
+	min_age = 4
+	max_age = 16
+	has_character_flag = changeling_child
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		age = 4
-		NOT = { age = 16 }
 		NOT = { has_character_flag = changeling_child_kills_2 }
-		has_character_flag = changeling_child
 		father = { is_alive = yes }
 		OR = {
 			has_character_flag = changeling_child_strange_1
@@ -3463,15 +3458,14 @@ character_event = {
 character_event = {
 	id = ancrel.0228
 	hide_window = yes
-	
+	has_dlc = "The Old Gods"
 	ai = yes
+	min_age = 4
+	max_age = 16
+	has_character_flag = changeling_child
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		age = 4
-		NOT = { age = 16 }
 		NOT = { has_character_flag = changeling_child_kills_3 }
-		has_character_flag = changeling_child
 		father = { is_alive = yes }
 		OR = {
 			has_character_flag = changeling_child_strange_1
@@ -3569,13 +3563,12 @@ character_event = {
 character_event = {
 	id = ancrel.0231
 	hide_window = yes
-	
+	has_dlc = "The Old Gods"
 	ai = yes
+	min_age = 4
+	max_age = 16
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		age = 4
-		NOT = { age = 16 }
 		NOT = { has_character_flag = changeling_trade }
 		father = { is_alive = yes }
 		OR = {
@@ -7036,10 +7029,11 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "Rajas of India"
 	only_men = yes
+	religion_group = pagan_group
 	
 	trigger = {
-		has_dlc = "Rajas of India"
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
@@ -7228,12 +7222,14 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "Rajas of India"
+	religion_group = pagan_group
+	
 	trigger = {
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
 		}
-		has_dlc = "Rajas of India"
 		has_character_flag = reincarnation_education
 		NOT = { personality_traits = 5 }
 		reincarnation_scope = {
@@ -9152,8 +9148,10 @@ character_event = {
 	desc = EVTDESCancrel.0157
 	picture = GFX_evt_druid
 	
+	has_dlc = "Sons of Abraham"
+	religion_group = pagan_group
+	
 	trigger = {
-		has_dlc = "Sons of Abraham"
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
@@ -9572,11 +9570,12 @@ character_event = {
 	max_age = 25
 	capable_only = yes
 	prisoner = no
+	has_dlc = "The Old Gods"
+	in_command = no
+	religion_group = pagan_group
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		is_landed = no
-		in_command = no
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
@@ -9690,11 +9689,12 @@ character_event = {
 	id = ancrel.0188
 	hide_window = yes
 	
+	has_dlc = "The Old Gods"
+	has_character_flag = druidic_training
+	min_age = 18
+	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = druidic_training
 		NOT = { trait = scarred }
-		age = 18
 	}
 	
 	mean_time_to_happen = {
@@ -9748,14 +9748,14 @@ character_event = {
 character_event = {
 	id = ancrel.0190
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = druidic_training
+	min_age = 18
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = druidic_training
 		NOT = {
 			is_maimed_trigger = yes
 		}
-		age = 18
 	}
 	
 	mean_time_to_happen = {
@@ -9801,17 +9801,17 @@ character_event = {
 character_event = {
 	id = ancrel.0192
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = druidic_training
+	min_age = 18
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = druidic_training
 		NOT = { trait = brilliant_strategist }
 		OR = {
 			trait = detached_priest
 			trait = martial_cleric
 			trait = scholarly_theologian
 		}
-		age = 18
 	}
 	
 	mean_time_to_happen = {
@@ -9904,12 +9904,12 @@ character_event = {
 character_event = {
 	id = ancrel.0194
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = druidic_training
+	min_age = 18
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = druidic_training
 		NOT = { trait = lunatic }
-		age = 18
 	}
 	
 	mean_time_to_happen = {
@@ -9971,11 +9971,11 @@ character_event = {
 character_event = {
 	id = ancrel.0196
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = druidic_training
+	min_age = 18
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = druidic_training
-		age = 18
 		father = {
 			supernatural_events_trigger = yes
 		}
@@ -10055,12 +10055,12 @@ character_event = {
 character_event = {
 	id = ancrel.0198
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = druidic_training
+	min_age = 18
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = druidic_training
 		NOT = { trait = zealous }
-		age = 18
 	}
 	
 	mean_time_to_happen = {
@@ -10110,11 +10110,11 @@ character_event = {
 character_event = {
 	id = ancrel.0200
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	min_age = 18
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_character_flag = druidic_training
-		age = 18
 	}
 	
 	mean_time_to_happen = {
@@ -10188,11 +10188,11 @@ character_event = {
 character_event = {
 	id = ancrel.0202
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	min_age = 18
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_character_flag = druidic_training
-		age = 18
 	}
 	
 	mean_time_to_happen = {
@@ -10285,11 +10285,11 @@ character_event = {
 character_event = {
 	id = ancrel.0204
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	min_age = 18
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_character_flag = druidic_training
-		age = 18
 	}
 	
 	mean_time_to_happen = {
@@ -10345,10 +10345,10 @@ character_event = {
 	desc = EVTDESCancrel.0206
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_war
+	has_dlc = "The Old Gods"
+	ai = no
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		ai = no
 		OR = {
 			has_character_flag = wants_druidic_training
 			has_character_flag = druidic_training
@@ -10388,10 +10388,10 @@ character_event = {
 character_event = {
 	id = ancrel.0207
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	ai = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		ai = yes
 		OR = {
 			has_character_flag = wants_druidic_training
 			has_character_flag = druidic_training
@@ -10601,11 +10601,11 @@ character_event = {
 	only_men = yes
 	capable_only = yes
 	prisoner = no
+	has_dlc = "The Old Gods"
+	in_command = no
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		is_landed = no
-		in_command = no
 		has_global_flag = fianna_founded
 		OR = {
 			religion = celtic_pagan
@@ -10729,10 +10729,10 @@ character_event = {
 character_event = {
 	id = ancrel.1164
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_fianna
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_fianna
 		NOT = { trait = scarred }
 	}
 	
@@ -10779,10 +10779,10 @@ character_event = {
 character_event = {
 	id = ancrel.1168
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_fianna
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_fianna
 		NOT = {
 			is_maimed_trigger = yes
 		}
@@ -10822,10 +10822,10 @@ character_event = {
 character_event = {
 	id = ancrel.1170
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_fianna
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_fianna
 		NOT = { trait = brilliant_strategist }
 		OR = {
 			trait = misguided_warrior
@@ -10916,10 +10916,10 @@ character_event = {
 character_event = {
 	id = ancrel.1172
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_fianna
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_fianna
 		NOT = { trait = depressed }
 	}
 	
@@ -10974,10 +10974,10 @@ character_event = {
 character_event = {
 	id = ancrel.1174
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_fianna
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_fianna
 		is_married = no
 	}
 	
@@ -11031,10 +11031,10 @@ character_event = {
 character_event = {
 	id = ancrel.1176
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_fianna
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_fianna
 		NOT = { trait = zealous }
 	}
 	
@@ -11076,9 +11076,9 @@ character_event = {
 character_event = {
 	id = ancrel.1178
 	hide_window = yes
+	has_dlc = "The Old Gods"
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_character_flag = serving_fianna
 	}
 	
@@ -11145,9 +11145,9 @@ character_event = {
 character_event = {
 	id = ancrel.1180
 	hide_window = yes
+	has_dlc = "The Old Gods"
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_character_flag = serving_fianna
 	}
 	
@@ -11241,9 +11241,9 @@ character_event = {
 character_event = {
 	id = ancrel.1182
 	hide_window = yes
+	has_dlc = "The Old Gods"
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_character_flag = serving_fianna
 	}
 	
@@ -11291,10 +11291,10 @@ character_event = {
 	desc = EVTDESCancrel.1184
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_war
+	has_dlc = "The Old Gods"
+	ai = no
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		ai = no
 		OR = {
 			has_character_flag = wants_fianna
 			has_character_flag = serving_fianna
@@ -11323,10 +11323,10 @@ character_event = {
 character_event = {
 	id = ancrel.1185
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	ai = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		ai = yes
 		OR = {
 			has_character_flag = wants_fianna
 			has_character_flag = serving_fianna
@@ -12057,10 +12057,11 @@ narrative_event = {
 	hide_from = yes
 	
 	only_rulers = yes
+	has_dlc = "The Old Gods"
+	has_global_flag = celtic_pagan_reformation
+	religion_group = pagan_group
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_global_flag = celtic_pagan_reformation
 		NOT = {
 			is_title_active = d_red_dragons
 		}
@@ -12181,10 +12182,15 @@ character_event = {
 	max_age = 45
 	only_capable = yes
 	prisoner = no
+	has_dlc = "Sons of Abraham"
+	religion_group = pagan_group
 	
 	trigger = {
 		is_ruler = no
-		religion = celtic_pagan_reformed
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
 		is_heretic = no
 		is_councillor = no
 		
@@ -12207,8 +12213,6 @@ character_event = {
 				holy_order = no
 			}
 		}
-		
-		has_dlc = "Sons of Abraham"
 		
 		NOT = { has_character_modifier = expelled_d_red_dragons }
 		NOT = {
@@ -12378,9 +12382,14 @@ character_event = {
 	hide_window = yes
 	
 	only_playable = yes
+	has_dlc = "Sons of Abraham"
+	religion_group = pagan_group
 	
 	trigger = {
-		religion = celtic_pagan_reformed
+		OR = {
+			religion = celtic_pagan
+			religion = celtic_pagan_reformed
+		}
 		is_heretic = no
 		
 		d_red_dragons = {
@@ -12406,8 +12415,6 @@ character_event = {
 				}
 			}
 		}
-		
-		has_dlc = "Sons of Abraham"
 		
 		NOT = { has_character_modifier = expelled_d_red_dragons }
 		NOT = {
@@ -12736,16 +12743,17 @@ character_event = {
 	only_men = yes
 	capable_only = yes
 	prisoner = no
+	has_dlc = "The Old Gods"
+	in_command = no
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		is_landed = no
-		in_command = no
 		has_global_flag = gwydion_founded
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
 		}
+		is_heretic = no
 		NOT = { 
 			trait = wolf 
 			has_character_flag = wants_gwydion
@@ -12853,10 +12861,10 @@ character_event = {
 character_event = {
 	id = ancrel.0124
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_gwydion
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_gwydion
 		NOT = { trait = scarred }
 	}
 	
@@ -12903,10 +12911,10 @@ character_event = {
 character_event = {
 	id = ancrel.0128
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_gwydion
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_gwydion
 		NOT = {
 			is_maimed_trigger = yes
 		}
@@ -12946,10 +12954,10 @@ character_event = {
 character_event = {
 	id = ancrel.0130
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_gwydion
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_gwydion
 		NOT = { trait = brilliant_strategist }
 		OR = {
 			trait = misguided_warrior
@@ -13040,10 +13048,10 @@ character_event = {
 character_event = {
 	id = ancrel.0132
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_gwydion
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_gwydion
 		NOT = { trait = depressed }
 	}
 	
@@ -13098,10 +13106,10 @@ character_event = {
 character_event = {
 	id = ancrel.0134
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_varangian
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_varangian
 		is_married = no
 	}
 	
@@ -13155,10 +13163,10 @@ character_event = {
 character_event = {
 	id = ancrel.0136
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = serving_gwydion
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = serving_gwydion
 		NOT = { trait = zealous }
 	}
 	
@@ -13200,9 +13208,9 @@ character_event = {
 character_event = {
 	id = ancrel.0138
 	hide_window = yes
+	has_dlc = "The Old Gods"
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_character_flag = serving_gwydion
 	}
 	
@@ -13269,9 +13277,9 @@ character_event = {
 character_event = {
 	id = ancrel.0140
 	hide_window = yes
+	has_dlc = "The Old Gods"
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_character_flag = serving_gwydion
 	}
 	
@@ -13365,9 +13373,9 @@ character_event = {
 character_event = {
 	id = ancrel.0142
 	hide_window = yes
-	
+	has_dlc = "The Old Gods"
+
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_character_flag = serving_gwydion
 	}
 	
@@ -13415,17 +13423,17 @@ character_event = {
 	desc = EVTDESCancrel.0144
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_war
+	has_dlc = "The Old Gods"
+	ai = no
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		ai = no
 		OR = {
 			has_character_flag = wants_gwydion
 			has_character_flag = serving_gwydion
 		}
 		father = { is_alive = no }
 	}
-			
+	
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -13447,17 +13455,17 @@ character_event = {
 character_event = {
 	id = ancrel.0145
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	ai = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		ai = yes
 		OR = {
 			has_character_flag = wants_gwydion
 			has_character_flag = serving_gwydion
 		}
 		father = { is_alive = no }
 	}
-			
+
 	mean_time_to_happen = {
 		days = 1
 	}

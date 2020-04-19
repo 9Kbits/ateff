@@ -150,13 +150,14 @@ character_event = {
 	portrait = event_target:scoped_WL_co_hunter #Empty.
 
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
+	min_age = 16
+	in_command = no
+	prisoner = no
 
 	trigger = { 
-		has_dlc = "Holy Fury"
-		is_adult = yes
-		in_command = no
 		society_rank = 3
-		prisoner = no
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { is_incapable = yes }
 		NOT = { has_character_flag = do_not_disturb }

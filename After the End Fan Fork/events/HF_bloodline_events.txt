@@ -930,12 +930,12 @@ narrative_event = {
 	show_from_from = yes
 	
 	is_triggered_only = yes
+	has_dlc = "Holy Fury"
+	is_female = no
 
 	trigger = { 
-		has_dlc = "Holy Fury" 
 		NOT = { has_global_flag = flag_phalaris_bloodline }
 		NOT = { has_dynasty_flag = flag_phalaris_event }
-		is_female = no
 	}
 
 	immediate = { 
@@ -1138,11 +1138,11 @@ character_event = {
 	hide_window = yes
 	
 	is_triggered_only = yes
-
+	
+	has_dlc = "Holy Fury" 
 	war = yes
 
 	trigger = { 
-		has_dlc = "Holy Fury" 
 		OR = {
 			FROM = {
 				age = 16
@@ -1494,8 +1494,9 @@ character_event = {
 character_event = {
 	id = HF.24017
 	hide_window = yes
+	has_dlc = "Holy Fury"
+
 	trigger = { 
-		has_dlc = "Holy Fury"
 		OR = { 
 			death_murder_unknown_trigger = yes
 			death_murder_known_trigger = yes
@@ -1525,8 +1526,9 @@ character_event = {
 character_event = {
 	id = HF.24018
 	hide_window = yes
+	has_dlc = "Holy Fury"
+
 	trigger = { 
-		has_dlc = "Holy Fury"
 		FROM = { 
 			NOR = {
 				trait = heresiarch
@@ -1571,8 +1573,9 @@ character_event = {
 character_event = {
 	id = HF.24019
 	hide_window = yes
+	has_dlc = "Holy Fury"
+
 	trigger = { 
-		has_dlc = "Holy Fury"
 		FROM = { 
 			NOR = {
 				trait = heresiarch
@@ -1620,8 +1623,9 @@ character_event = {
 character_event = {
 	id = HF.24020
 	hide_window = yes
+	has_dlc = "Holy Fury"
+
 	trigger = { 
-		has_dlc = "Holy Fury"
 		has_ambition = obj_forge_bloodline
 		NOT = { check_variable = { which = bloodline_peaceful_years value = 30 } }
 	}
@@ -1679,8 +1683,9 @@ character_event = {
 character_event = {
 	id = HF.24021
 	hide_window = yes
+	has_dlc = "Holy Fury"
+
 	trigger = { 
-		has_dlc = "Holy Fury"
 		has_ambition = obj_forge_bloodline
 	}
 	
@@ -1706,8 +1711,9 @@ character_event = {
 character_event = {
 	id = HF.24022
 	hide_window = yes
+	has_dlc = "Holy Fury"
+
 	trigger = { 
-		has_dlc = "Holy Fury"
 		FROM = { holding_type = CITY }
 		NOT = {
 			has_character_flag = flag_about_to_builder_bloodline
@@ -1762,8 +1768,9 @@ character_event = {
 character_event = {
 	id = HF.24023
 	hide_window = yes
+	has_dlc = "Holy Fury"
+
 	trigger = { 
-		has_dlc = "Holy Fury"
 		FROM = { holding_type = CASTLE }
 		NOT = {
 			has_character_flag = flag_about_to_builder_bloodline
@@ -1818,8 +1825,9 @@ character_event = {
 character_event = {
 	id = HF.24024
 	hide_window = yes
+	has_dlc = "Holy Fury"
+
 	trigger = { 
-		has_dlc = "Holy Fury"
 		FROM = { holding_type = TEMPLE }
 		NOT = {
 			has_character_flag = flag_about_to_builder_bloodline
@@ -1876,9 +1884,9 @@ character_event = {
 character_event = {
 	id = HF.24025
 	hide_window = yes
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -1931,9 +1939,10 @@ narrative_event = {
 	show_from_from = no
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -1996,8 +2005,9 @@ character_event = {
 	picture = GFX_evt_whispers
 	border = GFX_event_normal_frame_intrigue
 	
+	has_dlc = "Holy Fury"
+	
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -3632,9 +3642,10 @@ narrative_event = {
 	show_from_from = no
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -3675,9 +3686,10 @@ narrative_event = {
 	show_from_from = no
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -3720,8 +3732,9 @@ narrative_event = {
 	
 	is_triggered_only = yes
 
+	has_dlc = "Holy Fury"
+
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -3778,9 +3791,10 @@ narrative_event = {
 	show_from_from = no
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -3814,9 +3828,10 @@ narrative_event = {
 character_event = {
 	id = HF.24031
 	hide_window = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -3877,9 +3892,10 @@ narrative_event = {
 	show_from_from = no
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -3939,8 +3955,9 @@ character_event = {
 	picture = GFX_evt_battle
 	border = GFX_event_normal_frame_war
 	
+	has_dlc = "Holy Fury"
+	
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4073,9 +4090,10 @@ narrative_event = {
 	show_from_from = no
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4124,9 +4142,10 @@ narrative_event = {
 	show_from_from = no
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4179,9 +4198,10 @@ narrative_event = {
 	show_from_from = no
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4215,9 +4235,10 @@ narrative_event = {
 character_event = {
 	id = HF.24037
 	hide_window = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4257,9 +4278,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4330,9 +4352,10 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4400,9 +4423,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4442,9 +4466,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4484,9 +4509,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4532,9 +4558,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4580,9 +4607,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4644,9 +4672,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4692,9 +4721,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4740,9 +4770,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
-
+	
+	has_dlc = "Holy Fury"
+			
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4788,9 +4819,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4836,9 +4868,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4884,9 +4917,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -4932,9 +4966,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -5004,9 +5039,10 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -5087,9 +5123,10 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -5153,9 +5190,10 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -5218,9 +5256,10 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -5291,9 +5330,10 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -5443,9 +5483,10 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -5590,9 +5631,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -5650,9 +5692,10 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -5796,9 +5839,10 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -5955,9 +5999,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -6013,9 +6058,10 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -6118,9 +6164,10 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -6231,9 +6278,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -6476,9 +6524,10 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -6593,9 +6642,10 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury" #this is the point at which i developed carpal tunnel
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -6705,9 +6755,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -6755,9 +6806,10 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -6868,9 +6920,10 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -7002,9 +7055,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -7271,9 +7325,10 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -7422,9 +7477,10 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -7573,9 +7629,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline
@@ -13395,9 +13452,10 @@ narrative_event = {
 	sound = bloodline_added
 	
 	is_triggered_only = yes
+	
+	has_dlc = "Holy Fury"
 
 	trigger = { 
-		has_dlc = "Holy Fury"
 		NOT = {
 			any_owned_bloodline = { 
 				has_bloodline_flag = created_bloodline

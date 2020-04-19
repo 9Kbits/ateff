@@ -30,13 +30,14 @@ character_event = {
 	picture = GFX_evt_camaraderie
 	border = GFX_event_normal_frame_diplomacy
 	hide_new = yes
-
+	
+	has_dlc = "Holy Fury"
+	min_age = 16
+	in_command = no
+	prisoner = no
+	is_in_society = yes
 
 	trigger = { 
-		has_dlc = "Holy Fury"
-		is_adult = yes
-		in_command = no
-		prisoner = no
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { is_incapable = yes }
 		NOT = { has_character_flag = do_not_disturb }
@@ -2238,8 +2239,9 @@ character_event = {
 		NOT = { has_character_flag = do_not_disturb }
 		is_member_of_any_warrior_lodge_trigger = yes
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_rust_cultist
+			society_member_of = warrior_lodge_atomicist
 		}
 		wealth = 75
 	}
@@ -2320,8 +2322,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -2330,13 +2333,19 @@ character_event = {
 		name = {
 			text = EVTOPTDHF25228
 			trigger = {
-				society_member_of = warrior_lodge_bon
+				society_member_of = warrior_lodge_americanist
 			}
 		}
 		name = {
 			text = EVTOPTDHF25228_HELLENIC #Dionysus
 			trigger = {
-				society_member_of = warrior_lodge_hellenic
+				society_member_of = warrior_lodge_atomicist
+			}
+		}
+		name = {
+			text = EVTOPTDHF25228_RUST_CULTIST
+			trigger = {
+				society_member_of = warrior_lodge_rust_cultist
 			}
 		}
 		trigger = {  
@@ -2375,13 +2384,19 @@ character_event = {
 		name = {
 			text = EVTOPTCHF25228
 			trigger = {
-				society_member_of = warrior_lodge_bon
+				society_member_of = warrior_lodge_americanist
 			}
 		}
 		name = {
 			text = EVTOPTCHF25228_HELLENIC #Hermes
 			trigger = {
-				society_member_of = warrior_lodge_hellenic
+				society_member_of = warrior_lodge_atomicist
+			}
+		}
+		name = {
+			text = EVTOPTCHF25228_RUST_CULTIST #Hermes
+			trigger = {
+				society_member_of = warrior_lodge_rust_cultist
 			}
 		}
 		trigger = {  
@@ -2420,13 +2435,19 @@ character_event = {
 		name = {
 			text = EVTOPTBHF25228
 			trigger = {
-				society_member_of = warrior_lodge_bon
+				society_member_of = warrior_lodge_americanist
 			}
 		}
 		name = {
 			text = EVTOPTBHF25228_HELLENIC #Athena
 			trigger = {
-				society_member_of = warrior_lodge_hellenic
+				society_member_of = warrior_lodge_atomicist
+			}
+		}
+		name = {
+			text = EVTOPTBHF25228_RUST_CULTIST #Athena
+			trigger = {
+				society_member_of = warrior_lodge_rust_cultist
 			}
 		}
 		trigger = {  
@@ -2465,13 +2486,19 @@ character_event = {
 		name = {
 			text = EVTOPTAHF25228
 			trigger = {
-				society_member_of = warrior_lodge_bon
+				society_member_of = warrior_lodge_americanist
 			}
 		}
 		name = {
 			text = EVTOPTAHF25228_HELLENIC #Apollo
 			trigger = {
-				society_member_of = warrior_lodge_hellenic
+				society_member_of = warrior_lodge_atomicist
+			}
+		}
+		name = {
+			text = EVTOPTAHF25228_RUST_CULTIST #Apollo
+			trigger = {
+				society_member_of = warrior_lodge_rust_cultist
 			}
 		}
 		custom_tooltip = { text = tooltip_betting_easiest_side }
@@ -2512,8 +2539,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -2647,8 +2675,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -2856,8 +2885,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -2941,8 +2971,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -3161,8 +3192,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -3304,8 +3336,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -3418,8 +3451,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -3828,8 +3862,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -4075,8 +4110,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -4097,8 +4133,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -4120,8 +4157,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -4142,8 +4180,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -4163,8 +4202,9 @@ character_event = {
 
 	trigger = { 
 		OR = { 
-			society_member_of = warrior_lodge_bon
-			society_member_of = warrior_lodge_hellenic
+			society_member_of = warrior_lodge_americanist
+			society_member_of = warrior_lodge_atomicist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 	}
 	is_triggered_only = yes
@@ -4188,22 +4228,23 @@ character_event = {
 	picture = GFX_evt_camaraderie
 	border = GFX_event_normal_frame_diplomacy
 	hide_new = yes
-
+	
+	has_dlc = "Holy Fury"
+	min_age = 16
+	in_command = no
+	prisoner = no
+	is_in_society = yes
 
 	trigger = { 
-		has_dlc = "Holy Fury"
-		is_adult = yes
-		in_command = no
-		prisoner = no
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { is_incapable = yes }
 		NOT = { has_character_flag = do_not_disturb }
 		NOT = { has_character_modifier = flyting_challenge_cooldown }
 		OR = { #Only for northeners
 			society_member_of = warrior_lodge_norse
-			society_member_of = warrior_lodge_slavic
-			society_member_of = warrior_lodge_baltic
-			society_member_of = warrior_lodge_finnish
+			society_member_of = warrior_lodge_celtic
+			society_member_of = warrior_lodge_occultist
+			society_member_of = warrior_lodge_rust_cultist
 		}
 		any_society_member = { #Make sure there are enough contenders to pick.
 			same_society_as = ROOT
@@ -7250,10 +7291,10 @@ character_event = {
 							trigger = { is_female = yes }
 							give_nickname = nick_the_vixen 
 						} 
-						25 = { 
-							trigger = { society_member_of = warrior_lodge_west_african }
-							give_nickname = nick_the_hyena 
-						} 
+						#25 = { 
+						#	trigger = { society_member_of = warrior_lodge_west_african }
+						#	give_nickname = nick_the_hyena 
+						#} 
 						15 = {}
 					} 
 				}
@@ -7375,10 +7416,10 @@ character_event = {
 							trigger = { is_female = yes }
 							give_nickname = nick_the_vixen 
 						} 
-						25 = { 
-							trigger = { society_member_of = warrior_lodge_west_african }
-							give_nickname = nick_the_hyena 
-						} 
+						#25 = { 
+						#	trigger = { society_member_of = warrior_lodge_west_african }
+						#	give_nickname = nick_the_hyena 
+						#} 
 						15 = {}
 					} 
 				}
@@ -7980,16 +8021,18 @@ character_event = {
 
 	is_triggered_only = yes
 
+	has_dlc = "Holy Fury"
+	min_age = 16
+	in_command = no
+	prisoner = no
+	is_in_society = yes
+
 	trigger = { 
-		has_dlc = "Holy Fury"
-		is_adult = yes
-		in_command = no
-		prisoner = no
 		society_rank = 4
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { is_incapable = yes }
 		NOT = { has_character_flag = do_not_disturb }
-		NOT = { society_member_of = warrior_lodge_bon }
+		#NOT = { society_member_of = warrior_lodge_bon }
 		is_member_of_any_warrior_lodge_trigger = yes
 		any_society_member = { #Make sure there are enough contenders to join in.
 			same_society_as = ROOT

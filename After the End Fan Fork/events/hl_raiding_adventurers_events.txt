@@ -15,6 +15,7 @@ character_event = {
 	id = HL.100
 	hide_window = yes # Only fires for unplayable landless characters
 	
+	has_dlc = "Horse Lords"
 	min_age = 16
 	max_age = 50
 	#only_men = yes
@@ -22,8 +23,6 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		has_dlc = "Horse Lords"
-		
 		NOT = {
 			has_game_rule = {
 				name = adventurers

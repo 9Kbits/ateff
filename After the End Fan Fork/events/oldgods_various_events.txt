@@ -18,12 +18,11 @@ character_event = {
 	desc = EVTDESC_TOG_3000
 	picture = GFX_evt_viking_battle_oldgods
 	border = GFX_event_normal_frame_war
-	
+	has_dlc = "The Old Gods"
 	is_triggered_only = yes
+	culture_group = ameronordic
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		culture_group = ameronordic
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
@@ -63,10 +62,10 @@ character_event = {
 	picture = GFX_evt_viking_battle_oldgods
 	border = GFX_event_normal_frame_war
 	
+	has_dlc = "The Old Gods"
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = berserker
 		NOT = { trait = maimed }
 		NOT = { trait = one_legged }
@@ -112,11 +111,11 @@ character_event = {
 	desc = EVTDESC_TOG_3002
 	picture = GFX_evt_viking_battle_oldgods
 	border = GFX_event_normal_frame_war
-	
+
+	has_dlc = "The Old Gods"
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = berserker
 		NOT = { trait = wounded }
 		NOT = { is_maimed_trigger = yes }
@@ -141,11 +140,11 @@ character_event = {
 	desc = EVTDESC_TOG_3003
 	picture = GFX_evt_viking_battle_oldgods
 	border = GFX_event_normal_frame_war
-	
+
+	has_dlc = "The Old Gods"
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = berserker
 	}
 	
@@ -208,11 +207,11 @@ character_event = {
 	desc = EVTDESC_TOG_3004
 	picture = GFX_evt_viking_battle_oldgods
 	border = GFX_event_normal_frame_war
-	
+
+	has_dlc = "The Old Gods"
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = berserker
 	}
 
@@ -236,12 +235,12 @@ character_event = {
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_war
 	
+	has_dlc = "The Old Gods"
 	is_triggered_only = yes
 	
 	min_age = 50
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		trait = berserker
 		immortal = no
 		OR = { #Either you must have been a *regular* berserker (no flag), or a special one (gained via a Warrior Lodge) for more than ten years...
@@ -326,7 +325,8 @@ character_event = {
 	hide_window = yes
 	
 	is_triggered_only = yes
-	
+
+	has_dlc = "The Old Gods"
 	ai = yes
 	min_age = 16
 	only_men = yes
@@ -334,7 +334,6 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		host = { 
 			character = liege
 			prisoner = no
@@ -368,7 +367,8 @@ character_event = {
 	desc = EVTDESC_TOG_3200
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_religion
-	
+
+	has_dlc = "The Old Gods"
 	ai = no
 	min_age = 16
 	capable_only = yes
@@ -376,7 +376,6 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		in_command = no
 		OR = {
 			religion = norse_pagan
@@ -422,6 +421,7 @@ character_event = {
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_religion
 	
+	has_dlc = "The Old Gods"
 	ai = no
 	min_age = 16
 	capable_only = yes
@@ -429,7 +429,6 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		in_command = no
 		OR = {
 			religion = norse_pagan
@@ -475,7 +474,8 @@ character_event = {
 	desc = EVTDESC_TOG_3202
 	picture = GFX_evt_viking_throneroom_oldgods
 	border = GFX_event_normal_frame_religion
-	
+
+	has_dlc = "The Old Gods"
 	ai = no
 	min_age = 16
 	capable_only = yes
@@ -483,7 +483,6 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		in_command = no
 		OR = {
 			religion = norse_pagan
@@ -528,13 +527,13 @@ character_event = {
 	id = TOG.3203
 	hide_window = yes
 	
+	has_dlc = "The Old Gods"
 	only_women = yes
 	min_age = 16
 	prisoner = no
 	only_capable = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		NOT = {
 			has_game_rule = {
 				name = supernatural_events
@@ -624,8 +623,9 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "The Old Gods"
+	
 	trigger = {
-		has_dlc = "The Old Gods"
 		mother = { has_character_flag = pregnant_with_demon }
 	}
 	
@@ -1385,8 +1385,9 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "The Old Gods"
+	
 	trigger = {
-		has_dlc = "The Old Gods"
 		NOT = { has_artifact = loot_axe }
 		FROM = { always = yes }
 	}
@@ -1415,8 +1416,9 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "The Old Gods"
+	
 	trigger = {
-		has_dlc = "The Old Gods"
 		NOT = { 
 			has_artifact = strange_chest 
 			has_character_flag = found_chest
@@ -1443,8 +1445,9 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "The Old Gods"
+
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_artifact = strange_chest
 		has_character_flag = found_chest
 		FROM = { always = yes }
@@ -1477,8 +1480,9 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "The Old Gods"
+	
 	trigger = {
-		has_dlc = "The Old Gods"
 		has_artifact = strange_chest
 		NOT = { 
 			has_character_flag = found_chest
@@ -1626,14 +1630,14 @@ character_event = {
 	hide_from = yes
 	
 	is_triggered_only = yes
-	
+
+	has_dlc = "The Old Gods"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
 		OR = {
-			has_dlc = "The Old Gods"
 			any_owned_bloodline = {
 				has_bloodline_flag = bloodline_viking
 			}
@@ -1741,13 +1745,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "The Old Gods"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
 		OR = {
-			has_dlc = "The Old Gods"
 			any_owned_bloodline = {
 				has_bloodline_flag = bloodline_viking
 			}
@@ -1817,13 +1821,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "The Old Gods"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
 		OR = {
-			has_dlc = "The Old Gods"
 			any_owned_bloodline = {
 				has_bloodline_flag = bloodline_viking
 			}
@@ -1878,13 +1882,13 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	has_dlc = "The Old Gods"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
 	
 	trigger = {
 		OR = {
-			has_dlc = "The Old Gods"
 			any_owned_bloodline = {
 				has_bloodline_flag = bloodline_viking
 			}

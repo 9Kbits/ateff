@@ -18,13 +18,12 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
-	
+	has_dlc = "Zeus"		
 	ai = no
 	only_capable = yes
 	prisoner = no
 	
 	trigger = {
-		has_dlc = "Zeus"		
 		OR = {
 			independent = yes
 			higher_tier_than = DUKE
@@ -160,12 +159,11 @@ letter_event = {
 	border = GFX_event_letter_frame_religion
 	
 	is_triggered_only = yes
-	
+	has_dlc = "Zeus"
 	only_capable = yes
 	prisoner = no
 	
 	trigger = {
-		has_dlc = "Zeus"
 		wealth = 250
 		any_demesne_province = { has_empty_holding = yes }
 		job_spiritual = {
@@ -227,11 +225,11 @@ character_event = {
 	desc = EVTDESC_ZE_5020
 	picture = GFX_evt_bishop
 	border = GFX_event_normal_frame_religion
+	has_dlc = "Zeus"
 
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Zeus"
 		ai = no
 		job_spiritual = {
 			ai = yes
@@ -353,11 +351,11 @@ character_event = {
 	desc = EVTDESC_ZE_5022
 	picture = GFX_evt_bishop
 	border = GFX_event_normal_frame_religion
-	
+	has_dlc = "Zeus"
+
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Zeus"
 		job_spiritual = {
 			has_job_action = action_inquisition
 			has_character_flag = spiritual_reverse_convert_ze_5020
@@ -430,11 +428,11 @@ character_event = {
 	desc = EVTDESC_ZE_5027
 	picture = GFX_evt_recieve_letter
 	border = GFX_event_normal_frame_religion
-	
+	has_dlc = "Zeus"
+
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Zeus"
 		job_spiritual = {
 			has_character_flag = spiritual_reverse_convert_ze_5020
 		}
@@ -481,13 +479,12 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
-
+	has_dlc = "Zeus"
 	capable_only = yes
 	only_rulers = yes
 	prisoner = no
 	
 	trigger = {
-		has_dlc = "Zeus"
 		job_spiritual = {
 			ai = yes
 			NOR = {
@@ -566,11 +563,10 @@ letter_event = {
 	id = ZE.5040
 	desc = EVTDESC_ZE_5040
 	border = GFX_event_letter_frame_religion
-
+	has_dlc = "Zeus"
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "Zeus"
 		NOT = { religion_group = pagan_group }
 		job_spiritual = {
 			has_job_action = action_inquisition

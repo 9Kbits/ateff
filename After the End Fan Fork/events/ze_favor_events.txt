@@ -13,7 +13,8 @@ character_event = {
 	desc = EVTDESC_ZE_8100
 
 	hide_from = yes
-
+	
+	has_dlc = "Zeus"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
@@ -21,7 +22,6 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Zeus"
 		OR = {
 			NOT = {	religion_group = latter_day_saints }
 			NOT = {	religion_group = muslim }
@@ -193,7 +193,8 @@ character_event = {
 	picture = GFX_evt_quarrel
 	border = GFX_event_normal_frame_diplomacy
 	desc = EVTDESC_ZE_8110
-
+	
+	has_dlc = "Zeus"
 	min_age = 16
 	capable_only = yes
 	prisoner = no
@@ -201,7 +202,6 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_dlc = "Zeus"
 		NOT = { is_inaccessible_trigger = yes }
 		any_vassal = {
 			NOR = { 

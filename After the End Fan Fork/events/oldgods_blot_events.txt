@@ -2052,11 +2052,11 @@ character_event = {
 	picture = GFX_evt_drunk
 	border = GFX_event_normal_frame_religion
 	hide_from = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast_vassal
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast_vassal
 		NOT = { has_character_flag = feast_drunkard }
 		liege = { 
 			has_character_flag = blot_feast
@@ -2190,11 +2190,11 @@ character_event = {
 character_event = {
 	id = TOG.652
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast_vassal
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast_vassal
 		liege = {
 			has_character_flag = blot_feast
 			NOT = { has_character_flag = feast_gluttonous }
@@ -2355,12 +2355,11 @@ character_event = {
 	picture = GFX_evt_lunatic
 	border = GFX_event_normal_frame_religion
 	hide_from = yes
-	
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast_vassal
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast_vassal
 		NOT = { has_character_flag = feast_lunatic }
 		liege = { 
 			has_character_flag = blot_feast
@@ -2497,11 +2496,11 @@ character_event = {
 	picture = GFX_evt_brothel
 	border = GFX_event_normal_frame_religion
 	hide_from = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast_vassal
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast_vassal
 		NOT = { has_character_flag = feast_lustful }
 		liege = { 
 			has_character_flag = blot_feast
@@ -2720,11 +2719,11 @@ character_event = {
 character_event = {
 	id = TOG.660
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast_vassal
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast_vassal
 		NOT = { has_character_flag = feast_friendship }
 		liege = { 
 			has_character_flag = blot_feast
@@ -2851,11 +2850,11 @@ character_event = {
 character_event = {
 	id = TOG.663
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast_vassal
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast_vassal
 		NOT = { has_character_flag = feast_homosexual }
 		trait = homosexual
 		is_female = no
@@ -2996,11 +2995,11 @@ character_event = {
 character_event = {
 	id = TOG.666
 	hide_window = yes
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast_vassal
 	is_triggered_only = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast_vassal
 		NOT = { has_character_flag = feast_homosexual }
 		trait = homosexual
 		is_female = yes
@@ -3405,14 +3404,13 @@ character_event = {
 ### Feast event bounces
 character_event = { #feast_drunkard
 	id = TOG.683
-	
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast
 	is_triggered_only = yes
 	
 	hide_window = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast
 		NOT = { has_character_flag = feast_drunkard }
 		any_vassal = {
 			has_character_flag = blot_feast_vassal
@@ -3434,14 +3432,13 @@ character_event = { #feast_drunkard
 
 character_event = {
 	id = TOG.684 #feast_gluttonous
-	
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast
 	is_triggered_only = yes
 	
 	hide_window = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast
 		NOT = { has_character_flag = feast_gluttonous }
 		any_vassal = {
 			has_character_flag = blot_feast_vassal
@@ -3463,14 +3460,13 @@ character_event = {
 
 character_event = {
 	id = TOG.685 #feast_lunatic
-	
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast
 	is_triggered_only = yes
 	
 	hide_window = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast
 		NOT = { has_character_flag = feast_lunatic }
 		any_vassal = {
 			has_character_flag = blot_feast_vassal
@@ -3492,14 +3488,13 @@ character_event = {
 
 character_event = {
 	id = TOG.686 #feast_lustful
-	
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast
 	is_triggered_only = yes
 	
 	hide_window = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast
 		NOT = { has_character_flag = feast_lustful }
 		any_vassal = { 
 			has_character_flag = blot_feast_vassal
@@ -3523,14 +3518,13 @@ character_event = {
 
 character_event = {
 	id = TOG.687 #feast_friendship
-	
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast
 	is_triggered_only = yes
 	
 	hide_window = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
-		has_character_flag = blot_feast
 		NOT = { has_character_flag = feast_friendship }
 		has_character_flag = blot_feast_vassal
 		any_vassal = {
@@ -3568,15 +3562,14 @@ character_event = {
 
 character_event = {
 	id = TOG.688 #male_homosexual
-	
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast
 	is_triggered_only = yes
 	
 	hide_window = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		NOT = { has_character_flag = feast_homosexual }
-		has_character_flag = blot_feast
 		any_vassal = { 
 			has_character_flag = blot_feast_vassal
 			NOT = { has_character_flag = feast_homosexual }
@@ -3626,13 +3619,12 @@ character_event = {
 	id = TOG.689 #female_homosexual
 	
 	is_triggered_only = yes
-	
+	has_dlc = "The Old Gods"
+	has_character_flag = blot_feast
 	hide_window = yes
 	
 	trigger = {
-		has_dlc = "The Old Gods"
 		NOT = { has_character_flag = feast_homosexual }
-		has_character_flag = blot_feast
 		any_vassal = { 
 			has_character_flag = blot_feast_vassal
 			NOT = { has_character_flag = feast_homosexual }
