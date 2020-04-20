@@ -15,6 +15,7 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion_group = christian
 	
 	trigger = {
 		NOT = { #immersion-breaking
@@ -98,12 +99,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = catholic
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = catholic
 
 		is_heretic = no
 		
@@ -174,18 +175,17 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = rust_cultist
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = rust_cultist
 
 		is_heretic = no
 		
 		is_title_active = d_rust_cultist
 		NOT = { is_title_active = d_midwestern_brotherhood }
-		
 		
 		170 = { # Chicago
 			owner = {
@@ -261,13 +261,13 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = revelationist_reformed
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = revelationist_reformed
-
+		
 		is_heretic = no
 		
 		NOT = { is_title_active = d_flaming_sword }
@@ -338,12 +338,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = occultist_reformed
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = occultist_reformed
 
 		is_heretic = no
 		
@@ -423,12 +423,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = norse_pagan_reformed
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = norse_pagan_reformed
 
 		is_heretic = no
 		
@@ -500,12 +500,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = thelemic_reformed
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = thelemic_reformed
 
 		is_heretic = no
 		
@@ -579,12 +579,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = confederated
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = confederated
 
 		is_heretic = no
 		
@@ -648,12 +648,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = jewish
 
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = jewish
 
 		is_heretic = no
 		
@@ -667,7 +667,7 @@ narrative_event = {
 	}
 	
 	mean_time_to_happen = {
-		months = 2
+		months = 4
 	}
 	
 	immediate = {
@@ -790,12 +790,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = espiritista_reformed
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = espiritista_reformed
 
 		is_heretic = no
 		
@@ -867,6 +867,7 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = cetic
 	
 	trigger = {
 		NOT = { #immersion-breaking
@@ -940,6 +941,7 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = voodoo
 	
 	trigger = {
 		NOT = { #immersion-breaking
@@ -1028,6 +1030,7 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = rastafarian
 	
 	trigger = {
 		NOT = { #immersion-breaking
@@ -1111,6 +1114,7 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = santeria
 	
 	trigger = {
 		NOT = { #immersion-breaking
@@ -1182,12 +1186,14 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = consumerist
+	has_global_flag = consumerist_revolt_successful
 	
 	trigger = {
+		is_heretic = no
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		has_global_flag = consumerist_revolt_successful
 		NOT = { is_title_active = d_golden_archers }
 		has_landed_title = d_consumerist
 	}
@@ -1245,12 +1251,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = mormon
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = mormon
 
 		is_heretic = no
 		
@@ -1321,13 +1327,13 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	#only_men = yes
+	religion = ursuline
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = ursuline
-
+		
 		is_heretic = no
 		
 		NOT = { is_title_active = d_st_ursulas_chosen }
@@ -1407,12 +1413,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = atomicist
 
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = atomicist
 
 		is_heretic = no
 		
@@ -1479,15 +1485,13 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = sacred_heart
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
-		}
-		religion = sacred_heart
-
-		is_heretic = no
-		
+		}	
+	
 		NOT = { is_title_active = d_masked_knights }
 		
 		has_global_flag = mexican_reconquistas_unlocked
@@ -1558,12 +1562,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = evangelical
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = evangelical
 
 		is_heretic = no
 		
@@ -1656,13 +1660,13 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = midewiwin_reformed
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = midewiwin_reformed
-
+		
 		is_heretic = no
 		
 		NOT = { is_title_active = d_three_fires }
@@ -1733,12 +1737,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = raven_tales_reformed
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = raven_tales_reformed
 
 		is_heretic = no
 		
@@ -1810,12 +1814,12 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
+	religion = trailwalker_reformed
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = trailwalker_reformed
 
 		is_heretic = no
 		

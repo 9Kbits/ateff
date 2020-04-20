@@ -153,10 +153,11 @@ character_event = {
 	
 	has_dlc = "Holy Fury"
 	min_age = 16
-	in_command = no
 	prisoner = no
+	is_in_society = yes
 
-	trigger = { 
+	trigger = {
+		in_command = no
 		society_rank = 3
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { is_incapable = yes }

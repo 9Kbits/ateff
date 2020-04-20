@@ -16,6 +16,8 @@ character_event = {
     desc = HFP_500_DESC
     is_triggered_only = yes
 	
+	ai = yes
+	min_age = 16
 	is_in_society = yes
 	
 	portrait = event_target:combatant_1
@@ -38,8 +40,7 @@ character_event = {
 				character = ROOT
 			}
 			in_command = no
-			is_adult = yes
-            ai = yes
+			
         }
     }
 
@@ -1785,6 +1786,7 @@ character_event = { # Warrior Lodge members with high PCS might go out and duel 
     is_triggered_only = yes
 	
 	ai = yes
+	min_age = 16
 	is_in_society = yes
 	
 	weight_multiplier = {
@@ -1880,8 +1882,6 @@ character_event = { # Warrior Lodge members with high PCS might go out and duel 
 			}
 		}
 		is_inaccessible_or_incapable_trigger = no
-		ai = yes
-		is_adult = yes
 		in_command = no
 		NOR = {
 			has_injury_trigger = yes

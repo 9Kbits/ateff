@@ -3737,9 +3737,9 @@ character_event = {
 character_event = {
 	id = HF.20037
 	hide_window = yes
+	only_rulers = yes
 
 	trigger = { 
-		is_ruler = yes
 		event_target:converting_king = { 
 			has_character_flag = flag_converted_baptism 
 			is_alive = yes
@@ -3936,9 +3936,9 @@ character_event = {
 character_event = {
 	id = HF.20038
 	hide_window = yes
+	only_rulers = yes
 
 	trigger = { 
-		is_ruler = yes
 		is_alive = yes
 		event_target:converting_king = { 
 			is_ruler = yes
@@ -7800,9 +7800,9 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	has_dlc = "Holy Fury"
 	is_triggered_only = yes
+	religion_group = christian
 
-	trigger = { 
-		religion_group = christian
+	trigger = {
 		higher_tier_than = DUKE
 		NOT = { is_incapable = yes }
 		OR = { #Must qualify for at least one of the special options.

@@ -645,14 +645,13 @@ character_event = {
 	prisoner = no
 	has_dlc = "The Old Gods"
 	is_sick = no
+	always_men = yes
 	
 	trigger = {	
 		is_landed = no
 		in_command = no	
 		has_epidemic = no
-		NOT = { has_severe_disability_trigger = yes }
-		
-		is_female = no
+		NOT = { has_severe_disability_trigger = yes }		
 		#female_get_masculine_event_trigger = yes #you can't just make things up like this.
 		#has_global_flag = varangian_guard_founded
 		#culture_group = north_germanic

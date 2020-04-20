@@ -6,10 +6,12 @@ narrative_event = { #we must restore our glory
 	desc = EVTDESC_mahonic1
 	picture = GFX_evt_open_book_hf
 	#border = GFX_event_narrative_frame
+	
+	only_rulers = yes
+	
 	trigger = {
 		character = 1620100
 		NOT = { has_character_flag = paulmahonicflag }
-		is_landed = yes
 		OR = {
 			NOT = {
 				has_game_rule = {
@@ -1189,10 +1191,12 @@ character_event = { #victory
 	#border = GFX_event_narrative_frame
 	#Conditions
 	has_character_flag = paulmahonicflag
+	only_playable = yes
+	only_independent = yes
+	
 	trigger = {
 		AND = {
 			in_revolt = no
-			independent = yes
 			NOT = { has_character_flag = paul_mahonic_won_independence_war }
 		}
 	}
@@ -1373,9 +1377,11 @@ character_event = { #Now to unite NE
 	#border = GFX_event_narrative_frame
 	#Conditions
 	has_character_flag = paulmahonicflag
+	only_playable = yes
+	only_independent = yes
+	war = no
+	
 	trigger = {
-		independent = yes
-		war = no
 		NOT = { has_character_flag = uniting_NE }
 	}
 	mean_time_to_happen = {

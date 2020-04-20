@@ -92,14 +92,13 @@ narrative_event = {
 	
 	major = yes
 	only_playable = yes
+	religion = exovedate
 	has_global_flag = exopres
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = exovedate
-
 		
 		NOT = { is_title_active = d_coureurs_des_bois }
 

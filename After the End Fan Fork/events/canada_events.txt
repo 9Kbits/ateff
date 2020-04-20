@@ -143,13 +143,13 @@ character_event = {
 	is_triggered_only = yes
 	picture = GFX_evt_canada_confederation
 	#hide_window = yes
+	lacks_dlc = "Sons of Abraham"
 
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
 		has_landed_title = k_ursuline
-		NOT = { has_dlc = "Sons of Abraham" } # if they don't have cardinals
 	}
 	
 	option = {
@@ -276,13 +276,13 @@ character_event = {
 	hide_window = yes
 	religion = high_church
 	ai = yes
+	religion = high_church
 	is_triggered_only = yes
 
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = high_church
 		NOR = {
 			trait = high_anglican
 			trait = broad_anglican
@@ -317,7 +317,7 @@ narrative_event = {
 	
 	show_ROOT = yes
 	hide_new = yes
-	
+	religion = ursuline
 	only_playable = yes
 	min_age = 16
 	
@@ -325,7 +325,6 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = ursuline
 		controls_religion = yes
 		year = 2690
 		
@@ -376,7 +375,7 @@ narrative_event = {
 	
 	show_ROOT = yes
 	hide_new = yes
-	
+	religion = ursuline
 	only_playable = yes
 	min_age = 16
 	
@@ -384,7 +383,6 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = ursuline
 		controls_religion = yes
 		year = 2690
 		NOT = { has_global_flag = ursuline_crusades_unlocked }
@@ -439,7 +437,7 @@ narrative_event = {
 	
 	show_ROOT = yes
 	hide_new = yes
-	
+	religion = ursuline
 	only_playable = yes
 	min_age = 16
 	
@@ -447,7 +445,6 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = ursuline
 		controls_religion = yes
 		year = 2500
 		NOT = { has_global_flag = ursuline_crusades_unlocked }
@@ -497,7 +494,7 @@ narrative_event = {
 	
 	show_ROOT = yes
 	hide_new = yes
-	
+	religion = ursuline
 	only_playable = yes
 	min_age = 16
 	
@@ -505,7 +502,6 @@ narrative_event = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = ursuline
 		controls_religion = yes
 		year = 2690
 		NOT = { has_global_flag = ursuline_crusades_unlocked }
@@ -547,39 +543,37 @@ narrative_event = {
 }
 
 #Fixes Agnatic succession thing
-character_event = {
-	id = canada.14
-	desc = EVTDESC_gaian_laws
-	picture = GFX_evt_courtiers_talking
-	
-	mean_time_to_happen = {
-		months = 1
-	}
-
-	trigger = {
-		AND = {
-			religion = ursuline
-			is_theocracy = yes
-		}
-		is_landed = yes
-		primary_title = {
-			OR = {
-				has_law = agnatic_succession
-				has_law = cognatic_succession
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPT_gaian_law_enat
-		trigger = { is_female = yes }
-		primary_title = { add_law = enatic_succession }
-		piety = 20
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
+#character_event = {
+#	id = canada.14
+#	desc = EVTDESC_gaian_laws
+#	picture = GFX_evt_courtiers_talking
+#	religion = ursuline
+#	
+#	mean_time_to_happen = {
+#		months = 1
+#	}
+#
+#	trigger = {
+#		is_theocracy = yes
+#		is_landed = yes
+#		primary_title = {
+#			OR = {
+#				has_law = agnatic_succession
+#				has_law = cognatic_succession
+#			}
+#		}
+#	}
+#	
+#	option = {
+#		name = EVTOPT_gaian_law_enat
+#		trigger = { is_female = yes }
+#		primary_title = { add_law = enatic_succession }
+#		piety = 20
+#		ai_chance = {
+#			factor = 1
+#		}
+#	}
+#}
 
 ##Canadian Pilgrimage events##
 

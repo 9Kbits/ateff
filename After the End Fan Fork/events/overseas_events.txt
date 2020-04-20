@@ -780,6 +780,12 @@ character_event = {
 	picture = GFX_evt_scandal
 	
 	hide_window = yes
+	has_character_flag = foreign_merchant
+	
+	trigger = {
+		
+		#specifying culture is sort of redundant given that this already checks for the foreign merchant flag
+	}
 	
 	mean_time_to_happen = {
 		years = 100
@@ -788,11 +794,6 @@ character_event = {
 		modifier = { factor = 0.8 trait = wroth }
 		modifier = { factor = 0.8 trait = envious }
 		modifier = { factor = 0.5 trait = cruel }
-	}
-	
-	trigger = {
-		has_character_flag = foreign_merchant
-		#specifying culture is sort of redundant given that this already checks for the foreign merchant flag
 	}
 
 	option = {
@@ -832,6 +833,15 @@ character_event = {
 	picture = GFX_evt_scandal
 	
 	hide_window = yes
+	has_character_flag = foreign_merchant
+	
+	trigger = {
+		#again, specifying culture seems redundant given that this already checks for the foreign_merchant flag
+		liege = {
+			has_dynasty_flag = foreign_friendly
+			NOT = { religion = ROOT } #liege doesn't have merchant's religion
+		}
+	}
 	
 	mean_time_to_happen = {
 		years = 100
@@ -839,15 +849,6 @@ character_event = {
 		modifier = { factor = 5 trait = cynical }
 		modifier = { factor = 0.8 trait = gregarious }
 		modifier = { factor = 0.8 learning = 12 }
-	}
-	
-	trigger = {
-		has_character_flag = foreign_merchant
-		#again, specifying culture seems redundant given that this already checks for the foreign_merchant flag
-		liege = {
-			has_dynasty_flag = foreign_friendly
-			NOT = { religion = ROOT } #liege doesn't have merchant's religion
-		}
 	}
 
 	option = {
@@ -1043,14 +1044,14 @@ character_event = {
 	min_age = 16
 	max_age = 40
 	prisoner = no
+	is_married = no
+	only_capable = yes
 	
 	trigger = {
 		is_landed = no
 		in_command = no
 		from_ruler_dynasty = yes
-		has_dynasty_flag = foreign_allowed
-		is_married = no
-		NOT = { is_incapable = yes }
+		has_dynasty_flag = foreign_allowed		
 		NOT = { has_character_flag = mercantile_desire }
 		NOT = { has_character_flag = mercantile_deny }
 		NOT = { has_character_flag = mercantile_done }
@@ -1185,7 +1186,9 @@ character_event = {
 character_event = {
 	id = overseas.60
 	hide_window = yes
-	trigger = {	has_character_flag = mercantile_away }
+	has_character_flag = mercantile_away 
+	
+	trigger = {	}
 	
 	mean_time_to_happen = {
 		years = 29
@@ -1229,7 +1232,9 @@ narrative_event = {
 character_event = {
 	id = overseas.62
 	hide_window = yes
-	trigger = {	has_character_flag = mercantile_away }
+	has_character_flag = mercantile_away
+	
+	trigger = { }
 	
 	mean_time_to_happen = {
 		years = 21
@@ -1279,7 +1284,9 @@ narrative_event = {
 character_event = {
 	id = overseas.64
 	hide_window = yes
-	trigger = {	has_character_flag = mercantile_away }
+	has_character_flag = mercantile_away
+	
+	trigger = { }
 	
 	mean_time_to_happen = {
 		years = 13
@@ -1328,7 +1335,9 @@ narrative_event = {
 character_event = {
 	id = overseas.66
 	hide_window = yes
-	trigger = {	has_character_flag = mercantile_away }
+	has_character_flag = mercantile_away
+	
+	trigger = { }
 	
 	mean_time_to_happen = {
 		years = 13
@@ -1387,7 +1396,9 @@ narrative_event = {
 character_event = {
 	id = overseas.68
 	hide_window = yes
-	trigger = {	has_character_flag = mercantile_away }
+	has_character_flag = mercantile_away
+	
+	trigger = {	}
 	
 	mean_time_to_happen = {
 		years = 15
@@ -1445,7 +1456,9 @@ narrative_event = {
 character_event = {
 	id = overseas.70
 	hide_window = yes
-	trigger = {	has_character_flag = mercantile_away }
+	has_character_flag = mercantile_away
+	
+	trigger = { }
 	
 	mean_time_to_happen = {
 		years = 13
@@ -1514,7 +1527,9 @@ narrative_event = {
 character_event = {
 	id = overseas.72
 	hide_window = yes
-	trigger = {	has_character_flag = mercantile_away }
+	has_character_flag = mercantile_away
+	
+	trigger = { }
 	
 	mean_time_to_happen = {
 		years = 17

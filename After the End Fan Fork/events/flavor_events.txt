@@ -575,9 +575,9 @@ narrative_event = {
 	min_age = 16
 	prisoner = no
 	only_rulers = yes
+	war = no
 	
 	trigger = {
-		war = no
 		NOT = { has_character_flag = flavor_music }
 	}
 	
@@ -643,11 +643,11 @@ narrative_event = {
 	
 	min_age = 16
 	prisoner = no
+	war = no
+	only_playable = yes
 	
 	trigger = {
 		non_historical_culture_names_in_alt_start_trigger = no #will not fire if using non-historical culture names
-		num_of_count_titles = 1
-		war = no
 		month = 5
 		NOT = { month = 8 }
 		OR = {

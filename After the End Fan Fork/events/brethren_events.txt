@@ -34,10 +34,10 @@ character_event = {
 	id = pirate.10
 	desc = EVTDESC_pirate_yarr
 	picture = GFX_evt_merchant_ship_at_sea_republic
+	religion = brethren
+	only_rulers = yes
 
 	trigger = {
-		religion = brethren
-		is_ruler = yes
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_character_flag = pirate_yarr }
 	}

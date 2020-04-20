@@ -931,7 +931,7 @@ narrative_event = {
 	
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
-	is_female = no
+	only_men = yes
 
 	trigger = { 
 		NOT = { has_global_flag = flag_phalaris_bloodline }
@@ -9400,13 +9400,13 @@ character_event = {
 	max_age = 30
 	only_capable = yes
 	prisoner = no
+	only_women = yes
+	is_married = no
+	religion_group = christian
 	
 	trigger = {
 		is_ruler = no
-		is_female = yes
 		NOT = { has_religion_feature = religion_matriarchal }
-		religion_group = christian
-		is_married = no
 		NOT = { num_of_children = 1 }
 		NOT = { num_of_lovers = 1 }
 		NOT = { num_of_friends = 1 }

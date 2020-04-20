@@ -38,13 +38,13 @@ narrative_event = {
 	desc = EVTDESC_apparition_vision
 	picture = GFX_evt_lady_guadalupe
 
-	only_rulers = yes
+	only_playable = yes
+	religion_group = cult_of_saints
 	
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion_group = cult_of_saints
 		is_tribal = no
 		is_nomadic = no
 		location = {
@@ -218,13 +218,13 @@ character_event = {
 	desc = EVTDESC_apparition_fakevision
 	picture = GFX_evt_lady_guadalupe
 
-	only_rulers = yes
+	only_playable = yes
+	religion_group = cult_of_saints
 	
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion_group = cult_of_saints
 		is_tribal = no
 		is_nomadic = no
 		location = {

@@ -21,7 +21,6 @@ character_event = {
 		has_job_action = action_statecraft
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		liege = {
 			NOT = { 
 				has_character_modifier = popular_ruler
@@ -1695,7 +1694,6 @@ character_event = {
 		has_job_action = action_uncover_plots_offmap
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		liege = {
 			any_realm_lord = {
 				NOT = { is_liege_of = ROOT }
@@ -1882,7 +1880,6 @@ character_event = {
 		has_job_action = action_uncover_plots_offmap
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		liege = {
 			any_vassal = {
 				NOT = { character = ROOT }
@@ -1954,7 +1951,6 @@ character_event = { # Hunt Apostates meta event
 		has_job_action = action_hunt_heretics
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		liege = {
 			OR = {
 				# There is someone who is highly suspect

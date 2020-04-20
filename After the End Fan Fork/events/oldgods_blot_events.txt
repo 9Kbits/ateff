@@ -2499,6 +2499,7 @@ character_event = {
 	has_dlc = "The Old Gods"
 	has_character_flag = blot_feast_vassal
 	is_triggered_only = yes
+	only_men = yes
 	
 	trigger = {
 		NOT = { has_character_flag = feast_lustful }
@@ -2507,7 +2508,6 @@ character_event = {
 			NOT = { has_character_flag = feast_lustful }
 		}
 		trait = lustful
-		is_female = no
 	}
 	
 #	mean_time_to_happen = {
@@ -2853,11 +2853,11 @@ character_event = {
 	has_dlc = "The Old Gods"
 	has_character_flag = blot_feast_vassal
 	is_triggered_only = yes
+	only_men = yes
 	
 	trigger = {
 		NOT = { has_character_flag = feast_homosexual }
 		trait = homosexual
-		is_female = no
 		has_lover = no
 		liege = { 
 			NOT = { has_character_flag = feast_homosexual }
@@ -2998,11 +2998,11 @@ character_event = {
 	has_dlc = "The Old Gods"
 	has_character_flag = blot_feast_vassal
 	is_triggered_only = yes
+	only_women = yes
 	
 	trigger = {
 		NOT = { has_character_flag = feast_homosexual }
 		trait = homosexual
-		is_female = yes
 		has_lover = no
 		liege = { 
 			NOT = { has_character_flag = feast_homosexual }

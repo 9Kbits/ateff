@@ -40,7 +40,6 @@ character_event = {
 		has_job_action = action_inquisition
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		NOT = { location = { religion = ROOT } }
 		location = {
 			owner = { same_realm = ROOT }
@@ -406,7 +405,6 @@ character_event = {
 		has_job_action = action_inquisition
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		location = {
 			any_province_character = {
 				ai = yes
@@ -600,7 +598,6 @@ character_event = {
 		has_job_action = action_inquisition
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		location = {
 			NOT = { religion = ROOT }
 			owner = { same_realm = ROOT }
@@ -811,7 +808,6 @@ character_event = {
 		has_job_action = action_inquisition
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		NOT = { has_religion_feature = religion_cosmopolitan }
 		NOT = { has_religion_feature = religion_feature_espiritista }
 		NOT = { religion_group = pagan_group }
@@ -1090,7 +1086,6 @@ character_event = {
 		has_job_action = action_inquisition
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		NOT = { has_religion_feature = religion_cosmopolitan }
 		NOT = { has_religion_feature = religion_feature_espiritista }
 		location = {
@@ -1221,7 +1216,6 @@ character_event = {
 		has_job_action = action_inquisition
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		NOT = { has_character_flag = preacher_arrives }
 		location = {
 			owner = {
@@ -1273,7 +1267,6 @@ character_event = {
 		has_job_action = action_inquisition
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		location = {
 			owner = {
 				is_adult = yes
@@ -1386,7 +1379,6 @@ character_event = {
 		has_job_action = action_inquisition
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		location = {
 			owner = {
 				NOT = { character = ROOT }
@@ -1474,7 +1466,6 @@ character_event = {
 		has_job_action = action_inquisition
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		location = {
 			owner = {
 				NOT = { character = ROOT }
@@ -1578,7 +1569,6 @@ character_event = {
 		has_job_action = action_improve_rel_relations
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		location = { 
 			any_province_lord = {
 				NOT = { character = ROOT }
@@ -1688,8 +1678,8 @@ character_event = {
 		has_job_action = action_improve_rel_relations
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		NOT = { religion_group = indian_group }
+		NOT = { religion_group = afro_syncretic }
 		religion_head = {
 			NOT = { character = liege }
 		}
@@ -1800,7 +1790,6 @@ character_event = {
 		has_job_action = action_advance_cul_tech
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -1904,7 +1893,6 @@ character_event = {
 		has_job_action = action_advance_cul_tech
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		NOT = { religion_group = indian_group }
 		NOT = { has_religion_feature = religion_cosmopolitan }
 		NOT = { has_religion_feature = religion_feature_espiritista }
@@ -1912,6 +1900,8 @@ character_event = {
 		NOT = { religion_group = mesoamerican_gods }
 		NOT = { religion_group = afro_syncretic }
 		NOT = { religion_group = pacific }
+		NOT = { religion_group = amero_syncretic }
+		NOT = { religion_group = nautical }
 		is_heretic = no
 		has_secret_religion = no
 		OR = {
@@ -2065,7 +2055,6 @@ character_event = {
 		has_job_action = action_charity
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		location = { 
 			any_province_lord = {
 				religion = ROOT
@@ -2172,7 +2161,6 @@ character_event = {
 		has_job_action = action_charity
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 		location = {
 			religion = ROOT
 			owner = { same_realm = ROOT }
@@ -2299,7 +2287,6 @@ character_event = {
 		has_job_action = action_charity
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -2376,7 +2363,6 @@ character_event = {
 		has_job_action = action_charity
 		NOT = { has_character_modifier = in_seclusion }
 		NOT = { has_character_modifier = bedridden_illness }
-		NOT = { is_incapable = yes }
 	}
 	
 	mean_time_to_happen = {

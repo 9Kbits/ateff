@@ -15,7 +15,6 @@ narrative_event = {
 	
 	trigger = {
 		controls_religion = no
-		is_landed = yes
 		is_tribal = no
 		realm_size = 15
 		NOT = { has_global_flag = consumerist_revolt_ocurred }
@@ -930,17 +929,19 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	desc = EVTDESC_MONETARIST_6 # "An Investor, one of the companions to the Prophet of Profit, has declared what they claim is truthful doctrine: save, don't spend."
 	major = yes
+	
+	prisoner = no
+	has_global_flag = monetarist_grumbles
+	capable_only = yes
+	only_playable = yes
+	
 	major_trigger = {
 		capital_scope = { region = custom_usa }
 	}
 	
 	trigger = {
-		has_global_flag = monetarist_grumbles
 		NOT = { has_global_flag = monetarist_heresy }
 		trait = investor
-		is_playable = yes
-		prisoner = no
-		NOT = { is_incapable = yes }
 		NOT = { has_landed_title = d_consumerist }
 	}
 	
@@ -1032,13 +1033,14 @@ character_event = {
 	id = consumer.9
 	desc = EVTDESC_MONETARIST_9
 	picture = GFX_evt_imam
+	
+	religion = consumerist
+	has_global_flag = monetarist_heresy
 	only_playable = yes
 	only_capable = yes
 	prisoner = no
 	
 	trigger = {
-		religion = consumerist
-		has_global_flag = monetarist_heresy
 		NOT = {
 			has_character_flag = monetarist_chosen_side
 		}

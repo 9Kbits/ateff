@@ -43,12 +43,16 @@ character_event = {
 	desc = EVTDESC_faculty_142
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
+	capable_only = yes
+	prisoner = no
+	is_in_society = yes
 
 	trigger = {	
 		has_quest = quest_faculty_quest_1
 		society_member_of = hermetics
 		NOT = { is_inaccessible_trigger = yes }
-		prisoner = no
 	}
 	
 	mean_time_to_happen = {
@@ -121,6 +125,11 @@ character_event = {
 	desc = EVTDESC_faculty_150
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
+	capable_only = yes
+	prisoner = no
+	is_in_society = yes
 	
 	trigger = {
 		society_member_of = hermetics
@@ -277,14 +286,17 @@ character_event = {
 	desc = EVTDESC_faculty_162
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
 	capable_only = yes
+	prisoner = no
+	is_in_society = yes
 	
 	trigger = {		
 		has_quest = quest_faculty_quest_2
 		society_member_of = hermetics
 		NOT = { check_variable = { which = projectprogress value = 9} }
 		NOT = { is_inaccessible_trigger = yes }
-		prisoner = no
 	}
 	
 	mean_time_to_happen = {
@@ -368,14 +380,17 @@ character_event = {
 	desc = EVTDESC_faculty_163
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
 	capable_only = yes
+	prisoner = no
+	is_in_society = yes
 
 	trigger = {		
 		has_quest = quest_faculty_quest_2
 		society_member_of = hermetics
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { check_variable = { which = projectprogress value = 9} }
-		prisoner = no
 	}
 	
 	mean_time_to_happen = {
@@ -459,15 +474,18 @@ character_event = {
 	desc = EVTDESC_faculty_164
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
 	capable_only = yes
-	only_rulers = yes
+	prisoner = no
+	is_in_society = yes
+	
 	trigger = {
 		has_quest = quest_faculty_quest_2
 		society_member_of = hermetics
 		check_variable = { which = projectprogress value = 5}
 		NOT = { check_variable = { which = projectprogress value = 9} }
 		NOT = { is_inaccessible_trigger = yes }
-		prisoner = no
 		wealth = 100
 		learning = 20
 	}
@@ -535,13 +553,16 @@ character_event = {
 	desc = EVTDESC_faculty_165
 	picture = GFX_evt_throne_room
 	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
 	capable_only = yes
+	prisoner = no
+	is_in_society = yes
 
 	trigger = {	
 		has_quest = quest_faculty_quest_2
 		society_member_of = hermetics
 		NOT = { is_inaccessible_trigger = yes }
-		prisoner = no
 		check_variable = { which = projectprogress value = 3}
 	}
 	

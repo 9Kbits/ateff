@@ -33,11 +33,11 @@ character_event = {
 	
 	has_dlc = "Holy Fury"
 	min_age = 16
-	in_command = no
 	prisoner = no
 	is_in_society = yes
 
 	trigger = { 
+		in_command = no
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { is_incapable = yes }
 		NOT = { has_character_flag = do_not_disturb }
@@ -2228,12 +2228,12 @@ character_event = {
 	border = GFX_event_normal_frame_diplomacy
 
 	ai = no
+	prisoner = no
+	min_age = 16
 
 	trigger = { 
 		ai = no #Only involves one character.
-		is_adult = yes
 		in_command = no
-		prisoner = no
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { is_incapable = yes }
 		NOT = { has_character_flag = do_not_disturb }
@@ -4231,11 +4231,11 @@ character_event = {
 	
 	has_dlc = "Holy Fury"
 	min_age = 16
-	in_command = no
 	prisoner = no
 	is_in_society = yes
 
 	trigger = { 
+		in_command = no
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { is_incapable = yes }
 		NOT = { has_character_flag = do_not_disturb }
@@ -8023,12 +8023,12 @@ character_event = {
 
 	has_dlc = "Holy Fury"
 	min_age = 16
-	in_command = no
 	prisoner = no
 	is_in_society = yes
 
 	trigger = { 
 		society_rank = 4
+		in_command = no
 		NOT = { is_inaccessible_trigger = yes }
 		NOT = { is_incapable = yes }
 		NOT = { has_character_flag = do_not_disturb }

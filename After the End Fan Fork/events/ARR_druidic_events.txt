@@ -193,7 +193,6 @@ character_event = {
 	only_rulers = yes
 	
 	trigger = {
-		is_ruler = yes
 		has_character_flag = tailteann_death_phase
 		NOT = {
 			has_character_flag = choose_dead_one_tailteann
@@ -9122,9 +9121,9 @@ character_event = {
 character_event = {
 	id = ancrel.0156
 	hide_window = yes
+	only_rulers = yes
 	
 	trigger = {
-		is_ruler = yes
 		is_priest = yes
 		religion_openly_in_celtic_subgroup_trigger = yes
 		NOT = { 
@@ -9337,9 +9336,10 @@ character_event = {
 	capable_only = yes
 	only_playable = yes
 	prisoner = no
+	min_age = 16
+	religion_group = pagan_group
 	
 	trigger = {
-		is_adult = yes
 		in_command = no
 		OR = {
 			religion = celtic_pagan
@@ -9571,11 +9571,11 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	has_dlc = "The Old Gods"
-	in_command = no
 	religion_group = pagan_group
 	
 	trigger = {
 		is_landed = no
+		in_command = no
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
@@ -10602,10 +10602,11 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	has_dlc = "The Old Gods"
-	in_command = no
+	religion_group = pagan_group
 	
 	trigger = {
 		is_landed = no
+		in_command = no
 		has_global_flag = fianna_founded
 		OR = {
 			religion = celtic_pagan
@@ -11301,7 +11302,7 @@ character_event = {
 		}
 		father = { is_alive = no }
 	}
-			
+
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -11349,9 +11350,9 @@ character_event = {
 character_event = {
 	id = ancrel.1186
 	hide_window = yes
+	has_global_flag = celtic_pagan_reformation
 	
 	trigger = {
-		has_global_flag = celtic_pagan_reformation
 		NOT = { has_global_flag = fianna_reformed }
 		is_title_active = d_round_table
 	}
@@ -11368,7 +11369,6 @@ character_event = {
 			}
 		}		
 		set_global_flag = fianna_reformed
-
 	}
 }
 
@@ -11631,10 +11631,10 @@ character_event = {
 	
 	only_playable = yes
 	prisoner = no
+	has_character_flag = fian_band_visiting
 	
 	picture = GFX_evt_joust
 	trigger = {
-	 	has_character_flag = fian_band_visiting
 		NOT = {	has_character_flag = fian_recruited }
 		NOT = {	has_character_flag = fian_woman_seduced	}
 	}
@@ -11673,11 +11673,11 @@ character_event = {
 	
 	only_playable = yes
 	prisoner = no
+	has_character_flag = fian_band_visiting
 	
 	picture = GFX_evt_joust
 	
 	trigger =  {
-	 	has_character_flag = fian_band_visiting
 		NOT = {	has_character_flag = fian_recruited }
 		NOT = {	has_character_flag = fian_woman_seduced	}
 	}
@@ -11722,13 +11722,12 @@ character_event = {
 	id = ancrel.1257
 	desc = EVTDESCancrel.1257	
 	
-	
 	only_playable = yes
 	prisoner = no
+	has_character_flag = fian_band_visiting
 	
 	picture = GFX_evt_joust
 	trigger = {
-	 	has_character_flag = fian_band_visiting
 	 	any_courtier = {
 	 		age = 16
 	 		is_female = no
@@ -11803,12 +11802,12 @@ character_event = {
 	
 	only_playable = yes
 	prisoner = no
+	has_character_flag = fian_band_visiting
 	
 	picture = GFX_evt_lovers
 	
 	trigger = {
 		has_lover = no
-	 	has_character_flag = fian_band_visiting
 		NOT = {	has_character_flag = fian_recruited }
 		NOT = {	has_character_flag = fian_woman_seduced	}
 		any_courtier = {
@@ -11827,7 +11826,6 @@ character_event = {
 
 	mean_time_to_happen = {
 		days = 20
-		
 		modifier = {
 			factor = 5
 			has_character_flag = fian_recruited	
@@ -12744,11 +12742,12 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	has_dlc = "The Old Gods"
-	in_command = no
+	has_global_flag = gwydion_founded
+	religion_group = pagan_group
 	
 	trigger = {
 		is_landed = no
-		has_global_flag = gwydion_founded
+		in_command = no
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
@@ -13494,11 +13493,11 @@ narrative_event = {
 	hide_window = yes
 	
 	only_rulers = yes
+	has_global_flag = celtic_pagan_reformation
 
 	trigger = {
-		has_global_flag = celtic_pagan_reformation
-		NOT = { has_global_flag = celts_reformed }
 		has_landed_title = d_boston_celts
+		NOT = { has_global_flag = celts_reformed }
 	}
 
 	mean_time_to_happen = {

@@ -6,6 +6,7 @@ province_event = {
 	id = shopper.1
 	desc = EVTDESC_shopper_revival
 	picture = GFX_evt_bishop_pagan_group
+	has_global_flag = consumerist_revolt_ocurred
 
 	trigger = {
 		OR = { 
@@ -21,8 +22,6 @@ province_event = {
 			NOT = { religion = consumerist }
 			NOT = { religion_authority = 0.8 }
 		}
-		
-		has_global_flag = consumerist_revolt_ocurred
 	}
 
 	mean_time_to_happen = {

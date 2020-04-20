@@ -102,11 +102,10 @@ character_event = {
 	id = eva.1
 	desc = EVTDESC_bounce
 	hide_window = yes
+	religion = evangelical
 	
 	trigger = {
 		year = 2667
-		
-		religion = evangelical
 		controls_religion = yes
 		
 		e_dixie = {
@@ -1115,12 +1114,11 @@ character_event = { #Decide Ignoring the Monk Outcome
 	id = eva.26
 	desc = EVTDESC_bounce
 	hide_window = yes
+	religion = evangelical
 	
 	trigger = {
 		has_global_flag = monk_ignored
 		NOT = { has_global_flag = monk_ignored_outcome }
-	
-		religion = evangelical
 		controls_religion = yes
 	}
 	
@@ -1394,9 +1392,9 @@ character_event = {
 	id = eva.32
 	desc = EVTDESC_bounce
 	hide_window = yes
+	religion = evangelical
 	
 	trigger = {
-		religion = evangelical
 		controls_religion = yes
 		has_global_flag = westphalian_treatise
 		has_global_flag = evangelical_reformation
@@ -1469,12 +1467,12 @@ character_event = {
 	id = eva.101
 	desc = EVTDESC_eva.101
 	picture = GFX_evt_bishop_byzantine
+	religion = evangelical
 	
 	trigger = {
 		always = no		# just until events to set/clear the flag when lost or gained
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_global_flag = pat_atlanta }
-		religion = evangelical
 		has_landed_title = e_dixie
 		completely_controls = c_atlanta
 	}
@@ -1495,12 +1493,12 @@ character_event = {
 	id = eva.102
 	desc = EVTDESC_eva.102
 	picture = GFX_evt_bishop_byzantine
+	religion = evangelical
 	
 	trigger = {
 		always = no		# just until events to set/clear the flag when lost or gained
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_global_flag = pat_chapel_hill }
-		religion = evangelical
 		has_landed_title = e_dixie
 		completely_controls = c_chapel_hill
 	}
@@ -1521,11 +1519,11 @@ character_event = {
 	id = eva.103
 	desc = EVTDESC_eva.103
 	picture = GFX_evt_bishop_byzantine
+	religion = evangelical
 	
 	trigger = {
 		NOT = { has_global_flag = pat_chicago }
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
-		religion = evangelical
 		has_landed_title = e_dixie
 		completely_controls = c_chicago
 	}
@@ -1546,11 +1544,11 @@ character_event = {
 	id = eva.104
 	desc = EVTDESC_eva.104
 	picture = GFX_evt_bishop_byzantine
+	religion = evangelical
 	
 	trigger = {
 		NOT = { has_global_flag = pat_st_louis }
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
-		religion = evangelical
 		has_landed_title = e_dixie
 		completely_controls = c_st_louis
 	}
@@ -1572,11 +1570,11 @@ character_event = {
 	desc = EVTDESC_eva.105
 	
 	picture = GFX_evt_bishop_byzantine
+	religion = evangelical
 	
 	trigger = {
 		NOT = { has_global_flag = pat_washington }
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
-		religion = evangelical
 		has_landed_title = e_dixie
 		completely_controls = c_washington
 	}
@@ -1597,6 +1595,7 @@ province_event = {
 	id = eva.201
 	desc = EVTDESC_eva.201
 	picture = GFX_evt_heretic
+	has_global_flag = evangelical_reformation
 	
 	trigger = {
 		NOT = { has_province_modifier = antinomian_revival }
@@ -1609,7 +1608,6 @@ province_event = {
 		NOT = { has_province_modifier = resist_revival }
 		NOT = { has_province_modifier = burned_over }
 		NOT = { has_global_flag = end_wildfire_reformation }
-		has_global_flag = evangelical_reformation
 		holder_scope = {
 			religion = evangelical
 			NOT = { religion_authority = 0.8 }
@@ -1979,6 +1977,7 @@ province_event = {
 	id = eva.301
 	desc = EVTDESC_eva.301
 	picture = GFX_evt_heretic
+	has_global_flag = evangelical_reformation
 	
 	trigger = {
 		NOT = { has_province_modifier = charismatic_revival }
@@ -1991,7 +1990,6 @@ province_event = {
 		NOT = { has_province_modifier = resist_revival }
 		NOT = { has_province_modifier = burned_over }
 		NOT = { has_global_flag = end_wildfire_reformation }
-		has_global_flag = evangelical_reformation
 		holder_scope = {
 			religion = evangelical
 			NOT = { religion_authority = 0.8 }
@@ -2350,6 +2348,7 @@ province_event = {
 	id = eva.401
 	desc = EVTDESC_eva.401
 	picture = GFX_evt_heretic
+	has_global_flag = evangelical_reformation
 	
 	trigger = {
 		NOT = { has_province_modifier = postadventist_revival }
@@ -2362,7 +2361,6 @@ province_event = {
 		NOT = { has_province_modifier = resist_revival }
 		NOT = { has_province_modifier = burned_over }
 		NOT = { has_global_flag = end_wildfire_reformation }
-		has_global_flag = evangelical_reformation
 		holder_scope = {
 			religion = evangelical
 			NOT = { religion_authority = 0.8 }
@@ -2730,6 +2728,7 @@ province_event = {
 	id = eva.501
 	desc = EVTDESC_eva.501
 	picture = GFX_evt_heretic
+	has_global_flag = evangelical_reformation
 	
 	trigger = {
 		NOT = { has_province_modifier = revelationist_revival }
@@ -2743,7 +2742,6 @@ province_event = {
 		NOT = { has_province_modifier = burned_over }
 		NOT = { has_global_flag = end_wildfire_reformation }
 		NOT = { has_global_flag = revelationist_reformation }
-		has_global_flag = evangelical_reformation
 		holder_scope = {
 			religion = evangelical
 			NOT = { religion_authority = 0.8 }
@@ -3111,6 +3109,7 @@ province_event = {
 	id = eva.601
 	desc = EVTDESC_eva.601
 	picture = GFX_evt_heretic
+	has_global_flag = evangelical_reformation
 	
 	trigger = {
 		NOT = { has_province_modifier = mormon_revival }
@@ -3123,7 +3122,6 @@ province_event = {
 		NOT = { has_province_modifier = resist_revival }
 		NOT = { has_province_modifier = burned_over }
 		NOT = { has_global_flag = end_wildfire_reformation }
-		has_global_flag = evangelical_reformation
 		holder_scope = {
 			religion = evangelical
 			NOT = { religion_authority = 0.8 }
@@ -3490,6 +3488,7 @@ province_event = {
 	id = eva.701
 	desc = EVTDESC_eva.701
 	picture = GFX_evt_heretic
+	has_global_flag = evangelical_reformation
 	
 	trigger = {
 		NOT = { has_province_modifier = americanist_revival }
@@ -3502,7 +3501,6 @@ province_event = {
 		NOT = { has_province_modifier = resist_revival }
 		NOT = { has_province_modifier = burned_over }
 		NOT = { has_global_flag = end_wildfire_reformation }
-		has_global_flag = evangelical_reformation
 		holder_scope = {
 			religion = evangelical
 			NOT = { religion_authority = 0.8 }

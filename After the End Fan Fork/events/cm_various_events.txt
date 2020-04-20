@@ -87,12 +87,12 @@ character_event = {
 	has_dlc = "Charlemagne"
 	ai = no
 	min_age = 16
-	is_female = no
+	#only_men = yes
 	only_capable = yes
 	prisoner = no
-	in_command = no
 	
 	trigger = { #BRUH MOMENT
+		in_command = no
 		NOT = { has_character_flag = do_not_disturb }
 		any_child = {
 			age = 9

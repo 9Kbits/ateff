@@ -58,9 +58,9 @@ character_event = {		# for the houngan
 	prisoner = no
 	only_rulers = yes
 	capable_only = yes
+	religion = voodoo
 	
 	trigger = {
-		religion = voodoo
 		is_theocracy = yes
 	}
 	
@@ -863,8 +863,9 @@ character_event = {
 	desc = EVTDESC_voodoo_dream
 	picture = GFX_evt_feast
 	
+	religion = voodoo
+	
 	trigger = {
-		religion = voodoo
 		trait = possessed
 		NOT = { has_character_flag = loa_ceremony }
 		NOT = { has_character_flag = loa_possession }

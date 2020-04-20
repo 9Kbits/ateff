@@ -3846,14 +3846,10 @@ character_event = {
 	max_age = 45
 	only_capable = yes
 	prisoner = no
-	religion_group = pagan_group
+	religion = norse_pagan_reformed
 	
 	trigger = {
 		is_ruler = no
-		OR = {
-			religion = norse_pagan_reformed
-		}
-		
 		martial = 5
 		
 		is_title_active = d_fh
@@ -3871,7 +3867,9 @@ character_event = {
 			holy_order = no
 			OR = {
 				religion = norse_pagan_reformed
+				religion = norse_pagan
 			}
+			is_heretic = no
 			liege = {
 				holy_order = no
 			}
@@ -4114,13 +4112,9 @@ character_event = {
 	has_dlc = "Sons of Abraham"
 	min_age = 16
 	only_playable = yes
-	religion_group = pagan_group
+	religion = norse_pagan_reformed
 	
 	trigger = {
-		OR = {
-			religion = norse_pagan_reformed
-		}
-		
 		d_fh = {
 			holder_scope = {
 				wealth = 300
@@ -6013,7 +6007,6 @@ character_event = {
 	
 	trigger = {
 		is_ruler = no
-		is_heretic = no
 		
 		martial = 5
 		
@@ -6276,8 +6269,6 @@ character_event = {
 	religion = rastafarian
 	
 	trigger = {
-		is_heretic = no
-		
 		d_judah_lions = {
 			holder_scope = {
 				wealth = 300
@@ -8591,13 +8582,11 @@ character_event = {
 	religion_group = oldworld
 	
 	trigger = {
-		AND = {
-			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
-			is_heretic = no
+		OR = {
+			religion = rust_cultist
+			religion = chrome_cultist
 		}
+		is_heretic = no
 		is_ruler = no
 		
 		martial = 5
@@ -8865,13 +8854,11 @@ character_event = {
 	religion_group = oldworld
 	
 	trigger = {
-		AND = {
-			OR = {
-				religion = rust_cultist
-				religion = chrome_cultist
-			}
-			is_heretic = no
+		OR = {
+			religion = rust_cultist
+			religion = chrome_cultist
 		}
+		is_heretic = no
 		d_midwestern_brotherhood = {
 			holder_scope = {
 				wealth = 300
@@ -9981,10 +9968,12 @@ character_event = {
 	max_age = 45
 	only_capable = yes
 	prisoner = no
-	religion = mormon
+	religion_group = latter_day_saints
 	
 	trigger = {
 		is_ruler = no
+		
+		is_heretic = no
 		
 		martial = 5
 		
@@ -10001,7 +9990,10 @@ character_event = {
 		
 		liege = {
 			holy_order = no
-			religion = mormon
+			AND = {
+				religion_group = latter_day_saints
+				is_heretic = no
+			}
 			liege = {
 				holy_order = no
 			}
@@ -10247,12 +10239,6 @@ character_event = {
 	religion_group = latter_day_saints
 	
 	trigger = {
-		OR = {
-			religion = mormon
-			religion = woolleyite
-			religion = strangite
-			religion = bickertonite
-		}
 		is_heretic = no
 		d_nauvoo_legion = {
 			holder_scope = {

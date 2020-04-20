@@ -1099,15 +1099,15 @@ character_event = {
 	picture = GFX_evt_emissary
 	
 	only_playable = yes
+	only_independent = yes
 	min_age = 16
 	capable_only = yes
 	prisoner = no
 	war = no
-	in_command = no
 	
 	trigger = {
 		is_abroad = no
-		independent = no
+		in_command = no
 		liege = {
 			num_of_prisoners = 1
 			NOT = { character = ROOT }

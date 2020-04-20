@@ -33,10 +33,11 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	lacks_dlc = "Zeus"
+	only_rulers = yes
+	only_independent = yes
 	
 	trigger = {
 		has_ambition = obj_wants_landed_title
-		independent = no
 		liege = {
 			OR = { 
 				AND = { 
@@ -1177,9 +1178,9 @@ character_event = {
 	prisoner = no
 	lacks_dlc = "Zeus"
 	is_married = no
+	only_rulers = yes
 	
 	trigger = {
-		is_ruler = no
 		is_betrothed = no
 		NOT = {
 			trait = bastard
@@ -1373,9 +1374,9 @@ character_event = {
 	prisoner = no
 	has_character_flag = flag_denied_marriage
 	lacks_dlc = "Zeus"
+	only_rulers = yes
 	
 	trigger = {
-		is_ruler = no
 		is_betrothed = no
 		has_ambition = obj_get_married
 		OR = {

@@ -8,11 +8,11 @@ character_event = {
 	picture = GFX_evt_illness
 
 	religion = santeria
+	only_capable = yes
 
 	trigger = {
 		health_traits = 1
 		NOT = { is_maimed_trigger = yes }
-		NOT = { is_incapable = yes }
 		NOT = { trait = infirm }
 		NOT = { trait = zombi }
 	}

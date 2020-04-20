@@ -46,15 +46,17 @@ namespace = cetic
 #Visiting the court is a quest now
 #Imperial claim is a decision for like level 3
 
+#this is gonna be the real shit for pretriggers
+
 # ************************** emperor requests dissolution of claims ***********************
 character_event = {
 	id = cetic.1
 	desc = EVTDESC_bounce
 	picture = GFX_evt_china_diplomatic_incident
 	hide_window = yes
+	religion = cetic
 
 	trigger = {
-		religion = cetic
 		OR = {
 			has_claim = e_california
 			has_claim = k_sacramento
@@ -84,9 +86,9 @@ character_event = {
 	desc = EVTDESC_cetic_claims
 	picture = GFX_evt_china_diplomatic_incident
 	is_triggered_only = yes
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		controls_religion = yes
 		completely_controls = k_sacramento
 		trait = figurehead
@@ -533,10 +535,10 @@ character_event = {
 	desc = EVTDESC_bounce
 	picture = GFX_evt_china_golden_age
 	hide_window = yes
+	religion = cetic
+	has_global_flag = cali_emperor_destroyed
 	
 	trigger = {
-		has_global_flag = cali_emperor_destroyed
-		religion = cetic
 		controls_religion = yes
 	}
 	
@@ -1013,9 +1015,9 @@ character_event = {
 	id = cetic.30
 	desc = EVTDESC_cetic_impcourt_gaffe
 	picture = GFX_evt_bad_news
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		trait = travelling
 	}
 	
@@ -1071,9 +1073,9 @@ character_event = {
 	id = cetic.31
 	desc = EVTDESC_cetic_impcourt_learn
 	picture = GFX_evt_chinese_emissary
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		trait = travelling
 		learning = 6
 	}
@@ -1153,9 +1155,9 @@ character_event = {
 	id = cetic.32
 	desc = EVTDESC_cetic_impcourt_intrigue
 	picture = GFX_evt_chinese_emissary
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		trait = travelling
 		intrigue = 6
 	}
@@ -1227,9 +1229,9 @@ character_event = {
 	id = cetic.33
 	desc = EVTDESC_cetic_impcourt_diplo
 	picture = GFX_evt_chinese_emissary
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		trait = travelling
 		diplomacy = 6
 	}
@@ -1301,9 +1303,9 @@ character_event = {
 	id = cetic.34
 	desc = EVTDESC_cetic_impcourt_martial
 	picture = GFX_evt_china_invades
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		trait = travelling
 		martial = 6
 	}
@@ -1383,12 +1385,12 @@ character_event = {
 	id = cetic.35
 	desc = EVTDESC_cetic_impcourt_impress
 	picture = GFX_evt_chinese_emissary
+	religion = cetic
+	only_capable = yes
 	
 	trigger = {
-		religion = cetic
 		trait = travelling
 		NOT = { trait = imbecile }
-		NOT = { is_incapable = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -1440,9 +1442,9 @@ character_event = {
 	id = cetic.36
 	desc = EVTDESC_cetic_impcourt_pitiful
 	picture = GFX_evt_chinese_bureaucrat
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		trait = travelling
 		NOT = { trait = genius }
 		NOT = { trait = quick }
@@ -1518,9 +1520,9 @@ character_event = {
 	id = cetic.37
 	desc = EVTDESC_cetic_impcourt_buy
 	picture = GFX_evt_bribe_accepted
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		trait = travelling
 		stewardship = 6
 	}
@@ -1580,9 +1582,9 @@ character_event = {
 	id = cetic.50
 	desc = EVTDESC_cetic_write_block
 	picture = GFX_evt_library
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		controls_religion = yes
 		has_character_modifier = intense_writing
 	}
@@ -1641,9 +1643,10 @@ narrative_event = {
 	title = EVTNAME_cetic_write_inspire
 	desc = EVTDESC_cetic_write_inspire
 	picture = GFX_evt_library
+	religion = cetic
+	only_capable = yes
 	
 	trigger = {
-		religion = cetic
 		controls_religion = yes
 		has_character_modifier = intense_writing
 		OR = {
@@ -1653,7 +1656,6 @@ narrative_event = {
 		NOT = { trait = slow }
 		NOT = { trait = imbecile }
 		NOT = { trait = inbred }
-		NOT = { is_incapable = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -1697,14 +1699,14 @@ character_event = {
 	id = cetic.52
 	desc = EVTDESC_cetic_write_competent
 	picture = GFX_evt_library
+	religion = cetic
+	only_capable = yes
 	
 	trigger = {
-		religion = cetic
 		controls_religion = yes
 		has_character_modifier = intense_writing
 		NOT = { trait = imbecile }
 		NOT = { trait = inbred }
-		NOT = { is_incapable = yes }
 	}
 	
 	mean_time_to_happen = {
@@ -1759,9 +1761,9 @@ narrative_event = {
 	title = EVTNAME_cetic_write_terrible
 	desc = EVTDESC_cetic_write_terrible
 	picture = GFX_evt_lunatic
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		controls_religion = yes
 		has_character_modifier = intense_writing
 		NOT = { trait = genius }
@@ -3607,6 +3609,8 @@ character_event = {
 	id = cetic.307
 	desc = EVTDESCCETIC307
 	picture = GFX_evt_china_open
+	min_age = 16
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -3620,7 +3624,6 @@ character_event = {
 			trait = erudite
 			trait = administrator
 		}
-		age = 16
 		NOT = {
 			has_character_flag = ia_goodstats
 		}
@@ -3690,8 +3693,9 @@ narrative_event = {
 	title = EVTTITLECETIC309
 	desc = EVTDESCCETIC309
 	picture = GFX_evt_china_golden_age
+	religion = cetic
+	
 	trigger = {
-		religion = cetic
 		controls_religion = yes
 		has_landed_title = e_california
 		completely_controls = e_california
@@ -3803,6 +3807,8 @@ character_event = {
 	id = cetic.313
 	desc = EVTDESCCETIC313
 	picture = GFX_evt_bad_news
+	min_age = 16
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -3815,7 +3821,6 @@ character_event = {
 			trait = inbred
 			trait = dull
 		}
-		age = 16
 		NOT = {
 			has_character_flag = ia_badstats
 		}
@@ -7296,6 +7301,8 @@ character_event = {
 	id = cetic.506
 	desc = EVTDESCCETIC506
 	picture = GFX_evt_china_golden_age
+	min_age = 16
+	
 	trigger = {
 		government = bureaucratic_government
 		higher_real_tier_than = BARON
@@ -7309,7 +7316,6 @@ character_event = {
 		NOT = {
 			has_character_flag = bureau_set
 		}
-		age = 16
 	}
 	
 	mean_time_to_happen = {
@@ -7675,6 +7681,8 @@ character_event = {
 	id = cetic.516
 	desc = EVTDESCCETIC516
 	picture = GFX_evt_china_isolationist
+	min_age = 16
+	
 	trigger = {
 		government = bureaucratic_government
 		higher_real_tier_than = BARON
@@ -7685,7 +7693,6 @@ character_event = {
 			stewardship < 6
 			learning < 6
 		}
-		age = 16
 		NOT = {
 			has_character_flag = bureau_set
 		}
@@ -8888,6 +8895,7 @@ character_event = {
 }
 
 # **************************Variable Boundary Events***********************
+
 character_event = {
 	id = cetic.600
 	hide_window = yes

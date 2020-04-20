@@ -9,11 +9,11 @@ character_event = {
 	picture = GFX_evt_merchant_ship_at_sea_republic
 	hide_window = yes
 	is_triggered_only = yes
+	only_rulers = yes
+	war = no
 
 	trigger = {
 		always = no
-		is_ruler = yes
-		war = no
 		OR = {
 			has_landed_title = e_edokko
 			has_landed_title = e_novorusskiy
@@ -891,6 +891,8 @@ character_event = {
 	picture = "GFX_evt_colonial_japan"
 	border = "GFX_event_normal_frame_war"
 	only_rulers = yes
+	religion = shinto
+	culture = edokko
 	
 	mean_time_to_happen = {	
 		days = 200	
@@ -900,8 +902,6 @@ character_event = {
 		has_landed_title = e_edokko
 		is_primary_war_defender	= yes
 		NOT = { realm_levies = 5000 }
-		religion = shinto
-		culture = edokko
 	}
 	
 	immediate = {
@@ -933,12 +933,12 @@ character_event = {
 	picture = "GFX_evt_colonial_japan"
 	border = "GFX_event_normal_frame_war"
 	only_rulers = yes
-	
+	culture = edokko
+	religion = shinto
+
 	trigger = {
 		has_landed_title = e_edokko
 		government = colonial_government
-		culture = edokko
-		religion = shinto
 	}
 	
 	mean_time_to_happen = {
@@ -1056,7 +1056,6 @@ province_event = {
 		NOT = { is_title_active = e_novorusskiy }
 		NOT = { has_global_flag = novorusskiy_defeated }
 		NOT = { has_global_flag = overridenovorusskiy }
-
 		port = yes
 		any_province_holding = { holding_type = city }
 		county = {
@@ -1569,6 +1568,8 @@ character_event = {
 	picture = "GFX_evt_colonial_russia"
 	border = "GFX_event_normal_frame_war"
 	only_rulers = yes
+	religion = nousthreskeia
+	culture_group = novorusskiy
 	
 	mean_time_to_happen = {	
 		days = 300	
@@ -1579,11 +1580,6 @@ character_event = {
 		is_primary_war_defender	= yes
 		government = colonial_government
 		NOT = { realm_levies = 5000 }
-		OR = {
-			culture = petropavlovskiy
-			culture = vlodivostockiy
-		}
-		religion = nousthreskeia
 	}
 	
 	immediate = {
@@ -1616,15 +1612,12 @@ character_event = {
 	picture = "GFX_evt_colonial_russia"
 	border = "GFX_event_normal_frame_war"
 	only_rulers = yes
+	religion = nousthreskeia
+	culture_group = novorusskiy
 	
 	trigger = {
 		has_landed_title = e_novorusskiy
 		government = colonial_government
-		OR = {
-			culture = petropavlovskiy
-			culture = vlodivostockiy
-		}
-		religion = nousthreskeia
 	}
 	
 	mean_time_to_happen = {

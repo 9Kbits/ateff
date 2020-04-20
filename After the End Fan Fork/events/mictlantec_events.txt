@@ -26,15 +26,15 @@ narrative_event = {
 	desc = EVTDESC_mictlan_god
 	picture = GFX_evt_mictlantec_sacrifice
 	
+	religion = mictlantec
 	only_rulers = yes
 	prisoner = no
+	war = no
+	only_independent = yes
 	
 	trigger = {
 		NOT = { trait = incarnate }
 		NOT = { has_character_flag = attempt_incarnation }
-		independent = yes
-		religion = mictlantec
-		war = no
 		primary_title = { higher_tier_than = DUKE } 
 	}
 	
@@ -983,12 +983,13 @@ character_event = {
 	
 	only_rulers = yes
 	prisoner = no
+	religion = mictlantec
+	only_independent = yes
+	war = no
 	
 	trigger = {
-		religion = mictlantec
 		primary_title = { higher_tier_than = BARON } 
-		independent = no
-		war = no
+		
 		OR = {
 			trait = zealous
 			trait = incarnate

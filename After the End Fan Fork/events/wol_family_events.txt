@@ -23,9 +23,10 @@ character_event = {
 	hide_window = yes
 	
 	is_triggered_only = yes
+	has_dlc = "Way of Life"
 	
 	trigger = { #i'm not gonna mess around with removing the trigger block entirely
-		has_dlc = "Way of Life"
+		
 	}
 	
 	immediate = {
@@ -293,14 +294,13 @@ character_event = {
 	
 	prisoner = no
 	only_capable = yes
-	in_command = no
+	is_sick = no
 	is_married = yes
 	
 	trigger = {
 		has_focus = focus_family
 		has_regent = no
 		in_command = no
-		is_ill = no
 		any_spouse = {
 			is_alive = yes
 			NOT = { is_lover = ROOT }
@@ -420,14 +420,13 @@ character_event = {
 	is_triggered_only = yes
 	
 	prisoner = no
-	in_command = no
 	only_capable = yes
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_family
 		has_regent = no
 		in_command = no
-		is_ill = no
 		any_sibling = {
 			is_alive = yes
 			NOT = { is_friend = ROOT }
@@ -607,12 +606,12 @@ character_event = {
 	
 	prisoner = no
 	only_capable = yes
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_family
 		has_regent = no
 		in_command = no
-		is_ill = no
 		OR = {
 			father = {
 				is_alive = yes
@@ -843,14 +842,13 @@ character_event = {
 	is_triggered_only = yes
 	
 	prisoner = no
-	in_command = no
 	only_capable = yes
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_family
 		has_regent = no
 		in_command = no
-		is_ill = no
 		any_child = {
 			is_alive = yes
 			NOT = { is_incapable = yes }
@@ -1025,12 +1023,12 @@ character_event = {
 	
 	prisoner = no
 	only_capable = yes
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_family
 		has_regent = no
 		in_command = no
-		is_ill = no
 	}
 	
 	weight_multiplier = {
@@ -1418,12 +1416,12 @@ character_event = {
 	is_triggered_only = yes
 	prisoner = no
 	only_capable = yes
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_family
 		has_regent = no
 		in_command = no
-		is_ill = no
 		num_of_children = 2
 		any_child = {
 			age = 5

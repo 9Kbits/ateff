@@ -1999,10 +1999,10 @@ character_event = {
 	lacks_dlc = "Way of Life"
 	war = no
 	is_married = no
+	is_sick = no
 	
 	trigger = {
 		in_command = no
-		is_ill = no
 		OR = {
 			trait = kind
 			trait = just
@@ -2781,10 +2781,10 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	lacks_dlc = "Way of Life"
+	only_rulers = yes
 	
 	trigger = {
 		is_married = no
-		is_ruler = no
 		has_lover = yes
 		is_consort = no
 		NOT = { num_of_lovers = 2 }		

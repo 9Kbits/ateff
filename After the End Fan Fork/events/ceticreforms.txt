@@ -435,9 +435,11 @@ character_event = {
 	}
 }
 
-character_event = {
+character_event = { #there should probably be an on_action called on_religious_conversion or something
 	id = ceticreform.6
 	hide_window = yes
+	is_triggered_only = yes
+	
 	trigger = {
 		OR = {
 			trait = way_fist
@@ -448,9 +450,7 @@ character_event = {
 		}
 		NOT = { religion = cetic }
 	}
-	mean_time_to_happen = {
-		days = 1
-	}
+	
 	immediate = {
 		hidden_tooltip = {
 			remove_trait = way_fist
@@ -465,6 +465,8 @@ character_event = {
 	id = ceticreform.7
 	hide_window = yes
 	is_triggered_only = yes
+	religion = cetic
+	only_men = yes
 		
 	trigger = {
 		OR = {
@@ -481,8 +483,6 @@ character_event = {
 			trait = way_branch
 			trait = way_fist
 		}
-		religion = cetic
-		is_female = no
 		NOT = { has_character_flag = inherited_cetic_way }
 	}
 	
@@ -525,6 +525,8 @@ character_event = {
 	hide_window = yes
 	
 	is_triggered_only = yes
+	religion = cetic
+	only_women = yes
 		
 	trigger = {
 		OR = {
@@ -541,8 +543,6 @@ character_event = {
 			trait = way_branch
 			trait = way_fist
 		}
-		religion = cetic
-		is_female = yes
 		NOT = { has_character_flag = inherited_cetic_way }
 	}
 	

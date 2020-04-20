@@ -10069,10 +10069,10 @@ character_event = {
 	religion_group = christian
 	only_capable = yes
 	prisoner = no
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_seduction
-		is_ill = no
 		has_regent = no
 		any_realm_character = {
 			is_priest = yes
@@ -10268,11 +10268,11 @@ character_event = {
 	only_playable = yes
 	only_capable = yes
 	prisoner = no
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_seduction
 		is_pregnant = no
-		is_ill = no
 		has_regent = no
 		OR = {
 			is_female = no
@@ -10460,10 +10460,10 @@ character_event = {
 	only_playable = yes
 	only_capable = yes
 	prisoner = no
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_seduction
-		is_ill = no
 		has_regent = no
 		OR = {
 			is_female = no
@@ -10602,6 +10602,7 @@ character_event = {
 	only_playable = yes
 	only_capable = yes
 	prisoner = no
+	is_sick = no
 
 	trigger = {
 		has_focus = focus_seduction
@@ -10624,7 +10625,6 @@ character_event = {
 				trait = celibate
 			}
 		}
-		is_ill = no
 		has_regent = no
 		NOT = { has_character_modifier = hidden_seduced_tree }
 	}
@@ -10829,6 +10829,7 @@ character_event = {
 	only_playable = yes
 	only_capable = yes
 	prisoner = no
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_seduction
@@ -10844,7 +10845,6 @@ character_event = {
 			}
 		}
 		NOT = { trait = eunuch }
-		is_ill = no
 		has_regent = no
 		NOT = {
 			OR = {
@@ -10965,10 +10965,10 @@ character_event = {
 	only_women = yes
 	prisoner = yes
 	only_capable = yes
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_seduction
-		is_ill = no
 		NOT = {
 			OR = {
 				is_incapable = yes
@@ -11334,11 +11334,11 @@ character_event = {
 	prisoner = no
 	only_capable = yes
 	only_men = yes
+	is_sick = no
 	
 	trigger = {
 		has_focus = focus_seduction
 		has_concubinage = yes
-		is_ill = no
 		NOT = {
 			OR = {
 				is_incapable = yes

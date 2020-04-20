@@ -6072,17 +6072,16 @@ character_event = {
 	desc = EVTDESCIE21
 	picture = GFX_evt_china_open
 	border = GFX_event_normal_frame_religion
+	min_age = 16
+	only_playable = yes
 	
 	trigger = {
-		age = 16
 		OR = {
 			government = bureaucratic_government
 			liege = {
 				government = bureaucratic_government
 			}
 		}
-		is_landed = yes
-		higher_real_tier_than = BARON
 		NOR = {
 			has_character_flag = ie_set
 			trait = not_evaluated
