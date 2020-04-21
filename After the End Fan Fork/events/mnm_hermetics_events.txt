@@ -8132,7 +8132,10 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
+	only_rulers = yes
 	capable_only = yes
+	is_in_society = yes
+	war = no
 
 	trigger = {
 		society_member_of = hermetics
@@ -8142,9 +8145,7 @@ character_event = {
 			martial = 8
 			stewardship = 8
 		}
-		is_landed = yes
 		has_character_flag = built_laboratory
-		war = no
 		block_general_event_trigger = no
 		NOT = { has_character_flag = gathering_of_the_minds }
 		any_society_member = {

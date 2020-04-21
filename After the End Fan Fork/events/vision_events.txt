@@ -1524,8 +1524,10 @@ character_event = {
 	desc = EVTDESC_vision_truth_atom
 	picture = GFX_evt_vision_quest
 	is_triggered_only = yes
+	
+	religion = atomicist
+	
 	trigger = {
-		religion = atomicist
 		NOT = { has_character_flag = vis_truth_atom }
 	}
 	immediate = {

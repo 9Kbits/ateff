@@ -869,9 +869,9 @@ character_event = {
 	desc = EVTDESC_cetic_claim_request
 	picture = GFX_evt_chinese_bureaucrat
 	is_triggered_only = yes
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		controls_religion = yes
 	}
 	
@@ -925,9 +925,10 @@ character_event = {
 	desc = EVTDESC_cetic_claim_granted
 	picture = GFX_evt_china_diplomatic_success
 	is_triggered_only = yes
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
+		
 	}
 	
 	option = {
@@ -964,9 +965,10 @@ character_event = {
 	desc = EVTDESC_cetic_claim_denied
 	picture = GFX_evt_china_diplomatic_incident
 	is_triggered_only = yes
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
+		
 	}
 	
 	option = {
@@ -2105,9 +2107,9 @@ character_event = {
 	desc = EVTDESC_cetic_write_discuss
 	picture = GFX_evt_courtiers_talking
 	is_triggered_only = yes
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		controls_religion = yes
 		has_character_modifier = intense_writing
 		NOT = { has_character_modifier = writing_inspiration }
@@ -2131,9 +2133,9 @@ character_event = {
 	desc = EVTDESC_cetic_inspire_inform
 	picture = GFX_evt_library
 	is_triggered_only = yes
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		controls_religion = no
 	}
 	
@@ -2223,9 +2225,9 @@ character_event = {
 	desc = EVTDESC_cetic_terrible_inform
 	picture = GFX_evt_lunatic
 	is_triggered_only = yes
+	religion = cetic
 	
 	trigger = {
-		religion = cetic
 		controls_religion = no
 	}
 	
@@ -3339,10 +3341,10 @@ character_event = {
 	id = cetic.303
 	hide_window = yes
 	is_triggered_only = yes
+	religion = cetic
 	
 	trigger = {
 		has_landed_title = e_california
-		religion = cetic
 		controls_religion = yes
 		NOT = {
 			has_global_flag = imperial_authority_set
@@ -3735,8 +3737,9 @@ character_event = {
 	desc = EVTDESCCETIC310
 	picture = GFX_evt_monk
 	is_triggered_only = yes
+	religion = cetic
+	
 	trigger = {
-		religion = cetic
 		controls_religion = yes
 		has_landed_title = e_california
 	}
@@ -3759,8 +3762,9 @@ character_event = {
 	desc = EVTDESCCETIC311
 	picture = GFX_evt_monk
 	is_triggered_only = yes
+	religion = cetic
+	
 	trigger = {
-		religion = cetic
 		controls_religion = yes
 		has_landed_title = e_california
 	}
@@ -7422,6 +7426,9 @@ character_event = {
 character_event = {
 	id = cetic.510
 	hide_window = yes
+	
+	has_job_title = yes
+	
 	trigger = {
 		OR = {
 			government = bureaucratic_government
@@ -7797,6 +7804,9 @@ character_event = {
 character_event = {
 	id = cetic.519
 	hide_window = yes
+	
+	has_job_title = yes
+	
 	trigger = {
 		liege = {
 			government = bureaucratic_government

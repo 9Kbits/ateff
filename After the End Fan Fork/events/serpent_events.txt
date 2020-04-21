@@ -159,6 +159,9 @@ character_event = {
 	picture = GFX_evt_illness
 	
 	is_triggered_only = yes
+	
+	religion_group = pagan_group
+	
 	trigger = {
 		OR = {
 			religion = revelationist
@@ -200,7 +203,10 @@ character_event = {
 	picture = GFX_evt_illness
 	
 	is_triggered_only = yes
-	trigger = { religion = charismatic }
+	
+	religion = charismatic
+	
+	trigger = {  }
 	
 	option = {
 		name = EVTOPT_snake_convert_deny

@@ -3985,7 +3985,11 @@ character_event = {
 		}
 		if = {
 			limit = {
-				religion = cetic
+				OR = {
+					religion = cetic
+					religion = imamite
+					religion = qingzheng
+				}
 			}
 			set_government_type = bureaucratic_government
 		}

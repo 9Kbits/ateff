@@ -35,7 +35,6 @@ character_event = {
 	
 	trigger = {
 		in_command = yes
-		is_landed = yes
 		NOT = {
 			has_artifact = ate_fingerbone_of_saint
 		}
@@ -191,7 +190,6 @@ character_event = {
 	religion_group = christian
 
 	trigger = {
-		is_landed = yes
 		has_dlc = "Sons of Abraham"
 		NOT = {
 			any_demesne_province = {
@@ -1581,11 +1579,10 @@ character_event = {
 	min_age = 16
 	only_capable = yes
 	prisoner = no
-	religion_group = mesoamerican_gods
+	religion = mictlantec
 
 	trigger = {
 		is_priest = yes
-		religion = mictlantec
 		NOR = {
 			intrigue = 3
 			diplomacy = 3
@@ -1889,10 +1886,9 @@ character_event = {
 	min_age = 16
 	only_capable = yes
 	prisoner = no
-	religion_group = oldworld
+	religion = americanist
 
 	trigger = {
-		religion = americanist
 		controls_religion = yes
 		trait = bad_priest_americanist
 		NOT = { has_character_modifier = bad_rel_head }
@@ -3997,10 +3993,9 @@ character_event = {
 	min_age = 16
 	prisoner = no
 	only_capable = yes
-	religion_group = afro_syncretic
+	religion = rastafarian
 
 	trigger = {
-		religion = rastafarian
 		NOR = {
 			trait = zealous
 			trait = holy_warrior

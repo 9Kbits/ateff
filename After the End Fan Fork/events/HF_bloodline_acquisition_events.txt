@@ -3624,8 +3624,10 @@ character_event = { # Child of Destiny launches Adventure
 	
 	hide_new = yes
 	
+	has_character_flag = is_child_of_destiny
+	
 	trigger = {
-		has_character_flag = is_child_of_destiny
+		
 	}
 	
 	immediate = {
@@ -3970,8 +3972,10 @@ character_event = { # Child of Destiny reaches adulthood
 	picture = GFX_evt_throne_room
 	is_triggered_only = yes
 	
+	has_character_flag = is_child_of_destiny
+	
 	trigger = {
-		has_character_flag = is_child_of_destiny
+		
 	}
 	
 	immediate = {
@@ -4222,10 +4226,10 @@ character_event = { # Child of Destiny gains bloodline
 	desc = HF_304_DESC
 	picture = GFX_evt_throne_room
 	is_triggered_only = yes
+	has_character_flag = is_child_of_destiny
+	only_independent = yes
 	
-	trigger = {
-		independent = yes
-		has_character_flag = is_child_of_destiny
+	trigger = {		
 		higher_real_tier_than = DUKE
 		NOT = {
 			any_owned_bloodline = {

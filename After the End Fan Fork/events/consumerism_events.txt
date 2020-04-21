@@ -1126,10 +1126,12 @@ narrative_event = {
 	desc = EVTDESCCONSUMER1
 	picture = GFX_evt_consumerist_uprising
 	
+	ai = no
+	only_playable = yes
+	religion = consumerist
+	
 	trigger = {
-		ai = no
 		tier = duke
-		religion = consumerist
 		capital_scope = {
 			region = custom_usa
 		}

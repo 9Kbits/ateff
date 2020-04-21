@@ -79,9 +79,10 @@ letter_event = {
 	id = HF.20002
 	desc = EVTDESCHF20002
 	border = GFX_event_letter_frame_religion
+	
+	has_character_flag = flag_converting_baptism
 
 	trigger = {
-		has_character_flag = flag_converting_baptism
 		event_target:sponsoring_king = { is_alive = yes } 
 	}
 
@@ -813,9 +814,10 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	sound = mass_conversion_baptism
 	show_from_from = yes
+	
+	has_character_flag = flag_sponsoring_baptism
 
 	trigger = { 
-		has_character_flag = flag_sponsoring_baptism
 		event_target:converting_king = { is_alive = yes }
 	}
 
@@ -2778,7 +2780,6 @@ letter_event = {
 	id = HF.20009
 	desc = EVTDESCHF20009
 	border = GFX_event_letter_frame_religion
-
 	
 	is_triggered_only = yes
 

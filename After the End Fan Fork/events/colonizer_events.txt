@@ -241,6 +241,9 @@ character_event = {
 	desc = EVTDESC_pacific_10
 	picture = GFX_evt_colonial_japan
 	border = GFX_event_normal_frame_religion
+	
+	only_playable = yes
+	
 	trigger = {
 		has_landed_title = e_edokko
 		NOT = {
@@ -280,6 +283,9 @@ character_event = {
 	desc = EVTDESC_pacific_10
 	picture = GFX_evt_colonial_russia
 	border = GFX_event_normal_frame_religion
+	
+	only_playable = yes
+	
 	trigger = {
 		has_landed_title = e_novorusskiy
 		NOT = {
@@ -318,6 +324,7 @@ character_event = {
 	desc = EVTDESC_pacific_15
 	picture = GFX_evt_colonial_russia
 	border = GFX_event_normal_frame_religion
+	only_playable = yes
 	culture_group = novorusskiy
 	religion = nousthreskeia
 	
@@ -356,6 +363,9 @@ narrative_event = {
 	border = "GFX_event_narrative_frame_war"
 	   
 	is_triggered_only = yes
+	
+	only_playable = yes
+	culture_group = novorusskiy
 	   
 	trigger = {
 		NOT = { has_global_flag = russians_take_sitka }
@@ -365,7 +375,6 @@ narrative_event = {
 			top_liege = { has_landed_title = e_novorusskiy }
 		}
 		FROM = { title = b_sitka_AK }
-		culture_group = novorusskiy
 		NOT = {
 			FROM = {
 				owner = {
@@ -417,6 +426,9 @@ narrative_event = {
 	border = "GFX_event_narrative_frame_war"
 	   
 	is_triggered_only = yes
+	
+	only_playable = yes
+	culture_group = novorusskiy
 	   
 	trigger = {
 		NOT = { has_global_flag = russians_take_vancouver }
@@ -426,7 +438,6 @@ narrative_event = {
 			top_liege = { has_landed_title = e_novorusskiy }
 		}
 		FROM = { title = b_vancouver_BC }
-		culture_group = novorusskiy
 		NOT = {
 			FROM = {
 				owner = {
@@ -476,8 +487,11 @@ narrative_event = {
 	   
 	picture = "GFX_evt_colonial_russia"
 	border = "GFX_event_narrative_frame_war"
-	   
+	
 	is_triggered_only = yes
+	
+	only_playable = yes
+	culture_group = novorusskiy
 	   
 	trigger = {
 		NOT = { has_global_flag = russians_take_seattle }
@@ -489,7 +503,6 @@ narrative_event = {
 		FROM = {
 			has_title = b_seattle_WA
 		}
-		culture_group = novorusskiy
 		NOT = {
 			FROM = {
 				owner = {
@@ -543,6 +556,9 @@ narrative_event = {
 	border = "GFX_event_narrative_frame_war"
 	   
 	is_triggered_only = yes
+	
+	only_playable = yes
+	culture_group = novorusskiy
 	   
 	trigger = {
 		NOT = { has_global_flag = russians_take_portland }
@@ -552,7 +568,6 @@ narrative_event = {
 			top_liege = { has_landed_title = e_novorusskiy }
 		}
 		FROM = { title = b_portland_OR }
-		culture_group = novorusskiy
 		NOT = {
 			FROM = {
 				owner = {
@@ -604,6 +619,9 @@ narrative_event = {
 	border = "GFX_event_narrative_frame_war"
 	   
 	is_triggered_only = yes
+	
+	only_playable = yes
+	culture_group = nihonjin
 	   
 	trigger = {
 		NOT = { has_global_flag = japanese_take_san_francisco}
@@ -613,7 +631,6 @@ narrative_event = {
 			top_liege = { has_landed_title = e_edokko }
 		}
 		FROM = { title = b_fort_point_CA }
-		culture_group = nihonjin
 		NOT = {
 			FROM = {
 				owner = {
@@ -665,6 +682,9 @@ narrative_event = {
 	border = "GFX_event_narrative_frame_war"
 	   
 	is_triggered_only = yes
+	
+	only_playable = yes
+	culture_group = nihonjin
 	   
 	trigger = {
 		NOT = { has_global_flag = japanese_take_eureka}
@@ -674,7 +694,6 @@ narrative_event = {
 			top_liege = { has_landed_title = e_edokko }
 		}
 		FROM = { title = b_eureka_CA }
-		culture_group = nihonjin
 		NOT = {
 			FROM = {
 				owner = {
@@ -726,6 +745,9 @@ narrative_event = {
 	border = "GFX_event_narrative_frame_war"
 	   
 	is_triggered_only = yes
+	
+	only_playable = yes
+	culture_group = nihonjin
 	   
 	trigger = {
 		NOT = { has_global_flag = japanese_take_la}
@@ -735,7 +757,6 @@ narrative_event = {
 			top_liege = { has_landed_title = e_edokko }
 		}
 		FROM = { title = b_hollywood_CA }
-		culture_group = nihonjin
 		NOT = {
 			FROM = {
 				owner = {
@@ -788,6 +809,9 @@ narrative_event = {
 	border = "GFX_event_narrative_frame_war"
 	   
 	is_triggered_only = yes
+	
+	only_playable = yes
+	culture_group = nihonjin
 	   
 	trigger = {
 		NOT = { has_global_flag = japanese_take_sacramento}
@@ -797,7 +821,6 @@ narrative_event = {
 			top_liege = { has_landed_title = e_edokko }
 		}
 		FROM = { title = b_sacramento_CA }
-		culture_group = nihonjin
 		NOT = {
 			FROM = {
 				owner = {

@@ -16,6 +16,7 @@ society_quest_event = {
 	is_triggered_only = yes
 	is_in_society = yes
 	only_capable = yes
+	only_rulers = yes
 
 	desc = {
 		text = EVTDESCHF10523_A #default
@@ -33,8 +34,7 @@ society_quest_event = {
 		has_any_quest = no
 		NOT = { has_character_modifier = quest_cooldown_timer }
 		NOT = { is_inaccessible_trigger = yes }
-		is_landed = yes
-
+		
 		society = {
 			any_society_member = {
 				ai = yes

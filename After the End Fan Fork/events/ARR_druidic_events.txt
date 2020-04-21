@@ -6263,13 +6263,13 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	only_rulers = yes
+	religion_group = pagan_group
 	
 	trigger = {
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
 		}
-		is_landed = yes
 		is_abroad = no
 	}
 	
@@ -6341,6 +6341,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	only_rulers = yes
+	religion_group = pagan_group
 	
 	trigger = {
 		OR = {
@@ -6421,13 +6422,13 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	only_rulers = yes
+	religion_group = pagan_group
 	
 	trigger = {
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
 		}
-		is_landed = yes
 		is_abroad = no
 	}
 	
@@ -6510,13 +6511,13 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	only_rulers = yes
+	religion_group = pagan_group
 	
 	trigger = {
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
 		}
-		is_landed = yes
 		is_abroad = no
 	}
 	
@@ -6582,6 +6583,7 @@ narrative_event = {
 	hide_from = yes
 	
 	only_playable = yes
+	religion_group = pagan_group
 
 	is_triggered_only = yes
 
@@ -6736,6 +6738,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	religion_group = pagan_group
 
 	trigger = {
 		is_alive = yes
@@ -6879,6 +6882,7 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
+	religion_group = pagan_group
 	
 	trigger = {
 		is_alive = yes
@@ -8778,6 +8782,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	only_rulers = yes
+	religion_group = pagan_group
 	
 	trigger = {
 		ai = no
@@ -10424,9 +10429,9 @@ narrative_event = {
 	hide_window = yes
 
 	is_triggered_only = yes
+	religion = celtic_pagan_reformed
 	
 	trigger = {
-		religion = celtic_pagan_reformed
 		has_religion_feature = religion_theocratic_head
 	}
 
@@ -10603,11 +10608,11 @@ character_event = {
 	prisoner = no
 	has_dlc = "The Old Gods"
 	religion_group = pagan_group
+	has_global_flag = fianna_founded
 	
 	trigger = {
 		is_landed = no
 		in_command = no
-		has_global_flag = fianna_founded
 		OR = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
@@ -12742,8 +12747,8 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	has_dlc = "The Old Gods"
-	has_global_flag = gwydion_founded
 	religion_group = pagan_group
+	has_global_flag = gwydion_founded
 	
 	trigger = {
 		is_landed = no

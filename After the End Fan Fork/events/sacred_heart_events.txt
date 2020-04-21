@@ -796,11 +796,12 @@ character_event = {
 	picture = GFX_evt_death
 	is_triggered_only = yes
 	hide_window = yes
+	religion = sacred_heart
+	
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = sacred_heart
 	}
 	immediate = {
 		father = {
@@ -824,12 +825,12 @@ character_event = {
 	desc = EVTDESC_muerte_inform
 	picture = GFX_evt_death
 	is_triggered_only = yes
+	religion = sacred_heart
 	
 	trigger = {
 		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-		religion = sacred_heart
 		trait = marian_santa_muerte
 	}
 	

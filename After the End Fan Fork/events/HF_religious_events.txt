@@ -5788,9 +5788,9 @@ character_event = {
 	is_triggered_only = yes
 
 	has_dlc = "Holy Fury"
+	only_playable = yes
 
 	trigger = {
-		is_landed = yes
 		NOR = {	
 			has_earmarked_regiments = pirate_mercenaries_perm #Don't let another band spawn when the previous is still employed.
 			has_earmarked_regiments = pirate_mercenaries 
@@ -6461,9 +6461,9 @@ character_event = {
 	is_triggered_only = yes
 
 	has_dlc = "Holy Fury"
+	only_playable = yes
 
 	trigger = {
-		is_landed = yes
 		siege = {
 			is_attacker = yes
 		}
@@ -7711,10 +7711,9 @@ character_event = {
 	id = HF.23410
 	hide_window = yes
 	is_triggered_only = yes
+	only_playable = yes
 
 	trigger = { 
-		is_ruler = yes
-		higher_real_tier_than = COUNT
 		OR = { 
 			death_execution_trigger = yes
 			death_sacrificed_trigger = yes

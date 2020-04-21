@@ -374,6 +374,8 @@ character_event = {
 	id = HFP.41003
 	hide_window = yes
 	is_triggered_only = yes
+	religion_group = christian
+	
 	trigger = {
 		uses_new_crusade = yes
 		OR = {
@@ -5437,6 +5439,8 @@ character_event = {
 	id = HFP.41084
 	hide_window = yes
 	is_triggered_only = yes
+	religion_group = christian
+	
 	trigger = {
 		OR = {
 			any_war = {
@@ -5776,6 +5780,7 @@ character_event = {
 	}
 	picture = GFX_evt_throne_room
 	is_triggered_only = yes
+	religion_group = christian
 
 	trigger = {
 		NOT = { has_character_flag = stance_selection_open }
@@ -6330,6 +6335,9 @@ letter_event = {
 	}
 	picture = GFX_evt_throne_room
 	is_triggered_only = yes
+	
+	religion_group = christian
+	
 	trigger = {
 		has_character_modifier = not_pledged_to_crusade
 		check_if_not_fourth_crusade_trigger = yes

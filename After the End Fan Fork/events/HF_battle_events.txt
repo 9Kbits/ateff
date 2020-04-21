@@ -2374,10 +2374,11 @@ character_event = {
 	
 	is_triggered_only = yes
 	#hide_from = yes
+	
+	only_rulers = yes
 
 	trigger = {
 		is_alive = yes
-		is_landed = yes
 		OR = {
 			trait = brilliant_strategist
 			trait = skilled_tactician
@@ -2675,12 +2676,12 @@ character_event = {
 	border = GFX_event_normal_frame_war
 	
 	is_triggered_only = yes
+	war = no
+	only_rulers = yes
 
 	trigger = {
 		is_alive = yes
-		is_landed = yes
 		has_character_flag = has_PTSD
-		war = no
 	}
 
 	fail_trigger_effect = {

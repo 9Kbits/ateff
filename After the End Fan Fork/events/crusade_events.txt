@@ -16,13 +16,13 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
-	in_command = yes
+	
+	religion_group = christian
 	
 	is_triggered_only = yes
 	
 	trigger = {
-		religion_group = christian
-
+		in_command = yes
 		NOR = { trait = crusader trait = crusader_king trait = crusader_queen}
 		OR = {
 			AND = {
@@ -32,19 +32,13 @@ character_event = {
 						using_cb = new_crusade
 					}
 				}
-				OR = {
-		        religion_group = christian
-		        religion = exovedate
-		        }
+				religion_group = christian
 				crusade_target = {
 					is_located_in = ROOT
 				}
 			}
 			any_liege = {
-				OR = {
-		        religion_group = christian
-		        religion = exovedate
-		        }
+				religion_group = christian
 				any_war = {
 					OR = {
 						using_cb = crusade
@@ -155,11 +149,12 @@ character_event = {
 	min_age = 16
 	capable_only = yes
 	prisoner = no
-	in_command = yes
+	religion_group = pagan_group
 	
 	is_triggered_only = yes
 	
 	trigger = {
+		in_command = yes
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
