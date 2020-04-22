@@ -6695,7 +6695,6 @@ character_event = {
 
 	is_triggered_only = yes
 
-	only_playable = yes
 	religion = celtic_pagan
 
 	trigger = {
@@ -7033,8 +7032,8 @@ character_event = {
 	is_triggered_only = yes
 	
 	has_dlc = "Rajas of India"
-	only_men = yes
 	religion_group = pagan_group
+	only_men = yes
 	
 	trigger = {
 		OR = {
@@ -11426,11 +11425,11 @@ character_event = {
 	
 	only_playable = yes
 	prisoner = no
+	war = no
 	
 	picture = GFX_evt_emissary
 
 	trigger = {
-		war = no
 		in_command = no
 		OR = {
 			religion = celtic_pagan
@@ -11964,6 +11963,7 @@ character_event = {
 	
 	only_playable = yes
 	prisoner = no
+	war = no
 	
 	picture = GFX_evt_melee
 	
@@ -11972,7 +11972,6 @@ character_event = {
 			religion = celtic_pagan
 			religion = celtic_pagan_reformed
 		}
-		war = no
 		in_command = no
 		NOT = { has_character_flag = fian_band_visiting }
 		any_courtier = {

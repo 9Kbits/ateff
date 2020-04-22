@@ -5,7 +5,7 @@ character_event = {
 	desc = "Replace Sister-Militant"
 	picture = GFX_evt_mass_crusade
 	is_triggered_only = yes
-	#hide_window = yes
+	religion = ursuline
 
 	trigger = {
 		has_landed_title = d_st_ursulas_chosen
@@ -73,7 +73,7 @@ character_event = {
 	desc = "Replace Nanacy Harts leader"
 	picture = GFX_evt_mass_crusade
 	is_triggered_only = yes
-	#hide_window = yes
+	religion = evangelical
 
 	trigger = {
 		has_landed_title = d_nancy_harts
@@ -13206,6 +13206,7 @@ character_event = {
 	desc = "Replace First Lady"
 	is_triggered_only = yes
 	hide_window = yes
+	religion = libertarian
 	
 	trigger = {
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }

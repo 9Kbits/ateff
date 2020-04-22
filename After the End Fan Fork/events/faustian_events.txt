@@ -982,9 +982,7 @@ narrative_event = {
 
 character_event = {
 	id = faust.60
-	desc = EVTNAME_bounce
 	hide_window = yes
-	picture = GFX_evt_death
 	is_triggered_only = yes
 	immediate = {
 		if = {
@@ -992,7 +990,6 @@ character_event = {
 			current_heir = { character_event = { id = faust.61 days = 2 random = 10 } }
 		}
 	}
-	option = { }
 }
 
 character_event = {

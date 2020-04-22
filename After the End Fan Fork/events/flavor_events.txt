@@ -1304,9 +1304,9 @@ character_event = {
 	id = flavor.30
 	hide_window = yes
 	is_triggered_only = yes
+	has_character_flag = is_person_of_interest
 	
 	trigger = {
-		has_character_flag = is_person_of_interest
 		NOT = { year = 2669 }
 	}
 	
@@ -1321,9 +1321,9 @@ character_event = {
 	picture = GFX_evt_family_feud_republic
 
 	is_triggered_only = yes
+	has_character_flag = is_person_of_interest
 	
 	trigger = {
-		has_character_flag = is_person_of_interest
 		any_child = { has_character_flag = is_person_of_interest_son }
 	}
 	
@@ -1345,10 +1345,7 @@ character_event = {
 	picture = GFX_evt_plague_doctor
 
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_person_of_interest_son
-	}
+	has_character_flag = is_person_of_interest_son
 
 	option = {
 		name = EVTOPT_flavor_bat
@@ -1390,9 +1387,9 @@ character_event = {
 	id = flavor.40
 	hide_window = yes
 	is_triggered_only = yes
+	has_character_flag = is_shaggy
 	
 	trigger = {
-		has_character_flag = is_shaggy
 		NOT = { has_global_flag = scooby_arrives }
 	}
 	
@@ -1406,9 +1403,9 @@ character_event = {
 	desc = EVTDESC_flavor_scooby_1
 	picture = GFX_evt_hunting_scene
 	is_triggered_only = yes
+	has_character_flag = is_shaggy
 	
 	trigger = {
-		has_character_flag = is_shaggy
 		NOT = { has_global_flag = scooby_arrives }
 	}
 	
@@ -1472,9 +1469,9 @@ character_event = {
 	desc = EVTDESC_flavor_scooby_2
 	picture = GFX_evt_throne_room
 	is_triggered_only = yes
+	has_character_flag = is_shaggy
 	
 	trigger = {
-		has_character_flag = is_shaggy
 		NOT = { has_global_flag = mystery_gang_arrives }
 	}
 	
@@ -1504,10 +1501,7 @@ character_event = {
 	desc = EVTDESC_flavor_scooby_3
 	picture = GFX_evt_mysterious_forest
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # Let's split up, gang!
 		name = EVTOPTA_flavor_scooby_3
@@ -1521,10 +1515,7 @@ character_event = {
 	desc = EVTDESC_flavor_scooby_4
 	picture = GFX_evt_hooded_figure_hf
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # Run away!
 		name = EVTOPTA_flavor_scooby_4
@@ -1559,10 +1550,7 @@ character_event = {
 	desc = EVTDESC_flavor_scooby_5
 	picture = GFX_evt_mysterious_forest
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # If you must...
 		name = EVTOPTA_flavor_scooby_5
@@ -1577,10 +1565,7 @@ character_event = {
 	desc = EVTDESC_flavor_scooby_6
 	picture = GFX_evt_mysterious_forest
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # Now, we wait..
 		name = EVTOPTA_flavor_scooby_6
@@ -1603,10 +1588,7 @@ character_event = {
 	desc = EVTDESC_flavor_scooby_7
 	picture = GFX_evt_bad_news
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # I guess that's it..
 		name = EVTOPTA_flavor_scooby_7
@@ -1620,10 +1602,7 @@ character_event = { # Catch the villain!
 	desc = EVTDESC_flavor_scooby_8
 	picture = GFX_evt_mysterious_forest
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # We got him
 		name = EVTOPTA_flavor_scooby_8
@@ -1640,10 +1619,7 @@ character_event = { # Lord Jenkins?
 	desc = EVTDESC_flavor_scooby_9
 	picture = GFX_evt_judged_by_ruler
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	immediate = {
 		any_demesne_province = {
@@ -1684,10 +1660,7 @@ character_event = { # Invite the Scooby Gang to your court
 	desc = EVTDESC_flavor_scooby_10
 	picture = GFX_evt_throne_room
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # Welcome to my court!
 		name = EVTOPTA_flavor_scooby_10
@@ -1779,10 +1752,7 @@ character_event = { # Fight the villain and emerge unscathed!
 	desc = EVTDESC_flavor_scooby_11
 	picture = GFX_evt_melee
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # We got him
 		name = EVTOPTA_flavor_scooby_11
@@ -1807,10 +1777,7 @@ character_event = { # Fight the villain and emerge wounded!
 	desc = EVTDESC_flavor_scooby_12
 	picture = GFX_evt_melee
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # Nevertheless, I win!
 		name = EVTOPTA_flavor_scooby_12
@@ -1836,10 +1803,7 @@ character_event = { # Fight the villain and emerge severely wounded!
 	desc = EVTDESC_flavor_scooby_13
 	picture = GFX_evt_melee
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # Nevertheless, I win!
 		name = EVTOPTA_flavor_scooby_13
@@ -1865,10 +1829,7 @@ character_event = { # You die.
 	desc = EVTDESC_flavor_scooby_14
 	picture = GFX_evt_melee
 	is_triggered_only = yes
-	
-	trigger = {
-		has_character_flag = is_shaggy
-	}
+	has_character_flag = is_shaggy
 	
 	option = { # Goodbye, Scoobert...
 		name = EVTOPTA_flavor_scooby_14
@@ -1889,10 +1850,6 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	religion = neognostic
-	
-	trigger = {
-		
-	}
 	
 	option = {
 		name = EVTOPTA_neognostic_become_perfectus

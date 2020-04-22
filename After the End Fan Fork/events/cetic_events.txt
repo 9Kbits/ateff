@@ -252,6 +252,7 @@ character_event = {
 	picture = GFX_evt_chinese_bureaucrat
 	is_triggered_only = yes
 	hide_window = yes
+	only_playable = yes
 	
 	trigger = {
 		OR = {
@@ -308,6 +309,7 @@ narrative_event = {
 	desc = EVTDESC_cetic_usurp_emperor
 	picture = GFX_evt_china_unrest
 	is_triggered_only = yes
+	only_playable = yes
 	
 	trigger = {
 		OR = {
@@ -3177,6 +3179,8 @@ narrative_event = {
 character_event = {
 	id = cetic.104
 	hide_window = yes
+	only_playable = yes
+
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -3611,6 +3615,7 @@ character_event = {
 	id = cetic.307
 	desc = EVTDESCCETIC307
 	picture = GFX_evt_china_open
+	only_playable = yes
 	min_age = 16
 	
 	trigger = {
@@ -3655,6 +3660,8 @@ character_event = {
 	id = cetic.308
 	desc = EVTDESCCETIC308
 	picture = GFX_evt_monk
+	only_playable = yes
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -3787,6 +3794,8 @@ character_event = {
 	desc = EVTDESCCETIC312
 	picture = GFX_evt_china_isolationist
 	is_triggered_only = yes
+	only_playable = yes
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -3811,6 +3820,7 @@ character_event = {
 	id = cetic.313
 	desc = EVTDESCCETIC313
 	picture = GFX_evt_bad_news
+	only_playable = yes
 	min_age = 16
 	
 	trigger = {
@@ -3854,6 +3864,8 @@ character_event = {
 	id = cetic.314
 	desc = EVTDESCCETIC314
 	picture = GFX_evt_bad_news
+	only_playable = yes
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -3893,6 +3905,8 @@ character_event = {
 	desc = EVTDESCCETIC315
 	picture = GFX_evt_peasants
 	is_triggered_only = yes
+	only_playable = yes
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -3939,6 +3953,8 @@ character_event = {
 character_event = {
 	id = cetic.317
 	hide_window = yes
+	only_playable = yes
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -3967,6 +3983,9 @@ character_event = {
 	id = cetic.318
 	desc = EVTDESCCETIC318
 	picture = GFX_evt_council
+	
+	only_playable = yes
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -4000,6 +4019,9 @@ character_event = {
 character_event = {
 	id = cetic.319
 	hide_window = yes
+	
+	only_playable = yes
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -4024,6 +4046,9 @@ character_event = {
 	desc = EVTDESCCETIC320
 	picture = GFX_evt_bad_news
 	is_triggered_only = yes
+	
+	only_playable = yes
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -4047,6 +4072,7 @@ character_event = {
 	desc = EVTDESCCETIC321
 	picture = GFX_evt_recieve_letter
 	is_triggered_only = yes
+	
 	trigger = {
 		OR = {
 			religion = imamite
@@ -4072,9 +4098,8 @@ character_event = {
 	desc = EVTDESCCETIC322
 	picture = GFX_evt_upsetting_letter
 	is_triggered_only = yes
-	trigger = {
-		age = 16
-	}
+	min_age = 16
+	
 	option = {
 		name = hellbebahck
 		remove_trait = governator_heir
@@ -4087,6 +4112,8 @@ character_event = {
 	id = cetic.323
 	hide_window = yes
 	is_triggered_only = yes
+	only_rulers = yes
+
 	trigger = {
 		trait = governator
 		OR = {
@@ -4190,9 +4217,7 @@ character_event = {
 	desc = EVTDESCCETIC324
 	picture = GFX_evt_china_expansionist
 	is_triggered_only = yes
-	trigger = {
-		age = 16
-	}
+	min_age = 16
 	
 	option = {
 		name = EVTOPTACETIC324
@@ -4221,9 +4246,7 @@ character_event = {
 	desc = EVTDESCCETIC325
 	picture = GFX_evt_china_expansionist
 	is_triggered_only = yes
-	trigger = {
-		age = 16
-	}
+	min_age = 16
 	
 	option = {
 		name = EVTOPTACETIC324
@@ -4251,6 +4274,8 @@ character_event = {
 	id = cetic.326
 	hide_window = yes
 	is_triggered_only = yes
+	only_rulers = yes
+	
 	trigger = {
 		trait = governator
 		OR = {
@@ -4304,9 +4329,7 @@ character_event = {
 	desc = EVTDESCCETIC327
 	picture = GFX_evt_china_expansionist
 	is_triggered_only = yes
-	trigger = {
-		age = 16
-	}
+	min_age = 16
 	
 	option = {
 		name = hastalavista
@@ -4371,6 +4394,8 @@ character_event = {
 	id = cetic.330
 	desc = EVTDESCCETIC330
 	picture = GFX_evt_chinese_bureaucrat
+	only_rulers = yes
+	
 	trigger = {
 		trait = governator
 		NOT = {
@@ -4402,6 +4427,8 @@ character_event = {
 	id = cetic.331
 	desc = EVTDESCCETIC331
 	picture = GFX_evt_china_stable
+	only_playable = yes
+	
 	trigger = {
 		trait = governator
 		OR = {
@@ -6058,6 +6085,8 @@ character_event = {
 character_event = {
 	id = cetic.353
 	hide_window = yes
+	only_playable = yes
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -6490,6 +6519,7 @@ character_event = {
 character_event = {
 	id = cetic.363
 	hide_window = yes
+	only_playable = yes
 	
 	trigger = {
 		OR = {
@@ -6739,6 +6769,8 @@ character_event = {
 	id = cetic.368
 	desc = EVTDESCCETIC368
 	picture = GFX_evt_china_expansionist
+	only_playable = yes
+	
 	trigger = {
 		OR = {
 			has_landed_title = e_california
@@ -7059,9 +7091,10 @@ character_event = {
 	id = cetic.500
 	hide_window = yes
 	is_triggered_only = yes
+	only_playable = yes
+	
 	trigger = {
 		government = bureaucratic_government
-		higher_real_tier_than = BARON
 		NOT = {
 			primary_title = {
 				has_title_flag = bureaucracy_set
@@ -7093,6 +7126,9 @@ character_event = {
 	id = cetic.501
 	hide_window = yes
 	is_triggered_only = yes
+	
+	only_playable = yes
+	
 	trigger = {
 		has_landed_title = e_california
 		NOT = {
@@ -7111,9 +7147,11 @@ character_event = {
 	id = cetic.502
 	desc = EVTDESCCETIC502
 	picture = GFX_evt_china_golden_age
+	
+	only_playable = yes
+	
 	trigger = {
 		government = bureaucratic_government
-		higher_real_tier_than = BARON
 		NOT = {
 			primary_title = {
 				has_title_flag = bureaucracy_set
@@ -7305,11 +7343,11 @@ character_event = {
 	id = cetic.506
 	desc = EVTDESCCETIC506
 	picture = GFX_evt_china_golden_age
+	only_playable = yes
 	min_age = 16
 	
 	trigger = {
 		government = bureaucratic_government
-		higher_real_tier_than = BARON
 		OR = {
 			trait = imp_ex3
 			trait = imp_ex4
@@ -7688,11 +7726,11 @@ character_event = {
 	id = cetic.516
 	desc = EVTDESCCETIC516
 	picture = GFX_evt_china_isolationist
+	only_playable = yes
 	min_age = 16
 	
 	trigger = {
 		government = bureaucratic_government
-		higher_real_tier_than = BARON
 		OR = {
 			trait = failed_exam
 			trait = imp_ex1
@@ -8064,10 +8102,10 @@ character_event = {
 	desc = EVTDESCCETIC524
 	picture = GFX_evt_china_isolationist
 	is_triggered_only = yes
+	only_playable = yes
 	
 	trigger = {
 		government = bureaucratic_government
-		higher_real_tier_than = BARON
 		current_heir = {
 			is_landed = no
 		}
