@@ -75,6 +75,7 @@ decisions = {
 	#}
 
 	borrow_money = {
+		only_rulers = yes
 		potential = {
 			is_ruler = yes
 			demesne_size = 1
@@ -159,6 +160,7 @@ decisions = {
 	}
 	
 	repay_loan = {
+		only_rulers = yes
 		potential = {
 			has_character_flag = loan_taken
 		}
@@ -250,6 +252,8 @@ decisions = {
 	}
 	
 	banking_sell_shares = { #Exchanges society currency for gold.
+		only_rulers = yes
+		
 		potential = {
 			is_ruler = yes
 			society_rank >= 1
@@ -329,6 +333,8 @@ decisions = {
 	}
 	
 	banking_subsidize_construction = { #Lowers building costs for a while
+		only_rulers = yes
+		
 		potential = {
 			is_ruler = yes
 			society_rank >= 2
@@ -345,6 +351,8 @@ decisions = {
 	}
 	
 	banking_invest_research = { #Increases tech points by 100 in a chosen field for 500 currency
+		only_rulers = yes
+		
 		potential = {
 			is_ruler = yes
 			society_rank >= 3

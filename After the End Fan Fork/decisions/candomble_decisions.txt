@@ -1,9 +1,10 @@
 #Select patron deity
 
 decisions = {
-
 	select_candomble_deity = {
 		is_high_prio = yes
+		only_rulers = yes
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
