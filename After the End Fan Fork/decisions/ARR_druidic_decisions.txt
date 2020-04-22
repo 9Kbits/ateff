@@ -1,6 +1,7 @@
 decisions = {
 	hold_an_aonach_tailteann  = {
 		only_playable = yes
+		ai_check_interval = 3
 		is_high_prio = yes
 		potential = {
 			NOT = {
@@ -82,6 +83,7 @@ decisions = {
 	
 	hold_divination = {
 		only_playable = yes
+		ai_check_interval = 3
 		is_high_prio = yes
 		potential = {
 			NOT = {
@@ -164,6 +166,7 @@ decisions = {
 
 	reinstate_celtic_rites = {
 		only_playable = yes
+		ai_check_interval = 3
 		is_high_prio = yes
 		potential = {
 			NOT = {
@@ -230,6 +233,7 @@ decisions = {
 
 	organize_gwydion = {
 		only_playable = yes
+		ai_check_interval = 3
 		is_high_prio = yes
 		potential = {
 			always = no
@@ -562,6 +566,7 @@ decisions = {
 
 	donate_money_to_fianna = {
 		only_playable = yes
+		ai_check_interval = 3
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -630,7 +635,6 @@ decisions = {
 
 	expel_red_dragons = {
 		ai = no
-		only_playable = yes
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -692,6 +696,8 @@ decisions = {
 	
 	donate_money_to_red_dragons = {
 		only_playable = yes
+		ai_check_interval = 3
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -761,6 +767,8 @@ decisions = {
 
 	invite_druid_to_court = {
 		only_playable = yes
+		ai_check_interval = 3
+		
 		potential = {
 			OR = {
 				religion = celtic_pagan
@@ -831,6 +839,8 @@ decisions = {
 
 	invite_bard_to_court = {
 		only_playable = yes
+		ai_check_interval = 3
+		
 		potential = {
 			OR = {
 				religion = celtic_pagan
@@ -1064,6 +1074,7 @@ decisions = {
 
 	assign_druid = { # For the AI, because they are dumb enough not to hand out minor titles
 		only_playable = yes
+		
 		potential = {
 			ai = yes
 			OR = {
@@ -1105,6 +1116,7 @@ decisions = {
 
 	assign_bard = { # For the AI, because they are dumb enough not to hand out minor titles
 		only_playable = yes
+
 		potential = {
 			ai = yes
 			OR = {
@@ -1152,6 +1164,8 @@ decisions = {
 	give_offerings_sidhe = {
 		only_playable = yes
 		is_high_prio = yes
+		ai_check_interval = 3
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -1227,6 +1241,8 @@ decisions = {
 
 	abdicate_gaelic = {
 		only_playable = yes
+		ai_check_interval = 3
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }

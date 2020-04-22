@@ -2,6 +2,8 @@
 decisions = {
 	# Found Men in Black
 	found_mib = {
+		only_playable = yes
+		
 		potential = {
 			always = no #Disabled until we can figure out how to properly do this. This decision is actually somewhat redundant anyway.
 			NOT = {
@@ -64,6 +66,8 @@ decisions = {
 	
 	run_for_president = {
 		is_high_prio = yes
+		only_rulers = yes
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -207,6 +211,8 @@ decisions = {
 	
 	drop_out_of_campaign = {
 		is_high_prio = yes
+		only_rulers = yes
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -239,8 +245,9 @@ decisions = {
 	
 	show_candidates = {
 		is_high_prio = yes
+		ai = no
+		
 		potential = {
-			ai = no
 			religion = americanist
 			has_global_flag = pres_election
 		}
@@ -256,6 +263,8 @@ decisions = {
 	
 	hold_opinion_poll = {
 		is_high_prio = yes
+		ai = no
+		
 		potential = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
