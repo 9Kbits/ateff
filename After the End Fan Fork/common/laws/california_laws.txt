@@ -30,9 +30,11 @@ laws = {
 			modifier = {
 				factor = 0
 				any_character = {
-					OR = {
-						has_landed_title = e_california
-						has_landed_title = e_new_california
+					limit = {
+						OR = {
+							has_landed_title = e_california
+							has_landed_title = e_new_california
+						}
 					}
 					is_friend = holder_scope
 				}
@@ -40,20 +42,24 @@ laws = {
 			modifier = {
 				factor = 100
 				any_character = {
-					OR = {
+					limit = {
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					is_rival = holder_scope
 				}
 			}
 			modifier = {
 				factor = 1.8
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value <= -80
@@ -63,10 +69,12 @@ laws = {
 			modifier = {
 				factor = 1.6
 				any_character = {
-					OR = {
+					limit = {
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value <= -60
@@ -76,10 +84,12 @@ laws = {
 			modifier = {
 				factor = 1.4
 				any_character = {
-					OR = {
+					limit = {
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value <= -40
@@ -89,10 +99,12 @@ laws = {
 			modifier = {
 				factor = 1.2
 				any_character = {
-					OR = {
+					limit = {
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value <= -20
@@ -102,10 +114,12 @@ laws = {
 			modifier = {
 				factor = 0.8
 				any_character = {
-					OR = {
+					limit = {
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value = 20
@@ -115,10 +129,12 @@ laws = {
 			modifier = {
 				factor = 0.6
 				any_character = {
-					OR = {
+					limit = {
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value = 40
@@ -128,10 +144,12 @@ laws = {
 			modifier = {
 				factor = 0.4
 				any_character = {
-					OR = {
+					limit = {
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value = 60
@@ -141,10 +159,12 @@ laws = {
 			modifier = {
 				factor = 0.2
 				any_character = {
-					OR = {
+					limit = {
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value = 80
@@ -203,30 +223,36 @@ laws = {
 			modifier = {
 				factor = 100
 				any_character = {
-					OR = {
+					limit = {
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					is_friend = ROOT
 				}
 			}
 			modifier = {
 				factor = 0
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					is_rival = ROOT
 				}
 			}
 			modifier = {
 				factor = 0
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = ROOT
 						value <= 0
@@ -236,10 +262,12 @@ laws = {
 			modifier = {
 				factor = 1.2
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = ROOT
 						value = 20
@@ -249,10 +277,12 @@ laws = {
 			modifier = {
 				factor = 1.4
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = ROOT
 						value = 40
@@ -262,10 +292,12 @@ laws = {
 			modifier = {
 				factor = 1.6
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = ROOT
 						value = 60
@@ -275,10 +307,12 @@ laws = {
 			modifier = {
 				factor = 1.8
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = ROOT
 						value = 80
@@ -291,30 +325,36 @@ laws = {
 			modifier = {
 				factor = 0
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					is_friend = holder_scope
 				}
 			}
 			modifier = {
 				factor = 100
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					is_rival = holder_scope
 				}
 			}
 			modifier = {
 				factor = 1.8
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value <= -80
@@ -324,10 +364,12 @@ laws = {
 			modifier = {
 				factor = 1.6
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value <= -60
@@ -337,9 +379,11 @@ laws = {
 			modifier = {
 				factor = 1.4
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
+						}
 					}
 					reverse_opinion = {
 						who = holder_scope
@@ -350,10 +394,12 @@ laws = {
 			modifier = {
 				factor = 1.2
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value <= -20
@@ -363,10 +409,12 @@ laws = {
 			modifier = {
 				factor = 0.8
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value = 20
@@ -376,10 +424,12 @@ laws = {
 			modifier = {
 				factor = 0.6
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value = 40
@@ -389,10 +439,12 @@ laws = {
 			modifier = {
 				factor = 0.4
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value = 60
@@ -402,10 +454,12 @@ laws = {
 			modifier = {
 				factor = 0.2
 				any_character = {
-					OR = {
+					limit = {	
+						OR = {
 							has_landed_title = e_california
 							has_landed_title = e_new_california
 						}
+					}
 					reverse_opinion = {
 						who = holder_scope
 						value = 80

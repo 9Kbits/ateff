@@ -10154,8 +10154,10 @@ character_event = {
 		}
 		else_if = {
 			limit = {
-				religion_group = muslim
-				religion_group = afro_syncretic
+				OR = {
+					religion_group = muslim
+					religion_group = afro_syncretic
+				}
 			}
 			add_artifact = engraved_dagger
 			add_artifact = silver_bracelets

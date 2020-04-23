@@ -8477,7 +8477,6 @@ decadence_invasion = {
 
 	on_success = {
 		any_playable_ruler = {
-			if = {
 				limit = {
 					ai = no
 					NOT = { character = FROM }
@@ -8500,7 +8499,6 @@ decadence_invasion = {
 						}
 					}
 				}
-			}
 			narrative_event = { id = 91241 }
 		}
 		
@@ -8583,13 +8581,11 @@ decadence_invasion = {
 				
 				# Powerful vassals can choose independence
 				any_vassal = {
-					if = {
 						limit = {
 							NOT = { character = FROM }
 							higher_tier_than = COUNT
 							prisoner = no
 						}
-					}
 					character_event = { id = 91240 }
 				}
 			}
