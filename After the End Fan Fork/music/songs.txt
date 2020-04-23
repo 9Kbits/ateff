@@ -667,3 +667,80 @@ song = {
 		}
 	}
 }
+
+song = {
+	name = "Master of the Feast.ogg"
+	song_name = "Master of the Feast"
+	chance = {
+		factor = 1		
+	}
+}
+
+song = {
+	name = "Ancient Rite.ogg"
+	song_name = "Ancient Rite"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 1
+			NOT = { religion_group = pagan_group }
+		}
+	}
+}
+
+song = {
+	name = "Celtic Impulse.ogg"
+	song_name = "Celtic Impulse"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOR = {
+				religion = celtic_pagan
+				religion = celtic_pagan_reformed
+				culture_group = north_atlantic
+			}
+		}
+	}
+}
+
+song = {
+	name = "Return of the Mummy.ogg"
+	song_name = "Return of the Mummy"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 0
+			NOR = {
+				religion = orientalist
+				religion = misrist
+				culture = neomoor
+			}
+		}
+	}
+}
+
+song = {
+	name = "Village Consort.ogg"
+	song_name = "Village Consort"
+	chance = {
+		factor = 1		
+	}
+}
+
+song = {
+	name = "Suvaco do Cristo.ogg"
+	song_name = "Suvaco do Cristo"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 1
+			NOR = {
+				culture_group = caribbanglo
+				culture_group = antillais
+				culture_group = caribeno
+				religion_group = afro_syncretic
+			}
+		}
+	}
+}

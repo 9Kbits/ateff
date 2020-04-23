@@ -89,8 +89,9 @@ Mayo flag and Yaqui flag: Marrovi
 Sun symbol: Bruno Vallette
 
 Music:
-"Sardana", "Lord of the Land", "Teller of the Tales", "Drums of the Deep", "DD Groove", "Porch Blues", "Virtutes Instrumenti", "Night of the Owl", "Achaidh Cheide", "Black Bird", "Dhaka", "Moorland", "Thunderhead", "Suonatore di Liuto", "Laid Back Guitars, "Angevin B", "Pippin the Hunchback", "Senbazuru", "Finding Movement", "Hidden Past", "Ibn Al-Noor", "Mystery Bazaar", "Tabuk", "Desert City", "Untitled African rhythm" (named Rhythm in-game)
-Kevin MacLeod (incompetech.com)
+"Sardana", "Lord of the Land", "Teller of the Tales" (higher BPM version found in Game Bundle 1 - Medieval), "Drums of the Deep" (edited with bonus melody found in Game Buncle 1 - Medieval), "DD Groove", "Porch Blues", "Virtutes Instrumenti", "Night of the Owl", "Achaidh Cheide", "Black Bird", "Dhaka", "Moorland", "Thunderhead", "Suonatore di Liuto", "Laid Back Guitars, "Angevin B", "Pippin the Hunchback", "Senbazuru", "Finding Movement", "Hidden Past", "Ibn Al-Noor", "Mystery Bazaar", "Tabuk", "Desert City", "Untitled African rhythm" (named Rhythm in-game), "Celtic Impulse", "Suvaco do Cristo", "Village Consort", "Master of the Feast" (different instrumentation, assembled from stems in Game Bundle 1 - Medieval), "Ancient Rite", "Return of the Mummy"
+Kevin MacLeod (incompetech.com) (incompetech.filmmusic.io)
+Licenseed under Creative Commons: Attribution 4.0 International http://creativecommons.org/licenses/by/4.0/
 
 "Lazy Days"
 by Purple Planet (purple-planet.com)
