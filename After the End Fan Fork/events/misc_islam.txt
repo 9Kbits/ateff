@@ -2180,6 +2180,23 @@ narrative_event = {
 	}	
 }
 
+#Delete Imamite religious head title if inherited by a non-Cetic
+character_event = {
+	id = islamate.50
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		ROOT = {
+			NOT = { religion = imamite }
+		}
+	}
+	
+	immediate = {
+		activate_title = { title = d_imamite status = no }
+	}
+}
+
 ##################################
 # Rise of the hijolly
 ##################################
