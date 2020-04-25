@@ -112,8 +112,8 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 							religion = norse_pagan
 							religion = norse_pagan_reformed
 						}
-						has_artifact = mjolnir
-						has_artifact = andvaranaut
+						has_artifact = ate_mjolnir
+						#has_artifact = andvaranaut
 					}
 				}
 				modifier = {
@@ -1530,7 +1530,7 @@ character_event = {
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_major } }
 					modifier = {
 						factor = 0
-						has_artifact = mjolnir
+						has_artifact = ate_mjolnir
 					}
 					#Insert artifact event here
 					narrative_event = { id = MNM.9602 } #Mjolnir
@@ -5682,7 +5682,7 @@ narrative_event = {
 			modifier = opinion_extremely_disappointed
 			years = 20
 		}
-		add_artifact = mjolnir
+		add_artifact = ate_mjolnir
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
@@ -5707,7 +5707,7 @@ narrative_event = {
 			min = 50
 		}
 
-		add_artifact = mjolnir
+		add_artifact = ate_mjolnir
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
@@ -5727,7 +5727,7 @@ narrative_event = {
 			years = 15
 		}
 		reverse_add_favor = FROM
-		add_artifact = mjolnir
+		add_artifact = ate_mjolnir
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
@@ -5754,7 +5754,7 @@ narrative_event = {
 			chance = 20
 			add_friend = FROM
 		}
-		add_artifact = mjolnir
+		add_artifact = ate_mjolnir
 		new_artifact = {
 			set_creation_date = 1.1.1
 		}
