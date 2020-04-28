@@ -1176,6 +1176,111 @@
 	2730.1.1={death=yes}
 }
 
+1650063={ #Legendary father of Mesoamerican adventurers
+	name="Pancho"
+	dynasty=1546094	#Bolom
+	culture=northlander
+	religion=neomayan
+	occluded=yes
+	trait=mastermind_theologian
+	trait=genius
+	trait=drunkard
+	trait=diligent
+	trait=ambitious
+	trait=legendary
+	2350.8.9={birth=yes}
+	2410.1.1={
+		create_bloodline = {
+			type = jaguar
+		}
+	}
+	2423.6.23={death=yes}
+}
+
+1650064={
+	name="Kayum"
+	dynasty=1546094	#Bolom
+	culture=lacandon
+	religion=neomayan
+	occluded=yes
+	trait=skilled_tactician
+	trait=twin
+	trait=quick
+	trait=ambitious
+	trait=brave
+	trait=arbitrary
+	trait=adventurer
+	trait=legendary
+	father=1650063
+	2380.6.17={birth=yes}
+	2435.10.20={death=yes}
+}
+
+1650065={
+	name="Dona Betty"
+	dynasty=1546094	#Bolom
+	female=yes
+	culture=lacandon
+	religion=neomayan
+	occluded=yes
+	trait=brilliant_strategist
+	trait=twin
+	trait=strong
+	trait=kind
+	trait=brave
+	trait=diligent
+	trait=adventurer
+	trait=legendary
+	father=1650063
+	2390.6.17={birth=yes}
+	2450.4.28={death=yes}
+}
+
+1650066={
+	name="Cabrakan"
+	dynasty=1546094	#Bolom
+	culture=lacandon
+	religion=neomayan
+	trait=naive_appeaser
+	trait=content
+	trait=slothful
+	trait=patient
+	trait=erudite
+	father=1650064
+	2405.7.19={birth=yes}
+	2457.11.29={death=yes}
+}
+
+1650067={
+	name="Diódoro"
+	dynasty=1546094	#Bolom
+	culture=lacandon
+	religion=neomayan
+	father=1650066
+	2425.3.20={birth=yes}
+	2469.10.13={death=yes}
+}
+
+1650068={
+	name="Fermín"
+	dynasty=1546094	#Bolom
+	culture=lacandon
+	religion=neomayan
+	father=1650067
+	2450.4.24={birth=yes}
+	2503.1.12={death=yes}
+}
+
+1650069={
+	name="Plácido"
+	dynasty=1546094	#Bolom
+	culture=lacandon
+	religion=neomayan
+	father=1650068
+	2473.5.29={birth=yes}
+	2529.1.12={death=yes}
+}
+
 # Yucatan
 1650070={
 	name="Israel"
@@ -1423,6 +1528,7 @@
 	trait=grey_eminence
 	trait=fair
 	trait=diligent
+	father=1650126
 	2621.6.20={birth=yes}
 	2642.1.1={add_spouse=1650090}
 	2695.1.1={death=yes}
@@ -1607,7 +1713,7 @@
 
 1650110={
 	name="Blanco"
-	dynasty=1546082
+	dynasty=1546094 #Bolom
 	culture=lacandon
 	religion=neomayan
 	trait=midas_touched
@@ -1616,6 +1722,7 @@
 	trait=scholar
 	trait=humble
 	trait=brave
+	father=1650117
 	2629.5.18={birth=yes}
 	2663.1.1={add_spouse=1650111}
 	2695.1.1={death=yes}
@@ -1653,6 +1760,71 @@
 	2735.1.1={death=yes}
 }
 
+1650113={
+	name="Orozco"
+	dynasty=1546094	#Bolom
+	culture=lacandon
+	religion=neomayan
+	father=1650069
+	2501.10.17={birth=yes}
+	2556.8.10={death=yes}
+}
+
+1650114={
+	name="Pascual"
+	dynasty=1546094	#Bolom
+	culture=lacandon
+	religion=neomayan
+	father=1650113
+	2527.9.28={birth=yes}
+	2577.6.29={death=yes}
+}
+
+1650115={
+	name="Saccimi"
+	dynasty=1546094	#Bolom
+	culture=lacandon
+	religion=neomayan
+	father=1650114
+	2556.3.22={birth=yes}
+	2603.9.18={death=yes}
+}
+
+1650116={
+	name="Ikan"
+	dynasty=1546094	#Bolom
+	culture=lacandon
+	religion=neomayan
+	father=1650115
+	2580.4.19={birth=yes}
+	2638.2.16={death=yes}	
+}
+
+1650117={
+	name="Jaime"
+	dynasty=1546094	#Bolom
+	culture=lacandon
+	religion=neomayan
+	father=1650116
+	2606.2.12={birth=yes}
+	2663.7.29={death=yes}
+}
+
+1650118={
+	name="Gukumatz"
+	dynasty=1546094	#Bolom
+	culture=cholano
+	religion=neomayan
+	trait=fortune_builder
+	trait=diligent
+	trait=greedy
+	trait=just
+	mother=1650065
+	2415.8.19={birth=yes}
+	2467.5.22={death=yes}
+	
+}
+
 1650120={
 	name="Popol Hol"
 	dynasty=1697002
@@ -1672,7 +1844,7 @@
 
 1650125={
 	name="Damil"
-	dynasty=1697001
+	dynasty=1546094
 	culture=cholano
 	religion=uahomche
 	trait=tough_soldier
@@ -1681,6 +1853,7 @@
 	trait=brave
 	trait=cruel
 	martial=9
+	father=1650167
 	2641.1.1={birth=yes}
 	2660.1.1={
 		effect={
@@ -1688,6 +1861,49 @@
 		}
 	}
 	2695.1.1={death=yes}
+}
+
+1650126={
+	name="Lamat"
+	dynasty=1546094	#Bolom
+	culture=cholano
+	religion=neomayan
+	father=1650118
+	2445.5.12={birth=yes}
+	2509.9.23={death=yes}
+}
+
+1650127={
+	name="Wayaan"
+	dynasty=1546094	#Bolom
+	culture=cholano
+	religion=sacred_heart
+	trait=sympathy_cult_of_saints
+	father=1650126
+	2470.4.18={birth=yes}
+	2499.6.17={add_spouse=1810257}
+	2529.9.23={death=yes}
+}
+
+1650128={
+	name="Zipacna"
+	dynasty=1546094	#Bolom
+	culture=cholano
+	religion=sacred_heart
+	father=1650127
+	mother=1810257
+	2495.3.26={birth=yes}
+	2551.10.19={death=yes}
+}
+
+1650129={
+	name="Marcos"
+	dynasty=1546094	#Bolom
+	culture=cholano
+	religion=sacred_heart
+	father=1650128
+	2518.10.21={birth=yes}
+	2551.4.12={death=yes}
 }
 
 1650130={
@@ -2150,6 +2366,47 @@
 	trait=scholarly_theologian
 	trait=scholar
 	2624.6.14={birth=yes}
+}
+
+1650164={
+	name="Eztli"
+	dynasty=1546094	#Bolom
+	culture=cholano
+	religion=sacred_heart
+	father=1650129
+	2541.1.25={birth=yes}
+	2601.8.19={death=yes}
+}
+
+1650165={
+	name="Malah"
+	dynasty=1546094	#Bolom
+	culture=cholano
+	religion=sacred_heart
+	father=1650164
+	2568.12.27={birth=yes}
+	2616.8.17={death=yes}
+}
+
+1650166={
+	name="Tabscoob"
+	dynasty=1546094	#Bolom
+	culture=cholano
+	religion=uahomche
+	trait=sympathy_cult_of_saints
+	father=1650165
+	2591.2.28={birth=yes}
+	2648.3.1={death=yes}
+}
+
+1650167={
+	name="Vucub"
+	dynasty=1546094	#Bolom
+	culture=cholano
+	religion=uahomche
+	father=1650166
+	2619.3.17={birth=yes}
+	2665.2.16={death=yes}
 }
 
 1670000={
