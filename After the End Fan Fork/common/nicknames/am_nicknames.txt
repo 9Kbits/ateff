@@ -1456,3 +1456,22 @@ nick_the_brilliant = {
 }
 nick_grass_devil = {}
 nick_lackland = {}
+nick_the_jaguar = {
+	allow = {
+		is_adult = yes
+		is_dumb_trigger = no
+		OR = {
+			culture_group = mayan
+			religion = neomayan
+			religion = uahomche
+		}
+		OR = {
+			martial = 15
+			diplomacy = 15
+			stewardship = 15
+			learning = 15
+		}
+		prestige = 1000
+		piety = 1000
+	}
+}
