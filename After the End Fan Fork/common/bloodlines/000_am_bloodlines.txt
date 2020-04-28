@@ -588,9 +588,26 @@ kalomte_votan_female = {
 salazar = {
 	monthly_character_piety = 0.25
 	monthly_character_prestige = 0.4
-	neomayan_opinion = 5
-	learning = 2
+	neomayan_opinion = 10
+	martial = 2
 	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_bloodthirsty
+	active = {
+		OR = {
+			religion = neomayan
+			religion = uahomche
+		}
+	}
+}
+
+jaguar = {
+	monthly_character_piety = 0.4
+	monthly_character_prestige = 0.25
+	neomayan_opinion = 5
+	uahomche_opinion = 5
+	learning = 2
+	inheritance = all_descendant
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_bloodthirsty
 	active = {
