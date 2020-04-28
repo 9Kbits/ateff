@@ -1283,6 +1283,7 @@
 	religion=neomayan
 	father=1650068
 	2473.5.29={birth=yes}
+	2491.2.28={add_spouse=1650119}
 	2529.1.12={death=yes}
 }
 
@@ -1625,16 +1626,33 @@
 	2695.1.1={death=yes}
 }
 
+1650099={
+	name="Nohochacyum"
+	dynasty=1697000 #xocmo
+	culture=lacandon
+	religion=uahomche
+	trait=brilliant_strategist
+	trait=kind
+	trait=brave
+	trait=humble
+	trait=gregarious
+	2451.12.23={birth=yes}
+	2503.1.1={death=yes}
+}
+
 1650100={
 	name="Tabscoob"
-	dynasty=1697000
+	dynasty=1697000 #xocmo
 	culture=lacandon
 	religion=uahomche
 	trait=fortune_builder
 	trait=zealous
-	2629.1.1={
-		birth=yes
-		add_claim=k_peten
+	father=1650124
+	2629.1.1={birth=yes}
+	2630.1.1={
+		effect={
+			add_weak_claim=k_peten
+		}
 	}
 	2655.1.1={add_spouse=1650101}
 	2695.1.1={death=yes}
@@ -1713,6 +1731,16 @@
 	mother=1650106
 	2661.1.1={birth=yes}
 	2715.1.1={death=yes}
+}
+
+1650109={
+	name="Cabrakan"
+	dynasty=1697000 #xocmo
+	culture=lacandon
+	religion=uahomche
+	father=1650099
+	2472.6.10={birth=yes}
+	2535.11.12={death=yes}
 }
 
 1650110={
@@ -1826,7 +1854,18 @@
 	mother=1650065
 	2415.8.19={birth=yes}
 	2467.5.22={death=yes}
-	
+}
+
+1650119={
+	name="Huichaana"
+	female=yes
+	dynasty=1697000 #xocmo
+	culture=lacandon
+	religion=uahomche
+	father=1650099
+	2475.2.28={birth=yes}
+	2491.2.28={add_spouse=1650069}
+	2542.12.16={death=yes}
 }
 
 1650120={
@@ -1837,6 +1876,7 @@
 	trait=naive_appeaser
 	trait=ugly
 	trait=slow
+	father=1650148
 	2645.1.1={birth=yes}
 	2660.1.1={
 		effect={
@@ -1844,6 +1884,46 @@
 		}
 	}
 	2695.1.1={death=yes}
+}
+
+1650121={
+	name="Kabil"
+	dynasty=1697000 #xocmo
+	culture=lacandon
+	religion=uahomche
+	father=1650109
+	2495.4.19={birth=yes}
+	2549.2.13={death=yes}
+}
+
+1650122={
+	name="Qaholom"
+	dynasty=1697000 #xocmo
+	culture=lacandon
+	religion=uahomche
+	father=1650121
+	2529.8.2={birth=yes}
+	2590.3.1={death=yes}
+}
+
+1650123={
+	name="Qaholom"
+	dynasty=1697000 #xocmo
+	culture=lacandon
+	religion=uahomche
+	father=1650122
+	2566.7.19={birth=yes}
+	2645.12.1={death=yes}
+}
+
+1650124={
+	name="Pacal"
+	dynasty=1697000 #xocmo
+	culture=lacandon
+	religion=uahomche
+	father=1650123
+	2600.1.11={birth=yes}
+	2661.7.18={death=yes}
 }
 
 1650125={
@@ -1858,7 +1938,9 @@
 	trait=cruel
 	martial=9
 	father=1650167
-	2641.1.1={birth=yes}
+	2641.1.1={birth=yes
+		add_claim=k_chiapas
+	}
 	2660.1.1={
 		effect={
 			add_rival=1650120
@@ -2208,6 +2290,21 @@
 	mother=1650155
 	2664.1.1={birth=yes}
 	2734.1.1={death=yes}
+}
+
+1650148={
+	name="Popol Hol"
+	dynasty=1697002
+	culture=cholano
+	religion=uahomche
+	trait=grey_eminence
+	trait=peasant_leader
+	trait=wroth
+	trait=cynical
+	trait=deceitful
+	trait=charitable
+	2618.1.1={birth=yes}
+	2659.1.1={death=yes}
 }
 
 1650150={
