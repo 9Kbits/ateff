@@ -1515,3 +1515,36 @@ k_celeste = {
 	
 	dynasty_title_names = no	# Will not be named "Seljuk", etc.
 }
+
+d_patria_grande={
+	color={ 179 179 102 }
+	color2={ 220 220 0 }
+	
+	creation_requires_capital = no
+	
+	capital = 1897
+	
+	title = "CAUDILLO"
+	title_female = "CAUDILLA"
+	foa = "CAUDILLO_FOA"
+	
+	allow = {
+		religion = patria_grande
+		num_of_holy_sites = 3
+		piety = 500
+		wealth = 250
+	}
+	
+	caliphate = yes
+	
+	short_name = yes
+	
+	dignity = 100 # Counted as having this many more counties than it does
+	
+	# Controls a religion
+	controls_religion = patria_grande
+	
+	religion = patria_grande
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+}

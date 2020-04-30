@@ -9,6 +9,7 @@
 	occluded=yes
 	trait=mastermind_theologian
 	trait=legendary
+	trait=patria_santander
 	trait=genius
 	trait=erudite
 	trait=ambitious
@@ -29,6 +30,7 @@
 	religion=patria_grande
 	occluded=yes
 	trait=grey_eminence
+	trait=patria_bolivar
 	trait=legendary
 	trait=wroth
 	trait=ambitious
@@ -44,6 +46,7 @@
 	culture=rolo
 	religion=patria_grande
 	trait=scholarly_theologian
+	trait=patria_santander
 	trait=humble
 	trait=kind
 	trait=honest
@@ -52,18 +55,20 @@
 	2440.4.4={
 		death={
 			death_reason=death_execution_crucifixion #Executed.
-			killer=	#not added yet
+			#killer=	#not added yet
 		}
 	}
 }
 
 1811003={
-	name="Zacarías"
+	name="Zacarías" #I
 	dynasty=1533022
 	culture=costeno
 	religion=patria_grande
+	trait=genius
 	trait=strong
 	trait=brilliant_strategist
+	trait=patria_bolivar
 	trait=cruel
 	trait=brave
 	trait=zealous
@@ -72,18 +77,19 @@
 	2563.4.17={
 		death={
 			death_reason=death_execution_burning #Executed.
-			killer=	#not added yet
+			#killer=	#not added yet
 		}
 	}
 }
 
 1811004={
-	name="Zacarías"
+	name="Zacarías" #II
 	dynasty=1533022
 	culture=rolo
 	religion=patria_grande
 	trait=misguided_warrior
 	trait=fair
+	trait=patria_bolivar
 	trait=proud
 	trait=brave
 	trait=zealous
@@ -93,13 +99,13 @@
 	2619.6.13={
 		death={
 			death_reason=death_execution_hanging #Executed.
-			killer=	#not added yet
+			#killer=	#Arturo Cova, not added yet
 		}
 	}
 }
 
 1811005={
-	name="Zacarías"
+	name="Zacarías" #III
 	dynasty=1533022
 	culture=rolo
 	religion=patria_grande
@@ -107,6 +113,7 @@
 	trait=fair
 	trait=strong
 	trait=quick
+	trait=patria_bolivar
 	trait=brave
 	trait=zealous
 	trait=ambitious
@@ -121,11 +128,17 @@
 }
 
 1811006={
-	name="Zacarías"
+	name="Zacarías" #IV
 	dynasty=1533022
 	culture=rolo
 	religion=patria_grande
+	martial=5
+	diplomacy=4
+	stewardship=7
+	intrigue=4
+	learning=6
 	trait=fortune_builder
+	trait=patria_manuelita
 	trait=quick
 	trait=cynical
 	trait=stubborn
@@ -133,15 +146,406 @@
 	trait=just
 	father=1811005
 	2611.1.31={birth=yes}
+	2627.1.1={add_spouse=1811007}
 	2700.1.1={death=yes}
 }
 
 1811007={
 	name="Manuela"
-	dynasty=
+	dynasty=1539024
+	female=yes
+	culture=rolo
+	religion=patria_grande
+	trait=charismatic_negotiator
+	diplomacy=7
+	trait=patria_manuelita
+	2613.2.3={birth=yes}
+	2627.1.1={add_spouse=1811006}
+	2700.1.1={death=yes}
 }
 
-#skipping to 30 to leave room for future characters.
+1811008={
+	name="Bendición"
+	dynasty=1533022
+	female=yes
+	culture=rolo
+	religion=patria_grande
+	martial=5
+	diplomacy=6
+	stewardship=7
+	intrigue=2
+	learning=4
+	trait=midas_touched
+	trait=patria_manuelita
+	trait=temperate
+	trait=just
+	father=1811006
+	mother=1811008
+	2631.10.1={birth=yes}
+}
+
+1811009={
+	name="Ibrahim"
+	dynasty=1539025
+	culture=rolo
+	religion=patria_grande
+	trait=patria_bolivar
+	trait=grey_eminence
+	trait=patria_santander
+	trait=kind
+	trait=gregarious
+	trait=honest
+	trait=deceitful
+	2590.6.19={birth=yes}
+	2645.9.28={death=yes}
+}
+
+1811010={
+	name="Santiago"
+	dynasty=1539025
+	culture=rolo
+	religion=patria_grande
+	trait=patria_santander
+	trait=intricate_webweaver
+	trait=gregarious
+	trait=lustful
+	trait=envious
+	trait=deceitful
+	father=1811009
+	2615.2.25={birth=yes}
+	2656.3.8={
+		death={
+			death_reason=death_murder
+			killer=1811012
+		}
+	}
+}
+
+1811011={
+	name="Salvador"
+	dynasty=1438051
+	culture=quechua
+	religion=patria_grande
+	trait=patria_santander
+	trait=scholarly_theologian
+	2620.6.17={birth=yes}
+	2659.9.28={death=yes}
+}
+
+1811012={
+	name="Pedro"
+	dynasty=1438051
+	culture=quechua
+	religion=patria_grande
+	martial=6
+	diplomacy=5
+	stewardship=4
+	intrigue=7
+	learning=2
+	trait=patria_bolivar
+	trait=flamboyant_schemer
+	trait=twin
+	trait=cynical
+	trait=wroth
+	trait=envious
+	trait=deceitful
+	father=1811011
+	2640.2.25={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1811013={
+	name="Pablo"
+	dynasty=1438051
+	culture=quechua
+	religion=patria_grande
+	martial=2
+	diplomacy=7
+	stewardship=4
+	intrigue=6
+	learning=5
+	trait=patria_santander
+	trait=underhanded_rogue
+	trait=twin
+	trait=patient
+	trait=zealous
+	trait=kind
+	trait=honest
+	father=1811011
+	2640.2.25={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1811014={
+	name="Ángela"
+	dynasty=1438051
+	female=yes
+	culture=quechua
+	religion=patria_grande
+	trait=patria_manuelita
+	diplomacy=6
+	intrigue=6
+	trait=intricate_webweaver
+	trait=patria_manuelita
+	trait=kind
+	trait=lustful
+	trait=trusting
+	trait=zealous
+	2643.4.10={birth=yes}
+	2660.1.1={
+		employer=1811013
+	}
+	2700.1.1={death=yes}
+}
+
+1811015={
+	name="Bayardo"
+	dynasty=1539025
+	culture=rolo
+	religion=patria_grande
+	trait=patria_bolivar
+	trait=bastard
+	father=1811010
+	mother=1811014
+	2655.8.24={birth=yes
+		add_claim=d_vallecafe
+		add_claim=d_cundinamarca
+	}
+	2700.1.1={death=yes}
+}
+
+1811016={
+	name="Bendición"
+	dynasty=1533022
+	female=yes
+	culture=istmeno
+	religion=patria_grande
+	trait=fair
+	trait=quick
+	trait=patria_santander
+	trait=midas_touched
+	trait=just
+	trait=diligent
+	trait=patient
+	trait=proud
+	father=1811003
+	2548.11.28={birth=yes}
+	2618.12.1={death=yes}
+}
+
+1811017={
+	name="Zacarías"
+	dynasty=1533022
+	culture=istmeno
+	religion=patria_grande
+	trait=patria_santander
+	trait=fortune_builder
+	trait=temperate
+	trait=honest
+	trait=patient
+	trait=humble
+	mother=1811016
+	2578.11.3={birth=yes}
+	2640.11.13={death=yes}
+}
+
+1811018={
+	name="Bendición"
+	dynasty=1533022
+	female=yes
+	culture=istmeno
+	religion=patria_grande
+	trait=patria_santander
+	trait=thrifty_clerk
+	trait=twin
+	trait=content
+	trait=shy
+	trait=erudite
+	trait=charitable
+	father=1811017
+	2620.10.11={birth=yes}
+	2663.9.1={death=yes}
+}
+
+1811019={
+	name="Zacarías"
+	dynasty=1533022
+	culture=istmeno
+	religion=patria_grande
+	trait=patria_santander
+	trait=indulgent_wastrel
+	trait=twin
+	trait=homosexual
+	trait=slothful
+	trait=kind
+	trait=humble
+	trait=trusting
+	father=1811017
+	2620.11.3={birth=yes}
+	2665.11.13={
+		death={
+			death_reason=death_murder_unknown
+		}
+	}
+}
+
+1811020={
+	name="Andrés"
+	dynasty=1538006
+	culture=istmeno
+	religion=patria_grande
+	martial=5
+	diplomacy=4
+	stewardship=7
+	intrigue=4
+	learning=6
+	trait=patria_manuelita
+	trait=brave
+	trait=gregarious
+	trait=honest
+	trait=humble
+	2619.2.7={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1811021={
+	name="Simón"
+	dynasty=1538006
+	culture=istmeno
+	religion=patria_grande
+	martial=3
+	diplomacy=6
+	stewardship=4
+	intrigue=7
+	learning=4
+	trait=patria_manuelita
+	trait=flamboyant_schemer
+	trait=fair
+	trait=homosexual
+	trait=kind
+	trait=humble
+	trait=deceitful
+	trait=ambitious
+	father=1811020
+	2640.12.27={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1811022={
+	name="Bendición"
+	dynasty=1533022
+	female=yes
+	culture=istmeno
+	religion=patria_grande
+	martial=5
+	diplomacy=3
+	stewardship=6
+	intrigue=3
+	learning=6
+	trait=patria_santander
+	trait=scholarly_theologian
+	trait=zealous
+	trait=stubborn
+	trait=gluttonous
+	trait=diligent
+	mother=1811018
+	2656.7.1={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1811023={
+	name="Rubén"
+	dynasty=1538028
+	culture=istmeno
+	religion=patria_grande
+	trait=patria_manuelita
+	trait=charismatic_negotiator
+	2637.1.21={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1811024={
+	name="Pedro"
+	dynasty=1538028
+	culture=istmeno
+	religion=patria_grande
+	trait=patria_manuelita
+	father=1811023
+	2657.12.8={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1811025={
+	name="Navaja"
+	dynasty=1538028
+	female=yes
+	culture=istmeno
+	religion=patria_grande
+	trait=patria_manuelita
+	father=1811023
+	2659.2.19={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1811026={
+	name="Emilse"
+	dynasty=1510007
+	female=yes
+	culture=chocoano
+	religion=patria_grande
+	trait=patria_manuelita
+	trait=elusive_shadow
+	2624.7.29={birth=yes}
+	2635.1.1={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
+	2700.1.1={death=yes}
+}
+
+1811027={
+	name="Tostao"
+	dynasty=1510031
+	culture=chocoano
+	religion=patria_grande
+	trait=patria_santander
+	trait=martial_cleric
+	2622.12.18={birth=yes}
+	2635.1.1={add_spouse=1811026}
+	2700.1.1={death=yes}
+}
+
+1811028={
+	name="Miguel"
+	dynasty=1510007
+	culture=chocoano
+	religion=patria_grande
+	trait=patria_manuelita
+	trait=flamboyant_schemer
+	father=1811027
+	mother=1811026
+	2640.12.18={birth=yes}
+	2700.1.1={death=yes}
+}
+
+1811029={
+	name="Gregor"
+	dynasty=1510032
+	culture=chocoano
+	religion=patria_grande
+	trait=patria_bolivar
+	trait=thrifty_clerk
+	2628.11.2={birth=yes}
+	2700.1.1={death=yes}
+}
 
 18110030={
 	name="Ollantay"
@@ -169,7 +573,7 @@
 	trait=deceitful
 	father=18110030
 	2440.12.6={birth=yes}
-	2470.3.5={death=yes}
+	2500.3.5={death=yes}
 }
 
 18110032={
@@ -183,6 +587,10 @@
 	trait=ambitious
 	trait=deceitful
 	father=18110031
-	2440.12.6={birth=yes}
-	2470.3.5={death=yes}
+	2470.8.17={birth=yes}
+	2543.5.13={
+		death={
+			death_reason = death_suicide_hanging
+		}
+	}
 }
