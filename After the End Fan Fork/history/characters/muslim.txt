@@ -357,26 +357,6 @@
 	2640.3.7={birth=yes}
 	2710.12.5={death=yes}
 }
-2200020={
-	name="Abdool"
-	dynasty=1667054# Khan
-	martial=4
-	diplomacy=6
-	stewardship=8
-	intrigue=6
-	learning=8
-	culture=guyanese
-	religion=traditionalist
-	trait=trsunni
-	trait=sayyid2
-	trait=greedy
-	trait=patient
-	trait=lustful
-	trait=proud
-	trait=fortune_builder
-	2638.6.4={birth=yes}
-	2710.12.1={death=yes}
-}
 
 2200022={
 	name="Yusuf"
@@ -1453,4 +1433,84 @@
 	2660.1.1={
 		employer=1788012
 	}
+}
+
+1384020={
+	name="Muhammad"
+	dynasty=1667054# Khan
+	culture=guyanese
+	religion=traditionalist
+	trait=brilliant_strategist
+	trait=strong
+	trait=patient
+	trait=zealous
+	trait=just
+	trait=sayyid2
+	2590.1.1={birth=yes}
+	2640.1.1={death=yes}
+}
+
+1384021={
+	name="Bairam"
+	dynasty=1667054 # Khan
+	culture=guyanese
+	religion=traditionalist
+	trait=midas_touched
+	trait=strong
+	trait=just
+	trait=cruel
+	trait=wroth
+	trait=temperate
+	trait=has_small_pox
+	trait=sayyid2
+	father=1384020
+	2609.1.1={birth=yes}
+	2642.1.1={
+		death={
+			death_reason = death_trait
+		}
+	}
+}
+
+1384022={
+	name="Abdool"
+	dynasty=1667054 # Khan
+	culture=guyanese
+	religion=traditionalist
+	trait=indulgent_wastrel
+	trait=wroth
+	trait=cruel
+	trait=temperate
+	trait=proud
+	trait=sayyid2
+	father=1384021
+	2626.1.1={birth=yes}
+	2645.2.6={
+		death={
+			death_reason = death_battle
+			killer = 1800025
+		}
+	}
+}
+
+1384023={
+	name="Abdool"
+	dynasty=1667054# Khan
+	martial=4
+	diplomacy=6
+	stewardship=8
+	intrigue=6
+	learning=8
+	culture=guyanese
+	religion=traditionalist
+	trait=trsunni
+	trait=sayyid2
+	trait=greedy
+	trait=patient
+	trait=lustful
+	trait=proud
+	trait=fortune_builder
+	father=1384022
+	2648.6.4={birth=yes}
+	2710.12.1={death=yes}
 }
