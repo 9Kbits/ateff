@@ -708,6 +708,7 @@
 	intrigue=6
 	learning=1
 	trait=skilled_tactician
+	trait=patria_bolivar
 	trait=zealous
 	trait=wroth
 	trait=diligent
@@ -722,6 +723,7 @@
 	culture=paisa
 	religion=patria_grande
 	trait=martial_cleric
+	trait=patria_bolivar
 	trait=zealous
 	trait=wroth
 	father=18110038
@@ -735,6 +737,7 @@
 	culture=paisa
 	religion=patria_grande
 	trait=thrifty_clerk
+	trait=patria_bolivar
 	trait=diligent
 	trait=temperate
 	father=18110038
@@ -747,8 +750,527 @@
 	dynasty=1583030
 	culture=paisa
 	religion=patria_grande
+	trait=patria_santander
 	trait=grey_eminence
 	trait=cynical
 	2642.8.23={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110042={
+	name="Patricio"
+	dynasty=1533022
+	culture=costeno
+	religion=patria_grande
+	trait=patria_santander
+	trait=naive_appeaser
+	trait=trusting
+	trait=craven
+	trait=shy
+	trait=erudite
+	2547.3.19={birth=yes}
+	2600.2.6={death=yes}
+}
+
+18110043={
+	name="Patricio"
+	dynasty=1533022
+	culture=costeno
+	religion=patria_grande
+	trait=patria_santander
+	trait=amateurish_plotter
+	trait=cruel
+	trait=justful
+	trait=arbitrary
+	trait=erudite
+	2569.4.20={birth=yes}
+	2620.7.19={
+		death={
+			death_reason=death_execution_beheading
+			killer=18110044
+		}
+	}
+}
+
+18110044={
+	name="José Arcadio"
+	dynasty=1533000
+	culture=costeno
+	religion=patria_grande
+	trait=patria_manuelita
+	trait=tough_soldier
+	trait=just
+	trait=wroth
+	trait=greedy
+	trait=kind
+	2590.6.1={birth=yes}
+	2610.1.1={add_spouse=18110045}
+	2653.2.17={death=yes}
+}
+
+18110045={
+	name="Ursula"
+	dynasty=1533030
+	female=yes
+	culture=costeno
+	religion=patria_grande
+	trait=patria_manuelita
+	trait=intricate_webweaver
+	trait=kind
+	2592.12.21={birth=yes}
+	2648.1.{add_spouse=18110044}
+	2659.1.1={death=yes}
+}
+
+18110046={
+	name="José Arcadio"
+	dynasty=1533000
+	culture=costeno
+	religion=patria_grande
+	martial=6
+	diplomacy=4
+	stewardship=7
+	intrigue=3
+	learning=3
+	trait=patria_manuelita
+	trait=skilled_tactician
+	trait=strong
+	trait=zealous
+	trait=wroth
+	trait=diligent
+	trait=honest
+	father=18110044
+	mother=18110045
+	2630.1.16={birth=yes}
+	2648.1.1{add_spouse=18110049}
+	2700.1.1={death=yes}
+}
+
+18110047={
+	name="Aureliano"
+	dynasty=1533000
+	culture=costeno
+	religion=patria_grande
+	trait=patria_manuelita
+	martial=7
+	diplomacy=6
+	stewardship=6
+	intrigue=7
+	learning=7
+	trait=midas_touched
+	trait=quick
+	trait=just
+	trait=greedy
+	trait=cynical
+	trait=lustful
+	father=18110044
+	mother=18110045
+	2632.2.12={birth=yes}
+	2660.1.1={
+		effect={add_lover=18110050}
+	}
+	2660.1.2={
+		effect={add_lover=18110051}
+	}
+	2660.1.3={
+		effect={add_lover=18110052}
+	}
+	2700.1.1={death=yes}
+}
+
+18110048={
+	name="Amaranta"
+	dynasty=1533000
+	female=yes
+	culture=costeno
+	religion=patria_grande
+	trait=patria_manuelita
+	martial=3
+	diplomacy=7
+	stewardship=4
+	intrigue=2
+	learning=7
+	trait=scholarly_theologian
+	trait=shy
+	trait=patient
+	trait=kind
+	trait=temperate
+	father=18110044
+	mother=18110045
+	2634.8.19={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110049={
+	name="Rebeca"
+	female=yes
+	culture=wayuu
+	religion=patria_grande
+	trait=charismatic_negotiator
+	trait=patient
+	trait=trusting
+	2633.1.12={birth=yes}
+	2648.1.1{add_spouse=18110046}
+	2700.1.1={death=yes}
+}
+
+18110050={
+	name="Florentina"
+	female=yes
+	culture=costeno
+	religion=patria_grande
+	trait=fair
+	trait=lustful
+	trait=gluttonous
+	trait=patria_manuelita
+	2632.6.9={birth=yes}
+	2660.1.1={
+		effect={add_lover=18110047}
+	}
+	2700.1.1={death=yes}
+}
+
+18110051={
+	name="Olga"
+	female=yes
+	culture=costeno
+	religion=patria_grande
+	trait=strong
+	trait=lustful
+	trait=envious
+	trait=patria_bolivar
+	2639.10.29={birth=yes}
+	2660.1.2={
+		effect={add_lover=18110047}
+	}
+	2700.1.1={death=yes}
+}
+
+18110052={
+	name="Irene"
+	female=yes
+	culture=costeno
+	religion=patria_grande
+	trait=genius
+	trait=lustful
+	trait=patient
+	trait=patria_santander
+	2642.1.2={birth=yes}
+	2660.1.3={
+		effect={add_lover=18110047}
+	}
+	2700.1.1={death=yes}
+}
+
+18110054={
+	name="Aureliano"
+	dynasty=1533000
+	culture=costeno
+	religion=patria_grande
+	trait=patria_manuelita
+	father=18110047
+	mother=18110050
+	trait=bastard
+	2657.12.10={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110055={
+	name="Aureliano"
+	dynasty=1533000
+	culture=costeno
+	religion=patria_grande
+	father=18110047
+	mother=18110051
+	trait=patria_bolivar
+	trait=bastard
+	2660.5.12={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110056={
+	name="Aureliano"
+	dynasty=1533000
+	culture=costeno
+	religion=patria_grande
+	father=18110047
+	mother=18110052
+	trait=patria_santander
+	trait=bastard
+	2664.3.22={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110057={
+	name="Amílcar"
+	dynasty=1533028
+	culture=costeno
+	religion=gracia_divina
+	trait=brilliant_strategist
+	trait=ambitious
+	trait=stubborn
+	trait=zealous
+	trait=just
+	trait=patria_bolivar
+	2601.1.1={birth=yes}
+	2663.3.18={death=yes}
+}
+
+18110058={
+	name="Aníbal"
+	dynasty=1533028
+	culture=costeno
+	religion=patria_grande
+	trait=brilliant_strategist
+	trait=strategist
+	trait=ambitious
+	trait=stubborn
+	trait=patient
+	trait=narrow_flank_leader
+	trait=trickster
+	trait=patria_bolivar
+	father=18110057
+	2649.1.1={birth=yes}
+	2693.3.18={death=yes}
+}
+
+18110059={
+	name="Asdrúbal"
+	dynasty=1533028
+	culture=costeno
+	religion=patria_grande
+	trait=patria_bolivar
+	father=18110057
+	2652.1.1={birth=yes}
+	2698.3.18={death=yes}
+}
+
+18110060={
+	name="Magon"
+	dynasty=1533028
+	culture=costeno
+	religion=patria_grande
+	trait=patria_bolivar
+	father=18110057
+	2658.1.1={birth=yes}
+	2699.3.18={death=yes}
+}
+
+18110061={
+	name="Ricardo"
+	dynasty=1533031
+	culture=costeno
+	religion=traditionalist
+	trait=trtrad
+	trait=grey_eminence
+	trait=shrewd
+	trait=diligent
+	trait=erudite
+	trait=deceitful
+	trait=patient
+	2597.10.5={birth=yes}
+	2649.6.5={death=yes}
+}
+
+18110062={
+	name="Álex"
+	dynasty=1533031
+	culture=costeno
+	religion=traditionalist
+	trait=trtrad
+	trait=charismatic_negotiator
+	trait=humble
+	trait=zealous
+	trait=honest
+	trait=temperate
+	father=18110061
+	2630.7.20={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110063={
+	name="David"
+	dynasty=1533031
+	culture=costeno
+	religion=traditionalist
+	trait=trtrad
+	trait=fortune_builder
+	trait=greedy
+	trait=cynical
+	trait=honest
+	trait=lustful
+	father=18110061
+	2631.2.7={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110064={
+	name="Siad"
+	dynasty=1533031
+	female=yes
+	culture=costeno
+	religion=traditionalist
+	trait=trtrad
+	father=18110062
+	2651.12.17={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110065={
+	name="Álvaro"
+	dynasty=1533032
+	culture=costeno
+	religion=santeria
+	trait=midas_touched
+	trait=charitable
+	trait=kind
+	trait=gregarious
+	trait=honest
+	2635.5.30={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110066={
+	name="Wilson"
+	dynasty=1533032
+	culture=costeno
+	religion=santeria
+	father=18110065
+	2655.5.4={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110067={
+	name="Adela"
+	dynasty=1533032
+	female=yes
+	culture=costeno
+	religion=santeria
+	father=18110065
+	2658.11.8={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110068={
+	name="Pedro"
+	dynasty=1533033
+	culture=costeno
+	religion=brethren
+	trait=elusive_shadow
+	trait=schemer
+	trait=envious
+	2637.6.16={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110069={
+	name="Blas"
+	dynasty=1533033
+	culture=costeno
+	religion=brethren
+	2659.2.8={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110070={
+	name="Catalina"
+	dynasty=1533033
+	female=yes
+	culture=costeno
+	religion=brethren
+	2671.10.26={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110071={
+	name="Juvenal"
+	dynasty=1533035
+	culture=costeno
+	religion=patria_grande
+	trait=quick
+	trait=mastermind_theologian
+	trait=patria_santander
+	trait=physician
+	trait=patient
+	trait=brave
+	trait=proud
+	trait=envious
+	2600.3.12={birth=yes}
+	2640.1.1={add_spouse=18110072}
+	2700.1.1={death=yes}
+}
+
+18110072={
+	name="Fermina"
+	dynasty=1533036
+	female=yes
+	culture=costeno
+	religion=patria_grande
+	trait=quick
+	trait=grey_eminence
+	trait=patria_santander
+	trait=lustful
+	2620.3.12={birth=yes}
+	2640.1.1={add_spouse=18110071}
+	2660.1.1={
+		effect={add_lover=18110075}
+	}
+	2700.1.1={death=yes}
+}
+
+18110073={
+	name="Juvenal"
+	dynasty=1533035
+	culture=costeno
+	religion=patria_grande
+	trait=patria_santander
+	trait=trusting
+	father=18110071
+	mother=18110072
+	2643.1.21={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110074={
+	name="Ofelia"
+	dynasty=1533035
+	female=yes
+	culture=costeno
+	religion=patria_grande
+	trait=quick
+	trait=patria_santander
+	trait=cynical
+	father=18110071
+	mother=18110072
+	2643.1.21={birth=yes}
+	2700.1.1={death=yes}
+}
+
+18110075={
+	name="Florentino"
+	dynasty=1533034
+	culture=costeno
+	religion=patria_grande
+	trait=patria_bolivar
+	trait=bastard
+	trait=ambitious
+	trait=wroth
+	father=18110042
+	2615.10.31={birth=yes}
+	2660.1.1={
+		effect={add_lover=18110072}
+	}
+	2700.1.1={death=yes}
+}
+
+18110076={
+	name="Leona"
+	dynasty=1533037
+	culture=costeno
+	religion=patria_grande
+	trait=patria_bolivar
+	trait=humble
+	trait=content
+	2641.2.13={birth=yes}
 	2700.1.1={death=yes}
 }
