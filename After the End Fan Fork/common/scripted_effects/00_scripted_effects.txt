@@ -4064,10 +4064,7 @@ add_crusade_trait_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = espiritista
-				religion = espiritista_reformed
-			}
+			religion = espiritista
 		}
 		add_trait = jaguar_warrior
 		break = yes
@@ -9605,22 +9602,6 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
-					religion = espiritista_reformed
-				}
-				has_character_flag = character_was_espiritista_reformed
-			}
-		}
-		set_secret_religion = espiritista_reformed
-		clr_character_flag = character_was_espiritista_reformed
-		break = yes
-	}
-	if = {
-		limit = {
-			OR = {
-				AND = {
-					NOT = {
-						has_character_was_religion_flag_trigger = yes
-					}
 					religion = peyotist
 				}
 				has_character_flag = character_was_peyotist
@@ -10902,10 +10883,6 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_espiritista
 	}
 	if = {
-		limit = { religion = espiritista_reformed }
-		set_character_flag = character_was_espiritista_reformed
-	}
-	if = {
 		limit = { religion = peyotist }
 		set_character_flag = character_was_peyotist
 	}
@@ -11225,7 +11202,6 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_santeria
 	clr_character_flag = character_was_candomble
 	clr_character_flag = character_was_espiritista
-	clr_character_flag = character_was_espiritista_reformed
 	clr_character_flag = character_was_peyotist
 	clr_character_flag = character_was_midewiwin
 	clr_character_flag = character_was_midewiwin_reformed
@@ -11338,13 +11314,6 @@ event_target_old_religion_from_flag_effect = {
 		limit = { has_character_flag = character_was_espiritista }
 		random_character = {
 			limit = { religion = espiritista }
-			save_event_target_as = old_religion
-		}
-	}
-	if = {
-		limit = { has_character_flag = character_was_espiritista_reformed }
-		random_character = {
-			limit = { religion = espiritista_reformed }
 			save_event_target_as = old_religion
 		}
 	}
@@ -13428,17 +13397,6 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = espiritista
 					remove_province_modifier = secret_espiritista_community
-				}
-			}
-		}
-		secret_religious_society_espiritista_reformed = {
-			ROOT = {
-				any_demesne_province = {
-					limit = {
-						has_province_modifier = secret_espiritista_reformed_community
-					}
-					religion = espiritista_reformed
-					remove_province_modifier = secret_espiritista_reformed_community
 				}
 			}
 		}
@@ -18156,17 +18114,6 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = candomble
 						remove_province_modifier = secret_candomble_community
-					}
-				}
-			}
-			secret_religious_society_espiritista_reformed = {
-				PREV = {
-					any_demesne_province = {
-						limit = {
-							has_province_modifier = secret_espiritista_reformed_community
-						}
-						religion = espiritista_reformed
-						remove_province_modifier = secret_espiritista_reformed_community
 					}
 				}
 			}
@@ -24581,20 +24528,6 @@ transfer_crown_on_abdication_effect = {
 	}
 	if = {
 		limit = { 
-			has_landed_title = d_espiritista_reformed
-			any_artifact = { artifact_type = crown_espiritista_fylkir }
-		}
-			current_heir = { save_event_target_as = crown_espiritista_fylkir_heir }
-			any_artifact = { 
-				limit = { artifact_type = crown_espiritista_fylkir }
-				transfer_artifact = {
-					from = PREV
-					to = event_target:crown_espiritista_fylkir_heir
-				} 
-			}
-	}
-	if = {
-		limit = { 
 			has_landed_title = d_revelationist_reformed
 			any_artifact = { artifact_type = crown_revelationist_fylkir }
 		}
@@ -28352,26 +28285,6 @@ reformation_god_names_changes_effect = { #Reforming religion with certain Doctri
 				
 				break = yes
 			}
-			
-			if = { #A ruler reforms Tres Potencias
-				limit = {
-					has_dlc = "Holy Fury" 
-					religion = espiritista_reformed
-					has_religion_feature = religion_patriarchal
-				}
-				set_high_god_name = GOD_BOLIVAR
-			}
-			if = { #A ruler reforms Midewiwin.
-				limit = {
-					has_dlc = "Holy Fury" 
-					religion = midewiwin_reformed
-					has_religion_feature = religion_dogmatic
-				}
-				remove_god_names = yes
-				set_high_god_name = GOD_GITCHE_MANITOU
-				add_god_name = GOD_GITCHE_MANITOU_2
-				add_evil_god_name = THE_DARK_SPIRITS
-			}
 
 			if = { #A ruler reforms Hellenism while being Greek-cultured: change all the gods to their Greek names.
 				limit = {
@@ -30827,14 +30740,14 @@ abdicate_holy_order_if_religion_changes_effect = { #why. why did you add this ef
 		if = {
 			limit = {
 				is_title_active = d_warriors_guaicaipuro
-				religion = espiritista_reformed
+				religion = espiritista
 				owner = { 
 					ai = yes
 					holy_order = yes 
-					NOT = { religion = espiritista_reformed } 
+					NOT = { religion = espiritista } 
 				}
 			}
-			log = "[d_warriors_guaicaipuro.owner.GetTitledFirstName] was found to be unfit to lead the [d_warriors_guaicaipuro.GetName] due to religious conflict! Title is espiritista_reformed, but owner is not."
+			log = "[d_warriors_guaicaipuro.owner.GetTitledFirstName] was found to be unfit to lead the [d_warriors_guaicaipuro.GetName] due to religious conflict! Title is espiritista, but owner is not."
 			log = " ROOT = [Root.GetTitledFirstName] FROM = [From.GetTitledFirstName] PREV = [Prev.GetTitledFirstName]"
 		}
 		if = {

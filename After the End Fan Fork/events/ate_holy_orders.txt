@@ -790,24 +790,20 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
-	religion = espiritista_reformed
+	religion = espiritista
 	
 	trigger = {
 		NOT = { #immersion-breaking
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-
-		is_heretic = no
-		
-		NOT = { is_title_active = d_warriors_guaicaipuro }
-		
-		648 = { # Miranda
-			top_liege = { religion = espiritista_reformed }
+		1937 = { # Caracas
+			top_liege = { NOT = { religion_group = afro_syncretic } }
 		}
+		NOT = { is_title_active = d_warriors_guaicaipuro }
 	}
 	
 	mean_time_to_happen = {
-		months = 4
+		months = 1
 	}
 	
 	immediate = {
@@ -817,7 +813,7 @@ narrative_event = {
 			random_traits = yes
 			trait = zealous
 			trait = brilliant_strategist
-			unsafe_religion = espiritista_reformed
+			unsafe_religion = espiritista
 			culture=wayuu
 		}
 		new_character = {
@@ -838,20 +834,20 @@ narrative_event = {
 	option = {
 		name = "EVTOPTA_guaicaipuro_creation"
 		trigger = {
-			religion = espiritista_reformed
+			religion = espiritista
 		}
 	}
 	option = {
 		name = "EVTOPTB_guaicaipuro_creation"
 		trigger = {
-			NOT = { religion_group = espiritista_reformed }
+			NOT = { religion_group = afro_syncretic }
 		}
 	}
 	option = {
 		name = "EVTOPTC_guaicaipuro_creation"
 		trigger = {
 			religion_group = afro_syncretic
-			NOT = { religion = espiritista_reformed }
+			NOT = { religion = espiritista }
 		}
 	}
 }

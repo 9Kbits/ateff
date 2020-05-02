@@ -4394,8 +4394,8 @@ narrative_event = {
 		trigger = { 
 			ROOT = { 
 				OR = { 
-					religion = espiritista
-					religion = espiritista_reformed
+					religion = aria_de_machete
+					religion = aria_de_machete_reformed
 				}
 			}
 		} 
@@ -4419,8 +4419,8 @@ narrative_event = {
 			always = yes
 			ROOT = { 
 				NOR = { 
-					religion = espiritista
-					religion = espiritista_reformed
+					religion = aria_de_machete
+					religion = aria_de_machete_reformed
 					religion = midewiwin
 					religion = midewiwin_reformed
 					religion = raven_tales
@@ -4476,7 +4476,7 @@ narrative_event = {
 				ROOT = { 
 					NOR = { 
 						religion = thelemic_reformed
-						religion = espiritista_reformed
+						religion = aria_de_machete_reformed
 					} 
 				}
 			}
@@ -4582,7 +4582,6 @@ narrative_event = {
 				remove_intermarry = voodoo
 				remove_intermarry = santeria
 				remove_intermarry = candomble
-				remove_intermarry = espiritista_reformed
 				remove_intermarry = espiritista
 				remove_intermarry = peyotist
 				remove_intermarry = midewiwin
@@ -4902,7 +4901,7 @@ narrative_event = {
 			limit = { #Apply default special features if player doesn't have dlc.
 				NOT = { has_dlc = "Holy Fury" } 
 				ROOT = {
-					religion = espiritista_reformed
+					religion = aria_de_machete_reformed
 				}
 			}
 			ROOT = { 
@@ -4915,7 +4914,7 @@ narrative_event = {
 				set_piety_loss_for_attacking_same_religion = no
 				set_convert_other_groups = 0
 				set_convert_same_group = 0
-				set_ai_aggression = 0.5
+				set_ai_aggression = 1.5
 				set_can_excommunicate = yes
 				set_can_grant_divorce = yes
 				set_can_grant_invasion_cb = yes
@@ -5119,14 +5118,6 @@ narrative_event = {
 		if = {
 			limit = { 
 				has_religion_feature = religion_temporal_head 
-				religion = espiritista_reformed 
-
-			}
-			add_artifact = crown_espiritista_fylkir
-		}
-		if = {
-			limit = { 
-				has_religion_feature = religion_temporal_head 
 				religion = revelationist_reformed 
 
 			}
@@ -5203,10 +5194,6 @@ narrative_event = {
 				religion = celtic_pagan_reformed # This Holy Order now changes religion
 			}
 			set_global_flag = celtic_pagan_reformation
-		}
-		if = {
-			limit = { religion = espiritista_reformed }
-			set_global_flag = espiritista_reformation
 		}
 		if = {
 			limit = { religion = midewiwin_reformed }

@@ -782,10 +782,7 @@ has_crusade_trait_trigger = {
 			trait = shaddai
 		}
 		AND = {
-			OR = {
-				religion = espiritista
-				religion = espiritista_reformed
-			}
+			religion = espiritista
 			trait = jaguar_warrior
 		}
 		AND = {
@@ -2256,9 +2253,6 @@ true_religion_candomble_trigger = {
 true_religion_espiritista_trigger = {
 	true_religion = espiritista
 }
-true_religion_espiritista_reformed_trigger = {
-	true_religion = espiritista_reformed
-}
 true_religion_peyotist_trigger = {
 	true_religion = peyotist
 }
@@ -3490,10 +3484,6 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_espiritista }
 		}
 		AND = {
-			society_member_of = secret_religious_society_espiritista_reformed
-			PREV = { interested_in_society = secret_religious_society_espiritista_reformed }
-		}
-		AND = {
 			society_member_of = secret_religious_society_peyotist
 			PREV = { interested_in_society = secret_religious_society_peyotist }
 		}
@@ -3832,12 +3822,6 @@ has_any_char_old_religion = {
 			has_character_flag = character_was_candomble
 			any_character = {
 				religion = candomble
-			}
-		}
-		AND = {
-			has_character_flag = character_was_espiritista_reformed
-			any_character = {
-				religion = espiritista_reformed
 			}
 		}
 		AND = {
@@ -4550,13 +4534,6 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = espiritista
 				ROOT = { religion = espiritista }
-			}
-		}
-		NAND = {
-			any_artifact = {
-				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = espiritista_reformed
-				ROOT = { religion = espiritista_reformed }
 			}
 		}
 		NAND = {
@@ -6469,10 +6446,7 @@ likes_candomble = {
 	religion = candomble
 }
 likes_espiritista = {
-	OR = {
-		religion = espiritista
-		religion = espiritista_reformed
-	}
+	religion = espiritista
 }
 likes_hindus = {
 	religion_group = indian_group
@@ -9219,7 +9193,6 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_santeria
 		has_character_flag = character_was_candomble
 		has_character_flag = character_was_espiritista
-		has_character_flag = character_was_espiritista_reformed
 		has_character_flag = character_was_peyotist
 		has_character_flag = character_was_midewiwin
 		has_character_flag = character_was_midewiwin_reformed
@@ -9551,10 +9524,7 @@ religion_openly_espiritista_or_reformed_trigger = {
 	custom_tooltip = {
 		text = religion_openly_espiritista_or_reformed_tooltip
 		hidden_trigger = {
-			OR = {
-				religion = espiritista
-				religion = espiritista_reformed
-			}
+			religion = espiritista
 		}
 	}
 }

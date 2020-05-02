@@ -57,7 +57,6 @@ afro_syncretic = {
 		intermarry = santeria
 		intermarry = candomble
 		intermarry = espiritista
-		intermarry = espiritista_reformed
 	}
 	voodoo = {
 		graphical_culture = africangfx
@@ -94,9 +93,7 @@ afro_syncretic = {
 		intermarry = rastafarian
 		intermarry = santeria
 		intermarry = candomble
-		intermarry = espiritista
-		intermarry = espiritista_reformed
-		
+		intermarry = espiritista		
 		intermarry = brethren
 	}
 	santeria = {
@@ -136,7 +133,6 @@ afro_syncretic = {
 		intermarry = voodoo
 		intermarry = candomble
 		intermarry = espiritista
-		intermarry = espiritista_reformed
 	}
 	candomble = { # Bahian religion
 		graphical_culture = africangfx
@@ -176,77 +172,11 @@ afro_syncretic = {
 		intermarry = voodoo
 		intermarry = santeria
 		intermarry = espiritista
-		intermarry = espiritista_reformed
 		intermarry = hindu
 		intermarry = apostolic
 	}
-	espiritista_reformed = {
-		graphical_culture = africangfx
-
-
-		icon = 50
-		heresy_icon = 70
-				
-		color = { 0.6 0.3 0.4 }
-		
-		interface_skin = { afro_syncretic_interface zoroastrian_interface muslim_interface }
-		
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = PATAKI_BIBLE
-		priest_title = PRIEST_MEDIUM
-		piety_name = REVERENCE
-		
-		high_god_name = GOD_THE_SUPREME
-		
-		god_names = {
-			GOD_THE_THREE_POWERS GOD_THE_SAINTS GOD_THE_SPIRITS GOD_MARIA_LIONZA GOD_BOLIVAR GOD_GUAICAIPURO GOD_JOSE_GREGORIO
-		}
-		evil_god_names = {
-			GOD_THE_EVIL_SPIRITS GOD_THE_DOUBTER GOD_SILBON
-		}
-		
-		priests_can_marry = yes
-		female_temple_holders = yes
-		allow_rivermovement = yes
-		allow_in_ruler_designer = no
-		can_call_crusade = yes
-				
-		unit_modifier = {		
-			garrison_size = 0.3
-			levy_size = 0.2
-					
-			key = "DEF_RELIGION"
-		}
-		unit_home_modifier = {
-			land_morale = 0.8
-			light_infantry_defensive = 0.8
-			heavy_infantry_defensive = 0.8
-			pikemen_defensive = 0.8
-			light_cavalry_defensive = 0.8
-			knights_defensive = 0.8
-			archers_defensive = 0.8
-			horse_archers_defensive = 0.8
-			camel_cavalry_defensive = 0.8
-			war_elephants_defensive = 0.8
-					
-			garrison_size = 0.4
-					
-			key = "DEF_RELIGION_HOME_TERRITORY"
-		}
-
-		religious_clothing_head = 3
-		religious_clothing_priest = 3
-		intermarry = rastafarian
-		intermarry = voodoo
-		intermarry = santeria
-		intermarry = candomble
-		intermarry = hindu
-		
-		alternate_start = { always = no }
-	}
 	espiritista = {
 		graphical_culture = africangfx
-
 
 		icon = 50
 		heresy_icon = 70
@@ -272,8 +202,6 @@ afro_syncretic = {
 		female_temple_holders = yes
 		allow_rivermovement = yes
 		can_demand_religious_conversion = no
-		
-		reformed = espiritista_reformed
 		
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
@@ -1572,7 +1500,6 @@ christian = {
 		intermarry = sacred_heart
 		intermarry = patria_grande
 		intermarry = espiritista
-		intermarry = espiritista_reformed
 		intermarry = candomble
 	}
 	
@@ -1636,7 +1563,6 @@ christian = {
 		intermarry = sacred_heart
 		intermarry = patria_grande
 		intermarry = espiritista
-		intermarry = espiritista_reformed
 		intermarry = candomble
 	}
 }
@@ -3526,7 +3452,6 @@ pagan_group = {
 		allow_in_ruler_designer = no
 		
 		intermarry = espiritista
-		intermarry = espiritista_reformed
 	}	
 	
 	aria_de_machete = {
@@ -3579,7 +3504,6 @@ pagan_group = {
 		dislike_tribal_organization = yes
 		
 		intermarry = espiritista
-		intermarry = espiritista_reformed
 		can_demand_religious_conversion = no
 	}
 }
@@ -3882,7 +3806,6 @@ indian_group = {
 		piety_name = KARMA
 		
 		intermarry = espiritista
-		intermarry = espiritista_reformed
 		intermarry = candomble
 	}
 }

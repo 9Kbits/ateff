@@ -1601,12 +1601,9 @@ defined_text = {
 		}
 	}
 	text = { 
-		localisation_key = GOD_THE_SUPREME
+		localisation_key = GOD_MARIA_LIONZA
 		trigger = { 
-			OR = {
-				true_religion_espiritista_reformed_trigger = yes 
-				true_religion_espiritista_trigger = yes
-			}
+			true_religion_espiritista_trigger = yes
 		}
 	}
 	text = { 
@@ -5973,14 +5970,14 @@ defined_text = {
 		}
 		localisation_key = string_reformed_religion_celtic
 	}
-	text = {
-		trigger = { 
-			ROOT = { 
-				religion = espiritista_reformed
-			} 
-		}
-		localisation_key = string_reformed_religion_espiritista
-	}
+	#text = {
+	#	trigger = { 
+	#		ROOT = { 
+	#			religion = espiritista_reformed
+	#		} 
+	#	}
+	#	localisation_key = string_reformed_religion_espiritista
+	#}
 	text = {
 		trigger = { 
 			ROOT = { 
@@ -5999,7 +5996,6 @@ defined_text = {
 			ROOT = { 
 				NOR = {
 					religion = thelemic_reformed
-					religion = espiritista_reformed
 					religion = trailwalker_reformed
 					religion = revelationist_reformed
 				} 
@@ -6018,14 +6014,6 @@ defined_text = {
 	text = {
 		trigger = { 
 			ROOT = { 
-				religion = espiritista_reformed
-			} 
-		}
-		localisation_key = string_reformed_religion_espiritista_outro
-	}
-	text = {
-		trigger = { 
-			ROOT = { 
 				religion = trailwalker_reformed
 			} 
 		}
@@ -6038,6 +6026,14 @@ defined_text = {
 			} 
 		}
 		localisation_key = string_reformed_religion_revelationist_outro
+	}
+	text = {
+		trigger = { 
+			ROOT = { 
+				religion = aria_de_machete_reformed
+			} 
+		}
+		localisation_key = string_reformed_religion_aria_de_machete_outro
 	}
 }
 
@@ -6457,15 +6453,6 @@ defined_text = {
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_REAL_candomble
-	}
-}
-defined_text = {
-	name = GetReligiousCommunityName_espiritista_reformed
-	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_espiritista_reformed
-	}
-	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_espiritista_reformed
 	}
 }
 defined_text = {
@@ -7504,20 +7491,20 @@ defined_text = {
 defined_text = {
 	name = GetSaintAnthonySocietyName
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = monastic_order_espiritista_reformed_random
+		localisation_key = monastic_order_espiritista_random
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = monastic_order_espiritista_reformed_real
+		localisation_key = monastic_order_espiritista_real
 	}
 }
 
 defined_text = {
 	name = GetSaintAnthonySocietyDesc
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = monastic_order_espiritista_reformed_desc_random
+		localisation_key = monastic_order_espiritista_desc_random
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = monastic_order_espiritista_reformed_desc_real
+		localisation_key = monastic_order_espiritista_desc_real
 	}
 }
 
@@ -7953,14 +7940,14 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetReligiousSocietyDesc_espiritista_reformed
+	name = GetReligiousSocietyDesc_espiritista
 	text = {
 		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_desc
 	}
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_espiritista_reformed_desc_REAL
+		localisation_key = secret_religious_society_espiritista_desc_REAL
 	}
 }
 

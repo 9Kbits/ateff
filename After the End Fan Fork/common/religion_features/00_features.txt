@@ -1258,47 +1258,47 @@ religion_doctrine = {
 		}
 	}
 
-	religion_feature_espiritista = { #Combines beatification with cosmopolitan
-		picture = GFX_religion_feature_west_african
-		potential = {
-			has_game_started = yes
-			religion = espiritista_reformed
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		trigger = {
-			religion = espiritista_reformed
-			NOR = {
-				has_selected_religion_feature = religion_no_leader #prevents sainthood from working properly
-				has_selected_religion_feature = religion_beatification
-				has_selected_religion_feature = religion_cosmopolitan
-			}
-		}
-		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_beatification }
-			custom_tooltip = { text = tooltip_religion_feature_eldership }
-			custom_tooltip = { text = tooltip_religion_feature_cosmopolitan_2 }
-			custom_tooltip = { text = tooltip_religion_feature_crusade }
-			custom_tooltip = { text = tooltip_religion_feature_impotent }
-			custom_tooltip = { text = tooltip_religion_feature_cosmopolitan_1 }
-			hidden_tooltip = {
-				set_pacifist = no
-				set_peace_piety_gain = 0
-				set_raised_vassal_opinion_loss = yes
-				set_peace_prestige_loss = no
-				set_allow_looting = yes
-				set_hard_to_convert = no
-				set_piety_loss_for_attacking_same_religion = no
-				set_convert_other_groups = 0
-				set_convert_same_group = 0
-				set_ai_aggression = 0.5
-			}
-		}
-		ai_will_do = {
-			factor = 50
-		}
-	}
+	#religion_feature_espiritista = { #Combines beatification with cosmopolitan
+	#	picture = GFX_religion_feature_west_african
+	#	potential = {
+	#		has_game_started = yes
+	#		religion = espiritista_reformed
+	#		NOT = {
+	#			has_alternate_start_parameter = { key = religion_names value = random }
+	#		}
+	#	}
+	#	trigger = {
+	#		religion = espiritista_reformed
+	#		NOR = {
+	#			has_selected_religion_feature = religion_no_leader #prevents sainthood from working properly
+	#			has_selected_religion_feature = religion_beatification
+	#			has_selected_religion_feature = religion_cosmopolitan
+	#		}
+	#	}
+	#	effect = {
+	#		custom_tooltip = { text = tooltip_religion_feature_beatification }
+	#		custom_tooltip = { text = tooltip_religion_feature_eldership }
+	#		custom_tooltip = { text = tooltip_religion_feature_cosmopolitan_2 }
+	#		custom_tooltip = { text = tooltip_religion_feature_crusade }
+	#		custom_tooltip = { text = tooltip_religion_feature_impotent }
+	#		custom_tooltip = { text = tooltip_religion_feature_cosmopolitan_1 }
+	#		hidden_tooltip = {
+	#			set_pacifist = no
+	#			set_peace_piety_gain = 0
+	#			set_raised_vassal_opinion_loss = yes
+	#			set_peace_prestige_loss = no
+	#			set_allow_looting = yes
+	#			set_hard_to_convert = no
+	#			set_piety_loss_for_attacking_same_religion = no
+	#			set_convert_other_groups = 0
+	#			set_convert_same_group = 0
+	#			set_ai_aggression = 0.5
+	#		}
+	#	}
+	#	ai_will_do = {
+	#		factor = 50
+	#	}
+	#}
 	
 	religion_feature_midewiwin = { # Combines equality and animism. Also requires picking the autonomous religion head doctrine
 		picture = GFX_religion_feature_slavic # placeholder
@@ -1606,7 +1606,7 @@ religion_leadership = {
 				FROM = { 
 					character = yes 
 					NOT = {
-						religion = espiritista_reformed
+						religion = aria_de_machete_reformed
 					}
 				}
 			}
