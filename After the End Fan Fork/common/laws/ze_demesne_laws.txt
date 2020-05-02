@@ -619,7 +619,7 @@ laws = {
 		group = revoke_title_law
 		allow = {
 			NOT = { has_law = revoke_title_law_0 }
-			NOT = { holder_scope = { OR = { has_religion_feature = religion_cosmopolitan  } } }
+			NOT = { holder_scope = { has_religion_feature = religion_cosmopolitan } }
 			conditional_tooltip = {
 				trigger = {
 					holder_scope = { government = military_governorate }
@@ -635,8 +635,6 @@ laws = {
 		potential = {
 			has_dlc = "Zeus"
 			NOT = { holder_scope = { is_nomadic = yes } }
-			NOT = { holder_scope = { has_religion_feature = religion_cosmopolitan } }
-			NOT = { holder_scope = {  } }
 			NOT = { holder_scope = { government = military_governorate } }
 		}
 		revoke_allowed = { always = no }
