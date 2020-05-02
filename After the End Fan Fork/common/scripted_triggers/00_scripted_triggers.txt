@@ -1006,6 +1006,7 @@ can_be_chancellor_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -1110,6 +1111,7 @@ can_be_marshal_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -1206,6 +1208,7 @@ can_be_treasurer_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -1302,6 +1305,7 @@ can_be_spymaster_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -1603,6 +1607,7 @@ can_be_councilmember_emperor_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -2005,6 +2010,7 @@ gender_equality_trigger = {
 		religion = reform
 		religion = neomayan
 		has_religion_feature = religion_equal
+		has_religion_feature = religion_feature_aria_de_machete
 		has_religion_feature = religion_feature_midewiwin
 		AND = {
 			is_landed = yes
@@ -2086,11 +2092,13 @@ female_can_hold_minor_title_trigger = {
 				AND = {
 					OR = {
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 						has_religion_feature = religion_matriarchal
 					}
 					liege = {
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 						has_religion_feature = religion_matriarchal
 					}
@@ -2154,11 +2162,13 @@ female_can_hold_minor_commander_title_trigger = {
 				AND = {
 					OR = {
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 						has_religion_feature = religion_matriarchal
 					}
 					liege = {
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 						has_religion_feature = religion_matriarchal
 					}
@@ -7631,7 +7641,7 @@ this_is_diplomatic_culture_trigger = { #Not really about culture - Used in AI vo
 		religion = rust_cultist
 		religion = chrome_cultist
 		has_religion_feature = religion_cosmopolitan
-		has_religion_feature = religion_feature_espiritista
+		
 		#AND = {
 		#	NOT = { has_dlc = "Holy Fury"}
 		#	religion = rust_cultist_reformed
@@ -9052,6 +9062,7 @@ can_still_be_marshal_byzantine_trigger = {
 					OR = { 
 						liege = { has_religion_feature = religion_matriarchal } 
 						liege = { has_religion_feature = religion_equal } 
+						liege = { has_religion_feature = religion_feature_aria_de_machete } 
 						liege = { has_religion_feature = religion_feature_midewiwin } 
 					} 
 				}
@@ -9646,6 +9657,8 @@ is_accepting_of_homosexuality_trigger = {
 			trait = way_branch
 			has_character_flag = overridemarriage
 			has_religion_feature = religion_equal
+			has_religion_feature = religion_feature_midewiwin
+			has_religion_feature = religion_feature_aria_de_machete
 		}
 	
 	}

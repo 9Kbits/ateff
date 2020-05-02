@@ -446,7 +446,7 @@ succession_laws = {
 							}
 						}
 						has_religion_feature = religion_beatification
-						has_religion_feature = religion_feature_espiritista
+						
 						has_religion_feature = religion_feature_occultist
 					}
 				}
@@ -1901,6 +1901,7 @@ gender_laws = {
 			holder_scope = {
 				NOT = { has_religion_feature = religion_matriarchal }
 				NOT = { has_religion_feature = religion_equal }
+				NOT = { has_religion_feature = religion_feature_aria_de_machete }
 				NOT = { has_religion_feature = religion_feature_midewiwin }
 				OR = {
 					has_bloodline_flag = bloodline_effect_cognatic
@@ -2005,6 +2006,7 @@ gender_laws = {
 				NOT = { religion = neomayan }
 				NOT = { has_religion_feature = religion_matriarchal } 
 				NOT = { has_religion_feature = religion_equal }
+				NOT = { has_religion_feature = religion_feature_aria_de_machete }
 				NOT = { has_religion_feature = religion_feature_midewiwin }
 				
 				NAND = {
@@ -2101,6 +2103,7 @@ gender_laws = {
 						}
 						OR = {
 							has_religion_feature = religion_equal
+							has_religion_feature = religion_feature_aria_de_machete
 							has_religion_feature = religion_feature_midewiwin
 						}
 						AND = {
@@ -2140,6 +2143,7 @@ gender_laws = {
 				holder_scope = {
 					OR = {
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 					}
 				}
@@ -2167,6 +2171,7 @@ gender_laws = {
 						culture = iroquois
 						culture = wayuu
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 						any_owned_bloodline = {
 							has_bloodline_flag = bloodline_tanistry
@@ -2198,6 +2203,7 @@ gender_laws = {
 					holder_scope = {
 						OR = {
 							has_religion_feature = religion_equal
+							has_religion_feature = religion_feature_aria_de_machete
 							has_religion_feature = religion_feature_midewiwin
 						}
 					}
@@ -2209,6 +2215,7 @@ gender_laws = {
 				holder_scope = {
 					OR = {
 						has_religion_feature = religion_equal
+						has_religion_feature = religion_feature_aria_de_machete
 						has_religion_feature = religion_feature_midewiwin
 					}
 				}
