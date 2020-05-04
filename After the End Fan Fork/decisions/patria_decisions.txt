@@ -1,11 +1,18 @@
 decisions = {
 	form_gran_colombia = {
 		only_independent = yes
+		ai_check_interval = 36
 		is_high_prio = yes
 		
 		potential = {
 			is_alternate_start = no
 			is_playable = yes
+			independent = yes
+			OR = {
+				tier = duke
+				tier = king
+				tier = emperor
+			}
 			religion = patria_grande
 			NOT = { has_global_flag = gran_colombia_formed }
 		}
@@ -16,6 +23,7 @@ decisions = {
 
 				completely_controls_region = custom_gran_colombia
 			}
+			has_landed_title = d_patria_grande
 			piety = 1500
 			scaled_wealth = 2
 		}
@@ -26,103 +34,31 @@ decisions = {
 				text = TXT_gran_colombia
 			}
 			hidden_tooltip = {
-				d_cundinamarca = {
+				k_cundiboyaca = {
 					de_jure_liege = e_gran_colombia
 				}
-				d_santander = {
+				k_puente_grande = {
 					de_jure_liege = e_gran_colombia
 				}
-				d_gran_cafetal = {
+				k_antioquia = {
 					de_jure_liege = e_gran_colombia
 				}
-				d_panama = {
+				k_el_pacifico = {
 					de_jure_liege = e_gran_colombia
 				}
-				d_darien = {
+				k_el_caribe = {
 					de_jure_liege = e_gran_colombia
 				}
-				d_chiriqui = {
+				k_venezuela = {
 					de_jure_liege = e_gran_colombia
 				}
-				d_coiba = {
+				k_zulia = {
 					de_jure_liege = e_gran_colombia
 				}
-				d_antioquia = {
+				k_zamora = {
 					de_jure_liege = e_gran_colombia
 				}
-				d_cauca = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_choco = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_cartagena = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_cesar = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_magdalena = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_barinas = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_guarico = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_casanare = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_gran_caracas = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_anzoategui = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_falcon = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_lara = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_monagas = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_sucre = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_zulia = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_aguas = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_guajira = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_los_andes = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_cordoba = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_portuguesa = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_apure = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_magdalena_medio = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_meta = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_vichada = {
-					de_jure_liege = e_gran_colombia
-				}
-				d_guainia = {
+				k_los_llanos = {
 					de_jure_liege = e_gran_colombia
 				}
 			}

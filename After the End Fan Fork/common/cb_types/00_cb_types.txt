@@ -117,6 +117,7 @@ claim = {
 				OR = {
 					is_pretender = yes # Checks vs ROOT character
 					holder_scope = { has_regent = yes }
+					holder_scope = { trait = adopted_child }
 					AND = {
 						ROOT = { 
 							OR = { 
@@ -124,6 +125,7 @@ claim = {
 								has_law = status_of_women_4
 								has_religion_feature = religion_matriarchal
 								has_religion_feature = religion_equal
+								has_religion_feature = religion_feature_aria_de_machete
 								has_religion_feature = religion_feature_midewiwin
 							} 
 						}
@@ -133,6 +135,7 @@ claim = {
 								NOR = { 
 									has_religion_feature = religion_matriarchal
 									has_religion_feature = religion_equal
+									has_religion_feature = religion_feature_aria_de_machete
 									has_religion_feature = religion_feature_midewiwin
 									has_law = status_of_women_4 
 									has_game_rule = { name = gender value = all } 
@@ -3604,7 +3607,6 @@ crusade = {
 					AND = {
 						OR = {
 							religion_group = pagan_group
-							religion = espiritista_reformed
 							religion = midewiwin_reformed
 							religion = raven_tales_reformed
 						}
@@ -11157,7 +11159,6 @@ pagan_holy_war = { #
 				religion = thelemic_reformed
 				religion = celtic_pagan_reformed
 				religion = aria_de_machete_reformed
-				religion = espiritista_reformed
 				religion = midewiwin_reformed
 				religion = raven_tales_reformed
 			}
@@ -11236,7 +11237,6 @@ pagan_holy_war = { #
 				religion = thelemic_reformed
 				religion = celtic_pagan_reformed #update to celtic_pagan_reformed
 				religion = aria_de_machete_reformed
-				religion = espiritista_reformed 
 				religion = midewiwin_reformed
 				religion = raven_tales_reformed
 			}
@@ -11877,10 +11877,6 @@ pagan_county_conquest = {
 							religion = exovedate
 							is_tribal = yes
 						}
-						AND = {
-							religion = espiritista_reformed
-							has_religion_feature = religion_seafaring
-						}
 					}
 					NOT = { same_realm = FROM }
 				}
@@ -11972,10 +11968,6 @@ pagan_county_conquest = {
 						}
 						religion_group = nautical
 						religion = espiritista
-						AND = {
-							religion = espiritista_reformed
-							has_religion_feature = religion_seafaring
-						}
 					}
 					NOT = { same_realm = FROM }
 				}

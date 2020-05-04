@@ -3504,6 +3504,7 @@ character_event = {
 			OR = { 
 				has_religion_feature = religion_patriarchal
 				has_religion_feature = religion_equal
+				has_religion_feature = religion_feature_aria_de_machete
 				has_religion_feature = religion_feature_midewiwin
 				has_religion_feature = religion_matriarchal
 			}
@@ -3597,6 +3598,7 @@ character_event = {
 				ROOT = {
 					OR = { 
 						has_religion_feature = religion_equal 
+						has_religion_feature = religion_feature_aria_de_machete 
 						has_religion_feature = religion_feature_midewiwin
 					}
 					NOR = {  
@@ -3627,6 +3629,7 @@ character_event = {
 					FROM = {
 						NOR = { 
 							has_religion_feature = religion_equal 
+							has_religion_feature = religion_feature_aria_de_machete 
 							has_religion_feature = religion_feature_midewiwin
 							has_religion_feature = religion_patriarchal
 							has_religion_feature = religion_matriarchal
@@ -3656,6 +3659,7 @@ character_event = {
 					FROM = {
 						NOR = { 
 							has_religion_feature = religion_equal 
+							has_religion_feature = religion_feature_aria_de_machete 
 							has_religion_feature = religion_feature_midewiwin
 							has_religion_feature = religion_matriarchal
 							has_religion_feature = religion_patriarchal
@@ -3686,6 +3690,7 @@ character_event = {
 					ROOT = { 
 						OR = { 
 							has_religion_feature = religion_equal 
+							has_religion_feature = religion_feature_aria_de_machete 
 							has_religion_feature = religion_feature_midewiwin
 							has_religion_feature = religion_matriarchal
 						}
@@ -3714,6 +3719,7 @@ character_event = {
 					ROOT = { 
 						OR = { 
 							has_religion_feature = religion_equal 
+							has_religion_feature = religion_feature_aria_de_machete 
 							has_religion_feature = religion_feature_midewiwin
 							has_religion_feature = religion_patriarchal
 						}
@@ -3741,6 +3747,7 @@ character_event = {
 					FROM = { 
 						OR = { 
 							has_religion_feature = religion_equal 
+							has_religion_feature = religion_feature_aria_de_machete 
 							has_religion_feature = religion_feature_midewiwin
 						}
 					}
@@ -3770,6 +3777,7 @@ character_event = {
 					FROM = { 
 						OR = { 
 							has_religion_feature = religion_equal 
+							has_religion_feature = religion_feature_aria_de_machete 
 							has_religion_feature = religion_feature_midewiwin
 						}
 					}
@@ -3809,6 +3817,7 @@ character_event = {
 		OR = { 
 			has_religion_feature = religion_patriarchal
 			has_religion_feature = religion_equal
+			has_religion_feature = religion_feature_aria_de_machete
 			has_religion_feature = religion_feature_midewiwin
 			has_religion_feature = religion_matriarchal
 		}
@@ -3893,6 +3902,7 @@ character_event = {
 				ROOT = {
 					OR = { 
 						has_religion_feature = religion_equal 
+						has_religion_feature = religion_feature_aria_de_machete 
 						has_religion_feature = religion_feature_midewiwin
 					}
 				}
@@ -3934,504 +3944,504 @@ character_event = {
 	}
 	immediate = {
 		if = {
-			limit = { rastafarian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { rastafarian = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = rastafarian }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { voodoo = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { voodoo = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = voodoo }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { santeria = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { santeria = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = santeria }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { candomble = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { candomble = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = candomble }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { espiritista = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { espiritista = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = espiritista }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { raven_tales = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { raven_tales = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = raven_tales }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { catholic = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { catholic = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = catholic }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { neognostic = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { neognostic = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = neognostic }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { sedevacantist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { sedevacantist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = sedevacantist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { nestorian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { nestorian = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = nestorian }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { angeline = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { angeline = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = angeline }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { confederated = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { confederated = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = confederated }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { anabaptist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { anabaptist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = anabaptist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { batenburger = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { batenburger = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = batenburger }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { evangelical = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { evangelical = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = evangelical }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { antinomian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { antinomian = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = antinomian }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { charismatic = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { charismatic = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = charismatic }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { postadventist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { postadventist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = postadventist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { falling_star = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { falling_star = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = falling_star }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { moravian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { moravian = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = moravian }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { high_church = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { high_church = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = high_church }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { nonconformist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { nonconformist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = nonconformist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { norse_pagan = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { norse_pagan = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = norse_pagan }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { apostolic = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { apostolic = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = apostolic }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { celeste = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { celeste = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = celeste }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { sacred_heart = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { sacred_heart = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = sacred_heart }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { patria_grande = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { patria_grande = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = patria_grande }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { cetic = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { cetic = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = cetic }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { gaian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { gaian = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = gaian }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { shinto = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { shinto = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = shinto }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { nousthreskeia = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { nousthreskeia = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = nousthreskeia }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { mormon = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { mormon = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = mormon }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { bickertonite = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { bickertonite = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = bickertonite }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { woolleyite = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { woolleyite = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = woolleyite }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { strangite = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { strangite = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = strangite }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { sol_invicta = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { sol_invicta = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = sol_invicta }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { mictlantec = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { mictlantec = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = mictlantec }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { uahomche = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { uahomche = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = uahomche }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { neomayan = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { neomayan = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = neomayan }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { americanist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { americanist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = americanist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { hamiltonian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { hamiltonian = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = hamiltonian }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { jeffersonian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { jeffersonian = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = jeffersonian }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { libertarian = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { libertarian = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = libertarian }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { consumerist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { consumerist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = consumerist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { monetarist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { monetarist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = monetarist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { atomicist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { atomicist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = atomicist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { aphite = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { aphite = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = aphite }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { revelationist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { revelationist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = revelationist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { rust_cultist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { rust_cultist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = rust_cultist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { occultist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { occultist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = occultist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { thelemic = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { thelemic = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = thelemic }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { norse_pagan = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { norse_pagan = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = norse_pagan }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { celtic_pagan = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { celtic_pagan = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = celtic_pagan }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { aria_de_machete = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { aria_de_machete = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = aria_de_machete }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { brethren = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { brethren = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = brethren }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { jewish = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { jewish = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = jewish }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { reform = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { reform = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = reform }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { meshichist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { meshichist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = meshichist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { hindu = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { hindu = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = hindu }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { traditionalist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { traditionalist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = traditionalist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { revivalist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { revivalist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = revivalist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { imamite = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { imamite = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = imamite }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { qingzheng = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { qingzheng = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = qingzheng }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { alawiyya = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { alawiyya = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = alawiyya }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { orientalist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { orientalist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = orientalist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { misrist = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { misrist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = misrist }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { trailwalker = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { trailwalker = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = trailwalker }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { trailwalker_reformed = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { trailwalker_reformed = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = trailwalker_reformed }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { orthodox = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { orthodox = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = orthodox }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { orthodox = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { orthodox = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = orthodox }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { exovedate = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { exovedate = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = exovedate }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
 		if = {
-			limit = { pelagic = { OR = { has_religion_feature = religion_cosmopolitan has_religion_feature = religion_feature_espiritista } } }
+			limit = { pelagic = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = pelagic }
 				apply_cosmopolian_on_start_effect = yes
@@ -5860,6 +5870,7 @@ character_event = {
 								}
 								has_religion_feature = religion_matriarchal 
 								has_religion_feature = religion_equal 
+								has_religion_feature = religion_feature_aria_de_machete 
 								has_religion_feature = religion_feature_midewiwin
 							}
 						} 
@@ -6539,6 +6550,7 @@ character_event = {
 					FROM = { owner = { NOT = { has_religion_feature = religion_matriarchal } } }
 				}
 				FROM = { owner = { has_religion_feature = religion_equal } }
+				FROM = { owner = { has_religion_feature = religion_feature_aria_de_machete } }
 				FROM = { owner = { has_religion_feature = religion_feature_midewiwin } }
 				FROM = { 
 					owner = { 
@@ -6594,6 +6606,7 @@ character_event = {
 					FROM = { owner = { has_religion_feature = religion_matriarchal } }
 				}
 				FROM = { owner = { has_religion_feature = religion_equal } }
+				FROM = { owner = { has_religion_feature = religion_feature_aria_de_machete } }
 				FROM = { owner = { has_religion_feature = religion_feature_midewiwin } }
 			} 
 		} 
@@ -11398,7 +11411,6 @@ character_event = {
 			limit = {
 				OR = {
 					limit = { has_religion_feature = religion_cosmopolitan }
-					limit = { has_religion_feature = religion_feature_espiritista }
 					limit = { has_religion_feature = religion_feature_revelationist }
 				}
 			}
@@ -12004,6 +12016,7 @@ character_event = {
 				ROOT = {
 					OR = { 
 						has_religion_feature = religion_equal 
+						has_religion_feature = religion_feature_aria_de_machete 
 						has_religion_feature = religion_feature_midewiwin
 					}
 					NOR = {  

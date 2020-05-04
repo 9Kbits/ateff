@@ -13278,15 +13278,6 @@ character_event = {
 				} 
 			}
 			AND =  { 
-				has_landed_title = d_espiritista_reformed 
-				any_artifact = { artifact_type = crown_espiritista_fylkir }
-				d_espiritista_reformed = { 
-					current_heir = { 
-						NOT = { dynasty = ROOT }
-					} 
-				} 
-			}
-			AND =  { 
 				has_landed_title = d_revelationist_reformed 
 				any_artifact = { artifact_type = crown_revelationist_fylkir }
 				d_revelationist_reformed = { 
@@ -13416,21 +13407,6 @@ character_event = {
 			any_artifact = { 
 				limit = { artifact_type = crown_aria_de_machete_fylkir }
 				save_event_target_as = inheriting_artifact_celticcrown
-			}
-			current_heir = { character_event = { id = HF.20407 days = 1 } }
-		}
-		if = { 
-			limit = { 
-				has_landed_title = d_espiritista_reformed
-				any_artifact = { artifact_type = crown_espiritista_fylkir }
-			}
-			d_espiritista_reformed = { 
-				current_heir = { save_event_target_as = worthy_espiritista_fylkir_crown }
-			}
-			player_heir = { save_event_target_as = unworthy_espiritista_fylkir_crown }
-			any_artifact = { 
-				limit = { artifact_type = crown_espiritista_fylkir }
-				save_event_target_as = inheriting_artifact_espiritistacrown
 			}
 			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
@@ -14614,10 +14590,6 @@ character_event = {
 				FROMFROM = { any_artifact = { artifact_type = crown_aria_de_machete_fylkir } } 
 			}
 			AND = {
-				FROM = { title = d_espiritista_reformed } 
-				FROMFROM = { any_artifact = { artifact_type = crown_espiritista_fylkir } } 
-			} 
-			AND = {
 				FROM = { title = d_revelationist_reformed } 
 				FROMFROM = { any_artifact = { artifact_type = crown_revelationist_fylkir } } 
 			} 
@@ -14729,18 +14701,6 @@ character_event = {
 				any_artifact = { 
 					limit = { artifact_type = crown_aria_de_machete_fylkir }
 					save_event_target_as = inheriting_artifact_celticcrown
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = { title = d_espiritista_reformed } 
-				FROMFROM = { any_artifact = { artifact_type = crown_espiritista_fylkir } } 
-			} 
-			FROMFROM = { 
-				any_artifact = { 
-					limit = { artifact_type = crown_espiritista_fylkir }
-					save_event_target_as = inheriting_artifact_espiritistacrown
 				}
 			}
 		}
@@ -14899,10 +14859,6 @@ character_event = {
 				any_artifact = { artifact_type = crown_aria_de_machete_fylkir }
 			}
 			AND =  { 
-				has_landed_title = d_espiritista_reformed 
-				any_artifact = { artifact_type = crown_espiritista_fylkir }
-			}
-			AND =  { 
 				has_landed_title = d_revelationist_reformed 
 				any_artifact = { artifact_type = crown_revelationist_fylkir }
 			}
@@ -14975,13 +14931,6 @@ character_event = {
 				any_artifact = { artifact_type = crown_aria_de_machete_fylkir }
 			}
 			add_trait = dead_crown_aria_de_machete_fylkir
-		}
-		if =  { 
-			limit =  { 
-				has_landed_title = d_espiritista_reformed 
-				any_artifact = { artifact_type = crown_espiritista_fylkir }
-			}
-			add_trait = dead_crown_espiritista_fylkir
 		}
 		if =  { 
 			limit =  { 

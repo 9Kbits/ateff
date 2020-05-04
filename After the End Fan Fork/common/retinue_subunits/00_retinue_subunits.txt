@@ -865,7 +865,10 @@ RETTYPE_CUL_AMAZON =
 	
 	potential = {
 		is_nomadic = no
-		culture = amazonense
+		OR = {
+			culture = amazonense
+			culture = ribeirinho
+		}
 	}
 	
 	modifier = {

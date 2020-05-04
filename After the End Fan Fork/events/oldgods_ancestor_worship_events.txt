@@ -2598,10 +2598,6 @@ character_event = {
 				FROM = { religion = revelationist }
 			}
 			AND = {
-				religion = espiritista_reformed
-				FROM = { religion = espiritista }
-			}
-			AND = {
 				religion = trailwalker_reformed
 				FROM = { religion = trailwalker }
 			}
@@ -4759,20 +4755,14 @@ character_event = {
 
 	desc = {
 		trigger = { 
-			OR = {
-				religion = espiritista
-				religion = espiritista_reformed
-			}
+			religion = espiritista
 		}
 		text = EVTDESC_TOG_7526
 		picture = GFX_evt_sun_temple
 	}
 	desc = {
 		trigger = { 
-			NOR = {
-				religion = espiritista
-				religion = espiritista_reformed
-			}
+			religion = espiritista
 		}
 		text = EVTDESC_TOG_7526
 		picture = GFX_evt_irminsul_shrine
@@ -4903,20 +4893,14 @@ character_event = {
 	desc = {
 		trigger = { 
 			has_character_flag = monument_for_ancestors 
-			NOR = {
-				religion = espiritista
-				religion = espiritista_reformed
-			}
+			religion = espiritista
 		}
 		text = EVTDESC_TOG_7527_ANCESTORS
 	}
 	desc = {
 		trigger = { 
 			has_character_flag = monument_for_ancestors 
-			OR = {
-				religion = espiritista
-				religion = espiritista_reformed
-			}
+			religion = espiritista
 		}
 		text = EVTDESC_TOG_7527_ANCESTORS
 		picture = GFX_evt_sun_temple
