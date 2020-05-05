@@ -3886,16 +3886,7 @@ decisions = {
 		allow = {
 			war = no
 			in_command = no
-			scaled_piety = 0.2
-			custom_tooltip = {
-				text = UNOCCUPIED_DEMESNE_TITLE
-				hidden_tooltip = {
-					any_demesne_title = {
-						NOT = { higher_tier_than = count }
-						is_occupied = no
-					}
-				}
-			}
+			piety = 25
 			prisoner = no
 			NOT = { is_inaccessible_trigger = yes }
 			NOT = {	is_incapable = yes }
@@ -5251,7 +5242,7 @@ targetted_decisions = {
 			wealth = -100
 			set_character_flag = commissioned_stele
 			hidden_tooltip = { 
-				character_event = { id =  }
+				character_event = { id = mesoamerica.500 }
 			}
 		}
 		revoke_allowed = {
