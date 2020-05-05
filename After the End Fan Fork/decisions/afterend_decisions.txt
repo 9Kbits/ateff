@@ -3805,7 +3805,7 @@ decisions = {
 	
 	animal_sacrifice = {
 		only_playable = yes
-		only_playable = yes
+		only_capable = yes
 		ai_check_interval = 120
 		
 		potential = {
@@ -3830,15 +3830,6 @@ decisions = {
 			in_command = no
 			scaled_wealth = 0.25
 			piety = 30
-			custom_tooltip = {
-				text = UNOCCUPIED_DEMESNE_TITLE
-				hidden_tooltip = {
-					any_demesne_title = {
-						NOT = { higher_tier_than = count }
-						is_occupied = no
-					}
-				}
-			}
 			prisoner = no
 			NOT = { has_character_flag = sacrificing_animal }
 			NOT = { is_inaccessible_trigger = yes }
