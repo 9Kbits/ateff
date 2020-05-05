@@ -10013,3 +10013,12 @@ have_duplicate_goldsmith_artifacts_flag_amazing_trigger = {
 			}
 	}
 }
+
+has_neomayan_patron_trigger = {
+	OR {
+		has_character_modifier = patron_hunab_ku
+		has_character_modifier = patron_acquarius
+		has_character_modifier = patron_pacal_votan
+		has_character_modifier = patron_valum_votan
+	}
+}
