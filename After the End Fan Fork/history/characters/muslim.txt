@@ -605,6 +605,7 @@
 	learning=6
 	trait=charismatic_negotiator
 	trait=kind
+	trait=fair
 	trait=bisexual
 	trait=shy
 	trait=trusting
@@ -830,6 +831,7 @@
 	intrigue=2
 	learning=6
 	trait=charismatic_negotiator
+	trait=wroth
 	trait=humble
 	trait=just
 	trait=ambitious
@@ -839,7 +841,13 @@
 	disallow_random_traits=yes
 	culture=neoladino
 	religion=reform
-	2648.4.5={birth=yes}
+	2648.4.5={birth=yes
+		effect = {
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=no_historical_family
+		}
+	}
 	2690.11.7={death=yes}
 }
 2200039={
@@ -1514,7 +1522,7 @@
 	2648.6.4={birth=yes}
 	2660.1.1={
 		effect = {
-			set_character_flag=no_historical_famil
+			set_character_flag=no_historical_family
 		}
 	}
 	2710.12.1={death=yes}
