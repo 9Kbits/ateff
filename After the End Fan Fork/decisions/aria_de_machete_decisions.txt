@@ -103,4 +103,49 @@ targetted_decisions = {
 			}
 		}
 	}
+	
+	machete_decide_childs_health = {
+		ai_check_interval = 12
+		
+		only_capable = yes
+		religion_group = pagan_group
+		
+		potential = {
+			is_within_diplo_range = FROM
+			is_child_of = FROM
+			NOT = { age = 6 }
+			NOT = { has_character_flag = machete_child_health_determined }
+			NOT = { is_incapable = yes }
+		}
+		from_potential = {
+			OR = {
+				religion = aria_de_machete
+				religion = aria_de_machete_reformed
+			}
+			is_female = yes
+			NOT = { is_incapable = yes }
+			is_playable = yes
+		}
+		allow = {
+			FROM = {
+				piety = 25
+				scaled_wealth = 0.2
+			}
+		}
+		effect = {
+			piety = -25
+			scaled_wealth = -0.2
+			custom_tooltip = { text = TXT_machete_decide_childs_health }
+			hidden_tooltip = {
+				ROOT = {
+					set_charcter_flag = machete_child_health_determined
+					save_event_target_as = machete_child
+				}
+				FROM = {
+					save_event_target_as = machete_mother
+					narrative_event = { id = machete.15 }
+				}
+			}
+		}
+	}
 }

@@ -1480,7 +1480,7 @@ machete_cast_love_spell;Cast Love Spell;;;;;;;;;;;;;x
 machete_cast_love_spell_desc;As a follower of Aria de Machete, I can perform a ritual to invoke the will of Sayona and make a suitor of my choice fall in love with me. Success is not guaranteed, however...;;;;;;;;;;;;;x
 TXT_machete_cast_love_spell;You prepare the materials for the spell...;;;;;;;;;;;;;x
 EVTTITLE_machete_10;The Dark Love of Sayona;;;;;;;;;;;;;x
-EVTDESC_machete_10;Sayona is the ranchera of love and vengeance. Once a woman, she was murdered by her jealous lover who chopped one of her legs. After descending to hell she battled death itself to be able to return among the mortals to enact her vengeance...\n\nAs I burn frankincense while covered in a black mantle and stating in one leg, I sing the song of Sayona so the lady may give me [Character]’s hearth.";;;;;;;;;;;;;x
+EVTDESC_machete_10;Sayona is the ranchera of love and vengeance. Once a woman, she was murdered by her jealous lover who chopped one of her legs. After descending to hell she battled death itself to be able to return among the mortals to enact her vengeance...\n\nAs I burn frankincense while covered in a black mantle and stating in one leg, I sing the song of Sayona so the lady may give me [event_target:machete_spell_lover.GetName]’s hearth.";;;;;;;;;;;;;x
 EVTOPTA_machete_10;Bring me passion, lady of the dark mantle!;;;;;;;;;;;;;x
 EVTOPTA_machete_10_TT;The spell is cast...;;;;;;;;;;;;;x
 EVTDESC_machete_11;The other day I encountered [event_target:machete_spell_lover.GetName] and I noticed that [event_target:machete_spell_lover.GetSheHe] couldn’t stop staring at me with a loving gaze. Without a doubt, La Sayona’s lust spell has worked.;;;;;;;;;;;;;x
@@ -1490,3 +1490,17 @@ EVTDESC_machete_12;The other day I encountered [event_target:machete_spell_lover
 EVTOPTA_machete_12;I only wanted love!;;;;;;;;;;;;;x
 opinion_machete_infatuated;Deeply Infatuated;;;;;;;;;;;;;x
 opinion_machete_disdain;Disdain;;;;;;;;;;;;;x
+
+machete_decide_childs_health;Cast Health Spell;;;;;;;;;;;;;x
+machete_decide_childs_health_desc;As a follower of Aria de Machete, I can perform a ritual to invoke the will of Bolefuego and ask her to determine the health of my child. Exactly how it is determined is up to me...;;;;;;;;;;;;;x
+TXT_machete_decide_childs_health;You prepare the materials for the spell...;;;;;;;;;;;;;x
+EVTTITLE_machete_15;The Cursed Touch of Bolefuego;;;;;;;;;;;;;x
+EVTDESC_machete_15;La Bolefuego is the ranchera of fire, health and premonition. The dame of light is a being made of pure fire who appears to expecting mothers. She is said to bring health to those newborns who are destined greatness and death to those who are not worthy, to make sure that they are not a burden to their families\n\nAs I fill my room with candles and sing the chant of flame I whisper [event_target:machete_child.GetName]'s name. But what do I want for the little one?;;;;;;;;;;;;;x
+EVTOPTA_machete_15;Protect the little one, oh mother of flames!;;;;;;;;;;;;;x
+EVTOPTA_machete_15_TT;Your child's health is improved.;;;;;;;;;;;;;x
+EVTOPTB_machete_15;This child is a burden, take the young soul!;;;;;;;;;;;;;x
+EVTOPTB_machete_15_TT;Your child's health is worsened.;;;;;;;;;;;;;x
+EVTDESC_machete_16;[event_target:machete_child.GetName] seems to have very rosy cheeks and a lot of energy lately. The mother of fire has decided that the young one deserves life.;;;;;;;;;;;;;x
+EVTOPTA_machete_16;Thus is her will of light.;;;;;;;;;;;;;x
+EVTDESC_machete_17;[event_target:machete_child.GetName] seems to be very tired and has completely stopped laughing lately. The mother of fire has decided that the young one is a burden for his family.;;;;;;;;;;;;;x
+EVTOPTA_machete_17;Thus is her will of fire.;;;;;;;;;;;;;x
