@@ -42,6 +42,7 @@ decisions = {
 targetted_decisions = {
 	machete_cast_love_spell = {
 		ai_check_interval = 12
+
 		only_capable = yes
 		religion_group = pagan_group
 		
@@ -70,15 +71,16 @@ targetted_decisions = {
 					}
 				}
 			}
+			NOT = { is_incapable = yes }
 		}
 		from_potential = {
 			OR = {
 				religion = aria_de_machete
 				religion = aria_de_machete_reformed
 			}
-			
 			is_female = yes
-			trait = machete_female
+			NOT = { is_incapable = yes }
+			is_playable = yes
 		}
 		allow = {
 			FROM = {
