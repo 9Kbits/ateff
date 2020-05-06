@@ -219,4 +219,58 @@ decisions = {
 			always = no
 		}
 	}
+	change_machete_branch = {
+		ai = no
+		
+		potential = {
+			religion = aria_de_machete
+			is_playable = yes
+			NOT = { has_character_flag = changedmachetebranch }
+		}
+		
+		allow = {
+			religion = aria_de_machete
+			is_playable = yes
+			NOT = { has_character_flag = changedmachetebranch }
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = machete.2 }
+			}
+			custom_tooltip = { text = TXT_change_machete_branch }
+			set_character_flag = changedmachetebranch
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+	}
+	change_machete_reformed_branch = {
+		ai = no
+		
+		potential = {
+			religion = aria_de_machete_reformed
+			is_playable = yes
+			NOT = { has_character_flag = changedmachetereformedbranch }
+		}
+		
+		allow = {
+			religion = aria_de_machete_reformed
+			is_playable = yes
+			NOT = { has_character_flag = changedmachetereformedbranch }
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = machete.3 }		
+			}
+			custom_tooltip = { text = TXT_change_machete_branch }
+			set_character_flag = changedmachetereformedbranch
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+	}
 }

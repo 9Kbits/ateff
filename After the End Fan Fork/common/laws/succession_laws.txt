@@ -1901,7 +1901,15 @@ gender_laws = {
 			holder_scope = {
 				NOT = { has_religion_feature = religion_matriarchal }
 				NOT = { has_religion_feature = religion_equal }
-				NOT = { has_religion_feature = religion_feature_aria_de_machete }
+				AND = {
+					NOT = { has_religion_feature = religion_feature_aria_de_machete }
+					trait = machete_female_ref
+				}
+				NOT = { trait = machete_male }
+				AND = {
+					NOT = { has_religion_feature = religion_feature_aria_de_machete }
+					trait = machete_male_ref
+				}
 				NOT = { has_religion_feature = religion_feature_midewiwin }
 				OR = {
 					has_bloodline_flag = bloodline_effect_cognatic
@@ -2008,7 +2016,8 @@ gender_laws = {
 				NOT = { has_religion_feature = religion_equal }
 				NOT = { has_religion_feature = religion_feature_aria_de_machete }
 				NOT = { has_religion_feature = religion_feature_midewiwin }
-				
+				NOT = { trait = machete_female }
+				NOT = { trait = machete_female_ref }
 				NAND = {
 					OR = {
 						is_theocracy = yes
@@ -2103,7 +2112,13 @@ gender_laws = {
 						}
 						OR = {
 							has_religion_feature = religion_equal
-							has_religion_feature = religion_feature_aria_de_machete
+							AND = {
+								has_religion_feature = religion_feature_aria_de_machete
+								OR = {
+									trait = machete_male_ref
+									trait = machete_female_ref
+								}
+							}
 							has_religion_feature = religion_feature_midewiwin
 						}
 						AND = {
@@ -2234,6 +2249,11 @@ gender_laws = {
 					religion = gaian
 					trait = way_branch
 					#religion = neomayan
+					trait = machete_female
+					AND = {
+						NOT = { has_religion_feature = religion_feature_aria_de_machete }
+						trait = machete_female_ref
+					}
 					AND = {
 						OR = {
 							is_theocracy = yes
@@ -2272,6 +2292,10 @@ gender_laws = {
 			holder_scope = {
 				OR = {
 					has_religion_feature = religion_matriarchal
+					AND = {
+						has_religion_feature = religion_feature_aria_de_machete
+						trait = machete_female_ref
+					}
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_enatic_cognatic 
 					}

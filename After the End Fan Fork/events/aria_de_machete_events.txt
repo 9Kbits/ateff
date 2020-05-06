@@ -1,0 +1,332 @@
+namespace = machete
+
+# Choose new gender school after reformation
+character_event = {
+	id = machete.1
+	desc = EVTDESC_machete_choose_gender_ref
+	picture = GFX_evt_bishop
+	religion = aria_de_machete_reformed
+
+	trigger = {
+		NOT = { trait = machete_male_ref }
+		NOT = { trait = machete_female+ref }
+		OR = {
+			trait = machete_male
+			trait = machete_female
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = EVTOPT_machete_ref_male
+		hidden_tooltip = {
+			remove_trait = machete_male
+			remove_trait = machete_female
+		}
+		add_trait = machete_male_ref
+		if = {
+			limit = {
+				NOR = {
+					has_religion_feature = religion_feature_aria_de_machete
+					has_religion_feature = religion_equal
+				}
+				primary_title = {
+					revoke_law = cognatic_succession
+					revoke_law = agnatic_succession
+					revoke_law = true_cognatic_succession
+					revoke_law = enatic_succession
+					revoke_law = enatic_cognatic_succession
+					add_law = agnatic_succession
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_religion_feature = religion_feature_aria_de_machete
+					has_religion_feature = religion_equal
+				}
+				primary_title = {
+					revoke_law = cognatic_succession
+					revoke_law = agnatic_succession
+					revoke_law = true_cognatic_succession
+					revoke_law = enatic_succession
+					revoke_law = enatic_cognatic_succession
+					add_law = cognatic_succession
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EVTOPT_machete_ref_female
+		hidden_tooltip = {
+			remove_trait = machete_male
+			remove_trait = machete_female
+		}
+		add_trait = machete_female_ref
+		if = {
+			limit = {
+				NOR = {
+					has_religion_feature = religion_feature_aria_de_machete
+					has_religion_feature = religion_equal
+				}
+				primary_title = {
+					revoke_law = cognatic_succession
+					revoke_law = agnatic_succession
+					revoke_law = true_cognatic_succession
+					revoke_law = enatic_succession
+					revoke_law = enatic_cognatic_succession
+					add_law = enatic_succession
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_religion_feature = religion_feature_aria_de_machete
+					has_religion_feature = religion_equal
+				}
+				primary_title = {
+					revoke_law = cognatic_succession
+					revoke_law = agnatic_succession
+					revoke_law = true_cognatic_succession
+					revoke_law = enatic_succession
+					revoke_law = enatic_cognatic_succession
+					add_law = enatic_cognatic_succession
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+}
+
+# Choose lore school when unreformed
+character_event = {
+	id = machete.2
+	desc = EVTDESC_machete_choose_gender
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	religion = aria_de_machete
+
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_machete_ref_male
+		hidden_tooltip = {
+			remove_trait = machete_male
+			remove_trait = machete_female
+		}
+		add_trait = machete_male
+		if = {
+			limit = {
+				NOR = {
+					has_law = agnatic_succession
+					has_law = cognatic_succession
+				}
+				primary_title = {
+					revoke_law = cognatic_succession
+					revoke_law = agnatic_succession
+					revoke_law = true_cognatic_succession
+					revoke_law = enatic_succession
+					revoke_law = enatic_cognatic_succession
+					add_law = agnatic_succession
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EVTOPT_machete_ref_female
+		hidden_tooltip = {
+			remove_trait = machete_male
+			remove_trait = machete_female
+		}
+		add_trait = machete_female
+		if = {
+			limit = {
+				NOR = {
+					has_law = enatic_succession
+					has_law = enatic_cognatic_succession
+				}
+				primary_title = {
+					revoke_law = cognatic_succession
+					revoke_law = agnatic_succession
+					revoke_law = true_cognatic_succession
+					revoke_law = enatic_succession
+					revoke_law = enatic_cognatic_succession
+					add_law = enatic_succession
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}	
+}
+
+# Choose lore school when reformed
+character_event = {
+	id = machete.3
+	desc = EVTDESC_occult_choose_gender_ref
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	religion = aria_de_machete_reformed
+
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_occult_ref_mason
+		hidden_tooltip = {
+			remove_trait = machete_male_ref
+			remove_trait = machete_female_ref
+		}
+		add_trait = machete_male_ref
+		if = {
+			limit = {
+				NOR = {
+					has_religion_feature = religion_feature_aria_de_machete
+					has_religion_feature = religion_equal
+				}
+				primary_title = {
+					revoke_law = cognatic_succession
+					revoke_law = agnatic_succession
+					revoke_law = true_cognatic_succession
+					revoke_law = enatic_succession
+					revoke_law = enatic_cognatic_succession
+					add_law = agnatic_succession
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_religion_feature = religion_feature_aria_de_machete
+					has_religion_feature = religion_equal
+				}
+				primary_title = {
+					revoke_law = cognatic_succession
+					revoke_law = agnatic_succession
+					revoke_law = true_cognatic_succession
+					revoke_law = enatic_succession
+					revoke_law = enatic_cognatic_succession
+					add_law = cognatic_succession
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = EVTOPT_occult_ref_oldones
+		hidden_tooltip = {
+			remove_trait = machete_male_ref
+			remove_trait = machete_female_ref
+		}
+		add_trait = machete_female_ref
+		if = {
+			limit = {
+				NOR = {
+					has_religion_feature = religion_feature_aria_de_machete
+					has_religion_feature = religion_equal
+				}
+				primary_title = {
+					revoke_law = cognatic_succession
+					revoke_law = agnatic_succession
+					revoke_law = true_cognatic_succession
+					revoke_law = enatic_succession
+					revoke_law = enatic_cognatic_succession
+					add_law = enatic_succession
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_religion_feature = religion_feature_aria_de_machete
+					has_religion_feature = religion_equal
+				}
+				primary_title = {
+					revoke_law = cognatic_succession
+					revoke_law = agnatic_succession
+					revoke_law = true_cognatic_succession
+					revoke_law = enatic_succession
+					revoke_law = enatic_cognatic_succession
+					add_law = enatic_cognatic_succession
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = brave }
+			modifier = { factor = 2 trait = paranoid }
+			modifier = { factor = 2 trait = envious }
+			modifier = { factor = 2 trait = humble }
+		}
+	}
+}
+
+character_event = {
+	id = machete.4
+	hide_window = yes
+	is_triggered_only = yes
+	religion = aria_de_machete
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		NOT = { has_global_flag = aria_de_machete_setup }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				trait = machete_male
+			}
+			primary_title = {
+				revoke_law = cognatic_succession
+				revoke_law = agnatic_succession
+				revoke_law = true_cognatic_succession
+				revoke_law = enatic_succession
+				revoke_law = enatic_cognatic_succession
+				add_law = agnatic_succession
+			}
+		}
+		if = {
+			limit = {
+				trait = machete_female
+			}
+			primary_title = {
+				revoke_law = cognatic_succession
+				revoke_law = agnatic_succession
+				revoke_law = true_cognatic_succession
+				revoke_law = enatic_succession
+				revoke_law = enatic_cognatic_succession
+				add_law = enatic_succession
+			}
+		}
+		set_global_flag = aria_de_machete_setup
+	}
+}

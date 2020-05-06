@@ -2323,6 +2323,8 @@ bloodlet = {
 	mesoamerican_gods_opinion = 10
 	cult_of_saints_opinion = -10
 	christian_opinion = -10
+	muslim_opinion = -10
+	jewish_group_opinion = -10
 
 	potential = {
 		OR = {
@@ -2334,6 +2336,76 @@ bloodlet = {
 	random = no
 	religious = yes
 	customizer = no
+}
+
+machete_male = {
+	opposites = {
+		machete_female
+	}
+
+	opposite_opinion = -5
+	
+	learning = 2
+	intrigue = -1
+
+	potential = { religion = aria_de_machete }
+	religious_branch = aria_de_machete
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
+machete_female = {
+	opposites = {
+		machete_male
+	}
+
+	opposite_opinion = -5
+	
+	intrigue = 1
+	stewardship = 1
+
+	potential = { religion = aria_de_machete }
+	religious_branch = aria_de_machete
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
+machete_male_ref = {
+	opposites = {
+		machete_female_ref
+	}
+
+	opposite_opinion = -5
+	
+	intrigue = 1
+	stewardship = 1
+
+	potential = { religion = aria_de_machete_reformed }
+	religious_branch = aria_de_machete_reformed
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
+machete_female_ref = {
+	opposites = {
+		machete_male_ref
+	}
+
+	opposite_opinion = -5
+	
+	diplomacy = 1
+	martial = -1
+	
+	monthly_character_piety = 0.25
+
+	potential = { religion = aria_de_machete_reformed }
+	religious_branch = aria_de_machete_reformed
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
 }
 
 #Commented these out because I have no idea what these are supposed to do.
