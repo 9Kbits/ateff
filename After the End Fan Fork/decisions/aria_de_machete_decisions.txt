@@ -25,15 +25,79 @@ decisions = {
 		}
 		
 		allow = {
-			piety = 50
-			
+			piety = 25
 		}
 		
 		effect = {
+			piety = -25
 			custom_tooltip = { text = TXT_machete_pray_for_prosperity }
 			hidden_tooltip = {
 				narrative_event = { id = machete.5 }
 				set_charcter_flag = machete_praying_for_prosperity
+			}
+		}
+	}
+}
+
+targetted_decisions = {
+	machete_cast_love_spell = {
+		ai_check_interval = 12
+		only_capable = yes
+		religion_group = pagan_group
+		
+		potential = {
+			NOT = { is_incapable = yes }
+			is_within_diplo_range = FROM
+			NOT = { is_lover = FROM }
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_machete_infatuated } }
+			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_machete_disdain } }
+			OR = {
+				AND = {
+					is_female = no
+					NOT = { trait = homosexual }
+				}
+				AND = {
+					is_female = yes
+					OR = {
+						trait = homosexual
+						trait = bisexual
+					}
+					FROM = {
+						OR = {
+							trait = homosexual
+							trait = bisexual
+						}
+					}
+				}
+			}
+		}
+		from_potential = {
+			OR = {
+				religion = aria_de_machete
+				religion = aria_de_machete_reformed
+			}
+			
+			is_female = yes
+			trait = machete_female
+		}
+		allow = {
+			FROM = {
+				piety = 50
+				scaled_wealth = 0.2
+			}
+		}
+		effect = {
+			piety = -50
+			scaled_wealth = -0.2
+			custom_tooltip = { text = TXT_machete_cast_love_spell }
+			hidden_tooltip = {
+				ROOT = {
+					save_event_target_as = machete_spell_lover
+				}
+				FROM = {
+					save_event_target_as = machete_spell_caster
+					narrative_event = { id = machete.10 }
+				}
 			}
 		}
 	}

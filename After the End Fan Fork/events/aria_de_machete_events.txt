@@ -442,3 +442,74 @@ character_event = {
 		clr_character_flag = machete_praying_for_prosperity
 	}
 }
+
+narrative_event = { #Ritual is performed
+	id = machete.10
+	title = EVTTITLE_machete_10
+	desc = EVTDESC_machete_10
+	picture = GFX_evt_performing_experiments
+	border = GFX_event_narrative_frame_intrigue
+	is_triggered_only = yes
+	
+	option = { 
+        name = EVTOPTA_machete_10
+        custom_tooltip = { text = EVTOPTA_machete_10_TT }
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					character_event = { id = machete.11 days = 7 random = 3 }
+					modifier = {
+						factor = 2
+						event_target:machete_spell_lover = {
+							trait = trusting
+						}
+					}
+				}
+				50 = {
+					character_event = { id = machete.12 days = 7 random = 3 }
+				}
+			}
+		}
+    }
+}
+
+character_event = { #Spell Worked
+	id = machete.11
+	desc = EVTDESC_machete_11
+	picture = GFX_evt_dark_love
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_machete_11
+		reverse_opinion = {
+        	who = event_target:machete_spell_lover
+        	modifier = opinion_machete_infatuated
+			years = 15
+        }
+	}
+	
+	option = {
+		name = EVTOPTB_machete_11
+		event_target:machete_spell_lover = {
+			add_lover = event_target:machete_spell_caster
+		}
+	}
+}
+
+character_event = { #Spell Failed
+	id = machete.12
+	desc = EVTDESC_machete_12
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_machete_12
+		reverse_opinion = {
+        	who = event_target:machete_spell_lover
+        	modifier = opinion_machete_disdain
+			years = 10
+        }
+	}
+}
