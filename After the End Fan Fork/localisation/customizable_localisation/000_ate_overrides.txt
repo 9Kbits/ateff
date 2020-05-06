@@ -6773,6 +6773,24 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = GetReligiousCommunityName_anabaptist
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_anabaptist
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_anabaptist
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_batenburger
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_batenburger
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_batenburger
+	}
+}
+defined_text = {
 	name = GetReligiousCommunityName_angeline
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_name_angeline
@@ -8251,6 +8269,30 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_high_church_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_anabaptist
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_anabaptist_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_batenburger
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_batenburger_desc_REAL
 	}
 }
 
