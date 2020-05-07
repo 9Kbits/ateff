@@ -2762,9 +2762,63 @@ ate_mjolnir = {
 	allowed_gift = {
 		religion_openly_norse_or_reformed_trigger = yes
 	}
-	flags = { religious norse_pagan very_rare combat_weapon hammer }
+	flags = { religious norse_pagan very_rare ceremonial_weapon hammer }
 	stacking = no
 	picture = "GFX_mjolnir"
 	
 	slot = ceremonial_weapon
+}
+
+ate_juans_machete = {
+	command_modifier = {
+		light_cavalry = 0.2
+	}
+	monthly_character_prestige = 0.5
+	same_religion_opinion = 5
+	combat_rating = 20
+	quality = 5
+	active = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+	}
+	flags = { religious aria_de_machete very_rare combat_weapon sword }
+	slot = weapon
+	picture = "GFX_scimitar_T3"
+	stacking = no
+}
+
+ate_harp_of_florentino = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	same_religion_opinion = 5
+	quality = 5
+	active = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+	}
+	flags = { religious aria_de_machete very_rare }
+	picture = "GFX_king_davids_harp"
+	stacking = no
+}
+
+ate_mantle_of_la_sayona = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	quality = 3
+	active = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion_openly_aria_de_machete_or_reformed_trigger = yes
+	}
+	flags = { religious aria_de_machete face cloth }
+	picture = "GFX_veil_of_veronica"
+	stacking = no
 }

@@ -126,7 +126,18 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 						has_artifact = excalibur
 					}
 				}
-				#We could really use some artifacts for Trailwalker and Aria de Machete. Maybe.
+				modifier = {
+					factor = 0
+					AND = {
+						OR = {
+							religion = aria_de_machete
+							religion = aria_de_machete_reformed
+						}
+						has_artifact = ate_juans_machete
+						has_artifact = ate_harp_of_florentino
+					}
+				}
+				#We could really use some artifacts for Trailwalker. Maybe.
 				modifier = {
 					factor = 0
 					AND = {
@@ -1534,6 +1545,40 @@ character_event = {
 					}
 					#Insert artifact event here
 					narrative_event = { id = MNM.9602 } #Mjolnir
+				}
+				
+				10 = {
+					modifier = { 
+						factor = 0 
+						NOR = {
+							religion = aria_de_machete
+							religion = aria_de_machete_reformed
+						}
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_major } }
+					modifier = {
+						factor = 0
+						has_artifact = ate_juans_machete
+					}
+					#Insert artifact event here
+					narrative_event = { id = MNM.9605 } #Juan's Machete
+				}
+				
+				10 = {
+					modifier = { 
+						factor = 0 
+						NOR = {
+							religion = aria_de_machete
+							religion = aria_de_machete_reformed
+						}
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_major } }
+					modifier = {
+						factor = 0
+						has_artifact = ate_harp_of_florentino
+					}
+					#Insert artifact event here
+					narrative_event = { id = MNM.9606 } #Harp of Florentino
 				}
 				
 				10 = {
@@ -5964,6 +6009,208 @@ narrative_event = {
 		}
 	}
 	after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+#Aria de Machete#
+
+#Juan's Machete
+narrative_event = {
+    id = MNM.9605
+    title = EVTNAME_MNM_9605
+    desc = EVTDESC_MNM_9605
+    picture = GFX_evt_pagan_artifacts
+    border = GFX_event_narrative_frame_religion
+
+    is_triggered_only = yes
+
+    has_dlc = "Mystics"
+
+    option = { #it's their duty
+        name = EVTOPT_MAJOR_ARTIFACT_DUTY
+        prestige = 10
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_extremely_disappointed
+			years = 20
+		}
+        add_artifact = ate_juans_machete
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #monetary reward
+        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 1
+			min = 50
+		}
+
+        add_artifact = ate_juans_machete
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+    
+    option = { #reward them with a favor
+        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+        reverse_add_favor = FROM
+        add_artifact = ate_juans_machete
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #praise them (prestige reward)
+    	trigger = {
+			diplomacy = 15
+		}
+        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 5
+		}
+		FROM = { prestige = 100 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+        add_artifact = ate_juans_machete
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+    after = { clr_artifact_flagsmodifiers_effect = yes }
+}
+
+#Harp of Florentino
+narrative_event = {
+    id = MNM.9606
+    title = EVTNAME_MNM_9606
+    desc = EVTDESC_MNM_9606
+    picture = GFX_evt_pagan_artifacts
+    border = GFX_event_narrative_frame_religion
+
+    is_triggered_only = yes
+
+    has_dlc = "Mystics"
+
+    option = { #it's their duty
+        name = EVTOPT_MAJOR_ARTIFACT_DUTY
+        prestige = 10
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_extremely_disappointed
+			years = 20
+		}
+        add_artifact = ate_harp_of_florentino
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #monetary reward
+        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 1
+			min = 50
+		}
+
+        add_artifact = ate_harp_of_florentino
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+    
+    option = { #reward them with a favor
+        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_rewarded
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 15
+		}
+        reverse_add_favor = FROM
+        add_artifact = ate_harp_of_florentino
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+
+    option = { #praise them (prestige reward)
+    	trigger = {
+			diplomacy = 15
+		}
+        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+
+        reverse_opinion = {
+			who = FROM
+			modifier = opinion_was_praised
+			years = 15
+		}
+		opinion = {
+			who = FROM
+			modifier = opinion_found_major_artifact
+			years = 5
+		}
+		FROM = { prestige = 100 }
+		random = {
+			chance = 20
+			add_friend = FROM
+		}
+        add_artifact = ate_harp_of_florentino
+        new_artifact = {
+			set_creation_date = 1.1.1
+		}
+    }
+    after = { clr_artifact_flagsmodifiers_effect = yes }
 }
 
 ##Americanist##
