@@ -457,13 +457,13 @@ narrative_event = { #Ritual is performed
 		hidden_tooltip = {
 			random_list = {
 				50 = {
-					character_event = { id = machete.11 days = 7 random = 3 }
 					modifier = {
 						factor = 2
 						event_target:machete_spell_lover = {
 							trait = trusting
 						}
 					}
+					character_event = { id = machete.11 days = 7 random = 3 }
 				}
 				50 = {
 					character_event = { id = machete.12 days = 7 random = 3 }
@@ -527,7 +527,7 @@ narrative_event = { #Ritual is performed
 		piety = 15
         custom_tooltip = { text = EVTOPTA_machete_15_TT }
 		character_event = { id = machete.16 days = 10 random = 4 }
-		
+	}
 	option = {
 		name = EVTOPTB_machete_15
 		piety = -30
@@ -569,5 +569,213 @@ character_event = { #Spell Worked (bad)
 				years = 1
 			}
         }
+	}
+}
+
+#Strength Prayer - Self
+narrative_event = {
+	id = machete.20
+	title = EVTTITLE_machete_20
+	desc = EVTDESC_machete_20
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = strength_prayer_target_is_self
+	}
+	
+	option = {
+		name = EVTOPTA_machete_20
+		custom_tooltip = {
+			40 = {
+				modifier = {
+					factor = 2
+					trait = brave
+				}
+				modifier = {
+					factor = 2
+					trait = poet
+				}
+				character_event = { id = machete.22 days = 14 random = 7 }
+			}
+			60 = {
+				modifier = {
+					factor = 2
+					trait = craven
+				}
+				character_event = { id = machete.23 days = 14 random = 7 }
+			}
+		}
+	}
+}
+
+#Strength Prayer - Other
+narrative_event = {
+	id = machete.21
+	title = EVTTITLE_machete_20
+	desc = EVTDESC_machete_21
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_character_flag = strength_prayer_target_is_self }
+	}
+	
+	option = {
+		name = EVTOPTA_machete_20
+		custom_tooltip = {
+			45 = {
+				modifier = {
+					factor = 2
+					event_target:strength_prayer_target = {
+						trait = brave
+					}
+				}
+				modifier = {
+					factor = 2
+					event_target:strength_prayer_target = {
+						trait = poet
+					}
+				}
+				character_event = { id = machete.24 days = 14 random = 7 }
+			}
+			55 = {
+				modifier = {
+					factor = 2
+					event_target:strength_prayer_target = {
+						trait = craven
+					}
+				}
+				character_event = { id = machete.25 days = 14 random = 7 }
+			}
+		}
+	}
+}
+
+character_event = { #Spell Worked (self)
+	id = machete.22
+	desc = EVTDESC_machete_22
+	picture = GFX_evt_melee
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_machete_22
+		prestige = 50
+		if = {
+			limit = {
+				trait = depressed
+			}
+			remove_trait = depressed
+		}
+		add_character_modifier = {
+			name = machete_cazadiablos
+			years = 10
+		}
+	}
+}
+
+character_event = { #Spell Failed (self)
+	id = machete.23
+	desc = EVTDESC_machete_23
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_machete_23
+		prestige = -25
+		add_trait = depressed
+	}
+	
+	after = {
+		add_character_modifier = {
+			name = machete_strength_prayer_cooldown
+			hidden = yes
+			years = 5
+		}
+	}
+}
+
+character_event = { #Spell Worked (other)
+	id = machete.24
+	desc = EVTDESC_machete_24
+	picture = GFX_evt_melee
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_machete_22
+		prestige = 50
+		custom_tooltip = { text = TXT_EVTOPTA_machete_24 }
+		hidden_tooltip = {
+			event_target:strength_prayer_target = {
+				character_event = { id = machete.26 } #Ping event
+			}
+		}
+	}
+}
+
+character_event = { #Spell Failed (other)
+	id = machete.25
+	desc = EVTDESC_machete_25
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_machete_23
+		prestige = -25
+		custom_tooltip = { text = TXT_EVTOPTA_machete_25 }
+		hidden_tooltip = {
+			event_target:strength_prayer_target = {
+				character_event = { id = machete.27 } #Ping event
+			}
+		}
+	}
+	
+	after = {
+		add_character_modifier = {
+			name = machete_strength_prayer_cooldown
+			hidden = yes
+			years = 5
+		}
+	}
+}
+
+character_event = { #Spell Worked (ping)
+	id = machete.26
+	desc = EVTDESC_machete_26
+	picture = GFX_evt_melee
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_machete_26
+		if = {
+			limit = {
+				trait = depressed
+			}
+			remove_trait = depressed
+		}
+		add_character_modifier = {
+			name = machete_cazadiablos
+			years = 10
+		}
+	}
+}
+
+character_event = { #Spell Worked (ping)
+	id = machete.27
+	desc = EVTDESC_machete_27
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_machete_27
+		add_trait = depressed
 	}
 }
