@@ -675,6 +675,11 @@ character_event = { #Spell Worked (self)
 			years = 10
 		}
 	}
+	
+	after = {
+		clr_character_flag = praying_for_strength
+		clr_character_flag = strength_prayer_target_is_self
+	}
 }
 
 character_event = { #Spell Failed (self)
@@ -691,6 +696,8 @@ character_event = { #Spell Failed (self)
 	}
 	
 	after = {
+		clr_character_flag = praying_for_strength
+		clr_character_flag = strength_prayer_target_is_self
 		add_character_modifier = {
 			name = machete_strength_prayer_cooldown
 			hidden = yes
@@ -716,6 +723,10 @@ character_event = { #Spell Worked (other)
 			}
 		}
 	}
+	
+	after = {
+		clr_character_flag = praying_for_strength
+	}
 }
 
 character_event = { #Spell Failed (other)
@@ -737,6 +748,7 @@ character_event = { #Spell Failed (other)
 	}
 	
 	after = {
+		clr_character_flag = praying_for_strength
 		add_character_modifier = {
 			name = machete_strength_prayer_cooldown
 			hidden = yes
@@ -777,5 +789,195 @@ character_event = { #Spell Worked (ping)
 	option = {
 		name = EVTOPTA_machete_27
 		add_trait = depressed
+	}
+}
+
+#Fertility Prayer - Self
+narrative_event = {
+	id = machete.30
+	title = EVTTITLE_machete_30
+	desc = EVTDESC_machete_30
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = fertility_prayer_target_is_self
+	}
+	
+	option = {
+		name = EVTOPTA_machete_30
+		custom_tooltip = {
+			50 = {
+				modifier = {
+					factor = 2
+					trait = temperate
+				}
+				character_event = { id = machete.32 days = 14 random = 7 }
+			}
+			50 = {
+				modifier = {
+					factor = 2
+					trait = gluttonous
+				}
+				character_event = { id = machete.33 days = 14 random = 7 }
+			}
+		}
+	}
+}
+
+#Fertility Prayer - Other
+narrative_event = {
+	id = machete.31
+	title = EVTTITLE_machete_30
+	desc = EVTDESC_machete_31
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_character_flag = fertility_prayer_target_is_self }
+	}
+	
+	option = {
+		name = EVTOPTA_machete_30
+		custom_tooltip = {
+			45 = {
+				modifier = {
+					factor = 2
+					event_target:fertility_prayer_target = {
+						trait = temperate
+					}
+				}
+				character_event = { id = machete.34 days = 14 random = 7 }
+			}
+			55 = {
+				modifier = {
+					factor = 2
+					event_target:fertility_prayer_target = {
+						trait = gluttonous
+					}
+				}
+				character_event = { id = machete.35 days = 14 random = 7 }
+			}
+		}
+	}
+}
+
+character_event = { #Spell Worked (self)
+	id = machete.32
+	desc = EVTDESC_machete_32
+	picture = GFX_evt_dark_love
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_machete_32
+		add_character_modifier = {
+			name = machete_high_libido
+			years = 10
+		}
+	}
+	
+	after = {
+		clr_character_flag = praying_for_fertility
+		clr_character_flag = fertility_prayer_target_is_self
+	}
+}
+
+character_event = { #Spell Failed (self)
+	id = machete.33
+	desc = EVTDESC_machete_33
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_machete_33
+		add_character_modifier = {
+			name = machete_low_libido
+			years = 10
+		}
+	}
+	
+	after = {
+		clr_character_flag = praying_for_fertility
+		clr_character_flag = fertility_prayer_target_is_self
+	}
+}
+
+character_event = { #Spell Worked (other)
+	id = machete.34
+	desc = EVTDESC_machete_34
+	picture = GFX_evt_dark_love
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_machete_32
+		custom_tooltip = { text = TXT_EVTOPTA_machete_34 }
+		hidden_tooltip = {
+			event_target:strength_prayer_target = {
+				character_event = { id = machete.36 } #Ping event
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = praying_for_fertility
+	}
+}
+
+character_event = { #Spell Failed (other)
+	id = machete.35
+	desc = EVTDESC_machete_35
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_machete_33
+		custom_tooltip = { text = TXT_EVTOPTA_machete_35 }
+		hidden_tooltip = {
+			event_target:strength_prayer_target = {
+				character_event = { id = machete.37 } #Ping event
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = praying_for_strength
+	}
+}
+
+character_event = { #Spell Worked (ping)
+	id = machete.36
+	desc = EVTDESC_machete_36
+	picture = GFX_evt_dark_love
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_machete_32
+		add_character_modifier = {
+			name = machete_high_libido
+			years = 10
+		}
+	}
+}
+
+character_event = { #Spell Worked (ping)
+	id = machete.37
+	desc = EVTDESC_machete_37
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_machete_33
+		add_character_modifier = {
+			name = machete_low_libido
+			years = 10
+		}
 	}
 }
