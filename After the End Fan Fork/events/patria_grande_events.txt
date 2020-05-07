@@ -20,8 +20,20 @@ character_event = {
 		hidden_tooltip = {
 			remove_trait = patria_bolivar
 			remove_trait = patria_manuelita
+			remove_trait = patria_santander
 		}
-		add_trait = patria_santander
+		if = {
+			limit = {
+				ai = yes
+			}
+			add_trait = patria_santander
+		}
+		else_if = {
+			limit = {
+				ai = no
+			}
+			character_event = { id = patria.4 }
+		}
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 2 trait = patria_santander }
@@ -40,8 +52,20 @@ character_event = {
 		hidden_tooltip = {
 			remove_trait = patria_santander
 			remove_trait = patria_manuelita
+			remove_trait = patria_bolivar
 		}
-		add_trait = patria_bolivar
+		if = {
+			limit = {
+				ai = yes
+			}
+			add_trait = patria_bolivar
+		}
+		else_if = {
+			limit = {
+				ai = no
+			}
+			character_event = { id = patria.5 }
+		}
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 2 trait = patria_bolivar }
@@ -62,8 +86,20 @@ character_event = {
 		hidden_tooltip = {
 			remove_trait = patria_bolivar
 			remove_trait = patria_santander
+			remove_trait = patria_manuelita
 		}
-		add_trait = patria_manuelita
+		if = {
+			limit = {
+				ai = yes
+			}
+			add_trait = patria_manuelita
+		}
+		else_if = {
+			limit = {
+				ai = no
+			}
+			character_event = { id = patria.6 }
+		}
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 2 trait = patria_manuelita }
@@ -153,5 +189,346 @@ character_event = { # Make all existing descendants also Libertador descendants
 	immediate = {
 		add_trait = libertador_descendant
 		any_child_even_if_dead = { repeat_event = { id = patria.3 } }
+	}
+}
+
+character_event = {
+	id = patria.4
+	desc = EVTDESC_patria_santander
+	picture = GFX_evt_religious_exultation
+	religion = patria_grande
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_patria_santander
+		add_trait = patria_santander
+	}
+}
+
+character_event = {
+	id = patria.5
+	desc = EVTDESC_patria_bolivar
+	picture = GFX_evt_religious_exultation
+	religion = patria_grande
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_patria_bolivar
+		add_trait = patria_bolivar
+	}
+}
+
+character_event = {
+	id = patria.6
+	desc = EVTDESC_patria_manuelita
+	picture = GFX_evt_religious_exultation
+	religion = patria_grande
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_patria_manuelita
+		add_trait = patria_manuelita
+	}
+}
+
+narrative_event = {
+	id = patria.10
+	title = EVTTITLE_patria_10
+	desc = EVTDESC_patria_10
+	picture = GFX_evt_vision_quest
+	border = GFX_event_narrative_frame_religion
+	religion = patria_grande
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_patria_10
+		custom_tooltip = { text = TXT_EVTOPTA_patria_10 }
+		character_event = { id = patria.11 days = 1 }
+	}
+}
+
+character_event = {
+	id = patria.11
+	desc = EVTDESC_patria_11
+	picture = GFX_evt_vision_quest
+	border = GFX_event_normal_frame_religion
+	religion = patria_grande
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_patria_11
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					narrative_event = { id = patria.12 days = 1 }
+				}
+				50 = {
+					narrative_event = { id = patria.13 days = 1 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_patria_11
+		random_list = {
+				50 = {
+					narrative_event = { id = patria.14 days = 1 }
+				}
+				50 = {
+					narrative_event = { id = patria.15 days = 1 }
+				}
+			}
+	}
+	
+	option = {
+		name = EVTOPTC_patria_11
+		random_list = {
+				50 = {
+					narrative_event = { id = patria.16 days = 1 }
+				}
+				50 = {
+					narrative_event = { id = patria.17 days = 1 }
+				}
+			}
+	}
+}
+
+narrative_event = {
+	id = patria.12
+	title = EVTTITLE_patria_12
+	desc = EVTDESC_patria_12
+	picture = GFX_evt_vision_quest
+	border = GFX_event_narrative_frame_religion
+	religion = patria_grande
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_patria_12
+		add_character_modifier = {
+			name = patria_vision_beauty
+			years = 1
+		}
+		if = {
+			limit = {
+				NOT = { trait = trusting }
+			}
+			random_list = {
+				30 = {
+					add_trait = trusting
+				}
+				70 = { }
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = patria_marquess_meditating
+		add_character_modifier = {
+			name = patria_vision_cooldown
+			hidden = yes
+			years = 3
+		}
+	}
+}
+
+narrative_event = {
+	id = patria.13
+	title = EVTTITLE_patria_13
+	desc = EVTDESC_patria_13
+	picture = GFX_evt_vision_quest
+	border = GFX_event_narrative_frame_religion
+	religion = patria_grande
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_patria_12
+		add_character_modifier = {
+			name = patria_vision_loss
+			years = 1
+		}
+		if = {
+			limit = {
+				NOT = { trait = paranoid }
+			}
+			random_list = {
+				30 = {
+					add_trait = paranoid
+				}
+				70 = { }
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = patria_marquess_meditating
+		add_character_modifier = {
+			name = patria_vision_cooldown
+			hidden = yes
+			years = 3
+		}
+	}
+}
+
+narrative_event = {
+	id = patria.14
+	title = EVTTITLE_patria_14
+	desc = EVTDESC_patria_14
+	picture = GFX_evt_vision_quest
+	border = GFX_event_narrative_frame_religion
+	religion = patria_grande
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_patria_12
+		add_character_modifier = {
+			name = patria_vision_power
+			years = 1
+		}
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+			}
+			random_list = {
+				30 = {
+					add_trait = zealous
+				}
+				70 = { }
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = patria_marquess_meditating
+		add_character_modifier = {
+			name = patria_vision_cooldown
+			hidden = yes
+			years = 3
+		}
+	}
+}
+
+narrative_event = {
+	id = patria.15
+	title = EVTTITLE_patria_15
+	desc = EVTDESC_patria_15
+	picture = GFX_evt_vision_quest
+	border = GFX_event_narrative_frame_religion
+	religion = patria_grande
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_patria_15
+		add_character_modifier = {
+			name = patria_vision_defeat
+			years = 1
+		}
+		if = {
+			limit = {
+				NOT = { trait = cynical }
+			}
+			random_list = {
+				30 = {
+					add_trait = cynical
+				}
+				70 = { }
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = patria_marquess_meditating
+		add_character_modifier = {
+			name = patria_vision_cooldown
+			hidden = yes
+			years = 3
+		}
+	}
+}
+
+narrative_event = {
+	id = patria.16
+	title = EVTTITLE_patria_16
+	desc = EVTDESC_patria_16
+	picture = GFX_evt_vision_quest
+	border = GFX_event_narrative_frame_religion
+	religion = patria_grande
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_patria_16
+		add_character_modifier = {
+			name = patria_vision_madness
+			years = 1
+		}
+		if = {
+			limit = {
+				NOT = { trait = brave }
+			}
+			random_list = {
+				30 = {
+					add_trait = brave
+				}
+				70 = { }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = arbitrary }
+			}
+			random_list = {
+				30 = {
+					add_trait = arbitrary
+				}
+				70 = { }
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = patria_marquess_meditating
+		add_character_modifier = {
+			name = patria_vision_cooldown
+			hidden = yes
+			years = 3
+		}
+	}
+}
+
+narrative_event = {
+	id = patria.17
+	title = EVTTITLE_patria_17
+	desc = EVTDESC_patria_17
+	picture = GFX_evt_vision_quest
+	border = GFX_event_narrative_frame_religion
+	religion = patria_grande
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_patria_17
+		add_character_modifier = {
+			name = patria_vision_love
+			years = 1
+		}
+		if = {
+			limit = {
+				NOT = { trait = lustful }
+			}
+			random_list = {
+				30 = {
+					add_trait = lustful
+				}
+				70 = { }
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = patria_marquess_meditating
+		add_character_modifier = {
+			name = patria_vision_cooldown
+			hidden = yes
+			years = 3
+		}
 	}
 }

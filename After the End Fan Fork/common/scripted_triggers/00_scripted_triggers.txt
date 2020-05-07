@@ -10043,3 +10043,38 @@ has_neomayan_patron_trigger = {
 		has_character_modifier = patron_valum_votan
 	}
 }
+
+has_machete_blessing_trigger = {
+	OR = {
+		has_character_modifier = machete_blessing_nomad
+		has_character_modifier = machete_blessing_notnomad
+		has_character_modifier = machete_curse_nomad
+		has_character_modifier = machete_curse_notnomad
+	}
+}
+
+has_machete_strength_prayer_trigger = {
+	OR = {
+		has_character_modifier = machete_cazadiablos
+		has_character_modifier = machete_strength_prayer_cooldown
+	}
+}
+
+has_machete_fertility_prayer_trigger = {
+	OR = {
+		has_character_modifier = machete_high_libido
+		has_character_modifier = machete_low_libido
+	}
+}
+
+has_patria_vision_trigger = {
+	OR = {
+		has_character_modifier = patria_vision_beauty
+		has_character_modifier = patria_vision_loss
+		has_character_modifier = patria_vision_power
+		has_character_modifier = patria_vision_defeat
+		has_character_modifier = patria_vision_madness
+		has_character_modifier = patria_vision_love
+		has_character_modifier = patria_vision_cooldown #lasts 3 years
+	}
+}

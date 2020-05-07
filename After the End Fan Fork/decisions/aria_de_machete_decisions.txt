@@ -5,20 +5,16 @@ decisions = {
 		is_high_prio = yes
 		
 		potential = {
+			is_playable = yes
 			OR = {
 				religion = aria_de_machete
 				religion = aria_de_machete_reformed
 			}
 			age = 16
-			is_playable = yes
-			NOT = { is_incapable = yes }
+			war = no
 			prisoner = no
-			NOR = {
-				has_character_modifier = machete_blessing_nomad
-				has_character_modifier = machete_blessing_notnomad
-				has_character_modifier = machete_curse_nomad
-				has_character_modifier = machete_curse_notnomad
-			}
+			NOT = { is_incapable = yes }
+			NOT = { has_machete_blessing_trigger = yes }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -48,6 +44,8 @@ targetted_decisions = {
 		religion_group = pagan_group
 		
 		potential = {
+			age = 16
+			prisoner = no
 			NOT = { is_incapable = yes }
 			is_within_diplo_range = FROM
 			NOT = { is_lover = FROM }
@@ -75,13 +73,15 @@ targetted_decisions = {
 			NOT = { is_incapable = yes }
 		}
 		from_potential = {
+			is_playable = yes
 			OR = {
 				religion = aria_de_machete
 				religion = aria_de_machete_reformed
 			}
+			age = 16
 			is_female = yes
+			prisoner = no
 			NOT = { is_incapable = yes }
-			is_playable = yes
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -124,13 +124,14 @@ targetted_decisions = {
 			NOT = { is_incapable = yes }
 		}
 		from_potential = {
+			is_playable = yes
 			OR = {
 				religion = aria_de_machete
 				religion = aria_de_machete_reformed
 			}
 			is_female = yes
+			prisoner = no
 			NOT = { is_incapable = yes }
-			is_playable = yes
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -165,11 +166,15 @@ targetted_decisions = {
 		ai_target_filter = realm_including_me
 
 		from_potential = {
+			is_playable = yes
 			OR = {
 				religion = aria_de_machete
 				religion = aria_de_machete_reformed
 			}
+			age = 16
 			is_female = no
+			prisoner = no
+			NOT = { is_incapable = yes }
 			NOT = { has_character_flag = praying_for_strength }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -177,6 +182,7 @@ targetted_decisions = {
 		}
 
 		potential = {
+			age = 16
 			OR = {
 				liege = {
 					character = FROM
@@ -190,9 +196,8 @@ targetted_decisions = {
 				is_friend = FROM
 				is_lover = FROM
 			}
-			NOR = {
-				has_character_modifier = machete_cazadiablos
-				has_character_modifier = machete_strength_prayer_cooldown
+			NOT = {
+				has_machete_strength_prayer_trigger = yes
 			}
 		}
 
@@ -247,11 +252,15 @@ targetted_decisions = {
 		ai_target_filter = realm_including_me
 
 		from_potential = {
+			is_playable = yes
 			OR = {
 				religion = aria_de_machete
 				religion = aria_de_machete_reformed
 			}
+			age = 16
 			is_female = no
+			prisoner = no
+			NOT = { is_incapable = yes }
 			NOT = { has_character_flag = praying_for_fertility }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
@@ -259,6 +268,7 @@ targetted_decisions = {
 		}
 
 		potential = {
+			age = 16
 			OR = {
 				liege = {
 					character = FROM
@@ -272,9 +282,8 @@ targetted_decisions = {
 				is_friend = FROM
 				is_lover = FROM
 			}
-			NOR = {
-				has_character_modifier = machete_high_libido
-				has_character_modifier = machete_low_libido
+			NOT = {
+				has_machete_fertility_prayer_trigger = yes
 			}
 		}
 
