@@ -4084,6 +4084,13 @@ character_event = {
 			}
 		}
 		if = {
+			limit = { wormwoodist = { has_religion_feature = religion_cosmopolitan } }
+			random_playable_ruler = {
+				limit = { religion = wormwoodist }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
+		if = {
 			limit = { high_church = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = high_church }
@@ -4619,6 +4626,13 @@ character_event = {
 			limit = { moravian = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = moravian }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { wormwoodist = { has_religion_feature = religion_dogmatic } }
+			random_playable_ruler = {
+				limit = { religion = wormwoodist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}

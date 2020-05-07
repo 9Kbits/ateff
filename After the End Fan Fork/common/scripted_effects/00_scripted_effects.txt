@@ -9922,6 +9922,22 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
+					religion = wormwoodist
+				}
+				has_character_flag = character_was_wormwoodist
+			}
+		}
+		set_secret_religion = wormwoodist
+		clr_character_flag = character_was_wormwoodist
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
 					religion = high_church
 				}
 				has_character_flag = character_was_high_church
@@ -10963,6 +10979,10 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_moravian
 	}
 	if = {
+		limit = { religion = wormwoodist }
+		set_character_flag = character_was_wormwoodist
+	}
+	if = {
 		limit = { religion = high_church }
 		set_character_flag = character_was_high_church
 	}
@@ -11221,6 +11241,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_postadventist
 	clr_character_flag = character_was_falling_star
 	clr_character_flag = character_was_moravian
+	clr_character_flag = character_was_wormwoodist
 	clr_character_flag = character_was_high_church
 	clr_character_flag = character_was_nonconformist
 	clr_character_flag = character_was_apostolic
@@ -11461,6 +11482,13 @@ event_target_old_religion_from_flag_effect = {
 		limit = { has_character_flag = character_was_moravian }
 		random_character = {
 			limit = { religion = moravian }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_wormwoodist }
+		random_character = {
+			limit = { religion = wormwoodist }
 			save_event_target_as = old_religion
 		}
 	}
@@ -13618,6 +13646,17 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = moravian
 					remove_province_modifier = secret_moravian_community
+				}
+			}
+		}
+		secret_religious_society_wormwoodist = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_wormwoodist_community
+					}
+					religion = wormwoodist
+					remove_province_modifier = secret_wormwoodist_community
 				}
 			}
 		}
@@ -18345,6 +18384,17 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = moravian
 						remove_province_modifier = secret_moravian_community
+					}
+				}
+			}
+			secret_religious_society_wormwoodist = { 
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_wormwoodist_community
+						}
+						religion = wormwoodist
+						remove_province_modifier = secret_wormwoodist_community
 					}
 				}
 			}
