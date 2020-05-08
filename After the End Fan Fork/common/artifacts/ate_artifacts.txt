@@ -2822,3 +2822,156 @@ ate_mantle_of_la_sayona = {
 	picture = "GFX_veil_of_veronica"
 	stacking = no
 }
+
+ate_nasar_dagger = {
+	monthly_character_prestige = 0.3
+	quality = 2
+	active = {
+		is_adult = yes
+	}
+	allowed_gift = {
+		is_adult = yes
+	}
+	flags = { weapon dagger }
+	picture = "GFX_indian_dagger"
+	slot = weapon
+	stacking = no
+}
+
+ate_nasar_crown = {
+	monthly_character_piety = 0.3
+	quality = 2
+	active = {
+		is_adult = yes
+	}
+	allowed_gift = {
+		is_adult = yes
+	}
+	flags = { jewelry crown }
+	picture = "GFX_crown_gold_fancy"
+	slot = crown
+	stacking = no
+}
+
+ate_skull_falso_libertador = {
+	monthly_character_prestige = 0.1
+	same_religion_opinion = 3
+	quality = 2
+	active = {
+		OR = {
+			religion = patria_grande
+			religion = espiritista
+		}
+		is_adult = yes
+	}
+	allowed_gift = {
+		OR = {
+			religion = patria_grande
+			religion = espiritista
+		}
+	}
+	flags = { religious patria_grande espiritista skull saint }
+	picture = "GFX_saints_skull"
+	stacking = no
+}
+
+ate_seal_of_issacs = {
+	monthly_character_piety = 0.1
+	jewish_group_opinion = 5
+	quality = 3
+	active = {
+		is_adult = yes
+	}
+	allowed_gift = {
+		is_adult = yes
+	}
+	flags = { religious patria_grande jewish_group jewelry very_rare }
+	picture = "GFX_seal_of_solomon"
+	stacking = no
+}
+
+ate_sword_of_st_peter = {
+	monthly_character_prestige = 0.5
+	short_reign_length = -5
+	combat_rating = 16
+	quality = 5
+	active = {
+		religion = patria_grande
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion = patria_grande
+	}
+	flags = { religious patria_grande unique weapon sword }
+	picture = "GFX_the_golden_scimitar"
+	slot = weapon
+	stacking = no
+}
+
+ate_stone_of_st_francis = {
+	monthly_character_prestige = 1
+	monthly_character_piety = 0.5
+	health = 1
+	quality = 4
+	active = {
+		religion = patria_grande
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion = patria_grande
+	}
+	flags = { religious patria_grande unique bodypart saint }
+	picture = "GFX_pouch"
+	stacking = no
+}
+
+ate_pearls_of_magdalene = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	global_revolt_risk = -0.02
+	quality = 3
+	active = {
+		religion = patria_grande
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion = patria_grande
+	}
+	flags = { religious patria_grande very_rare jewelry saint }
+	picture = "GFX_pearl_necklace"
+	stacking = no
+	slot = neck
+}
+
+ate_llorente_flower_vase = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.5
+	same_religion_opinion = 5
+	quality = 2
+	active = {
+		religion = patria_grande
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion = patria_grande
+	}
+	flags = { religious patria_grande very_rare saint }
+	picture = "GFX_strange_chest"
+	stacking = no
+}
+
+ate_garcia_pig_tail = {
+	monthly_character_prestige = 0.1
+	monthly_character_piety = 0.25
+	quality = 2
+	active = {
+		religion = patria_grande
+		is_adult = yes
+	}
+	allowed_gift = {
+		religion = patria_grande
+	}
+	flags = { religious patria_grande unique bodypart saint }
+	picture = "GFX_saintly_tongue"
+	stacking = no
+}

@@ -113,7 +113,6 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 							religion = norse_pagan_reformed
 						}
 						has_artifact = ate_mjolnir
-						#has_artifact = andvaranaut
 					}
 				}
 				modifier = {
@@ -129,14 +128,12 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 				modifier = {
 					factor = 0
 					AND = {
-						OR = {
-							religion = aria_de_machete
-							religion = aria_de_machete_reformed
-						}
-						has_artifact = ate_juans_machete
-						has_artifact = ate_harp_of_florentino
+						religion = patria_grande
+						has_artifact = ate_sword_of_st_peter
+						has_artifact = ate_stone_of_st_francis
 					}
 				}
+				
 				#We could really use some artifacts for Trailwalker. Maybe.
 				modifier = {
 					factor = 0
@@ -361,6 +358,14 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 				modifier = {
 					factor = 0
 					religion = nousthreskeia
+				}
+				modifier = {
+					factor = 0
+					AND = {
+						religion = patria_grande
+						has_artifact = ate_pearls_of_magdalene
+						has_artifact = ate_llorente_flower_vase
+					}
 				}
 				modifier = {
 					factor = 0
@@ -1597,6 +1602,34 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9650 } #Excalibur
 				}
+				
+				10 = {
+					modifier = { 
+						factor = 0 
+						religion = patria_grande
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_major } }
+					modifier = {
+						factor = 0
+						has_artifact = ate_sword_of_st_peter
+					}
+					#Insert artifact event here
+					narrative_event = { id = atediscover.1 } #ate_sword_of_st_peter
+				}
+				
+				10 = {
+					modifier = { 
+						factor = 0 
+						religion = patria_grande
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_major } }
+					modifier = {
+						factor = 0
+						has_artifact = ate_stone_of_st_francis
+					}
+					#Insert artifact event here
+					narrative_event = { id = atediscover.2 } #ate_stone_of_st_francis
+				}
 
 				#West African artifacts
 				10 = {
@@ -2080,6 +2113,38 @@ character_event = {
 					}
 					#Insert artifact event here
 					character_event = { id = MNM.9642 } #Healing Crystal
+				}
+				
+				20 = {
+					modifier = { 
+						factor = 0 
+						NOT = {
+							religion = patria_grande
+						}
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
+					modifier = {
+						factor = 0
+						has_artifact = ate_pearls_of_magdalene
+					}
+					#Insert artifact event here
+					character_event = { id = atediscover.3 }
+				}
+				
+				20 = {
+					modifier = { 
+						factor = 0 
+						NOT = {
+							religion = patria_grande
+						}
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
+					modifier = {
+						factor = 0
+						has_artifact = ate_llorente_flower_vase
+					}
+					#Insert artifact event here
+					character_event = { id = atediscover.4 }
 				}
 				
 				#Native American Artifacts#
