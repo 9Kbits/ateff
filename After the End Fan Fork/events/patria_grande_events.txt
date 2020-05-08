@@ -532,3 +532,355 @@ narrative_event = {
 		}
 	}
 }
+
+## Thanksgiving ##
+
+# Invitations Sent
+character_event = {
+	id = patria.20
+	desc = EVTDESC_patria_20
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_patria_20
+		any_vassal = {
+			limit = {
+				religion = patria_grande
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { is_incapable = yes }
+			}
+			character_event = { id = america_pilgrim.101 days = 2 tooltip = EVTTOOLTIP_america_pilgrim_101 }
+		}
+		custom_tooltip = { text = patria_feast_invitations_sent }
+		hidden_tooltip = { character_event = { id = patria.23 days = 10 } }
+		hidden_tooltip = { character_event = { id = patria.29 days = 17 } }
+	}
+}
+
+# Invitation Received
+character_event = {
+	id = patria.21
+	desc = EVTDESC_patria_21
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	trigger = { NOT = { is_inaccessible_trigger = yes } }
+	
+	option = {
+		name = EVTOPTA_patria_21
+		ai_chance = {
+			factor = 80
+			modifier = {
+				factor = 0
+				NOT = {
+					opinion = {
+						who = ROOT
+						value = -20
+					}
+				}
+			}
+		}
+		custom_tooltip = { text = patria_feast_accepted }
+		set_character_flag = attending_patria_feast
+		set_character_flag = do_not_disturb
+		hidden_tooltip = { character_event = { id = patria.23 days = 8 } }
+		hidden_tooltip = { character_event = { id = patria.30 days = 15 } }
+		hidden_tooltip = { character_event = { id = patria.31 days = 20 } } # Safety catch flag clearing
+	}
+	option = {
+		name = EVTOPTB_patria_21
+		ai_chance = {
+			factor = 20
+		}
+		FROM = {
+			opinion = {
+				modifier = opinion_dislike
+				who = ROOT
+				years = 2
+			}
+		}
+		custom_tooltip = { text = patria_feast_declined }
+		hidden_tooltip = {
+			FROM = { character_event = { id = patria.22 } }
+		}
+	}
+}
+
+# Invitation Refused
+character_event = {
+	id = patria.22
+	desc = EVTDESC_patria_22
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_patria_22
+		opinion = {
+			modifier = opinion_dislike
+			who = FROM
+			years = 2
+		}
+	}
+}
+
+character_event = {
+	id = patria.23
+	desc = EVTDESC_patria_23
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_patria_23
+		character_event = { id = patria.24 days = 1 }
+	}
+}
+
+character_event = {
+	id = patria.24
+	desc = EVTDESC_patria_24
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_patria_24
+		prestige = 20
+		piety = -10
+	}
+	
+	option = {
+		name = EVTOPTB_patria_24
+		piety = 20
+		prestige = -10
+	}
+	
+	after = {
+		character_event = { id = patria.26 days = 1 }
+	}
+}
+
+#skipped this event cause i am a dumb dumb
+
+character_event = {
+	id = patria.26
+	desc = EVTDESC_patria_26
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_patria_26
+		random_list = {
+			10 = { add_trait = proud }
+			90 = { }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_patria_26
+		random_list = {
+			10 = { add_trait = humble }
+			90 = { }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_patria_26
+		random_list = {
+			10 = { add_trait = cynical }
+			90 = { }
+		}
+	}
+	
+	after = {
+		character_event = { id = patria.27 days = 1 }
+	}
+}
+
+character_event = {
+	id = patria.27
+	desc = EVTDESC_patria_27
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_patria_27
+		character_event = { id = patria.28 days = 1 }
+	}
+}
+
+character_event = {
+	id = patria.28
+	desc = EVTDESC_patria_28
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_patria_28
+		prestige = 20
+		if = {
+			limit = {
+				trait = stressed
+			}
+			random_list = {
+				20 = { remove_trait = stressed }
+				80 = { }
+			}
+		}
+		if = {
+			limit = {
+				trait = depressed
+			}
+			random_list = {
+				20 = { remove_trait = depressed }
+				80 = { }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_patria_26
+		piety = 20
+		random_list = {
+			10 = { remove_trait = lustful }
+			10 = { remove_trait = gluttonous }
+			10 = { remove_trait = greedy }
+			10 = { remove_trait = slothful }
+			10 = { remove_trait = wroth }
+			10 = { remove_trait = envious }
+			10 = { remove_trait = proud }
+			30 = { }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_patria_26
+		trigger = {
+			trait = lunatic
+		}
+		if = {
+			limit = {
+				NOT = { trait = brave }
+			}
+			random_list = {
+				40 = { add_trait = brave }
+				60 = { }
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = wounded }
+			}
+			random_list = {
+				50 = { add_trait = wounded }
+				50 = { }
+			}
+		}
+		random_list = {
+			10 = { add_trait = wounded }
+			90 = { death = { death_reason = death_accident } }
+		}
+	}
+}
+
+# Feast Ends (Host)
+character_event = {
+	id = patria.29
+	desc = EVTDESC_patria_29
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_patria_29
+		any_vassal = {
+			limit = { has_character_flag = attending_patria_feast }
+			opinion = {
+				modifier = opinion_enjoyed_feast
+				who = ROOT
+				years = 2
+			}
+		}
+		hidden_tooltip = {
+			any_vassal = {
+				limit = { has_character_flag = attending_patria_feast }
+				character_event = { id = america_pilgrim.105 }
+			}
+		}
+		add_character_modifier = {
+			name = held_patria_fest_timer
+			years = 4
+			hidden = yes
+		}
+		prestige = 50
+		piety = 50
+		clr_character_flag = holding_patria_feast
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+	}
+}
+
+# Thanksgiving Feast Ends (Guest)
+character_event = {
+	id = patria.30
+	desc = EVTDESC_patria_30
+	picture = GFX_evt_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_patria_30
+		clr_character_flag = attending_patria_feast
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+	}
+}
+
+# Safety catch - clears character flags and modifiers
+character_event = {
+	id = patria.31
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = do_not_disturb
+		clr_character_flag = recent_minor_decision
+		clr_character_flag = holding_patria_feast
+		clr_character_flag = attending_patria_feast
+	}
+}

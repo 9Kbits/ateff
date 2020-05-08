@@ -1700,7 +1700,7 @@ byzantine_elective = {
 			}
 			FROMFROM = { holder_scope = { NOT = { culture_group = ROOT_FROM } } }
 		}
-		additive_modifier = { #If candidate is elected, he will rule from a capital outside this dejure.
+		additive_modifier = { #If candidate is elected, he will rule from a capital outside this defacto.
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_political_concerns
 			capital_scope = { de_jure_liege = FROMFROM }
@@ -1719,7 +1719,7 @@ byzantine_elective = {
 				NOT = { is_vassal_or_below_of = ROOT_FROMFROM }
 			}
 		}
-		additive_modifier = { #Candidate is a foreign non-dejure ruler.
+		additive_modifier = { #Candidate is a foreign non-defacto ruler.
 			value = -500
 			localisation_key = tooltip_feudal_elector_vote_encroaching_foreigner
 			NOT = { capital_scope = { de_jure_liege = FROMFROM } }
@@ -4841,13 +4841,13 @@ hre_feudal_elective = {
 				holder_scope = { religion = ROOT }
 			}
 			NOT = { has_landed_title = e_dixie }
-			OR = { # To make sure they are still dejure vassals of HRE
+			OR = { # To make sure they are still defacto vassals of HRE
 				e_dixie = { #Counts
 					persistent_event_target:hre_title_1_per = { 
 						holder_scope = { character = ROOT } 
 						OR = { 
-							any_dejure_liege = { title = FROMFROM } 
-							ROOT = { #Popes need no dejure
+							any_defacto_liege = { title = FROMFROM } 
+							ROOT = { #Popes need no defacto
 								religion_head = { character = ROOT } 
 							}
 						}
@@ -4857,8 +4857,8 @@ hre_feudal_elective = {
 					persistent_event_target:hre_title_2_per = { 
 						holder_scope = { character = ROOT }
 						OR = { 
-							any_dejure_liege = { title = FROMFROM } 
-							ROOT = { #Popes need no dejure
+							any_defacto_liege = { title = FROMFROM } 
+							ROOT = { #Popes need no defacto
 								religion_head = { character = ROOT } 
 							}
 						}
@@ -4868,8 +4868,8 @@ hre_feudal_elective = {
 					persistent_event_target:hre_title_3_per = { 
 						holder_scope = { character = ROOT }
 						OR = { 
-							any_dejure_liege = { title = FROMFROM } 
-							ROOT = { #Popes need no dejure
+							any_defacto_liege = { title = FROMFROM } 
+							ROOT = { #Popes need no defacto
 								religion_head = { character = ROOT } 
 							}
 						}
@@ -4879,8 +4879,8 @@ hre_feudal_elective = {
 					persistent_event_target:hre_title_4_per = { 
 						holder_scope = { character = ROOT } 
 						OR = { 
-							any_dejure_liege = { title = FROMFROM } 
-							ROOT = { #Popes need no dejure
+							any_defacto_liege = { title = FROMFROM } 
+							ROOT = { #Popes need no defacto
 								religion_head = { character = ROOT } 
 							}
 						}
@@ -4890,8 +4890,8 @@ hre_feudal_elective = {
 					persistent_event_target:hre_title_5_per = { 
 						holder_scope = { character = ROOT }
 						OR = { 
-							any_dejure_liege = { title = FROMFROM } 
-							ROOT = { #Popes need no dejure
+							any_defacto_liege = { title = FROMFROM } 
+							ROOT = { #Popes need no defacto
 								religion_head = { character = ROOT } 
 							}
 						}
@@ -4901,8 +4901,8 @@ hre_feudal_elective = {
 					persistent_event_target:hre_title_6_per = { 
 						holder_scope = { character = ROOT }
 						OR = { 
-							any_dejure_liege = { title = FROMFROM } 
-							ROOT = { #Popes need no dejure
+							any_defacto_liege = { title = FROMFROM } 
+							ROOT = { #Popes need no defacto
 								religion_head = { character = ROOT } 
 							}
 						}
@@ -4912,8 +4912,8 @@ hre_feudal_elective = {
 					persistent_event_target:hre_title_7_per = { 
 						holder_scope = { character = ROOT }
 						OR = { 
-							any_dejure_liege = { title = FROMFROM } 
-							ROOT = { #Popes need no dejure
+							any_defacto_liege = { title = FROMFROM } 
+							ROOT = { #Popes need no defacto
 								religion_head = { character = ROOT } 
 							}
 						}
@@ -4939,16 +4939,16 @@ hre_feudal_elective = {
 				}
 				higher_real_tier_than = COUNT
 			}
-			OR = { #Either defacto direct vassal, or independent ruler who is dejure vassal.
+			OR = { #Either defacto direct vassal, or independent ruler who is defacto vassal.
 				vassal_of = FROMFROM 
 				independent = yes
 			}
-			OR = { #dejure vassal, or any vassal if title titular.
+			OR = { #defacto vassal, or any vassal if title titular.
 				AND = {
 					FROMFROM = { is_titular = yes }
 					vassal_of = FROMFROM 
 				}
-				any_dejure_liege = { title = FROMFROM }
+				any_defacto_liege = { title = FROMFROM }
 			}
 		}
 		additive_modifier = { #Fallback Electors (same religious group)
@@ -4970,16 +4970,16 @@ hre_feudal_elective = {
 				}
 				higher_real_tier_than = COUNT
 			}
-			OR = { #Either defacto direct vassal, or independent ruler who is dejure vassal.
+			OR = { #Either defacto direct vassal, or independent ruler who is defacto vassal.
 				vassal_of = FROMFROM 
 				independent = yes
 			}
-			OR = { #dejure vassal, or any vassal if title titular.
+			OR = { #defacto vassal, or any vassal if title titular.
 				AND = {
 					FROMFROM = { is_titular = yes }
 					vassal_of = FROMFROM 
 				}
-				any_dejure_liege = { title = FROMFROM }
+				any_defacto_liege = { title = FROMFROM }
 			}
 		}
 	#	additive_modifier = { #Fallback Electors (any religion).
@@ -5000,16 +5000,16 @@ hre_feudal_elective = {
 	#			}
 	#			higher_real_tier_than = COUNT
 	#		}
-	#		OR = { #Either defacto direct vassal, or independent ruler who is dejure vassal.
+	#		OR = { #Either defacto direct vassal, or independent ruler who is defacto vassal.
 	#			vassal_of = FROMFROM 
 	#			independent = yes
 	#		}
-	#		OR = { #dejure vassal, or any vassal if title titular.
+	#		OR = { #defacto vassal, or any vassal if title titular.
 	#			AND = {
 	#				FROMFROM = { is_titular = yes }
 	#				vassal_of = FROMFROM 
 	#			}
-	#			any_dejure_liege = { title = FROMFROM }
+	#			any_defacto_liege = { title = FROMFROM }
 	#		}
 	#	}
 		additive_modifier = {
@@ -5386,7 +5386,7 @@ hre_feudal_elective = {
 			}
 			FROMFROM = { holder_scope = { NOT = { culture_group = ROOT_FROM } } }
 		}
-		additive_modifier = { #If candidate is elected, he will rule from a capital outside this dejure.
+		additive_modifier = { #If candidate is elected, he will rule from a capital outside this defacto.
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_political_concerns
 			capital_scope = { de_jure_liege = FROMFROM }
@@ -5405,7 +5405,7 @@ hre_feudal_elective = {
 				NOT = { is_vassal_or_below_of = ROOT_FROMFROM }
 			}
 		}
-		additive_modifier = { #Candidate is a foreign non-dejure ruler.
+		additive_modifier = { #Candidate is a foreign non-defacto ruler.
 			value = -500
 			localisation_key = tooltip_feudal_elector_vote_encroaching_foreigner
 			NOT = { capital_scope = { de_jure_liege = FROMFROM } }
@@ -8194,7 +8194,7 @@ hre_feudal_elective = {
 					} 
 				}
 				FROM = { 
-				 	any_dejure_liege = { title = ROOT } #Only dejure vassals.
+				 	any_defacto_liege = { title = ROOT } #Only defacto vassals.
 				}
 			}
 		}
