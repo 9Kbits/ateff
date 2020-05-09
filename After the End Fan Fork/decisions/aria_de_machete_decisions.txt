@@ -38,11 +38,11 @@ decisions = {
 	}
 }
 
-targetted_decisions = {
+targeted_decisions = {
 	machete_cast_love_spell = {
 		ai_check_interval = 24
-		only_capable = yes
-		religion_group = pagan_group
+		filter = realm_including_me
+		ai_target_filter = realm_including_me
 		
 		potential = {
 			age = 16
@@ -50,8 +50,8 @@ targetted_decisions = {
 			NOT = { is_incapable = yes }
 			is_within_diplo_range = FROM
 			NOT = { is_lover = FROM }
-			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_machete_infatuated } }
-			NOT = { has_opinion_modifier = { who = ROOT modifier = opinion_machete_disdain } }
+			NOT = { has_opinion_modifier = { who = FROM modifier = opinion_machete_infatuated } }
+			NOT = { has_opinion_modifier = { who = FROM modifier = opinion_machete_disdain } }
 			OR = {
 				AND = {
 					is_female = no
@@ -73,6 +73,7 @@ targetted_decisions = {
 			}
 			NOT = { is_incapable = yes }
 		}
+		
 		from_potential = {
 			is_playable = yes
 			OR = {
@@ -87,17 +88,19 @@ targetted_decisions = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
+		
 		allow = {
 			FROM = {
 				piety = 50
 				scaled_wealth = 0.2
 			}
 		}
+		
 		effect = {
 			piety = -50
 			scaled_wealth = -0.2
 			custom_tooltip = { text = TXT_machete_cast_love_spell }
-			hidden_tooltip = {
+			hidden_toolip = {
 				ROOT = {
 					save_event_target_as = machete_spell_lover
 				}
@@ -107,15 +110,14 @@ targetted_decisions = {
 				}
 			}
 		}
+		
 		revoke_allowed = { always = no }
 	}
 	
 	machete_decide_childs_health = {
-		ai_check_interval = 24
+		ai_check_interval = 26
 		filter = realm_including_me
 		ai_target_filter = realm_including_me
-		only_capable = yes
-		religion_group = pagan_group
 		
 		potential = {
 			is_within_diplo_range = FROM
@@ -124,6 +126,7 @@ targetted_decisions = {
 			NOT = { has_character_flag = machete_child_health_determined }
 			NOT = { is_incapable = yes }
 		}
+		
 		from_potential = {
 			is_playable = yes
 			OR = {
@@ -137,19 +140,21 @@ targetted_decisions = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
+		
 		allow = {
 			FROM = {
 				piety = 25
 				scaled_wealth = 0.2
 			}
 		}
+		
 		effect = {
 			piety = -25
 			scaled_wealth = -0.2
 			custom_tooltip = { text = TXT_machete_decide_childs_health }
-			hidden_tooltip = {
+			hidden_toolip = {
 				ROOT = {
-					set_charcter_flag = machete_child_health_determined
+					set_character_flag = machete_child_health_determined
 					save_event_target_as = machete_child
 				}
 				FROM = {
@@ -158,14 +163,13 @@ targetted_decisions = {
 				}
 			}
 		}
-		revoke_allowed = { always = no }
 	}
 	
 	machete_pray_for_strength = {
 		ai_check_interval = 24
 		filter = realm_including_me
 		ai_target_filter = realm_including_me
-
+		
 		from_potential = {
 			is_playable = yes
 			OR = {
@@ -181,7 +185,7 @@ targetted_decisions = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
-
+		
 		potential = {
 			age = 16
 			OR = {
@@ -201,26 +205,26 @@ targetted_decisions = {
 				has_machete_strength_prayer_trigger = yes
 			}
 		}
-
+		
 		allow = {
 			piety = 100
 		}
-
+		
 		effect = {
 			piety = -100
 			FROM = { set_character_flag = praying_for_strength }
-
+			
 			if = {
-				limit = { character = FROM } #Praying for yourself
+				limit = { character = FROM }
 				custom_tooltip = {
 					text = praying_for_strength_effect_self
 					set_character_flag = strength_prayer_target_is_self
 					narrative_event = { id = machete.20 }
 				}
 			}
-
+			
 			if = {
-				limit = { NOT = { character = FROM } } #Praying for someone else
+				limit = { NOT = { character = FROM } }
 				save_event_target_as = strength_prayer_target
 				custom_tooltip = {
 					text = praying_for_strength_effect_other
@@ -228,12 +232,12 @@ targetted_decisions = {
 				}
 			}
 		}
-
+		
 		revoke_allowed = { always = no }
-
+		
 		ai_will_do = {
 			factor = 0.01
-			modifier = {	
+			modifier = {
 				factor = 100
 				character = FROM
 			}
@@ -251,7 +255,8 @@ targetted_decisions = {
 		ai_check_interval = 24
 		filter = realm_including_me
 		ai_target_filter = realm_including_me
-
+		only_capable = yes
+		
 		from_potential = {
 			is_playable = yes
 			OR = {
@@ -267,7 +272,7 @@ targetted_decisions = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
-
+		
 		potential = {
 			age = 16
 			OR = {
@@ -287,39 +292,39 @@ targetted_decisions = {
 				has_machete_fertility_prayer_trigger = yes
 			}
 		}
-
+		
 		allow = {
 			piety = 50
 		}
-
+		
 		effect = {
 			piety = -50
 			FROM = { set_character_flag = praying_for_fertility }
-
+			
 			if = {
-				limit = { character = FROM } #Praying for yourself
+				limit = { character = FROM }
 				custom_tooltip = {
 					text = praying_for_fertility_effect_self
 					set_character_flag = fertility_prayer_target_is_self
 					narrative_event = { id = machete.30 }
 				}
 			}
-
+			
 			if = {
-				limit = { NOT = { character = FROM } } #Praying for someone else
+				limit = { NOT = { character = FROM } }
 				save_event_target_as = fertility_prayer_target
 				custom_tooltip = {
 					text = praying_for_fertility_effect_other
-					narrative_event = { id = machete.30 }
+					narrative_event = { id = machete.31 }
 				}
 			}
 		}
-
+		
 		revoke_allowed = { always = no }
-
+		
 		ai_will_do = {
 			factor = 0.01
-			modifier = {	
+			modifier = { 
 				factor = 100
 				character = FROM
 			}
