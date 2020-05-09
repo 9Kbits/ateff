@@ -2148,7 +2148,6 @@ character_event = {
 						NOT = { diplomacy = 15 }
 						OR = {
 							has_character_modifier = follower_of_white_lamb
-							has_character_modifier = follower_of_bello
 							has_character_modifier = follower_of_the_tuatha
 						}
 					}
@@ -2159,10 +2158,7 @@ character_event = {
 					limit = {
 						NOT = { martial = 15 }
 						OR = {
-							has_character_modifier = follower_of_bolivar
-							has_character_modifier = follower_of_felipe
 							has_character_modifier = follower_of_missus_sureshot
-							has_character_modifier = follower_of_guaicaipuro
 							has_character_modifier = follower_of_burning_bush
 						}
 					}
@@ -2172,10 +2168,7 @@ character_event = {
 				if = {
 					limit = {
 						NOT = { stewardship = 15 }
-						OR = {
-							has_character_modifier = follower_of_lionza
-							has_character_modifier = follower_of_sacagewea
-						}
+						has_character_modifier = follower_of_sacagewea
 					}
 					character_event = { id = TOG.7502 }
 				}
@@ -2196,7 +2189,6 @@ character_event = {
 						NOT = { learning = 15 }
 						OR = {
 							has_character_modifier = follower_of_the_light
-							has_character_modifier = follower_of_gregorio
 							has_character_modifier = follower_of_almighty_spirit
 							has_character_modifier = follower_of_nokomis
 						}
@@ -2234,30 +2226,6 @@ character_event = {
 							AND = {
 								has_character_modifier = follower_of_white_lamb
 								ROOT = { has_character_modifier = follower_of_white_lamb }
-							}
-							AND = {
-								has_character_modifier = follower_of_lionza
-								ROOT = { has_character_modifier = follower_of_lionza }
-							}
-							AND = {
-								has_character_modifier = follower_of_guaicaipuro
-								ROOT = { has_character_modifier = follower_of_guaicaipuro }
-							}
-							AND = {
-								has_character_modifier = follower_of_felipe
-								ROOT = { has_character_modifier = follower_of_felipe }
-							}
-							AND = {
-								has_character_modifier = follower_of_gregorio
-								ROOT = { has_character_modifier = follower_of_gregorio }
-							}
-							AND = {
-								has_character_modifier = follower_of_bello
-								ROOT = { has_character_modifier = follower_of_bello }
-							}
-							AND = {
-								has_character_modifier = follower_of_bolivar
-								ROOT = { has_character_modifier = follower_of_bolivar }
 							}
 							AND = {
 								has_character_modifier = follower_of_almighty_spirit
@@ -2384,47 +2352,47 @@ character_event = {
 					event_target:thunder_target = { character_event = { id = TOG.7507 } }
 				}
 				#Sexy deities
-				if = {
-					limit = {
-						has_character_modifier = follower_of_lionza
-						any_courtier_or_vassal = {
-							NOT = { is_close_relative = ROOT }
-							ai = yes
-							root_attraction_trigger = yes
-							is_adult = yes
-							prisoner = no
-							is_alive = yes
-						}
-					}
-					random_courtier_or_vassal = {
-						limit = {
-							NOT = { is_close_relative = ROOT }
-							ai = yes
-							root_attraction_trigger = yes
-							is_adult = yes
-							prisoner = no
-							is_alive = yes
-						}
-						save_event_target_as = pagan_lover
-					}
-					random_courtier_or_vassal = {
-						limit = {
-							NOT = { is_close_relative = ROOT }
-							ai = yes
-							root_attraction_trigger = yes
-							is_adult = yes
-							prisoner = no
-							is_alive = yes
-							OR = {
-								trait = lustful
-								has_fair_trait_trigger = yes
-								has_character_modifier = follower_of_lionza
-							}
-						}
-						save_event_target_as = pagan_lover
-					}
-					event_target:pagan_lover = { character_event = { id = TOG.7509 } }
-				}
+				#if = {
+				#	limit = {
+				#		has_character_modifier = follower_of_lionza
+				#		any_courtier_or_vassal = {
+				#			NOT = { is_close_relative = ROOT }
+				#			ai = yes
+				#			root_attraction_trigger = yes
+				#			is_adult = yes
+				#			prisoner = no
+				#			is_alive = yes
+				#		}
+				#	}
+				#	random_courtier_or_vassal = {
+				#		limit = {
+				#			NOT = { is_close_relative = ROOT }
+				#			ai = yes
+				#			root_attraction_trigger = yes
+				#			is_adult = yes
+				#			prisoner = no
+				#			is_alive = yes
+				#		}
+				#		save_event_target_as = pagan_lover
+				#	}
+				#	random_courtier_or_vassal = {
+				#		limit = {
+				#			NOT = { is_close_relative = ROOT }
+				#			ai = yes
+				#			root_attraction_trigger = yes
+				#			is_adult = yes
+				#			prisoner = no
+				#			is_alive = yes
+				#			OR = {
+				#				trait = lustful
+				#				has_fair_trait_trigger = yes
+				#				has_character_modifier = follower_of_lionza
+				#			}
+				#		}
+				#		save_event_target_as = pagan_lover
+				#	}
+				#	event_target:pagan_lover = { character_event = { id = TOG.7509 } }
+				#}
 				#Family deities
 				if = {
 					limit = {
@@ -2511,10 +2479,7 @@ character_event = {
 				if = {
 					limit = {
 						OR = {
-							has_character_modifier = follower_of_bolivar
-							has_character_modifier = follower_of_felipe
 							has_character_modifier = follower_of_missus_sureshot
-							has_character_modifier = follower_of_guaicaipuro
 							has_character_modifier = follower_of_burning_bush
 						}
 					}
@@ -2525,7 +2490,6 @@ character_event = {
 					limit = {
 						OR = {
 							has_character_modifier = follower_of_white_lamb
-							has_character_modifier = follower_of_bello
 							has_character_modifier = follower_of_the_tuatha
 						}
 					}
@@ -2534,10 +2498,7 @@ character_event = {
 				#Stewardship gods
 				if = {
 					limit = {
-						OR = {
-							has_character_modifier = follower_of_lionza
-							has_character_modifier = follower_of_sacagewea
-						}
+						has_character_modifier = follower_of_sacagewea
 					}
 					character_event = { id = TOG.7520 }
 				}
@@ -2556,7 +2517,6 @@ character_event = {
 					limit = {
 						OR = {
 							has_character_modifier = follower_of_the_light
-							has_character_modifier = follower_of_gregorio
 							has_character_modifier = follower_of_almighty_spirit
 							has_character_modifier = follower_of_nokomis
 						}
@@ -2613,12 +2573,6 @@ character_event = {
 		remove_character_modifier = follower_of_burning_bush
 		remove_character_modifier = follower_of_the_light
 		remove_character_modifier = follower_of_white_lamb
-		remove_character_modifier = follower_of_lionza
-		remove_character_modifier = follower_of_guaicaipuro
-		remove_character_modifier = follower_of_felipe
-		remove_character_modifier = follower_of_gregorio
-		remove_character_modifier = follower_of_bello
-		remove_character_modifier = follower_of_bolivar
 		remove_character_modifier = follower_of_almighty_spirit
 		remove_character_modifier = follower_of_sacagewea
 		remove_character_modifier = follower_of_missus_sureshot 
@@ -2808,366 +2762,6 @@ character_event = {
 	}
 }
 
-#Selecting deity, Tres Potencias
-character_event = {
-	id = TOG.7200
-	desc = EVTDESC_TOG_7200
-	border = GFX_event_normal_frame_religion
-	picture = GFX_evt_desert
-
-	is_triggered_only = yes
-
-	immediate = { 
-		if = {
-			limit = { is_playable = yes }
-			any_courtier = {
-				limit = {
-					prisoner = no 
-					religion = ROOT
-					age = 16
-					has_minor_deity_trigger = no
-				}
-				character_event = { id = TOG.7200 days = 1 }
-			}
-		}
-	}
-
-	option = {
-		name = EVTOPTA_TOG_7200
-
-		add_character_modifier = {
-			name = follower_of_lionza
-			duration = -1
-		}
-
-		hidden_tooltip = { character_event = { id = TOG.7201 } }
-
-		ai_chance = {
-			factor = 1
-			modifier = {
-				has_education_stewardship_trigger = yes
-				factor = 2
-			}
-			modifier = {
-				is_fertile_trigger = yes
-				factor = 2
-			}
-			modifier = {
-				is_benevolent_trigger = yes
-				factor = 2
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_TOG_7200
-
-		add_character_modifier = {
-			name = follower_of_guaicaipuro
-			duration = -1
-		}
-
-		hidden_tooltip = { character_event = { id = TOG.7202 } }
-
-		ai_chance = {
-			factor = 1
-			modifier = {
-				has_education_intrigue_trigger = yes
-				factor = 2
-			}
-			modifier = {
-				trait = brave
-				factor = 2
-			}
-		}
-	}
-	option = {
-		name = EVTOPTC_TOG_7200
-
-		add_character_modifier = {
-			name = follower_of_felipe
-			duration = -1
-		}
-
-		hidden_tooltip = { character_event = { id = TOG.7203 } }
-
-		ai_chance = {
-			factor = 1
-			modifier = {
-				has_education_martial_trigger = yes
-				factor = 2
-			}
-			modifier = {
-				trait = gregarious
-				factor = 2
-			}
-		}
-	}
-	option = { #There are others.
-		name = EVTOPTD_TOG_7200_B
-		hidden_tooltip = { character_event = { id = TOG.7205 } }
-		ai_chance = {
-			factor = 1
-		}
-	}
-}
-
-#Selecting deity, Tres Potencias
-character_event = {
-	id = TOG.7205
-	desc = EVTDESC_TOG_7205
-	border = GFX_event_normal_frame_religion
-	picture = GFX_evt_desert
-
-	is_triggered_only = yes
-
-	option = {
-		name = EVTOPTD_TOG_7200
-
-		add_character_modifier = {
-			name = follower_of_gregorio
-			duration = -1
-		}
-
-		hidden_tooltip = { character_event = { id = TOG.7204 } }
-
-		ai_chance = {
-			factor = 1
-			modifier = {
-				has_education_learning_trigger = yes
-				factor = 2
-			}
-			modifier = {
-				trait = humble
-				factor = 2
-			}
-		}
-	}
-	option = {
-		name = EVTOPTE_TOG_7205
-
-		add_character_modifier = {
-			name = follower_of_bello
-			duration = -1
-		}
-
-		hidden_tooltip = { character_event = { id = TOG.7207 } }
-
-		ai_chance = {
-			factor = 1
-			modifier = {
-				has_education_diplomacy_trigger = yes
-				factor = 2
-			}
-			modifier = {
-				trait = erudite
-				factor = 2
-			}
-		}
-	}
-	option = {
-		name = EVTOPTF_TOG_7205
-
-		add_character_modifier = {
-			name = follower_of_bolivar
-			duration = -1
-		}
-
-		hidden_tooltip = { character_event = { id = TOG.7208 } }
-
-		ai_chance = {
-			factor = 1
-			modifier = {
-				has_education_martial_trigger = yes
-				factor = 2
-			}
-			modifier = {
-				trait = ambitious
-				factor = 2
-			}
-		}
-	}
-	option = { #There are others.
-		name = EVTOPTG_TOG_7205
-		hidden_tooltip = { character_event = { id = TOG.7200 } }
-		ai_chance = {
-			factor = 0
-		}
-	}
-}
-
-#Selecting deity, Tres Potencias (no immediate)
-#character_event = {
-#	id = TOG.7206
-#	desc = EVTDESC_TOG_7200
-#	border = GFX_event_normal_frame_religion
-#	picture = GFX_evt_desert
-#
-#	is_triggered_only = yes
-#
-#	option = {
-#		name = EVTOPTA_TOG_7200
-#
-#		add_character_modifier = {
-#			name = follower_of_ayyur
-#			duration = -1
-#		}
-#
-#		hidden_tooltip = { character_event = { id = TOG.7201 } }
-#
-#		ai_chance = {
-#			factor = 1
-#			modifier = {
-#				has_education_diplomacy_trigger = yes
-#				factor = 2
-#			}
-#			modifier = {
-#				is_infertile_trigger = yes
-#				factor = 2
-#			}
-#			modifier = {
-#				is_benevolent_trigger = yes
-#				factor = 2
-#			}
-#		}
-#	}
-#	option = {
-#		name = EVTOPTB_TOG_7200
-#
-#		add_character_modifier = {
-#			name = follower_of_bida
-#			duration = -1
-#		}
-#
-#		hidden_tooltip = { character_event = { id = TOG.7202 } }
-#
-#		ai_chance = {
-#			factor = 1
-#			modifier = {
-#				has_education_stewardship_trigger = yes
-#				factor = 2
-#			}
-#			modifier = {
-#				trait = greedy
-#				factor = 2
-#			}
-#		}
-#	}
-#	option = {
-#		name = EVTOPTC_TOG_7200
-#
-#		add_character_modifier = {
-#			name = follower_of_tsumburbura
-#			duration = -1
-#		}
-#
-#		hidden_tooltip = { character_event = { id = TOG.7203 } }
-#
-#		ai_chance = {
-#			factor = 1
-#			modifier = {
-#				has_education_learning_trigger = yes
-#				factor = 2
-#			}
-#			modifier = {
-#				is_learned_trigger = yes
-#				factor = 2
-#			}
-#		}
-#	}
-#	option = { #There are others.
-#		name = EVTOPTD_TOG_7200_B
-#		hidden_tooltip = { character_event = { id = TOG.7205 } }
-#	}
-#}
-
-#You picked Maria Lionza
-character_event = {
-	id = TOG.7201
-	desc = EVTDESC_TOG_7201
-	border = GFX_event_normal_frame_religion
-	picture = GFX_evt_tribal_lands
-
-	is_triggered_only = yes
-
-	#OK
-	option = {
-		name = EVTOPTA_TOG_7111
-	}
-}
-
-#You picked Guaicaipuro
-character_event = {
-	id = TOG.7202
-	desc = EVTDESC_TOG_7202
-	border = GFX_event_normal_frame_war
-	picture = GFX_evt_battle
-
-	is_triggered_only = yes
-
-	#OK
-	option = {
-		name = EVTOPTA_TOG_7111
-	}
-}
-
-#You picked Felipe
-character_event = {
-	id = TOG.7203
-	desc = EVTDESC_TOG_7203
-	border = GFX_event_normal_frame_war
-	picture = GFX_evt_battle
-
-	is_triggered_only = yes
-
-	#OK
-	option = {
-		name = EVTOPTA_TOG_7111
-	}
-}
-
-#You picked Jose Gregorio
-character_event = {
-	id = TOG.7204
-	desc = EVTDESC_TOG_7204
-	border = GFX_event_normal_frame_religion
-	picture = GFX_evt_comet
-
-	is_triggered_only = yes
-
-	#OK
-	option = {
-		name = EVTOPTA_TOG_7111
-	}
-}
-
-#You picked Andres Bello
-character_event = {
-	id = TOG.7207
-	desc = EVTDESC_TOG_7207
-	border = GFX_event_normal_frame_diplomacy
-	picture = GFX_evt_comet
-
-	is_triggered_only = yes
-
-	#OK
-	option = {
-		name = EVTOPTA_TOG_7111
-	}
-}
-#You picked Simon Bolivar
-character_event = {
-	id = TOG.7208
-	desc = EVTDESC_TOG_7208
-	border = GFX_event_normal_frame_war
-	picture = GFX_evt_battle
-
-	is_triggered_only = yes
-
-	#OK
-	option = {
-		name = EVTOPTA_TOG_7111
-	}
-}
 #Selecting deity, Trailwalker
 character_event = {
 	id = TOG.7300
@@ -3464,11 +3058,6 @@ character_event = {
 		picture = GFX_evt_viking_throneroom_oldgods
 	}
 	desc = {
-		trigger = { has_character_modifier = follower_of_bello }
-		text = EVTDESC_TOG_7500_BELLO
-		picture = GFX_evt_viking_throneroom_oldgods
-	}
-	desc = {
 		trigger = { has_character_modifier = follower_of_the_tuatha }
 		text = EVTDESC_TOG_7500_THE_TUATHA
 		picture = GFX_evt_family
@@ -3492,24 +3081,9 @@ character_event = {
 	picture = GFX_evt_battle
 
 	desc = {
-		trigger = { has_character_modifier = follower_of_bolivar }
-		text = EVTDESC_TOG_7501_BOLIVAR
-		picture = GFX_evt_viking_battle_oldgods
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_felipe }
-		text = EVTDESC_TOG_7501_FELIPE
-		picture = GFX_evt_battle
-	}
-	desc = {
 		trigger = { has_character_modifier = follower_of_missus_sureshot }
 		text = EVTDESC_TOG_7501_SURESHOT
 		picture = GFX_evt_hunt
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_guaicaipuro }
-		text = EVTDESC_TOG_7501_GUAICAIPURO
-		picture = GFX_evt_viking_battle_oldgods
 	}
 	desc = {
 		trigger = { has_character_modifier = follower_of_burning_bush }
@@ -3534,11 +3108,6 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	picture = GFX_evt_battle
 
-	desc = {
-		trigger = { has_character_modifier = follower_of_lionza }
-		text = EVTDESC_TOG_7502_LIONZA
-		picture = GFX_evt_tribal_lands
-	}
 	desc = {
 		trigger = { has_character_modifier = follower_of_sacagewea }
 		text = EVTDESC_TOG_7502_SACAGEWEA
@@ -3591,10 +3160,6 @@ character_event = {
 	desc = {
 		trigger = { has_character_modifier = follower_of_the_light }
 		text = EVTDESC_TOG_7503_THE_LIGHT
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_gregorio }
-		text = EVTDESC_TOG_7503_GREGORIO
 	}
 	desc = {
 		trigger = { has_character_modifier = follower_of_almighty_spirit }
@@ -3653,36 +3218,6 @@ character_event = {
 		trigger = { has_character_modifier = follower_of_white_lamb }
 		text = EVTDESC_TOG_7506_WHITE_LAMB
 		picture = GFX_evt_tribal_shrine
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_lionza }
-		text = EVTDESC_TOG_7506_LIONZA
-		picture = GFX_evt_tribal_lands
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_guaicaipuro }
-		text = EVTDESC_TOG_7506_GUAICAIPURO
-		picture = GFX_evt_longbowman_arabic
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_felipe }
-		text = EVTDESC_TOG_7506_FELIPE
-		picture = GFX_evt_longbowman_arabic
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_gregorio }
-		text = EVTDESC_TOG_7506_GREGORIO
-		picture = GFX_evt_tribal_shrine
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_bello }
-		text = EVTDESC_TOG_7506_BELLO
-		picture = GFX_evt_tribal_shrine
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_bolivar }
-		text = EVTDESC_TOG_7506_BOLIVAR
-		picture = GFX_evt_longbowman_arabic
 	}
 	desc = {
 		trigger = { has_character_modifier = follower_of_almighty_spirit }
@@ -3901,50 +3436,7 @@ character_event = {
 	}
 }
 
-character_event = {
-	id = TOG.7510
-	desc = EVTDESC_TOG_7510_LIONZA
-	border = GFX_event_normal_frame_diplomacy
-	picture = GFX_evt_lovers
-
-	is_triggered_only = yes
-
-	#Make love
-	option = {
-		name = EVTOPTA_TOG_7510_LIONZA
-		
-		add_trait_lustful_effect = yes
-
-		piety = 50
-
-		hidden_tooltip = { unprotected_sex_effect = yes }
-	}
-
-	#Become lovers
-	option = {
-		trigger = { NOT = { is_lover = FROM } }
-		name = EVTOPTB_TOG_7510
-
-		add_lover = FROM
-
-		hidden_tooltip = {
-			unprotected_sex_effect = yes
-
-			if = {
-				limit = { trait = homosexual } 
-				FROM = { add_trait = homosexual }
-			}
-		}
-	}
-
-	#Not that interested
-	option = {
-		name = EVTOPTC_TOG_7510
-		custom_tooltip = { text = EVTOPTC_TOG_7510_TOOLTIP }
-	}	
-
-	after = { clear_event_target = pagan_lover }
-}
+###
 
 #Family is doing well
 character_event = {
@@ -4268,14 +3760,6 @@ character_event = {
 	option = {
 		trigger = { FROM = { has_character_flag = inspiring_tale } }
 		name = {
-			trigger = { has_character_modifier = follower_of_bolivar }
-			text = EVTOPTA_TOG_7515_BOLIVAR
-		}
-		name = {
-			trigger = { has_character_modifier = follower_of_lionza }
-			text = EVTOPTA_TOG_7515_LIONZA
-		}
-		name = {
 			trigger = { has_character_modifier = follower_of_missus_sureshot }
 			text = EVTOPTA_TOG_7515_MISSUS_SURESHOT
 		}
@@ -4303,10 +3787,6 @@ character_event = {
 
 	option = {
 		trigger = { FROM = { has_character_flag = dull_tale } }
-		name = {
-			trigger = { has_character_modifier = follower_of_bello }
-			text = EVTOPTB_TOG_7515_BELLO
-		} 
 		name = {
 			trigger = { has_character_modifier = follower_of_sacagewea }
 			text = EVTOPTB_TOG_7515_SACAGEWEA
@@ -4341,16 +3821,8 @@ character_event = {
 	option = {
 		trigger = { FROM = { has_character_flag = hardening_tale } }
 		name = {
-			trigger = { has_character_modifier = follower_of_gregorio }
-			text = EVTOPTA_TOG_7515_GREGORIO
-		} 
-		name = {
 			trigger = { has_character_modifier = follower_of_serpent }
 			text = EVTOPTA_TOG_7515_SERPENT
-		} 
-		name = {
-			trigger = { has_character_modifier = follower_of_guaicaipuro }
-			text = EVTOPTA_TOG_7515_GUAICAIPURO
 		} 
 
 		FROM = {
@@ -4415,21 +3887,9 @@ character_event = {
 	picture = GFX_evt_viking_battle_oldgods
 	
 	desc = {
-		trigger = { has_character_modifier = follower_of_bolivar }
-		text = EVTDESC_TOG_7516_BOLIVAR
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_felipe }
-		text = EVTDESC_TOG_5716_FELIPE
-	}
-	desc = {
 		trigger = { has_character_modifier = follower_of_missus_sureshot }
 		text = EVTDESC_TOG_7516_MISSUS_SURESHOT
 		picture = GFX_evt_battle
-	}
-	desc = {
-		trigger = { has_character_modifier = follower_of_guaicaipuro }
-		text = EVTDESC_TOG_7516_GUAICAIPURO
 	}
 	desc = {
 		trigger = { has_character_modifier = follower_of_burning_bush }
@@ -4493,10 +3953,6 @@ character_event = {
 		text = EVTDESC_TOG_7518_WHITE_LAMB
 	}
 	desc = {
-		trigger = { has_character_modifier = follower_of_bello }
-		text = EVTDESC_TOG_7518_BELLO
-	}
-	desc = {
 		trigger = { has_character_modifier = follower_of_the_tuatha }
 		text = EVTDESC_TOG_7518_THE_TUATHA
 		picture = GFX_evt_viking_throneroom_oldgods
@@ -4524,13 +3980,6 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { has_character_modifier = follower_of_bello }
-			add_character_modifier = {
-				name = voice_of_bello
-				years = 10
-			}
-		}
-		if = {
 			limit = { has_character_modifier = follower_of_the_tuatha }
 			add_character_modifier = {
 				name = voice_of_the_tuatha
@@ -4547,10 +3996,6 @@ character_event = {
 	border = GFX_event_normal_frame_economy
 	picture = GFX_evt_tribal_lands
 	
-	desc = {
-		trigger = { has_character_modifier = follower_of_lionza }
-		text = EVTDESC_TOG_7520_LIONZA
-	}
 	desc = {
 		trigger = { has_character_modifier = follower_of_sacagewea }
 		text = EVTDESC_TOG_7520_SACAGEWEA
@@ -4709,10 +4154,6 @@ character_event = {
 		text = EVTDESC_TOG_7524_THE_LIGHT
 	}
 	desc = {
-		trigger = { has_character_modifier = follower_of_gregorio }
-		text = EVTDESC_TOG_7524_GREGORIO
-	}
-	desc = {
 		trigger = { has_character_modifier = follower_of_almighty_spirit }
 		text = EVTDESC_TOG_7524_ALMIGHTY_SPIRIT
 	}
@@ -4787,30 +4228,6 @@ character_event = {
 		name = {
 			trigger = { has_character_modifier = follower_of_white_lamb }
 			text = EVTOPTA_TOG_7526_WHITE_LAMB
-		}
-		name = {
-			trigger = { has_character_modifier = follower_of_lionza }
-			text = EVTOPTA_TOG_7526_LIONZA
-		}
-		name = {
-			trigger = { has_character_modifier = follower_of_guaicaipuro }
-			text = EVTOPTA_TOG_7526_GUAICAIPURO
-		}
-		name = {
-			trigger = { has_character_modifier = follower_of_felipe }
-			text = EVTOPTA_TOG_7526_FELIPE
-		}
-		name = {
-			trigger = { has_character_modifier = follower_of_gregorio }
-			text = EVTOPTA_TOG_7526_GREGORIO
-		}
-		name = {
-			trigger = { has_character_modifier = follower_of_bello }
-			text = EVTOPTA_TOG_7526_BELLO
-		}
-		name = {
-			trigger = { has_character_modifier = follower_of_bolivar }
-			text = EVTOPTA_TOG_7526_BOLIVAR
 		}
 		name = {
 			trigger = { has_character_modifier = follower_of_almighty_spirit }
@@ -4933,51 +4350,6 @@ character_event = {
 			has_character_modifier = follower_of_white_lamb 
 		}
 		text = EVTDESC_TOG_7527_WHITE_LAMB
-	}
-	desc = {
-		trigger = { 
-			NOT = { has_character_flag = monument_for_ancestors }
-			has_character_modifier = follower_of_lionza 
-		}
-		text = EVTDESC_TOG_7527_LIONZA
-		picture = GFX_evt_sun_temple
-	}
-	desc = {
-		trigger = { 
-			NOT = { has_character_flag = monument_for_ancestors }
-			has_character_modifier = follower_of_guaicaipuro 
-		}
-		text = EVTDESC_TOG_7527_GUAICAIPURO
-	}
-	desc = {
-		trigger = { 
-			NOT = { has_character_flag = monument_for_ancestors }
-			has_character_modifier = follower_of_felipe 
-		}
-		text = EVTDESC_TOG_7527_FELIPE
-	}
-	desc = {
-		trigger = { 
-			NOT = { has_character_flag = monument_for_ancestors }
-			has_character_modifier = follower_of_gregorio 
-		}
-		text = EVTDESC_TOG_7527_GREGORIO
-	}
-	desc = {
-		trigger = { 
-			NOT = { has_character_flag = monument_for_ancestors }
-			has_character_modifier = follower_of_bello 
-		}
-		text = EVTDESC_TOG_7527_BELLO
-		picture = GFX_evt_sun_temple
-	}
-	desc = {
-		trigger = { 
-			NOT = { has_character_flag = monument_for_ancestors }
-			has_character_modifier = follower_of_bolivar 
-		}
-		text = EVTDESC_TOG_7527_BOLIVAR
-		picture = GFX_evt_sun_temple
 	}
 	desc = {
 		trigger = { 
