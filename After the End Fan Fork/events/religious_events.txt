@@ -4920,42 +4920,42 @@ character_event = {
 }
 
 # Confederated antipope immediately loses claim if he or liege is no longer Confederated
-character_event = {
-	id = 39703
-
-	hide_window = yes
-
-	only_playable = yes
-	
-	trigger = {
-		d_confederated = {
-			any_claimant = {
-				OR = {
-					NOT = { religion = confederated }
-					any_liege = { NOT = { religion = confederated } }
-				}
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		d_confederated = {
-			any_claimant = {
-				limit = {
-					OR = {
-						NOT = { religion = confederated }
-						any_liege = { NOT = { religion = confederated } }
-					}
-				}
-				remove_claim = d_confederated
-			}
-		}
-	}
-}
+#character_event = {
+#	id = 39703
+#
+#	hide_window = yes
+#
+#	only_playable = yes
+#	
+#	trigger = {
+#		d_confederated = {
+#			any_claimant = {
+#				OR = {
+#					NOT = { religion = confederated }
+#					any_liege = { NOT = { religion = confederated } }
+#				}
+#			}
+#		}
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 1
+#	}
+#	
+#	immediate = {
+#		d_confederated = {
+#			any_claimant = {
+#				limit = {
+#					OR = {
+#						NOT = { religion = confederated }
+#						any_liege = { NOT = { religion = confederated } }
+#					}
+#				}
+#				remove_claim = d_confederated
+#			}
+#		}
+#	}
+#}
 
 # Anglican antipope immediately loses claim if he or liege is no longer Anglican
 character_event = {

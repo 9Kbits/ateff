@@ -4021,13 +4021,6 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { confederated = { has_religion_feature = religion_cosmopolitan } }
-			random_playable_ruler = {
-				limit = { religion = confederated }
-				apply_cosmopolian_on_start_effect = yes
-			}
-		}
-		if = {
 			limit = { anabaptist = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = anabaptist }
@@ -4563,13 +4556,6 @@ character_event = {
 			limit = { angeline = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = angeline }
-				apply_dogmatic_on_start_effect = yes
-			}
-		}
-		if = {
-			limit = { confederated = { has_religion_feature = religion_dogmatic } }
-			random_playable_ruler = {
-				limit = { religion = confederated }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}

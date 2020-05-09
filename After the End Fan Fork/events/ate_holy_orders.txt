@@ -569,73 +569,7 @@ narrative_event = {
 # National Cathedral Association becomes a Chivalric Order (now covered via decision)
 
 # Formation of the United Empire Loyalists
-narrative_event = {
-	id = holyorder.9
-	title = "EVTNAME_UEL_creation"
-	desc = "EVTDESC_UEL_creation"
-	picture = "GFX_evt_crusaders"
-	border = "GFX_event_narrative_frame_religion"
-	
-	major = yes
-	only_playable = yes
-	only_men = yes
-	religion = confederated
-	
-	trigger = {
-		NOT = { #immersion-breaking
-			has_alternate_start_parameter = { key = religion_names value = random }
-		}
-
-		is_heretic = no
-		
-		NOT = { is_title_active = d_uel }
-		
-		1271 = { # Toronto
-			owner = { religion = confederated }
-		}
-	}
-	
-	mean_time_to_happen = {
-		months = 4
-	}
-	
-	immediate = {
-		activate_title = { title = d_uel status = yes }
-		create_character = {
-			dynasty = none
-			random_traits = yes
-			religion = confederated
-			culture = ontarian
-			female = no
-		}
-		new_character = {
-			character_event = { id = misc.3 } # Diversity
-			character_event = { id = misc.4 } # Physique
-			d_uel = {
-				grant_title = PREV
-			}
-			set_defacto_liege = THIS
-			wealth = 500
-		}
-		
-		religion_authority = {
-			modifier = religious_order_formed
-			years = 10
-		}
-	}
-	option = {
-		name = "EVTOPTA_UEL_creation"
-		trigger = {
-			religion = confederated
-		}
-	}
-	option = {
-		name = "EVTOPTB_UEL_creation"
-		trigger = {
-			NOT = { religion = confederated }
-		}
-	}
-}
+#deleted 
 
 #Formation of the Shomrim
 narrative_event = {

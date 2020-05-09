@@ -41,12 +41,10 @@ deciding_upon_saint_effect = {
 				has_landed_title = k_papal_state
 				has_landed_title = k_ursuline
 				has_landed_title = d_nestorian
-				has_landed_title = d_confederated
 				has_landed_title = d_high_church
 				any_claim = { title = k_papal_state }
 				any_claim = { title = k_ursuline }
 				any_claim = { title = d_nestorian }
-				any_claim = { title = d_confederated }
 				any_claim = { title = d_high_church }
 			}
 		}
@@ -67,9 +65,6 @@ deciding_upon_saint_effect = {
 					}
 					event_target:saint_person = {
 						religion = ursuline
-					}
-					event_target:saint_person = {
-						religion = confederated
 					}
 					event_target:saint_person = {
 						religion = high_church
@@ -141,9 +136,6 @@ deciding_upon_saint_effect = {
 				}
 				event_target:saint_person = {
 					religion = bickertonite
-				}
-				event_target:saint_person = {
-					religion = confederated
 				}
 			}
 		}
@@ -345,12 +337,6 @@ deciding_upon_saint_effect = {
 					}
 				}
 				AND = {
-					religion = confederated
-					NOT = {
-						has_global_flag = confederated_saint
-					}
-				}
-				AND = {
 					religion = high_church
 					NOT = {
 						has_global_flag = high_church_saint
@@ -392,7 +378,6 @@ deciding_upon_saint_effect = {
 			nestorian = { set_global_flag = nestorian_saint }
 			evangelical = { set_global_flag = evangelical_saint }
 			ursuline = { set_global_flag = ursuline_saint }
-			confederated = { set_global_flag = confederated_saint }
 			high_church = { set_global_flag = high_church_saint }
 			mormon = { set_global_flag = mormon_saint }
 			woolleyite = { set_global_flag = woolleyite_saint }

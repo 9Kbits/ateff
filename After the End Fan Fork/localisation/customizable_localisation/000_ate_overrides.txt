@@ -5447,12 +5447,6 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			religion = confederated
-		}
-		localisation_key = Holy_Order_Confederated
-	}
-	text = {
-		trigger = {
 			religion = sacred_heart
 		}
 		localisation_key = Holy_Order_Sacred_Heart
@@ -6809,15 +6803,6 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = GetReligiousCommunityName_confederated
-	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_confederated
-	}
-	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_confederated
-	}
-}
-defined_text = {
 	name = GetReligiousCommunityName_falling_star
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_name_falling_star
@@ -7608,17 +7593,6 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_nonconformist_desc_REAL
-	}
-}
-defined_text = {
-	name = GetReligiousSocietyDesc_confederated
-	text = {
-		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_desc
-	}
-	text = {
-		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_confederated_desc_REAL
 	}
 }
 defined_text = {

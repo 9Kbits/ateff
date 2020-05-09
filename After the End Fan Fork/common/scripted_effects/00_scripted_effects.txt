@@ -9778,22 +9778,6 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
-					religion = confederated
-				}
-				has_character_flag = character_was_confederated
-			}
-		}
-		set_secret_religion = confederated
-		clr_character_flag = character_was_confederated
-		break = yes
-	}
-	if = {
-		limit = {
-			OR = {
-				AND = {
-					NOT = {
-						has_character_was_religion_flag_trigger = yes
-					}
 					religion = anabaptist
 				}
 				has_character_flag = character_was_anabaptist
@@ -10943,10 +10927,6 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_angeline
 	}
 	if = {
-		limit = { religion = confederated }
-		set_character_flag = character_was_confederated
-	}
-	if = {
 		limit = { religion = anabaptist }
 		set_character_flag = character_was_anabaptist
 	}
@@ -11232,7 +11212,6 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_sedevacantist
 	clr_character_flag = character_was_ursuline
 	clr_character_flag = character_was_angeline
-	clr_character_flag = character_was_confederated
 	clr_character_flag = character_was_anabaptist
 	clr_character_flag = character_was_batenburger
 	clr_character_flag = character_was_evangelical
@@ -11419,13 +11398,6 @@ event_target_old_religion_from_flag_effect = {
 		limit = { has_character_flag = character_was_angeline }
 		random_character = {
 			limit = { religion = angeline }
-			save_event_target_as = old_religion
-		}
-	}
-	if = {
-		limit = { has_character_flag = character_was_confederated }
-		random_character = {
-			limit = { religion = confederated }
 			save_event_target_as = old_religion
 		}
 	}
@@ -12019,7 +11991,6 @@ increase_visibility_minor_effect = {
 					OR = {
 						religion = catholic
 						religion = ursuline
-						religion = confederated
 						religion = evangelical
 						religion = high_church
 						religion = mormon
@@ -13547,17 +13518,6 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = angeline
 					remove_province_modifier = secret_angeline_community
-				}
-			}
-		}
-		secret_religious_society_confederated = {
-			ROOT = {
-				any_demesne_province = {
-					limit = {
-						has_province_modifier = secret_confederated_community
-					}
-					religion = confederated
-					remove_province_modifier = secret_confederated_community
 				}
 			}
 		}
@@ -18285,17 +18245,6 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = angeline
 						remove_province_modifier = secret_angeline_community
-					}
-				}
-			}
-			secret_religious_society_confederated = { 
-				PREV = {
-					any_demesne_province = {
-						limit = {
-							has_province_modifier = secret_confederated_community
-						}
-						religion = confederated
-						remove_province_modifier = secret_confederated_community
 					}
 				}
 			}
@@ -30656,19 +30605,19 @@ abdicate_holy_order_if_religion_changes_effect = { #why. why did you add this ef
 		}
 	}
 
-	d_uel = {
-		if = {
-			limit = {
-				is_title_active = d_uel
-				owner = { 
-					ai = yes
-					holy_order = yes 
-					NOT = { religion = confederated } 
-				}
-			}
-			log = "[d_uel.owner.GetTitledFirstName] was found to be unfit to lead the [d_uel.GetName] and therefore removed by the abdicate holy order effect!"
-		}
-	}
+	#d_uel = {
+	#	if = {
+	#		limit = {
+	#			is_title_active = d_uel
+	#			owner = { 
+	#				ai = yes
+	#				holy_order = yes 
+	#				NOT = { religion = confederated } 
+	#			}
+	#		}
+	#		log = "[d_uel.owner.GetTitledFirstName] was found to be unfit to lead the [d_uel.GetName] and therefore removed by the abdicate holy order effect!"
+	#	}
+	#}
 
 	d_flaming_sword = {
 		if = {
