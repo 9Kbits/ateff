@@ -145,3 +145,39 @@ decisions = {
 		}
 	}
 }
+targetted_decisions={
+	only_playable = yes
+	is_high_prio = yes
+	
+	patria_no_fault_divorce = {
+		from_potential = {
+			religion = patria_grande
+			trait = patria_manuelita
+		}
+		
+		potential = {
+			spouse = {
+				character = FROM
+			}
+		}
+		
+		allow = {
+			piety = 25
+		}
+		
+		effect = {
+			piety = -25
+			custom_tooltip = { text = TXT_patria_no_fault_divorce }
+				hidden_tooltip = {
+					ROOT = {
+					opinion = {
+						modifier = opinion_furious
+						who = FROM
+						years = 10
+					}
+				}
+				remove_spouse = spouse
+			}
+		}
+	}
+}

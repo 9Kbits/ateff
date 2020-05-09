@@ -3132,6 +3132,7 @@ invasion = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -3529,6 +3530,7 @@ tribal_invasion = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -5670,6 +5672,7 @@ religious = {
 	can_use_gui = {
 		ROOT = {
 			NOT = { religion = cetic }
+			NOT = { trait = patria_santander }
 			OR = {
 				NOT = { has_character_modifier = holy_war_cooldown }
 				has_game_rule = { name = holy_war_cooldown_rule value = off }
@@ -6168,6 +6171,7 @@ religious = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -9296,6 +9300,7 @@ embargo_cb = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -9497,6 +9502,7 @@ seize_trade_post = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -9806,6 +9812,7 @@ pagan_subjugation = {
 						religion_group = oldworld
 						religion = midewiwin
 						religion = raven_tales
+						trait = patria_bolivar
 					}
 					is_tribal = yes
 				}
@@ -9880,6 +9887,7 @@ pagan_subjugation = {
 						religion = midewiwin
 						religion_group = oldworld
 						religion = raven_tales
+						trait = patria_bolivar
 					}
 				}
 				FROM = {
@@ -9890,6 +9898,7 @@ pagan_subjugation = {
 							religion = midewiwin
 							religion_group = oldworld
 							religion = raven_tales
+							trait = patria_bolivar
 						}
 						is_tribal = yes
 					}
@@ -9898,6 +9907,7 @@ pagan_subjugation = {
 							defender = { character = PREVPREV }
 							OR = {
 								using_cb = pagan_subjugation
+								using_cb = patria_subjugation
 								using_cb = nomad_subjugation
 							}
 						}
@@ -10056,6 +10066,7 @@ pagan_subjugation = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -12609,6 +12620,7 @@ dejure_county_claim = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -14756,6 +14768,7 @@ tributary_cb = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -15154,6 +15167,7 @@ free_tributary_cb = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -15475,6 +15489,7 @@ nomad_dispute = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest
@@ -15712,6 +15727,7 @@ cb_liberate_nomad_duchy = {
 					religion = catholic
 					religion = ursuline
 					religion = mormon
+					religion = high_church
 				}
 				NOR = {
 					trait = crowned_by_priest

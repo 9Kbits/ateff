@@ -1370,6 +1370,18 @@ character_event = {
 	immediate = {
 		random_list = {
 			50 = {
+				modifier = {
+					factor = 0 
+					NOR = {
+						has_artifact = ate_firearm
+						has_artifact = brazilian_firearm
+						has_artifact = sitting_bull_rifle
+						has_artifact = ate_fastest_gun
+					}
+				}
+				character_event = { id = salvage.130 }
+			}
+			50 = {
 				modifier = { factor = 0 NOT = { has_artifact = ate_typewriter } }
 				character_event = { id = salvage.131 }
 			}
@@ -1436,7 +1448,14 @@ narrative_event = {
 	desc = EVTDESC_firearm_battle
 	picture = GFX_evt_viking_battle_oldgods
 	
-	trigger = { has_artifact = ate_firearm }
+	trigger = {
+		OR = {
+			has_artifact = ate_firearm
+			has_artifact = brazilian_firearm
+			has_artifact = sitting_bull_rifle
+			has_artifact = ate_fastest_gun
+		}
+	}
 	
 	option = {
 		name = EVTOPT_firearm_battle_fire

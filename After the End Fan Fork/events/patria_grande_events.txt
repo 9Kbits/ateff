@@ -22,18 +22,7 @@ character_event = {
 			remove_trait = patria_manuelita
 			remove_trait = patria_santander
 		}
-		if = {
-			limit = {
-				ai = yes
-			}
-			add_trait = patria_santander
-		}
-		else_if = {
-			limit = {
-				ai = no
-			}
-			character_event = { id = patria.4 }
-		}
+		character_event = { id = patria.4 }
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 2 trait = patria_santander }
@@ -54,18 +43,7 @@ character_event = {
 			remove_trait = patria_manuelita
 			remove_trait = patria_bolivar
 		}
-		if = {
-			limit = {
-				ai = yes
-			}
-			add_trait = patria_bolivar
-		}
-		else_if = {
-			limit = {
-				ai = no
-			}
-			character_event = { id = patria.5 }
-		}
+		character_event = { id = patria.5 }
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 2 trait = patria_bolivar }
@@ -88,18 +66,7 @@ character_event = {
 			remove_trait = patria_santander
 			remove_trait = patria_manuelita
 		}
-		if = {
-			limit = {
-				ai = yes
-			}
-			add_trait = patria_manuelita
-		}
-		else_if = {
-			limit = {
-				ai = no
-			}
-			character_event = { id = patria.6 }
-		}
+		character_event = { id = patria.6 }
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 2 trait = patria_manuelita }
@@ -202,6 +169,29 @@ character_event = {
 	option = {
 		name = EVTOPT_patria_santander
 		add_trait = patria_santander
+		if = {
+			limit = {
+				is_feudal = yes
+				holy_order = no
+			}
+			primary_title = {
+				revoke_law = succ_gavelkind
+				revoke_law = succ_elective_gavelkind
+				revoke_law = succ_eldership
+				revoke_law = succ_seniority
+				revoke_law = succ_primogeniture
+				revoke_law = succ_feudal_elective
+				revoke_law = succ_hre_elective
+				revoke_law = succ_byzantine_elective
+				revoke_law = succ_mormon_elective
+				revoke_law = succ_ghazi_elective
+				revoke_law = succ_bureaucratic_elective
+				revoke_law = succ_tanistry
+				revoke_law = succ_ultimogeniture
+				revoke_law = succ_turkish_succession
+				add_law = succ_primogeniture
+			}
+		}
 	}
 }
 
@@ -215,6 +205,29 @@ character_event = {
 	option = {
 		name = EVTOPT_patria_bolivar
 		add_trait = patria_bolivar
+		if = {
+			limit = {
+				is_feudal = yes
+				holy_order = no
+			}
+			primary_title = {
+				revoke_law = succ_gavelkind
+				revoke_law = succ_elective_gavelkind
+				revoke_law = succ_eldership
+				revoke_law = succ_seniority
+				revoke_law = succ_primogeniture
+				revoke_law = succ_feudal_elective
+				revoke_law = succ_hre_elective
+				revoke_law = succ_byzantine_elective
+				revoke_law = succ_mormon_elective
+				revoke_law = succ_ghazi_elective
+				revoke_law = succ_bureaucratic_elective
+				revoke_law = succ_tanistry
+				revoke_law = succ_ultimogeniture
+				revoke_law = succ_turkish_succession
+				add_law = succ_gavelkind
+			}
+		}
 	}
 }
 
@@ -228,6 +241,29 @@ character_event = {
 	option = {
 		name = EVTOPT_patria_manuelita
 		add_trait = patria_manuelita
+		if = {
+			limit = {
+				is_feudal = yes
+				holy_order = no
+			}
+			primary_title = {
+				revoke_law = succ_gavelkind
+				revoke_law = succ_elective_gavelkind
+				revoke_law = succ_eldership
+				revoke_law = succ_seniority
+				revoke_law = succ_primogeniture
+				revoke_law = succ_feudal_elective
+				revoke_law = succ_hre_elective
+				revoke_law = succ_byzantine_elective
+				revoke_law = succ_mormon_elective
+				revoke_law = succ_ghazi_elective
+				revoke_law = succ_bureaucratic_elective
+				revoke_law = succ_tanistry
+				revoke_law = succ_ultimogeniture
+				revoke_law = succ_turkish_succession
+				add_law = succ_feudal_elective
+			}
+		}
 	}
 }
 

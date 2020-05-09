@@ -136,6 +136,7 @@ succession_laws = {
 				holder_scope = { is_feudal = yes }
 				holder_scope = { is_tribal = yes }
 			}
+			
 			is_primary_type_title = no
 			NOT = { title = d_confederated }
 		}
@@ -154,7 +155,6 @@ succession_laws = {
 								religion = thelemic
 								religion = celtic_pagan
 								religion = aria_de_machete
-								religion = espiritista
 								religion = midewiwin
 								religion = raven_tales
 								religion = pagan
@@ -195,6 +195,21 @@ succession_laws = {
 					}
 				}
 
+			}
+			holder_scope = {
+				OR = {
+					AND = {
+						is_tribal = yes
+						religion = patria_grande
+					}
+					AND = {
+						is_tribal = no
+						religion = patria_grande
+						trait = patria_bolivar
+						NOT = { trait = patria_santander }
+						NOT = { trait = patria_manuelita }
+					}
+				}
 			}
 			conditional_tooltip = {
 				trigger = {
@@ -264,6 +279,21 @@ succession_laws = {
 					}
 				}
 			}
+			holder_scope = {
+				OR = {
+					AND = {
+						is_tribal = yes
+						religion = patria_grande
+					}
+					AND = {
+						is_tribal = no
+						religion = patria_grande
+						trait = patria_bolivar
+						NOT = { trait = patria_santander }
+						NOT = { trait = patria_manuelita }
+					}
+				}
+			}
 			OR = {
 				NAND = {
 					is_landless_type_title = no
@@ -281,6 +311,7 @@ succession_laws = {
 			}
 			is_primary_type_title = no
 			NOT = { title = d_confederated }
+
 			NOT = { holder_scope = { government = military_governorate } }
 			#NOT = { holder_scope = { government = military_governorate } }
 		}
@@ -425,6 +456,7 @@ succession_laws = {
 			}
 			is_primary_type_title = no
 			NOT = { title = d_confederated }
+			
 			NOT = { holder_scope = { government = military_governorate } }
 			#NOT = { holder_scope = { government = military_governorate } }
 		}
@@ -530,6 +562,12 @@ succession_laws = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
 					NOT = { religion = raven_tales }
+					AND = {
+						religion = patria_grande
+						NOT = { trait = patria_bolivar }
+						NOT = { trait = patria_manuelita }
+						trait = patria_santander
+					}
 					is_reformed_religion = yes
 					is_patrician = yes
 				}
@@ -570,7 +608,6 @@ succession_laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			
 			NOT = { holder_scope = { government = military_governorate } }
 		}
 		
@@ -722,7 +759,12 @@ succession_laws = {
 							}
 							NOT = { religion = midewiwin }
 							NOT = { religion = raven_tales }
-							NOT = { religion = espiritista }
+							AND = {
+								religion = patria_grande
+								NOT = { trait = patria_bolivar }
+								NOT = { trait = patria_manuelita }
+								trait = patria_santander
+							}
 							is_reformed_religion = yes
 						}
 					}
@@ -918,6 +960,12 @@ succession_laws = {
 					} 
 					ROOT = {
 						has_title_flag = alternate_hre
+					}
+					AND = {
+						religion = patria_grande
+						trait = patria_manuelita
+						NOT = { trait = patria_santander }
+						NOT = { trait = patria_bolivar }
 					}
 				}
 				OR = {
@@ -1468,8 +1516,13 @@ succession_laws = {
 						NOT = { religion = pagan }
 						NOT = { religion = celtic_pagan }
 						NOT = { religion = aria_de_machete }
-						NOT = { religion = espiritista }
 						NOT = { religion = trailwalker }
+						AND = {
+							religion = patria_grande
+							NOT = { trait = patria_bolivar }
+							NOT = { trait = patria_manuelita }
+							trait = patria_santander
+						}
 					}
 				}
 				
