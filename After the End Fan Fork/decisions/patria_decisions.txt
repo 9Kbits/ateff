@@ -146,11 +146,11 @@ decisions = {
 		}
 	}
 }
-targetted_decisions={
-	only_playable = yes
-	is_high_prio = yes
-	
+targeted_decisions={
 	patria_no_fault_divorce = {
+		only_playable = yes
+		is_high_prio = yes
+		
 		from_potential = {
 			religion = patria_grande
 			trait = patria_manuelita
@@ -180,5 +180,7 @@ targetted_decisions={
 				remove_spouse = spouse
 			}
 		}
+		
+		revoke_allowed = { always = no }
 	}
 }
