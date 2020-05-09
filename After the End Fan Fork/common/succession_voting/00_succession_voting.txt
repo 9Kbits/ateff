@@ -1780,6 +1780,24 @@ feudal_elective = {
 		}
 		additive_modifier = {
 			value = -5
+			localisation_key = tooltip_feudal_elector_vote_distractible
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = no
+			FROM = { 
+				trait = distractible
+			}
+		}
+		additive_modifier = {
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_slow_distractible
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = yes
+			FROM = { 
+				trait = distractible
+			}
+		}
+		additive_modifier = {
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_stutter
 			NOT = { character = FROM } #Do not judge yourself.
 			FROM = { 
@@ -5233,6 +5251,24 @@ tanistry = {
 		}
 		additive_modifier = {
 			value = -5
+			localisation_key = tooltip_feudal_elector_vote_distractible
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = no
+			FROM = { 
+				trait = distractible
+			}
+		}
+		additive_modifier = {
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_distractible_diplomat
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = yes
+			FROM = { 
+				trait = distractible
+			}
+		}
+		additive_modifier = {
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_stutter
 			NOT = { character = FROM } #Do not judge yourself.
 			FROM = { 
@@ -8668,6 +8704,24 @@ elective_gavelkind = {
 			this_is_diplomatic_culture_trigger = yes
 			FROM = { 
 				trait = slow
+			}
+		}
+		additive_modifier = {
+			value = -5
+			localisation_key = tooltip_feudal_elector_vote_distractible
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = no
+			FROM = { 
+				trait = distractible
+			}
+		}
+		additive_modifier = {
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_distractible_diplomat
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = yes
+			FROM = { 
+				trait = distractible
 			}
 		}
 		additive_modifier = {
@@ -12181,6 +12235,30 @@ eldership_rules = {
 		}
 		additive_modifier = {
 			value = -5
+			localisation_key = tooltip_feudal_elector_vote_distractible
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = no
+			FROM = { 
+				trait = distractible
+			}
+			FROMFROM = { 
+				holder_scope = { character = ROOT } 
+			}
+		}
+		additive_modifier = {
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_distractible_diplomat
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = yes
+			FROM = { 
+				trait = distractible
+			}
+			FROMFROM = { 
+				holder_scope = { character = ROOT } 
+			}
+		}
+		additive_modifier = {
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_stutter
 			NOT = { character = FROM } #Do not judge yourself.
 			FROM = { 
@@ -15397,6 +15475,26 @@ eldership_rules = {
 			this_is_diplomatic_culture_trigger = yes
 			FROM = { 
 				trait = slow
+			}
+			has_elector_stance = { stance = elder_pleased title = FROMFROM }
+		}
+		additive_modifier = {
+			value = -5
+			localisation_key = tooltip_feudal_elector_vote_distractible
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = no
+			FROM = { 
+				trait = distractible
+			}
+			has_elector_stance = { stance = elder_pleased title = FROMFROM }
+		}
+		additive_modifier = {
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_distractible_diplomat
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = yes
+			FROM = { 
+				trait = distractible
 			}
 			has_elector_stance = { stance = elder_pleased title = FROMFROM }
 		}

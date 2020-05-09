@@ -1181,6 +1181,15 @@ calculate_candidate_score = {
 		
 		NOT = { character = event_target:new_candidate } 
 		event_target:new_candidate = { 
+			trait = distractible
+		}
+		} change_variable = { which = newCandidate value = -10 } }
+	if = { 
+		
+		limit = {
+		
+		NOT = { character = event_target:new_candidate } 
+		event_target:new_candidate = { 
 			trait = stutter
 		}
 		} change_variable = { which = newCandidate value = -5 } }

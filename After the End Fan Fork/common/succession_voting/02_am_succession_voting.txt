@@ -1189,6 +1189,14 @@ presidential_elective = {
 		}
 		additive_modifier = {
 			value = -5
+			localisation_key = tooltip_feudal_elector_vote_distractible
+			NOT = { character = FROM } 
+			FROM = { 
+				trait = distractible
+			}
+		}
+		additive_modifier = {
+			value = -5
 			localisation_key = tooltip_feudal_elector_vote_stutter
 			NOT = { character = FROM } 
 			FROM = { 

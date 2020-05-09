@@ -1994,6 +1994,24 @@ bureaucratic_elective = {
 			}
 		}
 		additive_modifier = {
+			value = -5
+			localisation_key = tooltip_feudal_elector_vote_distractible
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = no
+			FROM = { 
+				trait = distractible
+			}
+		}
+		additive_modifier = {
+			value = -10
+			localisation_key = tooltip_feudal_elector_vote_distractible_diplomat
+			NOT = { character = FROM } #Do not judge yourself.
+			this_is_diplomatic_culture_trigger = yes
+			FROM = { 
+				trait = distractible
+			}
+		}
+		additive_modifier = {
 			value = -15
 			localisation_key = tooltip_feudal_elector_vote_stutter
 			NOT = { character = FROM } #Do not judge yourself.

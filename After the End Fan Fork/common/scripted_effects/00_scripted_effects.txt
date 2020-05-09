@@ -4929,6 +4929,13 @@ remove_random_negative_congenital_effect = {
 		}
 		10 = {
 			modifier = {
+				NOT = { trait = distractible }
+				factor = 0
+			}
+			remove_trait = distractible
+		}
+		10 = {
+			modifier = {
 				NOT = { trait = slow }
 				factor = 0
 			}
@@ -4990,6 +4997,10 @@ remove_all_negative_congenital_traits_effect = {
 	if = {
 		limit = { trait = lisp }
 		remove_trait = lisp
+	}
+	if = {
+		limit = { trait = distractible }
+		remove_trait = distractible
 	}
 	if = {
 		limit = { trait = slow }
@@ -14602,6 +14613,7 @@ spawn_good_commander_effect = {
 		remove_trait = weak
 		remove_trait = slow
 		remove_trait = imbecile
+		remove_trait = distractible
 		remove_trait = dull
 		
 		remove_trait = mystic
@@ -14740,6 +14752,7 @@ spawn_great_commander_effect = {
 		remove_trait = weak
 		remove_trait = slow
 		remove_trait = imbecile
+		remove_trait = distractible
 		remove_trait = dull
 		remove_trait = dwarf
 		remove_trait = giant
@@ -14935,6 +14948,7 @@ spawn_fantastic_commander_effect = {
 		remove_trait = weak
 		remove_trait = slow
 		remove_trait = imbecile
+		remove_trait = distractible
 		remove_trait = dull
 		remove_trait = dwarf
 		remove_trait = giant
@@ -15240,6 +15254,7 @@ spawn_fantastic_diplomat_effect = {
 		remove_trait = weak
 		remove_trait = slow
 		remove_trait = imbecile
+		remove_trait = distractible
 		remove_trait = dull
 		remove_trait = dwarf
 		remove_trait = giant
@@ -15377,6 +15392,7 @@ spawn_fantastic_scholar_effect = {
 		remove_trait = weak
 		remove_trait = slow
 		remove_trait = imbecile
+		remove_trait = distractible
 		remove_trait = dull
 		remove_trait = dwarf
 		remove_trait = giant
@@ -15533,6 +15549,7 @@ spawn_elder_effect = {
 		remove_trait = weak
 		remove_trait = slow
 		remove_trait = imbecile
+		remove_trait = distractible
 		remove_trait = dull
 		remove_trait = dwarf
 		remove_trait = giant
@@ -20777,6 +20794,10 @@ troubled_pregnancy_variable_easy_effect = {
 			persistent_event_target:pregnancy_spouse_physician_per = { trait = slow }
 		}
 		modifier = { 
+			factor = 0.9
+			persistent_event_target:pregnancy_spouse_physician_per = { trait = distractible }
+		}
+		modifier = { 
 			factor = 0.8
 			persistent_event_target:pregnancy_spouse_physician_per = { trait = imbecile }
 		}
@@ -21040,6 +21061,10 @@ troubled_pregnancy_variable_hard_effect = {
 			persistent_event_target:pregnancy_mother_physician_per = { trait = imbecile }
 		}
 		modifier = { 
+			factor = 0.8
+			persistent_event_target:pregnancy_mother_physician_per = { trait = distractible }
+		}
+		modifier = { 
 			factor = 1.25
 			persistent_event_target:pregnancy_mother_physician_per = { trait = scholar }
 		}
@@ -21086,6 +21111,10 @@ troubled_pregnancy_variable_hard_effect = {
 		modifier = { 
 			factor = 0.8
 			persistent_event_target:pregnancy_spouse_physician_per = { trait = imbecile }
+		}
+		modifier = { 
+			factor = 0.8
+			persistent_event_target:pregnancy_spouse_physician_per = { trait = distractible }
 		}
 		modifier = { 
 			factor = 1.25
@@ -25884,6 +25913,12 @@ stable_attribute_improvement_effect = {
 							}
 						}
 						modifier = { 
+							factor = 1.25
+							event_target:scoped_improvement_ruler = { 
+								trait = distractible
+							}
+						}
+						modifier = { 
 							factor = 1.5
 							event_target:scoped_improvement_ruler = { 
 								trait = imbecile
@@ -26079,6 +26114,12 @@ stable_attribute_improvement_effect = {
 							}
 						}
 						modifier = { 
+							factor = 1.25
+							event_target:scoped_improvement_ruler = { 
+								trait = distractible
+							}
+						}
+						modifier = { 
 							factor = 1.5
 							event_target:scoped_improvement_ruler = { 
 								trait = imbecile
@@ -26271,6 +26312,12 @@ stable_attribute_improvement_effect = {
 							factor = 1.25
 							event_target:scoped_improvement_ruler = { 
 								trait = slow
+							}
+						}
+						modifier = { 
+							factor = 1.25
+							event_target:scoped_improvement_ruler = { 
+								trait = distractible
 							}
 						}
 						modifier = { 
@@ -26472,6 +26519,12 @@ stable_attribute_improvement_effect = {
 							factor = 1.25
 							event_target:scoped_improvement_ruler = { 
 								trait = slow
+							}
+						}
+						modifier = { 
+							factor = 1.25
+							event_target:scoped_improvement_ruler = { 
+								trait = distractible
 							}
 						}
 						modifier = { 
@@ -30354,14 +30407,13 @@ assign_random_nickname_effect = {
 					trait = slow
 				}
 			}
-			random_list = {
-				10 = {
-					give_nickname = nick_the_thin_minded
-				}
-				10 = {
-					give_nickname = nick_the_forgetful
-				}
+			give_nickname = nick_the_thin_minded
+		}
+		10 = {
+			trigger = {
+				trait = distractible
 			}
+			give_nickname = nick_the_forgetful
 		}
 		10 = {
 			give_nickname = nick_the_messy 

@@ -256,6 +256,15 @@ character_event = {
 			}
 			add_trait = fair
 		}
+		if = {
+			limit = {
+				FROM = {
+					trait = distractible
+				}
+				NOT = { trait = distractible }
+			}
+			add_trait = distractible
+		}
 		
 		### Personality traits - Sins and virtues
 		if = {

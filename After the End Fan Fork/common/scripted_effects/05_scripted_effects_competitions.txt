@@ -9314,6 +9314,10 @@ set_flyting_patience_effect = {
 				change_variable = { which = "flything_patience" value = -1 }
 			}
 			if = {
+				limit = { trait = distractible }
+				change_variable = { which = "flything_patience" value = -1 }
+			}
+			if = {
 				limit = { trait = quick }
 				change_variable = { which = "flything_patience" value = 2 }
 			}
@@ -9429,6 +9433,10 @@ set_flyting_patience_effect = {
 				}
 				if = {
 					limit = { trait = slow }
+					change_variable = { which = "flything_patience" value = -1 }
+				}
+				if = {
+					limit = { trait = distractible }
 					change_variable = { which = "flything_patience" value = -1 }
 				}
 				if = {
