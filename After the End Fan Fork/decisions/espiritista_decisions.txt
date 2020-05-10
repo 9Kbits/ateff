@@ -3,6 +3,7 @@ decisions = {
 		only_playable = yes
 		only_capable = yes
 		is_high_prio = yes
+		ai_check_interval = 36
 		
 		potential = {
 			is_playable = yes
@@ -40,6 +41,7 @@ decisions = {
 		only_playable = yes
 		only_capable = yes
 		is_high_prio = yes
+		ai_check_interval = 36
 		
 		potential = {
 			is_playable = yes
@@ -89,5 +91,37 @@ decisions = {
 		}
 		
 		revoke_allowed = { always = no }
+	}
+	
+	espiritista_syncretize = {
+		only_playable = yes
+		only_capable = yes
+		is_high_prio = yes
+		ai_check_interval = 36
+		
+		potential = {
+			is_playable = yes
+			religion = espiritista
+			age = 16
+			war = no
+			prisoner = no
+			NOT = { is_incapable = yes }
+			NOR = {
+				trait = sympathy_christendom
+				trait = sympathy_cult_of_saints
+				trait = sympathy_pagans
+			}
+		}
+		
+		allow = {
+			piety = 50
+			NOT = { trait = zealous }
+		}
+		
+		effect = {
+			piety = -50
+			custom_tooltip = { text = TXT_espiritista_syncretize }
+			hidden_tooltip = { character_event = { id = lionza.30 } }
+		}
 	}
 }
