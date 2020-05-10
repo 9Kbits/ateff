@@ -4,7 +4,7 @@ eastern_woodlands = {
 	graphical_cultures = { northernnativegfx nativeamericangfx muslimgfx }
 	
 	cherokee = {
-		graphical_cultures = { cherokeegfx nativeamericangfx }
+		graphical_cultures = { nativeamericangfx }
 
 		color = { 0.8 0.85 0.8 }
 
@@ -65,7 +65,7 @@ eastern_woodlands = {
 	}
 	
 	muscogee = {
-		graphical_cultures = { cherokeegfx nativeamericangfx }
+		graphical_cultures = { nativeamericangfx }
 		
 		color = { 0.5 0.80 0.70 }
 
@@ -128,6 +128,43 @@ eastern_woodlands = {
 		mother_name_chance = 40
 		
 		feminist = yes
+		modifier = default_culture_modifier
+	}
+	
+	catawba = {
+		graphical_cultures = { cherokeegfx nativeamericangfx } #this graphical culture is now misnamed! wonderful
+
+		color = { 0.55 0.65 0.95 }
+
+		male_names = {
+			Arataswa Austugah Caygaywachepeche Charles Consau Couchestawasta Eno Essetaswa
+			Frow Gipson Gradamnsa Handehu Harachabe Harry Hixauraw Hixaycura Honencache Hurate
+			Iscountgonita Issac_Issac Jack_John Jacob Jaimy_James James_James Jeffers Jemmy_James Jimmy_James Jin_John Joe_Joseph John_John Kemanha
+			"Little River" Mahsa Mekewatanega Nafkebee Nangawahaegea Ned Nekaghre Nelson Nichumali Nopkehee
+			Oroloswa Osogahe Otano Ozato Ozusta Pahelagren Papuisea Pedehog Pickahasakehe Pickahassakehe
+			Prenchee Prow Qhihiramaki Robert_Robert Samuel_Samuel Simon_Peter Tavoingare Tawangahuh Teshuhimga Thomas_Thomas Thusawontsee
+			Tom_Thomas Topsonhagrew Touksecay Uraw Voichinodhe Voinache Voinonpache Voithechinga Voithevoihe
+			Wanougpacha Wasabatougga Whitmannetaughehee Wichmetanche Wickmaunatanchee William_William Willmannantamghkee
+			Yalangway Yanabe Zachary_Zachary Idle
+		}
+		
+		female_names = {
+			Egraname Jenny_Jennifer Mary_Mary Misae Niabi Sallie_Sally Sapona Sekaname Shonsegra Wakonsamoie Watoesa Anne_Anne Susan_Susan Pollie Margaret_Margaret
+			Fannie Nora Ethel Rebecca_Rebecca Artemis Carrie Edna Alice Mable Effie Pearly Lizzie_Elizabeth Rachel_Rachel Nancy_Rachel Martha Isabelle_Elizabeth Nettie Arzada
+			Cora Minnie
+		}
+
+		founder_named_dynasties = yes
+
+		pat_grf_name_chance = 50
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+
+		pat_grm_name_chance = 25
+		mat_grm_name_chance = 25
+		mother_name_chance = 0
+
 		modifier = default_culture_modifier
 	}
 }
