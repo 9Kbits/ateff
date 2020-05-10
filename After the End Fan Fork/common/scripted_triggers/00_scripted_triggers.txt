@@ -2364,8 +2364,8 @@ true_religion_sol_invicta_trigger = {
 true_religion_mictlantec_trigger = {
 	true_religion = mictlantec
 }
-true_religion_uahomche_trigger = {
-	true_religion = uahomche
+true_religion_costumbremaya_trigger = {
+	true_religion = costumbremaya
 }
 true_religion_neomayan_trigger = {
 	true_religion = neomayan
@@ -3626,8 +3626,8 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_mictlantec }
 		}
 		AND = {
-			society_member_of = secret_religious_society_uahomche
-			PREV = { interested_in_society = secret_religious_society_uahomche }
+			society_member_of = secret_religious_society_costumbremaya
+			PREV = { interested_in_society = secret_religious_society_costumbremaya }
 		}
 		AND = {
 			society_member_of = secret_religious_society_neomayan
@@ -4057,9 +4057,9 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = { 
-			has_character_flag = character_was_uahomche
+			has_character_flag = character_was_costumbremaya
 			any_character = {
-				religion = uahomche
+				religion = costumbremaya
 			}
 		}
 		AND = { 
@@ -4793,8 +4793,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = uahomche
-				ROOT = { religion = uahomche }
+				has_artifact_flag = costumbremaya
+				ROOT = { religion = costumbremaya }
 			}
 		}
 		NAND = {
@@ -9246,7 +9246,7 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_strangite
 		has_character_flag = character_was_sol_invicta
 		has_character_flag = character_was_mictlantec
-		has_character_flag = character_was_uahomche
+		has_character_flag = character_was_costumbremaya
 		has_character_flag = character_was_neomayan
 		has_character_flag = character_was_americanist
 		has_character_flag = character_was_hamiltonian
