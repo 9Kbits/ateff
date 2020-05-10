@@ -20,15 +20,72 @@ decisions = {
 		
 		allow = {
 			piety = 30
+			scaled_wealth = 0.15
 		}
 		
 		effect = {
 			piety = -30
+			scaled_wealth = -0.15
 			custom_tooltip = { text = TXT_espiritista_consult_court }
 			hidden_tooltip = {
 				narrative_event = { id = lionza.1 }
 				set_charcter_flag = machete_praying_for_prosperity
 			}
+		}
+		
+		revoke_allowed = { always = no }
+	}
+	
+	espiritista_pilgrimage = {
+		only_playable = yes
+		only_capable = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			religion = espiritista
+			age = 16
+			war = no
+			prisoner = no
+			NOT = { is_incapable = yes }
+			custom_tooltip = {
+				text = health_travel_condition
+				hidden_tooltip = {
+					NOT = {	trait = pregnant }
+					NOT = {	is_incapable = yes }
+					NOT = {	trait = blinded }
+					NOT = {	trait = has_tuberculosis }
+					NOT = {	trait = has_typhoid_fever }
+					NOT = {	trait = has_typhus }
+					NOT = {	trait = has_bubonic_plague }
+					NOT = {	trait = has_measles }
+					NOT = {	trait = has_small_pox }
+					NOT = {	trait = has_aztec_disease }
+				}
+			}
+			NOT = { trait = travelling }
+			hidden_tooltip = {
+				NOT = { has_character_modifier = espiritista_pilgrimage_cooldown }
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			scaled_wealth = 0.2
+		}
+		
+		effect = {
+			piety = 50
+			scaled_wealth = -0.2
+			add_trait = travelling
+			custom_tooltip = { text = TXT_espiritista_pilgrimage }
+			hidden_tooltip = {
+				character_event = { id = lionza.15 }
+				character_event = { id = lionza.26 months = 2 }
+			}
+			set_charcter_flag = do_not_disturb
 		}
 		
 		revoke_allowed = { always = no }

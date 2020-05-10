@@ -290,7 +290,7 @@ decisions = {
 			OR = {
 				religion_group = american_native
 				religion_group = mesoamerican_gods
-				religion_group = afro_syncretic #potentially redundant, needs testing
+				religion = rastafarian
 				religion_openly_revelationist_or_reformed_trigger = yes
 				religion_openly_occultist_or_reformed_trigger = yes
 				religion = gaian
@@ -3806,7 +3806,6 @@ decisions = {
 	
 	animal_sacrifice = {
 		only_playable = yes
-		only_capable = yes
 		ai_check_interval = 120
 		
 		potential = {
@@ -3820,6 +3819,7 @@ decisions = {
 				religion_openly_espiritista_or_reformed_trigger = yes
 			}
 			is_playable = yes
+			NOT = { is_incapable = yes }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}

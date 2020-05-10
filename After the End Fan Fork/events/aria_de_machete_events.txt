@@ -587,24 +587,26 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTA_machete_20
-		custom_tooltip = {
-			40 = {
-				modifier = {
-					factor = 2
-					trait = brave
+		hidden_tooltip = {
+			random_list = {
+				40 = {
+					modifier = {
+						factor = 2
+						trait = brave
+					}
+					modifier = {
+						factor = 2
+						trait = poet
+					}
+					character_event = { id = machete.22 days = 14 random = 7 }
 				}
-				modifier = {
-					factor = 2
-					trait = poet
+				60 = {
+					modifier = {
+						factor = 2
+						trait = craven
+					}
+					character_event = { id = machete.23 days = 14 random = 7 }
 				}
-				character_event = { id = machete.22 days = 14 random = 7 }
-			}
-			60 = {
-				modifier = {
-					factor = 2
-					trait = craven
-				}
-				character_event = { id = machete.23 days = 14 random = 7 }
 			}
 		}
 	}
@@ -625,30 +627,32 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTA_machete_20
-		custom_tooltip = {
-			45 = {
-				modifier = {
-					factor = 2
-					event_target:strength_prayer_target = {
-						trait = brave
+		hidden_tooltip = {
+			random_list = {
+				45 = {
+					modifier = {
+						factor = 2
+						event_target:strength_prayer_target = {
+							trait = brave
+						}
 					}
-				}
-				modifier = {
-					factor = 2
-					event_target:strength_prayer_target = {
-						trait = poet
+					modifier = {
+						factor = 2
+						event_target:strength_prayer_target = {
+							trait = poet
+						}
 					}
+					character_event = { id = machete.24 days = 14 random = 7 }
 				}
-				character_event = { id = machete.24 days = 14 random = 7 }
-			}
-			55 = {
-				modifier = {
-					factor = 2
-					event_target:strength_prayer_target = {
-						trait = craven
+				55 = {
+					modifier = {
+						factor = 2
+						event_target:strength_prayer_target = {
+							trait = craven
+						}
 					}
+					character_event = { id = machete.25 days = 14 random = 7 }
 				}
-				character_event = { id = machete.25 days = 14 random = 7 }
 			}
 		}
 	}
