@@ -2077,7 +2077,7 @@ female_can_hold_minor_title_trigger = {
 						religion = antinomian
 						religion = nonconformist
 						religion = gaian
-						religion = bickertonite
+						religion = neogodbeite
 						religion = strangite
 						religion = neomayan
 						religion = americanist
@@ -2349,8 +2349,8 @@ true_religion_nousthreskeia_trigger = {
 true_religion_mormon_trigger = {
 	true_religion = mormon
 }
-true_religion_bickertonite_trigger = {
-	true_religion = bickertonite
+true_religion_neogodbeite_trigger = {
+	true_religion = neogodbeite
 }
 true_religion_woolleyite_trigger = {
 	true_religion = woolleyite
@@ -3606,8 +3606,8 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_mormon }
 		}
 		AND = {
-			society_member_of = secret_religious_society_bickertonite
-			PREV = { interested_in_society = secret_religious_society_bickertonite }
+			society_member_of = secret_religious_society_neogodbeite
+			PREV = { interested_in_society = secret_religious_society_neogodbeite }
 		}
 		AND = {
 			society_member_of = secret_religious_society_woolleyite
@@ -4039,9 +4039,9 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = { 
-			has_character_flag = character_was_bickertonite
+			has_character_flag = character_was_neogodbeite
 			any_character = {
-				religion = bickertonite
+				religion = neogodbeite
 			}
 		}
 		AND = { 
@@ -4758,8 +4758,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = bickertonite
-				ROOT = { religion = bickertonite }
+				has_artifact_flag = neogodbeite
+				ROOT = { religion = neogodbeite }
 			}
 		}
 		NAND = {
@@ -9241,7 +9241,7 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_shinto
 		has_character_flag = character_was_nousthreskeia
 		has_character_flag = character_was_mormon
-		has_character_flag = character_was_bickertonite
+		has_character_flag = character_was_neogodbeite
 		has_character_flag = character_was_woolleyite
 		has_character_flag = character_was_strangite
 		has_character_flag = character_was_sol_invicta
@@ -9303,7 +9303,7 @@ is_feminist_religion_trigger = {
 		religion = antinomian
 		religion = nonconformist
 		religion = gaian
-		religion = bickertonite
+		religion = neogodbeite
 		religion = strangite
 		religion = neomayan
 		religion = libertarian
@@ -9445,7 +9445,7 @@ has_feminist_religion_trigger = {
 		religion = nonconformist
 		religion = neognostic
 		religion = antinomian
-		religion = bickertonite
+		religion = neogodbeite
 		religion = strangite
 		religion_group = oldworld
 	}

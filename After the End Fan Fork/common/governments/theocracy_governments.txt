@@ -31,7 +31,11 @@ theocracy_governments = {
 				controls_religion = yes
 			}
 			NAND = { #prevents theodem frickery
-				religion_group = latter_day_saints
+				OR = { 
+					religion = woolleyite
+					religion = mormon
+					religion = strangite
+				}
 				controls_religion = no
 				OR = {
 					tier = duke

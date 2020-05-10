@@ -12,7 +12,7 @@ decisions = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
-			religion = catholic
+			religion = neogodbeite
 			
 			controls_religion = no
 			
@@ -23,7 +23,7 @@ decisions = {
 						is_liege_or_above = ROOT
 					}
 					AND = {
-						ROOT = { religion = catholic }
+						ROOT = { religion = neogodbeite }
 						k_papal_state = {
 							holder_scope = {
 								NOT = { character = PREVPREV }
@@ -38,7 +38,7 @@ decisions = {
 		effect = {		
 			if = {
 				limit = {
-					religion = catholic
+					religion = neogodbeite
 				}
 				k_papal_state = {
 					holder_scope = {
@@ -61,8 +61,8 @@ decisions = {
 			}
 			if = {
 				limit = {
-					religion = catholic
-					NOT = { has_character_flag = restored_catholic_pope_in_rome }
+					religion = neogodbeite
+					NOT = { has_character_flag = restored_neogodbeite_pope_in_rome }
 				}
 				k_papal_state = {
 					holder_scope = {
@@ -73,7 +73,7 @@ decisions = {
 					}
 				}
 				piety = 1000
-				set_character_flag = restored_catholic_pope_in_rome
+				set_character_flag = restored_neogodbeite_pope_in_rome
 			}
 		}
 		
@@ -515,18 +515,18 @@ decisions = {
 		}
 	}
 	
-	create_bickertonite_presidency = {
+	create_neogodbeite_presidency = {
 		only_independent = yes
 		is_high_prio = yes
 		ai_check_interval = 36
 	
 		potential = {
 			is_playable = yes
-			religion = bickertonite
+			religion = neogodbeite
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
-			NOT = { is_title_active = d_bickertonite }
+			NOT = { is_title_active = d_neogodbeite }
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -541,7 +541,7 @@ decisions = {
 		}
 		
 		effect = {
-			activate_title = { title = d_bickertonite status = yes }
+			activate_title = { title = d_neogodbeite status = yes }
 			hidden_tooltip = {
 				create_random_priest = {
 					dynasty = none
@@ -550,7 +550,7 @@ decisions = {
 				new_character = {
 					character_event = { id = misc.3 } #Diversity
 					character_event = { id = misc.4 } # Physique
-					d_bickertonite = {
+					d_neogodbeite = {
 						grant_title = PREV
 					}
 					wealth = 500
