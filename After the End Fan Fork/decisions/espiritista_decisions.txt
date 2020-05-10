@@ -111,6 +111,7 @@ decisions = {
 				trait = sympathy_cult_of_saints
 				trait = sympathy_pagans
 			}
+			NOT = { has_character_flag = espiritista_syncretizing }
 		}
 		
 		allow = {
@@ -120,6 +121,7 @@ decisions = {
 		
 		effect = {
 			piety = -50
+			set_character_flag = espiritista_syncretizing
 			custom_tooltip = { text = TXT_espiritista_syncretize }
 			hidden_tooltip = { character_event = { id = lionza.30 } }
 		}

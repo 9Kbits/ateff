@@ -1135,6 +1135,8 @@ character_event = {
 	
 	immediate = {
 		clr_character_flag = espiritista_sorte_pilgrimage
+		clr_character_flag = espiritista_good_pilgrimage
+		clr_character_flag = espiritista_bad_pilgrimage
 		clr_character_flag = do_not_disturb
 	}
 }
@@ -1159,5 +1161,9 @@ character_event = {
 	option = {
 		name = EVTOPTC_lionza_26
 		add_trait = sympathy_pagans
+	}
+	
+	after = {
+		clr_character_flag = espiritista_syncretizing
 	}
 }
