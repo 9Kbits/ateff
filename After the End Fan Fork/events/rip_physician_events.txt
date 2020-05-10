@@ -1571,6 +1571,86 @@ character_event = {
 					character_event = { id = RIP.11052 }
 				}
 			}
+			5 = { # Neo-Godbeite Doctor (Mystic)
+				modifier = {
+					factor = 0
+					AND = {
+						has_character_flag = got_physician_neogodbeite_mystic
+						NOT = { had_character_flag = { flag = got_physician_godbeite_mystic days = 3650 } }
+					}
+				}
+				modifier = {
+					factor = 0
+					NOT = {
+						capital_scope = {
+							region = custom_greater_deseret
+						}
+					}
+				}
+				any_realm_province = {
+					limit = {
+						region = custom_greater_deseret
+					}
+					save_event_target_as = neogodbeite_mystic_home_target
+				}
+				create_character = {
+					religion = neogodbeite
+					culture = utahn
+					dynasty = none
+					age = 50
+					random_traits = yes
+					female = no
+					attributes = {
+						diplomacy = 2
+						learning = 8
+					}
+					health = 7
+					trait = charismatic_negotiator 
+					trait = mystic
+					trait = poet
+					flag = is_court_physician
+					flag = physician_neogodbeite_mystic
+					flag = ai_flag_refuse_conversion
+				}
+				new_character = {
+					set_character_flag = no_court_invites
+					remove_trait = scholar
+					remove_trait = falconer
+					remove_trait = socializer
+					remove_trait = gamer
+					remove_trait = hedonist
+					remove_trait = duelist
+					remove_trait = hunter
+					remove_trait = strategist
+					remove_trait = administrator
+					remove_trait = architect
+					remove_trait = gardener
+					remove_trait = schemer
+					remove_trait = impaler
+					remove_trait = seducer
+					remove_trait = seductress
+					remove_trait = theologian
+					random_list = { # Random chance to add Physician
+						50 = {
+							add_trait = physician
+						}
+						50 = {
+							
+						}
+					}
+					random_list = { # Is the Physician a Quack?
+						90 = {
+						}
+						10 = {
+							set_character_flag = physician_is_quack
+						}
+					}
+					save_event_target_as = recruited_physician_target
+					character_event = { id = misc.3 } # Diversity
+					character_event = { id = misc.4 } # Physique
+					character_event = { id = RIP.11052 }
+				}
+			}
 			5 = { # Travelling Muslim Scholar (Scholar or Mystic)
 				modifier = {
 					factor = 0
@@ -3473,6 +3553,71 @@ character_event = {
 					character_event = { id = RIP.11052 }
 				}
 			}
+			5 = { # Aphite scientist
+				modifier = {
+					factor = 0
+					AND = {
+						has_character_flag = got_physician_aphite_scientist
+						NOT = { had_character_flag = { flag = got_physician_aphite_scientist days = 3650 } }
+					}
+				}
+				modifier = {
+					factor = 0
+					religion = aphite
+				}
+				modifier = {
+					factor = 0
+					NOR = { #have to be in this zone
+						capital_scope = {
+							region = world_southwest
+						}
+						capital_scope = {
+							region = custom_california
+						}
+					}
+				}
+				create_character = {
+					religion = aphite
+					culture = arixan
+					dynasty = none
+					age = 55
+					random_traits = yes
+					female = no
+					attributes = {
+						learning = 13
+					}
+					health = 8
+					trait = scholarly_theologian 
+					trait = physician
+					trait = erudite
+					trait = distractible
+					trait = atom_bless
+					flag = is_court_physician
+					flag = physician_aphite_scientist
+					flag = ai_flag_refuse_conversion
+				}
+				new_character = {
+					character_event = { id = misc.3 } # Diversity
+					character_event = { id = misc.4 } # Physique
+					remove_trait = dull
+					remove_trait = slow
+					remove_trait = imbecile
+					random_list = { # Is the Physician a Quack?
+						90 = {
+						}
+						10 = {
+							set_character_flag = physician_is_quack
+						}
+					}
+					random_list = {
+						5 = { add_trait = genius }
+						10 = { add_trait = quick }
+						20 = { add_trait = shrewd }
+					}
+					save_event_target_as = recruited_physician_target
+					character_event = { id = RIP.11052 }
+				}
+			}
 			5 = { # Mictlantec butcher
 				modifier = {
 					factor = 0
@@ -3735,6 +3880,22 @@ character_event = {
 		picture = GFX_evt_bloody_tools
 		trigger = {
 			event_target:recruited_physician_target = { has_character_flag = physician_butcher }
+		}
+	}
+	
+	desc = {
+		text = EVTDESC_RIP_11053_APHITE_SCIENTIST
+		picture = GFX_evt_scientist
+		trigger = {
+			event_target:recruited_physician_target = { has_character_flag = physician_aphite_scientist }
+		}
+	}
+	
+	desc = {
+		text = EVTDESC_RIP_11053_NEOGODBEITE_MYSTIC
+		picture = GFX_evt_religious_exultation
+		trigger = {
+			event_target:recruited_physician_target = { has_character_flag = physician_neogodbeite_mystic }
 		}
 	}
 	
@@ -4677,6 +4838,86 @@ character_event = {
 			to = event_target:recruited_physician_target
 			min = 10
 			value = 0.05
+		}
+		event_target:recruited_physician_target = {
+			show_scope_change = no
+			opinion = {
+				modifier = opinion_glad
+				who = ROOT
+				years = 5
+			}
+			give_minor_title = title_court_physician
+		}
+	}
+	
+	option = {
+		name = EVTOPT_RIP_11053_aphite
+		trigger = {
+			event_target:recruited_physician_target = { has_character_flag = physician_aphite_scientist }
+		}
+		hidden_tooltip = {
+			set_character_flag = got_physician_aphite_scientist
+			if = {
+				limit = {
+					any_courtier_or_vassal = {
+						liege = { character = ROOT }
+						has_minor_title = title_court_physician
+					}
+				}
+				any_courtier_or_vassal = {
+					limit = {
+						liege = { character = ROOT }
+						has_minor_title = title_court_physician
+					}
+					remove_title = title_court_physician
+				}
+			}
+		}
+		piety = -25
+		transfer_scaled_wealth = {
+			to = event_target:recruited_physician_target
+			min = 10
+			value = 0.10
+		}
+		event_target:recruited_physician_target = {
+			show_scope_change = no
+			opinion = {
+				modifier = opinion_glad
+				who = ROOT
+				years = 5
+			}
+			give_minor_title = title_court_physician
+		}
+	}
+	
+	option = {
+		name = EVTOPT_RIP_11053_neogodbeite
+		trigger = {
+			event_target:recruited_physician_target = { has_character_flag = physician_neogodbeite_mystic }
+		}
+		hidden_tooltip = {
+			set_character_flag = got_physician_neogodbeite_mystic
+			if = {
+				limit = {
+					any_courtier_or_vassal = {
+						liege = { character = ROOT }
+						has_minor_title = title_court_physician
+					}
+				}
+				any_courtier_or_vassal = {
+					limit = {
+						liege = { character = ROOT }
+						has_minor_title = title_court_physician
+					}
+					remove_title = title_court_physician
+				}
+			}
+		}
+		piety = -25
+		transfer_scaled_wealth = {
+			to = event_target:recruited_physician_target
+			min = 10
+			value = 0.10
 		}
 		event_target:recruited_physician_target = {
 			show_scope_change = no
