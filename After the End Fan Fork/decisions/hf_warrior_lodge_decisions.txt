@@ -1998,11 +1998,14 @@ society_decisions = {
 					if = {
 						limit = {
 							has_religion_feature = religion_no_leader
+							OR = {
+								religion_group = pagan_group
+								religion_group = american_native
+							}
 							NOR = {
 								religion = occultist
 								religion = occultist_reformed
 							}
-							religion_group = pagan_group
 						}
 						random_list = {  
 							5 = {

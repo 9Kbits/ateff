@@ -1095,7 +1095,10 @@ spawn_old_duelist_effect = {
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					OR = {
+						religion_group = pagan_group
+						religion_group = american_native
+					}
 					NOR = {
 						religion = occultist
 						religion = occultist_reformed
@@ -1353,7 +1356,10 @@ spawn_giant_duelist_effect = {
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					OR = {
+						religion_group = pagan_group
+						religion_group = american_native
+					}
 					NOR = {
 						religion = occultist
 						religion = occultist_reformed
@@ -1682,7 +1688,10 @@ spawn_creature_champion_effect = {
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					OR = {
+						religion_group = pagan_group
+						religion_group = american_native
+					}
 					NOR = {
 						religion = occultist
 						religion = occultist_reformed

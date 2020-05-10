@@ -14692,7 +14692,14 @@ spawn_good_commander_effect = {
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					OR = {
+						religion_group = pagan_group
+						religion_group = american_native
+					}
+					NOR = {
+						religion = occultist
+						religion = occultist_reformed
+					}
 				}
 				random_list = { 
 					5 = {
@@ -14883,7 +14890,10 @@ spawn_great_commander_effect = {
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					OR = {
+						religion_group = pagan_group
+						religion_group = american_native
+					}
 					NOR = {
 						religion = occultist
 						religion = occultist_reformed
@@ -15189,7 +15199,10 @@ spawn_fantastic_commander_effect = {
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					OR = {
+						religion_group = pagan_group
+						religion_group = american_native
+					}
 					NOR = {
 						religion = occultist
 						religion = occultist_reformed
@@ -15327,7 +15340,10 @@ spawn_fantastic_diplomat_effect = {
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					OR = {
+						religion_group = pagan_group
+						religion_group = american_native
+					}
 					NOR = {
 						religion = occultist
 						religion = occultist_reformed
@@ -15447,7 +15463,10 @@ spawn_fantastic_scholar_effect = {
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					OR = {
+						religion_group = pagan_group
+						religion_group = american_native
+					}
 					NOR = {
 						religion = occultist
 						religion = occultist_reformed
@@ -15626,7 +15645,10 @@ spawn_elder_effect = {
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					OR = {
+						religion_group = pagan_group
+						religion_group = american_native
+					}
 					NOR = {
 						religion = occultist
 						religion = occultist_reformed
@@ -24428,7 +24450,10 @@ spawn_debutante_effect = {
 			if = {
 				limit = {
 					has_religion_feature = religion_no_leader
-					religion_group = pagan_group
+					OR = {
+						religion_group = pagan_group
+						religion_group = american_native
+					}
 					NOR = {
 						religion = occultist
 						religion = occultist_reformed
