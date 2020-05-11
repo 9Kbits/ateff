@@ -1954,15 +1954,6 @@ gender_laws = {
 			holder_scope = {
 				NOT = { has_religion_feature = religion_matriarchal }
 				NOT = { has_religion_feature = religion_equal }
-				AND = {
-					NOT = { has_religion_feature = religion_feature_aria_de_machete }
-					trait = machete_female_ref
-				}
-				NOT = { trait = machete_male }
-				AND = {
-					NOT = { has_religion_feature = religion_feature_aria_de_machete }
-					trait = machete_male_ref
-				}
 				NOT = { has_religion_feature = religion_feature_midewiwin }
 				OR = {
 					has_bloodline_flag = bloodline_effect_cognatic
@@ -1989,6 +1980,21 @@ gender_laws = {
 								#is_nomadic = no
 								#is_merchant_republic = no
 								is_patrician = no
+								
+								AND = {
+									religion = aria_de_machete_reformed
+									NOT = { has_religion_feature = religion_feature_aria_de_machete }
+									trait = machete_female_ref
+								}
+								NOT = {
+									religion = aria_de_machete
+									trait = machete_male
+								}
+								AND = {
+									religion = aria_de_machete_reformed
+									NOT = { has_religion_feature = religion_feature_aria_de_machete }
+									trait = machete_male_ref
+								}
 								
 								NAND = {
 									OR = {
