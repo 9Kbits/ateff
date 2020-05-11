@@ -1148,18 +1148,24 @@ decisions = {
 		ai_check_interval = 70 #check only once every 70 months.
 		potential = {
 			is_adult = yes
-			NOR = { #still use existing branch traits
-				religion = occultist
-				religion = occultist_reformed
-			}
+			
 			NOT = { trait = pagan_branch_1 }
 			NOT = { trait = pagan_branch_2 }
 			NOT = { trait = pagan_branch_3 }
 			NOT = { trait = pagan_branch_4 }
 			NOT = { has_character_flag = flag_picking_branch }
 			OR = {
-				religion_group = pagan_group
-				religion_group = american_native
+				AND = {
+					religion_group = pagan_group
+					is_reformed_religion = yes
+					has_religion_feature = religion_no_leader
+					NOT = { religion = occultist_reformed }
+				}
+				AND = {
+					religion_group = american_native
+					is_reformed_religion = yes
+					has_religion_feature = religion_no_leader
+				}
 			}
 		}
 		
