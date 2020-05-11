@@ -1974,27 +1974,15 @@ gender_laws = {
 						}
 						OR = {
 							AND = {
-								NOT = { religion = gaian }
+								OR = {
+									NOT = { religion = gaian }
+									NOT = { trait = machete_female }
+								}
 								#has_horde_culture = no
 								#is_tribal = no
 								#is_nomadic = no
 								#is_merchant_republic = no
 								is_patrician = no
-								
-								AND = {
-									religion = aria_de_machete_reformed
-									NOT = { has_religion_feature = religion_feature_aria_de_machete }
-									trait = machete_female_ref
-								}
-								NOT = {
-									religion = aria_de_machete
-									trait = machete_male
-								}
-								AND = {
-									religion = aria_de_machete_reformed
-									NOT = { has_religion_feature = religion_feature_aria_de_machete }
-									trait = machete_male_ref
-								}
 								
 								NAND = {
 									OR = {
