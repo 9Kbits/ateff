@@ -153,7 +153,10 @@ targeted_decisions={
 		
 		from_potential = {
 			religion = patria_grande
-			trait = patria_manuelita
+			OR = {
+				trait = patria_manuelita
+				has_landed_title = d_patria_grande
+			}
 		}
 		
 		potential = {
