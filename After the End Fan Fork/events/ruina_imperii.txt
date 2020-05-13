@@ -359,7 +359,11 @@ narrative_event = {
 			diplomacy = 15
 		}
 		FROM = {
-			make_tributary = ROOT
+			make_tributary = {
+				who = ROOT
+				percentage = 0.4
+				tributary_type = default
+			}
 		}
 	}
 }
