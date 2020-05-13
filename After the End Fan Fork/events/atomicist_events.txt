@@ -11,7 +11,8 @@
 
 #ALL OF THE ABOVE EVENTS WILL BE GIVEN TO CONSUMERISTS
 
-# 17 	the AEC is formed
+# the AEC is formed ### DEFUNCT
+# 17	someone becomes the Atomic Commissioner
 
 # should a decision to get blessed as an adult be added?
 #100	atomicist child is born, prepare for the blessing
@@ -501,40 +502,52 @@ character_event = {
 
 narrative_event = {
 	id = event_atomicist.17
-	title = EVTNAME_AEC_FORMATION
-	desc = EVTDESC_AEC_FORMATION
+	title = EVTNAME_atomic_high_commission
+	desc = EVTDESC_atom_commissar
 	picture = GFX_evt_cathedral_zun_pagan
 	border = GFX_event_narrative_frame_religion
-	
+
 	major = yes
 
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_global_flag = AEC_formation }
+		NOT = { has_global_flag = atomic_commission }
 	}
 	
 	immediate = {
-		set_global_flag = AEC_formation
+		set_global_flag = atomic_commission
+		d_atomicist = { grant_title = ROOT }
 	}
 	
 	option = {
-		name = EVTOPTA_AEC_FORMATION
+		name = EVTOPTA_atomicist_commissar
 		trigger = {
 			religion = atomicist
+			NOT = { has_landed_title = d_atomicist }
 		}
 	}
+	
 	option = {
-		name = EVTOPTB_AEC_FORMATION
+		name = EVTOPTB_atomicist_commissar
 		trigger = {
 			NOT = { religion_group = oldworld }
 		}
 	}
+	
 	option = {
-		name = EVTOPTC_AEC_FORMATION
+		name = EVTOPTC_atomicist_commissar
 		trigger = {
 			religion_group = oldworld
 			NOT = { religion = atomicist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_atomicist_commissar
+		trigger = {
+			religion = atomicist
+			has_landed_title = d_atomicist
 		}
 	}
 }

@@ -777,11 +777,16 @@ d_atomicist = { #the Atomic Energy Commission, or Commission for short
 	
 	landless = yes
 	
-	allow = {
-		always = no
+	allow = { #only via special decision
+		has_global_flag = atomic_commission
+		religion = atomicist
+		num_of_holy_sites = 3
+		piety = 1000
 	}
 	
-	dynasty_title_names = no
+	caliphate = yes
+	
+	dynasty_title_names = no	# Will not be named "Seljuk", etc.
 }
 
 d_apostolic = { #Archbishop of Manaus - head of the faith in northern Brazil and entirety of map

@@ -749,92 +749,6 @@ decisions = {
 		}
 	}
 	
-	create_aec = {
-		only_playable = yes
-		is_high_prio = yes
-		ai_check_interval = 24
-		
-		potential = {
-			religion = atomicist
-			NOT = { is_title_active = d_atomicist }
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		allow = {
-			independent = yes
-			primary_title = { higher_tier_than = DUKE }
-			OR = {
-				completely_controls = c_los_alamos
-				completely_controls = c_chicago
-				completely_controls = c_knox
-				completely_controls = c_alameda
-				completely_controls = c_three_mile_island
-			}
-			prestige = 500
-			piety = 1000
-		}
-		effect = { 
-			activate_title = { title = d_atomicist status = yes }
-			hidden_tooltip = {
-				create_random_priest = {
-					random_traits = yes
-					trait = atom_bless
-					religion = ROOT
-					culture = ROOT
-					dynasty = random
-					age = 41
-				}
-				new_character = {
-					character_event = { id = misc.3 } # Diversity
-					character_event = { id = misc.4 } # Physique
-					if = {
-						limit = {
-							ROOT = {
-								completely_controls = c_los_alamos
-							}
-						}
-						b_los_alamos_NM = { gain_title = PREV }
-					}
-					if = {
-						limit = {
-							ROOT = {
-								completely_controls = c_chicago
-							}
-						}
-						b_chicago_IL = { gain_title = PREV }
-					}
-					if = {
-						limit = {
-							ROOT = {
-								completely_controls = c_knox
-							}
-						}
-						b_oak_ridge_TN = { gain_title = PREV }
-					}
-					if = {
-						limit = {
-							ROOT = {
-								completely_controls = c_three_mile_island
-							}
-						}
-						b_goldsboro_PA = { gain_title = PREV }
-					}
-					d_atomicist = { grant_title = PREV }
-					narrative_event = { id = event_atomicist.17 }
-				}
-			}
-			d_atomicist = {
-				holder_scope = {
-					set_defacto_liege = ROOT
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
 	create_california = { #FOR ALTERNATE STARTS ONLY
 		only_independent = yes
 		is_high_prio = yes
@@ -904,6 +818,48 @@ decisions = {
 		effect = {
 			piety = -250
 			narrative_event = { id = rustcultist.1 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	become_chief_of_comission = { #New decision to claim the Atomicist religious head title
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			religion = atomicist
+			d_atomicist = { has_holder = no }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			primary_title = { higher_tier_than = COUNT } #only dukes and above can see this one
+		}
+		
+		allow = {
+			primary_title = { higher_tier_than = DUKE }
+			num_of_holy_sites = 3 #personally controls 3 holy sites
+			prestige = 250
+			OR = {
+				AND = {
+					wealth = 400
+					piety = 200
+					NOT = { trait = shrewd }
+				}
+				AND = {
+					wealth = 250
+					piety = 100
+					trait = shrewd
+				}
+			}
+		}
+		
+		effect = {
+			wealth = -250
+			piety = -100
+			narrative_event = { id = event_atomicist.17 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -3939,7 +3895,7 @@ decisions = {
 		}
 	}
 }	
-	
+
 targetted_decisions = {
 	
 	appoint_governator = {
