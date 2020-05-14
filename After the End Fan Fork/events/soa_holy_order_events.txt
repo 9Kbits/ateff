@@ -32,8 +32,8 @@ character_event = {
 			religion = nestorian
 		}
 		is_heretic = no
-		has_character_modifier = borrowed_from_knights_templar
-		NOT = { has_character_flag = sent_son_to_knights_templar }
+		has_character_modifier = borrowed_from_knights_of_columbus
+		NOT = { has_character_flag = sent_son_to_knights_of_columbus }
 		any_child = {
 			is_female = no
 			is_adult = yes
@@ -142,11 +142,11 @@ letter_event = {
 			factor = 100
 		}
 		
-		set_character_flag = sent_son_to_knights_templar
+		set_character_flag = sent_son_to_knights_of_columbus
 		
 		piety = 100
 		
-		d_knights_templar = {
+		d_knights_of_columbus = {
 			holder_scope = {
 				FROMFROM = {
 					hidden_tooltip = {
@@ -169,7 +169,7 @@ letter_event = {
 		name = EVTOPTB_SOA_1003 # Pay them back
 		wealth = -300
 		hidden_tooltip = {
-			remove_character_modifier = borrowed_from_knights_templar
+			remove_character_modifier = borrowed_from_knights_of_columbus
 		}
 		FROM = {
 			wealth = 300
@@ -285,8 +285,8 @@ character_event = {
 		}
 		is_heretic = no
 		
-		has_character_modifier = borrowed_from_knights_templar
-		NOT = { has_character_flag = sent_son_to_knights_templar }
+		has_character_modifier = borrowed_from_knights_of_columbus
+		NOT = { has_character_flag = sent_son_to_knights_of_columbus }
 		
 		any_demesne_province = {
 			has_empty_holding = yes
@@ -298,10 +298,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_knights_templar }
+		NOT = { has_character_modifier = expelled_d_knights_of_columbus }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_knights_templar
+				has_character_modifier = expelled_d_knights_of_columbus
 			}
 		}
 	}
@@ -389,8 +389,8 @@ letter_event = {
 		}
 		
 		hidden_tooltip = {
-			remove_character_modifier = borrowed_from_knights_templar
-			remove_character_modifier = expelled_d_knights_templar
+			remove_character_modifier = borrowed_from_knights_of_columbus
+			remove_character_modifier = expelled_d_knights_of_columbus
 			FROMFROM = {
 				province_event = { id = SoA.1024 }
 			}
@@ -403,7 +403,7 @@ letter_event = {
 		name = EVTOPTB_SOA_1003 # Pay them back
 		wealth = -300
 		hidden_tooltip = {
-			remove_character_modifier = borrowed_from_knights_templar
+			remove_character_modifier = borrowed_from_knights_of_columbus
 		}
 		FROM = {
 			wealth = 300
@@ -489,10 +489,10 @@ character_event = {
 			}
 		}
 				
-		NOT = { has_character_modifier = expelled_d_knights_templar }
+		NOT = { has_character_modifier = expelled_d_knights_of_columbus }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_knights_templar
+				has_character_modifier = expelled_d_knights_of_columbus
 			}
 		}
 		
@@ -718,10 +718,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_knights_templar }
+		NOT = { has_character_modifier = expelled_d_knights_of_columbus }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_knights_templar
+				has_character_modifier = expelled_d_knights_of_columbus
 			}
 		}
 	}
@@ -836,7 +836,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_knights_templar
+				has_character_modifier = expelled_d_knights_of_columbus
 			}
 		}
 		
@@ -844,7 +844,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.1054 }
 			}
-			remove_character_modifier = expelled_d_knights_templar
+			remove_character_modifier = expelled_d_knights_of_columbus
 		}
 		
 		piety = 200
@@ -1048,10 +1048,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_knights_hospitaler }
+		NOT = { has_character_modifier = expelled_d_knights_of_peter_claver }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_knights_hospitaler
+				has_character_modifier = expelled_d_knights_of_peter_claver
 			}
 		}
 
@@ -1325,10 +1325,10 @@ character_event = {
 			}
 		}
 				
-		NOT = { has_character_modifier = expelled_d_knights_hospitaler }
+		NOT = { has_character_modifier = expelled_d_knights_of_peter_claver }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_knights_hospitaler
+				has_character_modifier = expelled_d_knights_of_peter_claver
 			}
 		}
 	}
@@ -2498,10 +2498,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_teutonic_order }
+		NOT = { has_character_modifier = expelled_d_st_ursulas_chosen }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_teutonic_order
+				has_character_modifier = expelled_d_st_ursulas_chosen
 			}
 		}
 
@@ -2725,10 +2725,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_teutonic_order }
+		NOT = { has_character_modifier = expelled_d_st_ursulas_chosen }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_teutonic_order
+				has_character_modifier = expelled_d_st_ursulas_chosen
 			}
 		}
 	}
@@ -2813,7 +2813,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_teutonic_order
+				has_character_modifier = expelled_d_st_ursulas_chosen
 			}
 			modifier = { # EDIT
 				factor = 0.05
@@ -2828,7 +2828,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.1354 }
 			}
-			remove_character_modifier = expelled_d_teutonic_order
+			remove_character_modifier = expelled_d_st_ursulas_chosen
 		}
 		
 		piety = 200
@@ -2913,10 +2913,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_hashshashin }
+		NOT = { has_character_modifier = expelled_d_men_in_black }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_hashshashin
+				has_character_modifier = expelled_d_men_in_black
 			}
 		}
 	}
@@ -3165,10 +3165,10 @@ character_event = {
 				wealth = 300
 			}
 		}		
-		NOT = { has_character_modifier = expelled_d_hashshashin }
+		NOT = { has_character_modifier = expelled_d_men_in_black }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_hashshashin
+				has_character_modifier = expelled_d_men_in_black
 			}
 		}
 	}
@@ -3392,10 +3392,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_hashshashin }
+		NOT = { has_character_modifier = expelled_d_men_in_black }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_hashshashin
+				has_character_modifier = expelled_d_men_in_black
 			}
 		}
 
@@ -3604,10 +3604,10 @@ character_event = {
 			port = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_hashshashin }
+		NOT = { has_character_modifier = expelled_d_men_in_black }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_hashshashin
+				has_character_modifier = expelled_d_men_in_black
 			}
 		}
 	}
@@ -3698,7 +3698,7 @@ letter_event = {
 			factor = 100
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_hashshashin
+				has_character_modifier = expelled_d_men_in_black
 			}
 		}
 		
@@ -3706,7 +3706,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.1454 }
 			}
-			remove_character_modifier = expelled_d_hashshashin
+			remove_character_modifier = expelled_d_men_in_black
 		}
 		
 		piety = 200
@@ -3872,10 +3872,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_jomsvikings }
+		NOT = { has_character_modifier = expelled_d_fh }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_jomsvikings
+				has_character_modifier = expelled_d_fh
 			}
 		}
 
@@ -4126,10 +4126,10 @@ character_event = {
 			port = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_jomsvikings }
+		NOT = { has_character_modifier = expelled_d_fh }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_jomsvikings
+				has_character_modifier = expelled_d_fh
 			}
 		}
 	}
@@ -4247,7 +4247,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_jomsvikings
+				has_character_modifier = expelled_d_fh
 			}
 			modifier = {
 				factor = 0.01
@@ -4261,7 +4261,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.1554 }
 			}
-			remove_character_modifier = expelled_d_jomsvikings
+			remove_character_modifier = expelled_d_fh
 		}
 		
 		piety = 200
@@ -4630,10 +4630,10 @@ character_event = {
 			}
 		}
 				
-		NOT = { has_character_modifier = expelled_d_holy_sepulchre }
+		NOT = { has_character_modifier = expelled_d_national_cathedral }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_holy_sepulchre
+				has_character_modifier = expelled_d_national_cathedral
 			}
 		}
 
@@ -4891,10 +4891,10 @@ character_event = {
 			has_empty_holding = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_holy_sepulchre }
+		NOT = { has_character_modifier = expelled_d_national_cathedral }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_holy_sepulchre
+				has_character_modifier = expelled_d_national_cathedral
 			}
 		}
 	}
@@ -5011,7 +5011,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_holy_sepulchre
+				has_character_modifier = expelled_d_national_cathedral
 			}
 		}
 		
@@ -5019,7 +5019,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.1654 }
 			}
-			remove_character_modifier = expelled_d_holy_sepulchre
+			remove_character_modifier = expelled_d_national_cathedral
 		}
 		
 		piety = 200
@@ -5351,10 +5351,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_saint_anthony }
+		NOT = { has_character_modifier = expelled_d_lebanon_brethren }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_saint_anthony
+				has_character_modifier = expelled_d_lebanon_brethren
 			}
 		}
 
@@ -5610,10 +5610,10 @@ character_event = {
 			has_empty_holding = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_saint_anthony }
+		NOT = { has_character_modifier = expelled_d_lebanon_brethren }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_saint_anthony
+				has_character_modifier = expelled_d_lebanon_brethren
 			}
 		}
 	}
@@ -5730,7 +5730,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_saint_anthony
+				has_character_modifier = expelled_d_lebanon_brethren
 			}
 		}
 		
@@ -5738,7 +5738,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.1754 }
 			}
-			remove_character_modifier = expelled_d_saint_anthony
+			remove_character_modifier = expelled_d_lebanon_brethren
 		}
 		
 		piety = 200
@@ -6026,10 +6026,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_immortals }
+		NOT = { has_character_modifier = expelled_d_judah_lions }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_immortals
+				has_character_modifier = expelled_d_judah_lions
 			}
 		}
 
@@ -6279,10 +6279,10 @@ character_event = {
 			has_empty_holding = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_immortals }
+		NOT = { has_character_modifier = expelled_d_judah_lions }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_immortals
+				has_character_modifier = expelled_d_judah_lions
 			}
 		}
 	}
@@ -6399,7 +6399,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_immortals
+				has_character_modifier = expelled_d_judah_lions
 			}
 		}
 		
@@ -6407,7 +6407,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.1854 }
 			}
-			remove_character_modifier = expelled_d_immortals
+			remove_character_modifier = expelled_d_judah_lions
 		}
 		
 		piety = 200
@@ -6694,10 +6694,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_zealots }
+		NOT = { has_character_modifier = expelled_d_shomrim }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_zealots
+				has_character_modifier = expelled_d_shomrim
 			}
 		}
 
@@ -6949,10 +6949,10 @@ character_event = {
 			has_empty_holding = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_zealots }
+		NOT = { has_character_modifier = expelled_d_shomrim }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_zealots
+				has_character_modifier = expelled_d_shomrim
 			}
 		}
 	}
@@ -7069,7 +7069,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_zealots
+				has_character_modifier = expelled_d_shomrim
 			}
 		}
 		
@@ -7077,7 +7077,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.1954 }
 			}
-			remove_character_modifier = expelled_d_zealots
+			remove_character_modifier = expelled_d_shomrim
 		}
 		
 		piety = 200
@@ -7230,10 +7230,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_sky_lords }
+		NOT = { has_character_modifier = expelled_d_fm }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_sky_lords
+				has_character_modifier = expelled_d_fm
 			}
 		}
 
@@ -7483,10 +7483,10 @@ character_event = {
 			has_empty_holding = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_sky_lords }
+		NOT = { has_character_modifier = expelled_d_fm }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_sky_lords
+				has_character_modifier = expelled_d_fm
 			}
 		}
 	}
@@ -7603,7 +7603,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_sky_lords
+				has_character_modifier = expelled_d_fm
 			}
 		}
 		
@@ -7611,7 +7611,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.2054 }
 			}
-			remove_character_modifier = expelled_d_sky_lords
+			remove_character_modifier = expelled_d_fm
 		}
 		
 		piety = 200
@@ -7916,10 +7916,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_spirit_guardians }
+		NOT = { has_character_modifier = expelled_d_flaming_sword }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_spirit_guardians
+				has_character_modifier = expelled_d_flaming_sword
 			}
 		}
 
@@ -8168,10 +8168,10 @@ character_event = {
 			has_empty_holding = yes
 		}
 				
-		NOT = { has_character_modifier = expelled_d_spirit_guardians }
+		NOT = { has_character_modifier = expelled_d_flaming_sword }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_spirit_guardians
+				has_character_modifier = expelled_d_flaming_sword
 			}
 		}
 	}
@@ -8288,7 +8288,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_spirit_guardians
+				has_character_modifier = expelled_d_flaming_sword
 			}
 		}
 		
@@ -8296,7 +8296,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.2154 }
 			}
-			remove_character_modifier = expelled_d_spirit_guardians
+			remove_character_modifier = expelled_d_flaming_sword
 		}
 		
 		piety = 200
@@ -8611,10 +8611,10 @@ character_event = {
 			}
 		}
 				
-		NOT = { has_character_modifier = expelled_d_warriors_perun }
+		NOT = { has_character_modifier = expelled_d_midwestern_brotherhood }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_warriors_perun
+				has_character_modifier = expelled_d_midwestern_brotherhood
 			}
 		}
 
@@ -8870,10 +8870,10 @@ character_event = {
 		}
 		
 		
-		NOT = { has_character_modifier = expelled_d_warriors_perun }
+		NOT = { has_character_modifier = expelled_d_midwestern_brotherhood }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_warriors_perun
+				has_character_modifier = expelled_d_midwestern_brotherhood
 			}
 		}
 	}
@@ -8990,7 +8990,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_warriors_perun
+				has_character_modifier = expelled_d_midwestern_brotherhood
 			}
 		}
 		
@@ -8998,7 +8998,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.2254 }
 			}
-			remove_character_modifier = expelled_d_warriors_perun
+			remove_character_modifier = expelled_d_midwestern_brotherhood
 		}
 		
 		piety = 200
@@ -9304,10 +9304,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_chosen_perkunas }
+		NOT = { has_character_modifier = expelled_d_greenpeace }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_chosen_perkunas
+				has_character_modifier = expelled_d_greenpeace
 			}
 		}
 
@@ -9557,10 +9557,10 @@ character_event = {
 			has_empty_holding = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_chosen_perkunas }
+		NOT = { has_character_modifier = expelled_d_greenpeace }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_chosen_perkunas
+				has_character_modifier = expelled_d_greenpeace
 			}
 		}
 	}
@@ -9677,7 +9677,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_chosen_perkunas
+				has_character_modifier = expelled_d_greenpeace
 			}
 		}
 		
@@ -9685,7 +9685,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.2354 }
 			}
-			remove_character_modifier = expelled_d_chosen_perkunas
+			remove_character_modifier = expelled_d_greenpeace
 		}
 		
 		piety = 200
@@ -9996,10 +9996,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_sons_kaleva }
+		NOT = { has_character_modifier = expelled_d_nauvoo_legion }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_sons_kaleva
+				has_character_modifier = expelled_d_nauvoo_legion
 			}
 		}
 
@@ -10249,10 +10249,10 @@ character_event = {
 			has_empty_holding = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_sons_kaleva }
+		NOT = { has_character_modifier = expelled_d_nauvoo_legion }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_sons_kaleva
+				has_character_modifier = expelled_d_nauvoo_legion
 			}
 		}
 	}
@@ -10369,7 +10369,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_sons_kaleva
+				has_character_modifier = expelled_d_nauvoo_legion
 			}
 		}
 		
@@ -10377,7 +10377,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.2454 }
 			}
-			remove_character_modifier = expelled_d_sons_kaleva
+			remove_character_modifier = expelled_d_nauvoo_legion
 		}
 		
 		piety = 200
@@ -10530,10 +10530,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_huitzilopochtli }
+		NOT = { has_character_modifier = expelled_d_oto }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_huitzilopochtli
+				has_character_modifier = expelled_d_oto
 			}
 		}
 
@@ -10783,10 +10783,10 @@ character_event = {
 			has_empty_holding = yes
 		}
 		
-		NOT = { has_character_modifier = expelled_d_huitzilopochtli }
+		NOT = { has_character_modifier = expelled_d_oto }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_huitzilopochtli
+				has_character_modifier = expelled_d_oto
 			}
 		}
 	}
@@ -10903,7 +10903,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_huitzilopochtli
+				has_character_modifier = expelled_d_oto
 			}
 		}
 		
@@ -10911,7 +10911,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.2554 }
 			}
-			remove_character_modifier = expelled_d_huitzilopochtli
+			remove_character_modifier = expelled_d_oto
 		}
 		
 		piety = 200
@@ -11232,10 +11232,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_knights_santiago }
+		NOT = { has_character_modifier = expelled_d_masked_knights }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_knights_santiago
+				has_character_modifier = expelled_d_masked_knights
 			}
 		}
 
@@ -11493,10 +11493,10 @@ character_event = {
 			region = custom_neoladino
 		}
 		
-		NOT = { has_character_modifier = expelled_d_knights_santiago }
+		NOT = { has_character_modifier = expelled_d_masked_knights }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_knights_santiago
+				has_character_modifier = expelled_d_masked_knights
 			}
 		}
 	}
@@ -11613,7 +11613,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_knights_santiago
+				has_character_modifier = expelled_d_masked_knights
 			}
 		}
 		
@@ -11621,7 +11621,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.2654 }
 			}
-			remove_character_modifier = expelled_d_knights_santiago
+			remove_character_modifier = expelled_d_masked_knights
 		}
 		
 		piety = 200
@@ -11951,10 +11951,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_knights_calatrava }
+		NOT = { has_character_modifier = expelled_d_order_of_brotherhood }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_knights_calatrava
+				has_character_modifier = expelled_d_order_of_brotherhood
 			}
 		}
 
@@ -12218,10 +12218,10 @@ character_event = {
 			region = custom_neoladino
 		}
 		
-		NOT = { has_character_modifier = expelled_d_knights_calatrava }
+		NOT = { has_character_modifier = expelled_d_order_of_brotherhood }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_knights_calatrava
+				has_character_modifier = expelled_d_order_of_brotherhood
 			}
 		}
 	}
@@ -12338,7 +12338,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_knights_calatrava
+				has_character_modifier = expelled_d_order_of_brotherhood
 			}
 		}
 		
@@ -12346,7 +12346,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.2754 }
 			}
-			remove_character_modifier = expelled_d_knights_calatrava
+			remove_character_modifier = expelled_d_order_of_brotherhood
 		}
 		
 		piety = 200
@@ -12676,10 +12676,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_saint_addai }
+		NOT = { has_character_modifier = expelled_d_st_pats }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_saint_addai
+				has_character_modifier = expelled_d_st_pats
 			}
 		}
 
@@ -12943,10 +12943,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_saint_addai }
+		NOT = { has_character_modifier = expelled_d_st_pats }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_saint_addai
+				has_character_modifier = expelled_d_st_pats
 			}
 		}
 	}
@@ -13063,7 +13063,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_saint_addai
+				has_character_modifier = expelled_d_st_pats
 			}
 		}
 		
@@ -13071,7 +13071,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoA.2854 }
 			}
-			remove_character_modifier = expelled_d_saint_addai
+			remove_character_modifier = expelled_d_st_pats
 		}
 		
 		piety = 200
@@ -13319,37 +13319,37 @@ character_event = {
 	
 	title = { # Knights Templar
 		trigger = {
-			has_character_flag = expel_the_knights_templar_check
+			has_character_flag = expel_the_knights_columbus_check
 		}
 		text = expel_knights_columbus
 	}
 	title = { # Knights Hospitaler
 		trigger = {
-			has_character_flag = expel_the_knights_hospitaler_check
+			has_character_flag = expel_the_knights_peter_claver_check
 		}
 		text = expel_knights_peter_claver
 	}
 	title = { # Teutonic Order
 		trigger = {
-			has_character_flag = expel_the_teutonic_order_check
+			has_character_flag = expel_st_ursulas_chosen_check
 		}
 		text = expel_st_ursulas_chosen
 	}
 	title = { # Jomsvikings
 		trigger = {
-			has_character_flag = expel_the_jomsvikings_check
+			has_character_flag = expel_the_fh_check
 		}
 		text = expel_the_fh
 	}
 	title = { # Hashshashin
 		trigger = {
-			has_character_flag = expel_the_assassins_check
+			has_character_flag = expel_the_mib_check
 		}
 		text = expel_the_mib
 	}
 	title = { # Bektashi
 		trigger = {
-			has_character_flag = expel_the_bektashi_check
+			has_character_flag = expel_oppenheimer_check
 		}
 		text = expel_oppenheimer
 	}
@@ -13361,79 +13361,79 @@ character_event = {
 	#}
 	title = { # Holy Sepulchre
 		trigger = {
-			has_character_flag = expel_the_holy_sepulchre_check
+			has_character_flag = expel_the_nca_check
 		}
 		text = expel_the_nca
 	}
 	title = { # Saint Anthony
 		trigger = {
-			has_character_flag = expel_saint_anthony_check
+			has_character_flag = expel_lebanon_brethren_check
 		}
 		text = expel_lebanon_brethren
 	}
 	title = { # Immortals
 		trigger = {
-			has_character_flag = expel_immortals_check
+			has_character_flag = expel_judah_lions_check
 		}
 		text = expel_judah_lions
 	}
 	title = { # Zealots
 		trigger = {
-			has_character_flag = expel_zealots_check
+			has_character_flag = expel_shomrim_check
 		}
 		text = expel_shomrim
 	}
 	title = { # Sky Lords
 		trigger = {
-			has_character_flag = expel_sky_lords_check
+			has_character_flag = expel_freemasons_check
 		}
 		text = expel_freemasons
 	}
 	title = { # Spirit Guardians
 		trigger = {
-			has_character_flag = expel_spirit_guardians_check
+			has_character_flag = expel_flaming_sword_check
 		}
 		text = expel_flaming_sword
 	}
 	title = { # Warriors of Perun
 		trigger = {
-			has_character_flag = expel_warriors_perun_check
+			has_character_flag = expel_midwestern_brotherhood_check
 		}
 		text = expel_midwestern_brotherhood
 	}
 	title = { # Chosen of Perkunas
 		trigger = {
-			has_character_flag = expel_chosen_perkunas_check
+			has_character_flag = expel_greenpeace_check
 		}
 		text = expel_greenpeace
 	}
 	title = { # Sons of Kaleva
 		trigger = {
-			has_character_flag = expel_sons_kaleva_check
+			has_character_flag = expel_nauvoo_legion_check
 		}
 		text = expel_nauvoo_legion
 	}
 	title = { # Huitzilopochtli
 		trigger = {
-			has_character_flag = expel_huitzilopochtli_check
+			has_character_flag = expel_oto_check
 		}
 		text = expel_oto
 	}
 	title = { # Knights of Santiago
 		trigger = {
-			has_character_flag = expel_knights_santiago_check
+			has_character_flag = expel_masked_knights_check
 		}
 		text = expel_masked_knights
 	}
 	title = { # Knights of Calatrava
 		trigger = {
-			has_character_flag = expel_knights_calatrava_check
+			has_character_flag = expel_order_of_brotherhood_check
 		}
 		text = expel_order_of_brotherhood
 	}
 	title = { # Order of St Addai
 		trigger = {
-			has_character_flag = expel_order_of_addai_check
+			has_character_flag = expel_st_pats_check
 		}
 		text = expel_st_pats
 	}
@@ -13450,7 +13450,7 @@ character_event = {
 	
 	option = { # Knights Templar
 		trigger = {
-			has_character_flag = expel_the_knights_templar_check
+			has_character_flag = expel_the_knights_columbus_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13471,16 +13471,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_knights_templar
+				name = expelled_d_knights_of_columbus
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_the_knights_templar_check
+			clr_character_flag = expel_the_knights_columbus_check
 		}
 	}
 	option = { # Knights Hospitaler
 		trigger = {
-			has_character_flag = expel_the_knights_hospitaler_check
+			has_character_flag = expel_the_knights_peter_claver_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13501,16 +13501,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_knights_hospitaler
+				name = expelled_d_knights_of_peter_claver
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_the_knights_hospitaler_check
+			clr_character_flag = expel_the_knights_peter_claver_check
 		}
 	}
 	option = { # Teutonic Order
 		trigger = {
-			has_character_flag = expel_the_teutonic_order_check
+			has_character_flag = expel_st_ursulas_chosen_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13524,7 +13524,7 @@ character_event = {
 		}
 		hidden_tooltip = {
 			add_character_modifier = {
-				name = expelled_d_teutonic_order
+				name = expelled_d_st_ursulas_chosen
 				duration = -1
 				inherit = yes
 			}
@@ -13535,12 +13535,12 @@ character_event = {
 					}
 				}
 			}
-			clr_character_flag = expel_the_teutonic_order_check
+			clr_character_flag = expel_st_ursulas_chosen_check
 		}
 	}
 	option = { # Jomsvikings
 		trigger = {
-			has_character_flag = expel_the_jomsvikings_check
+			has_character_flag = expel_the_fh_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13561,16 +13561,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_jomsvikings
+				name = expelled_d_fh
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_the_jomsvikings_check
+			clr_character_flag = expel_the_fh_check
 		}
 	}
 	option = { # Hashshashin
 		trigger = {
-			has_character_flag = expel_the_assassins_check
+			has_character_flag = expel_the_mib_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13592,16 +13592,16 @@ character_event = {
 			}
 			
 			add_character_modifier = {
-				name = expelled_d_hashshashin
+				name = expelled_d_men_in_black
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_the_assassins_check
+			clr_character_flag = expel_the_mib_check
 		}
 	}
 	option = { # Bektashi
 		trigger = {
-			has_character_flag = expel_the_bektashi_check
+			has_character_flag = expel_oppenheimer_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13623,11 +13623,11 @@ character_event = {
 			}
 			
 			add_character_modifier = {
-				name = expelled_d_hashshashin
+				name = expelled_d_oppenheimer
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_the_bektashi_check
+			clr_character_flag = expel_oppenheimer_check
 		}
 	}
 	#option = { # Haruriyyah
@@ -13663,7 +13663,7 @@ character_event = {
 	#}
 	option = { # Holy Sepulchre
 		trigger = {
-			has_character_flag = expel_the_holy_sepulchre_check
+			has_character_flag = expel_the_nca_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13684,16 +13684,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_holy_sepulchre
+				name = expelled_d_national_cathedral
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_the_holy_sepulchre_check
+			clr_character_flag = expel_the_nca_check
 		}
 	}
 	option = { # Saint Anthony
 		trigger = {
-			has_character_flag = expel_saint_anthony_check
+			has_character_flag = expel_lebanon_brethren_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13714,16 +13714,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_saint_anthony
+				name = expelled_d_lebanon_brethren
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_saint_anthony_check
+			clr_character_flag = expel_lebanon_brethren_check
 		}
 	}
 	option = { # Immortals
 		trigger = {
-			has_character_flag = expel_immortals_check
+			has_character_flag = expel_judah_lions_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13744,16 +13744,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_immortals
+				name = expelled_d_judah_lions
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_immortals_check
+			clr_character_flag = expel_judah_lions_check
 		}
 	}
 	option = { # Zealots
 		trigger = {
-			has_character_flag = expel_zealots_check
+			has_character_flag = expel_shomrim_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13774,16 +13774,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_zealots
+				name = expelled_d_shomrim
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_zealots_check
+			clr_character_flag = expel_shomrim_check
 		}
 	}
 	option = { # Sky Lords
 		trigger = {
-			has_character_flag = expel_sky_lords_check
+			has_character_flag = expel_freemasons_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13804,16 +13804,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_sky_lords
+				name = expelled_d_fm
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_sky_lords_check
+			clr_character_flag = expel_freemasons_check
 		}
 	}
 	option = { # Spirit Guardians
 		trigger = {
-			has_character_flag = expel_spirit_guardians_check
+			has_character_flag = expel_flaming_sword_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13834,16 +13834,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_spirit_guardians
+				name = expelled_d_flaming_sword
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_spirit_guardians_check
+			clr_character_flag = expel_flaming_sword_check
 		}
 	}
 	option = { # Warriors of Perun
 		trigger = {
-			has_character_flag = expel_warriors_perun_check
+			has_character_flag = expel_midwestern_brotherhood_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13864,16 +13864,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_warriors_perun
+				name = expelled_d_midwestern_brotherhood
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_warriors_perun_check
+			clr_character_flag = expel_midwestern_brotherhood_check
 		}
 	}
 	option = { # Chosen of Perkunas
 		trigger = {
-			has_character_flag = expel_chosen_perkunas_check
+			has_character_flag = expel_greenpeace_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13894,16 +13894,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_chosen_perkunas
+				name = expelled_d_greenpeace
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_chosen_perkunas_check
+			clr_character_flag = expel_greenpeace_check
 		}
 	}
 	option = { # Sons of Kaleva
 		trigger = {
-			has_character_flag = expel_sons_kaleva_check
+			has_character_flag = expel_nauvoo_legion_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13924,16 +13924,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_sons_kaleva
+				name = expelled_d_nauvoo_legion
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_sons_kaleva_check
+			clr_character_flag = expel_nauvoo_legion_check
 		}
 	}
 	option = { # Huitzilopochtli
 		trigger = {
-			has_character_flag = expel_huitzilopochtli_check
+			has_character_flag = expel_oto_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13954,16 +13954,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_huitzilopochtli
+				name = expelled_d_oto
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_huitzilopochtli_check
+			clr_character_flag = expel_oto_check
 		}
 	}
 	option = { # Knights of Santiago
 		trigger = {
-			has_character_flag = expel_knights_santiago_check
+			has_character_flag = expel_masked_knights_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13984,16 +13984,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_knights_santiago
+				name = expelled_d_masked_knights
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_knights_santiago_check
+			clr_character_flag = expel_masked_knights_check
 		}
 	}
 	option = { # Knights of Calatrava
 		trigger = {
-			has_character_flag = expel_knights_calatrava_check
+			has_character_flag = expel_order_of_brotherhood_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -14014,16 +14014,16 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_knights_calatrava
+				name = expelled_d_order_of_brotherhood
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_knights_calatrava_check
+			clr_character_flag = expel_order_of_brotherhood_check
 		}
 	}
 	option = { # Order of St Addai
 		trigger = {
-			has_character_flag = expel_order_of_addai_check
+			has_character_flag = expel_st_pats_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -14044,11 +14044,11 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_saint_addai
+				name = expelled_d_st_pats
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_order_of_addai_check
+			clr_character_flag = expel_st_pats_check
 		}
 	}
 	#option = { # Zun Warriors
@@ -14087,26 +14087,26 @@ character_event = {
 			text = expelling_holy_order_event_tooltip_b
 		}
 		hidden_tooltip = {
-			clr_character_flag = expel_the_knights_templar_check
-			clr_character_flag = expel_the_knights_hospitaler_check
-			clr_character_flag = expel_the_teutonic_order_check
-			clr_character_flag = expel_the_jomsvikings_check
-			clr_character_flag = expel_the_assassins_check
-			clr_character_flag = expel_the_bektashi_check
+			clr_character_flag = expel_the_knights_columbus_check
+			clr_character_flag = expel_the_knights_peter_claver_check
+			clr_character_flag = expel_st_ursulas_chosen_check
+			clr_character_flag = expel_the_fh_check
+			clr_character_flag = expel_the_mib_check
+			clr_character_flag = expel_oppenheimer_check
 			#clr_character_flag = expel_the_haruriyyah_check
-			clr_character_flag = expel_the_holy_sepulchre_check
-			clr_character_flag = expel_saint_anthony_check
-			clr_character_flag = expel_immortals_check
-			clr_character_flag = expel_zealots_check
-			clr_character_flag = expel_sky_lords_check
-			clr_character_flag = expel_spirit_guardians_check
-			clr_character_flag = expel_warriors_perun_check
-			clr_character_flag = expel_chosen_perkunas_check
-			clr_character_flag = expel_sons_kaleva_check
-			clr_character_flag = expel_huitzilopochtli_check
-			clr_character_flag = expel_knights_santiago_check
-			clr_character_flag = expel_knights_calatrava_check
-			clr_character_flag = expel_order_of_addai_check
+			clr_character_flag = expel_the_nca_check
+			clr_character_flag = expel_lebanon_brethren_check
+			clr_character_flag = expel_judah_lions_check
+			clr_character_flag = expel_shomrim_check
+			clr_character_flag = expel_freemasons_check
+			clr_character_flag = expel_flaming_sword_check
+			clr_character_flag = expel_midwestern_brotherhood_check
+			clr_character_flag = expel_greenpeace_check
+			clr_character_flag = expel_nauvoo_legion_check
+			clr_character_flag = expel_oto_check
+			clr_character_flag = expel_masked_knights_check
+			clr_character_flag = expel_order_of_brotherhood_check
+			clr_character_flag = expel_st_pats_check
 			clr_character_flag = expel_zun_warriors_check
 		}
 	}
