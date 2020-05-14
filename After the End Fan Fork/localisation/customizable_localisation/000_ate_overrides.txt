@@ -1557,7 +1557,7 @@ defined_text = {
 	}
 	text = { 
 		localisation_key = GOD_HUNAB_KU
-		trigger = { true_religion_costumbremaya_trigger = yes }
+		trigger = { true_religion_tepalob_trigger = yes }
 	}
 	text = { 
 		localisation_key = GOD_HUNAB_KU
@@ -1842,7 +1842,7 @@ defined_text = {
 	text = { 
 		localisation_key = String_Popol_Vuh
 		trigger = { 
-			true_religion_costumbremaya_trigger = yes
+			true_religion_tepalob_trigger = yes
 		}
 	}
 	text = { 
@@ -2209,7 +2209,7 @@ defined_text = {
 	
 	text = {
 		localisation_key = String_Hunab_Kus_blessings
-		trigger = { society_member_of = secret_religious_society_costumbremaya  }
+		trigger = { society_member_of = secret_religious_society_tepalob  }
 	}
 	
 	text = {
@@ -2429,7 +2429,7 @@ defined_text = {
 		localisation_key = String_May_the_Gods_protect_you
 		trigger = {
 			OR = {
-				society_member_of = secret_religious_society_costumbremaya
+				society_member_of = secret_religious_society_tepalob
 				society_member_of = secret_religious_society_neomayan
 			}
 		}
@@ -2577,7 +2577,7 @@ defined_text = {
 		localisation_key = String_fire_symbol
 		trigger = { 
 			OR = {
-				true_religion_costumbremaya_trigger = yes
+				true_religion_tepalob_trigger = yes
 				true_religion_neomayan_trigger = yes
 			}
 		}
@@ -6992,12 +6992,12 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = GetReligiousCommunityName_costumbremaya
+	name = GetReligiousCommunityName_tepalob
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_costumbremaya
+		localisation_key = alt_start_community_name_tepalob
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_costumbremaya
+		localisation_key = secret_religious_society_REAL_tepalob
 	}
 }
 defined_text = {
@@ -8363,14 +8363,14 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetReligiousSocietyDesc_costumbremaya
+	name = GetReligiousSocietyDesc_tepalob
 	text = {
 		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_desc
 	}
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_costumbremaya_desc_REAL
+		localisation_key = secret_religious_society_tepalob_desc_REAL
 	}
 }
 

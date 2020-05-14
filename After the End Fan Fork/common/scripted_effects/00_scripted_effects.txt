@@ -10205,13 +10205,13 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
-					religion = costumbremaya
+					religion = tepalob
 				}
-				has_character_flag = character_was_costumbremaya
+				has_character_flag = character_was_tepalob
 			}
 		}
-		set_secret_religion = costumbremaya
-		clr_character_flag = character_was_costumbremaya
+		set_secret_religion = tepalob
+		clr_character_flag = character_was_tepalob
 		break = yes
 	}
 	if = {
@@ -11038,8 +11038,8 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_mictlantec
 	}
 	if = {
-		limit = { religion = costumbremaya }
-		set_character_flag = character_was_costumbremaya
+		limit = { religion = tepalob }
+		set_character_flag = character_was_tepalob
 	}
 	if = {
 		limit = { religion = neomayan }
@@ -11248,7 +11248,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_strangite
 	clr_character_flag = character_was_sol_invicta
 	clr_character_flag = character_was_mictlantec
-	clr_character_flag = character_was_costumbremaya
+	clr_character_flag = character_was_tepalob
 	clr_character_flag = character_was_neomayan
 	clr_character_flag = character_was_americanist
 	clr_character_flag = character_was_hamiltonian
@@ -11588,9 +11588,9 @@ event_target_old_religion_from_flag_effect = {
 		}
 	}
 	if = {
-		limit = { has_character_flag = character_was_costumbremaya }
+		limit = { has_character_flag = character_was_tepalob }
 		random_character = {
-			limit = { religion = costumbremaya }
+			limit = { religion = tepalob }
 			save_event_target_as = old_religion
 		}
 	}
@@ -13807,14 +13807,14 @@ flip_secret_religious_community_provinces = {
 				}
 			}
 		}
-		secret_religious_society_costumbremaya = {
+		secret_religious_society_tepalob = {
 			ROOT = {
 				any_demesne_province = {
 					limit = {
-						has_province_modifier = secret_costumbremaya_community
+						has_province_modifier = secret_tepalob_community
 					}
-					religion = costumbremaya
-					remove_province_modifier = secret_costumbremaya_community
+					religion = tepalob
+					remove_province_modifier = secret_tepalob_community
 				}
 			}
 		}
@@ -18562,14 +18562,14 @@ root_secret_religion_provinces_convert_effect = {
 					}
 				}
 			}
-			secret_religious_society_costumbremaya = { 
+			secret_religious_society_tepalob = { 
 				PREV = {
 					any_demesne_province = {
 						limit = {
-							has_province_modifier = secret_costumbremaya_community
+							has_province_modifier = secret_tepalob_community
 						}
-						religion = costumbremaya
-						remove_province_modifier = secret_costumbremaya_community
+						religion = tepalob
+						remove_province_modifier = secret_tepalob_community
 					}
 				}
 			}

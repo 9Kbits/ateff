@@ -36,7 +36,7 @@ character_event = {
 			}
 			if = {
 				limit = {
-					religion = costumbremaya
+					religion = tepalob
 				}
 				character_event = { id = mesoamerica.18 }
 			}
@@ -726,7 +726,7 @@ narrative_event = {
 
 character_event = {
 	id = mesoamerica.18
-	desc = EVTDESC_mayan_pilgrimage_destination_costumbremaya
+	desc = EVTDESC_mayan_pilgrimage_destination_tepalob
 	picture = GFX_evt_kukulkan
 	border = GFX_event_normal_frame_religion
 	
@@ -2395,7 +2395,7 @@ narrative_event = {
 		has_landed_title = e_yucatan
 		OR = {
 			religion = neomayan
-			religion = costumbremaya
+			religion = tepalob
 		}
 		NOT = { has_global_flag = kalomte_votan_created }
 	}
@@ -3039,7 +3039,7 @@ character_event = {
 		tooltip_info = zealous
 		trigger = {
 			trait = zealous
-			religion = costumbremaya
+			religion = tepalob
 			NOT = {
 				trait = lunatic
 				trait = possessed
