@@ -13739,8 +13739,8 @@ indian_subjugation = {
 	allowed_to_target_tributaries = no
 	
 	can_use_gui = {
-		always = no
 		ROOT = {
+			religion = rust_cultist
 			piety = 500
 		}
 	}
@@ -13758,9 +13758,8 @@ indian_subjugation = {
 	}
 	
 	can_use = {
-		always = no
 		ROOT = {
-			has_dharmic_religion_trigger = yes
+			religion = rust_cultist
 			NOT = { same_realm = FROM }
 			NOT = { is_liege_or_above = FROM }
 			has_horde_culture = no # Should use tribal invasion instead
@@ -13769,8 +13768,7 @@ indian_subjugation = {
 		}
 		FROM = {
 			NOT = { is_offmap_governor = yes }
-			has_dharmic_religion_trigger = yes
-			culture_group = ROOT
+			religion = rust_cultist
 			NOT = {
 				any_war = {
 					defender = { character = PREVPREV }
