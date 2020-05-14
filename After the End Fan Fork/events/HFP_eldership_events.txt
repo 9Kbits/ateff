@@ -2856,14 +2856,10 @@ character_event = {
 						is_tribal = yes
 						culture = metis
 					}
-					#AND = {
-					#	is_tribal = yes
-					#	religion = west_african_pagan
-					#}
-					has_religion_feature = religion_beatification
-					
-					#has_religion_feature = religion_feature_baltic
-					#has_religion_feature = religion_feature_west_african
+					OR = {
+						has_religion_feature = religion_beatification
+						has_religion_feature = religion_feature_revelationist
+					}
 				}
 			}
 		}

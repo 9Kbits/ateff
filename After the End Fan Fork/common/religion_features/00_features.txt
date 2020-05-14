@@ -649,7 +649,6 @@ religion_doctrine = {
 			NOR = {
 				has_selected_religion_feature = religion_jizya
 				has_selected_religion_feature = religion_dogmatic
-				has_selected_religion_feature = religion_feature_revelationist # Redundant
 			}
 		}
 		effect = {
@@ -1128,12 +1127,13 @@ religion_doctrine = {
 			religion = revelationist_reformed
 			NOR = { 
 				has_selected_religion_feature = religion_monastic
-				has_selected_religion_feature = religion_syncretic
+				has_selected_religion_feature = religion_beatification
 			}
 		}
 		effect = {
 			custom_tooltip = { text = tooltip_religion_feature_monastic }
-			custom_tooltip = { text = tooltip_religion_feature_syncretic }
+			custom_tooltip = { text = tooltip_religion_feature_beatification }
+			custom_tooltip = { text = tooltip_religion_feature_eldership }
 		}
 		ai_will_do = {
 			factor = 50
@@ -1638,6 +1638,7 @@ religion_leadership = {
 			NOR = {
 				has_selected_religion_feature = religion_dogmatic
 				has_selected_religion_feature = religion_beatification
+				has_selected_religion_feature = religion_feature_revelationist
 			}
 		}
 		effect = {

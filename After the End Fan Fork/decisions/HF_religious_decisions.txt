@@ -466,26 +466,12 @@ decisions = {
 				trait = sympathy_islam
 				has_character_flag = flag_picking_sympathy
 			}
-			OR = { 
-				has_religion_feature = religion_syncretic
-				has_religion_feature = religion_feature_revelationist
-				AND = {
-					religion = revelationist_reformed
-					has_religion_features = no
-				}
-			}
+			has_religion_feature = religion_syncretic
 		}
 		
 		allow = {
 			prisoner = no
-			OR = { 
-				has_religion_feature = religion_syncretic
-				has_religion_feature = religion_feature_revelationist
-				AND = {
-					religion = revelationist_reformed
-					has_religion_features = no
-				}
-			}
+			has_religion_feature = religion_syncretic
 		}
 		
 		effect = {
