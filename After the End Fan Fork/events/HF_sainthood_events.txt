@@ -457,6 +457,9 @@ character_event = {
 					event_target:saint_person = {
 						has_religion_feature = religion_feature_revelationist
 					}
+					event_target:saint_person = {
+						has_religion_feature = religion_feature_trailwalker
+					}
 				}
 			}
 			province_event = { id = HF.40015 days = 5 }
@@ -486,6 +489,7 @@ province_event = {
 			OR = {
 				trait = beatified
 				has_religion_feature = religion_beatification
+				has_religion_feature = religion_feature_trailwalker
 				has_religion_feature = religion_feature_revelationist
 			}
 			NOT = {

@@ -84,6 +84,7 @@ deciding_upon_saint_effect = {
 					event_target:saint_person = {
 						OR = {
 							has_religion_feature = religion_beatification
+							has_religion_feature = religion_feature_trailwalker
 							has_religion_feature = religion_feature_revelationist
 						}
 					}
@@ -98,6 +99,7 @@ deciding_upon_saint_effect = {
 					event_target:saint_person = {
 						OR = {
 							has_religion_feature = religion_beatification
+							has_religion_feature = religion_feature_trailwalker
 							has_religion_feature = religion_feature_revelationist
 						}
 					}
@@ -1386,7 +1388,6 @@ check_if_ancestor_worship_worthy_effect = {
 			OR = {
 				has_religion_feature = religion_relentless
 				has_religion_feature = religion_feature_celtic
-				has_religion_feature = religion_feature_trailwalker
 			}
 			martial = 20
 		}
@@ -1395,7 +1396,6 @@ check_if_ancestor_worship_worthy_effect = {
 			OR = {
 				has_religion_feature = religion_relentless
 				has_religion_feature = religion_feature_celtic
-				has_religion_feature = religion_feature_trailwalker
 			}
 			has_any_leadership_trait_trigger = yes
 		}
@@ -1405,7 +1405,6 @@ check_if_ancestor_worship_worthy_effect = {
 			OR = {
 				has_religion_feature = religion_relentless
 				has_religion_feature = religion_feature_celtic
-				has_religion_feature = religion_feature_trailwalker
 			}
 			NOT = {
 				martial = 15
@@ -1416,7 +1415,6 @@ check_if_ancestor_worship_worthy_effect = {
 			OR = {
 				has_religion_feature = religion_relentless
 				has_religion_feature = religion_feature_celtic
-				has_religion_feature = religion_feature_trailwalker
 			}
 			NOT = {
 				has_any_leadership_trait_trigger = yes

@@ -1032,6 +1032,7 @@ religion_doctrine = {
 				religion_group = afro_syncretic #redundant
 				has_selected_religion_feature = religion_feature_midewiwin
 				has_selected_religion_feature = religion_feature_celtic
+				has_selected_religion_feature = religion_feature_trailwalker
 			}
 		}
 		effect = {
@@ -1067,6 +1068,8 @@ religion_doctrine = {
 		trigger = {
 			NOR = {
 				has_selected_religion_feature = religion_no_leader
+				has_selected_religion_feature = religion_feature_trailwalker
+				has_selected_religion_feature = religion_feature_revelationist
 				religion_group = christian #Random World redundancy.
 			}
 		}
@@ -1470,29 +1473,19 @@ religion_doctrine = {
 		trigger = {
 			religion = trailwalker_reformed
 			NOR = { 
-				has_selected_religion_feature = religion_relentless
-				has_selected_religion_feature = religion_harems
+				has_selected_religion_feature = religion_animistic
+				has_selected_religion_feature = religion_beatification
 			}
 		}
 		effect = {
-			custom_tooltip = { text = tooltip_religion_feature_anti_attrition }
-			custom_tooltip = { text = tooltip_religion_feature_offensive }
-			custom_tooltip = { text = tooltip_religion_feature_harems }
-			hidden_tooltip = {
-				set_max_consorts = 0
-				set_max_wives = 4
-				set_ignores_defensive_attrition = yes
+			custom_tooltip = { text = tooltip_religion_feature_land_morale }
+			custom_tooltip = { text = tooltip_religion_feature_adulthood_rite }
+			custom_tooltip = { text = tooltip_religion_feature_beatification }
+			custom_tooltip = { text = tooltip_religion_feature_eldership }
+			hidden_tooltip = { 
 				set_unit_modifier = { 
-					light_infantry_offensive = 0.1
-					heavy_infantry_offensive = 0.1
-					light_cavalry_offensive = 0.1 
-					knights_offensive = 0.1 
-					pikemen_offensive = 0.1 
-					archers_offensive = 0.1
-					horse_archers_offensive = 0.1
-					camel_cavalry_offensive = 0.1
-					war_elephants_offensive = 0.1
-					key = "RELENTLESS_RELIGION"
+					land_morale = 0.05
+					key = "trailwalker_reformed"
 				}
 			}
 		}
