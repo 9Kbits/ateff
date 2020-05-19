@@ -15,6 +15,11 @@
 # 17	someone becomes the Warhead
 # 18	choose a regent Particle
 
+#THE RADIANT PATH
+
+# 50	the option to become irradiated
+# AHHHHHHHHHHHHHHHHHHHH
+
 # should a decision to get blessed as an adult be added? no
 #100	atomicist child is born, prepare for the blessing
 #101	parent chooses whether to grant the blessing of the atom
@@ -654,6 +659,89 @@ character_event = {
 		}
 	}
 }
+narrative_event = {
+	id = event_atomicist.50
+	title = "EVTITLE_radiant_pathstart"
+	desc = "EVTDESC_radiant_pathstart"
+	picture = GFX_evt_cathedral_zun_pagan
+	
+	only_independent = yes
+	only_playable = yes
+	religion = atomicist
+	
+	trigger = {
+		higher_tier_than = COUNT 
+		piety = 500
+		OR = {
+			trait = atom_bless
+			trait = zealous
+		}
+		NOR = {
+			trait = atom_curse
+			has_character_flag = ignores_the_radiant_light
+		}
+	}
+	
+	mean_time_to_happen = {
+		month = 2
+		modifier = {
+			factor = 2
+			NOT = { trait = atom_bless }
+		}
+	}
+	
+	option = {
+		name = EVOTPA_radiant_pathstart
+		trigger = {
+			religion = atomicist
+		}
+		custom_tooltip = { text = TXT_thestartofradiance }
+		piety = -500
+		trait = irradiated
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 50
+				OR = {
+					trait = zealous
+					trait = erudite
+					trait = scholar
+					trait = genious
+					trait = quick
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVOTPB_radiant_pathstart
+		trigger = {
+			religion = atomicist
+		}
+		custom_tooltip = { text = TXT_notinterestedintheradiantpath }
+		piety = -100
+		prestige = 20
+		hidden_tooltip = {
+			set_character_flag = ignores_the_radiant_light
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 10
+				OR = {
+					trait = cynical
+					trait = slow
+					trait = imbecile
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = zealous
+				}
+			}
+		}
+	}
 
 # ATOMICIST FIRST STRIKE
 # Called from 'on_crusade_creation'
