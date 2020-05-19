@@ -36,14 +36,12 @@ character_event = {
 	picture = GFX_evt_merchant_ship_at_sea_republic
 	religion = brethren
 	only_rulers = yes
-
+	
+	is_triggered_only = yes
+	
 	trigger = {
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		NOT = { has_character_flag = pirate_yarr }
-	}
-	
-	mean_time_to_happen = {
-		months = 6
 	}
 	
 	immediate = {
