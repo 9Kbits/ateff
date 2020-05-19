@@ -134,7 +134,18 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 					}
 				}
 				
-				#We could really use some artifacts for Trailwalker. Maybe.
+				modifier = {
+					factor = 0
+					AND = {
+						OR = {
+							religion = trailwalker
+							religion = trailwalker_reformed
+						}
+						has_artifact = fastest_gun
+						has_artifact = pen_black_bart
+					}
+				}
+				
 				modifier = {
 					factor = 0
 					AND = {
@@ -243,6 +254,8 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 							religion = norse_pagan_reformed
 							religion = celtic_pagan
 							religion = celtic_pagan_reformed
+							religion = trailwalker
+							religion = trailwalker_reformed
 							culture = yooper
 						}
 					}
@@ -365,6 +378,7 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 						religion = patria_grande
 						has_artifact = ate_pearls_of_magdalene
 						has_artifact = ate_llorente_flower_vase
+						has_artifact = ate_garcia_pig_tail
 					}
 				}
 				modifier = {
@@ -377,10 +391,23 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 				modifier = {
 					factor = 0
 					AND = {
+						OR = {
+							religion = trailwalker
+							religion = trailwalker_reformed
+						}
+						has_artifact = roadrunner_feathers
+						has_artifact = golden_stake
+					}
+				}
+				modifier = {
+					factor = 0
+					AND = {
 						religion_group = pagan_group
 						NOR = {
 							religion = norse_pagan
 							religion = norse_pagan_reformed
+							religion = trailwalker
+							religion = trailwalker_reformed
 						}
 					}
 				}
@@ -1630,6 +1657,40 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = atediscover.2 } #ate_stone_of_st_francis
 				}
+				
+				10 = {
+					modifier = { 
+						factor = 0 
+						NOR = {
+							religion = celtic_pagan
+							religion = celtic_pagan_reformed
+						}
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_major } }
+					modifier = {
+						factor = 0
+						has_artifact = fastest_gun
+					}
+					#Insert artifact event here
+					narrative_event = { id = atediscover.5 } #fastest_gun
+				}
+				
+				10 = {
+					modifier = { 
+						factor = 0 
+						NOR = {
+							religion = celtic_pagan
+							religion = celtic_pagan_reformed
+						}
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_major } }
+					modifier = {
+						factor = 0
+						has_artifact = pen_black_bart
+					}
+					#Insert artifact event here
+					narrative_event = { id = atediscover.6 } #pen_black_bart
+				}
 
 				#West African artifacts
 				10 = {
@@ -2141,10 +2202,60 @@ character_event = {
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
 					modifier = {
 						factor = 0
+						has_artifact = ate_garcia_pig_tail
+					}
+					#Insert artifact event here
+					character_event = { id = atediscover.9 }
+				}
+				
+				20 = {
+					modifier = { 
+						factor = 0 
+						NOT = {
+							religion = patria_grande
+						}
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
+					modifier = {
+						factor = 0
 						has_artifact = ate_llorente_flower_vase
 					}
 					#Insert artifact event here
 					character_event = { id = atediscover.4 }
+				}
+				
+				20 = {
+					modifier = { 
+						factor = 0 
+						NOR = {
+							religion = trailwalker
+							religion = trailwalker_reformed
+						}
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
+					modifier = {
+						factor = 0
+						has_artifact = roadrunner_feathers
+					}
+					#Insert artifact event here
+					character_event = { id = atediscover.7 }
+				}
+				
+				20 = {
+					modifier = { 
+						factor = 0 
+						NOR = {
+							religion = trailwalker
+							religion = trailwalker_reformed
+						}
+					}
+					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
+					modifier = {
+						factor = 0
+						has_artifact = golden_stake
+					}
+					#Insert artifact event here
+					character_event = { id = atediscover.8 }
 				}
 				
 				#Native American Artifacts#
