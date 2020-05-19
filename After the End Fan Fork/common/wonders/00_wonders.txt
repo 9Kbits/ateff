@@ -4015,12 +4015,32 @@ wonder_mosque_center_islam = {
 	picture = GFX_wonder_strip_mosque
 	model = wonder_mosque
 	allow_construction = no
-	potential = {
-		religion_group = muslim
-	}
+	#potential = {
+	#	religion_group = muslim
+	#}
 	active = {
-		ROOT = {
-			religion_group = muslim
+		OR = {
+			AND = {
+				ROOT = { religion = rust_cultist }
+				FROMFROM = { has_wonder_flag = Center_rust_cult }
+			}
+			AND = {
+				ROOT = { religion_group = muslim }
+				FROMFROM = { has_wonder_flag = Center_muslim_cult }
+			}
+			AND = {
+				ROOT = {
+					OR = {
+						religion = norse_pagan
+						religion = norse_pagan_reformed
+					}
+				}
+				FROMFROM = { has_wonder_flag = Center_norse_cult }
+			}
+			AND = {
+				ROOT = { religion = ursuline }
+				FROMFROM = { has_wonder_flag = Center_ursuline_cult }
+			}
 		}
 	}
 	flags = {

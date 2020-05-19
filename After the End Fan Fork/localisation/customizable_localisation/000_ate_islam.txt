@@ -165,3 +165,75 @@ defined_text = {
 		localisation_key = regla_de_ifa_desc_real
 	}
 }
+
+defined_text = { 
+	name = GetCenterIslamNameString
+	
+	use_first_valid = yes # Defaults to no
+
+	text = {
+		trigger = {
+			has_wonder_flag = Center_rust_cult
+		}
+		localisation_key = String_Center_Rust_Cultist_Name
+	}
+	text = {
+		trigger = {
+			has_wonder_flag = Center_muslim_cult
+		}
+		localisation_key = String_Center_Muslim_Name
+	}
+	text = {
+		trigger = {
+			has_wonder_flag = Center_norse_cult
+		}
+		localisation_key = String_Center_Norse_Name
+	}
+	text = {
+		trigger = {
+			has_wonder_flag = Center_ursuline_cult
+		}
+		localisation_key = String_Center_Urusline_Name
+	}
+
+
+	fallback_text = {
+		localisation_key = String_Center_Rust_Cultist_Name
+	}
+}
+
+defined_text = { 
+	name = GetCenterIslamDescString
+	
+	use_first_valid = yes # Defaults to no
+
+	text = {
+		trigger = {
+			has_wonder_flag = Center_rust_cult
+		}
+		localisation_key = String_Center_Rust_Cultist_Desc
+	}
+	text = {
+		trigger = {
+			has_wonder_flag = Center_muslim_cult
+		}
+		localisation_key = String_Center_Muslim_Desc
+	}
+	text = {
+		trigger = {
+			has_wonder_flag = Center_norse_cult
+		}
+		localisation_key = String_Center_Norse_Desc
+	}
+	text = {
+		trigger = {
+			has_wonder_flag = Center_ursuline_cult
+		}
+		localisation_key = String_Center_Ursuline_Desc
+	}
+
+
+	fallback_text = {
+		localisation_key = String_Center_Rust_Cultist_Desc
+	}
+}
