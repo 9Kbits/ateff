@@ -27,6 +27,32 @@ e_cuba = {
 	creation_requires_capital = no	
 }
 
+e_west_indian = {
+	color={ 50 255 75 }
+	color2={ 255 255 255 }
+	capital = 1174 # Surrey
+	
+	culture = west_indian
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = west_indian
+		OR = {
+			realm_size = 150
+			e_west_indian = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
 e_haiti = {
 	color={ 10 100 140 }
 	color2={ 255 255 255 }
