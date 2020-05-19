@@ -866,6 +866,38 @@ decisions = {
 		}
 	}
 	
+	choose_a_particle = { # Decision to choose a regent particle
+		is_high_prio = yes
+		only_rulers = yes
+		
+		potential = {
+			NOR = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = atomicist
+			is_adult = yes
+			has_atomicist_particle_trigger = no
+		}
+		allow = {
+			block_general_event_trigger = no
+			piety = 50
+			NOT = { has_character_modifier = atomicist_didnt_choose_particle }
+		}
+		effect = {
+			character_event = { id = atomicist.18 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
+	
+	
 	claim_imperial_throne = { # this decision immediately starts a war with the emperor, so be careful
 		only_independent = yes
 		is_high_prio = yes

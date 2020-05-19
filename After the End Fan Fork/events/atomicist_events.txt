@@ -12,9 +12,10 @@
 #ALL OF THE ABOVE EVENTS WILL BE GIVEN TO CONSUMERISTS
 
 # the AEC is formed ### DEFUNCT
-# 17	someone becomes the Atomic Commissioner
+# 17	someone becomes the Warhead
+# 18	choose a regent Particle
 
-# should a decision to get blessed as an adult be added?
+# should a decision to get blessed as an adult be added? no
 #100	atomicist child is born, prepare for the blessing
 #101	parent chooses whether to grant the blessing of the atom
 #102	parent notified that spouse will choose whether blessing is granted
@@ -548,6 +549,108 @@ narrative_event = {
 		trigger = {
 			religion = atomicist
 			has_landed_title = d_atomicist
+		}
+	}
+}
+
+character_event = {
+	id = atomicist.18
+	title = "EVTITLE_atomicist_18"
+	desc = "EVTDESC_atomicist_18"
+	picture = GFX_evt_atom_blessing
+	
+	religion = atomicist
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVOTPA_atomicist_particle
+		trigger = {
+			religion = atomicist
+		}
+		custom_tooltip = { text = TXT_atomicist_quark }
+		piety = -50
+		hidden_effect = {
+			add_character_modifier = { name = atomicist_quark duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				OR = {
+					trait = gregarious
+					trait = slothful
+				}
+			}
+		}
+	}
+	option = {
+		name = EVOTPB_atomicist_particle
+		trigger = {
+			religion = atomicist
+		}
+		custom_tooltip = { text = TXT_atomicist_lepton }
+		piety = -50
+		hidden_effect = {
+			add_character_modifier = { name = atomicist_lepton duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				OR = {
+					trait = shy
+					trait = weak
+					trait = quick
+				}
+			}
+		}
+	}
+	option = {
+		name = EVOTPC_atomicist_particle
+		trigger = {
+			religion = atomicist
+		}
+		custom_tooltip = { text = TXT_atomicist_boson }
+		piety = -50
+		hidden_effect = {
+			add_character_modifier = { name = atomicist_boson duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				OR = {
+					trait = is_fat
+					trait = diligent
+					trait = deceitful
+				}
+			}
+		}
+	}
+	option = {
+		name = EVOTPD_atomicist_particle
+		trigger = {
+			religion = atomicist
+			trait = cynical
+		}
+		custom_tooltip = { text = TXT_atomicist_none }
+		piety = -100
+		prestige = 200
+		add_character_modifier = {
+			name = atomicist_didnt_choose_particle
+			hidden = yes
+			years = 10
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 20
+				OR = {
+					trait = content
+					trait = arbitrary
+				}
+			}
 		}
 	}
 }
