@@ -1050,3 +1050,61 @@ character_event = {
 		}
 	}
 }
+
+character_event = {
+	id = patria.44
+	hide_window = yes
+	is_triggered_only = yes
+	religion = patria_grande
+	
+	trigger = {
+		has_character_flag = bayardo
+	}
+	
+	immediate = {
+		narrative_event = { id = patria.45 years = 2 }
+		character_event = { id = patria.46 years = 3 }
+	}
+}
+
+narrative_event = {
+	id = patria.45
+	title = EVTTITLE_patria_45
+	desc = EVTDESC_patria_45
+	picture = GFX_evt_melee
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	religion = patria_grande
+	
+	trigger = {
+		has_character_flag = bayardo
+	}
+	
+	option = {
+		name = EVTOPTA_patria_45
+		remove_trait = bastard
+		add_trait = legit_bastard
+		add_rival = 1811012
+		add_rival = 1811013
+	}
+}
+
+character_event = {
+	id = patria.46
+	desc = EVTDESC_patria_46
+	picture = GFX_evt_knight_kneeling
+	border = GFX_event_normal_frame_diplomacy
+	is_triggered_only = yes
+	religion = patria_grande
+	
+	trigger = {
+		has_character_flag = bayardo
+	}
+	
+	option = {
+		name = EVTOPTA_patria_46
+		add_trait = duelist
+		add_trait = zealous
+	}
+}
+	
