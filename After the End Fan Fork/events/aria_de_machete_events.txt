@@ -985,3 +985,36 @@ character_event = { #Spell Worked (ping)
 		}
 	}
 }
+
+character_event = {
+	id = machete.40
+	desc = EVTDESC_machete_40
+	picture = GFX_evt_aria_de_machete
+	border = GFX_event_normal_frame_diplomacy
+	religion = espiritista
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_save_game = no
+		has_character_flag = simoneta
+	}
+	
+	immediate = {
+		clr_character_flag = simoneta
+	}
+
+	option = {
+		name = EVTOPTA_machete_40
+		ROOT = {
+			religion = aria_de_machete
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_machete_40
+		ROOT = {
+			culture = bolivarense
+		}
+	}
+}
