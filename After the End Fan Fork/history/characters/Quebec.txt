@@ -1289,6 +1289,44 @@
 	2669.8.29={death=yes}
 }
 
+1763077={
+	name="Ojistah"
+	dynasty=2007086
+	female=yes
+	culture=iroquois
+	religion=ursuline
+	martial=3
+	diplomacy=7
+	stewardship=6
+	intrigue=4
+	learning=7
+	trait=fortune_builder
+	trait=patient
+	trait=gluttonous
+	2645.2.22={birth=yes}
+	2660.1.1={effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}}
+	2700.1.1={death=yes}
+}
+
+1763078={
+	name="Karontase"
+	culture=iroquois
+	religion=ursuline
+	trait=kind
+	2647.10.2={birth=yes}
+	2660.1.1={add_spouse=1763077}
+	2700.1.1={death=yes}
+}
+
 1763079={
 	name="Adam"
 	dynasty=1796003
@@ -1307,6 +1345,18 @@
 	mother=1763069
 	2652.1.28={birth=yes}
 	2706.8.3={death=yes}
+}
+
+17630780={
+	name="Tanis"
+	dynasty=2007086
+	female=yes
+	culture=iroquois
+	religion=ursuline
+	mother=1763077
+	father=1763078
+	2661.12.1={birth=yes}
+	2700.1.1={death=yes}
 }
 
 1763081={
