@@ -897,6 +897,111 @@ decisions = {
 		}
 	}
 	
+	radiant_path_1 = { # Start of the Radiant Path
+		is_high_prio = yes
+		only_rulers = yes
+		only_independent = yes
+		
+		ai_check_interval = 24 #once every 2 years
+		
+		potential = {
+			religion = atomicist
+			is_adult = yes
+			NOT = {
+				trait = atom_curse
+			}
+		}
+		allow = {
+			higher_tier_than = COUNT 
+			piety = 500
+			OR = {
+				trait = atom_bless
+				trait = zealous
+			}
+			NOT = {
+				has_character_flag = ignores_the_radiant_light
+			}
+		}
+		effect = {
+			character_event = { id = atomicist.50 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
+	
+	radiant_path_2 = { # Becoming Enriched
+		is_high_prio = yes
+		only_rulers = yes
+		only_independent = yes
+		
+		ai_check_interval = 24 #once every 2 years
+		
+		potential = {
+			religion = atomicist
+			is_adult = yes
+			trait = irradiated
+		}
+		allow = {
+			higher_tier_than = DUKE
+			piety = 300
+			num_of_holy_sites = 1
+			OR = {
+				trait = atom_bless
+				trait = zealous
+			}
+		}
+		effect = {
+			character_event = { id = atomicist.51 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
+	
+	radiant_path_3 = { # Becoming Radioactive
+		is_high_prio = yes
+		only_rulers = yes
+		only_independent = yes
+		
+		ai_check_interval = 24 #once every 2 years
+		
+		potential = {
+			religion = atomicist
+			is_adult = yes
+			trait = enriched
+		}
+		allow = {
+			higher_tier_than = DUKE
+			piety = 1000
+			num_of_holy_sites = 3
+			has_atomicist_particle_trigger = yes
+		}
+		effect = {
+			character_event = { id = atomicist.56 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
 	
 	claim_imperial_throne = { # this decision immediately starts a war with the emperor, so be careful
 		only_independent = yes

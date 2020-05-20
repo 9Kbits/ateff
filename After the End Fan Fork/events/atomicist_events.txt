@@ -649,42 +649,17 @@ character_event = {
 		}
 	}
 }
+
 narrative_event = {
 	id = event_atomicist.50
 	title = "EVTITLE_radiant_pathstart"
 	desc = "EVTDESC_radiant_pathstart"
 	picture = GFX_evt_cathedral_zun_pagan
 	
-	only_independent = yes
-	only_playable = yes
-	religion = atomicist
-	
-	trigger = {
-		higher_tier_than = COUNT 
-		piety = 500
-		OR = {
-			trait = atom_bless
-			trait = zealous
-		}
-		NOR = {
-			trait = atom_curse
-			has_character_flag = ignores_the_radiant_light
-		}
-	}
-	
-	mean_time_to_happen = {
-		month = 2
-		modifier = {
-			factor = 2
-			NOT = { trait = atom_bless }
-		}
-	}
+	is_triggered_only = yes
 	
 	option = {
 		name = EVOTPA_radiant_pathstart
-		trigger = {
-			religion = atomicist
-		}
 		custom_tooltip = { text = TXT_thestartofradiance }
 		piety = -500
 		trait = irradiated
@@ -705,9 +680,6 @@ narrative_event = {
 	
 	option = {
 		name = EVOTPB_radiant_pathstart
-		trigger = {
-			religion = atomicist
-		}
 		custom_tooltip = { text = TXT_notinterestedintheradiantpath }
 		piety = -100
 		prestige = 20
@@ -732,6 +704,89 @@ narrative_event = {
 			}
 		}
 	}
+}
+
+narrative_event = {
+	id = event_atomicist.50
+	title = "EVTITLE_radiant_pathstart"
+	desc = "EVTDESC_radiant_pathstart"
+	picture = GFX_evt_cathedral_zun_pagan
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVOTPA_radiant_pathstart
+		custom_tooltip = { text = TXT_thestartofradiance }
+		piety = -500
+		trait = irradiated
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 50
+				OR = {
+					trait = zealous
+					trait = erudite
+					trait = scholar
+					trait = genious
+					trait = quick
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVOTPB_radiant_pathstart
+		custom_tooltip = { text = TXT_notinterestedintheradiantpath }
+		piety = -100
+		prestige = 20
+		hidden_tooltip = {
+			set_character_flag = ignores_the_radiant_light
+		}
+		ai_chance = {
+			factor = 50
+			modifier = {
+				factor = 10
+				OR = {
+					trait = cynical
+					trait = slow
+					trait = imbecile
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = zealous
+				}
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = event_atomicist.51
+	title = "EVTITLE_radiant_pathmiddle1"
+	desc = "EVTDESC_radiant_pathmiddle1"
+	picture = GFX_evt_cathedral_zun_pagan
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVOTPA_literally_just_filler
+	}
+}
+
+narrative_event = {
+	id = event_atomicist.56
+	title = "EVTITLE_radiant_pathend1"
+	desc = "EVTDESC_radiant_pathend1"
+	picture = GFX_evt_cathedral_zun_pagan
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVOTPA_literally_just_filler
+	}
+}
 
 # ATOMICIST FIRST STRIKE
 # Called from 'on_crusade_creation'
