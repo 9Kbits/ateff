@@ -2014,25 +2014,22 @@ character_event = {
 				character_event = { id = SoA.5085 }
 			}
 		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_ottawa
-				NOT = { is_title_active = d_st_pats }
-			}
-			hidden_tooltip = {
-				character_event = { id = SoA.5049 }
-			}
-		}
+		#if = {
+		#	limit = {
+		#		has_character_flag = pilgrimage_to_ottawa
+		#		NOT = { is_title_active = d_st_pats }
+		#	}
+		#	hidden_tooltip = {
+		#		character_event = { id = SoA.5049 }
+		#	}
+		#}
 		if = {
 			limit = {
 				has_character_flag = pilgrimage_to_ottawa
 				is_title_active = d_st_pats
 			}
 			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5085 } }
-					10 = { character_event = { id = SoA.5049 } }
-				}
+				character_event = { id = SoA.5085 }
 			}
 		}
 		if = {
@@ -2044,25 +2041,22 @@ character_event = {
 				character_event = { id = SoA.5085 }
 			}
 		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_new_canterbury
-				NOT = { is_title_active = d_st_pats }
-			}
-			hidden_tooltip = {
-				character_event = { id = SoA.5049 }
-			}
-		}
+		#if = {
+		#	limit = {
+		#		has_character_flag = pilgrimage_to_new_canterbury
+		#		NOT = { is_title_active = d_st_pats }
+		#	}
+		#	hidden_tooltip = {
+		#		character_event = { id = SoA.5049 }
+		#	}
+		#}
 		if = {
 			limit = {
 				has_character_flag = pilgrimage_to_new_canterbury
 				is_title_active = d_st_pats
 			}
 			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5085 } }
-					10 = { character_event = { id = SoA.5049 } }
-				}
+				character_event = { id = SoA.5085 }
 			}
 		}
 		if = {
@@ -2074,25 +2068,22 @@ character_event = {
 				character_event = { id = SoA.5084 }
 			}
 		}
-		if = {
-			limit = {
-				has_character_flag = pilgrimage_to_quebec
-				NOT = { is_title_active = d_st_ursulas_chosen }
-			}
-			hidden_tooltip = {
-				character_event = { id = SoA.5049 }
-			}
-		}
+		#if = {
+		#	limit = {
+		#		has_character_flag = pilgrimage_to_quebec
+		#		NOT = { is_title_active = d_st_ursulas_chosen }
+		#	}
+		#	hidden_tooltip = {
+		#		character_event = { id = SoA.5049 }
+		#	}
+		#}
 		if = {
 			limit = {
 				has_character_flag = pilgrimage_to_quebec
 				is_title_active = d_st_ursulas_chosen
 			}
 			hidden_tooltip = {
-				random_list = {
-					10 = { character_event = { id = SoA.5084 } }
-					10 = { character_event = { id = SoA.5049 } }
-				}
+				character_event = { id = SoA.5084 }
 			}
 		}
 		if = {
@@ -2362,41 +2353,41 @@ character_event = {
 }
 
 # Makes friend - Knight of UEL
-character_event = {
-	id = SoA.5049
-
-	hide_window = yes
-
-	is_triggered_only = yes
-
-	immediate = {
-		d_uel = {
-			holder_scope = {
-				random_courtier = {
-					limit = {
-						is_female = no
-						prisoner = no
-						in_command = no
-						is_priest = no
-						age = 16
-						NOT = {
-							sibling = ROOT
-						}
-						NOT = {
-							is_friend = ROOT
-						}
-						NOT = {
-							is_rival = ROOT
-						}
-						NOT = { has_job_title = job_spiritual }
-					}
-					add_friend = ROOT
-					character_event = { id = SoA.5086 }
-				}
-			}
-		}
-	}
-}
+#character_event = {
+#	id = SoA.5049
+#
+#	hide_window = yes
+#
+#	is_triggered_only = yes
+#
+#	immediate = {
+#		d_uel = {
+#			holder_scope = {
+#				random_courtier = {
+#					limit = {
+#						is_female = no
+#						prisoner = no
+#						in_command = no
+#						is_priest = no
+#						age = 16
+#						NOT = {
+#							sibling = ROOT
+#						}
+#						NOT = {
+#							is_friend = ROOT
+#						}
+#						NOT = {
+#							is_rival = ROOT
+#						}
+#						NOT = { has_job_title = job_spiritual }
+#					}
+#					add_friend = ROOT
+#					character_event = { id = SoA.5086 }
+#				}
+#			}
+#		}
+#	}
+#}
 
 # Knight friend bounce event
 character_event = {

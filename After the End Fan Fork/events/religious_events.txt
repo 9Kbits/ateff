@@ -4966,7 +4966,7 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		d_high_church = {
+		k_high_church = {
 			any_claimant = {
 				OR = {
 					NOT = { religion = high_church }
@@ -4981,7 +4981,7 @@ character_event = {
 	}
 	
 	immediate = {
-		d_high_church = {
+		k_high_church = {
 			any_claimant = {
 				limit = {
 					OR = {
@@ -4989,7 +4989,7 @@ character_event = {
 						any_liege = { NOT = { religion = high_church } }
 					}
 				}
-				remove_claim = d_high_church
+				remove_claim = k_high_church
 			}
 		}
 	}

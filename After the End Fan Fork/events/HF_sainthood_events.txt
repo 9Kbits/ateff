@@ -44,7 +44,7 @@ character_event = {
 			
 			any_claim = { title = k_papal_state } # Antipopes
 			any_claim = { title = k_ursuline } # Antipopes
-			any_claim = { title = d_high_church } # Antipopes
+			any_claim = { title = k_high_church } # Antipopes
 			any_claim = { title = d_quorum_of_the_twelve } # Antipopes
 		}
 		OR = {
@@ -2900,7 +2900,7 @@ character_event = {
 			}
 			AND = {
 				rightful_religious_head_scope = {
-					has_landed_title = d_high_church
+					has_landed_title = k_high_church
 				}
 				NOT = { has_global_flag = only_archbishop_saints }
 			}
@@ -3044,7 +3044,7 @@ character_event = {
 			}
 			AND = {
 				rightful_religious_head_scope = {
-					has_landed_title = d_high_church
+					has_landed_title = k_high_church
 				}
 				NOT = {
 					has_global_flag = only_archbishop_saints
@@ -3096,7 +3096,7 @@ character_event = {
 				limit = {
 					religion = high_church
 				}
-				set_global_flag = bad_high_church_saint
+				set_global_flag = bak_high_church_saint
 			}
 			else_if = {
 				limit = {
@@ -3328,9 +3328,9 @@ province_event = {
 		}
 		else_if = {
 			limit = {
-				has_global_flag = bad_high_church_saint
+				has_global_flag = bak_high_church_saint
 			}
-			d_high_church = { 
+			k_high_church = { 
 				holder_scope = {
 					character_event = { id = HF.40058 }
 				}
@@ -3396,10 +3396,10 @@ character_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = bad_high_church_saint
+				has_global_flag = bak_high_church_saint
 			}
 			set_global_flag = only_archbishop_saints
-			clr_global_flag = bad_high_church_saint
+			clr_global_flag = bak_high_church_saint
 			log = "Only Archbishoprical Beatifications, declared by [Root.GetTitledName]"
 			any_playable_ruler = {
 				limit = {
@@ -3770,7 +3770,7 @@ character_event = {
 			}
 			AND = {
 				religion = high_church
-				d_high_church = {
+				k_high_church = {
 					holder_scope = {
 						trait = bad_priest_christian
 						independent = yes
@@ -3783,7 +3783,7 @@ character_event = {
 				OR = {
 					AND = {
 						trait = impaler
-						d_high_church = {
+						k_high_church = {
 							holder_scope = {
 								trait = impaler
 							}
@@ -3791,7 +3791,7 @@ character_event = {
 					}
 					AND = {
 						trait = hedonist
-						d_high_church = {
+						k_high_church = {
 							holder_scope = {
 								trait = hedonist
 							}
@@ -3799,7 +3799,7 @@ character_event = {
 					}
 					AND = {
 						trait = cannibal_trait
-						d_high_church = {
+						k_high_church = {
 							holder_scope = {
 								trait = cannibal_trait
 							}
@@ -3807,7 +3807,7 @@ character_event = {
 					}
 					AND = {
 						trait = lunatic
-						d_high_church = {
+						k_high_church = {
 							holder_scope = {
 								trait = lunatic
 							}
@@ -3815,7 +3815,7 @@ character_event = {
 					}
 					AND = {
 						trait = drunkard
-						d_high_church = {
+						k_high_church = {
 							holder_scope = {
 							trait = drunkard
 							}
@@ -3823,7 +3823,7 @@ character_event = {
 					}
 					AND = {
 						trait = homosexual
-						d_high_church = {
+						k_high_church = {
 							holder_scope = {
 								trait = homosexual
 								is_lover = ROOT
@@ -3833,7 +3833,7 @@ character_event = {
 					}
 					AND = {
 						trait = lustful
-						d_high_church = {
+						k_high_church = {
 							is_lover = ROOT
 							trait = lustful
 							NOT = {
@@ -3846,7 +3846,7 @@ character_event = {
 							trait = seducer
 							trait = seductress
 						}
-						d_high_church = {
+						k_high_church = {
 							holder_scope = {
 								trait = seducer
 							}
@@ -3986,7 +3986,7 @@ character_event = {
 			}
 			random = {
 				chance = 20
-				d_high_church = {
+				k_high_church = {
 					holder_scope = {
 						character_event = { id = HF.40091 }
 					}
@@ -4371,7 +4371,7 @@ narrative_event = {
 			OR = {
 				has_landed_title = k_papal_state
 				has_landed_title = k_ursuline
-				has_landed_title = d_high_church
+				has_landed_title = k_high_church
 				has_landed_title = d_quorum_of_the_twelve
 			}
 			any_war = {

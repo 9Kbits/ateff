@@ -7064,7 +7064,7 @@ depose_impious_pope = {
 					}
 					AND = {
 						religion = high_church
-						has_landed_title = d_high_church
+						has_landed_title = k_high_church
 					}
 					AND = {
 						religion = mormon
@@ -7137,10 +7137,10 @@ depose_impious_pope = {
 			else_if = {
 				limit = {
 					FROM = {
-						has_landed_title = d_high_church
+						has_landed_title = k_high_church
 					}
 				}
-				d_high_church = {
+				k_high_church = {
 					owner = {
 						save_event_target_as = current_pope
 						reverse_imprison = FROM
