@@ -397,6 +397,17 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 						}
 						has_artifact = roadrunner_feathers
 						has_artifact = golden_stake
+					}
+				}
+				modifier = {
+					factor = 0
+					AND = {
+						OR = {
+							religion = trailwalker
+							religion = trailwalker_reformed
+							religion = revelationist
+							religion = revelationist_reformed
+						}
 						has_artifact = dinosaur
 					}
 				}
@@ -2265,6 +2276,8 @@ character_event = {
 						NOR = {
 							religion = trailwalker
 							religion = trailwalker_reformed
+							religion = revelationist
+							religion = revelationist_reformed
 						}
 					}
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
