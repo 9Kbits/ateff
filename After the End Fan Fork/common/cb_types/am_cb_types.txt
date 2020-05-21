@@ -1641,11 +1641,11 @@ reconquista_mixteca = {
 	}
 }
 
-# Zapoteca #
-reconquista_zapoteca = {
-	name = CB_NAME_RECONQUISTA_ZAPOTECA
-	war_name = WAR_NAME_RECONQUISTA_ZAPOTECA
-	diplo_view_region = custom_zapoteca
+# Oaxaca #
+reconquista_oaxaca = {
+	name = CB_NAME_RECONQUISTA_OAXACA
+	war_name = WAR_NAME_RECONQUISTA_OAXACA
+	diplo_view_region = custom_oaxaca
 	sprite = 9
 	truce_days = 3650
 	is_permanent = yes
@@ -1682,13 +1682,13 @@ reconquista_zapoteca = {
 				OR = {
 					AND = {
 						any_neighbor_province = {
-							region = custom_zapoteca
+							region = custom_oaxaca
 						}
 					}
 					AND = {
 						NOT = {
 							any_neighbor_province = {
-								region = custom_zapoteca
+								region = custom_oaxaca
 							}
 						}
 						NOT = {
@@ -1714,19 +1714,19 @@ reconquista_zapoteca = {
 						any_neighbor_province = {
 							is_land = yes
 							any_neighbor_province = {
-								region = custom_zapoteca
+								region = custom_oaxaca
 							}
 						}
 					}
 					AND = {
 						NOR = {
 							any_neighbor_province = {
-								region = custom_zapoteca
+								region = custom_oaxaca
 							}
 							any_neighbor_province = {
 								is_land = yes
 								any_neighbor_province = {
-									region = custom_zapoteca 
+									region = custom_oaxaca
 								}
 							}
 						}
@@ -1759,7 +1759,7 @@ reconquista_zapoteca = {
 							any_neighbor_province = {
 								is_land = yes
 								any_neighbor_province = {
-									region = custom_zapoteca
+									region = custom_oaxaca
 								}
 							}
 						}
@@ -1780,7 +1780,7 @@ reconquista_zapoteca = {
 
 		FROM = {
 			any_realm_province = {
-				region = custom_zapoteca
+				region = custom_oaxaca
 			}
 			NOT = {
 				religion_group = ROOT
@@ -1838,7 +1838,7 @@ reconquista_zapoteca = {
 		d_istmo = {
 			save_event_target_as = second_duchy_title
 		}
-		k_zapoteca = {
+		k_oaxaca = {
 			save_event_target_as = reconquista_kingdom_title
 		}
 
