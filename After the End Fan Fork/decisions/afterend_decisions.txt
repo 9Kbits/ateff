@@ -824,6 +824,39 @@ decisions = {
 		}
 	}
 	
+	form_the_contested_title = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			religion = celeste
+			k_celeste = { has_holder = no }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+				has_global_flag = celeste_formed
+			}
+			primary_title = { higher_tier_than = COUNT } #only dukes and above can see this one
+		}
+		
+		allow = {
+			primary_title = { higher_tier_than = DUKE }
+			num_of_holy_sites = 2
+			piety = 1000
+			}
+		}
+		
+		effect = {
+			piety -1000
+			narrative_event = { id = event_39841 }
+			activate_title = { title = k_celeste status = yes }
+			k_celeste = { grant_title = ROOT }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	
 	become_warhead = { #New decision to claim the Atomicist religious head title
 		only_playable = yes
 		is_high_prio = yes
