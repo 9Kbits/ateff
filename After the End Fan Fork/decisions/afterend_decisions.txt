@@ -4064,6 +4064,54 @@ decisions = {
 			}			
 		}
 	}
+	
+	create_el_templo_mayor = {
+		ai_check_interval = 360
+		is_high_prio = yes
+		only_playable = yes
+		
+		potential = {
+			religion = mictlantec
+			OR = {
+				tier = KING
+				tier = EMPEROR
+			}
+			NOT = { has_global_flag = el_templo_mayor_formed }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			independent = yes
+			primary_title = { higher_tier_than = DUKE }
+			completely_controls = c_mexico
+			piety = 1000
+		}
+		effect = {
+			set_global_flag = el_templo_mayor_formed
+			activate_title = { title = d_mictlantec status = yes }
+			hidden_tooltip = {
+				create_random_priest = {
+					random_traits = yes
+					religion = ROOT
+					culture = ROOT
+					dynasty = random
+					female = no
+					age = 41
+				}
+				new_character = {
+					character_event = { id = misc.3 } # Diversity
+					character_event = { id = misc.4 } # Physique
+					b_tacuba_MX = { gain_title = PREV }
+					d_mictlantec = { grant_title = PREV }
+					narrative_event = { id = mesoamerica.600 }
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }	
 
 targetted_decisions = {

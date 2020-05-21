@@ -1117,7 +1117,7 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
-	religion_feature_revelationist = { #Combines Monastic and Syncretism
+	religion_feature_revelationist = { #Combines Monastic and Beatification
 		picture = GFX_religion_feature_baltic
 		potential = {
 			has_game_started = yes
@@ -1129,6 +1129,7 @@ religion_doctrine = {
 		trigger = {
 			religion = revelationist_reformed
 			NOR = { 
+				has_selected_religion_feature = religion_no_leader
 				has_selected_religion_feature = religion_monastic
 				has_selected_religion_feature = religion_beatification
 			}
@@ -1473,6 +1474,7 @@ religion_doctrine = {
 		trigger = {
 			religion = trailwalker_reformed
 			NOR = { 
+				has_selected_religion_feature = religion_no_leader
 				has_selected_religion_feature = religion_animistic
 				has_selected_religion_feature = religion_beatification
 			}

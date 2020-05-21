@@ -4,6 +4,7 @@
 #300-	patron deity event
 #400-	bloodline creation
 #500-	stele events
+#600-	religious head for mictlantecs
 
 namespace = mesoamerica
 
@@ -4761,5 +4762,39 @@ character_event = {
 		name = EVTOPTA_mesoamerica_580
 		custom_tooltip = { text = no_more_runestones }
 		set_character_flag = runestones_halted
+	}
+}
+
+narrative_event = {
+	id = mesoamerica.600
+	title = EVTNAME_mesoamerica_600
+	desc = EVTDESC_mesoamerica_600
+	picture = GFX_evt_bishop_aztec
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_600
+		trigger = {
+			religion = mictlantec
+		}
+	}
+	option = {
+		name = EVTOPTB_mesoamerica_600
+		trigger = {
+			religion_group = mesoamerican_gods
+			NOT = { religion = mictlantec }
+		}
+	}
+	option = {
+		name = EVTOPTC_mesoamerica_600
+		trigger = {
+			NOT = {
+				religion_group = mesoamerican_gods
+			}
+		}
 	}
 }
