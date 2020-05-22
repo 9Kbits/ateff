@@ -1520,14 +1520,12 @@ dinosaur = {
 
 	weight = {
 		value = 0
-		additive_modifier = {
-			value = 100
-			religion = trailwalker
-			is_landed = yes
-		}
-		additive_modifier = {
-			value = 100
-			religion = revelationist
+		modifier = {
+			factor = 1
+			OR = {
+				religion = trailwalker
+				religion = revelationist
+			}
 			is_landed = yes
 		}
 	}
