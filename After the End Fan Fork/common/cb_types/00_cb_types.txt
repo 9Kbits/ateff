@@ -5292,13 +5292,14 @@ new_crusade = {
 				clr_character_flag = crusade_papal_stance
 			}
 
-			# Special bloodline for the recipient of the first Crusade
+			# Special bloodline for the recipient of the first Catholic Crusade
 			if = {
 				limit = {
 					NOT = {
-						has_global_flag = first_crusade_complete
+						has_global_flag = first_catholic_crusade_complete
 					}
 					most_participating_crusader = {
+						religion = catholic
 						NOT = {
 							crusader_king = {
 								character = PREV
@@ -5342,10 +5343,67 @@ new_crusade = {
 			if = {
 				limit = {
 					NOT = {
-						has_global_flag = first_crusade_complete
+						has_global_flag = first_catholic_crusade_complete
 					}
 				}
-				set_global_flag = first_crusade_complete
+				set_global_flag = first_catholic_crusade_complete
+			}
+			
+			# Special bloodline for the recipient of the first Ursuline Crusade
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = first_ursuline_crusade_complete
+					}
+					most_participating_crusader = {
+						religion = ursuline
+						NOT = {
+							crusader_king = {
+								character = PREV
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						has_dlc = "Holy Fury"
+					}
+					if = {
+						limit = {
+							crusader_king = {
+								is_female = yes
+							}
+						}
+						crusader_king = {
+							create_bloodline = {
+								type = crusade_lord
+								religion = THIS
+								inheritance = matrilineal
+							}
+							set_bloodline_founder_religion_flag_effect = yes
+						}
+					}
+					else = {
+						crusader_king = {
+							create_bloodline = {
+								type = crusade_lord
+								religion = THIS
+								inheritance = patrilineal
+							}
+							set_bloodline_founder_religion_flag_effect = yes
+						}
+					}
+				}
+			}
+
+			# Checks if First Crusade
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = first_ursuline_crusade_complete
+					}
+				}
+				set_global_flag = first_ursuline_crusade_complete
 			}
 
 			# Adds a negative opinion modifier for selfish Crusaders
