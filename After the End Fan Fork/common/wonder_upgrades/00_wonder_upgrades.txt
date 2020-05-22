@@ -311,7 +311,6 @@ upgrade_tower = {
 
 	potential = { }
 	allow = { }
-	allow = { }
 	active = { }
 
 	flags = {
@@ -3385,16 +3384,10 @@ upgrade_soaring_fortresses = { # Soaring Fortresses
 	build_time = 60
 	gold_cost_flat = 500
 	gold_cost_ticking = 1
-
-	owner_modifier = {
-	}
 	
 	local_modifier = {
 		heavy_infantry = 100
 		siege_defence = 0.05
-	}
-	local_modifier = {
-	
 	}
 	owner_modifier = {
 		custom_modifier_text = castellan_custom_modifier_tt
@@ -4402,7 +4395,8 @@ upgrade_freedom_statue = { #Quadriga
 	owner_modifier = {
 		monthly_character_prestige = 0.05
 	}
-	}
+}
+
 upgrade_clocher = { #Mille Clocher
 	picture = GFX_upgrade_icon_walls
 	potential = { }
@@ -4417,12 +4411,10 @@ upgrade_clocher = { #Mille Clocher
 	gold_cost_ticking = 1
 	local_modifier = {
 		levy_size = 0.1
-	}
-	owner_modifier = {
-	}
-	local_modifier = {
 		archers = 50
 		siege_defence = 0.15
+	}
+	owner_modifier = {
 	}
 }
 upgrade_carillon = { #Carillon
@@ -4438,13 +4430,11 @@ upgrade_carillon = { #Carillon
 	gold_cost_flat = 500
 	gold_cost_ticking = 1
 	local_modifier = {
-	culture_techpoints = 0.05
+		culture_techpoints = 0.05
+		siege_defence = 0.15
 	}
 	owner_modifier = {
 		monthly_character_prestige = 0.5
-	}
-	local_modifier = {
-		siege_defence = 0.15
 	}
 }
 upgrade_college_faculty = { #Les Collèges Faculty of sciences
@@ -4460,13 +4450,11 @@ upgrade_college_faculty = { #Les Collèges Faculty of sciences
 	gold_cost_flat = 500
 	gold_cost_ticking = 1
 	local_modifier = {
-	culture_techpoints = 0.15
-	economy_techpoints = 0.15
+		culture_techpoints = 0.15
+		economy_techpoints = 0.15
 	}
 	owner_modifier = {
 		monthly_character_prestige = 0.5
-	}
-	local_modifier = {
 	}
 }
 upgrade_ate_star_charts = {
@@ -4536,30 +4524,6 @@ upgrade_ate_lake_meade = {
 	}
 }
 
-upgrade_ate_lake_meade = {
-	picture = GFX_upgrade_icon_roses_white
-	potential = { 
-	}
-	allow = {
-	}
-	active = { 
-	}
-
-	flags = {
-		is_singular
-	}
-	build_time = 24
-	gold_cost_flat = 450
-	gold_cost_ticking = 1
-	owner_modifier = {
-		monthly_character_prestige = 0.1
-		gardener_opinion = 5
-	}
-	local_modifier = {
-		local_tax_modifier = 0.10
-	}
-}
-
 upgrade_ate_lady_guadalupe = {
 	picture = GFX_upgrade_icon_roses_white
 	potential = { }
@@ -4584,7 +4548,6 @@ upgrade_peace_tower = {
 	picture = GFX_upgrade_icon_stones
 
 	potential = { }
-	allow = { }
 	allow = { }
 	active = { }
 
@@ -4624,8 +4587,6 @@ upgrade_cats = {
 	}
 }
 upgrade_century_flame = {
-	picture = GFX_upgrade_icon_stones
-
 	picture = GFX_upgrade_icon_brazier
 	potential = { }
 	allow = { }
@@ -4666,7 +4627,6 @@ upgrade_library_parliament = {
 	picture = GFX_upgrade_icon_stones
 
 	potential = { }
-	allow = { }
 	allow = { }
 	active = { }
 
