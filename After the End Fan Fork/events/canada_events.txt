@@ -1,7 +1,80 @@
 # Ursuline, High Church, and other Canadian events
 namespace = canada
 
-#deleted 
+# The Schism Mended (Catholics v Ursulines)
+narrative_event = {
+	id = canada.1
+	title = EVTNAME_canada_1
+	desc = EVTDESC_canada_1
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_canada_1
+
+		if = {
+			limit = { religion = catholic }
+			set_parent_religion = { religion = ursuline parent = catholic }
+		}
+		if = {
+			limit = { religion = neognostic }
+			set_parent_religion = { religion = ursuline parent = neognostic }
+		}
+		if = {
+			limit = { religion = sedevacantist }
+			set_parent_religion = { religion = ursuline parent = sedevacantist }
+		}
+		if = {
+			limit = { religion = nestorian }
+			set_parent_religion = { religion = ursuline parent = nestorian }
+		}
+
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = ursuline
+					controls_religion = no
+				}
+				narrative_event = { id = canada.2 }
+			}
+		}
+	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = canada.2
+	title = EVTNAME_canada_1
+	desc = EVTDESC_canada_1
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTALoR.211
+		ai_chance = { factor = 75 }
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = ursuline
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTBLoR.211
+		ai_chance = { factor = 25 }
+	}
+}
+
 
 # Triggered on death of Abbess
 character_event = {
@@ -168,6 +241,72 @@ character_event = {
 				add_trait = low_anglican
 			}
 		}
+	}
+}
+
+# The Schism Mended (Ursulines v Catholics)
+narrative_event = {
+	id = canada.6
+	title = EVTNAME_canada_6
+	desc = EVTDESC_canada_6
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_canada_6
+
+		if = {
+			limit = { religion = ursuline }
+			set_parent_religion = { religion = catholic parent = ursuline }
+		}
+		if = {
+			limit = { religion = angeline }
+			set_parent_religion = { religion = catholic parent = angeline }
+		}
+
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = catholic
+					controls_religion = no
+				}
+				narrative_event = { id = canada.7 }
+			}
+		}
+	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = canada.7
+	title = EVTNAME_canada_6
+	desc = EVTDESC_canada_6
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTALoR.211
+		ai_chance = { factor = 75 }
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = catholic
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTBLoR.211
+		ai_chance = { factor = 25 }
 	}
 }
 

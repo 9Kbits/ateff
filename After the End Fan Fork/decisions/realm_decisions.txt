@@ -337,7 +337,7 @@ decisions = {
 		}
 	}
 	
-	mend_great_schism = {
+	mend_ursuline_schism = {
 		only_independent = yes
 		is_high_prio = yes
 		ai_check_interval = 24
@@ -358,10 +358,14 @@ decisions = {
 				religion = sedevacantist
 				religion = nestorian
 			}
-			tier = EMPEROR
+			OR = {
+				tier = KING
+				tier = EMPEROR
+			}
 			is_heretic = no
-			NOT = { has_global_flag = schism_mended }
-			k_evangelical = {
+			NOT = { has_global_flag = catholics_mended_schism }
+			NOT = { has_global_flag = ursulines_mended_schism }
+			k_ursuline = {
 				holder_scope = {
 					is_heretic = no
 				}
@@ -371,28 +375,27 @@ decisions = {
 			}
 		}
 		allow = {
+			tier = EMPEROR
 			piety = 2000
 			religion_authority = 0.9
 			custom_tooltip = { # Custom tooltip to shorten the in-game tooltip
-				text = hcc_not_evangelical
+				text = quebec_not_ursuline
 				OR = {
-					e_dixie = { has_holder = no }
-					e_dixie = {
+					k_quebec = { has_holder = no }
+					k_quebec = {
 						holder_scope = {
 							NOR = {
-								religion = evangelical
-								religion = antinomian
-								religion = charismatic
-								religion = postadventist
+								religion = ursuline
+								religion = angeline
 							}
 						}
 					}
 				}
 			}
-			completely_controls = c_washington
-			b_washington_DC = {
+			completely_controls = c_cap_diamant
+			b_quebec_QC = {
 				custom_tooltip = { # Custom tooltip to shorten the in-game tooltip
-					text = mend_the_schism_holder_religion
+					text = mend_the_ursuline_schism_holder_religion
 					hidden_tooltip = {
 						holder_scope = {
 							OR = {
@@ -408,7 +411,7 @@ decisions = {
 			}
 			b_st_louis_MO = {
 				custom_tooltip = {
-					text = mend_the_schism_holder_religion
+					text = mend_the_ursuline_schism_holder_religion
 					hidden_tooltip = {
 						holder_scope = {
 							OR = {
@@ -424,8 +427,104 @@ decisions = {
 			}
 		}
 		effect = {
-			narrative_event = { id = LoR.210 tooltip = EVTTOOLTIPLoR.210}
-			set_global_flag = schism_mended
+			narrative_event = { id = canada.1 tooltip = TXT_mend_ursuline_schism }
+			set_global_flag = catholics_mended_schism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	mend_catholic_schism = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_dlc = "Legacy of Rome"
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			independent = yes
+			NOT = { is_incapable = yes }
+			OR = {
+				religion = ursuline
+				religion = angeline
+			}
+			OR = {
+				tier = KING
+				tier = EMPEROR
+			}
+			is_heretic = no
+			NOT = { has_global_flag = catholics_mended_schism }
+			NOT = { has_global_flag = ursulines_mended_schism }
+			k_papal_state = {
+				holder_scope = {
+					is_heretic = no
+				}
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			tier = EMPEROR
+			piety = 2000
+			religion_authority = 0.9
+			custom_tooltip = { # Custom tooltip to shorten the in-game tooltip
+				text = missouri_not_catholic
+				OR = {
+					k_missouri = { has_holder = no }
+					k_missouri = {
+						holder_scope = {
+							NOR = {
+								religion = catholic
+								religion = neognostic
+								religion = sedevacantist
+								religion = nestorian
+							}
+						}
+					}
+				}
+			}
+			completely_controls = c_st_louis
+			b_st_louis_MO = {
+				custom_tooltip = { # Custom tooltip to shorten the in-game tooltip
+					text = mend_the_catholic_schism_holder_religion
+					hidden_tooltip = {
+						holder_scope = {
+							OR = {
+								religion = ursuline
+								religion = angeline
+							}
+							is_heretic = no
+						}
+					}
+				}
+			}
+			b_quebec_QC = {
+				custom_tooltip = {
+					text = mend_the_catholic_schism_holder_religion
+					hidden_tooltip = {
+						holder_scope = {
+							OR = {
+								religion = catholic
+								religion = neognostic
+								religion = sedevacantist
+								religion = nestorian
+							}
+							is_heretic = no
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			narrative_event = { id = canada.6 tooltip = TXT_mend_catholic_schism }
+			set_global_flag = ursulines_mended_schism
 		}
 		ai_will_do = {
 			factor = 1
