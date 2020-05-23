@@ -295,3 +295,494 @@ character_event = {
 		hidden_effect = { character_event = { id = HFATE.23200 } }
 	}
 }
+
+#On_start event to assign crowned_by_traits to existing rulers, so as to prevent a cascade of coronation ceremonies at the beginning of every game.
+character_event = {
+	id = HFATE.20372
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	has_dlc = "Holy Fury"
+
+	trigger = { 
+		has_landed_title = k_ursuline
+		is_save_game = no
+	}
+	immediate = {
+		set_global_flag = flag_crowns_delivered
+		any_playable_ruler = { 
+			limit = { 
+				age = 16
+				religion = ursuline 
+				is_feudal = yes
+				NOT = { government = order_government }
+				higher_real_tier_than = DUKE
+				NOT = { has_character_flag = is_charlemagne }
+				NOT = { has_character_flag = is_carloman }
+				NOT = { trait = crowned_by_priest }
+				NOT = { trait = crowned_by_bishop }
+				NOT = { trait = crowned_by_pope }
+				NOT = { trait = crowned_by_myself }
+				is_vice_royalty = no
+			}
+			random_list = { 
+				#Crowned by Pope
+				#Crowned by Bishop
+				#Crowned by Priest
+
+				10 = { 
+					modifier = { #Excommunicated rulers, possessed rulers, or rulers under an Antipope are never assigned Crowned by the Pope.
+						factor = 0
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+							NOT = { religion_head = { has_landed_title = k_ursuline } }
+						}
+					}
+					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Abbess-General.
+						factor = 0.5
+						religion = ursuline
+						NOR = {  
+							has_landed_title = k_quebec
+							has_landed_title = k_aurora
+							has_landed_title = k_michigan
+							has_landed_title = k_cote_nord
+							has_landed_title = k_louisiana
+						} 
+					}
+					modifier = { #If the Pope disliked him, less likely to be crowned by him.
+						factor = 0.5
+						NOT = {  
+							reverse_opinion = { 
+								who = ROOT
+								value = 0 
+							} 
+						} 
+					}
+					modifier = { #Historically more likely.
+						factor = 10
+						religion = ursuline
+						has_landed_title = k_quebec
+					}
+					save_persistent_event_target = { name = coronation_priest_per scope = ROOT } #Needed to localize the trait properly.
+					add_trait = crowned_by_pope
+				}
+				80 = { 
+					modifier = { #Checking if there is no Antipope, and you are not excommunicated, go for the Pope.
+						factor = 0.1
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						religion_head = { has_landed_title = k_ursuline } 
+						tier = EMPEROR
+					}
+					modifier = { #Checking if Emperor, Bishop Coronation unavailable when without investiture law.
+						factor = 0
+						tier = EMPEROR
+						NOT = { primary_title = { has_law = investiture_law_0 } }
+					}
+					modifier = { #Checking if there is an available powerful theocrat.
+						factor = 0
+						NOT = { 
+							any_realm_character = { 
+								is_theocracy = yes 
+								religion = ROOT
+								OR = { 
+									higher_real_tier_than = BARON 
+									has_minor_title = title_ursuline_cardinal
+									any_claim = { title = k_ursuline } #Antipope
+								}
+								NOT = { has_landed_title = k_ursuline }
+							}
+						} 
+					}
+					character_event = { id = HF.20373 }
+				}
+				10 = { 
+					modifier = { #Emperors always crowned by somebody important.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = EMPEROR
+					}
+					modifier = { #Respectable Kings are crowned by Bishops.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = KING
+						any_realm_character = { 
+							is_theocracy = yes 
+							religion = ROOT
+							OR = { 
+								higher_real_tier_than = BARON 
+								has_minor_title = title_ursuline_cardinal
+								any_claim = { title = k_ursuline } #Antipope
+							}
+							NOT = { has_landed_title = k_ursuline }
+						}
+					}
+				}
+			}
+			random_list = { #Second list to determine which modifier.
+				40 = { 
+					modifier = {
+						factor = 0.1
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+						}
+					}
+					modifier = {
+						factor = 0.5
+						tier = KING
+					}
+					modifier = {
+						factor = 2
+						trait = crowned_by_pope
+					}
+					if = { 
+						limit = { NOT = { ruled_years = 20 } }
+						add_character_modifier = {
+							name = extravagant_coronation
+							days = 6000 #Has probably already ruled for a while.
+						}
+					}
+				}
+				50 = { 
+				}
+				10 = { 
+					add_character_modifier = {
+						name = crowned_in_barn
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+#On_start event to assign crowned_by_traits to existing rulers, so as to prevent a cascade of coronation ceremonies at the beginning of every game.
+character_event = {
+	id = HFATE.20373
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	has_dlc = "Holy Fury"
+
+	trigger = { 
+		has_landed_title = d_quorum_of_the_twelve
+		is_save_game = no
+	}
+	immediate = {
+		set_global_flag = flag_crowns_delivered
+		any_playable_ruler = { 
+			limit = { 
+				age = 16
+				religion = mormon 
+				is_feudal = yes
+				NOT = { government = order_government }
+				higher_real_tier_than = DUKE
+				NOT = { has_character_flag = is_charlemagne }
+				NOT = { has_character_flag = is_carloman }
+				NOT = { trait = crowned_by_priest }
+				NOT = { trait = crowned_by_bishop }
+				NOT = { trait = crowned_by_pope }
+				NOT = { trait = crowned_by_myself }
+				is_vice_royalty = no
+			}
+			random_list = { 
+				#Crowned by Pope
+				#Crowned by Bishop
+				#Crowned by Priest
+
+				10 = { 
+					modifier = { #Excommunicated rulers, possessed rulers, or rulers under an Antipope are never assigned Crowned by the Pope.
+						factor = 0
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+							NOT = { religion_head = { has_landed_title = d_quorum_of_the_twelve } }
+						}
+					}
+					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
+						factor = 0.5
+						religion = mormon
+						NOR = {  
+							has_landed_title = k_deseret
+							has_landed_title = k_arixo
+						} 
+					}
+					modifier = { #If the Pope disliked him, less likely to be crowned by him.
+						factor = 0.5
+						NOT = {  
+							reverse_opinion = { 
+								who = ROOT
+								value = 0 
+							} 
+						} 
+					}
+					modifier = { #Historically more likely.
+						factor = 10
+						religion = mormon
+						has_landed_title = k_deseret
+					}
+					save_persistent_event_target = { name = coronation_priest_per scope = ROOT } #Needed to localize the trait properly.
+					add_trait = crowned_by_pope
+				}
+				80 = { 
+					modifier = { #Checking if there is no Antipope, and you are not excommunicated, go for the Pope.
+						factor = 0.1
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						religion_head = { has_landed_title = d_quorum_of_the_twelve } 
+						tier = EMPEROR
+					}
+					modifier = { #Checking if Emperor, Bishop Coronation unavailable when without investiture law.
+						factor = 0
+						tier = EMPEROR
+						NOT = { primary_title = { has_law = investiture_law_0 } }
+					}
+					modifier = { #Checking if there is an available powerful theocrat.
+						factor = 0
+						NOT = { 
+							any_realm_character = { 
+								is_theocracy = yes 
+								religion = ROOT
+								OR = { 
+									higher_real_tier_than = BARON 
+									has_minor_title = title_mormon_cardinal
+									any_claim = { title = d_quorum_of_the_twelve } #Antipope
+								}
+								NOT = { has_landed_title = d_quorum_of_the_twelve }
+							}
+						} 
+					}
+					character_event = { id = HF.20373 }
+				}
+				10 = { 
+					modifier = { #Emperors always crowned by somebody important.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = EMPEROR
+					}
+					modifier = { #Respectable Kings are crowned by Bishops.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = KING
+						any_realm_character = { 
+							is_theocracy = yes 
+							religion = ROOT
+							OR = { 
+								higher_real_tier_than = BARON 
+								has_minor_title = title_cardinal
+								any_claim = { title = d_quorum_of_the_twelve } #Antipope
+							}
+							NOT = { has_landed_title = d_quorum_of_the_twelve }
+						}
+					}
+				}
+			}
+			random_list = { #Second list to determine which modifier.
+				40 = { 
+					modifier = {
+						factor = 0.1
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+						}
+					}
+					modifier = {
+						factor = 0.5
+						tier = KING
+					}
+					modifier = {
+						factor = 2
+						trait = crowned_by_pope
+					}
+					if = { 
+						limit = { NOT = { ruled_years = 20 } }
+						add_character_modifier = {
+							name = extravagant_coronation
+							days = 6000 #Has probably already ruled for a while.
+						}
+					}
+				}
+				50 = { 
+				}
+				10 = { 
+					add_character_modifier = {
+						name = crowned_in_barn
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}
+
+#On_start event to assign crowned_by_traits to existing rulers, so as to prevent a cascade of coronation ceremonies at the beginning of every game.
+character_event = {
+	id = HFATE.20374
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	has_dlc = "Holy Fury"
+
+	trigger = { 
+		has_landed_title = k_high_church
+		is_save_game = no
+	}
+	immediate = {
+		set_global_flag = flag_crowns_delivered
+		any_playable_ruler = { 
+			limit = { 
+				age = 16
+				religion = high_church 
+				is_feudal = yes
+				NOT = { government = order_government }
+				higher_real_tier_than = DUKE
+				NOT = { has_character_flag = is_charlemagne }
+				NOT = { has_character_flag = is_carloman }
+				NOT = { trait = crowned_by_priest }
+				NOT = { trait = crowned_by_bishop }
+				NOT = { trait = crowned_by_pope }
+				NOT = { trait = crowned_by_myself }
+				is_vice_royalty = no
+			}
+			random_list = { 
+				#Crowned by Pope
+				#Crowned by Bishop
+				#Crowned by Priest
+
+				10 = { 
+					modifier = { #Excommunicated rulers, possessed rulers, or rulers under an Antipope are never assigned Crowned by the Pope.
+						factor = 0
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+							NOT = { religion_head = { has_landed_title = k_high_church } }
+						}
+					}
+					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
+						factor = 0.5
+						religion = high_church
+						NOR = {  
+							has_landed_title = k_ontario
+							has_landed_title = k_maritimes
+							has_landed_title = k_quebec
+						} 
+					}
+					modifier = { #If the Pope disliked him, less likely to be crowned by him.
+						factor = 0.5
+						NOT = {  
+							reverse_opinion = { 
+								who = ROOT
+								value = 0 
+							} 
+						} 
+					}
+					modifier = { #Historically more likely.
+						factor = 10
+						religion = high_church
+						OR = {  
+							has_landed_title = k_ontario
+							has_landed_title = k_maritimes
+						} 
+					}
+					save_persistent_event_target = { name = coronation_priest_per scope = ROOT } #Needed to localize the trait properly.
+					add_trait = crowned_by_pope
+				}
+				80 = { 
+					modifier = { #Checking if there is no Antipope, and you are not excommunicated, go for the Pope.
+						factor = 0.1
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						religion_head = { has_landed_title = k_high_church } 
+						tier = EMPEROR
+					}
+					modifier = { #Checking if Emperor, Bishop Coronation unavailable when without investiture law.
+						factor = 0
+						tier = EMPEROR
+						NOT = { primary_title = { has_law = investiture_law_0 } }
+					}
+					modifier = { #Checking if there is an available powerful theocrat.
+						factor = 0
+						NOT = { 
+							any_realm_character = { 
+								is_theocracy = yes 
+								religion = ROOT
+								OR = { 
+									higher_real_tier_than = BARON 
+									any_claim = { title = k_high_church } #Antipope
+								}
+								NOT = { has_landed_title = k_high_church }
+							}
+						} 
+					}
+					character_event = { id = HF.20373 }
+				}
+				10 = { 
+					modifier = { #Emperors always crowned by somebody important.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = EMPEROR
+					}
+					modifier = { #Respectable Kings are crowned by Bishops.
+						factor = 0
+						NOT = { trait = excommunicated }
+						NOT = { trait = possessed }
+						tier = KING
+						any_realm_character = { 
+							is_theocracy = yes 
+							religion = ROOT
+							OR = { 
+								higher_real_tier_than = BARON 
+								any_claim = { title = k_high_church } #Antipope
+							}
+							NOT = { has_landed_title = k_high_church }
+						}
+					}
+				}
+			}
+			random_list = { #Second list to determine which modifier.
+				40 = { 
+					modifier = {
+						factor = 0.1
+						OR = { 
+							trait = excommunicated
+							trait = possessed 
+						}
+					}
+					modifier = {
+						factor = 0.5
+						tier = KING
+					}
+					modifier = {
+						factor = 2
+						trait = crowned_by_pope
+					}
+					if = { 
+						limit = { NOT = { ruled_years = 20 } }
+						add_character_modifier = {
+							name = extravagant_coronation
+							days = 6000 #Has probably already ruled for a while.
+						}
+					}
+				}
+				50 = { 
+				}
+				10 = { 
+					add_character_modifier = {
+						name = crowned_in_barn
+						days = -1
+					}
+				}
+			}
+		}
+	}
+}

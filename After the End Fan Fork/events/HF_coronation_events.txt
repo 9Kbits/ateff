@@ -11078,12 +11078,7 @@ character_event = {
 		any_playable_ruler = { 
 			limit = { 
 				age = 16
-				OR = {
-					religion = catholic 
-					religion = ursuline 
-					religion = mormon
-					religion = high_church
-				}
+				religion = catholic
 				is_feudal = yes
 				NOT = { government = order_government }
 				higher_real_tier_than = DUKE
@@ -11122,34 +11117,6 @@ character_event = {
 							has_landed_title = k_comancheria
 						} 
 					}
-					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Abbess-General.
-						factor = 0.5
-						religion = ursuline
-						NOR = {  
-							has_landed_title = k_quebec
-							has_landed_title = k_aurora
-							has_landed_title = k_michigan
-							has_landed_title = k_cote_nord
-							has_landed_title = k_louisiana
-						} 
-					}
-					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
-						factor = 0.5
-						religion = mormon
-						NOR = {  
-							has_landed_title = k_deseret
-							has_landed_title = k_arixo
-						} 
-					}
-					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
-						factor = 0.5
-						religion = high_church
-						NOR = {  
-							has_landed_title = k_ontario
-							has_landed_title = k_maritimes
-							has_landed_title = k_quebec
-						} 
-					}
 					modifier = { #If the Pope disliked him, less likely to be crowned by him.
 						factor = 0.5
 						NOT = {  
@@ -11165,24 +11132,6 @@ character_event = {
 						OR = {  
 							has_landed_title = k_platte
 							has_landed_title = k_comancheria
-						} 
-					}
-					modifier = { #Historically more likely.
-						factor = 10
-						religion = ursuline
-						has_landed_title = k_quebec
-					}
-					modifier = { #Historically more likely.
-						factor = 10000000
-						religion = mormon
-						has_landed_title = k_deseret
-					}
-					modifier = { #Historically more likely.
-						factor = 10
-						religion = high_church
-						OR = {  
-							has_landed_title = k_ontario
-							has_landed_title = k_maritimes
 						} 
 					}
 					save_persistent_event_target = { name = coronation_priest_per scope = ROOT } #Needed to localize the trait properly.
@@ -11210,17 +11159,9 @@ character_event = {
 								OR = { 
 									higher_real_tier_than = BARON 
 									has_minor_title = title_cardinal
-									has_minor_title = title_ursuline_cardinal
-									has_minor_title = title_mormon_cardinal
 									any_claim = { title = k_papal_state } #Antipope
-									any_claim = { title = k_ursuline } #Antipope
-									any_claim = { title = d_quorum_of_the_twelve } #Antipope
-									any_claim = { title = k_high_church } #Antipope
 								}
 								NOT = { has_landed_title = k_papal_state }
-								NOT = { has_landed_title = k_ursuline }
-								NOT = { has_landed_title = d_quorum_of_the_twelve }
-								NOT = { has_landed_title = k_high_church }
 							}
 						} 
 					}
@@ -11244,25 +11185,11 @@ character_event = {
 							OR = { 
 								higher_real_tier_than = BARON 
 								has_minor_title = title_cardinal
-								has_minor_title = title_ursuline_cardinal
-								has_minor_title = title_mormon_cardinal
 								any_claim = { title = k_papal_state } #Antipope
-								any_claim = { title = k_ursuline } #Antipope
-								any_claim = { title = d_quorum_of_the_twelve } #Antipope
-								any_claim = { title = k_high_church } #Antipope
 							}
 							NOT = { has_landed_title = k_papal_state }
-							NOT = { has_landed_title = k_ursuline }
-							NOT = { has_landed_title = d_quorum_of_the_twelve }
-							NOT = { has_landed_title = k_high_church }
 						}
 					}
-					modifier = { #Historically never happened
-						factor = 0
-						religion = mormon
-						has_landed_title = k_deseret
-					}
-					add_trait = crowned_by_priest
 				}
 			}
 			random_list = { #Second list to determine which modifier.
