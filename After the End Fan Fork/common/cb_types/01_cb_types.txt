@@ -1766,41 +1766,98 @@ liberate_religion = { # New6
 							AND = {
 								is_land = no
 								OR = {
-									ROOT = { religion_group = muslim }
-									FROM = { religion_group = muslim }
 									AND = {
-										ROOT = { religion_group = pagan_group }
-										has_global_flag = pagan_ghws_unlocked
+										religion = consumerist
+										custom_tooltip = {
+											text = CTT_CONSUMERIST_PROPHET_DEAD
+											has_global_flag = consumerist_prophet_dead
+										}
+									}
+									religion = atomicist
+									religion_group = jewish_group
+									AND = {
+										OR = {
+											religion_group = pagan_group
+											religion = midewiwin_reformed
+											religion = raven_tales_reformed
+										}
+										custom_tooltip = {
+											text = CTT_PAGAN_GHWS_UNLOCKED
+											has_global_flag = pagan_ghws_unlocked
+										}
 									}
 									AND = {
-										ROOT = { religion_group = christian }
+										religion_group = christian
 										NOT = { religion = ursuline }
 										NOT = { religion = angeline }
-										has_global_flag = christian_crusades_unlocked
+										custom_tooltip = {
+											text = CTT_CHRISTIAN_CRUSADES_UNLOCKED
+											has_global_flag = christian_crusades_unlocked
+										}
 									}
 									AND = {
 										OR = {
-											religion = ursuline 
+											religion = ursuline
 											religion = angeline
 										}
-										has_global_flag = ursuline_crusades_unlocked
+										custom_tooltip = {
+											text = CTT_URSULINE_CRUSADES_UNLOCKED
+											has_global_flag = ursuline_crusades_unlocked
+										}
+									}
+									AND = {
+										religion = exovedate
+										custom_tooltip = {
+											text = CTT_EXOVEDATE_CRUSADES_UNLOCKED
+											has_global_flag = exopres
+										}
 									}
 									AND = {
 										religion = americanist
-										has_global_flag = liberation_wars_unlocked
+										custom_tooltip = {
+											text = CTT_LIBERATION_WARS_UNLOCKED
+											has_global_flag = liberation_wars_unlocked
+										}
 									}
 									AND = {
-										ROOT = { religion_group = latter_day_saints }
-										has_global_flag = mormon_expeditions_unlocked
+										religion = mormon
+										custom_tooltip = {
+											text = CTT_MORMON_EXPEDITIONS_UNLOCKED
+											has_global_flag = mormon_expeditions_unlocked
+										}
 									}
 									AND = {
-										ROOT = { religion_group = cult_of_saints }
-										has_global_flag = mexican_reconquistas_unlocked
+										religion = imamite
+										custom_tooltip = {
+											text = CTT_IMAMITE_JIHAD_UNLOCKED
+											has_global_flag = imamite_jihad_unlocked # when does this flag activate again? - If the head of the faith is independent.
+										}
 									}
 									AND = {
-										ROOT = { religion_group = muslim }
-										has_global_flag = muslim_jihads_unlocked
+										religion = alawiyya
+										custom_tooltip = {
+											text = CTT_IMAMITE_JIHAD_UNLOCKED
+											has_global_flag = alawiyya_jihad_unlocked 
+										}
 									}
+
+									AND = {
+										religion = orientalist
+										custom_tooltip = {
+											text = CTT_ORIENTALIST_JIHAD_UNLOCKED
+											has_global_flag = orientalist_jihad_unlocked # you forgot to do this i believe
+										}
+									}
+									
+									AND = {
+										religion = rust_cultist
+										custom_tooltip = {
+											text = CTT_RUST_CULTIST_INDUSTRIAL_ACTIONS_UNLOCKED
+											has_global_flag = rust_cultist_industrial_actions_unlocked
+										}
+									}
+									
+									religion = revivalist # doesn't need no fancy event to begin declaring jihads
 								}
 								any_neighbor_province = {
 									OR = {

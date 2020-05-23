@@ -184,3 +184,258 @@ narrative_event = {
 		}
 	}
 }
+
+# THE START OF THE INDUSTRIAL ACTIONS
+narrative_event = {
+	id = rustcultist.10
+	title = EVTNAME_rustcultist_10
+	desc = EVTDESC_rustcultist_10
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = rust_cultist
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		
+		OR = {
+			170 = { # Chicago
+				NOT = { owner = { religion = rust_cultist } }
+			}
+			4 = { # Palisades
+				NOT = { owner = { religion = rust_cultist } }
+			}
+		}
+		
+		NOT = { has_global_flag = rust_cultist_industrial_actions_unlocked }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		set_global_flag = rust_cultist_industrial_actions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_10
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rustcultist_10
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rustcultist_10
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+}
+
+# THE START OF THE INDUSTRIAL ACTIONS - PITTSBURGH FAILING
+narrative_event = {
+	id = rustcultist.11
+	title = EVTNAME_rustcultist_10
+	desc = EVTDESC_rustcultist_11
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = rust_cultist
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		NOT = { has_global_flag = rust_cultist_industrial_actions_unlocked }
+		
+		OR = {
+			k_allegheny = {
+				holder_scope = {
+					NOT = { religion = rust_cultist }
+				}
+			}
+			88 = { # Yohogania
+				NOT = { owner = { religion = rust_cultist } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = rust_cultist_industrial_actions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_10
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rustcultist_10
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rustcultist_10
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+}
+
+# THE START OF THE INDUSTRIAL ACTIONS - DETROIT HAS FALLEN
+narrative_event = {
+	id = rustcultist.12
+	title = EVTNAME_rustcultist_10
+	desc = EVTDESC_rustcultist_12
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = rust_cultist
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2500
+		NOT = { has_global_flag = rust_cultist_industrial_actions_unlocked }
+		
+		118 = { # Detroit
+			owner = {
+				NOT = { religion = rust_cultist }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = rust_cultist_industrial_actions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_10
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rustcultist_10
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rustcultist_10
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+}
+
+# THE START OF THE INDUSTRIAL ACTIONS - CLEVELAND
+narrative_event = {
+	id = canada.13
+	title = EVTNAME_rustcultist_10
+	desc = EVTDESC_rustcultist_13
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = rust_cultist
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		NOT = { has_global_flag = rust_cultist_industrial_actions_unlocked }
+		
+		102 = { # Cuyahoga
+			NOT = { owner = { religion = rust_cultist } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = rust_cultist_industrial_actions_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_10
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rustcultist_10
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rustcultist_10
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+}
