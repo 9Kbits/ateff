@@ -76,6 +76,15 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 						has_artifact = sword_michael
 						has_artifact = ate_ark_of_the_covenant
 						has_artifact = stone_of_golgotha
+					}
+				}
+				modifier = {
+					factor = 0
+					AND = {
+						OR = {
+							religion = high_church
+							religion = nonconformist
+						}
 						has_artifact = bell_of_batoche
 					}
 				}
@@ -239,7 +248,7 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 				modifier = {
 					factor = 0
 					AND = {
-						religion_group = american_native
+						religion_group = americo_syncretic
 						has_artifact = sitting_bull_rifle
 						has_artifact = skull_of_geronimo
 						has_artifact = bell_of_batoche
@@ -268,9 +277,19 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 					AND = {
 						religion_group = christian
 						has_artifact = horn_gabriel
-						has_artifact = st_stanleys_chalice
 						has_artifact = ate_fragment_of_true_cross
-						has_artifact = gutenberg_bible
+					}
+				}
+				modifier = {
+					factor = 0
+					AND = {
+						OR = {
+							religion = ursuline
+							religion = angeline
+							religion = high_church
+							religion = nonconformist
+						}
+						has_artifact = st_stanleys_chalice
 					}
 				}
 				modifier = {
@@ -298,7 +317,10 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 							religion = norse_pagan
 							religion = norse_pagan_reformed
 						}
-						has_artifact = gjallarhorn
+						OR = {
+							has_artifact = gjallarhorn
+							has_artifact = st_stanleys_chalice
+						}
 					}
 				}
 				modifier = {
@@ -1258,7 +1280,7 @@ character_event = {
 					narrative_event = { id = MNM.9804 } #receive Sword of Michael event
 				}
 				10 = {
-					modifier = { factor = 0 NOR = { religion = high_church religion = nonconformist religion = peyotist religion = midewiwin religion = midewiwin_reformed } }
+					modifier = { factor = 0 NOR = { religion = high_church religion = nonconformist religion_group = amero_syncretic } }
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_major } }
 					modifier = {
 						factor = 0
@@ -1278,7 +1300,7 @@ character_event = {
 
 
 				10 = {
-					modifier = { factor = 0 NOT = { religion_group = christian } }
+					modifier = { factor = 0 NOR = { religion = ursuline religion = angeline religion = high_church religion = nonconformist religion = norse_pagan religion = norse_pagan_reformed } }
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
 					modifier = {
 						factor = 0
@@ -1308,17 +1330,6 @@ character_event = {
 					character_event = { id = MNM.9807 } #Fragment of the True Cross
 				}
 				
-				10 = {
-					modifier = { factor = 0 NOR = { religion = evangelical religion = antinomian religion = charismatic religion = postadventist religion = high_church religion = nonconformist } }
-					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
-					modifier = {
-						factor = 0
-						has_artifact = gutenberg_bible
-					}
-					#Insert artifact event here
-					character_event = { id = MNM.9808 } #Gutenberg Bible
-				}
-
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -4207,104 +4218,7 @@ character_event = {
 	after = { clr_artifact_flagsmodifiers_effect = yes }
 }
 
-#Gutenberg Bible
-character_event = {
-	id = MNM.9808
-	desc = EVTDESC_MNM_9808
-	picture = GFX_evt_relic_box
-	border = GFX_event_normal_frame_religion
-
-	is_triggered_only = yes
-
-	has_dlc = "Mystics"
-
-	option = { #it's their duty
-		name = EVTOPT_MEDIUM_ARTIFACT_DUTY
-		prestige = 10
-		reverse_opinion = {
-			who = FROM
-			modifier = opinion_very_disappointed
-			years = 15
-		}
-		add_artifact = gutenberg_bible
-		new_artifact = {
-			set_creation_date = 1.1.1
-		}
-	}
-
-	option = { #monetary reward
-		name = EVTOPT_MEDIUM_ARTIFACT_MONEY
-
-		reverse_opinion = {
-			who = FROM
-			modifier = opinion_was_rewarded
-			years = 10
-		}
-		opinion = {
-			who = FROM
-			modifier = opinion_found_medium_artifact
-			years = 15
-		}
-		transfer_scaled_wealth = {
-			to = FROM
-			value = 0.5
-			min = 35
-		}
-
-		add_artifact = gutenberg_bible
-		new_artifact = {
-			set_creation_date = 1.1.1
-		}
-	}
-	
-	option = { #reward them with a favor
-		name = EVTOPT_MEDIUM_ARTIFACT_FAVOR
-
-		reverse_opinion = {
-			who = FROM
-			modifier = opinion_was_rewarded
-			years = 10
-		}
-		opinion = {
-			who = FROM
-			modifier = opinion_found_medium_artifact
-			years = 15
-		}
-		reverse_add_favor = FROM
-		add_artifact = gutenberg_bible
-		new_artifact = {
-			set_creation_date = 1.1.1
-		}
-	}
-
-	option = { #praise them (prestige reward)
-		trigger = {
-			diplomacy = 15
-		}
-		name = EVTOPT_MEDIUM_ARTIFACT_PRESTIGE
-
-		reverse_opinion = {
-			who = FROM
-			modifier = opinion_was_praised
-			years = 10
-		}
-		opinion = {
-			who = FROM
-			modifier = opinion_found_medium_artifact
-			years = 5
-		}
-		FROM = { prestige = 50 }
-		random = {
-			chance = 20
-			add_friend = FROM
-		}
-		add_artifact = gutenberg_bible
-		new_artifact = {
-			set_creation_date = 1.1.1
-		}
-	}
-	after = { clr_artifact_flagsmodifiers_effect = yes }
-}
+#deleted
 
 #Fingerbone of Saint
 #Quality 1

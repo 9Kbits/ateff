@@ -427,6 +427,7 @@ king_james_bible = {
 			religion = postadventist
 			religion = high_church
 			religion = nonconformist
+			religion_group = latter_day_saints
 		}
 	}
 	allowed_gift = {
@@ -437,6 +438,7 @@ king_james_bible = {
 			religion = postadventist
 			religion = high_church
 			religion = nonconformist
+			religion_group = latter_day_saints
 		}
 	}
 	quality = 3
@@ -1486,37 +1488,6 @@ ate_finger_of_st_john = { #now a councilor artifact
 	flags = { religious christian cult_of_saints latter_day_saints bodypart }
 	stacking = no
 	picture = "GFX_saints_bone_finger"
-}
-
-gutenberg_bible = {
-	monthly_character_piety = 0.5
-	monthly_character_prestige = 0.2
-	learning = 2
-	active = {
-		OR = {
-			religion = evangelical
-			religion = antinomian
-			religion = charismatic
-			religion = postadventist
-			religion = high_church
-			religion = nonconformist
-		}
-	}
-	allowed_gift = {
-		OR = {
-			religion = evangelical
-			religion = antinomian
-			religion = charismatic
-			religion = postadventist
-			religion = high_church
-			religion = nonconformist
-		}
-	}
-	quality = 4
-	stacking = no
-	flags = { religious christian book very_rare }
-	picture = "GFX_book_blue_glow"
-	slot = library
 }
 
 stone_of_golgotha = {
