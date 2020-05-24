@@ -1112,12 +1112,12 @@ e_cayennais = {
 	creation_requires_capital = no	
 }
 
-e_chapin = {
+e_centrano = {
 	color={ 10 55 200 }
 	color2={ 210 50 20 }
 	capital = 1847 # c_guatemala
 	
-	culture = chapin
+	culture = centrano
 	allow = {
 		NOT = {
 			has_game_rule = {
@@ -1127,10 +1127,10 @@ e_chapin = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = chapin
+		culture = centrano
 		OR = {
 			realm_size = 150
-			e_chapin = { OR = { is_titular = no has_holder = yes } }
+			e_centrano = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
