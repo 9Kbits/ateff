@@ -3578,7 +3578,6 @@ crusade = {
 					text = ALT_GHW_STARTED
 					has_global_flag = imamite_jihad_unlocked
 					has_global_flag = orientalist_jihad_unlocked
-					has_global_flag = revivalist_jihad_unlocked
 					has_global_flag = ursuline_crusades_unlocked
 					has_global_flag = liberation_wars_unlocked
 					has_global_flag = mormon_expeditions_unlocked
@@ -5921,7 +5920,8 @@ religious = {
 											ROOT = { religion_group = afro_syncretic }
 											ROOT = { religion_group = cult_of_saints }
 											ROOT = { religion_group = pacific }
-											ROOT = { religion = peyotist }
+											ROOT = { religion_group = amero_syncretic }
+											ROOT = { religion = hindu }
 										}
 										year = 2700
 									}
@@ -5953,6 +5953,13 @@ religious = {
 									AND = {
 										ROOT = { religion_group = latter_day_saints }
 										has_global_flag = mormon_expeditions_unlocked
+									}
+									AND = {
+										ROOT = { religion_group = muslim }
+										OR = {
+											has_global_flag = orientalist_jihad_unlocked
+											has_global_flag = imamite_jihad_unlocked
+										}
 									}
 								}
 								any_neighbor_province = {

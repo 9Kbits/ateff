@@ -363,7 +363,6 @@ province_event = {
 				OR = {
 					culture = rostmann
 					culture = motowner
-					culture = lacustrine
 					culture = chicagoan
 					culture = rouillard
 				}
@@ -379,6 +378,13 @@ province_event = {
 				}
 			}
 			province_event = { id = monster.28 }
+		}
+		
+		if = { #Michigan Dogman
+			limit = {
+				culture = lacustrine
+			}
+			province_event = { id = monster.29 }
 		}
 	}
 	
@@ -712,6 +718,24 @@ province_event = {
 province_event = {
 	id = monster.28
 	desc = EVTDESC_monster_howler
+	picture = GFX_evt_bad_news_female
+	is_triggered_only = yes
+	
+	immediate = {
+		add_province_modifier = { name = terror_beast duration = 1000 } 
+	}
+	
+	option = {
+		name = EVTOPTA_monster_alert
+	}
+	option = {
+		name = EVTOPTB_monster_alert
+	}
+}
+
+province_event = {
+	id = monster.29
+	desc = EVTDESC_monster_dogman
 	picture = GFX_evt_bad_news_female
 	is_triggered_only = yes
 	
