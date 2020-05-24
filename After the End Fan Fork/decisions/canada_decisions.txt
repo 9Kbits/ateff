@@ -1,6 +1,154 @@
 decisions = {
 
-	#nope
+	vassalize_archbishop = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = high_church
+			has_landed_title = e_canada
+			k_high_church = {
+				holder_scope = {
+					independent = yes
+				}
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			is_heretic = no
+
+			conditional_tooltip = {
+				trigger = {
+					NOT = {
+						k_high_church = {
+							owner = {
+								opinion = {
+									who = ROOT
+									value = 50
+								}
+							}
+						}
+					}
+				}
+
+				custom_tooltip = {
+					text = vassalize_archbishop_opinion_TT
+
+					k_high_church = {
+						owner = {
+							opinion = {
+								who = ROOT
+								value = 50
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				trait = excommunicated
+			}
+		}
+		
+		effect = {
+			piety = -1000
+			custom_tooltip = { text = TXT_vassalize_archbishop }
+			hidden_tooltip = {
+				k_high_church = {
+					holder_scope = {
+						set_defacto_liege = e_canada
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	vassalize_abbess_general = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = ursuline
+			has_landed_title = e_canada
+			k_ursuline = {
+				holder_scope = {
+					independent = yes
+				}
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			is_heretic = no
+
+			conditional_tooltip = {
+				trigger = {
+					NOT = {
+						k_ursuline = {
+							owner = {
+								opinion = {
+									who = ROOT
+									value = 50
+								}
+							}
+						}
+					}
+				}
+
+				custom_tooltip = {
+					text = vassalize_abbess_general_opinion_TT
+
+					k_ursuline = {
+						owner = {
+							opinion = {
+								who = ROOT
+								value = 50
+							}
+						}
+					}
+				}
+			}
+			NOT = {
+				trait = excommunicated
+			}
+		}
+		
+		effect = {
+			piety = -1000
+			custom_tooltip = { text = TXT_vassalize_abbess_general }
+			hidden_tooltip = {
+				k_ursuline = {
+					holder_scope = {
+						set_defacto_liege = e_canada
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 	vassalize_mounties = {
 		is_high_prio = yes
