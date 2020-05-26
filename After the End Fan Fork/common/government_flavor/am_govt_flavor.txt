@@ -38,7 +38,7 @@ government_flavor = {
 	priority = 1
 	trigger = {
 		government = mormon_government
-		has_law = mormon_elective
+		has_law = succ_mormon_elective
 	}
 }
 government_flavor = {
@@ -47,7 +47,7 @@ government_flavor = {
 	priority = 1
 	trigger = {
 		government = mormon_government
-		NOT = { has_law = mormon_elective }
+		NOT = { has_law = succ_mormon_elective }
 	}
 }
 government_flavor = {
@@ -813,16 +813,6 @@ government_flavor = {
 	trigger = {
 		has_landed_title = k_ursuline
 		trait = bad_priest_christian
-	}
-}
-
-government_flavor = {
-	name = gov_quorum
-	graphics = GFX_evt_pope
-	priority = 4
-	trigger = {
-		has_landed_title = d_quorum_of_the_twelve
-		NOT = { trait = bad_priest_mormon }
 	}
 }
 

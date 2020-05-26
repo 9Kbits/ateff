@@ -1577,22 +1577,6 @@ government_flavor = {
 	}
 }
 
-
-government_flavor = {
-	name = gov_romuva_eldership
-	graphics = GFX_evt_elder_council
-	priority = 3
-	trigger = {
-		has_law = succ_eldership
-		NOT = { 
-			OR = {
-				capital_scope = { region = world_caribbean }
-				religion_group = afro_syncretic
-			}
-		}
-	}
-}
-
 government_flavor = {
 	name = gov_african_eldership
 	graphics = GFX_evt_west_african_ruler
