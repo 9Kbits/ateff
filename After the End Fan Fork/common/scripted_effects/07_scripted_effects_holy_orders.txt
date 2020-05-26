@@ -162,7 +162,7 @@ teutonic_order_upgrade_capital_effect = {
 			}
 			holding_type = TRIBAL
 		}
-		convert_to = CASTLE
+		convert_to = castle
 		if = {
 			limit = {
 				location = {
@@ -176,7 +176,7 @@ teutonic_order_upgrade_capital_effect = {
 			}
 			location = {
 				build_holding = {
-					type = CITY
+					type = city
 				}
 			}
 		}
@@ -187,13 +187,13 @@ teutonic_order_upgrade_capital_effect = {
 				}
 				NOT = {
 					any_direct_de_jure_vassal_title = {
-						holding_type = TEMPLE
+						holding_type = temple
 					}
 				}
 			}
 			location = {
 				build_holding = {
-					type = TEMPLE
+					type = temple
 				}
 			}
 		}
@@ -204,13 +204,13 @@ holy_order_distribute_titles_effect = {
 	any_demesne_title = {
 		limit = {
 			NOT = {
-				holding_type = CASTLE
+				holding_type = castle
 			}
 			lower_tier_than = DUKE
 		}
 		if = {
 			limit = {
-				holding_type = CITY
+				holding_type = city
 			}
 			create_random_steward = {
 				random_traits = yes
@@ -219,7 +219,7 @@ holy_order_distribute_titles_effect = {
 		}
 		else_if = {
 			limit = {
-				holding_type = TEMPLE
+				holding_type = temple
 			}
 			create_random_priest = {
 				random_traits = yes

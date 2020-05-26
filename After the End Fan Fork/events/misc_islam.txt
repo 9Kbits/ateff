@@ -462,16 +462,19 @@ narrative_event = {
 	option = {
 		name = "EVTOPT_imamitejihad"
 		trigger = {
-			religion = imamite
-			religion = alawiyya
+			OR = {
+				religion = imamite
+				religion = alawiyya
+			}
 		}
 	}
 	option = {
 		name = "EVTOPT_alawiyyajihadc"
 		trigger = {
-			religion = cetic
-			religion = qingzheng
-
+			OR = {
+				religion = cetic
+				religion = qingzheng
+			}
 		}
 	}
 	option = {
