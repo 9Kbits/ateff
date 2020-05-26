@@ -5381,32 +5381,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetDruidDryad
-
-	text = {
-		trigger = { is_female = no }
-		localisation_key = druid_lowercase
-	}
-	text = {
-		trigger = { is_female = yes }
-		localisation_key = dryad
-	}	
-}
-
-defined_text = {
-	name = GetDruidDryadCap
-
-	text = {
-		trigger = { is_female = no }
-		localisation_key = DRUID
-	}
-	text = {
-		trigger = { is_female = yes }
-		localisation_key = DRYAD
-	}
-}
-
-defined_text = {
 	name = GetHolyOrderName
 
 	text = {
@@ -6476,15 +6450,7 @@ defined_text = {
 		localisation_key = secret_religious_society_REAL_americanist
 	}
 }
-defined_text = {
-	name = GetReligiousCommunityName_hamiltonian
-	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_name_hamiltonian
-	}
-	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_REAL_hamiltonian
-	}
-}
+
 defined_text = {
 	name = GetReligiousCommunityName_jeffersonian
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -7420,16 +7386,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetAssassinsSocietyDesc
-	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = the_assassins_desc_random
-	}
-	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = the_assassins_desc_real
-	}
-}
-
-defined_text = {
 	name = GetBenedictineSocietyName
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = monastic_order_benedictine_random
@@ -7901,18 +7857,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetReligiousSocietyDesc_espiritista
-	text = {
-		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_desc
-	}
-	text = {
-		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_espiritista_desc_REAL
-	}
-}
-
-defined_text = {
 	name = GetReligiousSocietyDesc_americanist
 	text = {
 		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
@@ -7921,18 +7865,6 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_americanist_desc_REAL
-	}
-}
-
-defined_text = {
-	name = GetReligiousSocietyDesc_hamiltonian
-	text = {
-		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = alt_start_community_desc
-	}
-	text = {
-		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = secret_religious_society_hamiltonian_desc_REAL
 	}
 }
 
@@ -9521,16 +9453,6 @@ defined_text = {
 	}
 	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = the_assassins_real
-	}
-}
-
-defined_text = {
-	name = GetAssassinsSocietyDesc
-	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
-		localisation_key = the_assassins_desc_random
-	}
-	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
-		localisation_key = the_assassins_desc_real
 	}
 }
 
