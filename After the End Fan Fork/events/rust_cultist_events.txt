@@ -147,7 +147,7 @@ narrative_event = {
 	id = rustcultist.3
 	title = EVTNAME_uaw_formed
 	desc = EVTDESC_uaw_formed
-	picture = GFX_evt_Crusading_knights_cross
+	picture = GFX_evt_rust_cultist
 	border = GFX_event_narrative_frame_religion
 
 	major = yes
@@ -160,6 +160,143 @@ narrative_event = {
 	
 	immediate = {
 		activate_title = { title = d_uaw status = yes }
+		d_uaw = {
+			set_defacto_liege = ROOT
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_rust_cult_holy_order
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rust_cult_holy_order
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rust_cult_holy_order
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+}
+narrative_event = {
+	id = rustcultist.4
+	title = EVTNAME_iatse_formed
+	desc = EVTDESC_iatse_formed
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = high_fabricator }
+	}
+	
+	immediate = {
+		activate_title = { title = d_iatse status = yes }
+		d_iatse = {
+			set_defacto_liege = ROOT
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_rust_cult_holy_order
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rust_cult_holy_order
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rust_cult_holy_order
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+}
+
+narrative_event = {
+	id = rustcultist.5
+	title = EVTNAME_teamsters_formed
+	desc = EVTDESC_teamsters_formed
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = high_fabricator }
+	}
+	
+	immediate = {
+		activate_title = { title = d_teamsters status = yes }
+		d_teamsters = {
+			set_defacto_liege = ROOT
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_rust_cult_holy_order
+		trigger = {
+			religion = rust_cultist
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_rust_cult_holy_order
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_rust_cult_holy_order
+		trigger = {
+			religion_group = oldworld
+			NOT = { religion = rust_cultist }
+		}
+	}
+}
+
+narrative_event = {
+	id = rustcultist.6
+	title = EVTNAME_afl_formed
+	desc = EVTDESC_afl_formed
+	picture = GFX_evt_rust_cultist
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = high_fabricator }
+	}
+	
+	immediate = {
+		activate_title = { title = d_afl status = yes }
+		d_afl = {
+			set_defacto_liege = ROOT
+		}
 	}
 	
 	option = {

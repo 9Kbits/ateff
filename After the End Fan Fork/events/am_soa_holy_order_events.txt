@@ -15225,7 +15225,6 @@ character_event = {
 					id = SoAtE.3008
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -15722,7 +15721,6 @@ character_event = {
 					id = SoAtE.3108
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -16219,7 +16217,6 @@ character_event = {
 					id = SoAtE.3208
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -16716,7 +16713,6 @@ character_event = {
 					id = SoAtE.3308
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -17213,7 +17209,6 @@ character_event = {
 					id = SoAtE.3408
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -17710,7 +17705,6 @@ character_event = {
 					id = SoAtE.3508
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -18213,7 +18207,6 @@ character_event = {
 					id = SoAtE.3608
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -18716,7 +18709,6 @@ character_event = {
 					id = SoAtE.3708
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -19213,7 +19205,6 @@ character_event = {
 					id = SoAtE.3808
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -19710,7 +19701,6 @@ character_event = {
 					id = SoAtE.3908
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -20207,7 +20197,6 @@ character_event = {
 					id = SoAtE.4008
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -20722,7 +20711,6 @@ character_event = {
 					id = SoAtE.4108
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -21238,7 +21226,6 @@ character_event = {
 					id = SoAtE.4208
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -21764,7 +21751,6 @@ character_event = {
 					id = SoAtE.4308
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -22282,7 +22268,6 @@ character_event = {
 					id = SoAtE.4408
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -22798,7 +22783,6 @@ character_event = {
 					id = SoAtE.4508
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -23314,7 +23298,6 @@ character_event = {
 					id = SoAtE.4608
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -23838,7 +23821,6 @@ character_event = {
 					id = SoAtE.4708
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -24350,7 +24332,6 @@ character_event = {
 					id = SoAtE.4808
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -24861,7 +24842,6 @@ character_event = {
 					id = SoAtE.4908
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -25375,7 +25355,6 @@ character_event = {
 					id = SoAtE.5008
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -25893,7 +25872,6 @@ character_event = {
 					id = SoAtE.5108
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -26409,7 +26387,6 @@ character_event = {
 					id = SoAtE.5208
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -26918,7 +26895,6 @@ character_event = {
 					id = SoAtE.5308
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -27429,7 +27405,6 @@ character_event = {
 					id = SoAtE.5408
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -27945,7 +27920,6 @@ character_event = {
 					id = SoAtE.5508
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -28467,7 +28441,6 @@ character_event = {
 					id = SoAtE.5608
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -28715,6 +28688,39 @@ province_event = {
 		}
 	}
 }
+
+# Ping event when vassalizing the Templars
+character_event = {
+	id = SoAtE.5614
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_defacto_liege = FROM
+		FROM = {
+			letter_event = {
+				id = SoAtE.5615
+			}
+		}
+		abdicate_holy_order_if_religion_changes_effect = yes
+	}
+}
+
+# Notification event when vassalizing the Templars
+letter_event = {
+	id = SoAtE.5615
+	desc = EVTDESC_SOATE_5615
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
 
 ########################################
 # d_teamsters
@@ -28989,7 +28995,6 @@ character_event = {
 					id = SoAtE.5708
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
@@ -29511,7 +29516,6 @@ character_event = {
 					id = SoAtE.5808
 				}
 			}
-		}
 		opinion = {
 			who = FROM
 			modifier = opinion_generous_donation
