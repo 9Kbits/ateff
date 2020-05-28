@@ -578,3 +578,137 @@ narrative_event = {
 		}
 	}
 }
+
+character_event = {
+	id = rustcultist.15
+	desc = EVTDESC_rustcultist_15
+	picture = GFX_evt_market_hf
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = celebrating_labor_day
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_15
+		hidden_tooltip = { character_event = { id = rustcultist.16 days = 1 } }
+	}
+}
+
+character_event = {
+	id = rustcultist.16
+	desc = EVTDESC_rustcultist_16
+	picture = GFX_evt_jugglers
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = celebrating_labor_day
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_16
+		prestige = -30
+		piety = 50
+		custom_tooltip = { text = TXT_EVTOPTA_rustcultist_16 }
+		hidden_tooltip = { character_event = { id = rustcultist.17 days = 1 } }
+	}
+	
+	option = {
+		name = EVTOPTB_rustcultist_16
+		custom_tooltip = { text = TXT_EVTOPTB_rustcultist_16 }
+		hidden_tooltip = { character_event = { id = rustcultist.18 days = 1 } }
+	}
+}
+
+character_event = {
+	id = rustcultist.17
+	desc = EVTDESC_rustcultist_17
+	picture = GFX_evt_outside_tavern_hf
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = celebrating_labor_day
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_17
+		add_character_modifier = { name = labor_day_commoners years = 1 }
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
+			custom_tooltip = {
+				text = capital_prospers_custom_tooltip
+				hidden_tooltip = {
+					capital_scope = {
+						change_variable = { which = prosperity_value value = 4 }
+					}
+				}
+			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTA_rustcultist_17 }
+		hidden_tooltip = { character_event = { id = rustcultist.19 days = 1 } }
+	}
+}
+
+character_event = {
+	id = rustcultist.18
+	desc = EVTDESC_rustcultist_18
+	picture = GFX_evt_noble_in_castle
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = celebrating_labor_day
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_18
+		add_character_modifier = { name = labor_day_noble years = 1 }
+		custom_tooltip = { text = TXT_EVTOPTA_rustcultist_17 }
+		hidden_tooltip = { character_event = { id = rustcultist.19 days = 1 } }
+	}
+}
+
+character_event = {
+	id = rustcultist.19
+	desc = EVTDESC_rustcultist_19
+	picture = GFX_evt_market_hf
+	border = GFX_event_normal_frame_religion
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = celebrating_labor_day
+	}
+	
+	option = {
+		name = EVTOPTA_rustcultist_19
+		custom_tooltip = { text = TXT_EVTOPTA_rustcultist_19 }
+	}
+	
+	after = {
+		add_character_modifier = {
+			name = labor_day_timer
+			hidden = yes
+			years = 3
+		}
+		clr_character_flag = celebrating_labor_day
+		clr_character_flag = recent_minor_decision
+		clr_character_flag = do_not_disturb
+	}
+}
+
+character_event = {
+	id = rustcultist.20
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = celebrating_labor_day
+		clr_character_flag = recent_minor_decision
+		clr_character_flag = do_not_disturb
+	}
+}
