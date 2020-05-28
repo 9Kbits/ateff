@@ -30645,17 +30645,17 @@ abdicate_holy_order_if_religion_changes_effect = { #why. why did you add this ef
 		}
 	}
 
-	d_midwestern_brotherhood = {
+	d_iron_workers = {
 		if = {
 			limit = {
-				is_title_active = d_midwestern_brotherhood
+				is_title_active = d_iron_workers
 				owner = { 
 					ai = yes
 					holy_order = yes 
 					NOT = { religion = rust_cultist } 
 				}
 			}
-			log = "[d_midwestern_brotherhood.owner.GetTitledFirstName] was found to be unfit to lead the [d_midwestern_brotherhood.GetName] and therefore removed by the abdicate holy order effect!"
+			log = "[d_iron_workers.owner.GetTitledFirstName] was found to be unfit to lead the [d_iron_workers.GetName] and therefore removed by the abdicate holy order effect!"
 		}
 	}
 
