@@ -760,9 +760,9 @@ donate_money_to_oppenheimer_desc;I can donate money to the Sons of Oppenheimer i
 expel_oppenheimer;Expel the Sons of Oppenheimer;;;;;;;;;;;;;x
 expel_oppenheimer_desc;I can drive the Sons of Oppenheimer from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
 vassalize_knights_columbus;Vassalize the Knights of Columbus;;;;;;;;;;;;;x
-vassalize_knights_columbus_desc;As the King of Columbia, it is within my power to vassalize the powerful Knights of Columbia at the cost of 500 gold.;;;;;;;;;;;;;x
+vassalize_knights_columbus_desc;As the [Root.GetTitle] of Columbia, it is within my power to vassalize the powerful Knights of Columbia at the cost of 500 gold.;;;;;;;;;;;;;x
 vassalize_knights_peter_claver;Vassalize the Knights of Peter Claver;;;;;;;;;;;;;x
-vassalize_knights_peter_claver_desc;As the King of Columbia, it is within my power to vassalize the powerful Knights of Peter Claver at the cost of 500 gold.;;;;;;;;;;;;;x
+vassalize_knights_peter_claver_desc;As the [Root.GetTitle] of Columbia, it is within my power to vassalize the powerful Knights of Peter Claver at the cost of 500 gold.;;;;;;;;;;;;;x
 expel_the_nca;Expel the National Cathedral Association;;;;;;;;;;;;;x
 expel_the_nca_desc;I can drive the National Cathedral Association from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
 donate_money_to_nca;Donate 300¤ to the National Cathedral Association;;;;;;;;;;;;;x
@@ -775,6 +775,7 @@ expel_judah_lions;Expel the Lions of Judah;;;;;;;;;;;;;x
 expel_judah_lions_desc;I can drive the Lions of Judah from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
 donate_money_to_judah_lions;Donate 300¤ to the Lions of Judah;;;;;;;;;;;;;x
 donate_money_to_judah_lions_desc;I can donate money to the Lions of Judah in exchange for [Player.Religion.GetPietyName] and lifelong respect from the priesthood.;;;;;;;;;;;;;x
+
 expel_shomrim;Expel the Shomrim;;;;;;;;;;;;;x
 expel_shomrim_desc;I can drive the Shomrim from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
 donate_money_to_shomrim;Donate 300¤ to the Shomrim;;;;;;;;;;;;;x
@@ -787,10 +788,13 @@ expel_flaming_sword;Expel the Order of the Flaming Sword;;;;;;;;;;;;;x
 expel_flaming_sword_desc;I can drive the Order of the Flaming Sword from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
 donate_money_to_flaming_sword;Donate 300¤ to the Order of the Flaming Sword;;;;;;;;;;;;;x
 donate_money_to_flaming_sword_desc;I can donate money to the Order of the Flaming Sword in exchange for [Player.Religion.GetPietyName] and lifelong respect from the priesthood.;;;;;;;;;;;;;x
-expel_midwestern_brotherhood;Expel the Midwestern Brotherhood;;;;;;;;;;;;;x
-expel_midwestern_brotherhood_desc;I can drive the Midwestern Brotherhood from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
-donate_money_to_midwestern_brotherhood;Donate 300¤ to the Midwestern Brotherhood;;;;;;;;;;;;;x
-donate_money_to_midwestern_brotherhood_desc;I can donate money to the Midwestern Brotherhood in exchange for [Player.Religion.GetPietyName] and lifelong respect from the priesthood.;;;;;;;;;;;;;x
+expel_iron_workers;Expel the [d_iron_workers.GetName];;;;;;;;;;;;;x
+expel_iron_workers_desc;I can drive the [d_iron_workers.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_iron_workers;Donate 300¤ to the [d_iron_workers.GetName];;;;;;;;;;;;;x
+donate_money_to_iron_workers_desc;I can donate money to the [d_iron_workers.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the priesthood.;;;;;;;;;;;;;x
+vassalize_iron_workers;Vassalize the [d_iron_workers.GetName];;;;;;;;;;;;;x
+vassalize_iron_workers_desc;As the [Root.GetTitle] of Alleghenia, it is within my power to vassalize the powerful [d_iron_workers.GetName] at the cost of 500 gold.;;;;;;;;;;;;;x
+
 expel_greenpeace;Expel the Keepers of the Green Peace;;;;;;;;;;;;;x
 expel_greenpeace_desc;I can drive the Keepers of the Green Peace from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
 donate_money_to_greenpeace;Donate 300¤ to the Keepers of the Green Peace;;;;;;;;;;;;;x
@@ -819,6 +823,11 @@ form_st_pats;Form the Knights of St. Patrick;;;;;;;;;;;;;x
 form_st_pats_desc;Call forth warriors to defend the Anglican faith.;;;;;;;;;;;;;x
 expand_twelve_pairs;Expand the Twelve Pairs of France;;;;;;;;;;;;;x
 expand_twelve_pairs_desc;Help estabilish a foothold for the Celeste faith warriors in the north.;;;;;;;;;;;;;x
+expel_twelve_pairs;Expel the [d_twelve_pairs_of_france.GetName];;;;;;;;;;;;;x
+expel_twelve_pairs_desc; can drive the [d_twelve_pairs_of_france.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_twelve_pairs;Donate 300¤ to the [d_twelve_pairs_of_france.GetName];;;;;;;;;;;;;x
+donate_money_to_twelve_pairs_desc;I can donate money to the [d_twelve_pairs_of_france.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Church.;;;;;;;;;;;;;x
+
 form_the_contested_title;Form the Contested Title;;;;;;;;;;;;;x
 form_the_contested_title_desc;Restabilish a proper religious head for the Celeste faith.;;;;;;;;;;;;;x
 
@@ -1842,3 +1851,412 @@ vassalize_abbess_general;Vassalize the Abbess-General;;;;;;;;;;;;;x
 vassalize_abbess_general_desc;Now that we have reunited the legendary Dominion of Canada, we may be able to convince the Abbess-General to submit to imperial rule. Doing so would further legitimize our rule of the great white north.;;;;;;;;;;;;;x
 vassalize_knights_templar_opinion_TT;§Y[k_ursuline.Holder.GetTitledName]§! has an opinion of §G50§! or higher of §Y[Root.GetTitledName]§!;;;;;;;;;;;;;x
 TXT_vassalize_archbishop;The Abbess-General becomes your vassal.;;;;;;;;;;;;;x
+
+expelled_d_knights_of_columbus;Expelled the [d_knights_of_columbus.GetName];;;;;;;;;;;;;x
+expelled_d_knights_of_peter_claver;Expelled the [d_knights_of_peter_claver.GetName];;;;;;;;;;;;;x
+expelled_d_st_ursulas_chosen;Expelled the [d_st_ursulas_chosen.GetName];;;;;;;;;;;;;x
+expelled_d_fh;Expelled the [d_fh.GetName];;;;;;;;;;;;;x
+expelled_d_men_in_black;Expelled the [d_men_in_black.GetName];;;;;;;;;;;;;x
+expelled_d_oppenheimer;Expelled the [d_oppenheimer.GetName];;;;;;;;;;;;;x
+expelled_d_national_cathedral;Expelled the [d_national_cathedral.GetName];;;;;;;;;;;;;x
+expelled_d_lebanon_brethren;Expelled the [d_lebanon_brethren.GetName];;;;;;;;;;;;;x
+expelled_d_judah_lions;Expelled the [d_judah_lions.GetName];;;;;;;;;;;;;x
+expelled_d_shomrim;Expelled the [d_shomrim.GetName];;;;;;;;;;;;;x
+expelled_d_fm;Expelled the [d_fm.GetName];;;;;;;;;;;;;x
+expelled_d_flaming_sword;Expelled the [d_flaming_sword.GetName];;;;;;;;;;;;;x
+expelled_d_uaw;Expelled the [d_uaw.GetName];;;;;;;;;;;;;x
+expelled_d_greenpeace;Expelled the [d_greenpeace.GetName];;;;;;;;;;;;;x
+expelled_d_nauvoo_legion;Expelled the [d_nauvoo_legion.GetName];;;;;;;;;;;;;x
+expelled_d_oto;Expelled the [d_oto.GetName];;;;;;;;;;;;;x
+expelled_d_masked_knights;Expelled the [d_masked_knights.GetName];;;;;;;;;;;;;x
+expelled_d_order_of_brotherhood;Expelled the [d_order_of_brotherhood.GetName];;;;;;;;;;;;;x
+expelled_d_st_pats;Expelled the [d_st_pats.GetName];;;;;;;;;;;;;x
+expelled_d_lightbringers;Expelled the [d_lightbringers.GetName];;;;;;;;;;;;;x
+expelled_d_dead_sun;Expelled the [d_dead_sun.GetName];;;;;;;;;;;;;x
+expelled_d_golden_bears;Expelled the [d_golden_bears.GetName];;;;;;;;;;;;;x
+expelled_d_followers_arjuna;Expelled the [d_followers_arjuna.GetName];;;;;;;;;;;;;x
+expelled_d_batallon_colombia;Expelled the [d_batallon_colombia.GetName];;;;;;;;;;;;;x
+expelled_d_saint_expedit;Expelled the [d_saint_expedit.GetName];;;;;;;;;;;;;x
+expelled_d_followers_ogun;Expelled the [d_followers_ogun.GetName];;;;;;;;;;;;;x
+expelled_d_warriors_guaicaipuro;Expelled the [d_warriors_guaicaipuro.GetName];;;;;;;;;;;;;x
+expelled_d_all_tribes;Expelled the [d_all_tribes.GetName];;;;;;;;;;;;;x
+expelled_d_capoeiristas;Expelled the [d_capoeiristas.GetName];;;;;;;;;;;;;x
+expelled_d_code_keepers;Expelled the [d_code_keepers.GetName];;;;;;;;;;;;;x
+expelled_d_golden_archers;Expelled the [d_golden_archers.GetName];;;;;;;;;;;;;x
+expelled_d_round_table;Expelled the [d_round_table.GetName];;;;;;;;;;;;;x
+expelled_d_salvation_army;Expelled the [d_salvation_army.GetName];;;;;;;;;;;;;x
+expelled_d_three_fires;Expelled the [d_three_fires.GetName];;;;;;;;;;;;;x
+expelled_d_taxet_warriors;Expelled the [d_taxet_warriors.GetName];;;;;;;;;;;;;x
+expelled_d_fruit_of_islam;Expelled the [d_fruit_of_islam.GetName];;;;;;;;;;;;;x
+expelled_d_guardians_of_tradition;Expelled the [d_guardians_of_tradition.GetName];;;;;;;;;;;;;x
+expelled_d_coureurs_des_bois;Expelled the [d_coureurs_des_bois.GetName];;;;;;;;;;;;;x
+expelled_d_knights_st_flanelle;Expelled the [d_knights_st_flanelle.GetName];;;;;;;;;;;;;x
+expelled_d_cedesi;Expelled the [d_cedesi.GetName];;;;;;;;;;;;;x
+expelled_d_pony_express;Expelled the [d_pony_express.GetName];;;;;;;;;;;;;x
+expelled_d_order_of_the_golden_bunny;Expelled the [d_order_of_the_golden_bunny.GetName];;;;;;;;;;;;;x
+expelled_d_twelve_pairs_of_france;Expelled the [d_twelve_pairs_of_france.GetName];;;;;;;;;;;;;x
+expelled_d_legion_infernal;Expelled the [d_legion_infernal.GetName];;;;;;;;;;;;;x
+expelled_d_iatse;Expelled the [d_iatse.GetName];;;;;;;;;;;;;x
+expelled_d_iron_workers;Expelled the [d_iron_workers.GetName];;;;;;;;;;;;;x
+expelled_d_teamsters;Expelled the [d_teamsters.GetName];;;;;;;;;;;;;x
+expelled_d_afl;Expelled the [d_afl.GetName];;;;;;;;;;;;;x
+
+expel_lightbringers;Expel the [d_lightbringers.GetName];;;;;;;;;;;;;x
+expel_lightbringers_desc; can drive the [d_lightbringers.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_lightbringers;Donate 300¤ to the [d_lightbringers.GetName];;;;;;;;;;;;;x
+donate_money_to_lightbringers_desc;I can donate money to the [d_lightbringers.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+expel_dead_sun;Expel the [d_dead_sun.GetName];;;;;;;;;;;;;x
+expel_dead_sun_desc; can drive the [d_dead_sun.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_dead_sun;Donate 300¤ to the [d_dead_sun.GetName];;;;;;;;;;;;;x
+donate_money_to_dead_sun_desc;I can donate money to the [d_dead_sun.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+expel_golden_bears;Expel the [d_golden_bears.GetName];;;;;;;;;;;;;x
+expel_golden_bears_desc;I can drive the [d_golden_bears.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_golden_bears;Donate 300¤ to the [d_golden_bears.GetName];;;;;;;;;;;;;x
+donate_money_to_golden_bears_desc;I can donate money to the [d_golden_bears.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the scholars.;;;;;;;;;;;;;x
+
+expel_followers_arjuna;Expel the [d_followers_arjuna.GetName];;;;;;;;;;;;;x
+expel_followers_arjuna_desc;I can drive the [d_followers_arjuna.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_followers_arjuna;Donate 300¤ to the [d_followers_arjuna.GetName];;;;;;;;;;;;;x
+donate_money_to_followers_arjuna_desc;I can donate money to the [d_followers_arjuna.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_followers_arjuna;Expel the [d_followers_arjuna.GetName];;;;;;;;;;;;;x
+expel_followers_arjuna_desc;I can drive the [d_followers_arjuna.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_followers_arjuna;Donate 300¤ to the [d_followers_arjuna.GetName];;;;;;;;;;;;;x
+donate_money_to_followers_arjuna_desc;I can donate money to the [d_followers_arjuna.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_batallon_colombia;Expel the [d_batallon_colombia.GetName];;;;;;;;;;;;;x
+expel_batallon_colombia_desc;I can drive the [d_batallon_colombia.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_batallon_colombia;Donate 300¤ to the [d_batallon_colombia.GetName];;;;;;;;;;;;;x
+donate_money_to_batallon_colombia_desc;I can donate money to the [d_batallon_colombia.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_saint_expedit;Expel the [d_saint_expedit.GetName];;;;;;;;;;;;;x
+expel_saint_expedit_desc;I can drive the [d_saint_expedit.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_saint_expedit;Donate 300¤ to the [d_saint_expedit.GetName];;;;;;;;;;;;;x
+donate_money_to_saint_expedit_desc;I can donate money to the [d_saint_expedit.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_followers_ogun;Expel the [d_followers_ogun.GetName];;;;;;;;;;;;;x
+expel_followers_ogun_desc;I can drive the [d_followers_ogun.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_followers_ogun;Donate 300¤ to the [d_followers_ogun.GetName];;;;;;;;;;;;;x
+donate_money_to_followers_ogun_desc;I can donate money to the [d_followers_ogun.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_warriors_guaicaipuro;Expel the [d_warriors_guaicaipuro.GetName];;;;;;;;;;;;;x
+expel_warriors_guaicaipuro_desc;I can drive the [d_warriors_guaicaipuro.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_warriors_guaicaipuro;Donate 300¤ to the [d_warriors_guaicaipuro.GetName];;;;;;;;;;;;;x
+donate_money_to_warriors_guaicaipuro_desc;I can donate money to the [d_warriors_guaicaipuro.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_all_tribes;Expel the [d_all_tribes.GetName];;;;;;;;;;;;;x
+expel_all_tribes_desc;I can drive the [d_all_tribes.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_all_tribes;Donate 300¤ to the [d_all_tribes.GetName];;;;;;;;;;;;;x
+donate_money_to_all_tribes_desc;I can donate money to the [d_all_tribes.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_capoeiristas;Expel the [d_capoeiristas.GetName];;;;;;;;;;;;;x
+expel_capoeiristas_desc;I can drive the [d_capoeiristas.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_capoeiristas;Donate 300¤ to the [d_capoeiristas.GetName];;;;;;;;;;;;;x
+donate_money_to_capoeiristas_desc;I can donate money to the [d_capoeiristas.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_code_keepers;Expel the [d_code_keepers.GetName];;;;;;;;;;;;;x
+expel_code_keepers_desc;I can drive the [d_code_keepers.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_code_keepers;Donate 300¤ to the [d_code_keepers.GetName];;;;;;;;;;;;;x
+donate_money_to_code_keepers_desc;I can donate money to the [d_code_keepers.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_golden_archers;Expel the [d_golden_archers.GetName];;;;;;;;;;;;;x
+expel_golden_archers_desc;I can drive the [d_golden_archers.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_golden_archers;Donate 300¤ to the [d_golden_archers.GetName];;;;;;;;;;;;;x
+donate_money_to_golden_archers_desc;I can donate money to the [d_golden_archers.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_round_table;Expel the [d_round_table.GetName];;;;;;;;;;;;;x
+expel_round_table_desc;I can drive the [d_round_table.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_round_table;Donate 300¤ to the [d_round_table.GetName];;;;;;;;;;;;;x
+donate_money_to_round_table_desc;I can donate money to the [d_round_table.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_salvation_army;Expel the [d_salvation_army.GetName];;;;;;;;;;;;;x
+expel_salvation_army_desc;I can drive the [d_salvation_army.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_salvation_army;Donate 300¤ to the [d_salvation_army.GetName];;;;;;;;;;;;;x
+donate_money_to_salvation_army_desc;I can donate money to the [d_salvation_army.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_three_fires;Expel the [d_three_fires.GetName];;;;;;;;;;;;;x
+expel_three_fires_desc;I can drive the [d_three_fires.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_three_fires;Donate 300¤ to the [d_three_fires.GetName];;;;;;;;;;;;;x
+donate_money_to_three_fires_desc;I can donate money to the [d_three_fires.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_taxet_warriors;Expel the [d_taxet_warriors.GetName];;;;;;;;;;;;;x
+expel_taxet_warriors_desc;I can drive the [d_taxet_warriors.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_taxet_warriors;Donate 300¤ to the [d_taxet_warriors.GetName];;;;;;;;;;;;;x
+donate_money_to_taxet_warriors_desc;I can donate money to the [d_taxet_warriors.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect.;;;;;;;;;;;;;x
+
+expel_fruit_of_islam;Expel the [d_fruit_of_islam.GetName];;;;;;;;;;;;;x
+expel_fruit_of_islam_desc;I can drive the [d_fruit_of_islam.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_fruit_of_islam;Donate 300¤ to the [d_fruit_of_islam.GetName];;;;;;;;;;;;;x
+donate_money_to_fruit_of_islam_desc;I can donate money to the [d_fruit_of_islam.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+expel_guardians_of_tradition;Expel the [d_guardians_of_tradition.GetName];;;;;;;;;;;;;x
+expel_guardians_of_tradition_desc;I can drive the [d_guardians_of_tradition.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_guardians_of_tradition;Donate 300¤ to the [d_guardians_of_tradition.GetName];;;;;;;;;;;;;x
+donate_money_to_guardians_of_tradition_desc;I can donate money to the [d_guardians_of_tradition.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+expel_coureurs_des_bois;Expel the [d_coureurs_des_bois.GetName];;;;;;;;;;;;;x
+expel_coureurs_des_bois_desc;I can drive the [d_coureurs_des_bois.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_coureurs_des_bois;Donate 300¤ to the [d_coureurs_des_bois.GetName];;;;;;;;;;;;;x
+donate_money_to_coureurs_des_bois_desc;I can donate money to the [d_coureurs_des_bois.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+expel_knights_st_flanelle;Expel the [d_knights_st_flanelle.GetName];;;;;;;;;;;;;x
+expel_knights_st_flanelle_desc;I can drive the [d_knights_st_flanelle.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_knights_st_flanelle;Donate 300¤ to the [d_knights_st_flanelle.GetName];;;;;;;;;;;;;x
+donate_money_to_knights_st_flanelle_desc;I can donate money to the [d_knights_st_flanelle.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+expel_cedesi;Expel the [d_cedesi.GetName];;;;;;;;;;;;;x
+expel_cedesi_desc;I can drive the [d_cedesi.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_cedesi;Donate 300¤ to the [d_cedesi.GetName];;;;;;;;;;;;;x
+donate_money_to_cedesi_desc;I can donate money to the [d_cedesi.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+expel_pony_express;Expel the [d_pony_express.GetName];;;;;;;;;;;;;x
+expel_pony_express_desc;I can drive the [d_pony_express.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_pony_express;Donate 300¤ to the [d_pony_express.GetName];;;;;;;;;;;;;x
+donate_money_to_pony_express_desc;I can donate money to the [d_pony_express.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+expel_order_of_the_golden_bunny;Expel the [d_order_of_the_golden_bunny.GetName];;;;;;;;;;;;;x
+expel_order_of_the_golden_bunny_desc;I can drive the [d_order_of_the_golden_bunny.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_order_of_the_golden_bunny;Donate 300¤ to the [d_order_of_the_golden_bunny.GetName];;;;;;;;;;;;;x
+donate_money_to_order_of_the_golden_bunny_desc;I can donate money to the [d_order_of_the_golden_bunny.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+expel_order_of_the_golden_bunny;Expel the [d_order_of_the_golden_bunny.GetName];;;;;;;;;;;;;x
+expel_order_of_the_golden_bunny_desc;I can drive the [d_order_of_the_golden_bunny.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_order_of_the_golden_bunny;Donate 300¤ to the [d_order_of_the_golden_bunny.GetName];;;;;;;;;;;;;x
+donate_money_to_order_of_the_golden_bunny_desc;I can donate money to the [d_order_of_the_golden_bunny.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+expel_legion_infernal;Expel the [d_legion_infernal.GetName];;;;;;;;;;;;;x
+expel_legion_infernal_desc;I can drive the [d_legion_infernal.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_legion_infernal;Donate 300¤ to the [d_legion_infernal.GetName];;;;;;;;;;;;;x
+donate_money_to_legion_infernal_desc;I can donate money to the [d_legion_infernal.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+form_the_uaw;Form the [d_uaw.GetName];;;;;;;;;;;;;x
+form_the_uaw_desc;As the [Root.GetTitle] of Michigan, it is my power to revive the ancient holy order of the [d_uaw.GetName].;;;;;;;;;;;;;x
+expel_the_uaw;Expel the [d_uaw.GetName];;;;;;;;;;;;;x
+expel_the_uaw_desc;I can drive the [d_uaw.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_the_uaw;Donate 300¤ to the [d_uaw.GetName];;;;;;;;;;;;;x
+donate_money_to_the_uaw_desc;I can donate money to the [d_uaw.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+form_iatse;Form the [d_iatse.GetName];;;;;;;;;;;;;x
+form_iatse_desc;As the [Root.GetTitle] of Gotham, it is my power to revive the ancient holy order of the [d_iatse.GetName].;;;;;;;;;;;;;x
+expel_iatse;Expel the [d_iatse.GetName];;;;;;;;;;;;;x
+expel_iatse_desc;I can drive the [d_iatse.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_iatse;Donate 300¤ to the [d_iatse.GetName];;;;;;;;;;;;;x
+donate_money_to_iatse_desc;I can donate money to the [d_iatse.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+form_teamsters;Form the [d_teamsters.GetName];;;;;;;;;;;;;x
+form_teamsters_desc;As the [Root.GetTitle] of Chicagoland, it is my power to revive the ancient holy order of the [d_teamsters.GetName].;;;;;;;;;;;;;x
+expel_teamsters;Expel the [d_teamsters.GetName];;;;;;;;;;;;;x
+expel_teamsters_desc;I can drive the [d_teamsters.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_teamsters;Donate 300¤ to the [d_teamsters.GetName];;;;;;;;;;;;;x
+donate_money_to_teamsters_desc;I can donate money to the [d_teamsters.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+form_afl;Form the [d_afl.GetName];;;;;;;;;;;;;x
+form_afl_desc;As the [Root.GetTitle] of Ohio, it is my power to revive the ancient holy order of the [d_afl.GetName].;;;;;;;;;;;;;x
+expel_afl;Expel the [d_afl.GetName];;;;;;;;;;;;;x
+expel_afl_desc;I can drive the [d_afl.GetName] from my realm and seize their castles. However, it is a very impious thing to do...;;;;;;;;;;;;;x
+donate_money_to_afl;Donate 300¤ to the [d_afl.GetName];;;;;;;;;;;;;x
+donate_money_to_afl_desc;I can donate money to the [d_afl.GetName] in exchange for [Player.Religion.GetPietyName] and lifelong respect from the Ummah.;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_3001;My liege, the [d_lightbringers.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3004;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_lightbringers.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_3004;[This.GetTitledFirstName] becomes a member of the [d_lightbringers.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_3008;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3012;Most righteous [Root.GetTitledFirstName], the [d_lightbringers.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3013;The [d_lightbringers.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+EVTDESC_SOATE_3061;Your majesty, this antagonism is completely unwarranted! The [From.Title.GetName] serve at the pleasure of [Root.Religion.GetHighGodName], but, one has to wonder, do you?\n\nWith anger and sadness,\n\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+
+EVTDESC_SOATE_3101;My liege, the [d_dead_sun.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3104;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_dead_sun.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_3104;[This.GetTitledFirstName] becomes a member of the [d_dead_sun.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_3108;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3112;Most righteous [Root.GetTitledFirstName], the [d_dead_sun.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3113;The [d_dead_sun.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_3201;My liege, the [d_golden_bears.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3204;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_golden_bears.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_3204;[This.GetTitledFirstName] becomes a member of the [d_golden_bears.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_3208;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3212;Most righteous [Root.GetTitledFirstName], the [d_golden_bears.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3213;The [d_golden_bears.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_3301;My liege, the [d_followers_arjuna.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3304;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_followers_arjuna.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_3304;[This.GetTitledFirstName] becomes a member of the [d_followers_arjuna.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_3308;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3312;Most righteous [Root.GetTitledFirstName], the [d_followers_arjuna.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3313;The [d_followers_arjuna.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_3401;My liege, the [d_batallon_colombia.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3404;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_batallon_colombia.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_3404;[This.GetTitledFirstName] becomes a member of the [d_batallon_colombia.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_3408;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3412;Most righteous [Root.GetTitledFirstName], the [d_batallon_colombia.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3413;The [d_batallon_colombia.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_3501;My liege, the [d_saint_expedit.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3504;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_saint_expedit.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_3504;[This.GetTitledFirstName] becomes a member of the [d_saint_expedit.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_3508;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3512;Most righteous [Root.GetTitledFirstName], the [d_saint_expedit.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3513;The [d_saint_expedit.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_3601;My liege, the [d_followers_ogun.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3604;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_followers_ogun.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_3604;[This.GetTitledFirstName] becomes a member of the [d_followers_ogun.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_3608;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3612;Most righteous [Root.GetTitledFirstName], the [d_followers_ogun.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3613;The [d_followers_ogun.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_3701;My liege, the [d_warriors_guaicaipuro.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3704;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_warriors_guaicaipuro.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_3704;[This.GetTitledFirstName] becomes a member of the [d_warriors_guaicaipuro.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_3708;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3712;Most righteous [Root.GetTitledFirstName], the [d_warriors_guaicaipuro.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3713;The [d_warriors_guaicaipuro.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_3801;My liege, the [d_all_tribes.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3804;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_all_tribes.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_3804;[This.GetTitledFirstName] becomes a member of the [d_all_tribes.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_3808;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3812;Most righteous [Root.GetTitledFirstName], the [d_all_tribes.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3813;The [d_all_tribes.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_3901;My liege, the [d_capoeiristas.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3904;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_capoeiristas.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_3904;[This.GetTitledFirstName] becomes a member of the [d_capoeiristas.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_3908;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3912;Most righteous [Root.GetTitledFirstName], the [d_capoeiristas.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_3913;The [d_capoeiristas.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_4001;My liege, the [d_code_keepers.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4004;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_code_keepers.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_4004;[This.GetTitledFirstName] becomes a member of the [d_code_keepers.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_4008;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4012;Most righteous [Root.GetTitledFirstName], the [d_code_keepers.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4013;The [d_code_keepers.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_4101;My liege, the [d_golden_archers.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4104;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_golden_archers.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_4104;[This.GetTitledFirstName] becomes a member of the [d_golden_archers.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_4108;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4112;Most righteous [Root.GetTitledFirstName], the [d_golden_archers.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4113;The [d_golden_archers.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_4201;My liege, the [d_round_table.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4204;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_round_table.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_4204;[This.GetTitledFirstName] becomes a member of the [d_round_table.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_4208;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4212;Most righteous [Root.GetTitledFirstName], the [d_round_table.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4213;The [d_round_table.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_4301;My liege, the [d_salvation_army.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4304;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_salvation_army.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_4304;[This.GetTitledFirstName] becomes a member of the [d_salvation_army.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_4308;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4312;Most righteous [Root.GetTitledFirstName], the [d_salvation_army.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4313;The [d_salvation_army.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_4401;My liege, the [d_three_fires.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4404;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_three_fires.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_4404;[This.GetTitledFirstName] becomes a member of the [d_three_fires.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_4408;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4412;Most righteous [Root.GetTitledFirstName], the [d_three_fires.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4413;The [d_three_fires.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_4501;My liege, the [d_taxet_warriors.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4504;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_taxet_warriors.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_4504;[This.GetTitledFirstName] becomes a member of the [d_taxet_warriors.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_4508;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4512;Most righteous [Root.GetTitledFirstName], the [d_taxet_warriors.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4513;The [d_taxet_warriors.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_4601;My liege, the [d_fruit_of_islam.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4604;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_fruit_of_islam.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_4604;[This.GetTitledFirstName] becomes a member of the [d_fruit_of_islam.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_4608;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4612;Most righteous [Root.GetTitledFirstName], the [d_fruit_of_islam.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4613;The [d_fruit_of_islam.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_4701;My liege, the [d_guardians_of_tradition.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4704;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_guardians_of_tradition.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_4704;[This.GetTitledFirstName] becomes a member of the [d_guardians_of_tradition.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_4708;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4712;Most righteous [Root.GetTitledFirstName], the [d_guardians_of_tradition.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4713;The [d_guardians_of_tradition.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_4801;My liege, the [d_coureurs_des_bois.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4804;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_coureurs_des_bois.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_4804;[This.GetTitledFirstName] becomes a member of the [d_coureurs_des_bois.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_4808;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4812;Most righteous [Root.GetTitledFirstName], the [d_coureurs_des_bois.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4813;The [d_coureurs_des_bois.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_4901;My liege, the [d_knights_st_flanelle.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4904;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_knights_st_flanelle.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_4904;[This.GetTitledFirstName] becomes a member of the [d_knights_st_flanelle.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_4908;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4912;Most righteous [Root.GetTitledFirstName], the [d_knights_st_flanelle.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_4913;The [d_knights_st_flanelle.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_5001;My liege, the [d_cedesi.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5004;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_cedesi.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_5004;[This.GetTitledFirstName] becomes a member of the [d_cedesi.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_5008;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5012;Most righteous [Root.GetTitledFirstName], the [d_cedesi.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5013;The [d_cedesi.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_5101;My liege, the [d_pony_express.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5104;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_pony_express.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_5104;[This.GetTitledFirstName] becomes a member of the [d_pony_express.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_5108;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5112;Most righteous [Root.GetTitledFirstName], the [d_pony_express.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5113;The [d_pony_express.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_5201;My liege, the [d_order_of_the_golden_bunny.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5204;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_order_of_the_golden_bunny.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_5204;[This.GetTitledFirstName] becomes a member of the [d_order_of_the_golden_bunny.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_5208;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5212;Most righteous [Root.GetTitledFirstName], the [d_order_of_the_golden_bunny.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5213;The [d_order_of_the_golden_bunny.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_5301;My liege, the [d_twelve_pairs_of_france.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5304;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_twelve_pairs_of_france.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_5304;[This.GetTitledFirstName] becomes a member of the [d_twelve_pairs_of_france.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_5308;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5312;Most righteous [Root.GetTitledFirstName], the [d_twelve_pairs_of_france.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5313;The [d_twelve_pairs_of_france.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_5401;My liege, the [d_legion_infernal.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5404;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_legion_infernal.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_5404;[This.GetTitledFirstName] becomes a member of the [d_legion_infernal.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_5408;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5412;Most righteous [Root.GetTitledFirstName], the [d_legion_infernal.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5413;The [d_legion_infernal.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_5501;My liege, the [d_iatse.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5504;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_iatse.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_5504;[This.GetTitledFirstName] becomes a member of the [d_iatse.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_5508;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5512;Most righteous [Root.GetTitledFirstName], the [d_iatse.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5513;The [d_iatse.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_5601;My liege, the [d_iron_workers.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5604;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_iron_workers.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_5604;[This.GetTitledFirstName] becomes a member of the [d_iron_workers.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_5608;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5612;Most righteous [Root.GetTitledFirstName], the [d_iron_workers.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5613;The [d_iron_workers.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_5701;My liege, the [d_teamsters.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5704;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_teamsters.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_5704;[This.GetTitledFirstName] becomes a member of the [d_teamsters.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_5708;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5712;Most righteous [Root.GetTitledFirstName], the [d_teamsters.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5713;The [d_teamsters.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
+
+EVTDESC_SOATE_5801;My liege, the [d_afl.GetName] stands ready to serve you in defense of the [Root.Religion.GetName] faith! For [Root.Religion.GetHighGodName]!,\n\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5804;My [GetFromRelation], [From.GetTitledFirstName], has requested to join the [d_afl.GetName] in their war against unbelievers, even though this will forever disinherit him.;;;;;;;;;;;;;x
+EVTTOOLTIP_SOATE_5804;[This.GetTitledFirstName] becomes a member of the [d_afl.GetName].;;;;;;;;;;;;;x
+EVTDESC_SOATE_5808;Great [Root.PrimaryTitle.GetRulerTitle], your extremely generous donation shall aid us greatly in our quest to serve the will of [Root.Religion.GetHighGodName]! You have my friendship, as well as that of the priesthood.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nGrand Master [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5812;Most righteous [Root.GetTitledFirstName], the [d_afl.GetName] are in need of more castles in order to train troops and generate a supporting income. There is a suitable location in your demesne - in [FromFrom.GetName] to be specific. I am willing to pay you 100 gold in exchange for the right to construct a fortress there.\n\nMay [Root.Religion.GetHighGodName] watch over you,\nWarchief [From.GetFirstName];;;;;;;;;;;;;x
+EVTDESC_SOATE_5813;The [d_afl.GetName] have constructed a castle in [Root.GetName]!;;;;;;;;;;;;;x
