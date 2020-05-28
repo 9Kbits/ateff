@@ -3131,5 +3131,57 @@ character_event = {
 	}
 }
 
+character_event = {
+	id = islamate.87
+	desc = "EVTDESC_islamate87"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	religion = qingzheng
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_islamate87
+		hidden_tooltip = {
+			remove_trait = taoism_qingzhen
+			remove_trait = confucianism_qingzhen
 
+		}
+		add_trait = buddhism_qingzhen
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = EVTOPTB_islamate87
+		hidden_tooltip = {
+			remove_trait = buddhism_qingzhen
+			remove_trait = confucianism_qingzhen
+
+		}
+		add_trait = taoism_qingzhen
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_islamate87
+		hidden_tooltip = {
+			remove_trait = buddhism_qingzhen
+			remove_trait = taoism_qingzhen
+
+		}
+		add_trait = confucianism_qingzhen
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
 
