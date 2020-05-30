@@ -1059,12 +1059,12 @@ e_costeno = {
 	creation_requires_capital = no	
 }
 
-e_cascadian = {
+e_klamathite = {
 	color={ 190 155 250 }
 	color2={ 210 50 20 }
 	capital = 543 #Seattle
 	
-	culture = cascadian
+	culture = klamathite
 	allow = {
 		NOT = { religion = cetic }
 		NOT = {
@@ -1075,10 +1075,10 @@ e_cascadian = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = cascadian
+		culture = klamathite
 		OR = {
 			realm_size = 150
-			e_cascadian = { OR = { is_titular = no has_holder = yes } }
+			e_klamathite = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
@@ -1346,12 +1346,12 @@ e_paisa = {
 	creation_requires_capital = no	
 }
 
-e_portlander = {
+e_cascadian = {
 	color={ 190 55 200 }
 	color2={ 210 50 20 }
 	capital = 534 # Portland
 	
-	culture = portlander
+	culture = cascadian
 	allow = {
 		NOT = {
 			has_game_rule = {
@@ -1361,10 +1361,10 @@ e_portlander = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = portlander
+		culture = cascadian
 		OR = {
 			realm_size = 150
-			e_portlander = { OR = { is_titular = no has_holder = yes } }
+			e_cascadian = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
@@ -3938,6 +3938,31 @@ e_battleborn = {
 	creation_requires_capital = no	
 }
 
+e_inlander = {
+	color={ 0 74 127 }
+	color2={ 255 255 255 }
+	capital = 505 # Spokane
+	
+	culture = inlander
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = inlander
+		OR = {
+			realm_size = 150
+			e_inlander = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
 
 ### special empires
 

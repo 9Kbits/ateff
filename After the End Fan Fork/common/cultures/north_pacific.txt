@@ -2,11 +2,11 @@
 north_pacific = {
 	graphical_cultures = { whitepacificgfx westerngfx }
 
-	cascadian = {
+	klamathite = {
 		graphical_cultures = { whitepacificgfx }
 		unit_graphical_cultures = { chinesegfx mongolgfx indiangfx muslimgfx }
 
-		color = { 0.6 0.6 0.8 }
+		color = { 0.8 0.7 0.3 }
 
 		male_names = {
 			Alistair Amun Andrew Alan
@@ -80,11 +80,11 @@ north_pacific = {
 		modifier = default_culture_modifier
 	}
 	
-	portlander = {
+	cascadian = {
 		graphical_cultures = { whitepacificgfx }
 		unit_graphical_cultures = { chinesegfx mongolgfx indiangfx muslimgfx }
 		
-		color = { 0.8 0.7 0.3 }
+		color = { 0.6 0.6 0.8 }
 
 		male_names = {
 			Aaron Adam Allen Andrew Art Ashby Aragorn
@@ -152,8 +152,6 @@ north_pacific = {
 	}
 	
 	canuck = {
-		dukes_called_kings = yes
-
 		graphical_cultures = { canadiangfx whitepacificgfx }
 		unit_graphical_cultures = { englishgfx saxongfx }
 
@@ -211,6 +209,40 @@ north_pacific = {
 		}
 
 		from_dynasty_prefix = "de "
+		
+		prefix = no # The patronym is added as a suffix
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 20
+		mat_grf_name_chance = 15
+		father_name_chance = 40
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 15
+		mat_grm_name_chance = 20
+		mother_name_chance = 40
+		
+		feminist = yes
+		modifier = default_culture_modifier
+	}
+	
+	inlander = {
+		dukes_called_kings = yes
+		
+		graphical_cultures = { canadiangfx whitepacificgfx }
+		unit_graphical_cultures = { englishgfx saxongfx }
+		
+		color = { 0.25 0.35 0.55 }
+		
+		male_names = {
+			Placeholder
+		}
+		
+		female_names = {
+			Placeholder
+		}
+		
+		from_dynasty_prefix = ""
 		
 		prefix = no # The patronym is added as a suffix
 		
