@@ -4245,17 +4245,17 @@ faction_independence = {
 			}
 			
 			# Not allowed to start factions like this if our capital borders the liege's capital
-			NOT = {
-				capital_scope = {
-					any_neighbor_province = {
-						ROOT = {
-							capital_scope = {
-								province = PREVPREV
-							}
-						}
-					}
-				}
-			}
+			# NOT = {
+				# capital_scope = {
+					# any_neighbor_province = {
+						# ROOT = {
+							# capital_scope = {
+								# province = PREVPREV
+							# }
+						# }
+					# }
+				# }
+			# }
 			
 			NOT = {
 				any_demesne_title = {
@@ -4359,7 +4359,60 @@ faction_independence = {
 	# AI creation weight
 	chance = {
 		factor = 4
-		
+		#GSonderlings block
+		modifier = {
+			factor = 2
+			ROOT = {
+				liege = {
+					tier = EMPEROR
+				}			
+			}
+		}
+		modifier = {
+			factor = 0.01
+			ROOT = {
+				primary_title = {
+					lower_tier_than = DUKE
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			ROOT = {
+				ai_ambition >= 60
+			}
+		}
+		modifier = {
+			factor = 3
+			ROOT = {
+				ai_ambition >= 70
+			}
+		}
+		modifier = {
+			factor = 4
+			ROOT = {
+				ai_ambition >= 90
+			}
+		}
+		modifier = {
+			factor = 2
+			ROOT = {
+				relative_power_to_liege >= 0.5
+			}
+		}
+		modifier = {
+			factor = 3
+			ROOT = {
+				relative_power_to_liege >= 0.7
+			}
+		}
+		modifier = {
+			factor = 6
+			ROOT = {
+				relative_power_to_liege >= 0.9
+			}
+		}
+		###END OF GSonderlings BLOCK###
 		modifier = {
 			factor = 0.5
 			liege = { 
@@ -4373,50 +4426,10 @@ faction_independence = {
 		
 		modifier = {
 			factor = 0
-			FROM = {
-				has_character_modifier = in_seclusion
-			}
-		}
-		
-		modifier = {
-			factor = 0
-			war = yes
-		}
-		
-		modifier = {
-			factor = 0
 			is_patrician = yes
 			is_merchant_republic = no
 		}
-		
-		modifier = {
-			factor = 0
-			liege = {
-				religion = ROOT
-				culture = ROOT
-				OR = {
-					NOT = { distance = { who = ROOT distance = 100 } }
-					AND = {
-						NOT = { distance = { who = ROOT distance = 200 } }
-						ROOT = {
-							OR = {
-								NOT = { religion_group = pagan_group }
-								is_reformed_religion = yes
-							}
-						}
-						OR = {
-							NOT = { ROOT = { religion_group = pagan_group } }
-							ROOT = { is_reformed_religion = yes }
-						}
-					}
-					AND = {
-						de_jure_vassal_or_below = ROOT
-						NOT = { ROOT = { tier = KING } }
-					}
-				}
-			}
-		}
-		
+				
 		modifier = {
 			factor = 0
 			liege = {
@@ -4428,7 +4441,7 @@ faction_independence = {
 		
 		modifier = {
 			factor = 0
-			lower_tier_than = KING
+			lower_tier_than = DUKE
 			OR = {
 				NOT = { religion_group = pagan_group }
 				is_reformed_religion = yes
@@ -4536,7 +4549,7 @@ faction_independence = {
 		}
 		
 		modifier = {
-			factor = 1.5
+			factor = 2.0
 			liege = {
 				NOT = { culture_group = ROOT }
 			}
@@ -4547,7 +4560,7 @@ faction_independence = {
 			opinion = { who = LIEGE value = 20 } 			
 		}
 		modifier = {
-			factor = 0
+			factor = 0.5
 			opinion = { who = LIEGE value = 40 } 
 			NOT = {	
 				has_opinion_modifier = {
@@ -4557,15 +4570,15 @@ faction_independence = {
 			}			
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2.5
 			NOT = { opinion = { who = LIEGE value = -20 } } 
 		}
 		modifier = {
-			factor = 2.0
+			factor = 3.0
 			NOT = { opinion = { who = LIEGE value = -50 } } 
 		}
 		modifier = {
-			factor = 4.0
+			factor = 5.0
 			NOT = { opinion = { who = LIEGE value = -75 } } 
 		}
 		
@@ -4651,7 +4664,7 @@ faction_independence = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 10
 			OR = {
 				has_opinion_modifier = { who = LIEGE modifier = opinion_evil_tyrant }
 				has_opinion_modifier = { who = LIEGE modifier = opinion_tyrant }
@@ -4674,7 +4687,60 @@ faction_independence = {
 	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
 	membership = {
 		factor = 4
-		
+		#GSonderlings block
+		modifier = {
+			factor = 2
+			ROOT = {
+				liege = {
+					tier = EMPEROR
+				}			
+			}
+		}
+		modifier = {
+			factor = 0.01
+			ROOT = {
+				primary_title = {
+					lower_tier_than = DUKE
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			ROOT = {
+				ai_ambition >= 60
+			}
+		}
+		modifier = {
+			factor = 3
+			ROOT = {
+				ai_ambition >= 70
+			}
+		}
+		modifier = {
+			factor = 4
+			ROOT = {
+				ai_ambition >= 90
+			}
+		}
+		modifier = {
+			factor = 2
+			ROOT = {
+				relative_power_to_liege >= 0.5
+			}
+		}
+		modifier = {
+			factor = 3
+			ROOT = {
+				relative_power_to_liege >= 0.7
+			}
+		}
+		modifier = {
+			factor = 6
+			ROOT = {
+				relative_power_to_liege >= 0.9
+			}
+		}
+		###END OF GSonderlings BLOCK###
 		modifier = {
 			factor = 0.5
 			ROOT = { 
@@ -4712,35 +4778,35 @@ faction_independence = {
 			is_merchant_republic = no
 		}
 		
-		modifier = {
-			factor = 0
-			liege = {
-				religion = ROOT
-				culture = ROOT
-				OR = {
-					NOT = { distance = { who = ROOT distance = 100 } }
-					AND = {
-						NOT = { distance = { who = ROOT distance = 200 } }
-						ROOT = {
-							OR = {
-								NOT = { religion_group = pagan_group }
-								is_reformed_religion = yes
-							}
-						}
-					}
-					AND = {
-						de_jure_vassal_or_below = ROOT
-						NOT = { ROOT = { tier = KING } }
-					}
-				}
-			}
-			NOT = {	
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
+		# modifier = {
+			# factor = 0
+			# liege = {
+				# religion = ROOT
+				# culture = ROOT
+				# OR = {
+					# NOT = { distance = { who = ROOT distance = 100 } }
+					# AND = {
+						# NOT = { distance = { who = ROOT distance = 200 } }
+						# ROOT = {
+							# OR = {
+								# NOT = { religion_group = pagan_group }
+								# is_reformed_religion = yes
+							# }
+						# }
+					# }
+					# AND = {
+						# de_jure_vassal_or_below = ROOT
+						# NOT = { ROOT = { tier = KING } }
+					# }
+				# }
+			# }
+			# NOT = {	
+				# has_opinion_modifier = {
+					# who = FROM
+					# modifier = opinion_coerced_into_joining_faction
+				# }
+			# }
+		# }
 		
 		modifier = {
 			factor = 0
@@ -4858,28 +4924,28 @@ faction_independence = {
 			}
 		}
 		
-		modifier = {
-			factor = 0
+		# modifier = {
+			# factor = 0
 			
-			# Won't join this type of faction if our capital borders the liege's capital
-			liege = {
-				capital_scope = {
-					any_neighbor_province = {
-						ROOT = {
-							capital_scope = {
-								province = PREVPREV
-							}
-						}
-					}
-				}
-			}
-			NOT = {	
-				has_opinion_modifier = {
-					who = FROM
-					modifier = opinion_coerced_into_joining_faction
-				}
-			}
-		}
+			# # Won't join this type of faction if our capital borders the liege's capital
+			# liege = {
+				# capital_scope = {
+					# any_neighbor_province = {
+						# ROOT = {
+							# capital_scope = {
+								# province = PREVPREV
+							# }
+						# }
+					# }
+				# }
+			# }
+			# NOT = {	
+				# has_opinion_modifier = {
+					# who = FROM
+					# modifier = opinion_coerced_into_joining_faction
+				# }
+			# }
+		# }
 		
 		modifier = {
 			factor = 1000
@@ -4936,13 +5002,13 @@ faction_independence = {
 		}
 		
 		modifier = {
-			factor = 1.5
+			factor = 2.5
 			liege = {
 				distance = { who = ROOT distance = 300 }
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 3.0
 			liege = {
 				distance = { who = ROOT distance = 400 }
 			}
@@ -4962,7 +5028,7 @@ faction_independence = {
 		}
 		
 		modifier = {
-			factor = 1.5
+			factor = 2.0
 			liege = {
 				NOT = { culture_group = ROOT }
 			}
@@ -5101,7 +5167,7 @@ faction_independence = {
 			trait = ambitious
 		}
 		modifier = {
-			factor = 2
+			factor = 10
 			OR = {
 				has_opinion_modifier = { who = LIEGE modifier = opinion_evil_tyrant }
 				has_opinion_modifier = { who = LIEGE modifier = opinion_tyrant }
