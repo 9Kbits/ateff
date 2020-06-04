@@ -1,40 +1,48 @@
 namespace = ruin
 
-# Fall of generic empire
+# Empire reaches breaking point
 narrative_event = {
 	id = ruin.1
-	title = TITLE_collapse
-	desc = EVTDESC_collapse
+	title = TITLE_collapse_crisis
+	desc = EVTDESC_collapse_crisis
 	picture = GFX_evt_ruina_imperii
-	major = yes	
+	
 	only_playable = yes
 	is_triggered_only = yes
 	show_root = yes
-	war = no
+	
 	trigger = {
 		independent = yes
 		real_tier = emperor
-		in_revolt = no
+		#Char flags
 		NOT = { has_character_flag = settled_nomad }
 		NOT = { has_character_flag = the_protector_general }
+		NOT = {	has_character_flag = empress_portia	}
+		
+		#Republics, nomads and colonies are exempt
 		NOR = {
 			government = nomadic_government
 			government = merchant_republic_government
 			government = colonial_government
 		}		
+		
 		OR = {
-			NOT = {
-					realm_size = 120
-			}
+			realm_size <= 50
 			AND = {
-				NOT = {
-					realm_size = 100
-				}	
-				NOT = {
-					dynastic_prestige = 1500
-				}
+				realm_size <= 60
+				dynastic_prestige <= 500 #Prestigeous dynasty supports your legitimacy
 			}
 		}
+		
+		#Diplomacy or stewardship > 26 can avert the disaster 
+		NOT = {
+			realm_stewardship = 26
+		}
+		NOT = {
+			realm_diplomacy = 26
+		}		
+		#Some titles are excluded
+		#California, Estelaria, colonists and special event empires
 		AND = {
 			NOT = {
 				primary_title = {
@@ -106,28 +114,84 @@ narrative_event = {
 			}
 		}
 		primary_title = {
-			is_titular = yes
 			temporary = no
-		}
+		}	
 	
 	}	
+	#Announcement
 	immediate = {
-		ROOT = {
-			primary_title = {
-				destroy_landed_title = yes
-			}
-			prestige = -500
-		}
+		log = "Empire of [Root.GetTitledName] reaches breaking point."
 	}
+	
+	#For rulers of ordinary empires if they are out of options
 	option = {
-		name = "RUIN_generic"
+		name = "RUIN_ANY_ruler"
 		trigger = {
-			always = yes
-		}		
+			NOT = {
+				primary_title = {
+					title = e_caribbean
+				}
+			}
+			AND = {			
+				prestige <= 800
+				wealth < 200
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+		character_event = { id = ruin.10 }
+		narrative_event = { id = ruin.20 }
 	}
+	
+	#For ruler of Caribbean
+	option = {
+		name = "RUIN_CARIBBEAN_ruler"
+		trigger = {
+			primary_title = {
+				title = e_caribbean
+			}
+			AND = {			
+				prestige <= 800
+				wealth < 200
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+		character_event = { id = ruin.10 }
+		narrative_event = { id = ruin.2 }
+	}
+	
+	#Pay prestige to placate vassals
+	option = {
+		name = "RUIN_prestige"
+		trigger = {
+			prestige >= 800
+		}
+		ai_chance = {
+			factor = 1000
+		}
+		
+		prestige = -800
+	}
+	
+	#Pay gold to placate vassals
+	option = {
+		name = "RUIN_money"
+		trigger = {
+			realm_stewardship = 20
+			wealth >= 200
+		}
+		ai_chance = {
+			factor = 1000
+		}
+		
+		gold = -200
+	}	
 }
 
-#Fall of Caribbean empire
+#Fall of Caribbean empire announcement
 narrative_event = {
 	id = ruin.2
 	title = TITLE_collapse_CARIBBEAN
@@ -137,9 +201,9 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_independent = yes
+	is_triggered_only = yes
 	
 	hide_from = yes
-
 	trigger = {
 		NOT = {
 			has_game_rule = {
@@ -147,57 +211,117 @@ narrative_event = {
 				value = off
 			}
 		}
+		independent = yes
 		real_tier = emperor
-		NOT = {
-			has_character_flag = empress_portia
-		}
-		NOT = {
-			year = 2710
-		}
+		#Char flags
+		NOT = { has_character_flag = settled_nomad }
+		NOT = { has_character_flag = the_protector_general }
+		NOT = {	has_character_flag = empress_portia	}
+		
+		#Republics, nomads and colonies are exempt
+		NOR = {
+			government = nomadic_government
+			government = merchant_republic_government
+			government = colonial_government
+		}		
+		
 		OR = {
-			AND = {				
-				NOT = {
-					realm_size = 90
-				}
-			}
+			realm_size <= 50
 			AND = {
-				NOT = {
-					completely_controls = d_haiti
-				}
-				NOT = {
-					completely_controls = d_santo_domingo
-				}
-				NOT = {
-					completely_controls = d_el_cibao
-				}
-				NOT = {
-					completely_controls = k_west_indies
-				}
-				NOT = {
-					completely_controls = k_cuba
-				}
+				realm_size <= 60
+				dynastic_prestige <= 500 #Prestigeous dynasty supports your legitimacy
 			}
 		}
+		
+		#Diplomacy or stewardship > 26 can avert the disaster 
 		NOT = {
 			realm_stewardship = 26
 		}
 		NOT = {
 			realm_diplomacy = 26
+		}		
+		#Some titles are excluded
+		#California, Estelaria, colonists and special event empires
+		AND = {
+			NOT = {
+				primary_title = {
+					title = e_california
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_new_california
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_redcoat_dominion
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_estelaria
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_neomoor
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_metis_confederacy
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_rebels
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_pirates
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_playercolnovorusskiy
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_playercoledokko
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_edokko
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_novorusskiy
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_china_west_governor
+				}
+			}
+			NOT = {
+				is_offmap_tag = offmap_china
+			}
 		}
 		primary_title = {
 			temporary = no
 			title = e_caribbean
-		}
+		}		
 	}	
-	mean_time_to_happen = {
-		months = 25
-	}
+	#Announcement
 	immediate = {
-		primary_title = {
-			destroy_landed_title = yes
-		}
-		prestige = -500
+		log = "Caribbean empire has fallen!"
 	}	
+	#For rulers further beyond Caribbean
 	option = {
 		name = "RUIN_CARIBBEAN_NORM"
 		trigger = {
@@ -215,6 +339,7 @@ narrative_event = {
 			}
 		}
 	}
+	#For rulers close to Caribbean
 	option = {
 		name = "RUIN_CARIBBEAN_OPPORTUNITY"
 		trigger = {
@@ -231,6 +356,297 @@ narrative_event = {
 		}
 	}
 }
+
+
+#Final breakup
+character_event = {
+	id = ruin.10
+	desc = EVTDESC_collapse
+	picture = GFX_evt_ruina_imperii
+	is_triggered_only = yes
+	hide_window = yes
+	trigger = {
+		independent = yes
+		real_tier = emperor
+		#Char flags
+		NOT = { has_character_flag = settled_nomad }
+		NOT = { has_character_flag = the_protector_general }
+		NOT = {	has_character_flag = empress_portia	}
+		
+		#Republics, nomads and colonies are exempt
+		NOR = {
+			government = nomadic_government
+			government = merchant_republic_government
+			government = colonial_government
+		}		
+		
+		OR = {
+			realm_size <= 50
+			AND = {
+				realm_size <= 60
+				dynastic_prestige <= 500 #Prestigeous dynasty supports your legitimacy
+			}
+		}
+		
+		#Diplomacy or stewardship > 26 can avert the disaster 
+		NOT = {
+			realm_stewardship = 26
+		}
+		NOT = {
+			realm_diplomacy = 26
+		}
+		
+		#Some titles are excluded
+		#California, Estelaria, colonists and special event empires
+		AND = {
+			NOT = {
+				primary_title = {
+					title = e_california
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_new_california
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_redcoat_dominion
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_estelaria
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_neomoor
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_metis_confederacy
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_rebels
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_pirates
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_playercolnovorusskiy
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_playercoledokko
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_edokko
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_novorusskiy
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_china_west_governor
+				}
+			}
+			NOT = {
+				is_offmap_tag = offmap_china
+			}
+		}
+		primary_title = {
+			temporary = no
+		}		
+	}	
+	#Primary title is destroyed
+	#Announcement
+	immediate = {	
+		log = "This is the end, no more options for [Root.GetTitledName]"
+		destroy_landed_title = FROM
+	}
+	
+	#For rulers of ordinary empires if they messed up too badly
+	option = {
+		name = "RUIN_generic"
+		trigger = {
+			NOT = {
+				primary_title = {
+					title = e_caribbean
+				}
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+		# destroy_landed_title = FROM
+
+		# narrative_event = { id = ruin.20 } 
+	}
+	
+	#For ruler of Caribbean if they messed up too badly
+	option = {
+		name = "RUIN_CARIBBEAN_ruler"
+		trigger = {
+			primary_title = {
+				title = e_caribbean
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+		# destroy_landed_title = FROM
+
+		# narrative_event = { id = ruin.2 } 
+	}
+}
+
+#Generic fall announcement
+narrative_event = {
+	id = ruin.20
+	title = TITLE_collapse
+	desc = EVTDESC_collapse
+	picture = GFX_evt_ruina_imperii
+	
+	major = yes	
+	only_playable = yes
+	is_triggered_only = yes
+	show_root = yes
+	
+	trigger = {
+		independent = yes
+		real_tier = emperor
+		#Char flags
+		NOT = { has_character_flag = settled_nomad }
+		NOT = { has_character_flag = the_protector_general }
+		NOT = {	has_character_flag = empress_portia	}
+		
+		#Republics, nomads and colonies are exempt
+		NOR = {
+			government = nomadic_government
+			government = merchant_republic_government
+			government = colonial_government
+		}		
+		
+		OR = {
+			realm_size <= 50
+			AND = {
+				realm_size <= 60
+				dynastic_prestige <= 500 #Prestigeous dynasty supports your legitimacy
+			}
+		}
+		
+		#Diplomacy or stewardship > 26 can avert the disaster 
+		NOT = {
+			realm_stewardship = 26
+		}
+		NOT = {
+			realm_diplomacy = 26
+		}		
+		#Some titles are excluded
+		#California, Estelaria, colonists and special event empires
+		AND = {
+			NOT = {
+				primary_title = {
+					title = e_california
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_new_california
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_redcoat_dominion
+				}		
+			}
+			NOT = {
+				primary_title = {
+					title = e_estelaria
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_neomoor
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_metis_confederacy
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_rebels
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_pirates
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_playercolnovorusskiy
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_playercoledokko
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_edokko
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_novorusskiy
+				}
+			}
+			NOT = {
+				primary_title = {
+					title = e_china_west_governor
+				}
+			}
+			NOT = {
+				is_offmap_tag = offmap_china
+			}
+		}
+		primary_title = {
+			temporary = no
+		}	
+	
+	}	
+	
+	#Announcement
+	immediate = {
+		log = "World is notified of [Root.GetTitledName]s failure."
+	}
+	
+	option = {
+		name = "RUIN_generic"
+		trigger = {
+			always = yes
+		}
+	}
+}
+
 
 narrative_event = {
 	id = ruin.3
@@ -359,11 +775,7 @@ narrative_event = {
 			diplomacy = 15
 		}
 		FROM = {
-			make_tributary = {
-				who = ROOT
-				percentage = 0.4
-				tributary_type = default
-			}
+			make_tributary = ROOT
 		}
 	}
 }
