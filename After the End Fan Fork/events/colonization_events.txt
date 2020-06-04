@@ -872,13 +872,13 @@ narrative_event = {
 	
 	picture = "GFX_evt_colonial_japan"
 	border = "GFX_event_narrative_frame_war"
-	#immediate = {
-	#	destroy_landed_title = e_edokko
-	#	activate_title = { title = e_edokko status = no } 
-	#}
+	immediate = {
+		set_global_flag = edokko_defeated
+		destroy_landed_title = e_edokko
+		activate_title = { title = e_edokko status = no } 
+	}
 	option = {
 		name = col.13.optA
-		set_global_flag = edokko_defeated
 	}
 }
 
@@ -1549,13 +1549,13 @@ narrative_event = {
 	
 	picture = "GFX_evt_colonial_russia"
 	border = "GFX_event_narrative_frame_war"
-	#immediate = {
-	#	destroy_landed_title = e_novorusskiy
-	#	activate_title = { title = e_novorusskiy status = no } 
-	#}
+	immediate = {
+		set_global_flag = novorusskiy_defeated
+		destroy_landed_title = e_novorusskiy
+		activate_title = { title = e_novorusskiy status = no }
+	}
 	option = {
 		name = col.23.optA
-		set_global_flag = novorusskiy_defeated
 	}
 }
 
