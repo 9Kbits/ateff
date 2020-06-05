@@ -99,8 +99,8 @@ EVTDESC_hurricane_sighted_inform;Messengers report that a massive hurricane has 
 EVTOPT_hurricane_sighted_inform;My lands are unaffected.;;;;;;;;;;;;;x
 EVTNAME_hurricane_landfall;Hurricane!;;;;;;;;;;;;;x
 EVTDESC_hurricane_landfall;A hurricane has struck your county of [Root.GetName]!;;;;;;;;;;;;;x
-TXT_hurricane_landfall_riskdeath;Characters in this county must fend for themselves\n\n;;;;;;;;;;;;x
-TXT_hurricane_landfall_protected;Characters in this county are well protected\n\n;;;;;;;;;;;;x
+TXT_hurricane_landfall_riskdeath;Characters in this county must fend for themselves\n\n;;;;;;;;;;;;;x
+TXT_hurricane_landfall_protected;Characters in this county are well protected\n\n;;;;;;;;;;;;;x
 hurricane_damage;Hurricane Damage;;;;;;;;;;;;;x
 hurricane_damage_desc;High winds and flooding have damaged many buildings in this county.;;;;;;;;;;;;;x
 hurricane_flooded_farmland;Flooded Farmland;;;;;;;;;;;;;x
@@ -234,7 +234,7 @@ salvage_textbooks;Bookman;;;;;;;;;;;;;x
 salvage_textbooks_desc;In possession of several intact pre-calamity academic books. This trait has been deprecated in favor of artifacts.;;;;;;;;;;;;;x
 rustcult_salvage;Salvage Expedition;;;;;;;;;;;;;x
 rustcult_salvage_desc;The techpriests need a constant supply of salvaged Old World technology to continue their studies, and a lucky salvager might find himself wielding a powerful tech prize.;;;;;;;;;;;;;x
-EVTNAME_salvage_describe;Salvage Expedition;;;;;;;;;;;;x
+EVTNAME_salvage_describe;Salvage Expedition;;;;;;;;;;;;;x
 EVTDESC_salvage_describe;The people of the Old World left many amazing artifacts behind. Powerful weapons, tools that aid in all varieties of work, machinery our most brilliant Techpriests do not fully understand, and beautiful objects our finest artisans cannot replicate. Much of the Old World is gone, consumed by centuries of rust, but a few rare artifacts survive in workable condition...\n\nAcquiring such an artifact will not only bring me wealth and prestige, it is the sacred duty of all followers of [Root.Religion.GetRandomGodName].;;;;;;;;;;;;x
 EVTOPT_salvage_describe;Hmmm, where will I find good salvage?;;;;;;;;;;;;x
 EVTDESC_salvage_choosesite;You check the maps, and have located several potential expedition sites in the province of [From.GetName]. The people of [From.GetName] follow the [From.Religion.GetName] faith, and are culturally [From.Culture.GetName].\n\nProvinces populated by infidels are more likely to contain items of the Old World, since they do not have the traditions of salvage.;;;;;;;;;;;;x
@@ -245,7 +245,7 @@ EVTOPT_salvage_prepare_start;Set out with your men.;;;;;;;;;;;;x
 EVTOPT_salvage_prepare_research;Consult the Techpriests for good salvage locations.;;;;;;;;;;;;x
 EVTOPT_salvage_prepare_warband;Assemble a battle-hardened warband to accompany you.;;;;;;;;;;;;x
 EVTOPT_salvage_prepare_envoys;Send envoys ahead to smooth your travels.;;;;;;;;;;;;x
-EVTNAME_salvage_unfriendly;Unfriendly Locals;;;;;;;;;;;;x
+EVTNAME_salvage_unfriendly;Unfriendly Locals;;;;;;;;;;;;;x
 EVTDESC_salvage_unfriendly;You arrive in [From.GetName], and many of the local residents are distrustful or outright hostile towards you and your men. You notice them watching you surreptitiously and talking amongst themselves, and have a difficult time finding a place to rest.;;;;;;;;;;;;x
 EVTOPT_salvage_unfriendly_ignore;Ignore them.;;;;;;;;;;;;x
 EVTOPT_salvage_unfriendly_warband;We're well armed, they won't risk attacking us.;;;;;;;;;;;;x
@@ -255,7 +255,7 @@ EVTDESC_salvage_provowner;Rust Cultists from a nearby realm are attempting to sa
 EVTOPT_salvage_provowner_violence;Let the locals drive them away.;;;;;;;;;;;;x
 EVTOPT_salvage_provowner_peaceful;We must avoid bloodshed.;;;;;;;;;;;;x
 EVTDESC_salvage_peaceful;Mixed among the local residents in [From.GetName], you see the occasional soldier wearing the colors of [From.Holder.GetTitledFirstName]. Fortunately, the soldiers seem to be ensuring that order is maintained and the locals allow you to pass without conflict.;;;;;;;;;;;;x
-EVTNAME_salvage_violence;Hostile Locals;;;;;;;;;;;;x
+EVTNAME_salvage_violence;Hostile Locals;;;;;;;;;;;;;x
 EVTDESC_salvage_violence;Your continued presence in [From.GetName] has drawn the ire of the local peasantry, and you are now confronted by a disorganized mob of angry villagers. They may not be well armed, and they're certainly not well trained...\n\n...but there are a lot of them.;;;;;;;;;;;;x
 EVTOPT_salvage_violence_flee;We should turn back.;;;;;;;;;;;;x
 TXT_salvage_flee;Your Salvage Expedition is over.;;;;;;;;;;;;x
@@ -265,7 +265,7 @@ EVTOPT_salvage_violence_fightwarband;They'll back down from a vulgar display of 
 EVTOPT_salvage_violence_bribe;Peasants like silver, right?;;;;;;;;;;;;x
 EVTNAME_salvage_drivenout;Driven from [From.From.GetName];;;;;;;;;;;;x
 EVTDESC_salvage_drivenout;Hordes of angry local villagers have driven you from their lands, ending your Salvage Expedition. If it makes you feel better, tell yourself you left to avoid shedding THEIR blood.;;;;;;;;;;;;x
-EVTNAME_salvage_agent;Competing Salvager;;;;;;;;;;;;x
+EVTNAME_salvage_agent;Competing Salvager;;;;;;;;;;;;;x
 EVTDESC_salvage_agent;During your expedition to [From.GetName], you encounter an agent of an unknown lord who shares your faith. He appears to be scouting new salvage sites for his master, in direct competition with you!;;;;;;;;;;;;x
 EVTOPT_salvage_agent;May the best salvager win!;;;;;;;;;;;;x
 EVTOPT_salvage_agent_research;Direct him to a promising site nearby.;;;;;;;;;;;;x
@@ -275,9 +275,9 @@ EVTDESC_salvage_collapse;You hoped the wooden reinforcement beams would be enoug
 EVTOPT_salvage_collapse_flee;Run for it!;;;;;;;;;;;;x
 EVTOPT_salvage_collapse_brave;I won't let debris stand in my way!;;;;;;;;;;;;x
 EVTOPT_salvage_collapse_plan;I planned for this risk.;;;;;;;;;;;;x
-recent_salvage;Recent Salvage;;;;;;;;;;;;x
+recent_salvage;Recent Salvage;;;;;;;;;;;;;x
 recent_salvage_desc;This character has recently gone on a Salvage Expedition.;;;;;;;;;;;;x
-preparing_expedition;Preparing Expedition;;;;;;;;;;;;x
+preparing_expedition;Preparing Expedition;;;;;;;;;;;;;x
 preparing_expedition_desc;This character is preparing to go on a Salvage Expedition.;;;;;;;;;;;;x
 EVTNAME_salvage_value;Salvage in [From.GetName];;;;;;;;;;;;x
 EVTDESC_salvage_worthless;Your expedition has turned up very little valuable salvage. You have explored many ruined buildings, and everywhere you look you find the ruins picked clean.;;;;;;;;;;;;x
@@ -290,7 +290,7 @@ EVTOPT_salvage_moderate_research;Hawk these trinkets, I know of another site.;;;
 EVTDESC_salvage_safe;Your men have discovered a large metal box beneath the ruins of a long-forgotten structure in [From.GetName]. The strongbox is corroded but still intact. Who knows what mysteries or treasures of the Old World are sealed within it?;;;;;;;;;;;;x
 EVTOPT_salvage_safe;I'll know soon, crack it open!;;;;;;;;;;;;x
 EVTOPT_salvage_safe_patient;Have your tinker open it carefully.;;;;;;;;;;;;x
-EVTNAME_salvage_item;Salvage;;;;;;;;;;;;x
+EVTNAME_salvage_item;Salvage;;;;;;;;;;;;;x
 EVTDESC_salvage_scraps;You have found scraps of Old World artifacts, but none of them are especially well preserved. There are objects that may have once been used for cooking or as craftsmen's tools, but it's hard to tell with the corrosion and decay of the centuries. They might be worth a few gold pieces to the right buyer.;;;;;;;;;;;;x
 EVTDESC_salvage_coins;Your men have discovered a cache of corroded coins from the Old World. Their coins were inexplicably made out of base metals rather than gold or silver, dramatically reducing their value as working currency. Still, they might be worth a few gold pieces.;;;;;;;;;;;;x
 EVTDESC_salvage_glassware;You have discovered a long-hidden supply of Old World glassware. Unlike iron objects which have mostly been consumed by rust, many glass objects have survived. You need but wipe off the centuries and you'll have finely polished Old World artifacts that artisans today cannot replicate.;;;;;;;;;;;;x
@@ -316,7 +316,7 @@ EVTDESC_salvage_safe_watch;The safe door finally opens, and you can see the cont
 EVTDESC_salvage_safe_optics;The safe door finally opens, and you can see the contents: a segmented set of brass tubes with several curved internal mirrors and smoothly bulging disks of polished glass. The tools and knowledge to craft such a device have been lost, but you recognize it as an Old World version of today's spyglass.\n\nYou will be able to see things from a great distance.;;;;;;;;;;;;x
 EVTDESC_salvage_safe_textbooks;The safe door finally opens, and you can see the contents: several stacks of thick books. They have been sealed away from the ravages of the weather, but the centuries have still taken their toll on their brittle brown pages.\n\nWith luck, a scholar fluent in Old World languages will be able to extract useful information from the books before they crumble into dust.;;;;;;;;;;;;x
 EVTDESC_salvage_safe_compass;The safe door finally opens, and you can see the contents: a small metal disc with a string attached to it. As you hold the item, you notice that there is a free-floating needle inside. You realize that the artifact is a hand-held Old World navigational device.\n\nOnce you learn how to properly calibrate and use it, it is unlikely that you will ever lose your way again.;;;;;;;;;;;;
-EVTNAME_salvage_result;Salvage Expedition ends;;;;;;;;;;;;x
+EVTNAME_salvage_result;Salvage Expedition ends;;;;;;;;;;;;;x
 EVTDESC_salvage_result_poor;Not all Salvage Expeditions end in success. Sometimes the recovered artifacts are badly damaged, sometimes they are worthless, sometimes there isn't anything to salvage because the area has been picked clean, and sometimes dangerous circumstances interrupt the expedition.\n\nThis is one of those times.;;;;;;;;;;;;x
 EVTOPT_salvage_result_poor;Until next time.;;;;;;;;;;;;x
 EVTDESC_salvage_result_medium;You have returned from your Salvage Expedition with baubles and artifacts of the Old World. Although you did not find a tech prize truly worthy of [Root.Religion.GetRandomGodName]'s favor, at least you didn't return empty handed.;;;;;;;;;;;;x
@@ -325,7 +325,7 @@ EVTOPT_salvage_result_medium_sell;Someone will buy these trinkets.;;;;;;;;;;;;x
 EVTOPT_salvage_result_medium_donate;I will donate these artifacts to the techpriests for study.;;;;;;;;;;;;x
 EVTDESC_salvage_result_good;You have returned from your Salvage Expedition with an exciting tech prize, worthy of [Root.Religion.GetRandomGodName]'s favor. Your court is buzzing with word of your success, and the techpriests are already coming to you with requests to examine your prize. It remains to be seen whether you can return the artifact to a functional state.\n\nThis will surely bring you fame, power, and understanding of the old world.;;;;;;;;;;;;x
 EVTOPT_salvage_result_study;I must study and repair my prize.;;;;;;;;;;;;x
-EVTNAME_salvage_repair_prize;The Past Restored;;;;;;;;;;;;x
+EVTNAME_salvage_repair_prize;The Past Restored;;;;;;;;;;;;;x
 EVTDESC_salvage_study_firearm;After weeks of study, your armorers have finally restored your Old World firearm to working condition! Much of the wood body had to be replaced, but the metal parts were functional. The charges required to operate the weapon are in extremely short supply, as many of those found alongside the weapon were dangerously unstable and your armorers do not yet know how to construct additional charges.\n\nYou will be a fearsome and inspiring figure on the battlefield!;;;;;;;;;;;;x
 EVTOPT_salvage_study_firearm;This is my boomstick!;;;;;;;;;;;;x
 EVTDESC_salvage_study_calculator;After weeks of study, your tinkers have finally restored your numeric calculating machine to working condition! You are still learning how to operate it: you enter numerals by sliding the levers into the correct positions, then turn the heavy crank and the machine produces the result of addition in mere seconds.\n\nThis will make it much easier to keep track of the rents and taxes that are owed to you!;;;;;;;;;;;;x
@@ -335,16 +335,16 @@ EVTDESC_salvage_study_optics;After weeks of study, your tinkers have finally res
 EVTDESC_salvage_study_textbooks;After weeks of study, your scholars have learned many things about your collection of pre-calamity books. Several of the books have fallen to pieces during transport or study, but those that survived are providing valuable insight into medicine, engineering, and other topics.\n\nMore study will reveal additional secrets of the old world!;;;;;;;;;;;;x
 EVTDESC_salvage_study_compass;After weeks of study, your tinkers have finally restored your compass to working condition! The needle inside the compass has been recalibrated, and the quicksilver inside has been refillled. You are still figuring out exactly how to orient yourself with it, but you feel as if you're getting better at it over time.\n\nThis will make it nearly impossible for you to get lost on long journeys.;;;;;;;;;;;;x
 EVTOPT_salvage_study_compass;I shall never lose my way again!;;;;;;;;;;;;x
-EVTNAME_salvage_fail_prize;Unsolved Mysteries;;;;;;;;;;;;x
+EVTNAME_salvage_fail_prize;Unsolved Mysteries;;;;;;;;;;;;;x
 EVTDESC_salvage_study_fail;Despite weeks of effort you have failed to restore your salvaged prize to a useful state. Your assistants don't possess the knowledge or the tools to help you accomplish this task, and your efforts only seem to be causing additional damage. Major portions of the prize are damaged or missing, and there may be some mystical component required to make the device function that is not available to you.;;;;;;;;;;;;x
 EVTOPT_salvage_study_keep;I can still display it as art.;;;;;;;;;;;;x
 EVTOPT_salvage_study_sell;Someone will buy it from me.;;;;;;;;;;;;x
 EVTOPT_salvage_study_learn;The real prize is the knowledge I've gained.;;;;;;;;;;;;x
 EVTOPT_salvage_study_donate;The techpriests will find a use for it.;;;;;;;;;;;;x
-donated_tech_prize;Donated Tech Prizes;;;;;;;;;;;;x
-tech_scavenger;Tech Scavenger;;;;;;;;;;;;x
+donated_tech_prize;Donated Tech Prizes;;;;;;;;;;;;;x
+tech_scavenger;Tech Scavenger;;;;;;;;;;;;;x
 tech_scavenger_desc;This character is an accomplished scavenger of Old World technology.;;;;;;;;;;;;x
-EVTNAME_bequeathed;Bequeathment;;;;;;;;;;;;x
+EVTNAME_bequeathed;Bequeathment;;;;;;;;;;;;;x
 EVTDESC_bequeathed_firearm;Your late [GetFromRelation] [From.GetFirstName] bequeathed an antique firearm to you. Hopefully it hasn't been damaged or lost in the confusion of [From.GetPossPronoun] passing.;;;;;;;;;;;;x
 EVTDESC_bequeathed_typewriter;Your late [GetFromRelation] [From.GetFirstName] bequeathed a pre-calamity antique typewriter to you. Hopefully it hasn't been damaged or lost in the confusion of [From.GetPossPronoun] passing.;;;;;;;;;;;;x
 EVTDESC_bequeathed_calculator;Your late [GetFromRelation] [From.GetFirstName] bequeathed a pre-calamity mechanical calculator to you. Hopefully it hasn't been damaged or lost in the confusion of [From.GetPossPronoun] passing.;;;;;;;;;;;;x
@@ -356,71 +356,71 @@ EVTOPT_bequeath_teen;All these council meetings are confusing...;;;;;;;;;;;;x
 EVTOPT_bequeath_adult;Now where did my [GetFromRelation] keep it?;;;;;;;;;;;;x
 EVTOPT_bequeath_skilled;I've been using it since I was young.;;;;;;;;;;;;x
 EVTOPT_bequeath_intrigue;I've ensured I will retain possession of it.;;;;;;;;;;;;x
-TXT_bequeth_lost;The artifact is lost to the ages;;;;;;;;;;;;x
+TXT_bequeth_lost;The artifact is lost to the ages;;;;;;;;;;;;;x
 EVTNAME_firearm_battle;Take Aim!;;;;;;;;;;;;x
 EVTDESC_firearm_battle;An arrow glances off your armor as the battle is joined, the air fills with a flurry of battle cries, and you hear the ringing sound of steel on steel.\n\nYour foes surge towards you, but you raise your Old World firearm to single out a looming warrior leading the charge. You pull the trigger and the warrior is felled with a deafening blast of light and smoke, his armor useless.;;;;;;;;;;;;x
 EVTOPT_firearm_battle_fire;None dare to oppose the Firebringer!;;;;;;;;;;;;x
 EVTOPT_firearm_battle_thunder;Fools, I am the Thunderhand!;;;;;;;;;;;;x
 EVTOPT_firearm_battle_marksman;My marksmanship is perfect.;;;;;;;;;;;;x
 EVTOPT_firearm_battle_default;Run from me, cowards!;;;;;;;;;;;;x
-EVTNAME_typewriter_history;Storytelling;;;;;;;;;;;;x
+EVTNAME_typewriter_history;Storytelling;;;;;;;;;;;;;x
 EVTDESC_typewriter_history;Sometimes you feel the urge to use your Old World typewriter to write things beyond the normal decrees, proclamations, and correspondence. Perhaps history will remember you more favorably if your thoughts on the events of the day are recorded in your own neatly machine-lettered words.;;;;;;;;;;;;x
 EVTOPT_typewriter_history_record;My dynasty will be remembered.;;;;;;;;;;;;x
 EVTOPT_typewriter_history_poet;I'll tell a rousing story.;;;;;;;;;;;;x
 EVTOPT_typewriter_history_square;I will use it only for affairs of state.;;;;;;;;;;;;x
-EVTNAME_calculator_taxes;Death and Taxes;;;;;;;;;;;;x
+EVTNAME_calculator_taxes;Death and Taxes;;;;;;;;;;;;;x
 EVTDESC_calculator_taxes;It may be boring, but it is a crucial task for any [Root.GetTitle] to ensure that [Root.GetPossPronoun] expected tax revenue matches the rents paid by [Root.GetPossPronoun] vassals. Your Old World Arithmometer has made it much easier for you to do just that. You feel much more confident calculating the expected contents of your treasury, and can ensure that the numbers reported by your advisers are accurate.;;;;;;;;;;;;x
 EVTOPT_calculator_taxes_shrewd;This enhances my reputation for shrewdness.;;;;;;;;;;;;x
 EVTOPT_calculator_taxes_machine;I'm more machine than man!;;;;;;;;;;;;x
 EVTOPT_calculator_taxes_default;Some of my vassals are short a few coins.;;;;;;;;;;;;x
-EVTNAME_watch_smooth;Precision in All Things;;;;;;;;;;;;x
+EVTNAME_watch_smooth;Precision in All Things;;;;;;;;;;;;;x
 EVTDESC_watch_smooth;Since you acquired your Old World pocket watch, you feel like things have been running like... well, clockwork. You are able to bring precision and confidence to any issue you face. While others struggle with primitive sundials, you keep your stylish ticking companion with you at all times.;;;;;;;;;;;;x
 EVTOPT_watch_smooth_style;Plus, it goes with everything!;;;;;;;;;;;;x
 EVTOPT_watch_smooth_carriage;I make the carriages run on time.;;;;;;;;;;;;x
 EVTOPT_watch_smooth_default;Well, I am pretty great.;;;;;;;;;;;;x
-EVTNAME_telescope_stargaze;Watch the Skies;;;;;;;;;;;;x
+EVTNAME_telescope_stargaze;Watch the Skies;;;;;;;;;;;;;x
 EVTDESC_telescope_stargaze;Sometimes you take your Old World telescope to a high tower late at night, and gaze through it at the sky. Some might consider it frivolous, but you find it relaxing to see the Moon and wandering stars in a way few have since the calamity.;;;;;;;;;;;;x
 EVTOPT_telescope_stargaze_astro;I'll study the wandering stars, also known as planets.;;;;;;;;;;;;x
 EVTOPT_telescope_stargaze_military;My telescope should be reserved for scouting.;;;;;;;;;;;;x
 EVTOPT_telescope_stargaze_calm;It's very calming.;;;;;;;;;;;;x
-EVTNAME_textbooks_medical;Intense Study;;;;;;;;;;;;x
+EVTNAME_textbooks_medical;Intense Study;;;;;;;;;;;;;x
 EVTDESC_textbooks_medical;You have been spending some time studying your collection of Old World books. You are not fully fluent in the language, but you have determined that one of the books is a manual of Old World treatments for human disease. Though some of the words are arcane and confusing, there are many useful anatomical diagrams and descriptions of healing techniques.;;;;;;;;;;;;x
-EVTOPT_textbooks_medical_wound;This will help me heal my wound.;;;;;;;;;;;;x
-EVTOPT_textbooks_medical_ill;This will help me cure my illness.;;;;;;;;;;;;x
+EVTOPT_textbooks_medical_wound;This will help me heal my wound.;;;;;;;;;;;;;x
+EVTOPT_textbooks_medical_ill;This will help me cure my illness.;;;;;;;;;;;;;x
 EVTOPT_textbooks_medical_child;This will help me treat my sick children.;;;;;;;;;;;;x
-EVTOPT_textbooks_medical_learn;I have learned many things.;;;;;;;;;;;;x
-EVTOPT_textbooks_medical_lazy;Reading is boring.;;;;;;;;;;;;x
-EVTNAME_compass_navigate;Finding a Way;;;;;;;;;;;;x
+EVTOPT_textbooks_medical_learn;I have learned many things.;;;;;;;;;;;;;x
+EVTOPT_textbooks_medical_lazy;Reading is boring.;;;;;;;;;;;;;x
+EVTNAME_compass_navigate;Finding a Way;;;;;;;;;;;;;x
 EVTDESC_compass_navigate;Since you acquired your Old World compass, you have found that traveling has become much smoother. You almost never got lost, and you can safely find your way through paths that most would consider treacherous. You no longer have to struggle with crude maps or wait until nightfall to find your way.;;;;;;;;;;;;x
 EVTOPT_compass_navigate_logistics;It is much easier to move trade goods.;;;;;;;;;;;;x
 EVTOPT_compass_navigate_military;My troops will never get lost again!.;;;;;;;;;;;;x
 EVTOPT_compass_navigate_sneaky;These paths are useful for avoiding enemies...;;;;;;;;;;;;x
-consumerist_invest;Invest in Broker;;;;;;;;;;;;x
+consumerist_invest;Invest in Broker;;;;;;;;;;;;;x
 consumerist_invest_desc;Every year, you have the option to select the finest exemplar of Consumerism, invest him with the title of Broker, and send him into the world to amass wealth on your behalf. Brokers are known for their skill with intrigue and diplomacy, and are castrated at a young age to ensure purity in their focus on the deal.;;;;;;;;;;;;x
-recent_invest;Recent Investment;;;;;;;;;;;;x
+recent_invest;Recent Investment;;;;;;;;;;;;;x
 recent_invest_desc;Recently invested in a Broker and sent him into the world.;;;;;;;;;;;;x
-merchant_recent_arrive;Recently Arrived;;;;;;;;;;;;x
+merchant_recent_arrive;Recently Arrived;;;;;;;;;;;;;x
 merchant_recent_arrive_desc;This Broker recently arrived in court.;;;;;;;;;;;;x
-consumerist_privileges;Decadent Luxury;;;;;;;;;;;;x
+consumerist_privileges;Decadent Luxury;;;;;;;;;;;;;x
 consumerist_privileges_desc;Consumerist merchants are providing a supply of luxury goods.;;;;;;;;;;;;x
-consumerist_loan;Consumerist Loan;;;;;;;;;;;;x
+consumerist_loan;Consumerist Loan;;;;;;;;;;;;;x
 consumerist_loan_desc;Has taken a significant loan from the Consumerists.;;;;;;;;;;;;x
-poor_credit;Poor Credit;;;;;;;;;;;;x
+poor_credit;Poor Credit;;;;;;;;;;;;;x
 poor_credit_desc;A reputation for not repaying debts.;;;;;;;;;;;;x
-merchant_retired;Retired Broker;;;;;;;;;;;;x
+merchant_retired;Retired Broker;;;;;;;;;;;;;x
 merchant_retired_desc;This character returned home with satchels full of gold.;;;;;;;;;;;;x
-brokers_returned;Brokers Returned;;;;;;;;;;;;x
-well_protected;Well Protected;;;;;;;;;;;;x
+brokers_returned;Brokers Returned;;;;;;;;;;;;;x
+well_protected;Well Protected;;;;;;;;;;;;;x
 well_protected_desc;Protected by carefully selected bodyguards.;;;;;;;;;;;;x
-precious_heirloom;Precious Heirloom;;;;;;;;;;;;x
+precious_heirloom;Precious Heirloom;;;;;;;;;;;;;x
 precious_heirloom_desc;You made it clear your dynastic heirlooms are not for sale.;;;;;;;;;;;;x
-EVTNAME_broker_arrive;Broker arrives;;;;;;;;;;;;x
+EVTNAME_broker_arrive;Broker arrives;;;;;;;;;;;;;x
 EVTDESC_broker_arrive;A mysterious traveller has arrived at your court, requesting permission to reside there for a while. His name is [From.GetTitledFirstName], and he claims to be a wandering merchant of the Consumerist faith. He trades in luxuries and specializes in acquiring rare and unique artifacts.\n\nAfter all, who doesn't need a bit more luxury in their life?;;;;;;;;;;;;x
 EVTOPT_broker_arrive_allow;Let him stay.;;;;;;;;;;;;x
 EVTOPT_broker_arrive_deny;We have no need of him.;;;;;;;;;;;;x
 EVTOPT_broker_arrive_confiscate;He should pay a toll for trespassing...;;;;;;;;;;;;x
-TXT_consumerist_become_enemy;You will become an enemy of Consumerism\n;;;;;;;;;;;;x
-EVTNAME_broker_luxury;Grant Privileges;;;;;;;;;;;;x
+TXT_consumerist_become_enemy;You will become an enemy of Consumerism\n;;;;;;;;;;;;;x
+EVTNAME_broker_luxury;Grant Privileges;;;;;;;;;;;;;x
 EVTDESC_broker_luxury;[From.GetTitledFirstName] claims that there is gold to be earned if you allow him special privileges in the markets of your demesne. More fine textiles, furs, spices, glassware, and Old World goods will find their way into your great hall, and the rising tide of [From.Religion.GetRandomGodName] will lift all boats.\n\nOn the other hand, your vassals might be annoyed by an outsider getting special access.;;;;;;;;;;;;x
 EVTOPT_broker_luxury_accept;I want the finer things.;;;;;;;;;;;;x
 EVTOPT_broker_luxury_deny;I do not need such things.;;;;;;;;;;;;x
@@ -437,7 +437,7 @@ EVTOPT_broker_repay_calculator;I'll repay him with my Arithmometer.;;;;;;;;;;;;x
 EVTOPT_broker_repay_watch;I'll repay him with my pocket watch.;;;;;;;;;;;;x
 EVTOPT_broker_repay_telescope;I'll repay him with my telescope.;;;;;;;;;;;;x
 EVTOPT_broker_repay_textbooks;I'll repay him with my collection of books.;;;;;;;;;;;;x
-EVTNAME_broker_oldloan;Old Loans;;;;;;;;;;;;x
+EVTNAME_broker_oldloan;Old Loans;;;;;;;;;;;;;x
 EVTDESC_broker_oldloan;Consumerist envoys arrive at your court, asking if you thought they had forgotten about a debt owed to one of their Brokers. It seems the amount you owe has risen a bit with time, and they would like it repaid immediately.;;;;;;;;;;;;x
 EVTOPT_broker_oldloan_pay;Very well, here is your gold.;;;;;;;;;;;;x
 EVTOPT_broker_oldloan_reject;Guards! Remove them from my sight.;;;;;;;;;;;;x
@@ -447,11 +447,11 @@ EVTOPT_broker_dispute_lazy;There's nothing I can do.;;;;;;;;;;;;x
 EVTDESC_broker_complain;[Root.job_spiritual.GetTitledFirstName] comes to you, complaining that the Consumerist infidel [FromFrom.GetTitledFirstName] has no place in your court. [From.GetTitledFirstName] requests that you compel the infidel to leave.;;;;;;;;;;;;x
 EVTOPT_broker_complain_keep;He is useful to me.;;;;;;;;;;;;x
 EVTOPT_broker_complain_leave;He must find a new host.;;;;;;;;;;;;x
-EVTNAME_broker_converthost;An Impious Proposal;;;;;;;;;;;;x
+EVTNAME_broker_converthost;An Impious Proposal;;;;;;;;;;;;;x
 EVTDESC_broker_converthost;[From.GetTitledFirstName] speaks to you privately:\n\n"I was glad you chose to allow me to remain in your court, despite my dispute with your spiritual advisor. I think you will find that there are many advantages to following the path of [From.Religion.GetRandomGodName]. For a small fee, I can reveal to you the secrets to prosperity.";;;;;;;;;;;;x
 EVTOPT_broker_converthost_reject;I will not turn from my faith.;;;;;;;;;;;;x
 EVTOPT_broker_converthost_convert;I think we have a deal.;;;;;;;;;;;;x
-EVTNAME_broker_buy;An Enticing Offer;;;;;;;;;;;;x
+EVTNAME_broker_buy;An Enticing Offer;;;;;;;;;;;;;x
 EVTDESC_broker_buy_firearm;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I see that you are in possession of an Old World firearm. I will arrange for you to be paid a significant sum of gold for it, with which you could fund an army. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
 EVTOPT_broker_buy_gold;I accept your offer.;;;;;;;;;;;;x
 EVTOPT_broker_buy_stewardship;I will negotiate a better price.;;;;;;;;;;;;x
@@ -461,7 +461,7 @@ EVTDESC_broker_buy_calculator;[From.GetTitledFirstName] comes to you as you hold
 EVTDESC_broker_buy_watch;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I see that you are in possession of an Old World pocket watch. I will arrange for you to be paid a significant sum of gold for it, with which you could fund an army. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
 EVTDESC_broker_buy_telescope;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I see that you are in possession of an Old World portable telescope. I will arrange for you to be paid a significant sum of gold for it, with which you could fund an army. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
 EVTDESC_broker_buy_textbooks;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I see that you are in possession of a collection of Old World books. I will arrange for you to be paid a significant sum of gold for them, with which you could fund an army. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
-EVTNAME_broker_sell;An Ancient Object;;;;;;;;;;;;x
+EVTNAME_broker_sell;An Ancient Object;;;;;;;;;;;;;x
 EVTDESC_broker_sell_firearm;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I have recently become aware of an Old World firearm available for you to purchase. As long as you wield it you will inspire your soldiers, terrify the enemy, and bring prestige to your dynasty. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
 EVTOPT_broker_sell_gold;Be silent, and take my gold!;;;;;;;;;;;;x
 EVTOPT_broker_sell_stewardship;I will negotiate a better price.;;;;;;;;;;;;x
@@ -472,7 +472,7 @@ EVTDESC_broker_sell_calculator;[From.GetTitledFirstName] comes to you as you hol
 EVTDESC_broker_sell_watch;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I have recently become aware of an Old World pocket watch available for you to purchase. Beyond its stylish appearance it will allow you to perfectly keep track of time, a major advantage in many situations. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
 EVTDESC_broker_sell_telescope;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I have recently become aware of an Old World far-seeing scope available for you to purchase. With it you will be able to observe enemy troop movements from far away, or gaze at the stars as our distant ancestors once did. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
 EVTDESC_broker_sell_textbooks;[From.GetTitledFirstName] comes to you as you hold court.\n\n"My liege, I have recently become aware of a collection of Old World books available for you to purchase. With a fluent scholar of Old American translating them, you will gain deep insight into medicine, engineering, and other topics. Once the sale is complete, I will leave your court.";;;;;;;;;;;;x
-EVTNAME_broker_return;Broker Returns;;;;;;;;;;;;x
+EVTNAME_broker_return;Broker Returns;;;;;;;;;;;;;x
 EVTDESC_broker_return;Your loyal Broker [From.GetTitledFirstName] has returned to your court with his satchels brimming with gold and silver. It is time for him to retire to a life of decadent luxury.;;;;;;;;;;;;x
 EVTOPT_broker_return_take;He has done well for our faith.;;;;;;;;;;;;x
 EVTOPT_broker_return_split;He may keep some of the spoils.;;;;;;;;;;;;x
@@ -492,13 +492,13 @@ EVTDESC_broker_assassin_unskilled;Guards!;;;;;;;;;;;;x
 EVTDESC_broker_poison;An hour after a hearty meal of roast chicken, you begin to feel a bit queasy and light-headed. You can barely breathe, and you clutch at your throat. Poison!\n\nCould it be that your food taster was bribed by the vile Consumerists?;;;;;;;;;;;;x
 EVTDESC_broker_poison_doctor;Get me my court doctor!;;;;;;;;;;;;x
 EVTDESC_broker_poison_paranoid;They're all out to get me!;;;;;;;;;;;;x
-EVTNAME_broker_madness;Lasting Damage;;;;;;;;;;;;x
+EVTNAME_broker_madness;Lasting Damage;;;;;;;;;;;;;x
 EVTDESC_broker_madness;It has been several days since the attempt on your life, and you are suffering from vivid nightmares, hallucinations, and fatigue. Perhaps it is some kind of slow acting poison, or the handiwork of [Root.Religion.GetRandomEvilGodName]. You find it difficult to concentrate, and your thoughts are becoming erratic.;;;;;;;;;;;;x
 EVTOPT_broker_madness;This is not just madness!;;;;;;;;;;;;x
 EVTDESC_broker_family_kill;Those close to you are being targeted by assassins. You have just received word that your [GetFromRelation] [From.GetTitledFirstName] has been found dead, with the sign of the Dollar carved into [From.GetPossPronoun] forehead.;;;;;;;;;;;;x
 EVTOPT_broker_family;Curse them!;;;;;;;;;;;;x
 EVTDESC_broker_family_wound;Those close to you are being targeted by a Consumerist assassin. You have just received word that your [GetFromRelation] [From.GetTitledFirstName] has been injured during an attempt on [From.GetPossPronoun] life.;;;;;;;;;;;;x
-terror_beast;Terror Beast;;;;;;;;;;;;x
+terror_beast;Terror Beast;;;;;;;;;;;;;x
 terror_beast_desc;Rumor has it a terrible beast roaming the wilderness, and people are afraid to leave their houses.;;;;;;;;;;;;x
 EVTDESC_monster_beast;Panic is spreading in [Root.GetName] among the common folk. There are reports of eerie sounds in the wilderness and livestock disappearing. Peasants are blaming the Beast of [Root.GetName].;;;;;;;;;;;;x
 EVTDESC_monster_chupa;Panic is spreading in [Root.GetName] among the common folk. There are reports of eerie sounds in the wilderness and livestock disappearing. Peasants are blaming the Chupacabra, claiming that they have found their animals drained of blood.;;;;;;;;;;;;x
@@ -522,7 +522,7 @@ EVTDESC_monster_howler;Panic is spreading in [Root.GetName] among the common fol
 EVTDESC_monster_dogman;Panic is spreading in [Root.GetName] among the common folk. There are reports of travelers hearing a scream-like howl before being attacked by a gigantic hound who walks on two legs. Peasants are blaming the Dogman, a creature that has roamed these lands since time immemorial.;;;;;;;;;;;;x
 EVTOPTA_monster_alert;A fearsome-sounding beast!;;;;;;;;;;;;x
 EVTOPTB_monster_alert;What nonsense is this?;;;;;;;;;;;;x
-EVTNAME_monster_react;Terror Beast;;;;;;;;;;;;x
+EVTNAME_monster_react;Terror Beast;;;;;;;;;;;;;x
 EVTDESC_monster_react;Villages elders in [From.GetName] are requesting your aid in dealing with the beast terrorizing the countryside. They claim the creature is an agent of [From.Religion.GetRandomEvilGodName] sent to destroy them. Some of the elders have brought evidence of the beast for you to examine, hoping to convince you the situation is dire.;;;;;;;;;;;;x
 EVTOPT_monster_react_lazy;They're just superstitious [From.Culture.GetName] peasants.;;;;;;;;;;;;x
 EVTOPT_monster_react_hoax;I have my suspicions about the truth...;;;;;;;;;;;;x
@@ -534,17 +534,17 @@ EVTDESC_monster_angry;The peasants in [Root.GetName] have taken matters into the
 EVTOPT_monster_angry;Oh well.;;;;;;;;;;;;x
 EVTDESC_monster_findnothing;You and your men search high and low, but don't find any evidence of the beast. It must have just been superstitious peasants after all.;;;;;;;;;;;;x
 EVTOPT_monster_findnothing;How embarrassing.;;;;;;;;;;;;x
-EVTNAME_monster_kids;Meddling Kids;;;;;;;;;;;;x
+EVTNAME_monster_kids;Meddling Kids;;;;;;;;;;;;;x
 EVTDESC_monster_kids;Investigation of the beast terrorizing [FromFrom.GetName] have turned up some troublemaking children perpetrating a hoax. Several of the youngsters are apprentices of local craftsmen. You suspect that punishing them severely would anger your vassals, but you would appear weak if you let children make a fool of you and cause panic in your demesne.;;;;;;;;;;;;x
 EVTOPT_monster_kids_lenient;Boys will be boys.;;;;;;;;;;;;x
 EVTOPT_monster_kids_just;Throw them in the stocks.;;;;;;;;;;;;x
 EVTOPT_monster_kids_cruel;Cut out their clever tongues.;;;;;;;;;;;;x
-EVTNAME_monster_scheme;Scheming Lord;;;;;;;;;;;;x
+EVTNAME_monster_scheme;Scheming Lord;;;;;;;;;;;;;x
 EVTDESC_monster_scheme;You have discovered that the supposed beast terrorizing [FromFrom.GetName] was all part of a complicated plot to drive free peasants away from prime plots of fertile land. A minor local lord seems to be behind the scheme.;;;;;;;;;;;;x
 EVTOPT_monster_scheme_dishonor;I'll put an end to this..;;;;;;;;;;;;x
 EVTOPT_monster_scheme_lazy;Not really my concern.;;;;;;;;;;;;x
 EVTOPT_monster_scheme_join;I might be willing to turn a blind eye...;;;;;;;;;;;;x
-EVTNAME_monster_shepherd;The Shepherd's Plea;;;;;;;;;;;;x
+EVTNAME_monster_shepherd;The Shepherd's Plea;;;;;;;;;;;;;x
 EVTDESC_monster_shepherd;Your men question local farmers and artisans, and you eventually find your way to the cottage of a shepherd who claims his flock was attacked by the beast. He shows you the mangled body of his prized Golden Merino, and pleads for you to find the beast before it kills again.;;;;;;;;;;;;x
 EVTOPT_monster_shepherd_pay;Give the shepherd some coin, and hand me my spear.;;;;;;;;;;;;x
 EVTOPT_monster_shepherd_hunt;I will hunt it down.;;;;;;;;;;;;x
@@ -553,14 +553,14 @@ EVTDESC_monster_lair;Following the directions of the local farmers, you track th
 EVTOPT_monster_lair_enter;Enter the lair.;;;;;;;;;;;;x
 EVTOPT_monster_lair_ambush;Prepare an ambush.;;;;;;;;;;;;x
 EVTOPT_monster_lair_man;This is not merely an animal. It's a man!;;;;;;;;;;;;x
-EVTNAME_monster_fight;The Beast;;;;;;;;;;;;x
+EVTNAME_monster_fight;The Beast;;;;;;;;;;;;;x
 EVTDESC_monster_fight;With an unearthly bestial noise, a terrible creature lurches out at you from the shadows. It lunges towards you and your men with fearsome madness in its eyes!\n\nIt moves so quickly that you barely have time to react.;;;;;;;;;;;;x
 EVTOPT_monster_fight;Kill the beast!;;;;;;;;;;;;x
 EVTDESC_monster_escape;Your soldiers engage the beast in melee combat and it swiftly retreats into the forest, wounded. Hopefully the injuries it has sustained will prevent it from being a threat. You are victorious, though you do not have a trophy to bring home or use to definitively identify the beast.;;;;;;;;;;;;x
 EVTDESC_monster_bear;After a swift and brutal fight, the beast lies motionless at your feet. It appears to be an especially large silvertip bear, perhaps driven mad by starvation or disease. Its head will make a fine trophy, and the peasants will be glad their livestock are safe.;;;;;;;;;;;;x
 EVTDESC_monster_wolf;After a swift and brutal fight, several beasts lie motionless at your feet. They appear to be a pack of large grey wolves, perhaps driven mad by starvation or disease. Their hides will surely make a set of fine cloaks, and the peasants will be glad their livestock are safe.;;;;;;;;;;;;x
 EVTDESC_monster_catamount;After a swift and brutal fight, the beast lies motionless at your feet. It appears to be an especially large catamount, perhaps driven mad by starvation or disease. Its head will surely make a fine trophy, and the peasants will be glad their livestock are safe.;;;;;;;;;;;;x
-EVTNAME_monster_man;A Terrible Mistake;;;;;;;;;;;;x
+EVTNAME_monster_man;A Terrible Mistake;;;;;;;;;;;;;x
 EVTDESC_monster_man;After a swift and brutal fight, the beast lies motionless at your feet.\n\nBut... it's not a beast, it's a man. Looking at the hairy and deformed body you can see why ignorant peasants might have thought him a monster, but you could have known better.;;;;;;;;;;;;x
 EVTOPT_monster_man;Oops.;;;;;;;;;;;;x
 EVTDESC_monster_injured;Though you are victorious, you feel a stinging pain and a warm, damp spot on your clothing spreading from it. You hope the wound doesn't get infected.;;;;;;;;;;;;x
@@ -568,19 +568,19 @@ EVTOPT_monster_injured;Ouch.;;;;;;;;;;;;x
 EVTDESC_monster_hunterlife;You can't forget the rush of adrenaline as you fought the mighty beast! Perhaps it is time to devote your life to testing yourself against the most ferocious creatures of the natural world.;;;;;;;;;;;;x
 EVTOPT_monster_hunterlife;I am a hunter!;;;;;;;;;;;;x
 EVTOPT_monster_hunterlife_reject;Hunting isn't for me.;;;;;;;;;;;;x
-EVTNAME_monster_hermit;The Hermit;;;;;;;;;;;;x
+EVTNAME_monster_hermit;The Hermit;;;;;;;;;;;;;x
 EVTDESC_monster_hermit;Looking at the objects surrounding the lair, you realize that the "beast" is actually just a man. When he emerges, your men stay their arms. The old hermit seems a bit unhinged, with a wild beard and a touch of madness or brilliance in his eyes. He talks to himself in an unsettling way, but he doesn't seem to be aggressive or violent.;;;;;;;;;;;;x
 EVTOPT_monster_hermit_invite;He might be useful in my court.;;;;;;;;;;;;x
 EVTOPT_monster_hermit_remove;Get rid of him.;;;;;;;;;;;;x
-EVTNAME_monster_deformed;The Deformed Man;;;;;;;;;;;;x
+EVTNAME_monster_deformed;The Deformed Man;;;;;;;;;;;;;x
 EVTDESC_monster_deformed;Looking at the objects surrounding the lair, you realize the "beast" is actually just a man. When he emerges, your men stay their arms. He is huge and strong, with deformities that might explain the rumors of a monster. You see a spark of intelligence in his eyes, but also a great deal of sadness.;;;;;;;;;;;;x
-EVTNAME_monster_crone;The Crone's Warning;;;;;;;;;;;;x
+EVTNAME_monster_crone;The Crone's Warning;;;;;;;;;;;;;x
 EVTDESC_monster_crone;As you investigate a farmer's claims of missing livestock, a blind old crone grabs your arm and speaks:\n\n"You are doomed, [Root.GetTitle]. As surely as the red comet returns to Aquarius, your fate is sealed if you pursue this foolish quest. Turn back, and perhaps my visions will not come to pass.";;;;;;;;;;;;x
 EVTOPT_monster_crone_flee;I should turn back.;;;;;;;;;;;;x
 EVTOPT_monster_crone_scholar;Tell me about your visions.;;;;;;;;;;;;x
 EVTOPT_monster_crone_angry;Quiet yourself, woman!;;;;;;;;;;;;x
 EVTOPT_monster_injured_doom;The blind crone was right!;;;;;;;;;;;;x
-EVTNAME_monster_witch;The Witch;;;;;;;;;;;;x
+EVTNAME_monster_witch;The Witch;;;;;;;;;;;;;x
 EVTDESC_monster_witch;Rather than a beast lair, you have come upon a young woman inhabiting a remote shack. Based on the carved bones scattered around the shack and hanging from trees, you suspect she holds fairly unorthodox religious views. She is pretty despite the mud and leaves in her hair, and interacting with her reveals that she is a bit unusual but skilled with herbs and other folk traditions.;;;;;;;;;;;;x
 EVTOPT_monster_witch_invite;She might be useful in my court.;;;;;;;;;;;;x
 EVTOPT_monster_witch_remove;Unorthodox views? She's a witch!;;;;;;;;;;;;x
@@ -593,29 +593,29 @@ EVTOPT_monster_witch_court_learn;Present a compelling theological case.;;;;;;;;;
 EVTOPT_monster_witch_court_stay;My decision is final.;;;;;;;;;;;;x
 EVTOPT_monster_witch_court_banish;She has no place at my court.;;;;;;;;;;;;x
 EVTOPT_monster_witch_court_kill;Let the church decide her fate.;;;;;;;;;;;;x
-harboring_witch;Harboring Witch;;;;;;;;;;;;x
+harboring_witch;Harboring Witch;;;;;;;;;;;;;x
 harboring_witch_desc;Your church vassals suspect that one of your courtiers is a witch.;;;;;;;;;;;;x
-zombi;Zombi;;;;;;;;;;;;x
+zombi;Zombi;;;;;;;;;;;;;x
 zombi_desc;A potion containing datura blossom and pufferfish toxin has deadened the mind of this character. Some practitioners of Voodoo believe that the ti bon ange, essentially the part of the soul that contains the personality, of this character has been stolen and placed in a fetish. Others believe that the character is simply brain damaged or drugged.;;;;;;;;;;;;x
-opinion_zombi_family;Zombified Family;;;;;;;;;;;;x
+opinion_zombi_family;Zombified Family;;;;;;;;;;;;;x
 zombi_decision;Zombify [Root.GetFirstName];;;;;;;;;;;;x
 zombi_decision_desc;Send for a bokor to administer a mind-deadening potion to the prisoner, creating a mentally addled zombi. You will anger the family of the prisoner. Being known to employ bokor may also have a negative impact on your reputation.;;;;;;;;;;;;x
-bokor_consort;Employed Bokor;;;;;;;;;;;;x
-opinion_puppetmaster;Puppetmaster;;;;;;;;;;;;x
+bokor_consort;Employed Bokor;;;;;;;;;;;;;x
+opinion_puppetmaster;Puppetmaster;;;;;;;;;;;;;x
 bokor_consort_desc;Employed a bokor, a houngan that some consider an evil sorcerer.;;;;;;;;;;;;x
 EVTDESC_zombi_jailer;You call for a houngan who serves the loa with both hands. Your guards restrain the prisoner while the bokor prepares a potion from pufferfish spines, datura blossoms, and other ingredients. The prisoner struggles at first, but the light soon goes out of [From.GetPossPronoun] eyes and [From.GetSubjectPronoun] enters a delirious, suggestible state.;;;;;;;;;;;;x
 EVTDESC_zombi_prisoner;A bokor has been summoned by your captor to crush your mind with a zombifying potion. You are restrained by the jailors and a foul liquid is forced down your throat. You enter a dreamlike state, and it's suddenly difficult to figure out what is real. You feel like you're watching yourself from outside your own body.;;;;;;;;;;;;x
-loa_martial;Loa gives military advice;;;;;;;;;;;;x
-loa_learning;Loa gives theological advice;;;;;;;;;;;;x
-loa_diplomacy;Loa gives diplomatic advice;;;;;;;;;;;;x
-loa_stewardship;Loa gives administrative advice;;;;;;;;;;;;x
-loa_intrigue;Loa gives intrigue advice;;;;;;;;;;;;x
+loa_martial;Loa gives military advice;;;;;;;;;;;;;x
+loa_learning;Loa gives theological advice;;;;;;;;;;;;;x
+loa_diplomacy;Loa gives diplomatic advice;;;;;;;;;;;;;x
+loa_stewardship;Loa gives administrative advice;;;;;;;;;;;;;x
+loa_intrigue;Loa gives intrigue advice;;;;;;;;;;;;;x
 EVTDESC_voodoo_dream;The loa come to you in a dream, offering advice in exchange for your service. When you awake, you can still hear the voices of the loa and feel the lingering touch of the world beyond the Crossroads.;;;;;;;;;;;;x
 EVTOPT_voodoo_dream_sacrifice;I will sacrifice a pig.;;;;;;;;;;;;x
 EVTOPT_voodoo_dream_rite;I will perform a rite.;;;;;;;;;;;;x
 EVTDESC_voodoo_invite;My liege,\n\nI humbly invite you to attend the ceremony I will be hosting a few days time. This is a chance to serve the loa, receive their advice, and allow them to speak truths through you.;;;;;;;;;;;;x
-EVTOPT_voodoo_invite_accept;I will attend;;;;;;;;;;;;x
-EVTOPT_voodoo_invite_decline;I am too busy;;;;;;;;;;;;x
+EVTOPT_voodoo_invite_accept;I will attend;;;;;;;;;;;;;x
+EVTOPT_voodoo_invite_decline;I am too busy;;;;;;;;;;;;;x
 EVTDESC_voodoo_offer;The ceremony is a time when even a [Root.GetTitle] must serve the loa. How do you wish to do so?;;;;;;;;;;;;x
 EVTOPT_voodoo_offer_animal;Sustain the loa with an animal sacrifices.;;;;;;;;;;;;x
 EVTOPT_voodoo_offer_formal;Present offerings during a formal, serious rite.;;;;;;;;;;;;x
@@ -651,21 +651,21 @@ EVTOPT_voodoo_loa_duelist;I must hone my combat skill.;;;;;;;;;;;;x
 EVTDESC_voodoo_loa_madness;The unhinged loa possessing you has chosen to remain on the earthly side of the Crossroads. You can hear him even now, chipping away at your sanity and gibbering in madness and terror.;;;;;;;;;;;;x
 EVTOPT_voodoo_loa_impaler;Others must share my pain.;;;;;;;;;;;;x
 EVTDESC_voodoo_loa_leave;You suddenly realize that your loa possessor has returned through the Crossroads to the world of the invisible. For the last several days you have felt its presence less and less frequently, and for the moment your mind is solely yours.;;;;;;;;;;;;x
-TXT_loa_leaves;The spirit departs;;;;;;;;;;;;x
-TXT_loa_angry;The spirit is enraged;;;;;;;;;;;;x
-faustian_contest;Faustian Contest;;;;;;;;;;;;x
+TXT_loa_leaves;The spirit departs;;;;;;;;;;;;;x
+TXT_loa_angry;The spirit is enraged;;;;;;;;;;;;;x
+faustian_contest;Faustian Contest;;;;;;;;;;;;;x
 faustian_contest_desc;This prideful character competed against a stranger in black with his or her soul on the line.;;;;;;;;;;;;x
-EVTNAME_faust_fence;Fencing Expert;;;;;;;;;;;;x
+EVTNAME_faust_fence;Fencing Expert;;;;;;;;;;;;;x
 EVTDESC_faust_fence;You are becoming renowned as a skilled fencer. You understand the subtleties of numerous fighting stances, and your artful parries and swift thrusts allow you to quickly declare victory in most bouts. Aspiring swordsmen come from miles around to challenge you and learn your techniques.\n\nIt is difficult not to boast about your fencing prowess.;;;;;;;;;;;;x
 EVTOPT_faust_proud;I'm the best in the realm!;;;;;;;;;;;;x
 EVTOPT_faust_humble;I only know that I know nothing.;;;;;;;;;;;;x
-EVTNAME_faust_falcon;Falconry Expert;;;;;;;;;;;;x
+EVTNAME_faust_falcon;Falconry Expert;;;;;;;;;;;;;x
 EVTDESC_faust_falcon;You surely must be the finest falconer of anyone you know. You know exactly how to raise and train your birds to be perfect aerial hunters, and the sheen of their feathers and noble bearing is the envy of the land. Your birds promptly follow your command and nearly always return with desirable quarry.\n\nIt is difficult not to boast about your falconry prowess.;;;;;;;;;;;;x
-EVTNAME_faust_archery;Archery Expert;;;;;;;;;;;;x
+EVTNAME_faust_archery;Archery Expert;;;;;;;;;;;;;x
 EVTDESC_faust_archery;Whether you're splitting arrows on a wooden target or bringing down a deer with a well-placed shot, few people can match your skill at archery. You can nock and loose an arrow from a powerful longbow in seconds, demonstrating the proper technique to your soldiers as you strike a target with pinpoint accuracy.\n\nIt is difficult not to boast about your archery prowess.;;;;;;;;;;;;x
-EVTNAME_faust_drink;Carousing Expert;;;;;;;;;;;;x
+EVTNAME_faust_drink;Carousing Expert;;;;;;;;;;;;;x
 EVTDESC_faust_drink;When it comes time to drink and be merry, no one seems to measure up to your capacity for alcohol consumption. You lead round after round of toasts when you throw a feast, but find that most of your court is unconscious before the night is half over. It seems like you could drink anyone under the table.\n\nIt is difficult not to boast about your enormous capacity for drink.;;;;;;;;;;;;x
-EVTNAME_faust_offer;The Man in Black;;;;;;;;;;;;x
+EVTNAME_faust_offer;The Man in Black;;;;;;;;;;;;;x
 EVTDESC_faust_offer_fence;You meet a man dressed all in black. With a mysterious smile he unrolls a piece of parchment and says, "I hear you fancy yourself quite the fencer. I happen to be a fencer too. I'd bet a sword of gold against your soul 'cause I think I'm better than you.";;;;;;;;;;;;x
 EVTOPT_faust_offer_accept;I'm the best there's ever been.;;;;;;;;;;;;x
 EVTOPT_faust_offer_reject;Sounds like a bad deal.;;;;;;;;;;;;x
@@ -685,7 +685,7 @@ EVTDESC_faust_victory_archery;You and the man in black fire arrows at wooden tar
 EVTDESC_faust_defeat_archery;You and the man in black fire arrows at wooden targets placed at various distances. When he looses an arrow his bowstring seems to hiss and sizzle in addition to the normal twang, leaving behind a curl of pungent smoke. The man in black wasn't lying about his skill, and he leaves tight clusters near the bullseye. Several of your shots are off the mark, and when the scores are totalled you realize with despair that you have lost.\n\nThe man in black grins as you concede defeat, and hands you the piece of parchment you signed. "I'll be back to collect my winnings when the time comes.";;;;;;;;;;;;x
 EVTDESC_faust_victory_drink;You pour cup after cup of wine and mead down your gullet, and the man in black does the same. He belches into an open candle flame, creating a puff of acrid smoke. His capacity seems the equal of yours, and after a few hours you are both having difficulty pouring the drinks. Eventually the man in black keels over, and you queasily declare victory. You take the golden cup from him, and stagger away to bed.\n\nIn the morning you awake with the cup in your hand, and the man in black is gone.;;;;;;;;;;;;x
 EVTDESC_faust_defeat_drink;You pour cup after cup of wine and mead down your gullet, and the man in black does the same. He belches into an open candle flame, creating a puff of acrid smoke. The man in black seems less affected by the drink than you expected, and you soon realize you were foolish to make this wager. The last thing you remember is his wicked grin as you struggle to remain in your chair.\n\nYou awake with a splitting headache and the piece of parchment you signed.;;;;;;;;;;;;x
-EVTNAME_faust_contract;The Contract;;;;;;;;;;;;x
+EVTNAME_faust_contract;The Contract;;;;;;;;;;;;;x
 EVTDESC_faust_contract;Rarely does a day go by where you don't think about the contract you foolishly signed with the man in black. Could there be some way to wriggle free from your obligation, or to protect yourself from the doom that surely awaits you in the afterlife?;;;;;;;;;;;;x
 EVTOPT_faust_contract_good;I must live righteously.;;;;;;;;;;;;x
 EVTOPT_faust_contract_evil;I'll live like there's no tomorrow.;;;;;;;;;;;;x
@@ -702,9 +702,9 @@ EVTOPT_sacredheart_neighbor_reject;No. We are the pure and chosen few.;;;;;;;;;;
 EVTDESC_lucha_duelist;Many followers of El Santo choose to sharpen their martial skills in bouts of hand-to-hand combat, their faces concealed behind colorful masks. Will you choose to follow in the footsteps of El Santo, and prove your worthiness in the ring of honor?;;;;;;;;;;;;x
 EVTOPT_lucha_duelist;I will take on all challengers!;;;;;;;;;;;;x
 EVTOPT_lucha_duelist_reject;My time is better spent elsewhere.;;;;;;;;;;;;x
-sacred_heart_luchadore;Lucha de Apuestas;;;;;;;;;;;;x
+sacred_heart_luchadore;Lucha de Apuestas;;;;;;;;;;;;;x
 sacred_heart_luchadore_desc;Challenge another masked follower of El Santo to ritualized combat, wagering the unmasking of the loser.;;;;;;;;;;;;x
-luchadore;Luchadore;;;;;;;;;;;;x
+luchadore;Luchadore;;;;;;;;;;;;;x
 luchadore_desc;This character hones his martial skill in masked, ritualized combat.;;;;;;;;;;;;x
 EVTDESC_lucha_lackofopponent;You survey the other masked warriors, but none of them have the noble bearing to be worthy of challenging. Though you are unable to test your mettle and courage today, you can take comfort in knowing you are unique in your skill.;;;;;;;;;;;;x
 EVTOPT_lucha_lackofopponent;I'll await a proper challenger.;;;;;;;;;;;;x
@@ -723,7 +723,7 @@ EVTOPT_lucha_unmask;Let him feel the light of shame as I unmask him.;;;;;;;;;;;;
 EVTOPT_lucha_recognize;Wait, I recognize this fighter... I won't unmask him.;;;;;;;;;;;;x
 EVTOPT_lucha_mercy;He fought well, let him keep his mask.;;;;;;;;;;;;x
 EVTDESC_lucha_bigwin;Your opponent is no match for you. You easily turn aside his attacks, and slam him into the ground repeatedly with your stylish technique. A more difficult challenge might have been nice, but at least you have won the match handily.;;;;;;;;;;;;x
-unmasked;Unmasked;;;;;;;;;;;;x
+unmasked;Unmasked;;;;;;;;;;;;;x
 unmasked_desc;This character has been defeated in the ring, and unmasked for all to see.;;;;;;;;;;;;x
 EVTDESC_lucha_unmasked;After a hard-fought fight, your opponent has finally gotten the better of you. Exhausted and dripping with sweat, you collapse in defeat. As is his right, he chooses to remove your mask and reveal your face to the onlookers.;;;;;;;;;;;;x
 EVTOPT_lucha_unmasked;Oh, the shame of it!;;;;;;;;;;;;x
@@ -737,44 +737,44 @@ EVTOPT_lucha_bigreward;I must find a more worthy opponent.;;;;;;;;;;;;x
 EVTDESC_lucha_reveal;You pull the mask from your defeated opponent's face, and reveal that he is [From.GetTitledFirstName]! He would probably be angry with you if he knew who you are, but for now your identity will remain a secret and all he can do is hang his head in shame.;;;;;;;;;;;;x
 EVTDESC_muerte_inform;Your [GetFromRelation] [From.GetTitledFirstName] has entered into the realm of [Root.Religion.GetRandomGodName]. As a follower of Santa Muerte, [From.GetPossPronoun] death leaves you with certain responsibilities. You are expected to be involved in the funeral rites, which will ensure safe passage of [From.GetPossPronoun] soul as well as protecting those left behind.;;;;;;;;;;;;x
 EVTOPT_muerte_inform_revenge;I swear vengeance on [From.GetPossPronoun] killer!;;;;;;;;;;;;x
-TXT_muerte_revenge;This option is available because you know who killed your [GetFromRelation], and Santa Muerte demands a life for a life.\n\n;;;;;;;;;;;;x
+TXT_muerte_revenge;This option is available because you know who killed your [GetFromRelation], and Santa Muerte demands a life for a life.\n\n;;;;;;;;;;;;;x
 EVTOPT_muerte_inform_guide;Santa Muerte guides [From.GetPossPronoun] soul to heaven.;;;;;;;;;;;;x
 EVTOPT_muerte_inform_protect;Santa Muerte protects and watches over all of us.;;;;;;;;;;;;x
 EVTOPT_muerte_inform_cynic;These rites are meaningless.;;;;;;;;;;;;x
 EVTOPT_muerte_inform_learn;I will learn the rites.;;;;;;;;;;;;x
-TXT_muerte_learnrites;This option is available because you are still a child.\n\n;;;;;;;;;;;;x
-seeking_revenge;Seeking Revenge;;;;;;;;;;;;x
+TXT_muerte_learnrites;This option is available because you are still a child.\n\n;;;;;;;;;;;;;x
+seeking_revenge;Seeking Revenge;;;;;;;;;;;;;x
 seeking_revenge_desc;This character is focused on avenging the death of a close relative.;;;;;;;;;;;;x
 EVTDESC_muerte_vedetta;After hearing about the death of [FromFrom.GetTitledFirstName] at your hands, [From.GetTitledFirstName] has publicly sworn a vendetta against you. According to the rumors, [From.GetSubjectPronoun] will not rest until Santa Muerte snatches your life from you.;;;;;;;;;;;;x
-mortal;Mortal;;;;;;;;;;;;x
+mortal;Mortal;;;;;;;;;;;;;x
 mortal_desc;This character refused or was denied the honor of being declared a living god. It will be much more difficult to rule over those who expect a king to be acknowledged as a divine avatar.;;;;;;;;;;;;x
-incarnate;Incarnate;;;;;;;;;;;;x
+incarnate;Incarnate;;;;;;;;;;;;;x
 incarnate_desc;This character is widely recognized by people of the Mictlantec faith as a living god, or as the human vessel through which a god speaks.;;;;;;;;;;;;x
-EVTNAME_mictlan_god;The God-King;;;;;;;;;;;;x
+EVTNAME_mictlan_god;The God-King;;;;;;;;;;;;;x
 EVTDESC_mictlan_god;Mictlantec nobles and peasants alike chafe beneath the yoke of a mortal king. Why should they bend the knee to a fellow human, when the priests tell them gods walk the Earth? To rule effectively, you must be declared an Incarnate: the divine spirit of a god assuming human form, with a mandate to rule the mortal world in the Age of the Dead Sun.\n\nBloody human sacrifices, displays of skill and piety, and gifts to the priests should convince your subjects of your divine mandate. How will you establish your godhood, and avoid throwing the realm into turmoil?;;;;;;;;;;;;x
 EVTOPT_mictlan_martial;My famed conquests and martial prowess.;;;;;;;;;;;;x
 EVTOPT_mictlan_learning;My spiritual knowledge and renowned piety.;;;;;;;;;;;;x
 EVTOPT_mictlan_blood;My father's divine blood.;;;;;;;;;;;;x
-TXT_mictlan_blood;This option is available because your father was an Incarnate and you possess a positive congenital trait.\n;;;;;;;;;;;;x
+TXT_mictlan_blood;This option is available because your father was an Incarnate and you possess a positive congenital trait.\n;;;;;;;;;;;;;x
 EVTOPT_mictlan_sac;I will make bloody sacrifices.;;;;;;;;;;;;x
 EVTOPT_mictlan_god;I am the divine made flesh.;;;;;;;;;;;;x
 EVTOPT_mictlan_wait;I am not ready for the ceremony.;;;;;;;;;;;;x
 EVTOPT_mictlan_mortal;I am merely human.;;;;;;;;;;;;x
-TXT_mictlan_mortal;I am not a skilled and prestigious warrior. I am not a pious and learned theologian. I was not born with obviously divine blood. My dungeons do not contain numerous potential sacrifices.\n;;;;;;;;;;;;x
-postponed_incarnation;Postponed Incarnation;;;;;;;;;;;;x
+TXT_mictlan_mortal;I am not a skilled and prestigious warrior. I am not a pious and learned theologian. I was not born with obviously divine blood. My dungeons do not contain numerous potential sacrifices.\n;;;;;;;;;;;;;x
+postponed_incarnation;Postponed Incarnation;;;;;;;;;;;;;x
 postponed_incarnation_desc;This character has postponed the ceremony to be acknowledged as a living god.;;;;;;;;;;;;x
 TXT_choose_sac;Prepare the prisoners for sacrifice.;;;;;;;;;;;;x
-EVTNAME_mictlan_ceremony;Incarnation Ceremony;;;;;;;;;;;;x
+EVTNAME_mictlan_ceremony;Incarnation Ceremony;;;;;;;;;;;;;x
 EVTDESC_mictlan_ceremony;You mount the stairs to the sacred ziggurat, wrapped in the regalia of the gods and flanked on either side by a procession of high priests. Below you, thousands of your subjects have gathered to witness the ceremony.\n\nThe blood of your offerings will firmly establish a conduit between you and the gods. It also sustains and nourishes the gods, giving Mictlantecuhtli the strength to journey across the sky each day and return safely to the underworld... prolonging the duration of the Sixth Age.;;;;;;;;;;;;x
 EVTOPT_mictlan_ceremony;Let the ceremony begin!;;;;;;;;;;;;x
-EVTNAME_mictlan_picksac;The Sacrifice;;;;;;;;;;;;x
+EVTNAME_mictlan_picksac;The Sacrifice;;;;;;;;;;;;;x
 EVTDESC_mictlan_picksac;The altar at the top of the ziggurat is prepared for human sacrifice, sharp obsidian knives and other tools glinting in the sunlight. Now is the time to empty your dungeons and fill the stomachs of the gods with the blood of noble prisoners. Anointing your body with their blood will secure your position among the gods.\n\nYour loyal priests look to you with anticipation in their eyes, ready to retrieve the next sacrifice at your command.;;;;;;;;;;;;x
 EVTOPT_mictlan_picksac;Empty the dungeons!;;;;;;;;;;;;x
 EVTOPT_mictlan_enough;The gods have eaten enough.;;;;;;;;;;;;x
-EVTNAME_mictlan_victim;Day of Reckoning;;;;;;;;;;;;x
+EVTNAME_mictlan_victim;Day of Reckoning;;;;;;;;;;;;;x
 EVTDESC_mictlan_victim;You are dragged from the dungeons by men wearing extravagant cloaks of iridescent feathers and expressions of terrifying zeal. They escort you to a towering stone ziggurat, as you shield your eyes against the blinding sunlight.\n\n[From.GetTitledFirstName] is standing before a bloody stone altar at the top of the ziggurat, flanked by many men in feathered cloaks with bloody black knives in their hands. You may be meeting [Root.Religion.GetRandomGodName] sooner than anticipated.;;;;;;;;;;;;x
 EVTOPT_mictlan_victim;Wicked servants of [Root.Religion.GetRandomEvilGodName].;;;;;;;;;;;;x
-EVTNAME_mictlan_sac;The Sacrifice;;;;;;;;;;;;x
+EVTNAME_mictlan_sac;The Sacrifice;;;;;;;;;;;;;x
 EVTDESC_mictlan_sac;Your guards bring [From.GetTitledFirstName] up the stairs of the ziggurat. As [From.GetSubjectPronoun] is placed on the altar, you hear the mumblings of a [From.Religion.GetName] prayer to [From.Religion.GetRandomGodName].\n\nYour high priest looks to you, his skilled hands already stained with blood and gripping a ceremonial obsidian knife. With a nod from you, he will cut the heart from your offering.;;;;;;;;;;;;x
 EVTOPT_mictlan_sac_emperor;The mighty blood of an emperor!;;;;;;;;;;;;x
 EVTOPT_mictlan_sac_king;The potent blood of a king!;;;;;;;;;;;;x
@@ -784,39 +784,39 @@ EVTOPT_mictlan_sac_courtier;The blood of a human offering!;;;;;;;;;;;;x
 EVTOPT_mictlan_sac_mictlantec;[From.Religion.GetRandomGodName] has heard your prayers.;;;;;;;;;;;;x
 EVTOPT_mictlan_sac_mercy;I will show mercy in this case.;;;;;;;;;;;;x
 TXT_sacrifice;[From.GetTitledFirstName] is sacrificed to the gods!;;;;;;;;;;;;x
-TXT_sac_mercy;Only a portion of [From.GetTitledFirstName]'s blood will be taken.\n;;;;;;;;;;;;x
-EVTNAME_mictlan_victim_killed;The Ritual;;;;;;;;;;;;x
+TXT_sac_mercy;Only a portion of [From.GetTitledFirstName]'s blood will be taken.\n;;;;;;;;;;;;;x
+EVTNAME_mictlan_victim_killed;The Ritual;;;;;;;;;;;;;x
 EVTDESC_mictlan_victim_killed;The high priest plunges his wicked blade into your chest. You scream in agony, and you see nothing more.;;;;;;;;;;;;x
-EVTNAME_mictlan_victim_mercy;The Ritual;;;;;;;;;;;;x
+EVTNAME_mictlan_victim_mercy;The Ritual;;;;;;;;;;;;;x
 EVTDESC_mictlan_victim_mercy;The high priest cuts your skin with his razor-sharp blade of black glass. Blood pools below you as you scream in agony, but for some reason your life has been spared. Whether your physical wounds will heal remains to be seen, but you will surely carry this day with you until the end of your life.;;;;;;;;;;;;x
-EVTNAME_mictlan_empty;Empty Dungeons;;;;;;;;;;;;x
+EVTNAME_mictlan_empty;Empty Dungeons;;;;;;;;;;;;;x
 EVTDESC_mictlan_empty;Your dungeons contain no notable prisoners for you to sacrifice. Hopefully your sacrifices have been sufficient to sustain the gods, please the priests, and sate the bloodlust of the crowd of onlookers.;;;;;;;;;;;;x
-a_god_made_flesh;A God Made Flesh;;;;;;;;;;;;x
-royal_apotheosis;Royal Apotheosis;;;;;;;;;;;;x
-EVTNAME_mictlan_incarnate;A God Walks the Earth;;;;;;;;;;;;x
+a_god_made_flesh;A God Made Flesh;;;;;;;;;;;;;x
+royal_apotheosis;Royal Apotheosis;;;;;;;;;;;;;x
+EVTNAME_mictlan_incarnate;A God Walks the Earth;;;;;;;;;;;;;x
 EVTDESC_mictlan_incarnate;Your divine incarnation is clear to all. The high priest places a crown of obsidian and iridescent feathers upon your head. You raise your hands to the sky from atop the great ziggurat and the thousands of onlookers bearing witness to the ceremony kneel, then touch their foreheads to the ground.\n\nIt would be unwise claim yourself the Incarnate of Mictlantecuhtli, as even an uneducated peasant can see him in the sky every day. You can feel the divine inspiration of...;;;;;;;;;;;;x
 EVTOPT_mictlan_incarnate_huitz;...Huitzilopochtli, the Dart-Hurler.;;;;;;;;;;;;x
 EVTOPT_mictlan_incarnate_quetz;...Quetzalcoatl, the Wind Jewel.;;;;;;;;;;;;x
 EVTOPT_mictlan_incarnate_tezca;...Tezcatlipoca, the Smoking Mirror.;;;;;;;;;;;;x
 EVTOPT_mictlan_incarnate_xipe;...Xipe-Totec, the Flayed One.;;;;;;;;;;;;x
-EVTNAME_mictlan_almost_incarnate;Doubting the God-King;;;;;;;;;;;;x
+EVTNAME_mictlan_almost_incarnate;Doubting the God-King;;;;;;;;;;;;;x
 EVTDESC_mictlan_almost_incarnate;There are some who yet doubt the truth of your divine flesh. Perhaps your sacrifices were insufficient, and your words and deeds not pious enough to prove your Incarnation. There is still much that can be done to ensure your place among the gods.;;;;;;;;;;;;x
 EVTDESC_mictlan_almost_gifts;Sizeable gifts to influential priests.;;;;;;;;;;;;x
 EVTDESC_mictlan_almost_terror;A bloody reign of terror against the doubters.;;;;;;;;;;;;x
-EVTNAME_mictlan_mortal;A Mortal King;;;;;;;;;;;;x
+EVTNAME_mictlan_mortal;A Mortal King;;;;;;;;;;;;;x
 EVTDESC_mictlan_mortal;Your sacrifices were paltry and your piety seems lacking. Nobles, priests, and gods alike are in agreement that you do not have the divine spark. Divinations show the future of the realm will be full of turmoil, as many of your subjects will consider you a false king.;;;;;;;;;;;;x
-EVTNAME_mictlan_huitz;Huitzilopochtli Incarnate;;;;;;;;;;;;x
+EVTNAME_mictlan_huitz;Huitzilopochtli Incarnate;;;;;;;;;;;;;x
 EVTDESC_mictlan_huitz;As the human incarnation of Huitzilopochtli, you must be skilled in all aspects of war. Huitzilopochtli requires a constant stream of human sacrifices to nourish him in his struggles against the forces of darkness that nearly destroyed him when he was the sun in the previous age. There are only a few who give their lives willingly to the gods, so you must seize captives with blade and dart.\n\nIn battle you wear a shimmering cloak of hummingbird feathers laid over golden cloth, and your face is painted pitch black.;;;;;;;;;;;;x
 EVTOPT_mictlan_incarnate_lifestyle;My lifestyle must change.;;;;;;;;;;;;x
 EVTOPT_mictlan_incarnate_traits;My habits must change.;;;;;;;;;;;;x
 EVTOPT_mictlan_incarnate_aligned;I truly embody the god.;;;;;;;;;;;;x
-EVTNAME_mictlan_quetz;Quetzalcoatl Incarnate;;;;;;;;;;;;x
+EVTNAME_mictlan_quetz;Quetzalcoatl Incarnate;;;;;;;;;;;;;x
 EVTDESC_mictlan_quetz;As the human incarnation of Quetzalcoatl, you must embody the great feathered serpent's vast knowledge and just rule. Unlike many other Mictlantec gods, Quetzalcoatl does not demand endless human sacrifices. As the "Morning Star", you must wake early each morning to greet the dawn.\n\nYour ceremonial garments are crafted from the resplendent feathers of the quetzal bird, which shimmer with iridescent beauty in the sunlight.;;;;;;;;;;;;x
-EVTNAME_mictlan_tezca;Tezcatlipoca Incarnate;;;;;;;;;;;;x
+EVTNAME_mictlan_tezca;Tezcatlipoca Incarnate;;;;;;;;;;;;;x
 EVTDESC_mictlan_tezca;As the human incarnation of Tezcatlipoca, you must be treated with the utmost respect and politeness. Those who anger Smoking Mirror are doomed to be destroyed with sorcery, their lives ending in chaos and strife. You rule the night, playing your enemies off each other with your skill in the art of divination.\n\nYour regalia includes a headdress adorned with heron feathers, a cloak crafted from a jaguar skin, and horizontal stripes of black and yellow across your face.;;;;;;;;;;;;x
-EVTNAME_mictlan_xipe;Xipe-Totec Incarnate;;;;;;;;;;;;x
+EVTNAME_mictlan_xipe;Xipe-Totec Incarnate;;;;;;;;;;;;;x
 EVTDESC_mictlan_xipe;As the human incarnation of Xipe-Totec, you must maintain the cycle of death and rebirth. Just as maize sprang from the flayed skin of the Night Drinker many ages ago, you now coax a new living harvest from the dead Earth each year. The captives you sacrifice with arrows or gladiatorial combat provide succor to the Earth, ensuring that the cycle of renewal continues.\n\nYou wear the flayed skins of your sacrifices over golden armor, a terrible sight for your enemies to behold.;;;;;;;;;;;;x
-mictlantec_sacrifice;Sacrificial Ceremony;;;;;;;;;;;;x
+mictlantec_sacrifice;Sacrificial Ceremony;;;;;;;;;;;;;x
 mictlantec_sacrifice_desc;The gods require offerings of blood to sustain themselves. Should they receive insufficient sustenance, this age will end just as the last one did. Human blood is more potent than animal blood, and the blood of a king is more potent still.;;;;;;;;;;;;x
 EVTDESC_mictlan_mortal_liege;Your weak mortal liege [Root.Liege.GetTitledName] brings shame to true followers of the [Root.Religion.GetName] faith. Your liege does not bear the divine blood expected of the position. This gives you the sacred right to cast [Root.GetObjectPronoun] down and take [Root.GetPossPronoun] place, in the name of [Root.Religion.GetRandomGodName].;;;;;;;;;;;;x
 EVTOPT_mictlan_mortal_liege_accept;I will exercise my divine right.;;;;;;;;;;;;x
@@ -828,7 +828,7 @@ EVTOPT_flavor_southernknight_kind;Kindness and hospitality.;;;;;;;;;;;;x
 EVTOPT_flavor_southernknight_honest;Integrity and honesty.;;;;;;;;;;;;x
 EVTOPT_flavor_southernknight_honor;Courage and honor.;;;;;;;;;;;;x
 EVTOPT_flavor_southernknight_arbit;Frankly, I don't give a damn.;;;;;;;;;;;;x
-EVTNAME_flavor_convenience;Ancient Conveniences;;;;;;;;;;;;x
+EVTNAME_flavor_convenience;Ancient Conveniences;;;;;;;;;;;;;x
 EVTDESC_flavor_convenience;Recently you spent some time reading a crumbling old book, slowly interpreting the writings of the Old World. Within its pages, you find descriptions of the miracles that enhanced the lives of the people of the Old World.\n\nInvisible servants that carried spoken words hundreds of leagues in an instant? Even the swiftest pigeon takes hours or days.\n\nCould their carriages really have been pulled by over two hundred horses? Perhaps the writer was exaggerating.\n\nSummoning hot water on demand? That's a prospect anyone could get behind.;;;;;;;;;;;;x
 EVTOPT_flavor_convenience_wish;If only these luxuries were still around.;;;;;;;;;;;;x
 EVTOPT_flavor_convenience_blasphemy;This sounds like blasphemous sorcery.;;;;;;;;;;;;x
@@ -839,18 +839,18 @@ EVTOPT_flavor_baseball_nowager;I'll watch, but I won't wager.;;;;;;;;;;;;x
 EVTOPT_flavor_baseball_home;I support my local boys!;;;;;;;;;;;;x
 EVTOPT_flavor_baseball_away;The travelling band looks a bit more skilled.;;;;;;;;;;;;x
 EVTOPT_flavor_baseball_lazy;Lazy peasants need to get back to work!;;;;;;;;;;;;x
-TXT_baseball_tooltip;You find out the results of the game...\n;;;;;;;;;;;;x
+TXT_baseball_tooltip;You find out the results of the game...\n;;;;;;;;;;;;;x
 EVTDESC_flavor_baseball_win;It's an exciting game, and your chosen team jumps out to an early lead. By the end of the afternoon, they are ahead by several runs and you walk away with your pockets a bit heavier.;;;;;;;;;;;;x
 EVTDESC_flavor_baseball_lose;Your chosen team struggles to strike the ball anywhere other than the waiting hands of their opponents. By the end of the afternoon, your pockets are a bit lighter.;;;;;;;;;;;;x
 EVTOPT_flavor_baseball_result;Holy cow! What a game!;;;;;;;;;;;;x
-EVTNAME_flavor_baseball_realm;Strikeball;;;;;;;;;;;;x
+EVTNAME_flavor_baseball_realm;Strikeball;;;;;;;;;;;;;x
 EVTDESC_flavor_baseball_realm;You had such a great time at the recent strikeball game, that it gave you a wonderful idea: encouraging the activity across the realm! While it would be costly, it would provide a pleasant distraction from the sometimes dismal lives of your subjects.\n\nYour magnanimous generosity would reduce unrest among the common folk, and the physical exertion would maintain a supply of strong, healthy soldiers should the need for them arise.;;;;;;;;;;;;x
 EVTOPT_flavor_baseball_realm_pay;Spare no expense!;;;;;;;;;;;;x
 EVTOPT_flavor_baseball_realm_cheap;Let them play ball!;;;;;;;;;;;;x
-EVTOPT_flavor_baseball_realm_deny;No time for idle sport. ;;;;;;;;;;;;x
-idle_sport;Idle Sport;;;;;;;;;;;;x
+EVTOPT_flavor_baseball_realm_deny;No time for idle sport. ;;;;;;;;;;;;;x
+idle_sport;Idle Sport;;;;;;;;;;;;;x
 idle_sport_desc;The common folk have been encouraged to participate in idle games of sport, such as strikeball.;;;;;;;;;;;;x
-EVTNAME_flavor_amerdream;The American Dream;;;;;;;;;;;;x
+EVTNAME_flavor_amerdream;The American Dream;;;;;;;;;;;;;x
 EVTDESC_flavor_amerdream;At court, a discussion of the old philosophers wends its way to the topic of the American Dream. Many writers who lived before the calamity wrote on the topic, though few of their profound works survive today.\n\nYour courtiers all have their own unique opinions on the subject. As the discussion winds down, one of them asks for your view. Many eyes turn to you with eager anticipation.;;;;;;;;;;;;x
 EVTOPT_flavor_amerdream_zeal;A life in service of [Root.Religion.GetRandomGodName].;;;;;;;;;;;;x
 EVTOPT_flavor_amerdream_good;To live a good and simple life, with family and friends.;;;;;;;;;;;;x
@@ -861,13 +861,13 @@ EVTOPT_flavor_knowledge_realm;Encourage similar study across the realm.;;;;;;;;;
 EVTOPT_flavor_knowledge_learn;What can I learn from them?;;;;;;;;;;;;x
 EVTOPT_flavor_knowledge_reward;They shall be rewarded for their work.;;;;;;;;;;;;x
 EVTOPT_flavor_knowledge_bookworms;Pah! Useless bookworms.;;;;;;;;;;;;x
-TXT_flavor_knowledge_realm;All provinces in your realm gain the 'Temple Scholars' modifier. While this will speed the spread of advancements, it leaves fewer holy men available to take up the sword.\n;;;;;;;;;;;;x
-temple_scholars;Temple Scholars;;;;;;;;;;;;x
+TXT_flavor_knowledge_realm;All provinces in your realm gain the 'Temple Scholars' modifier. While this will speed the spread of advancements, it leaves fewer holy men available to take up the sword.\n;;;;;;;;;;;;;x
+temple_scholars;Temple Scholars;;;;;;;;;;;;;x
 temple_scholars_desc;The clergy have been encouraged to study the secrets of the Old World. While this will speed the spread of advancements, it leaves fewer holy men available to take up the sword.;;;;;;;;;;;;x
-EVTNAME_flavor_warfare;Ancient Warfare;;;;;;;;;;;;x
+EVTNAME_flavor_warfare;Ancient Warfare;;;;;;;;;;;;;x
 EVTDESC_flavor_warfare;There are many legends about the manner in which the people of the Old World waged war. It is common knowledge that they bargained with [Root.Religion.GetRandomGodName] to annihilate their foes from hundreds of miles away. Some claim that their champions penetrated the heavens on pillars of flame and smoke to steal celestial armaments. Others claim that they rode enormous clockwork tortoises into battle, crushing their foes under dozens of steel feet.\n\nIt is difficult to tell which of these tales are true, but what you know for sure is that a handful of the armaments of the Old World have survived. It would be good to wield that power... to feel the righteous wrath of the divine, warm in your hand.;;;;;;;;;;;;x
 EVTOPT_flavor_war_seek;I must acquire this power. No matter the cost.;;;;;;;;;;;;x
-TXT_flavor_war_seek;You send agents out into the world to acquire an Old World firearm for you...\n;;;;;;;;;;;;x
+TXT_flavor_war_seek;You send agents out into the world to acquire an Old World firearm for you...\n;;;;;;;;;;;;;x
 EVTOPT_flavor_war_desire;I must have the armaments of the Old World.;;;;;;;;;;;;x
 EVTOPT_flavor_war_armed;Happiness is a warm gun.;;;;;;;;;;;;x
 EVTOPT_flavor_war_peace;The fools of the past wasted their minds on war.;;;;;;;;;;;;x
@@ -876,13 +876,13 @@ EVTOPT_flavor_war_lies;Tall tales, with no truth to them. Focus on the present.;
 EVTDESC_acquire_fail;Your agents have spent years searching for an Old World firearm without success. It reflects poorly on you that so much money has been spent with no result, and you feel a wave of rage as the last of your men reports that his mission has been a failure.;;;;;;;;;;;;x
 EVTOPT_flavor_acq_cash;You worthless loafers will return my gold!;;;;;;;;;;;;x
 EVTOPT_flavor_acq_fail;Anyone who fails me will suffer, starting with you.;;;;;;;;;;;;x
-TXT_flavor_jail;...and he is thrown in your darkest cell.\n;;;;;;;;;;;;x
+TXT_flavor_jail;...and he is thrown in your darkest cell.\n;;;;;;;;;;;;;x
 EVTOPT_flavor_acq_kind;You can't win them all. I can let this go...;;;;;;;;;;;;x
-opinion_failed_me;Failure;;;;;;;;;;;;x
+opinion_failed_me;Failure;;;;;;;;;;;;;x
 EVTDESC_acquire_success;One of your agents returns with an intact Old World firearm, although it is currently non-functional. It will take time and elbow grease to restore it to its ancient glory.\n\nIn the meantime, your agent may be a reliable addition to your court.;;;;;;;;;;;;x
 EVTOPT_flavor_acq_hire;Reward this man with a place in my court.;;;;;;;;;;;;x
 EVTOPT_flavor_acq_fix;Excellent, bring my finest tinkers and armorers!;;;;;;;;;;;;x
-EVTNAME_flavor_music;Old World Music;;;;;;;;;;;;x
+EVTNAME_flavor_music;Old World Music;;;;;;;;;;;;;x
 EVTDESC_flavor_music;Deep in the woods of [Root.PrimaryTitle.GetName] close to [musician_home.GetName], there stands a log cabin made of earth and wood. In it lives a county boy who can play the guitar just like ringing a bell. Many people come from miles around to hear him play his music while the sun goes down.\n\nIt would certainly be good if such a troubadour savant joined your court, entertaining your guests with the rich musical sounds of the Old World.;;;;;;;;;;;;x
 EVTOPT_flavor_music_yes;I hope he knows the standards!;;;;;;;;;;;;x
 EVTOPT_flavor_music_no;There are more important matters to attend to.;;;;;;;;;;;;x
@@ -890,23 +890,23 @@ EVTDESC_flavor_alley;As you travel home from the marketplace with your family, a
 EVTOPT_no;Oh no!;;;;;;;;;;;;x
 EVTDESC_flavor_bat;Your parents have been murdered. If you are to survive in this world, you must strike fear into the hearts of rival lords, as well as the superstitious brigands and other scum who must be brought to justice. You will hone your body and mind into lethal weapons.;;;;;;;;;;;;x
 EVTOPT_flavor_bat;I am the night!;;;;;;;;;;;;x
-EVTNAME_bounce;Bounce/Debug Event;;;;;;;;;;;;x
+EVTNAME_bounce;Bounce/Debug Event;;;;;;;;;;;;;x
 EVTDESC_bounce;This event should not be seen, or should only be seen for debugging purposes.;;;;;;;;;;;;x
-EVTNAME_overseas_arrive;Strange Ships;;;;;;;;;;;;x
+EVTNAME_overseas_arrive;Strange Ships;;;;;;;;;;;;;x
 EVTDESC_overseas_arrive;Reports from [From.County.GetName] speak of strange foreign ships arriving in the harbor. The ships fly unknown flags, and their design is unlike those of the local merchants.\n\nThe foreign ships are larger than normal galleys, and their sails and rigging appear to be in poor condition after a long voyage. They have anchored themselves a respectful distance from the docks, and the local authorities are requesting that you deal with the outsiders if and when they dispatch landing parties.;;;;;;;;;;;;x
 EVTOPT_overseas_arrive_audience;This could be important, I will grant them an audience.;;;;;;;;;;;;x
 EVTOPT_overseas_arrive_repel;Outsiders are trouble. Drive off their landing parties.;;;;;;;;;;;;x
-EVTNAME_overseas_audience;A Foreign Audience;;;;;;;;;;;;x
+EVTNAME_overseas_audience;A Foreign Audience;;;;;;;;;;;;;x
 EVTDESC_overseas_audience;One of the foreigners steps forward and speaks in the archaic tongue of the Old World. Though his words are stilted and heavily accented, you can understand some of what he says and your court scholars are able to fill in the rest.\n\nThe spokesman explains that they are explorers and merchants, travelling far across the ocean to bring knowledge and wealth to their patron. Recent discoveries and court fashions have spurred a desire for certain goods that have been absent or scarce in their homeland for centuries. He claims you stand to be enriched as well by this lucrative trade. As you speak with him, the other foreigners occasionally converse quietly in a wholly unknown language.;;;;;;;;;;;;x
 EVTOPT_overseas_audience_allow;Give them access to our markets and harbors.;;;;;;;;;;;;x
 EVTOPT_overseas_audience_tax;They can trade, but they will pay extra tariffs.;;;;;;;;;;;;x
 EVTOPT_overseas_audience_deny;I don't deal with infidels. Send them on their way.;;;;;;;;;;;;x
 EVTOPT_overseas_audience_seize;These are agents of [Root.Religion.GetRandomEvilGodName]. Kill them and seize their ships.;;;;;;;;;;;;x
-foreign_trade;Foreign Trade;;;;;;;;;;;;x
+foreign_trade;Foreign Trade;;;;;;;;;;;;;x
 foreign_trade_desc;Merchants and explorers from distant lands trade in this port, providing a boost to the local economy.;;;;;;;;;;;;x
-EVTNAME_overseas_seize;Foreign Plunder;;;;;;;;;;;;x
+EVTNAME_overseas_seize;Foreign Plunder;;;;;;;;;;;;;x
 EVTDESC_overseas_seize;Your men board the foreign ships, putting their sailors to the sword as they scream for mercy in an incomprehensible tongue. The holds contain chests of silver, fine textiles, glassware, and other valuables.\n\nThe ships themselves are also valuable prizes, with numerous design improvements over the common galley. Your shipwrights will learn new shipbuilding techniques from studying them, while a trove of maps and navigational tools will be useful to your cartographers and sailors.;;;;;;;;;;;;x
-EVTNAME_overseas_friendly;Another Offer;;;;;;;;;;;;x
+EVTNAME_overseas_friendly;Another Offer;;;;;;;;;;;;;x
 EVTDESC_overseas_friendly;The foreigners are pleased with your decision, and present you with gifts of silver, colored glass, and smoothly carved white stone.\n\nThe foreign spokesman makes another offer in the words of the distant past: several of his men will remain behind in your court, to study the language and culture of your realm and perhaps teach your scholars their own language. This will ease future communication difficulties and solidify a profitable long-term trading partnership.\n\nYou catch disapproving looks from a few of the more zealous members of your court.;;;;;;;;;;;;x
 EVTOPT_overseas_friendly_allow;We have much to learn from each other.;;;;;;;;;;;;x
 EVTOPT_overseas_friendly_deny;I won't host foreign spies in my court.;;;;;;;;;;;;x
@@ -948,10 +948,10 @@ EVTDESC_overseas_ask;Your [GetFromRelation] [From.GetFirstName] is requesting ap
 EVTOPT_overseas_ask_deny;No, I have need of you in my court.;;;;;;;;;;;;x
 EVTOPT_overseas_ask_allow;Go with my blessing, and bring glory to your name.;;;;;;;;;;;;x
 EVTOPT_overseas_ask_gift;Go. Take these gifts and soldiers to ease your travels.;;;;;;;;;;;;x
-opinion_mercantile_sponsor;Mercantile Sponsor;;;;;;;;;;;;x
-EVTNAME_overseas_return_bad;A Bitter Return;;;;;;;;;;;;x
-EVTNAME_overseas_return_good;A Triumphant Return;;;;;;;;;;;;x
-EVTNAME_overseas_return;Your [GetFromRelation] returns;;;;;;;;;;;;x
+opinion_mercantile_sponsor;Mercantile Sponsor;;;;;;;;;;;;;x
+EVTNAME_overseas_return_bad;A Bitter Return;;;;;;;;;;;;;x
+EVTNAME_overseas_return_good;A Triumphant Return;;;;;;;;;;;;;x
+EVTNAME_overseas_return;Your [GetFromRelation] returns;;;;;;;;;;;;;x
 EVTDESC_overseas_return_die;Your [GetFromRelation] [From.GetFirstName] has returned from [From.GetPossPronoun] overseas mercantile adventure. Or at least [From.GetPossPronoun] remains have returned.\n\nThe ship that was supposed to be bearing your [GetFromRelation] is instead bearing [From.GetPossPronoun] bones. The merchants [From.GetSubjectPronoun] travelled with are apologetic as they solemnly return [From.GetPossPronoun] belongings.;;;;;;;;;;;;x
 EVTDESC_overseas_return_maim;Your [GetFromRelation] [From.GetFirstName] has returned from [From.GetPossPronoun] overseas mercantile adventure. [From.GetSubjectPronounCap] is in poor condition, battered by a terrible journey.\n\nYou are unsure whether [From.GetSubjectPronoun] will live to tell you story. Pirates, disease, or powerful storms? What terrible events could have befallen [From.GetObjectPronoun]?;;;;;;;;;;;;x
 EVTDESC_overseas_return_scar;Your [GetFromRelation] [From.GetFirstName] has returned from [From.GetPossPronoun] overseas mercantile adventure. [From.GetSubjectPronounCap] looks as though [From.GetSubjectPronoun] has seen a great deal of combat.\n\nWith a new scar across [From.GetPossPronoun] face and a battle-hardened demeanor, [From.GetFirstName] strikes a more imposing figure than the day [From.GetSubjectPronoun] left. From the respect [From.GetPossPronoun] shipmates show [From.GetObjectPronoun], you would wager [From.GetSubjectPronoun] fought skillfully alongside many of them.;;;;;;;;;;;;x
@@ -977,9 +977,9 @@ EVTOPT_snake_convert;The vision is clear!;;;;;;;;;;;;x
 EVTOPT_snake_convert_deny;I will not turn from my faith.;;;;;;;;;;;;x
 EVTDESC_snake_convert_charis;The poison courses through your veins, and you collapse in pain. In your delirium, you have a series of potent visions. In the most powerful vision, you realize that [Root.Religion.GetRandomGodName] and The Light are one and the same, and that you must convert to the Revelationist faith.;;;;;;;;;;;;x
 EVTDESC_snake_convert_vassal;[From.GetTitledFirstName] was bitten by a serpent during a holy ritual service. In [From.GetPossPronoun] delirium [From.GetSubjectPronoun] saw many potent visions, one of which was powerful enough to convert [From.GetObjectPronoun] to the [From.Religion.GetName] faith.;;;;;;;;;;;;x
-vision_quest;Vision Quest;;;;;;;;;;;;x
+vision_quest;Vision Quest;;;;;;;;;;;;;x
 vision_quest_desc;To be truly considered an adult, you must go on a spiritual journey with the aid of fasting, meditation, or medicinal herbs. You will purify your body and spirit and gain deep insights about yourself and the nature of the universe.;;;;;;;;;;;;x
-on_vision_quest;On Vision Quest;;;;;;;;;;;;x
+on_vision_quest;On Vision Quest;;;;;;;;;;;;;x
 on_vision_quest_desc;This character is currently exploring the spiritual world with the aid of fasting, meditation, or herbal medicines.;;;;;;;;;;;;x
 EVTNAME_vision_name;Vision Quest;;;;;;;;;;;;;x
 EVTDESC_vision_amerind;Your people undertake vision quests within a carefully constructed wooden sweat lodge. You will spend days within the lodge, fasting and meditating under close supervision of the firekeeper. Your spiritual journey will take you far beyond the walls of the lodge, to commune with [Root.Religion.GetRandomGodName].\n\nA seeker often sees startling things. Some visions show supernatural or seemingly impossible sights which may be interpreted allegorically. Other visions are more literal: historical events, happenings in distant lands, or even things that have not yet come to pass.\n\nA successful vision quest will provide you with deep insights about yourself, the spiritual world, or the natural world.;;;;;;;;;;;;x
@@ -987,19 +987,19 @@ EVTDESC_vision_meso;For a ruler of your standing, the [Root.Religion.GetName] vi
 EVTDESC_vision_afro;The [Root.Religion.GetName] vision quest tradition begins with a joyous day of music, accompanied by singing and dancing. As the celebration winds down, you retreat to a secluded location and contemplate [Root.Religion.GetRandomGodName] with the aid of sacramental herbs.\n\nA seeker often sees startling things. Some visions show supernatural or seemingly impossible sights which may be interpreted allegorically. Other visions are more literal: historical events, happenings in distant lands, or even things that have not yet come to pass.\n\nA successful vision quest will provide you with deep insights about yourself, the spiritual world, or the natural world.;;;;;;;;;;;;x
 EVTDESC_vision_pagan;A vision quest in the [Root.Religion.GetName] tradition can be a dangerous activity. Not every mind is strong enough to face [Root.Religion.GetRandomGodName] or [Root.Religion.GetRandomEvilGodName] without shattering. You prepare yourself for the fasting and arduous spiritual journey ahead.\n\nA seeker often sees startling things. Some visions show supernatural or seemingly impossible sights which may be interpreted allegorically. Other visions are more literal: historical events, happenings in distant lands, or even things that have not yet come to pass.\n\nA successful vision quest will provide you with deep insights about yourself, the spiritual world, or the natural world.;;;;;;;;;;;;x
 EVTOPT_vision_opt;Let the mystical journey begin!;;;;;;;;;;;;x
-EVTNAME_vision_war;Vision of War;;;;;;;;;;;;x
+EVTNAME_vision_war;Vision of War;;;;;;;;;;;;;x
 EVTDESC_vision_war_die;An armored rider wheels towards you, a great plume of feathers on his cap. The air is thick with arrows, but the rider ignores them. Your arms are heavy, and the rider's spear finds your throat.;;;;;;;;;;;;x
 EVTDESC_vision_war_siege;You stand atop a high bluff, your banner crisp in the wind. Below you lies an ocean of men... soldiers beyond counting. In the distance, a great fortress burns.;;;;;;;;;;;;x
 EVTDESC_vision_war_ride;Your horse is swift, and your arm is strong. A trumpet looses a mighty blast. You ride across the dusty ground with your companions, your hooves like rolling thunder.;;;;;;;;;;;;x
 EVTDESC_vision_war_carnage;You stand in a bloody field, strewn with bodies. An injured soldier struggles to stand, using his weapon for support. Carrion birds circle overhead and a wolf howls to summon the pack.;;;;;;;;;;;;x
-EVTNAME_vision_wond;Vision of Wonder;;;;;;;;;;;;x
+EVTNAME_vision_wond;Vision of Wonder;;;;;;;;;;;;;x
 EVTDESC_vision_wond_gather;A great fire roars in the center of the camp. Men and women from all tribes gather around it, embracing in fellowship with their faces smiling and shining in the firelight.;;;;;;;;;;;;x
 EVTDESC_vision_wond_aurora;The night is dark, but the sky is clear and full of countless bright stars strung out like a great celestial road. Shimmering curtains of light bathe the land in beautiful, ghostly hues.;;;;;;;;;;;;x
 EVTDESC_vision_wond_river;You are carried by the current of a vast river. You need not steer, the magic of the river guides you. You need not eat, the warmth of the Sun sustains you.;;;;;;;;;;;;x
 EVTDESC_vision_wond_field;You walk through a waist-high field of golden grass. The grass parts as you pass, rippling in the breeze like the surface of a lake. You raise your hand to shield your eyes from the Sun.;;;;;;;;;;;;x
 EVTDESC_vision_wond_kindle;Points of flickering orange light are kindled in the darkness. Soon, you cannot tell where the countless campfires end and the stars begin. You too must kindle a flame in the ashes of the old world.;;;;;;;;;;;;x
 EVTDESC_vision_wond_god;One of the powers of the universe draws close to you, within the sacred circle. You are laid bare before its piercing gaze, enveloped by a feeling of strength, compassion, and connectedness with all things.;;;;;;;;;;;;x
-EVTNAME_vision_wild;Vision of Nature;;;;;;;;;;;;x
+EVTNAME_vision_wild;Vision of Nature;;;;;;;;;;;;;x
 EVTDESC_vision_wild_sign;Three ravens lead you east, to the bank of the great sacred river. Three deer pass through the river valley. With them is a white fawn... a very great sign.;;;;;;;;;;;;x
 EVTDESC_vision_wild_fly;Each step seems lighter than the last, as you bound higher. You need not touch the ground to continue, the warm thermals carrying you ever higher. The people below are no more than ants, the vast forest like a blanket of moss.;;;;;;;;;;;;x
 EVTDESC_vision_wild_hunt;You observe your prey, carefully readying your bow. You scrape your hoof against the earth, filling your mouth with shoots and tender leaves. You feel both the bowstring against your fingertips, and the sharp bite of the arrow in your flank.;;;;;;;;;;;;x
@@ -1008,9 +1008,9 @@ EVTDESC_vision_wild_track;Curtains of sunlight wash over you as you move swiftly
 EVTDESC_vision_wild_tbird;A massive bird takes flight, cleaving the clouds with each wingbeat. It wheels and turns in the sky, carrying lightning in its talons and producing thunder from the wind on its wings.;;;;;;;;;;;;x
 EVTDESC_vision_wild_unic;Deep in the forest you come upon a noble white horse with a single straight horn on its head. It turns to look at you and you feel a pleasurable sense of contentedness.;;;;;;;;;;;;x
 EVTDESC_vision_wild_fox;You chase a fox through the wilds, but it easily eludes you. You see it looking back at you with a mirthful expression.;;;;;;;;;;;;x
-EVTNAME_vision_doom;Vision of Disaster;;;;;;;;;;;;x
+EVTNAME_vision_doom;Vision of Disaster;;;;;;;;;;;;;x
 EVTDESC_vision_doom_blood;The sky cracks like chapped skin and splits with a deep groan of pain. Bloody rain drips from the heavens. Sick men wander aimlessly in the gory mud below.;;;;;;;;;;;;x
-EVTDESC_vision_doom_fire;Horsemen with flaming hooves rend the clouds with a clap of thunder and a burst of blinding light. Sheets of fire issue forth, scouring the land. ;;;;;;;;;;;;x
+EVTDESC_vision_doom_fire;Horsemen with flaming hooves rend the clouds with a clap of thunder and a burst of blinding light. Sheets of fire issue forth, scouring the land. ;;;;;;;;;;;;;x
 EVTDESC_vision_doom_mist;Thick mist creeps along the ground beneath a sky of patchwork colors. Your eyes sting and your throat is painfully parched. The only sound that breaks the silence is a distant gasping for breath.;;;;;;;;;;;;x
 EVTDESC_vision_doom_dark;The Sun is swallowed by a vast serpent of smoke. Dead, brown leaves swirl and settle in the chill calm of eternal night. The faint glow of a distant campfire is obscured by falling snow.;;;;;;;;;;;;x
 EVTDESC_vision_doom_road;A man trudges across a blighted landscape of ash and dust. A boy follows close behind him. Nothing grows along the grim and desolate road.;;;;;;;;;;;;x
@@ -1020,16 +1020,16 @@ EVTDESC_vision_self_kids;Children laugh and play in a meadow of clover. The Sun 
 EVTDESC_vision_self_luke;You swing your blade forcefully at your armored opponent, striking his neck. He is beheaded, and the strength of the blow knocks a shower of black lacquer chips loose from his armor. With a puff of smoke, your opponent's face is revealed to be yours.;;;;;;;;;;;;x
 EVTDESC_vision_self_evil;There is a malevolent presence nearby. You feel like you are being watched, but you cannot see the watcher. You hear distant laughter.;;;;;;;;;;;;x
 EVTDESC_vision_self_sky;Across the ragged sky, you see a vast herd of black-horned cattle driven by doomed and ghostly riders. One gaunt face turns and looks past you, your misdeeds pooling in his mournful eyes.;;;;;;;;;;;;x
-EVTNAME_vision_past;Vision of the Ancestors;;;;;;;;;;;;x
+EVTNAME_vision_past;Vision of the Ancestors;;;;;;;;;;;;;x
 EVTDESC_vision_past_rider;A silent rider passes you on the trail, carrying a horn of glowing embers. The night is cold, but you feel a warm sense of kinship with him. You are sure that there will be a fire waiting for you up ahead, somewhere in all that dark.;;;;;;;;;;;;x
 EVTDESC_vision_past_light;You are in a vast city of the men of the Old World. Their homes are lit by a thousand thousand lanterns, stretching up into the sky. In comparison, the mightiest castle looks like a farmer's cottage.;;;;;;;;;;;;x
 EVTDESC_vision_past_heart;You see an old dead city, the great ancient manors stained with the years. The roads are filled with the men and women of the city, a vast river of humanity in constant motion. The city seems to pulse, beating like a man's heart.;;;;;;;;;;;;x
 EVTDESC_vision_past_dad;Your father is silhouetted against the Sun, smiling at you. Behind him stands his father, and yet more ancestors beyond him. You turn away from the Sun, and feel a strong hand on your shoulder.;;;;;;;;;;;;x
 EVTDESC_vision_past_arise;Deep beneath the roots of the mountains, you have lived for aeons. Now you emerge from the darkness, squinting and peeking through your fingers at the blinding light. Praise the Sun!;;;;;;;;;;;;x
-EVTNAME_vision_truth;Vision of Truth;;;;;;;;;;;;x
+EVTNAME_vision_truth;Vision of Truth;;;;;;;;;;;;;x
 EVTDESC_vision_truth_atom;You feel the mighty energies of the old world welling up within you, and see the concentric spirals of flowing energy that compose the world. The ancients were right, and now you too have seen into the world of the invisible and indivisible.;;;;;;;;;;;;x
 EVTDESC_vision_truth_illus;This world is an illusion. You are simply a dream of a god pretending to be real. You must unshackle your mind, free yourself from the mirage of this reality, and escape to the real.;;;;;;;;;;;;x
-EVTNAME_vision_ends;Vision Quest Ends;;;;;;;;;;;;x
+EVTNAME_vision_ends;Vision Quest Ends;;;;;;;;;;;;;x
 EVTDESC_vision_ends;Your spiritual journey is nearly at an end. You have experienced many visions, and though a spiritual guide is available to discuss the experience with you, only you can determine the true meaning of your vision quest.\n\nMany seekers take their experience to heart, reshaping themselves in accordance with their visions. Some defy the visions and choose their own fate. Others take a balanced approach, acknowledging the wisdom of their visions without giving themselves over entirely.;;;;;;;;;;;;x
 EVTOPT_vision_thunderbird;Thunderbird has chosen me.;;;;;;;;;;;;x
 EVTOPT_vision_ancestor;I communed with the ancestors.;;;;;;;;;;;;x
@@ -1044,47 +1044,47 @@ EVTOPT_vision_nothing;I felt nothing.;;;;;;;;;;;;x
 EVTOPT_vision_jaguar;Jaguar has chosen me.;;;;;;;;;;;;x
 EVTOPT_vision_cataclysms;I saw terrible cataclysms.;;;;;;;;;;;;x
 EVTOPT_vision_nature;I gained perspective on nature.;;;;;;;;;;;;x
-EVTNAME_vision_tbird;Thunderbird;;;;;;;;;;;;x
+EVTNAME_vision_tbird;Thunderbird;;;;;;;;;;;;;x
 EVTDESC_vision_tbird;The mighty Thunderbird is your totem! An enormous supernatural bird that causes thunderstorms with its wings when angered, the Thunderbird is associated with leadership and war.\n\nThunderbird is powerful, intelligent, and easily stirred to wrathfulness. With Thunderbird on your side, only a fool would dare to challenge you.;;;;;;;;;;;;x
 EVTOPT_vision_totem_accept;My life path has been chosen.;;;;;;;;;;;;x
 EVTOPT_vision_totem_guide;I will accept some guidance.;;;;;;;;;;;;x
 EVTOPT_vision_totem_reject;My destiny is my own to choose.;;;;;;;;;;;;x
-EVTNAME_vision_ancestor;The Ancestors;;;;;;;;;;;;x
+EVTNAME_vision_ancestor;The Ancestors;;;;;;;;;;;;;x
 EVTDESC_vision_ancestor;Your visions show you your ancestors, both distant and recent. A thread of fate runs through you, your father, and your grandfather... all the way to the inhabitants of the Old World.\n\nTheir experiences, memories, and skills will help you patiently face the challenges ahead. Perhaps one day, if [Root.Religion.GetRandomGodName] wills it, you shall do the same for your ancestors.;;;;;;;;;;;;x
-EVTNAME_vision_universe;The Universe;;;;;;;;;;;;x
+EVTNAME_vision_universe;The Universe;;;;;;;;;;;;;x
 EVTDESC_vision_universe;Your visions have shown you deep truths about the nature of [Root.Religion.GetRandomGodName] and the Universe. These insights will greatly aid you in your theological studies.\n\nSome might consider it ironic that as your knowledge and wisdom increase, your opinion about your significance in the grand scheme of the Universe diminishes. Those people are ignorant of the truths you have discovered today.;;;;;;;;;;;;x
-EVTNAME_vision_self;The Self;;;;;;;;;;;;x
+EVTNAME_vision_self;The Self;;;;;;;;;;;;;x
 EVTDESC_vision_self;Many of your visions focused on yourself and your future. What kind of person will you become, and how can you live up to your potential? How can you improve your strengths, heal your spiritual wounds, and make the most of your life?;;;;;;;;;;;;x
 EVTOPT_vision_self_great;I will be great!;;;;;;;;;;;;x
 EVTOPT_vision_self_good;I will be good!;;;;;;;;;;;;x
-EVTNAME_vision_raven;Raven Totem;;;;;;;;;;;;x
+EVTNAME_vision_raven;Raven Totem;;;;;;;;;;;;;x
 EVTDESC_vision_raven;The cunning Raven is your totem animal. Clever and opportunistic, Raven commands you take advantage of chaos where it arises. Though Raven thrives in chaos, he does not command you to cause it... merely to gorge yourself upon its bounty should the chance present itself.;;;;;;;;;;;;x
-EVTNAME_vision_bear;Bear Totem;;;;;;;;;;;;x
+EVTNAME_vision_bear;Bear Totem;;;;;;;;;;;;;x
 EVTDESC_vision_bear;The stalwart Bear is your totem animal. Bear is a mighty warrior when provoked, but she only fights when it is prudent. Bear can be ferocious when defending family and clan, but is slow to raise arms under other circumstances.;;;;;;;;;;;;x
-EVTNAME_vision_wolf;Wolf Totem;;;;;;;;;;;;x
+EVTNAME_vision_wolf;Wolf Totem;;;;;;;;;;;;;x
 EVTDESC_vision_wolf;The loyal Wolf is your totem. Wolf is a skilled warrior, but he knows that his strength is multiplied when aided by powerful allies. Though Wolf builds strong relationships with his friends, those outside the pack find he has a vicious streak... especially those he views as prey.;;;;;;;;;;;;x
-EVTNAME_vision_coyote;Coyote Totem;;;;;;;;;;;;x
+EVTNAME_vision_coyote;Coyote Totem;;;;;;;;;;;;;x
 EVTDESC_vision_coyote;The clever Coyote is your totem animal. A trickster and a thief, Coyote prefers to outwit his foes rather than fighting them directly. His lack of loyalty can prove problematic both for himself and those foolish enough to trust him.;;;;;;;;;;;;x
-EVTNAME_vision_madness;Madness;;;;;;;;;;;;x
+EVTNAME_vision_madness;Madness;;;;;;;;;;;;;x
 EVTDESC_vision_madness;You have seen so many terrible things that your sanity is slipping away. Time seems to lose all meaning, and you feel as though your soul has been sharply separated from your body. \n\nWaves of terror, helplessness, and despair pass over you. Could this be the work of [Root.Religion.GetRandomEvilGodName]? How is it possible to be watched by a hundred malevolent eyes yet feel so utterly alone?;;;;;;;;;;;;x
-TXT_vision_smart;This option is available because of your keen intelligence.\n;;;;;;;;;;;;x
+TXT_vision_smart;This option is available because of your keen intelligence.\n;;;;;;;;;;;;;x
 EVTOPT_vision_madness_resist;I can hold my mind together!;;;;;;;;;;;;x
 EVTOPT_vision_madness_givein;[Root.Religion.GetRandomGodName] must desire madness!;;;;;;;;;;;;x
-EVTNAME_vision_nothing;Nothingness;;;;;;;;;;;;x
+EVTNAME_vision_nothing;Nothingness;;;;;;;;;;;;;x
 EVTDESC_vision_nothing;In the end, your attempts to contact the spiritual world have come to naught. Others see visions of [Root.Religion.GetRandomGodName] or hear soothing voices that guide them, but you have found only a terrible black void.\n\nRather than communing with the Universe, you are simply alone with your own thoughts. Does some barrier separate you from the divine, or is everyone else simply faking their connection?;;;;;;;;;;;;x
 EVTOPT_vision_nothing_uncover;I have uncovered the true nature of the universe.;;;;;;;;;;;;x
 EVTOPT_vision_nothing_facade;I must maintain a facade of pious spirituality.;;;;;;;;;;;;x
 EVTOPT_vision_nothing_madness;I can feel my mind slipping into madness...;;;;;;;;;;;;x
-EVTNAME_vision_jaguar;Jaguar Totem;;;;;;;;;;;;x
+EVTNAME_vision_jaguar;Jaguar Totem;;;;;;;;;;;;;x
 EVTDESC_vision_jaguar;The stealthy Jaguar is your totem animal. Just as strong as he is cunning, Jaguar knows when to fight and when to wait. Those who always choose to fight are fools and those who never choose to fight are cowards. Jaguar councils you to conceal your strength until the time is right, then step into the sunlight and strike swiftly.;;;;;;;;;;;;x
-EVTNAME_vision_cataclysm;Cataclysms Past and Future;;;;;;;;;;;;x
+EVTNAME_vision_cataclysm;Cataclysms Past and Future;;;;;;;;;;;;;x
 EVTDESC_vision_cataclysm;You have seen many terrible things. To remember them makes [Root.Religion.GetRandomGodName] seem very far away, and you feel burdened by the knowledge of the trials you will face. It would be weakness to give in to despair, and you feel a weighty responsibility to grow strong that you might survive to be a shield in the darkness.;;;;;;;;;;;;x
 EVTOPT_vision_cataclysm_labor;Tireless labor awaits me.;;;;;;;;;;;;x
 EVTOPT_vision_cataclysm_prepare;If conflict looms, prepare for it.;;;;;;;;;;;;x
 EVTOPT_vision_cataclysm_cynic;Man must do what [Root.Religion.GetRandomGodName] cannot.;;;;;;;;;;;;x
 EVTOPT_vision_cataclysm_doomed;We're all doomed!;;;;;;;;;;;;x
 TXT_vision_doomed;DOOMED! DOOOOOMED!!;;;;;;;;;;;;x
-EVTNAME_vision_nature;The Natural World;;;;;;;;;;;;x
+EVTNAME_vision_nature;The Natural World;;;;;;;;;;;;;x
 EVTDESC_vision_nature;You feel the primal energies of the natural world flowing through you, and the distant presence of the divine. Your direct connection is not with [Root.Religion.GetRandomGodName] and the spiritual world, but with nature itself and the plants and animals that inhabit this world. You have gained perspective on man's place in nature and the nature of man.;;;;;;;;;;;;x
 pres_excommunicate;Excommunicate;;;;;;;;;;;;;x
 pres_excommunicate_desc;Unilaterally excommunicate [Root.GetTitledFirstName]. You will anger those of the same dynasty. Without proper justification, you will harm the moral authority of your administration.;;;;;;;;;;;;;x
@@ -1524,46 +1524,46 @@ EVTOPT_flav_calam_humble;I only know that I know nothing.;;;;;;;;;;;;x
 EVTOPT_flav_calam_neither;None of them are convincing.;;;;;;;;;;;;x
 EVTOPT_flav_calam_proud;All wrong! Here's what really happened...;;;;;;;;;;;;x
 EVTOPT_flav_calam_zeal;All the answers are in [Root.Religion.GetScriptureName].;;;;;;;;;;;;x
-TXT_opinion1_A;...their decadence allowed [debater1.Religion.GetRandomEvilGodName] into their hearts, bringing the world to ruin.\n;;;;;;;;;;;;x
-TXT_opinion2_A;...servants of [debater1.Religion.GetRandomGodName] cast down the wicked kings of the Old World, smashing their decadent contraptions.\n;;;;;;;;;;;;x
-TXT_opinion3_A;...humanity was merely collateral damage in the cosmic battle between [debater1.Religion.GetRandomGodName] and [debater1.Religion.GetRandomEvilGodName].\n;;;;;;;;;;;;x
-TXT_opinion4_A;...the Old World was justly overthrown for turning away from [debater1.Religion.GetRandomGodName].\n;;;;;;;;;;;;x
-TXT_opinion5_A;...[debater1.Religion.GetRandomGodName] pulled a vast lash of fire from the Sun and cast it across the Earth.\n;;;;;;;;;;;;x
-TXT_opinion6_A;...[debater1.Religion.GetRandomGodName] raptured good souls into heaven, unleashing chaos upon those who remained.\n;;;;;;;;;;;;x
-TXT_opinion1_B;...their decadence allowed [debater2.Religion.GetRandomEvilGodName] into their hearts, bringing the world to ruin.\n;;;;;;;;;;;;x
-TXT_opinion2_B;...servants of [debater2.Religion.GetRandomGodName] cast down the wicked kings of the Old World, smashing their decadent contraptions.\n;;;;;;;;;;;;x
-TXT_opinion3_B;...humanity was merely collateral damage in the cosmic battle between [debater2.Religion.GetRandomGodName] and [debater2.Religion.GetRandomEvilGodName].\n;;;;;;;;;;;;x
-TXT_opinion4_B;...the Old World was justly overthrown for turning away from [debater2.Religion.GetRandomGodName].\n;;;;;;;;;;;;x
-TXT_opinion5_B;...[debater2.Religion.GetRandomGodName] pulled a vast lash of fire from the Sun and cast it across the Earth.\n;;;;;;;;;;;;x
-TXT_opinion6_B;...[debater2.Religion.GetRandomGodName] raptured good souls into heaven, unleashing chaos upon those who remained.\n;;;;;;;;;;;;x
-TXT_opinion1_C;...their decadence allowed [debater3.Religion.GetRandomEvilGodName] into their hearts, bringing the world to ruin.\n;;;;;;;;;;;;x
-TXT_opinion2_C;...servants of [debater3.Religion.GetRandomGodName] cast down the wicked kings of the Old World, smashing their decadent contraptions.\n;;;;;;;;;;;;x
-TXT_opinion3_C;...humanity was merely collateral damage in the cosmic battle between [debater3.Religion.GetRandomGodName] and [debater3.Religion.GetRandomEvilGodName].\n;;;;;;;;;;;;x
-TXT_opinion4_C;...the Old World was justly overthrown for turning away from [debater3.Religion.GetRandomGodName].\n;;;;;;;;;;;;x
-TXT_opinion5_C;...[debater3.Religion.GetRandomGodName] pulled a vast lash of fire from the Sun and cast it across the Earth.\n;;;;;;;;;;;;x
-TXT_opinion6_C;...[debater3.Religion.GetRandomGodName] raptured good souls into heaven, unleashing chaos upon those who remained.\n;;;;;;;;;;;;x
-TXT_opinion7;...their machines grew too powerful to control and turned on their masters.\n;;;;;;;;;;;;x
-TXT_opinion8;...they foolishly placed too much faith in their machines, becoming weak and slothful.\n;;;;;;;;;;;;x
-TXT_opinion9;...the seas heaved and bubbled with flammable air, scouring the world with a deluge of fire.\n;;;;;;;;;;;;x
-TXT_opinion10;...the sky itself split and fell with a thunderous crash, leaving the world dark and frozen.\n;;;;;;;;;;;;x
-TXT_opinion11;...the terrible weapons of the Old World blackened the sky and poisoned the land.\n;;;;;;;;;;;;x
-TXT_opinion12;...the dead and damned walked the Earth, killing and consuming the flesh of the living.\n;;;;;;;;;;;;x
-TXT_opinion13;...the women of the Old World were cursed and became barren, dooming humanity to wither away.\n;;;;;;;;;;;;x
-TXT_opinion14;...a lethal plague ravaged humanity, indiscriminately killing both kings and commoners.\n;;;;;;;;;;;;x
-TXT_opinion15;...they bled the Earth to feed their machines, without thought for what would happen when the Earth was bled dry.\n;;;;;;;;;;;;x
-TXT_opinion16;...it was simply time for a new world to be reborn from the ashes of the old.\n;;;;;;;;;;;;x
-TXT_opinion17;...the stories of the Old World are superstitious lies peddled by opportunistic charlatans.\n;;;;;;;;;;;;x
-TXT_opinion18;...the oceans receded, the dry air shimmered with heat, and no seeds would grow in the parched soil.\n;;;;;;;;;;;;x
-TXT_opinion19;...insufficient sacrifice led to the death of the Sun and the end of the Fifth Age.\n;;;;;;;;;;;;x
-TXT_opinion20;...a colossal serpent of black smoke devoured the Sun and Moon.\n;;;;;;;;;;;;x
-rumor_rome_pos;Rumors of Rome;;;;;;;;;;;;x
-rumor_rome_pos_big;Rumors of Rome;;;;;;;;;;;;x
-rumor_rome_neg;Rumors of Rome;;;;;;;;;;;;x
-rumor_rome_neg_big;Rumors of Rome;;;;;;;;;;;;x
-bull_devil_tongue;Bull of Devil Tongues;;;;;;;;;;;;x
-bull_ruins_of_rome;Bull of the Ruins of Rome;;;;;;;;;;;;x
-papal_bull_neg;Papal Bull;;;;;;;;;;;;x
-EVTNAME_rumor_rome;Rumors of Rome;;;;;;;;;;;;x
+TXT_opinion1_A;...their decadence allowed [debater1.Religion.GetRandomEvilGodName] into their hearts, bringing the world to ruin.\n;;;;;;;;;;;;;x
+TXT_opinion2_A;...servants of [debater1.Religion.GetRandomGodName] cast down the wicked kings of the Old World, smashing their decadent contraptions.\n;;;;;;;;;;;;;x
+TXT_opinion3_A;...humanity was merely collateral damage in the cosmic battle between [debater1.Religion.GetRandomGodName] and [debater1.Religion.GetRandomEvilGodName].\n;;;;;;;;;;;;;x
+TXT_opinion4_A;...the Old World was justly overthrown for turning away from [debater1.Religion.GetRandomGodName].\n;;;;;;;;;;;;;x
+TXT_opinion5_A;...[debater1.Religion.GetRandomGodName] pulled a vast lash of fire from the Sun and cast it across the Earth.\n;;;;;;;;;;;;;x
+TXT_opinion6_A;...[debater1.Religion.GetRandomGodName] raptured good souls into heaven, unleashing chaos upon those who remained.\n;;;;;;;;;;;;;x
+TXT_opinion1_B;...their decadence allowed [debater2.Religion.GetRandomEvilGodName] into their hearts, bringing the world to ruin.\n;;;;;;;;;;;;;x
+TXT_opinion2_B;...servants of [debater2.Religion.GetRandomGodName] cast down the wicked kings of the Old World, smashing their decadent contraptions.\n;;;;;;;;;;;;;x
+TXT_opinion3_B;...humanity was merely collateral damage in the cosmic battle between [debater2.Religion.GetRandomGodName] and [debater2.Religion.GetRandomEvilGodName].\n;;;;;;;;;;;;;x
+TXT_opinion4_B;...the Old World was justly overthrown for turning away from [debater2.Religion.GetRandomGodName].\n;;;;;;;;;;;;;x
+TXT_opinion5_B;...[debater2.Religion.GetRandomGodName] pulled a vast lash of fire from the Sun and cast it across the Earth.\n;;;;;;;;;;;;;x
+TXT_opinion6_B;...[debater2.Religion.GetRandomGodName] raptured good souls into heaven, unleashing chaos upon those who remained.\n;;;;;;;;;;;;;x
+TXT_opinion1_C;...their decadence allowed [debater3.Religion.GetRandomEvilGodName] into their hearts, bringing the world to ruin.\n;;;;;;;;;;;;;x
+TXT_opinion2_C;...servants of [debater3.Religion.GetRandomGodName] cast down the wicked kings of the Old World, smashing their decadent contraptions.\n;;;;;;;;;;;;;x
+TXT_opinion3_C;...humanity was merely collateral damage in the cosmic battle between [debater3.Religion.GetRandomGodName] and [debater3.Religion.GetRandomEvilGodName].\n;;;;;;;;;;;;;x
+TXT_opinion4_C;...the Old World was justly overthrown for turning away from [debater3.Religion.GetRandomGodName].\n;;;;;;;;;;;;;x
+TXT_opinion5_C;...[debater3.Religion.GetRandomGodName] pulled a vast lash of fire from the Sun and cast it across the Earth.\n;;;;;;;;;;;;;x
+TXT_opinion6_C;...[debater3.Religion.GetRandomGodName] raptured good souls into heaven, unleashing chaos upon those who remained.\n;;;;;;;;;;;;;x
+TXT_opinion7;...their machines grew too powerful to control and turned on their masters.\n;;;;;;;;;;;;;x
+TXT_opinion8;...they foolishly placed too much faith in their machines, becoming weak and slothful.\n;;;;;;;;;;;;;x
+TXT_opinion9;...the seas heaved and bubbled with flammable air, scouring the world with a deluge of fire.\n;;;;;;;;;;;;;x
+TXT_opinion10;...the sky itself split and fell with a thunderous crash, leaving the world dark and frozen.\n;;;;;;;;;;;;;x
+TXT_opinion11;...the terrible weapons of the Old World blackened the sky and poisoned the land.\n;;;;;;;;;;;;;x
+TXT_opinion12;...the dead and damned walked the Earth, killing and consuming the flesh of the living.\n;;;;;;;;;;;;;x
+TXT_opinion13;...the women of the Old World were cursed and became barren, dooming humanity to wither away.\n;;;;;;;;;;;;;x
+TXT_opinion14;...a lethal plague ravaged humanity, indiscriminately killing both kings and commoners.\n;;;;;;;;;;;;;x
+TXT_opinion15;...they bled the Earth to feed their machines, without thought for what would happen when the Earth was bled dry.\n;;;;;;;;;;;;;x
+TXT_opinion16;...it was simply time for a new world to be reborn from the ashes of the old.\n;;;;;;;;;;;;;x
+TXT_opinion17;...the stories of the Old World are superstitious lies peddled by opportunistic charlatans.\n;;;;;;;;;;;;;x
+TXT_opinion18;...the oceans receded, the dry air shimmered with heat, and no seeds would grow in the parched soil.\n;;;;;;;;;;;;;x
+TXT_opinion19;...insufficient sacrifice led to the death of the Sun and the end of the Fifth Age.\n;;;;;;;;;;;;;x
+TXT_opinion20;...a colossal serpent of black smoke devoured the Sun and Moon.\n;;;;;;;;;;;;;x
+rumor_rome_pos;Rumors of Rome;;;;;;;;;;;;;x
+rumor_rome_pos_big;Rumors of Rome;;;;;;;;;;;;;x
+rumor_rome_neg;Rumors of Rome;;;;;;;;;;;;;x
+rumor_rome_neg_big;Rumors of Rome;;;;;;;;;;;;;x
+bull_devil_tongue;Bull of Devil Tongues;;;;;;;;;;;;;x
+bull_ruins_of_rome;Bull of the Ruins of Rome;;;;;;;;;;;;;x
+papal_bull_neg;Papal Bull;;;;;;;;;;;;;x
+EVTNAME_rumor_rome;Rumors of Rome;;;;;;;;;;;;;x
 EVTDESC_rumor_ruins;Spurred by the tales of merchants from distant lands, many in Christendom believe that Rome is a desolate and uninhabited ruin. Centuries ago in a land far beyond the sea the city was obliterated by God's divine fire, and none dare to defy His will and return to the City of Ash. [ThePope.GetTitledFirstName] encourages this understanding, as it lends credence to his claim to apostolic succession.\n\nAnd it shall remain eternally so.;;;;;;;;;;;;x
 EVTDESC_rumor_weak;Spurred by the tales of merchants from distant lands, many in Christendom believe that an anti-Pope rules in the ancient city of Rome, far across the ocean. These tales do not threaten the righteous order of the true Papacy, for they describe this false Pope as weak and beleaguered by infidels.\n\nIf this foreign Pope was the true apostolic successor the Lord would sweep away his enemies. That they remain reveal him to be an impostor.;;;;;;;;;;;;x
 EVTDESC_rumor_many;Spurred by the tales of merchants from distant lands, many in Christendom believe that numerous false Popes vie for power among the ruins of Rome and its environs, far across the ocean. Some of the tales are so outlandish that they cannot be believed, for there can only be one true Vicar of Christ.\n\nStill, it has cast seeds of doubt into the minds of a few of the faithful...;;;;;;;;;;;;x
@@ -1671,10 +1671,10 @@ EVTOPT_RIP_11053_madsci;Great Scott!;;;;;;;;;;;;;x
 EVTOPT_RIP_11053_aphite;I'll help him find his tools.;;;;;;;;;;;;;x
 EVTOPT_RIP_11053_butcher;I'm sure [recruited_physician_target.GetFullName] will serve me well.;;;;;;;;;;;;;x
 EVTOPT_RIP_11053_neogodbeite;A fair request, and I grant it.;;;;;;;;;;;;;x
-TXT_kingdom_columbia;The Kingdom of Columbia is completely controlled.\n;;;;;;;;;;;;x
-TXT_kingdom_gotham;The Kingdom of Gotham is completely controlled.\n;;;;;;;;;;;;x
-TXT_kingdom_dominion;The Kingdom of The Old Dominion is completely controlled.\n;;;;;;;;;;;;x
-TXT_kingdom_carolina;The Kingdom of Carolina is completely controlled.\n;;;;;;;;;;;;x
+TXT_kingdom_columbia;The Kingdom of Columbia is completely controlled.\n;;;;;;;;;;;;;x
+TXT_kingdom_gotham;The Kingdom of Gotham is completely controlled.\n;;;;;;;;;;;;;x
+TXT_kingdom_dominion;The Kingdom of The Old Dominion is completely controlled.\n;;;;;;;;;;;;;x
+TXT_kingdom_carolina;The Kingdom of Carolina is completely controlled.\n;;;;;;;;;;;;;x
 form_the_usa;Restore America;;;;;;;;;;;;;x
 form_the_usa_desc;America was once the mightiest empire on the face of the Earth. As your realm grows in power, it is becoming more widely recognized as the true successor of America.;;;;;;;;;;;;;x
 vassalize_mib;Vassalize the Men in Black;;;;;;;;;;;;;x
@@ -1855,7 +1855,7 @@ EVTDESC_canada_20;My things are packed, everything is in order. I am ready to ma
 EVTNAME_canada_21;Ottawa;;;;;;;;;;;;;x
 EVTDESC_canada_21;You have finally arrived in Ottawa! Situated on the border between Francophone and Anglophone Canada, the city prides itself on its ancient heritage, having once been the capital of a united Canada. As you walk down the street, hearing both Quebecois and Ontarian words in the air, you begin to imagine what it must have been like to live in that ancient Empire. You plan to visit the Shrine to the Unknown Soldier, a site revered by all Canadians.;;;;;;;;;;;;;x
 EVTOPTA_canada_21;O Canada, we stand on guard for thee.;;;;;;;;;;;;;x
-EVTNAME_canada_22;Canterbury;Cantorb?;Canterbury;;Canterbury;;;;;;;;;x
+EVTNAME_canada_22;Canterbury;Canterbury;Canterbury;;Canterbury;;;;;;;;;x
 EVTDESC_canada_22;You have finally arrived at Canterbury! It is beautifully situated between the St. John and St. Croix rivers in New Brunswick. The town itself and the surrounding woods are full of pilgrims from all over Canada. You had quite an eventful journey, meeting many strange pilgrims and hearing many strange stories, but you have finally checked into an inn near your destination. You are eager to finally see the Cathedral, one of the few great post-Event works of architecture.;;;;;;;;;;;;;x
 EVTOPTA_canada_22;I am full of devout homage.;;;;;;;;;;;;;x
 EVTNAME_canada_23;Quebec City;;;;;;;;;;;;;x
@@ -1882,7 +1882,7 @@ EVTNAME_fallingstar_5;Panama City;;;;;;;;;;;;;x
 EVTDESC_fallingstar_5;You have finally arrived at Panama! Situated at the narrowest point between the Atlantic and Pacific oceans, Panama has long been a center of trade, and you can hear conversations in unknown tongues in almost any part of the city. Although not many truly Christian churches remain in the city, the golden altar at the Church of St. Joseph is still a sight to behold. It is said that the Fallen Star himself crashed to Earth on the spot where St Joseph's Church now stands, leaving the golden altar miraculously unharmed..;;;;;;;;;;;;;x
 EVTOPTA_fallingstar_5;Panama! There is nothing like it!;;;;;;;x
 EVTNAME_fallingstar_6;San Salvador;;;;;;;;;;;;;x
-EVTDESC_fallingstar_6;You have finally arrived at San Salvador! San Salvador has always been a place where diverse faiths coexist, and this has only become more true since deluge. It contains not only the largest remaining Christian church in central America, but also prominent shrines to the Cult of Saints and the old Mesoamerican gods. As you see practicioners of all these faiths intermingle peacefully, you marvel at the sight. Still, you have come here on a holy pilgrimage, so you would be remiss to dwell on this too long. Iglesia Cristiana Josue awaits!;;;;;;;;;;;;;x
+EVTDESC_fallingstar_6;You have finally arrived at San Salvador! San Salvador has always been a place where diverse faiths coexist, and this has only become more true since the deluge. It contains not only the largest remaining Christian church in central America, but also prominent shrines to the Cult of Saints and the old Mesoamerican gods. As you see practicioners of all these faiths intermingle peacefully, you marvel at the sight. Still, you have come here on a holy pilgrimage, so you would be remiss to dwell on this too long. Iglesia Cristiana Josue awaits!;;;;;;;;;;;;;x
 EVTOPTA_fallingstar_6;Truly, a capital of culture.;;;;;;;;;;;;;x
 EVTNAME_fallingstar_7;Belize;;;;;;;;;;;;;x
 EVTDESC_fallingstar_7;You have finally arrived at Belize! Like the Miskito Coast, Belize was once a possession of the ancient Crown, and as such holds a special significance to the Falling Star faith. The ancient Cathedral of St. John is one of the most important sites outside of the Miskito coast itself, as it was the cathedral in which many of the old Kings of Miskito were coronated. As you walk down the street, you can hear a tongue that is at once alien and distinctly familiar... truly, Belize is an incredibly holy place.;;;;;;;;;;;;;x
@@ -1921,7 +1921,7 @@ EVTDESC_MNM_40220;Blessed [Root.GetSocietyRank] [Root.GetFirstName].\n\nWe are p
 EVTDESC_MNM_40220_fallback;Oh, blessed [Root.Religion.GetHighGodName]. I, [Root.GetSocietyRank] [Root.GetFirstName], have completed a pilgrimage in your name.\n\nI pray you are pleased with me.\n\n\n? From the journal of [From.GetSocietyRank] [From.GetFirstName] of [Root.Society.GetName];Oh, [Root.Religion.GetHighGodName]. Moi, [Root.GetSocietyRank] [Root.GetFirstName], ai effectu?n p?rinage en votre nom.\n\nPuissent mes actes vous satisfaire.\n\n\n? Journal [From.Get_du_SocietyRank][From.GetSocietyRank] [From.GetFirstName] [Root.Get_du_Society][Root.Society.GetName];[Root.Religion.GetHighGodName] sei gesegnet. Ich, [Root.GetSocietyRank] [Root.GetFirstName], habe meine Pilgerreise in deinem Namen beendet.\n\nIch bete, dass du mit mir zufrieden bist.\n\n\n? Aus dem Bericht von [From.GetSocietyRank] [From.GetFirstName] von [Root.Society.GetName];;Oh, bendito/a [Root.Religion.GetHighGodName]. Yo, [Root.GetSocietyRank] [Root.GetFirstName], he terminado una peregrinaci??n tu nombre.\n\nRuego que est?satisfecho/a conmigo.\n\n\n? Del diario de [From.GetSocietyRank] [From.GetFirstName] de [Root.Society.GetName];;;;;;;;;x
 EVTOPT_MNM_4022;Praise [Root.Religion.GetHighGodNameCap]!;Louons [Root.Get_le_HighGod][Root.Religion.GetHighGodName] !;Gepriesen sei [Root.Religion.GetHighGodNameCap]!;;¡Alabado sea [Root.Religion.GetHighGodNameCap]!;;;;;;;;;x
 quest_monastic_order_pilgrimage_mormon;Follow the Oregon Trail;Partir en p?rinage;Auf Pilgerreise gehen;;Ir de peregrinaci??;;;;;;;x
-quest_monastic_order_pilgrimage_mormon_desc;You must travel down the Oregon Trail to learn about the history of Mormonism and to reflect upon the greatness of God. This spiritual journey will help you reflect upon yourself and increase your standing with the order.;Vous devez accomplir un p?rinage pour expier vos p??et m?ter sur la grandeur de Dieu. Ce voyage spirituel vous aidera ???ir sur vous-m? et ?ugmenter votre r?tation aupr?de l'Ordre.;Ihr müsst eine heilige Pilgerreise antreten, um für Eure Sünden Bu? zu tun und über die Grö? Gottes zu meditieren. Diese spirituelle Reise wird Euch helfen, über Euch selbst nachzudenken und wird Euren Einfluss beim Orden erhöhen. ;;Debes realizar una peregrinaci??ara expiar tus pecados y para reflexionar acerca de la grandeza de Dios. El viaje espiritual te permitir?onocerte mejor y mejorar tu posici??n la orden. ;;;;;;;;;x
+quest_monastic_order_pilgrimage_mormon_desc;You must travel down the Oregon Trail to learn about the history of Mormonism and to reflect upon the greatness of God. This spiritual journey will help you reflect upon yourself and increase your standing with the order.;Vous devez accomplir un p?rinage pour expier vos p??et m?ter sur la grandeur de Dieu. Ce voyage spirituel vous aidera ???ir sur vous-m? et ?ugmenter votre r?tation aupr?de l'Ordre.;Ihr müsst eine heilige Pilgerreise antreten, um für Eure Sünden Bu? zu tun und über die Grö? Gottes zu meditieren. Diese spirituelle Reise wird Euch helfen, über Euch selbst nachzudenken und wird Euren Einfluss beim Orden erhöhen. ;;Debes realizar una peregrinaci??ara expiar tus pecados y para reflexionar acerca de la grandeza de Dios. El viaje espiritual te permitir?onocerte mejor y mejorar tu posici??n la orden.;;;;;;;;;x
 quest_monastic_order_pilgrimage_mormon_tooltip;To complete this mission, activate the decision §Y'Follow Oregon Trail'§! in the Intrigue menu and attempt to travel down the Oregon Trail.;Pour achever cette mission, prenez la d?sion §Y'Partir en p?rinage'§! et effectuez-le dans un lieu sacr?e la chr?ent?Um diese Mission abzuschlie?n, aktiviert die Entscheidung §Y"Auf Pilgerreise gehen"§! im Intrigenmenü und vollendet eine Pilgerreise zu einer der heiligen St?e des Christentums.;;Para completar esta misi??activa la decisi??YIr de peregrinaci?? en el menú Intriga y completa la peregrinaci??asta una de las ciudades sagradas del cristianismo.;;;;;;;;;x
 EVTDESC_faculty_150;While trying to run some Ivy League-related errands, you come across two undergraduates arguing loudly about something. Before you get the chance to hear what the argument is about, one of the students throws a punch at the other, and the argument turns into a fistfight. As a distinguished Ivy League scholar, you should probably intervene, but perhaps it is better to let them work things out themselves.;;;;;;;;;;;;;x
 EVTOPTA_faculty_150;Beat some sense into them.;;;;;;;;;;;;;x
@@ -1951,7 +1951,7 @@ EVTDESC_faculty_165;Finally the library stands. And awaits judgment of the facul
 EVTOPTA_faculty_165;They are amazed. Some even call me a genius!;;;;;;;;;;;;;x
 EVTOPTB_faculty_165;They are grateful, and congratulate me on a job well done.;;;;;;;;;;;;;x
 EVTOPTC_faculty_165;They are disappointed, and some even want to expel me!;;;;;;;;;;;;;x
-select_candomble_deity;Select Patron Orix?;;;;;;;;;;;x
+select_candomble_deity;Select Patron Orix?;;;;;;;;;;;;;x
 select_candomble_deity_desc;As a practitioner of Candombl?I am able to choose an Orix?o protect and guide me through my life. My choice of Orix?ill be influenced by my existing personality.;;;;;;;;;;;;;x
 EVTDESC_candomble_1;The time has come for me to find my patron Orix?Which deity will guide me in the future?;;;;;;;;;;;;;x
 EVOTPA_candomble_1;Ogum, the god of iron and rum.;;;;;;;;;;;;;x
@@ -2186,10 +2186,10 @@ create_pei;Create the Principality of Prince Edward Island;;;;;;;;;;;;;x
 create_pei_desc;With the island named for Prince Edward under my control, it seems only right that I declare myself its Prince.;;;;;;;;;;;;;x
 recreate_the_abbey_guards;Recreate Le Vingt-Deuxi?;;;;;;;;;;;;x
 recreate_the_abbey_guards_desc;It is only right that the Abbess-General has an elite guard to protect her.;;;;;;;;;;;;x
-String_Catholic_Crown_Desc;This ruler was annointed by the Vicar of [GetChristName] himself;;;;;;;;;;;;x
-String_Ursuline_Crown_Desc;This ruler was annointed by the Abbess herself;;;;;;;;;;;;x
-String_Mormon_Crown_Desc;This ruler was annointed by the President himself;;;;;;;;;;;;x
-String_High_Church_Crown_Desc;This ruler was annointed by the Archbishop himself;;;;;;;;;;;;x
+String_Catholic_Crown_Desc;This ruler was annointed by the Vicar of [GetChristName] himself;;;;;;;;;;;;;x
+String_Ursuline_Crown_Desc;This ruler was annointed by the Abbess herself;;;;;;;;;;;;;x
+String_Mormon_Crown_Desc;This ruler was annointed by the President himself;;;;;;;;;;;;;x
+String_High_Church_Crown_Desc;This ruler was annointed by the Archbishop himself;;;;;;;;;;;;;x
 create_california;Create [e_california.GetName];;;;;;;;;;;;x
 create_california_desc;Now that I am an Emperor, I can become the head of all [cetic.GetName]s!;;;;;;;;;;;;x
 warrior_lodge_atomicist_holds;Atomic Holds;;;;;;;;;;;;;x
@@ -2271,21 +2271,21 @@ EVTOPTA_chichen_itza_arrival;I must see the temple one more time...;;;;;;;;;;;;;
 EVTNAME_san_salvador_arrival;San Salvador;;;;;;;;;;;;;x
 EVTDESC_san_salvador_arrival;I have arrived in the heart of San Salvador, ready to partake in ceremonies. Although this city may lack ancient temples and monuments, it more than makes up for it with its vibrant religious life and cosmopolitan atmosphere. Truly, this city is one of the greatest living centers of spiritual energy in Central America.;;;;;;;;;;;;;x
 EVTOPTA_san_salvador_arrival;I must stop by the market before I go...;;;;;;;;;;;;;x
-EVTDESC_mayan_pilgrimage_destination_qabantajik;I can choose to travel to one of several great Qab?antajik holy sites. Which one should I visit?;;;;;;;;;;;;;x
-EVTOPTA_sian_kaan;I will go to Sian-Ka'an and visit the shrine to Maxim??;;;;;;;;;;;;x
-EVTOPTB_nojpeten;I will go to Nojpet? the ancient capital of Itza.;;;;;;;;;;;;;x
+EVTDESC_mayan_pilgrimage_destination_qabantajik;I can choose to travel to one of several great Qab'antajik holy sites. Which one should I visit?;;;;;;;;;;;;;x
+EVTOPTA_sian_kaan;I will go to Sian-Ka'an and visit the shrine to the Talking Cross.;;;;;;;;;;;;x
+EVTOPTB_nojpeten;I will go to Nojpeten, the ancient capital of Itza.;;;;;;;;;;;;;x
 EVTOPTC_esquipulas;I will go to Esquipulas, home of the great shrine to Jesucristo Nahual.;;;;;;;;;;;;;x
-EVTDESC_sian_kaan_start;My bags are packed and my litter is ready. I will begin traveling to Sian-Ka'an to see the great shrine of Maxim??;;;;;;;;;;;;x
+EVTDESC_sian_kaan_start;My bags are packed and my litter is ready. I will begin traveling to Sian-Ka'an to see the great shrine of the Talking Cross.;;;;;;;;;;;;x
 EVTOPTA_sian_kaan_start;Let us depart!;;;;;;;;;;;;;x
-EVTDESC_nojpeten_start;My bags are packed and my litter is ready. I will begin traveling to Nojpet?at once!;;;;;;;;;;;;;x
+EVTDESC_nojpeten_start;My bags are packed and my litter is ready. I will begin traveling to Nojpeten at once!;;;;;;;;;;;;;x
 EVTOPTA_nojpeten_start;Let us depart!;;;;;;;;;;;;;x
 EVTDESC_esquipulas_start;My bags are packed and my litter is ready. I will begin traveling to Esquipulas at once!;;;;;;;;;;;;;x
 EVTOPTA_esquipulas_start;Let us depart!;;;;;;;;;;;;;x
 EVTNAME_sian_kaan_arrival;Sian Ka'an;;;;;;;;;;;;;x
-EVTDESC_sian_kaan_arrival;I have finally arrived at Sian Ka'an, the very center of worship for the Talking Cross. There is not only a patron cross for every village, but there are personal crosses in nearly every individual household. The city is also the home of the Nohoch Tata, the formal leader of the Qab?antajik faith.;;;;;;;;;;;;;x
+EVTDESC_sian_kaan_arrival;I have finally arrived at Sian Ka'an, the very center of worship for the Talking Cross. There is not only a patron cross for every village, but there are personal crosses in nearly every individual household. The city is also the home of the Nohoch Tata, the formal leader of the Qab'antajik faith.;;;;;;;;;;;;;x
 EVTOPTA_sian_kaan_arrival;Praise the Talking Cross!;;;;;;;;;;;;;x
 EVTNAME_nojpeten_arrival;Nojpet?;;;;;;;;;;;;x
-EVTDESC_nojpeten_arrival;I have finally arrived at Nojpet? the ancient capital of Itza. This city is one of the oldest in the entire Western Hemisphere, and contains over a dozen holy temples. Despite the chaos the city endured both before and after the start of the new age, it still stands as one of the most sacred places in Mesoamerica.;;;;;;;;;;;;;x
+EVTDESC_nojpeten_arrival;I have finally arrived at Nojpeten, the ancient capital of Itza. This city is one of the oldest in the entire Western Hemisphere, and contains over a dozen holy temples. Despite the chaos the city endured both before and after the start of the new age, it still stands as one of the most sacred places in Mesoamerica.;;;;;;;;;;;;;x
 EVTOPTA_nojpeten_arrival;This is truly a great island.;;;;;;;;;;;;;x
 EVTNAME_esquipulas_arrival;Esquipulas;;;;;;;;;;;;;x
 EVTDESC_esquipulas_arrival;I have finally arrived at Equipulas, home of the great wooden image of Jesucristo Nahual, the god of the sky. This statue, originally found in a cave, is said to have immense healing power, which draws migrants from all over the Maya world and beyond. As you kneel before the image, you can actually feel Jesucristo Nahual's presence in the statue.;;;;;;;;;;;;;x
@@ -2305,7 +2305,7 @@ EVTOPTB_mayan_ecstasy;This place is truly holy.;;;;;;;;;;;;;x
 EVTDESC_mayan_lust;I am away from court and far away from prying eyes. I am sure the gods will forgive me if I indulge in a slight dalliance...;;;;;;;;;;;;;x
 EVTOPTA_mayan_lust;Say, that pilgrim over there looks quite beautiful...;;;;;;;;;;;;;x
 EVTOPTB_mayan_lust;This is a holy place! I will control myself.;;;;;;;;;;;;;x
-GFX_event_narrative_frame_religion;Upon arriving at my destination, I immediately began to feel that something had changed. Now, I realize what it is - the illness that had plagued me before my arrival is gone!;;;;;;;;;;;;;x
+EVTDESC_mayan_cured_illness;Upon arriving at my destination, I immediately began to feel that something had changed. Now, I realize what it is - the illness that had plagued me before my arrival is gone!;;;;;;;;;;;;;x
 EVTOPTA_mayan_cured_illness;This is surely a blessing from [Root.Religion.GetHighGodName]!;;;;;;;;;;;;;x
 EVTOPTB_mayan_cured_illness;It's probably just a coincidence.;;;;;;;;;;;;;x
 EVTOPTC_mayan_cured_illness;The power of the gods is a force to be reckoned with...;;;;;;;;;;;;;x
@@ -2442,7 +2442,7 @@ EVTOPTA_flavor_scooby_8;Now, let's see who this "spirit" really is!;;;;;;;;;;;;;
 TXT_scooby_unmask;You reach towards the figure's "face"...;;;;;;;;;;;;;x
 EVTDESC_flavor_scooby_9;You pull the mask from the attacker's face and discover... Lord Jenkins! He confesses that he was trying to convince the villagers to abandon their village so that he could take their land for free. And he would have gotten away with it, too!;;;;;;;;;;;;;x
 EVTOPTA_flavor_scooby_9;Off to the dungeons with you!;;;;;;;;;;;;;x
-TXT_scooby_imprison;You immediately have Lord Jenkins sent to prison.;;;;;;;;;;;;;x
+TXT_scooby_imprison;Lord Jenkins is imprisoned.;;;;;;;;;;;;;x
 EVTDESC_flavor_scooby_10;After Lord Jenkins' arrest, life in the village quickly returns to normal. The group of mystery solvers thanks you and bids you farewell, but you stop them from leaving. They deserve a proper reward for their efforts...;;;;;;;;;;;;;x
 EVTOPTA_flavor_scooby_10;I offer all of you a place in my court!;;;;;;;;;;;;;x
 TXT_scooby_gang;The group of mystery solvers joins your court.;;;;;;;;;;;;;x
@@ -2578,16 +2578,16 @@ EVTDESC_ironconfed.1;A new power has arisen on the vast plains of the north. The
 EVTOPTA_ironconfed.1;All will kneel before me.;;;;;;;;;x
 EVTOPTB_ironconfed.1;And he went forth conquering, and to conquer...;;;;;;;;;x
 EVTOPTC_ironconfed.1;We ride forth!;;;;;;;;;x
-become_iron_chief;Form the Iron Confederacy;;;;;;;;;;;;x
+become_iron_chief;Form the Iron Confederacy;;;;;;;;;;;;;x
 become_iron_chief_desc;Unite the people of the plains and claim the title of Iron Chief.;;;;;;;;;;;;x
 vassalize_mounties;Vassalize the Mounties;;;;;;;;;;;;;x
 vassalize_mounties_desc;With Canada restored, the Mounties would willingly serve a sufficiently wealthy and powerful Emperor.;;;;;;;;;;;;;x
-EVTDESCATOM300;An esteemed representative of the Eternal Church approaches you, a holy text under their arm. "My liege, we have heard of your plans to quarantine a site of atomic taint. Where would you have us go? ;;;;;;;;;;;;x
-aphite_quarantine;Quarantine Place of Dishonor;;;;;;;;;;;;x
+EVTDESCATOM300;An esteemed representative of the Eternal Church approaches you, a holy text under their arm. "My liege, we have heard of your plans to quarantine a site of atomic taint. Where would you have us go? ;;;;;;;;;;;;;x
+aphite_quarantine;Quarantine Place of Dishonor;;;;;;;;;;;;;x
 aphite_quarantine_desc;For long, have the Atomicist heathens used this tainted land as an excuse to spread their wicked faith. No longer!;;;;;;;;;;;;x
-atomic_quarantine;Aphite Quarantine;;;;;;;;;;;;x
+atomic_quarantine;Aphite Quarantine;;;;;;;;;;;;;x
 atomic_quarantine_desc;This land has been securely contained by the hands of the Atomic Priesthood.;;;;;;;;;;;;x
-destroy_quarantine;Destroy Quarantine;;;;;;;;;;;;x
+destroy_quarantine;Destroy Quarantine;;;;;;;;;;;;;x
 aphite_quarantine_desc;Aphite scum have walled off this holy land from the world. This is unacceptable- the world must see the light of Atomos!;;;;;;;;;;;;x
 EVTOPTAPHITE1;To the Windy City.;;;;;;;;;;;;x
 EVTOPTAPHITE2;The pale sands of New Mexico must know purification.;;;;;;;;;;;;x
@@ -2596,7 +2596,7 @@ EVTOPTAPHITE4;The old lockbox of the Old World must be sealed off in Kennessee.;
 EVTOPTAPHITE5;May the failure of the Old World in Keystone be amended.;;;;;;;;;;;;x
 EVTDESCATOM301;The ritual is grand and the mood is somber, as three representatives of the Eternal Church, representing the trefoil, walk forward. Sprinkling holy water, they condemn this site of evil. Workers soon will storm the scene, building walls to keep anyone from this harmful land.;;;;;;;;;;;;x
 EVTOPTAPHITE;This is not a place of honor!;;;;;;;;;;;;x
-EVTDESCATOM306;The greatest scientists of the faith gather around you. "My liege, there are sites in your land that have been defiled by Aphite scum. Shall we liberate them?" ;;;;;;;;;;;;x
+EVTDESCATOM306;The greatest scientists of the faith gather around you. "My liege, there are sites in your land that have been defiled by Aphite scum. Shall we liberate them?" ;;;;;;;;;;;;;x
 EVTOPTATOMICISTLIBERATE1;Chicago must know liberation!;;;;;;;;;;;;x
 EVTOPTATOMICISTLIBERATE2;The world should see the White Sands!;;;;;;;;;;;;x
 EVTOPTATOMICISTLIBERATE3;Los Alamos must be free!;;;;;;;;;;;;x
@@ -2604,10 +2604,10 @@ EVTOPTATOMICISTLIBERATE4;The bounty of Knox must be shared!;;;;;;;;;;;;x
 EVTOPTATOMICISTLIBERATE5;May the world know of Three Mile Island!;;;;;;;;;;;;x
 EVTDESCATOM307;After a long days of work, the last of the old gates and barriers surrounding the Holy Site of Atomos have been struck down. Praise be to his name!;;;;;;;;;;;;x
 EVTOPTATOMICISTFREE;A shackle removed!;;;;;;;;;;;;x
-col.45.title;The Landing of the Tsardom;;;;;;;;;;;;x
+col.45.title;The Landing of the Tsardom;;;;;;;;;;;;;x
 col.45.text;After several treacherous months at sea, we have finally reached land. The tiger of Primorskiy guiding our voyage, we quickly landed on the shores of this new, strange world and planted our flag- a spiritual victory for the Nousthreskeia faithful, as our people have rediscovered an entire world. Perhaps this land will have the secret of the Great Catastrophe, and a solution to this travesty that has been cast on our world. While local armies were quick to meet us, they have been quickly ousted. As this land is firmly placed under the banner of our reign, it is our duty and goal to expand ever further- for the sake of all Mankind.;;;;;;;;;;;;x
 col.22.optB;Ura!;;;;;;;;;;;;x
-col.40.title;The Long Arm of the Empire;;;;;;;;;;;;x
+col.40.title;The Long Arm of the Empire;;;;;;;;;;;;;x
 col.40.text;After several treacherous months at sea, it is with great pleasure to see warm shores once more. Our great ships have navigated the Pacific Ocean just as our explorers theorized, and on the other end of this massive stretch of land is the new world of America. But this world is not one that will bend the knee easily. Full of upstart kings and pathetic, false emperors, we cannot expect the locals to submit to the heir of the Sun Goddess so easily. Perhaps our superior technology and firearms will change their minds. But regardless, it is our immediate responsibility to secure a colony in this land worthy of the Emperor himself.;;;;;;;;;;;;x
 col.12.optB;Banzai!;;;;;;;;;;;;x
 EVTOPTA_col40;Too much is at stake to give up.;;;;;;;;;;;;x
@@ -2661,7 +2661,7 @@ EVTOPTAtrodeo.99;The good time's just aren't a-rolling right now.;;;;;;;;;;;;;x
 TXT_hold_a_rodeo;The rodeo begins!;;;;;;;;;;;;;x
 hunt_for_whale;Embark on Whale Hunt.;;;;;;;;;;;;x
 hunt_for_whale_desc;Hunting the great beasts of the sea is a sacred activity for many Pelagic men and women. You should consider embarking on a hunt yourself.;;;;;;;;;;;;x
-whale_hunt;Set sail and hunt a Whale;;;;;;;;;;;;x
+whale_hunt;Set sail and hunt a Whale;;;;;;;;;;;;;x
 recent_whaling;Recent whaling;;;;;;;;;;;;;x
 EVTDESC_pelagic1;At dawn you make your way to the docks and speak with the captains of two ships willing to take you with them on a Whale hunt. The first is a large and impressive ship whose captain demands a high price but assures you that it is quite worth it. The second ship is smaller and looks like it has seen better days, but its captain only asks for a quarter of the price...;;;;;;;;;;;;x
 EVTOPTA_pelagic1;Money is no object, I must take the best ship possible!;;;;;;;;;;;;x
@@ -2685,18 +2685,18 @@ EVTOPTA_pelagic7;This is but a setback. We must continue!;;;;;;;;;;;;x
 EVTOPTB_pelagic7;I have grown tired of this hunt, perhaps we should return home...;;;;;;;;;;;;x
 EVTDESC_pelagic8;You have returned home victorious. While the crew of the ship takes their share of the whale, you must decide what to do with what you have taken.;;;;;;;;;;;;x
 EVTOPTA_pelagic8;I must visit a scrimshander and have something carved from these bones.;;;;;;;;;;;;x
-EVTOPTB_pelagic8;I will take my share to the market and sell it;;;;;;;;;;;;x
+EVTOPTB_pelagic8;I will take my share to the market and sell it;;;;;;;;;;;;;x
 EVTDESC_pelagic9;The Scrimshander, a wiry old man with strange markings on his hands, carefully appraises the bone you brought him. "Aye, I reckon I could make something out of this. A charm perhaps? To ward off storms and foul tidings. Or maybe a knife or even some sort of pendant. It is your choice.";;;;;;;;;;;;x
-EVTOPTA_pelagic9;A bone charm you say?;;;;;;;;;;;;x
-EVTOPTB_pelagic9;The knife sounds good;;;;;;;;;;;;x
-EVTOPTC_pelagic9;I'll take the pendant;;;;;;;;;;;;x
-general_of_gaia;General of Gaia;;;;;;;;;;;;x
-general_of_gaia_desc;This man has completely subjugated the land of Jefferson to its rightful Klamathite rule, mirroring the deeds of the great general of old.;;;;;;;;;;;;x
-general_of_gaia_descendant;General of Gaia Descendant;;;;;;;;;;;;x
-general_of_gaia_descendant_desc;The blood of the subjugator of Jefferson flows through this characters veins, granting them respect from the Gaian faithful.;;;;;;;;;;;;x
-proclaim_general_of_gaia;Proclaim Reincarnation of the General;;;;;;;;;;;;x
-proclaim_general_of_gaia_desc;Long ago, a great general arose from the Redwoods to avenge a great affront against the Earth Mother. He was slain at Californian swords, but I will meet a better fate...;;;;;;;;;;;;x
-EVTTITLE_GAIAN15;The General of Gaia;;;;;;;;;;;;x
+EVTOPTA_pelagic9;A bone charm you say?;;;;;;;;;;;;;x
+EVTOPTB_pelagic9;The knife sounds good;;;;;;;;;;;;;x
+EVTOPTC_pelagic9;I'll take the pendant;;;;;;;;;;;;;x
+general_of_gaia;General of Gaia;;;;;;;;;;;;;x
+general_of_gaia_desc;This man has completely subjugated the land of Jefferson to its rightful Klamathite rule, mirroring the deeds of the great general of old.;;;;;;;;;;;;;x
+general_of_gaia_descendant;General of Gaia Descendant;;;;;;;;;;;;;x
+general_of_gaia_descendant_desc;The blood of the subjugator of Jefferson flows through this characters veins, granting them respect from the Gaian faithful.;;;;;;;;;;;;;x
+proclaim_general_of_gaia;Proclaim Reincarnation of the General;;;;;;;;;;;;;x
+proclaim_general_of_gaia_desc;Long ago, a great general arose from the Redwoods to avenge a great affront against the Earth Mother. He was slain at Californian swords, but I will meet a better fate...;;;;;;;;;;;;;x
+EVTTITLE_GAIAN15;The General of Gaia;;;;;;;;;;;;;x
 EVTDESC_GAIAN15;Long ago, Gaianism spread deep into the land of California, the land of the Redwooods. But with the formation of the Cetic philosophy, many walked down a different path and swore allegiance to the false Empire. Ever since, the Gaians of the land have been trampled and disregarded by their Cetic brethren, culminating in the horror that the Prefect Gearheart unleashed on the Redwoods with their attempt to bury Gaianism under their own philosophy. At the news of these tragedies, a mystic guru rose up from the woods and led a great Army that terrorized the Cetic world and crumbled imperial authority. Although he met his end, he was renowned as a hero of Gaianism and an eternal servant of the Earth Mother. \n Now, with the subjugation of Jefferson, you have matched his deeds. Many across the land have begun to proclaim you the prophesized second coming of this great General.;;;;;;;;;;;;x
 EVTOPTA_GAIAN15;And it is my honor to accept this role...;;;;;;;;;;;;x
 EVTDESC_pacific_10;Whilst you have come to seize control of the Colony, your own customs and traditions quite dramatically differ from what is orthodox in the motherland. Perhaps you should attempt to fit into the traditional customs of the colony, so that you may earn your motherland's grace.;;;;;;;;;;;;x
@@ -2705,7 +2705,7 @@ EVTOPTB_pacific_10;I refuse to alter my customs to satisfy some far away elite.;
 EVTDESC_pacific_15;Back home in Mother Russia, the Nousthreskeian mystics are not the only adherents of faith- books and withered temples stand giving praise to the slanted Cross and the God who was killed on it. Interestingly enough, the people here follow the same tradition! These people claim that this faith was brought to them from across the Pacific, from an area where we live. Perhaps this is the true faith of our ancestors...;;;;;;;;;;;;x
 EVTOPTB_pacific_15;Interesting, but old traditions will not mend the noosphere.;;;;;;;;;;;;x
 EVTOPTA_pacific_15;I must change my ways!!;;;;;;;;;;;;x
-reestablish_archdiocese;Reestablish the Archdiocese of Mexico;;;;;;;;;;;;x
+reestablish_archdiocese;Reestablish the Archdiocese of Mexico;;;;;;;;;;;;;x
 reestablish_archdiocese_desc;For hundreds of years, the faithful of the Sacred Heart have had no formal religious head. If a strong emperor sat on the throne once more, the faith could be consolidated with the crown...;;;;;;;;;;;;x
 EVTTITLE_PACIFIC16;Sitka falls!;;;;;;;;;;;;x
 EVTDESC_PACIFIC16;The ancient city of Sitka, a far northern bastion of Old America and the territory of Alaska, has fallen to Novorusskiy invaders. It is said that the city fell quickly as Russian ships sailed into port, firing great weapons of steel and disembarking thousands of warriors onto the island.\n As the city fell, its new owners have come to calling the city "Novo-Arkhangelsk", citing ancient antediluvian texts as their claim to the rightful overlordship of this land. Regardless of the shakiness of their claims, it is unlikely their rule will be contested. Trade flows freely from what was once Sitka, supplying these colonists with even greater wealth...;;;;;;;;;;;;x
@@ -2744,18 +2744,18 @@ EVTDESC_renovator2;More and more, the faith of the falling star compels you. Gat
 EVTOPTA_renovator2;Coyatoc it is!;;;;;;;;;;;;x
 EVTOPTB_renovator2;May Bluefields know the Star!;;;;;;;;;;;;x
 EVTOPTC_renovator2;To San Salvador!!;;;;;;;;;;;;x
-EVTTITL_mahonic1;The Mahonic Dynasty;;;;;;;;;;;;x
+EVTTITL_mahonic1;The Mahonic Dynasty;;;;;;;;;;;;;x
 EVTDESC_mahonic1;Long ago, the Mahonic dynasty ruled a mighty empire founded by Vincent Mahonic, which stretched from Buffalo to New Brunswick and was the terror of everything in the Northeast. Those days, however, are long gone. Infighting between nobles, weak rulers, and foreign enemies caused the empire to first lose Hudsonia, then New Brunswick, and then finally collapse entirely. The Mahonic dynasty was first dethroned from New England, and then lost its land entirely. Your father, Lazarus, managed to reclaim some land in the form of the County of Boston, albeit under vassalage to the Miskatons of Nogad. In your childhood, he would read stories of the former glory of New England and of the Mahonic dynasty. But how to restore it, from only one county in vassalage to a much larger tribe?;;;;;;;;;;;;x
 EVTOPTA_mahonic1;Task the Council with this immediately.;;;;;;;;;;;;x
 EVTDESC_mahonic2;A small band of troops has sent their commander to Boston with an offer. He has heard of your attempt to resurrect Vincent Mahonic's empire, he explains, and he is willing to lend his men to your effort.;;;;;;;;;;;;x
-EVTOPTA_mahonic2;Fantastic;;;;;;;;;;;;x
+EVTOPTA_mahonic2;Fantastic!;;;;;;;;;;;;;x
 EVTDESC_mahonic3;Your Spymaster has observed suspicious activity in your vassal's county of Boston recently. He notes that many more troops seem to have assembled in the area than normal, and suggests further investigation.;;;;;;;;;;;;x
 EVTOPTA_mahonic3;Send him in!;;;;;;;;;;;;x
 EVTDESC_mahonic4;Your liege has told you to further investigate Boston's troops.;;;;;;;;;;;;x
-EVTOPTA_mahonic4;Ok;;;;;;;;;;;;x
+EVTOPTA_mahonic4;Okay.;;;;;;;;;;;;;x
 EVTDESC_mahonic5;A spy employed by the Miskatons has been noticed snooping around Boston, likely gathering information on your troop buildup. How should he be dealt with?;;;;;;;;;;;;x
-EVTOPTA_mahonic5;Go after him;;;;;;;;;;;;x
-EVTOPTB_mahonic5;Ignore him, it's sure to pass soon;;;;;;;;;;;;x
+EVTOPTA_mahonic5;Go after him.;;;;;;;;;;;;;x
+EVTOPTB_mahonic5;Ignore him, it's sure to pass soon.;;;;;;;;;;;;;x
 EVTDESC_mahonic6;Your spymaster has given you a concerning report on the troop buildup in Boston, led by Paul Mahonic. Apparently, he has supported it in order to gather the military strength to begin a war of independence against you!;;;;;;;;;;;;x
 EVTOPTA_mahonic6;Concerning...;;;;;;;;;;;;x
 EVTDESC_mahonic7;In the middle of the night, you are awakened by the knock of metal on your door. Suddenly, you feel a sharp pain in your neck...;;;;;;;;;;;;x
@@ -2772,16 +2772,16 @@ EVTDESC_mahonic12;Our Council has brought a man who claims to share your aims of
 EVTOPTA_mahonic12;Accept this offer.;;;;;;;;;;;;x
 EVTOPTB_mahonic12;Refuse and look elsewhere.;;;;;;;;;;;;x
 EVTDESC_mahonic13;Your Spymaster has informed you that a suspicious figure with claims on your land and significant amounts of troops was recently accepted by Paul Mahonic. He suggests that, as Paul Mahonic seems willing to accept these offers, you could send a saboteur disguised as another offer...;;;;;;;;;;;;x
-EVTOPTA_mahonic13;A clever plan;;;;;;;;;;;;x
-EVTOPTB_mahonic13;Sounds like a risky idea;;;;;;;;;;;;x
+EVTOPTA_mahonic13;A clever plan.;;;;;;;;;;;;;x
+EVTOPTB_mahonic13;Sounds like a risky idea.;;;;;;;;;;;;;x
 EVTDESC_mahonic14;A second man with a grudge against the Miskatons has come to your court, this time with claims on the Nogad capital region of Merrimack. He claims to have even more wealth and troops than the previous offerer did. Should we accept him?;;;;;;;;;;;;x
-EVTOPTA_mahonic14;Accept this offer;;;;;;;;;;;;x
-EVTOPTB_mahonic14;Reject this offer;;;;;;;;;;;;x
-EVTOPTC_mahonic14;Suspicious, arrest and interrogate him;;;;;;;;;;;;x
+EVTOPTA_mahonic14;Accept this offer.;;;;;;;;;;;;;x
+EVTOPTB_mahonic14;Reject this offer.;;;;;;;;;;;;;x
+EVTOPTC_mahonic14;Suspicious, arrest and interrogate him.;;;;;;;;;;;;;x
 EVTDESC_mahonic15;Success! Your saboteur has planted evidence of grave wrongdoing on Paul Mahonic, and then presented it wide-eyed to your horrified Council. With such horrible actions, who can justify the Mahonics remaining in control of Boston?;;;;;;;;;;;;x
-EVTOPTA_mahonic15;Demand Boston;;;;;;;;;;;;x
+EVTOPTA_mahonic15;Demand Boston.;;;;;;;;;;;;;x
 EVTDESC_mahonic16;Under interrogation, the second offerer has confessed to being a saboteur employed by the Miskatons to undermine your rule. With this new evidence, you can easily justify demanding independence from the Miskatons.;;;;;;;;;;;;x
-EVTOPTA_mahonic16;Send the demands.;;;;;;;;;;;;x
+EVTOPTA_mahonic16;Send the demands.;;;;;;;;;;;;;x
 EVTDESC_mahonic17;The Miskaton dynasty has been in control of the Bay region for decades if not centuries, with Boston included in this realm. Only in the past few decades did Lazarus, the latest member of the decrepit Mahonic dynasty, manage to take control of Boston, the wealthy heart of New England. This land should belong to the Miskatons again, but how to retake it?;;;;;;;;;;;;x
 EVTOPTA_mahonic17;Employ the Council on this task.;;;;;;;;;;;;x
 EVTDESC_mahonic18;Your Chancellor has presented evidence to you that the Mahonic takeover of Boston was fraudulent, and that the land rightfully belongs to the Miskatons.;;;;;;;;;;;;x
@@ -2798,7 +2798,7 @@ EVTDESC_mahonic22;Now that Paul Mahonic's relations with his vassals have been s
 EVTOPTA_mahonic22;Send a demand.;;;;;;;;;;;;x
 EVTDESC_mahonic23;To the vile [Root.GetFirstName], \n\nYour atrocious misrule and abuses have shown that you are unfit to rule Boston. Surrender your titles now if you wish to avoid bloodshed...;;;;;;;;;;;;x
 EVTOPTA_mahonic23;I refuse!;;;;;;;;;;;;x
-EVTOPTB_mahonic23;Accede to these demands;;;;;;;;;;;;x
+EVTOPTB_mahonic23;Accede to these demands.;;;;;;;;;;;;;x
 EVTDESC_mahonic24;To the vile [Root.GetFirstName], \n\nYour flagrant violations of my noble rights must end! Grant me independence from your rule, or be prepared to fight...;;;;;;;;;;;;x
 EVTOPTA_mahonic24;I refuse!;;;;;;;;;;;;x
 EVTOPTB_mahonic24;I must accept...;;;;;;;;;;;;x
