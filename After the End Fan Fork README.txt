@@ -43,6 +43,7 @@ frederico83
 Popeato Chips
 Lahom
 Fast Man
+chemist03
 
 Original mod team:
 
@@ -67,6 +68,7 @@ Portraits from Lux Invicta by DarkReborn and others
 Clothing and headgear from AGOT Congenital Overhaul by LancelotLoire
 Muslim societies from Maal's Sufi Schools mod
 Great Lakes Clothing from Better Looking Garbs
+Adjustments to Combat Tactics and Equus / Homo by redtide
 
 Images:
 All flags have been resized to be compatible with game requirements.
