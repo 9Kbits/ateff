@@ -2393,7 +2393,7 @@ cat = {
 	}
 }
 
-master_of_flame = { # Way of the Dragon
+master_of_flame = { # Striker
 	leader = yes
 	potential = {
 		OR = {
@@ -2403,13 +2403,18 @@ master_of_flame = { # Way of the Dragon
 		}
 	}
 	
+	opposites =  {
+		flanker sapper
+	}
+	
 	command_modifier = {
 		damage = 0.2
-		morale_offence = 0.2
+		flank = 0.5
+		siege = 0.4
 	}
 }
 
-logistics_expert = { # Way of the Dog
+logistics_expert = { # Midfielder
 	leader = yes
 	potential = {
 		OR = {
@@ -2418,32 +2423,22 @@ logistics_expert = { # Way of the Dog
 			has_character_flag = originated_from_chinese_court
 		}
 	}
-	attrition = -0.5
-	days_of_supply = 30
+	attrition = -0.2
+	days_of_supply = 20
+
+	opposites =  {
+		organizer sapper
+	}
 
 	command_modifier = {
 		center = 0.2
-	}
-}
-
-levy_coordinator = { # Way of the Tiger
-	leader = yes
-	potential = {
-		OR = {
-			culture = brazilian
-			has_character_flag = taught_chinese_strategy
-			has_character_flag = originated_from_chinese_court
-		}
-	}
-
-	command_modifier = {
-		flank = 0.2
 		speed = 0.3
-		retreat = 0.2
+		terrain = plains
+		
 	}
 }
 
-sapper = { # Way of the Leopard
+levy_coordinator = { # Sweeper
 	leader = yes
 	potential = {
 		OR = {
@@ -2452,11 +2447,37 @@ sapper = { # Way of the Leopard
 			has_character_flag = originated_from_chinese_court
 		}
 	}
+	
+	opposites =  {
+		defensive_leader sapper
+	}
 
 	command_modifier = {
-		terrain = forest
-		terrain = hills
-		siege = 0.5
+		retreat = 0.2
+		defence = 0.2
+		morale_defence = 0.2
+		speed = 0.1
+	}
+}
+
+sapper = { # Goalkeeper
+	leader = yes
+	potential = {
+		OR = {
+			culture = brazilian
+			has_character_flag = taught_chinese_strategy
+			has_character_flag = originated_from_chinese_court
+		}
+	}
+	
+	opposites =  {
+		defensive_leader experimenter
+	}
+
+	command_modifier = {
+		defence = 0.3
+		morale_defence = 0.3
+		pursue = 0.1
 	}
 }
 
