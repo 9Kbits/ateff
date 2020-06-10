@@ -3584,6 +3584,7 @@ crusade = {
 					has_global_flag = pagan_ghws_unlocked
 					has_global_flag = christian_crusades_unlocked
 					has_global_flag = rust_cultist_industrial_actions_unlocked
+					has_global_flag = patria_grande_liberation_wars_unlocked
 				}
 			}
 			conditional_tooltip = {
@@ -3687,6 +3688,14 @@ crusade = {
 						}
 					}
 					
+					AND = {
+						religion = patria_grande
+						custom_tooltip = {
+							text = CTT_PATRIA_GRANDE_LIBERATION_WARS_UNLOCKED
+							has_global_flag = patria_grande_liberation_wars_unlocked
+						}
+					}
+					
 					religion = revivalist # doesn't need no fancy event to begin declaring jihads
 				}
 			}
@@ -3713,13 +3722,6 @@ crusade = {
 					religion_group = amero_syncretic
 					NOT = { religion = ROOT }
 				}
-			}
-		}
-		
-		NOT = { # Not if the Canadian Schism has been mended
-			AND = {
-				religion = ursuline
-				has_global_flag = canadian_church_unified
 			}
 		}
 	}

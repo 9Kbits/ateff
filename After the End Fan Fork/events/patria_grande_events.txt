@@ -1108,3 +1108,252 @@ character_event = {
 	}
 }
 	
+# THE START OF THE LIBERATION WARS
+narrative_event = {
+	id = patria.50
+	title = EVTNAME_patria_50
+	desc = EVTDESC_patria_50
+	picture = GFX_evt_gran_colombia
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = patria_grande
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		
+		992 = { # Caracas
+			NOT = { owner = { religion_group = cult_of_saints } }
+		}
+		
+		NOT = { has_global_flag = patria_grande_liberation_wars_unlocked }
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+	}
+	
+	immediate = {
+		set_global_flag = patria_grande_liberation_wars_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_patria_50
+		trigger = {
+			religion = patria_grande
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_patria_50
+		trigger = {
+			religion_group = cult_of_saints
+			NOT = { religion = patria_grande }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_patria_50
+		trigger = {
+			NOT = { religion_group = cult_of_saints }
+		}
+	}
+}
+
+# THE START OF THE LIBERATION WARS - CUCUTA FALLING
+narrative_event = {
+	id = patria.51
+	title = EVTNAME_patria_50
+	desc = EVTDESC_patria_51
+	picture = GFX_evt_gran_colombia
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = patria_grande
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		NOT = { has_global_flag = patria_grande_liberation_wars_unlocked }
+		
+		OR = {
+			k_zulia = {
+				holder_scope = {
+					NOT = { religion_group = cult_of_saints }
+				}
+			}
+			1983 = { # Cucuta
+				NOT = { owner = { religion_group = cult_of_saints } }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = patria_grande_liberation_wars_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_patria_50
+		trigger = {
+			religion = patria_grande
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_patria_50
+		trigger = {
+			religion_group = cult_of_saints
+			NOT = { religion = patria_grande }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_patria_50
+		trigger = {
+			NOT = { religion_group = cult_of_saints }
+		}
+	}
+}
+
+# THE START OF THE LIBERATION WARS - BOGOTA HAS FALLEN
+narrative_event = {
+	id = patria.52
+	title = EVTNAME_patria_50
+	desc = EVTDESC_patria_52
+	picture = GFX_evt_gran_colombia
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = patria_grande
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2500
+		NOT = { has_global_flag = patria_grande_liberation_wars_unlocked }
+		
+		1897 = { # Bogota
+			owner = {
+				NOT = { religion_group = cult_of_saints }
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = patria_grande_liberation_wars_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_patria_50
+		trigger = {
+			religion = patria_grande
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_patria_50
+		trigger = {
+			religion_group = cult_of_saints
+			NOT = { religion = patria_grande }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_patria_50
+		trigger = {
+			NOT = { religion_group = cult_of_saints }
+		}
+	}
+}
+
+# THE START OF THE INDUSTRIAL ACTIONS - MISC
+narrative_event = {
+	id = patria.53
+	title = EVTNAME_patria_50
+	desc = EVTDESC_patria_53
+	picture = GFX_evt_gran_colombia
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	show_ROOT = yes
+	hide_new = yes
+	religion = patria_grande
+	only_playable = yes
+	min_age = 16
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		controls_religion = yes
+		year = 2690
+		NOT = { has_global_flag = patria_grande_liberation_wars_unlocked }
+		
+		1889 = { # Panama
+			NOT = { owner = { religion_group = cult_of_saints } }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
+	immediate = {
+		set_global_flag = patria_grande_liberation_wars_unlocked
+	}
+	
+	option = {
+		name = EVTOPTA_patria_50
+		trigger = {
+			religion = patria_grande
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_patria_50
+		trigger = {
+			religion_group = cult_of_saints
+			NOT = { religion = patria_grande }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_patria_50
+		trigger = {
+			NOT = { religion_group = cult_of_saints }
+		}
+	}
+}
