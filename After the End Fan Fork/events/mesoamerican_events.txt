@@ -5,6 +5,7 @@
 #400-	bloodline creation
 #500-	stele events
 #600-	religious head for mictlantecs
+#700-	story events for uprising
 
 namespace = mesoamerica
 
@@ -4796,5 +4797,162 @@ narrative_event = {
 				religion_group = mesoamerican_gods
 			}
 		}
+	}
+}
+
+character_event = {
+	id = mesoamerica.700
+	hide_window = yes
+	is_triggered_only = yes
+	religion = qabantajik
+	
+	trigger = {
+		has_character_flag = qab_tata
+		is_save_game = no
+	}
+	
+	immediate = {
+		c_1650072={
+			character_event = { id = mesoamerica.701 months = 1 }
+		}
+	}
+}
+
+character_event = {
+	id = mesoamerica.701
+	desc = EVTDESC_mesoamerica_701
+	picture = GFX_evt_bishop_aztec
+	border = GFX_event_normal_frame_religion
+	
+	religion = neomayan
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_701
+		custom_tooltip = { text = TXT_EVTOPTA_mesoamerica_701 }
+		ROOT = { religion = qabantajik }
+		any_vassal = {
+			limit = {
+				religion = qabantajik
+			}
+			character_event = { id = mesoamerica.702 days = 3 }
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_mesoamerica_701
+		custom_tooltip = { text = TXT_EVTOPTB_mesoamerica_701 }
+		FROM = { character_event = { id = mesoamerica.703 days = 7 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+character_event = {
+	id = mesoamerica.702
+	desc = EVTDESC_mesoamerica_702
+	picture = GFX_evt_bishop_aztec
+	border = GFX_event_normal_frame_religion
+	
+	religion = neomayan
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_702
+		ROOT = { religion = qabantajik }
+		any_vassal = {
+			limit = {
+				religion = qabantajik
+			}
+			character_event = { id = mesoamerica.702 days = 3 } #round and round it goes
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				trait = proud
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_mesoamerica_702
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				trait = cynical
+			}
+			modifier = {
+				factor = 0
+				trait = humble
+			}
+		}
+	}
+}
+
+character_event = {
+	id = mesoamerica.703
+	hide_window = yes
+	is_triggered_only = yes
+	
+	option = {	
+		name = "EVTOPTA_mesoamerica_703"
+		create_title = {
+			tier = DUKE
+			landless = yes
+			temporary = yes
+			culture = yucateco
+			name = "Qab’antajik Revolt"
+			holder = THIS
+		}
+		spawn_unit = {
+			character = THIS
+			province = c_sian_kaan
+			home = c_sian_kaan
+			troops = {
+				light_infantry = { 1000 1000 }
+				heavy_infantry = { 300 300 }
+			}
+			earmark = qabantajik_event_troops
+			attrition = 0.5
+			maintenance_multiplier = 0.25
+		}
+		add_claim = k_yucatan
+		k_yucatan = {
+			holder_scope = {	
+				reverse_war = {
+					target = ROOT
+					thirdparty_title = k_yucatan
+					casus_belli = claim
+				}
+			}
+		}
+		FROM = { character_event = { id = mesoamerica.704 } }
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+character_event = {
+	id = mesoamerica.704
+	desc = EVTDESC_mesoamerica_704
+	picture = GFX_evt_bishop_aztec
+	border = GFX_event_normal_frame_religion
+	
+	religion = neomayan
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_mesoamerica_704
 	}
 }
