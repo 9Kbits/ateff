@@ -94,7 +94,7 @@ Golden Jaguars: Milenioscuro
 Khan CoA: TRAJAN 117
 Caracas Flag: Wilfredor
 Venezuela Flag: Milenioscuro
-Nebraska, Blue Earth, Savannah, Atlanta, Piedmont Crescent, Idaho, Outer Chicagoland, Berdoo Flags: Alekjds
+Nebraska, Blue Earth, Savannah, Atlanta, Piedmont Crescent, Idaho, Outer Chicagoland, Berdoo, Wyandotte Flags: Alekjds
 Syracuse wreath element: Etxeko
 Calumet flag: Iac74205
 Mogollon flag: Sumiaz
