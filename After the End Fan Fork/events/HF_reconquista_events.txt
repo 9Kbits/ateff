@@ -2308,10 +2308,7 @@ character_event = {
 					limit = {
 						any_province = {
 							county = {
-								OR = {
-									region = custom_jalisco
-									region = custom_colima
-								}
+								region = custom_jalisco
 							}
 							owner = {
 								OR = {
@@ -2394,76 +2391,6 @@ character_event = {
 												unsafe_war = {
 													target = PREV
 													casus_belli = reconquista_beja
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-						# Valencia
-						1 = {
-							trigger = {
-								any_province = {
-									county = {
-										region = custom_colima
-									}
-									owner = {
-										OR = {
-											AND = {
-												independent = yes
-												NOT = {
-													religion_group = cult_of_saints
-												}
-											}
-											top_liege = {
-												NOT = {
-													religion_group = cult_of_saints
-												}
-											}
-										}
-									}
-								}
-							}
-							random_province = {
-								limit = {
-									county = {
-										region = custom_colima
-									}
-									owner = {
-										OR = {
-											AND = {
-												independent = yes
-												NOT = {
-													religion_group = cult_of_saints
-												}
-											}
-											top_liege = {
-												NOT = {
-													religion_group = cult_of_saints
-												}
-											}
-										}
-									}
-								}
-								owner = {
-									if = {
-										limit = {
-											independent = yes
-										}
-										ROOT = {
-											unsafe_war = {
-												target = PREV
-												casus_belli = reconquista_colima
-											}
-										}
-									}
-									else = {
-										top_liege = {
-											ROOT = {
-												unsafe_war = {
-													target = PREV
-													casus_belli = reconquista_colima
 												}
 											}
 										}

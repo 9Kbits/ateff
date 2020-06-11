@@ -1059,12 +1059,12 @@ e_costeno = {
 	creation_requires_capital = no	
 }
 
-e_klamathite = {
+e_siskiyouan = {
 	color={ 190 155 250 }
 	color2={ 210 50 20 }
 	capital = 543 #Seattle
 	
-	culture = klamathite
+	culture = siskiyouan
 	allow = {
 		NOT = { religion = cetic }
 		NOT = {
@@ -1075,10 +1075,10 @@ e_klamathite = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = klamathite
+		culture = siskiyouan
 		OR = {
 			realm_size = 150
-			e_klamathite = { OR = { is_titular = no has_holder = yes } }
+			e_siskiyouan = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
@@ -4158,6 +4158,13 @@ k_s_mart = {
 		always = no
 		is_republic = yes
 	}
+}
+
+k_colima = {
+	color={ 45 141 236 }
+	color2={ 255 255 255 }
+		
+	capital = 1749 # c_colima
 }
 
 ### titular duchies

@@ -27,7 +27,7 @@ narrative_event = {
 	option = {
 		name = EVTOPT_oregon_prep_cancel
 		piety = -10
-		remove_trait = on_pilgrimage
+		remove_trait = travelling
 		ai_chance = { factor = 0 }
 	}
 	option = {
@@ -101,9 +101,9 @@ narrative_event = {
 	picture = GFX_evt_busy_trading_dock_republic
 
 	is_triggered_only = yes
-	trigger = { trait = on_pilgrimage }
+	trigger = { trait = travelling }
 	immediate = {
-		set_character_flag = on_pilgrimage_portland
+		set_character_flag = travelling_portland
 	}
 	
 	option = {
@@ -127,10 +127,10 @@ narrative_event = {
 	picture = GFX_evt_pilgrims_epic_journey
 
 	is_triggered_only = yes
-	trigger = { trait = on_pilgrimage }
+	trigger = { trait = travelling }
 	immediate = {
-		set_character_flag = on_pilgrimage_boise
-		clr_character_flag = on_pilgrimage_portland
+		set_character_flag = travelling_boise
+		clr_character_flag = travelling_portland
 	}
 	
 	option = {
@@ -154,9 +154,9 @@ narrative_event = {
 	picture = GFX_evt_cathedral
 
 	is_triggered_only = yes
-	trigger = { trait = on_pilgrimage }
+	trigger = { trait = travelling }
 	immediate = {
-		set_character_flag = on_pilgrimage_slc
+		set_character_flag = travelling_slc
 	}
 	
 	option = {
@@ -180,11 +180,11 @@ narrative_event = {
 	picture = GFX_evt_pilgrims_epic_journey
 
 	is_triggered_only = yes
-	trigger = { trait = on_pilgrimage }
+	trigger = { trait = travelling }
 	immediate = {
-		set_character_flag = on_pilgrimage_bridger
-		clr_character_flag = on_pilgrimage_boise
-		clr_character_flag = on_pilgrimage_slc
+		set_character_flag = travelling_bridger
+		clr_character_flag = travelling_boise
+		clr_character_flag = travelling_slc
 	}
 	
 	option = {
@@ -208,10 +208,10 @@ narrative_event = {
 	picture = GFX_evt_natrona
 
 	is_triggered_only = yes
-	trigger = { trait = on_pilgrimage }
+	trigger = { trait = travelling }
 	immediate = {
-		set_character_flag = on_pilgrimage_natrona
-		clr_character_flag = on_pilgrimage_bridger
+		set_character_flag = travelling_natrona
+		clr_character_flag = travelling_bridger
 	}
 	
 	option = {
@@ -235,10 +235,10 @@ narrative_event = {
 	picture = GFX_evt_chimney
 
 	is_triggered_only = yes
-	trigger = { trait = on_pilgrimage }
+	trigger = { trait = travelling }
 	immediate = {
-		set_character_flag = on_pilgrimage_chimney
-		clr_character_flag = on_pilgrimage_natrona
+		set_character_flag = travelling_chimney
+		clr_character_flag = travelling_natrona
 	}
 	
 	option = {
@@ -262,10 +262,10 @@ narrative_event = {
 	picture = GFX_evt_moks
 
 	is_triggered_only = yes
-	trigger = { trait = on_pilgrimage }
+	trigger = { trait = travelling }
 	immediate = {
-		set_character_flag = on_pilgrimage_moks
-		clr_character_flag = on_pilgrimage_chimney
+		set_character_flag = travelling_moks
+		clr_character_flag = travelling_chimney
 	}
 	
 	option = {
@@ -290,8 +290,8 @@ narrative_event = {
 		}
 		piety = 100
 		prestige = 100
-		add_trait = pilgrim
-		remove_trait = on_pilgrimage
+		remove_trait = travelling
+		set_character_flag = went_on_oregon_pilgrimage
 		hidden_tooltip = { character_event = { id = oregon.50 days = 2 } }
 	}	
 }
@@ -303,17 +303,17 @@ narrative_event = {
 	picture = GFX_evt_nauvoo
 
 	is_triggered_only = yes
-	trigger = { trait = on_pilgrimage }
+	trigger = { trait = travelling }
 	immediate = {
-		clr_character_flag = on_pilgrimage_moks
+		clr_character_flag = travelling_moks
 	}
 	
 	option = {
 		name = EVTOPT_oregon_success
 		piety = 100
 		prestige = 100
-		add_trait = pilgrim
-		remove_trait = on_pilgrimage
+		remove_trait = travelling
+		set_character_flag = went_on_oregon_pilgrimage
 		if = {
 			limit = { higher_tier_than = BARON }
 			religion_authority = { modifier = ruler_pilgrimage }
@@ -502,7 +502,7 @@ narrative_event = {
 			10 = { add_trait = depressed }
 			50 = { }
 		}
-		remove_trait = on_pilgrimage
+		remove_trait = travelling
 		add_character_modifier = { name = dysentery duration = 30 }
 	}
 	
@@ -518,7 +518,7 @@ narrative_event = {
 			10 = { add_trait = depressed }
 			50 = { }
 		}
-		remove_trait = on_pilgrimage
+		remove_trait = travelling
 		give_dysentery_effect = yes
 	}
 }
@@ -530,13 +530,13 @@ character_event = {
 	
 	immediate = {
 		clr_character_flag = extra_wheel
-		clr_character_flag = on_pilgrimage_portland
-		clr_character_flag = on_pilgrimage_boise
-		clr_character_flag = on_pilgrimage_slc
-		clr_character_flag = on_pilgrimage_bridger
-		clr_character_flag = on_pilgrimage_natrona
-		clr_character_flag = on_pilgrimage_chimney
-		clr_character_flag = on_pilgrimage_moks
+		clr_character_flag = travelling_portland
+		clr_character_flag = travelling_boise
+		clr_character_flag = travelling_slc
+		clr_character_flag = travelling_bridger
+		clr_character_flag = travelling_natrona
+		clr_character_flag = travelling_chimney
+		clr_character_flag = travelling_moks
 		if = {
 			limit = {
 				has_quest = quest_monastic_order_pilgrimage_mormon
@@ -552,19 +552,19 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		if = { limit = { has_character_flag = on_pilgrimage_portland }
+		if = { limit = { has_character_flag = travelling_portland }
 			character_event = { id = oregon.3 days = 3 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_boise }
+		if = { limit = { has_character_flag = travelling_boise }
 			character_event = { id = oregon.5 days = 3 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_slc }
+		if = { limit = { has_character_flag = travelling_slc }
 			character_event = { id = oregon.5 days = 3 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_bridger }
+		if = { limit = { has_character_flag = travelling_bridger }
 			character_event = { id = oregon.6 days = 3 } }	
-		if = { limit = { has_character_flag = on_pilgrimage_natrona }
+		if = { limit = { has_character_flag = travelling_natrona }
 			character_event = { id = oregon.7 days = 3 } }
-		if = { limit = { has_character_flag = on_pilgrimage_chimney }
+		if = { limit = { has_character_flag = travelling_chimney }
 			character_event = { id = oregon.8 days = 3 } }
-		if = { limit = { has_character_flag = on_pilgrimage_moks}
+		if = { limit = { has_character_flag = travelling_moks}
 			character_event = { id = oregon.9 days = 3 } }
 	}
 }
