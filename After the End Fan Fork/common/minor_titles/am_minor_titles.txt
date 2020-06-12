@@ -644,6 +644,240 @@ title_qenyazmach = {
 	message = yes
 }
 
+title_helmsman = {
+	dignity = 0.15
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.35
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		OR = { 
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_commander_title_trigger = yes
+		}
+		NOT = { is_incapable = yes }
+		stewardship = 6
+	}
+
+	allowed_to_grant = {
+		OR = {
+			is_feudal = yes
+			is_tribal = yes
+		}
+		religion_group = nautical
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_rum_runner = {
+	dignity = 0.10
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		OR = { 
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_commander_title_trigger = yes
+		}
+		NOT = { is_incapable = yes }
+		OR = {
+			trait = hedonist
+			trait = drunkard
+			intrigue = 6
+		}
+	}
+
+	allowed_to_grant = {
+		OR = {
+			is_feudal = yes
+			is_tribal = yes
+		}
+		religion_group = nautical
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_shipwright = {
+	dignity = 0.15
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.25
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		OR = { 
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_commander_title_trigger = yes
+		}
+		NOT = { is_incapable = yes }
+	}
+
+	allowed_to_grant = {
+		OR = {
+			is_feudal = yes
+			is_tribal = yes
+		}
+		religion_group = nautical
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_first_mate = {
+	dignity = 0.15
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		OR = { 
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_commander_title_trigger = yes
+		}
+		NOT = { is_incapable = yes }
+		learning = 6
+	}
+
+	allowed_to_grant = {
+		OR = {
+			is_feudal = yes
+			is_tribal = yes
+		}
+		religion_group = nautical
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_second_mate = {
+	dignity = 0.10
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		OR = { 
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_commander_title_trigger = yes
+		}
+		NOT = { is_incapable = yes }
+	}
+
+	allowed_to_grant = {
+		OR = {
+			is_feudal = yes
+			is_tribal = yes
+		}
+		religion_group = nautical
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
+
+title_third_mate = {
+	dignity = 0.10
+	grant_limit = 1
+	opinion_effect = 10
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		is_adult = yes
+		OR = { 
+			male_can_hold_minor_title_trigger = yes
+			female_can_hold_minor_commander_title_trigger = yes
+		}
+		NOT = { is_incapable = yes }
+	}
+
+	allowed_to_grant = {
+		OR = {
+			is_feudal = yes
+			is_tribal = yes
+		}
+		religion_group = nautical
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+	}
+
+	message = yes
+}
 
 # Brazil and related
 

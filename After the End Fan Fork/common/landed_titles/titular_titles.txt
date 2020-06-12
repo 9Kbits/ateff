@@ -4092,7 +4092,7 @@ e_iron_confederacy = {
 
 e_new_south = {
 	color = { 150 105 56 }
-	color2 = { 0 220 220 }
+	color2 = { 220 220 0 }
 	
 	capital = 164 # Charleston
 	
@@ -4359,27 +4359,6 @@ d_nantucket = {
 	color2={ 255 255 255 }
 				
 	capital = 559 # Nantucket
-}
-e_fourcorners = {
-	color={ 210 210 210 }
-	color2={ 210 0 0 }
-	capital = 412 # Fort Defiance
-	
-	allow = {
-		war = no
-		realm_size = 150
-		OR = {	
-			AND = {
-				has_landed_title = k_colorado
-				has_landed_title = k_deseret
-				has_landed_title = k_navajoland
-			}
-			e_fourcorners = { OR = { is_titular = no has_holder = yes } }
-		}
-	}
-	short_name = yes
-	
-	creation_requires_capital = no	
 }
 
 ##Holy Fury stuff in other files##
