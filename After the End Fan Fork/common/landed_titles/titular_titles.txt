@@ -3964,59 +3964,6 @@ e_inlander = {
 	creation_requires_capital = no	
 }
 
-### special empires
-
-e_zion = {
-	color = { 136 190 255 }
-	color2= { 255 255 255 }
-	
-	capital = 430 # Salt Lake
-	
-	allow = {
-		conditional_tooltip = {
-			trigger = {
-				NOT = {
-					religion_group = latter_day_saints
-				}
-			}
-			religion_group = latter_day_saints
-		}
-		conditional_tooltip = {
-			trigger = {
-				e_zion = {
-					is_titular = yes
-				}
-			}
-			e_zion = {
-				is_titular = no
-			}
-		}
-	}
-}
-
-e_iron_confederacy = {
-	color = { 70 70 70 }
-	color2= { 255 255 255 }
-
-	cree = "Nehiyaw-Pawat"
-	saulteaux = "Nehiyaw-Pawat" 
-
-	capital = 1999 #Regina
-
-	allow = {
-		conditional_tooltip = {
-			trigger = {
-				e_iron_confederacy = {
-					is_titular = yes
-				}
-			}
-			e_iron_confederacy = {
-				is_titular = no
-			}
-		}
-	}
-}
-
 e_lokono = {
 	color={ 50 204 75 }
 	color2={ 210 50 20 }
@@ -4087,6 +4034,102 @@ e_valluno = {
 	short_name = yes
 	
 	creation_requires_capital = no	
+}
+
+
+### special empires
+
+e_zion = {
+	color = { 136 190 255 }
+	color2= { 255 255 255 }
+	
+	capital = 430 # Salt Lake
+	
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				NOT = {
+					religion_group = latter_day_saints
+				}
+			}
+			religion_group = latter_day_saints
+		}
+		conditional_tooltip = {
+			trigger = {
+				e_zion = {
+					is_titular = yes
+				}
+			}
+			e_zion = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_iron_confederacy = {
+	color = { 70 70 70 }
+	color2= { 255 255 255 }
+
+	cree = "Nehiyaw-Pawat"
+	saulteaux = "Nehiyaw-Pawat" 
+
+	capital = 1999 #Regina
+
+	allow = {
+		conditional_tooltip = {
+			trigger = {
+				e_iron_confederacy = {
+					is_titular = yes
+				}
+			}
+			e_iron_confederacy = {
+				is_titular = no
+			}
+		}
+	}
+}
+
+e_new_south = {
+	color = { 100 85 150 }
+	
+	capital = 164 # Charleston
+	
+	short_name = yes
+	
+	allow = {
+		OR = {
+			religion = catholic
+			is_heresy_of = catholic
+		}
+		e_dixie = {
+			has_holder = no
+		}
+		e_usa = {
+			has_holder = no
+		}
+		custom_tooltip = {
+			text = controls_lowcountry
+			hidden_tooltip = {
+				163 = { # Beaufort
+					owner = {
+						OR = {
+							is_liege_or_above = ROOT
+							character = ROOT
+						}
+					}
+				}
+				165 = { # Grand Strand
+					owner = {
+						OR = {
+							is_liege_or_above = ROOT
+							character = ROOT
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 ### titular kingdoms

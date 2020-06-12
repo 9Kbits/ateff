@@ -10,7 +10,7 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
-	religion = ursuline #Won't happen for Catholics or Mormons, for obvious reasons
+	religion = catholic #Won't happen for Ursulines
 	
 	trigger = {
 		uses_new_crusade = yes
@@ -22,7 +22,7 @@ character_event = {
 			AND = {
 				random = 90
 				NOT = {
-					k_maritimes = {
+					e_dixie = {
 						owner = {
 							realm_size = 25
 						}
@@ -31,13 +31,13 @@ character_event = {
 			}
 			AND = {
 				random = 85
-				k_maritimes = {
+				e_dixie = {
 					owner = {
 						realm_size = 25
 					}
 				}
 				NOT = {
-					k_maritimes = {
+					e_dixie = {
 						owner = {
 							realm_size = 35
 						}
@@ -46,13 +46,13 @@ character_event = {
 			}
 			AND = {
 				random = 80
-				k_maritimes = {
+				e_dixie = {
 					owner = {
 						realm_size = 35
 					}
 				}
 				NOT = {
-					k_maritimes = {
+					e_dixie = {
 						owner = {
 							realm_size = 45
 						}
@@ -61,7 +61,7 @@ character_event = {
 			}
 			AND = {
 				random = 75
-				k_maritimes = {
+				e_dixie = {
 					owner = {
 						realm_size = 45
 					}
@@ -71,13 +71,13 @@ character_event = {
 		}
 		has_global_flag = first_crusade_complete
 		NOT = { has_global_flag = fourth_crusade_launched }
-		k_maritimes = {
+		e_dixie = {
 			owner = {
 				realm_size = 50
 				OR = {
-					has_landed_title = c_yarmouth
+					has_landed_title = c_charleston
 					any_vassal = {
-						has_landed_title = c_yarmouth
+						has_landed_title = c_charleston
 					}
 				}
 				NOT = {
@@ -86,19 +86,16 @@ character_event = {
 				religion_group = ROOT
 			}
 		}
-		d_nova_scotia = {
-			de_jure_liege = k_maritimes
+		d_grand_strand = {
+			de_jure_liege = e_dixie
 		}
-		d_north_nova = {
-			de_jure_liege = k_maritimes
-		}
-		e_canada = {
+		e_new_south = {
 			has_holder = no
 		}
 	}
 
 	immediate = {
-		k_maritimes = {
+		e_dixie = {
 			owner = {
 				save_event_target_as = fourth_crusade_byzantine_emperor
 				narrative_event = { id = HF.49001 days = 30 }
@@ -134,8 +131,8 @@ narrative_event = {
 		any_playable_ruler = {
 			religion = FROM
 			OR = {
-				culture = quebecois
-				culture = acadien
+				culture_group = south_anglo
+				culture_group = upland
 			}
 			capital_scope = {
 				port = yes
@@ -149,12 +146,13 @@ narrative_event = {
 			limit = {
 				religion = FROM
 				OR = {
-					culture = quebecois
-					culture = acadien
+					culture_group = south_anglo
+					culture_group = upland
 				}
 				capital_scope = {
 					port = yes
 				}
+				is_theocracy = no
 				higher_tier_than = COUNT
 			}
 			preferred_limit = {
@@ -243,8 +241,8 @@ narrative_event = {
 			show_scope_change = no
 			move_character = event_target:fourth_crusade_merchant_lord
 			hidden_tooltip = {
-				add_claim = k_maritimes
-				add_claim = d_nova_scotia
+				add_claim = e_dixie
+				add_claim = k_palmetto
 			}
 		}
 		add_rival = event_target:fourth_crusade_byzantine_refugee
@@ -302,7 +300,7 @@ narrative_event = {
 	has_dlc = "Holy Fury"
 	trigger = {
 		is_preparing_crusade = yes
-		k_maritimes = {
+		e_dixie = {
 			owner = {
 				NOT = {
 					religion = ROOT
@@ -312,11 +310,11 @@ narrative_event = {
 		event_target:fourth_crusade_byzantine_refugee = {
 			is_alive = yes
 			NOR = {
-				has_landed_title = k_maritimes
-				has_landed_title = d_nova_scotia
+				has_landed_title = e_dixie
+				has_landed_title = k_palmetto
 			}
 		}
-		religion = ursuline
+		religion = catholic
 	}
 
 	immediate = {
@@ -328,7 +326,7 @@ narrative_event = {
 					}
 				}
 			}
-			k_maritimes = {
+			e_dixie = {
 				owner = {
 					save_event_target_as = fourth_crusade_byzantine_emperor
 				}
@@ -413,7 +411,7 @@ narrative_event = {
 	immediate = {
 		set_crusade_target = {
 			character = event_target:fourth_crusade_byzantine_emperor
-			title = k_maritimes
+			title = e_dixie
 		}
 		set_official_crusade_recipient = event_target:fourth_crusade_byzantine_refugee
 	}
@@ -441,11 +439,11 @@ character_event = {
 	has_dlc = "Holy Fury"
 	trigger = {
 		crusade_target_title = {
-			title = k_maritimes
+			title = e_dixie
 		}
 		has_global_flag = 4th_crusade_official
 		crusade_target_char = {
-			k_maritimes = {
+			e_dixie = {
 				owner = {
 					character = PREVPREV
 				}
@@ -510,7 +508,7 @@ narrative_event = {
 	option = {	  
 		name = EVTOPTB_HF_49007
 		trigger = {
-			has_landed_title = k_maritimes
+			has_landed_title = e_dixie
 		}
 	}
 	option = {
@@ -526,7 +524,7 @@ narrative_event = {
 		trigger = {
 			NOR = {
 				religion = FROM
-				has_landed_title = k_maritimes
+				has_landed_title = e_dixie
 			}
 			religion_group = FROM
 		}
@@ -547,7 +545,7 @@ narrative_event = {
 
 	immediate = {
 
-		k_acadia = {
+		e_new_south = {
 			owner = {
 				save_event_target_as = latin_empire_holder
 			}
@@ -556,7 +554,7 @@ narrative_event = {
 
 		if = {
 			limit = {
-				has_landed_title = k_acadia
+				has_landed_title = e_new_south
 			}
 			sound_effect = bloodline_added
 		}
@@ -589,20 +587,20 @@ narrative_event = {
 		if = {
 			limit = {
 				is_female = yes
-				has_landed_title = k_acadia
+				has_landed_title = e_new_south
 			}
 			create_bloodline = {
-				type = destroyer_of_maritimes
+				type = sherman
 				inheritance = matrilineal
 			}
 		}
 		else_if = {
 			limit = {
 				is_female = no
-				has_landed_title = k_acadia
+				has_landed_title = e_new_south
 			}
 			create_bloodline = {
-				type = destroyer_of_maritimes
+				type = sherman
 			}
 		}
 	}

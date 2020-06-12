@@ -56,7 +56,8 @@ decisions = {
 			OR = {
 				has_landed_title = k_new_york
 				has_landed_title = k_old_dominion
-				has_landed_title = k_carolina
+				has_landed_title = k_tarheel
+				has_landed_title = k_palmetto
 			}
 			any_demesne_title = {
 				tier = EMPEROR
@@ -70,6 +71,11 @@ decisions = {
 				AND = {
 					religion = evangelical
 					has_landed_title = e_dixie
+					religion_authority = 1
+				}
+				AND = {
+					religion = catholic
+					has_landed_title = e_new_south
 					religion_authority = 1
 				}
 				AND = {
@@ -97,8 +103,12 @@ decisions = {
 						hidden_tooltip = { completely_controls = k_old_dominion }
 					}
 					custom_tooltip = {
-						text = TXT_kingdom_carolina
-						hidden_tooltip = { completely_controls = k_carolina }
+						text = TXT_kingdom_tarheel
+						hidden_tooltip = { completely_controls = k_tarheel }
+					}
+					custom_tooltip = {
+						text = TXT_kingdom_palmetto
+						hidden_tooltip = { completely_controls = k_palmetto }
 					}
 				}
 			}

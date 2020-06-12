@@ -4301,7 +4301,7 @@ new_crusade = {
 				}
 				AND = {
 					has_global_flag = 4th_crusade_official
-					has_landed_title = k_maritimes
+					has_landed_title = e_dixie
 					NOT = { religion = ROOT }
 				}
 				is_heresy_of = ROOT
@@ -4314,9 +4314,15 @@ new_crusade = {
 		}
 		
 		NOT = { # Not if the Schism has been mended
-			AND = {
-				religion = ursuline
-				has_global_flag = canadian_church_unified
+			OR = {
+				AND = {
+					religion = ursuline
+					has_global_flag = catholics_mended_schism
+				}
+				AND = {
+					religion = catholic
+					has_global_flag = ursulines_mended_schism
+				}
 			}
 		}
 	}
@@ -4335,7 +4341,11 @@ new_crusade = {
 					title = PREV
 				}
 				PREV = {
-					title = k_maritimes	
+					title = k_carolina	
+					FROM = { 
+						has_landed_title = e_dixie 
+						religion_group = christian
+					}
 				} 
 			}
 		}
@@ -4938,7 +4948,7 @@ new_crusade = {
 					limit = {
 						has_global_flag = 4th_crusade_official
 						crusade_target_title = {
-							title = k_maritimes
+							title = k_carolina
 						}
 						FROM = {
 							religion_group = ROOT
@@ -4949,61 +4959,47 @@ new_crusade = {
 							}
 						}
 						crusade_target_char = {
-							k_maritimes = {
+							e_dixie = {
 								owner = {
 									character = PREVPREV
 								}
 							}
 						}
 					}
-					# Find a King for New Brunswick
-					k_maritimes = {
+					# Find a King for Dixieland
+					e_dixie = {
 						owner = {
 							if = {
 								limit = {
-									NOR = {
+									NOT = {
 										any_playable_ruler = {
-											has_landed_title = d_petitcodiac
-											has_landed_title = d_miramichi
-											has_landed_title = d_new_brunswick
-											has_landed_title = d_restigouche
+											has_landed_title = k_dixieland
 										}
 									}
 								}
 								random_vassal = {
 									limit = {
 										OR = {
-											has_landed_title = d_petitcodiac
-											has_landed_title = d_miramichi
-											has_landed_title = d_new_brunswick
-											has_landed_title = d_restigouche
+											has_landed_title = d_peachtree
+											has_landed_title = d_savannah
 										}
 									}
 									preferred_limit = {
-										has_landed_title = d_new_brunswick
+										has_landed_title = d_peachtree
 									}
-									grant_title_no_opinion = k_new_brunswick
+									grant_title_no_opinion = k_dixieland
 								}
 							}
 						}
 					}
-					# Set vassals for New Brunswick
-					k_new_brunswick = {
+					# Set vassals for Dixieland
+					k_dixieland = {
 						owner = {
-							k_maritimes = {
+							e_dixie = {
 								owner = {
 									any_vassal = {
 										limit = {
-											OR = {
-												has_landed_title = d_petitcodiac
-												has_landed_title = d_miramichi
-												has_landed_title = d_new_brunswick
-												has_landed_title = d_restigouche
-												de_jure_liege = d_petitcodiac
-												de_jure_liege = d_miramichi
-												de_jure_liege = d_new_brunswick
-												de_jure_liege = d_restigouche
-											}
+											de_jure_liege = k_dixieland
 										}
 										set_defacto_liege = PREVPREVPREV
 									}
@@ -5011,65 +5007,48 @@ new_crusade = {
 							}
 						}
 					}
-					# Find an Ursuline lord for PEI
-					if = {
-						limit = {
-							c_egmont = {
-								owner = {
-									religion = FROM
-									culture = FROM
-									ai = yes
-								}
-							}
-							c_cardigan = {
-								owner = {
-									religion = FROM
-									culture = FROM
-									ai = yes
-								}
-							}
-							k_prince_edward_island = {
-								has_holder = no
-							}
-						}
-						any_crusade_participant = {
-							limit = {
-								ai = yes
-								NOT = {
-									most_participating_crusader = {
-										character = PREV
-									}
-								}
-							}
-							crusade_beneficiary = {
-								grant_title_no_opinion = c_egmont
-								grant_title_no_opinion = c_cardigan
-								grant_title_no_opinion = d_prince_edward_island
-								grant_title_no_opinion = k_prince_edward_island
-								set_defacto_liege = THIS
-								character_event = { id = HFP.41090 days = 1 }
-								if = {
-									limit = {
-										NOR = {
-											trait = crusader
-											trait = crusader_king
-											trait = crusader_queen
-										}
-									}
-									add_trait = crusader
-								}
-							}
-							character_event = { id = HFP.41007 }
-						}
-					}
+					#Nope
+					
 					distribute_crusade_target_title = yes
-					#The Crusader King becomes king of Acadia and gets a bloodline. (
+					#The Crusader King becomes an Emperor and gets a bloodline
 					crusader_king = {
-						grant_title_no_opinion = k_acadia
+						grant_title_no_opinion = e_new_south
 					}
-					# Find random vassal and make a king out of them (removed due to lack of space)
-					# All Byzantine vassals go independent except those neighboring the old Emperor, and he/she gets an inferior Kingdom title while the Maritimes title is broken
-					k_maritimes = {
+					# Find random vassal and make a king out of them
+					e_dixie = {
+						owner = {
+							random_vassal = {
+								limit = {
+									tier = DUKE
+									ai = yes
+								}
+								preferred_limit = {
+									de_jure_liege = k_tuskegee
+								}
+								preferred_limit = {
+									de_jure_liege = k_tarheel
+								}
+								preferred_limit = {
+									de_jure_liege = k_magnolia
+								}
+								primary_title = {
+									create_title = {
+										tier = KING
+										landless = no
+										temporary = no
+										name = "fourth_crusade_greek_kingdom_name"
+										holder = PREV
+										culture = PREV
+										custom_created = yes
+										base_title = THIS
+										copy_title_laws = yes
+									}
+								}
+							}
+						}
+					}
+					# All Byzantine vassals go independent except those neighboring the old Emperor, and he/she gets an inferior Empire title while the Byzantine title is broken
+					e_dixie = {
 						owner = {
 							any_vassal = {
 								limit = {
@@ -5077,7 +5056,32 @@ new_crusade = {
 								}
 								set_defacto_liege = this
 							}
-							#removed all this stuff due to lack of space
+							if = {
+								limit = {
+									primary_title = {
+										title = e_dixie
+									}
+								}
+								capital_scope = {
+									create_title = {
+										tier = EMPEROR
+										landless = no
+										temporary = no
+										name = "fourth_crusade_greek_empire_name"
+										holder = PREV
+										culture = PREV
+										custom_created = yes
+										base_title = THIS
+									}
+								}
+								any_demesne_title = {
+									limit = {
+										tier = EMPEROR
+										is_titular = no
+									}
+									destroy_landed_title = THIS
+								}
+							}
 							any_neighbor_independent_ruler = {
 								limit = {
 									ai = yes
@@ -5089,7 +5093,8 @@ new_crusade = {
 							}
 						}
 					}
-					# Crete is taken by a Merchant Lord (also removed)
+					
+					#Nope
 
 					if = {
 						limit = {
@@ -5112,7 +5117,7 @@ new_crusade = {
 						}
 					}
 					# Making sure the Byzantine Empire is destroyed
-					k_maritimes = {
+					e_dixie = {
 						unsafe_destroy_landed_title = THIS
 					}
 				}
@@ -9043,8 +9048,10 @@ imperial_reconquest = {
 			de_jure_liege_or_above = k_deitscherei
 			de_jure_liege_or_above = k_appalachia
 			de_jure_liege_or_above = k_old_dominion
+			de_jure_liege_or_above = k_tuskegee
 			de_jure_liege_or_above = k_dixieland
-			de_jure_liege_or_above = k_carolina
+			de_jure_liege_or_above = k_tarheel
+			de_jure_liege_or_above = k_palmetto
 			de_jure_liege_or_above = k_florida
 		}
 	}
