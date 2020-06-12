@@ -1,0 +1,123 @@
+namespace = brumby
+
+narrative_event = {
+	id = brumby.1
+	title = EVTTITLE_brumby_1
+	desc = EVTDESC_brumby_1
+	picture = GFX_evt_uncomfortable
+	border = GFX_event_narrative_frame_intrigue
+	prisoner = no
+	has_character_flag = is_brumby
+	only_playable = yes
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		clr_character_flag = is_brumby
+	}
+	
+	option = { # I will search for her
+		name = EVTOPT_brumby_1a
+		hidden_tooltip = {
+			c_1491037 = {
+				character_event = { id = brumby.2 days = 7 }
+			}
+		}
+	}
+	
+	option = { # Nah
+		name = EVTOPT_brumby_1b
+	}
+}
+
+character_event = {
+	id = brumby.2
+	title = EVTTITLE_brumby_2
+	desc = EVTDESC_brumby_2
+	picture = GFX_evt_uncomfortable
+	
+	is_triggered_only = yes
+	
+	option = { #Yes
+		name = EVTOPT_brumby_2a
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = brumby.3 days = 7 }
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = { #No
+		name = EVTOPT_brumby_2b
+		#Ally, do you want a ping back to Brumby if Allysia doesn't want to make contact?
+		#I'll add one
+		
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = brumby.4 days = 7 }
+			}
+		}
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+character_event = {
+	id = brumby.3
+	desc = EVTDESC_brumby_3
+	picture = GFX_evt_uncomfortable
+	
+	is_triggered_only = yes
+	
+	option = { # Never speak of this again
+		name = EVTOPT_brumby_3a
+	}
+	
+	option = { # I want you back in my life
+		name = EVTOPT_brumby_3b
+		FROM = { move_character = ROOT }
+		add_spouse = FROM
+		add_spouse = FROM
+		c_1491036 = {
+			remove_trait = adopted_child
+			set_mother = FROM
+		}
+	}
+	
+	option = { # You've convinced me
+		name = EVTOPT_brumby_3c
+		FROM = { move_character = ROOT }
+		add_spouse = FROM
+		ROOT = { religion = FROM }
+		c_1491036 = {
+			remove_trait = adopted_child
+			set_mother = FROM
+			religion = FROM
+		}
+		FROM = {
+			add_trait = physician
+			give_job_title = job_spiritual
+		}
+	}
+}
+
+character_event = {
+	id = brumby.4
+	desc = EVTDESC_brumby_4
+	picture = GFX_evt_uncomfortable
+	
+	is_triggered_only = yes
+	
+	option = { # I'm sorry
+		name = EVTOPT_brumby_4
+		add_trait = depressed
+	}
+}
