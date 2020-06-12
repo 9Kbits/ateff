@@ -895,6 +895,8 @@ patria_manuelita = {
 fords_striker = {
 	opposites = {
 		crusader
+		crusader_king
+		crusader_queen
 		mujahid
 		jaguar_warrior
 		shaddai
@@ -909,6 +911,7 @@ fords_striker = {
 		dragon_soldier
 		cavalier
 		joropo_cantor
+		bronze_star
 	}
 	
 	martial = 2
@@ -931,6 +934,8 @@ fords_striker = {
 sword_of_the_lamb = {
 	opposites = {
 		crusader
+		crusader_king
+		crusader_queen
 		mujahid
 		jaguar_warrior
 		shaddai
@@ -945,6 +950,7 @@ sword_of_the_lamb = {
 		hivernant
 		cavalier
 		joropo_cantor
+		bronze_star
 	}
 	
 	martial = 2
@@ -967,6 +973,8 @@ sword_of_the_lamb = {
 knight_templar = {
 	opposites = {
 		crusader
+		crusader_king
+		crusader_queen
 		mujahid
 		jaguar_warrior
 		shaddai
@@ -982,6 +990,7 @@ knight_templar = {
 		hivernant
 		cavalier
 		joropo_cantor
+		bronze_star
 	}
 	
 	martial = 2
@@ -1004,6 +1013,8 @@ knight_templar = {
 order_of_the_garter = {
 	opposites = {
 		crusader
+		crusader_king
+		crusader_queen
 		mujahid
 		jaguar_warrior
 		shaddai
@@ -1019,6 +1030,7 @@ order_of_the_garter = {
 		hivernant
 		cavalier
 		joropo_cantor
+		bronze_star
 	}
 	
 	martial = 2
@@ -1041,6 +1053,8 @@ order_of_the_garter = {
 cavalier = {
 	opposites = {
 		crusader
+		crusader_king
+		crusader_queen
 		mujahid
 		jaguar_warrior
 		shaddai
@@ -1056,6 +1070,7 @@ cavalier = {
 		order_of_the_garter
 		hivernant
 		joropo_cantor
+		bronze_star
 	}
 	
 	martial = 2
@@ -1078,6 +1093,8 @@ cavalier = {
 joropo_cantor = {
 	opposites = {
 		crusader
+		crusader_king
+		crusader_queen
 		mujahid
 		jaguar_warrior
 		shaddai
@@ -1092,6 +1109,7 @@ joropo_cantor = {
 		dragon_soldier
 		cavalier
 		fords_striker
+		bronze_star
 	}
 	
 	martial = 2
@@ -1125,6 +1143,8 @@ libertador_descendant = {
 danite = {
 	opposites = {
 		crusader
+		crusader_king
+		crusader_queen
 		mujahid
 		jaguar_warrior
 		shaddai
@@ -1138,6 +1158,7 @@ danite = {
 		raven_warrior
 		dragon_soldier
 		joropo_cantor
+		bronze_star
 	}
 	
 	martial = 2
@@ -1160,6 +1181,8 @@ danite = {
 thunderbird_warrior = {
 	opposites = {
 		crusader
+		crusader_king
+		crusader_queen
 		mujahid
 		jaguar_warrior
 		shaddai
@@ -1173,6 +1196,7 @@ thunderbird_warrior = {
 		raven_warrior
 		dragon_soldier
 		joropo_cantor
+		bronze_star
 	}
 	
 	martial = 2
@@ -1195,6 +1219,8 @@ thunderbird_warrior = {
 raven_warrior = {
 	opposites = {
 		crusader
+		crusader_king
+		crusader_queen
 		mujahid
 		jaguar_warrior
 		shaddai
@@ -1208,6 +1234,7 @@ raven_warrior = {
 		thunderbird_warrior
 		dragon_soldier
 		joropo_cantor
+		bronze_star
 	}
 	
 	martial = 2
@@ -2478,6 +2505,41 @@ radioactive = {
 	male_compliment_adj = COMPL_RADIANT
 	female_compliment_adj = COMPL_RADIANT
 	
+}
+
+bronze_star = {
+	opposites = {
+		crusader
+		crusader_king
+		crusader_queen
+		mujahid
+		valhalla_bound
+		jaguar_warrior
+		fords_striker
+		sword_of_the_lamb
+		knight_templar
+		order_of_the_garter
+		danite
+		shaddai
+		lughs_own
+		thunderbird_warrior
+		raven_warrior
+		dragon_soldier
+		hivernant
+		cavalier
+	}
+
+	martial = 2
+	combat_rating = 10 #old value: 1
+
+	church_opinion = 15
+	same_opinion_if_same_religion = 15
+
+	ai_zeal = 10
+	customizer = no
+
+	male_compliment_adj = COMPL_DECORATED
+	female_compliment_adj = COMPL_DECORATED
 }
 
 #Commented these out because I have no idea what these are supposed to do.

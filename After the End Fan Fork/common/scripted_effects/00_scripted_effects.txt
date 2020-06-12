@@ -4116,6 +4116,27 @@ add_crusade_trait_effect = {
 		add_trait = cavalier
 		break = yes
 	}
+	if = {
+		limit = {
+			OR = {
+				religion = aria_de_machete
+				religion = aria_de_machete_reformed
+			}
+		}
+		add_trait = joropo_cantor
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
+		}
+		add_trait = bronze_star
+		break = yes
+	}
 }
 
 ###MONKS & MYSTICS###
