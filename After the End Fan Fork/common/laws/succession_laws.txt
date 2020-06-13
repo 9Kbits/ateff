@@ -160,6 +160,14 @@ succession_laws = {
 							}
 						}
 					}
+					AND = {
+						is_tribal = yes
+						religion = patria_grande
+					}
+					AND = {
+						religion = patria_grande
+						trait = patria_bolivar
+					}
 				}
 				in_revolt = no
 				conditional_tooltip = {
@@ -195,19 +203,7 @@ succession_laws = {
 
 			}
 			holder_scope = {
-				OR = {
-					AND = {
-						is_tribal = yes
-						religion = patria_grande
-					}
-					AND = {
-						is_tribal = no
-						religion = patria_grande
-						trait = patria_bolivar
-						NOT = { trait = patria_santander }
-						NOT = { trait = patria_manuelita }
-					}
-				}
+			
 			}
 			conditional_tooltip = {
 				trigger = {
@@ -276,8 +272,6 @@ succession_laws = {
 						}
 					}
 				}
-			}
-			holder_scope = {
 				OR = {
 					AND = {
 						is_tribal = yes
@@ -287,8 +281,6 @@ succession_laws = {
 						is_tribal = no
 						religion = patria_grande
 						trait = patria_bolivar
-						NOT = { trait = patria_santander }
-						NOT = { trait = patria_manuelita }
 					}
 				}
 			}
@@ -559,12 +551,6 @@ succession_laws = {
 					NOT = { religion_group = pagan_group }
 					NOT = { religion = midewiwin }
 					NOT = { religion = raven_tales }
-					AND = {
-						religion = patria_grande
-						NOT = { trait = patria_bolivar }
-						NOT = { trait = patria_manuelita }
-						trait = patria_santander
-					}
 					is_reformed_religion = yes
 					is_patrician = yes
 				}
@@ -758,8 +744,6 @@ succession_laws = {
 							NOT = { religion = raven_tales }
 							AND = {
 								religion = patria_grande
-								NOT = { trait = patria_bolivar }
-								NOT = { trait = patria_manuelita }
 								trait = patria_santander
 							}
 							is_reformed_religion = yes
@@ -961,8 +945,6 @@ succession_laws = {
 					AND = {
 						religion = patria_grande
 						trait = patria_manuelita
-						NOT = { trait = patria_santander }
-						NOT = { trait = patria_bolivar }
 					}
 				}
 				OR = {
@@ -1509,12 +1491,10 @@ succession_laws = {
 						NOT = { religion = celtic_pagan }
 						NOT = { religion = aria_de_machete }
 						NOT = { religion = trailwalker }
-						AND = {
-							religion = patria_grande
-							NOT = { trait = patria_bolivar }
-							NOT = { trait = patria_manuelita }
-							trait = patria_santander
-						}
+					}
+					AND = {
+						religion = patria_grande
+						trait = patria_santander
 					}
 				}
 				
