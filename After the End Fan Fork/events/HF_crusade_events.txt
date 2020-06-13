@@ -130,11 +130,8 @@ narrative_event = {
 		}
 		any_playable_ruler = {
 			religion = FROM
-			OR = {
-				culture_group = south_anglo
-				culture_group = upland
-			}
 			capital_scope = {
+				region = custom_mississippi_river
 				port = yes
 			}
 			higher_tier_than = COUNT
@@ -145,11 +142,8 @@ narrative_event = {
 		random_playable_ruler = { 
 			limit = {
 				religion = FROM
-				OR = {
-					culture_group = south_anglo
-					culture_group = upland
-				}
 				capital_scope = {
+					region = custom_mississippi_river
 					port = yes
 				}
 				is_theocracy = no
@@ -411,7 +405,7 @@ narrative_event = {
 	immediate = {
 		set_crusade_target = {
 			character = event_target:fourth_crusade_byzantine_emperor
-			title = e_dixie
+			title = k_palmetto
 		}
 		set_official_crusade_recipient = event_target:fourth_crusade_byzantine_refugee
 	}

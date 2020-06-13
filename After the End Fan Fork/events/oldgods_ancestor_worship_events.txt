@@ -4190,16 +4190,15 @@ character_event = {
 }
 
 character_event = {
-	id = TOG.7526 
+	id = TOG.7526
 	border = GFX_event_normal_frame_economy
 	picture = GFX_evt_irminsul_shrine
 
 	desc = {
 		trigger = { 
-			religion = espiritista
+			NOT = { religion = espiritista }
 		}
 		text = EVTDESC_TOG_7526
-		picture = GFX_evt_sun_temple
 	}
 	desc = {
 		trigger = { 
@@ -4304,16 +4303,9 @@ character_event = {
 character_event = {
 	id = TOG.7527
 	border = GFX_event_normal_frame_economy
-	desc = EVTDESC_TOG_7527_TSUMBURBURA
+	desc = EVTDESC_TOG_7527_ANCESTORS
 	picture = GFX_evt_irminsul_shrine
 
-	desc = {
-		trigger = { 
-			has_character_flag = monument_for_ancestors 
-			religion = espiritista
-		}
-		text = EVTDESC_TOG_7527_ANCESTORS
-	}
 	desc = {
 		trigger = { 
 			has_character_flag = monument_for_ancestors 
