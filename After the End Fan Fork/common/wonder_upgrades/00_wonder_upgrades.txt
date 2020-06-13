@@ -4387,7 +4387,6 @@ upgrade_freedom_statue = { #Quadriga
 		is_singular
 		statues
 		decorative
-		
 	}
 	build_time = 24
 	gold_cost_flat = 450
@@ -4722,5 +4721,83 @@ upgrade_gates_of_martyrs = {
 		disease_defence = 0.08
 	}
 	owner_modifier = {
+	}
+}
+
+upgrade_seagull_monument = {
+	picture = GFX_upgrade_icon_statue
+
+	potential = {
+		religion_group = latter_day_saints
+	}
+	allow = { }
+	active = {
+		religion_group = latter_day_saints
+	}
+
+	flags = {
+		is_singular
+		statues
+		decorative
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	owner_modifier = {
+		monthly_character_prestige = 0.05
+	}
+	local_modifier = {
+		local_tax_modifier = 0.05
+	}
+}
+
+upgrade_moroni_statue = {
+	picture = GFX_upgrade_icon_guard
+
+	potential = {
+		religion_group = latter_day_saints
+	}
+	allow = { }
+	active = {
+		religion_group = latter_day_saints
+	}
+
+	flags = {
+		is_singular
+		statues
+		decorative
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	owner_modifier = {
+		monthly_character_piety = 0.1
+	}
+}
+
+upgrade_tabernacle = {
+	picture = GFX_upgrade_icon_key
+
+	potential = {
+		religion_group = latter_day_saints
+	}
+	allow = { }
+	active = {
+		religion_group = latter_day_saints
+	}
+
+	flags = {
+		is_singular
+		statues
+		decorative
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		culture_techpoints = 0.05
+	}
+	owner_modifier = {
+		learning = 1
 	}
 }
