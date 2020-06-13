@@ -33,6 +33,105 @@ e_dixie = {
 	}
 	
 	creation_requires_capital = yes
+	
+	k_magnolia_archduchy = { #Potential stem duchy, placed here to avoid gaps in de jure map once formed
+		color = { 122 60 29 }
+		color2= { 220 220 0 }
+
+		# Crusade target weight
+		americanist = 100
+		catholic = 50
+		revelationist_reformed = 100
+		rust_cultist = 5
+
+		capital = 1128
+		
+		beltway = "Mississippi"
+	
+		title = "archduchy_title"
+		title_female = "archduchy_title_female"
+		foa = "archduchy_foa"
+		title_prefix = "archduchy_prefix"
+	
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_magnolia_archduchy = {
+						is_titular = yes
+					}
+				}
+				k_magnolia_archduchy = {
+					is_titular = no
+				}
+			}
+		}
+	}
+	
+	k_tuskegee_grand_duchy = { #Potential stem duchy, placed here to avoid gaps in de jure map once formed
+		color={ 90 50 90 }
+		color2={ 220 220 0 }
+	
+		capital = 1036 #Birmingham (yes, I know)
+	
+		title_prefix = "GRAND_DUCHY_PREFIX"
+		title = "GRAND_DUCHY_RULER"
+		title_female = "GRAND_DUCHY_RULER_FEMALE"
+		foa = "GRAND_DUCHY_FOA"
+		
+		americanist = 100
+		
+		dixie = "Alabama"
+		southron = "Alabama"
+		beltway = "Alabama"
+	
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_tuskegee_grand_duchy = {
+						is_titular = yes
+					}
+				}
+				k_tuskegee_grand_duchy = {
+					is_titular = no
+				}
+			}
+		}
+	}
+	
+	k_tarheel_grand_duchy = { #Potential stem duchy, placed here to avoid gaps in de jure map once formed
+		color={ 226 239 175 }
+		color2={ 220 220 0 }
+	
+		capital = 139 #Raleigh
+	
+		title_prefix = "GRAND_DUCHY_PREFIX"
+		title = "GRAND_DUCHY_RULER"
+		title_female = "GRAND_DUCHY_RULER_FEMALE"
+		foa = "GRAND_DUCHY_FOA"
+		
+		# Crusade target weight
+		catholic = 5
+		americanist = 200
+		revelationist_reformed = 200
+		rust_cultist = 5
+		occultist_reformed = 5
+		thelemic_reformed = 50
+		
+		beltway = "North Carolina"
+	
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_tarheel_grand_duchy = {
+						is_titular = yes
+					}
+				}
+				k_tarheel_grand_duchy = {
+					is_titular = no
+				}
+			}
+		}
+	}
 
 	k_dixieland = {
 		color={ 195 205 185 }
@@ -355,10 +454,6 @@ e_dixie = {
 		color2={ 220 220 0 }
 	
 		capital = 1036 #Birmingham (yes, I know)
-	
-		title_prefix = "GRAND_DUCHY_PREFIX"
-		title = "GRAND_DUCHY_RULER"
-		title_female = "GRAND_DUCHY_RULER_FEMALE"
 		
 		americanist = 100
 		
@@ -370,6 +465,16 @@ e_dixie = {
 			war = no
 			NOT = { has_landed_title = e_dixie }
 			NOT = { top_liege = { has_landed_title = e_dixie } }
+			conditional_tooltip = {
+				trigger = {
+					k_tuskegee_grand_duchy = {
+						is_titular = no
+					}
+				}
+				k_tuskegee_grand_duchy = {
+					is_titular = yes
+				}
+			}
 		}
 		
 		d_black_belt = {
@@ -610,11 +715,6 @@ e_dixie = {
 		color2={ 220 220 0 }
 
 		capital = 164 # Charleston
-	
-		title = "archduchy_title"
-		title_female = "archduchy_title_female"
-		foa = "archduchy_foa"
-		title_prefix = "archduchy_prefix"
 		
 		beltway = "South Carolina"
 		
@@ -826,10 +926,6 @@ e_dixie = {
 		color2={ 220 220 0 }
 	
 		capital = 139 #Raleigh
-	
-		title_prefix = "GRAND_DUCHY_PREFIX"
-		title = "GRAND_DUCHY_RULER"
-		title_female = "GRAND_DUCHY_RULER_FEMALE"
 		
 		# Crusade target weight
 		catholic = 5
@@ -845,6 +941,16 @@ e_dixie = {
 			war = no
 			NOT = { has_landed_title = e_dixie }
 			NOT = { top_liege = { has_landed_title = e_dixie } }
+			conditional_tooltip = {
+				trigger = {
+					k_tarheel_grand_duchy = {
+						is_titular = no
+					}
+				}
+				k_tarheel_grand_duchy = {
+					is_titular = yes
+				}
+			}
 		}
 
 		d_outer_banks = {
@@ -1139,6 +1245,16 @@ e_dixie = {
 		allow = {
 			NOT = { has_landed_title = e_dixie }
 			NOT = { top_liege = { has_landed_title = e_dixie } }
+			conditional_tooltip = {
+				trigger = {
+					k_magnolia_archduchy = {
+						is_titular = no
+					}
+				}
+				k_magnolia_archduchy = {
+					is_titular = yes
+				}
+			}
 		}
 
 		d_pine_belt = {

@@ -34,7 +34,7 @@ narrative_event = {
     title = EVTTITLE_HFP_40022
     desc = {
         trigger = {
-            e_hre = {
+            e_dixie = {
                 OR = {
                     has_law = succ_feudal_elective
                     has_law = succ_hre_elective
@@ -45,7 +45,7 @@ narrative_event = {
     }
     desc = {
         trigger = {
-            e_hre = {
+            e_dixie = {
                 NOR = {
                     has_law = succ_feudal_elective
                     has_law = succ_hre_elective
@@ -60,7 +60,7 @@ narrative_event = {
     option = {      
         name = EVTOPTA_HFP_40022
         trigger = {
-        	has_landed_title = k_austria
+        	has_landed_title = k_magnolia_archduchy
         }
 
         prestige = 500
@@ -69,7 +69,7 @@ narrative_event = {
         name = EVTOPTB_HFP_40022
         trigger = {
         	NOT = {
-        		has_landed_title = k_austria
+        		has_landed_title = k_magnolia_archduchy
         	}
         }
     }
