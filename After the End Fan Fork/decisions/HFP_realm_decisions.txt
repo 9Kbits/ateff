@@ -238,26 +238,8 @@ decisions = {
 			narrative_event = { id = canada.26 }
 		}
 	}
-
-	#Deleted
 	
-	#Deleted
-	
-	#Deleted
-	
-	#Deleted
-	
-	#Deleted
-	
-	#Deleted
-
-	#Deleted
-	
-	#Deleted
-	
-	#Deleted
-
-	restore_hcc = { #Just in case this actually happens for some reason
+	restore_hcc = {
 		is_high_prio = yes
 		only_playable = yes
 		ai_check_interval = 60
@@ -273,7 +255,7 @@ decisions = {
 				religion = revelationist
 				religion = revelationist_reformed
 			}
-			NOT = { has_landed_title = e_dixie }
+			NOT = { has_landed_title = e_new_south }
 			higher_tier_than = DUKE
 			e_dixie = {
 				has_holder = no
@@ -281,9 +263,6 @@ decisions = {
 			e_usa = {
 				has_holder = no
 			}
-			#e_usa = {
-			#	is_titular = yes
-			#}
 
 			NOR = {
 				has_alternate_start_setting = {
