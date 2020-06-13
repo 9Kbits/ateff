@@ -592,9 +592,19 @@ targetted_decisions = {
 				capital_scope = {
 					OR = {
 						AND = {
-							culture = yankee
+							OR = {
+								culture = yankee
+								culture = gothamite
+								culture = hudsonian
+								culture = delawarean
+							}	
 							ROOT = {
-								culture_group = north_atlantic
+								OR = {
+									culture = yankee
+									culture = gothamite
+									culture = hudsonian
+									culture = delawarean
+								}
 							}
 						}
 						AND = {
@@ -1012,7 +1022,12 @@ targetted_decisions = {
 		
 		potential = {
 			is_playable = yes
-			culture = yankee
+			OR = {
+				culture = yankee
+				culture = gothamite
+				culture = hudsonian
+				culture = delawarean
+			}	
 			any_realm_province = {
 				culture = carpetbagger
 			}
@@ -1022,13 +1037,23 @@ targetted_decisions = {
 			}
 		}
 		allow = {
-			culture = yankee
+			OR = {
+				culture = yankee
+				culture = gothamite
+				culture = hudsonian
+				culture = delawarean
+			}	
 		}
 		effect = {
 			culture = carpetbagger
 			any_courtier = {
 				limit = {
-					culture = yankee
+					OR = {
+						culture = yankee
+						culture = gothamite
+						culture = hudsonian
+						culture = delawarean
+					}	
 					employer = { character = ROOT }
 					dynasty = ROOT
 				}
@@ -1045,9 +1070,16 @@ targetted_decisions = {
 				factor = 0.5 # Slow it down a bit
 			}
 			
-			modifier = { # Do not flip if we're in a huge Yankee empire
+			modifier = { # Do not flip if we're in a huge Northern empire
 				factor = 0
-				top_liege = { culture = yankee }
+				top_liege = {
+					OR = {
+						culture = yankee
+						culture = gothamite
+						culture = hudsonian
+						culture = delawarean
+					}	
+				}
 				69 = { # Boston
 					owner = {
 						same_realm = ROOT

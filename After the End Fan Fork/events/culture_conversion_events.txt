@@ -449,7 +449,14 @@ character_event = {
 			}
 			
 			OR = { # Not when Carpetbagger culture should appear
-				ROOT = { NOT = { culture = yankee } }
+				ROOT = {
+					NOR = {
+						culture = yankee
+						culture = gothamite
+						culture = hudsonian
+						culture = delawarean
+					}
+				}
 				AND = {
 					NOR = {
 						culture = dixie

@@ -14,7 +14,12 @@ character_event = {
 		year = 2900
 		any_demesne_province = {
 			region = custom_new_england
-			culture = yankee
+			OR = {
+				culture = yankee
+				culture = gothamite
+				culture = hudsonian
+				culture = delawarean
+			}	
 			any_province_holding = {
 				NOT = { holding_type = nomad }
 			}
@@ -302,6 +307,9 @@ province_event = {
 		owner = {
 			OR = {
 				culture = yankee
+				culture = gothamite
+				culture = hudsonian
+				culture = delawarean
 				culture = carpetbagger
 			}
 		}
