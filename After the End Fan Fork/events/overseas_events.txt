@@ -226,6 +226,8 @@ province_event = {
 				10 = { FROM = { character_event = { id = overseas.10 } } }
 				3 = { FROM = { character_event = { id = overseas.18 } } }
 				3 = { FROM = { character_event = { id = overseas.19 } } }
+				3 = { FROM = { character_event = { id = overseas.80 } } } #Liberian
+				3 = { FROM = { character_event = { id = overseas.81 } } } #Verdiano
 			}
 		}
 		
@@ -242,6 +244,10 @@ province_event = {
 				3 = { FROM = { character_event = { id = overseas.15 } } }
 				3 = { FROM = { character_event = { id = overseas.16 } } }
 				3 = { FROM = { character_event = { id = overseas.17 } } }
+				3 = { FROM = { character_event = { id = overseas.17 } } }
+				3 = { FROM = { character_event = { id = overseas.17 } } }
+				3 = { FROM = { character_event = { id = overseas.82 } } } #Wastelander
+				3 = { FROM = { character_event = { id = overseas.83 } } } #Maori
 			}
 		}
 	}
@@ -345,7 +351,7 @@ character_event = {
 			female = no
 			age = 26
 			religion = nousthreskeia
-			culture = novorusskiy
+			culture = vladivostotskiy
 			trait = scholar
 			trait = greedy
 			trait = brave
@@ -631,7 +637,7 @@ character_event = {
 			dynasty = NONE
 			female = no
 			age = 26
-			religion = charismatic #no Islam in the mod, so I went with Charismatic instead
+			religion = charismatic
 			culture = nigerian
 			trait = scholar
 			trait = greedy
@@ -1524,6 +1530,170 @@ narrative_event = {
 			change_stewardship = 1
 			add_trait = ambitious
 			add_trait = diligent
+		}
+	}
+}
+
+character_event = {
+	id = overseas.80
+	desc = EVTDESC_overseas_liberian
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		create_character = {
+			dynasty = NONE
+			female = no
+			age = 26
+			religion = americanist
+			culture = liberian
+			trait = scholar
+			trait = greedy
+			trait = brave
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			set_character_flag = foreign_merchant
+			wealth = 10
+			random_list = {
+				5 = { add_trait = midas_touched }
+				10 = { add_trait = scholarly_theologian  }
+				10 = { add_trait = fortune_builder }
+				10 = { add_trait = charismatic_negotiator  }
+			}
+			random = { chance = 50 add_trait = envious }
+			random = { chance = 50 add_trait = diligent }
+			random = { chance = 50 add_trait = patient }
+			random = { chance = 50 add_trait = gregarious }
+			random = { chance = 20 add_trait = proud }
+			random = { chance = 20 add_trait = ambitious }
+			random = { chance = 10 add_trait = quick }
+		}
+	}
+}
+
+character_event = {
+	id = overseas.81
+	desc = EVTDESC_overseas_verdiano
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		create_character = {
+			dynasty = NONE
+			female = no
+			age = 26
+			religion = brethren
+			culture = verdiano
+			trait = scholar
+			trait = greedy
+			trait = brave
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			set_character_flag = foreign_merchant
+			wealth = 10
+			random_list = {
+				5 = { add_trait = midas_touched }
+				10 = { add_trait = scholarly_theologian  }
+				10 = { add_trait = fortune_builder }
+				10 = { add_trait = charismatic_negotiator  }
+			}
+			random = { chance = 50 add_trait = envious }
+			random = { chance = 50 add_trait = diligent }
+			random = { chance = 50 add_trait = patient }
+			random = { chance = 50 add_trait = gregarious }
+			random = { chance = 20 add_trait = proud }
+			random = { chance = 20 add_trait = ambitious }
+			random = { chance = 10 add_trait = quick }
+		}
+	}
+}
+
+character_event = {
+	id = overseas.82
+	desc = EVTDESC_overseas_wastelander
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		create_character = {
+			dynasty = NONE
+			female = no
+			age = 26
+			religion = atomicist
+			culture = wastelander
+			trait = scholar
+			trait = greedy
+			trait = brave
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			set_character_flag = foreign_merchant
+			wealth = 10
+			random_list = {
+				5 = { add_trait = midas_touched }
+				10 = { add_trait = scholarly_theologian  }
+				10 = { add_trait = fortune_builder }
+				10 = { add_trait = charismatic_negotiator  }
+			}
+			random = { chance = 50 add_trait = envious }
+			random = { chance = 50 add_trait = diligent }
+			random = { chance = 50 add_trait = patient }
+			random = { chance = 50 add_trait = gregarious }
+			random = { chance = 20 add_trait = proud }
+			random = { chance = 20 add_trait = ambitious }
+			random = { chance = 10 add_trait = quick }
+		}
+	}
+}
+
+character_event = {
+	id = overseas.83
+	desc = EVTDESC_overseas_maori
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		create_character = {
+			dynasty = NONE
+			female = no
+			age = 26
+			religion = nonconformist #I guess this is the closest we can get to a sutiable religion
+			culture = maori
+			trait = scholar
+			trait = greedy
+			trait = brave
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			set_character_flag = foreign_merchant
+			wealth = 10
+			random_list = {
+				5 = { add_trait = midas_touched }
+				10 = { add_trait = scholarly_theologian  }
+				10 = { add_trait = fortune_builder }
+				10 = { add_trait = charismatic_negotiator  }
+			}
+			random = { chance = 50 add_trait = envious }
+			random = { chance = 50 add_trait = diligent }
+			random = { chance = 50 add_trait = patient }
+			random = { chance = 50 add_trait = gregarious }
+			random = { chance = 20 add_trait = proud }
+			random = { chance = 20 add_trait = ambitious }
+			random = { chance = 10 add_trait = quick }
 		}
 	}
 }

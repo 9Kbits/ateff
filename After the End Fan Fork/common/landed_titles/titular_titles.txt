@@ -3311,6 +3311,32 @@ e_liberian = {
 	creation_requires_capital = no	
 }
 
+e_verdiano = {
+	color={ 0 255 0 }
+	color2={ 0 0 255 }
+	capital = 1197 # Providence
+	
+	culture = verdiano
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = verdiano
+		OR = {
+			realm_size = 150
+			e_verdiano = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
 e_maori = {
 	color={ 66 56 255 }
 	color2={ 210 50 20 }
