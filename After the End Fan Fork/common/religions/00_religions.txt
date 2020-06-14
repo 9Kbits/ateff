@@ -3893,9 +3893,11 @@ muslim = {
 	
 		intermarry = imamite
 		intermarry = revivalist
+		intermarry = theosophist
 		intermarry = qingzheng
 		intermarry = alawiyya
 		intermarry = orientalist #???
+		intermarry = misrist #???
 
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
@@ -3941,9 +3943,60 @@ muslim = {
 	
 		intermarry = imamite
 		intermarry = traditionalist
+		intermarry = theosophist
 		intermarry = qingzheng
 		intermarry = alawiyya
 		intermarry = orientalist
+		intermarry = misrist
+
+		religious_clothing_head = 5
+		religious_clothing_priest = 5
+	}
+	
+	theosophist = {
+		graphical_culture = muslimgfx
+		
+		icon = 76
+		heresy_icon = 79
+		
+		parent = traditionalist
+		color = { 0.4 0.9 0 }
+		crusade_name = JIHAD
+		scripture_name = THE_QURAN
+		priest_title = IMAM
+	
+		high_god_name = GOD_ALLAH
+		
+		god_names = {
+			GOD_ALLAH GOD_THE_GREATEST
+		}
+		evil_god_names = {
+			GOD_SHAYTAN GOD_IBLIS
+		}
+		
+		can_call_crusade = yes
+		allow_rivermovement = yes
+	
+		attacking_same_religion_piety_loss = yes
+		uses_jizya_tax = yes
+
+		priests_can_marry = yes
+		priests_can_inherit = yes
+		psc_marriage = no # Disallow uncle-nice and aunt-nephew marriages
+		matrilineal_marriages = no
+		max_wives = 4
+		
+		pacifist = yes
+		peace_piety_gain = 1.0 #Gains 1 extra piety per month while at peace
+		aggression = 0.5 # AI aggression factor
+	
+		intermarry = imamite
+		intermarry = traditionalist
+		intermarry = revivalist
+		intermarry = qingzheng
+		intermarry = alawiyya
+		intermarry = orientalist
+		intermarry = misrist
 
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
@@ -3982,9 +4035,11 @@ muslim = {
 	
 		intermarry = traditionalist
 		intermarry = revivalist
+		intermarry = theosophist
 		intermarry = qingzheng
 		intermarry = alawiyya
 		intermarry = orientalist
+		intermarry = misrist
 		intermarry = cetic
 
 		religious_clothing_head = 5
@@ -4029,8 +4084,10 @@ muslim = {
 	
 		intermarry = traditionalist
 		intermarry = revivalist
+		intermarry = theosophist
 		intermarry = alawiyya
 		intermarry = orientalist
+		intermarry = misrist
 		intermarry = imamite
 		intermarry = cetic
 
@@ -4071,10 +4128,13 @@ muslim = {
 		defensive_attrition = yes
 	
 		intermarry = traditionalist
+		intermarry = revivalist
+		intermarry = theosophist
 		intermarry = imamite
 		intermarry = revivalist
 		intermarry = qingzheng
 		intermarry = orientalist
+		intermarry = misrist
 
 		religious_clothing_head = 5
 		religious_clothing_priest = 5
@@ -4116,8 +4176,12 @@ muslim = {
 
 
 		intermarry = imamite
+		intermarry = qingzheng
+		intermarry = alawiyya
 		intermarry = traditionalist
 		intermarry = revivalist
+		intermarry = theosophist
+		intermarry = misrist
 		intermarry = thelemic
 		intermarry = thelemic_reformed
 		intermarry = occultist
@@ -4161,9 +4225,17 @@ muslim = {
 		peace_piety_gain = 1.0 #Gains 1 extra piety per month while at peace
 		rel_head_defense = yes
 
-
+		intermarry = imamite
+		intermarry = qingzheng
+		intermarry = alawiyya
+		intermarry = traditionalist
+		intermarry = revivalist
+		intermarry = theosophist
 		intermarry = orientalist
-
+		intermarry = thelemic
+		intermarry = thelemic_reformed
+		intermarry = occultist
+		intermarry = occultist_reformed
 
 		religious_clothing_head = 5
 		religious_clothing_priest = 5

@@ -458,6 +458,12 @@ religion_same_as_bloodline_founder_trigger = { #WHY PARADOX
 	}
 	trigger_if = {
 		limit = {
+			FROM = { has_bloodline_flag = requires_theosophist_religion }
+		}
+		ROOT = { show_scope_change = no religion = theosophist }
+	}
+	trigger_if = {
+		limit = {
 			FROM = { has_bloodline_flag = requires_imamite_religion }
 		}
 		ROOT = { show_scope_change = no religion = imamite }

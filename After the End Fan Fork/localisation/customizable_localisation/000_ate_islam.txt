@@ -27,6 +27,15 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = GetReligiousCommunityName_theosophist
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_theosophist
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_theosophist
+	}
+}
+defined_text = {
 	name = GetReligiousCommunityName_orientalist
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_name_orientalist
@@ -95,6 +104,17 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_revivalist_desc_REAL
+	}
+}
+defined_text = {
+	name = GetReligiousSocietyDesc_theosophist
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_theosophist_desc_REAL
 	}
 }
 defined_text = {

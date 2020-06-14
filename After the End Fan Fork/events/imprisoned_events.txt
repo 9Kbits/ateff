@@ -669,7 +669,13 @@ character_event = {
 	option = {
 		name = EVTOPTB50010 # Oil up the rack!
 		if = {
-			limit = { NOT = { religion = anabaptist } }
+			limit = {
+				NOR = {
+					religion = anabaptist
+					religion = libertarian
+					religion = theosophist
+				}
+			}
 			piety = -10
 		}
 		pacifists_lose_piety_effect = yes

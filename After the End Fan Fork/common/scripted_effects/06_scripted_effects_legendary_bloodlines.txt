@@ -1971,6 +1971,10 @@ set_bloodline_founder_religion_flag_effect = {
 		new_bloodline = { set_bloodline_flag = requires_revivalist_religion }
 	}
 	else_if = {
+		limit = { religion = theosophist }
+		new_bloodline = { set_bloodline_flag = requires_theosophist_religion }
+	}
+	else_if = {
 		limit = { religion = imamite }
 		new_bloodline = { set_bloodline_flag = requires_imamite_religion }
 	}

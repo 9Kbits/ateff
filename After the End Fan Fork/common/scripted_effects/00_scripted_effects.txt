@@ -10742,6 +10742,22 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
+					religion = theosophist
+				}
+				has_character_flag = character_was_theosophist
+			}
+		}
+		set_secret_religion = theosophist
+		clr_character_flag = character_was_theosophist
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
 					religion = imamite
 				}
 				has_character_flag = character_was_imamite
@@ -11191,6 +11207,10 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_revivalist
 	}
 	if = {
+		limit = { religion = theosophist }
+		set_character_flag = character_was_theosophist
+	}
+	if = {
 		limit = { religion = imamite }
 		set_character_flag = character_was_imamite
 	}
@@ -11305,6 +11325,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_hindu
 	clr_character_flag = character_was_traditionalist
 	clr_character_flag = character_was_revivalist
+	clr_character_flag = character_was_theosophist
 	clr_character_flag = character_was_imamite
 	clr_character_flag = character_was_qingzheng
 	clr_character_flag = character_was_alawiyya
@@ -11833,6 +11854,13 @@ event_target_old_religion_from_flag_effect = {
 		limit = { has_character_flag = character_was_revivalist }
 		random_character = {
 			limit = { religion = revivalist }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_theosophist }
+		random_character = {
+			limit = { religion = theosophist }
 			save_event_target_as = old_religion
 		}
 	}
@@ -14181,6 +14209,17 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = revivalist
 					remove_province_modifier = secret_revivalist_community
+				}
+			}
+		}
+		secret_religious_society_theosophist = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_theosophist_community
+					}
+					religion = theosophist
+					remove_province_modifier = secret_theosophist_community
 				}
 			}
 		}
@@ -18915,6 +18954,17 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = revivalist
 						remove_province_modifier = secret_revivalist_community
+					}
+				}
+			}
+			secret_religious_society_theosophist = { 
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_theosophist_community
+						}
+						religion = theosophist
+						remove_province_modifier = secret_theosophist_community
 					}
 				}
 			}

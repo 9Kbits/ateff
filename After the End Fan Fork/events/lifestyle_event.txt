@@ -423,7 +423,10 @@ character_event = {
 	option = {
 		name = "EVTOPTA5023"
 		trigger = {
-			NOT = { religion = anabaptist }
+			NOR = {
+				religion = anabaptist
+				religion = theosophist
+			}
 		}
 		prestige = 20
 		clr_character_flag = red_rose

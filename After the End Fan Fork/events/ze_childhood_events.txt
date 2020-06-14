@@ -429,7 +429,10 @@ character_event = {
 								}
 								NOT = {
 									AND = {
-										religion = anabaptist
+										OR = {
+											religion = anabaptist
+											religion = theosophist
+										}
 										trait = zealous
 									}
 								}
@@ -451,7 +454,10 @@ character_event = {
 							}
 							NOT = {
 								AND = {
-									religion = anabaptist
+									OR = {
+										religion = anabaptist
+										religion = theosophist
+									}
 									trait = zealous
 								}
 							}
@@ -7632,6 +7638,10 @@ character_event = {
 			limit = { religion = anabaptist }
 			piety = -15
 		}
+		if = {
+			limit = { religion = theosophist }
+			piety = -15
+		}
 		prestige = 30
 		FROM = {
 			set_character_flag = child_curious_version_1_scolded
@@ -7696,6 +7706,10 @@ character_event = {
 		}
 		if = {
 			limit = { religion = anabaptist }
+			piety = -15
+		}
+		if = {
+			limit = { religion = theosophist }
 			piety = -15
 		}
 		FROM = {

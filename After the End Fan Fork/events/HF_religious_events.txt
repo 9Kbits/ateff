@@ -4370,6 +4370,13 @@ character_event = {
 			}
 		}
 		if = {
+			limit = { theosophist = { has_religion_feature = religion_cosmopolitan } }
+			random_playable_ruler = {
+				limit = { religion = theosophist }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
+		if = {
 			limit = { imamite = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = imamite }
@@ -4898,6 +4905,13 @@ character_event = {
 			limit = { revivalist = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = revivalist }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { theosophist = { has_religion_feature = religion_dogmatic } }
+			random_playable_ruler = {
+				limit = { religion = theosophist }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
