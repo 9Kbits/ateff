@@ -191,26 +191,20 @@ narrative_event = {
 		NOT = { has_global_flag = interventions_unlocked }
 
 		calc_true_if = { 
-			amount = 2
-			AND = {
-				3 = { # manhattan
-					owner = {
-						NOT = { religion_openly_americanist_or_heresy_trigger = yes }
-					}
+			amount >= 2
+			3 = { # manhattan
+				owner = {
+					NOT = { religion = americanist }
 				}
 			}
-			AND = {
-				27 = { # philadelphia
-					owner = {
-						NOT = { religion_openly_americanist_or_heresy_trigger = yes }
-					}
+			27 = { # philadelphia
+				owner = {
+					NOT = { rreligion = americanist }
 				}
 			}
-			AND = {
-				383 = { # rushmore
-					owner = {
-						NOT = { religion_openly_americanist_or_heresy_trigger = yes }
-					}
+			383 = { # rushmore
+				owner = {
+					NOT = { religion = americanist }
 				}
 			}
 		}
