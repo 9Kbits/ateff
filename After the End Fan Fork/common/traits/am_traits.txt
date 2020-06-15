@@ -2542,6 +2542,29 @@ bronze_star = {
 	female_compliment_adj = COMPL_DECORATED
 }
 
+draft_dodger = {
+	opposites = {
+		bronze_star
+		president #presidents can't be draft dodgers
+	}
+	
+	potential = {
+		religion = americanist
+	}
+	
+	religious = yes
+	random = no
+	
+	ai_zeal = -25 #this prevents draft dodgers from joining the crusade anyway
+	monthly_character_piety = -0.15
+	same_religion_opinion = -15
+	
+	male_insult = INSULT_COWARD
+	male_insult_adj = INSULT_CRAVEN
+	female_insult_adj = INSULT_WUSSY
+	child_insult_adj = INSULT_WUSSY
+}
+
 #Commented these out because I have no idea what these are supposed to do.
 
 #fair_credit = {

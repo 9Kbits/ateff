@@ -1,7 +1,7 @@
 
 namespace = americanist_crusade
 
-# AMERICANIST FILIBUSTER
+# AMERICANIST INTERVENTION
 # Called from 'on_crusade_creation'
 # new_character is the targetted enemy
 # ROOT is the religious head
@@ -9,11 +9,11 @@ namespace = americanist_crusade
 narrative_event = {
 	id = americanist_crusade.1
 	title = EVTNAME200
-	picture = GFX_evt_americanist_filibuster
+	picture = GFX_evt_americanist_intervention
 	border = GFX_event_narrative_frame_war
 	
 	desc = {
-		text = EVTDESC_filibuster
+		text = EVTDESC_intervention
 		trigger = {
 			OR = {
 				new_character = {
@@ -25,7 +25,7 @@ narrative_event = {
 		}
 	}
 	desc = {
-		text = EVTDESC_filibuster_pagan
+		text = EVTDESC_intervention_pagan
 		trigger = {
 			new_character = {
 				religion_group = pagan_group
@@ -36,7 +36,7 @@ narrative_event = {
 		}
 	}
 	desc = {
-		text = EVTDESC_filibuster_christ
+		text = EVTDESC_intervention_christ
 		trigger = {
 			new_character = {
 				religion_group = christian
@@ -56,6 +56,12 @@ narrative_event = {
 		can_call_crusade = yes
 		ROOT = { 
 			religion = americanist
+		}
+	}
+	
+	immediate = {
+		ROOT = {
+			character_event = { id = americanist_crusade.5 days = 3 } #ping event for call to arms
 		}
 	}
 
@@ -94,9 +100,9 @@ narrative_event = {
 
 narrative_event = {
 	id = americanist_crusade.2
-	title = EVTNAME_filibuster
-	desc = EVTDESC_filibuster_2
-	picture = GFX_evt_americanist_filibuster
+	title = EVTNAME_intervention
+	desc = EVTDESC_intervention_2
+	picture = GFX_evt_americanist_intervention
 	border = GFX_event_narrative_frame_religion
 	
 	major = yes
@@ -117,24 +123,24 @@ narrative_event = {
 		controls_religion = yes
 		year = 2690
 		
-		NOT = { has_global_flag = filibusters_unlocked }
+		NOT = { has_global_flag = interventions_unlocked }
 	}
 	
 	is_triggered_only = yes
 	
 	immediate = {
-		set_global_flag = filibusters_unlocked
+		set_global_flag = interventions_unlocked
 	}
 	
 	option = {
-		name = EVTOPTA_filibuster_2
+		name = EVTOPTA_intervention_2
 		trigger = {
 			religion_openly_americanist_or_heresy_trigger = yes
 		}
 	}
 	
 	option = {
-		name = EVTOPTB_filibuster_2
+		name = EVTOPTB_intervention_2
 		trigger = {
 			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 		}
@@ -143,9 +149,9 @@ narrative_event = {
 
 narrative_event = {
 	id = americanist_crusade.3
-	title = EVTNAME_filibuster
-	desc = EVTDESC_filibuster_3
-	picture = GFX_evt_americanist_filibuster
+	title = EVTNAME_intervention
+	desc = EVTDESC_intervention_3
+	picture = GFX_evt_americanist_intervention
 	border = GFX_event_narrative_frame_religion
 	
 	major = yes
@@ -164,7 +170,7 @@ narrative_event = {
 		}
 		religion = americanist
 		controls_religion = yes
-		NOT = { has_global_flag = filibusters_unlocked }
+		NOT = { has_global_flag = interventions_unlocked }
 
 		calc_true_if = { 
 			amount = 2
@@ -197,18 +203,18 @@ narrative_event = {
 	}
 	
 	immediate = {
-		set_global_flag = filibusters_unlocked
+		set_global_flag = interventions_unlocked
 	}
 	
 	option = {
-		name = EVTOPTA_filibuster_2
+		name = EVTOPTA_intervention_2
 		trigger = {
 			religion_openly_americanist_or_heresy_trigger = yes
 		}
 	}
 	
 	option = {
-		name = EVTOPTB_filibuster_2
+		name = EVTOPTB_intervention_2
 		trigger = {
 			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
 		}
@@ -217,9 +223,9 @@ narrative_event = {
 
 narrative_event = {
 	id = americanist_crusade.4
-	title = EVTNAME_filibuster
-	desc = EVTDESC_filibuster_4
-	picture = GFX_evt_americanist_filibuster
+	title = EVTNAME_intervention
+	desc = EVTDESC_intervention_4
+	picture = GFX_evt_americanist_intervention
 	border = GFX_event_narrative_frame_religion
 	
 	major = yes
@@ -238,7 +244,7 @@ narrative_event = {
 		}
 		religion = americanist
 		controls_religion = yes
-		NOT = { has_global_flag = filibusters_unlocked }
+		NOT = { has_global_flag = interventions_unlocked }
 		
 		63 = { # DC
 			owner = {
@@ -252,20 +258,155 @@ narrative_event = {
 	}
 	
 	immediate = {
-		set_global_flag = filibusters_unlocked
+		set_global_flag = interventions_unlocked
 	}
 	
 	option = {
-		name = EVTOPTA_filibuster_2
+		name = EVTOPTA_intervention_2
 		trigger = {
 			religion_openly_americanist_or_heresy_trigger = yes
 		}
 	}
 	
 	option = {
-		name = EVTOPTB_filibuster_2
+		name = EVTOPTB_intervention_2
 		trigger = {
 			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+		}
+	}
+}
+
+character_event = {
+	id = americanist_crusade.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		any_independent_ruler = {
+			limit = {
+				religion = ROOT
+				war = no
+			}
+			letter_event = { id = americanist_crusade.6 }
+		}
+	}
+}
+
+letter_event = {
+	id = americanist_crusade.6
+	desc = EVTDESC_americanist_crusade_6
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		war = no
+	}
+	
+	option = {
+		name = EVTOPTA_americanist_crusade_6
+		custom_tooltip = { text = TXT_EVTOPTA_americanist_crusade_6 }
+		ROOT = { join_attacker_wars = FROM }
+		
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.5
+				trait = wroth
+			}
+			modifier = {
+				factor = 0.1
+				trait = craven
+			}
+			modifier = {
+				factor = 0.5
+				has_any_sympathy_trait_trigger = yes
+			}
+			modifier = {
+				factor = 0.6
+				trait = cynical
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_americanist_crusade_6
+		trigger = {
+			NOR = {
+				has_disability_trigger = yes
+				trait = imbecile
+			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTB_americanist_crusade_6 }
+		prestige = -25
+		piety = -50
+		add_trait = draft_dodger
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = brave
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+			modifier = {
+				factor = 3
+				trait = craven
+			}
+			modifier = {
+				factor = 3
+				has_any_sympathy_trait_trigger = yes
+			}
+			modifier = {
+				factor = 3
+				trait = cynical
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_americanist_crusade_6
+		trigger = {
+			OR = {
+				has_disability_trigger = yes
+				trait = imbecile
+			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTC_americanist_crusade_6 }
+		prestige = -15
+		add_character_modifier = {
+			name = disability_exemption
+			years = 5
+		}
+		
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				trait = brave
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+			modifier = {
+				factor = 3
+				trait = craven
+			}
+			modifier = {
+				factor = 3
+				has_any_sympathy_trait_trigger = yes
+			}
 		}
 	}
 }

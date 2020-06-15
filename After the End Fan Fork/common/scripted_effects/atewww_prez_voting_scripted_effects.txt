@@ -1745,7 +1745,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		OR = { has_religion_feature = religion_dogmatic has_religion_feature = religion_feature_rust_cultist }
+		OR = { has_religion_feature = religion_dogmatic }
 		religion = event_target:new_candidate
 		trait = zealous
 		event_target:new_candidate = { 
@@ -1909,6 +1909,19 @@ calculate_candidate_score = {
 			trait = adventurer
 		}
 		} change_variable = { which = newCandidate value = 10 } }
+	if = { 
+		
+		limit = {
+		
+		NOT = { character = event_target:new_candidate } 
+		OR = { 
+			trait = arbitrary #
+			NOT = { trait = draft_dodger }
+		}
+		event_target:new_candidate = { 
+			trait = draft_dodger
+		}
+		} change_variable = { which = newCandidate value = -30 } }
 	if = { 
 		
 		limit = {
@@ -2133,6 +2146,7 @@ calculate_candidate_score = {
 			trait = giant
 		}
 		} change_variable = { which = newCandidate value = 10 } }
+	
 	######################## Raw Opinion bonus towards Candidate	##########################
 	if = { 
 		

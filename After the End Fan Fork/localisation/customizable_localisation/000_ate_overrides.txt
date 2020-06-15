@@ -11313,3 +11313,43 @@ defined_text = {
 		localisation_key = String_Patriarchs
 	}
 }
+
+defined_text = {
+	name = GetSirMaam
+	
+	text = {
+		trigger = {
+			is_female = no
+		}
+		localisation_key = SIR
+	}
+	text = {
+		trigger = {
+			is_female = yes
+		}
+		localisation_key = MAAM
+	}
+	fallback_text = { #fallback
+		localisation_key = SIR
+	}
+}
+
+defined_text = {
+	name = GetSirMaamLowercase
+	
+	text = {
+		trigger = {
+			is_female = no
+		}
+		localisation_key = String_Sir_Lowercase
+	}
+	text = {
+		trigger = {
+			is_female = yes
+		}
+		localisation_key = String_Maam_Lowercase
+	}
+	fallback_text = { #fallback
+		localisation_key = String_Sir_Lowercase
+	}
+}

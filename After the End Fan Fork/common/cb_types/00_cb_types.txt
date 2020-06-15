@@ -3568,7 +3568,7 @@ crusade = {
 				religion_scope = {
 					OR = {
 						NOT = { has_flag = crusade_fired }
-						had_flag = { flag = crusade_fired days = 3650 }
+						had_flag = { flag = crusade_fired days = 7300 }
 					}
 				}
 			}
@@ -3588,7 +3588,7 @@ crusade = {
 					has_global_flag = imamite_jihad_unlocked
 					has_global_flag = orientalist_jihad_unlocked
 					has_global_flag = ursuline_crusades_unlocked
-					has_global_flag = filibusters_unlocked
+					has_global_flag = interventions_unlocked
 					has_global_flag = mormon_expeditions_unlocked
 					has_global_flag = pagan_ghws_unlocked
 					has_global_flag = christian_crusades_unlocked
@@ -3656,8 +3656,8 @@ crusade = {
 					AND = {
 						religion = americanist
 						custom_tooltip = {
-							text = CTT_FILIBUSTERS_UNLOCKED
-							has_global_flag = filibusters_unlocked
+							text = CTT_INTERVENTIONS_UNLOCKED
+							has_global_flag = interventions_unlocked
 						}
 					}
 					AND = {
