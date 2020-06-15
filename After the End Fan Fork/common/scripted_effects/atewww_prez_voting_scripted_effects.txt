@@ -39,22 +39,6 @@ calculate_candidate_score = {
 			trait = bad_priest_americanist
 		}
 		} change_variable = { which = newCandidate value = -100 } }
-	#Crusader
-	if = { 
-		
-		limit = {
-		
-		NOT = { religion_authority = 0.4 }
-		NOR = {
-			trait = cynical
-			trait = zealous
-		}
-		NOT = { character = event_target:new_candidate }
-		event_target:new_candidate = {
-			religion = ROOT
-			has_crusade_trait_trigger = yes
-		}
-		} change_variable = { which = newCandidate value = 5 } }
 	if = { 
 		
 		limit = {
@@ -1914,14 +1898,41 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		OR = { 
-			trait = arbitrary #
-			NOT = { trait = draft_dodger }
+		NOT = { trait = draft_dodger }
+		event_target:new_candidate = { 
+			trait = bronze_star
 		}
+		} change_variable = { which = newCandidate value = 15 } }
+	if = { 
+		
+		limit = {
+		
+		NOT = { character = event_target:new_candidate } 
+		NOT = { trait = draft_dodger }
 		event_target:new_candidate = { 
 			trait = draft_dodger
 		}
 		} change_variable = { which = newCandidate value = -30 } }
+	if = { 
+		
+		limit = {
+		
+		NOT = { character = event_target:new_candidate } 
+		trait = draft_dodger
+		event_target:new_candidate = { 
+			trait = draft_dodger
+		}
+		} change_variable = { which = newCandidate value = 10 } }
+	if = { 
+		
+		limit = {
+		
+		NOT = { character = event_target:new_candidate } 
+		trait = draft_dodger
+		event_target:new_candidate = { 
+			trait = bronze_star
+		}
+		} change_variable = { which = newCandidate value = -10 } }
 	if = { 
 		
 		limit = {
