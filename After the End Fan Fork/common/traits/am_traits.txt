@@ -2528,14 +2528,18 @@ medal_of_honor = {
 		hivernant
 		cavalier
 	}
+	
+	ai_zeal = 20
 
-	martial = 2
-	combat_rating = 10 #old value: 1
+	martial = 3
+	global_levy_size = 0.2
+	combat_rating = 15
+	
+	command_modifier = {
+		religious_enemy = 0.3
+	}
 
-	church_opinion = 20
-	same_opinion_if_same_religion = 20
-
-	ai_zeal = 10
+	same_religion_opinion = 35
 	customizer = no
 
 	male_compliment_adj = COMPL_DECORATED
