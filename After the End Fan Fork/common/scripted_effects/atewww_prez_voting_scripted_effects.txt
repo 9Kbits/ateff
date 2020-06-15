@@ -1900,9 +1900,9 @@ calculate_candidate_score = {
 		NOT = { character = event_target:new_candidate } 
 		NOT = { trait = draft_dodger }
 		event_target:new_candidate = { 
-			trait = bronze_star
+			trait = medal_of_honor
 		}
-		} change_variable = { which = newCandidate value = 5 } }
+		} change_variable = { which = newCandidate value = 30 } }
 	if = { 
 		
 		limit = {
@@ -1930,7 +1930,7 @@ calculate_candidate_score = {
 		NOT = { character = event_target:new_candidate } 
 		trait = draft_dodger
 		event_target:new_candidate = { 
-			trait = bronze_star
+			trait = medal_of_honor
 		}
 		} change_variable = { which = newCandidate value = -10 } }
 	if = { 

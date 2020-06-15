@@ -229,7 +229,10 @@ character_event = {
 			religion_group = pagan_group
 			religion_group = jewish_group
 			religion_group = latter_day_saints
-			religion_group = oldworld
+			AND = {
+				religion_group = oldworld
+				NOT = { religion = americanist }
+			}
 			religion = exovedate
 		}
 		NOR = {

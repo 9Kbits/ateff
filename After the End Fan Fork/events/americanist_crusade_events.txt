@@ -100,10 +100,10 @@ narrative_event = {
 		}
 	}
 	option = {
-		name = EVTOPTF_americanist_crusade_1 #hippie
+		name = EVTOPTF_americanist_crusade_1
 		trigger = {
 			religion = ROOT
-			trait = draft_dodger
+			NOT = { trait = president }
 		}
 	}
 }
@@ -145,14 +145,21 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_intervention_2
 		trigger = {
-			religion_openly_americanist_or_heresy_trigger = yes
+			religion = americanist
 		}
 	}
 	
 	option = {
 		name = EVTOPTB_intervention_2
 		trigger = {
-			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+			NOT = { religion = americanist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_intervention_2
+		trigger = {
+			religion = americanist
 		}
 	}
 }
@@ -219,14 +226,21 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_intervention_2
 		trigger = {
-			religion_openly_americanist_or_heresy_trigger = yes
+			religion = americanist
 		}
 	}
 	
 	option = {
 		name = EVTOPTB_intervention_2
 		trigger = {
-			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+			NOT = { religion = americanist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_intervention_2
+		trigger = {
+			religion = americanist
 		}
 	}
 }
@@ -274,14 +288,21 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_intervention_2
 		trigger = {
-			religion_openly_americanist_or_heresy_trigger = yes
+			religion = americanist
 		}
 	}
 	
 	option = {
 		name = EVTOPTB_intervention_2
 		trigger = {
-			NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+			NOT = { religion = americanist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_intervention_2
+		trigger = {
+			religion = americanist
 		}
 	}
 }
