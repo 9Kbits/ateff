@@ -67,7 +67,10 @@ narrative_event = {
 
 	option = {
 		name = EVTOPTA324 # For [God Name]!
-		trigger = { religion = ROOT }
+		trigger = {
+			religion = ROOT
+			NOT = { trait = draft_dodger }
+		}
 	}
 	option = {
 		name = EVTOPTB200 # No concern of ours
@@ -94,6 +97,13 @@ narrative_event = {
 				religion = PREV
 				NOT = { character = PREV }
 			}
+		}
+	}
+	option = {
+		name = EVTOPTF_americanist_crusade_1 #hippie
+		trigger = {
+			religion = ROOT
+			trait = draft_dodger
 		}
 	}
 }

@@ -1745,7 +1745,7 @@ calculate_candidate_score = {
 		limit = {
 		
 		NOT = { character = event_target:new_candidate } 
-		OR = { has_religion_feature = religion_dogmatic }
+		has_religion_feature = religion_dogmatic
 		religion = event_target:new_candidate
 		trait = zealous
 		event_target:new_candidate = { 
