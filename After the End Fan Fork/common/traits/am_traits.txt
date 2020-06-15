@@ -2565,6 +2565,58 @@ draft_dodger = {
 	child_insult_adj = INSULT_WUSSY
 }
 
+trans_bahai = {
+	opposites = {
+		trans_uwaysi
+		trans_hurufiyya
+	}
+	potential = {
+		religion = transcendentalist
+	}
+	random = no
+	religious = yes
+	religious_branch = transcendentalist	
+	christian_opinion = 10
+	jewish_group_opinion = 10
+	tech_growth_modifier_culture = 0.1
+	opposite_opinion = -20
+}
+trans_uwaysi = {
+	opposites = {
+		trans_bahai
+		trans_hurufiyya
+	}
+	potential = {
+		religion = transcendentalist
+	}
+	random = no
+	religious = yes
+	religious_branch = transcendentalist	
+	imamite_opinion = 10
+	traditionalist_opinion = 10
+	monthly_character_piety = 0.1
+	opposite_opinion = -20
+}
+trans_hurufiyya = {
+	opposites = {
+		trans_bahai
+		trans_uwaysi
+	}
+	potential = {
+		religion = transcendentalist
+	}
+	random = no
+	religious = yes
+	religious_branch = transcendentalist	
+	imamite_opinion = 5
+	traditionalist_opinion = 5
+	qingzheng_opinion = 5
+	alawiyya_opinion = -10
+	revivalist_opinion = -10
+	learning = 2
+	opposite_opinion = -20
+}
+
 #Commented these out because I have no idea what these are supposed to do.
 
 #fair_credit = {
