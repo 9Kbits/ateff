@@ -364,6 +364,10 @@ letter_event = {
 				factor = 0.6
 				trait = cynical
 			}
+			modifier = {
+				factor = 0.8
+				trait = kind
+			}
 		}
 	}
 	
@@ -395,12 +399,16 @@ letter_event = {
 				trait = craven
 			}
 			modifier = {
-				factor = 3
+				factor = 2
 				has_any_sympathy_trait_trigger = yes
 			}
 			modifier = {
-				factor = 3
+				factor = 2
 				trait = cynical
+			}
+			modifier = {
+				factor = 1.5
+				trait = kind
 			}
 		}
 	}
@@ -438,6 +446,67 @@ letter_event = {
 				factor = 3
 				has_any_sympathy_trait_trigger = yes
 			}
+			modifier = {
+				factor = 5
+				trait = cynical
+			}
+			modifier = {
+				factor = 2
+				trait = kind
+			}
 		}
+	}
+}
+
+# Arriving for the great holy war - removal of Draft Dodger trait
+character_event = {
+	id = americanist_crusade.7
+	desc = EVTDESC_americanist_crusade_7
+	picture = "GFX_evt_battle"
+	border = GFX_event_normal_frame_war
+	
+	min_age = 16
+	capable_only = yes
+	prisoner = no
+	in_command = yes
+	religion = americanist
+	is_triggered_only = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				any_war = {
+					OR = {
+						using_cb = crusade
+						using_cb = new_crusade
+					}
+				}
+				crusade_target = {
+					is_located_in = ROOT
+				}
+			}
+			any_liege = {
+				religion = ROOT
+				any_war = {
+					OR = {
+						using_cb = crusade
+						using_cb = new_crusade
+					}
+				}
+				crusade_target = {
+					is_located_in = ROOT
+				}
+			}
+		}
+		trait = draft_dodger
+	}
+
+	immediate = {
+		abdicate_holy_order_if_religion_changes_effect = yes
+	}
+	
+	option = {
+		name = EVTOPTA_americanist_crusade_7
+		remove_trait = draft_dodger
 	}
 }
