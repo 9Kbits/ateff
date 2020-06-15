@@ -160,6 +160,7 @@ narrative_event = {
 		name = EVTOPTC_intervention_2
 		trigger = {
 			religion = americanist
+			NOT = { trait = president }
 		}
 	}
 }
@@ -241,6 +242,7 @@ narrative_event = {
 		name = EVTOPTC_intervention_2
 		trigger = {
 			religion = americanist
+			NOT = { trait = president }
 		}
 	}
 }
@@ -272,7 +274,7 @@ narrative_event = {
 		
 		63 = { # DC
 			owner = {
-				NOT = { religion_openly_americanist_or_heresy_trigger = yes }
+				NOT = { religion = americanist }
 			}
 		}
 	}
@@ -303,6 +305,7 @@ narrative_event = {
 		name = EVTOPTC_intervention_2
 		trigger = {
 			religion = americanist
+			NOT = { trait = president }
 		}
 	}
 }
