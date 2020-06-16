@@ -767,7 +767,11 @@ narrative_event = {
 			diplomacy = 15
 		}
 		FROM = {
-			make_tributary = ROOT
+			make_tributary = {
+				who = ROOT
+				percentage = 0.4
+				tributary_type = default
+			}
 		}
 	}
 }
@@ -887,7 +891,11 @@ narrative_event = { #why is this throwing up an error?
 			diplomacy = 20
 		}
 		FROM = {
-			make_tributary = ROOT
+			make_tributary = {
+				who = ROOT
+				percentage = 0.4
+				tributary_type = default
+			}
 		}	
 		ai_chance = {
 			factor = 1000
