@@ -1125,6 +1125,13 @@
 	culture=cubano
 	religion=santeria
 	father=1898064
+	trait=kind
+	trait=charitable
+	trait=arbitrary
+	trait=content
+	trait=honest
+	trait=humble
+	trait=indulgent_wastrel
 	2616.4.24={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -1139,6 +1146,18 @@
 	trait=ambitious
 	trait=skilled_tactician
 	2605.6.25={birth=yes}
+	2626.1.1={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
 	2659.8.2={death=yes}
 }
 1898067={
@@ -1147,7 +1166,15 @@
 	dynasty=1794101
 	culture=cubano
 	religion=santeria
+	father=1898075
 	mother=1898066
+	trait=drunkard
+	trait=brave
+	trait=gregarious
+	trait=poet
+	trait=trusting
+	trait=honest
+	trait=charismatic_negotiator
 	2629.10.22={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -1156,7 +1183,14 @@
 	dynasty=1794101
 	culture=cubano
 	religion=santeria
+	father=1898075
 	mother=1898066
+	trait=fortune_builder
+	trait=ambitious
+	trait=diligent
+	trait=greedy
+	trait=gluttonous
+	trait=ambitious
 	2632.2.10={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -1220,4 +1254,16 @@
 	father=1898065
 	2645.1.11={birth=yes}
 	2700.1.1={death=yes}
+}
+1898075={
+	name="Bárbaro"
+	dynasty=1794002
+	culture=cubano
+	religion=santeria
+	trait=diligent
+	trait=ambitious
+	trait=fortune_builder
+	2601.6.15={birth=yes}
+	2625.1.1={add_spouse=1898066}
+	2655.5.6={death=yes}
 }

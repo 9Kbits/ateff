@@ -1430,12 +1430,13 @@
 	2643.5.12={add_spouse=1763050}
 	2657.7.1={death=yes}
 }
-
 1857079={
 	name="Theyanoguin"
 	dynasty=2007054
 	culture=iroquois
 	religion=high_church
+	father=1867161
+	mother=1867163
 	trait=quick
 	trait=strong
 	trait=brave
@@ -1444,6 +1445,7 @@
 	trait=honest
 	trait=skilled_tactician
 	2640.11.22={birth=yes}
+	2653.10.10={add_claim=c_brant}
 	2700.1.1={death=yes}
 }
 1857080={
@@ -1465,15 +1467,18 @@
 	culture=ontarian
 	religion=high_church
 	father=1857097
+	martial=7
+	diplomacy=4
+	intrigue=4
+	stewardship=8
+	learning=8
 	trait=paranoid
 	trait=depressed
 	trait=martial_cleric
 	trait=slothful
-	trait=quick
 	trait=shy
 	trait=temperate
 	trait=patient
-	trait=stutter
 	trait=erudite
 	2647.11.22={birth=yes effect={set_character_flag=no_historical_family}}
 	2660.1.1={
@@ -2447,6 +2452,64 @@
 	trait=gregarious
 	trait=humble
 	trait=thrifty_clerk
-	2641.12.17={birth=yes culture=iroquois}
+	2641.12.17={birth=yes culture=iroquois effect={set_character_flag=no_historical_family}}
 	2700.1.1={death=yes}
+}
+1867161={
+	name="Oronhyatekha"
+	dynasty=2007054
+	culture=iroquois
+	religion=high_church
+	trait=martial_cleric
+	trait=zealous
+	trait=humble
+	trait=patient
+	trait=brave
+	trait=just
+	2617.6.15={birth=yes}
+	2635.1.1={add_spouse=1867163}
+	2653.10.10={death={
+			death_reason=death_execution
+			killer=1867159
+		}
+	}
+}
+1867162={
+	name="Tenskwatawa"
+	dynasty=2007054
+	culture=iroquois
+	religion=high_church
+	father=1867161
+	mother=1867163
+	trait=brave
+	trait=wroth
+	trait=proud
+	trait=ambitious
+	trait=tough_soldier
+	2636.12.6={birth=yes}
+	2653.10.10={death={
+			death_reason=death_execution
+			killer=1867159
+		}
+	}
+}
+1867163={
+	name="Kawennahere"
+	female=yes
+	dynasty=2007054
+	culture=iroquois
+	religion=high_church
+	trait=martial_cleric
+	trait=zealous
+	trait=humble
+	trait=patient
+	trait=kind
+	trait=charitable
+	trait=content
+	2616.5.16={birth=yes}
+	2653.10.10={death={
+			death_reason=death_execution
+			killer=1867159
+		}
+	}
 }
