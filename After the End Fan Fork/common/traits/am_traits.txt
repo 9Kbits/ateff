@@ -2634,6 +2634,33 @@ trans_hurufiyya = {
 	opposite_opinion = -20
 }
 
+hajjaj2 = {
+	potential = {
+		religion = transcendentalist
+	}
+	
+	muslim_opinion = 5
+	monthly_character_piety = 0.1
+	
+	male_compliment = COMPL_HAJJAJ
+	female_compliment = COMPL_HAJJAJ
+}
+
+on_hajj2 = {
+	potential = {
+		religion = transcendentalist
+		NOT = { trait = hajjaj2 }
+	}
+	
+	cached = yes # Keep a cache of all trait holders, to use with the corresponding event trigger 
+	
+	transcendentalist_opinion = 10
+	monthly_character_piety = 0.2
+	
+	pilgrimage = yes # Will need a regent, but can still be guardian to children
+	customizer = no
+}
+
 #Commented these out because I have no idea what these are supposed to do.
 
 #fair_credit = {

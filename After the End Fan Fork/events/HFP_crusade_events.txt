@@ -6388,51 +6388,45 @@ letter_event = {
 		hidden_tooltip = {
 			remove_character_modifier = not_pledged_to_crusade
 		}
-		if = {
-			limit = {
-				has_character_flag = crusade_light_punishment
-			}
-			piety = -100
-			FROM = {
-				opinion = {
-					who = ROOT
-					modifier = opinion_insulted
-					years = 5
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				has_character_flag = crusade_harsh_punishment
-			}
-			piety = -200
-			FROM = {
-				opinion = {
-					who = ROOT
-					modifier = opinion_deeply_insulted
-					years = 5
-				}
-			}
-		}
-		else_if = {
-			limit = {
-				has_character_flag = crusade_excommunicated
-			}
-			piety = -300
-			FROM = {
-				opinion = {
-					who = ROOT
-					modifier = opinion_deeply_insulted
-					years = 5
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						trait = excommunicated
+		trigger_switch = {
+			on_trigger = has_character_flag
+			crusade_light_punishment = {
+				piety = -100
+				FROM = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_insulted
+						years = 5
 					}
 				}
-				add_trait = excommunicated
+			}
+			crusade_harsh_punishment = {
+				piety = -200
+				FROM = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_deeply_insulted
+						years = 5
+					}
+				}
+			}
+			crusade_excommunicated = {
+				piety = -300
+				FROM = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_deeply_insulted
+						years = 5
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							trait = excommunicated
+						}
+					}
+					add_trait = excommunicated
+				}
 			}
 		}
 	}
@@ -6609,30 +6603,26 @@ letter_event = {
 
 	option = {	  
 		name = EVTOPTA_HFP_41144
-
-		if = {
-			limit = {
-				has_character_flag = crusade_light_punishment
-			}
-			piety = -100
-			FROM = {
-				opinion = {
-					who = ROOT
-					modifier = opinion_insulted
-					years = 5
+		trigger_switch = {
+			on_trigger = has_character_flag
+			crusade_light_punishment = {
+				piety = -100
+				FROM = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_insulted
+						years = 5
+					}
 				}
 			}
-		}
-		else_if = {
-			limit = {
-				has_character_flag = crusade_harsh_punishment
-			}
-			piety = -200
-			FROM = {
-				opinion = {
-					who = ROOT
-					modifier = opinion_deeply_insulted
-					years = 5
+			crusade_harsh_punishment = {
+				piety = -200
+				FROM = {
+					opinion = {
+						who = ROOT
+						modifier = opinion_deeply_insulted
+						years = 5
+					}
 				}
 			}
 		}

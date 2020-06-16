@@ -680,12 +680,10 @@ narrative_event = {
 	option = {
 		name = "NEW_CALIFORNIA_ACK"
 		trigger = {
-			OR = {				
+			OR = {		
 				NOR = {
-					primary_title = {
-						capital_scope = {
-							region = custom_california
-						}
+					capital_scope = {
+						region = custom_california
 					}
 					has_landed_title = e_new_california
 				}
@@ -702,10 +700,8 @@ narrative_event = {
 		name = "NEW_CALIFORNIA_JOIN"
 		trigger = {		
 			NOT = { has_landed_title = e_new_california }
-			primary_title = {
-				capital_scope = {
-					region = custom_california
-				}
+			capital_scope = {
+				region = custom_california
 			}
 			NOT = {
 				is_vassal_or_below_of = FROM
@@ -728,10 +724,8 @@ narrative_event = {
 		name = "NEW_CALIFORNIA_REFUSE"
 		trigger = {
 			NOT = { has_landed_title = e_new_california }
-			primary_title = {
-				capital_scope = {
-					region = custom_california
-				}
+			capital_scope = {
+				region = custom_california
 			}
 			NOT = {
 				is_vassal_or_below_of = FROM
@@ -756,10 +750,8 @@ narrative_event = {
 		name = "NEW_CALIFORNIA_TRIBUTARY"
 		trigger = {
 			NOT = { has_landed_title = e_new_california }
-			primary_title = {
-				capital_scope = {
-					region = custom_california
-				}
+			capital_scope = {
+				region = custom_california
 			}
 			NOT = {
 				is_vassal_or_below_of = FROM

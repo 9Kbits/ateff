@@ -3185,3 +3185,56 @@ character_event = {
 	}
 }
 
+character_event = {
+	id = islamate.88
+	desc = "EVTDESC_islamate88"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	religion = transcendentalist
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_islamate88
+		hidden_tooltip = {
+			remove_trait = trans_uwaysi
+			remove_trait = trans_hurufiyya
+
+		}
+		add_trait = trans_bahai
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = EVTOPTB_islamate88
+		hidden_tooltip = {
+			remove_trait = trans_bahai
+			remove_trait = trans_hurufiyya
+
+		}
+		add_trait = trans_uwaysi
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_islamate88
+		hidden_tooltip = {
+			remove_trait = trans_bahai
+			remove_trait = trans_uwaysi
+
+		}
+		add_trait = trans_hurufiyya
+		ai_chance = {
+			factor = 10
+		}
+	}
+}

@@ -4896,14 +4896,11 @@ character_event = {
         
         add_blood_splatter_effect = yes
 
-        if = {
-        	limit = { trait = depressed }
-        	remove_trait = depressed
-        }
-        else_if = {
-        	limit = { trait = stressed }
-        	remove_trait = stressed
-        }
+		trigger_switch = {
+			on_trigger = trait
+			depressed = { remove_trait = depressed }
+			stressed = { remove_trait = stressed }
+		}
         if = {
         	limit = { has_nickname = no }
         	give_nickname = nick_warrior_lodge_spirit

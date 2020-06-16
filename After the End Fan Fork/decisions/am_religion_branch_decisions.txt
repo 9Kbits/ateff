@@ -331,7 +331,7 @@ decisions = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
-			NOT = { has_character_flag = changedmachetereformedbranch }
+			NOT = { has_character_flag = changedqingzhengbranch }
 		}
 		
 		allow = {
@@ -346,6 +346,37 @@ decisions = {
 			}
 			custom_tooltip = { text = TXT_change_qingzheng_branch }
 			set_character_flag = changedqingzhengbranch
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+	}
+	change_trans_branch = {
+		ai = no
+		
+		potential = {
+			religion = transcendentalist
+			is_playable = yes
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_character_flag = changedtransbranch }
+			NOT = { trait = hajjaj }
+		}
+		
+		allow = {
+			religion = transcendentalist
+			is_playable = yes
+			NOT = { has_character_flag = changedtransbranch }
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = islamate.88 }
+			}
+			custom_tooltip = { text = TXT_change_trans_branch }
+			set_character_flag = changedtransbranch
 		}
 		
 		revoke_allowed = {
