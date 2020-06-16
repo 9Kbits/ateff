@@ -144,38 +144,25 @@ character_event = {
 				trait = sympathy_indian
 			}
 		}
-		if = {
-			limit = {
-				religion_group = muslim
+		trigger_switch = {
+			on_trigger = religion_group
+			muslim = {
+				add_trait = sympathy_afro_syncretic
+				add_trait = sympathy_indian
 			}
-			add_trait = sympathy_afro_syncretic
-			add_trait = sympathy_indian
-		}
-		else_if = {
-			limit = {
-				religion_group = afro_syncretic
+			indian_group = {
+				add_trait = sympathy_islam
+				add_trait = sympathy_afro_syncretic
 			}
-			add_trait = sympathy_islam
-			add_trait = sympathy_indian
-		}
-		else_if = {
-			limit = {
-				religion_group = indian_group
+			afro_syncretic = {
+				add_trait = sympathy_islam
+				add_trait = sympathy_indian
 			}
-			add_trait = sympathy_islam
-			add_trait = sympathy_afro_syncretic
-		}
-		else_if = {
-			limit = {
-				NOR = {
-					religion_group = muslim
-					religion_group = afro_syncretic
-					religion_group = indian_group
-				}
+			fallback = {
+				add_trait = sympathy_islam
+				add_trait = sympathy_afro_syncretic
+				add_trait = sympathy_indian
 			}
-			add_trait = sympathy_islam
-			add_trait = sympathy_afro_syncretic
-			add_trait = sympathy_indian
 		}
 		prestige = 10
 	}

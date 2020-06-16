@@ -562,29 +562,37 @@ character_event = {
 
 	option = {
 		name = EVTOPTA_HF_40020
-
-		if = {
-			limit = {
-				OR = {
-					religion_group = christian
-					religion_group = cult_of_saints
-					religion_group = latter_day_saints
+		trigger_switch = {
+			on_trigger = religion_group
+			christian = {
+				custom_tooltip = {
+					text = pope_cannonize_choice_TT
 				}
 			}
-			custom_tooltip = {
-				text = pope_cannonize_choice_TT
-			}
-		}
-		else_if = {
-			limit = {
-				OR = {
-					religion_group = pagan_group
-					religion_group = afro_syncretic
-					religion_group = american_native
+			cult_of_saints = {
+				custom_tooltip = {
+					text = pope_cannonize_choice_TT
 				}
 			}
-			custom_tooltip = {
-				text = pagan_pope_cannonize_choice_TT
+			latter_day_saints = {
+				custom_tooltip = {
+					text = pope_cannonize_choice_TT
+				}
+			}
+			pagan_group = {
+				custom_tooltip = {
+					text = pagan_pope_cannonize_choice_TT
+				}
+			}
+			afro_syncretic = {
+				custom_tooltip = {
+					text = pagan_pope_cannonize_choice_TT
+				}
+			}
+			american_native = {
+				custom_tooltip = {
+					text = pagan_pope_cannonize_choice_TT
+				}
 			}
 		}
 
@@ -868,36 +876,59 @@ character_event = {
 			}
 			# Trait change
 			event_target:saint_person = {
-				if = {
-					limit = {
-						OR = {
-							religion_group = christian
-							religion_group = cult_of_saints
-							religion_group = latter_day_saints
+				trigger_switch = {
+					on_trigger = religion_group
+					christian = {
+						remove_trait = beatified
+						add_trait = saint   
+						if = {
+							limit = {
+								is_female = yes
+							}
+							set_special_character_title = SAINT_TITLE_FEMALE
+						}
+						else = {
+							set_special_character_title = SAINT_TITLE
 						}
 					}
-					remove_trait = beatified
-					add_trait = saint   
-					if = {
-						limit = {
-							is_female = yes
+					cult_of_saints = {
+						remove_trait = beatified
+						add_trait = saint   
+						if = {
+							limit = {
+								is_female = yes
+							}
+							set_special_character_title = SAINT_TITLE_FEMALE
 						}
-						set_special_character_title = SAINT_TITLE_FEMALE
-					}
-					else = {
-						set_special_character_title = SAINT_TITLE
-					}
-				}
-				else_if = {
-					limit = {
-						OR = {
-							religion_group = pagan_group
-							religion_group = afro_syncretic
-							religion_group = american_native
+						else = {
+							set_special_character_title = SAINT_TITLE
 						}
 					}
-					add_trait = blessed_ancestor
-					set_special_character_title = BLESSED_TITLE
+					latter_day_saints = {
+						remove_trait = beatified
+						add_trait = saint   
+						if = {
+							limit = {
+								is_female = yes
+							}
+							set_special_character_title = SAINT_TITLE_FEMALE
+						}
+						else = {
+							set_special_character_title = SAINT_TITLE
+						}
+					}
+					pagan_group = {
+						add_trait = blessed_ancestor
+						set_special_character_title = BLESSED_TITLE
+					}
+					afro_syncretic = {
+						add_trait = blessed_ancestor
+						set_special_character_title = BLESSED_TITLE
+					}
+					american_native = {
+						add_trait = blessed_ancestor
+						set_special_character_title = BLESSED_TITLE
+					}
 				}
 			}
 			# Burial Site setting - Christian only
@@ -1001,289 +1032,343 @@ character_event = {
 						}
 					}
 					event_target:saint_person = {
-						if = {
-							limit = {
-								OR = {
-									religion = evangelical
-									religion = antinomian
-									religion = charismatic
-									religion = postadventist
+						trigger_switch = {
+							on_trigger = religion
+							evangelical = {
+								create_bloodline = {
+									type = saintly_bloodline_evangelical_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							create_bloodline = {
-								type = saintly_bloodline_evangelical_01
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = ursuline
-									religion = angeline
+							antinomian = {
+								create_bloodline = {
+									type = saintly_bloodline_evangelical_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							create_bloodline = {
-								type = saintly_bloodline_ursuline_01
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = high_church
-									religion = nonconformist
+							charismatic = {
+								create_bloodline = {
+									type = saintly_bloodline_evangelical_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							create_bloodline = {
-								type = saintly_bloodline_high_church_01
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = anabaptist
-									religion = batenburger
+							postadventist = {
+								create_bloodline = {
+									type = saintly_bloodline_evangelical_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							create_bloodline = {
-								type = saintly_bloodline_anabaptist_01
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = falling_star
-									religion = moravian
-									religion = wormwoodist
+							ursuline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_01
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_01
+										religion = event_target:saint_person
+									}
 								}
 							}
-							create_bloodline = {
-								type = saintly_bloodline_falling_star_01
-								religion = event_target:saint_person
-								inheritance = patrilineal
+							angeline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_01
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_01
+										religion = event_target:saint_person
+									}
+								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = norse_pagan_reformed
+							high_church = {
+								create_bloodline = {
+									type = saintly_bloodline_high_church_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
 							}
-							if = {
+							nonconformist = {
+								create_bloodline = {
+									type = saintly_bloodline_high_church_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							anabaptist = {
+								create_bloodline = {
+									type = saintly_bloodline_anabaptist_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							batenburger = {
+								create_bloodline = {
+									type = saintly_bloodline_anabaptist_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							falling_star = {
+								create_bloodline = {
+									type = saintly_bloodline_falling_star_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							moravian = {
+								create_bloodline = {
+									type = saintly_bloodline_falling_star_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							wormwoodist = {
+								create_bloodline = {
+									type = saintly_bloodline_falling_star_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							norse_pagan_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_germanic_01
+										religion = norse_pagan_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_germanic_01
+										religion = norse_pagan_reformed
+									}
+								}
+							}
+							revelationist_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_revelationist_01
+										religion = revelationist_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_revelationist_01
+										religion = revelationist_reformed
+									}
+								}
+							}
+							occultist_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_occultist_01
+										religion = occultist_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_occultist_01
+										religion = occultist_reformed
+									}
+								}
+							}
+							thelemic_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_thelemic_01
+										religion = thelemic_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_thelemic_01
+										religion = thelemic_reformed
+									}
+								}
+							}
+							celtic_pagan_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_celtic_01
+										religion = celtic_pagan_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_celtic_01
+										religion = celtic_pagan_reformed
+									}
+								}
+							}
+							aria_de_machete_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_aria_de_machete_01
+										religion = aria_de_machete_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_aria_de_machete_01
+										religion = aria_de_machete_reformed
+									}
+								}
+							}
+							sacred_heart = {
+								if = {
 								limit = {
 									is_female = yes
 								}
+									create_bloodline = {
+										type = saintly_bloodline_sacred_heart_01
+										religion = sacred_heart
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_sacred_heart_01
+										religion = sacred_heart
+									}
+								}
+							}
+							patria_grande = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_patria_grande_01
+										religion = patria_grande
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_patria_grande_01
+										religion = patria_grande
+									}
+								}
+							}
+							mormon = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_01
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_01
+										religion = ROOT
+									}
+								}
+							}
+							woolleyite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_01
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_01
+										religion = ROOT
+									}
+								}
+							}
+							strangite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_01
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_01
+										religion = ROOT
+									}
+								}
+							}
+							neogodbeite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_01
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_01
+										religion = ROOT
+									}
+								}
+							}
+							fallback = {
 								create_bloodline = {
-									type = saintly_bloodline_germanic_01
-									religion = norse_pagan_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_catholic_01
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_germanic_01
-									religion = norse_pagan_reformed
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = revelationist_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_revelationist_01
-									religion = revelationist_reformed
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_revelationist_01
-									religion = revelationist_reformed
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = occultist_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_occultist_01
-									religion = occultist_reformed
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_occultist_01
-									religion = occultist_reformed
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = thelemic_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_thelemic_01
-									religion = thelemic_reformed
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_thelemic_01
-									religion = thelemic_reformed
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = celtic_pagan_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_celtic_01
-									religion = celtic_pagan_reformed
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_celtic_01
-									religion = celtic_pagan_reformed
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = aria_de_machete_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_aria_de_machete_01
-									religion = aria_de_machete_reformed
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_aria_de_machete_01
-									religion = aria_de_machete_reformed
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = sacred_heart
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_sacred_heart_01
-									religion = sacred_heart
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_sacred_heart_01
-									religion = sacred_heart
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = patria_grande
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_patria_grande_01
-									religion = patria_grande
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_patria_grande_01
-									religion = patria_grande
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion_group = latter_day_saints #change to OR block
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_latter_day_saints_01
-									religion = ROOT
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_latter_day_saints_01
-									religion = ROOT
-								}
-							}
-						}
-						#else_if = {
-						#	limit = {
-						#		religion = espiritista_reformed
-						#	}
-						#	if = {
-						#		limit = {
-						#			is_female = yes
-						#		}
-						#		create_bloodline = {
-						#			type = saintly_bloodline_espiritista_01
-						#			religion = espiritista_reformed
-						#			inheritance = matrilineal
-						#		}
-						#	}
-						#	else = {
-						#		create_bloodline = {
-						#			type = saintly_bloodline_espiritista_01
-						#			religion = espiritista_reformed
-						#		}
-						#	}
-						#}
-						else = {
-							create_bloodline = {
-								type = saintly_bloodline_catholic_01
-								religion = event_target:saint_person
-								inheritance = patrilineal
 							}
 						}
 						if = {
@@ -1345,79 +1430,127 @@ character_event = {
 						}
 					}
 					event_target:saint_person = {
-						 if = {
-							limit = {
-								OR = {
-									religion = evangelical
-									religion = antinomian
-									religion = charismatic
-									religion = postadventist
+						trigger_switch = {
+							on_trigger = religion
+							evangelical = {
+								create_bloodline = {
+									type = saintly_bloodline_evangelical_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							create_bloodline = {
-								type = saintly_bloodline_evangelical_02
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = ursuline
-									religion = angeline
+							antinomian = {
+								create_bloodline = {
+									type = saintly_bloodline_evangelical_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							create_bloodline = {
-								type = saintly_bloodline_ursuline_02
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = high_church
-									religion = nonconformist
+							charismatic = {
+								create_bloodline = {
+									type = saintly_bloodline_evangelical_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							create_bloodline = {
-								type = saintly_bloodline_high_church_02
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = anabaptist
-									religion = batenburger
+							postadventist = {
+								create_bloodline = {
+									type = saintly_bloodline_evangelical_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							create_bloodline = {
-								type = saintly_bloodline_anabaptist_02
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = falling_star
-									religion = moravian
-									religion = wormwoodist
+							ursuline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_02
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_02
+										religion = event_target:saint_person
+									}
 								}
 							}
-							create_bloodline = {
-								type = saintly_bloodline_falling_star_02
-								religion = event_target:saint_person
-								inheritance = patrilineal
+							angeline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_02
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_02
+										religion = event_target:saint_person
+									}
+								}
 							}
-						}
-						else = {
-							create_bloodline = {
-								type = saintly_bloodline_catholic_02
-								religion = event_target:saint_person
-								inheritance = patrilineal
+							high_church = {
+								create_bloodline = {
+									type = saintly_bloodline_high_church_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							nonconformist = {
+								create_bloodline = {
+									type = saintly_bloodline_high_church_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							anabaptist = {
+								create_bloodline = {
+									type = saintly_bloodline_anabaptist_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							batenburger = {
+								create_bloodline = {
+									type = saintly_bloodline_anabaptist_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							falling_star = {
+								create_bloodline = {
+									type = saintly_bloodline_falling_star_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							moravian = {
+								create_bloodline = {
+									type = saintly_bloodline_falling_star_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							wormwoodist = {
+								create_bloodline = {
+									type = saintly_bloodline_falling_star_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
+							}
+							fallback = {
+								create_bloodline = {
+									type = saintly_bloodline_catholic_02
+									religion = event_target:saint_person
+									inheritance = patrilineal
+								}
 							}
 						}
 						if = {
@@ -1446,289 +1579,343 @@ character_event = {
 				}
 				5 = {
 					event_target:saint_person = {
-						if = {
-							limit = {
-								OR = {
-									religion = evangelical
-									religion = antinomian
-									religion = charismatic
-									religion = postadventist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_evangelical_03
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = ursuline
-									religion = angeline
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_ursuline_03
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = high_church
-									religion = nonconformist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_high_church_03
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = anabaptist
-									religion = batenburger
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_anabaptist_03
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = falling_star
-									religion = moravian
-									religion = wormwoodist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_falling_star_03
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								religion = norse_pagan_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+						trigger_switch = {
+							on_trigger = religion
+							evangelical = {
 								create_bloodline = {
-									type = saintly_bloodline_germanic_03
-									religion = norse_pagan_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_evangelical_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							antinomian = {
 								create_bloodline = {
-									type = saintly_bloodline_germanic_03
-									religion = norse_pagan_reformed
+									type = saintly_bloodline_evangelical_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = revelationist_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							charismatic = {
 								create_bloodline = {
-									type = saintly_bloodline_revelationist_03
-									religion = revelationist_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_evangelical_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							postadventist = {
 								create_bloodline = {
-									type = saintly_bloodline_revelationist_03
-									religion = revelationist_reformed
+									type = saintly_bloodline_evangelical_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = occultist_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
+							ursuline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_03
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
 								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_03
+										religion = event_target:saint_person
+									}
+								}
+							}
+							angeline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_03
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_03
+										religion = event_target:saint_person
+									}
+								}
+							}
+							high_church = {
 								create_bloodline = {
-									type = saintly_bloodline_occultist_03
-									religion = occultist_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_high_church_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							nonconformist = {
 								create_bloodline = {
-									type = saintly_bloodline_occultist_03
-									religion = occultist_reformed
+									type = saintly_bloodline_high_church_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = thelemic_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							anabaptist = {
 								create_bloodline = {
-									type = saintly_bloodline_thelemic_03
-									religion = thelemic_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_anabaptist_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							batenburger = {
 								create_bloodline = {
-									type = saintly_bloodline_thelemic_03
-									religion = thelemic_reformed
+									type = saintly_bloodline_anabaptist_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = celtic_pagan_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							falling_star = {
 								create_bloodline = {
-									type = saintly_bloodline_celtic_03
-									religion = celtic_pagan_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_falling_star_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							moravian = {
 								create_bloodline = {
-									type = saintly_bloodline_celtic_03
-									religion = celtic_pagan_reformed
+									type = saintly_bloodline_falling_star_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = aria_de_machete_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							wormwoodist = {
 								create_bloodline = {
-									type = saintly_bloodline_aria_de_machete_03
-									religion = aria_de_machete_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_falling_star_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							norse_pagan_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_germanic_03
+										religion = norse_pagan_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_germanic_03
+										religion = norse_pagan_reformed
+									}
+								}
+							}
+							revelationist_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_revelationist_03
+										religion = revelationist_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_revelationist_03
+										religion = revelationist_reformed
+									}
+								}
+							}
+							occultist_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_occultist_03
+										religion = occultist_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_occultist_03
+										religion = occultist_reformed
+									}
+								}
+							}
+							thelemic_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_thelemic_03
+										religion = thelemic_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_thelemic_03
+										religion = thelemic_reformed
+									}
+								}
+							}
+							celtic_pagan_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_celtic_03
+										religion = celtic_pagan_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_celtic_03
+										religion = celtic_pagan_reformed
+									}
+								}
+							}
+							aria_de_machete_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_aria_de_machete_03
+										religion = aria_de_machete_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_aria_de_machete_03
+										religion = aria_de_machete_reformed
+									}
+								}
+							}
+							sacred_heart = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_sacred_heart_03
+										religion = sacred_heart
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_sacred_heart_03
+										religion = sacred_heart
+									}
+								}
+							}
+							patria_grande = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_patria_grande_03
+										religion = patria_grande
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_patria_grande_03
+										religion = patria_grande
+									}
+								}
+							}
+							mormon = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_03
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_03
+										religion = ROOT
+									}
+								}
+							}
+							woolleyite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_03
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_03
+										religion = ROOT
+									}
+								}
+							}
+							strangite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_03
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_03
+										religion = ROOT
+									}
+								}
+							}
+							neogodbeite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_03
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_03
+										religion = ROOT
+									}
+								}
+							}
+							fallback = {
 								create_bloodline = {
-									type = saintly_bloodline_aria_de_machete_03
-									religion = aria_de_machete_reformed
+									type = saintly_bloodline_catholic_03
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = sacred_heart
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_sacred_heart_03
-									religion = sacred_heart
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_sacred_heart_03
-									religion = sacred_heart
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = patria_grande
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_patria_grande_03
-									religion = patria_grande
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_patria_grande_03
-									religion = patria_grande
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion_group = latter_day_saints
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_latter_day_saints_03
-									religion = ROOT
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_latter_day_saints_03
-									religion = ROOT
-								}
-							}
-						}
-						#else_if = {
-						#	limit = {
-						#		religion = espiritista_reformed
-						#	}
-						#	if = {
-						#		limit = {
-						#			is_female = yes
-						#		}
-						#		create_bloodline = {
-						#			type = saintly_bloodline_espiritista_03
-						#			religion = espiritista_reformed
-						#			inheritance = matrilineal
-						#		}
-						#	}
-						#	else = {
-						#		create_bloodline = {
-						#			type = saintly_bloodline_espiritista_03
-						#			religion = espiritista_reformed
-						#		}
-						#	}
-						#}
-						else = {
-							create_bloodline = {
-								type = saintly_bloodline_catholic_03
-								religion = event_target:saint_person
-								inheritance = patrilineal
 							}
 						}
 						if = {
@@ -1776,289 +1963,343 @@ character_event = {
 						}
 					}
 					event_target:saint_person = {
-						if = {
-							limit = {
-								OR = {
-									religion = evangelical
-									religion = antinomian
-									religion = charismatic
-									religion = postadventist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_evangelical_04
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = ursuline
-									religion = angeline
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_ursuline_04
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = high_church
-									religion = nonconformist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_high_church_04
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = anabaptist
-									religion = batenburger
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_high_church_04
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = falling_star
-									religion = moravian
-									religion = wormwoodist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_falling_star_04
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								religion = norse_pagan_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+						trigger_switch = {
+							on_trigger = religion
+							evangelical = {
 								create_bloodline = {
-									type = saintly_bloodline_germanic_04
-									religion = norse_pagan_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_evangelical_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							antinomian = {
 								create_bloodline = {
-									type = saintly_bloodline_germanic_04
-									religion = norse_pagan_reformed
+									type = saintly_bloodline_evangelical_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = revelationist_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							charismatic = {
 								create_bloodline = {
-									type = saintly_bloodline_revelationist_04
-									religion = revelationist_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_evangelical_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							postadventist = {
 								create_bloodline = {
-									type = saintly_bloodline_revelationist_04
-									religion = revelationist_reformed
+									type = saintly_bloodline_evangelical_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = occultist_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
+							ursuline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_04
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
 								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_04
+										religion = event_target:saint_person
+									}
+								}
+							}
+							angeline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_04
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_04
+										religion = event_target:saint_person
+									}
+								}
+							}
+							high_church = {
 								create_bloodline = {
-									type = saintly_bloodline_occultist_04
-									religion = occultist_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_high_church_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							nonconformist = {
 								create_bloodline = {
-									type = saintly_bloodline_occultist_04
-									religion = occultist_reformed
+									type = saintly_bloodline_high_church_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = thelemic_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							anabaptist = {
 								create_bloodline = {
-									type = saintly_bloodline_thelemic_04
-									religion = thelemic_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_high_church_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							batenburger = {
 								create_bloodline = {
-									type = saintly_bloodline_thelemic_04
-									religion = thelemic_reformed
+									type = saintly_bloodline_high_church_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = celtic_pagan_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							falling_star = {
 								create_bloodline = {
-									type = saintly_bloodline_celtic_04
-									religion = celtic_pagan_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_falling_star_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							moravian = {
 								create_bloodline = {
-									type = saintly_bloodline_celtic_04
-									religion = celtic_pagan_reformed
+									type = saintly_bloodline_falling_star_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = aria_de_machete_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							wormwoodist = {
 								create_bloodline = {
-									type = saintly_bloodline_aria_de_machete_04
-									religion = aria_de_machete_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_falling_star_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							norse_pagan_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_germanic_04
+										religion = norse_pagan_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_germanic_04
+										religion = norse_pagan_reformed
+									}
+								}
+							}
+							revelationist_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_revelationist_04
+										religion = revelationist_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_revelationist_04
+										religion = revelationist_reformed
+									}
+								}
+							}
+							occultist_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_occultist_04
+										religion = occultist_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_occultist_04
+										religion = occultist_reformed
+									}
+								}
+							}
+							thelemic_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_thelemic_04
+										religion = thelemic_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_thelemic_04
+										religion = thelemic_reformed
+									}
+								}
+							}
+							celtic_pagan_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_celtic_04
+										religion = celtic_pagan_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_celtic_04
+										religion = celtic_pagan_reformed
+									}
+								}
+							}
+							aria_de_machete_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_aria_de_machete_04
+										religion = aria_de_machete_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_aria_de_machete_04
+										religion = aria_de_machete_reformed
+									}
+								}
+							}
+							sacred_heart = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_sacred_heart_04
+										religion = sacred_heart
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_sacred_heart_04
+										religion = sacred_heart
+									}
+								}
+							}
+							patria_grande = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_patria_grande_04
+										religion = patria_grande
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_patria_grande_04
+										religion = patria_grande
+									}
+								}
+							}
+							mormon = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_04
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_04
+									   religion = ROOT
+									}
+								}
+							}
+							woolleyite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_04
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_04
+									   religion = ROOT
+									}
+								}
+							}
+							strangite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_04
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_04
+									   religion = ROOT
+									}
+								}
+							}
+							neogodbeite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_04
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_04
+									   religion = ROOT
+									}
+								}
+							}
+							fallback = {
 								create_bloodline = {
-									type = saintly_bloodline_aria_de_machete_04
-									religion = aria_de_machete_reformed
+									type = saintly_bloodline_catholic_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = sacred_heart
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_sacred_heart_04
-									religion = sacred_heart
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_sacred_heart_04
-									religion = sacred_heart
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = patria_grande
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_patria_grande_04
-									religion = patria_grande
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_patria_grande_04
-									religion = patria_grande
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion_group = latter_day_saints
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_latter_day_saints_04
-									religion = ROOT
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_latter_day_saints_04
-								   religion = ROOT
-								}
-							}
-						}
-						#else_if = {
-						#	limit = {
-						#		religion = espiritista_reformed
-						#	}
-						#	if = {
-						#		limit = {
-						#			is_female = yes
-						#		}
-						#		create_bloodline = {
-						#			type = saintly_bloodline_espiritista_04
-						#			religion = espiritista_reformed
-						#			inheritance = matrilineal
-						#		}
-						#	}
-						#	else = {
-						#		create_bloodline = {
-						#			type = saintly_bloodline_espiritista_04
-						#			religion = espiritista_reformed
-						#		}
-						#	}
-						#}
-						else = {
-							create_bloodline = {
-								type = saintly_bloodline_catholic_04
-								religion = event_target:saint_person
-								inheritance = patrilineal
 							}
 						}
 						if = {
@@ -2100,289 +2341,343 @@ character_event = {
 						}
 					}
 					event_target:saint_person = {
-						if = {
-							limit = {
-								OR = {
-									religion = evangelical
-									religion = antinomian
-									religion = charismatic
-									religion = postadventist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_evangelical_05
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = ursuline
-									religion = angeline
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_ursuline_05
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = high_church
-									religion = nonconformist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_high_church_05
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = anabaptist
-									religion = batenburger
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_anabaptist_05
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = falling_star
-									religion = moravian
-									religion = wormwoodist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_falling_star_05
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								religion = norse_pagan_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+						trigger_switch = {
+							on_trigger = religion
+							evangelical = {
 								create_bloodline = {
-									type = saintly_bloodline_germanic_05
-									religion = norse_pagan_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_evangelical_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							antinomian = {
 								create_bloodline = {
-									type = saintly_bloodline_germanic_05
-									religion = norse_pagan_reformed
+									type = saintly_bloodline_evangelical_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = revelationist_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							charismatic = {
 								create_bloodline = {
-									type = saintly_bloodline_revelationist_05
-									religion = revelationist_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_evangelical_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							postadventist = {
 								create_bloodline = {
-									type = saintly_bloodline_revelationist_05
-									religion = revelationist_reformed
+									type = saintly_bloodline_evangelical_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = occultist_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
+							ursuline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_05
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
 								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_05
+										religion = event_target:saint_person
+									}
+								}
+							}
+							angeline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_05
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_05
+										religion = event_target:saint_person
+									}
+								}
+							}
+							high_church = {
 								create_bloodline = {
-									type = saintly_bloodline_occultist_05
-									religion = occultist_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_high_church_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							nonconformist = {
 								create_bloodline = {
-									type = saintly_bloodline_occultist_05
-									religion = occultist_reformed
+									type = saintly_bloodline_high_church_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = thelemic_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							anabaptist = {
 								create_bloodline = {
-									type = saintly_bloodline_thelemic_05
-									religion = thelemic_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_high_church_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							batenburger = {
 								create_bloodline = {
-									type = saintly_bloodline_thelemic_05
-									religion = thelemic_reformed
+									type = saintly_bloodline_high_church_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = celtic_pagan_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							falling_star = {
 								create_bloodline = {
-									type = saintly_bloodline_celtic_05
-									religion = celtic_pagan_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_falling_star_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							moravian = {
 								create_bloodline = {
-									type = saintly_bloodline_celtic_05
-									religion = celtic_pagan_reformed
+									type = saintly_bloodline_falling_star_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = aria_de_machete_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							wormwoodist = {
 								create_bloodline = {
-									type = saintly_bloodline_aria_de_machete_05
-									religion = aria_de_machete_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_falling_star_05
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							norse_pagan_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_germanic_05
+										religion = norse_pagan_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_germanic_05
+										religion = norse_pagan_reformed
+									}
+								}
+							}
+							revelationist_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_revelationist_05
+										religion = revelationist_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_revelationist_05
+										religion = revelationist_reformed
+									}
+								}
+							}
+							occultist_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_occultist_05
+										religion = occultist_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_occultist_05
+										religion = occultist_reformed
+									}
+								}
+							}
+							thelemic_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_thelemic_05
+										religion = thelemic_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_thelemic_05
+										religion = thelemic_reformed
+									}
+								}
+							}
+							celtic_pagan_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_celtic_05
+										religion = celtic_pagan_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_celtic_05
+										religion = celtic_pagan_reformed
+									}
+								}
+							}
+							aria_de_machete_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_aria_de_machete_05
+										religion = aria_de_machete_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_aria_de_machete_05
+										religion = aria_de_machete_reformed
+									}
+								}
+							}
+							sacred_heart = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_sacred_heart_05
+										religion = sacred_heart
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_sacred_heart_05
+										religion = sacred_heart
+									}
+								}
+							}
+							patria_grande = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_patria_grande_05
+										religion = patria_grande
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_patria_grande_05
+										religion = patria_grande
+									}
+								}
+							}
+							mormon = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_05
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_05
+									   religion = ROOT
+									}
+								}
+							}
+							woolleyite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_05
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_05
+									   religion = ROOT
+									}
+								}
+							}
+							strangite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_05
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_05
+									   religion = ROOT
+									}
+								}
+							}
+							neogodbeite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_05
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_05
+									   religion = ROOT
+									}
+								}
+							}
+							fallback = {
 								create_bloodline = {
-									type = saintly_bloodline_aria_de_machete_05
-									religion = aria_de_machete_reformed
+									type = saintly_bloodline_catholic_04
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = cult_of_saints
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_cult_of_saints_05
-									religion = cult_of_saints
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_cult_of_saints_05
-									religion = cult_of_saints
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = patria_grande
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_patria_grande_05
-									religion = patria_grande
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_patria_grande_05
-									religion = patria_grande
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion_group = latter_day_saints
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_latter_day_saints_05
-									religion = ROOT
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_latter_day_saints_05
-									religion = ROOT
-								}
-							}
-						}
-						#else_if = {
-						#	limit = {
-						#		religion = espiritista_reformed
-						#	}
-						#	if = {
-						#		limit = {
-						#			is_female = yes
-						#		}
-						#		create_bloodline = {
-						#			type = saintly_bloodline_espiritista_05
-						#			religion = espiritista_reformed
-						#			inheritance = matrilineal
-						#		}
-						#	}
-						#	else = {
-						#		create_bloodline = {
-						#			type = saintly_bloodline_espiritista_05
-						#			religion = espiritista_reformed
-						#		}
-						#	}
-						#}
-						else = {
-							create_bloodline = {
-								type = saintly_bloodline_catholic_05
-								religion = event_target:saint_person
-								inheritance = patrilineal
 							}
 						}
 						if = {
@@ -2419,289 +2714,343 @@ character_event = {
 				}
 				5 = {
 					event_target:saint_person = {
-						if = {
-							limit = {
-								OR = {
-									religion = evangelical
-									religion = antinomian
-									religion = charismatic
-									religion = postadventist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_evangelical_06
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = ursuline
-									religion = angeline
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_ursuline_06
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = high_church
-									religion = nonconformist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_high_church_06
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = anabaptist
-									religion = batenburger
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_anabaptist_06
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								OR = {
-									religion = falling_star
-									religion = moravian
-									religion = wormwoodist
-								}
-							}
-							create_bloodline = {
-								type = saintly_bloodline_falling_star_06
-								religion = event_target:saint_person
-								inheritance = patrilineal
-							}
-						}
-						else_if = {
-							limit = {
-								religion = norse_pagan_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+						trigger_switch = {
+							on_trigger = religion
+							evangelical = {
 								create_bloodline = {
-									type = saintly_bloodline_germanic_06
-									religion = norse_pagan_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_evangelical_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							antinomian = {
 								create_bloodline = {
-									type = saintly_bloodline_germanic_06
-									religion = norse_pagan_reformed
+									type = saintly_bloodline_evangelical_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = revelationist_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							charismatic = {
 								create_bloodline = {
-									type = saintly_bloodline_revelationist_06
-									religion = revelationist_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_evangelical_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							postadventist = {
 								create_bloodline = {
-									type = saintly_bloodline_revelationist_06
-									religion = revelationist_reformed
+									type = saintly_bloodline_evangelical_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = occultist_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
+							ursuline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_06
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
 								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_06
+										religion = event_target:saint_person
+									}
+								}
+							}
+							angeline = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_06
+										religion = event_target:saint_person
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_ursuline_06
+										religion = event_target:saint_person
+									}
+								}
+							}
+							high_church = {
 								create_bloodline = {
-									type = saintly_bloodline_occultist_06
-									religion = occultist_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_high_church_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							nonconformist = {
 								create_bloodline = {
-									type = saintly_bloodline_occultist_06
-									religion = occultist_reformed
+									type = saintly_bloodline_high_church_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = thelemic_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							anabaptist = {
 								create_bloodline = {
-									type = saintly_bloodline_thelemic_06
-									religion = thelemic_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_high_church_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							batenburger = {
 								create_bloodline = {
-									type = saintly_bloodline_thelemic_06
-									religion = thelemic_reformed
+									type = saintly_bloodline_high_church_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = celtic_pagan_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							falling_star = {
 								create_bloodline = {
-									type = saintly_bloodline_celtic_06
-									religion = celtic_pagan_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_falling_star_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							moravian = {
 								create_bloodline = {
-									type = saintly_bloodline_celtic_06
-									religion = celtic_pagan_reformed
+									type = saintly_bloodline_falling_star_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-						}
-						else_if = {
-							limit = {
-								religion = aria_de_machete_reformed
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
+							wormwoodist = {
 								create_bloodline = {
-									type = saintly_bloodline_aria_de_machete_06
-									religion = aria_de_machete_reformed
-									inheritance = matrilineal
+									type = saintly_bloodline_falling_star_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
 							}
-							else = {
+							norse_pagan_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_germanic_06
+										religion = norse_pagan_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_germanic_06
+										religion = norse_pagan_reformed
+									}
+								}
+							}
+							revelationist_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_revelationist_06
+										religion = revelationist_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_revelationist_06
+										religion = revelationist_reformed
+									}
+								}
+							}
+							occultist_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_occultist_06
+										religion = occultist_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_occultist_06
+										religion = occultist_reformed
+									}
+								}
+							}
+							thelemic_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_thelemic_06
+										religion = thelemic_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_thelemic_06
+										religion = thelemic_reformed
+									}
+								}
+							}
+							celtic_pagan_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_celtic_06
+										religion = celtic_pagan_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_celtic_06
+										religion = celtic_pagan_reformed
+									}
+								}
+							}
+							aria_de_machete_reformed = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_aria_de_machete_06
+										religion = aria_de_machete_reformed
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_aria_de_machete_06
+										religion = aria_de_machete_reformed
+									}
+								}
+							}
+							sacred_heart = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_sacred_heart_06
+										religion = sacred_heart
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_sacred_heart_06
+										religion = sacred_heart
+									}
+								}
+							}
+							patria_grande = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_patria_grande_06
+										religion = patria_grande
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_patria_grande_06
+										religion = patria_grande
+									}
+								}
+							}
+							mormon = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_06
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_06
+									   religion = ROOT
+									}
+								}
+							}
+							woolleyite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_06
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_06
+									   religion = ROOT
+									}
+								}
+							}
+							strangite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_06
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_06
+									   religion = ROOT
+									}
+								}
+							}
+							neogodbeite = {
+								if = {
+									limit = {
+										is_female = yes
+									}
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_06
+										religion = ROOT
+										inheritance = matrilineal
+									}
+								}
+								else = {
+									create_bloodline = {
+										type = saintly_bloodline_latter_day_saints_06
+									   religion = ROOT
+									}
+								}
+							}
+							fallback = {
 								create_bloodline = {
-									type = saintly_bloodline_aria_de_machete_06
-									religion = aria_de_machete_reformed
+									type = saintly_bloodline_catholic_06
+									religion = event_target:saint_person
+									inheritance = patrilineal
 								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = sacred_heart
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_sacred_heart_06
-									religion = sacred_heart
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_sacred_heart_06
-									religion = sacred_heart
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion = patria_grande
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_patria_grande_06
-									religion = patria_grande
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_patria_grande_06
-									religion = patria_grande
-								}
-							}
-						}
-						else_if = {
-							limit = {
-								religion_group = latter_day_saints
-							}
-							if = {
-								limit = {
-									is_female = yes
-								}
-								create_bloodline = {
-									type = saintly_bloodline_latter_day_saints_06
-									religion = ROOT
-									inheritance = matrilineal
-								}
-							}
-							else = {
-								create_bloodline = {
-									type = saintly_bloodline_latter_day_saints_06
-									religion = ROOT
-								}
-							}
-						}
-						#else_if = {
-						#	limit = {
-						#		religion = espiritista_reformed
-						#	}
-						#	if = {
-						#		limit = {
-						#			is_female = yes
-						#		}
-						#		create_bloodline = {
-						#			type = saintly_bloodline_espiritista_06
-						#			religion = espiritista_reformed
-						#			inheritance = matrilineal
-						#		}
-						#	}
-						#	else = {
-						#		create_bloodline = {
-						#			type = saintly_bloodline_espiritista_06
-						#			religion = espiritista_reformed
-						#		}
-						#	}
-						#}
-						else = {
-							create_bloodline = {
-								type = saintly_bloodline_catholic_06
-								religion = event_target:saint_person
-								inheritance = patrilineal
 							}
 						}
 						if = {
@@ -3080,29 +3429,20 @@ character_event = {
 			else = {
 				set_special_character_title = BLESSED_TITLE
 			}
-			if = {
-				limit = {
-					religion = catholic
+			trigger_switch = {
+				on_trigger = religion
+				catholic = {
+					set_global_flag = bad_catholic_saint
 				}
-				set_global_flag = bad_catholic_saint
-			}
-			else_if = {
-				limit = {
-					religion = ursuline
+				ursuline = {
+					set_global_flag = bad_ursuline_saint
 				}
-				set_global_flag = bad_ursuline_saint
-			}
-			else_if = {
-				limit = {
-					religion = high_church
+				high_church = {
+					set_global_flag = bad_high_church_saint
 				}
-				set_global_flag = bak_high_church_saint
-			}
-			else_if = {
-				limit = {
-					religion = mormon
+				mormon = {
+					set_global_flag = bad_mormon_saint
 				}
-				set_global_flag = bad_mormon_saint
 			}
 		}
 		any_realm_character = {
@@ -3306,43 +3646,34 @@ province_event = {
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
 	immediate = {
-		if = {
-			limit = {
-				has_global_flag = bad_catholic_saint
-			}
-			k_papal_state = { 
-				holder_scope = {
-					character_event = { id = HF.40058 }
+		trigger_switch = {
+			on_trigger = has_global_flag
+			bad_catholic_saint = {
+				k_papal_state = { 
+					holder_scope = {
+						character_event = { id = HF.40058 }
+					}
 				}
 			}
-		}
-		else_if = {
-			limit = {
-				has_global_flag = bad_ursuline_saint
-			}
-			k_ursuline = { 
-				holder_scope = {
-					character_event = { id = HF.40058 }
+			bad_ursuline_saint = {
+				k_ursuline = { 
+					holder_scope = {
+						character_event = { id = HF.40058 }
+					}
 				}
 			}
-		}
-		else_if = {
-			limit = {
-				has_global_flag = bak_high_church_saint
-			}
-			k_high_church = { 
-				holder_scope = {
-					character_event = { id = HF.40058 }
+			bad_high_church_saint = {
+				k_high_church = { 
+					holder_scope = {
+						character_event = { id = HF.40058 }
+					}
 				}
 			}
-		}
-		else_if = {
-			limit = {
-				has_global_flag = bad_mormon_saint
-			}
-			d_quorum_of_the_twelve = { 
-				holder_scope = {
-					character_event = { id = HF.40058 }
+			bad_mormon_saint = {
+				d_quorum_of_the_twelve = { 
+					holder_scope = {
+						character_event = { id = HF.40058 }
+					}
 				}
 			}
 		}
@@ -3366,60 +3697,51 @@ character_event = {
 	}
 
 	immediate = {
-		if = {
-			limit = {
-				has_global_flag = bad_catholic_saint
-			}
-			set_global_flag = only_papal_saints
-			clr_global_flag = bad_catholic_saint
-			log = "Only Papal Beatifications, declared by [Root.GetTitledName]"
-			any_playable_ruler = {
-				limit = {
-					religion = catholic
+		trigger_switch = {
+			on_trigger = has_global_flag
+			bad_catholic_saint = {
+				set_global_flag = only_papal_saints
+				clr_global_flag = bad_catholic_saint
+				log = "Only Papal Beatifications, declared by [Root.GetTitledName]"
+				any_playable_ruler = {
+					limit = {
+						religion = catholic
+					}
+					narrative_event = { id = HF.40060 }
 				}
-				narrative_event = { id = HF.40060 }
 			}
-		}
-		if = {
-			limit = {
-				has_global_flag = bad_ursuline_saint
-			}
-			set_global_flag = only_abbess_saints
-			clr_global_flag = bad_ursuline_saint
-			log = "Only Abbessal Beatifications, declared by [Root.GetTitledName]"
-			any_playable_ruler = {
-				limit = {
-					religion = ursuline
+			bad_ursuline_saint = {
+				set_global_flag = only_abbess_saints
+				clr_global_flag = bad_ursuline_saint
+				log = "Only Abbessal Beatifications, declared by [Root.GetTitledName]"
+				any_playable_ruler = {
+					limit = {
+						religion = ursuline
+					}
+					narrative_event = { id = HF.40060 }
 				}
-				narrative_event = { id = HF.40060 }
 			}
-		}
-		if = {
-			limit = {
-				has_global_flag = bak_high_church_saint
-			}
-			set_global_flag = only_archbishop_saints
-			clr_global_flag = bak_high_church_saint
-			log = "Only Archbishoprical Beatifications, declared by [Root.GetTitledName]"
-			any_playable_ruler = {
-				limit = {
-					religion = high_church
+			bad_high_church_saint = {
+				set_global_flag = only_archbishop_saints
+				clr_global_flag = bak_high_church_saint
+				log = "Only Archbishoprical Beatifications, declared by [Root.GetTitledName]"
+				any_playable_ruler = {
+					limit = {
+						religion = high_church
+					}
+					narrative_event = { id = HF.40060 }
 				}
-				narrative_event = { id = HF.40060 }
 			}
-		}
-		if = {
-			limit = {
-				has_global_flag = bad_mormon_saint
-			}
-			set_global_flag = only_presidential_saints
-			clr_global_flag = bad_mormon_saint
-			log = "Only Archbishoprical Beatifications, declared by [Root.GetTitledName]"
-			any_playable_ruler = {
-				limit = {
-					religion = mormon
+			bad_mormon_saint = {
+				set_global_flag = only_presidential_saints
+				clr_global_flag = bad_mormon_saint
+				log = "Only Archbishoprical Beatifications, declared by [Root.GetTitledName]"
+				any_playable_ruler = {
+					limit = {
+						religion = mormon
+					}
+					narrative_event = { id = HF.40060 }
 				}
-				narrative_event = { id = HF.40060 }
 			}
 		}
 	}

@@ -154,67 +154,6 @@ letter_event = {
     }
 }
 
-#Title Overhaul Management Ping
-character_event = {
-	id = SUFI.108
-	hide_window = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		NOT = { has_global_flag = CK2PLUS_ACTIVE }
-		NOT = { has_global_flag = HIPEMF_ACTIVE }
-	}
-	
-	immediate = {
-		if = { #HIP
-			limit = {
-				has_character_flag = start_of_game_character
-			}
-			set_global_flag = CK2PLUS_ACTIVE
-		}
-		else_if = { #CK2+
-			limit = {
-				OR = {
-					has_global_flag = EMF
-					has_global_flag = SWMH
-				}
-			}
-			set_global_flag = HIPEMF_ACTIVE
-		}
-		else = {
-			character_event = { id = SUFI.1081 days = 1 }
-		}
-	}
-}
-
-#Title Overhaul Management
-character_event = {
-	id = SUFI.1081
-	hide_window = yes
-
-	is_triggered_only = yes
-
-	immediate = {
-		if = { #HIP
-			limit = {
-				has_character_flag = start_of_game_character
-			}
-			set_global_flag = CK2PLUS_ACTIVE
-		}
-		else_if = { #CK2+
-			limit = {
-				OR = {
-					has_global_flag = EMF
-					has_global_flag = SWMH
-				}
-			}
-			set_global_flag = HIPEMF_ACTIVE
-		}
-		else = { }
-	}
-}
-
 ###RANKING UP EVENTS####
 
 # Hidden start: Send the rank-up request to the current Grandmaster (delayed event on self, from decision to rank up)

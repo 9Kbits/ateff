@@ -24001,19 +24001,6 @@ child_of_destiny_journey_resume_effect = {
 pacifists_lose_piety_effect = {
 	if = {
 		limit = {
-			OR = {
-				religion = anabaptist
-				religion = libertarian
-			}
-			NOT = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		piety = -20
-		custom_tooltip = { text = jain_ahimsa_tooltip }
-	}
-	else_if = {
-		limit = {
 			pacifist = yes
 		}
 		piety = -20
@@ -24790,120 +24777,111 @@ move_childrens_crusade_region_effect = {
 		}
 		break = yes
 	}
-	if = { #Move to St. Louis first.
-		limit = {
-			has_character_flag = flag_children_at_beginning
-		}
-		primary_title = { set_preferred_capital = c_st_louis } #Historically traveled here.
-		change_variable = { which = children_crusade_forces value = 1 }
-		change_variable = { which = children_crusade_morale value = -1 }
-		clr_character_flag = flag_children_at_beginning
-		set_character_flag = flag_children_at_st_louis
-		if = { 
-			limit = { 
-				NOT = { persistent_event_target:childrens_crusade_sponsor_per = { is_alive = yes } }
-			}
-			change_variable = { which = children_crusade_morale value = -2 }
-		}
-		any_player = { 
-				limit = {
-				religion_group = christian
-				NOT = {
-					character = ROOT
+	trigger_switch = {
+		on_trigger = has_character_flag
+		flag_children_at_beginning = {
+			primary_title = { set_preferred_capital = c_st_louis } #Historically traveled here.
+			change_variable = { which = children_crusade_forces value = 1 }
+			change_variable = { which = children_crusade_morale value = -1 }
+			clr_character_flag = flag_children_at_beginning
+			set_character_flag = flag_children_at_st_louis
+			if = { 
+				limit = { 
+					NOT = { persistent_event_target:childrens_crusade_sponsor_per = { is_alive = yes } }
 				}
+				change_variable = { which = children_crusade_morale value = -2 }
 			}
-			narrative_event = { id = HF.25815 days = 30 } #Notify everyone that the crusade has reached Genoa and the sea did not part before them.
-		}
-		narrative_event = { id = HF.25808 days = 50 random = 100 } #Ping back to main event to check travel progress.
-	}
-	else_if = { #Then shipwreck to Achaia.
-		limit = {
-			has_character_flag = flag_children_at_st_louis
-		}
-		primary_title = { set_preferred_capital = c_chicago } 
-		change_variable = { which = children_crusade_morale value = -1 }
-		clr_character_flag = flag_children_at_st_louis
-		set_character_flag = flag_children_at_chicago 
-		any_player = { 
-				limit = {
-				religion_group = christian
-				NOT = {
-					character = ROOT
+			any_player = { 
+					limit = {
+					religion_group = christian
+					NOT = {
+						character = ROOT
+					}
 				}
+				narrative_event = { id = HF.25815 days = 30 } #Notify everyone that the crusade has reached Genoa and the sea did not part before them.
 			}
-			narrative_event = { id = HF.25816 days = 30 } #Notify everyone that the crusade has shipwrecked into Achaia.
+			narrative_event = { id = HF.25808 days = 50 random = 100 } #Ping back to main event to check travel progress.
 		}
-		if = { 
-			limit = { 
-				NOT = { persistent_event_target:childrens_crusade_sponsor_per = { is_alive = yes } }
-			}
-			random = { 
-				chance = 25 
-				change_variable = { which = children_crusade_forces value = -1 }
-			} 
-		}
-		narrative_event = { id = HF.25808 days = 50 random = 100 } #Ping back to main event to check travel progress.
-	}
-	else_if = { #Then crawl to Nikaea.
-		limit = {
-			has_character_flag = flag_children_at_chicago
-		}
-		primary_title = { set_preferred_capital = c_niagara } 
-		clr_character_flag = flag_children_at_chicago
-		set_character_flag = flag_children_at_buffalo
-		change_variable = { which = children_crusade_forces value = 1 } #Base forces score is 3 = circa 15.000 poorly armed troops.
-		any_player = { 
-				limit = {
-				religion_group = christian
-				NOT = {
-					character = ROOT
+		flag_children_at_st_louis = {
+			primary_title = { set_preferred_capital = c_chicago } 
+			change_variable = { which = children_crusade_morale value = -1 }
+			clr_character_flag = flag_children_at_st_louis
+			set_character_flag = flag_children_at_chicago 
+			any_player = { 
+					limit = {
+					religion_group = christian
+					NOT = {
+						character = ROOT
+					}
 				}
+				narrative_event = { id = HF.25816 days = 30 } #Notify everyone that the crusade has shipwrecked into Achaia.
 			}
-			narrative_event = { id = HF.25817 days = 30 } #Notify everyone that the crusade has crawled its way to Nikaea.
-		}
-		narrative_event = { id = HF.25808 days = 50 random = 100 } #Ping back to main event to check travel progress.
-	}
-	else_if = { #We actually got there. Start the war.
-		limit = {
-			has_character_flag = flag_children_at_buffalo
-		}
-		primary_title = { set_preferred_capital = c_manhattan } #Where the troops will spawn.
-		clr_character_flag = flag_children_at_buffalo
-		set_character_flag = flag_children_at_new_york
-		narrative_event = { id = HF.25820 days = 25 } #START THE CRUSADE.
-		any_player = { 
-				limit = {
-				religion_group = christian
-				NOT = {
-					character = ROOT
+			if = { 
+				limit = { 
+					NOT = { persistent_event_target:childrens_crusade_sponsor_per = { is_alive = yes } }
 				}
+				random = { 
+					chance = 25 
+					change_variable = { which = children_crusade_forces value = -1 }
+				} 
 			}
-			narrative_event = { id = HF.25818 days = 30 } #Notify everyone that the crusade has actually reached Antioch and is ready to engage.
+			narrative_event = { id = HF.25808 days = 50 random = 100 } #Ping back to main event to check travel progress.
 		}
-	}
-	else = { #Move directly to New York in case something went wrong.
-		primary_title = { set_preferred_capital = c_new_york } #Historically traveled here.
-		clr_character_flag = flag_children_at_st_louis
-		clr_character_flag = flag_children_at_chicago
-		clr_character_flag = flag_children_at_buffalo
-		set_character_flag = flag_children_at_new_york
-		change_variable = { which = children_crusade_forces value = 1 }
-		change_variable = { which = children_crusade_morale value = -1 }
-		if = { 
-			limit = { 
-				NOT = { persistent_event_target:childrens_crusade_sponsor_per = { is_alive = yes } }
-			}
-			change_variable = { which = children_crusade_morale value = -2 }
-		}
-		narrative_event = { id = HF.25820 days = 25 } #START THE CRUSADE.
-		any_player = { 
-				limit = {
-				religion_group = christian
-				NOT = {
-					character = ROOT
+		flag_children_at_chicago = {
+			primary_title = { set_preferred_capital = c_niagara } 
+			clr_character_flag = flag_children_at_chicago
+			set_character_flag = flag_children_at_buffalo
+			change_variable = { which = children_crusade_forces value = 1 } #Base forces score is 3 = circa 15.000 poorly armed troops.
+			any_player = { 
+					limit = {
+					religion_group = christian
+					NOT = {
+						character = ROOT
+					}
 				}
+				narrative_event = { id = HF.25817 days = 30 } #Notify everyone that the crusade has crawled its way to Nikaea.
 			}
-			narrative_event = { id = HF.25818 days = 30 } #Notify everyone that the crusade has actually reached Antioch and is ready to engage.
+			narrative_event = { id = HF.25808 days = 50 random = 100 } #Ping back to main event to check travel progress.
+		}
+		flag_children_at_buffalo = {
+			primary_title = { set_preferred_capital = c_manhattan } #Where the troops will spawn.
+			clr_character_flag = flag_children_at_buffalo
+			set_character_flag = flag_children_at_new_york
+			narrative_event = { id = HF.25820 days = 25 } #START THE CRUSADE.
+			any_player = { 
+					limit = {
+					religion_group = christian
+					NOT = {
+						character = ROOT
+					}
+				}
+				narrative_event = { id = HF.25818 days = 30 } #Notify everyone that the crusade has actually reached Antioch and is ready to engage.
+			}
+		}
+		fallback = {
+			primary_title = { set_preferred_capital = c_new_york } #Historically traveled here.
+			clr_character_flag = flag_children_at_st_louis
+			clr_character_flag = flag_children_at_chicago
+			clr_character_flag = flag_children_at_buffalo
+			set_character_flag = flag_children_at_new_york
+			change_variable = { which = children_crusade_forces value = 1 }
+			change_variable = { which = children_crusade_morale value = -1 }
+			if = { 
+				limit = { 
+					NOT = { persistent_event_target:childrens_crusade_sponsor_per = { is_alive = yes } }
+				}
+				change_variable = { which = children_crusade_morale value = -2 }
+			}
+			narrative_event = { id = HF.25820 days = 25 } #START THE CRUSADE.
+			any_player = { 
+					limit = {
+					religion_group = christian
+					NOT = {
+						character = ROOT
+					}
+				}
+				narrative_event = { id = HF.25818 days = 30 } #Notify everyone that the crusade has actually reached Antioch and is ready to engage.
+			}
 		}
 	}
 }
@@ -25083,41 +25061,38 @@ warrior_lodge_get_dice_bet_effect = {
 }
 
 warrior_lodge_double_dice_bet_effect = {
-	if = { 
-		limit = { has_character_flag = flag_betting_money_500 } 
-		clr_character_flag = flag_betting_money_500
-		set_character_flag = flag_betting_money_1000
-		custom_tooltip = { text = tooltip_betting_1000_gold } 
-	}
-	else_if = { 
-		limit = { has_character_flag = flag_betting_money_250 } 
-		clr_character_flag = flag_betting_money_250
-		set_character_flag = flag_betting_money_500
-		custom_tooltip = { text = tooltip_betting_500_gold }
-	}
-	else_if = { 
-		limit = { has_character_flag = flag_betting_money_100 } 
-		clr_character_flag = flag_betting_money_100
-		set_character_flag = flag_betting_money_200
-		custom_tooltip = { text = tooltip_betting_200_gold }
-	}
-	else_if = { 
-		limit = { has_character_flag = flag_betting_money_50 } 
-		clr_character_flag = flag_betting_money_50
-		set_character_flag = flag_betting_money_100
-		custom_tooltip = { text = tooltip_betting_100_gold }
-	}
-	else_if = { 
-		limit = { has_character_flag = flag_betting_money_25 } 
-		clr_character_flag = flag_betting_money_25
-		set_character_flag = flag_betting_money_50
-		custom_tooltip = { text = tooltip_betting_50_gold }
-	}
-	else_if = { 
-		limit = { has_character_flag = flag_betting_money_10 } 
-		clr_character_flag = flag_betting_money_10
-		set_character_flag = flag_betting_money_20
-		custom_tooltip = { text = tooltip_betting_20_gold }
+	trigger_switch = {
+		on_trigger = has_character_flag
+		flag_betting_money_500 = {
+			clr_character_flag = flag_betting_money_500
+			set_character_flag = flag_betting_money_1000
+			custom_tooltip = { text = tooltip_betting_1000_gold } 
+		}
+		flag_betting_money_250 = {
+			clr_character_flag = flag_betting_money_250
+			set_character_flag = flag_betting_money_500
+			custom_tooltip = { text = tooltip_betting_500_gold }
+		}
+		flag_betting_money_100 = {
+			clr_character_flag = flag_betting_money_100
+			set_character_flag = flag_betting_money_200
+			custom_tooltip = { text = tooltip_betting_200_gold }
+		}
+		flag_betting_money_50 = {
+			clr_character_flag = flag_betting_money_50
+			set_character_flag = flag_betting_money_100
+			custom_tooltip = { text = tooltip_betting_100_gold }
+		}
+		flag_betting_money_25 = {
+			clr_character_flag = flag_betting_money_25
+			set_character_flag = flag_betting_money_50
+			custom_tooltip = { text = tooltip_betting_50_gold }
+		}
+		flag_betting_money_10 = {
+			clr_character_flag = flag_betting_money_10
+			set_character_flag = flag_betting_money_20
+			custom_tooltip = { text = tooltip_betting_20_gold }
+		}
 	}
 }
 warrior_lodge_dice_game_cleanup_effect = {
@@ -26664,117 +26639,22 @@ stable_attribute_improvement_effect = {
 }
 
 add_sympathy_for_religion_effect = {
-	if = {
-		limit = {
-			religion_group = afro_syncretic
-		}
-		ROOT = {
-			add_trait = sympathy_afro_syncretic
-		}
-	}
-	if = {
-		limit = {
-			religion_group = american_native
-		}
-		ROOT = {
-			add_trait = sympathy_american_native
-		}
-	}
-	if = {
-		limit = {
-			religion_group = amero_syncretic
-		}
-		ROOT = {
-			add_trait = sympathy_amero_syncretic #we need this trait!!!
-		}
-	}
-	if = {
-		limit = {
-			religion_group = christian
-		}
-		ROOT = {
-			add_trait = sympathy_christendom
-		}
-	}
-	if = {
-		limit = {
-			religion_group = cult_of_saints
-		}
-		ROOT = {
-			add_trait = sympathy_cult_of_saints
-		}
-	}
-	if = {
-		limit = {
-			religion_group = pacific
-		}
-		ROOT = {
-			add_trait = sympathy_pacific
-		}
-	}
-	if = {
-		limit = {
-			religion_group = latter_day_saints
-		}
-		ROOT = {
-			add_trait = sympathy_latter_day_saints
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = indian_group
-		}
-		ROOT = {
-			add_trait = sympathy_indian
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = mesoamerican_gods
-		}
-		ROOT = {
-			add_trait = sympathy_mesoamerican_gods
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = jewish_group
-		}
-		ROOT = {
-			add_trait = sympathy_judaism
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = pagan_group
-		}
-		ROOT = {
-			add_trait = sympathy_pagans
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = oldworld
-		}
-		ROOT = {
-			add_trait = sympathy_oldworld
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = nautical
-		}
-		ROOT = {
-			add_trait = sympathy_nautical
-		}
-	}
-	else_if = {
-		limit = {
-			religion_group = muslim
-		}
-		ROOT = {
-			add_trait = sympathy_islam
-		}
+	trigger_switch = {
+		on_trigger = religion_group
+		afro_syncretic = { add_trait = sympathy_afro_syncretic }
+		american_native = { add_trait = sympathy_american_native }
+		amero_syncretic = { add_trait = sympathy_amero_syncretic }
+		christian = { add_trait = sympathy_christendom }
+		cult_of_saints = { add_trait = sympathy_cult_of_saints }
+		pacific = { add_trait = sympathy_pacific }
+		latter_day_saints = { add_trait = sympathy_latter_day_saints }
+		indian_group = { add_trait = sympathy_indian }
+		mesoamerican_gods = { add_trait = sympathy_mesoamerican_gods }
+		jewish_group = { add_trait = sympathy_judaism }
+		pagan_group = { add_trait = sympathy_pagans }
+		oldworld = { add_trait = sympathy_oldworld }
+		nautical = { add_trait = sympathy_nautical }
+		muslim = { add_trait = sympathy_islam }
 	}
 }
 
@@ -27339,263 +27219,260 @@ set_rain_flag_drought_effect = {
 }
 
 change_rain_effect = { # Needs a province scope...
-	if = {
-		limit = { has_province_modifier = africa_heavy_rain }
-		random_list = {
-			10 = { # Make it worse (risk for drought)...
-				modifier = { # There is no nearby light rain...
-					factor = 2
-					any_neighbor_province_has_light_rain_trigger = no
+	trigger_switch = {
+		on_trigger = has_province_modifier
+		africa_heavy_rain = {
+			random_list = {
+				10 = { # Make it worse (risk for drought)...
+					modifier = { # There is no nearby light rain...
+						factor = 2
+						any_neighbor_province_has_light_rain_trigger = no
+					}
+					modifier = {
+						factor = 2 # There is more heavy rain nearby...
+						any_neighbor_province_has_heavy_rain_trigger = yes
+					}
+					modifier = {
+						factor = 2 # There is nearby dry weather...
+						any_neighbor_province_has_dry_weather_trigger = yes
+					}
+					remove_rain_modifiers_effect = yes
+					if = {
+						limit = { has_province_modifier = africa_rain_dance_successful }
+						remove_province_modifier = africa_rain_dance_successful
+					}
+					add_province_modifier = {
+						name = africa_drought_risk
+						duration = -1
+					}
+					set_rain_flag_drought_risk_effect = yes
 				}
-				modifier = {
-					factor = 2 # There is more heavy rain nearby...
-					any_neighbor_province_has_heavy_rain_trigger = yes
+				10 = { # Make it better (light rain)...
+					modifier = { #There is no nearby drought...
+						factor = 2
+						any_neighbor_province_has_dry_weather_trigger = no
+					}
+					modifier = {
+						factor = 2 # There is more heavy rain nearby...
+						any_neighbor_province_has_heavy_rain_trigger = yes
+					}
+					modifier = {
+						factor = 2 # There is light rain nearby...
+						any_neighbor_province_has_light_rain_trigger = no
+					}
+					remove_rain_modifiers_effect = yes
+					add_province_modifier = {
+						name = africa_light_rain
+						duration = -1
+					}
+					set_rain_flag_light_effect = yes
 				}
-				modifier = {
-					factor = 2 # There is nearby dry weather...
-					any_neighbor_province_has_dry_weather_trigger = yes
+				10 = { # Keep weather (heavy rain)...
+					set_rain_flag_heavy_effect = yes
 				}
-				remove_rain_modifiers_effect = yes
-				if = {
-					limit = { has_province_modifier = africa_rain_dance_successful }
-					remove_province_modifier = africa_rain_dance_successful
-				}
-				add_province_modifier = {
-					name = africa_drought_risk
-					duration = -1
-				}
-				set_rain_flag_drought_risk_effect = yes
-			}
-			10 = { # Make it better (light rain)...
-				modifier = { #There is no nearby drought...
-					factor = 2
-					any_neighbor_province_has_dry_weather_trigger = no
-				}
-				modifier = {
-					factor = 2 # There is more heavy rain nearby...
-					any_neighbor_province_has_heavy_rain_trigger = yes
-				}
-				modifier = {
-					factor = 2 # There is light rain nearby...
-					any_neighbor_province_has_light_rain_trigger = no
-				}
-				remove_rain_modifiers_effect = yes
-				add_province_modifier = {
-					name = africa_light_rain
-					duration = -1
-				}
-				set_rain_flag_light_effect = yes
-			}
-			10 = { # Keep weather (heavy rain)...
-				set_rain_flag_heavy_effect = yes
 			}
 		}
-	}
-	else_if = {
-		limit = {
-			has_province_modifier = africa_light_rain
-		}
-		random_list = {
-			10 = { # Make it worse (drought risk)...
-				modifier = { #More likely if have enjoyed it long enough...
-					factor = 2
-					had_province_flag = {
-						flag = africa_light_rain_flag
-						days = 3600 # almost 10 years...
+		africa_light_rain = {
+			random_list = {
+				10 = { # Make it worse (drought risk)...
+					modifier = { #More likely if have enjoyed it long enough...
+						factor = 2
+						had_province_flag = {
+							flag = africa_light_rain_flag
+							days = 3600 # almost 10 years...
+						}
 					}
-				}
-				modifier = { #More likely if have enjoyed it long enough...
-					factor = 2
-					had_province_flag = {
-						flag = africa_light_rain_flag
-						days = 6000 # 16,5 years...
+					modifier = { #More likely if have enjoyed it long enough...
+						factor = 2
+						had_province_flag = {
+							flag = africa_light_rain_flag
+							days = 6000 # 16,5 years...
+						}
 					}
+					modifier = { # There is no nearby great weather...
+						factor = 2
+						any_neighbor_province_has_light_rain_trigger = no
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_heavy_rain_trigger = yes
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_dry_weather_trigger = yes
+					}
+					remove_rain_modifiers_effect = yes
+					if = {
+						limit = { has_province_modifier = africa_rain_dance_successful }
+						remove_province_modifier = africa_rain_dance_successful
+					}
+					add_province_modifier = {
+						name = africa_drought_risk
+						duration = -1
+					}
+					set_rain_flag_drought_risk_effect = yes
 				}
-				modifier = { # There is no nearby great weather...
-					factor = 2
-					any_neighbor_province_has_light_rain_trigger = no
+				10 = { # Make it better (heavy rain)...
+					modifier = { #There is no nearby drought...
+						factor = 3
+						any_neighbor_province_has_dry_weather_trigger = no
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_heavy_rain_trigger = yes
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_light_rain_trigger = no
+					}
+					remove_rain_modifiers_effect = yes
+					add_province_modifier = {
+						name = africa_heavy_rain
+						duration = -1
+					}
+					set_rain_flag_heavy_effect = yes
 				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_heavy_rain_trigger = yes
+				10 = { # Keep weather (light rain)...
+					set_rain_flag_light_effect = yes
 				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_dry_weather_trigger = yes
-				}
-				remove_rain_modifiers_effect = yes
-				if = {
-					limit = { has_province_modifier = africa_rain_dance_successful }
-					remove_province_modifier = africa_rain_dance_successful
-				}
-				add_province_modifier = {
-					name = africa_drought_risk
-					duration = -1
-				}
-				set_rain_flag_drought_risk_effect = yes
-			}
-			10 = { # Make it better (heavy rain)...
-				modifier = { #There is no nearby drought...
-					factor = 3
-					any_neighbor_province_has_dry_weather_trigger = no
-				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_heavy_rain_trigger = yes
-				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_light_rain_trigger = no
-				}
-				remove_rain_modifiers_effect = yes
-				add_province_modifier = {
-					name = africa_heavy_rain
-					duration = -1
-				}
-				set_rain_flag_heavy_effect = yes
-			}
-			10 = { # Keep weather (light rain)...
-				set_rain_flag_light_effect = yes
 			}
 		}
-	}
-	else_if = {
-		limit = { has_province_modifier = africa_drought_risk }
-		random_list = {
-			10 = { # Make it worse (actual drought)...
-				modifier = { # There is no nearby rain...
-					factor = 2
-					any_neighbor_province_has_light_rain_trigger = no
+		africa_drought_risk = {
+			random_list = {
+				10 = { # Make it worse (actual drought)...
+					modifier = { # There is no nearby rain...
+						factor = 2
+						any_neighbor_province_has_light_rain_trigger = no
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_heavy_rain_trigger = no
+					}
+					remove_rain_modifiers_effect = yes
+					if = {
+						limit = { has_province_modifier = africa_rain_dance_successful }
+						remove_province_modifier = africa_rain_dance_successful
+					}
+					add_province_modifier = {
+						name = africa_drought_risk
+						duration = -1
+					}
+					set_rain_flag_drought_effect = yes
 				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_heavy_rain_trigger = no
+				10 = { # Make it better (light rain)...
+					modifier = { #There is no nearby drought...
+						factor = 3
+						any_neighbor_province_has_dry_weather_trigger = no
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_heavy_rain_trigger = yes
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_light_rain_trigger = no
+					}
+					remove_rain_modifiers_effect = yes
+					add_province_modifier = {
+						name = africa_light_rain
+						duration = -1
+					}
+					set_rain_flag_light_effect = yes
 				}
-				remove_rain_modifiers_effect = yes
-				if = {
-					limit = { has_province_modifier = africa_rain_dance_successful }
-					remove_province_modifier = africa_rain_dance_successful
+				10 = { # Keep weather (drought risk)...
+					set_rain_flag_drought_risk_effect = yes
 				}
-				add_province_modifier = {
-					name = africa_drought_risk
-					duration = -1
-				}
-				set_rain_flag_drought_effect = yes
-			}
-			10 = { # Make it better (light rain)...
-				modifier = { #There is no nearby drought...
-					factor = 3
-					any_neighbor_province_has_dry_weather_trigger = no
-				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_heavy_rain_trigger = yes
-				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_light_rain_trigger = no
-				}
-				remove_rain_modifiers_effect = yes
-				add_province_modifier = {
-					name = africa_light_rain
-					duration = -1
-				}
-				set_rain_flag_light_effect = yes
-			}
-			10 = { # Keep weather (drought risk)...
-				set_rain_flag_drought_risk_effect = yes
 			}
 		}
-	}
-	else = {
-		limit = { has_province_modifier = africa_drought }
-		random_list = {
-			10 = { # Make it better (heavy rain)...
-				modifier = { #More likely if have suffered long enough...
-					factor = 2
-					had_province_flag = {
-						flag = africa_drought_flag
-						days = 3600 # almost 10 years...
+		africa_drought = {
+			random_list = {
+				10 = { # Make it better (heavy rain)...
+					modifier = { #More likely if have suffered long enough...
+						factor = 2
+						had_province_flag = {
+							flag = africa_drought_flag
+							days = 3600 # almost 10 years...
+						}
 					}
-				}
-				modifier = { #More likely if have suffered long enough...
-					factor = 2
-					had_province_flag = {
-						flag = africa_drought_flag
-						days = 6000 # 16,5 years...
+					modifier = { #More likely if have suffered long enough...
+						factor = 2
+						had_province_flag = {
+							flag = africa_drought_flag
+							days = 6000 # 16,5 years...
+						}
 					}
-				}
-				modifier = { #There is no nearby drought...
-					factor = 3
-					any_neighbor_province_has_dry_weather_trigger = no
-				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_heavy_rain_trigger = yes
-				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_light_rain_trigger = no
-				}
-				remove_rain_modifiers_effect = yes
-				add_province_modifier = {
-					name = africa_heavy_rain
-					duration = -1
-				}
-				set_rain_flag_heavy_effect = yes
-			}
-			15 = { # Make it better (drought risk)...
-				modifier = { #More likely if have suffered long enough...
-					factor =2
-					had_province_flag = {
-						flag = africa_drought_flag
-						days = 3600 # almost 10 years...
+					modifier = { #There is no nearby drought...
+						factor = 3
+						any_neighbor_province_has_dry_weather_trigger = no
 					}
-				}
-				modifier = { #More likely if have suffered long enough...
-					factor = 2
-					had_province_flag = {
-						flag = africa_drought_flag
-						days = 6000 # 16,5 years...
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_heavy_rain_trigger = yes
 					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_light_rain_trigger = no
+					}
+					remove_rain_modifiers_effect = yes
+					add_province_modifier = {
+						name = africa_heavy_rain
+						duration = -1
+					}
+					set_rain_flag_heavy_effect = yes
 				}
-				modifier = { #There is no nearby drought...
-					factor = 3
-					any_neighbor_province_has_dry_weather_trigger = no
+				15 = { # Make it better (drought risk)...
+					modifier = { #More likely if have suffered long enough...
+						factor =2
+						had_province_flag = {
+							flag = africa_drought_flag
+							days = 3600 # almost 10 years...
+						}
+					}
+					modifier = { #More likely if have suffered long enough...
+						factor = 2
+						had_province_flag = {
+							flag = africa_drought_flag
+							days = 6000 # 16,5 years...
+						}
+					}
+					modifier = { #There is no nearby drought...
+						factor = 3
+						any_neighbor_province_has_dry_weather_trigger = no
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_heavy_rain_trigger = yes
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_light_rain_trigger = no
+					}
+					remove_rain_modifiers_effect = yes
+					if = {
+						limit = { has_province_modifier = africa_rain_dance_successful }
+						remove_province_modifier = africa_rain_dance_successful
+					}
+					add_province_modifier = {
+						name = africa_drought_risk
+						duration = -1
+					}
+					set_rain_flag_drought_risk_effect = yes
 				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_heavy_rain_trigger = yes
+				10 = { # Keep weather (actual drought)...
+					modifier = { # There is no nearby great weather...
+						factor = 2
+						any_neighbor_province_has_light_rain_trigger = no
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_heavy_rain_trigger = no
+					}
+					modifier = {
+						factor = 2
+						any_neighbor_province_has_dry_weather_trigger = yes
+					}
+					set_rain_flag_drought_effect = yes
 				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_light_rain_trigger = no
-				}
-				remove_rain_modifiers_effect = yes
-				if = {
-					limit = { has_province_modifier = africa_rain_dance_successful }
-					remove_province_modifier = africa_rain_dance_successful
-				}
-				add_province_modifier = {
-					name = africa_drought_risk
-					duration = -1
-				}
-				set_rain_flag_drought_risk_effect = yes
-			}
-			10 = { # Keep weather (actual drought)...
-				modifier = { # There is no nearby great weather...
-					factor = 2
-					any_neighbor_province_has_light_rain_trigger = no
-				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_heavy_rain_trigger = no
-				}
-				modifier = {
-					factor = 2
-					any_neighbor_province_has_dry_weather_trigger = yes
-				}
-				set_rain_flag_drought_effect = yes
 			}
 		}
 	}
@@ -27603,48 +27480,47 @@ change_rain_effect = { # Needs a province scope...
 }
 
 clone_weather_to_prev_effect = {
-	if = {
-		limit = { has_province_modifier = africa_heavy_rain }
-		PREV = {
-			remove_rain_modifiers_effect = yes
-			add_province_modifier = {
-				name = africa_heavy_rain
-				duration = -1
+	trigger_switch = {
+		on_trigger = has_province_modifier
+		africa_heavy_rain = {
+			PREV = {
+				remove_rain_modifiers_effect = yes
+				add_province_modifier = {
+					name = africa_heavy_rain
+					duration = -1
+				}
+				set_rain_flag_heavy_effect = yes
 			}
-			set_rain_flag_heavy_effect = yes
 		}
-	}
-	else_if = {
-		limit = { has_province_modifier = africa_light_rain }
-		PREV = {
-			remove_rain_modifiers_effect = yes
-			add_province_modifier = {
-				name = africa_light_rain
-				duration = -1
+		africa_light_rain = {
+			PREV = {
+				remove_rain_modifiers_effect = yes
+				add_province_modifier = {
+					name = africa_light_rain
+					duration = -1
+				}
+				set_rain_flag_light_effect = yes
 			}
-			set_rain_flag_light_effect = yes
 		}
-	}
-	else_if = {
-		limit = { has_province_modifier = africa_drought_risk }
-		PREV = {
-			remove_rain_modifiers_effect = yes
-			add_province_modifier = {
-				name = africa_drought_risk
-				duration = -1
+		africa_drought_risk = {
+			PREV = {
+				remove_rain_modifiers_effect = yes
+				add_province_modifier = {
+					name = africa_drought_risk
+					duration = -1
+				}
+				set_rain_flag_drought_risk_effect = yes
 			}
-			set_rain_flag_drought_risk_effect = yes
 		}
-	}
-	else = {
-		limit = { has_province_modifier = africa_drought }
-		PREV = {
-			remove_rain_modifiers_effect = yes
-			add_province_modifier = {
-				name = africa_drought
-				duration = -1
+		africa_drought = {
+			PREV = {
+				remove_rain_modifiers_effect = yes
+				add_province_modifier = {
+					name = africa_drought
+					duration = -1
+				}
+				set_rain_flag_drought_effect = yes
 			}
-			set_rain_flag_drought_effect = yes
 		}
 	}
 	PREV = { set_weather_change_cooldown_effect = yes } #sets a hidden modifier...
@@ -28811,7 +28687,7 @@ princely_elective_german_elector_setup_effect = {
 		#Duchy of Saxony
 		#Duchy of Brandenburg
 		save_persistent_event_target = { name = hre_title_1_per scope = c_chapel_hill } #replace with chapel hill
-		save_persistent_event_target = { name = hre_title_2_per scope = c_atlanta } #replace with atlanta
+		save_persistent_event_target = { name = hre_title_2_per scope = d_peachtree } #replace with atlanta
 		save_persistent_event_target = { name = hre_title_3_per scope = c_charleston } #replace with charleston
 		save_persistent_event_target = { name = hre_title_4_per scope = d_black_belt } #replace with black belt
 		save_persistent_event_target = { name = hre_title_5_per scope = d_piedmont_crescent } #replace with piedmont crescent

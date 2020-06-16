@@ -351,17 +351,10 @@ character_event = { #Goat Roping
 	}
 	
 	after = {
-		if = {
-			limit = {
-				has_character_flag = rodeo_event_good
-			}
-			character_event = { id = trailwalker.13 days = 1 } #good outcome, can recruit courtier
-		}
-		else_if = {
-			limit = {
-				has_character_flag = rodeo_event_bad
-			}
-			character_event = { id = trailwalker.14 days = 1 } #bad outcome, lose prestige
+		trigger_switch = {
+			on_trigger = has_character_flag
+			rodeo_event_good = { character_event = { id = trailwalker.13 days = 1 } } #good outcome, can recruit courtier
+			rodeo_event_bad = { character_event = { id = trailwalker.14 days = 1 } } #bad outcome, lose prestige
 		}
 	}
 }
@@ -475,17 +468,10 @@ character_event = { #Barrel Racing
 	}
 	
 	after = {
-		if = {
-			limit = {
-				has_character_flag = rodeo_event_good
-			}
-			character_event = { id = trailwalker.16 days = 1 } #good outcome, can recruit courtier
-		}
-		else_if = {
-			limit = {
-				has_character_flag = rodeo_event_bad
-			}
-			character_event = { id = trailwalker.17 days = 1 } #bad outcome, lose prestige
+		trigger_switch = {
+			on_trigger = has_character_flag
+			rodeo_event_good = { character_event = { id = trailwalker.16 days = 1 } } #good outcome, can recruit courtier
+			rodeo_event_bad = { character_event = { id = trailwalker.17 days = 1 } } #bad outcome, lose prestige
 		}
 	}
 }
@@ -602,17 +588,10 @@ character_event = { #Steer Wrestling
 	}
 	
 	after = {
-		if = {
-			limit = {
-				has_character_flag = rodeo_event_good
-			}
-			character_event = { id = trailwalker.19 days = 1 } #good outcome, can recruit courtier
-		}
-		else_if = {
-			limit = {
-				has_character_flag = rodeo_event_bad
-			}
-			character_event = { id = trailwalker.20 days = 1 } #bad outcome, lose prestige
+		trigger_switch = {
+			on_trigger = has_character_flag
+			rodeo_event_good = { character_event = { id = trailwalker.19 days = 1 } } #good outcome, can recruit courtier
+			rodeo_event_bad = { character_event = { id = trailwalker.20 days = 1 } } #bad outcome, lose prestige
 		}
 	}
 }
@@ -729,17 +708,10 @@ character_event = { #Livestock Judging
 	}
 	
 	after = {
-		if = {
-			limit = {
-				has_character_flag = rodeo_event_good
-			}
-			character_event = { id = trailwalker.22 days = 1 } #good outcome, can recruit courtier
-		}
-		else_if = {
-			limit = {
-				has_character_flag = rodeo_event_bad
-			}
-			character_event = { id = trailwalker.23 days = 1 } #bad outcome, lose prestige
+		trigger_switch = {
+			on_trigger = has_character_flag
+			rodeo_event_good = { character_event = { id = trailwalker.22 days = 1 } } #good outcome, can recruit courtier
+			rodeo_event_bad = { character_event = { id = trailwalker.23 days = 1 } } #bad outcome, lose prestige
 		}
 	}
 }
@@ -831,17 +803,10 @@ character_event = { #Ending event roulette
 	is_triggered_only = yes
 	
 	immediate = {
-		if = {
-			limit = {
-				has_character_flag = rodeo_event_good
-			}
-			character_event = { id = trailwalker.25 } #Good ending
-		}
-		else_if = {
-			limit = {
-				has_character_flag = rodeo_event_bad
-			}
-			character_event = { id = trailwalker.26 } #Bad ending
+		trigger_switch = {
+			on_trigger = has_character_flag
+			rodeo_event_good = { character_event = { id = trailwalker.25 } } #Good ending
+			rodeo_event_bad = { character_event = { id = trailwalker.26 } } #Bad ending
 		}
 	}
 }

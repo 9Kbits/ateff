@@ -1332,36 +1332,15 @@ character_event = {
 			limit = {
 				is_tribal = yes
 			}
-			if = { # Pay some Prestige instead, based around how many of these modifiers you're getting...
-				limit = { num_of_count_titles_in_realm = 15 }
-				prestige = -150
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 12 }
-				prestige = -120
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 12 }
-				prestige = -120
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 9 }
-				prestige = -90
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 7 }
-				prestige = -70
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 5 }
-				prestige = -50
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 3 }
-				prestige = -30
-			}
-			else = { #means you have a small realm
-				prestige = -15
+			trigger_switch = {
+				on_trigger = num_of_count_titles_in_realm
+				15 = { prestige = -150 }
+				12 = { prestige = -120 }
+				9 = { prestige = -90 }
+				7 = { prestige = -70 }
+				5 = { prestige = -50 }
+				3 = { prestige = -30 }
+				fallback = { prestige = -15 }
 			}
 		}
 		else = { #If you're not Tribal
@@ -1400,36 +1379,15 @@ character_event = {
 			limit = {
 				is_tribal = yes
 			}
-			if = { # Pay some Prestige instead, based around how many of these modifiers you're getting...
-				limit = { num_of_count_titles_in_realm = 15 }
-				prestige = -150
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 12 }
-				prestige = -120
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 12 }
-				prestige = -120
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 9 }
-				prestige = -90
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 7 }
-				prestige = -70
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 5 }
-				prestige = -50
-			}
-			else_if = {
-				limit = { num_of_count_titles_in_realm = 3 }
-				prestige = -30
-			}
-			else = { #means you have a small realm
-				prestige = -15
+			trigger_switch = {
+				on_trigger = num_of_count_titles_in_realm
+				15 = { prestige = -150 }
+				12 = {prestige = -120 }
+				9 = { prestige = -90 }
+				7 = { prestige = -70 }
+				5 = { prestige = -50 }
+				3 = { prestige = -30 }
+				fallback = { prestige = -15 }
 			}
 		}
 		else = { #If you're not Tribal

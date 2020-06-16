@@ -9968,17 +9968,10 @@ character_event = {
 		trigger = {
 			higher_tier_than = DUKE
 		}
-		if = {
-			limit = {
-				tier = EMPEROR
-			}
-			custom_tooltip = { text = EVTOPTB_MNM_9103_TT }
-		}
-		else_if = {
-			limit = {
-				tier = KING
-			}
-			custom_tooltip = { text = EVTOPTB_MNM_9103_TT_KING }
+		trigger_switch = {
+			on_trigger = tier
+			EMPEROR = { custom_tooltip = { text = EVTOPTB_MNM_9103_TT } }
+			KING = { custom_tooltip = { text = EVTOPTB_MNM_9103_TT_KING } }
 		}
 
 		scaled_wealth = { value = -2 min = -150 max = -500 }
@@ -10070,21 +10063,12 @@ character_event = {
 			}
 			text = EVTOPTC_MNM_9103_GENERIC
 		}
-
-		if = {
-			limit = {
-				tier = EMPEROR
-			}
-			custom_tooltip = { text = EVTOPTC_MNM_9103_TT }
-		}
-		else_if = {
-			limit = {
-				tier = KING
-			}
-			custom_tooltip = { text = EVTOPTC_MNM_9103_TT_KING }
-		}
-		else = {
-			custom_tooltip = { text = EVTOPTC_MNM_9103_TT_GENERIC }
+		
+		trigger_switch = {
+			on_trigger = tier
+			EMPEROR = { custom_tooltip = { text = EVTOPTC_MNM_9103_TT } }
+			KING = { custom_tooltip = { text = EVTOPTC_MNM_9103_TT_KING } }
+			fallback = { custom_tooltip = { text = EVTOPTC_MNM_9103_TT_GENERIC } }
 		}
 
 		scaled_wealth = { value = -1 min = -50 max = -100 }
@@ -11292,107 +11276,58 @@ character_event = {
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_sword } }
-			if = {
-				limit = {
-					tier = EMPEROR
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORD_EMPEROR }
-			}
-			else_if = {
-				limit = {
-					tier = KING
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORD_KING}
+			trigger_switch = {
+				on_trigger = tier
+				EMPEROR = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORD_EMPEROR } }
+				KING = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORD_KING } }
 			}
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_scimitar } }
-			if = {
-				limit = {
-					tier = EMPEROR
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORDSCIMITAR_EMPEROR }
-			}
-			else_if = {
-				limit = {
-					tier = KING
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORDSCIMITAR_KING }
+			trigger_switch = {
+				on_trigger = tier
+				EMPEROR = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORDSCIMITAR_EMPEROR } }
+				KING = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORDSCIMITAR_KING } }
 			}
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
-			if = {
-				limit = {
-					tier = EMPEROR
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_LANCE_EMPEROR }
-			}
-			else_if = {
-				limit = {
-					tier = KING
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_LANCE_KING }
+			trigger_switch = {
+				on_trigger = tier
+				EMPEROR = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_LANCE_EMPEROR } }
+				KING = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_LANCE_KING } }
 			}
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_axe } }
-			if = {
-				limit = {	
-					tier = EMPEROR
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_AXE_EMPEROR }
-			}
-			else_if = {
-				limit = {
-					tier = KING
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_AXE_KING }
+			trigger_switch = {
+				on_trigger = tier
+				EMPEROR = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_AXE_EMPEROR } }
+				KING = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_AXE_KING } }
 			}
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_mace } }
-			if = {
-				limit = {
-					tier = EMPEROR
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_MACE_EMPEROR }
-			}
-			else_if = {
-				limit = {
-					tier = KING
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_MACE_KING }
+			trigger_switch = {
+				on_trigger = tier
+				EMPEROR = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_MACE_EMPEROR } }
+				KING = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_MACE_KING } }
 			}
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_bow } }
-			if = {
-				limit = {
-					tier = EMPEROR
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_BOW_EMPEROR}
-			}
-			else_if = {
-				limit = {
-					tier = KING
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_BOW_KING}
+			trigger_switch = {
+				on_trigger = tier
+				EMPEROR = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_BOW_EMPEROR } }
+				KING = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_BOW_KING } }
 			}
 		}
 		if = {
 			limit = { FROM = { has_character_flag = armor_set } }
-			if = {
-				limit = {
-					tier = EMPEROR
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_ARMOR_EMPEROR}
-			}
-			else_if = {
-				limit = {
-					tier = KING
-				}
-				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_ARMOR_KING}
+			trigger_switch = {
+				on_trigger = tier
+				EMPEROR = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_ARMOR_EMPEROR } }
+				KING = { custom_tooltip = { text = EVTOPTB_MNM_9120_TT_ARMOR_KING } }
 			}
 		}
 
@@ -11496,74 +11431,29 @@ character_event = {
 		
 		if = {
 			limit = { FROM = { NOT = { has_character_flag = armor_set } NOT = { has_character_flag = weapon_bow } } }
-			if = {
-				limit = {
-					tier = EMPEROR 
-				}
-				custom_tooltip = { text = EVTOPTC_MNM_9120_TT_SWORDSCIMITAR_EMPEROR }
-			}
-			else_if = {
-				limit = {
-					tier = KING
-				}
-				custom_tooltip = { text = EVTOPTC_MNM_9120_TT_SWORDSCIMITAR_KING }
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						tier = EMPEROR
-						tier = KING
-					}
-				}
-				custom_tooltip = { text = EVTOPTC_MNM_9120_TT_SWORDSCIMITAR_GENERIC }
+			trigger_switch = {
+				on_trigger = tier
+				EMPEROR = { custom_tooltip = { text = EVTOPTC_MNM_9120_TT_SWORDSCIMITAR_EMPEROR } }
+				KING = { custom_tooltip = { text = EVTOPTC_MNM_9120_TT_SWORDSCIMITAR_KING } }
+				fallback = { custom_tooltip = { text = EVTOPTC_MNM_9120_TT_SWORDSCIMITAR_GENERIC } }
 			}
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_bow } }
-			if = {
-				limit = {
-					tier = EMPEROR
-				}
-				custom_tooltip = { text = EVTOPTC_MNM_9120_TT_BOW_EMPEROR }
-			}
-			else_if = {
-				limit = {
-					tier = KING
-				}
-				custom_tooltip = { text = EVTOPTC_MNM_9120_TT_BOW_KING }
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						tier = EMPEROR
-						tier = KING
-					}
-				}
-				custom_tooltip = { text = EVTOPTC_MNM_9120_TT_BOW_GENERIC }
+			trigger_switch = {
+				on_trigger = tier
+				EMPEROR = { custom_tooltip = { text = EVTOPTC_MNM_9120_TT_BOW_EMPEROR } }
+				KING = { custom_tooltip = { text = EVTOPTC_MNM_9120_TT_BOW_KING } }
+				fallback = { custom_tooltip = { text = EVTOPTC_MNM_9120_TT_BOW_GENERIC } }
 			}
 		}
 		if = {
 			limit = { FROM = { has_character_flag = armor_set } }
-			if = {
-				limit = {
-					tier = EMPEROR
-				}
-				custom_tooltip = { text = EVTOPTC_MNM_9120_TT_ARMOR_EMPEROR }
-			}
-			else_if = {
-				limit = {
-					tier = KING
-				}
-				custom_tooltip = { text = EVTOPTC_MNM_9120_TT_ARMOR_KING }
-			}
-			else_if = {
-				limit = {
-					NOT = {
-						tier = EMPEROR
-						tier = KING
-					}
-				}
-				custom_tooltip = { text = EVTOPTC_MNM_9120_TT_ARMOR_GENERIC }
+			trigger_switch = {
+				on_trigger = tier
+				EMPEROR = { custom_tooltip = { text = EVTOPTC_MNM_9120_TT_ARMOR_EMPEROR } }
+				KING = { custom_tooltip = { text = EVTOPTC_MNM_9120_TT_ARMOR_KING } }
+				fallback = { custom_tooltip = { text = EVTOPTC_MNM_9120_TT_ARMOR_GENERIC } }
 			}
 		}
 

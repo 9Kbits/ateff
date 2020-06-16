@@ -208,28 +208,25 @@ holy_order_distribute_titles_effect = {
 			}
 			lower_tier_than = DUKE
 		}
-		if = {
-			limit = {
-				holding_type = city
+		trigger_switch = {
+			on_trigger = holding_type
+			city = {
+				create_random_steward = {
+					random_traits = yes
+					dynasty = random
+				}
 			}
-			create_random_steward = {
-				random_traits = yes
-				dynasty = random
+			temple = {
+				create_random_priest = {
+					random_traits = yes
+					dynasty = random
+				}
 			}
-		}
-		else_if = {
-			limit = {
-				holding_type = temple
-			}
-			create_random_priest = {
-				random_traits = yes
-				dynasty = random
-			}
-		}
-		else = {
-			create_random_soldier = {
-				random_traits = yes
-				dynasty = random
+			fallback = {
+				create_random_soldier = {
+					random_traits = yes
+					dynasty = random
+				}
 			}
 		}
 		grant_title_no_opinion = new_character

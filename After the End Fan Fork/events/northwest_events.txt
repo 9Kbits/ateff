@@ -42,31 +42,32 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		if = {
-			limit = {
-				prestige = 500
-			}
-			character_event = { id = northwest.3 } #Magnificent pole
-		}
-		else_if = {
-			limit = {
-				prestige = 250
-				NOT = { prestige = 500 }
-			}
-			character_event = { id = northwest.4 } #Respectable pole
-		}
-		else_if = {
-			limit = {
-				prestige = 100
-				NOT = { prestige = 250 }
-			}
-			character_event = { id = northwest.5 } #Acceptable pole
-		}
 		else_if = {
 			limit = {
 				NOT = { prestige = 100 }
 			}
 			character_event = { id = northwest.6 } #Underwhelming pole
+		}
+		else_if = {
+			limit = {
+				prestige = 100
+				break = yes
+			}
+			character_event = { id = northwest.5 } #Acceptable pole
+		}
+		else_if = {
+			limit = {
+				prestige = 250
+				break = yes
+			}
+			character_event = { id = northwest.4 } #Respectable pole
+		}
+		if = {
+			limit = {
+				prestige = 500
+				break = yes
+			}
+			character_event = { id = northwest.3 } #Magnificent pole
 		}
 	}
 }

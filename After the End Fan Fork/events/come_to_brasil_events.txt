@@ -4774,22 +4774,19 @@ narrative_event = { # audience w/ the Emperor
 			which = kow_tow_temp_calc
 			value = 0
 		}
-		if = {
-			limit = {
-				real_tier = KING
+		trigger_switch = {
+			on_trigger = real_tier
+			KING = {
+				change_variable = {
+					which = kow_tow_emperor_impression_evaluation
+					value = 7
+				}
 			}
-			change_variable = {
-				which = kow_tow_emperor_impression_evaluation
-				value = 7
-			}
-		}
-		else_if = {
-			limit = {
-				real_tier = EMPEROR
-			}
-			change_variable = {
-				which = kow_tow_emperor_impression_evaluation
-				value = 14
+			EMPEROR = {
+				change_variable = {
+					which = kow_tow_emperor_impression_evaluation
+					value = 14
+				}
 			}
 		}
 		

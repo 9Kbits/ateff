@@ -726,29 +726,12 @@ character_event = {
 	option = {	  
 		name = EVTOPTA_HF_41320
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41350 days = 30 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41352 days = 30 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41354 days = 30 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41356 days = 30}
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41350 days = 30 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41352 days = 30 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41354 days = 30 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41356 days = 30} }
 			}
 		}
 		if = {
@@ -774,29 +757,12 @@ character_event = {
 		name = EVTOPTB_HF_41320
 		change_martial = 1
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41350 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41352 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41354 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41356 days = 15}
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41350 days = 30 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41352 days = 30 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41354 days = 30 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41356 days = 30} }
 			}
 		}
 		random = {
@@ -843,30 +809,13 @@ character_event = {
 		prestige = -50
 		wealth = -100
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41350 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41352 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41354 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41356 days = 15}
-			}		
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41350 days = 30 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41352 days = 30 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41354 days = 30 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41356 days = 30} }
+			}	
 		}
 	}
 	#Fight your way out of it
@@ -931,30 +880,13 @@ character_event = {
 			}
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41350 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41352 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41354 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41356 days = 15}
-			}		
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41350 days = 30 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41352 days = 30 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41354 days = 30 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41356 days = 30} }
+			}	
 		}
 	}
 }
@@ -1274,29 +1206,12 @@ character_event = {
 			duration = 120
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -1319,29 +1234,12 @@ character_event = {
 			character_event = { id = 38274 }
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -1382,29 +1280,12 @@ character_event = {
 			character_event = { id = 38273 }
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -1435,29 +1316,12 @@ character_event = {
 			character_event = { id = 38255 }
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -1482,29 +1346,12 @@ character_event = {
 			character_event = { id = 38252 }
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -1618,29 +1465,12 @@ character_event = {
 			}
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -1701,29 +1531,12 @@ character_event = {
 			}
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -1762,29 +1575,12 @@ character_event = {
 			character_event = { id = 38254 }
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -1796,29 +1592,12 @@ character_event = {
 			50 = {
 				custom_tooltip = { text = EVTOPTB_HF_41375_TT1 }
 				hidden_tooltip = {
-					if = {
-						limit = {
-							has_character_flag = cold_saintly_pilgrimage
-						}
-						character_event = { id = HF.41419 days = 15 }
-					}
-					else_if = {
-						limit = {
-							has_character_flag = mild_saintly_pilgrimage
-						}
-						character_event = { id = HF.41424 days = 15 }
-					}
-					else_if = {
-						limit = {
-							has_character_flag = exotic_saintly_pilgrimage
-						}
-						character_event = { id = HF.41429 days = 15 }
-					}
-					else_if = {
-						limit = {
-							has_character_flag = generic_saintly_pilgrimage
-						}
-						character_event = { id = HF.41434 days = 15 }
+					trigger_switch = {
+						on_trigger = has_character_flag
+						cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+						mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+						exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+						generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 					}
 				}
 			}
@@ -1856,29 +1635,12 @@ character_event = {
 			}
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -1906,29 +1668,12 @@ character_event = {
 			duration = 180
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 30 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 30 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 30 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 30 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -1967,29 +1712,12 @@ character_event = {
 			custom_tooltip = { text = EVTTOOLTIP_HF_41390_TT }
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15}
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -2095,29 +1823,12 @@ character_event = {
 			}
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15}
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -2129,29 +1840,12 @@ character_event = {
 			add_trait = paranoid
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15}
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -2173,29 +1867,12 @@ character_event = {
 			}
 		}
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15}
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}
@@ -2253,29 +1930,12 @@ character_event = {
 				change_martial = 3
 
 				hidden_tooltip = {
-					if = {
-						limit = {
-							has_character_flag = cold_saintly_pilgrimage
-						}
-						character_event = { id = HF.41419 days = 15 }
-					}
-					else_if = {
-						limit = {
-							has_character_flag = mild_saintly_pilgrimage
-						}
-						character_event = { id = HF.41424 days = 15 }
-					}
-					else_if = {
-						limit = {
-							has_character_flag = exotic_saintly_pilgrimage
-						}
-						character_event = { id = HF.41429 days = 15 }
-					}
-					else_if = {
-						limit = {
-							has_character_flag = generic_saintly_pilgrimage
-						}
-						character_event = { id = HF.41434 days = 15}
+					trigger_switch = {
+						on_trigger = has_character_flag
+						cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+						mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+						exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+						generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 					}
 				}
 			}
@@ -2346,29 +2006,12 @@ character_event = {
 				change_martial = 3
 
 				hidden_tooltip = {
-					if = {
-						limit = {
-							has_character_flag = cold_saintly_pilgrimage
-						}
-						character_event = { id = HF.41419 days = 15 }
-					}
-					else_if = {
-						limit = {
-							has_character_flag = mild_saintly_pilgrimage
-						}
-						character_event = { id = HF.41424 days = 15 }
-					}
-					else_if = {
-						limit = {
-							has_character_flag = exotic_saintly_pilgrimage
-						}
-						character_event = { id = HF.41429 days = 15 }
-					}
-					else_if = {
-						limit = {
-							has_character_flag = generic_saintly_pilgrimage
-						}
-						character_event = { id = HF.41434 days = 15}
+					trigger_switch = {
+						on_trigger = has_character_flag
+						cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+						mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+						exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+						generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 					}
 				}
 			}
@@ -2472,29 +2115,12 @@ character_event = {
 		add_trait = possessed 
 		character_event = { id = 38315 }
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = cold_saintly_pilgrimage
-				}
-				character_event = { id = HF.41419 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = mild_saintly_pilgrimage
-				}
-				character_event = { id = HF.41424 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = exotic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41429 days = 15 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = generic_saintly_pilgrimage
-				}
-				character_event = { id = HF.41434 days = 15}
+			trigger_switch = {
+				on_trigger = has_character_flag
+				cold_saintly_pilgrimage = { character_event = { id = HF.41419 days = 15 } }
+				mild_saintly_pilgrimage = { character_event = { id = HF.41424 days = 15 } }
+				exotic_saintly_pilgrimage = { character_event = { id = HF.41429 days = 15 } }
+				generic_saintly_pilgrimage = { character_event = { id = HF.41434 days = 15 } }
 			}
 		}
 	}

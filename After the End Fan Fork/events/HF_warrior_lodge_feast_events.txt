@@ -2894,41 +2894,38 @@ character_event = {
 
 	option = { #Double or nothing.
 		name = EVTOPTAHF25231
-		if = { 
-			limit = { has_character_flag = flag_betting_money_500 } 
-			clr_character_flag = flag_betting_money_500
-			set_character_flag = flag_betting_money_1000
-			custom_tooltip = { text = tooltip_betting_1000_gold } 
-		}
-		else_if = { 
-			limit = { has_character_flag = flag_betting_money_250 } 
-			clr_character_flag = flag_betting_money_250
-			set_character_flag = flag_betting_money_500
-			custom_tooltip = { text = tooltip_betting_500_gold }
-		}
-		else_if = { 
-			limit = { has_character_flag = flag_betting_money_100 } 
-			clr_character_flag = flag_betting_money_100
-			set_character_flag = flag_betting_money_200
-			custom_tooltip = { text = tooltip_betting_200_gold }
-		}
-		else_if = { 
-			limit = { has_character_flag = flag_betting_money_50 } 
-			clr_character_flag = flag_betting_money_50
-			set_character_flag = flag_betting_money_100
-			custom_tooltip = { text = tooltip_betting_100_gold }
-		}
-		else_if = { 
-			limit = { has_character_flag = flag_betting_money_25 } 
-			clr_character_flag = flag_betting_money_25
-			set_character_flag = flag_betting_money_50
-			custom_tooltip = { text = tooltip_betting_50_gold }
-		}
-		else_if = { 
-			limit = { has_character_flag = flag_betting_money_10 } 
-			clr_character_flag = flag_betting_money_10
+		trigger_switch = {
+			on_trigger = has_character_flag
+			flag_betting_money_500 = {
+				clr_character_flag = flag_betting_money_500
+				set_character_flag = flag_betting_money_1000
+				custom_tooltip = { text = tooltip_betting_1000_gold } 
+			}
+			flag_betting_money_250 = {
+				clr_character_flag = flag_betting_money_250
+				set_character_flag = flag_betting_money_500
+				custom_tooltip = { text = tooltip_betting_500_gold }
+			}
+			flag_betting_money_100 = {
+				clr_character_flag = flag_betting_money_100
+				set_character_flag = flag_betting_money_200
+				custom_tooltip = { text = tooltip_betting_200_gold }
+			}
+			flag_betting_money_50 = {
+				clr_character_flag = flag_betting_money_50
+				set_character_flag = flag_betting_money_100
+				custom_tooltip = { text = tooltip_betting_100_gold }
+			}
+			flag_betting_money_25 = {
+				clr_character_flag = flag_betting_money_25
+				set_character_flag = flag_betting_money_50
+				custom_tooltip = { text = tooltip_betting_50_gold }
+			}
+			flag_betting_money_10 = {
+				clr_character_flag = flag_betting_money_10
 			set_character_flag = flag_betting_money_20
 			custom_tooltip = { text = tooltip_betting_20_gold }
+			}
 		}
 		random_list = {
 			50 = {

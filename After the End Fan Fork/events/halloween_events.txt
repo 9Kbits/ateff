@@ -1248,17 +1248,10 @@ character_event = { #Encounter the ghost girl
 		name = EVTOPTA_halloween_20
 		custom_tooltip = { text = TXT_treat_ghost_nicely }
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = nice_ghost_girl
-				}
-				character_event = { id = halloween.21 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = evil_ghost_girl
-				}
-				character_event = { id = halloween.23 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				nice_ghost_girl = { character_event = { id = halloween.21 } }
+				evil_ghost_girl = { character_event = { id = halloween.23 } }
 			}
 		}
 	}
@@ -1267,17 +1260,10 @@ character_event = { #Encounter the ghost girl
 		name = EVTOPTB_halloween_20
 		custom_tooltip = { text = TXT_treat_ghost_forcefully }
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_character_flag = nice_ghost_girl
-				}
-				character_event = { id = halloween.22 }
-			}
-			else_if = {
-				limit = {
-					has_character_flag = evil_ghost_girl
-				}
-				character_event = { id = halloween.24 }
+			trigger_switch = {
+				on_trigger = has_character_flag
+				nice_ghost_girl = { character_event = { id = halloween.22 } }
+				evil_ghost_girl = { character_event = { id = halloween.24 } }
 			}
 		}
 	}
