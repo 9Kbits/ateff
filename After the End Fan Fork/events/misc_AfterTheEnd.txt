@@ -14188,3 +14188,64 @@ narrative_event = {
 		name = OK
 	}
 }
+
+character_event = {
+	id = misc.11
+	desc = "Replace Leader of the Labrys Band"
+	picture = GFX_evt_mass_crusade
+	is_triggered_only = yes
+	religion = gaian
+
+	trigger = {
+		has_landed_title = d_labrys_band
+	}
+	
+	option = {
+		# Make sure they're a good age
+		random_list = {
+			10 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 30
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 35
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 40
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 45
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 50
+			} }
+			20 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 55
+			} }
+			10 = { create_random_soldier = {
+				random_traits = yes
+				female = yes
+				trait=homosexual
+				age = 60
+			} }
+		}
+		new_character = { ROOT = { any_demesne_title = { gain_title = PREVPREV } } }
+	}
+}
