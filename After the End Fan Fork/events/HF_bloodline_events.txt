@@ -2211,24 +2211,14 @@ narrative_event = {
 		NOT = { has_character_flag = flag_chance_for_alexander_blood } #Opportunity only once per character.
 		NOT = { has_global_flag = flag_alexander_blood_restored } #Bloodline unlocked only once per playthrough.
 		capital_scope = { 
-			NOR = { 
-				region = custom_neoladino
-				region = world_caribbean
-			}
+			region = custom_usa
 		}
+		NOT = { has_native_culture_trigger = yes }
 	}
 
 	weight_multiplier = { 
 		days = 1
-		
-		modifier = {
-			factor = 0.35
-			capital_scope = { 
-				NOT = { 
-					region = custom_usa
-				}
-			}
-		}
+
 		modifier = {
 			factor = 0.35
 			NOR = { 
@@ -13095,6 +13085,79 @@ character_event = {
 			else = { 
 				opinion = { who = FROM modifier = opinion_kindred_spirit years = 15 } 
 				reverse_opinion = { who = FROM modifier = opinion_kindred_spirit years = 15 } 
+			}
+		}
+	}
+}
+
+#Add mental decay if not won enough wars by maturity as a ruler (35 years).
+character_event = {
+	id = HF.24230
+	desc = { 
+		trigger = { 
+			ROOT = {  
+				any_owned_bloodline = {  
+					has_bloodline_flag = bloodline_bolivar
+				}
+			}
+		} 
+		text = EVTDESCAHF24230
+	}
+	desc = { 
+		trigger = { 
+			NOT = { 
+				ROOT = { 
+					any_owned_bloodline = {  
+						has_bloodline_flag = bloodline_tecumseh
+					}
+				}
+			}
+		} 
+		text = EVTDESCBHF24230
+	}
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_diplomacy
+
+	min_age = 35
+	only_rulers = yes
+	only_capable = yes
+	
+	is_triggered_only = yes
+
+	trigger = { 
+		higher_tier_than = DUKE
+		NOT = { trait = incapable }
+		NOT = { trait = depressed }
+		prisoner = no
+		NOT = { check_variable = { which = bloodline_won_wars value = 10 } }
+		any_owned_bloodline = {  
+			OR = {  
+				has_bloodline_flag = bloodline_alexander
+				has_bloodline_flag = bloodline_ashoka
+			}
+			founder = {
+				NOT = {
+					character = ROOT
+				}
+			}
+		}
+	}
+
+	option = { 
+		name = EVTOPTAHF24230
+		trigger = { trait = content }
+		tooltip_info = content
+	}
+	option = { 
+		name = EVTOPTBHF24230
+		if = { 
+			limit = {  
+				NOT = { trait = depressed }
+			}
+			random = { 
+				chance = 25
+				add_trait = depressed
+				hidden_tooltip = { character_event = { id = 38288 } }
 			}
 		}
 	}
