@@ -69,13 +69,13 @@ namespace = eva
 # Postadventist events
 #401-412	see above
 
-# Revelationist events
+# Anabaptist events
 #501-512	see above
 
 # Mormon events
 #601-612	see above
 
-# Americanist events
+# Anglican events
 #701-712	see above
 
 
@@ -86,11 +86,7 @@ namespace = eva
 #	antinomian
 #	charismatic
 #	mormon
-#	americanist
-#	consumerist (forgot this one, w/e)
-#	revelationist
-#	occultist
-#	high church
+#	etc
 #	Imperial Church is established; 
 #	NOT = { has_global_flag = imperial_church_established }
 #	NOT = { has_global_flag = authority_maintained }
@@ -1605,9 +1601,9 @@ province_event = {
 		NOT = { has_province_modifier = antinomian_revival }
 		NOT = { has_province_modifier = charismatic_revival }
 		NOT = { has_province_modifier = postadventist_revival }
-		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = anabaptist_revival }
 		NOT = { has_province_modifier = mormon_revival }
-		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = high_church }
 		NOT = { has_province_modifier = religious_unrest }
 		NOT = { has_province_modifier = resist_revival }
 		NOT = { has_province_modifier = burned_over }
@@ -1987,9 +1983,9 @@ province_event = {
 		NOT = { has_province_modifier = charismatic_revival }
 		NOT = { has_province_modifier = antinomian_revival }
 		NOT = { has_province_modifier = postadventist_revival }
-		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = anabaptist_revival }
 		NOT = { has_province_modifier = mormon_revival }
-		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = high_church }
 		NOT = { has_province_modifier = religious_unrest }
 		NOT = { has_province_modifier = resist_revival }
 		NOT = { has_province_modifier = burned_over }
@@ -2358,9 +2354,9 @@ province_event = {
 		NOT = { has_province_modifier = postadventist_revival }
 		NOT = { has_province_modifier = antinomian_revival }
 		NOT = { has_province_modifier = charismatic_revival }
-		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = anabaptist_revival }
 		NOT = { has_province_modifier = mormon_revival }
-		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = high_church }
 		NOT = { has_province_modifier = religious_unrest }
 		NOT = { has_province_modifier = resist_revival }
 		NOT = { has_province_modifier = burned_over }
@@ -2727,7 +2723,7 @@ character_event = {
 	}
 }
 
-#Revelationist Revival
+#Anabaptist Revival
 province_event = {
 	id = eva.501
 	desc = EVTDESC_eva.501
@@ -2735,17 +2731,16 @@ province_event = {
 	has_global_flag = evangelical_reformation
 	
 	trigger = {
-		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = anabaptist_revival }
 		NOT = { has_province_modifier = antinomian_revival }
 		NOT = { has_province_modifier = charismatic_revival }
 		NOT = { has_province_modifier = postadventist_revival }
 		NOT = { has_province_modifier = mormon_revival }
-		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = high_church_revival }
 		NOT = { has_province_modifier = religious_unrest }
 		NOT = { has_province_modifier = resist_revival }
 		NOT = { has_province_modifier = burned_over }
 		NOT = { has_global_flag = end_wildfire_reformation }
-		NOT = { has_global_flag = revelationist_reformation }
 		holder_scope = {
 			religion = evangelical
 			NOT = { religion_authority = 0.8 }
@@ -2756,7 +2751,7 @@ province_event = {
 		months = 150
 		
 		modifier = { factor = 0.8  holder_scope = { trait = lustful } }
-		modifier = { factor = 0.8  holder_scope = { trait = gluttonous} }
+		modifier = { factor = 0.8  holder_scope = { trait = gluttonous } }
 		modifier = { factor = 0.8  holder_scope = { trait = greedy } }
 		modifier = { factor = 0.8  holder_scope = { trait = slothful } }
 		modifier = { factor = 0.8  holder_scope = { trait = envious } }
@@ -2766,7 +2761,7 @@ province_event = {
 	
 	immediate = {
 		add_province_modifier = {
-			name = revelationist_revival
+			name = anabaptist_revival
 			duration = 1460
 		}
 		add_province_modifier = {
@@ -2789,7 +2784,7 @@ province_event = {
 	
 	option = {
 		name = EVTOPTC_eva.501 #allow it to take its course
-		religion = revelationist
+		religion = anabaptist
 		add_province_modifier = { name = burned_over duration = 912 }
 		piety = -25
 		ai_chance = { factor = 5 }
@@ -2798,7 +2793,7 @@ province_event = {
 	option = {
 		name = EVTOPTD_eva.501 #suppress the revival violently
 		remove_province_modifier = religious_tension
-		remove_province_modifier = revelationist_revival
+		remove_province_modifier = anabaptist_revival
 		add_province_modifier = {
 			name = religious_unrest
 			duration = 60 
@@ -2815,14 +2810,14 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { religion = revelationist }
+		NOT = { religion = anabaptist }
 	}
 		
 	option = { #convert
 		name = EVTOPTA_eva.502
-		FROM = { religion = revelationist }
+		FROM = { religion = anabaptist }
 		FROM = { add_province_modifier = { name = burned_over duration = 912 } }
-		custom_tooltip = { text = TXT_revelationist_revival_convert }
+		custom_tooltip = { text = TXT_anabaptist_revival_convert }
 		hidden_tooltip = { character_event = { id = eva.506 } }
 			ai_chance = {
 			factor = 10
@@ -2920,7 +2915,7 @@ character_event = {
 	option = { 
 		name = EVTOPTA_eva.505 
 		FROMFROMFROM = { add_province_modifier = { name = burned_over duration = 720 } }
-		FROMFROMFROM = { religion = revelationist }
+		FROMFROMFROM = { religion = anabaptist }
 		piety = -5
 		hidden_tooltip = {
 			if = {
@@ -2945,7 +2940,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_eva.506
 		trigger = { has_job_title = job_spiritual }
-		religion = revelationist
+		religion = anabaptist
 		hidden_tooltip = {
 			if = {
 				limit = {
@@ -2962,7 +2957,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_eva.506
 		trigger = { NOT = { has_job_title = job_spiritual } }
-		religion = revelationist
+		religion = anabaptist
 		hidden_tooltip = {
 			if = {
 				limit = {
@@ -2978,7 +2973,7 @@ character_event = {
 	option = {
 		name = EVTOPTC_eva.506
 		hidden_tooltip = {
-			set_secret_religion = revelationist
+			set_secret_religion = anabaptist
 			if = {
 				limit = {
 					NOT = { has_landed_title = e_dixie }
@@ -3000,7 +2995,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_eva.507
-		religion = revelationist
+		religion = anabaptist
 		FROM = { character_event = { id = eva.511 } }
 		ai_chance = {
 			factor = 50
@@ -3120,8 +3115,8 @@ province_event = {
 		NOT = { has_province_modifier = antinomian_revival }
 		NOT = { has_province_modifier = charismatic_revival }
 		NOT = { has_province_modifier = postadventist_revival }
-		NOT = { has_province_modifier = revelationist_revival }
-		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = anabaptist_revival }
+		NOT = { has_province_modifier = high_church_revival }
 		NOT = { has_province_modifier = religious_unrest }
 		NOT = { has_province_modifier = resist_revival }
 		NOT = { has_province_modifier = burned_over }
@@ -3133,7 +3128,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 150
+		months = 600
 		
 		modifier = { factor = 0.8  holder_scope = { trait = lustful } }
 		modifier = { factor = 0.8  holder_scope = { trait = gluttonous} }
@@ -3487,7 +3482,7 @@ character_event = {
 	}
 }
 
-#Americanist Revival
+#High Church Revival
 province_event = {
 	id = eva.701
 	desc = EVTDESC_eva.701
@@ -3495,11 +3490,11 @@ province_event = {
 	has_global_flag = evangelical_reformation
 	
 	trigger = {
-		NOT = { has_province_modifier = americanist_revival }
+		NOT = { has_province_modifier = high_church_revival }
 		NOT = { has_province_modifier = antinomian_revival }
 		NOT = { has_province_modifier = charismatic_revival }
 		NOT = { has_province_modifier = postadventist_revival }
-		NOT = { has_province_modifier = revelationist_revival }
+		NOT = { has_province_modifier = anabaptist_revival }
 		NOT = { has_province_modifier = mormon_revival }
 		NOT = { has_province_modifier = religious_unrest }
 		NOT = { has_province_modifier = resist_revival }
@@ -3512,7 +3507,7 @@ province_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 150
+		months = 525
 		
 		modifier = { factor = 0.8  holder_scope = { trait = lustful } }
 		modifier = { factor = 0.8  holder_scope = { trait = gluttonous} }
@@ -3525,7 +3520,7 @@ province_event = {
 	
 	immediate = {
 		add_province_modifier = {
-			name = americanist_revival
+			name = high_church_revival
 			duration = 1460
 		}
 		add_province_modifier = {
@@ -3556,7 +3551,7 @@ province_event = {
 	option = {
 		name = EVTOPTD_eva.701 #suppress the revival violently
 		remove_province_modifier = religious_tension
-		remove_province_modifier = americanist_revival
+		remove_province_modifier = high_church
 		add_province_modifier = {
 			name = religious_unrest
 			duration = 60 
@@ -3573,14 +3568,14 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { religion = americanist }
+		NOT = { religion = high_church }
 	}
 		
 	option = { #convert
 		name = EVTOPTA_eva.702
-		FROM = { religion = americanist }
+		FROM = { religion = high_church }
 		FROM = { add_province_modifier = { name = burned_over duration = 912 } }
-		custom_tooltip = { text = TXT_americanist_revival_convert }
+		custom_tooltip = { text = TXT_high_church_convert }
 		hidden_tooltip = { character_event = { id = eva.706 } }
 			ai_chance = {
 			factor = 10
@@ -3678,7 +3673,7 @@ character_event = {
 	option = { 
 		name = EVTOPTA_eva.705 
 		FROMFROMFROM = { add_province_modifier = { name = burned_over duration = 720 } }
-		FROMFROMFROM = { religion = americanist }
+		FROMFROMFROM = { religion = high_church }
 		piety = -5
 		hidden_tooltip = {
 			if = {
@@ -3704,7 +3699,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_eva.706
 		trigger = { has_job_title = job_spiritual }
-		religion = americanist
+		religion = high_church
 		hidden_tooltip = {
 			if = {
 				limit = {
@@ -3721,7 +3716,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_eva.706
 		trigger = { NOT = { has_job_title = job_spiritual } }
-		religion = americanist
+		religion = high_church
 		hidden_tooltip = {
 			if = {
 				limit = {
@@ -3737,7 +3732,7 @@ character_event = {
 	option = {
 		name = EVTOPTC_eva.706
 		hidden_tooltip = {
-			set_secret_religion = americanist
+			set_secret_religion = high_church
 			if = {
 				limit = {
 					NOT = { has_landed_title = e_dixie }
@@ -3759,7 +3754,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_eva.707
-		religion = americanist
+		religion = high_church
 		FROM = { character_event = { id = eva.711 } }
 		ai_chance = {
 			factor = 50
