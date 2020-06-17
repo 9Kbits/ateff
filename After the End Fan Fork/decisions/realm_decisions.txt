@@ -1602,29 +1602,15 @@ decisions = {
 				set_character_flag = achievement_not_a_tribe
 			}
 			
-			if = {
-				limit = {
-					NOR = {
-						religion = cetic
-						religion = gaian
-					}
-				}
-				
-				if = {
-					limit = {
-						ai = no
-					}
-					chronicle = {
-						entry = CHRONICLE_ADOPTED_FEUDALISM
-						picture = GFX_evt_castle_construction
-					}
-				}
-				set_government_type = feudal_government
-			}
+			
 			
 			if = {
 				limit = {
-					religion = cetic
+					OR = {
+						religion = cetic
+						religion = imamite
+						religion = qingzheng
+					}
 				}
 				
 				if = {
@@ -1639,7 +1625,7 @@ decisions = {
 				set_government_type = bureaucratic_government
 			}
 			
-			if = {
+			else_if = {
 				limit = {
 					religion = gaian
 					higher_tier_than = BARON
@@ -1655,6 +1641,60 @@ decisions = {
 					}
 				}
 				set_government_type = theocratic_feudal_government
+			}
+			
+			else_if = {
+				limit = {
+					religion_group = latter_day_saints
+					NOT = { religion = neogodbeite }
+					higher_tier_than = BARON
+				}
+				
+				if = {
+					limit = {
+						ai = no
+					}
+					chronicle = {
+						entry = CHRONICLE_ADOPTED_FEUDALISM
+						picture = GFX_evt_castle_construction
+					}
+				}
+				set_government_type = mormon_government
+			}
+			
+			else_if = {
+				limit = {
+					religion_group = muslim
+					NOR = {
+						religion = imamite
+						religion = qingzheng
+					}
+					higher_tier_than = BARON
+				}
+				
+				if = {
+					limit = {
+						ai = no
+					}
+					chronicle = {
+						entry = CHRONICLE_ADOPTED_FEUDALISM
+						picture = GFX_evt_castle_construction
+					}
+				}
+				set_government_type = ghazi_government
+			}
+			
+			else = {
+				if = {
+					limit = {
+						ai = no
+					}
+					chronicle = {
+						entry = CHRONICLE_ADOPTED_FEUDALISM
+						picture = GFX_evt_castle_construction
+					}
+				}
+				set_government_type = feudal_government
 			}
 			
 			if = {

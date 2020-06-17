@@ -1584,48 +1584,53 @@ character_event = {
 		calculate_candidate_score = yes
 		log = "[new_candidate.GetBestName]: [Root.newCandidate.GetValue] best candidate: [Root.bestCandidate.GetValue]"
 		set_variable = { which = bestCandidate which = newCandidate }
-		trigger_switch = {
-			on_trigger = has_character_flag
-			current_candidate_c1 = {
-				set_character_flag = evaluated_candidate_c1
-				set_character_flag = best_candidate_c1
-				log = "new best candidate c1: [new_candidate.GetBestName]"
-			}
-			current_candidate_c2 = {
-				set_character_flag = evaluated_candidate_c2
-				set_character_flag = best_candidate_c2
-				log = "new best candidate c2: [new_candidate.GetBestName]"
-			}
-			current_candidate_c3 = {
-				set_character_flag = evaluated_candidate_c3
-				set_character_flag = best_candidate_c3
-				log = "new best candidate c3: [new_candidate.GetBestName]"
-			}
-			current_candidate_c4 = {
-				set_character_flag = evaluated_candidate_c4
-				set_character_flag = best_candidate_c4
-				log = "new best candidate c4: [new_candidate.GetBestName]"
-			}
-			current_candidate_c5 = {
-				set_character_flag = evaluated_candidate_c5
-				set_character_flag = best_candidate_c5
-				log = "new best candidate c5: [new_candidate.GetBestName]"
-			}
-			current_candidate_c6 = {
-				set_character_flag = evaluated_candidate_c6
-				set_character_flag = best_candidate_c6
-				log = "new best candidate c6: [new_candidate.GetBestName]"
-			}
-			current_candidate_c7 = {
-				set_character_flag = evaluated_candidate_c7
-				set_character_flag = best_candidate_c7
-				log = "new best candidate c7: [new_candidate.GetBestName]"
-			}
-			current_candidate_c8 = {
-				set_character_flag = evaluated_candidate_c8
-				set_character_flag = best_candidate_c8
-				log = "new best candidate c8: [new_candidate.GetBestName]"
-			}
+		if = {
+			limit = { has_character_flag = current_candidate_c1 }
+			set_character_flag = evaluated_candidate_c1
+			set_character_flag = best_candidate_c1
+			log = "new best candidate c1: [new_candidate.GetBestName]"
+		}
+		else_if = {
+			limit = { has_character_flag = current_candidate_c2 }
+			set_character_flag = evaluated_candidate_c2
+			set_character_flag = best_candidate_c2
+			log = "new best candidate c2: [new_candidate.GetBestName]"
+		}
+		else_if = {
+			limit = { has_character_flag = current_candidate_c3 }
+			set_character_flag = evaluated_candidate_c3
+			set_character_flag = best_candidate_c3
+			log = "new best candidate c3: [new_candidate.GetBestName]"
+		}
+		else_if = {
+			limit = { has_character_flag = current_candidate_c4 }
+			set_character_flag = evaluated_candidate_c4
+			set_character_flag = best_candidate_c4
+			log = "new best candidate c4: [new_candidate.GetBestName]"
+		}
+		else_if = {
+			limit = { has_character_flag = current_candidate_c5 }
+			set_character_flag = evaluated_candidate_c5
+			set_character_flag = best_candidate_c5
+			log = "new best candidate c5: [new_candidate.GetBestName]"
+		}
+		else_if = {
+			limit = { has_character_flag = current_candidate_c6 }
+			set_character_flag = evaluated_candidate_c6
+			set_character_flag = best_candidate_c6
+			log = "new best candidate c6: [new_candidate.GetBestName]"
+		}
+		else_if = {
+			limit = { has_character_flag = current_candidate_c7 }
+			set_character_flag = evaluated_candidate_c7
+			set_character_flag = best_candidate_c7
+			log = "new best candidate c7: [new_candidate.GetBestName]"
+		}
+		else_if = {
+			limit = { has_character_flag = current_candidate_c8 }
+			set_character_flag = evaluated_candidate_c8
+			set_character_flag = best_candidate_c8
+			log = "new best candidate c8: [new_candidate.GetBestName]"
 		}
 		evaluate_candidate = yes
 		evaluate_candidate = yes
@@ -1634,550 +1639,556 @@ character_event = {
 		evaluate_candidate = yes
 		evaluate_candidate = yes
 		evaluate_candidate = yes
-		trigger_switch = {
-			on_trigger = has_character_flag
-			best_candidate_c1 = {
+		if = {
+			limit = { has_character_flag = best_candidate_c1 }
+			log = "best candidate c1: [c1.GetBestName]"
+			if = {
+				limit = {
+					check_variable = { which = "global_c1_votes" which = "global_1st_place" }
+				}
+				change_variable = { which = "global_c1_votes" value = 3 }
 				if = {
-					limit = {
-						check_variable = { which = "global_c1_votes" which = "global_1st_place" }
-					}
-					change_variable = { which = "global_c1_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 1 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_1st_place" }
-						set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
-						set_variable = { which = "global_1st_place" which = "global_c1_votes" }
-						set_variable = { which = "global_1st_place_index" value = 1 }
-					}
-					else = {
-						set_variable = { which = "global_1st_place" which = "global_c1_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which = "global_c1_votes" which = "global_2nd_place" }
-					}
-					change_variable = { which = "global_c1_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 1 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "c1_votes" }
-						set_variable = { which = "global_2nd_place_index" value = 1 }
-					}
-					else = {
-						set_variable = { which = "global_2nd_place" which = "global_c1_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c1_votes" which = "global_3rd_place" }
-					}
-					change_variable = { which = "global_c1_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 1 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_c1_votes" }
-						set_variable = { which = "global_3rd_place_index" value = 1 }
-					}
-					else = {
-						set_variable = { which = "global_3rd_place" which = "global_c1_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c1_votes" which = "global_4th_place" }
-					}
-					change_variable = { which = "global_c1_votes" value = 3 }
-					set_variable = { which = "global_4th_place" which = "global_c1_votes" }
-					set_variable = { which = "global_4th_place_index" value = 1 }
+					limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 1 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_1st_place" }
+					set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
+					set_variable = { which = "global_1st_place" which = "global_c1_votes" }
+					set_variable = { which = "global_1st_place_index" value = 1 }
 				}
 				else = {
-					change_variable = { which = "global_c1_votes" value = 3 }
+					set_variable = { which = "global_1st_place" which = "global_c1_votes" }
 				}
 			}
-			best_candidate_c2 = {
-				log = "best candidate c2: [c2.GetBestName]"
+			else_if = {
+				limit = {
+					check_variable = { which = "global_c1_votes" which = "global_2nd_place" }
+				}
+				change_variable = { which = "global_c1_votes" value = 3 }
 				if = {
-					limit = {
-						check_variable = { which ="global_c2_votes" which = "global_1st_place" }
-					}
-					change_variable = { which = "global_c2_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 2 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_1st_place" }
-						set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
-						set_variable = { which = "global_1st_place" which = "global_c2_votes" }
-						set_variable = { which = "global_1st_place_index" value = 2 }
-					}
-					else = {
-						set_variable = { which = "global_1st_place" which = "global_c2_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c2_votes" which = "global_2nd_place" }
-					}
-					change_variable = { which = "global_c2_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 2 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_c2_votes" }
-						set_variable = { which = "global_2nd_place_index" value = 2 }
-					}
-					else = {
-						set_variable = { which = "global_2nd_place" which = "global_c2_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c2_votes" which = "global_3rd_place" }
-					}
-					change_variable = { which = "global_c2_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 2 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_c2_votes" }
-						set_variable = { which = "global_3rd_place_index" value = 2 }
-					}
-					else = {
-						set_variable = { which = "global_3rd_place" which = "global_c2_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c2_votes" which = "global_4th_place" }
-					}
-					change_variable = { which = "global_c2_votes" value = 3 }
-					set_variable = { which = "global_4th_place" which = "global_c2_votes" }
-					set_variable = { which = "global_4th_place_index" value = 2 }
+					limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 1 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "c1_votes" }
+					set_variable = { which = "global_2nd_place_index" value = 1 }
 				}
 				else = {
-					change_variable = { which = "global_c2_votes" value = 3 }
+					set_variable = { which = "global_2nd_place" which = "global_c1_votes" }
 				}
 			}
-			best_candidate_c3 = {
-				log = "best candidate c3: [c3.GetBestName]"
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c1_votes" which = "global_3rd_place" }
+				}
+				change_variable = { which = "global_c1_votes" value = 3 }
 				if = {
-					limit = {
-						check_variable = { which ="global_c3_votes" which = "global_1st_place" }
-					}
-					change_variable = { which = "global_c3_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 3 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_1st_place" }
-						set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
-						set_variable = { which = "global_1st_place" which = "global_c3_votes" }
-						set_variable = { which = "global_1st_place_index" value = 3 }
-					}
-					else = {
-						set_variable = { which = "global_1st_place" which = "global_c3_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c3_votes" which = "global_2nd_place" }
-					}
-					change_variable = { which = "global_c3_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 3 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_c3_votes" }
-						set_variable = { which = "global_2nd_place_index" value = 3 }
-					}
-					else = {
-						set_variable = { which = "global_2nd_place" which = "global_c3_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c3_votes" which = "global_3rd_place" }
-					}
-					change_variable = { which = "global_c3_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 3 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_c3_votes" }
-						set_variable = { which = "global_3rd_place_index" value = 3 }
-					}
-					else = {
-						set_variable = { which = "global_3rd_place" which = "global_c3_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c3_votes" which = "global_4th_place" }
-					}
-					change_variable = { which = "global_c3_votes" value = 3 }
-					set_variable = { which = "global_4th_place" which = "global_c3_votes" }
-					set_variable = { which = "global_4th_place_index" value = 3 }
+					limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 1 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_c1_votes" }
+					set_variable = { which = "global_3rd_place_index" value = 1 }
 				}
 				else = {
-					change_variable = { which = "global_c3_votes" value = 3 }
+					set_variable = { which = "global_3rd_place" which = "global_c1_votes" }
 				}
 			}
-			best_candidate_c4 = {
-				log = "best candidate c4: [c4.GetBestName]"
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c1_votes" which = "global_4th_place" }
+				}
+				change_variable = { which = "global_c1_votes" value = 3 }
+				set_variable = { which = "global_4th_place" which = "global_c1_votes" }
+				set_variable = { which = "global_4th_place_index" value = 1 }
+			}
+			else = {
+				change_variable = { which = "global_c1_votes" value = 3 }
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = best_candidate_c2 }
+			log = "best candidate c2: [c2.GetBestName]"
+			if = {
+				limit = {
+					check_variable = { which ="global_c2_votes" which = "global_1st_place" }
+				}
+				change_variable = { which = "global_c2_votes" value = 3 }
 				if = {
-					limit = {
-						check_variable = { which ="global_c4_votes" which = "global_1st_place" }
-					}
-					change_variable = { which = "global_c4_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 4 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_1st_place" }
-						set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
-						set_variable = { which = "global_1st_place" which = "global_c4_votes" }
-						set_variable = { which = "global_1st_place_index" value = 4 }
-					}
-					else = {
-						set_variable = { which = "global_1st_place" which = "global_c4_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c4_votes" which = "global_2nd_place" }
-					}
-					change_variable = { which = "global_c4_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 4 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_c4_votes" }
-						set_variable = { which = "global_2nd_place_index" value = 4 }
-					}
-					else = {
-						set_variable = { which = "global_2nd_place" which = "global_c4_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c4_votes" which = "global_3rd_place" }
-					}
-					change_variable = { which = "global_c4_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 4 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_c4_votes" }
-						set_variable = { which = "global_3rd_place_index" value = 4 }
-					}
-					else = {
-						set_variable = { which = "global_3rd_place" which = "global_c4_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c4_votes" which = "global_4th_place" }
-					}
-					change_variable = { which = "global_c4_votes" value = 3 }
-					set_variable = { which = "global_4th_place" which = "global_c4_votes" }
-					set_variable = { which = "global_4th_place_index" value = 4 }
+					limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 2 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_1st_place" }
+					set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
+					set_variable = { which = "global_1st_place" which = "global_c2_votes" }
+					set_variable = { which = "global_1st_place_index" value = 2 }
 				}
 				else = {
-					change_variable = { which = "global_c4_votes" value = 3 }
+					set_variable = { which = "global_1st_place" which = "global_c2_votes" }
 				}
 			}
-			best_candidate_c5 = {
-				log = "best candidate c5: [c5.GetBestName]"
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c2_votes" which = "global_2nd_place" }
+				}
+				change_variable = { which = "global_c2_votes" value = 3 }
 				if = {
-					limit = {
-						check_variable = { which ="global_c5_votes" which = "global_1st_place" }
-					}
-					change_variable = { which = "global_c5_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 5 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_1st_place" }
-						set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
-						set_variable = { which = "global_1st_place" which = "global_c5_votes" }
-						set_variable = { which = "global_1st_place_index" value = 5 }
-					}
-					else = {
-						set_variable = { which = "global_1st_place" which = "global_c5_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c5_votes" which = "global_2nd_place" }
-					}
-					change_variable = { which = "global_c5_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 5 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_c5_votes" }
-						set_variable = { which = "global_2nd_place_index" value = 5 }
-					}
-					else = {
-						set_variable = { which = "global_2nd_place" which = "global_c5_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c5_votes" which = "global_3rd_place" }
-					}
-					change_variable = { which = "global_c5_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 5 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_c5_votes" }
-						set_variable = { which = "global_3rd_place_index" value = 5 }
-					}
-					else = {
-						set_variable = { which = "global_3rd_place" which = "global_c5_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c5_votes" which = "global_4th_place" }
-					}
-					change_variable = { which = "global_c5_votes" value = 3 }
-					set_variable = { which = "global_4th_place" which = "global_c5_votes" }
-					set_variable = { which = "global_4th_place_index" value = 5 }
+					limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 2 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_c2_votes" }
+					set_variable = { which = "global_2nd_place_index" value = 2 }
 				}
 				else = {
-					change_variable = { which = "global_c5_votes" value = 3 }
+					set_variable = { which = "global_2nd_place" which = "global_c2_votes" }
 				}
 			}
-			best_candidate_c6 = {
-				log = "best candidate c6: [c6.GetBestName]"
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c2_votes" which = "global_3rd_place" }
+				}
+				change_variable = { which = "global_c2_votes" value = 3 }
 				if = {
-					limit = {
-						check_variable = { which ="global_c6_votes" which = "global_1st_place" }
-					}
-					change_variable = { which = "global_c6_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 6 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_1st_place" }
-						set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
-						set_variable = { which = "global_1st_place" which = "global_c6_votes" }
-						set_variable = { which = "global_1st_place_index" value = 6 }
-					}
-					else = {
-						set_variable = { which = "global_1st_place" which = "global_c6_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c6_votes" which = "global_2nd_place" }
-					}
-					change_variable = { which = "global_c6_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 6 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_c6_votes" }
-						set_variable = { which = "global_2nd_place_index" value = 6 }
-					}
-					else = {
-						set_variable = { which = "global_2nd_place" which = "global_c6_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c6_votes" which = "global_3rd_place" }
-					}
-					change_variable = { which = "global_c6_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 6 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_c6_votes" }
-						set_variable = { which = "global_3rd_place_index" value = 6 }
-					}
-					else = {
-						set_variable = { which = "global_3rd_place" which = "global_c6_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c6_votes" which = "global_4th_place" }
-					}
-					change_variable = { which = "global_c6_votes" value = 3 }
-					set_variable = { which = "global_4th_place" which = "global_c6_votes" }
-					set_variable = { which = "global_4th_place_index" value = 6 }
+					limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 2 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_c2_votes" }
+					set_variable = { which = "global_3rd_place_index" value = 2 }
 				}
 				else = {
-					change_variable = { which = "global_c6_votes" value = 3 }
+					set_variable = { which = "global_3rd_place" which = "global_c2_votes" }
 				}
 			}
-			best_candidate_c7 = {
-				log = "best candidate c7: [c7.GetBestName]"
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c2_votes" which = "global_4th_place" }
+				}
+				change_variable = { which = "global_c2_votes" value = 3 }
+				set_variable = { which = "global_4th_place" which = "global_c2_votes" }
+				set_variable = { which = "global_4th_place_index" value = 2 }
+			}
+			else = {
+				change_variable = { which = "global_c2_votes" value = 3 }
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = best_candidate_c3 }
+			log = "best candidate c3: [c3.GetBestName]"
+			if = {
+				limit = {
+					check_variable = { which ="global_c3_votes" which = "global_1st_place" }
+				}
+				change_variable = { which = "global_c3_votes" value = 3 }
 				if = {
-					limit = {
-						check_variable = { which ="global_c7_votes" which = "global_1st_place" }
-					}
-					change_variable = { which = "global_c7_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 7 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_1st_place" }
-						set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
-						set_variable = { which = "global_1st_place" which = "global_c7_votes" }
-						set_variable = { which = "global_1st_place_index" value = 7 }
-					}
-					else = {
-						set_variable = { which = "global_1st_place" which = "global_c7_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c7_votes" which = "global_2nd_place" }
-					}
-					change_variable = { which = "global_c7_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 7 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_c7_votes" }
-						set_variable = { which = "global_2nd_place_index" value = 7 }
-					}
-					else = {
-						set_variable = { which = "global_2nd_place" which = "global_c7_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c7_votes" which = "global_3rd_place" }
-					}
-					change_variable = { which = "global_c7_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 7 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_c7_votes" }
-						set_variable = { which = "global_3rd_place_index" value = 7 }
-					}
-					else = {
-						set_variable = { which = "global_3rd_place" which = "global_c7_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c7_votes" which = "global_4th_place" }
-					}
-					change_variable = { which = "global_c7_votes" value = 3 }
-					set_variable = { which = "global_4th_place" which = "global_c7_votes" }
-					set_variable = { which = "global_4th_place_index" value = 7 }
+					limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 3 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_1st_place" }
+					set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
+					set_variable = { which = "global_1st_place" which = "global_c3_votes" }
+					set_variable = { which = "global_1st_place_index" value = 3 }
 				}
 				else = {
-					change_variable = { which = "global_c7_votes" value = 3 }
+					set_variable = { which = "global_1st_place" which = "global_c3_votes" }
 				}
 			}
-			best_candidate_c8 = {
-				log = "best candidate c8: [c8.GetBestName]"
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c3_votes" which = "global_2nd_place" }
+				}
+				change_variable = { which = "global_c3_votes" value = 3 }
 				if = {
-					limit = {
-						check_variable = { which ="global_c8_votes" which = "global_1st_place" }
-					}
-					change_variable = { which = "global_c8_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 8 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_1st_place" }
-						set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
-						set_variable = { which = "global_1st_place" which = "global_c8_votes" }
-						set_variable = { which = "global_1st_place_index" value = 8 }
-					}
-					else = {
-						set_variable = { which = "global_1st_place" which = "global_c8_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c8_votes" which = "global_2nd_place" }
-					}
-					change_variable = { which = "global_c8_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 8 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
-						set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
-						set_variable = { which = "global_2nd_place" which = "global_c8_votes" }
-						set_variable = { which = "global_2nd_place_index" value = 8 }
-					}
-					else = {
-						set_variable = { which = "global_2nd_place" which = "global_c8_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c8_votes" which = "global_3rd_place" }
-					}
-					change_variable = { which = "global_c8_votes" value = 3 }
-					if = {
-						limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 8 } } }
-						set_variable = { which = "global_4th_place" which = "global_3rd_place" }
-						set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
-						set_variable = { which = "global_3rd_place" which = "global_c8_votes" }
-						set_variable = { which = "global_3rd_place_index" value = 8 }
-					}
-					else = {
-						set_variable = { which = "global_3rd_place" which = "global_c8_votes" }
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = { which ="global_c8_votes" which = "global_4th_place" }
-					}
-					change_variable = { which = "global_c8_votes" value = 3 }
-					set_variable = { which = "global_4th_place" which = "global_c8_votes" }
-					set_variable = { which = "global_4th_place_index" value = 8 }
+					limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 3 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_c3_votes" }
+					set_variable = { which = "global_2nd_place_index" value = 3 }
 				}
 				else = {
-					change_variable = { which = "global_c8_votes" value = 3 }
+					set_variable = { which = "global_2nd_place" which = "global_c3_votes" }
 				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c3_votes" which = "global_3rd_place" }
+				}
+				change_variable = { which = "global_c3_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 3 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_c3_votes" }
+					set_variable = { which = "global_3rd_place_index" value = 3 }
+				}
+				else = {
+					set_variable = { which = "global_3rd_place" which = "global_c3_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c3_votes" which = "global_4th_place" }
+				}
+				change_variable = { which = "global_c3_votes" value = 3 }
+				set_variable = { which = "global_4th_place" which = "global_c3_votes" }
+				set_variable = { which = "global_4th_place_index" value = 3 }
+			}
+			else = {
+				change_variable = { which = "global_c3_votes" value = 3 }
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = best_candidate_c4 }
+			log = "best candidate c4: [c4.GetBestName]"
+			if = {
+				limit = {
+					check_variable = { which ="global_c4_votes" which = "global_1st_place" }
+				}
+				change_variable = { which = "global_c4_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 4 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_1st_place" }
+					set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
+					set_variable = { which = "global_1st_place" which = "global_c4_votes" }
+					set_variable = { which = "global_1st_place_index" value = 4 }
+				}
+				else = {
+					set_variable = { which = "global_1st_place" which = "global_c4_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c4_votes" which = "global_2nd_place" }
+				}
+				change_variable = { which = "global_c4_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 4 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_c4_votes" }
+					set_variable = { which = "global_2nd_place_index" value = 4 }
+				}
+				else = {
+					set_variable = { which = "global_2nd_place" which = "global_c4_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c4_votes" which = "global_3rd_place" }
+				}
+				change_variable = { which = "global_c4_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 4 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_c4_votes" }
+					set_variable = { which = "global_3rd_place_index" value = 4 }
+				}
+				else = {
+					set_variable = { which = "global_3rd_place" which = "global_c4_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c4_votes" which = "global_4th_place" }
+				}
+				change_variable = { which = "global_c4_votes" value = 3 }
+				set_variable = { which = "global_4th_place" which = "global_c4_votes" }
+				set_variable = { which = "global_4th_place_index" value = 4 }
+			}
+			else = {
+				change_variable = { which = "global_c4_votes" value = 3 }
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = best_candidate_c5 }
+			log = "best candidate c5: [c5.GetBestName]"
+			if = {
+				limit = {
+					check_variable = { which ="global_c5_votes" which = "global_1st_place" }
+				}
+				change_variable = { which = "global_c5_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 5 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_1st_place" }
+					set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
+					set_variable = { which = "global_1st_place" which = "global_c5_votes" }
+					set_variable = { which = "global_1st_place_index" value = 5 }
+				}
+				else = {
+					set_variable = { which = "global_1st_place" which = "global_c5_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c5_votes" which = "global_2nd_place" }
+				}
+				change_variable = { which = "global_c5_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 5 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_c5_votes" }
+					set_variable = { which = "global_2nd_place_index" value = 5 }
+				}
+				else = {
+					set_variable = { which = "global_2nd_place" which = "global_c5_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c5_votes" which = "global_3rd_place" }
+				}
+				change_variable = { which = "global_c5_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 5 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_c5_votes" }
+					set_variable = { which = "global_3rd_place_index" value = 5 }
+				}
+				else = {
+					set_variable = { which = "global_3rd_place" which = "global_c5_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c5_votes" which = "global_4th_place" }
+				}
+				change_variable = { which = "global_c5_votes" value = 3 }
+				set_variable = { which = "global_4th_place" which = "global_c5_votes" }
+				set_variable = { which = "global_4th_place_index" value = 5 }
+			}
+			else = {
+				change_variable = { which = "global_c5_votes" value = 3 }
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = best_candidate_c6 }
+			log = "best candidate c6: [c6.GetBestName]"
+			if = {
+				limit = {
+					check_variable = { which ="global_c6_votes" which = "global_1st_place" }
+				}
+				change_variable = { which = "global_c6_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 6 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_1st_place" }
+					set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
+					set_variable = { which = "global_1st_place" which = "global_c6_votes" }
+					set_variable = { which = "global_1st_place_index" value = 6 }
+				}
+				else = {
+					set_variable = { which = "global_1st_place" which = "global_c6_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c6_votes" which = "global_2nd_place" }
+				}
+				change_variable = { which = "global_c6_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 6 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_c6_votes" }
+					set_variable = { which = "global_2nd_place_index" value = 6 }
+				}
+				else = {
+					set_variable = { which = "global_2nd_place" which = "global_c6_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c6_votes" which = "global_3rd_place" }
+				}
+				change_variable = { which = "global_c6_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 6 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_c6_votes" }
+					set_variable = { which = "global_3rd_place_index" value = 6 }
+				}
+				else = {
+					set_variable = { which = "global_3rd_place" which = "global_c6_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c6_votes" which = "global_4th_place" }
+				}
+				change_variable = { which = "global_c6_votes" value = 3 }
+				set_variable = { which = "global_4th_place" which = "global_c6_votes" }
+				set_variable = { which = "global_4th_place_index" value = 6 }
+			}
+			else = {
+				change_variable = { which = "global_c6_votes" value = 3 }
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = best_candidate_c7 }
+			log = "best candidate c7: [c7.GetBestName]"
+			if = {
+				limit = {
+					check_variable = { which ="global_c7_votes" which = "global_1st_place" }
+				}
+				change_variable = { which = "global_c7_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 7 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_1st_place" }
+					set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
+					set_variable = { which = "global_1st_place" which = "global_c7_votes" }
+					set_variable = { which = "global_1st_place_index" value = 7 }
+				}
+				else = {
+					set_variable = { which = "global_1st_place" which = "global_c7_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c7_votes" which = "global_2nd_place" }
+				}
+				change_variable = { which = "global_c7_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 7 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_c7_votes" }
+					set_variable = { which = "global_2nd_place_index" value = 7 }
+				}
+				else = {
+					set_variable = { which = "global_2nd_place" which = "global_c7_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c7_votes" which = "global_3rd_place" }
+				}
+				change_variable = { which = "global_c7_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 7 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_c7_votes" }
+					set_variable = { which = "global_3rd_place_index" value = 7 }
+				}
+				else = {
+					set_variable = { which = "global_3rd_place" which = "global_c7_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c7_votes" which = "global_4th_place" }
+				}
+				change_variable = { which = "global_c7_votes" value = 3 }
+				set_variable = { which = "global_4th_place" which = "global_c7_votes" }
+				set_variable = { which = "global_4th_place_index" value = 7 }
+			}
+			else = {
+				change_variable = { which = "global_c7_votes" value = 3 }
+			}
+		}
+		else_if = {
+			limit = { has_character_flag = best_candidate_c8 }
+			log = "best candidate c8: [c8.GetBestName]"
+			if = {
+				limit = {
+					check_variable = { which ="global_c8_votes" which = "global_1st_place" }
+				}
+				change_variable = { which = "global_c8_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_1st_place_index" value = 8 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_1st_place" }
+					set_variable = { which = "global_2nd_place_index" which = "global_1st_place_index" }
+					set_variable = { which = "global_1st_place" which = "global_c8_votes" }
+					set_variable = { which = "global_1st_place_index" value = 8 }
+				}
+				else = {
+					set_variable = { which = "global_1st_place" which = "global_c8_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c8_votes" which = "global_2nd_place" }
+				}
+				change_variable = { which = "global_c8_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_2nd_place_index" value = 8 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_2nd_place" }
+					set_variable = { which = "global_3rd_place_index" which = "global_2nd_place_index" }
+					set_variable = { which = "global_2nd_place" which = "global_c8_votes" }
+					set_variable = { which = "global_2nd_place_index" value = 8 }
+				}
+				else = {
+					set_variable = { which = "global_2nd_place" which = "global_c8_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c8_votes" which = "global_3rd_place" }
+				}
+				change_variable = { which = "global_c8_votes" value = 3 }
+				if = {
+					limit = { NOT = { is_variable_equal = { which = "global_3rd_place_index" value = 8 } } }
+					set_variable = { which = "global_4th_place" which = "global_3rd_place" }
+					set_variable = { which = "global_4th_place_index" which = "global_3rd_place_index" }
+					set_variable = { which = "global_3rd_place" which = "global_c8_votes" }
+					set_variable = { which = "global_3rd_place_index" value = 8 }
+				}
+				else = {
+					set_variable = { which = "global_3rd_place" which = "global_c8_votes" }
+				}
+			}
+			else_if = {
+				limit = {
+					check_variable = { which ="global_c8_votes" which = "global_4th_place" }
+				}
+				change_variable = { which = "global_c8_votes" value = 3 }
+				set_variable = { which = "global_4th_place" which = "global_c8_votes" }
+				set_variable = { which = "global_4th_place_index" value = 8 }
+			}
+			else = {
+				change_variable = { which = "global_c8_votes" value = 3 }
 			}
 		}
 	}

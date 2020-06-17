@@ -5018,7 +5018,11 @@ invasion_of_china_cb = {
 								#No temple names or anything
 								if = {
 									limit = {
-										religion = cetic
+										OR = {
+											religion = cetic
+											religion = imamite
+											religion = qingzheng
+										}
 									}
 									set_government_type = bureaucratic_government
 								}

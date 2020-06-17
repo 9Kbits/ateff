@@ -4000,6 +4000,24 @@ character_event = {
 			}
 			set_government_type = theocratic_feudal_government
 		}
+		else_if = {
+			limit = {
+				religion_group = latter_day_saints
+				NOT = { religion = neogodbeite }
+				higher_tier_than = BARON
+			}
+			set_government_type = mormon_government
+		}
+		else_if = {
+			limit = {
+				religion_group = muslim
+				NOR = {
+					religion = imamite
+					religion = qingzheng
+				}
+			}
+			set_government_type = ghazi_government
+		}
 		else = {
 			set_government_type = feudal_government
 		}

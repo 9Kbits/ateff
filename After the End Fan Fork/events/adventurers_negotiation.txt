@@ -688,7 +688,11 @@ letter_event = {
 			event_target:raiding_adventurer = {
 				if = {
 					limit = {
-						religion = cetic
+						OR = {
+							religion = cetic
+							religion = imamite
+							religion = qingzheng
+						}
 					}
 					set_government_type = bureaucratic_government
 				}
@@ -703,7 +707,7 @@ letter_event = {
 						religion_group = latter_day_saints
 						NOT = { religion = neogodbeite }
 					}
-					set_government_type = theocratic_feudal_government
+					set_government_type = mormon_government
 				}
 				else_if = {
 					limit = {

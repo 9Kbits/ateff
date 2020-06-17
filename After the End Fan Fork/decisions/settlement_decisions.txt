@@ -1813,28 +1813,11 @@ settlement_decisions = {
 			
 				if = {
 					limit = {
-						NOT = { religion = cetic }
-						NAND = {
-							religion = gaian
-							higher_tier_than = BARON
+						OR = {
+							religion = cetic
+							religion = imamite
+							religion = qingzheng
 						}
-					}
-					
-					if = {
-						limit = {
-							ai = no
-						}
-						chronicle = {
-							entry = CHRONICLE_NOMAD_ADOPTED_FEUDALISM
-							picture = GFX_evt_castle_construction
-						}
-					}
-					set_government_type = feudal_government
-				}
-				
-				if = {
-					limit = {
-						religion = cetic
 					}
 					
 					if = {
@@ -1865,6 +1848,59 @@ settlement_decisions = {
 						}
 					}
 					set_government_type = theocratic_feudal_government
+				}
+				
+				if = {
+					limit = {
+						religion_group = latter_day_saints
+						NOT = { religion = neogodbeite }
+						higher_tier_than = BARON
+					}
+					
+					if = {
+						limit = {
+							ai = no
+						}
+						chronicle = {
+							entry = CHRONICLE_ADOPTED_FEUDALISM
+							picture = GFX_evt_castle_construction
+						}
+					}
+					set_government_type = mormon_government
+				}
+				
+				if = {
+					limit = {
+						religion_group = muslim
+						NOR = {
+							religion = imamite
+							religion = qingzheng
+						}
+					}
+					
+					if = {
+						limit = {
+							ai = no
+						}
+						chronicle = {
+							entry = CHRONICLE_ADOPTED_FEUDALISM
+							picture = GFX_evt_castle_construction
+						}
+					}
+					set_government_type = theocratic_feudal_government
+				}
+				
+				else = {
+					if = {
+						limit = {
+							ai = no
+						}
+						chronicle = {
+							entry = CHRONICLE_NOMAD_ADOPTED_FEUDALISM
+							picture = GFX_evt_castle_construction
+						}
+					}
+					set_government_type = feudal_government
 				}
 				
 				hidden_tooltip = {
