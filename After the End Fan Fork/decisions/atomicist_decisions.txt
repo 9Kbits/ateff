@@ -1,0 +1,195 @@
+decisions = {
+	become_warhead = { #New decision to claim the Atomicist religious head title
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			religion = atomicist
+			d_atomicist = { has_holder = no }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			primary_title = { higher_tier_than = COUNT } #only dukes and above can see this one
+		}
+		
+		allow = {
+			primary_title = { higher_tier_than = DUKE }
+			num_of_holy_sites = 3 #personally controls 3 holy sites
+			prestige = 250
+			OR = {
+				AND = {
+					wealth = 400
+					piety = 200
+					NOT = { trait = shrewd }
+				}
+				AND = {
+					wealth = 250
+					piety = 100
+					trait = shrewd
+				}
+			}
+		}
+		
+		effect = {
+			wealth = -250
+			piety = -100
+			narrative_event = { id = event_atomicist.17 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	choose_a_particle = { # Decision to choose a regent particle
+		is_high_prio = yes
+		only_rulers = yes
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = atomicist
+			is_adult = yes
+			has_atomicist_particle_trigger = no
+		}
+		allow = {
+			block_general_event_trigger = no
+			piety = 50
+			NOT = { has_character_modifier = atomicist_didnt_choose_particle }
+		}
+		effect = {
+			character_event = { id = event_atomicist.18 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
+	
+	radiant_path_1 = { # Start of the Radiant Path
+		is_high_prio = yes
+		only_rulers = yes
+		only_independent = yes
+		
+		ai_check_interval = 24 #once every 2 years
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = atomicist
+			is_adult = yes
+			NOT = {
+				trait = atom_curse
+			}
+			
+		}
+		allow = {
+			higher_tier_than = COUNT 
+			piety = 500
+			OR = {
+				trait = atom_bless
+				trait = zealous
+			}
+			NOT = {
+				has_character_modifier = ignores_the_radiant_light
+			}
+		}
+		effect = {
+			custom_tooltip = { TXT_radiant_path_1 }
+			character_event = { id = event_atomicist.50 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
+	
+	radiant_path_2 = { # Becoming Enriched
+		is_high_prio = yes
+		only_rulers = yes
+		only_independent = yes
+		
+		ai_check_interval = 24 #once every 2 years
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = atomicist
+			is_adult = yes
+			trait = irradiated
+		}
+		allow = {
+			higher_tier_than = DUKE
+			piety = 300
+			num_of_holy_sites = 1
+			OR = {
+				trait = atom_bless
+				trait = zealous
+			}
+		}
+		effect = {
+			custom_tooltip = { text = TXT_radiant_path_2 }
+			hidden_tooltip = {
+				character_event = { id = event_atomicist.51 }
+				character_event = { id = event_atomicist.61 days = 30 } #fallback
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
+	
+	radiant_path_3 = { # Becoming Radioactive
+		is_high_prio = yes
+		only_rulers = yes
+		only_independent = yes
+		
+		ai_check_interval = 24 #once every 2 years
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = atomicist
+			is_adult = yes
+			trait = enriched
+		}
+		allow = {
+			higher_tier_than = DUKE
+			piety = 1000
+			num_of_holy_sites = 3
+			has_atomicist_particle_trigger = yes
+		}
+		effect = {
+			character_event = { id = atomicist.62 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
+}
