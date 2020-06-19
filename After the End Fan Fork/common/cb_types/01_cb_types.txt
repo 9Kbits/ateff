@@ -2582,13 +2582,22 @@ unjust_conquest = { # New7
 				piety = 200
 				scaled_wealth = { value = 1.0 min = 400 }
 			}
-			NOR = { 
+			NOR = {
 				trait = figurehead
 				trait = weak_emperor
 			}
 			NOT = { religion = anabaptist }
 			NOT = { religion = libertarian }
 			NOT = { religion = transcendantalist }
+		}
+		NAND = {
+			ROOT = { religion = cetic }
+			FROM = { #prevents the emperor from getting wiped out day one
+				OR = {
+					trait = figurehead
+					trait = weak_emperor
+				}
+			}
 		}
 		NAND = {
 			ROOT = {
