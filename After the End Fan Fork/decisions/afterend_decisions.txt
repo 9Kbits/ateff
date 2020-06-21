@@ -797,7 +797,7 @@ decisions = {
 		}
 	}
 	
-	seize_means_production = { #New decision to claim the Rust Cultist religious head title
+	claim_forge_saint = { #New decision to claim the Rust Cultist religious head title
 		only_playable = yes
 		is_high_prio = yes
 		ai_check_interval = 24
@@ -836,7 +836,10 @@ decisions = {
 		
 		effect = {
 			piety = -1500
-			narrative_event = { id = narrative_event.30 }
+			custom_tooltip = { text = TXT_seize_means_production }
+			hidden_tooltip = {
+				narrative_event = { id = rustcultist.30 }
+			}
 		}
 		ai_will_do = {
 			factor = 1
