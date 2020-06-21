@@ -1073,12 +1073,12 @@ narrative_event = {
 	title = "EVTITLE_radiant_pathend1"
 	desc = "EVTDESC_radiant_pathend1"
 	picture = GFX_evt_cathedral_zun_pagan
-	
+	religion = atomicist
 	is_triggered_only = yes
 	
 	immediate = {
 		ROOT = { set_variable = { which = radiant_path value = 1 } }
-		
+		set_character_flag = radiant_path
 	}
 	
 	option = {
@@ -1098,6 +1098,113 @@ narrative_event = {
 			ROOT = { change_variable = { which = radiant_path value = 1 } }
 		}
 	}
+	
+	after = {
+		character_event = { id = event_atomicist.63 days = 7 }
+	}
+}
+
+character_event = {
+	id = event_atomicist.63
+	desc = "EVTDESC_radiant_pathend2"
+	picture = GFX_evt_cathedral_zun_pagan
+	religion = atomicist
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = radiant_path
+	}
+	
+	option = {
+		name = EVTOPTA_atomicist_63
+		custom_tooltip = { text = TXT_EVTOPA_atomicist_63 }
+		hidden_tooltip = {
+			lose_weight_large_effect = yes
+			lose_weight_medium_effect = yes
+			weight_trait_check_effect = yes
+			hidden_tooltip = {
+				ROOT = { change_variable = { which = radiant_path value = 1 } }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_atomicist_63
+		trigger = {
+			trait = temperate
+		}
+		tooltip_info = temperate
+		custom_tooltip = { text = TXT_EVTOPB_atomicist_63 }
+		hidden_tooltip = {
+			ROOT = { change_variable = { which = radiant_path value = 2 } }
+		}
+	}
+	
+	after = {
+		character_event = { id = event_atomicist.64 days = 7 }
+	}
+}
+
+character_event = {
+	id = event_atomicist.64
+	desc = "EVTDESC_radiant_pathend2"
+	picture = GFX_evt_cathedral_zun_pagan
+	religion = atomicist
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = radiant_path
+	}
+	
+	option = {
+		name = EVTOPTA_atomicist_64
+		custom_tooltip = { text = TXT_EVTOPA_atomicist_64 }
+		hidden_tooltip = {
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				give_dysentery_effect = yes
+			}
+			else_if = {
+				limit = {
+					NOT = { has_dlc = "Reapers" }
+				}
+				add_character_modifier = { name = dysentery duration = 30 }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_atomicist_64
+		trigger = {
+			trait = stubborn
+		}
+		tooltip_info = stubborn
+		custom_tooltip = { text = TXT_EVTOPA_atomicist_64 }
+		hidden_tooltip = {
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				give_dysentery_effect = yes
+			}
+			else_if = {
+				limit = {
+					NOT = { has_dlc = "Reapers" }
+				}
+				add_character_modifier = { name = dysentery duration = 30 }
+			}
+			hidden_tooltip = {
+				ROOT = { subtract_variable = { which = radiant_path value = 2 } }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_atomicist_64
+		custom_tooltip = { text = TXT_EVTOPB_atomicist_64 }
+	}	
 }
 
 # ATOMICIST FIRST STRIKE
