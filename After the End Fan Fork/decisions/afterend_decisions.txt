@@ -3995,7 +3995,8 @@ decisions = {
 					}
 				}
 			}
-			month = 10
+			month = 8
+			NOT = { month = 9 }
 			wealth = 25
 			prisoner = no
 			NOT = { is_inaccessible_trigger = yes }
@@ -4009,7 +4010,7 @@ decisions = {
 			set_character_flag = celebrating_labor_day
 			set_character_flag = recent_minor_decision
 			set_character_flag = do_not_disturb
-			hidden_tooltip = { character_event = { id = rustcultist.20 days = 150 } } # Safety catch flag clearing
+			hidden_tooltip = { narrative_event = { id = rustcultist.20 days = 150 } } # Safety catch flag clearing
 			custom_tooltip = {
 				text = labor_day_celebration
 				hidden_tooltip = { 
