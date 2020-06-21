@@ -797,39 +797,46 @@ decisions = {
 		}
 	}
 	
-	become_high_fabricator = { #New decision to claim the Rust Cultist religious head title
+	seize_means_production = { #New decision to claim the Rust Cultist religious head title
 		only_playable = yes
 		is_high_prio = yes
 		ai_check_interval = 24
 		
 		potential = {
 			religion = rust_cultist
-			k_rust_cultist = { has_holder = no }
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
-			primary_title = { higher_tier_than = COUNT } #only dukes and above can see this one
+			OR = {
+				tier = KING
+				tier = EMPEROR
+			}
+			k_rust_cultist = { has_holder = yes }
+			k_rust_cultist = {
+				holder_scope = {
+					NOT = { vassal_of = ROOT }
+				}
+			}
 		}
 		
 		allow = {
-			primary_title = { higher_tier_than = DUKE }
-			num_of_holy_sites = 3 #personally controls 3 holy sites
-			prestige = 250
+			tier = EMPEROR
+			prestige = 1500
 			OR = {
 				AND = {
-					piety = 500
+					piety = 2000
 					NOT = { trait = zealous }
 				}
 				AND = {
-					piety = 250
+					piety = 1500
 					trait = zealous
 				}
 			}
 		}
 		
 		effect = {
-			piety = -250
-			narrative_event = { id = rustcultist.1 }
+			piety = -1500
+			narrative_event = { id = narrative_event.30 }
 		}
 		ai_will_do = {
 			factor = 1

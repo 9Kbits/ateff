@@ -1,61 +1,10 @@
-# 1 - Becoming the High Fabricator
+# 1 - Becoming the High Fabricator (DEPRECATED)
 # 2 - Industrial Action
 # 3 - Form the UAW
 # 10-13 - Crusade timers
 # 15-x - Labor Day
+# 30-x - Forge Saint
 namespace = rustcultist
-
-narrative_event = {
-	id = rustcultist.1
-	title = EVTNAME_high_fabricator
-	desc = EVTDESC_high_fabricator
-	picture = GFX_evt_coronation
-	border = GFX_event_narrative_frame_religion
-
-	major = yes
-
-	is_triggered_only = yes
-	
-	trigger = {
-		NOT = { has_global_flag = high_fabricator }
-	}
-	
-	immediate = {
-		set_global_flag = high_fabricator
-		k_rust_cultist = { grant_title = ROOT }
-	}
-	
-	option = {
-		name = EVTOPTA_high_fabricator
-		trigger = {
-			religion = rust_cultist
-			NOT = { has_landed_title = k_rust_cultist }
-		}
-	}
-	
-	option = {
-		name = EVTOPTB_high_fabricator
-		trigger = {
-			NOT = { religion_group = oldworld }
-		}
-	}
-	
-	option = {
-		name = EVTOPTC_high_fabricator
-		trigger = {
-			religion_group = oldworld
-			NOT = { religion = rust_cultist }
-		}
-	}
-	
-	option = {
-		name = EVTOPTD_high_fabricator
-		trigger = {
-			religion = rust_cultist
-			has_landed_title = k_rust_cultist
-		}
-	}
-}
 
 # RUST CULTIST INDUSTRIAL ACTION
 # Called from 'on_crusade_creation'
@@ -766,5 +715,143 @@ character_event = {
 		clr_character_flag = celebrating_labor_day
 		clr_character_flag = recent_minor_decision
 		clr_character_flag = do_not_disturb
+	}
+}
+
+narrative_event = {
+	id = rustcultist.30
+	title = EVTNAME_forge_saint
+	desc = EVTDESC_forge_saint
+	picture = GFX_evt_diplomat_hf
+	border = GFX_event_narrative_frame_religion
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		ROOT = {
+			add_claim = k_rust_cultist
+		}
+	}
+	
+	option = { #starts war immediately
+		name = EVTOPTA_forge_saint
+		trigger = { character = ROOT }
+		custom_tooltip = { text = TXT_EVTOPTA_forge_saint }
+		k_rust_cultist = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					thirdparty_title = PREV
+					casus_belli = claim
+				}
+				character_event = { id = rustcultist.31 }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_forge_saint
+		trigger = {
+			has_landed_title = k_rust_cultist
+		}
+		custom_tooltip = { text = TXT_EVTOPTB_forge_saint }
+	}
+	
+	option = {
+		name = EVTOPTC_forge_saint
+		trigger = {
+			religion_group = oldworld
+			NOR = {
+				character = ROOT
+				has_landed_title = k_rust_cultist
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_forge_saint
+		trigger = {
+			NOT = { religion_group = oldworld }
+		}
+	}
+}
+
+character_event = {
+	id = rustcultist.31
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			any_independent_ruler = {
+				limit = {
+					religion = ROOT
+					war = no
+				}
+				letter_event = { id = rustcultist.32 }
+			}
+		}
+	}
+}
+
+letter_event = {
+	id = rustcultist.32
+	desc = EVTDESC_forge_saint_3
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		war = no
+	}
+	
+	option = {
+		name = EVTOPTA_forge_saint_3
+		custom_tooltip = { text = TXT_EVTOPTA_forge_saint_3 }
+		ROOT = { join_defender_wars = FROM }
+		
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 3
+				trait = zealous
+			}
+			modifier = {
+				factor = 0
+				is_allied_with = FROM
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_forge_saint_3
+		custom_tooltip = { text = TXT_EVTOPTB_forge_saint_3 }
+		prestige = -50
+		piety = -100
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				trait = brave
+			}
+			modifier = {
+				factor = 0
+				trait = zealous
+			}
+			modifier = {
+				factor = 2
+				trait = cynical
+			}
+			modifier = {
+				factor = 0
+				is_allied_with = FROMFROM
+			}
+		}
 	}
 }
