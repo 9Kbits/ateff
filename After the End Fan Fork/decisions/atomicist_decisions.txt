@@ -88,7 +88,11 @@ decisions = {
 			NOT = {
 				trait = atom_curse
 			}
-			
+			NOR = {
+				trait = irradiated
+				trait = enriched
+				trait = radiant
+			}
 		}
 		allow = {
 			higher_tier_than = COUNT 
@@ -180,7 +184,12 @@ decisions = {
 			has_atomicist_particle_trigger = yes
 		}
 		effect = {
-			character_event = { id = atomicist.62 }
+			custom_tooltip = { text = TXT_radiant_path_3 }
+			hidden_tooltip = {
+				set_character_flag = do_not_disturb
+				add_trait = travelling
+				character_event = { id = event_atomicist.62 }
+			}
 		}
 		revoke_allowed = {
 			always = no

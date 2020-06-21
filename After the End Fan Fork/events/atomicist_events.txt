@@ -990,6 +990,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_atomicist_58
 		custom_tooltip = { text = TXT_EVTOPTA_atomicist_58 }
+		remove_trait = irradiated
 		add_trait = enriched
 		prestige = 500
 	}
@@ -1015,6 +1016,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_atomicist_59
 		custom_tooltip = { text = TXT_EVTOPTA_atomicist_58 }
+		remove_trait = irradiated
 		add_trait = enriched
 	}
 	
@@ -1074,8 +1076,27 @@ narrative_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		ROOT = { set_variable = { which = radiant_path value = 1 } }
+		
+	}
+	
 	option = {
-		name = EVOTPA_atomicist_62
+		name = EVTOPA_atomicist_62
+		custom_tooltip = { text = TXT_EVTOPA_atomicist_62 }
+	}
+	
+	option = {
+		name = EVTOPB_atomicist_62
+		custom_tooltip = { text = TXT_EVTOPB_atomicist_62 }
+	}
+	
+	option = {
+		name = EVTOPC_atomicist_62
+		custom_tooltip = { text = TXT_EVTOPC_atomicist_62 }
+		hidden_tooltip = {
+			ROOT = { change_variable = { which = radiant_path value = 1 } }
+		}
 	}
 }
 
