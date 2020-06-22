@@ -179,6 +179,11 @@ character_event = {
 		name = "EVTOPT_ZKCourtierHunt"
 		hidden_tooltip = {
 			character_event = { id = zakariyya.8 days = 30 }
+			e_california = {
+				holder_scope = {
+					character = { id = zakariyya.41 days = 5 }
+				}
+			}
 		}
 	}
 }
@@ -212,7 +217,6 @@ character_event = {
 			character_event = { id = zakariyya.8 days = 30 }
 		}
 		ai_chance = { factor = 10 }
-	
 	}
 	option = {
 		name = "EVTOPT_ZKCourtierHuntStop"
@@ -452,6 +456,13 @@ character_event = {
 				has_character_flag = bajamarriage
 			}
 		}
+		hidden_tooltip = {
+			e_california = {
+				holder_scope = {
+					id = zakariyya.43
+				}
+			}
+		}
 	}
 }
 
@@ -600,9 +611,16 @@ character_event = {
 		custom_tooltip = {
 			text = carminegood
 		}
-		d_imamite = {
-			holder_scope = {
-				character_event = { id = zakariyya.38 days = 1 }
+		hidden_tooltip = {
+			d_imamite = {
+				holder_scope = {
+					character_event = { id = zakariyya.38 days = 1 }
+				}
+			}
+			e_california = {
+				holder_scope = {
+					character_event = { id = zakariyya.44 days = 1}
+				}
 			}
 		}
 		ai_chance = {
@@ -838,7 +856,12 @@ narrative_event = {
 		add_trait = sanctioned_governator
 		hidden_tooltip = {
 			character_event = { id = zakariyya.36 days = 7 }
-		}	
+			e_california = {
+				holder_scope = {
+					narrative_event = { id = zakariyya.42 }
+				}
+			}
+		}
 	}
 }
 
@@ -948,6 +971,110 @@ character_event = {
 	}
 	option = {	
 		name = "EVTOPT_zkimamite"
+		hidden_tooltip = {
+			character_event = { id = zakariyya.45 days = 15 }
+		}
+	}
+}
+
+character_event = {
+	id = zakariyya.41
+	desc = EVTDESC_zkcouriersend
+	picture = GFX_evt_china_civil_War
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_zkcouriersend
+		custom_tooltip = { text = TXT_EVTOPTA_zkcouriersend }
+	}
+	
+	option = {
+		name = EVTOPTB_zkcouriersend
+		custom_tooltip = { text = TXT_EVTOPTB_zkcouriersend }
+	}
+}
+
+narrative_event = {
+	id = zakariyya.42
+	title = EVTTITLE_zkwarnotif
+	desc = EVTDESC_zkwarnotif
+	picture = GFX_evt_china_civil_War
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_zkwarnotif
+	}
+}
+
+narrative_event = {
+	id = zakariyya.43
+	title = EVTTITLE_zkintegrate
+	desc = EVTDESC_zkintegrate
+	picture = GFX_evt_china_golden_age
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_zkintegrate
+	}
+}
+
+character_event = {
+	id = zakariyya.44
+	desc = EVTDESC_zkabdicate
+	picture = GFX_evt_china_open
+	border = GFX_event_normal_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_zkabdicate
+	}
+}
+
+character_event = {
+	id = zakariyya.45
+	desc = "EVTDESC_zakariyya45"
+	picture = GFX_evt_china_open
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	
+		option = {	
+		name = "EVTOPT_zkqingzhen"
+		destroy_landed_title = d_imamite
+		grant_title_no_opinion = d_qingzheng
 		piety = 100
+		add_trait = zealous
+		religion = qingzhen
+		hidden_tooltip = {
+			any_spouse = {
+				religion = qingzhen
+			}
+			any_child = {
+				religion = qingzhen
+			}
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = imamite
+				}
+				religion = qingzhen
+			}
+		}
+		c_1910160 = {
+			add_friend = ROOT
+		}
+	}
+	option = {	
+		name = "EVTOPT_zkimamite2"
+		piety = 100
+		custom_tooltip = { text = TXT_EVTOPT_zkimamite2 }
 	}
 }
