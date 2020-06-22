@@ -2,6 +2,177 @@ check_holy_order_donation_effect = {
 	hidden_tooltip = {
 		save_event_target_as = holy_order_potential_title
 
+		if = { # Checking if it is an island the Hospitallers could be interested in 
+				limit = {
+					is_title_active = d_knights_of_peter_claver
+					d_knights_of_peter_claver = {
+						owner = {
+							religion = ROOT
+						}
+					}
+					ROOT = {
+						is_heretic = no
+						NOT = {
+							has_character_flag = refused_to_give_island_to_knights
+						}
+					}
+					OR = {
+						title = d_jamaica
+						AND = {
+							title = d_leeward_isles
+							c_anguilla_and_st_martin = {
+								owner = {
+									OR = {
+										character = FROM
+										any_liege = {
+											character = FROM
+										}
+									}
+								}
+							}
+						}
+						title = c_anguilla_and_st_martin
+						title = d_french_antilles
+						title = d_windward_isles
+						title = d_leeward_antilles
+						AND = {
+							title = d_miami
+							c_florida_keys = {
+								owner = {
+									OR = {
+										character = FROM
+										any_liege = {
+											character = FROM
+										}
+									}
+								}
+							}
+						}
+						title = c_florida_keys
+						AND = {
+							title = d_puerto_rico
+							c_abacoa = {
+								owner = {
+									OR = {
+										character = FROM
+										any_liege = {
+											character = FROM
+										}
+									}
+								}
+							}
+						}
+						title = c_abacoa
+						AND = {
+							title = d_bahamas
+							c_turks_and_caicos = {
+								owner = {
+									OR = {
+										character = FROM
+										any_liege = {
+											character = FROM
+										}
+									}
+								}
+							}
+						}
+						title = c_turks_and_caicos
+						AND = {
+							title = d_havana
+							c_isla_de_pinos = {
+								owner = {
+									OR = {
+										character = FROM
+										any_liege = {
+											character = FROM
+										}
+									}
+								}
+							}
+						}
+						title = c_isla_de_pinos
+						AND = {
+							title = d_tortuga
+							c_tortuga = {
+								owner = {
+									OR = {
+										character = FROM
+										any_liege = {
+											character = FROM
+										}
+									}
+								}
+							}
+						}
+						title = c_tortuga
+						AND = {
+							title = d_haiti
+							c_la_gonave = {
+								owner = {
+									OR = {
+										character = FROM
+										any_liege = {
+											character = FROM
+										}
+									}
+								}
+							}
+						}
+						title = c_la_gonave
+						title = d_trinidad_and_tobago
+					}
+				}
+				if = {
+					limit = {
+						title = d_miami
+					}
+					c_florida_keys = {
+						save_event_target_as = potential_title
+					}
+				}
+				else_if = {
+					limit = {
+						title = d_grand_cayman
+					}
+					c_cayman = {
+						save_event_target_as = potential_title
+					}
+				}
+				else_if = {
+					limit = {
+						title = d_tortuga
+					}
+					c_tortuga = {
+						save_event_target_as = potential_title
+					}
+				}
+				else_if = {
+					limit = {
+						title = d_haiti
+					}
+					c_la_gonave = {
+						save_event_target_as = potential_title
+					}
+				}
+				else_if = {
+					limit = {
+						title = d_leeward_isles
+					}
+					c_anguilla_and_st_martin = {
+						save_event_target_as = potential_title
+					}
+				}
+				else = {
+					save_event_target_as = potential_title 
+				}
+				ROOT = { save_event_target_as = title_owner }
+				d_knights_of_peter_claver = {
+					owner = {
+						character_event = { id = HFP.44000 days = 1}
+					}
+				}
+		}
+		
 		if = { # Checking if it is a Duchy that St. Ursula's Chosen could be interested in
 			limit = {
 				# Checking that ROOT has the whole Duchy

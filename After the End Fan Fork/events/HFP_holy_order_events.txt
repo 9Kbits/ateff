@@ -3,6 +3,314 @@ namespace = HFP
 # Written by Joachim
 # HFP.44000 - HFP.44999 
 
+namespace = HFP
+
+# Written by Joachim
+# HFP.44000 - HFP.44999 
+
+# Knights Hospitaller wants an island
+character_event = {
+    id = HFP.44000
+    hide_window = yes
+    is_triggered_only = yes
+
+    trigger = {
+    	NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+    	NOR = {
+    		has_landed_title = c_anguilla_and_st_martin
+    		any_realm_lord = {
+    			has_landed_title = c_anguilla_and_st_martin
+    		}
+    		has_landed_title = c_abacoa
+    		any_realm_lord = {
+    			has_landed_title = c_abacoa
+    		}
+    		has_landed_title = c_turks_and_caicos
+    		any_realm_lord = {
+    			has_landed_title = c_turks_and_caicos
+    		}
+    		has_landed_title = c_isla_de_pinos
+    		any_realm_lord = {
+    			has_landed_title = c_isla_de_pinos
+    		}
+			has_landed_title = c_tortuga
+    		any_realm_lord = {
+    			has_landed_title = c_tortuga
+    		}
+    		has_landed_title = c_la_gonave
+    		any_realm_lord = {
+    			has_landed_title = c_la_gonave
+    		}
+			has_landed_title = c_florida_keys
+    		any_realm_lord = {
+    			has_landed_title = c_florida_keys
+    		}
+			has_landed_title = c_cayman
+    		any_realm_lord = {
+    			has_landed_title = c_cayman
+    		}
+    		d_french_antilles = {
+    			any_direct_de_jure_vassal_title = {
+    				owner = {
+    					OR = {
+    						character = ROOT
+    						any_liege = {
+    							character = ROOT
+    						}
+    					}
+    				}
+    			}
+    		}
+    		d_windward_isles = {
+    			any_direct_de_jure_vassal_title = {
+    				owner = {
+    					OR = {
+    						character = ROOT
+    						any_liege = {
+    							character = ROOT
+    						}
+    					}
+    				}
+    			}
+    		}
+    		d_leeward_antilles = {
+    			any_direct_de_jure_vassal_title = {
+    				owner = {
+    					OR = {
+    						character = ROOT
+    						any_liege = {
+    							character = ROOT
+    						}
+    					}
+    				}
+    			}
+    		}
+    		d_jamaica = {
+    			any_direct_de_jure_vassal_title = {
+    				owner = {
+    					OR = {
+    						character = ROOT
+    						any_liege = {
+    							character = ROOT
+    						}
+    					}
+    				}
+    			}
+    		}
+    		d_trinidad_and_tobago = {
+    			any_direct_de_jure_vassal_title = {
+    				owner = {
+    					OR = {
+    						character = ROOT
+    						any_liege = {
+    							character = ROOT
+    						}
+    					}
+    				}
+    			}
+    		}
+    	}
+    }
+
+    immediate = {
+    	event_target:title_owner = {
+    		letter_event = { id = HFP.44001 }
+    	}
+    }
+}
+
+# Knights Hospitaller asks to receive an island 
+letter_event = {
+	id = HFP.44001 
+	desc = EVTDESC_HFP_44001
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_HFP_44001
+		piety = 100
+		scaled_wealth = { value = 2 }
+
+		d_knights_of_peter_claver = {
+			show_scope_change = no
+			holder_scope = {
+				show_scope_change = no
+				opinion = {
+					who = ROOT
+					modifier = opinion_grateful
+					years = 10
+				}
+				opinion = {
+	                modifier = in_non_aggression_pact
+	                years = 10
+	                who = ROOT
+	            }
+            }
+		}
+
+		custom_tooltip = {
+			text = EVTOPTA_HFP_44001_TT
+
+			event_target:potential_title = {
+				if = {
+					limit = {
+						owner = {
+							OR = {
+								character = ROOT
+								any_liege = {
+									character = ROOT
+								}
+							}
+						}
+						NOT = {
+							tier = DUKE
+						}
+					}
+					grant_title_no_opinion = FROM
+				}
+				else_if = {
+					limit = {
+						owner = {
+							OR = {
+								character = ROOT
+								any_liege = {
+									character = ROOT
+								}
+							}
+							tier = DUKE
+						}
+					}
+					destroy_landed_title = THIS
+				}
+				any_direct_de_jure_vassal_title = {
+					limit = {
+						OR = {
+							owner = {
+								character = ROOT
+							}
+							owner = {
+								any_liege = {
+									character = ROOT
+								}
+							}
+						}
+					}
+					grant_title_no_opinion = FROM
+					any_direct_de_jure_vassal_title = {
+						limit = {
+							OR = {
+								owner = {
+									character = ROOT
+								}
+								owner = {
+									any_liege = {
+										character = ROOT
+									}
+								}
+							}
+						}
+						grant_title_no_opinion = FROM
+					}
+				}
+			}
+			FROM = {
+				any_demesne_title = {
+					limit = {
+						NOR = {
+							AND = {
+								OR = {
+									tier = BARON
+									tier = COUNT
+								}
+								holding_type = CASTLE
+							}
+							title = d_knights_hospitaler
+						}
+					}
+					if = {
+						limit = {
+							tier = BARON
+							holding_type = CITY
+						}
+						create_random_steward = {
+							random_traits = yes
+							dynasty = random
+						}
+					}
+					else_if = {
+						limit = {
+							tier = BARON
+							holding_type = TEMPLE
+						}
+						create_random_priest = {
+							random_traits = yes
+							dynasty = random
+						}
+					}
+					else = {
+						create_random_soldier = {
+							random_traits = yes
+							dynasty = random
+						}
+					}
+					grant_title_no_opinion = new_character
+				}
+			}
+
+			d_knights_of_peter_claver = {
+				set_name = "knights_hospitaler_island_rename"
+			}
+			event_target:potential_title = {
+				capital_scope = {
+					FROM = {
+						if = {
+							limit = {
+								has_landed_title = PREV
+								event_target:potential_title = {
+									tier = DUKE
+								}
+							}
+							capital = PREV
+						}
+						else = {
+							capital = event_target:potential_title
+						}
+					}
+				}
+			}
+			any_playable_ruler = {
+				limit = {
+					religion = FROM
+				}
+				narrative_event = { id = HFP.44004 }
+			}
+			ROOT = {
+				narrative_event = { id = HFP.44004}
+			}
+			FROM = {
+				character_event = { id = HFP.41090 days = 1 }
+				character_event = { id = HFP.41090 days = 3 }
+			}
+		}
+
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = EVTOPTB_HFP_44001
+		piety = -25
+
+		set_character_flag = refused_to_give_island_to_knights
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
 # Holy Order decides their liege is unfit to rule over them
 character_event = {
 	id = HFP.44002
