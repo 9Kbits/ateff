@@ -17,10 +17,9 @@ check_holy_order_donation_effect = {
 						}
 					}
 					OR = {
-						title = d_jamaica
 						AND = {
 							title = d_leeward_isles
-							c_anguilla_and_st_martin = {
+							c_virgin_islands = {
 								owner = {
 									OR = {
 										character = FROM
@@ -31,7 +30,7 @@ check_holy_order_donation_effect = {
 								}
 							}
 						}
-						title = c_anguilla_and_st_martin
+						title = c_virgin_islands
 						title = d_french_antilles
 						title = d_windward_isles
 						title = d_leeward_antilles
@@ -49,20 +48,6 @@ check_holy_order_donation_effect = {
 							}
 						}
 						title = c_florida_keys
-						AND = {
-							title = d_puerto_rico
-							c_abacoa = {
-								owner = {
-									OR = {
-										character = FROM
-										any_liege = {
-											character = FROM
-										}
-									}
-								}
-							}
-						}
-						title = c_abacoa
 						AND = {
 							title = d_bahamas
 							c_turks_and_caicos = {
@@ -91,6 +76,20 @@ check_holy_order_donation_effect = {
 							}
 						}
 						title = c_isla_de_pinos
+						AND = {
+							title = d_gitmo
+							c_guantanamo = {
+								owner = {
+									OR = {
+										character = FROM
+										any_liege = {
+											character = FROM
+										}
+									}
+								}
+							}
+						}
+						title = c_guantanamo
 						AND = {
 							title = d_tortuga
 							c_tortuga = {
@@ -132,9 +131,9 @@ check_holy_order_donation_effect = {
 				}
 				else_if = {
 					limit = {
-						title = d_grand_cayman
+						title = d_gitmo
 					}
-					c_cayman = {
+					c_guantanamo = {
 						save_event_target_as = potential_title
 					}
 				}
@@ -158,7 +157,7 @@ check_holy_order_donation_effect = {
 					limit = {
 						title = d_leeward_isles
 					}
-					c_anguilla_and_st_martin = {
+					c_virgin_islands = {
 						save_event_target_as = potential_title
 					}
 				}

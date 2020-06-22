@@ -19,13 +19,9 @@ character_event = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
     	NOR = {
-    		has_landed_title = c_anguilla_and_st_martin
+    		has_landed_title = c_virgin_islands
     		any_realm_lord = {
-    			has_landed_title = c_anguilla_and_st_martin
-    		}
-    		has_landed_title = c_abacoa
-    		any_realm_lord = {
-    			has_landed_title = c_abacoa
+    			has_landed_title = c_virgin_islands
     		}
     		has_landed_title = c_turks_and_caicos
     		any_realm_lord = {
@@ -38,6 +34,10 @@ character_event = {
 			has_landed_title = c_tortuga
     		any_realm_lord = {
     			has_landed_title = c_tortuga
+    		}
+			has_landed_title = c_guantanamo
+    		any_realm_lord = {
+    			has_landed_title = c_guantanamo
     		}
     		has_landed_title = c_la_gonave
     		any_realm_lord = {
@@ -76,18 +76,6 @@ character_event = {
     			}
     		}
     		d_leeward_antilles = {
-    			any_direct_de_jure_vassal_title = {
-    				owner = {
-    					OR = {
-    						character = ROOT
-    						any_liege = {
-    							character = ROOT
-    						}
-    					}
-    				}
-    			}
-    		}
-    		d_jamaica = {
     			any_direct_de_jure_vassal_title = {
     				owner = {
     					OR = {
