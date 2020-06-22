@@ -622,14 +622,7 @@ decisions = {
 		effect = {
 			piety = -25
 			add_character_modifier = { name = requested_military_aid duration = 365 }
-			any_independent_ruler = {
-				limit = {
-					religion = cetic
-					NOT = { war = yes }
-					mercenary = no
-				}
-				letter_event = { id = cetic.60 days = 5 random = 5 }
-			}
+			character_event = { id = cetic.60 }
 		}
 		revoke_allowed = {
 			always = no
