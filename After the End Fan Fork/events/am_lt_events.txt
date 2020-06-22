@@ -140,12 +140,10 @@ character_event = {
 
     option = { #Convert
 		name = EVTOPTA_LT_20900
-		event_target:target_wonder = {
-			clr_wonder_flag = Center_rust_cult
-			clr_wonder_flag = Center_muslim_cult
-			clr_wonder_flag = Center_norse_cult
-			clr_wonder_flag = Center_ursuline_cult
-		}
+		event_target:target_wonder = { clr_wonder_flag = Center_rust_cult }
+		event_target:target_wonder = { clr_wonder_flag = Center_muslim_cult }
+		event_target:target_wonder = { clr_wonder_flag = Center_norse_cult }
+		event_target:target_wonder = { clr_wonder_flag = Center_ursuline_cult }
 		if = {
 			limit = { religion = rust_cultist }
 			event_target:target_wonder = {

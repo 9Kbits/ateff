@@ -4154,7 +4154,10 @@ character_event = {
 
     option = { #Convert
 		name = EVTOPTA_LT_20900
-		event_target:target_wonder = { clear_flags_with_prefix = Guadalupe_ }
+		event_target:target_wonder = { clr_wonder_flag = Guadalupe_sacred_heart_cult }
+		event_target:target_wonder = { clr_wonder_flag = Guadalupe_catholic_cult }
+		event_target:target_wonder = { clr_wonder_flag = Guadalupe_mictlantec_cult }
+		event_target:target_wonder = { clr_wonder_flag = Guadalupe_sol_invicta_cult }
 		if = {
 			limit = { religion = catholic }
 			event_target:target_wonder = {
