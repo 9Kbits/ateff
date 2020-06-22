@@ -1036,7 +1036,6 @@ narrative_event = {
 	
 	trigger = {
 		has_character_flag = enriched_path
-		trait = travelling
 	}
 	
 	option = {
@@ -1082,18 +1081,22 @@ narrative_event = {
 	}
 	
 	option = {
-		name = EVTOPA_atomicist_62
-		custom_tooltip = { text = TXT_EVTOPA_atomicist_62 }
+		name = EVTOPTA_atomicist_62
+		custom_tooltip = { text = TXT_EVTOPTA_atomicist_62 }
 	}
 	
 	option = {
-		name = EVTOPB_atomicist_62
-		custom_tooltip = { text = TXT_EVTOPB_atomicist_62 }
+		name = EVTOPTB_atomicist_62
+		custom_tooltip = { text = TXT_EVTOPTB_atomicist_62 }
 	}
 	
 	option = {
-		name = EVTOPC_atomicist_62
-		custom_tooltip = { text = TXT_EVTOPC_atomicist_62 }
+		name = EVTOPTC_atomicist_62
+		trigger = {
+			trait = paranoid
+		}
+		tooltip_info = paranoid
+		custom_tooltip = { text = TXT_EVTOPTC_atomicist_62 }
 		hidden_tooltip = {
 			ROOT = { change_variable = { which = radiant_path value = 1 } }
 		}
@@ -1107,34 +1110,50 @@ narrative_event = {
 character_event = {
 	id = event_atomicist.63
 	desc = "EVTDESC_radiant_pathend2"
-	picture = GFX_evt_cathedral_zun_pagan
+	picture = GFX_evt_woman_praying_hf
 	religion = atomicist
 	is_triggered_only = yes
-	
+
 	trigger = {
 		has_character_flag = radiant_path
+		trait = travelling
 	}
 	
 	option = {
 		name = EVTOPTA_atomicist_63
-		custom_tooltip = { text = TXT_EVTOPA_atomicist_63 }
-		hidden_tooltip = {
-			lose_weight_large_effect = yes
-			lose_weight_medium_effect = yes
-			weight_trait_check_effect = yes
-			hidden_tooltip = {
-				ROOT = { change_variable = { which = radiant_path value = 1 } }
+		trigger = {
+			NOR = {
+				trait = proud
+				learning = 12
 			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTA_atomicist_63 }
+		hidden_tooltip = {
+			ROOT = { change_variable = { which = radiant_path value = 1 } }
 		}
 	}
 	
 	option = {
 		name = EVTOPTB_atomicist_63
 		trigger = {
-			trait = temperate
+			trait = proud
 		}
-		tooltip_info = temperate
-		custom_tooltip = { text = TXT_EVTOPB_atomicist_63 }
+		tooltip_info = proud
+		piety = -25
+		custom_tooltip = { text = TXT_EVTOPTB_atomicist_63 }
+		hidden_tooltip = {
+			ROOT = { subtract_variable = { which = radiant_path value = 1 } }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_atomicist_63
+		trigger = {
+			learning = 12
+		}
+		tooltip_info = learning
+		piety = 50
+		custom_tooltip = { text = TXT_EVTOPTC_atomicist_63 }
 		hidden_tooltip = {
 			ROOT = { change_variable = { which = radiant_path value = 2 } }
 		}
@@ -1147,64 +1166,255 @@ character_event = {
 
 character_event = {
 	id = event_atomicist.64
-	desc = "EVTDESC_radiant_pathend2"
-	picture = GFX_evt_cathedral_zun_pagan
+	desc = "EVTDESC_radiant_pathend3"
+	picture = GFX_evt_woman_praying_hf
 	religion = atomicist
 	is_triggered_only = yes
 
 	trigger = {
 		has_character_flag = radiant_path
-	}
-	
-	option = {
-		name = EVTOPTA_atomicist_64
-		custom_tooltip = { text = TXT_EVTOPA_atomicist_64 }
-		hidden_tooltip = {
-			if = {
-				limit = {
-					has_dlc = "Reapers"
-				}
-				give_dysentery_effect = yes
-			}
-			else_if = {
-				limit = {
-					NOT = { has_dlc = "Reapers" }
-				}
-				add_character_modifier = { name = dysentery duration = 30 }
-			}
-		}
+		trait = travelling
 	}
 	
 	option = {
 		name = EVTOPTA_atomicist_64
 		trigger = {
-			trait = stubborn
+			NOT = {
+				trait = stubborn
+			}
 		}
-		tooltip_info = stubborn
-		custom_tooltip = { text = TXT_EVTOPA_atomicist_64 }
+		custom_tooltip = { text = TXT_EVTOPTA_atomicist_64 }
 		hidden_tooltip = {
-			if = {
-				limit = {
-					has_dlc = "Reapers"
-				}
-				give_dysentery_effect = yes
-			}
-			else_if = {
-				limit = {
-					NOT = { has_dlc = "Reapers" }
-				}
-				add_character_modifier = { name = dysentery duration = 30 }
-			}
-			hidden_tooltip = {
-				ROOT = { subtract_variable = { which = radiant_path value = 2 } }
-			}
+			give_pneumonic_effect = yes
+			ROOT = { change_variable = { which = radiant_path value = 1 } }
 		}
 	}
 	
 	option = {
 		name = EVTOPTB_atomicist_64
-		custom_tooltip = { text = TXT_EVTOPB_atomicist_64 }
+		trigger = {
+			trait = stubborn
+		}
+		tooltip_info = stubborn
+		prestige = -25
+		custom_tooltip = { text = TXT_EVTOPTB_atomicist_64 }
+		hidden_tooltip = {
+			give_pneumonic_effect = yes
+			ROOT = { subtract_variable = { which = radiant_path value = 1 } }
+		}
+	}
+	
+	after = {
+		character_event = { id = event_atomicist.65 days = 7 }
 	}	
+}
+
+character_event = {
+	id = event_atomicist.65
+	desc = "EVTDESC_radiant_pathend3"
+	picture = GFX_evt_woman_praying_hf
+	religion = atomicist
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = radiant_path
+		trait = travelling
+	}
+	
+	option = {
+		name = EVTOPTA_atomicist_65
+		trigger = {
+			NOT = {
+				trait = temperate
+			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTA_atomicist_65 }
+		hidden_tooltip = {
+			lose_weight_large_effect = yes
+			lose_weight_small_effect = yes
+			weight_trait_check_effect = yes
+			ROOT = { change_variable = { which = radiant_path value = 1 } }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_atomicist_65
+		trigger = {
+			trait = temperate
+		}
+		tooltip_info = temperate
+		custom_tooltip = { text = TXT_EVTOPTB_atomicist_65 }
+		hidden_tooltip = {
+			lose_weight_medium_effect = yes
+			weight_trait_check_effect = yes
+			ROOT = { change_variable = { which = radiant_path value = 2 } }
+		}
+	}
+	
+	after = {
+		character_event = { id = event_atomicist.66 days = 7 }
+	}
+}
+
+
+character_event = {
+	id = event_atomicist.66
+	desc = "EVTDESC_radiant_pathend4"
+	picture = GFX_evt_woman_praying_hf
+	religion = atomicist
+	is_triggered_only = yes
+
+	trigger = {
+		has_character_flag = radiant_path
+		trait = travelling
+	}
+	
+	option = {
+		name = EVTOPTA_atomicist_66
+		trigger = {
+			NOR = {
+				trait = patient
+				trait = wroth
+			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTA_atomicist_66 }
+		hidden_tooltip = {
+			ROOT = { subtract_variable = { which = radiant_path value = 1 } }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_atomicist_66
+		trigger = {
+			trait = patient
+		}
+		tooltip_info = patient
+		custom_tooltip = { text = TXT_EVTOPTB_atomicist_66 }
+		hidden_tooltip = {
+			ROOT = { change_variable = { which = radiant_path value = 1 } }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_atomicist_66
+		trigger = {
+			trait = wroth
+		}
+		tooltip_info = wroth
+		custom_tooltip = { text = TXT_EVTOPTC_atomicist_66 }
+		hidden_tooltip = {
+			ROOT = { subtract_variable = { which = radiant_path value = 2 } }
+		}
+	}
+	
+	after = {
+		character_event = { id = event_atomicist.67 }
+	}
+}
+
+character_event = {
+	id = event_atomicist.67
+	hide_window = yes
+	religion = atomicist
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = radiant_path
+		trait = travelling
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				ROOT = { check_variable = { which = radiant_path value = 7 } }
+			}
+			narrative_event = { id = event_atomicist.68 days = 7 }
+		}
+		else_if = {
+			limit = {
+				ROOT = { check_variable = { which = radiant_path value = 4 } }
+				NOT = { ROOT = { check_variable = { which = radiant_path value = 7 } } }
+			}
+			narrative_event = { id = event_atomicist.68 days = 7 }
+		}
+		else_if = {
+			limit = {
+				NOT = { ROOT = { check_variable = { which = radiant_path value = 4 } } }
+			}
+			narrative_event = { id = event_atomicist.69 days = 7 }
+		}
+	}
+}
+
+narrative_event = {
+	id = event_atomicist.68
+	title = "EVTTITLE_radiant_pathend5"
+	desc = "EVTDESC_radiant_pathend5"
+	picture = GFX_evt_cathedral_mushroom_cloud
+	religion = atomicist
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = radiant_path
+		trait = travelling
+	}
+	
+	option = {
+		name = EVTOPTA_atomicist_68
+		custom_tooltip = { text = TXT_EVTOPTA_atomicist_68 }
+		remove_trait = enriched
+		add_trait = radiant
+	}
+	
+	after = {
+		clr_character_flag = radiant_path
+		ROOT = { set_variable = { which = radiant_path value = 1 } }
+		remove_trait = travelling
+	}
+}
+
+narrative_event = {
+	id = event_atomicist.69
+	title = "EVTTITLE_radiant_pathend6"
+	desc = "EVTDESC_radiant_pathend6"
+	picture = GFX_evt_bad_news
+	religion = atomicist
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = enriched_path
+		trait = travelling
+	}
+	
+	option = {
+		name = EVTOPTA_atomicist_69
+		custom_tooltip = { text = TXT_EVTOPTA_atomicist_60 }
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = radiant_path_cooldown
+				hidden = yes
+				years = 10
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = radiant_path
+		ROOT = { set_variable = { which = enriched_path value = 1 } }
+		remove_trait = travelling
+	}
+}
+
+character_event = {
+	id = event_atomicist.70
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = radiant_path
+		ROOT = { set_variable = { which = enriched_path value = 1 } }
+		remove_trait = travelling
+	}
 }
 
 # ATOMICIST FIRST STRIKE

@@ -134,6 +134,7 @@ decisions = {
 			religion = atomicist
 			is_adult = yes
 			trait = irradiated
+			NOT = { has_character_modifier = enriched_path_cooldown }
 		}
 		allow = {
 			higher_tier_than = DUKE
@@ -176,6 +177,7 @@ decisions = {
 			religion = atomicist
 			is_adult = yes
 			trait = enriched
+			NOT = { has_character_modifier = radiant_path_cooldown }
 		}
 		allow = {
 			higher_tier_than = DUKE
@@ -189,6 +191,7 @@ decisions = {
 				set_character_flag = do_not_disturb
 				add_trait = travelling
 				character_event = { id = event_atomicist.62 }
+				character_event = { id = event_atomicist.70 days = 60 }
 			}
 		}
 		revoke_allowed = {
