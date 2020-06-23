@@ -4043,6 +4043,59 @@ decisions = {
 			}
 		}
 	}
+	
+	study_ancient_thought = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 3
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			religion = qingzheng
+			OR = {
+				trait = confucianism_qingzheng
+				trait = taoism_qingzheng
+				trait = buddhism_qingzheng
+			}
+			NOT = { has_character_flag = studied_qingzheng_thought }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			wealth = 25
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			custom_tooltip = { text = TXT_study_ancient_thought }
+			hidden_tooltip = {
+				character_event = { id = islamate.90 }
+				set_character_flag = studied_qingzheng_thought
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }	
 
 targetted_decisions = {

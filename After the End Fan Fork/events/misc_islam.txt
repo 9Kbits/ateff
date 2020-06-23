@@ -3238,3 +3238,363 @@ character_event = {
 		}
 	}
 }
+
+##########################################################################
+# Study the texts
+##########################################################################
+character_event = {
+	id = islamate.90
+	desc = "EVTDESC_islamate_90"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	religion = qingzheng
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA_islamate_90"
+		custom_tooltip = {
+			text = TXT_EVTOPTA_islamate_90
+			hidden_tooltip = {
+				trigger_switch = {
+					on_trigger = trait
+					confucianism_qingzheng = {
+						random_list = {
+							20 = {  character_event = { id = islamate.91 days = 2 } }
+							20 = {  character_event = { id = islamate.92 days = 2 } }
+							20 = {  character_event = { id = islamate.93 days = 2 } }
+							20 = {  character_event = { id = islamate.94 days = 2 } }
+							20 = {  character_event = { id = islamate.95 days = 2 } }
+						}
+					}
+					taoism_qingzheng = {
+						random_list = {
+							20 = {  character_event = { id = islamate.96 days = 2 } }
+							20 = {  character_event = { id = islamate.97 days = 2 } }
+							20 = {  character_event = { id = islamate.98 days = 2 } }
+							20 = {  character_event = { id = islamate.99 days = 2 } }
+							20 = {  character_event = { id = islamate.100 days = 2 } }
+						}
+					}
+					buddhism_qingzheng = {
+						random_list = {
+							20 = {  character_event = { id = islamate.101 days = 2 } }
+							20 = {  character_event = { id = islamate.102 days = 2 } }
+							20 = {  character_event = { id = islamate.103 days = 2 } }
+							20 = {  character_event = { id = islamate.104 days = 2 } }
+							20 = {  character_event = { id = islamate.105 days = 2 } }
+						}
+					}
+				}
+			}		
+		}
+		scaled_wealth = -0.01
+	}
+}
+
+character_event = {
+	id = islamate.91
+	desc = "EVTDESC_islamate_91"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	religion = qingzheng	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA_islamate_91"
+		trigger_switch = {
+			on_trigger = trait
+			imbecile = {
+				remove_trait = imbecile
+				add_trait = slow
+			}
+			slow = {
+				remove_trait = slow
+			}
+			quick = {
+				remove_trait = quick
+				add_trait = genius
+			}
+			genius = {
+				prestige = 50
+			}
+			dull = {
+				remove_trait = dull
+				add_trait = shrewd
+			}
+			fallback = {
+				add_trait = shrewd
+			}
+		}
+		add_character_modifier = {
+			name = confucian_learning
+			duration = -1
+		}
+	}
+}		
+
+character_event = {
+	id = islamate.92
+	desc = "EVTDESC_islamate_92"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_stewardship
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_92"
+		remove_trait = proud
+		add_trait = humble
+		add_character_modifier = {
+			name = confucian_stewardship
+			duration = -1
+		}
+	}
+}		
+
+character_event = {
+	id = islamate.93
+	desc = "EVTDESC_islamate_93"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_war
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_93"
+		remove_trait = slothful
+		add_trait = diligent
+		add_character_modifier = {
+			name = confucian_martial
+			duration = -1
+		}
+	}
+}		
+
+
+character_event = {
+	id = islamate.94
+	desc = "EVTDESC_islamate_94"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_diplomacy
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_94"
+		remove_trait = wroth
+		add_trait = patient
+		add_character_modifier = {
+			name = confucian_diplomacy
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.95
+	desc = "EVTDESC_islamate_95"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_intrigue
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_95"
+		remove_trait = content
+		add_trait = ambitious
+		add_character_modifier = {
+			name = confucian_intrigue
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.96
+	desc = "EVTDESC_islamate_96"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_96"
+		remove_trait = proud
+		add_trait = humble
+		add_character_modifier = {
+			name = taoism_learning
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.97
+	desc = "EVTDESC_islamate_97"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_war
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_97"
+		remove_trait = cruel
+		add_trait = kind
+		add_character_modifier = {
+			name = taoism_martial
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.98
+	desc = "EVTDESC_islamate_98"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_intrigue
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_98"
+		remove_trait = craven
+		add_trait = brave
+		add_character_modifier = {
+			name = taoism_intrigue
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.99
+	desc = "EVTDESC_islamate_99"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_diplomacy
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_99"
+		remove_trait = shy
+		add_trait = gregarious
+		add_character_modifier = {
+			name = taoism_diplomacy
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.100
+	desc = "EVTDESC_islamate_100"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_stewardship
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_100"
+		remove_trait = greedy
+		add_trait = charitable
+		add_character_modifier = {
+			name = taoism_stewardship
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.101
+	desc = "EVTDESC_islamate_101"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_war
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_101"
+		remove_trait = gluttonous
+		add_trait = temperate
+		add_character_modifier = {
+			name = buddhism_martial
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.102
+	desc = "EVTDESC_islamate_102"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_102"
+		remove_trait = wroth
+		add_trait = patient
+		add_character_modifier = {
+			name = buddhism_learning
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.103
+	desc = "EVTDESC_islamate_103"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_diplomacy
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_103"
+		remove_trait = proud
+		add_trait = humble
+		add_character_modifier = {
+			name = buddhism_diplomacy
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.104
+	desc = "EVTDESC_islamate_104"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_intrigue
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_104"
+		remove_trait = honest
+		add_trait = deceitful
+		add_character_modifier = {
+			name = buddhism_intrigue
+			duration = -1
+		}
+	}
+}
+
+character_event = {
+	id = islamate.105
+	desc = "EVTDESC_islamate_105"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_intrigue
+	religion = qingzheng	
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_islamate_105"
+		remove_trait = shy
+		add_trait = gregarious
+		add_character_modifier = {
+			name = buddhism_stewardship
+			duration = -1
+		}
+	}
+}
