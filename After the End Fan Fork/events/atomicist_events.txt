@@ -1364,6 +1364,33 @@ narrative_event = {
 		custom_tooltip = { text = TXT_EVTOPTA_atomicist_68 }
 		remove_trait = enriched
 		add_trait = radiant
+		give_nickname = nick_the_radiant
+		if = { #Isotropic Blood (male)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			create_bloodline = {
+				type = isotopic_male
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_isotopic"
+			}	
+			sound_effect = bloodline_added			
+		}
+		else_if = { #Isotropic Blood (female)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			create_bloodline = {
+				type = isotopic_female
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_isotopic"
+			}	
+			sound_effect = bloodline_added			
+		}
 	}
 	
 	after = {
