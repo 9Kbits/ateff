@@ -4,6 +4,7 @@
 #hajj.3&6 = Going to Tampa (Orientalist)
 #hajj.7-16 = Hadith (Imamite and Traditionalist)
 #hajj.17-25 = Arabian Nights (Orientalist)
+#hajj.200- = Spiritual Hajj (transcendentalist)
 
 namespace = hajj
 #############################
@@ -2167,7 +2168,10 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		trait = on_hajj
+		OR = {
+			trait = on_hajj
+			trait = on_hajj2
+		}
 	}
 	
 	option = {
@@ -2191,7 +2195,10 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		trait = on_hajj
+		OR = {
+			trait = on_hajj
+			trait = on_hajj2
+		}
 	}
 	
 	immediate = {
@@ -2239,7 +2246,10 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		trait = on_hajj
+		OR = {
+			trait = on_hajj
+			trait = on_hajj2
+		}
 	}
 	
 	option = {
@@ -2280,7 +2290,10 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		trait = on_hajj
+		OR = {
+			trait = on_hajj
+			trait = on_hajj2
+		}
 	}
 	
 	option = {
@@ -2304,7 +2317,10 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		trait = on_hajj
+		OR = {
+			trait = on_hajj
+			trait = on_hajj2
+		}
 	}
 	
 	option = {
@@ -2351,14 +2367,28 @@ character_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		trait = on_hajj
+		OR = {
+			trait = on_hajj
+			trait = on_hajj2
+		}
 	}
 	option = {
 		name = "EVTOPTA86630"
 		scaled_wealth = -0.1
 		prestige = 25
 		hidden_tooltip = {
-			character_event = { id = hajj.100 days = 180 }
+			if = {
+				limit = {
+					trait = on_hajj
+				}
+				character_event = { id = hajj.100 days = 180 }
+			}
+			else_if = {
+				limit = {
+					trait = on_hajj2
+				}
+				character_event = { id = hajj.100 days = 7 }
+			}
 		}		
 	}
 	option = {
@@ -2366,7 +2396,18 @@ character_event = {
 		scaled_wealth = -0.05
 		piety = 15
 		hidden_tooltip = {
-			character_event = { id = hajj.100 days = 180 }
+			if = {
+				limit = {
+					trait = on_hajj
+				}
+				character_event = { id = hajj.100 days = 180 }
+			}
+			else_if = {
+				limit = {
+					trait = on_hajj2
+				}
+				character_event = { id = hajj.100 days = 7 }
+			}
 		}		
 	}	
 }
@@ -2393,10 +2434,24 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPTA86800"
-		remove_trait = on_hajj
-		add_trait = hajjaj
-		create_bloodline = {
-					type = hajjajbloodline
+		if = {
+			limit = {
+				trait = on_hajj
+			}
+			remove_trait = on_hajj
+			add_trait = hajjaj
+			create_bloodline = {
+				type = hajjajbloodline
+			}
+		}
+		else_if = {
+			limit = {
+				trait = on_hajj2
+			}
+			remove_trait = on_hajj2
+			add_trait = hajjaj2
+			clr_character_flag = on_mind_hajj
+			clr_character_flag = do_not_disturb
 		}
 	}
 }
@@ -2417,6 +2472,204 @@ character_event = {
 	}
 }
 
+narrative_event = {
+	id = hajj.200
+	title = EVTTITLE_hajj_200
+	desc = EVTDESC_hajj_200
+	picture = GFX_evt_secluded_in_prayer
+	border = GFX_event_narrative_frame_religion
+	religion = transcendentalist
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = on_mind_hajj
+	}
+	
+	option = {
+		name = EVTOPTA_hajj_200
+		custom_tooltip = { text = TXT_EVTOPTA_hajj_200 }
+		hidden_tooltip = {
+			add_trait = on_hajj2
+			narrative_event = { id = hajj.201 days = 2 }
+		}
+	}
+}
 
+narrative_event = {
+	id = hajj.201
+	title = EVTTITLE_hajj_201
+	desc = EVTDESC_hajj_201
+	picture = GFX_evt_mysterious_forest
+	border = GFX_event_narrative_frame_religion
+	religion = transcendentalist
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = on_hajj2
+	}
+	
+	option = {
+		name = EVTOPTA_hajj_201
+		hidden_tooltip = {
+			narrative_event = { id = hajj.203 days = 2 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_hajj_201
+		hidden_tooltip = {
+			character_event = { id = hajj.202 days = 2 }
+		}
+	}
+}
 
+character_event = {
+	id = hajj.202
+	desc = EVTDESC_hajj_202
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_normal_frame_religion
+	religion = transcendentalist
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = on_hajj2
+	}
+	
+	option = {
+		name = EVTOPTA_hajj_202
+		piety = -250
+		custom_tooltip = { text = TXT_EVTOPTA_hajj_201 }
+		remove_trait = on_hajj2
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = mind_hajj_cooldown
+				hidden = yes
+				years = 5
+			}
+		}
+	}
+}
 
+narrative_event = {
+	id = hajj.203
+	title = EVTTITLE_hajj_203
+	desc = EVTDESC_hajj_203
+	picture = GFX_evt_merchant_ship_at_sea_republic
+	border = GFX_event_narrative_frame_religion
+	religion = transcendentalist
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = on_hajj2
+	}
+	
+	option = {
+		name = EVTOPTA_hajj_203
+		hidden_tooltip = {
+			character_event = { id = hajj.204 }
+		}
+	}
+}
+
+character_event = {
+	id = hajj.204
+	desc = EVTDESC_hajj_204
+	picture = GFX_evt_merchant_ship_at_sea_republic
+	border = GFX_event_normal_frame_religion
+	religion = transcendentalist
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = on_hajj2
+	}
+	
+	option = {
+		name = EVTOPTA_hajj_204
+		hidden_tooltip = {
+			narrative_event = { id = hajj.205 days = 5 }
+		}
+	}
+}
+
+narrative_event = {
+	id = hajj.205
+	title = EVTTITLE_hajj_205
+	desc = EVTDESC_hajj_205
+	picture = GFX_evt_desert
+	border = GFX_event_narrative_frame_religion
+	religion = transcendentalist
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = on_hajj2
+	}
+	
+	option = {
+		name = EVTOPTA_hajj_205
+		hidden_tooltip = {
+			character_event = { id = hajj.207 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_hajj_205
+		hidden_tooltip = {
+			character_event = { id = hajj.206 }
+		}
+	}
+}
+
+narrative_event = {
+	id = hajj.206
+	title = EVTTITLE_hajj_206
+	desc = EVTDESC_hajj_206
+	picture = GFX_evt_lunatic_arabic
+	border = GFX_event_narrative_frame_religion
+	religion = transcendentalist
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = on_hajj2
+	}
+	
+	option = {
+		name = EVTOPTA_hajj_206
+		if = {
+			limit = {
+				NOT = { trait = wounded }
+			}
+			add_trait = wounded
+		}
+		custom_tooltip = { text = TXT_EVTOPTA_hajj_206 }
+		remove_trait = on_hajj2
+		hidden_tooltip = {
+			add_character_modifier = {
+				name = mind_hajj_cooldown
+				hidden = yes
+				years = 5
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = hajj.207
+	title = EVTTITLE_hajj_207
+	desc = EVTDESC_hajj_207
+	picture = GFX_evt_kaaba
+	border = GFX_event_narrative_frame_religion
+	religion = transcendentalist
+	is_triggered_only = yes
+	
+	trigger = {
+		trait = on_hajj2
+	}
+	
+	option = {
+		name = EVTOPTA_hajj_207
+		custom_tooltip = { text = TXT_EVTOPTA_hajj_207 }
+		hidden_tooltip = {
+			character_event = { id = hajj.90 days = 1 }
+		}
+	}
+}
