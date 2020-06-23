@@ -435,7 +435,7 @@ character_event = {
 	}
 }
 
-character_event = { #there should probably be an on_action called on_religious_conversion or something
+character_event = {
 	id = ceticreform.6
 	hide_window = yes
 	is_triggered_only = yes
@@ -450,7 +450,7 @@ character_event = { #there should probably be an on_action called on_religious_c
 		}
 		NOT = { religion = cetic }
 	}
-	
+
 	immediate = {
 		hidden_tooltip = {
 			remove_trait = way_fist
@@ -464,10 +464,10 @@ character_event = { #there should probably be an on_action called on_religious_c
 character_event = {
 	id = ceticreform.7
 	hide_window = yes
-	is_triggered_only = yes
 	religion = cetic
 	only_men = yes
-
+	is_triggered_only = yes
+		
 	trigger = {
 		OR = {
 			father = { trait = way_book }
@@ -523,10 +523,9 @@ character_event = {
 character_event = {
 	id = ceticreform.8
 	hide_window = yes
-	
-	is_triggered_only = yes
 	religion = cetic
 	only_women = yes
+	is_triggered_only = yes
 		
 	trigger = {
 		OR = {
