@@ -589,14 +589,18 @@ character_event = {
 		OR = { 
 			culture = angeleno
 			culture = californio
+			culture = chino
 		}
 		NOT = { tier = BARON }
 		is_ruler = yes
 		OR = {
-			e_california = {
-				holder_scope = {
-					trait = weak_emperor
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
 				}
+				NOT = { religion_authority = 0.2 }
 			}
 			AND = {
 				e_california = {
@@ -605,16 +609,13 @@ character_event = {
 				e_new_california = {
 					has_holder = no
 				}
+				NOT = { religion_authority = 0.4 }
 			}
-
 		}
-		NOT = { religion_authority = 0.4 }
-
 	}
 	mean_time_to_happen = {
-		years= 20	
+		years = 20	
 	}
-	
 
 	option = {
 		name = EVTOPT_ceticreformimamite
@@ -632,8 +633,8 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 0 culture = californio }
 		}
-
 	}
 	option = {
 		name = EVTOPT_ceticreformalawiyya
@@ -651,9 +652,29 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 0 culture = californio }
 		}
 	}
-	
+	option = {
+		name = EVTOPT_ceticreformqingzheng
+		trigger = {
+			trait = way_fist
+		}
+		religion = qingzheng
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = qingzheng
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = californio }
+			modifier = { factor = 10 culture = qingzheng }
+		}
+	}
 	option = {
 		name = EVTOPT_ceticreformsagrado
 		trigger = {
@@ -673,7 +694,7 @@ character_event = {
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = californio }
-
+			modifier = { factor = 10 culture = chino }
 		}
 	}
 	option = {
@@ -694,7 +715,6 @@ character_event = {
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = angeleno }
-
 		}
 	}
 	option = {
@@ -715,7 +735,7 @@ character_event = {
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = californio }
-
+			modifier = { factor = 10 culture = chino }
 		}
 	}
 
@@ -737,9 +757,9 @@ character_event = {
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = angeleno }
-
 		}
 	}
+	
 	option = {
 		name = EVTOPT_ceticreformsagrado
 		trigger = {
@@ -759,13 +779,14 @@ character_event = {
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = californio }
-
+			modifier = { factor = 10 culture = chino }
 		}
 	}
 	option = {
 		name = EVTOPT_ceticreformconsumerist
 		trigger = {
 			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
 		}
 		religion = consumerist
 		any_demesne_province = {
@@ -779,7 +800,7 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
-
+			modifier = { factor = 10 culture = angeleno }
 		}
 	}
 	option = {
@@ -799,8 +820,8 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
-			modifier = { factor = 10 culture = californio }
-
+			modifier = { factor = 0 culture = californio }
+			modifier = { factor = 10 culture = chino }
 		}
 	}
 	option = {
@@ -839,6 +860,7 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 10 culture = angeleno }
 		}
 	}
 	option = {
@@ -866,12 +888,14 @@ character_event = {
 			culture = siskiyouan
 		}
 		NOT = { tier = BARON }
-		is_ruler = yes
 		OR = {
-			e_california = {
-				holder_scope = {
-					trait = weak_emperor
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
 				}
+				NOT = { religion_authority = 0.2 }
 			}
 			AND = {
 				e_california = {
@@ -880,10 +904,9 @@ character_event = {
 				e_new_california = {
 					has_holder = no
 				}
+				NOT = { religion_authority = 0.4 }
 			}
-
 		}
-		NOT = { religion_authority = 0.4 }
 
 	}
 	mean_time_to_happen = {
@@ -909,7 +932,6 @@ character_event = {
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = battleborn }
-
 		}
 	}
 	option = {
@@ -931,7 +953,6 @@ character_event = {
 			factor = 5
 			modifier = { factor = 15 culture = cascadian }
 			modifier = { factor = 15 culture = siskiyouan }
-
 		}
 	}
 	
@@ -996,6 +1017,7 @@ character_event = {
 		name = EVTOPT_ceticreformconsumerist
 		trigger = {
 			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
 		}
 		religion = consumerist
 		any_demesne_province = {
@@ -1010,7 +1032,6 @@ character_event = {
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = battleborn }
-
 		}
 	}
 	option = {
@@ -1030,8 +1051,6 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
-			modifier = { factor = 10 culture = californio }
-
 		}
 	}
 	option = {
@@ -1071,16 +1090,36 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
-			modifier = { factor = 10 culture = cascadian }
+			modifier = { factor = 15 culture = cascadian }
 			modifier = { factor = 15 culture = siskiyouan }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
 
-
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 culture = cascadian }
+			modifier = { factor = 15 culture = siskiyouan }
 		}
 	}
 	option = {
 		name = EVTOPT_ceticreformmonetarist
 		trigger = {
 			trait = way_book
+			has_global_flag = monetarist_heresy
 		}
 		religion = monetarist
 		any_demesne_province = {
@@ -1094,27 +1133,10 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 10 culture = battleborn }
 		}
 	}
-	option = {
-		name = EVTOPT_ceticreformreform
-		trigger = {
-			trait = way_book
-		}
-		religion = atomicist
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = reform
-			}
-		}
-
-		ai_chance = {
-			factor = 5
-		}
-	}
+	#seems weird for these guys
 	option = {
 		name = EVTOPT_ceticreformresist
 		ai_chance = {
@@ -1123,8 +1145,6 @@ character_event = {
 
 		}
 	}
-
-
 }
 character_event = {
 	id = ceticreform.12
@@ -1135,16 +1155,18 @@ character_event = {
 	trigger = {
 		OR = {
 			culture = bayfolk
-			culture = chino
 			culture = calaotian
 		}
 		NOT = { tier = BARON }
 		is_ruler = yes
 		OR = {
-			e_california = {
-				holder_scope = {
-					trait = weak_emperor
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
 				}
+				NOT = { religion_authority = 0.2 }
 			}
 			AND = {
 				e_california = {
@@ -1153,55 +1175,12 @@ character_event = {
 				e_new_california = {
 					has_holder = no
 				}
+				NOT = { religion_authority = 0.4 }
 			}
-
 		}
-		NOT = { religion_authority = 0.4 }
-
-
-
 	}
 	mean_time_to_happen = {
 		years= 20	
-	}
-	
-
-	option = {
-		name = EVTOPT_ceticreformimamite
-		trigger = {
-			trait = way_fist
-		}
-		religion = imamite
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = imamite
-			}
-		}
-		ai_chance = {
-			factor = 5
-		}
-	}
-	option = {
-		name = EVTOPT_ceticreformalawiyya
-		trigger = {
-			trait = way_fist
-		}
-		religion = alawiyya
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = alawiyya
-			}
-		}
-
-		ai_chance = {
-			factor = 5
-		}
 	}
 	
 	option = {
@@ -1221,6 +1200,8 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 10 culture = bayfolk }
+			modifier = { factor = 10 culture = calaotian }
 		}
 	}
 	option = {
@@ -1240,6 +1221,8 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 10 culture = bayfolk }
+			modifier = { factor = 10 culture = calaotian }
 		}
 	}
 
@@ -1247,6 +1230,7 @@ character_event = {
 		name = EVTOPT_ceticreformconsumerist
 		trigger = {
 			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
 		}
 		religion = consumerist
 		any_demesne_province = {
@@ -1260,6 +1244,7 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 10 culture = bayfolk }
 		}
 	}
 	option = {
@@ -1280,8 +1265,7 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
-			modifier = { factor = 10 culture = californio }
-
+			modifier = { factor = 10 culture = bayfolk }
 		}
 	}
 	option = {
@@ -1301,8 +1285,7 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
-			modifier = { factor = 10 culture = californio }
-
+			modifier = { factor = 10 culture = bayfolk }
 		}
 	}
 
@@ -1323,25 +1306,7 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
-		}
-	}
-	option = {
-		name = EVTOPT_ceticreformqingzheng
-		trigger = {
-			trait = way_book
-		}
-		religion = qingzheng
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = qingzheng
-			}
-		}
-
-		ai_chance = {
-			factor = 5
+			modifier = { factor = 10 culture = bayfolk }
 		}
 	}
 	option = {
@@ -1371,8 +1336,81 @@ character_event = {
 
 		}
 	}
+	option = {
+		name = EVTOPT_ceticreformatomicist
+		religion = atomicist
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = atomicist
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_fist
+		}
+		religion = gaian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
 
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = calaotian }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_book
+		}
+		religion = gaian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
 
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = calaotian }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = calaotian }
+		}
+	}
 }
 character_event = {
 	id = ceticreform.13
@@ -1385,10 +1423,13 @@ character_event = {
 		NOT = { tier = BARON }
 		is_ruler = yes
 		OR = {
-			e_california = {
-				holder_scope = {
-					trait = weak_emperor
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
 				}
+				NOT = { religion_authority = 0.2 }
 			}
 			AND = {
 				e_california = {
@@ -1397,10 +1438,9 @@ character_event = {
 				e_new_california = {
 					has_holder = no
 				}
+				NOT = { religion_authority = 0.4 }
 			}
-
 		}
-		NOT = { religion_authority = 0.4 }
 	}
 	mean_time_to_happen = {
 		years= 20	
@@ -1527,6 +1567,7 @@ character_event = {
 		name = EVTOPT_ceticreformconsumerist
 		trigger = {
 			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
 		}
 		religion = consumerist
 		any_demesne_province = {
@@ -1559,8 +1600,6 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
-			modifier = { factor = 10 culture = californio }
-
 		}
 	}
 
@@ -1582,8 +1621,6 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
-			modifier = { factor = 10 culture = californio }
-
 		}
 	}
 	option = {
@@ -1627,6 +1664,7 @@ character_event = {
 		name = EVTOPT_ceticreformmonetarist
 		trigger = {
 			trait = way_book
+			has_global_flag = monetarist_heresy
 		}
 		religion = monetarist
 		any_demesne_province = {
@@ -1650,9 +1688,6 @@ character_event = {
 
 		}
 	}
-
-
-
 }
 
 character_event = {
@@ -1670,10 +1705,13 @@ character_event = {
 		NOT = { tier = BARON }
 		is_ruler = yes
 		OR = {
-			e_california = {
-				holder_scope = {
-					trait = weak_emperor
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
 				}
+				NOT = { religion_authority = 0.2 }
 			}
 			AND = {
 				e_california = {
@@ -1682,11 +1720,9 @@ character_event = {
 				e_new_california = {
 					has_holder = no
 				}
+				NOT = { religion_authority = 0.4 }
 			}
-
 		}
-		NOT = { religion_authority = 0.4 }
-
 	}
 	mean_time_to_happen = {
 		years= 20	
@@ -1706,6 +1742,8 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 10 culture = arixan }
+			modifier = { factor = 10 culture = neomexicano }
 		}
 
 	}
@@ -1722,6 +1760,8 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 10 culture = arixan }
+			modifier = { factor = 10 culture = neomexicano }
 		}
 	}
 	
@@ -1739,7 +1779,73 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 10 culture = arixan }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_cowl
+		}
+		religion = sacred_heart
+		add_trait = marian_santa_muerte
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
 
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = neomexicano }
+			modifier = { factor = 10 culture = sonorense }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_fist
+		}
+		religion = sacred_heart
+		add_trait = marian_el_santo
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = neomexicano }
+			modifier = { factor = 10 culture = sonorense }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_dove
+		}
+		religion = sacred_heart
+		add_trait = marian_guadalupe
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = neomexicano }
+			modifier = { factor = 10 culture = sonorense }
 		}
 	}
 	option = {
@@ -1763,15 +1869,18 @@ character_event = {
 			culture = hopi
 			culture = coloradan
 			culture = paiute
-
+			culture = mountainer
 		}
 		NOT = { tier = BARON }
 		is_ruler = yes
 		OR = {
-			e_california = {
-				holder_scope = {
-					trait = weak_emperor
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
 				}
+				NOT = { religion_authority = 0.2 }
 			}
 			AND = {
 				e_california = {
@@ -1780,8 +1889,8 @@ character_event = {
 				e_new_california = {
 					has_holder = no
 				}
+				NOT = { religion_authority = 0.4 }
 			}
-
 		}
 		NOT = { religion_authority = 0.4 }
 
@@ -1804,6 +1913,9 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 15 culture = utahn }
+			modifier = { factor = 10 culture = navajo }
+			modifier = { factor = 10 culture = hopi }
 		}
 
 	}
@@ -1820,6 +1932,7 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 10 culture = coloradan }
 		}
 	}
 	
@@ -1837,14 +1950,30 @@ character_event = {
 
 		ai_chance = {
 			factor = 5
-
+			modifier = { factor = 10 culture = coloradan }
+			modifier = { factor = 10 culture = mountainer }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformatomicist
+		religion = atomicist
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = atomicist
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = mountainer }
 		}
 	}
 	option = {
 		name = EVTOPT_ceticreformresist
 		ai_chance = {
 			factor = 5
-
 		}
 	}
 }
@@ -1859,18 +1988,14 @@ character_event = {
 		NOT = { tier = BARON }
 		is_ruler = yes
 		OR = {
-			OR = {
+			AND = {
 				e_california = {
 					holder_scope = {
 						trait = weak_emperor
 					}
 				}
-				e_new_california = {
-					holder_scope = {
-						trait = weak_emperor
-					}
-				}
-
+				NOT = { religion_authority = 0.2 }
+			}
 			AND = {
 				e_california = {
 					has_holder = no
@@ -1878,17 +2003,14 @@ character_event = {
 				e_new_california = {
 					has_holder = no
 				}
+				NOT = { religion_authority = 0.4 }
 			}
-
 		}
-		NOT = { religion_authority = 0.4 }
-
 	}
 	mean_time_to_happen = {
 		years= 20	
 	}
 	
-
 	option = {
 		name = EVTOPT_ceticreformshinto
 		religion = shinto
@@ -1914,8 +2036,507 @@ character_event = {
 		}
 	}
 }
+character_event = {
+	id = ceticreform.16
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
+	
+	trigger = {
+		OR = {
+			culture = anjalusi
+			culture = tehrangeleno
+		}
+		NOT = { tier = BARON }
+		is_ruler = yes
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years= 20	
+	}
+	
+	option = {
+		name = EVTOPT_ceticreformimamite
+		religion = imamite
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = imamite
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformalawiyya
+		religion = alawiyya
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = alawiyya
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformreform
+		religion = reform
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = reform
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 0 culture = anjalusi }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+			
+		}
+	}
+}
 
+character_event = {
+	id = ceticreform.17
+	religion = cetic
+	desc = EVTDESC_cetic_collapse
+	picture = GFX_evt_chinese_bureaucrat
 
+	trigger = {
+		NOR = {
+			culture_group = californian
+			culture = californio
+			culture = chino
+			culture = chino
+			culture = battleborn
+			culture = cascadian
+			culture = siskiyouan
+			culture = arixan
+			culture = neomexicano
+			culture = sonorense
+			culture = utahn
+			culture = navajo
+			culture = hopi
+			culture = coloradan
+			culture = paiute
+		}
+		NOT = { tier = BARON }
+		is_ruler = yes
+		OR = {
+			AND = {
+				e_california = {
+					holder_scope = {
+						trait = weak_emperor
+					}
+				}
+				NOT = { religion_authority = 0.2 }
+			}
+			AND = {
+				e_california = {
+					has_holder = no
+				}
+				e_new_california = {
+					has_holder = no
+				}
+				NOT = { religion_authority = 0.4 }
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years= 20	
+	}
+	option = {
+		name = EVTOPT_ceticreformaphite
+		trigger = {
+			trait = way_book
+		}
+		religion = aphite
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = aphite
+			}
+		}
 
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformneognostic
+		trigger = {
+			trait = way_book
+		}
+		religion = neognostic
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = neognostic
+			}
+		}
 
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_book
+		}
+		religion = gaian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
 
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformmonetarist
+		trigger = {
+			trait = way_book
+			has_global_flag = monetarist_heresy
+		}
+		religion = monetarist
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = monetarist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformimamite
+		trigger = {
+			trait = way_fist
+		}
+		religion = imamite
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = imamite
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = chiraqi }
+			modifier = { factor = 10 culture = prodnanici }
+			modifier = { factor = 10 culture = neomoor }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformalawiyya
+		trigger = {
+			trait = way_fist
+		}
+		religion = alawiyya
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = alawiyya
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = chiraqi }
+			modifier = { factor = 10 culture = prodnanici }
+			modifier = { factor = 10 culture = neomoor }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_fist
+		}
+		religion = sacred_heart
+		add_trait = marian_el_santo
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = chicano }
+			modifier = { factor = 10 culture_group = mexicano }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformtrailwalker
+		trigger = {
+			trait = way_fist
+		}
+		religion = trailwalker
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = trailwalker
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = west_anglo }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsede
+		trigger = {
+			trait = way_dove
+		}
+		religion = sedevacantist
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sedevacantist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = west_anglo }
+			modifier = { factor = 10 culture = chicagoan }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_dove
+		}
+		religion = sacred_heart
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+		add_trait = marian_guadalupe
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = chicano }
+			modifier = { factor = 10 culture_group = mexicano }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformcatholic
+		trigger = {
+			trait = way_dove
+		}
+		religion = catholic
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = catholic
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = chicano }
+			modifier = { factor = 10 culture_group = mexicano }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformmormon
+		trigger = {
+			trait = way_dove
+		}
+		religion = mormon
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = mormon
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformconsumerist
+		trigger = {
+			trait = way_cowl
+			has_global_flag = consumerist_revolt_ocurred
+		}
+		religion = consumerist
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = consumerist
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = chicagoan }
+			modifier = { factor = 10 culture = gothamite }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformhamiltonian
+		trigger = {
+			trait = way_cowl
+		}
+		religion = hamiltonian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = hamiltonian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = mid_atlantic }
+			modifier = { factor = 10 culture_group = south_anglo }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsagrado
+		trigger = {
+			trait = way_cowl
+		}
+		religion = sacred_heart
+		add_trait = marian_santa_muerte
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sacred_heart
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture_group = chicano }
+			modifier = { factor = 10 culture_group = mexicano }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformwoolleyite
+		trigger = {
+			trait = way_cowl
+		}
+		religion = woolleyite
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = woolleyite
+			}
+		}
+
+		ai_chance = {
+			factor = 2
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_branch
+		}
+		religion = gaian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformatomicist
+		religion = atomicist
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = atomicist
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
