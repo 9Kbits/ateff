@@ -421,15 +421,6 @@ character_event = {
 	}
 	option = {
 		name = "EVTOPT_zkwar"
-		create_title = {
-			tier = DUKE
-			landless = yes
-			temporary = yes
-			culture = khalfi
-			name = "Abbas Loyalists"
-			holder = ROOT
-		}
-		add_trait = wroth
 		if = {
 			limit = {
 				has_character_flag = joshuatreemarriage
@@ -459,7 +450,7 @@ character_event = {
 		hidden_tooltip = {
 			e_california = {
 				holder_scope = {
-					id = zakariyya.43
+					character_event = { id = zakariyya.43 }
 				}
 			}
 		}
