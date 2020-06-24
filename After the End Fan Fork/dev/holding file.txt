@@ -1,7 +1,7 @@
 # ************************* Atomicist Revival ************************
 
 province_event = {
-	id = event_atomicist.1
+	id = atom.1
 	desc = EVTDESC_atom_revival
 	picture = GFX_evt_bishop_pagan_group
 
@@ -46,7 +46,7 @@ province_event = {
 		trigger = {
 			holder_scope = { NOT = { religion = atomicist } }
 		}
-		holder_scope = { narrative_event = { id = event_atomicist.10 days = 3 } }
+		holder_scope = { narrative_event = { id = atom.10 days = 3 } }
 		ai_chance = { factor = 10 }
 	}
 	
@@ -67,7 +67,7 @@ province_event = {
 					limit = {
 						has_job_title = job_spiritual
 					}
-					narrative_event = { id = event_atomicist.10 days = 3 }
+					narrative_event = { id = atom.10 days = 3 }
 				}
 			}
 		}
@@ -89,7 +89,7 @@ province_event = {
 }
 
 province_event = {
-	id = event_atomicist.2
+	id = atom.2
 	hide_window = yes
 	trigger = {
 		has_province_modifier = atomic_revival
@@ -103,18 +103,18 @@ province_event = {
 	immediate = {
 		if = {
 			limit = { NOT = { religion = atomicist } }
-			ROOT = { province_event = { id = event_atomicist.3 } }
+			ROOT = { province_event = { id = atom.3 } }
 		}
 		if = {
 			limit = { religion = atomicist }
-			random_neighbor_province = { province_event = { id = event_atomicist.3 } }
+			random_neighbor_province = { province_event = { id = atom.3 } }
 		}
 	}
 	option = { }
 }
 
 province_event = {
-	id = event_atomicist.3
+	id = atom.3
 	desc = EVTDESC_atom_revival_spread
 	picture = GFX_evt_bishop_pagan_group
 
@@ -178,7 +178,7 @@ province_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.10
+	id = atom.10
 	title = EVTNAME_atom_revival_witness
 	desc = EVTDESC_atom_revival_witness
 	picture = GFX_evt_bishop_pagan_group
@@ -193,8 +193,8 @@ narrative_event = {
 		religion = atomicist
 		FROM = { religion = atomicist }
 		custom_tooltip = { text = TXT_atom_revival_convert }
-		hidden_tooltip = { narrative_event = { id = event_atomicist.12 days = 2 } }
-		hidden_tooltip = { liege = { character_event = { id = event_atomicist.11 days = 5 } } }
+		hidden_tooltip = { narrative_event = { id = atom.12 days = 2 } }
+		hidden_tooltip = { liege = { character_event = { id = atom.11 days = 5 } } }
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 0 trait = zealous }
@@ -207,7 +207,7 @@ narrative_event = {
 		name = EVTOPT_atom_revival_witness_resist
 		random = { chance = 50 FROM = { religion = atomicist } }
 		FROM = { add_province_modifier = { name = religious_tension duration = 720 } }
-		hidden_tooltip = { FROM = { holder_scope = { character_event = { id = event_atomicist.16 } } } }
+		hidden_tooltip = { FROM = { holder_scope = { character_event = { id = atom.16 } } } }
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 2 religion_authority = 0.7 }
@@ -225,9 +225,9 @@ narrative_event = {
 		random_list = {
 			50 = {
 				FROM = { remove_province_modifier = atomic_revival }
-				FROM = { holder_scope = { character_event = { id = event_atomicist.15 } } }
+				FROM = { holder_scope = { character_event = { id = atom.15 } } }
 			}
-			50 = { FROM = { holder_scope = { character_event = { id = event_atomicist.16 } } } }
+			50 = { FROM = { holder_scope = { character_event = { id = atom.16 } } } }
 		}
 		ai_chance = {
 			factor = 5
@@ -239,7 +239,7 @@ narrative_event = {
 }
 
 character_event = {
-	id = event_atomicist.11
+	id = atom.11
 	desc = EVTDESC_atom_revival_convertup
 	picture = GFX_evt_bishop_pagan_group
 	
@@ -256,9 +256,9 @@ character_event = {
 		}
 		religion = atomicist
 		custom_tooltip = { text = TXT_atom_revival_convert }
-		hidden_tooltip = { liege = { character_event = { id = event_atomicist.11 days = 5 } } }
-		hidden_tooltip = { narrative_event = { id = event_atomicist.12 days = 2 } }
-		hidden_tooltip = { FROM = { character_event = { id = event_atomicist.13 } } }
+		hidden_tooltip = { liege = { character_event = { id = atom.11 days = 5 } } }
+		hidden_tooltip = { narrative_event = { id = atom.12 days = 2 } }
+		hidden_tooltip = { FROM = { character_event = { id = atom.13 } } }
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 0 trait = zealous }
@@ -275,7 +275,7 @@ character_event = {
 			months = 120
 			multiplier = 1
 		}
-		hidden_tooltip = { FROM = { character_event = { id = event_atomicist.14 } } }
+		hidden_tooltip = { FROM = { character_event = { id = atom.14 } } }
 		ai_chance = {
 			factor = 20
 		}
@@ -287,7 +287,7 @@ character_event = {
 			diplomacy = 8
 		}
 		piety = 5
-		hidden_tooltip = { FROM = { character_event = { id = event_atomicist.14 } } }
+		hidden_tooltip = { FROM = { character_event = { id = atom.14 } } }
 		hidden_tooltip = { FROM = { character_event = { id = 39023 days = 4 } }	}
 		ai_chance = {
 			factor = 50
@@ -308,7 +308,7 @@ character_event = {
 				trait = lunatic
 			}
 		}
-		hidden_tooltip = { FROM = { character_event = { id = event_atomicist.14 } } }
+		hidden_tooltip = { FROM = { character_event = { id = atom.14 } } }
 		hidden_tooltip = { FROM = { character_event = { id = 39024 days = 4 } }	}
 		ai_chance = {
 			factor = 10
@@ -318,7 +318,7 @@ character_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.12
+	id = atom.12
 	title = EVTNAME_atom_revival_converted
 	desc = EVTDESC_atom_revival_converted
 	picture = GFX_evt_bishop_pagan_group
@@ -340,7 +340,7 @@ narrative_event = {
 
 
 character_event = {
-	id = event_atomicist.13
+	id = atom.13
 	desc = EVTDESC_atom_revival_liegeconverted
 	picture = GFX_evt_bishop_pagan_group
 	is_triggered_only = yes
@@ -349,7 +349,7 @@ character_event = {
 }
 
 character_event = {
-	id = event_atomicist.14
+	id = atom.14
 	desc = EVTDESC_atom_revival_liegerefused
 	picture = GFX_evt_bishop_pagan_group
 	is_triggered_only = yes
@@ -358,7 +358,7 @@ character_event = {
 }
 
 character_event = {
-	id = event_atomicist.15
+	id = atom.15
 	desc = EVTDESC_atom_revival_advisorsuccess
 	picture = GFX_evt_bishop_pagan_group
 	is_triggered_only = yes
@@ -370,7 +370,7 @@ character_event = {
 }
 
 character_event = {
-	id = event_atomicist.16
+	id = atom.16
 	desc = EVTDESC_atom_revival_advisorneutral
 	picture = GFX_evt_bishop_pagan_group
 	is_triggered_only = yes

@@ -34,7 +34,7 @@ decisions = {
 		effect = {
 			wealth = -250
 			piety = -100
-			narrative_event = { id = event_atomicist.17 }
+			narrative_event = { id = atom.17 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -59,7 +59,7 @@ decisions = {
 			NOT = { has_character_modifier = atomicist_didnt_choose_particle }
 		}
 		effect = {
-			character_event = { id = event_atomicist.18 }
+			character_event = { id = atom.18 }
 		}
 		revoke_allowed = {
 			always = no
@@ -107,7 +107,7 @@ decisions = {
 		}
 		effect = {
 			custom_tooltip = { text = TXT_radiant_path_1 }
-			character_event = { id = event_atomicist.50 }
+			character_event = { id = atom.50 }
 		}
 		revoke_allowed = {
 			always = no
@@ -148,8 +148,8 @@ decisions = {
 		effect = {
 			custom_tooltip = { text = TXT_radiant_path_2 }
 			hidden_tooltip = {
-				character_event = { id = event_atomicist.51 }
-				character_event = { id = event_atomicist.61 days = 30 } #fallback
+				character_event = { id = atom.51 }
+				character_event = { id = atom.61 days = 30 } #fallback
 			}
 		}
 		revoke_allowed = {
@@ -190,8 +190,8 @@ decisions = {
 			hidden_tooltip = {
 				set_character_flag = do_not_disturb
 				add_trait = travelling
-				character_event = { id = event_atomicist.62 }
-				character_event = { id = event_atomicist.70 days = 60 }
+				character_event = { id = atom.62 }
+				character_event = { id = atom.70 days = 60 }
 			}
 		}
 		revoke_allowed = {

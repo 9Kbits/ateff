@@ -34,31 +34,31 @@
 
 #200	First Strike Launched
 
-namespace = event_atomicist
+namespace = atom
 
 # ************************* Blessing of the Atom ************************
 
 character_event = {
-	id = event_atomicist.100
+	id = atom.100
 	hide_window = yes
 	is_triggered_only = yes
 	religion = atomicist
 	
 	immediate = {
 		if = { limit = { is_female = yes }
-			mother = { character_event = { id = event_atomicist.101 days = 5 } }
-			father = { character_event = { id = event_atomicist.102 days = 5 } }
+			mother = { character_event = { id = atom.101 days = 5 } }
+			father = { character_event = { id = atom.102 days = 5 } }
 		}
 		if = { limit = { is_female = no }
-			mother = { character_event = { id = event_atomicist.102 days = 5 } }
-			father = { character_event = { id = event_atomicist.101 days = 5 } }
+			mother = { character_event = { id = atom.102 days = 5 } }
+			father = { character_event = { id = atom.101 days = 5 } }
 		}
 	}
 	option = { }
 }
 
 character_event = {
-	id = event_atomicist.101
+	id = atom.101
 	desc = EVTDESC_atom_birth
 	picture = GFX_evt_birth
 
@@ -74,8 +74,8 @@ character_event = {
 			}
 		}
 		piety = 10
-		any_spouse = { character_event = { id = event_atomicist.103 days = 3 } }
-		FROM = { character_event = { id = event_atomicist.110 days = 5 } }
+		any_spouse = { character_event = { id = atom.103 days = 3 } }
+		FROM = { character_event = { id = atom.110 days = 5 } }
 		ai_chance = {
 			factor = 100
 			modifier = { factor = 5 trait = zealous }
@@ -94,8 +94,8 @@ character_event = {
 			}
 		}
 		piety = 10
-		any_spouse = { character_event = { id = event_atomicist.103 days = 3 } }
-		FROM = { character_event = { id = event_atomicist.110 days = 5 } }
+		any_spouse = { character_event = { id = atom.103 days = 3 } }
+		FROM = { character_event = { id = atom.110 days = 5 } }
 		ai_chance = {
 			factor = 25
 			modifier = { factor = 5 trait = zealous }
@@ -106,14 +106,14 @@ character_event = {
 	option = {
 		name = OPTDESC_atom_birth_deny
 		piety = -10
-		any_spouse = { character_event = { id = event_atomicist.104 days = 3 } }
+		any_spouse = { character_event = { id = atom.104 days = 3 } }
 		FROM = { add_trait = atom_deny }
 		ai_chance = { factor = 10 }
 	}
 }
 
 character_event = {
-	id = event_atomicist.102
+	id = atom.102
 	desc = EVTDESC_atom_birth_spousedecide
 	picture = GFX_evt_birth
 	is_triggered_only = yes
@@ -121,7 +121,7 @@ character_event = {
 }
 
 character_event = {
-	id = event_atomicist.103
+	id = atom.103
 	desc = EVTDESC_atom_birth_spousegrant
 	picture = GFX_evt_birth
 	is_triggered_only = yes
@@ -129,7 +129,7 @@ character_event = {
 }
 
 character_event = {
-	id = event_atomicist.104
+	id = atom.104
 	desc = EVTDESC_atom_birth_spousedeny
 	picture = GFX_evt_birth
 	is_triggered_only = yes
@@ -137,28 +137,28 @@ character_event = {
 }
 
 character_event = {
-	id = event_atomicist.110
+	id = atom.110
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
 		random_list = {
-			75 = { narrative_event = { id = event_atomicist.120 days = 5 } } # good ritual
-			25 = { narrative_event = { id = event_atomicist.121 days = 5 } } # bad ritual
+			75 = { narrative_event = { id = atom.120 days = 5 } } # good ritual
+			25 = { narrative_event = { id = atom.121 days = 5 } } # bad ritual
 		}
 	}
 	option = { }
 }
 
 narrative_event = {
-	id = event_atomicist.120
+	id = atom.120
 	title = EVTNAME_atom_birth_ritual
 	desc = EVTDESC_atom_birth_ritualgood
 	picture = GFX_evt_atom_blessing
 	is_triggered_only = yes
 	
 	immediate = {
-		mother = { narrative_event = { id = event_atomicist.122 } }
-		father = { narrative_event = { id = event_atomicist.122 } }
+		mother = { narrative_event = { id = atom.122 } }
+		father = { narrative_event = { id = atom.122 } }
 	}
 	
 	option = {
@@ -176,15 +176,15 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.121
+	id = atom.121
 	title = EVTNAME_atom_birth_ritual
 	desc = EVTDESC_atom_birth_ritualbad
 	picture = GFX_evt_atom_blessing
 	is_triggered_only = yes
 	
 	immediate = {
-		mother = { narrative_event = { id = event_atomicist.123 } }
-		father = { narrative_event = { id = event_atomicist.123 } }
+		mother = { narrative_event = { id = atom.123 } }
+		father = { narrative_event = { id = atom.123 } }
 	}
 	
 	option = {
@@ -207,7 +207,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.122
+	id = atom.122
 	title = EVTNAME_atom_birth_ritual
 	desc = EVTDESC_atom_birth_ritualgoodparent
 	picture = GFX_evt_atom_blessing
@@ -219,7 +219,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.123
+	id = atom.123
 	title = EVTNAME_atom_birth_ritual
 	desc = EVTDESC_atom_birth_ritualbadparent
 	picture = GFX_evt_atom_blessing
@@ -235,7 +235,7 @@ narrative_event = {
 # By Henrik "Groogy" Hansson, modified by Sam
 ####################################################
 character_event = {
-	id = event_atomicist.15000
+	id = atom.15000
 	
 	desc = "EVTDESCATOM15000"
 	picture = GFX_evt_emissary
@@ -248,7 +248,7 @@ character_event = {
 			duration = -1
 		}
 		
-		character_event = { id = event_atomicist.15001 days = 30 }
+		character_event = { id = atom.15001 days = 30 }
 	}
 	
 	option = {
@@ -257,7 +257,7 @@ character_event = {
 }
 
 character_event = {
-	id = event_atomicist.15001
+	id = atom.15001
 	
 	hide_window = yes
 	#desc = "EVTDESCATOM15001"
@@ -280,12 +280,12 @@ character_event = {
 			
 			set_character_flag = passing_atom_judgement
 			random_list = {
-				60 = { character_event = { id = event_atomicist.15003 } } # Character lives
-				10 = { character_event = { id = event_atomicist.15004 } } # Character dies
-				5 = { character_event = { id = event_atomicist.15005 } } # Character goes insane
-				5 = { character_event = { id = event_atomicist.15006 } } # Character goes zealous
-				5 = { character_event = { id = event_atomicist.15007 } } # Character goes atomicist
-				10 = { character_event = { id = event_atomicist.15002 } }  # Character is freed
+				60 = { character_event = { id = atom.15003 } } # Character lives
+				10 = { character_event = { id = atom.15004 } } # Character dies
+				5 = { character_event = { id = atom.15005 } } # Character goes insane
+				5 = { character_event = { id = atom.15006 } } # Character goes zealous
+				5 = { character_event = { id = atom.15007 } } # Character goes atomicist
+				10 = { character_event = { id = atom.15002 } }  # Character is freed
 			}
 		}
 		
@@ -301,11 +301,11 @@ character_event = {
 			
 			set_character_flag = passing_atom_judgement
 			random_list = {
-				60 = { character_event = { id = event_atomicist.15003 } } # Character lives
-				5 = { character_event = { id = event_atomicist.15004 } } # Character dies
-				5 = { character_event = { id = event_atomicist.15006 } } # Character goes zealous
-				5 = { character_event = { id = event_atomicist.15007 } } # Character goes atomicist
-				20 = { character_event = { id = event_atomicist.15002 } }  # Character is freed
+				60 = { character_event = { id = atom.15003 } } # Character lives
+				5 = { character_event = { id = atom.15004 } } # Character dies
+				5 = { character_event = { id = atom.15006 } } # Character goes zealous
+				5 = { character_event = { id = atom.15007 } } # Character goes atomicist
+				20 = { character_event = { id = atom.15002 } }  # Character is freed
 			}
 		}
 		
@@ -318,10 +318,10 @@ character_event = {
 			
 			set_character_flag = passing_atom_judgement
 			random_list = {
-				60 = { character_event = { id = event_atomicist.15003 } } # Character lives
-				5 = { character_event = { id = event_atomicist.15004 } } # Character dies
-				5 = { character_event = { id = event_atomicist.15005 } } # Character goes insane
-				20 = { character_event = { id = event_atomicist.15002 } }  # Character is freed
+				60 = { character_event = { id = atom.15003 } } # Character lives
+				5 = { character_event = { id = atom.15004 } } # Character dies
+				5 = { character_event = { id = atom.15005 } } # Character goes insane
+				20 = { character_event = { id = atom.15002 } }  # Character is freed
 			}
 		}
 		
@@ -333,9 +333,9 @@ character_event = {
 			
 			set_character_flag = passing_atom_judgement
 			random_list = {
-				60 = { character_event = { id = event_atomicist.15003 } } # Character lives
-				5 = { character_event = { id = event_atomicist.15004 } } # Character dies
-				20 = { character_event = { id = event_atomicist.15002 } }  # Character is freed
+				60 = { character_event = { id = atom.15003 } } # Character lives
+				5 = { character_event = { id = atom.15004 } } # Character dies
+				20 = { character_event = { id = atom.15002 } }  # Character is freed
 			}
 		}
 		
@@ -347,16 +347,16 @@ character_event = {
 			
 			set_character_flag = passing_atom_judgement
 			random_list = {
-				60 = { character_event = { id = event_atomicist.15003 } } # Character lives
-				40 = { character_event = { id = event_atomicist.15004 } } # Character dies
-				10 = { character_event = { id = event_atomicist.15002 } }  # Character is freed
+				60 = { character_event = { id = atom.15003 } } # Character lives
+				40 = { character_event = { id = atom.15004 } } # Character dies
+				10 = { character_event = { id = atom.15002 } }  # Character is freed
 			}
 		}
 	}
 }
 
 character_event = {	# End torture
-	id = event_atomicist.15002
+	id = atom.15002
 	
 	desc = "EVTDESCATOM15002"
 	picture = GFX_evt_emissary
@@ -377,7 +377,7 @@ character_event = {	# End torture
 }
 
 character_event = {	# Character lives
-	id = event_atomicist.15003
+	id = atom.15003
 	
 	#desc = "EVTDESCATOM15003"
 	#picture = GFX_evt_emissary
@@ -388,12 +388,12 @@ character_event = {	# Character lives
 	option = {
 		name = "EVTOPTAATOM15003"
 		clr_character_flag = passing_atom_judgement
-		character_event = { id = event_atomicist.15001 days = 30 }
+		character_event = { id = atom.15001 days = 30 }
 	}
 }
 
 character_event = {	# Character dies
-	id = event_atomicist.15004
+	id = atom.15004
 	
 	desc = "EVTDESCATOM15004"
 	picture = GFX_evt_emissary
@@ -417,7 +417,7 @@ character_event = {	# Character dies
 }
 
 character_event = {	# Character goes insane
-	id = event_atomicist.15005
+	id = atom.15005
 	
 	desc = "EVTDESCCM15005"
 	picture = GFX_evt_emissary
@@ -428,12 +428,12 @@ character_event = {	# Character goes insane
 		name = "EVTOPTACM15005"
 		clr_character_flag = passing_atom_judgement
 		add_trait = lunatic
-		character_event = { id = event_atomicist.15001 days = 30 }
+		character_event = { id = atom.15001 days = 30 }
 	}
 }
 
 character_event = {	# Character goes zealous
-	id = event_atomicist.15006
+	id = atom.15006
 	
 	desc = "EVTDESCCM15006"
 	picture = GFX_evt_emissary
@@ -444,12 +444,12 @@ character_event = {	# Character goes zealous
 		name = "EVTOPTACM15006"
 		clr_character_flag = passing_atom_judgement
 		add_trait = zealous
-		character_event = { id = event_atomicist.15001 days = 30 }
+		character_event = { id = atom.15001 days = 30 }
 	}
 }
 
 character_event = {	# Character goes atomicist
-	id = event_atomicist.15007
+	id = atom.15007
 	
 	desc = "EVTDESCATOM15007"
 	picture = GFX_evt_emissary
@@ -460,13 +460,13 @@ character_event = {	# Character goes atomicist
 		name = "EVTOPTAATOM15007"
 		clr_character_flag = passing_atom_judgement
 		religion = atomicist
-		character_event = { id = event_atomicist.15001 days = 30 }
+		character_event = { id = atom.15001 days = 30 }
 	}
 }
 
 # Survivor of radiation gets cancer
 character_event = {
-	id = event_atomicist.15010
+	id = atom.15010
 	
 	desc = "EVTDESCATOM15010"
 	picture = GFX_evt_bad_news
@@ -507,7 +507,7 @@ character_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.17
+	id = atom.17
 	title = EVTNAME_atomic_high_commission
 	desc = EVTDESC_atom_commissar
 	picture = GFX_evt_cathedral_zun_pagan
@@ -559,11 +559,11 @@ narrative_event = {
 }
 
 character_event = {
-	id = atomicist.18
+	id = atom.18
 	title = "EVTITLE_atomicist_18"
 	desc = "EVTDESC_atomicist_18"
 	picture = GFX_evt_atom_blessing
-	
+	religion = atomicist
 	is_triggered_only = yes
 	
 	option = {
@@ -649,7 +649,7 @@ character_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.50
+	id = atom.50
 	title = "EVTITLE_radiant_pathstart"
 	desc = "EVTDESC_radiant_pathstart"
 	picture = GFX_evt_cathedral_zun_pagan
@@ -709,7 +709,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.51
+	id = atom.51
 	title = "EVTITLE_radiant_pathstart"
 	desc = "EVTDESC_radiant_pathmiddle1"
 	picture = GFX_evt_cathedral_zun_pagan
@@ -729,7 +729,7 @@ narrative_event = {
 }
 
 character_event = {
-	id = event_atomicist.52
+	id = atom.52
 	desc = "EVTDESC_radiant_pathmiddle2"
 	picture = GFX_evt_cathedral_zun_pagan
 	religion = atomicist
@@ -746,7 +746,7 @@ character_event = {
 			lose_weight_large_effect = yes
 			weight_trait_check_effect = yes
 			ROOT = { change_variable = { which = enriched_path value = 2 } }
-			character_event = { id = event_atomicist.53 days = 2 }
+			character_event = { id = atom.53 days = 2 }
 		}
 		
 	}
@@ -757,7 +757,7 @@ character_event = {
 		custom_tooltip = { text = TXT_EVTOPTB_atomicist_52 }
 		hidden_tooltip = {
 			ROOT = { change_variable = { which = enriched_path value = 1 } }
-			character_event = { id = event_atomicist.53 days = 2 }
+			character_event = { id = atom.53 days = 2 }
 		}
 	}
 	
@@ -769,13 +769,13 @@ character_event = {
 		tooltip_info = intrigue
 		custom_tooltip = { text = TXT_EVTOPTC_atomicist_52 }
 		hidden_tooltip = {
-			character_event = { id = event_atomicist.53 days = 2 }
+			character_event = { id = atom.53 days = 2 }
 		}
 	}
 }
 
 character_event = {
-	id = event_atomicist.53
+	id = atom.53
 	desc = "EVTDESC_radiant_pathmiddle3"
 	picture = GFX_evt_battle
 	religion = atomicist
@@ -820,7 +820,7 @@ character_event = {
 						factor = 0
 						NOT = { combat_rating = 3 }
 					}
-					character_event = { id = event_atomicist.54 }
+					character_event = { id = atom.54 }
 				}
 				50 = {
 					modifier = {
@@ -853,7 +853,7 @@ character_event = {
 						combat_rating = 3
 						NOT = { combat_rating = 6 }
 					}
-					character_event = { id = event_atomicist.55 }
+					character_event = { id = atom.55 }
 				}
 			}
 		}
@@ -861,7 +861,7 @@ character_event = {
 }
 
 character_event = {
-	id = event_atomicist.54
+	id = atom.54
 	desc = "EVTDESC_radiant_pathmiddle4"
 	picture = GFX_evt_battle
 	religion = atomicist
@@ -877,13 +877,13 @@ character_event = {
 		custom_tooltip = { text = TXT_EVOPTA_atomicist_54 }
 		hidden_tooltip = {
 			ROOT = { change_variable = { which = enriched_path value = 2 } }
-			character_event = { id = event_atomicist.56 days = 3 }
+			character_event = { id = atom.56 days = 3 }
 		}
 	}
 }
 
 character_event = {
-	id = event_atomicist.55
+	id = atom.55
 	desc = "EVTDESC_radiant_pathmiddle5"
 	picture = GFX_evt_battle
 	religion = atomicist
@@ -898,13 +898,13 @@ character_event = {
 		custom_tooltip = { text = TXT_EVOPTA_atomicist_55 }
 		hidden_tooltip = {
 			ROOT = { subtract_variable = { which = enriched_path value = 1 } }
-			character_event = { id = event_atomicist.56 days = 3 }
+			character_event = { id = atom.56 days = 3 }
 		}
 	}
 }
 
 character_event = {
-	id = event_atomicist.56
+	id = atom.56
 	desc = "EVTDESC_radiant_pathmiddle6"
 	picture = GFX_evt_cathedral_zun_pagan
 	religion = atomicist
@@ -923,7 +923,7 @@ character_event = {
 		custom_tooltip = { text = TXT_EVTOPTA_atomicist_56 }
 		hidden_tooltip = {
 			ROOT = { change_variable = { which = enriched_path value = 2 } }
-			character_event = { id = event_atomicist.57 }
+			character_event = { id = atom.57 }
 		}
 	}
 	
@@ -935,13 +935,13 @@ character_event = {
 		custom_tooltip = { text = TXT_EVTOPTB_atomicist_56 }
 		hidden_tooltip = {
 			ROOT = { subtract_variable = { which = enriched_path value = 2 } }
-			character_event = { id = event_atomicist.57 }
+			character_event = { id = atom.57 }
 		}
 	}
 }
 
 character_event = {
-	id = event_atomicist.57
+	id = atom.57
 	hide_window = yes
 	religion = atomicist
 	is_triggered_only = yes
@@ -955,26 +955,26 @@ character_event = {
 			limit = {
 				ROOT = { check_variable = { which = enriched_path value = 7 } }
 			}
-			narrative_event = { id = event_atomicist.58 days = 1 }
+			narrative_event = { id = atom.58 days = 1 }
 		}
 		else_if = {
 			limit = {
 				ROOT = { check_variable = { which = enriched_path value = 4 } }
 				NOT = { ROOT = { check_variable = { which = enriched_path value = 7 } } }
 			}
-			narrative_event = { id = event_atomicist.59 days = 1 }
+			narrative_event = { id = atom.59 days = 1 }
 		}
 		else_if = {
 			limit = {
 				NOT = { ROOT = { check_variable = { which = enriched_path value = 4 } } }
 			}
-			narrative_event = { id = event_atomicist.60 days = 1 }
+			narrative_event = { id = atom.60 days = 1 }
 		}
 	}
 }
 
 narrative_event = {
-	id = event_atomicist.58
+	id = atom.58
 	title = "EVTITLE_radiant_pathmiddle7"
 	desc = "EVTDESC_radiant_pathmiddle7"
 	picture = GFX_evt_cathedral_zun_pagan
@@ -1000,7 +1000,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.59
+	id = atom.59
 	title = "EVTITLE_radiant_pathmiddle8"
 	desc = "EVTDESC_radiant_pathmiddle8"
 	picture = GFX_evt_cathedral_zun_pagan
@@ -1025,7 +1025,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.60
+	id = atom.60
 	title = "EVTITLE_radiant_pathmiddle9"
 	desc = "EVTDESC_radiant_pathmiddle9"
 	picture = GFX_evt_bad_news
@@ -1055,7 +1055,7 @@ narrative_event = {
 }
 
 character_event = {
-	id = event_atomicist.61
+	id = atom.61
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -1066,7 +1066,7 @@ character_event = {
 }
 	
 narrative_event = {
-	id = event_atomicist.62
+	id = atom.62
 	title = "EVTITLE_radiant_pathend1"
 	desc = "EVTDESC_radiant_pathend1"
 	picture = GFX_evt_cathedral_zun_pagan
@@ -1101,12 +1101,12 @@ narrative_event = {
 	}
 	
 	after = {
-		character_event = { id = event_atomicist.63 days = 7 }
+		character_event = { id = atom.63 days = 7 }
 	}
 }
 
 character_event = {
-	id = event_atomicist.63
+	id = atom.63
 	desc = "EVTDESC_radiant_pathend2"
 	picture = GFX_evt_woman_praying_hf
 	religion = atomicist
@@ -1158,12 +1158,12 @@ character_event = {
 	}
 	
 	after = {
-		character_event = { id = event_atomicist.64 days = 7 }
+		character_event = { id = atom.64 days = 7 }
 	}
 }
 
 character_event = {
-	id = event_atomicist.64
+	id = atom.64
 	desc = "EVTDESC_radiant_pathend3"
 	picture = GFX_evt_woman_praying_hf
 	religion = atomicist
@@ -1203,12 +1203,12 @@ character_event = {
 	}
 	
 	after = {
-		character_event = { id = event_atomicist.65 days = 7 }
+		character_event = { id = atom.65 days = 7 }
 	}	
 }
 
 character_event = {
-	id = event_atomicist.65
+	id = atom.65
 	desc = "EVTDESC_radiant_pathend3"
 	picture = GFX_evt_woman_praying_hf
 	religion = atomicist
@@ -1250,13 +1250,13 @@ character_event = {
 	}
 	
 	after = {
-		character_event = { id = event_atomicist.66 days = 7 }
+		character_event = { id = atom.66 days = 7 }
 	}
 }
 
 
 character_event = {
-	id = event_atomicist.66
+	id = atom.66
 	desc = "EVTDESC_radiant_pathend4"
 	picture = GFX_evt_woman_praying_hf
 	religion = atomicist
@@ -1306,12 +1306,12 @@ character_event = {
 	}
 	
 	after = {
-		character_event = { id = event_atomicist.67 }
+		character_event = { id = atom.67 }
 	}
 }
 
 character_event = {
-	id = event_atomicist.67
+	id = atom.67
 	hide_window = yes
 	religion = atomicist
 	is_triggered_only = yes
@@ -1326,26 +1326,26 @@ character_event = {
 			limit = {
 				ROOT = { check_variable = { which = radiant_path value = 7 } }
 			}
-			narrative_event = { id = event_atomicist.68 days = 7 }
+			narrative_event = { id = atom.68 days = 7 }
 		}
 		else_if = {
 			limit = {
 				ROOT = { check_variable = { which = radiant_path value = 4 } }
 				NOT = { ROOT = { check_variable = { which = radiant_path value = 7 } } }
 			}
-			narrative_event = { id = event_atomicist.68 days = 7 }
+			narrative_event = { id = atom.68 days = 7 }
 		}
 		else_if = {
 			limit = {
 				NOT = { ROOT = { check_variable = { which = radiant_path value = 4 } } }
 			}
-			narrative_event = { id = event_atomicist.69 days = 7 }
+			narrative_event = { id = atom.69 days = 7 }
 		}
 	}
 }
 
 narrative_event = {
-	id = event_atomicist.68
+	id = atom.68
 	title = "EVTTITLE_radiant_pathend5"
 	desc = "EVTDESC_radiant_pathend5"
 	picture = GFX_evt_cathedral_mushroom_cloud
@@ -1399,7 +1399,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = event_atomicist.69
+	id = atom.69
 	title = "EVTTITLE_radiant_pathend6"
 	desc = "EVTDESC_radiant_pathend6"
 	picture = GFX_evt_bad_news
@@ -1431,7 +1431,7 @@ narrative_event = {
 }
 
 character_event = {
-	id = event_atomicist.70
+	id = atom.70
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -1448,7 +1448,7 @@ character_event = {
 # ROOT is the religious head
 # FROM is the attacked kingdom title
 narrative_event = {
-	id = event_atomicist.200
+	id = atom.200
 	title = EVTNAME200
 	picture = GFX_evt_battle
 	border = GFX_event_narrative_frame_war
