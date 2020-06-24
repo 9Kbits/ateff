@@ -932,12 +932,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		is_save_game = no
 		has_character_flag = alvarado_desecendant
-	}
-	
-	immediate = {
-		clr_character_flag = alvarado_desecendant
 	}
 	
 	option = {
@@ -952,6 +947,10 @@ narrative_event = {
 		}
 		add_trait = hedonist
 		add_trait = lustful
+	}
+	
+	after = {
+		clr_character_flag = alvarado_desecendant
 	}
 }
 

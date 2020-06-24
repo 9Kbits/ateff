@@ -4519,9 +4519,6 @@ patria_subjugation = {
 	can_use_gui = {
 		has_dlc = "Rajas of India" #sorry
 		trait = patria_bolivar
-		ROOT = {
-			piety = 500
-		}
 	}
 	
 	on_add = {
@@ -4540,6 +4537,7 @@ patria_subjugation = {
 		always = no
 		ROOT = {
 			religion = patria_grande
+			piety = 500
 			NOT = { same_realm = FROM }
 			NOT = { is_liege_or_above = FROM }
 			is_tribal = no #uses tribal subjugation instead
