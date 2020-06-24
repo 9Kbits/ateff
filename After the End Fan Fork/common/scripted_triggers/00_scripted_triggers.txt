@@ -2474,8 +2474,8 @@ true_religion_transcendentalist_trigger = {
 true_religion_imamite_trigger = {
 	true_religion = imamite
 }
-true_religion_qingzheng_trigger = {
-	true_religion = qingzheng
+true_religion_qingzhen_trigger = {
+	true_religion = qingzhen
 }
 true_religion_alawiyya_trigger = {
 	true_religion = alawiyya
@@ -3769,8 +3769,8 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_imamite }
 		}
 		AND = {
-			society_member_of = secret_religious_society_qingzheng
-			PREV = { interested_in_society = secret_religious_society_qingzheng }
+			society_member_of = secret_religious_society_qingzhen
+			PREV = { interested_in_society = secret_religious_society_qingzhen }
 		}
 		AND = {
 			society_member_of = secret_religious_society_alawiyya
@@ -4270,9 +4270,9 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = { 
-			has_character_flag = character_was_qingzheng
+			has_character_flag = character_was_qingzhen
 			any_character = {
-				religion = qingzheng
+				religion = qingzhen
 			}
 		}
 		AND = { 
@@ -5045,8 +5045,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = qingzheng
-				ROOT = { religion = qingzheng }
+				has_artifact_flag = qingzhen
+				ROOT = { religion = qingzhen }
 			}
 		}
 		NAND = {
@@ -6538,7 +6538,7 @@ has_unsafe_religion = {
 				religion = revivalist
 				religion = transcendentalist
 				religion = imamite
-				religion = qingzheng
+				religion = qingzhen
 				religion = alawiyya
 				religion = orientalist
 				religion = misrist
@@ -9309,7 +9309,7 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_revivalist
 		has_character_flag = character_was_transcendentalist
 		has_character_flag = character_was_imamite
-		has_character_flag = character_was_qingzheng
+		has_character_flag = character_was_qingzhen
 		has_character_flag = character_was_alawiyya
 		has_character_flag = character_was_orientalist
 		has_character_flag = character_was_misrist

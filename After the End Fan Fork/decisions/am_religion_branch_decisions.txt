@@ -322,30 +322,30 @@ decisions = {
 			always = no
 		}
 	}
-	change_qingzheng_branch = {
+	change_qingzhen_branch = {
 		ai = no
 		
 		potential = {
-			religion = qingzheng
+			religion = qingzhen
 			is_playable = yes
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
-			NOT = { has_character_flag = changedqingzhengbranch }
+			NOT = { has_character_flag = changedqingzhenbranch }
 		}
 		
 		allow = {
-			religion = qingzheng
+			religion = qingzhen
 			is_playable = yes
-			NOT = { has_character_flag = changedqingzhengbranch }
+			NOT = { has_character_flag = changedqingzhenbranch }
 		}
 		
 		effect = {
 			hidden_tooltip = {
 				character_event = { id = islamate.87 }		
 			}
-			custom_tooltip = { text = TXT_change_qingzheng_branch }
-			set_character_flag = changedqingzhengbranch
+			custom_tooltip = { text = TXT_change_qingzhen_branch }
+			set_character_flag = changedqingzhenbranch
 		}
 		
 		revoke_allowed = {

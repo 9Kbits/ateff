@@ -10763,13 +10763,13 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
-					religion = qingzheng
+					religion = qingzhen
 				}
-				has_character_flag = character_was_qingzheng
+				has_character_flag = character_was_qingzhen
 			}
 		}
-		set_secret_religion = qingzheng
-		clr_character_flag = character_was_qingzheng
+		set_secret_religion = qingzhen
+		clr_character_flag = character_was_qingzhen
 		break = yes
 	}
 	if = {
@@ -11204,8 +11204,8 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_imamite
 	}
 	if = {
-		limit = { religion = qingzheng }
-		set_character_flag = character_was_qingzheng
+		limit = { religion = qingzhen }
+		set_character_flag = character_was_qingzhen
 	}
 	if = {
 		limit = { religion = alawiyya }
@@ -11316,7 +11316,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_revivalist
 	clr_character_flag = character_was_transcendentalist
 	clr_character_flag = character_was_imamite
-	clr_character_flag = character_was_qingzheng
+	clr_character_flag = character_was_qingzhen
 	clr_character_flag = character_was_alawiyya
 	clr_character_flag = character_was_orientalist
 	clr_character_flag = character_was_misrist
@@ -11861,9 +11861,9 @@ event_target_old_religion_from_flag_effect = {
 		}
 	}
 	if = {
-		limit = { has_character_flag = character_was_qingzheng }
+		limit = { has_character_flag = character_was_qingzhen }
 		random_character = {
-			limit = { religion = qingzheng }
+			limit = { religion = qingzhen }
 			save_event_target_as = old_religion
 		}
 	}
@@ -14223,14 +14223,14 @@ flip_secret_religious_community_provinces = {
 				}
 			}
 		}
-		secret_religious_society_qingzheng = {
+		secret_religious_society_qingzhen = {
 			ROOT = {
 				any_demesne_province = {
 					limit = {
-						has_province_modifier = secret_qingzheng_community
+						has_province_modifier = secret_qingzhen_community
 					}
-					religion = qingzheng
-					remove_province_modifier = secret_qingzheng_community
+					religion = qingzhen
+					remove_province_modifier = secret_qingzhen_community
 				}
 			}
 		}
@@ -18968,14 +18968,14 @@ root_secret_religion_provinces_convert_effect = {
 					}
 				}
 			}
-			secret_religious_society_qingzheng = { 
+			secret_religious_society_qingzhen = { 
 				PREV = {
 					any_demesne_province = {
 						limit = {
-							has_province_modifier = secret_qingzheng_community
+							has_province_modifier = secret_qingzhen_community
 						}
-						religion = qingzheng
-						remove_province_modifier = secret_qingzheng_community
+						religion = qingzhen
+						remove_province_modifier = secret_qingzhen_community
 					}
 				}
 			}
