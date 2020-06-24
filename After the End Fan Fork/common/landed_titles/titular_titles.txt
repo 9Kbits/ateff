@@ -4062,6 +4062,31 @@ e_valluno = {
 	creation_requires_capital = no	
 }
 
+e_catawba = {
+	color={ 60 60 180 }
+	color2={ 220 220 0 }
+	capital = 1895 # Cali
+	
+	culture = catawba
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = catawba
+		OR = {
+			realm_size = 150
+			e_catawba = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
 
 ### special empires
 
