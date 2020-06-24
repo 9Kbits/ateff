@@ -2055,8 +2055,10 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTB_islamate42 #cancel the entire event chain
-		remove_trait = flowered
 		add_trait = chaste
+		hidden_tooltip = {
+			remove_trait = flowered
+		}
 	}
 }
 narrative_event = {
@@ -2149,7 +2151,6 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTA_islamate46
-		remove_trait = flowered
 		any_realm_character = {
 			limit = {
 				has_character_flag = jazmin
@@ -2157,6 +2158,7 @@ narrative_event = {
 			add_spouse = ROOT
 		}
 		hidden_tooltip = {
+			remove_trait = flowered
 			narrative_event = { id = islamate.47 days = 30 }
 		}
 	}	
@@ -2178,12 +2180,14 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTA_islamate47
-		remove_trait = flowered
 		any_realm_character = {
 			limit = {
 				has_character_flag = jazmin
 			}
 			add_lover = ROOT
+		}
+		hidden_tooltip = {
+			remove_trait = flowered
 		}
 	}	
 }
