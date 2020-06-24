@@ -816,6 +816,7 @@ RETTYPE_CUL_PORTLAND =
 		OR = {
 			culture = cascadian
 			culture = siskiyouan
+			culture = inlander
 		}
 	}
 	
@@ -891,7 +892,10 @@ RETTYPE_CUL_BRAZILIAN =
 	
 	potential = {
 		is_nomadic = no
-		culture = brazilian
+		OR = {
+			culture = brazilian
+			culture = verdiano
+		}
 	}
 	
 	modifier = {

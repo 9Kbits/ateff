@@ -270,7 +270,7 @@ character_event = {
 			is_ill = no
 			NOT = { trait = paranoid }
 			NOT = { trait = zealous }
-			NOT = { is_incapable = yes }
+			NOT = { trait = incapable }
 			prisoner = no
 		}
 	}
@@ -278,33 +278,33 @@ character_event = {
 		text = EVTDESC6020_PARA
 		trigger = {
 			trait = paranoid
-			NOT = { is_incapable = yes }
+			NOT = { trait = incapable }
 		}
 	}
 	desc = {
 		text = EVTDESC6020_FEVER
 		trigger = {
 			is_ill = yes
-			NOT = { is_incapable = yes }
+			NOT = { trait = incapable }
 		}
 	}
 	desc = {
 		text = EVTDESC6020_ZEAL
 		trigger = {
 			trait = zealous
-			NOT = { is_incapable = yes }
+			NOT = { trait = incapable }
 		}
 	}
 	desc = {
 		text = EVTDESC6020_PRISON
 		trigger = {
 			prisoner = yes
-			NOT = { is_incapable = yes }
+			NOT = { trait = incapable }
 		}
 	}
 	desc = {
 		text = EVTDESC6020_COMA
-		trigger = { is_incapable = yes }
+		trigger = { trait = incapable }
 	}
 	
 	min_age = 10
@@ -317,7 +317,7 @@ character_event = {
 			#Senile/comatose due to old age do not gain lunatic, immortals get a pass though
 			NOT = { age = 65 }
 			immortal = yes
-			NOT = { is_incapable = yes }
+			NOT = { trait = incapable }
 		}
 	}
 	
@@ -365,12 +365,12 @@ character_event = {
 		}
 		modifier = {
 			factor = 40
-			is_incapable = yes # Coma due to brain damage. Wakes up a lunatic.
+			trait = incapable # Coma due to brain damage. Wakes up a lunatic.
 		}
 		modifier = {
 			factor = 40
 			AND = {
-				is_incapable = yes
+				trait = incapable
 				immortal = yes # Incapable immortals more likely to wake up nuts
 			}
 		}
@@ -415,7 +415,7 @@ character_event = {
 				is_ill = no
 				NOT = { trait = paranoid }
 				NOT = { trait = zealous }
-				NOT = { is_incapable = yes }
+				NOT = { trait = incapable }
 				prisoner = no
 			}
 		}
@@ -423,33 +423,33 @@ character_event = {
 			text = EVTOPTA6020_PARA
 			trigger = {
 				trait = paranoid
-				NOT = { is_incapable = yes }
+				NOT = { trait = incapable }
 			}
 		}
 		name = {
 			text = EVTOPTA6020_FEVER
 			trigger = {
 				is_ill = yes
-				NOT = { is_incapable = yes }
+				NOT = { trait = incapable }
 			}
 		}
 		name = {
 			text = EVTOPTA6020_ZEAL
 			trigger = {
 				trait = zealous
-				NOT = { is_incapable = yes }
+				NOT = { trait = incapable }
 			}
 		}
 		name = {
 			text = EVTOPTA6020_PRISON
 			trigger = {
 				prisoner = yes
-				NOT = { is_incapable = yes }
+				NOT = { trait = incapable }
 			}
 		}
 		name = {
 			text = EVTOPTA6020_COMA
-			trigger = { is_incapable = yes }
+			trigger = { trait = incapable }
 		}
 		
 		add_trait = lunatic
@@ -583,10 +583,10 @@ character_event = {
 	desc = {
 		text = EVTDESC6031_ALL
 		trigger = {
+			NOT = { religion_group = muslim }
 			NOT = { religion_group = christian }
 			NOT = { religion_group = cult_of_saints }
 			NOT = { religion_group = latter_day_saints }
-			NOT = { religion_group = muslim }
 		}
 	}
 	
@@ -625,11 +625,9 @@ character_event = {
 	option = {
 		name = EVTOPTA6031
 		trigger = {
-			OR = {
-				religion_group = christian
-				religion_group = cult_of_saints
-				religion_group = latter_day_saints
-			}
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = latter_day_saints	
 		}
 		remove_trait = possessed
 	}
@@ -640,7 +638,7 @@ character_event = {
 			NOR = {
 				religion_group = christian
 				religion_group = cult_of_saints
-				religion_group = latter_day_saints
+				religion_group = latter_day_saints	
 			}
 		}
 		remove_trait = possessed
@@ -1005,7 +1003,6 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	is_sick = yes
-	lacks_dlc = "Reapers"
 	
 	trigger = {
 		base_health = 3
@@ -1052,7 +1049,6 @@ character_event = {
 	
 	max_age = 7
 	is_sick = yes
-	lacks_dlc = "Reapers"
 	
 	trigger = {
 		trait = sickly
@@ -1543,7 +1539,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 5.0
-			is_incapable = yes
+			trait = incapable
 		}
 	}
 	
@@ -1620,7 +1616,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 5.0
-			is_incapable = yes
+			trait = incapable
 		}
 	}
 	
@@ -1697,7 +1693,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 5.0
-			is_incapable = yes
+			trait = incapable
 		}
 	}
 	
@@ -1773,7 +1769,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 5.0
-			is_incapable = yes
+			trait = incapable
 		}
 	}
 	
@@ -1850,7 +1846,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 5.0
-			is_incapable = yes
+			trait = incapable
 		}
 	}
 	
@@ -1927,7 +1923,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 5.0
-			is_incapable = yes
+			trait = incapable
 		}
 	}
 	
@@ -2057,12 +2053,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_jesus
 	}
 	
@@ -2090,12 +2086,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_jesus
 	}
 	
@@ -2123,12 +2119,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		OR = {
 			has_character_modifier = voice_of_jesus
 			has_character_modifier = voice_of_satan
@@ -2162,13 +2158,13 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
-		trait = lustful
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = lustful
 		has_character_modifier = voice_of_jesus
 	}
 
@@ -2195,12 +2191,12 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_jesus
 		NOT = {
 			OR = {
@@ -2233,13 +2229,13 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
-		trait = gluttonous
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = gluttonous
 		has_character_modifier = voice_of_jesus
 	}
 
@@ -2308,13 +2304,13 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
-		trait = greedy
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = greedy
 		has_character_modifier = voice_of_jesus
 	}
 
@@ -2341,12 +2337,12 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_jesus
 		NOT = {
 			OR = {
@@ -2379,13 +2375,13 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
-		trait = slothful
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = slothful
 		has_character_modifier = voice_of_jesus
 	}
 
@@ -2411,12 +2407,12 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_jesus
 		NOT = {
 			OR = {
@@ -2449,13 +2445,13 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
-		trait = envious
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = envious
 		has_character_modifier = voice_of_jesus
 	}
 
@@ -2481,12 +2477,12 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_jesus
 		NOT = {
 			OR = {
@@ -2519,13 +2515,13 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
-		trait = wroth
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = wroth
 		has_character_modifier = voice_of_jesus
 	}
 
@@ -2552,12 +2548,12 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_jesus
 		NOT = {
 			OR = {
@@ -2590,13 +2586,13 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
-		trait = proud
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = proud
 		has_character_modifier = voice_of_jesus
 	}
 
@@ -2623,12 +2619,12 @@ character_event = {
 	prisoner = no
 
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_jesus
 		NOT = {
 			OR = {
@@ -2661,11 +2657,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
+			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = holy_comet
 	}
 	
@@ -2692,12 +2689,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = holy_comet
 		NOT = {
 			OR = {
@@ -2733,12 +2730,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = military_jesus
 	}
 	
@@ -2765,12 +2762,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = holy_comet
 		NOT = {
 			OR = {
@@ -2782,10 +2779,6 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 120
-		modifier = {
-			factor = 0.5
-			religion = charismatic
-		}
 	}
 
 	option = {
@@ -2810,12 +2803,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = speaking_in_tounges
 	}
 	
@@ -2842,12 +2835,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		NOT = { has_character_modifier = voice_of_jesus }
 		NOT = { has_character_modifier = voice_of_satan }
 		NOT = { has_character_modifier = holy_comet }
@@ -2932,12 +2925,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_satan
 		any_courtier = {
 			prisoner = yes
@@ -2976,12 +2969,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_satan
 		NOT = {
 			trait = homosexual
@@ -3011,12 +3004,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_satan
 		NOT = {
 			has_character_modifier = intrigue_advice
@@ -3049,13 +3042,13 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
-		trait = chaste
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = chaste
 		has_character_modifier = voice_of_satan
 	}
 	
@@ -3082,12 +3075,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_satan
 		NOT = {
 			OR = {
@@ -3120,13 +3113,13 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
-		trait = patient
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = patient
 		has_character_modifier = voice_of_satan
 	}
 	
@@ -3153,12 +3146,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_satan
 		NOT = {
 			OR = {
@@ -3191,13 +3184,13 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
-		trait = humble
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = humble
 		has_character_modifier = voice_of_satan
 	}
 	
@@ -3224,12 +3217,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_satan
 		NOT = {
 			OR = {
@@ -3262,13 +3255,13 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
-		trait = temperate
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = temperate
 		has_character_modifier = voice_of_satan
 	}
 	
@@ -3295,12 +3288,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_satan
 		NOT = {
 			OR = {
@@ -3317,7 +3310,7 @@ character_event = {
 	option = {
 		name = EVTOPTA6234
 		add_trait = gluttonous
-		gain_weight_medium_effect = yes
+		gain_weight_small_effect = yes
 		weight_trait_check_effect = yes
 	}
 }
@@ -3335,13 +3328,13 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
-		trait = charitable
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = charitable
 		has_character_modifier = voice_of_satan
 	}
 	
@@ -3368,12 +3361,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_satan
 		NOT = {
 			OR = {
@@ -3406,13 +3399,13 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
-		trait = kind
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = kind
 		has_character_modifier = voice_of_satan
 	}
 	
@@ -3439,12 +3432,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_satan
 		NOT = {
 			OR = {
@@ -3477,13 +3470,13 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
-		trait = diligent
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
+		trait = diligent
 		has_character_modifier = voice_of_satan
 	}
 	
@@ -3510,12 +3503,12 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
-		trait = possessed
 		OR = {
 			religion_group = christian
 			religion_group = cult_of_saints
 			religion_group = latter_day_saints
 		}
+		trait = possessed
 		has_character_modifier = voice_of_satan
 		NOT = {
 			OR = {
@@ -3910,12 +3903,12 @@ character_event = {
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
-			religion = celtic_pagan
-			religion = celtic_pagan_reformed
-			religion = revelationist
-			religion = revelationist_reformed
-			religion = thelemic
-			religion = thelemic_reformed
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
 		}
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
@@ -3972,12 +3965,12 @@ character_event = {
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
-			religion = celtic_pagan
-			religion = celtic_pagan_reformed
-			religion = revelationist
-			religion = revelationist_reformed
-			religion = thelemic
-			religion = thelemic_reformed
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
 		}
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
@@ -4034,12 +4027,12 @@ character_event = {
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
-			religion = celtic_pagan
-			religion = celtic_pagan_reformed
-			religion = revelationist
-			religion = revelationist_reformed
-			religion = thelemic
-			religion = thelemic_reformed
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
 		}
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
@@ -4096,12 +4089,12 @@ character_event = {
 		OR = {
 			religion = norse_pagan
 			religion = norse_pagan_reformed
-			religion = celtic_pagan
-			religion = celtic_pagan_reformed
-			religion = revelationist
-			religion = revelationist_reformed
-			religion = thelemic
-			religion = thelemic_reformed
+			religion = slavic_pagan
+			religion = slavic_pagan_reformed
+			religion = baltic_pagan
+			religion = baltic_pagan_reformed
+			religion = finnish_pagan
+			religion = finnish_pagan_reformed
 		}
 		NOT = { has_character_flag = the_old_ones_are_waking }
 		NOT = { is_inaccessible_trigger = yes }
@@ -4453,12 +4446,12 @@ character_event = {
 
 #Mittens ping
 character_event = {
-	id = 6364
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = { 
-		FROM = {
-			any_courtier = {
+    id = 6364
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = { 
+    	FROM = {
+    		any_courtier = {
 				limit = {
 					OR = {
 						has_job_title = job_chancellor
@@ -4475,8 +4468,8 @@ character_event = {
 				limit = { trait = immortal }
 				character_event = { id = 6365 days = 10 }
 			}
-		}
-	}
+    	}
+    }
 }
 
 # End

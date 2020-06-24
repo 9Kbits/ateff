@@ -5057,6 +5057,7 @@ castle = {
 			OR = {
 				culture = siskiyouan
 				culture = cascadian
+				culture = inlander
 				has_building = ca_culture_pnw_1
 			}
 		}
@@ -5065,6 +5066,7 @@ castle = {
 				OR = {
 					culture = siskiyouan
 					culture = cascadian
+					culture = inlander
 				}
 			}
 		} 
@@ -5074,6 +5076,7 @@ castle = {
 				OR = {
 					culture = siskiyouan
 					culture = cascadian
+					culture = inlander
 				}
 			}
 		}
@@ -5095,6 +5098,7 @@ castle = {
 			OR = {
 				culture = siskiyouan
 				culture = cascadian
+				culture = inlander
 				has_building = ca_culture_pnw_1
 				has_building = ca_culture_pnw_2
 			}
@@ -5104,6 +5108,7 @@ castle = {
 				OR = {
 					culture = siskiyouan
 					culture = cascadian
+					culture = inlander
 				}
 			}
 		} 
@@ -5113,6 +5118,7 @@ castle = {
 				OR = {
 					culture = siskiyouan
 					culture = cascadian
+					culture = inlander
 				}
 			}
 		}
@@ -5134,6 +5140,7 @@ castle = {
 			OR = {
 				culture = siskiyouan
 				culture = cascadian
+				culture = inlander
 				has_building = ca_culture_pnw_1
 				has_building = ca_culture_pnw_2
 				has_building = ca_culture_pnw_3
@@ -5144,6 +5151,7 @@ castle = {
 				OR = {
 					culture = siskiyouan
 					culture = cascadian
+					culture = inlander
 				}
 			}
 		} 
@@ -5153,6 +5161,7 @@ castle = {
 				OR = {
 					culture = siskiyouan
 					culture = cascadian
+					culture = inlander
 				}
 			}
 		}
@@ -5174,6 +5183,7 @@ castle = {
 			OR = {
 				culture = siskiyouan
 				culture = cascadian
+				culture = inlander
 				has_building = ca_culture_pnw_1
 				has_building = ca_culture_pnw_2
 				has_building = ca_culture_pnw_3
@@ -5185,6 +5195,7 @@ castle = {
 				OR = {
 					culture = siskiyouan
 					culture = cascadian
+					culture = inlander
 				}
 			}
 		} 
@@ -5194,6 +5205,7 @@ castle = {
 				OR = {
 					culture = siskiyouan
 					culture = cascadian
+					culture = inlander
 				}
 			}
 		}
@@ -5764,18 +5776,25 @@ castle = {
 		potential = {
 			OR = {
 				culture = brazilian
+				culture = verdiano
 				has_building = ca_culture_brazilian_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = brazilian
+				OR = {
+					culture = brazilian
+					culture = verdiano
+				}
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 0
 			ROOT = {
-				culture = brazilian
+				OR = {
+					culture = brazilian
+					culture = verdiano
+				}
 			}
 		}
 		prerequisites = { ca_wall_2 }
@@ -5794,19 +5813,26 @@ castle = {
 		potential = {
 			OR = {
 				culture = brazilian
+				culture = verdiano
 				has_building = ca_culture_brazilian_1
 				has_building = ca_culture_brazilian_2
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = brazilian
+				OR = {
+					culture = brazilian
+					culture = verdiano
+				}
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
-				culture = brazilian
+				OR = {
+					culture = brazilian
+					culture = verdiano
+				}
 			}
 		}
 		upgrades_from = ca_culture_brazilian_1
@@ -5825,6 +5851,7 @@ castle = {
 		potential = {
 			OR = {
 				culture = brazilian
+				culture = verdiano
 				has_building = ca_culture_brazilian_1
 				has_building = ca_culture_brazilian_2
 				has_building = ca_culture_brazilian_3
@@ -5832,13 +5859,19 @@ castle = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = brazilian
+				OR = {
+					culture = brazilian
+					culture = verdiano
+				}
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
-				culture = brazilian
+				OR = {
+					culture = brazilian
+					culture = verdiano
+				}
 			}
 		}
 		upgrades_from = ca_culture_brazilian_2
@@ -5857,6 +5890,7 @@ castle = {
 		potential = {
 			OR = {
 				culture = brazilian
+				culture = verdiano
 				has_building = ca_culture_brazilian_1
 				has_building = ca_culture_brazilian_2
 				has_building = ca_culture_brazilian_3
@@ -5865,13 +5899,19 @@ castle = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = brazilian
+				OR = {
+					culture = brazilian
+					culture = verdiano
+				}
 			}
 		} 
 		trigger = { 
 			TECH_CASTLE_CONSTRUCTION = 4
 			ROOT = {
-				culture = brazilian
+				OR = {
+					culture = brazilian
+					culture = verdiano
+				}
 			}
 		}
 		upgrades_from = ca_culture_brazilian_3

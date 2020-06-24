@@ -1357,3 +1357,56 @@ narrative_event = {
 		}
 	}
 }
+
+narrative_event = {
+	id = patria.54
+	title = EVTNAME200
+	picture = GFX_evt_gran_colombia
+	border = GFX_event_narrative_frame_war	
+	desc = EVTDESC_patria_54
+	is_triggered_only = yes
+	major = yes
+	show_ROOT = yes
+	hide_new = yes
+	
+	trigger = {
+		can_call_crusade = yes
+		ROOT = { 
+			religion = patria_grande
+		}
+	}
+	
+	option = {
+		name = EVTOPTA324 # For [God Name]!
+		trigger = {
+			religion = ROOT
+		}
+	}
+	option = {
+		name = EVTOPTB200 # No concern of ours
+		trigger = {
+			NOT = { religion = ROOT }
+			new_character = {
+				NOT = { religion = PREV }
+				NOT = { character = PREV }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD200 # To Arms!
+		trigger = {
+			new_character = {
+				character = PREV
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE200 # Terrible News!
+		trigger = {
+			new_character = {
+				religion = PREV
+				NOT = { character = PREV }
+			}
+		}
+	}
+}
