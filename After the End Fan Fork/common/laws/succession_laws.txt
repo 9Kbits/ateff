@@ -125,21 +125,6 @@ succession_laws = {
 			}
 			
 			is_primary_type_title = no
-			
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
-					}
-				}
-			}
 		}
 		allow = {
 			holder_scope = {
@@ -172,12 +157,12 @@ succession_laws = {
 						trait = patria_bolivar
 					}
 				}
-				AND = {
-					NOR = {
+				NAND = {
+					OR = {
 						tier = king
 						tier = emperor
 					}
-					NOR = {
+					OR = {
 						government = mormon_government
 						government = ghazi_government
 					}
@@ -291,17 +276,15 @@ succession_laws = {
 
 			NOT = { holder_scope = { government = military_governorate } }
 			
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
+			holder_scope = {
+				NAND = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					OR = {
+						government = mormon_government
+						government = ghazi_government
 					}
 				}
 			}
@@ -348,17 +331,15 @@ succession_laws = {
 					has_law = centralization_4
 				}
 			}
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
+			holder_scope = {
+				NAND = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					OR = {
+						government = mormon_government
+						government = ghazi_government
 					}
 				}
 			}
@@ -441,17 +422,15 @@ succession_laws = {
 			
 			NOT = { holder_scope = { government = military_governorate } }
 			
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
+			holder_scope = {
+				NAND = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					OR = {
+						government = mormon_government
+						government = ghazi_government
 					}
 				}
 			}
@@ -588,17 +567,15 @@ succession_laws = {
 				holder_scope = { is_patrician = yes }
 			}
 			NOT = { holder_scope = { government = military_governorate } }
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
+			holder_scope = {
+				NAND = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					OR = {
+						government = mormon_government
+						government = ghazi_government
 					}
 				}
 			}
@@ -685,17 +662,15 @@ succession_laws = {
 				has_law = centralization_4
 			}
 			
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
+			holder_scope = {
+				NAND = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					OR = {
+						government = mormon_government
+						government = ghazi_government
 					}
 				}
 			}
@@ -774,17 +749,15 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = military_governorate } }
 			
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
+			holder_scope = {
+				NAND = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					OR = {
+						government = mormon_government
+						government = ghazi_government
 					}
 				}
 			}
@@ -881,17 +854,15 @@ succession_laws = {
 				}
 				has_law = centralization_4
 			}
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
+			holder_scope = {
+				NAND = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					OR = {
+						government = mormon_government
+						government = ghazi_government
 					}
 				}
 			}
@@ -995,17 +966,15 @@ succession_laws = {
 				title = e_dixie
 				has_title_flag = alternate_hre
 			}
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
+			holder_scope = {
+				NAND = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					OR = {
+						government = mormon_government
+						government = ghazi_government
 					}
 				}
 			}
@@ -1390,17 +1359,15 @@ succession_laws = {
 			}
 			NOT = { holder_scope = { government = military_governorate } }
 			
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
+			holder_scope = {
+				NAND = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					OR = {
+						government = mormon_government
+						government = ghazi_government
 					}
 				}
 			}
@@ -1550,17 +1517,15 @@ succession_laws = {
 				}
 			}
 			NOT = { holder_scope = { government = military_governorate } }
-			NOT = {
-				holder_scope = {
-					AND = {
-						OR = {
-							tier = king
-							tier = emperor
-						}
-						OR = {
-							government = mormon_government
-							government = ghazi_government
-						}
+			holder_scope = {
+				NAND = {
+					OR = {
+						tier = king
+						tier = emperor
+					}
+					OR = {
+						government = mormon_government
+						government = ghazi_government
 					}
 				}
 			}
