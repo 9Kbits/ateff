@@ -280,6 +280,7 @@
 	dynasty=1797022 # Helianthus
 	culture=grangelander
 	religion=catholic
+	father=1846078
 	diplomacy=7
 	martial=5
 	stewardship=7
@@ -370,9 +371,20 @@
 
 1846025={
 	name="Ned"
-	dynasty=1797029
+	dynasty=1797029 #Brasge
 	culture=grangelander
 	religion=catholic
+	father=1846075
+	diplomacy=8
+	martial=5
+	stewardship=7
+	intrigue=5
+	learning=6
+	trait=charitable
+	trait=kind
+	trait=charismatic_negotiator
+	trait=diligent
+	trait=erudite
 	2617.3.1={birth=yes}
 	2644.1.1={add_spouse=1846026}
 	2664.1.1={add_trait=depressed}
@@ -725,4 +737,408 @@
 	trait=patient
 	trait=erudite
 	2642.6.7={birth=yes}
+}
+
+##History and Characters inspired by "Our Rights We Prize and Our Liberties We Will Maintain"
+1846045={
+	name="Ethan"
+	dynasty=1797036 #Branstad-Grassley
+	culture=grangelander
+	religion=catholic
+	trait=grey_eminence
+	trait=zealous
+	trait=ambitious
+	trait=brave
+	trait=gregarious
+	trait=diligent
+	2313.3.3={birth=yes}
+	2370.7.30={death=yes}
+}
+1846046={
+	name="Leah"
+	female=yes
+	dynasty=1797036 #Branstad-Grassley
+	culture=grangelander
+	religion=catholic
+	father=1846045
+	2355.8.25={birth=yes}
+	2405.7.26={death=yes}
+}
+1846047={
+	name="Bethasia"
+	female=yes
+	dynasty=1797036 #Branstad-Grassley
+	culture=grangelander
+	religion=catholic
+	father=1846045
+	2358.2.4={birth=yes}
+	2411.1.24={death=yes}
+}
+1846048={
+	name="Sampson"
+	dynasty=1797039 #Williamson
+	culture=grangelander
+	religion=catholic
+	trait=tough_soldier
+	trait=gregarious
+	trait=just
+	trait=proud
+	trait=ambitious
+	2346.6.23={birth=yes}
+	2380.1.1={add_spouse=1846046}
+	2402.3.7={death=yes}
+}
+1846049={
+	name="Robert"
+	dynasty=1797039 #Williamson
+	culture=grangelander
+	religion=catholic
+	father=1846048
+	mother=1846046
+	2381.1.6={birth=yes}
+	2424.2.4={death=yes}
+}
+1846050={
+	name="Alvin"
+	dynasty=1797039 #Williamson
+	culture=grangelander
+	religion=catholic
+	father=1846049
+	trait=thrifty_clerk
+	trait=arbitrary
+	trait=slothful
+	trait=content
+	2400.1.6={birth=yes}
+	2434.3.7={death={
+			death_reason=death_execution
+			killer=1846055
+		}
+	}
+}
+1846051={
+	name="Denman"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	2335.5.5={birth=yes}
+	2375.1.1={add_spouse=1846047}
+	2382.11.10={death=yes}
+}
+1846052={
+	name="Mary"
+	female=yes
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846051
+	mother=1846047
+	trait=elusive_shadow
+	trait=ambitious
+	trait=deceitful
+	trait=diligent
+	trait=patient
+	trait=quick
+	2376.12.4={birth=yes}
+	2395.1.1={add_spouse=1846053}
+	2455.5.6={death=yes}
+}
+1846053={
+	name="Galloway"
+	dynasty=1797035 #Galloway
+	culture=grangelander
+	religion=catholic
+	2374.1.1={birth=yes}
+	2430.7.4={death=yes}
+}
+1846054={
+	name="Berthold"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846053
+	mother=1846052
+	trait=tough_soldier
+	trait=dysentery
+	2396.6.8={birth=yes}
+	2429.1.8={death={
+			death_reason=death_trait
+		}
+	}
+}
+1846055={
+	name="Leonard"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846054
+	trait=strong
+	trait=fair
+	trait=ambitious
+	trait=brave
+	trait=gregarious
+	trait=diligent
+	trait=deceitful
+	trait=brilliant_strategist
+	2412.8.7={birth=yes}
+	2440.1.1={add_spouse=1846056}
+	2478.3.9={death=yes}
+}
+1846056={
+	name="Benedictine"
+	female=yes
+	dynasty=1797041 #Poyneer
+	culture=grangelander
+	religion=catholic
+	trait=martial_cleric
+	trait=zealous
+	trait=kind
+	trait=charitable
+	trait=weak
+	trait=infirm
+	2416.1.7={birth=yes}
+	2444.4.4={death={
+			death_reason=death_trait
+		}
+	}
+}
+1846057={
+	name="Tigris"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846055
+	mother=1846056
+	trait=fortune_builder
+	trait=ambitious
+	trait=brave
+	trait=envious
+	trait=just
+	trait=patient
+	2444.4.2={birth=yes}
+	2493.6.7={death=yes}
+}
+1846058={
+	name="Wilson"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846055
+	trait=fortune_builder
+	trait=zealous
+	trait=brave
+	trait=charitable
+	trait=just
+	trait=patient
+	trait=proud
+	2448.6.6={birth=yes}
+	2501.6.6={death=yes}
+}
+1846059={
+	name="Lysander"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846058
+	2470.2.7={birth=yes}
+	2525.2.5={death=yes}
+}
+1846060={
+	name="Bellard"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846059
+	2492.7.15={birth=yes}
+	2538.7.23={death=yes}
+}
+1846061={
+	name="Neil"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846060
+	trait=slow
+	trait=hunter
+	trait=tough_soldier
+	2519.7.6={birth=yes}
+	2550.1.9={death=yes}
+}
+1846062={
+	name="Daniel"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846060
+	trait=homosexual
+	trait=skilled_tactician
+	trait=lustful
+	trait=erudite
+	trait=charitable
+	trait=ambitious
+	2530.3.3={birth=yes}
+	2572.1.26={death=yes}
+}
+1846063={
+	name="Anabelle"
+	female=yes
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846059
+	trait=underhanded_rogue
+	trait=proud
+	trait=wroth
+	trait=gregarious
+	trait=ambitious
+	trait=diligent
+	2496.2.7={birth=yes}
+	2520.1.1={add_spouse=1846076}
+	2580.5.25={death=yes}
+}
+1846064={
+	name="Barnes"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846076
+	mother=1846063
+	2523.4.25={birth=yes}
+	2578.5.25={death=yes}
+}
+1846065={
+	name="Marshall"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846064
+	2550.2.7={birth=yes}
+	2599.9.3={death=yes}
+}
+1846066={
+	name="Leonard"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846065
+	2581.9.24={birth=yes}
+	2645.9.6={death=yes}
+}
+1846067={
+	name="Winfrald"
+	dynasty=1797038
+	culture=grangelander
+	religion=catholic
+	trait=skilled_tactician
+	trait=peasant_leader
+	trait=brave
+	trait=just
+	trait=ambitious
+	2541.5.5={birth=yes}
+	2591.10.5={death={
+			death_reason=death_execution_crucifixion #Executed.
+			killer=1846068
+		}
+	}
+}
+1846068={
+	name="Kimball"
+	dynasty=1791006 #Cambariday
+	culture=riverlander
+	religion=revelationist
+	trait=skilled_tactician
+	trait=ambitious
+	trait=brave
+	trait=adventurer
+	trait=quick
+	2564.8.4={birth=yes}
+	2607.2.23={death=yes}
+}
+1846069={
+	name="Halleck"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846057
+	2465.5.9={birth=yes}
+	2523.10.7={death=yes}
+}
+1846070={
+	name="Randall"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846069
+	2490.9.4={birth=yes}
+	2545.4.20={death=yes}
+}
+1846071={
+	name="Malernon"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846070
+	2513.2.6={birth=yes}
+	2557.9.9={death=yes}
+}
+1846072={
+	name="Tigris"
+	dynasty=1797001 #Rodman
+	culture=grangelander
+	religion=catholic
+	father=1846071
+	2530.8.7={birth=yes}
+	2588.12.9={death=yes}
+}
+1846073={
+	name="Ned"
+	dynasty=1797029 #Brasge
+	culture=grangelander
+	religion=catholic
+	2549.2.6={birth=yes}
+	2590.5.9={death=yes}
+}
+1846074={
+	name="Ned"
+	dynasty=1797029 #Brasge
+	culture=grangelander
+	religion=catholic
+	father=1846073
+	2571.2.4={birth=yes}
+	2627.5.29={death=yes}
+}
+1846075={
+	name="Ned"
+	dynasty=1797029 #Brasge
+	culture=grangelander
+	religion=catholic
+	father=1846074
+	2590.11.7={birth=yes}
+	2643.3.8={death=yes}
+}
+1846076={
+	name="Rilbert"
+	dynasty=1797037
+	culture=grangelander
+	religion=catholic
+	trait=brilliant_strategist
+	trait=brave
+	2495.7.2={birth=yes}
+	2580.4.25={death=yes}
+}
+1846077={
+	name="Mern"
+	dynasty=1797022 # Helianthus
+	culture=grangelander
+	religion=catholic
+	2575.9.12={birth=yes}
+	2626.2.7={death=yes}
+}
+1846078={
+	name="Garlan"
+	dynasty=1797022 # Helianthus
+	culture=grangelander
+	religion=catholic
+	father=1846077
+	2602.7.6={birth=yes}
+	2654.10.1={death=yes}
 }
