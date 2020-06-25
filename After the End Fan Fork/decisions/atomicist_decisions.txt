@@ -144,11 +144,12 @@ decisions = {
 				trait = atom_bless
 				trait = zealous
 			}
+			NOT = { has_character_flag = enriched_path }
 		}
 		effect = {
 			custom_tooltip = { text = TXT_radiant_path_2 }
 			hidden_tooltip = {
-				character_event = { id = atom.51 }
+				narrative_event = { id = atom.51 }
 				character_event = { id = atom.61 days = 30 } #fallback
 			}
 		}
@@ -177,6 +178,7 @@ decisions = {
 			religion = atomicist
 			is_adult = yes
 			trait = enriched
+			NOT = { has_character_flag = radiant_path }
 			NOT = { has_character_modifier = radiant_path_cooldown }
 		}
 		allow = {
@@ -190,7 +192,7 @@ decisions = {
 			hidden_tooltip = {
 				set_character_flag = do_not_disturb
 				add_trait = travelling
-				character_event = { id = atom.62 }
+				narrative_event = { id = atom.62 }
 				character_event = { id = atom.70 days = 60 }
 			}
 		}
