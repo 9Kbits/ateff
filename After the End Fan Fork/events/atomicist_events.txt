@@ -653,14 +653,13 @@ narrative_event = {
 	title = "EVTITLE_radiant_pathstart"
 	desc = "EVTDESC_radiant_pathstart"
 	picture = GFX_evt_cathedral_zun_pagan
-	religion = atomicist
 	is_triggered_only = yes
-		
+
 	option = {
 		name = EVOTPA_radiant_pathstart
 		custom_tooltip = { text = TXT_thestartofradiance }
 		piety = -500
-		trait = irradiated
+		add_trait = irradiated
 		ai_chance = {
 			factor = 10
 			modifier = {
