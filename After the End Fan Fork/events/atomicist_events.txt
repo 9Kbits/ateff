@@ -723,7 +723,6 @@ narrative_event = {
 			ROOT = { set_variable = { which = enriched_path value = 1 } }
 			character_event = { id = atom.52 days = 5 }
 		}
-		
 	}
 }
 
@@ -786,7 +785,7 @@ character_event = {
 	
 	option = {
 		name = EVOPTA_atomicist_53
-		custom_tooltip = { text = TXT_EVTOPTA_atomicist_52 }
+		custom_tooltip = { text = TXT_EVTOPTA_atomicist_53 }
 		hidden_tooltip = {
 			random_list = {
 				50 = {
@@ -873,7 +872,6 @@ character_event = {
 	option = {
 		name = EVOPTA_atomicist_54
 		tooltip_info = combat_rating
-		custom_tooltip = { text = TXT_EVOPTA_atomicist_54 }
 		hidden_tooltip = {
 			ROOT = { change_variable = { which = enriched_path value = 2 } }
 			character_event = { id = atom.56 days = 3 }
@@ -894,7 +892,6 @@ character_event = {
 	
 	option = {
 		name = EVOPTA_atomicist_55
-		custom_tooltip = { text = TXT_EVOPTA_atomicist_55 }
 		hidden_tooltip = {
 			ROOT = { subtract_variable = { which = enriched_path value = 1 } }
 			character_event = { id = atom.56 days = 3 }
@@ -994,7 +991,9 @@ narrative_event = {
 	
 	after = {
 		clr_character_flag = enriched_path
-		ROOT = { set_variable = { which = enriched_path value = 1 } }
+		hidden_tooltip = {
+			ROOT = { set_variable = { which = enriched_path value = 1 } }
+		}
 	}
 }
 
@@ -1019,7 +1018,9 @@ narrative_event = {
 	
 	after = {
 		clr_character_flag = enriched_path
-		ROOT = { set_variable = { which = enriched_path value = 1 } }
+		hidden_tooltip = {
+			ROOT = { set_variable = { which = enriched_path value = 1 } }
+		}
 	}
 }
 
@@ -1049,7 +1050,9 @@ narrative_event = {
 	
 	after = {
 		clr_character_flag = enriched_path
-		ROOT = { set_variable = { which = enriched_path value = 1 } }
+		hidden_tooltip = {
+			ROOT = { set_variable = { which = enriched_path value = 1 } }
+		}
 	}
 }
 
@@ -1060,7 +1063,9 @@ character_event = {
 	
 	immediate = {
 		clr_character_flag = enriched_path
-		ROOT = { set_variable = { which = enriched_path value = 1 } }
+		hidden_tooltip = {
+			ROOT = { set_variable = { which = enriched_path value = 1 } }
+		}
 	}
 }
 	

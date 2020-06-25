@@ -134,6 +134,7 @@ decisions = {
 			religion = atomicist
 			is_adult = yes
 			trait = irradiated
+			NOT = { has_character_flag = enriched_path }
 			NOT = { has_character_modifier = enriched_path_cooldown }
 		}
 		allow = {
@@ -144,7 +145,6 @@ decisions = {
 				trait = atom_bless
 				trait = zealous
 			}
-			NOT = { has_character_flag = enriched_path }
 		}
 		effect = {
 			custom_tooltip = { text = TXT_radiant_path_2 }

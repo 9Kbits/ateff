@@ -1,0 +1,292 @@
+namespace = ceticpilgrim
+
+#if = {
+#	limit = {
+#		has_quest = quest_monastic_order_pilgrimage_cetic
+#	}
+#	character_event = { id = MNM.40201 days = 1}
+#}
+
+# Choose destination
+character_event = {
+	id = ceticpilgrim.1
+	desc = EVTDESC_ceticpilgrim_1
+	picture = GFX_evt_carriage #PLACEHOLDER
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_ceticpilgrim_1
+		trigger = {
+			NOT = { capital_scope = { province_id = 2046 } } #Sacramento
+		}
+		custom_tooltip = {
+			text = TXT_EVTOPTA_ceticpilgrim_1
+		}
+		hidden_tooltip = {
+			set_character_flag = pilgrimage_to_sacramento
+			character_event = { id = ceticpilgrim.3 days = 7 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_ceticpilgrim_1
+		trigger = {
+			NOT = { capital_scope = { province_id = 2031 } } #San Francisco
+		}
+		custom_tooltip = {
+			text = TXT_EVTOPTB_ceticpilgrim_1
+		}
+		hidden_tooltip = {
+			set_character_flag = pilgrimage_to_san_francisco
+			character_event = { id = ceticpilgrim.4 days = 15 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_ceticpilgrim_1
+		trigger = {
+			NOT = { capital_scope = { province_id = 2019 } } #Los Angeles
+		}
+		custom_tooltip = {
+			text = TXT_EVTOPTC_ceticpilgrim_1
+		}
+		hidden_tooltip = {
+			set_character_flag = pilgrimage_to_la
+			character_event = { id = ceticpilgrim.5 days = 15 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_ceticpilgrim_1 #page 2
+		custom_tooltip = {
+			text = TXT_EVTOPTD_ceticpilgrim_1
+		}
+		hidden_tooltip = {
+			character_event = { id = ceticpilgrim.2 }
+		}
+	}
+}
+
+character_event = {
+	id = ceticpilgrim.2
+	desc = EVTDESC_ceticpilgrim_2
+	picture = GFX_evt_carriage #PLACEHOLDER
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_ceticpilgrim_2
+		trigger = {
+			NOT = { capital_scope = { province_id = 2010 } } #San Diego
+		}
+		custom_tooltip = {
+			text = TXT_EVTOPTA_ceticpilgrim_2
+		}
+		hidden_tooltip = {
+			set_character_flag = pilgrimage_to_san_diego
+			character_event = { id = ceticpilgrim.6 days = 7 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_ceticpilgrim_2
+		trigger = {
+			NOT = { capital_scope = { province_id = 2057 } } #Redwood
+		}
+		custom_tooltip = {
+			text = TXT_EVTOPTB_ceticpilgrim_2
+		}
+		hidden_tooltip = {
+			set_character_flag = pilgrimage_to_redwood
+			character_event = { id = ceticpilgrim.7 days = 15 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_ceticpilgrim_2 #page 1 again
+		custom_tooltip = {
+			text = TXT_EVTOPTC_ceticpilgrim_2
+		}
+		hidden_tooltip = {
+			character_event = { id = ceticpilgrim.2 }
+		}
+	}
+}
+
+# Setting out for Sacramento
+character_event = {
+	id = ceticpilgrim.3
+	desc = EVTDESC_sacramento_start
+	picture = GFX_evt_carriage #PLACEHOLDER
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sacramento_start
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = ceticpilgrim.18 days = 45 } #Arrival in Sacramento
+		}
+		hidden_tooltip = {
+			random_list = {
+				20 = {  character_event = { id = ceticpilgrim.8 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.9 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.10 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.11 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.12 days = 15 random = 5 } } #TBD
+			}
+			random_list = {
+				20 = {  character_event = { id = ceticpilgrim.13 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.14 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.15 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.16 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.17 days = 30 random = 5 } } #TBD
+			}
+		}
+	}
+}
+
+# Setting out for San Francisco
+character_event = {
+	id = ceticpilgrim.4
+	desc = EVTDESC_san_francisco_start
+	picture = GFX_evt_carriage #PLACEHOLDER
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_san_francisco_start
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = ceticpilgrim.19 days = 45 } #Arrival in San Francisco
+		}
+		hidden_tooltip = {
+			random_list = {
+				20 = {  character_event = { id = ceticpilgrim.8 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.9 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.10 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.11 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.12 days = 15 random = 5 } } #TBD
+			}
+			random_list = {
+				20 = {  character_event = { id = ceticpilgrim.13 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.14 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.15 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.16 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.17 days = 30 random = 5 } } #TBD
+			}
+		}
+	}
+}
+
+# Setting out for Los Angeles
+character_event = {
+	id = ceticpilgrim.5
+	desc = EVTDESC_los_angeles_start
+	picture = GFX_evt_carriage #PLACEHOLDER
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_los_angeles_start
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = ceticpilgrim.20 days = 45 } #Arrival in Los Angeles
+		}
+		hidden_tooltip = {
+			random_list = {
+				20 = {  character_event = { id = ceticpilgrim.8 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.9 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.10 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.11 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.12 days = 15 random = 5 } } #TBD
+			}
+			random_list = {
+				20 = {  character_event = { id = ceticpilgrim.13 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.14 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.15 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.16 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.17 days = 30 random = 5 } } #TBD
+			}
+		}
+	}
+}
+
+# Setting out for San Diego
+character_event = {
+	id = ceticpilgrim.6
+	desc = EVTDESC_san_diego_start
+	picture = GFX_evt_carriage #PLACEHOLDER
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_san_diego_start
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = ceticpilgrim.21 days = 45 } #Arrival in San Diego
+		}
+		hidden_tooltip = {
+			random_list = {
+				20 = {  character_event = { id = ceticpilgrim.8 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.9 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.10 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.11 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.12 days = 15 random = 5 } } #TBD
+			}
+			random_list = {
+				20 = {  character_event = { id = ceticpilgrim.13 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.14 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.15 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.16 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.17 days = 30 random = 5 } } #TBD
+			}
+		}
+	}
+}
+
+# Setting out for Redwood
+character_event = {
+	id = ceticpilgrim.6
+	desc = EVTDESC_redwood_start
+	picture = GFX_evt_carriage #PLACEHOLDER
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_redwood_start
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			set_character_flag = good_pilgrimage
+			narrative_event = { id = ceticpilgrim.22 days = 45 } #Arrival in Redwood
+		}
+		hidden_tooltip = {
+			random_list = {
+				20 = {  character_event = { id = ceticpilgrim.8 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.9 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.10 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.11 days = 15 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.12 days = 15 random = 5 } } #TBD
+			}
+			random_list = {
+				20 = {  character_event = { id = ceticpilgrim.13 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.14 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.15 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.16 days = 30 random = 5 } } #TBD
+				20 = {  character_event = { id = ceticpilgrim.17 days = 30 random = 5 } } #TBD
+			}
+		}
+	}
+}
