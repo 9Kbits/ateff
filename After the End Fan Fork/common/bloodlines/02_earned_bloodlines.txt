@@ -189,7 +189,7 @@ child_of_destiny_female = {
 }
 
 seaking_bloodline = { #Spawned tribal raider troops are more numerous.
-	combat_rating = 3
+	martial = 2
 	seaking_opinion = 5
 	sea_queen_opinion = 5
 	inheritance = patrilineal
@@ -211,7 +211,7 @@ seaking_bloodline = { #Spawned tribal raider troops are more numerous.
 }
 
 seaqueen_bloodline = {
-	combat_rating = 3
+	martial = 2
 	seaking_opinion = 5
 	sea_queen_opinion = 5
 	inheritance = matrilineal
@@ -272,7 +272,7 @@ bloodthirsty_female_bloodline = {
 
 duelist_male = {
 	monthly_character_prestige = 0.1
-	combat_rating = 20
+	combat_rating = 10
 	bloodline_effect_duel = 1
 	command_modifier = {
 		morale_offence = 0.015
@@ -286,7 +286,7 @@ duelist_male = {
 
 duelist_female = {
 	monthly_character_prestige = 0.1
-	combat_rating = 20
+	combat_rating = 10
 	bloodline_effect_duel = 1
 	command_modifier = {
 		morale_offence = 0.015
@@ -325,7 +325,7 @@ lcr_female = {
 grand_crusader = {
 	monthly_character_prestige = 0.2
 	christian_opinion = 5
-	combat_rating = 5
+	monthly_character_piety = 0.2
 	bloodline_effect_grand_crusader = 1
 	inheritance = patrilineal
 	allow_bastards = yes
@@ -346,7 +346,7 @@ grand_crusader = {
 
 crusader_commander = {
 	monthly_character_prestige = 0.2
-	combat_rating = 10
+	monthly_character_piety = 0.2
 	bloodline_effect_battle_survivor = 1
 	inheritance = patrilineal
 	allow_bastards = yes
@@ -368,7 +368,7 @@ crusader_commander = {
 crusade_lord = {
 	monthly_character_prestige = 0.1
 	christian_opinion = 5
-	combat_rating = 5
+	monthly_character_piety = 0.1
 	bloodline_effect_crusade_lord = 1
 	inheritance = patrilineal
 	allow_bastards = yes
@@ -414,8 +414,7 @@ lord_of_outremer = {
 
 crusader_kid_bloodline = {
 	monthly_character_piety = 0.15
-	combat_rating = 5
-	christian_opinion = 5
+	christian_opinion = 10
 	bloodline_effect_crusade_lord = 1
 	inheritance = patrilineal
 	allow_bastards = yes
@@ -571,10 +570,9 @@ pure_war_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	bloodline_effect_great_heroes_appear = 1
-	combat_rating = 6
 	command_modifier = {
-		morale_offence = 0.05
-		morale_defence = 0.05
+		morale_offence = 0.10
+		morale_defence = 0.10
 	}
 	flags = { created_bloodline bloodline_heroes }
 }
@@ -583,8 +581,7 @@ pure_war_bloodline_02 = {
 	picture = GFX_bloodlines_symbol_war_knight
 	inheritance = patrilineal
 	allow_bastards = yes
-	combat_rating = 4
-	monthly_character_piety = 0.05
+	monthly_character_piety = 0.1
 	command_modifier = {
 		cavalry = 0.10
 	}
@@ -603,10 +600,9 @@ pure_war_bloodline_03 = {
 	picture = GFX_bloodlines_symbol_war
 	inheritance = patrilineal
 	allow_bastards = yes
-	combat_rating = 5
 	levy_reinforce_rate = 0.05
 	command_modifier = {
-		center = 0.05
+		center = 0.10
 	}
 	bloodline_effect_reaver = 1
 	flags = { created_bloodline bloodline_reaver }
@@ -616,7 +612,8 @@ pure_war_bloodline_04 = {
 	picture = GFX_bloodlines_placeholder_symbol
 	inheritance = patrilineal
 	allow_bastards = yes
-	combat_rating = 3
+	learning = 1
+	martial = 1
 	command_modifier = {
 		speed = 0.15
 		retreat = 0.05
@@ -711,8 +708,7 @@ hybrid_murder_war_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	plot_power_modifier = 0.05
-	combat_rating = 3
-	levy_reinforce_rate = 0.02
+	levy_reinforce_rate = 0.05
 	bloodline_effect_faster_claims = 1 
 	bloodline_effect_faster_dissent = 1 
 	flags = { created_bloodline bloodline_faster_claims bloodline_faster_dissent }
@@ -1523,7 +1519,10 @@ true_matilde_bloodline = {
 }
 
 iron_chief = {
-	combat_rating = 10
+	command_modifier = {
+        speed = 0.1
+		cavalry = 0.1
+    }
 	cree_opinion = 5
 	peyotist_opinion = 5
 	monthly_character_prestige = 0.2
@@ -1560,6 +1559,7 @@ heir_riel_female = {
 	picture = GFX_bloodlines_symbol_fleur_de_lis
 	flags = { bloodline_faster_exovedate }
 }
++}
 isotopic_male = {
 	monthly_character_piety = 0.1
 	church_opinion = 5
