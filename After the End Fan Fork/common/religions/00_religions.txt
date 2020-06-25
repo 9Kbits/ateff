@@ -2606,7 +2606,7 @@ oldworld = {
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
 		
-		#defensive_attrition = yes
+		defensive_attrition = yes
 		
 		religious_clothing_head = 14
 		religious_clothing_priest = 14
@@ -2647,6 +2647,13 @@ oldworld = {
 		evil_god_names = {
 			GOD_ATOMOS THE_DEMON_CORE THE_VOID GOD_FAT_MAN GOD_LITTLE_BOY GOD_TSAR_BOMBA
 		}
+		
+		unit_modifier = {
+			levy_size = 0.3
+			
+			key = "OFF_RELIGION"
+		}
+		
 		crusade_name = FIRST_STRIKE
 		#allow_viking_invasion = yes
 		scripture_name = THE_LECTURES
@@ -2654,12 +2661,15 @@ oldworld = {
 		priests_can_marry = yes
 		female_temple_holders = yes
 		allow_rivermovement = yes
+		ignores_defensive_attrition = yes
+		raised_vassal_opinion_loss = no
 		
 		can_grant_claim = yes
 		can_grant_divorce = yes
 		can_grant_invasion_cb = invasion
 		
 		#defensive_attrition = yes
+		aggression = 2.0 # AI aggression factor
 		
 		religious_clothing_head = 14
 		religious_clothing_priest = 14
