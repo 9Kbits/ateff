@@ -1477,7 +1477,9 @@ character_event = {
 			remove_trait = ugly
 			remove_trait = slow
 			remove_trait = chaste
+			set_character_flag = patrick_mother
 		}
+		set_character_flag = patrick_father
 		custom_tooltip = { text = TXT_st_patricks_end }
 	}
 	
@@ -1522,8 +1524,10 @@ character_event = {
 			remove_trait = imbecile
 			remove_trait = ugly
 			remove_trait = slow
-			remove_trait = chaste			
+			remove_trait = chaste
+			set_character_flag = patrick_father
 		}
+		set_character_flag = patrick_mother
 		custom_tooltip = { text = TXT_st_patricks_end }
 	}
 	
@@ -1622,66 +1626,72 @@ character_event = {
 	}
 }
 
-#character_event = { #Give birth to St. Patrick's Child
-#	id = canada.37
-#	hide_window = yes
-#	is_triggered_only = yes
-#	trigger = { 
-#		OR = {
-#			mother = { has_character_flag = patrick_mother } 
-#			father = { has_character_flag = patrick_father }
-#		}
-#	}
-#	
-#	immediate = {
-#		add_trait = strong
-#		add_trait = quick
-#		remove_trait = weak
-#		remove_trait = clubfooted
-#		remove_trait = harelip
-#		remove_trait = hunchback
-#		remove_trait = imbecile
-#		remove_trait = inbred
-#		remove_trait = lisp
-#		remove_trait = slow
-#		remove_trait = stutter
-#		remove_trait = ugly
-#		remove_trait = giant
-#		if = {
-#			limit = {
-#				is_female = no
-#			}
-#			set_name = "Patrick"
-#		}
-#		else_if = {
-#			limit = {
-#				is_female = yes
-#			}
-#			set_name = "Patricia"
-#		}
-#		mother = {
-#			clr_character_flag = patrick_mother
-#			character_event = { id = canada.38 days = 1 }
-#		}
-#		father = {
-#			clr_character_flag = patrick_father
-#			character_event = { id = canada.38 days = 1 }
-#		}
-#	}
-#}
+character_event = { #Give birth to St. Patrick's Child
+	id = canada.37
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { 
+		mother = {
+			has_character_flag = patrick_mother
+			NOT = { has_character_flag = was_patrick_mother }
+		} 
+		true_father = {
+			has_character_flag = patrick_father
+			NOT = { has_character_flag = was_patrick_father }
+		}
+	}
+	
+	immediate = {
+		add_trait = strong
+		add_trait = quick
+		remove_trait = weak
+		remove_trait = clubfooted
+		remove_trait = harelip
+		remove_trait = hunchback
+		remove_trait = imbecile
+		remove_trait = inbred
+		remove_trait = lisp
+		remove_trait = slow
+		remove_trait = stutter
+		remove_trait = ugly
+		remove_trait = giant
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_name = "Patrick"
+		}
+		else_if = {
+			limit = {
+				is_female = yes
+			}
+			set_name = "Patricia"
+		}
+		mother = {
+			clr_character_flag = patrick_mother
+			set_character_flag = was_patrick_mother
+			character_event = { id = canada.38 days = 1 }
+		}
+		true_father  = {
+			clr_character_flag = patrick_father
+			set_character_flag = was_patrick_father
+			character_event = { id = canada.38 days = 1 }
+		}
+	}
+}
 
-#character_event = { #Give birth to St. Patrick's Child
-#	id = canada.38
-#	desc = EVTDESC_st_patricks_8
-#	picture = GFX_evt_birth
-#	border = GFX_event_normal_frame_religious
-#	is_triggered_only = yes
-#	
-#	option = {
-#		name = EVTOPTA_st_patricks_8
-#		prestige = 20
-#	}
-#}
+character_event = { #Give birth to St. Patrick's Child
+	id = canada.38
+	desc = EVTDESC_st_patricks_8
+	picture = GFX_evt_birth
+	border = GFX_event_normal_frame_religious
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_st_patricks_8
+		prestige = 20
+	}
+}
 
 character_event = {
 	id = canada.39

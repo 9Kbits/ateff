@@ -14,6 +14,7 @@
 # 30-32	easter egg events
 # 40-54	additional easter egg events
 # 60	neognostic abdication event
+# 70	abram events
 
 namespace = flavor
 
@@ -1876,6 +1877,90 @@ narrative_event = {
 			remove_trait = wroth
 			remove_trait = envious
 			remove_trait = proud
+		}
+	}
+}
+
+character_event = {
+	id = flavor.61
+	desc = EVTDESC_abram_1
+	picture = GFX_evt_woman_at_window_hf
+	
+	trigger = {
+		has_character_flag = king_abram
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = EVTOPTA_abram_1
+		custom_tooltip = { text = TXT_EVTOPTA_abram_1 }
+		hidden_tooltip = {
+			any_spouse = {
+				character_event = { id = flavor.62 }
+			}
+		}
+	}
+	
+	after = {
+		clr_character_flag = king_abram
+	}
+}
+
+character_event = {
+	id = flavor.62
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		unsafe_impregnate = FROM
+		set_character_flag = issac_pregnant
+	}
+}
+
+character_event = {
+	id = flavor.63
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		mother_even_if_dead = {
+			has_character_flag = issac_pregnant
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_female = no
+			}
+			set_name = "Issac"
+		}
+		if = {
+			limit = {
+				is_female = yes
+			}
+			set_name = "Isidora"
+		}
+		true_father = {
+			character_event = { id = flavor.64 days = 1 }
+		}
+	}
+}
+
+character_event = {
+	id = flavor.64
+	desc = EVTDESC_abram_2
+	picture = GFX_evt_birth
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_abram_2
+		piety = 25
+		any_spouse = {
+			clr_character_flag = issac_pregnant
 		}
 	}
 }

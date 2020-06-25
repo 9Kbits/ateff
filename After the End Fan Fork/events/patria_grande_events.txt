@@ -921,6 +921,7 @@ character_event = {
 	}
 }
 
+
 #Narrative event for Alvarados
 narrative_event = {
 	id = patria.40
@@ -928,11 +929,10 @@ narrative_event = {
 	desc = EVTDESC_patria_40
 	picture = GFX_evt_gran_colombia
 	border = GFX_event_narrative_frame_diplomacy
-	
 	is_triggered_only = yes
 	
 	trigger = {
-		has_character_flag = alvarado_desecendant
+		has_character_flag = alvarado_descendant
 	}
 	
 	option = {
@@ -950,7 +950,7 @@ narrative_event = {
 	}
 	
 	after = {
-		clr_character_flag = alvarado_desecendant
+		clr_character_flag = alvarado_descendant
 	}
 }
 

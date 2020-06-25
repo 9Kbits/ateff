@@ -146,7 +146,11 @@
 	trait=temperate
 	trait=just
 	father=1811005
-	2605.7.31={birth=yes}
+	2605.7.31={birth=yes
+		effect={
+			set_character_flag=alvarado_descendant
+		}
+	}
 	2627.10.2={add_spouse=1811007}
 	2672.2.27={death=yes}
 }
@@ -183,10 +187,6 @@
 	father=1811006
 	mother=1811007
 	2641.10.1={birth=yes}
-	2600.1.1={effect={
-			set_character_flag=alvarado_desecendant
-		}
-	}
 	2699.7.2={death=yes}
 }
 
@@ -353,10 +353,6 @@
 	trait=humble
 	mother=1811016
 	2578.11.3={birth=yes}
-	2600.1.1={effect={
-			set_character_flag=alvarado_desecendant
-		}
-	}
 	2640.11.13={death=yes}
 }
 
@@ -459,7 +455,11 @@
 	trait=gluttonous
 	trait=diligent
 	mother=1811018
-	2656.7.1={birth=yes}
+	2656.7.1={birth=yes
+		effect={
+			set_character_flag=alvarado_descendant
+		}
+	}
 	2700.1.1={death=yes}
 }
 
@@ -933,12 +933,7 @@
 	trait=gluttonous
 	trait=patria_manuelita
 	2632.6.9={birth=yes}
-	2660.1.1={effect={add_lover=1811047}
-	}
-	2600.1.2={effect={
-			set_character_flag=alvarado_desecendant
-		}
-	}
+	2660.1.1={effect={add_lover=1811047}}
 	2700.1.1={death=yes}
 }
 
@@ -1268,9 +1263,12 @@
 	trait=ambitious
 	trait=wroth
 	father=1811043
-	2615.10.31={birth=yes}
-	2660.1.1={effect={add_lover=1811072}
+	2615.10.31={birth=yes
+		effect={
+			set_character_flag=alvarado_descendant
+		}
 	}
+	2660.1.1={effect={add_lover=1811072}}
 	2700.1.1={death=yes}
 }
 

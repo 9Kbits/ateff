@@ -1,7 +1,6 @@
 #character
 on_startup = {
 	events = {
-		#1337 # Emperor Ticket character spawning event
 		GR.13 #True cognatic for rule gender = all
 		JD.10006 #Save game fix for setting the name of the Chinese empire
 		JD.60005 #Convert prosthetics event modifiers into artifacts
@@ -46,10 +45,10 @@ on_startup = {
 		islamate.77 #Player Viceroy
 		fallingstar.13 #Player Renovator
 	
+		holyorder.25
+		
 		playerbrit.1 #Player colonization event (Britain)
 		consumer.20 #Player Consumerist Uprising
-		
-		holyorder.25
 		
 		machete.4 #sets up gender laws
 		
@@ -64,6 +63,8 @@ on_startup = {
 		HFATE.20372
 		HFATE.20373
 		HFATE.20374
+		
+		flavor.60
 	}
 }
 
@@ -1660,7 +1661,9 @@ on_birth = {
 		gaian.16 #General of Gaia heir is acknowledged
 		ceticreform.7 #Son is Given Cetic Way
 		ceticreform.8 #Daughter is Given Cetic Way
-
+		
+		canada.37
+		flavor.63
 	}
 	random_events = {
 		200 = 0
