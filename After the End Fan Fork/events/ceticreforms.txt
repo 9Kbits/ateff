@@ -672,7 +672,7 @@ character_event = {
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 0 culture = californio }
-			modifier = { factor = 10 culture = qingzhen }
+			modifier = { factor = 10 culture = chino }
 		}
 	}
 	option = {
@@ -890,8 +890,6 @@ character_event = {
 
 		}
 	}
-
-
 }
 character_event = {
 	id = ceticreform.11
@@ -2205,27 +2203,6 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformsagrado
-		trigger = {
-			trait = way_fist
-		}
-		religion = sacred_heart
-		add_trait = marian_el_santo
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = sacred_heart
-			}
-		}
-
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 10 culture = anjalusi }
-		}
-	}
-	option = {
 		name = EVTOPT_ceticreformsede
 		trigger = {
 			trait = way_dove
@@ -2265,7 +2242,6 @@ character_event = {
 			modifier = { factor = 10 culture = anjalusi }
 		}
 	}
-
 	option = {
 		name = EVTOPT_ceticreformcatholic
 		trigger = {
@@ -2406,6 +2382,14 @@ character_event = {
 			factor = 5
 		}
 	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+
+		}
+	}
 }
 
 character_event = {
@@ -2456,25 +2440,6 @@ character_event = {
 	}
 	mean_time_to_happen = {
 		years= 20	
-	}
-	option = {
-		name = EVTOPT_ceticreformaphite
-		trigger = {
-			trait = way_book
-		}
-		religion = aphite
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = aphite
-			}
-		}
-
-		ai_chance = {
-			factor = 5
-		}
 	}
 	option = {
 		name = EVTOPT_ceticreformneognostic
@@ -2577,28 +2542,6 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformsagrado
-		trigger = {
-			trait = way_fist
-		}
-		religion = sacred_heart
-		add_trait = marian_el_santo
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = sacred_heart
-			}
-		}
-
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 10 culture_group = chicano }
-			modifier = { factor = 10 culture_group = mexicano }
-		}
-	}
-	option = {
 		name = EVTOPT_ceticreformtrailwalker
 		trigger = {
 			trait = way_fist
@@ -2616,27 +2559,6 @@ character_event = {
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture_group = west_anglo }
-		}
-	}
-	option = {
-		name = EVTOPT_ceticreformsede
-		trigger = {
-			trait = way_dove
-		}
-		religion = sedevacantist
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = sedevacantist
-			}
-		}
-
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 10 culture_group = west_anglo }
-			modifier = { factor = 10 culture = chicagoan }
 		}
 	}
 	option = {
@@ -2766,25 +2688,6 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformwoolleyite
-		trigger = {
-			trait = way_cowl
-		}
-		religion = woolleyite
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = woolleyite
-			}
-		}
-
-		ai_chance = {
-			factor = 2
-		}
-	}
-	option = {
 		name = EVTOPT_ceticreformgaian
 		trigger = {
 			trait = way_branch
@@ -2804,18 +2707,11 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformatomicist
-		religion = atomicist
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = atomicist
-			}
-		}
+		name = EVTOPT_ceticreformresist
 		ai_chance = {
 			factor = 5
+			modifier = { factor = 15 trait = zealous }
+
 		}
 	}
 }
