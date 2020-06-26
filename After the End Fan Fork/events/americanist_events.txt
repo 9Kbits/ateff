@@ -120,7 +120,11 @@ character_event = {
 	id = americanist.2
 	desc = EVTDESCAMERICANIST2
 	picture = GFX_evt_beatification
-	is_triggered_only = yes 
+	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = requested_implied_powers
+	}
 	
 	option = {
 		name = opta_excellent
@@ -249,6 +253,10 @@ character_event = {
 	desc = EVTDESCAMERICANIST5
 	
 	is_triggered_only = yes
+	
+	immediate = {
+		set_character_flag = jeffersonian_chosen_devotion
+	}
 	
 	option = {
 		name = EVTOPTAAMERICANIST5
