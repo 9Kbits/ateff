@@ -1072,9 +1072,11 @@ character_event = {
 	option = {
 		name = EVTOPT_cetic_pilgrim_sympathy_already
 		trigger = {
-			trait = sympathy_christendom
-			trait = sympathy_cult_of_saints
-			trait = sympathy_oldworld
+			OR = {
+				trait = sympathy_christendom
+				trait = sympathy_cult_of_saints
+				trait = sympathy_oldworld
+			}
 		}
 		piety = 50
 	}
@@ -1137,9 +1139,11 @@ character_event = {
 	option = {
 		name = EVTOPT_cetic_pilgrim_sympathy_already
 		trigger = {
-			trait = sympathy_christendom
-			trait = sympathy_cult_of_saints
-			trait = sympathy_oldworld
+			OR = {
+				trait = sympathy_christendom
+				trait = sympathy_cult_of_saints
+				trait = sympathy_oldworld
+			}
 		}
 		piety = 50
 	}
@@ -1201,9 +1205,11 @@ character_event = {
 	option = {
 		name = EVTOPTE_cetic_pilgrim_sympathy_sd
 		trigger = {
-			trait = sympathy_cult_of_saints
-			trait = sympathy_islam
-			trait = sympathy_latter_day_saints
+			OR = {
+				trait = sympathy_cult_of_saints
+				trait = sympathy_islam
+				trait = sympathy_latter_day_saints
+			}
 		}
 		piety = 50
 	}
