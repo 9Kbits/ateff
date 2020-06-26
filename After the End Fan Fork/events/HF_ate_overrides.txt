@@ -2163,3 +2163,1571 @@ narrative_event = {
 		}
 	}
 }
+
+###########################################################
+
+# Forging Claim on Che Guevara's Bloodline.
+
+#Opportunity arises.
+narrative_event = {
+	id = HFATE.24220
+	title = EVTTITLEHFATE24220
+	text = EVTDESCHFATE24220
+	picture = GFX_evt_mounted_combat_day_hf
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	ai = no
+	capable_only = yes
+	prisoner = no
+
+	trigger = { 
+		real_tier = EMPEROR
+		prestige = 15000
+		is_adult = yes
+		ai = no
+		is_alternate_start = no
+		NOT = { trait = content }
+		NOT = { has_character_flag = flag_chance_for_guevara_blood } #Opportunity only once per character.
+		NOT = { has_global_flag = flag_guevara_blood_restored } #Bloodline unlocked only once per playthrough.
+		capital_scope = { 
+			region = world_caribbean
+		}
+	}
+
+	weight_multiplier = { 
+		days = 1
+		
+		modifier = {
+			factor = 3
+			trait = zealous
+		}
+		modifier = {
+			factor = 3
+			trait = brave
+		}
+		modifier = {
+			factor = 3
+			religion = santeria
+		}
+		modifier = {
+			factor = 0.5
+			age = 50
+		}
+		modifier = {
+			factor = 2
+			has_education_learning_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			has_lifestyle_learning_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			trait = scholar
+		}
+		modifier = {
+			factor = 2
+			has_ambition = obj_forge_bloodline
+		}
+		modifier = {
+			factor = 2
+			learning = 8
+		}
+		modifier = {
+			factor = 2
+			learning = 10
+		}
+		modifier = {
+			factor = 2
+			learning = 12
+		}
+		modifier = {
+			factor = 2
+			learning = 14
+		}
+		modifier = {
+			factor = 2
+			learning = 16
+		}
+		modifier = {
+			factor = 2
+			learning = 18
+		}
+		modifier = {
+			factor = 2
+			learning = 20
+		}
+		modifier = {
+			factor = 2
+			learning = 22
+		}
+		modifier = {
+			factor = 2
+			learning = 24
+		}
+		modifier = {
+			factor = 2
+			learning = 26
+		}
+		modifier = {
+			factor = 2
+			learning = 28
+		}
+		modifier = {
+			factor = 2
+			learning = 30
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 22000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 24000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 26000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 28000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 30000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 40000
+		}
+		modifier = {
+			factor = 1.5
+			prestige = 50000
+		}
+		modifier = {
+			factor = 1.5
+			piety = 1000
+			religion = santeria
+		}
+		modifier = {
+			factor = 1.5
+			piety = 1500
+			religion = santeria
+		}
+		modifier = {
+			factor = 1.75
+			piety = 2000
+			religion = santeria
+		}
+		modifier = {
+			factor = 1.75
+			check_variable = { which = bloodline_won_wars value = 5 }
+		}
+		modifier = {
+			factor = 1.75
+			check_variable = { which = bloodline_won_wars value = 10 }
+		}
+	}
+
+	immediate = { 
+		set_character_flag = flag_chance_for_guevara_blood
+	}
+
+	option = { #Pursue.
+		name = EVTOPTAHF24220
+		custom_tooltip = { text = TT_EVTOPTAHFATE24220 }
+		hidden_tooltip = { narrative_event = { id = HFATE.24221 days = 25 random = 25 } }
+	}
+	option = { #Abandon.
+		name = EVTOPTBHF24220
+	}
+}
+
+#Call priests to examine you.
+narrative_event = {
+	id = HFATE.24221
+	title = EVTTITLEHF24220
+	desc = EVTDESCHFATE24221
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_scholars_search_high
+		clr_character_flag = flag_guevara_scholars_search_medium
+		clr_character_flag = flag_guevara_scholars_search_low
+		clr_character_flag = flag_guevara_scholars_search_cheap
+	}
+
+	option = { 
+		name = EVTOPTAHF24221
+		custom_tooltip = { text = TT_EVTOPTAHF24202 }
+		scaled_wealth = { value = -4 min = -1000 max = -2000 }
+		set_character_flag = flag_guevara_scholars_search_high
+	}
+	option = { 
+		name = EVTOPTBHF24221
+		custom_tooltip = { text = TT_EVTOPTBHF24202 }
+		scaled_wealth = { value = -3 min = -750 max = -1500 }
+		set_character_flag = flag_guevara_scholars_search_medium
+	}
+	option = { 
+		name = EVTOPTCHF24221
+		custom_tooltip = { text = TT_EVTOPTCHF24202 }
+		scaled_wealth = { value = -2 min = -500 max = -1000 }
+		set_character_flag = flag_guevara_scholars_search_low
+	}
+	option = { 
+		name = EVTOPTDHF24221
+		custom_tooltip = { text = TT_EVTOPTDHF24202 }
+		scaled_wealth = { value = -1 min = -250 max = -500 }
+		set_character_flag = flag_guevara_scholars_search_cheap
+	}
+	after = { 
+		character_event = { id = HFATE.24222 days = 150 random = 150 }
+	}
+}
+
+#Test 1: Guevara's Bravery.
+narrative_event = {
+	id = HFATE.24222
+	title = EVTTITLEHFATE24222
+	desc = EVTDESCAHFATE24222
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24222
+		trigger = { diplomacy = 12 trait = brave }
+		tooltip_info = diplomacy
+		set_character_flag = flag_guevara_diplomacy_check
+	}
+	option = { 
+		name = EVTOPTAHF24222
+		trigger = { intrigue = 18 NOT = { trait = brave } }
+		tooltip_info = intrigue
+		set_character_flag = flag_guevara_intrigue_check
+	}
+	option = { 
+		name = EVTOPTBHF24222
+		trigger = { learning = 18 NOT = { trait = brave } }
+		tooltip_info = learning
+		set_character_flag = flag_guevara_learning_check
+	}
+	option = { 
+		name = EVTOPTCHF24222
+		trigger = { trait = brave }
+		tooltip_info = brave
+	}
+	option = { 
+		name = EVTOPTDHF24222
+		trigger = {
+			NOR = {
+				trait = brave
+				trait = craven
+			}
+		}
+	}
+	option = { 
+		name = EVTOPTEHF24222
+		trigger = { trait = craven }
+		tooltip_info = craven
+	}
+	after = { 
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		hidden_tooltip = { 
+			random_list = { 
+				#Success. - Move to second test.
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_guevara_scholars_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_guevara_scholars_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_guevara_scholars_search_medium
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 0.5
+						trait = craven
+					}
+					modifier = {
+						factor = 1.5
+						trait = brave
+					}
+					narrative_event = { id = HFATE.24224 days = 350 random = 450 }
+				}
+				60 = { #Failure
+					narrative_event = { id = HFATE.24223 days = 350 random = 450 }
+				}
+			}
+		}
+	}
+}
+
+#Failed to prove bravery. Try again or abandon quest.
+narrative_event = {
+	id = HFATE.24223
+	title = EVTTITLEHF24222
+	desc = EVTDESCAHFATE24223
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24223
+		trigger = { diplomacy = 12 trait = brave }
+		tooltip_info = diplomacy
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_diplomacy_check
+	}
+	option = { 
+		name = EVTOPTAHF24223
+		trigger = { intrigue = 18 NOT = { trait = brave } }
+		tooltip_info = intrigue
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_intrigue_check
+	}
+	option = { 
+		name = EVTOPTBHF24223
+		trigger = { learning = 18 NOT = { trait = brave } }
+		tooltip_info = learning
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_learning_check
+	}
+	option = { 
+		name = EVTOPTCHF24223
+		trigger = { trait = brave }
+		tooltip_info = brave
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { 
+		name = EVTOPTDHF24223
+		trigger = {
+			NOR = {
+				trait = brave
+				trait = craven
+			}
+		}
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { 
+		name = EVTOPTEHF24223
+		trigger = { trait = craven }
+		tooltip_info = craven
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { #Abandon search.
+		name = EVTOPTFHF24223
+		custom_tooltip = { text = TT_EVTOPTFHFATE24223 }
+		if = { 
+			limit = { 
+				trait = ambitious
+			}
+			remove_trait = ambitious
+			if = { 
+				limit = { 
+					NOT = { trait = depressed }
+				}
+				add_trait = depressed
+			}
+		}
+		piety = -2000
+		set_character_flag = flag_guevara_abandoning_quest
+	}
+	after = { 
+		if = { 
+			limit = { 
+				NOT = { has_character_flag = flag_guevara_abandoning_quest }
+			}
+			piety = -500
+			hidden_tooltip = { 
+				random_list = { 
+					#Success. - Move to second test.
+					#Failure. - Retry or change approach.
+					40 = { #Success
+						modifier = {
+							factor = 0.1
+							has_character_flag = flag_guevara_scholars_search_cheap
+						}
+						modifier = {
+							factor = 0.35
+							has_character_flag = flag_guevara_scholars_search_low
+						}
+						modifier = {
+							factor = 0.75
+							has_character_flag = flag_guevara_scholars_search_medium
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 12
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 14
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 16
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 30
+						}
+						modifier = {
+							factor = 0.5
+							trait = craven
+						}
+						modifier = {
+							factor = 1.5
+							trait = brave
+						}
+						narrative_event = { id = HFATE.24224 days = 350 random = 450 }
+					}
+					60 = { #Failure
+						narrative_event = { id = HFATE.24223 days = 350 random = 450 }
+					}
+				}
+			}
+		}
+		else = {
+			clr_character_flag = flag_guevara_abandoning_quest
+		}
+	}
+}
+
+#Test 2: Guevara's Ambition.
+narrative_event = {
+	id = HFATE.24224
+	title = EVTTITLEHFATE24224
+	desc = EVTDESCAHFATE24224
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24224
+		trigger = { diplomacy = 12 trait = ambitious }
+		tooltip_info = diplomacy
+		set_character_flag = flag_guevara_diplomacy_check
+	}
+	option = { 
+		name = EVTOPTAHF24224
+		trigger = { intrigue = 18 NOT = { trait = ambitious } }
+		tooltip_info = intrigue
+		set_character_flag = flag_guevara_intrigue_check
+	}
+	option = { 
+		name = EVTOPTBHF24224
+		trigger = { learning = 18 NOT = { trait = ambitious } }
+		tooltip_info = learning
+		set_character_flag = flag_guevara_learning_check
+	}
+	option = { 
+		name = EVTOPTCHF24224
+		trigger = { trait = ambitious }
+		tooltip_info = ambitious
+	}
+	option = { 
+		name = EVTOPTDHF24224
+		trigger = {
+			NOR = {
+				trait = ambitious
+				trait = content
+			}
+		}
+	}
+	option = { 
+		name = EVTOPTEHF24224
+		trigger = { trait = content }
+		tooltip_info = content
+	}
+	after = { 
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		hidden_tooltip = { 
+			random_list = { 
+				#Success. - Move to third test.
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_guevara_scholars_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_guevara_scholars_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_guevara_scholars_search_medium
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 0.5
+						trait = content
+					}
+					modifier = {
+						factor = 1.5
+						trait = ambitious
+					}
+					narrative_event = { id = HFATE.24226 days = 350 random = 450 }
+				}
+				60 = { #Failure
+					narrative_event = { id = HFATE.24225 days = 350 random = 450 }
+				}
+			}
+		}
+	}
+}
+
+#Failed to prove ambition. Try again or abandon quest.
+narrative_event = {
+	id = HFATE.24225
+	title = EVTTITLEHF24224
+	desc = EVTDESCBHF24225
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24225
+		trigger = { diplomacy = 12 trait = ambitious }
+		tooltip_info = diplomacy
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_diplomacy_check
+	}
+	option = { 
+		name = EVTOPTAHF24225
+		trigger = { intrigue = 18 NOT = { trait = ambitious } }
+		tooltip_info = intrigue
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_intrigue_check
+	}
+	option = { 
+		name = EVTOPTBHF24225
+		trigger = { learning = 18 NOT = { trait = ambitious } }
+		tooltip_info = learning
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_learning_check
+	}
+	option = { 
+		name = EVTOPTCHF24225
+		trigger = { trait = ambitious }
+		tooltip_info = ambitious
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { 
+		name = EVTOPTDHF24225
+		trigger = {
+			NOR = {
+				trait = ambitious
+				trait = content
+			}
+		}
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { 
+		name = EVTOPTEHF24225
+		trigger = { trait = content }
+		tooltip_info = content
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+	}
+	option = { #Abandon search.
+		name = EVTOPTFHF24225
+		custom_tooltip = { text = TT_EVTOPTFHF24223 }
+		if = { 
+			limit = { 
+				trait = ambitious
+			}
+			remove_trait = ambitious
+			if = { 
+				limit = { 
+					NOT = { trait = depressed }
+				}
+				add_trait = depressed
+			}
+		}
+		piety = -2000
+		set_character_flag = flag_guevara_abandoning_quest
+	}
+	after = { 
+		if = { 
+			limit = { 
+				NOT = { has_character_flag = flag_guevara_abandoning_quest }
+			}
+			piety = -500
+			hidden_tooltip = { 
+				random_list = { 
+					#Success. - Move to third test.
+					#Failure. - Retry or change approach.
+					40 = { #Success
+						modifier = {
+							factor = 0.1
+							has_character_flag = flag_guevara_scholars_search_cheap
+						}
+						modifier = {
+							factor = 0.35
+							has_character_flag = flag_guevara_scholars_search_low
+						}
+						modifier = {
+							factor = 0.75
+							has_character_flag = flag_guevara_scholars_search_medium
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 12
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 14
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 16
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 30
+						}
+						modifier = {
+							factor = 0.5
+							trait = content
+						}
+						modifier = {
+							factor = 1.5
+							trait = ambitious
+						}
+						narrative_event = { id = HFATE.24226 days = 350 random = 450 }
+					}
+					60 = { #Failure
+						narrative_event = { id = HFATE.24225 days = 350 random = 450 }
+					}
+				}
+			}
+		}
+		else = { 
+			clr_character_flag = flag_guevara_abandoning_quest
+		}
+	}
+}
+
+#Test 3: Guevara's Charity.
+narrative_event = {
+	id = HFATE.24226
+	title = EVTTITLEHFATE24226
+	desc = EVTDESCBHFATE24226
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24226
+		trigger = { diplomacy = 12 trait = charitable }
+		tooltip_info = diplomacy
+		set_character_flag = flag_guevara_diplomacy_check
+		scaled_wealth = { value = -4 min = -750 max = -1000 }
+	}
+	option = { 
+		name = EVTOPTAHF24226
+		trigger = { intrigue = 18 NOT = { trait = charitable } }
+		tooltip_info = intrigue
+		set_character_flag = flag_guevara_intrigue_check
+		scaled_wealth = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTBHF24226
+		trigger = { learning = 18 NOT = { trait = charitable } }
+		tooltip_info = learning
+		set_character_flag = flag_guevara_learning_check
+		scaled_wealth = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTCHF24226
+		trigger = { trait = charitable }
+		tooltip_info = charitable
+		scaled_wealth = { value = -4 min = -750 max = -1000 }
+	}
+	option = { 
+		name = EVTOPTDHF24226
+		trigger = {
+			NOR = {
+				trait = charitable
+				trait = greedy
+			}
+		}
+		scaled_wealth = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTEHF24226
+		trigger = { trait = greedy }
+		tooltip_info = greedy
+		scaled_wealth = { value = -2 min = -350 max = -500 }
+	}
+	after = { 
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		hidden_tooltip = { 
+			random_list = { 
+				#Success. - Found Bloodline.
+				#Failure. - Retry or change approach.
+				40 = { #Success
+					modifier = {
+						factor = 0.1
+						has_character_flag = flag_guevara_scholars_search_cheap
+					}
+					modifier = {
+						factor = 0.35
+						has_character_flag = flag_guevara_scholars_search_low
+					}
+					modifier = {
+						factor = 0.75
+						has_character_flag = flag_guevara_scholars_search_medium
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_intrigue_check
+						intrigue = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_learning_check
+						learning = 30
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 12
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 14
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 16
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 18
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 20
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 22
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 24
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 28
+					}
+					modifier = {
+						factor = 1.5
+						has_character_flag = flag_guevara_diplomacy_check
+						diplomacy = 30
+					}
+					modifier = {
+						factor = 0.5
+						trait = greedy
+					}
+					modifier = {
+						factor = 1.5
+						trait = charitable
+					}
+					narrative_event = { id = HFATE.24228 days = 350 random = 450 }
+				}
+				60 = { #Failure
+					narrative_event = { id = HFATE.24227 days = 350 random = 450 }
+				}
+			}
+		}
+	}
+}
+#Failed to prove charity. Try again or abandon quest.
+narrative_event = {
+	id = HFATE.24227
+	title = EVTTITLEHFATE24226
+	desc = EVTDESCAHFATE24227
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+	}
+
+	option = { 
+		name = EVTOPTZHF24227
+		trigger = { diplomacy = 12 trait = charitable }
+		tooltip_info = diplomacy
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_diplomacy_check
+		scaled_piety = { value = -4 min = -750 max = -1000 }
+	}
+	option = { 
+		name = EVTOPTAHF24227
+		trigger = { intrigue = 18 NOT = { trait = charitable } }
+		tooltip_info = intrigue
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_intrigue_check
+		scaled_piety = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTBHF24227
+		trigger = { learning = 18 NOT = { trait = charitable } }
+		tooltip_info = learning
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		set_character_flag = flag_guevara_learning_check
+		scaled_piety = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTCHF24227
+		trigger = { trait = charitable }
+		tooltip_info = charitable
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		scaled_piety = { value = -4 min = -750 max = -1000 }
+	}
+	option = { 
+		name = EVTOPTDHF24227
+		trigger = {
+			NOR = {
+				trait = charitable
+				trait = greedy
+			}
+		}
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		scaled_piety = { value = -3 min = -500 max = -750 }
+	}
+	option = { 
+		name = EVTOPTEHFATE24227
+		trigger = { trait = greedy }
+		tooltip_info = greedy
+		custom_tooltip = { text = TT_EVTOPTHF24222 }
+		scaled_piety = { value = -2 min = -350 max = -500 }
+	}
+	option = { #Abandon search.
+		name = EVTOPTFHF24227
+		custom_tooltip = { text = TT_EVTOPTFHF24223 }
+		if = { 
+			limit = { 
+				trait = ambitious
+			}
+			remove_trait = ambitious
+			if = { 
+				limit = { 
+					NOT = { trait = depressed }
+				}
+				add_trait = depressed
+			}
+		}
+		piety = -2000
+		set_character_flag = flag_guevara_abandoning_quest
+	}
+	after = { 
+		if = { 
+			limit = { 
+				NOT = { has_character_flag = flag_guevara_abandoning_quest }
+			}
+			piety = -500
+			hidden_tooltip = { 
+				random_list = { 
+					#Success. - Move to third test.
+					#Failure. - Retry or change approach.
+					40 = { #Success
+						modifier = {
+							factor = 0.1
+							has_character_flag = flag_guevara_scholars_search_cheap
+						}
+						modifier = {
+							factor = 0.35
+							has_character_flag = flag_guevara_scholars_search_low
+						}
+						modifier = {
+							factor = 0.75
+							has_character_flag = flag_guevara_scholars_search_medium
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_intrigue_check
+							intrigue = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_learning_check
+							learning = 30
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 12
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 14
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 16
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 18
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 20
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 22
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 24
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 28
+						}
+						modifier = {
+							factor = 1.5
+							has_character_flag = flag_guevara_diplomacy_check
+							diplomacy = 30
+						}
+						modifier = {
+							factor = 0.5
+							trait = greedy
+						}
+						modifier = {
+							factor = 1.5
+							trait = charitable
+						}
+						narrative_event = { id = HFATE.24228 days = 350 random = 450 }
+					}
+					60 = { #Failure
+						narrative_event = { id = HFATE.24227 days = 350 random = 450 }
+					}
+				}
+			}
+		}
+		else = { 
+			clr_character_flag = flag_guevara_abandoning_quest
+		}
+	}
+}
+
+#Acquired Bolivar's Bloodline.
+narrative_event = {
+	id = HFATE.24228
+	title = EVTTITLEHFATE24228
+	desc = EVTDESCHFATE24228
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		clr_character_flag = flag_guevara_intrigue_check
+		clr_character_flag = flag_guevara_learning_check
+		clr_character_flag = flag_guevara_diplomacy_check
+		set_global_flag = flag_guevara_blood_restored
+	}
+
+	option = { 
+		name = EVTOPTAHF24228
+		if = { 
+			limit = { 
+				this_has_cool_nickname_trigger = no
+				this_has_super_cool_nickname_trigger = no
+			}
+			ROOT = { give_nickname = nick_the_liberator }
+		}
+		if = { 
+			limit = { is_female = no }
+			create_bloodline = {
+				type = guevara_bloodline_01
+			}
+		}
+		if = { 
+			limit = { is_female = yes }
+			create_bloodline = {
+				type = guevara_bloodline_01
+				inheritance = matrilineal
+			}		
+		}
+		any_playable_ruler = {  
+			limit = { 
+				ai = no 
+				is_within_diplo_range = ROOT
+			}
+			narrative_event = { id = HFATE.24229 }
+		}
+	}
+}
+
+narrative_event = {
+	id = HFATE.24229
+	title = EVTTITLEHFATE24228
+	desc = EVTDESCHFATE24229
+	picture = GFX_evt_bishop
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = EVTOPTAHF24229
+	}
+}

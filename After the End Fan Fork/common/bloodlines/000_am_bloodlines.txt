@@ -23,7 +23,7 @@ yudkow = { #Emperors of California
 	flags = { historical_bloodline bloodline_heroes }
 }
 soady = { #Vikings
-command_modifier = {
+	command_modifier = {
 		morale_offense = 0.10
 	}
 	norse_pagan_opinion = 5
@@ -327,7 +327,7 @@ libertador_male = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_virgin
-	flags = { created_bloodline }
+	flags = { created_bloodline libertador_bloodline }
 	active = {
 		religion = patria_grande
 	}
@@ -343,7 +343,7 @@ libertador_female = {
 	inheritance = matrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_virgin
-	flags = { created_bloodline }
+	flags = { created_bloodline libertador_bloodline }
 	active = {
 		religion = patria_grande
 	}
@@ -524,7 +524,6 @@ bolivar_bloodline_01 = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	patria_grande_opinion = 5
-	santeria_opinion = 5
 	levy_reinforce_rate = 0.15
 	command_modifier = {
 		land_organisation = 0.2
@@ -532,6 +531,20 @@ bolivar_bloodline_01 = {
 	monthly_character_prestige = 0.2
 	bloodline_effect_one_invasion = 1
 	flags = { created_bloodline bloodline_ambition bloodline_better_inquisition bloodline_religious_liberation bloodline_great_conquerors bloodline_bolivar }
+}
+
+guevara_bloodline_01 = {
+	picture = GFX_bloodlines_symbol_longship #placeholder
+	inheritance = patrilineal
+	allow_bastards = yes
+	santeria_opinion = 5
+	levy_reinforce_rate = 0.15
+	command_modifier = {
+		land_organisation = 0.2
+	}
+	monthly_character_prestige = 0.2
+	bloodline_effect_one_invasion = 1
+	flags = { created_bloodline bloodline_ambition bloodline_better_inquisition bloodline_religious_liberation bloodline_great_conquerors bloodline_guevara }
 }
 
 general_gaia_male= {
