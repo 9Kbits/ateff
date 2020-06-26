@@ -392,7 +392,10 @@ decisions = {
 		potential = {
 			is_ruler = yes
 			OR = { #this is basically it
-				religion = cetic
+				AND = {
+					religion = cetic
+					NOT = { controls_religion = yes }
+				}
 				AND = {
 					OR = {
 						religion = imamite
@@ -407,10 +410,6 @@ decisions = {
 			in_seclusion = no
 			NOT = { is_incapable = yes }
 			NOT = { trait = travelling }
-			NOT = {
-				religion = cetic
-				controls_religion = yes
-			}
 			e_california = { has_holder = yes } #you know, we'll have to figure out the cetic religious head situation if we want random world to work right
 			NOT = { #immersion-breaking
 				has_alternate_start_parameter = { key = religion_names value = random }
