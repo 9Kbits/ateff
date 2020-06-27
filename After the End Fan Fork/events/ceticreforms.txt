@@ -679,26 +679,6 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformsede
-		trigger = {
-			trait = way_dove
-		}
-		religion = sedevacantist
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = sedevacantist
-			}
-		}
-
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 10 culture = angeleno }
-		}
-	}
-	option = {
 		name = EVTOPT_ceticreformsagrado
 		trigger = {
 			trait = way_dove
@@ -739,7 +719,26 @@ character_event = {
 			modifier = { factor = 10 culture = angeleno }
 		}
 	}
-	
+	option = {
+		name = EVTOPT_ceticreformnestorian
+		trigger = {
+			trait = way_dove
+		}
+		religion = nestorian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = nestorian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = angeleno }
+		}
+	}
 	option = {
 		name = EVTOPT_ceticreformsagrado
 		trigger = {
@@ -1345,14 +1344,6 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformresist
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 15 trait = zealous }
-
-		}
-	}
-	option = {
 		name = EVTOPT_ceticreformatomicist
 		religion = atomicist
 		any_demesne_province = {
@@ -1425,6 +1416,14 @@ character_event = {
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 0 culture = calaotian }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformresist
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 15 trait = zealous }
+
 		}
 	}
 }
@@ -2365,17 +2364,17 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformsede
+		name = EVTOPT_ceticreformnestorian
 		trigger = {
 			trait = way_dove
 		}
-		religion = sedevacantist
+		religion = nestorian
 		any_demesne_province = {
 			if = {
 				limit = {
 					religion = cetic
 				}
-				religion = sedevacantist
+				religion = nestorian
 			}
 		}
 
