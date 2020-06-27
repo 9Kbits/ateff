@@ -21,6 +21,7 @@
 	disallow_random_traits=yes
 	give_nickname=nick_abu_tammam
 	2000.11.21={birth=yes}
+	2020.1.1={add_spouse=1384024}
 	2050.1.1={
 		create_bloodline={
 			type=abbas01
@@ -37,6 +38,7 @@
 	name="Ali az-Zahir"
 	dynasty=2030000# Abbas
 	father=2200000
+	mother=1384024
 	culture=anjalusi
 	occluded=yes
 	religion=imamite
@@ -235,7 +237,7 @@
 	culture=anjalusi
 	religion=imamite
 	trait=sayyid2
-	2620.12.14={birth=yes}
+	2618.12.14={birth=yes}
 	2663.11.7={death={
 			death_reason=death_murder_unknown #Murdered.
 		}
@@ -564,7 +566,10 @@
 	culture=angeleno
 	religion=cetic
 	2597.4.5={birth=yes}
-	2640.11.7={death=yes}
+	2621.6.3={death={
+			death_reason=death_murder_unknown #Murdered.
+		}
+	}
 }
 2200032={
 	name="Salim" #
@@ -1534,4 +1539,52 @@
 		}
 	}
 	2710.12.1={death=yes}
+}
+
+1384024={
+	name="Malikah al-Aziziyyah"
+	culture=anjalusi
+	religion=imamite
+	trait=fair
+	trait=just
+	trait=patient
+	trait=content
+	trait=mystic
+	trait=shrewd
+	trait=fortune_builder
+	2000.11.21={birth=yes}
+	2100.11.21={death=yes}
+}
+
+1384025={
+	name="Hussein"
+	dynasty=2030000# Abbas
+	father=2200007
+	culture=anjalusi
+	religion=imamite
+	trait=sayyid2
+	2325.1.1={birth=yes}
+	2381.1.1={death=yes}
+}
+1384026={
+	name="Karim"
+	dynasty=2030000# Abbas
+	father=1384025
+	culture=anjalusi
+	religion=imamite
+	trait=just
+	trait=zealous
+	trait=mystic
+	trait=diligent
+	trait=gregarious
+	trait=ambitious
+	trait=mastermind_theologian
+	trait=sayyid2
+	give_nickname=nick_the_missionary
+	2367.1.1={birth=yes}
+	2400.1.1={death={
+			death_reason=death_execution_beheading #Executed by last Areus king.
+			killer=2500008
+		}
+	}
 }

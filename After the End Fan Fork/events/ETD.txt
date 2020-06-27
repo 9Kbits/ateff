@@ -1,0 +1,76 @@
+Namespace = etd
+
+province_event = {
+	id = etd.1
+	desc = "EVTDESC_ETD1"
+	picture = GFX_evt_emissary
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_ETD1
+		create_random_steward = {
+			random_traits = yes
+			culture = FROM
+			religion = FROM
+			female = no
+			attributes = {
+				diplomacy = 2
+				learning = 2
+				stewardship = 8
+				intrigue = 2
+				martial = 2
+			}
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			remove_trait = slow
+			remove_trait = imbecile
+			remove_trait = dull
+				
+			remove_trait = mystic
+			remove_trait = socializer
+			remove_trait = gamer
+			remove_trait = hedonist
+			remove_trait = duelist
+			remove_trait = hunter
+			remove_trait = strategist
+			remove_trait = administrator
+			remove_trait = architect
+			remove_trait = gardener
+			remove_trait = schemer
+			remove_trait = impaler
+			remove_trait = seducer
+			remove_trait = seductress
+			remove_trait = theologian
+			remove_trait = scholar
+				
+			random_list = { # Flavor Randomization
+				35 = { 
+					# Nothing
+				}
+				15 = {
+					change_stewardship = 2
+				}
+				10 = {
+					add_trait = gardener
+				}
+				10 = {
+					add_trait = architect
+				}
+				10 = {
+					add_trait = administrator
+				}
+				10 = {
+					change_stewardship = 4
+				}
+				5 = {
+					change_stewardship = 6
+				}
+				5 = {
+					add_trait = shrewd
+				}
+			}
+		}
+	}
+}
