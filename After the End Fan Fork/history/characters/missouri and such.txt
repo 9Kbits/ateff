@@ -97,6 +97,8 @@
 	trait=lustful
 	trait=brave
 	trait=brilliant_strategist
+	father=1821088
+	mother=1821086
 	2620.9.17={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -115,6 +117,7 @@
 	trait=honest
 	trait=kind
 	trait=fortune_builder
+	father=1821074
 	2621.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -525,7 +528,6 @@
 	dynasty=1791006
 	culture=grangelander
 	religion=catholic
-	father=1846068
 	martial=4
 	diplomacy=2
 	stewardship=5
@@ -664,6 +666,7 @@
 	2645.5.20={birth=yes}
 	2700.1.1={death=yes}
 }
+
 1821037={
 	name="Ulfley"
 	dynasty=1791006
@@ -734,4 +737,559 @@
 		give_nickname=nick_the_saint
 	}
 	2300.1.1={death=yes}
+}
+1821094={
+	name="Jeremiah" #Last President of the Turner Ward Republic
+	culture=ozark
+	religion=catholic
+	dynasty=1836061
+	2531.1.1={birth=yes}
+	2586.6.15={death={death_reason = death_murder killer = 1821061}}
+}
+
+1821038={
+	name="Roxxy" #Jeremiah's wife, later Malachi Blythe's wife
+	culture=dixie
+	religion=charismatic
+	dynasty=1787141
+	female=yes
+	2559.6.8={birth=yes}
+	2583.2.27={add_spouse = 1821094}
+	2586.7.4={add_spouse = 1821040}
+	2602.6.15={death=yes}
+}
+
+1821039={
+	name="Truman"
+	culture=ozark
+	religion=catholic
+	dynasty=1836062
+	2542.1.1={birth=yes}
+	2587.9.10={death={death_reason = death_suicide}}
+}
+
+1821040={
+	name="Malachi"
+	culture=ozark
+	religion=catholic
+	dynasty=1836025
+	2551.1.1 = {
+		effect=	{ add_friend = 1821061 }
+	}
+	2586.6.15 = { 
+		effect = { 
+			remove_friend = 1821061
+			add_rival = 1821061
+		}
+	}
+	2586.7.4={add_spouse = 1821038}
+	2548.11.20={birth=yes}
+	2603.9.10={death=yes}
+}
+
+1821041={
+	name="Jeremiah"
+	culture=ozark
+	religion=catholic
+	dynasty=1836025
+	father=1821040
+	mother=1821038
+	2587.5.27={birth=yes}
+	2640.9.10={death=yes}
+}
+
+1821042= {
+	name="Rhoda"
+	culture=ozark
+	religion=catholic
+	female=yes
+	dynasty=1836061
+	father=1821094
+	mother=1821038
+	2585.8.18={birth=yes}
+	2640.9.10={death=yes}
+}
+
+1821043={
+	name="Wilbur"
+	dynasty=1787026
+	culture=dixie
+	religion=catholic
+	father=1821044
+	2620.1.1={birth=yes}
+	2662.1.1={death=yes}
+}
+
+1821044={
+	name="Wilbur"
+	dynasty=1787026
+	culture=dixie
+	religion=catholic
+	2585.1.1={birth=yes}
+	2637.1.1={death=yes}
+}
+
+1821045={
+	name="Heron" #First Warlord to Claim Ft. Smith
+	culture=ozark
+	religion=catholic
+	dynasty=1836074
+	2530.1.1={birth=yes}
+	2587.2.1={death={death_reason = death_execution killer = 1821040}}
+}
+
+1821046={
+	name="Boston" #Bradson's former Secretary of Justice and first Ozark warlord of Pine Bluff
+	culture=dixie
+	religion=catholic
+	dynasty=1836075
+	2533.1.1={ birth=yes}
+	2587.7.1={death={death_reason = death_battle}}
+}
+
+1821047={
+	name="Wade" #Dixie warlord of Pine Bluff
+	culture=dixie
+	religion=revelationist
+	dynasty=1836076
+	2533.1.1={ birth=yes effect={ dynasty=none }}
+	2589.1.1={death={death_reason = death_battle}}
+}
+
+1821048={
+	name="Urias" #Attempted to maintain Catholic rule in Chicot until rule could be reestablished
+	culture=ozark
+	religion=catholic
+	dynasty=1836066
+	2502.1.1={birth= yes effect={ dynasty=none }}
+	2587.3.15={death={death_reason = death_execution killer = 1821049}}
+}
+
+1821049={
+	name="Phineas" #Tuskegean warlord of Chicot, killed Urias
+	culture=tuskegean
+	religion=revelationist
+	dynasty=1785012
+	2533.1.1={birth=yes}
+	2589.1.1={death={death_reason = death_murder_strangle killer = 1821050}}
+}
+
+1821050={
+	name="Zilpah" #Warlord of Chicot, wife and murderer Phineas
+	culture=tuskegean
+	religion=charismatic
+	female=yes
+	dynasty=1785028
+	father=1821052
+	2556.1.1={birth=yes effect={ dynasty=1785028 }}
+	2582.8.1={add_spouse = 1821049}
+	2599.1.1={death=yes}
+}
+
+1821051={
+	name="Darryl" #Brother of Zilpah
+	culture=tuskegean
+	religion=charismatic
+	dynasty=1785028
+	father=1821052
+	2568.1.1={birth=yes}
+	2604.1.1={death=yes}
+}
+
+1821052={
+	name="Israel" #Father of Darryl and Zilpah
+	culture=tuskegean
+	religion=charismatic
+	dynasty=1785028
+	2535.1.1={birth=yes}
+	2582.1.1={death=yes}
+}
+
+1821053={
+	name="Enos" #Voodoo warlord of Chicot
+	culture=dixie
+	religion=voodoo
+	dynasty=1787039
+	2580.1.1={birth=yes}
+	2607.1.1={death=yes}
+}
+
+1821054={
+	name="Eldridge"
+	culture=tuskegean
+	religion=revelationist
+	dynasty=1785008
+	2580.1.1={birth=yes}
+	2621.12.25={death={death_reason = death_battle}}
+}
+
+1821055={ ##A product of marriage alliances, she united the Arkansas Delta, but was removed from power by the Blythes - currently imprisoned by Duke Jubal
+	name="Daffodil"
+	female=yes
+	culture=riverlander
+	religion=revelationist
+	dynasty=1791031
+	mother=1821092
+	father=1821093
+	2623.1.1={birth=yes}
+	2657.1.1={effect={imprison=1861084}}
+	2700.1.1={death=yes}
+}
+
+1821056={ #An ally of Russel Warnock and warlord of Fay
+	name="Alexa"
+	female=yes
+	culture=ozark
+	religion=catholic
+	dynasty=1836001
+	2545.1.1={birth=yes}
+	2592.1.1={death={death_reason = death_battle}}
+}
+
+1821058={ #First warlord of Spring, once-ally later deposed by Russel Warnock
+	name="Brock"
+	culture=ozark
+	religion=catholic
+	dynasty=1836077
+	2545.1.1={birth=yes}
+	2592.1.1={death={death_reason = death_execution killer=1821062}}
+}
+1821059={ #Jeremiah Bradson's brother-in-law and general, originally sided with Russel Warnock but later joined with Malachi Blythe after the Mudcrays drove him from Little Rock
+	name="Urias"
+	culture=ozark
+	religion=catholic
+	dynasty=1836078
+	2534.1.1={birth=yes}
+	2590.1.1={death={death_reason = death_battle}}
+}
+1821060={ #Overthrew General Urias, fled Little Rock when Blythe retook it
+	name="Finn"
+	culture=riverlander
+	religion=revelationist
+	dynasty=1791065
+	2546.1.1={birth=yes}
+	2621.5.29={death=yes}
+}
+1821061={ #A Sequoyan expat, Took control of Sam's Throne following Russel Warnock's death
+	name="Ahaya"
+	culture=muscogee
+	religion=catholic
+	dynasty=1491307
+	2560.1.1={birth=yes}
+	2600.2.28={death=yes}
+}
+1821062={ ##Russel Warnock, leader of the assassination against President Bradson and once Malachi Blythe's closest friend
+	name="Russel"
+	culture=ozark
+	religion=catholic
+	dynasty=1836004
+	2549.1.2={birth=yes}
+	2588.9.10={death=yes}
+}
+1821063={ #Former Diplomat to the HCC
+	name="Chester"
+	culture=ozark
+	religion=catholic
+	dynasty=1836068
+	2550.1.1={birth=yes}
+	2602.1.1={death=yes}
+}
+1821064={ #Speaker of the Congress, was pardoned by Bradson for his role in the Civil War and later helped assassinate him
+	name="Marcus"
+	culture=ozark
+	religion=catholic
+	dynasty=1836064
+	2530.1.1={birth=yes}
+	2590.1.1={effect={imprison=1821065}}
+	2602.1.1={death=yes}
+}
+1821065={ #Speaker Marcus's son and s Bradson loyalist, he later imprisoned his father but remained in the wider anti-Bradford axis
+	name="Eli"
+	culture=ozark
+	religion=catholic
+	dynasty=1836064
+	father=1821064
+	2560.1.1={birth=yes}
+	2608.1.1={death=yes}
+}
+1821066={ #Removed Constantinte Burntower from power and ruled Bald Knob for some years
+	name="Harris"
+	culture=riverlander
+	religion=revelationist
+	dynasty=1791064
+	2578.1.1={birth=yes}
+	2614.11.3={death=yes}
+}
+1821067={
+	name="Pastor Jim"
+	culture=ozark
+	religion=evangelical
+	trait=zealous
+	trait=mastermind_theologian
+	martial=10
+	diplomacy=10
+	stewardship=10
+	intrigue=10
+	learning=10
+	dynasty=1836063
+	2563.1.1={birth=yes}
+	2608.11.3={death={death_reason = death_execution killer = 1821068}}
+}
+1821068={ ##Servant of the Pope and enemy of Pastor Jim
+	name="Constantine"
+	culture=riverlander
+	religion=catholic
+	trait=mystic
+	trait=lustful
+	trait=gluttonous
+	trait=proud
+	trait=greedy
+	trait=slothful
+	trait=wroth
+	trait=envious
+	trait=deceitful
+	dynasty=1791061
+	2562.1.1={birth=yes}
+	2629.1.1={death=yes}
+}
+1821069={ ##Constantine Burntower's wife
+	name="Jess"
+	female=yes
+	culture=riverlander
+	religion=catholic
+	trait=seducer
+	trait=fair
+	trait=lustful
+	trait=gluttonous
+	trait=proud
+	trait=greedy
+	trait=slothful
+	trait=wroth
+	trait=envious
+	trait=deceitful
+	dynasty=1791062
+	2586.1.1={birth=yes}
+	2604.1.1={add_spouse=1821068}
+	2648.1.1={death=yes}
+}
+1821070={ ##Burntower daughter
+	name="Salome"
+	female=yes
+	culture=riverlander
+	religion=catholic
+	trait=fair
+	trait=zealous
+	father=1821068
+	mother=1821069
+	dynasty=1791061
+	2609.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1821071={ #Chester Springvoice's son
+	name="Darryl"
+	culture=ozark
+	religion=catholic
+	dynasty=1836068
+	father=1821063
+	2579.1.1={birth=yes}
+	2603.1.1={death=yes}
+}
+
+1821072={ #Brother of Pamela Lightstricken
+	name="Dodge"
+	culture=riverlander
+	religion=revelationist
+	dynasty=1791063
+	father=1821077
+	2572.1.1={birth=yes}
+	2640.1.1={death=yes}
+}
+
+1821073={ #Grandmother of Daffodil Edenborn, warlord of Crowley
+	name="Pamela"
+	culture=riverlander
+	religion=revelationist
+	dynasty=1791063
+	female=yes
+	father=1821077
+	2570.1.1={birth=yes}
+	2647.1.1={death=yes}
+}
+
+1821074={ ##Twice invaded Spring, succeeded on the second attempt, pushing Bald Knob into the arms of Blythe Arkansas
+	name="Riley"
+	dynasty=1791021
+	culture=riverlander
+	religion=catholic
+	2598.1.1={birth=yes}
+	2660.1.1={death=yes}
+}
+1821075={ #Congressman from Fay, Succeeded Warlord Alexa as ruler of Fay
+	name="Abraham"
+	culture=ozark
+	religion=catholic
+	dynasty=1836069
+	2545.1.1={birth=yes}
+	2594.1.1={death={death_reason = death_battle}}
+}
+1821076={ #Zeke The Monster, Former Secretary of Agriculture, usurped Dardanelle from Malachi Blythe and later removed Warlord Ahaya from Fay
+	name="Zeke"
+	culture=ozark
+	religion=catholic
+	dynasty=1836070
+	give_nickname=nick_the_monster
+	trait=wroth
+	trait=cruel
+	trait=arbitrary
+	2556.1.1={birth=yes}
+	2607.1.1={death={death_reason = death_battle}}
+}
+1821077={ #Founder of the Lightstricken Dynasty
+	name="Dodge"
+	culture=riverlander
+	religion=revelationist
+	dynasty=1791063
+	2540.1.1={birth=yes}
+	2580.1.1={death=yes}
+}
+1821078={ #Degataga "Green", Sequoyan Commander sent to remove Zeke the Monster and reestablish order in Fay, but instead set himself up as a warlord
+	name="Degataga"
+	culture=cherokee
+	religion=catholic
+	dynasty=1491220
+	2568.1.1={birth=yes}
+	2601.1.1={death={death_reason = death_battle}}
+}
+1821079={ #Warlord Ahaya's successor, was overthrown by Revelationists
+	name="Michael"
+	culture=ozark
+	religion=catholic
+	dynasty=1836071
+	2565.1.1={birth=yes}
+	2604.1.1={death={death_reason = death_battle}}
+}
+1821080={ #Ascent to power in Dardanelle c.2607 marks the beginning of a two decade Revelationist mostly-peace in the Eastern Ozarks 
+	name="Myrtle"
+	culture=ozark
+	religion=revelationist
+	female=yes
+	dynasty=1836072
+	2587.1.1={birth=yes}
+	2633.1.1={death=yes}
+}
+1821081={ 
+	name="Yell"
+	culture=ozark
+	religion=revelationist
+	dynasty=1836073
+	2577.1.1={birth=yes}
+	2615.1.1={death=yes}
+}
+1821082={ 
+	name="Holla"
+	culture=ozark
+	religion=revelationist
+	female=yes
+	dynasty=1836073
+	father=1821081
+	2593.1.1={birth=yes}
+	2622.1.1={death=yes}
+}
+1821083={ 
+	name="Whisper"
+	culture=ozark
+	religion=revelationist
+	female=yes
+	mother=1821082
+	dynasty=1836073
+	2610.1.1={birth=yes}
+	2645.1.1={death=yes}
+}
+1821084={ 
+	name="Denzel"
+	culture=tuskegean
+	religion=revelationist
+	dynasty=1785121
+	2580.1.1={birth=yes}
+	2607.1.1={death={death_reason = death_execution killer = 1821041}}
+}
+1821085={
+	name="Rayen"
+	culture=muscogee
+	religion=catholic
+	female=yes
+	father=1821061
+	dynasty=1491307
+	2588.1.1={birth=yes}
+	2700.1.1={death=yes}
+}
+1821086={ 
+	name="Suwanee"
+	culture=muscogee
+	religion=catholic
+	father=1821061
+	dynasty=1491307
+	female=yes
+	2590.1.1={birth=yes}
+	2615.1.1={add_spouse=1821088}
+	2700.1.1={death=yes}
+}
+1821087={ #Claimed to be Jeremiah Bradson's bastard
+	name="Clark"
+	culture=ozark
+	religion=catholic
+	dynasty=1836067
+	2571.1.1={birth=yes}
+	2636.1.1={death=yes}
+}
+1821088={##Ascended to the throne of Salem at age 14, married warlord warlord Rayen's sister
+	name="Luke"
+	culture=ozark
+	religion=catholic
+	dynasty=1836021
+	2599.1.1={birth=yes}
+	2660.1.1={death=yes}
+}
+1821089={
+	name="Darryl"
+	culture=ozark
+	religion=revelationist
+	dynasty=1836072
+	mother=1821080
+	2608.1.1={birth=yes}
+	2636.1.1={death={death_reason = death_battle}}
+}
+1821090={#Digger Daddy
+	name="Bill"
+	dynasty=1836024
+	culture=ozark
+	religion=catholic
+	2618.6.14={birth=yes}
+	2659.1.1={death=yes}
+}
+1821091={#Kicked out the Burntowers for the second time
+	name="Nehemiah"
+	culture=ozark
+	religion=revelationist
+	2602.6.14={birth=yes}
+	2650.1.1={death=yes}
+}
+1821092={ #Mother of Daffodil Edenborn
+	name="Sue Ellen"
+	culture=riverlander
+	religion=revelationist
+	dynasty=1791063
+	female=yes
+	mother=1821073
+	2594.1.1={birth=yes}
+	2641.1.1={death=yes}
+}
+1821093={ #Father of Daffodil Edenborn
+	name="Damian"
+	culture=riverlander
+	religion=revelationist
+	dynasty=1791031
+	2591.1.1={birth=yes}
+	2621.1.1={add_spouse=1821092}
+	2628.1.1={death=yes}
 }
