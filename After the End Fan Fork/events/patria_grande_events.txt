@@ -174,23 +174,10 @@ character_event = {
 				is_feudal = yes
 				holy_order = no
 			}
-			primary_title = {
-				revoke_law = succ_gavelkind
-				revoke_law = succ_elective_gavelkind
-				revoke_law = succ_eldership
-				revoke_law = succ_seniority
-				revoke_law = succ_primogeniture
-				revoke_law = succ_feudal_elective
-				revoke_law = succ_hre_elective
-				revoke_law = succ_byzantine_elective
-				revoke_law = succ_mormon_elective
-				revoke_law = succ_ghazi_elective
-				revoke_law = succ_bureaucratic_elective
-				revoke_law = succ_tanistry
-				revoke_law = succ_ultimogeniture
-				revoke_law = succ_turkish_succession
+			any_demesne_title = {
 				add_law = succ_primogeniture
 			}
+			recalc_succession = yes
 		}
 	}
 }
@@ -210,23 +197,10 @@ character_event = {
 				is_feudal = yes
 				holy_order = no
 			}
-			primary_title = {
-				revoke_law = succ_gavelkind
-				revoke_law = succ_elective_gavelkind
-				revoke_law = succ_eldership
-				revoke_law = succ_seniority
-				revoke_law = succ_primogeniture
-				revoke_law = succ_feudal_elective
-				revoke_law = succ_hre_elective
-				revoke_law = succ_byzantine_elective
-				revoke_law = succ_mormon_elective
-				revoke_law = succ_ghazi_elective
-				revoke_law = succ_bureaucratic_elective
-				revoke_law = succ_tanistry
-				revoke_law = succ_ultimogeniture
-				revoke_law = succ_turkish_succession
+			any_demesne_title = {
 				add_law = succ_gavelkind
 			}
+			recalc_succession = yes
 		}
 	}
 }
@@ -246,23 +220,10 @@ character_event = {
 				is_feudal = yes
 				holy_order = no
 			}
-			primary_title = {
-				revoke_law = succ_gavelkind
-				revoke_law = succ_elective_gavelkind
-				revoke_law = succ_eldership
-				revoke_law = succ_seniority
-				revoke_law = succ_primogeniture
-				revoke_law = succ_feudal_elective
-				revoke_law = succ_hre_elective
-				revoke_law = succ_byzantine_elective
-				revoke_law = succ_mormon_elective
-				revoke_law = succ_ghazi_elective
-				revoke_law = succ_bureaucratic_elective
-				revoke_law = succ_tanistry
-				revoke_law = succ_ultimogeniture
-				revoke_law = succ_turkish_succession
+			any_demesne_title = {
 				add_law = succ_feudal_elective
 			}
+			recalc_succession = yes
 		}
 	}
 }
@@ -960,6 +921,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
+		is_save_game = no
 		has_landed_title = d_patria_grande
 	}
 	

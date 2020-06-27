@@ -1761,6 +1761,7 @@ gender_laws = {
 				NOT = { has_religion_feature = religion_matriarchal }
 				NOT = { has_religion_feature = religion_equal }
 				NOT = { has_religion_feature = religion_feature_midewiwin }
+				trait = machete_male_ref
 				OR = {
 					has_bloodline_flag = bloodline_effect_cognatic
 					AND = {
@@ -1965,13 +1966,7 @@ gender_laws = {
 						}
 						OR = {
 							has_religion_feature = religion_equal
-							AND = {
-								has_religion_feature = religion_feature_aria_de_machete
-								OR = {
-									trait = machete_male_ref
-									trait = machete_female_ref
-								}
-							}
+							has_religion_feature = religion_feature_aria_de_machete
 							has_religion_feature = religion_feature_midewiwin
 						}
 						AND = {
@@ -2101,12 +2096,7 @@ gender_laws = {
 					has_religion_feature = religion_matriarchal
 					religion = gaian
 					trait = way_branch
-					#religion = neomayan
 					trait = machete_female
-					AND = {
-						NOT = { has_religion_feature = religion_feature_aria_de_machete }
-						trait = machete_female_ref
-					}
 					AND = {
 						OR = {
 							is_theocracy = yes
@@ -2115,7 +2105,6 @@ gender_laws = {
 						OR = {
 							religion = ursuline
 							religion = gaian
-							#religion = neomayan
 						}
 					}
 				}
@@ -2145,10 +2134,7 @@ gender_laws = {
 			holder_scope = {
 				OR = {
 					has_religion_feature = religion_matriarchal
-					AND = {
-						has_religion_feature = religion_feature_aria_de_machete
-						trait = machete_female_ref
-					}
+					trait = machete_female_ref
 					any_owned_bloodline = {
 						has_bloodline_flag = bloodline_enatic_cognatic 
 					}

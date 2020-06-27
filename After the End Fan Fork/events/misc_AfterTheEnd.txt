@@ -14249,3 +14249,31 @@ character_event = {
 		new_character = { ROOT = { any_demesne_title = { gain_title = PREVPREV } } }
 	}
 }
+
+character_event = {
+	id = misc.12
+	desc = "Reformation trigger"
+	is_triggered_only = yes
+	hide_window = yes
+	
+	trigger = {
+		has_religion_feature = religion_matriarchal
+		is_theocracy = yes
+		is_ruler = yes
+		controls_religion = no # prevents weirdness
+	}
+	
+	option = {
+		create_random_priest = {
+			random_traits = yes
+			female = yes
+			religion = ursuline
+		}
+		new_character = {
+			ROOT = {
+				any_demesne_title = { gain_title = PREVPREV }
+			}
+			primary_title = { add_law = enatic_succession }
+		}
+	}
+}
