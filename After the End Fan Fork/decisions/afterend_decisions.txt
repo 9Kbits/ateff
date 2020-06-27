@@ -422,6 +422,7 @@ decisions = {
 		}
 		effect = {
 			add_trait = travelling
+			set_character_flag = visiting_imperial_court
 			wealth = -25
 		}
 		revoke_allowed = {
@@ -452,13 +453,26 @@ decisions = {
 		
 		potential = {
 			is_ruler = yes
-			religion = cetic
+			OR = { #this is basically it
+				AND = {
+					religion = cetic
+					NOT = { controls_religion = yes }
+				}
+				AND = {
+					OR = {
+						religion = imamite
+						religion = qingzhen
+					}
+					NOT = { has_global_flag = imamite_jihad_unlocked }
+				}
+			}
 			NOT = { has_character_modifier = imperial_favor }
 			controls_religion = no
 			trait = travelling
 		}
 		effect = {
 			remove_trait = travelling
+			clr_character_flag = visiting_imperial_court
 		}
 		revoke_allowed = {
 			always = no

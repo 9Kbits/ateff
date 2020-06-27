@@ -1019,7 +1019,7 @@ character_event = {
 	id = cetic.30
 	desc = EVTDESC_cetic_impcourt_gaffe
 	picture = GFX_evt_bad_news
-	religion = cetic
+	has_character_flag = visiting_imperial_court
 	
 	trigger = {
 		trait = travelling
@@ -1078,7 +1078,7 @@ character_event = {
 	id = cetic.31
 	desc = EVTDESC_cetic_impcourt_learn
 	picture = GFX_evt_chinese_emissary
-	religion = cetic
+	has_character_flag = visiting_imperial_court
 	
 	trigger = {
 		trait = travelling
@@ -1119,6 +1119,7 @@ character_event = {
 		add_character_modifier = { name = imperial_favor duration = 1500 }
 		remove_character_modifier = imperial_censure
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 	
 	option = {
@@ -1127,6 +1128,7 @@ character_event = {
 		piety = 25
 		remove_character_modifier = imperial_censure
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 	
 	option = {
@@ -1135,6 +1137,7 @@ character_event = {
 		piety = 25
 		add_character_modifier = { name = imperial_favor duration = 1500 }
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 }
 
@@ -1142,7 +1145,7 @@ character_event = {
 	id = cetic.32
 	desc = EVTDESC_cetic_impcourt_intrigue
 	picture = GFX_evt_chinese_emissary
-	religion = cetic
+	has_character_flag = visiting_imperial_court
 	
 	trigger = {
 		trait = travelling
@@ -1175,6 +1178,7 @@ character_event = {
 		remove_character_modifier = imperial_censure
 		add_character_modifier = { name = imperial_favor duration = 1500 }
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 	
 	option = {
@@ -1183,6 +1187,7 @@ character_event = {
 		prestige = 40
 		remove_character_modifier = imperial_censure
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 	
 	option = {
@@ -1191,6 +1196,7 @@ character_event = {
 		prestige = 40
 		add_character_modifier = { name = imperial_favor duration = 1500 }
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 }
 
@@ -1198,7 +1204,7 @@ character_event = {
 	id = cetic.33
 	desc = EVTDESC_cetic_impcourt_diplo
 	picture = GFX_evt_chinese_emissary
-	religion = cetic
+	has_character_flag = visiting_imperial_court
 	
 	trigger = {
 		trait = travelling
@@ -1232,6 +1238,7 @@ character_event = {
 		remove_character_modifier = imperial_censure
 		add_character_modifier = { name = imperial_favor duration = 1500 }
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 	
 	option = {
@@ -1240,6 +1247,7 @@ character_event = {
 		prestige = 40
 		remove_character_modifier = imperial_censure
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 	
 	option = {
@@ -1248,6 +1256,7 @@ character_event = {
 		prestige = 40
 		add_character_modifier = { name = imperial_favor duration = 1500 }
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 }
 
@@ -1255,7 +1264,7 @@ character_event = {
 	id = cetic.34
 	desc = EVTDESC_cetic_impcourt_martial
 	picture = GFX_evt_china_invades
-	religion = cetic
+	has_character_flag = visiting_imperial_court
 	
 	trigger = {
 		trait = travelling
@@ -1296,6 +1305,7 @@ character_event = {
 		remove_character_modifier = imperial_censure
 		add_character_modifier = { name = imperial_favor duration = 1500 }
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 	
 	option = {
@@ -1304,6 +1314,7 @@ character_event = {
 		prestige = 40
 		remove_character_modifier = imperial_censure
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 	
 	option = {
@@ -1312,6 +1323,7 @@ character_event = {
 		prestige = 40
 		add_character_modifier = { name = imperial_favor duration = 1500 }
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 }
 
@@ -1319,8 +1331,8 @@ character_event = {
 	id = cetic.35
 	desc = EVTDESC_cetic_impcourt_impress
 	picture = GFX_evt_chinese_emissary
-	religion = cetic
 	only_capable = yes
+	has_character_flag = visiting_imperial_court
 	
 	trigger = {
 		trait = travelling
@@ -1365,8 +1377,8 @@ character_event = {
 		}
 		any_playable_ruler = {
 			limit = {
-				religion = cetic
 				trait = travelling
+				has_character_flag = visiting_imperial_court
 			}
 			opinion = { modifier = opinion_impressed who = ROOT years = 5 }
 		}
@@ -1377,7 +1389,7 @@ character_event = {
 	id = cetic.36
 	desc = EVTDESC_cetic_impcourt_pitiful
 	picture = GFX_evt_chinese_bureaucrat
-	religion = cetic
+	has_character_flag = visiting_imperial_court
 	
 	trigger = {
 		trait = travelling
@@ -1418,8 +1430,8 @@ character_event = {
 		}
 		any_playable_ruler = {
 			limit = {
-				religion = cetic
 				trait = travelling
+				has_character_flag = visiting_imperial_court
 			}
 			opinion = { modifier = opinion_pitiful who = ROOT years = 5 }
 		}
@@ -1429,6 +1441,7 @@ character_event = {
 		name = EVTOPT_cetic_impcourt_pitiful_leave
 		prestige = -10
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 		religion_head = {
 			opinion = { modifier = opinion_pitiful who = ROOT years = 5 }
 			random_vassal = {
@@ -1438,8 +1451,8 @@ character_event = {
 		}
 		any_playable_ruler = {
 			limit = {
-				religion = cetic
 				trait = travelling
+				has_character_flag = visiting_imperial_court
 			}
 			opinion = { modifier = opinion_pitiful who = ROOT years = 5 }
 		}
@@ -1450,7 +1463,7 @@ character_event = {
 	id = cetic.37
 	desc = EVTDESC_cetic_impcourt_buy
 	picture = GFX_evt_bribe_accepted
-	religion = cetic
+	has_character_flag = visiting_imperial_court
 	
 	trigger = {
 		trait = travelling
@@ -1478,6 +1491,7 @@ character_event = {
 		piety = -10
 		remove_character_modifier = imperial_censure
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 	
 	option = {
@@ -1487,6 +1501,7 @@ character_event = {
 		piety = -10
 		add_character_modifier = { name = imperial_favor duration = 1500 }
 		remove_trait = travelling
+		clr_character_flag = visiting_imperial_court
 	}
 	
 	option = {
