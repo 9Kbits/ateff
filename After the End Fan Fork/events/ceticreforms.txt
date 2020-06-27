@@ -637,25 +637,6 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformalawiyya
-		trigger = {
-			trait = way_fist
-		}
-		religion = alawiyya
-		any_demesne_province = {
-			if = {
-				limit = {
-					religion = cetic
-				}
-				religion = alawiyya
-			}
-		}
-		ai_chance = {
-			factor = 5
-			modifier = { factor = 0 culture = californio }
-		}
-	}
-	option = {
 		name = EVTOPT_ceticreformqingzhen
 		trigger = {
 			trait = way_fist
@@ -738,7 +719,6 @@ character_event = {
 			modifier = { factor = 10 culture = chino }
 		}
 	}
-
 	option = {
 		name = EVTOPT_ceticreformcatholic
 		trigger = {
