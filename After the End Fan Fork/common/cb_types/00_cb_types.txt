@@ -11815,7 +11815,10 @@ muslim_county_conquest = {
 		}
 		
 		ROOT = {
-			religion_group = muslim
+			AND = {
+				religion_group = muslim
+				NOT = { religion = transcendentalist }
+			}
 		}
 
 		NOT = {
