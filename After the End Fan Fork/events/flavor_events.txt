@@ -1888,6 +1888,10 @@ character_event = {
 	
 	trigger = {
 		has_character_flag = king_abram
+		any_spouse = {
+			has_character_flag = issac_mother
+		}
+		NOT = { has_global_flag = issac_conceived }
 	}
 	
 	mean_time_to_happen = {
@@ -1905,7 +1909,7 @@ character_event = {
 	}
 	
 	after = {
-		clr_character_flag = king_abram
+		set_global_flag = issac_conceived
 	}
 }
 
@@ -1955,7 +1959,12 @@ character_event = {
 			}
 			set_name = "Isidora"
 		}
+		mother_even_if_dead = {
+			clr_character_flag = issac_pregnant
+			clr_character_flag = issac_pregnant
+		}
 		true_father = {
+			clr_character_flag = king_abram
 			character_event = { id = flavor.64 days = 1 }
 		}
 	}
@@ -1970,8 +1979,5 @@ character_event = {
 	option = {
 		name = EVTOPTA_abram_2
 		piety = 25
-		any_spouse = {
-			clr_character_flag = issac_pregnant
-		}
 	}
 }
