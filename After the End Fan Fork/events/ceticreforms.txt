@@ -916,11 +916,30 @@ character_event = {
 		trigger = {
 			trait = way_fist
 		}
-		religion = trailwalker
+		if = {
+			limit = {
+				has_global_flag = trailwalker_reformation
+			}
+			religion = trailwalker_reformed
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = trailwalker_reformation }
+			}
+			religion = trailwalker
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
 					religion = cetic
+					has_global_flag = trailwalker_reformation
+				}
+				religion = trailwalker_reformed
+			}
+			else_if = {
+				limit = {
+					religion = cetic
+					NOT = { has_global_flag = trailwalker_reformation }
 				}
 				religion = trailwalker
 			}
@@ -1447,11 +1466,30 @@ character_event = {
 		trigger = {
 			trait = way_fist
 		}
-		religion = trailwalker
+		if = {
+			limit = {
+				has_global_flag = trailwalker_reformation
+			}
+			religion = trailwalker_reformed
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = trailwalker_reformation }
+			}
+			religion = trailwalker
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
 					religion = cetic
+					has_global_flag = trailwalker_reformation
+				}
+				religion = trailwalker_reformed
+			}
+			else_if = {
+				limit = {
+					religion = cetic
+					NOT = { has_global_flag = trailwalker_reformation }
 				}
 				religion = trailwalker
 			}
@@ -1461,6 +1499,7 @@ character_event = {
 			factor = 5
 		}
 	}
+	
 	option = {
 		name = EVTOPT_ceticreformimamite
 		trigger = {
@@ -1937,6 +1976,9 @@ character_event = {
 
 	option = {
 		name = EVTOPT_ceticreformmormon
+		trigger = {
+			trait = way_dove
+		}
 		religion = mormon
 		any_demesne_province = {
 			if = {
@@ -1952,10 +1994,90 @@ character_event = {
 			modifier = { factor = 10 culture = navajo }
 			modifier = { factor = 10 culture = hopi }
 		}
+	}
+	option = {
+		name = EVTOPT_ceticreformcatholic
+		trigger = {
+			trait = way_dove
+		}
+		religion = catholic
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = catholic
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = coloradan }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformsede
+		trigger = {
+			trait = way_dove
+		}
+		religion = sedevacantist
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = sedevacantist
+			}
+		}
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = coloradan }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformwoolleyite
+		trigger = {
+			trait = way_cowl
+		}
+		religion = woolleyite
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = woolleyite
+			}
+		}
 
+		ai_chance = {
+			factor = 2
+			modifier = { factor = 10 culture = utahn }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformhamiltonian
+		trigger = {
+			trait = way_cowl
+		}
+		religion = hamiltonian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = hamiltonian
+			}
+		}
+
+		ai_chance = {
+			factor = 2
+			modifier = { factor = 10 culture = mountainer }
+		}
 	}
 	option = {
 		name = EVTOPT_ceticreformneognostic
+		trigger = {
+			trait = way_book
+		}
 		religion = neognostic
 		any_demesne_province = {
 			if = {
@@ -1970,14 +2092,55 @@ character_event = {
 			modifier = { factor = 10 culture = coloradan }
 		}
 	}
-	
 	option = {
-		name = EVTOPT_ceticreformtrailwalker
-		religion = trailwalker
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_book
+		}
+		religion = gaian
 		any_demesne_province = {
 			if = {
 				limit = {
 					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 10 culture = mountainer }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformtrailwalker
+		trigger = {
+			trait = way_fist
+		}
+		if = {
+			limit = {
+				has_global_flag = trailwalker_reformation
+			}
+			religion = trailwalker_reformed
+		}
+		else_if = {
+			limit = {
+				NOT = { has_global_flag = trailwalker_reformation }
+			}
+			religion = trailwalker
+		}
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+					has_global_flag = trailwalker_reformation
+				}
+				religion = trailwalker_reformed
+			}
+			else_if = {
+				limit = {
+					religion = cetic
+					NOT = { has_global_flag = trailwalker_reformation }
 				}
 				religion = trailwalker
 			}
@@ -1987,6 +2150,25 @@ character_event = {
 			factor = 5
 			modifier = { factor = 10 culture = coloradan }
 			modifier = { factor = 10 culture = mountainer }
+		}
+	}
+	option = {
+		name = EVTOPT_ceticreformgaian
+		trigger = {
+			trait = way_fist
+		}
+		religion = gaian
+		any_demesne_province = {
+			if = {
+				limit = {
+					religion = cetic
+				}
+				religion = gaian
+			}
+		}
+
+		ai_chance = {
+			factor = 5
 		}
 	}
 	option = {
