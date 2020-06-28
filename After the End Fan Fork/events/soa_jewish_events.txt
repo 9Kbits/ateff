@@ -221,6 +221,9 @@ character_event = {
 			capital_scope = {
 				region = world_caribbean
 			}
+			capital_scope = {
+				region = world_west_coast
+			}
 		}
 		NOT = { has_character_modifier = expelled_jewish }
 		NOT = { is_inaccessible_trigger = yes }
@@ -325,6 +328,9 @@ character_event = {
 			capital_scope = {
 				region = world_caribbean
 			}
+			capital_scope = {
+				region = world_west_coast
+			}
 		}
 		NOT = { has_character_modifier = expelled_jewish }
 		NOT = { is_inaccessible_trigger = yes }
@@ -428,6 +434,9 @@ character_event = {
 			}
 			capital_scope = {
 				region = world_caribbean
+			}
+			capital_scope = {
+				region = world_west_coast
 			}
 		}
 		NOT = { has_character_modifier = expelled_jewish }
@@ -1078,6 +1087,306 @@ character_event = {
 					religion = jewish
 				}
 				30 = {
+					religion = reform
+				}
+			}
+			save_event_target_as = jewish_courtier
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_SoA_200
+		custom_tooltip = {
+			text = jewish_courtier_tooltip
+		}
+	}
+}
+
+# Jewish Diplomat Appears at Court (Tehrangeleno)
+character_event = {
+	id = SoA.209
+	desc = EVTDESC_SoA_209
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	
+	has_dlc = "Sons of Abraham"
+	min_age = 16
+	prisoner = no
+	only_playable = yes
+	capable_only = yes
+	only_independent = yes
+	
+	trigger = {
+		capital_scope = {
+			region = world_west_coast
+		}
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = oldworld
+			religion_group = latter_day_saints
+			religion_group = jewish_group
+			religion_group = muslim
+			religion_group = pacific
+			AND = {
+				religion = rastafarian
+				trait = twelve_tribes
+			}
+		}	
+		NOT = { has_character_modifier = expelled_jewish }
+		NOT = { is_inaccessible_trigger = yes }
+	}
+	
+	mean_time_to_happen = {
+		months = 750
+	}
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			culture = tehrangeleno
+			dynasty = culture
+			religion = jewish
+			female = no
+			age = 30
+			trait = charismatic_negotiator
+			attributes = {
+				diplomacy = 10
+			}
+			flag = ai_flag_refuse_conversion
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			remove_trait = socializer
+			remove_trait = gamer
+			remove_trait = hedonist
+			remove_trait = duelist
+			remove_trait = hunter
+			remove_trait = strategist
+			remove_trait = administrator
+			remove_trait = architect
+			remove_trait = gardener
+			remove_trait = schemer
+			remove_trait = impaler
+			remove_trait = seductress
+			remove_trait = scholar
+			remove_trait = theologian
+			remove_trait = mystic
+			random_list = {
+				70 = {
+					add_trait = socializer
+				}
+				30 = {
+					add_trait = socializer
+					add_trait = shrewd
+				}
+			}
+			random_list = {
+				50 = {
+					religion = jewish
+				}
+				50 = {
+					religion = reform
+				}
+			}
+			save_event_target_as = jewish_courtier
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_SoA_200
+		custom_tooltip = {
+			text = jewish_courtier_tooltip
+		}
+	}
+}
+
+# Jewish Administrator Appears at Court (Tehrangeleno)
+character_event = {
+	id = SoA.207
+	desc = EVTDESC_SoA_201
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	
+	has_dlc = "Sons of Abraham"
+	min_age = 16
+	prisoner = no
+	only_playable = yes
+	capable_only = yes
+	only_independent = yes
+	
+	trigger = {
+		capital_scope = {
+			region = world_west_coast
+		}
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = oldworld
+			religion_group = latter_day_saints
+			religion_group = jewish_group
+			religion_group = muslim
+			religion_group = pacific
+			AND = {
+				religion = rastafarian
+				trait = twelve_tribes
+			}
+		}	
+		NOT = { has_character_modifier = expelled_jewish }
+		NOT = { is_inaccessible_trigger = yes }
+	}
+	
+	mean_time_to_happen = {
+		months = 750
+	}
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			culture = tehrangeleno
+			dynasty = culture
+			religion = jewish
+			female = no
+			age = 30
+			trait = fortune_builder
+			attributes = {
+				stewardship = 10
+			}
+			flag = ai_flag_refuse_conversion
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			remove_trait = socializer
+			remove_trait = gamer
+			remove_trait = hedonist
+			remove_trait = duelist
+			remove_trait = hunter
+			remove_trait = strategist
+			remove_trait = administrator
+			remove_trait = architect
+			remove_trait = gardener
+			remove_trait = schemer
+			remove_trait = impaler
+			remove_trait = seductress
+			remove_trait = scholar
+			remove_trait = theologian
+			remove_trait = mystic
+			random_list = {
+				70 = {
+					add_trait = administrator
+				}
+				30 = {
+					add_trait = administrator
+					add_trait = shrewd
+				}
+			}
+			random_list = {
+				50 = {
+					religion = jewish
+				}
+				50 = {
+					religion = reform
+				}
+			}
+			save_event_target_as = jewish_courtier
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_SoA_200
+		custom_tooltip = {
+			text = jewish_courtier_tooltip
+		}
+	}
+}
+
+# Jewish Spy Appears at Court (Tehrangeleno)
+character_event = {
+	id = SoA.208
+	desc = EVTDESC_SoA_202
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_religion
+	
+	has_dlc = "Sons of Abraham"
+	min_age = 16
+	prisoner = no
+	only_playable = yes
+	capable_only = yes
+	only_independent = yes
+	
+	trigger = {
+		capital_scope = {
+			region = world_west_coast
+		}
+		OR = {
+			religion_group = christian
+			religion_group = cult_of_saints
+			religion_group = oldworld
+			religion_group = latter_day_saints
+			religion_group = jewish_group
+			religion_group = muslim
+			religion_group = pacific
+			AND = {
+				religion = rastafarian
+				trait = twelve_tribes
+			}
+		}	
+		NOT = { has_character_modifier = expelled_jewish }
+		NOT = { is_inaccessible_trigger = yes }
+	}
+	
+	mean_time_to_happen = {
+		months = 750
+	}
+	
+	immediate = {
+		create_character = {
+			random_traits = yes
+			culture = tehrangeleno
+			dynasty = culture
+			religion = jewish
+			female = no
+			age = 30
+			trait = intricate_webweaver
+			attributes = {
+				intrigue = 10
+			}
+			flag = ai_flag_refuse_conversion
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			remove_trait = socializer
+			remove_trait = gamer
+			remove_trait = hedonist
+			remove_trait = duelist
+			remove_trait = hunter
+			remove_trait = strategist
+			remove_trait = administrator
+			remove_trait = architect
+			remove_trait = gardener
+			remove_trait = schemer
+			remove_trait = impaler
+			remove_trait = seductress
+			remove_trait = scholar
+			remove_trait = theologian
+			remove_trait = mystic
+			random_list = {
+				70 = {
+					add_trait = schemer
+				}
+				30 = {
+					add_trait = schemer
+					add_trait = shrewd
+				}
+			}
+			random_list = {
+				50 = {
+					religion = jewish
+				}
+				50 = {
 					religion = reform
 				}
 			}
