@@ -2174,3 +2174,134 @@ narrative_event = {
 		}
 	}
 }
+
+# Rebirth of Acadia
+narrative_event = {
+	id = flavor.73
+	title = EVTTITLE_acadia
+	desc = EVTDESC_acadia
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_maritimes
+		OR = {
+			culture = acadien
+			culture = cajun
+		}
+		NOT = { has_global_flag = rebirth_of_acadia }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 1260 # Halifax
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = rebirth_of_acadia
+		k_maritimes = {
+			set_name = ""
+			adjective = "ACADIA_ADJ"
+			set_coa = k_acadia
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_maritimes
+		}
+	}
+	option = {
+		name = EVTOPTB_acadia
+		trigger = {
+			NOT = { has_landed_title = k_maritimes }
+			culture = acadien
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_maritimes }
+			NOT = { culture = acadien }
+		}
+	}
+}
+
+# Return of Maritimes
+narrative_event = {
+	id = flavor.74
+	title = EVTTITLE_acadia
+	desc = EVTDESC_maritimes
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_maritimes
+		culture = maritimer
+		has_global_flag = rebirth_of_acadia
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 1260 # Halifax
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_global_flag = rebirth_of_acadia
+		k_maritimes = {
+			set_name = ""
+			adjective = ""
+			reset_coa = THIS
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_maritimes
+		}
+	}
+	option = {
+		name = EVTOPTB_acadia
+		trigger = {
+			NOT = { has_landed_title = k_maritimes }
+			culture = acadien
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_maritimes }
+			NOT = { culture = acadien }
+		}
+	}
+}
