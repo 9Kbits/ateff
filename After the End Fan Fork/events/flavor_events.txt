@@ -2034,3 +2034,143 @@ narrative_event = {
 		}
 	}
 }
+
+# Fall of Haida Tlagaang
+narrative_event = {
+	id = flavor.71
+	title = EVTTITLE_great_coast
+	desc = EVTDESC_great_coast
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_great_coast
+		NOT = { culture_group = northwest_coast }
+		NOT = { has_global_flag = fall_of_haida_tlagaang }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 846 # Kiis Gwaii
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_haida_tlagaang
+		if = {
+			limit = {
+				culture = alaskan
+			}
+			k_great_coast = {
+				set_name = ""
+				adjective = "ALASKA_ADJ"
+				reset_coa = THIS
+			}
+		}
+		else = {
+			k_great_coast = {
+				set_name = ""
+				adjective = ""
+				reset_coa = THIS
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_great_coast
+		}
+	}
+	option = {
+		name = EVTOPTB_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_great_coast }
+			culture = haida
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_great_coast }
+			NOT = { culture = haida }
+		}
+	}
+}
+
+# Return of Haida Tlagaang
+narrative_event = {
+	id = flavor.72
+	title = EVTTITLE_haida_tlagaang
+	desc = EVTDESC_haida_tlagaang
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_great_coast
+		culture = haida
+		has_global_flag = fall_of_haida_tlagaang
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 846 # Kiis Gwaii
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_global_flag = fall_of_haida_tlagaang
+		k_great_coast = {
+			set_name = "HAIDA_TLAGAANG"
+			adjective = "HAIDA_TLAGAANG_ADJ"
+			set_coa = k_haida
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_great_coast
+		}
+	}
+	option = {
+		name = EVTOPTB_haida_tlagaang
+		trigger = {
+			NOT = { has_landed_title = k_great_coast }
+			culture = haida
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_great_coast }
+			NOT = { culture = haida }
+		}
+	}
+}
