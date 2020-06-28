@@ -1981,3 +1981,56 @@ character_event = {
 		piety = 25
 	}
 }
+
+narrative_event = {
+	id = flavor.70
+	title = EVTTITLE_mountain_king
+	desc = EVTDESC_mountain_king
+	picture = GFX_evt_knight_kneeling
+	border = GFX_event_narrative_frame_diplomacy
+	
+	is_triggered_only = yes
+	
+	culture_group = rockland
+	
+	trigger = {
+		has_landed_title = e_the_rockies
+		NOT = { has_global_flag = mountain_king_crowned }
+	}
+	
+	immediate = {
+		set_global_flag = mountain_king_crowned
+	}
+	
+	option = {
+		name = EVTOPTA_mountain_king
+		prestige = 3000
+		give_nickname = nick_the_glorious
+		if = {
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			create_bloodline = {
+				type = mountain_lord_male
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_mountain_lord"
+			}	
+			sound_effect = bloodline_added			
+		}
+		else_if = {
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			create_bloodline = {
+				type = mountain_lord_female
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_mountain_lord"
+			}	
+			sound_effect = bloodline_added
+		}
+	}
+}

@@ -45,7 +45,26 @@ settlement_decisions = {
 					religion = FROM
 				}
 			}
-			has_building = tb_hillfort_4
+			conditional_tooltip = {
+				trigger = {
+					FROM = {
+						NOT = {
+							has_bloodline_flag = mountainer_bloodline }
+						}
+				}
+				has_building = tb_hillfort_4
+			}
+			conditional_tooltip = {
+				trigger = {
+					FROM = {
+						has_bloodline_flag = mountainer_bloodline
+					}
+				}
+				FROM = {
+					has_bloodline_flag = mountainer_bloodline
+				}
+				has_building = tb_hillfort_1
+			}
 		}
 		effect = {
 			convert_to = CASTLE
