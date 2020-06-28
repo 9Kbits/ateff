@@ -30914,10 +30914,10 @@ abdicate_holy_order_if_religion_changes_effect = { #why. why did you add this ef
 		}
 	}	
 
-	d_followers_arjuna = {
+	d_followers_ram = {
 		if = {
 			limit = {
-				is_title_active = d_followers_arjuna
+				is_title_active = d_followers_ram
 				religion = hindu
 				owner = { 
 					ai = yes
@@ -30925,7 +30925,7 @@ abdicate_holy_order_if_religion_changes_effect = { #why. why did you add this ef
 					NOT = { religion = hindu } 
 				}
 			}
-			log = "[d_followers_arjuna.owner.GetTitledFirstName] was found to be unfit to lead the [d_followers_arjuna.GetName] and therefore removed by the abdicate holy order effect!"
+			log = "[d_followers_ram.owner.GetTitledFirstName] was found to be unfit to lead the [d_followers_ram.GetName] and therefore removed by the abdicate holy order effect!"
 		}
 	}	
 

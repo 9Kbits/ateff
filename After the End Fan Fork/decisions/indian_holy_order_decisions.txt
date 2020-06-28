@@ -1,13 +1,13 @@
 decisions = {
-	# Create Followers of Arjuna - Hindu Holy Order
-	create_followers_arjuna = {
+	# Create Followers of Ram - Hindu Holy Order
+	create_followers_ram = {
 		only_playable = yes
 		ai_check_interval = 30 #check only once every 30 months.
 		is_high_prio = yes
 		
 		potential = {
 			is_alternate_start = no
-			NOT = { is_title_active = d_followers_arjuna }
+			NOT = { is_title_active = d_followers_ram }
 			OR = {
 				independent = yes
 				tier = king
@@ -37,9 +37,9 @@ decisions = {
 			#	limit = { NOT = { year = 1100 } }
 			#	prestige = 500
 			#}
-			custom_tooltip = { text = create_followers_arjuna_tooltip }
+			custom_tooltip = { text = create_followers_ram_tooltip }
 			hidden_tooltip = {
-				activate_title = { title = d_followers_arjuna status = yes }
+				activate_title = { title = d_followers_ram status = yes }
 				create_character = {
 					random_traits = no
 					dynasty = random
@@ -56,11 +56,11 @@ decisions = {
 				}
 				new_character = {
 					wealth = 500
-					d_followers_arjuna = {
+					d_followers_ram = {
 						grant_title = PREV
 					}
 					set_government_type = feudal_government
-					save_event_target_as = leader_of_arjuna
+					save_event_target_as = leader_of_ram
 					create_character = {
 						random_traits = yes
 						dynasty = random

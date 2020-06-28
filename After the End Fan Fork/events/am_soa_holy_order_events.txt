@@ -12468,11 +12468,11 @@ character_event = {
 		}
 		text = expel_golden_bears
 	}
-	title = { # d_followers_arjuna
+	title = { # d_followers_ram
 		trigger = {
-			has_character_flag = expel_followers_arjuna_check
+			has_character_flag = expel_followers_ram_check
 		}
-		text = expel_followers_arjuna
+		text = expel_followers_ram
 	}
 	title = { # d_batallon_colombia
 		trigger = {
@@ -13295,9 +13295,9 @@ character_event = {
 			clr_character_flag = expel_golden_bears_check
 		}
 	}
-	option = { # d_followers_arjuna
+	option = { # d_followers_ram
 		trigger = {
-			has_character_flag = expel_followers_arjuna_check
+			has_character_flag = expel_followers_ram_check
 		}
 		name = "EVTOPTA_SOA_2990"
 		piety = -1000
@@ -13310,7 +13310,7 @@ character_event = {
 			text = expelling_holy_order_event_tooltip_a
 		}
 		hidden_tooltip = {
-			d_followers_arjuna = {
+			d_followers_ram = {
 				holder_scope = {
 					character_event = {
 						id = SoAtE.3060
@@ -13318,11 +13318,11 @@ character_event = {
 				}
 			}
 			add_character_modifier = {
-				name = expelled_d_followers_arjuna
+				name = expelled_d_followers_ram
 				duration = -1
 				inherit = yes
 			}
-			clr_character_flag = expel_followers_arjuna_check
+			clr_character_flag = expel_followers_ram_check
 		}
 	}
 	option = { # d_batallon_colombia
@@ -14107,7 +14107,7 @@ character_event = {
 			clr_character_flag = expel_lightbringers_check
 			clr_character_flag = expel_dead_sun_check
 			clr_character_flag = expel_golden_bears_check
-			clr_character_flag = expel_followers_arjuna_check
+			clr_character_flag = expel_followers_ram_check
 			clr_character_flag = expel_batallon_colombia_check
 			clr_character_flag = expel_saint_expedit_check
 			clr_character_flag = expel_followers_ogun_check
@@ -15698,10 +15698,10 @@ province_event = {
 }
 
 ########################################
-# d_followers_arjuna
+# d_followers_ram
 ########################################
 
-# Ping event when vassalizing the d_followers_arjuna
+# Ping event when vassalizing the d_followers_ram
 character_event = {
 	id = SoAtE.3300
 	hide_window = yes
@@ -15718,7 +15718,7 @@ character_event = {
 	}
 }
 
-# Notification event when vassalizing the d_followers_arjuna
+# Notification event when vassalizing the d_followers_ram
 letter_event = {
 	id = SoAtE.3301
 	desc = EVTDESC_SOATE_3301
@@ -15731,7 +15731,7 @@ letter_event = {
 	}
 }
 
-# The son of a ruler volunteers to join the d_followers_arjuna
+# The son of a ruler volunteers to join the d_followers_ram
 character_event = {
 	id = SoAtE.3303
 	hide_window = yes
@@ -15749,7 +15749,7 @@ character_event = {
 		
 		martial = 5
 		
-		is_title_active = d_followers_arjuna
+		is_title_active = d_followers_ram
 		
 		OR = {
 			father_even_if_dead = {
@@ -15768,10 +15768,10 @@ character_event = {
 			}
 		}
 		
-		NOT = { has_character_modifier = expelled_d_followers_arjuna }
+		NOT = { has_character_modifier = expelled_d_followers_ram }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_followers_arjuna
+				has_character_modifier = expelled_d_followers_ram
 			}
 		}
 
@@ -15910,7 +15910,7 @@ character_event = {
 	}
 }
 
-# Son or brother joins the d_followers_arjuna
+# Son or brother joins the d_followers_ram
 character_event = {
 	id = SoAtE.3305
 	hide_window = yes
@@ -15918,7 +15918,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		d_followers_arjuna = {
+		d_followers_ram = {
 			holder_scope = {
 				save_event_target_as = order_target
 				ROOT = {
@@ -15929,7 +15929,7 @@ character_event = {
 	}
 }
 
-# Liege refuses request to join the d_followers_arjuna
+# Liege refuses request to join the d_followers_ram
 character_event = {
 	id = SoAtE.3306
 	hide_window = yes
@@ -15944,7 +15944,7 @@ character_event = {
 	}
 }
 
-# Ping event when donating money to d_followers_arjuna
+# Ping event when donating money to d_followers_ram
 character_event = {
 	id = SoAtE.3307
 	hide_window = yes
@@ -15966,7 +15966,7 @@ character_event = {
 	}
 }
 
-# Notification event when donating money to the d_followers_arjuna
+# Notification event when donating money to the d_followers_ram
 letter_event = {
 	id = SoAtE.3308
 	desc = {
@@ -16009,7 +16009,7 @@ character_event = {
 	religion = hindu
 	
 	trigger = {
-		d_followers_arjuna = {
+		d_followers_ram = {
 			holder_scope = {
 				wealth = 300
 				NOT = {
@@ -16023,10 +16023,10 @@ character_event = {
 			region = world_south_america
 		}
 
-		NOT = { has_character_modifier = expelled_d_followers_arjuna }
+		NOT = { has_character_modifier = expelled_d_followers_ram }
 		NOT = {
 			any_liege = {
-				has_character_modifier = expelled_d_followers_arjuna
+				has_character_modifier = expelled_d_followers_ram
 			}
 		}
 	}
@@ -16035,7 +16035,7 @@ character_event = {
 		months = 240
 		modifier = {
 			factor = 0.5
-			d_followers_arjuna = {
+			d_followers_ram = {
 				holder_scope = {
 					NOT = { demesne_size = 1 }
 				}
@@ -16043,7 +16043,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			d_followers_arjuna = {
+			d_followers_ram = {
 				holder_scope = {
 					NOT = { demesne_size = 2 }
 				}
@@ -16051,7 +16051,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2.0
-			d_followers_arjuna = {
+			d_followers_ram = {
 				holder_scope = {
 					num_of_count_titles = 1
 				}
@@ -16059,7 +16059,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 2.0
-			d_followers_arjuna = {
+			d_followers_ram = {
 				holder_scope = {
 					realm_size = 5
 				}
@@ -16087,7 +16087,7 @@ province_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		d_followers_arjuna = {
+		d_followers_ram = {
 			holder_scope = {
 				character_event = {
 					id = SoAtE.3311
@@ -16144,7 +16144,7 @@ letter_event = {
 			factor = 80
 			modifier = {
 				factor = 0
-				has_character_modifier = expelled_d_followers_arjuna
+				has_character_modifier = expelled_d_followers_ram
 			}
 		}
 		
@@ -16152,7 +16152,7 @@ letter_event = {
 			FROMFROM = {
 				province_event = { id = SoAtE.3313 }
 			}
-			remove_character_modifier = expelled_d_followers_arjuna
+			remove_character_modifier = expelled_d_followers_ram
 		}
 		
 		piety = 200

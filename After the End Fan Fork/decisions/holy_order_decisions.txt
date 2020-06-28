@@ -3910,7 +3910,7 @@ decisions = {
 		}
 	}
 	
-	expel_followers_arjuna = {
+	expel_followers_ram = {
 		only_independent = yes
 		ai = no
 
@@ -3918,12 +3918,12 @@ decisions = {
 			religion = hindu
 			higher_tier_than = DUKE
 			independent = yes
-			is_title_active = d_followers_arjuna
-			NOT = { has_character_modifier = expelled_d_followers_arjuna }
+			is_title_active = d_followers_ram
+			NOT = { has_character_modifier = expelled_d_followers_ram }
 			
 			any_realm_province = {
 				any_province_lord = {
-					d_followers_arjuna = {
+					d_followers_ram = {
 						holder_scope = {
 							OR = {
 								character = PREVPREV
@@ -3942,13 +3942,13 @@ decisions = {
 			custom_tooltip = {
 				text = expelling_holy_order_decision_tooltip
 				hidden_tooltip = {
-					NOT = { has_character_flag = expel_followers_arjuna_check }
+					NOT = { has_character_flag = expel_followers_ram_check }
 				}
 			}
 		}
 		
 		effect = {
-			set_character_flag = expel_followers_arjuna_check
+			set_character_flag = expel_followers_ram_check
 			custom_tooltip = {
 				text = expelling_holy_order_decision_tooltip_b
 				hidden_tooltip = {
@@ -3966,7 +3966,7 @@ decisions = {
 		}
 	}
 	
-	donate_money_to_followers_arjuna = {
+	donate_money_to_followers_ram = {
 		only_playable = yes
 		ai_check_interval = 80
 
@@ -3988,13 +3988,13 @@ decisions = {
 
 			NOT = { government = order_government }
 			
-			is_title_active = d_followers_arjuna
+			is_title_active = d_followers_ram
 			
-			NOT = { has_character_modifier = expelled_d_followers_arjuna }
+			NOT = { has_character_modifier = expelled_d_followers_ram }
 			
 			has_dlc = "Sons of Abraham"
 			
-			d_followers_arjuna = {
+			d_followers_ram = {
 				holder_scope = {
 					liege = {
 						NOT = { character = ROOT }
@@ -4030,7 +4030,7 @@ decisions = {
 			}
 			
 			hidden_tooltip = {
-				d_followers_arjuna = {
+				d_followers_ram = {
 					holder_scope = {
 						character_event = {
 							id = SoAtE.3307

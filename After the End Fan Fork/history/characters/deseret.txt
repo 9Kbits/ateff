@@ -78,9 +78,8 @@
 	trait=humble
 	trait=diligent
 	trait=fortune_builder
-	2616.1.1={birth=yes
-		effect={set_character_flag=no_historical_family}
-	}
+	2616.1.1={birth=yes}
+	2651.1.1={add_spouse=1491007}
 	2700.1.1={death=yes}
 }
 
@@ -112,7 +111,6 @@
 	2591.1.1={birth=yes}
 	2660.1.1={death=yes}
 }
-
 
 1830010={
 	name="Amos"
@@ -191,24 +189,28 @@
 }
 
 1830017={
-	name="Alice"
-	dynasty=1830027 #Willow
+	name="Ziona"
+	dynasty=1830021
 	female=yes
-	culture=utahn
+	culture=native
 	religion=mormon
-	martial=7
-	intrigue=9
-	learning=7
-	trait=scholarly_theologian
-	trait=homosexual
-	trait=cruel
-	trait=proud
-	trait=shy
-	trait=patient
-	trait=cynical
-	2646.1.1={birth=yes}
-	2666.1.1={
-		employer=1830006
+	father=1830006
+	mother=1491007
+	2651.12.1={birth=yes
+		culture=utahn
+	}
+	2700.1.1={death=yes}
+}
+
+1830018={
+	name="Nephi"
+	dynasty=1830021
+	culture=native
+	religion=mormon
+	father=1830006
+	mother=1491007
+	2653.6.7={birth=yes
+		culture=utahn
 	}
 	2700.1.1={death=yes}
 }
