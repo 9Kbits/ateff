@@ -1,0 +1,301 @@
+namespace = aph
+
+narrative_event = {
+	id = aph.1
+	title = EVTTITLE_aph_1
+	desc = EVTDESC_aph_1
+	picture = GFX_evt_pagan
+	border = GFX_event_narrative_frame_religion
+	religion = aphite
+	only_playable = yes
+	
+	trigger = {
+		NOT = { has_global_flag = aphite_containment }
+		NOT = { has_character_flag = aphite_facing_demon }
+		NOT = { has_character_flag = aphite_uninterested }
+		NOT = { has_character_flag = aphite_failed_containment }
+		NOT = { has_character_modifier = aphite_true_vision }
+		OR = {
+			tier = DUKE
+			tier = KING
+			tier = EMPEROR
+		}
+		piety = 1000
+	}
+	
+	mean_time_to_happen = {
+		years = 10
+	}
+	
+	option = {
+		name = EVTOPTA_aph_1
+		custom_tooltip = { text = TXT_EVTOPTA_aph_1 }
+		hidden_tooltip = {
+			set_global_flag = aphite_containment
+			set_character_flag = aphite_facing_demon
+			narrative_event = { id = aph.2 days = 5 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_aph_1
+		if = {
+			limit = {
+				trait = zealous
+			}
+			remove_trait = zealous
+		}
+		piety = -100
+		custom_tooltip = { text = TXT_EVTOPTB_aph_1 }
+		hidden_tooltip = {
+			set_character_flag = aphite_uninterested
+		}
+	}
+}
+
+narrative_event = {
+	id = aph.2
+	title = EVTTITLE_aph_1
+	desc = EVTDESC_aph_2
+	picture = GFX_evt_pagan
+	border = GFX_event_narrative_frame_religion
+	religion = aphite
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = aphite_facing_demon
+	}
+	
+	option = {
+		name = EVTOPTA_aph_2
+		trigger = {
+			OR = {
+				learning = 12
+				trait = quick
+				trait = genius
+			}
+			NOT = { trait = theologian }
+		}
+		tooltip_info = learning
+		scaled_wealth = -0.15
+		piety = 100
+		custom_tooltip = { text = TXT_EVTOPTA_aph_2 }
+		hidden_tooltip = {
+			set_character_flag = aphite_true_vision
+			narrative_event = { id = aph.3 days = 7 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_aph_2
+		trigger = {
+			trait = theologian
+		}
+		tooltip_info = theologian
+		piety = 150
+		scaled_wealth = -0.2
+		custom_tooltip = { text = TXT_EVTOPTB_aph_2 }
+		hidden_tooltip = {
+			set_character_flag = aphite_true_vision
+			narrative_event = { id = aph.3 days = 7 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_aph_2
+		trigger = {
+			NOR = {
+				learning = 12
+				trait = theologian
+			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTC_aph_2 }
+		hidden_tooltip = {
+			random_list = {
+				50 = {
+					set_character_flag = aphite_true_vision
+				}
+				50 = {
+					set_character_flag = aphite_false_vision
+				}
+			}
+			narrative_event = { id = aph.3 days = 2 }
+		}
+	}
+}
+
+narrative_event = {
+	id = aph.3
+	title = EVTTITLE_aph_1
+	desc = EVTDESC_aph_3
+	picture = GFX_evt_pagan
+	border = GFX_event_narrative_frame_religion
+	religion = aphite
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = aphite_facing_demon
+	}
+	
+	option = {
+		name = EVTOPTA_aph_3
+		trigger = {
+			martial = 12
+			NOR = {
+				trait = strong
+				trait = robust
+				trait = weak
+				trait = feeble
+			}
+		}
+		prestige = 100
+		custom_tooltip = { text = TXT_EVTOPTA_aph_3 }
+		hidden_tooltip = {
+			narrative_event = { id = aph.4 days = 5 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_aph_3
+		trigger = {
+			OR = {
+				trait = strong
+				trait = robust
+			}
+		}
+		tooltip_info = strong
+		prestige = 150
+		custom_tooltip = { text = TXT_EVTOPTA_aph_3 }
+		hidden_tooltip = {
+			narrative_event = { id = aph.4 days = 5 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_aph_3
+		trigger = {
+			diplomacy = 15
+		}
+		tooltip_info = diplomacy
+		prestige = 50
+		custom_tooltip = { text = TXT_EVTOPTC_aph_3 }
+		hidden_tooltip = {
+			narrative_event = { id = aph.4 days = 3 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_aph_3
+		scaled_wealth = -0.2
+		custom_tooltip = { text = TXT_EVTOPTC_aph_3 }
+		hidden_tooltip = {
+			narrative_event = { id = aph.4 days = 3 }
+		}
+	}
+	
+	option = {
+		name = EVTOPTE_aph_3
+		custom_tooltip = { text = TXT_EVTOPTE_aph_3 }
+		hidden_tooltip = {
+			clr_character_flag = aphite_facing_demon
+			set_character_flag = aphite_failed_containment
+		}
+	}
+}
+
+narrative_event = {
+	id = aph.4
+	title = EVTTITLE_aph_1
+	desc = EVTDESC_aph_4
+	picture = GFX_evt_bad_news
+	border = GFX_event_narrative_frame_religion
+	religion = aphite
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = aphite_facing_demon
+	}
+	
+	option = {
+		name = EVTOPTA_aph_4
+		custom_tooltip = { text = TXT_EVTOPTA_aph_4 }
+		hidden_tooltip = {
+			trigger_switch = {
+				on_trigger = has_character_flag
+				aphite_false_vision = { narrative_event = { id = aph.5 days = 1 } }
+				aphite_true_vision = { narrative_event = { id = aph.6 days = 1 } }
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = aph.5
+	title = EVTTITLE_aph_5
+	desc = EVTDESC_aph_5
+	picture = GFX_evt_cathedral_zun_pagan
+	border = GFX_event_narrative_frame_religion
+	religion = aphite
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = aphite_facing_demon
+		has_character_flag = aphite_false_vision
+	}
+	
+	option = {
+		name = EVTOPTA_aph_5
+		piety = -500
+		custom_tooltip = { text = TXT_EVTOPTA_aph_5 }
+		hidden_tooltip = {
+			clr_character_flag = aphite_false_vision
+			clr_character_flag = aphite_facing_demon
+			set_character_flag = aphite_failed_containment
+		}
+	}
+}
+
+narrative_event = {
+	id = aph.6
+	title = EVTTITLE_aph_6
+	desc = EVTDESC_aph_6
+	picture = GFX_evt_mushroom_cloud
+	border = GFX_event_narrative_frame_religion
+	religion = aphite
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_character_flag = aphite_facing_demon
+		has_character_flag = aphite_true_vision
+	}
+	
+	option = {
+		name = EVTOPTA_aph_6
+		piety = 500
+		add_character_modifier = {
+			name = aphite_true_vision
+			duration = -1
+		}
+		ROOT = {
+			religion_authority = {
+				modifier = quarantined_holy_site_aphite
+			}
+		}
+		random_character = { 
+			limit = { religion = atomicist }		
+			religion_authority = {
+				modifier = quarantined_holy_site
+			}
+		}
+		custom_tooltip = { text = TXT_EVTOPTA_aph_6 }
+		hidden_tooltip = {
+			clr_character_flag = aphite_true_vision
+			clr_character_flag = aphite_facing_demon
+		}
+	}
+}

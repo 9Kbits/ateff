@@ -3329,8 +3329,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_92"
-		remove_trait = proud
-		add_trait = humble
+		if = {
+			limit = {
+				trait = proud
+			}
+			remove_trait = proud
+		}
+		if = {
+			limit = {
+				NOT = { trait = humble }
+			}
+			add_trait = humble
+		}
+		if = {
+			limit = {
+				trait = humble
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = confucian_stewardship
 			duration = -1
@@ -3348,8 +3364,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_93"
-		remove_trait = slothful
-		add_trait = diligent
+		if = {
+			limit = {
+				trait = slothful
+			}
+			remove_trait = slothful
+		}
+		if = {
+			limit = {
+				NOT = { trait = diligent }
+			}
+			add_trait = diligent
+		}
+		if = {
+			limit = {
+				trait = diligent
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = confucian_martial
 			duration = -1
@@ -3368,8 +3400,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_94"
-		remove_trait = wroth
-		add_trait = patient
+		if = {
+			limit = {
+				trait = wroth
+			}
+			remove_trait = wroth
+		}
+		if = {
+			limit = {
+				NOT = { trait = patient }
+			}
+			add_trait = patient
+		}
+		if = {
+			limit = {
+				trait = patient
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = confucian_diplomacy
 			duration = -1
@@ -3387,8 +3435,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_95"
-		remove_trait = content
-		add_trait = ambitious
+		if = {
+			limit = {
+				trait = content
+			}
+			remove_trait = content
+		}
+		if = {
+			limit = {
+				NOT = { trait = ambitious }
+			}
+			add_trait = ambitious
+		}
+		if = {
+			limit = {
+				trait = ambitious
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = confucian_intrigue
 			duration = -1
@@ -3406,8 +3470,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_96"
-		remove_trait = proud
-		add_trait = humble
+		if = {
+			limit = {
+				trait = proud
+			}
+			remove_trait = proud
+		}
+		if = {
+			limit = {
+				NOT = { trait = humble }
+			}
+			add_trait = humble
+		}
+		if = {
+			limit = {
+				trait = humble
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = taoism_learning
 			duration = -1
@@ -3425,8 +3505,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_97"
-		remove_trait = cruel
-		add_trait = kind
+		if = {
+			limit = {
+				trait = cruel
+			}
+			remove_trait = cruel
+		}
+		if = {
+			limit = {
+				NOT = { trait = kind }
+			}
+			add_trait = kind
+		}
+		if = {
+			limit = {
+				trait = kind
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = taoism_martial
 			duration = -1
@@ -3444,8 +3540,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_98"
-		remove_trait = craven
-		add_trait = brave
+		if = {
+			limit = {
+				trait = craven
+			}
+			remove_trait = craven
+		}
+		if = {
+			limit = {
+				NOT = { trait = brave }
+			}
+			add_trait = brave
+		}
+		if = {
+			limit = {
+				trait = brave
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = taoism_intrigue
 			duration = -1
@@ -3463,8 +3575,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_99"
-		remove_trait = shy
-		add_trait = gregarious
+		if = {
+			limit = {
+				trait = shy
+			}
+			remove_trait = shy
+		}
+		if = {
+			limit = {
+				NOT = { trait = gregarious }
+			}
+			add_trait = gregarious
+		}
+		if = {
+			limit = {
+				trait = gregarious
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = taoism_diplomacy
 			duration = -1
@@ -3482,8 +3610,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_100"
-		remove_trait = greedy
-		add_trait = charitable
+		if = {
+			limit = {
+				trait = greedy
+			}
+			remove_trait = greedy
+		}
+		if = {
+			limit = {
+				NOT = { trait = charitable }
+			}
+			add_trait = charitable
+		}
+		if = {
+			limit = {
+				trait = charitable
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = taoism_stewardship
 			duration = -1
@@ -3501,8 +3645,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_101"
-		remove_trait = gluttonous
-		add_trait = temperate
+		if = {
+			limit = {
+				trait = gluttonous
+			}
+			remove_trait = gluttonous
+		}
+		if = {
+			limit = {
+				NOT = { trait = temperate }
+			}
+			add_trait = temperate
+		}
+		if = {
+			limit = {
+				trait = temperate
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = buddhism_martial
 			duration = -1
@@ -3520,8 +3680,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_102"
-		remove_trait = wroth
-		add_trait = patient
+		if = {
+			limit = {
+				trait = wroth
+			}
+			remove_trait = wroth
+		}
+		if = {
+			limit = {
+				NOT = { trait = patient }
+			}
+			add_trait = patient
+		}
+		if = {
+			limit = {
+				trait = patient
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = buddhism_learning
 			duration = -1
@@ -3539,8 +3715,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_103"
-		remove_trait = proud
-		add_trait = humble
+		if = {
+			limit = {
+				trait = proud
+			}
+			remove_trait = proud
+		}
+		if = {
+			limit = {
+				NOT = { trait = humble }
+			}
+			add_trait = humble
+		}
+		if = {
+			limit = {
+				trait = humble
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = buddhism_diplomacy
 			duration = -1
@@ -3558,8 +3750,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_104"
-		remove_trait = honest
-		add_trait = deceitful
+		if = {
+			limit = {
+				trait = honest
+			}
+			remove_trait = honest
+		}
+		if = {
+			limit = {
+				NOT = { trait = deceitful }
+			}
+			add_trait = deceitful
+		}
+		if = {
+			limit = {
+				trait = deceitful
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = buddhism_intrigue
 			duration = -1
@@ -3577,8 +3785,24 @@ character_event = {
 
 	option = {
 		name = "EVTOPTA_islamate_105"
-		remove_trait = shy
-		add_trait = gregarious
+		if = {
+			limit = {
+				trait = shy
+			}
+			remove_trait = shy
+		}
+		if = {
+			limit = {
+				NOT = { trait = gregarious }
+			}
+			add_trait = gregarious
+		}
+		if = {
+			limit = {
+				trait = gregarious
+			}
+			piety = 50
+		}
 		add_character_modifier = {
 			name = buddhism_stewardship
 			duration = -1
