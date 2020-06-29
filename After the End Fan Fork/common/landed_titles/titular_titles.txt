@@ -4088,6 +4088,33 @@ e_catawba = {
 	creation_requires_capital = no	
 }
 
+e_adelsverer = {
+	color={ 80 55 150 }
+	color2={ 210 50 20 }
+	capital = 1872 # c_san_andres
+	
+	culture = adelsverer
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = adelsverer
+		OR = {
+			realm_size = 150
+			e_adelsverer = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
+
 ### special empires
 
 e_zion = {
