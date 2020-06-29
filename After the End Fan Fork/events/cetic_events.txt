@@ -2490,11 +2490,11 @@ letter_event = {
 			years = 5
 		}
 		
-		#add_character_modifier = { #this doesn't exist
-		#	name = faction_pro_imperial_ultimatum_timer
-		#	hidden = yes
-		#	duration = 3650
-		#}
+		add_character_modifier = { #this doesn't exist
+			name = faction_pro_imperial_ultimatum_timer
+			hidden = yes
+			duration = 3650
+		}
 	}
 }
 
@@ -3317,46 +3317,46 @@ character_event = {
 character_event = {
 	id = cetic.304
 	desc = {
-		picture = GFX_evt_china_isolationist
 		trigger = {
 			check_variable = { which = global_imp_auth value < 10 }
 		}
+		picture = GFX_evt_china_isolationist
 		text = EVTDESCCETIC304_WEAK
 	}
 	desc = {
-		picture = GFX_evt_china_isolationist
 		trigger = {
 			check_variable = { which = global_imp_auth value >= 10 }
 		}
+		picture = GFX_evt_china_isolationist
 		text = EVTDESCCETIC304_NOTWEAK
 	}
 	desc = {
-		picture = GFX_evt_china_isolationist
 		trigger = {
 			check_variable = { which = global_imp_auth value < 50 }
 		}
+		picture = GFX_evt_china_isolationist
 		text = EVTDESCCETIC304_FIGUREHEAD
 	}
 	desc = {
-		picture = GFX_evt_china_open
 		trigger = {
 			check_variable = { which = global_imp_auth value > 50 }
 		}
+		picture = GFX_evt_china_open
 		text = EVTDESCCETIC304
 	}
 	desc = {
-		picture = GFX_evt_china_isolationist
 		trigger = {
 			check_variable = { which = global_imp_auth value < 70 }
 			trait = strong_emperor
 		}
+		picture = GFX_evt_china_isolationist
 		text = EVTDESCCETIC304_B
 	}
 	desc = {
-		picture = GFX_evt_china_golden_age
 		trigger = {
 			check_variable = { which = global_imp_auth value > 70 }
 		}
+		picture = GFX_evt_china_golden_age
 		text = EVTDESCCETIC304_STRONG
 	}
 	

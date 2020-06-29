@@ -748,6 +748,38 @@ d_woolleyite = {
 	dynasty_title_names = no
 }
 
+d_neogodbeite = {
+	color = { 140 153 204 }
+	color2= { 225 255 255 }
+
+	capital = 430 # Salt Lake City
+	creation_requires_capital = no
+	
+	title = "PROPHET_PRESIDENT"
+	title_female = "PROPHET_PRESIDENT"
+	foa = "POPE_FOA"
+
+	short_name = yes
+	location_ruler_title = yes
+	
+	religion = neogodbeite
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	# Controls a religion
+	controls_religion = neogodbeite
+
+	landless = yes
+	
+	allow = {
+		always = no
+	}
+
+	#caliphate = yes
+	dynasty_title_names = no
+}
+
 d_atomicist = { #the Atomic Energy Commission, or Commission for short
 	color = { 191 255 51 }
 	color2= { 225 255 255 }

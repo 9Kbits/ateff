@@ -173,72 +173,6 @@ decisions = {
 		}
 	}
 	
-	create_pei = { #also a principality
-		only_independent = yes
-		is_high_prio = yes
-		ai_check_interval = 60
-
-		potential = {
-			religion = ursuline
-			has_landed_title = d_prince_edward_island
-			NOT = { 
-				higher_tier_than = DUKE
-			}
-			k_prince_edward_island = {
-				has_holder = no
-			}
-			k_prince_edward_island = {
-				is_titular = yes
-			}
-			NOR = {
-				has_alternate_start_setting = {
-					setting = dejure
-					value = random
-				}
-				has_alternate_start_setting = {
-					setting = title_names
-					value = random
-				}
-				has_alternate_start_setting = {
-					setting = title_names
-					value = random_including_duchies
-				}
-			}
-		}
-
-		allow = {
-			is_adult = yes
-			independent = yes
-			war = no
-			NOT = {
-				is_incapable = yes
-			}
-			completely_controls = d_prince_edward_island
-			conditional_tooltip = {
-				trigger = {
-					ai = no
-				}
-
-				prestige = 1000
-			}
-			wealth = 100
-		}
-
-		effect = {
-			wealth = -100
-			primary_title = {
-				save_event_target_as = current_primary_title
-			}
-			k_prince_edward_island = {
-				show_scope_change = no
-				grant_title = ROOT
-				copy_title_laws = event_target:current_primary_title
-			}
-
-			narrative_event = { id = canada.26 }
-		}
-	}
-	
 	restore_hcc = {
 		is_high_prio = yes
 		only_playable = yes
@@ -453,7 +387,7 @@ decisions = {
 					province = 1037 #Talladega
 					province = 1038 #Coosa
 					province = 1040 #Tuscaloosa
-					province = 1116 #Buttahatchee
+					province = 1116 #Fayette
 					province = 1041 #Demopolis
 					province = 1039 #Montgomery
 					province = 1033 #Tuskegee
@@ -489,7 +423,7 @@ decisions = {
 			completely_controls = c_talladega
 			completely_controls = c_coosa
 			completely_controls = c_tuscaloosa
-			completely_controls = c_buttahatchee
+			completely_controls = c_fayette
 			completely_controls = c_demopolis
 			completely_controls = c_montgomery
 			completely_controls = c_tuskegee
@@ -779,7 +713,7 @@ decisions = {
 					province = 1037 #Talladega
 					province = 1038 #Coosa
 					province = 1040 #Tuscaloosa
-					province = 1116 #Buttahatchee
+					province = 1116 #Fayette
 					province = 1041 #Demopolis
 					province = 1039 #Montgomery
 					province = 1033 #Tuskegee
@@ -812,7 +746,7 @@ decisions = {
 			completely_controls = c_talladega
 			completely_controls = c_coosa
 			completely_controls = c_tuscaloosa
-			completely_controls = c_buttahatchee
+			completely_controls = c_fayette
 			completely_controls = c_demopolis
 			completely_controls = c_montgomery
 			completely_controls = c_tuskegee

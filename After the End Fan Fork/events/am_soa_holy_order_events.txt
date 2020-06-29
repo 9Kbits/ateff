@@ -18,7 +18,7 @@ character_event = {
 			religion = nestorian
 		}
 		is_heretic = no
-		has_character_modifier = borrowed_from_knights_of_columbus
+		has_character_modifier = borrowed_from_knights_templar
 		NOT = { has_character_flag = sent_son_to_knights_of_columbus }
 		any_child = {
 			is_female = no
@@ -155,7 +155,7 @@ letter_event = {
 		name = EVTOPTB_SOA_1003 # Pay them back
 		wealth = -300
 		hidden_tooltip = {
-			remove_character_modifier = borrowed_from_knights_of_columbus
+			remove_character_modifier = borrowed_from_knights_templar
 		}
 		FROM = {
 			wealth = 300
@@ -271,7 +271,7 @@ character_event = {
 		}
 		is_heretic = no
 		
-		has_character_modifier = borrowed_from_knights_of_columbus
+		has_character_modifier = borrowed_from_knights_templar
 		NOT = { has_character_flag = sent_son_to_knights_of_columbus }
 		
 		any_demesne_province = {
@@ -375,7 +375,7 @@ letter_event = {
 		}
 		
 		hidden_tooltip = {
-			remove_character_modifier = borrowed_from_knights_of_columbus
+			remove_character_modifier = borrowed_from_knights_templar
 			remove_character_modifier = expelled_d_knights_of_columbus
 			FROMFROM = {
 				province_event = { id = SoAtE.1024 }
@@ -389,7 +389,7 @@ letter_event = {
 		name = EVTOPTB_SOA_1003 # Pay them back
 		wealth = -300
 		hidden_tooltip = {
-			remove_character_modifier = borrowed_from_knights_of_columbus
+			remove_character_modifier = borrowed_from_knights_templar
 		}
 		FROM = {
 			wealth = 300
@@ -1227,7 +1227,7 @@ character_event = {
 				}
 			}
 		}
-		if = {
+		if = { #error
 			limit = { religion_group = oldworld }
 			FROM = {
 				letter_event = {

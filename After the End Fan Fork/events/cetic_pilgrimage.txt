@@ -322,7 +322,7 @@ character_event = {
 		create_character = {
 			random_traits = yes
 			dynasty = NONE
-			female = no
+			is_female = no
 			age = 22
 			religion = ROOT
 			culture = ROOT
@@ -744,13 +744,13 @@ character_event = {
 		name = EVTOPTA_cetic_pilgrim_lover
 		if = {
 			limit = {
-				female = no
+				is_female = no
 				NOT = { trait = homosexual }
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				female = yes
+				is_female = yes
 				age = 22
 				religion = ROOT
 				culture = ROOT
@@ -771,7 +771,7 @@ character_event = {
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				female = no
+				is_female = no
 				age = 22
 				religion = ROOT
 				culture = ROOT
@@ -786,13 +786,13 @@ character_event = {
 		}
 		if = {
 			limit = {
-				female = no
+				is_female = no
 				trait = homosexual
 			}
 			create_character = {
 				random_traits = yes
 				dynasty = NONE
-				female = no
+				is_female = no
 				age = 22
 				religion = ROOT
 				culture = ROOT
@@ -1226,10 +1226,10 @@ character_event = {
 	option = {
 		name = EVTOPTA_cetic_pilgrim_sympathy_red
 		NOT = {
-			secret_religion = gaian
+			has_secret_religion = yes
 		}
 		piety = -25
-		secret_religion = gaian
+		set_secret_religion = gaian
 	}
 	
 	option = {
@@ -1252,7 +1252,7 @@ character_event = {
 	option = {
 		name = EVTOPTC_cetic_pilgrim_sympathy_la
 		trigger = {
-			secret_religion = gaian
+			has_secret_religion = yes
 		}
 		piety = 25
 	}
