@@ -154,6 +154,12 @@ sulley = { #Miskito Kings
 	allow_bastards = yes
 	picture = GFX_bloodlines_placeholder_symbol_2
 	flags = { historical_bloodline pre_event_bloodline }
+	active = {
+		OR = {
+			culture = miskito
+			religion = falling_star
+		}
+	}
 }
 
 clinton = { #Clintons
@@ -166,6 +172,12 @@ clinton = { #Clintons
 	allow_bastards = yes
 	picture = GFX_bloodlines_placeholder_symbol_2
 	flags = { historical_bloodline pre_event_bloodline }
+	active = {
+		OR = {
+			religion_group = christian
+			religion_openly_americanist_or_heresy_trigger = yes
+		}
+	}
 }
 
 rothschild = { #Rothschild family
@@ -177,6 +189,9 @@ rothschild = { #Rothschild family
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_jewish
 	flags = { historical_bloodline }
+	active = {
+		religion_group = jewish_group
+	}
 }
 
 gutfreund = { #Levi the Liberator
@@ -188,6 +203,9 @@ gutfreund = { #Levi the Liberator
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_jewish
 	flags = { historical_bloodline bloodline_heroes }
+	active = {
+		religion_group = jewish_group
+	}
 }
 
 tlgunghung = { #Kings of BC
@@ -199,6 +217,9 @@ tlgunghung = { #Kings of BC
 	allow_bastards = yes
 	picture = GFX_bloodlines_placeholder_symbol_2
 	flags = { historical_bloodline }
+	active = {
+		religion = raven_tales
+	}
 }
 
 freeland = { #Gaian lords
