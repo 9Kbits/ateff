@@ -1,4 +1,4 @@
-max_provinces = 2244
+max_provinces = 2246
 definitions = "definition.csv"
 provinces = "provinces.bmp"
 positions = "positions.txt"
@@ -25,27 +25,25 @@ sea_zones = { 1589 1626 }
 sea_zones = { 1301 1442 }
 # Lakes 5
 sea_zones = { 1627 1727 }
-# Pacific 6
-sea_zones = { 914 922 }
-# Atlantic 7
+# Atlantic 6
 sea_zones = { 923 963 }
-# Atlantic 8
+# Atlantic 7
 sea_zones = { 2153 2184 }
-# Pacific 9
-sea_zones = { 633 636 }
-# Lakes 10
+# Pacific 8
+sea_zones = { 2207 2222 }
+# Lakes 9
 sea_zones = { 2230 2242 }
 
 ocean_region = {	
-	sea_zones = { 1 2 7 8 } # Atlantic Ocean
+	sea_zones = { 1 2 6 7 } # Atlantic Ocean
 }
 
 ocean_region = {	
-	sea_zones = { 3 6 9 } # Pacific Ocean
+	sea_zones = { 3 8 } # Pacific Ocean
 }
 
 ocean_region = {	
-	sea_zones = { 4 5 } # Lakes
+	sea_zones = { 4 5 9 } # Lakes
 }
 
 
@@ -62,8 +60,8 @@ major_rivers = {
 	959 960 1559 1586 #Rio Grande
 	947 961 1556 1557 #Arkansas River
 	1612 1613 #Colorado River
-	921 1618 1619 #Sacramento River
-	920 1615 1616 1617 1626 #Columbia River
+	1618 1619 2214 #Sacramento River
+	1615 1616 1617 1626 2213 2220 2221 2222 #Columbia River
 	1443 1460 1461 1462 2180 #Rio Magdalena
 	956 957 1445 1446 1463 1464 2153 2154 2155 2157 2178 2179 #Rio Orinoco
 	935 936 1558 2158 2159 2172 #Tombigbee/Mobile River
@@ -75,7 +73,7 @@ major_rivers = {
 	940 #Altamaha River
 	941 943 #Apalachicola
 	942 #Connecticut
-	922 #Willamette River
+	2215 #Willamette River
 	945 951 #White River
 	953 #Kentucky River
 	885 886 887 #Nelson River
@@ -88,14 +86,14 @@ major_rivers = {
 	2160 #St Johns River
 	2173 #Savannah River
 	2174 #Santee River
-	633 #Taku
-	636 #Fraser
-	634 #Stikine
+	2216 #Taku
+	2219 #Fraser
+	2217 #Stikine
 	2175 #Susquehanna River
 	2176 #Delaware River
 	2177 #St. John River
 	2182 2183 #Ottawa River
-	2184
+	2184 #Rio Grijalva
 }
 
 externals = { 637 638 2131 2132 2133 }
