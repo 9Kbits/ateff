@@ -1,0 +1,436 @@
+###################################
+#
+# MUSLIM SCHOOL IMAMITES
+# - Muslim School Events
+#
+###################################
+namespace = MSI
+
+# Adopts Jadidi(renewal)
+character_event = {
+	id = MSI.00 #i don't think you can have event id of 00, needs testing
+	desc = EVTDESC_MSI_00
+	picture = GFX_evt_kaaba
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_MSI_00
+		add_trait = jadidi
+		if = {
+			limit = {
+				primary_title = { higher_tier_than = COUNT }
+			}
+			economy_techpoints = 25
+			culture_techpoints = 25
+			military_techpoints = 25
+		}
+	}
+}
+
+# Adopts Ansari(traditionalism)
+character_event = {
+	id = MSI.01
+	desc = EVTDESC_MSI_01
+	picture = GFX_evt_kaaba
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_MSI_00
+		add_trait = ansari
+		piety = 100
+	}
+}
+
+# Ansari liege has Jadidi vassal (Hidden)
+character_event = {
+	id = MSI.02
+	
+	hide_window = yes
+	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	only_rulers = yes
+	religion_group = muslim
+	
+	trigger = {
+		has_dlc = "Sons of Abraham"
+		NOR = {
+			liege = {
+				war = yes
+			}
+			trait = incapable
+			is_inaccessible_trigger = yes
+			prisoner = yes
+		}
+		trait = jadidi
+		liege = { 
+			trait = ansari 
+			NOT = {
+				has_opinion_modifier = { who = ROOT modifier = opinion_rejected_school }
+			}
+		}
+	}
+	
+	immediate = {
+		liege = {
+			character_event = { id = MSI.03 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 640
+	}
+}
+
+# Ansari liege has Jadidi vassal
+character_event = {
+	id = MSI.03
+	desc = EVTDESC_MSI_03
+	picture = GFX_evt_kaaba
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_MSI_03
+		FROM = { 
+			letter_event = { id = MSI.04 days = 3 tooltip = EVTTOOLTIP_MSI_04 }
+		}
+	}
+	option = {
+		name = EVTOPTB_MSI_03
+	}
+}
+
+# Jadidi vassal receives letter
+letter_event = {
+	id = MSI.04
+	desc = EVTDESC_MSI_04
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_MSI_04
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				decadence = 40
+			}
+			modifier = {
+				factor = 1.5
+				decadence = 60
+			}
+			modifier = {
+				factor = 1.5
+				decadence = 80
+			}
+		}
+		FROM = { 
+			letter_event = { id = MSI.05 days = 3 tooltip = EVTTOOLTIP_MSI_05 }
+		}
+		remove_trait = muntaqiyun
+		add_trait = salimi
+	}
+	option = {
+		name = EVTOPTB_MSI_04
+		ai_chance = {
+			factor = 1
+		}
+		FROM = { 
+			opinion = {
+				modifier = opinion_rejected_school
+				who = ROOT
+			}
+			letter_event = { id = MSI.06 days = 3 tooltip = EVTTOOLTIP_MSI_06 }
+		}
+	}
+}
+
+# Jadidi vassal complies
+letter_event = {
+	id = MSI.05
+	desc = EVTDESC_MSI_05
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_MSI_05
+		tooltip = {
+			FROM = {
+				remove_trait = jadidi
+				add_trait = ansari
+			}
+		}
+	}
+}
+
+# Jadidi vassal refuses
+letter_event = {
+	id = MSI.06
+	desc = EVTDESC_MSI_06
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_MSI_06
+	}
+}
+
+# Jadidi liege has Ansari vassal (Hidden)
+character_event = {
+	id = MSI.10
+	
+	hide_window = yes
+	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	only_rulers = yes
+	religion_group = muslim
+	
+	trigger = {
+		has_dlc = "Sons of Abraham"
+		NOR = {
+			liege = {
+				war = yes
+			}
+			trait = incapable
+			is_inaccessible_trigger = yes
+			prisoner = yes
+		}
+		trait = ansari
+		liege = { 
+			trait = jadidi
+			NOT = {
+				has_opinion_modifier = { who = ROOT modifier = opinion_rejected_school }
+			}
+		}
+	}
+	
+	immediate = {
+		liege = {
+			character_event = { id = MSI.11 }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 640
+	}
+}
+
+# Jadidi liege has Ansari vassal
+character_event = {
+	id = MSI.11
+	desc = EVTDESC_MSI_11
+	picture = GFX_evt_kaaba
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_MSI_11
+		FROM = { 
+			letter_event = { id = MSI.12 days = 3 tooltip = EVTTOOLTIP_MSI_12 }
+		}
+	}
+	option = {
+		name = EVTOPTB_MSI_11
+	}
+}
+
+# Ansari vassal receives letter
+letter_event = {
+	id = MSI.12
+	desc = EVTDESC_MSI_12
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_MSI_12
+		ai_chance = {
+			factor = 1
+		}
+		FROM = { 
+			letter_event = { id = MSI.13 days = 3 tooltip = EVTTOOLTIP_MSI_13 }
+		}
+		remove_trait = ansari
+		add_trait = jadidi
+	}
+	option = {
+		name = EVTOPTB_MSI_12
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				decadence = 40
+			}
+			modifier = {
+				factor = 1.5
+				decadence = 60
+			}
+			modifier = {
+				factor = 1.5
+				decadence = 80
+			}
+		}
+		FROM = { 
+			opinion = {
+				modifier = opinion_rejected_school
+				who = ROOT
+			}
+			letter_event = { id = MSI.14 days = 3 tooltip = EVTTOOLTIP_MSI_14 }
+		}
+	}
+}
+
+# Ansari vassal complies
+letter_event = {
+	id = MSI.13
+	desc = EVTDESC_MSI_13
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_MSI_13
+		tooltip = {
+			FROM = {
+				remove_trait = ansari
+				add_trait = jadidi
+			}
+		}
+	}
+}
+
+# Ansari vassal refuses
+letter_event = {
+	id = MSI.14
+	desc = EVTDESC_MSI_14
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_MSI_14
+	}
+}
+
+# Cynical Ansari considers Jadidi
+character_event = {
+	id = MSI.20
+	desc = EVTDESC_MSI_20
+	picture = GFX_evt_kaaba
+	border = GFX_event_normal_frame_religion
+	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	only_rulers = yes
+	religion_group = muslim
+	
+	trigger = {
+		has_dlc = "Sons of Abraham"
+		trait = ansari
+		trait = cynical
+	}
+	
+	mean_time_to_happen = {
+		months = 140
+	}
+	
+	option = {
+		name = EVTOPTA_MSI_20
+		ai_chance = {
+			factor = 1
+		}
+		remove_trait = ansari
+		add_trait = jadidi
+	}
+	option = {
+		name = EVTOPTB_MSI_20
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				decadence = 40
+			}
+			modifier = {
+				factor = 1.5
+				decadence = 60
+			}
+			modifier = {
+				factor = 1.5
+				decadence = 80
+			}
+		}
+		remove_trait = cynical
+		add_trait = zealous
+	}
+}
+
+# Zealous jadidi considers ansari
+character_event = {
+	id = MSI.21
+	desc = EVTDESC_MSI_21
+	picture = GFX_evt_kaaba
+	border = GFX_event_normal_frame_religion
+	
+	min_age = 16
+	only_capable = yes
+	prisoner = no
+	only_rulers = yes
+	religion_group = muslim
+	
+	trigger = {
+		has_dlc = "Sons of Abraham"
+		trait = jadidi
+		trait = zealous
+	}
+	
+	mean_time_to_happen = {
+		months = 140
+	}
+	
+	option = {
+		name = EVTOPTA_MSI_20
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				decadence = 40
+			}
+			modifier = {
+				factor = 1.5
+				decadence = 60
+			}
+			modifier = {
+				factor = 1.5
+				decadence = 80
+			}
+		}
+		remove_trait = jadidi
+		add_trait = ansari
+	}
+	option = {
+		name = EVTOPTB_MSI_21
+		ai_chance = {
+			factor = 1
+		}
+		remove_trait = zealous
+		add_trait = cynical
+	}
+}

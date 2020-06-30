@@ -1,0 +1,283 @@
+targetted_decisions = {
+	monastic_orders_spiritual_guidance = {  ### Imamite School power : targeted decision to remove one of target's vices
+		ai_check_interval = 12
+		potential = {
+			NOT = { trait = incapable }
+			OR = {
+				same_realm = FROM
+				same_society_as = FROM
+			}
+			is_within_diplo_range = FROM
+			religion = FROM
+		}
+		
+		from_potential = {
+			is_adult = yes
+			NOT = { trait = incapable }
+		}
+		
+		allow = {
+			FROM = {
+				piety = 150	###requires 150 piety
+				is_inaccessible_trigger = no
+				prisoner = no
+				in_command = no
+				OR= { #improved spacing
+					trait = jadidi
+				    trait = ansari
+				}
+			}
+			is_inaccessible_trigger = no
+			prisoner = no
+			in_command = no
+			same_realm = FROM
+			OR = {
+				is_landed = yes
+				is_patrician = yes
+				is_close_relative = FROM
+			}
+			NOT = {
+				has_opinion_modifier = {	###opinion modifier 10yrs cooldown
+					who =  FROM
+					modifier = opinion_spiritual_guidance
+				}
+			}
+			custom_tooltip = {
+				text = spiritual_guidance_tooltip
+				OR ={
+					AND = {
+						trait = lustful
+						FROM = { NOT = { trait = lustful } }
+					}
+					AND = {
+						trait = gluttonous
+						FROM = { NOT = { trait = gluttonous } }
+					}
+					AND = {
+						trait = greedy
+						FROM = { NOT = { trait = greedy } }
+					}
+					AND = {
+						trait = slothful
+						FROM = { NOT = { trait = slothful } }
+					}
+					AND = {
+						trait = wroth
+						FROM = { NOT = { trait = wroth } }
+					}
+					AND = {
+						trait = envious
+						FROM = { NOT = { trait = envious } }
+					}
+					AND = {
+						trait = proud
+						FROM = { NOT = { trait = proud } }
+					}
+				}
+			}
+		}
+		
+		effect = {
+			FROM = {
+				piety = -150 ###lose piety
+			}
+			random_list = {				###Will randomly remove one sin that target has and you don't
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { trait = lustful }
+							FROM = { trait = lustful }
+						}
+					}
+					set_character_flag = spiritual_guidance_lustful
+					remove_trait = lustful
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { trait = gluttonous }
+							FROM = { trait = gluttonous }
+						}
+					}
+					set_character_flag = spiritual_guidance_gluttonous
+					remove_trait = gluttonous
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { trait = greedy }
+							FROM = { trait = greedy }
+						}
+					}
+					set_character_flag = spiritual_guidance_greedy
+					remove_trait = greedy
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { trait = slothful }
+							FROM = { trait = slothful }
+						}
+					}
+					set_character_flag = spiritual_guidance_slothful
+					remove_trait = slothful
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { trait = wroth }
+							FROM = { trait = wroth }
+						}
+					}
+					set_character_flag = spiritual_guidance_wroth
+					remove_trait = wroth
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { trait = envious }
+							FROM = { trait = envious }
+						}
+					}
+					set_character_flag = spiritual_guidance_envious
+					remove_trait = envious
+				}
+				10 = {
+					modifier = {
+						factor = 0
+						OR = {
+							NOT = { trait = proud }
+							FROM = { trait = proud }
+						}
+					}
+					set_character_flag = spiritual_guidance_proud
+					remove_trait = proud
+				}
+			}
+			opinion = {										###opinion mostly serves as a 10 years cooldown ; +5 Opinion
+				who = FROM
+				modifier = opinion_spiritual_guidance
+				months = 120
+			}
+			FROM = { character_event = { id = MSI.4950 } }
+			character_event = { id = MSI.4951 }
+		}
+		
+		revoke_allowed = {
+		always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					AND = {
+						is_close_relative = FROM						###AI will only target landed relatives in the same realm
+						same_realm = FROM
+						OR = {
+							is_landed = yes
+							is_patrician = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+    become_defenders_of_the_faith = {
+        only_playable = yes	
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+		potential = {
+			is_playable = yes
+			religion = imamite
+			NOR = { #nor block instead of not or
+				has_character_modifier = defenders_of_the_faith
+				has_character_modifier = renewers_of_the_faith
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			piety = 200
+			martial = 8
+		}
+		
+		effect = {
+		    piety = -200
+			add_character_modifier = {
+				modifier = defenders_of_the_faith
+				duration = -1 #did this instead of 100 years
+			}
+			character_event = { id = MSI.4952 tooltip = EVTTOOLTIP_MSI_4952 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+	    }
+	}
+		
+    become_renewers_of_the_faith = {
+		only_playable = yes
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+	    
+		potential = {	
+			is_playable = yes
+			religion = imamite
+			NOT = { #nor block instead of not or
+				has_character_modifier = defenders_of_the_faith
+				has_character_modifier = renewers_of_the_faith
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			piety = 200
+			learning = 8
+		}
+		
+		effect = {
+		    piety = -200
+			add_character_modifier = {
+				modifier = renewers_of_the_faith
+				duration = -1 #did this instead of 100 years
+			}
+			character_event = { id = MSI.4953 tooltip = EVTTOOLTIP_MSI_4953 }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1	
+		}
+	}
+}

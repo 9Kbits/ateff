@@ -1,0 +1,94 @@
+namespace = MSI
+
+
+character_event = {
+	id = MSI.4950
+	picture = GFX_evt_secluded_in_prayer
+	desc = EVTDESC_MSI_4950
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+	}
+}
+
+#Notification for when you are targeted
+character_event = {
+	id = MSI.4951
+	picture = GFX_evt_secluded_in_prayer
+	desc = EVTDESC_MSI_4951
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = I_SEE
+		if = {
+			limit = { has_character_flag = spiritual_guidance_lustful }
+			tooltip = { remove_trait = lustful }
+		}
+		if = {
+			limit = { has_character_flag = spiritual_guidance_gluttonous }
+			tooltip = { remove_trait = gluttonous }
+		}
+		if = {
+			limit = { has_character_flag = spiritual_guidance_greedy }
+			tooltip = { remove_trait = greedy }
+		}
+		if = {
+			limit = { has_character_flag = spiritual_guidance_slothful }
+			tooltip = { remove_trait = slothful }
+		}
+		if = {
+			limit = { has_character_flag = spiritual_guidance_wroth }
+			tooltip = { remove_trait = wroth }
+		}
+		if = {
+			limit = { has_character_flag = spiritual_guidance_envious }
+			tooltip = { remove_trait = envious }
+		}
+		if = {
+			limit = { has_character_flag = spiritual_guidance_proud }
+			tooltip = { remove_trait = proud }
+		}
+		clr_character_flag = spiritual_guidance_lustful
+		clr_character_flag = spiritual_guidance_gluttonous
+		clr_character_flag = spiritual_guidance_greedy
+		clr_character_flag = spiritual_guidance_slothful
+		clr_character_flag = spiritual_guidance_wroth
+		clr_character_flag = spiritual_guidance_envious
+		clr_character_flag = spiritual_guidance_proud
+	}
+}
+
+#adopt defenders of the faith
+character_event = {
+	id = MSI.4952
+	desc = EVTDESC_MSI_4952
+	picture = GFX_evt_kaaba
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = EVTOPTA_MSI_4952
+	}
+}
+	
+#adopt renewers of the faith
+character_event = {
+	id = MSI.4953
+	desc = EVTDESC_MSI_4953
+	picture = GFX_evt_kaaba
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = EVTOPTA_MSI_4953
+	}
+} #brackets here were messed up in terms of placement, makes it hard to read
