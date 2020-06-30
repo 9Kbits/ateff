@@ -130,9 +130,12 @@ narrative_event = {
 		}
 		any_playable_ruler = {
 			religion = FROM
-			capital_scope = {
-				region = custom_mississippi_river
-				port = yes
+			OR = {
+				is_patrician = yes
+				capital_scope = {
+					region = custom_mississippi_river
+					port = yes
+				}
 			}
 			higher_tier_than = COUNT
 			is_theocracy = no
@@ -143,9 +146,12 @@ narrative_event = {
 		random_playable_ruler = { 
 			limit = {
 				religion = FROM
-				capital_scope = {
-					region = custom_mississippi_river
-					port = yes
+				OR = {
+					is_patrician = yes
+					capital_scope = {
+						region = custom_mississippi_river
+						port = yes
+					}
 				}
 				is_theocracy = no
 				higher_tier_than = COUNT
