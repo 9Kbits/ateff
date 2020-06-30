@@ -70,6 +70,8 @@ e_canada = {
 			c_elgin = {
 				color = { 104 115 53 }
 
+				maritimer = "Eilginn"
+
 				b_london_ON = {}
 				b_st_thomas_ON = {}
 				b_port_stanley_ON = {
@@ -194,6 +196,7 @@ e_canada = {
 				ojibwe = "Nochemoweniing"
 				algonquin = "Nochemoweniing"
 				saulteaux = "Nochemoweniing"
+				maritimer = "Bhruis"
 
 				b_tobermory_ON = {}
 				b_owen_sound_ON = { 
@@ -224,6 +227,7 @@ e_canada = {
 			dellsman = "Nassau"
 			hudsonian = "Nassau" #dutch
 			ojibwe = "Mississagua"
+			maritimer = "Dachaigh"
 			
 			c_welland = {
 				color = { 252 174 12 }
@@ -295,6 +299,8 @@ e_canada = {
 			}
 			c_york = {
 				color = { 205 173 33 }
+
+				maritimer = "Iorc"
 
 				b_markham_ON = {}
 				b_vaughan_ON = {}
@@ -373,6 +379,7 @@ e_canada = {
 				color2= { 255 255 20 }
 				
 				ojibwe = "Onigaming"
+				maritimer = "Prince Eideard"
 
 				b_picton_ON = {}
 				b_bloomfield_ON = {}
@@ -489,8 +496,10 @@ e_canada = {
 				color = { 173 238 21 }
 				color2= { 255 255 255 }
 
+				maritimer = "Rinnfriu"
+
 				b_pembroke_ON = {}
-				b_renfrew_ON = {}
+				b_renfrew_ON = {maritimer = "Rinnfriu"}
 				b_eganville_ON = {}
 				b_amprior_ON = {}
 				b_killaloe_ON = {}
@@ -502,7 +511,7 @@ e_canada = {
 				color = { 148 189 21 }
 				color2= { 255 255 255 }
 
-				b_perth_ON = {}
+				b_perth_ON = {maritimer = "Peairt"}
 				b_ashton_ON = {}
 				b_smiths_falls_ON = {
 					used_for_dynasty_names = no
@@ -912,6 +921,7 @@ e_canada = {
 			acadien = "Gaspésie"
 			ontarois = "Gaspésie"
 			metis = "Gaspésie"
+			maritimer = "Cuibég"
 
 			capital = 1202 # Gaspé
 
@@ -920,8 +930,12 @@ e_canada = {
 				color2= { 255 255 20 }
 
 				mikmaq = "Gespeg"
+				maritimer = "Cuibég"
 
-				b_gaspe_QC = {}
+				b_gaspe_QC = {
+					maritimer = "Cuibég"
+					mikmaq = "Gespeg"
+				}
 				b_perce_QC = {}
 				b_chandler_QC = {}
 				b_grand_rivier_QC = {}
@@ -948,6 +962,8 @@ e_canada = {
 			c_chic_chocs = {
 				color = { 211 133 14 }
 				color2= { 255 255 20 }
+
+				mikmaq = "Sigsog"
 
 				b_matane_QC = {}
 				b_cap_chat_QC = {}
@@ -1013,7 +1029,7 @@ e_canada = {
 				b_austin_QC = {}
 				b_brompton_QC = {}
 				b_cookshire_eaton_QC = {}
-				b_lennoxville_QC = {}
+				b_lennoxville_QC = {Baile Leamhnachd}
 			}
 			c_frontenac = {
 				color = { 225 213 215 }
@@ -1038,8 +1054,10 @@ e_canada = {
 			c_drummond = {
 				color = { 205 175 184 }
 				color2= { 255 255 20 }
+		
+				maritimer = "Druimeanach"
 
-				b_drummondville_QC = {}
+				b_drummondville_QC = {Baile Druimeanach}
 				b_victoriaville_QC = {}
 				b_nicolet_QC = {}
 				b_becancour_QC = {}
@@ -1268,6 +1286,7 @@ e_canada = {
 		acadien = "Acadie"
 		cajun = "Acadie"
 		creole = "Acadie"
+		newfie = "The Mainland"
 
 		capital = 1260 # Halifax
 		
@@ -1282,7 +1301,6 @@ e_canada = {
 			acadien = "Nouveau-Brunswick"
 			metis = "Nouveau-Brunswick"
 			maritimer = "Bronsuic Nuadh"
-			newfie = "Bronsuic Nuadh"
 			mikmaq = "Sigenigteoag"
 			deitsch = "Neu-Brunswick"
 			plautdietsch = "Neu-Brunswick"
@@ -1298,10 +1316,11 @@ e_canada = {
 				color2= { 220 220 0 }
 
 				mikmaq = "Qonasqamkuk"
-	
-				b_st_andrews_NB = {}
-				b_st_george_NB = {}
-				b_st_stephen_NB = {}
+				maritimer = "Baile Stiobhan"
+
+				b_st_andrews_NB = {maritimer = "Baile Aindreas"}
+				b_st_george_NB = {maritimer = "Baile Seoras"}
+				b_st_stephen_NB = {maritimer = "Baile Stiobhan"}
 				b_mcadam_NB = {}
 				b_pennfield_NB = {}
 				b_grand_manan_NB = {}
@@ -1318,8 +1337,14 @@ e_canada = {
 				haitian = "Saint-Jean"
 				metis = "Saint-Jean"
 				acadien = "Managouèche"
+				maritimer = "Baile Iain"
+				mikmaq = "Menagwes"
 
-				b_st_john_NB = {acadien = "Managouèche"}
+				b_st_john_NB = {
+					acadien = "Managouèche"
+					mikmaq = "Menagwes"
+					maritimer = "Baile Iain"
+				}
 				b_simonds_NB = {}
 				b_carleton_WB = {}
 				b_parrtown_NB = {}
@@ -1334,8 +1359,12 @@ e_canada = {
 
 				acadien = "Sainte-Anne"
 				quebecois = "Sainte-Anne"
+				maritimer = "Baile Freadaraig"
 
-				b_fredericton_NB = {acadien = "Sainte-Anne"}
+				b_fredericton_NB = {
+					acadien = "Sainte-Anne"
+					maritimer = "Baile Freadaraig"
+				}
 				b_kingsclear_NB = {}
 				b_nashwaaksis_NB = {}
 				b_penniac_NB = {}
@@ -1365,6 +1394,8 @@ e_canada = {
 			color2= { 220 220 0 }
 
 			capital = 1165 # Moncton
+		
+			maritimer = "Uilinn Bheag"
 
 			c_fundy = {
 				color = { 170 194 169 }
@@ -1383,7 +1414,7 @@ e_canada = {
 				b_petitcodiac_NB = {}
 				b_norton_NB = {}
 				b_penobsquis_NB = {}
-				b_elgin_NB = {acadien = "Gaspareau"}
+				b_elgin_NB = {}
 				b_alma_NB = {}
 				b_st_martins_NB = {}
 				b_apohaqui_NB = {}
@@ -1411,7 +1442,8 @@ e_canada = {
 				b_port_elgin_NB = {
 					quebecois = "Fort Gaspareaux"
 					cajun = "Fort Gaspareaux"
-					acadien = "Fort Gaspareaux"}
+					acadien = "Fort Gaspareaux"
+				}
 				b_grand_barachois_NB = {}
 				b_haute_aboujagane_NB = {}
 			}
@@ -1460,6 +1492,7 @@ e_canada = {
 				
 				acadien = "Caraquet"
 				quebecois = "Caraquet"
+				mikmaq = "Nepisiguit"
 
 				b_bathurst_NB = {acadien = "Nipisiguit"}
 				b_shippagan_NB = {}
@@ -1477,7 +1510,7 @@ e_canada = {
 				acadien = "Grand-Sault"
 
 				b_st_quentin_NB = {}
-				b_grand_falls_NB = {acadien = "Grand Sault"}
+				b_grand_falls_NB = {acadien = "Grand-Sault"}
 				b_st_leonard_NB = {}
 				b_plaster_rock_NB = {}
 				b_nictau_NB = {}
@@ -1496,8 +1529,15 @@ e_canada = {
 				color = { 155 210 232 }
 				color2= { 220 220 0 }
 
-				b_campbellton_NB = {acadien = "Pointe-à-Martin"}
-				b_atholville_NB = {}
+				mikmaq = "Wisiamkik"
+				maritimer = "Baile Caimbeul"
+
+				b_campbellton_NB = {
+					acadien = "Pointe-à-Martin"
+					maritimer = "Baile Caimbeul"
+					mikmaq = "Wisiamkik
+				}
+				b_atholville_NB = {maritimer = "Baile Athall"}
 				b_dalhousie_NB = {}
 				b_balmoral_NB = {}
 				b_belledune_NB = {}
@@ -1528,6 +1568,7 @@ e_canada = {
 			acadien = "Îles de la Madeleine"
 			quebecois = "Îles de la Madeleine"
 			mikmaq = "Memquit"
+			maritimer = "Eilean nan Magdaileanan"
 			
 
 			c_madeleine = {
@@ -1561,7 +1602,6 @@ e_canada = {
 			metis = "Île-du-Prince-Édouard"
 			maritimer = "Eilean Eòin"
 			mikmaq = "Epekwitk"
-			newfie = "Oileán Phrionsa Éadbhard"
 
 			c_cardigan = {
 				color = { 36 187 82 }
@@ -1607,7 +1647,6 @@ e_canada = {
 			capital = 1215 # c_chignecto
 			
 			maritimer = "Nuadh Tuath"
-			newfie = "Nua Thuaidh"
 			quebecois = "Nord-Écosse"
 			ontarois = "Nord-Écosse"
 			cajun = "Nord-Écosse"
@@ -1621,6 +1660,7 @@ e_canada = {
 				color2= { 255 255 20 }
 				
 				mikmaq = "Siknikt"
+				maritimer = "Cheaghnachd"
 				
 				b_amherst_NS = {
 					acadien = "Les Planches"
@@ -1638,24 +1678,29 @@ e_canada = {
 				color2= { 220 220 0 }
 
 				mikmaq = "Takumegoochk"
-				newfie = "Phiogto"
+				maritimer = "Phiogto"
 
-				b_tatamagouche_NS = {}
+				b_tatamagouche_NS = {mikmaq = "Takumegoochk"}
 				b_pugwash_NS = {}
-				b_wallace_NS = {}
+				b_wallace_NS = {maritimer = "Uallas"}
 				b_trenton_NS = {}
-				b_pictou_NS = {}
+				b_pictou_NS = {maritimer = "Baile Phiogto"}
 				b_fox_harbour_NS = {}
 				b_merigomish_NS = {}
 				b_oxford_NS = {}
-				b_new_glasgow_NS = {}
+				b_new_glasgow_NS = {maritimer = "Glaschu Nuadh"}
 			}
 			c_colchester = {
 				color = { 106 65 157 }
 				
 				mikmaq = "Wagobagitik"
+				maritimer = "Truru"
 				
-				b_truro_NS = {acadien = "Cobequid"}
+				b_truro_NS = {
+					acadien = "Cobequid"
+					maritimer = "Truru"
+					mikmaq = "Wagobagitik"
+				}
 				b_shortts_lake_NS = {}
 				b_brookfield_NS = {}
 				b_stewiacke_NS = {}
@@ -1678,7 +1723,6 @@ e_canada = {
 			haitian = "Nouvelle-Écosse"
 			metis = "Nouvelle-Écosse"
 			maritimer = "Alba Nuadh"
-			newfie = "Albain Nua"
 			mikmaq = "Segepenegatig"
 			
 			c_halifax = {
@@ -1688,9 +1732,13 @@ e_canada = {
 				
 				mikmaq = "Kjipuktuk"
 				acadien = "Chebucto"
+				maritimer = "Halafacs"
 				
 				b_fort_george_NS = {}
-				b_halifax_NS = {acadien = "Chebucto"}
+				b_halifax_NS = {
+					acadien = "Chebucto"
+					maritimer = "Halafacs"
+				}
 				b_dartmouth_NS = {}
 				b_cole_harbour_NS = {}
 				b_lower_sackville_NS = {}
@@ -1705,10 +1753,13 @@ e_canada = {
 				
 				acadien = "Mirliguesh"
 				mikmaq = "Aseedig"
+				maritimer = "Banrighrean"
 				
 				b_lunenburg_NS = {acadien = "Mirliguesh"}
 				b_bridgewater_NS = {}
-				b_liverpool_NS = {acadien = "Port-Rossignol"}
+				b_liverpool_NS = {
+					acadien = "Port-Rossignol"
+				}
 				b_hunts_point_NS = {}
 				b_caledonia_NS = {}
 				b_hebbville_NS = {}
@@ -1722,6 +1773,7 @@ e_canada = {
 				color2={ 255 255 255 }
 				
 				mikmaq = "Pisiguit"
+				maritimer = "Baile Annag"
 				
 				b_kentville_NS = {acadien = "Grand Habitat"}
 				b_wolfville_NS = {}
@@ -1735,7 +1787,9 @@ e_canada = {
 					quebecois = "Port-Royal"
 					cajun = "Port-Royal"
 					acadien = "Port-Royal"
-					haitian = "Port-Royal"}
+					haitian = "Port-Royal"
+					maritimer = "Baile Annag Rioghail"
+				}
 				b_digby_NS = {}
 			}
 			c_yarmouth = {
@@ -1743,12 +1797,13 @@ e_canada = {
 				color2={ 255 255 255 }
 				
 				mikmaq = "Usitukun"
+				maritimer = "Inbhir Iara"
 				
-				b_yarmouth_NS = {}
+				b_yarmouth_NS = {maritimer = "Inbhir Iara"}
 				b_shelburne_NS = {acadien = "Port-Rasoir"}
 				b_westport_NS = {}
 				b_meteghan_NS = {}
-				b_argyle_NS = {}
+				b_argyle_NS = {maritimer = "Earra Ghaidheal"}
 				b_tusket_NS = {}
 				b_kemptville_NS = {}
 				b_port_maitland_NS = {}
@@ -1769,8 +1824,7 @@ e_canada = {
 			acadien = "Île-Royale"
 			creole = "Île-Royale"
 			metis = "Île-Royale"
-			maritimer = "Ceap Breatainn"
-			newfie = "Cheap Bhreatainn"
+			maritimer = "Cheap Breatainn"
 			mikmaq = "Onamag"
 			
 			c_sydney = {
@@ -1784,15 +1838,21 @@ e_canada = {
 				quebecois = "Louisbourg"
 				cajun = "Louisbourg"
 				creole = "Louisbourg"
-				newfie = "Shidni"
+				maritimer = "Shidni"
 				
-				b_glace_bay_NS = {}
-				b_sydney_NS = {acadien = "Baie des Espagnols"}
+				b_glace_bay_NS = {maritimer = "Glasbaidh"}
+				b_sydney_NS = {
+					acadien = "Baie des Espagnols"
+					maritimer = "Baile Shidni"
+				}
 				b_louisbourg_NS = {acadien = "Port-aux-Baleines"}
 				b_gabarus_NS = {}
 				b_boularderie_NS = {}
-				b_port_hawkesbury_NS = {}
-				b_st_peters_NS = {acadien = "Port Toulouse"}
+				b_port_hawkesbury_NS = {maritimer = "Baile a' Chlamhain"}
+				b_st_peters_NS = {
+					acadien = "Port Toulouse"
+					maritimer = "Baile Pheadair"
+				}
 				b_saint_esprit_NS = {}
 			}
 			c_inverness = {
@@ -1803,12 +1863,12 @@ e_canada = {
 				cajun = "Bras d'Or"
 				acadien = "Bras d'Or"
 				creole = "Bras d'Or"
-				newfie = "Sanndraigh"
+				maritimer = "Inbhir Nis"
 			
 				b_cape_north_NS = {}
-				b_baddeck_NS = {}
-				b_inverness_NS = {}
-				b_whycocomagh_NS = {}
+				b_baddeck_NS = {maritimer = "Badaig"}
+				b_inverness_NS = {maritimer = "Baile Inbhir Nis"}
+				b_whycocomagh_NS = {maritimer = "Hogama"}
 				b_ingonish_NS = {}
 				b_isle_madame_NS = {}
 				b_breton_cove_NS = {}
@@ -1818,15 +1878,18 @@ e_canada = {
 				color = { 100 80 162 }
 				
 				mikmaq = "Nalegitkoonecht"
-				newfie = "Am Baile Mor"
+				maritimer = "Am Baile Mòr"
 			
-				b_antigonish_NS = {}
-				b_guysborough_NS = {acadien = "Chedabouctou"}
+				b_antigonish_NS = {maritimer = "Am Baile Mòr"}
+				b_guysborough_NS = {
+					acadien = "Chedabouctou"
+					maritimer = "Baile Mhainisdear"
+				}
 				b_canso_NS = {acadien = "Fronsac"}
 				b_queensport_NS = {}
 				b_little_dover_NS = {}
 				b_sherbrook_NS = {}
-				b_lochaber_NS = {}
+				b_lochaber_NS = {maritimer = "Loch Abar"}
 				b_havre_boucher_NS = {}
 				b_goldboro_NS = {}
 			}
