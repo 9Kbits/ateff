@@ -1759,7 +1759,7 @@ narrative_event = {
 				}
 			}
 		}
-		c_chichagof = { 
+		c_chichagof = {
 			holder_scope = {
 				grant_title_no_opinion = b_pelican_AK
 			}
@@ -1767,6 +1767,9 @@ narrative_event = {
 		set_global_flag = tsardom_arrives
 		destroy_landed_title = e_novorusskiy
 		activate_title = { title = e_novorusskiy status = no } 
+		any_courtier = {
+			death = { death_reason = death_vanished }
+		}
 		death = { death_reason = death_vanished }
 	}
 	option = {
@@ -2073,7 +2076,6 @@ narrative_event = {
 		}
 		create_family_palace = yes
 		set_government_type = colonial_government
-		
 	}
 }
 narrative_event = {
@@ -2454,7 +2456,9 @@ narrative_event = {
 		set_global_flag = empire_arrives
 		destroy_landed_title = e_edokko
 		activate_title = { title = e_edokko status = no } 
-
+		any_courtier = {
+			death = { death_reason = death_vanished }
+		}
 		death = { death_reason = death_vanished }
 	}
 	option = {
@@ -3679,6 +3683,9 @@ character_event = {
 		}
 		set_global_flag = revivalist_landing
 		destroy_landed_title = k_revivalist_invasion
+		any_courtier = {
+			death = { death_reason = death_vanished }
+		}
 		death = { death_reason = death_vanished }
 	}
 	option = {
