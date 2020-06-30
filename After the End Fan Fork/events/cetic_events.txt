@@ -3845,7 +3845,7 @@ character_event = {
 }
 
 #Authority Decrease - Peasant Revolts
-character_event = {
+province_event = { #bit of a hacky change, idk if this actually works
 	id = cetic.315
 	desc = EVTDESCCETIC315
 	picture = GFX_evt_peasants
@@ -3853,9 +3853,11 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		OR = {
-			has_landed_title = e_california
-			has_landed_title = e_new_california
+		owner = {
+			OR = {
+				has_landed_title = e_california
+				has_landed_title = e_new_california
+			}
 		}
 	}
 	
