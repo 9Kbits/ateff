@@ -44,6 +44,7 @@ Popeato Chips
 Lahom
 Fast Man
 chemist03
+The Dude
 
 Original mod team:
 
