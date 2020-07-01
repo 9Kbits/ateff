@@ -194,6 +194,7 @@
 	trait=patient
 	trait=content
 	2636.12.12={birth=yes}
+	2660.1.1={add_spouse=1867143}
 	2684.12.12={death=yes}
 }
 
@@ -386,6 +387,7 @@
 	culture=maritimer
 	religion=high_church
 	father=1899116
+	mother=1899141
 	martial=2
 	diplomacy=3
 	stewardship=3
@@ -402,7 +404,7 @@
 1899018={
 	name="Michael"
 	dna="gbcmihnlepg"
-	dynasty="1813008"
+	dynasty=1813008
 	culture=maritimer
 	religion=high_church
 	martial=6
@@ -416,6 +418,7 @@
 	trait=charitable
 	trait=brave
 	2645.6.1={birth=yes}
+	2651.1.1={add_spouse=1899150}
 	2705.9.26={death=yes}
 }
 
@@ -425,6 +428,7 @@
 	culture=maritimer
 	religion=high_church
 	father=1899084
+	mother=1899142
 	diplomacy=7
 	martial=8
 	stewardship=8
@@ -437,7 +441,7 @@
 	trait=quick
 	trait=strong
 	trait=possessed
-	2646.1.15={birth=yes}
+	2646.1.15={birth=yes effect={set_character_flag=no_historical_family}}
 	2687.2.1={death=yes}
 }
 
@@ -976,6 +980,7 @@
 	culture=maritimer
 	religion=high_church
 	father=1899058
+	mother=1899149
 	trait=greedy
 	trait=cruel
 	trait=ambitious
@@ -1072,6 +1077,7 @@
 	religion=high_church
 	father=1899057
 	2581.7.20={birth=yes}
+	2630.1.1={add_spouse=1899149}
 	2650.6.1={death=yes}
 }
 1899059={
@@ -1199,6 +1205,7 @@
 	culture=acadien
 	religion=ursuline
 	2600.11.22={birth=yes}
+	2629.1.1={add_spouse=1899152}
 	2660.1.1={death=yes}
 }
 1899066={
@@ -1207,6 +1214,7 @@
 	culture=acadien
 	religion=ursuline
 	father=1899065
+	mother=1899152
 	trait=fortune_builder
 	2630.11.22={birth=yes}
 	2700.1.1={death=yes}
@@ -1217,6 +1225,7 @@
 	culture=acadien
 	religion=high_church
 	father=1899065
+	mother=1899152
 	trait=skilled_tactician
 	2635.11.22={birth=yes}
 	2700.1.1={death=yes}
@@ -1355,8 +1364,16 @@
 	name="Roger"
 	dynasty=1867020
 	father=1857098
+	mother=1867164
 	culture=ontarian
 	religion=high_church
+	trait=scholarly_theologian
+	trait=zealous
+	trait=ambitious
+	trait=deceitful
+	trait=chaste
+	trait=charitable
+	trait=patient
 	2626.5.16={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -1367,6 +1384,7 @@
 	religion=high_church
 	father=1899085
 	2608.6.5={birth=yes}
+	2615.1.1={add_spouse=1899142}
 	2665.8.22={death=yes}
 }
 1899085={
@@ -1737,12 +1755,14 @@
 	culture=maritimer
 	religion=high_church
 	2601.2.2={birth=yes}
+	2626.1.1={add_spouse=1899141}
 	2655.12.12={death=yes}
 }
 1899117={
 	name="Clodagh"
 	female=yes
 	father=1899116
+	mother=1899141
 	dynasty="1813044"
 	culture=maritimer
 	religion=high_church
@@ -1964,4 +1984,247 @@
 	trait=strong
 	2660.8.2={birth=yes culture=maritimer}
 	2700.10.15={death=yes}
+}
+1899133={
+	name="Benoît"
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	father=1899139
+	trait=midas_touched
+	trait=cynical
+	trait=greedy
+	trait=ambitious
+	trait=diligent
+	2617.6.29={birth=yes effect={set_character_flag=no_historical_family}}
+	2639.1.1={add_spouse=1899134}
+	2700.1.1={death=yes}
+}
+1899134={
+	name="Édith"
+	female=yes
+	culture=acadien
+	religion=ursuline
+	dynasty=0
+	trait=fair
+	trait=diligent
+	trait=gregarious
+	trait=ambitious
+	2621.9.2={birth=yes}
+	2658.1.1={death=yes}
+}
+1899135={
+	name="Aldéa"
+	female=yes
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	father=1899133
+	mother=1899134
+	trait=fair
+	trait=cruel
+	trait=gregarious
+	trait=diligent
+	trait=content
+	trait=charismatic_negotiator
+	2640.8.6={birth=yes}
+	2700.1.1={death=yes}
+}
+1899136={
+	name="Eymard"
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	father=1899133
+	mother=1899134
+	trait=tough_soldier
+	trait=strong
+	trait=hunter
+	trait=proud
+	trait=brave
+	trait=wroth
+	trait=arbitrary
+	2642.9.16={birth=yes}
+	2665.1.1={add_spouse=1899002}
+	2700.1.1={death=yes}
+}
+1899137={
+	name="Eudes"
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	father=1899133
+	mother=1899134
+	trait=tough_soldier
+	trait=scarred
+	trait=duelist
+	trait=cruel
+	trait=greedy
+	trait=wroth
+	trait=lustful
+	trait=craven
+	2645.9.16={birth=yes}
+	2700.1.1={death=yes}
+}
+1899138={
+	name="Evée"
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	father=1899133
+	mother=1899134
+	trait=scholarly_theologian
+	trait=strong
+	trait=kind
+	trait=patient
+	trait=zealous
+	trait=chaste
+	trait=temperate
+	trait=theologian
+	2646.9.16={birth=yes}
+	2700.1.1={death=yes}
+}
+1899139={
+	name="Réginald"
+	culture=acadien
+	religion=ursuline
+	dynasty=1755053
+	trait=charismatic_negotiator
+	trait=diligent
+	trait=ambitious
+	trait=gregarious
+	2591.9.3={birth=yes}
+	2615.1.1={add_spouse=1899140}
+	2644.8.8={death=yes}
+}
+1899140={
+	name="Philomène"
+	female=yes
+	culture=acadien
+	religion=ursuline
+	dynasty=0
+	2592.6.4={birth=yes}
+	2615.1.1={add_spouse=1899140}
+	2650.6.8={death=yes}
+}
+1899141={
+	name="Morag"
+	female=yes
+	dynasty=1813048
+	culture=maritimer
+	religion=high_church
+	father=1899085
+	2610.3.23={birth=yes}
+	2700.1.1={death=yes}
+}
+1899142={
+	name="Oighrig"
+	female=yes
+	dynasty=0
+	culture=maritimer
+	religion=high_church
+	2611.6.4={birth=yes}
+	2700.6.5={death=yes}
+}
+1899143={
+	name="Lachlann"
+	dynasty=1813043
+	culture=maritimer
+	religion=high_church
+	father=1899006
+	mother=1899007
+	2658.6.10={birth=yes}
+	2700.1.1={death=yes}
+}
+1899144={
+	name="Magnolia"
+	female=yes
+	dynasty=1813043
+	culture=maritimer
+	religion=high_church
+	father=1899006
+	mother=1899007
+	2659.6.14={birth=yes}
+	2700.1.1={death=yes}
+}
+1899145={
+	name="Iomhair"
+	dynasty=1813042
+	culture=maritimer
+	religion=high_church
+	father=1899008
+	mother=1867143
+	trait=quick
+	2661.6.3={birth=yes}
+	2700.1.1={death=yes}
+}
+1899146={
+	name="Hammel"
+	dynasty=1813042
+	culture=maritimer
+	religion=high_church
+	father=1899008
+	mother=1867143
+	2663.6.12={birth=yes}
+	2700.1.1={death=yes}
+}
+1899147={
+	name="Bridget"
+	female=yes
+	dynasty=1813042
+	culture=maritimer
+	religion=high_church
+	father=1899008
+	mother=1867143
+	2664.9.3={birth=yes}
+	2700.1.1={death=yes}
+}
+1899148={
+	name="Phyllis"
+	female=yes
+	dynasty=1813041
+	culture=maritimer
+	religion=high_church
+	father=1899004
+	mother=1899005
+	2666.2.4={birth=yes}
+	2700.1.1={death=yes}
+}
+1899149={
+	name="Monique"
+	female=yes
+	dynasty=0
+	culture=acadien
+	trait=fair
+	religion=high_church
+	2609.2.8={birth=yes}
+	2661.2.8={death=yes}
+}
+1899150={
+	name="Karla"
+	female=yes
+	dynasty=0
+	culture=maritimer
+	religion=high_church
+	2645.7.3={birth=yes}
+	2700.1.1={death=yes}
+}
+1899151={
+	name="Seamus"
+	dynasty=1813008
+	culture=maritimer
+	religion=high_church
+	father=1899018
+	mother=1899150
+	2662.7.2={birth=yes}
+	2700.1.1={death=yes}
+}
+1899152={
+	name="Jeanne"
+	dynasty=0
+	female=yes
+	culture=acadien
+	religion=ursuline
+	2614.7.72={birth=yes}
+	2664.1.1={death=yes}
 }
