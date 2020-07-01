@@ -474,4 +474,35 @@ decisions = {
 			always = no
 		}
 	}
+	change_qabantajik_branch = {
+		ai = no
+		
+		potential = {
+			religion = qabantajik
+			age = 16
+			is_playable = yes
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_character_flag = changedqabantajikbranch }
+		}
+		
+		allow = {
+			religion = qabantajik
+			is_playable = yes
+			NOT = { has_character_flag = changedqabantajikbranch }
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = mesoamerica.710 }
+			}
+			custom_tooltip = { text = TXT_change_qabantajik_branch }
+			set_character_flag = changedqabantajikbranch
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+	}
 }

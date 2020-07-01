@@ -4948,3 +4948,57 @@ character_event = {
 		name = EVTOPTA_mesoamerica_704
 	}
 }
+
+character_event = {
+	id = mesoamerica.710
+	desc = EVTDESC_mesoamerica_710
+	picture = GFX_evt_bishop_aztec
+	border = GFX_event_normal_frame_religion
+	religion = qabantajik
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_mesoamerica_710
+		hidden_tooltip = {
+			remove_trait = qab_qijlanik
+			remove_trait = qab_votanzapatismo
+
+		}
+		add_trait = qab_suuk_chilam
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = EVTOPTB_mesoamerica_710
+		hidden_tooltip = {
+			remove_trait = qab_suuk_chilam
+			remove_trait = qab_votanzapatismo
+
+		}
+		add_trait = qab_qijlanik
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_mesoamerica_710
+		hidden_tooltip = {
+			remove_trait = qab_qijlanik
+			remove_trait = qab_suuk_chilam
+
+		}
+		add_trait = qab_votanzapatismo
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
