@@ -31,7 +31,10 @@ title_governator = {
 	}
 	
 	allowed_to_grant = {
-		government = bureaucratic_government
+		OR = {
+			has_landed_title = e_california
+			has_landed_title = e_new_california
+		}
 		NOT = {
 			trait = strong_emperor
 		}
