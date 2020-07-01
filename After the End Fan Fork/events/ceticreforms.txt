@@ -720,17 +720,17 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformnestorian
+		name = EVTOPT_ceticreformneogodbeite
 		trigger = {
 			trait = way_dove
 		}
-		religion = nestorian
+		religion = neogodbeite
 		any_demesne_province = {
 			if = {
 				limit = {
 					religion = cetic
 				}
-				religion = nestorian
+				religion = neogodbeite
 			}
 		}
 
@@ -1010,17 +1010,17 @@ character_event = {
 	}
 
 	option = {
-		name = EVTOPT_ceticreformsede
+		name = EVTOPT_ceticreformneogodbeite
 		trigger = {
 			trait = way_dove
 		}
-		religion = sedevacantist
+		religion = neogodbeite
 		any_demesne_province = {
 			if = {
 				limit = {
 					religion = cetic
 				}
-				religion = sedevacantist
+				religion = neogodbeite
 			}
 		}
 
@@ -1804,6 +1804,9 @@ character_event = {
 	option = {
 		name = EVTOPT_ceticreformaphite
 		religion = aphite
+		trigger = {
+			trait = way_book
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1822,6 +1825,9 @@ character_event = {
 	option = {
 		name = EVTOPT_ceticreformmormon
 		religion = mormon
+		trigger = {
+			trait = way_dove
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2014,22 +2020,24 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPT_ceticreformsede
+		name = EVTOPT_ceticreformneogodbeite
 		trigger = {
 			trait = way_dove
 		}
-		religion = sedevacantist
+		religion = neogodbeite
 		any_demesne_province = {
 			if = {
 				limit = {
 					religion = cetic
 				}
-				religion = sedevacantist
+				religion = neogodbeite
 			}
 		}
 		ai_chance = {
 			factor = 5
-			modifier = { factor = 10 culture = coloradan }
+			modifier = { factor = 10 culture = utahn }
+			modifier = { factor = 5 culture = navajo }
+			modifier = { factor = 5 culture = hopi }
 		}
 	}
 	option = {
