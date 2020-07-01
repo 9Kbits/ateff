@@ -4195,6 +4195,43 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	move_tradition_to_detroit = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_dlc = "The Sword of Islam"
+			is_playable = yes
+			religion = traditionalist
+			NOT = { has_global_flag = mufti_moved }
+		}
+		allow = {
+			independent = yes
+			primary_title = { higher_tier_than = DUKE }
+			completely_controls = c_detroit
+			piety = 500
+		}
+		effect = {
+			set_global_flag = mufti_moved
+			custom_tooltip = { text = TXT_move_tradition_to_detroit }
+			hidden_tooltip = {
+				k_house_of_tradition = {
+					holder_scope = {
+						b_dearborn_MI = { gain_title = PREV }
+						narrative_event = { id = islamate.106 }
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }	
 
 targetted_decisions = {

@@ -66,6 +66,7 @@ Casus bellis from Project Balance
 Titular Empires from CK2+ (old version) by Wiz
 Portraits from Lux Invicta by DarkReborn and others
 Clothing and headgear from AGOT Congenital Overhaul by LancelotLoire
+Druidic religion and event images from Ancient Religions Reborn by theStormWeaver
 Muslim societies from Maal's Sufi Schools mod
 Great Lakes Clothing from Better Looking Garbs
 Adjustments to Combat Tactics and Equus / Homo by redtide
