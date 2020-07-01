@@ -48,6 +48,7 @@ interstate_trade = { # The Interstate
 			province_id = 548
 			province_id = 1055
 			province_id = 1238
+			province_id = 2073
 		}
 	}
 
@@ -71,19 +72,31 @@ interstate_trade = { # The Interstate
 		548 #Vancouver
 	}
 	
-	# Northern route (Transcontinental Railroad) San Francisco - Salt Lake
+	# Northern route (Transcontinental Railroad) San Francisco - Cassia
 	path = {
-		2031 2029 2032 2042 2045 2046 2064 2068 2067 729 458 459 473 432 430 
+		2031 2029 2032 2042 2045 2046 2064 2068 2067 729 458 730 459
 	}
-	# Northern route (Transcontinental Railroad) Salt Lake - St. Louis
+	# Cassia - Bannock
 	path = {
-		430 429 443 444 445 474 475 476 360 361 357 356 353 346 988 250 251 1295 1294 1050
+		459 452
 	}
-	# Southern route (I-10/Route 66) Los Angeles - Phoenix
+	# Bannock - Salt Lake
 	path = {
-		2019 2020 2075 2073 2074 693 440
+		452 429 430
 	}
-	# Southern route (I-10/Route 66) Phoenix - Sandia
+	# Bannock - St. Louis
+	path = {
+		452 443 444 445 474 475 476 360 361 357 356 353 346 988 250 251 1295 1294 1050
+	}
+	# Southern route (I-10/Route 66) Los Angeles - Mead
+	path = {
+		2019 2015 2077 2075 2073 2074
+	}
+	# Southern route (I-10/Route 66) Mead - Flagstaff
+	path = {
+		2074 693 440
+	}
+	# Southern route (I-10/Route 66) Flagstaff - Sandia
 	path = {
 		440 692 415 416 338 
 	}
@@ -91,17 +104,21 @@ interstate_trade = { # The Interstate
 	path = {
 		338 340 318 320 325 327 326 246 247 248 1294 1050
 	}
+	# Northern route (I-15) Mead - Salt Lake
+	path = {
+		2074 436 435 431 430
+	}
 	# El Camino Real de Tierra Adentro (US - Mexico) Sandia - Mexico City
 	path = {
 		1767 678 1764 1791 1788 1787 1785 1784 1736 1735 1731 745 807 809 744 801 799 800 313 755 337 338
 	}
-	# Southern route (I-10) Phoenix - New Orleans
+	# Southern route (I-10) Flagstaff - New Orleans
 	path = {
 		440 695 439 419 420 422 421 313 312 310 309 1237 1235 1255 1238 1239 1254 1253 1252 1251 1250 1124
 	}
-	# Northern Route (I-84/Oregon Trail) Portland - Salt Lake
+	# Northern Route (I-84/Oregon Trail) Portland - Cassia
 	path = {
-		534 535 517 732 516 462 460 456 459 473 432 430
+		534 535 517 732 516 462 460 456 453 459
 	}
 	# North Mississippi Route (Twin Cities - St. Louis)
 	path = {
