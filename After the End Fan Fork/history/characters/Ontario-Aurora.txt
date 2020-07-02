@@ -1700,7 +1700,7 @@
 	2656.1.1={death=yes}
 }
 1857095={
-	name="Yorick"
+	name="Yorwick"
 	dynasty=1867101
 	culture=ontarian
 	religion=high_church
@@ -1737,9 +1737,13 @@
 	trait=kind
 	trait=gregarious
 	trait=diligent
+	trait=has_tuberculosis
 	2623.11.12={birth=yes}
 	2644.1.1={add_spouse=1867183}
-	2661.1.1={death=yes}
+	2661.1.1={death={
+			death_reason=death_trait
+		}
+	}
 }
 1857098={
 	name="Randolph"
@@ -1838,8 +1842,7 @@
 	trait=high_anglican
 	father=1867011
 	mother=1867111
-	2654.10.3={birth=yes
-		culture=ontarian}
+	2654.10.3={birth=yes culture=ontarian}
 	2695.10.5={death=yes}
 }
 1857109={
@@ -1870,11 +1873,8 @@
 	trait=quick
 	trait=high_anglican
 	father=1867010
-	2640.1.1={birth=yes
-		culture=ontarian}
-	2660.1.1={
-		employer=1867007
-	}
+	2640.1.1={birth=yes culture=ontarian}
+	2660.1.1={employer=1867007}
 	2700.1.1={death=yes}
 }
 1867111={
@@ -2753,7 +2753,10 @@
 	trait=wroth
 	trait=depressed
 	2623.8.13={birth=yes}
-	2662.6.9={death=yes}
+	2662.6.9={death={
+			death_reason=death_trait
+		}
+	}
 }
 1867184={
 	name="Sharlene"
