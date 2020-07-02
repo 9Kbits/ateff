@@ -69,7 +69,7 @@ Portraits from Lux Invicta by DarkReborn and others
 Clothing and headgear from AGOT Congenital Overhaul by LancelotLoire
 Druidic religion and event images from Ancient Religions Reborn by theStormWeaver
 Muslim societies from Maal's Sufi Schools mod
-Great Lakes Clothing from Better Looking Garbs
+Great Lakes Clothing and Dixie Martial Clothing from Better Looking Garbs and BLG AGOT submod
 Adjustments to Combat Tactics and Equus / Homo by redtide
 
 Images:
