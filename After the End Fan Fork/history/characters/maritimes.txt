@@ -398,6 +398,7 @@
 	trait=deceitful
 	trait=greedy
 	2627.2.1={birth=yes}
+	2647.1.1={add_spouse=1899155}
 	2678.9.12={death=yes}
 }
 
@@ -407,6 +408,8 @@
 	dynasty=1813008
 	culture=maritimer
 	religion=high_church
+	father=1899154
+	mother=1899157
 	martial=6
 	diplomacy=2
 	stewardship=4
@@ -2010,8 +2013,12 @@
 	trait=diligent
 	trait=gregarious
 	trait=ambitious
+	trait=cancer
 	2621.9.2={birth=yes}
-	2658.1.1={death=yes}
+	2658.1.1={death={
+			death_reason=death_trait
+		}
+	}
 }
 1899135={
 	name="Aldéa"
@@ -2103,13 +2110,9 @@
 	culture=acadien
 	religion=ursuline
 	dynasty=0
-	trait=cancer
 	2592.6.4={birth=yes}
 	2615.1.1={add_spouse=1899140}
-	2650.6.8={death={
-			death_reason=death_trait
-		}
-	}
+	2650.6.8={death=yes}
 }
 1899141={
 	name="Morag"
@@ -2231,4 +2234,97 @@
 	religion=ursuline
 	2614.7.72={birth=yes}
 	2664.1.1={death=yes}
+}
+1899153={
+	name="Wellwood"
+	dynasty=1813008
+	culture=maritimer
+	religion=high_church
+	2593.3.5={birth=yes}
+	2620.1.1={add_spouse=1899156}
+	2647.9.26={death=yes}
+}
+1899154={
+	name="William"
+	dynasty=1813008
+	culture=maritimer
+	religion=high_church
+	father=1899153
+	mother=1899156
+	trait=wounded
+	2625.2.18={birth=yes}
+	2640.1.1={add_spouse=1899157}
+	2664.7.27={death=yes}
+}
+1899155={
+	name="Mairi"
+	female=yes
+	dynasty=1813008
+	culture=maritimer
+	father=1899153
+	mother=1899156
+	religion=high_church
+	trait=slow
+	trait=zealous	
+	trait=content
+	trait=charitable
+	trait=chaste
+	2628.2.4={birth=yes}
+	2700.1.1={death=yes}
+}
+1899156={
+	name="Etta"
+	female=yes
+	culture=maritimer
+	religion=high_church
+	2601.5.15={birth=yes}
+	2660.6.26={death=yes}
+}
+1899157={
+	name="Fiona"
+	female=yes
+	culture=maritimer
+	religion=high_church
+	trait=brave
+	trait=ambitious
+	trait=deceitful
+	trait=diligent
+	2628.7.7={birth=yes}
+	2700.1.1={death=yes}
+}
+1899158={
+	name="Gruoch"
+	female=yes
+	dynasty="1813044"
+	culture=maritimer
+	religion=high_church
+	father=1899017
+	mother=1899155
+	trait=cynical
+	trait=paranoid
+	trait=deceitful
+	trait=wroth
+	trait=brave
+	trait=lustful
+	trait=skilled_tactician
+	2649.9.12={birth=yes}
+	2700.1.1={death=yes}
+}
+1899159={
+	name="Edgar"
+	dynasty="1813044"
+	culture=maritimer
+	religion=high_church
+	father=1899017
+	mother=1899155
+	trait=quick
+	trait=slothful
+	trait=deceitful
+	trait=cynical
+	trait=gluttonous
+	trait=brave
+	trait=gregarious
+	trait=intricate_webweaver
+	2650.5.4={birth=yes}
+	2700.1.1={death=yes}
 }
