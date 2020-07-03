@@ -3093,3 +3093,28 @@ narrative_event = {
 		}
 	}
 }
+
+# President is dead (empire edition)
+character_event = {
+	id = prez.302
+	is_triggered_only = yes # Triggered by on_death
+	hide_window = yes
+	religion = americanist
+	
+	trigger = {
+		has_landed_title = d_americanist
+		has_landed_title = e_usa
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	immediate = {
+		e_usa = {
+			holder_scope = {
+				d_americanist = { gain_title = PREV }
+				give_nickname = nick_lastname
+			}
+		}
+	}
+}
