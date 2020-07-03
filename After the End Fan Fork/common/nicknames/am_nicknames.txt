@@ -1484,3 +1484,16 @@ nick_the_explorer = {}
 nick_the_bowed = {}
 nick_the_rebel = {}
 nick_the_sword_of_god_from = {}
+nick_the_soldier = {
+	allow = {
+		is_adult = yes
+		martial=12
+		has_education_martial_trigger = yes
+		trait=brave
+		OR = {
+			trait=ambitious
+			trait=diligent
+		}
+		prestige = 500
+	}
+}
