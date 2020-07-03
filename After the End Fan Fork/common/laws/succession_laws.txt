@@ -1761,11 +1761,9 @@ gender_laws = {
 				NOT = { has_religion_feature = religion_equal }
 				NOT = { has_religion_feature = religion_feature_midewiwin }
 				AND = {
-					OR = {
-						has_religion_feature = religion_equal
-						has_religion_feature = religion_feature_aria_de_machete
-					}
-					trait = machete_male_ref
+				NOR = {
+					trait = machete_female
+					trait = machete_female_ref
 				}
 				OR = {
 					has_bloodline_flag = bloodline_effect_cognatic
