@@ -1497,3 +1497,28 @@ nick_the_soldier = {
 		prestige = 500
 	}
 }
+nick_the_pastor = {
+	allow = {
+		is_adult = yes
+		OR = {
+			religion=evangelical
+			religion=charismatic
+		}
+		NOT = { trait = cruel }
+		NOT = { trait = cynical }
+		NOT = { trait = envious }
+		NOT = { trait = greedy }
+		NOT = { trait = gluttonous }
+		NOT = { trait = slothful }
+		trait = zealous
+		trait = gregarious
+		piety = 1000
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			trait = diligent
+		}
+	}
+}
