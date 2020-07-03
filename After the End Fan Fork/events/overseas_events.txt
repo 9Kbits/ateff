@@ -228,6 +228,7 @@ province_event = {
 				3 = { FROM = { character_event = { id = overseas.19 } } }
 				3 = { FROM = { character_event = { id = overseas.80 } } } #Liberian
 				3 = { FROM = { character_event = { id = overseas.81 } } } #Verdiano
+				3 = { FROM = { character_event = { id = overseas.84 } } } #gwladfeg
 			}
 		}
 		
@@ -248,6 +249,7 @@ province_event = {
 				3 = { FROM = { character_event = { id = overseas.17 } } }
 				3 = { FROM = { character_event = { id = overseas.82 } } } #Strine
 				3 = { FROM = { character_event = { id = overseas.83 } } } #Maori
+				3 = { FROM = { character_event = { id = overseas.85 } } } #chileno
 			}
 		}
 	}
@@ -1672,6 +1674,88 @@ character_event = {
 			age = 26
 			religion = nonconformist #I guess this is the closest we can get to a sutiable religion
 			culture = maori
+			trait = scholar
+			trait = greedy
+			trait = brave
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			set_character_flag = foreign_merchant
+			wealth = 10
+			random_list = {
+				5 = { add_trait = midas_touched }
+				10 = { add_trait = scholarly_theologian  }
+				10 = { add_trait = fortune_builder }
+				10 = { add_trait = charismatic_negotiator  }
+			}
+			random = { chance = 50 add_trait = envious }
+			random = { chance = 50 add_trait = diligent }
+			random = { chance = 50 add_trait = patient }
+			random = { chance = 50 add_trait = gregarious }
+			random = { chance = 20 add_trait = proud }
+			random = { chance = 20 add_trait = ambitious }
+			random = { chance = 10 add_trait = quick }
+		}
+	}
+}
+
+character_event = {
+	id = overseas.84
+	desc = EVTDESC_overseas_gwladfeg
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		create_character = {
+			dynasty = NONE
+			female = no
+			age = 26
+			religion = nonconformist
+			culture = gwladfeg
+			trait = scholar
+			trait = greedy
+			trait = brave
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			set_character_flag = foreign_merchant
+			wealth = 10
+			random_list = {
+				5 = { add_trait = midas_touched }
+				10 = { add_trait = scholarly_theologian  }
+				10 = { add_trait = fortune_builder }
+				10 = { add_trait = charismatic_negotiator  }
+			}
+			random = { chance = 50 add_trait = envious }
+			random = { chance = 50 add_trait = diligent }
+			random = { chance = 50 add_trait = patient }
+			random = { chance = 50 add_trait = gregarious }
+			random = { chance = 20 add_trait = proud }
+			random = { chance = 20 add_trait = ambitious }
+			random = { chance = 10 add_trait = quick }
+		}
+	}
+}
+
+character_event = {
+	id = overseas.85
+	desc = EVTDESC_overseas_chileno
+	picture = GFX_evt_emissary
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		create_character = {
+			dynasty = NONE
+			female = no
+			age = 26
+			religion = sedevacantist
+			culture = chileno
 			trait = scholar
 			trait = greedy
 			trait = brave

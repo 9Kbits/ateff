@@ -3233,6 +3233,32 @@ e_gwladfeg = {
 	creation_requires_capital = no
 }
 
+e_chileno = {
+	color = { 200 25 25 }
+	color2={ 220 220 0 }
+	capital = 1097 # Miami
+	
+	culture = chileno
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = chileno
+		OR = {
+			realm_size = 150
+			e_chileno = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no
+}
+
 e_afrocubano = {
 	color={ 112 26 77 }
 	color2={ 210 50 20 }
