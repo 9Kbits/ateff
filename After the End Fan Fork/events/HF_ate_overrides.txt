@@ -29,6 +29,169 @@ character_event = {
 	}
 }
 
+province_event = {
+	id = HFATE.42306
+	hide_window = yes
+	is_triggered_only = yes
+	has_dlc = "Sons of Abraham"
+
+	trigger = {
+		any_landed_title = {
+			tier = COUNT
+			OR = {
+				empire = {
+					title = e_canada
+				}
+				kingdom = {
+					title = k_louisiana
+				}
+			}
+			owner = {
+				NOT = {
+					religion = FROMFROM
+				}
+			}
+		}
+	}
+
+	immediate = {
+		random_province = {
+			limit = {
+				has_province_flag = shepherds_crusade_originator
+			}
+			clr_province_flag = shepherds_crusade_originator
+			save_event_target_as = shepherds_province
+			owner = {
+				create_random_soldier = {
+					random_traits = yes
+					dynasty = none
+					religion = THIS
+					culture = THIS
+					age = 25
+				}
+				new_character = {
+					save_event_target_as = shepherds_leader
+					create_title = {
+						tier = DUKE
+						landless = yes
+						adventurer = yes
+						name = "THE_SHEPHERDS_CRUSADE"
+						holder = THIS
+					}
+					add_trait = brave
+					add_trait = ambitious
+					add_trait = holy_warrior
+					add_trait = zealous
+					set_focus = focus_war
+					add_ambition = obj_become_exalted
+					set_character_flag = shepherds_leader
+					spawn_unit = {
+						province = ROOT
+						home = ROOT
+						owner = THIS
+						troops = {
+							archers = { 1000 1000 }
+							light_infantry = { 8000 8000 }
+						}
+						attrition = 0
+					}
+					random_landed_title = {
+						limit = {
+							tier = COUNT
+							OR = {
+								empire = {
+									title = e_canada
+								}
+								kingdom = {
+									title = k_louisiana
+								}
+							}
+							owner = {
+								NOT = {
+									religion = FROMFROM
+								}
+							}
+						}
+						preferred_limit = {
+							owner = {
+								OR = {
+									AND = {
+										independent = yes
+										tier = EMPEROR
+									}
+									top_liege = {
+										tier = EMPEROR
+									}
+								}
+							}
+						}
+						preferred_limit = {
+							owner = {
+								OR = {
+									AND = {
+										independent = yes
+										tier = KING
+									}
+									top_liege = {
+										tier = KING
+									}
+								}
+							}
+						}
+						preferred_limit = {
+							owner = {
+								OR = {
+									AND = {
+										independent = yes
+										tier = DUKE
+									}
+									top_liege = {
+										tier = DUKE
+									}
+								}
+							}
+						}
+						kingdom = {
+							save_event_target_as = kingdom_target
+						}
+						owner = {
+							if = {
+								limit = {
+									independent = yes
+								}
+								event_target:shepherds_leader = {
+									unsafe_war = {
+										target = PREV
+										casus_belli = shepherds_crusade_invasion
+										thirdparty_title = event_target:kingdom_target
+										tier = KING
+									}
+								}
+							}
+							else = {
+								top_liege = {
+									event_target:shepherds_leader = {
+										unsafe_war = {
+											target = PREV
+											casus_belli = shepherds_crusade_invasion
+											thirdparty_title = event_target:kingdom_target
+											tier = KING
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				save_event_target_as = shepherds_owner
+			}
+		}
+		any_playable_ruler = {
+			narrative_event = { id = HFP.42307 }
+		}
+	}
+}
+
 #Hellenic Dedicated Temples.
 #Ruler decides whom to dedicate the temple to.
 #First determine which kind of god you are interested in.

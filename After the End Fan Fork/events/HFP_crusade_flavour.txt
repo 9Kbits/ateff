@@ -4096,45 +4096,19 @@ province_event = {
 	has_dlc = "Sons of Abraham"
 
 	trigger = {
-		if = {
-			limit = {
-				has_global_flag = catholic_shepherds_crusade
-			}
-			any_landed_title = {
-				tier = COUNT
-				OR = {
-					empire = {
-						title = e_lone_star
-					}
-					kingdom = {
-						title = k_columbia
-					}
+		any_landed_title = {
+			tier = COUNT
+			OR = {
+				empire = {
+					title = e_lone_star
 				}
-				owner = {
-					NOT = {
-						religion = FROMFROM
-					}
+				kingdom = {
+					title = k_columbia
 				}
 			}
-		}
-		else_if = {
-			limit = {
-				has_global_flag = ursuline_shepherds_crusade
-			}
-			any_landed_title = {
-				tier = COUNT
-				OR = {
-					empire = {
-						title = e_canada
-					}
-					kingdom = {
-						title = k_louisiana
-					}
-				}
-				owner = {
-					NOT = {
-						religion = FROMFROM
-					}
+			owner = {
+				NOT = {
+					religion = FROMFROM
 				}
 			}
 		}
@@ -4181,184 +4155,87 @@ province_event = {
 						}
 						attrition = 0
 					}
-					if = {
-						limit = { 
-							has_global_flag = catholic_shepherds_crusade
-						}
-						random_landed_title = {
-							limit = {
-								tier = COUNT
-								OR = {
-									empire = {
-										title = e_lone_star
-									}
-									kingdom = {
-										title = k_columbia
-									}
+					random_landed_title = {
+						limit = {
+							tier = COUNT
+							OR = {
+								empire = {
+									title = e_lone_star
 								}
-								owner = {
-									NOT = {
-										religion = FROMFROM
-									}
+								kingdom = {
+									title = k_columbia
 								}
-							}
-							preferred_limit = {
-								owner = {
-									OR = {
-										AND = {
-											independent = yes
-											tier = EMPEROR
-										}
-										top_liege = {
-											tier = EMPEROR
-										}
-									}
-								}
-							}
-							preferred_limit = {
-								owner = {
-									OR = {
-										AND = {
-											independent = yes
-											tier = KING
-										}
-										top_liege = {
-											tier = KING
-										}
-									}
-								}
-							}
-							preferred_limit = {
-								owner = {
-									OR = {
-										AND = {
-											independent = yes
-											tier = DUKE
-										}
-										top_liege = {
-											tier = DUKE
-										}
-									}
-								}
-							}
-							kingdom = {
-								save_event_target_as = kingdom_target
 							}
 							owner = {
-								if = {
-									limit = {
+								NOT = {
+									religion = FROMFROM
+								}
+							}
+						}
+						preferred_limit = {
+							owner = {
+								OR = {
+									AND = {
 										independent = yes
+										tier = EMPEROR
 									}
+									top_liege = {
+										tier = EMPEROR
+									}
+								}
+							}
+						}
+						preferred_limit = {
+							owner = {
+								OR = {
+									AND = {
+										independent = yes
+										tier = KING
+									}
+									top_liege = {
+										tier = KING
+									}
+								}
+							}
+						}
+						preferred_limit = {
+							owner = {
+								OR = {
+									AND = {
+										independent = yes
+										tier = DUKE
+									}
+									top_liege = {
+										tier = DUKE
+									}
+								}
+							}
+						}
+						kingdom = {
+							save_event_target_as = kingdom_target
+						}
+						owner = {
+							if = {
+								limit = {
+									independent = yes
+								}
+								event_target:shepherds_leader = {
+									unsafe_war = {
+										target = PREV
+										casus_belli = shepherds_crusade_invasion
+										thirdparty_title = event_target:kingdom_target
+										tier = KING
+									}
+								}
+							}
+							else = {
+								top_liege = {
 									event_target:shepherds_leader = {
 										unsafe_war = {
 											target = PREV
 											casus_belli = shepherds_crusade_invasion
 											thirdparty_title = event_target:kingdom_target
 											tier = KING
-										}
-									}
-								}
-								else = {
-									top_liege = {
-										event_target:shepherds_leader = {
-											unsafe_war = {
-												target = PREV
-												casus_belli = shepherds_crusade_invasion
-												thirdparty_title = event_target:kingdom_target
-												tier = KING
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-					else_if = {
-						limit = { 
-							has_global_flag = ursuline_shepherds_crusade
-						}
-						random_landed_title = {
-							limit = {
-								tier = COUNT
-								OR = {
-									empire = {
-										title = e_canada
-									}
-									kingdom = {
-										title = k_louisiana
-									}
-								}
-								owner = {
-									NOT = {
-										religion = FROMFROM
-									}
-								}
-							}
-							preferred_limit = {
-								owner = {
-									OR = {
-										AND = {
-											independent = yes
-											tier = EMPEROR
-										}
-										top_liege = {
-											tier = EMPEROR
-										}
-									}
-								}
-							}
-							preferred_limit = {
-								owner = {
-									OR = {
-										AND = {
-											independent = yes
-											tier = KING
-										}
-										top_liege = {
-											tier = KING
-										}
-									}
-								}
-							}
-							preferred_limit = {
-								owner = {
-									OR = {
-										AND = {
-											independent = yes
-											tier = DUKE
-										}
-										top_liege = {
-											tier = DUKE
-										}
-									}
-								}
-							}
-							kingdom = {
-								save_event_target_as = kingdom_target
-							}
-							owner = {
-								if = {
-									limit = {
-										independent = yes
-									}
-									event_target:shepherds_leader = {
-										unsafe_war = {
-											target = PREV
-											casus_belli = shepherds_crusade_invasion
-											thirdparty_title = event_target:kingdom_target
-											tier = KING
-										}
-									}
-								}
-								else = {
-									top_liege = {
-										event_target:shepherds_leader = {
-											unsafe_war = {
-												target = PREV
-												casus_belli = shepherds_crusade_invasion
-												thirdparty_title = event_target:kingdom_target
-												tier = KING
-											}
 										}
 									}
 								}
@@ -4372,11 +4249,6 @@ province_event = {
 		any_playable_ruler = {
 			narrative_event = { id = HFP.42307 }
 		}
-	}
-	
-	after = { #we'll need these flags later...
-		clr_global_flag = catholic_shepherds_crusade
-		clr_global_flag = ursuline_shepherds_crusade
 	}
 }
 
