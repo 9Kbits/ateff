@@ -60,7 +60,8 @@
 	disallow_random_traits=yes
 	2099.1.1={birth=yes}
 	2160.1.10={death={
-			death_reason=death_murder_unknown #Murdered.
+			death_reason=death_execution_beheading
+			killer= 2500070
 		}
 	}
 }
@@ -219,6 +220,7 @@
 	disallow_random_traits=yes
 
 	2380.1.1={birth=yes}
+	2400.1.1={add_spouse=2500077}
 	2421.5.5={effect={add_friend=1910100}}
 	2450.1.1={death=yes}
 }
@@ -1233,7 +1235,7 @@
 
 2500057={
 	name="Eugene"
-	culture=tuskegean
+	culture=black
 	religion=cetic
 	dynasty=1849057#Woz
 	father=2500056
@@ -1591,5 +1593,136 @@
 	trait=content 
 	2598.1.1={birth=yes}
 	2662.1.3={death=yes}	
+}
+
+2500070={
+	name="Joshua"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Garcia
+	occluded=yes
+	trait=brilliant_strategist
+	trait=legendary
+	trait=brave
+	trait=strategist
+	trait=greedy
+	trait=ambitious
+	trait=zealous
+	trait=paranoid 
+	give_nickname=nick_the_grizzly
+	2140.1.1={birth=yes}
+	2190.2.15={death= {
+		death_reason=death_battle
+		}	
 	}
+}
+
+2500071={
+	name="Jacob"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Garcia
+	father=2500070
+	occluded=yes
+	trait=thrifty_clerk
+	trait=legendary
+	trait=charitable
+	trait=content
+	trait=hedonist
+	trait=gluttonous
+	trait=lustful
+	trait=craven
+	2170.1.1={birth=yes}
+	2230.1.1={death=yes}
+}
+
+2500072={
+	name="Jonathan"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Garcia
+	father=2500071
+	trait=tough_soldier
+	trait=brave
+	trait=just
+	trait=diligent
+	trait=honest
+	trait=kind
+	2220.1.1={birth=yes}
+	2245.3.24={death={
+			death_reason=death_execution_hanging
+			killer=2500009
+		}
+	}
+}
+2500073={
+	name="Jerry"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Garcia
+	father=2500072
+	trait=charismatic_negotiator
+	trait=paranoid
+	trait=shrewd
+	trait=frail
+	trait=content
+	2245.2.1={birth=yes}
+	2310.11.24={death=yes}
+}
+2500074={
+	name="Jason"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Garcia
+	father=2500073
+	trait=thrifty_clerk
+	trait=greedy
+	trait=shrewd
+	trait=administrator
+	2295.9.11={birth=yes}
+	2345.6.12={death=yes}
+}
+2500075={
+	name="Jordan"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Garcia
+	father=2500074
+	trait=charismatic_negotiator
+	trait=paranoid
+	trait=shrewd
+	trait=frail
+	trait=content
+	2318.2.24={birth=yes}
+	2360.3.23={death=yes}
+}
+2500076={
+	name="Jules"
+	culture=valleyan
+	religion=evangelical
+	dynasty=1850049 #Garcia
+	father=2500075
+	trait=intricate_webweaver
+	trait=paranoid
+	trait=ambitious
+	trait=wroth
+	trait=maimed
+	trait=cruel
+	2335.7.24={birth=yes}
+	2381.2.28={death=yes}
+}
+2500077={
+	name="Julia"
+	culture=valleyan
+	female=yes
+	religion=cetic
+	dynasty=1850049 #Garcia
+	father=2500076
+	trait=naive_appeaser
+	trait=paranoid
+	trait=shy
+	trait=frail
+	trait=content
+	2376.7.24={birth=yes}
+	2440.3.12={death=yes}
 }
