@@ -14384,13 +14384,13 @@ indian_subjugation = {
 	can_use_gui = {
 		ROOT = {
 			religion = rust_cultist
-			piety = 500
+			piety = 200
 		}
 	}
 	
 	on_add = {
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
-		ROOT = { piety = -500 }
+		ROOT = { piety = -200 }
 		if = {
 			limit = { defender = { is_offmap_governor = offmap_china } }
 			attacker = { 
