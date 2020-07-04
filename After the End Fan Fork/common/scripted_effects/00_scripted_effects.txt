@@ -17720,7 +17720,6 @@ add_kinslayer_trait_effect = {
 	if = { #Parents, children, direct ancestors or descendants 
 		limit = {
 			NOT = { trait = kinslayer }
-			NOT = { religion_group = muslim }
 			OR = {
 				is_ancestor_of = event_target:kinslayer_target
 				is_descendant_of = event_target:kinslayer_target
@@ -17744,7 +17743,6 @@ add_kinslayer_trait_effect = {
 				trait = kinslayer
 				trait = familial_kinslayer
 			}
-			NOT = { religion_group = muslim }
 			OR = {
 				is_cousin_of = event_target:kinslayer_target
 				is_aunt_uncle_of = event_target:kinslayer_target
@@ -17769,7 +17767,6 @@ add_kinslayer_trait_effect = {
 				trait = familial_kinslayer
 				trait = dynastic_kinslayer
 			}
-			NOT = { religion_group = muslim }
 			is_lowborn = no
 			dynasty = event_target:kinslayer_target
 			OR = {
@@ -17792,7 +17789,6 @@ add_kinslayer_trait_effect = {
 				trait = dynastic_kinslayer
 				trait = tribal_kinslayer
 			}
-			NOT = { religion_group = muslim }
 			is_lowborn = no
 
 			OR = {
