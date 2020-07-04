@@ -65,12 +65,14 @@
 	trait=sayyid2
 	disallow_random_traits=yes
 	2070.1.1={birth=yes}
+	2100.1.1={add_spouse=1384074}
 	2140.1.1={death=yes}
 }
 2200003={
 	name="Salim"
 	dynasty=2030000# Abbas
 	father=2200002
+	mother=1384074
 	culture=anjalusi
 	occluded=yes
 	religion=imamite
@@ -1877,4 +1879,841 @@
 	give_nickname=nick_the_fox
 	2600.1.10={birth=yes}
 	2650.2.21={death=yes}
+}
+
+1384044={ #duke of mojave and count of blythe
+	name="Osman"
+	dynasty=2030000 #abbas
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=skilled_tactician
+	trait=duelist
+	trait=strong
+	trait=zealous
+	trait=brave
+	trait=diligent
+	give_nickname=nick_ghazi
+	father=2200000
+	mother=1384024
+	2032.10.27={birth=yes}
+	2098.1.2={death=yes}
+}
+
+1384045={ #duke of mojave and count of blythe
+	name="Alaeddin"
+	dynasty=2030000 #abbas
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=fortune_builder
+	trait=shrewd
+	trait=kind
+	trait=zealous
+	trait=diligent
+	trait=faqih
+	father=1384044
+	2053.8.1={birth=yes}
+	2101.5.24={death=yes}
+}
+
+1384046={ #duke of mojave and death valley and count of blythe
+	name="Murad"
+	dynasty=2030000 #abbas
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=skilled_tactician
+	trait=duelist
+	trait=strong
+	trait=zealous
+	trait=brave
+	trait=diligent
+	give_nickname=nick_ghazi
+	father=1384045
+	2082.8.30={birth=yes}
+	2143.3.1={death=yes}
+}
+
+1384047={ #duke of mojave and death valley and count of blythe
+	name="Yakub"
+	dynasty=2030000 #abbas
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=skilled_tactician
+	trait=duelist
+	trait=strong
+	trait=zealous
+	trait=brave
+	trait=diligent
+	give_nickname=nick_yilidrim
+	father=1384046
+	2102.4.12={birth=yes}
+	2178.6.9={death=yes}
+}
+
+1384048={ #duke of mojave and death valley and count of blythe
+	name="Maryam"
+	dynasty=2030000 #abbas
+	female=yes
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=fair
+	trait=grey_eminence
+	trait=gregarious
+	trait=honest
+	trait=just
+	trait=patient
+	give_nickname=nick_yilidrim
+	father=1384047
+	2134.12.5={birth=yes}
+	2154.1.1={add_spouse=1384049}
+	2189.9.4={death=yes}
+}
+
+1384049={ #
+	name="Imad"
+	dynasty=2030018 #Qazwini
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=tough_soldier
+	trait=brave
+	trait=ambitious
+	trait=charitable
+	trait=honest
+	trait=zealous
+	2130.6.1={birth=yes}
+	2154.1.1={add_spouse=1384048}
+	2182.5.12={death=yes}
+}
+
+1384050={ #duke of mojave and death valley and count of blythe
+	name="Suleyman"
+	dynasty=2030018 #Qazwini
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=thrifty_clerk
+	trait=gluttonous
+	trait=charitable
+	trait=trusting
+	trait=kind
+	father=1384049
+	mother=1384048
+	2152.4.16={birth=yes}
+	2190.8.5={death={
+		death_reason=death_murder_poison
+		killer=1384051
+	}}
+}
+
+1384051={ #duke of mojave and death valley and count of blythe
+	name="Musa"
+	dynasty=2030018 #Qazwini
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=flamboyant_schemer
+	trait=ambitious
+	trait=wroth
+	trait=deceitful
+	trait=temperate
+	trait=familial_kinslayer
+	father=1384049
+	mother=1384048
+	2154.2.9={birth=yes}
+	2190.8.10={death={
+		death_reason=death_duel
+		killer=1384052
+	}}
+}
+
+1384052={ #duke of mojave and death valley and count of blythe
+	name="Isa"
+	dynasty=2030018 #Qazwini
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=skilled_tactician
+	trait=ambitious
+	trait=wroth
+	trait=brave
+	trait=just
+	trait=familial_kinslayer
+	trait=wounded
+	father=1384049
+	mother=1384048
+	2160.2.9={birth=yes}
+	2190.8.23={death={
+		death_reason=death_trait
+	}}
+}
+
+1384053={ #duke of mojave and count of blythe
+	name="Muhammad"
+	dynasty=2030018 #Qazwini
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=mastermind_theologian
+	trait=content
+	trait=kind
+	trait=just
+	trait=diligent
+	trait=chaste
+	trait=zealous
+	trait=honest
+	trait=ansari
+	father=1384049
+	mother=1384048
+	2162.4.16={birth=yes}
+	2222.3.24={death=yes}
+}
+
+1384054={ #duke of mojave and count of blythe
+	name="Zakariyya"
+	dynasty=2030018 #Qazwini
+	culture=anjalusi
+	religion=imamite
+	trait=charismatic_negotiator
+	trait=gregarious
+	trait=shrewd
+	trait=deceitful
+	trait=patient
+	trait=diligent
+	father=1384053
+	2197.12.3={birth=yes}
+	2255.7.21={death=yes}
+}
+
+1384055={ #duke of mojave and count of blythe
+	name="Yusuf"
+	dynasty=2030018 #Qazwini
+	culture=anjalusi
+	religion=imamite
+	trait=tough_soldier
+	trait=brave
+	trait=cruel
+	trait=diligent
+	trait=wroth
+	trait=shy
+	trait=humble
+	father=1384054
+	2236.1.12={birth=yes}
+	2260.6.9={death=yes}
+}
+
+1384056={ #duke of mojave and count of blythe
+	name="Salim"
+	dynasty=2030018 #Qazwini
+	culture=anjalusi
+	religion=imamite
+	trait=martial_cleric
+	trait=charitable
+	trait=zealous
+	trait=diligent
+	trait=temperate
+	trait=chaste
+	father=1384055
+	2250.4.9={birth=yes}
+	2299.10.4={death=yes}
+}
+
+1384057={ #duke of mojave and count of blythe
+	name="Karim"
+	dynasty=2030018 #Qazwini
+	culture=anjalusi
+	religion=imamite
+	trait=midas_touched
+	trait=lustful
+	trait=honest
+	trait=craven
+	trait=groomed
+	trait=gregarious
+	father=1384056
+	2272.9.2={birth=yes}
+	2336.12.5={death=yes}
+}
+
+1384058={ #duke of mojave and count of blythe
+	name="Zackary"
+	dynasty=1864101 #Hall
+	culture=anjalusi
+	religion=imamite
+	trait=bastard
+	trait=skilled_tactician
+	trait=brave
+	trait=deceitful
+	trait=patient
+	trait=shrewd
+	trait=strategist
+	father=1384057
+	2310.6.5={birth=yes
+		culture=battleborn
+	}
+	2355.2.5={death=yes}
+}
+
+1384059={ #duke of mojave and count of blythe
+	name="William"
+	dynasty=1864101 #Hall
+	culture=anjalusi
+	religion=imamite
+	trait=tough_soldier
+	trait=content
+	trait=honest
+	trait=dull
+	trait=kind
+	trait=brave
+	trait=diligent
+	father=1384058
+	2334.11.15={birth=yes
+		culture=battleborn
+	}
+	2379.7.21={death=yes}
+}
+
+1384060={ #duke of mojave and count of blythe
+	name="Wendy"
+	dynasty=1864101 #Hall
+	female=yes
+	culture=battleborn
+	religion=imamite
+	trait=charismatic_negotiator
+	trait=ambitious
+	trait=fair
+	trait=kind
+	trait=gregarious
+	trait=chaste
+	father=1384059
+	2365.3.24={birth=yes}
+	2401.1.30={death=yes}
+}
+
+1384061={ #duke of mojave and count of blythe
+	name="Harry"
+	dynasty=1864101 #Hall
+	culture=battleborn
+	religion=imamite
+	trait=skilled_tactician
+	trait=brave
+	trait=robust
+	trait=cruel
+	trait=envious
+	trait=sympathy_pacific
+	mother=1384060
+	2390.11.14={birth=yes}
+	2434.4.21={death=yes}
+}
+
+1384062={ #duke of mojave and count of blythe
+	name="Leonard"
+	dynasty=1864101 #Hall
+	culture=battleborn
+	religion=imamite
+	trait=thrifty_clerk
+	trait=content
+	trait=diligent
+	trait=lustful
+	trait=hedonist
+	trait=charitable
+	trait=kind
+	trait=cynical
+	trait=sympathy_pacific
+	father=1384061
+	2420.11.14={birth=yes}
+	2492.4.21={death=yes}
+}
+
+1384063={ #duke of mojave and count of blythe
+	name="Freddy"
+	dynasty=1864101 #Hall
+	culture=battleborn
+	religion=imamite
+	trait=underhanded_rogue
+	trait=ambitious
+	trait=envious
+	trait=greedy
+	trait=diligent
+	trait=just
+	trait=gregarious
+	trait=sympathy_pacific
+	father=1384062
+	2446.11.14={birth=yes}
+	2501.7.12={death=yes}
+}
+
+1384064={ #duke of mojave and count of blythe
+	name="John"
+	dynasty=1864101 #Hall
+	culture=battleborn
+	religion=imamite
+	trait=martial_cleric
+	trait=zealous
+	trait=charitable
+	trait=kind
+	trait=diligent
+	trait=shy
+	trait=humble
+	father=1384063
+	2489.1.4={birth=yes}
+	2545.7.12={death=yes}
+}
+
+1384065={ #duke of mojave and count of blythe
+	name="Aaron"
+	dynasty=1864101 #Hall
+	culture=battleborn
+	religion=imamite
+	trait=tough_soldier
+	trait=hunter
+	trait=patient
+	trait=gluttonous
+	trait=diligent
+	trait=sympathy_pacific
+	father=1384064
+	2538.11.29={birth=yes}
+	2592.12.25={death=yes}
+}
+
+1384066={ #duke of mojave and count of blythe
+	name="Conner"
+	dynasty=1864101 #Hall
+	culture=battleborn
+	religion=imamite
+	trait=thrifty_clerk
+	trait=administrator
+	trait=diligent
+	trait=shrewd
+	trait=patient
+	trait=shy
+	trait=erudite
+	trait=sympathy_pacific
+	father=1384065
+	2570.11.29={birth=yes}
+	2650.12.25={death=yes}
+}
+
+1384067={ #duke of mojave and count of blythe
+	name="Joesph"
+	dynasty=1864101 #Hall
+	culture=battleborn
+	religion=imamite
+	trait=intricate_webweaver
+	trait=patient
+	trait=diligent
+	trait=deceitful
+	trait=brave
+	trait=envious
+	trait=erudite
+	trait=sympathy_pacific
+	father=1384066
+	2631.4.19={birth=yes}
+	2660.1.1={
+		add_claim = c_blythe
+		employer=2200016
+	}
+	2700.1.1={death=yes}
+}
+
+1384068={
+	name="Maya"
+	dynasty=2030000 #abbas
+	female=yes
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=just
+	trait=zealous
+	father=2200000
+	mother=1384024
+	2040.10.25={birth=yes}
+	2125.1.1={death=yes}
+}
+
+1384069={
+	name="Usama"
+	dynasty=2030000 #abbas
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=just
+	trait=zealous
+	father=2200000
+	mother=1384024
+	2050.10.25={birth=yes}
+	2130.1.1={death=yes}
+}
+
+1384070={
+	name="Bilal"
+	dynasty=2030000 #abbas
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=just
+	trait=zealous
+	trait=twin
+	father=2200000
+	mother=1384024
+	2050.10.25={birth=yes}
+	2130.1.1={death=yes}
+}
+
+1384071={
+	name="Zaynab" # d_los_padres, c_santa_barbara
+	dynasty=2030000 #abbas
+	female=yes
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=just
+	trait=zealous
+	trait=fair
+	trait=diligent
+	trait=ambitious
+	trait=twin
+	father=2200000
+	mother=1384024
+	2050.10.25={birth=yes}
+	2077.1.1={add_spouse=1384072}
+	2130.1.1={death=yes}
+}
+
+1384072={
+	name="Hamza"
+	dynasty=2030034 #Abdulfattah
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=just
+	trait=diligent
+	trait=ambitious
+	2060.10.25={birth=yes}
+	2077.1.1={add_spouse=1384071}
+	2130.1.1={death=yes}
+}
+
+1384073={
+	name="Sulayman" # d_los_padres, c_santa_barbara
+	dynasty=2030034 #Abdulfattah
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=just
+	trait=diligent
+	trait=ambitious
+	trait=zealous
+	trait=twin
+	father=1384072
+	mother=1384071
+	2080.1.10={birth=yes}
+	2160.1.1={death=yes}
+}
+
+1384074={
+	name="Layla"
+	dynasty=2030034 #Abdulfattah
+	female=yes
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=just
+	trait=diligent
+	trait=fair
+	trait=zealous
+	trait=twin
+	father=1384072
+	mother=1384071
+	2080.1.10={birth=yes}
+	2100.1.1={add_spouse=2200002}
+	2160.1.1={death=yes}
+}
+
+1384075={
+	name="Usama" # d_los_padres, c_santa_barbara
+	dynasty=2030034 #Abdulfattah
+	culture=anjalusi
+	religion=imamite
+	occluded=yes
+	trait=legendary
+	trait=just
+	trait=diligent
+	trait=kind
+	trait=zealous
+	father=1384073
+	2115.1.10={birth=yes}
+	2200.1.1={death=yes}
+}
+
+1384076={
+	name="Bilal" # d_los_padres, c_santa_barbara
+	dynasty=2030034 #Abdulfattah
+	culture=anjalusi
+	religion=imamite
+	trait=just
+	trait=diligent
+	trait=ambitious
+	trait=zealous
+	trait=ansari
+	trait=ill
+	father=1384075
+	2150.1.10={birth=yes}
+	2221.10.4={death={
+		death_reason = death_trait
+	}}
+}
+
+1384077={
+	name="Sulayman" # d_los_padres, c_santa_barbara
+	dynasty=2030034 #Abdulfattah
+	culture=anjalusi
+	religion=imamite
+	trait=just
+	trait=diligent
+	trait=ambitious
+	trait=zealous
+	trait=ansari
+	trait=wounded
+	father=1384076
+	give_nickname=nick_the_martyr
+	2115.1.10={birth=yes}
+	2200.1.1={death={
+		death_reason = death_battle_duel
+		killer=2500009
+	}}
+}
+
+1384078={
+	name="Yusuf" # d_los_padres, c_santa_barbara
+	dynasty=2030034 #Abdulfattah
+	culture=anjalusi
+	religion=imamite
+	trait=wroth
+	trait=just
+	trait=ambitious
+	trait=zealous
+	trait=diligent
+	father=1384077
+	2202.1.10={birth=yes}
+	2280.1.1={death=yes}
+}
+
+1384079={
+	name="Mahdi" # d_los_padres, c_santa_barbara
+	dynasty=2030034 #Abdulfattah
+	culture=anjalusi
+	religion=imamite
+	trait=wroth
+	trait=just
+	trait=content
+	trait=zealous
+	trait=diligent
+	trait=kind
+	father=1384078
+	2240.1.10={birth=yes}
+	2310.1.1={death=yes}
+}
+
+1384080={
+	name="Majid" # d_los_padres, c_santa_barbara
+	dynasty=2030034 #Abdulfattah
+	culture=anjalusi
+	religion=imamite
+	trait=just
+	trait=ambitious
+	trait=zealous
+	trait=diligent
+	father=1384079
+	2270.1.10={birth=yes}
+	2345.1.1={death=yes}
+}
+
+1384081={
+	name="Amir" # d_los_padres, c_santa_barbara
+	dynasty=2030034 #Abdulfattah
+	culture=anjalusi
+	religion=imamite
+	trait=just
+	trait=kind
+	trait=diligent
+	father=1384080
+	2300.1.10={birth=yes}
+	2380.1.1={death=yes}
+}
+
+1384082={
+	name="Maryam" # d_los_padres, c_santa_barbara
+	dynasty=2030034 #Abdulfattah
+	female=yes
+	culture=anjalusi
+	religion=imamite
+	trait=just
+	trait=fair
+	trait=diligent
+	trait=ambitious
+	trait=hafiz
+	trait=shrewd
+	father=1384080
+	2340.1.10={birth=yes}
+	2460.1.1={add_spouse=1384083}
+	2400.1.1={death=yes}
+}
+
+1384083={
+	name="Ayyub"
+	dynasty=2030035 #Ayyubi
+	culture=anjalusi
+	religion=imamite
+	trait=just
+	trait=fair
+	trait=diligent
+	trait=ambitious
+	trait=hafiz
+	trait=shrewd
+	father=1384080
+	2340.1.10={birth=yes}
+	2460.1.1={add_spouse=1384082}
+	2400.1.1={death=yes}
+}
+
+1384084={
+	name="Ahmad" # d_los_padres, c_santa_barbara
+	dynasty=2030035 #Ayyubi
+	culture=anjalusi
+	religion=imamite
+	trait=strong
+	trait=duelist
+	trait=just
+	trait=diligent
+	trait=ambitious
+	trait=zealous
+	father=1384083
+	mother=1384082
+	2380.1.10={birth=yes}
+	2445.1.1={death=yes}
+}
+
+1384085={
+	name="Ali" # d_los_padres, c_santa_barbara
+	dynasty=2030035 #Ayyubi
+	culture=anjalusi
+	religion=imamite
+	trait=strong
+	trait=duelist
+	trait=just
+	trait=diligent
+	trait=ambitious
+	trait=sympathy_pacific
+	father=1384084
+	2420.1.10={birth=yes}
+	2495.1.1={death=yes}
+}
+
+1384086={
+	name="Hassan" # d_los_padres, c_santa_barbara
+	dynasty=2030035 #Ayyubi
+	culture=anjalusi
+	religion=imamite
+	trait=strong
+	trait=duelist
+	trait=just
+	trait=diligent
+	trait=ambitious
+	trait=sympathy_pacific
+	father=1384085
+	2450.1.10={birth=yes}
+	2530.1.1={death=yes}
+}
+
+1384087={
+	name="Yunus" # d_los_padres, c_santa_barbara
+	dynasty=2030035 #Ayyubi
+	culture=anjalusi
+	religion=imamite
+	trait=strong
+	trait=duelist
+	trait=just
+	trait=diligent
+	trait=ambitious
+	trait=sympathy_pacific
+	father=1384086
+	2510.1.10={birth=yes}
+	2600.1.1={death=yes}
+}
+
+1384088={
+	name="Nasser" # d_los_padres, c_santa_barbara
+	dynasty=2030035 #Ayyubi
+	culture=anjalusi
+	religion=imamite
+	trait=strong
+	trait=duelist
+	trait=just
+	trait=diligent
+	trait=ambitious
+	trait=sympathy_pacific
+	trait=ansari
+	trait=wroth
+	father=1384087
+	2545.1.10={birth=yes}
+	2622.5.5={death={
+		death_reason = death_murder_unknown #killed by carmines
+	}}
+}
+
+1384089={
+	name="Ahmad"
+	dynasty=2030035 #Ayyubi
+	culture=anjalusi
+	religion=imamite
+	trait=strong
+	trait=duelist
+	trait=just
+	trait=diligent
+	trait=ambitious
+	trait=sympathy_pacific
+	father=1384088
+	2600.1.10={birth=yes}
+	2645.1.1={death=yes}
+}
+
+1384090={
+	name="Yusuf"
+	dynasty=2030035 #Ayyubi
+	culture=anjalusi
+	religion=imamite
+	trait=strong
+	trait=duelist
+	trait=just
+	trait=diligent
+	trait=ambitious
+	trait=zealous
+	trait=ansari
+	father=1384089
+	2640.1.10={birth=yes}
+	2660.1.1={
+		employer=2200016
+	}
+	2700.1.1={death=yes}
 }

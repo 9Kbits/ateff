@@ -4232,6 +4232,83 @@ decisions = {
 			factor = 1
 		}
 	}
+	
+	vassalize_qabantajik_pope = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 120
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = qabantajik
+			NOT = { tier = COUNT }
+			independent = yes
+			d_qabantajik = {
+				holder_scope = {
+					NOT = { is_landed = yes }
+				}
+			}
+		}
+		
+		allow = {
+			piety = 1000
+			is_heretic = no
+			OR = {
+				tier = KING
+				tier = EMPEROR
+			}
+			conditional_tooltip = {
+				trigger = {
+					NOT = {
+						d_qabantajik = {
+							owner = {
+								opinion = {
+									who = ROOT
+									value = 50
+								}
+							}
+						}
+					}
+				}
+
+				custom_tooltip = {
+					text = vassalize_qababtajik_opinion_TT
+
+					d_qabantajik = {
+						owner = {
+							opinion = {
+								who = ROOT
+								value = 50
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			piety = -1000
+			custom_tooltip = { text = TXT_qabantajik_archbishop }
+			hidden_tooltip = {
+				d_qabantajik = {
+					holder_scope = {
+						set_defacto_liege = ROOT
+					}
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 }	
 
 targetted_decisions = {
