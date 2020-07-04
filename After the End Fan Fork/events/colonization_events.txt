@@ -3689,6 +3689,9 @@ character_event = {
 		set_global_flag = revivalist_landing
 		destroy_landed_title = k_revivalist_invasion
 		any_courtier = {
+			limit = {
+				religion = revivalist
+			}
 			death = { death_reason = death_missing }
 		}
 		death = { death_reason = death_missing }
