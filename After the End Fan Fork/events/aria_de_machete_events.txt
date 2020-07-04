@@ -37,7 +37,10 @@ character_event = {
 				}
 			}
 			any_demesne_title = {
-				add_law = agnatic_succession
+				add_law = {
+					law = agnatic_succession
+					opinion_effect = no
+				}
 			}
 			recalc_succession = yes
 		}
@@ -48,8 +51,11 @@ character_event = {
 					has_religion_feature = religion_equal
 				}
 			}
-			any_demesne_title = {
-				add_law = cognatic_succession
+			any_demesne_title = {	
+				add_law = {
+					law = cognatic_succession
+					opinion_effect = no
+				}
 			}
 			recalc_succession = yes
 		}
@@ -73,7 +79,10 @@ character_event = {
 				}
 			}
 			any_demesne_title = {
-				add_law = enatic_succession
+				add_law = {
+					law = enatic_succession
+					opinion_effect = no
+				}
 			}
 			recalc_succession = yes
 		}
@@ -85,7 +94,10 @@ character_event = {
 				}
 			}
 			any_demesne_title = {
-				add_law = enatic_cognatic_succession
+				add_law = {
+					law = enatic_cognatic_succession
+					opinion_effect = no
+				}
 			}
 			recalc_succession = yes
 		}
@@ -125,8 +137,12 @@ character_event = {
 				}
 			}
 			any_demesne_title = {
-				add_law = agnatic_succession
+				add_law = {
+					law = agnatic_succession
+					opinion_effect = no
+				}
 			}
+			recalc_succession = yes
 		}
 		ai_chance = {
 			factor = 1
@@ -148,8 +164,12 @@ character_event = {
 				}
 			}
 			any_demesne_title = {
-				add_law = enatic_succession
+				add_law = {
+					law = enatic_succession
+					opinion_effect = no
+				}
 			}
+			recalc_succession = yes
 		}
 		ai_chance = {
 			factor = 1
@@ -187,8 +207,12 @@ character_event = {
 				}
 			}
 			any_demesne_title = {
-				add_law = agnatic_succession
+				add_law = {
+					law = agnatic_succession
+					opinion_effect = no
+				}
 			}
+			recalc_succession = yes
 		}
 		if = {
 			limit = {
@@ -198,8 +222,12 @@ character_event = {
 				}
 			}
 			any_demesne_title = {
-				add_law = cognatic_succession
+				add_law = {
+					law = cognatic_succession
+					opinion_effect = no
+				}
 			}
+			recalc_succession = yes
 		}
 		ai_chance = {
 			factor = 1
@@ -221,13 +249,12 @@ character_event = {
 				}
 			}
 			any_demesne_title = {
-				revoke_law = cognatic_succession
-				revoke_law = agnatic_succession
-				revoke_law = true_cognatic_succession
-				revoke_law = enatic_succession
-				revoke_law = enatic_cognatic_succession
-				add_law = enatic_succession
+				add_law = {
+					law = enatic_succession
+					opinion_effect = no
+				}
 			}
+			recalc_succession = yes
 		}
 		if = {
 			limit = {
@@ -237,8 +264,12 @@ character_event = {
 				}
 			}
 			any_demesne_title = {
-				add_law = enatic_cognatic_succession
+				add_law = {
+					law = enatic_cognatic_succession
+					opinion_effect = no
+				}
 			}
+			recalc_succession = yes
 		}
 		ai_chance = {
 			factor = 10
@@ -268,21 +299,24 @@ character_event = {
 				trait = machete_male
 			}
 			any_demesne_title = {
-				revoke_law = cognatic_succession
-				revoke_law = agnatic_succession
-				revoke_law = true_cognatic_succession
-				revoke_law = enatic_succession
-				revoke_law = enatic_cognatic_succession
-				add_law = agnatic_succession
+				add_law = {
+					law = agnatic_succession
+					opinion_effect = no
+				}
 			}
+			recalc_succession = yes
 		}
 		if = {
 			limit = {
 				trait = machete_female
 			}
 			any_demesne_title = {
-				add_law = enatic_succession
+				add_law = {
+					law = enatic_succession
+					opinion_effect = no
+				}
 			}
+			recalc_succession = yes
 		}
 	}
 }
