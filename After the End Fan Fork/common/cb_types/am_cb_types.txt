@@ -4501,7 +4501,6 @@ sanc_governator_war = {
 	}
 }
 
-# Ripped off from Indian subjugation (please no DLC violations)
 patria_subjugation = {
 	name = CB_NAME_PAGAN_SUBJUGATION
 	war_name = WAR_NAME_PAGAN_SUBJUGATION
@@ -4514,13 +4513,16 @@ patria_subjugation = {
 	allowed_to_target_tributaries = no
 	
 	can_use_gui = {
-		has_dlc = "Rajas of India" #sorry
-		trait = patria_bolivar
+		ROOT = {
+			religion = patria_grande
+			trait = patria_bolivar
+			piety = 200
+		}
 	}
 	
 	on_add = {
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
-		ROOT = { piety = -500 }
+		ROOT = { piety = -200 }
 		if = {
 			limit = { defender = { is_offmap_governor = offmap_china } }
 			attacker = { 
@@ -4533,10 +4535,9 @@ patria_subjugation = {
 	can_use = {
 		ROOT = {
 			religion = patria_grande
-			piety = 500
 			NOT = { same_realm = FROM }
 			NOT = { is_liege_or_above = FROM }
-			is_tribal = no #uses tribal subjugation instead
+			has_horde_culture = no # Should use tribal invasion instead
 			is_nomadic = no
 			mercenary = no
 		}
@@ -4573,17 +4574,17 @@ patria_subjugation = {
 			}
 		}
 		
-		OR = { # This ensures that the AI doesn't declare this type of war against someone who only holds a few counties within the targeted title...
-			ROOT = {
-				ai = no
-			}
-			FROM = {
-				num_of_realm_counties = {
-					value = 5
-					title = PREV
-				}
-			}
-		}
+		#OR = { # This ensures that the AI doesn't declare this type of war against someone who only holds a few counties within the targeted title...
+		#	ROOT = {
+		#		ai = no
+		#	}
+		#	FROM = {
+		#		num_of_realm_counties = {
+		#			value = 5
+		#			title = PREV
+		#		}
+		#	}
+		#}
 	}
 	
 	is_valid_title = {
