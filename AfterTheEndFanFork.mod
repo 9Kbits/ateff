@@ -1,7 +1,7 @@
 name = "After the End Fan Fork"
 path = "mod/After the End Fan Fork"
 user_dir = "After the End Fan Fork"
-supported_checksums = { SHDJ }
+supported_checksums = { KDTI }
 
 replace_path = "common/death"
 replace_path = "common/landed_titles"
