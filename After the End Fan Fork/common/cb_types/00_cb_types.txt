@@ -9973,7 +9973,13 @@ pagan_subjugation = {
 					has_horde_culture = no # Should use tribal invasion instead
 				}
 			}
-			
+			OR = {
+				is_tribal = yes
+				has_ambition = obj_become_king
+				primary_title = {
+					has_law = succ_elective_gavelkind
+				}
+			}
 			OR = {
 				NOT = { has_character_modifier = launched_subjugation }
 				AND = {
