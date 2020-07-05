@@ -9,7 +9,7 @@ Compatible with CK2 3.3.3 and the Holy Fury DLC
 3. Unzip everything to to My Documents/Paradox Interactive/Crusader Kings II/mod (Windows) or Documents/Paradox Interactive/Crusader Kings II/mod (Mac). If the "mod" folder does not exist, you should create it.
 4. Open Crusader Kings II and check "After the End Fan Fork" in the "Mods" section of the launcher.
 5. If you have Sunset Invasion, enable it and the "After the End Fan Fork - Sunset Invasion DLC" mod. This will not cause an Aztec invasion, but it will allow Native American faces to show properly.
-6. Similarly, if you have African Portraits, enable it and the "After the End Fan Fork - African Faces DLC" mod.
+6. If you have the Reaper's Due Content Pack DLC, activate East African Portraits. If you do not have that DLC, but you do have the African Faces DLC, activate West African Portraits. If you have neither, do not activate either portrait.
 7. All of the other included portrait submods operate on similar principles. English and German Faces requires Monks and Mystics, while Chinese Faces requires Jade Dragon. The others should be easy enough to guess.
 
 	CREDITS
