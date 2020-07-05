@@ -15,9 +15,10 @@ narrative_event = {
 	
 	trigger = {
 		controls_religion = no
+		is_landed = yes
 		is_tribal = no
 		realm_size = 15
-		NOT = { has_global_flag = consumerist_revolt_ocurred }
+		NOT = { has_global_flag = consumerist_revolt_successful }
 		capital_scope = { region = custom_usa } #what the hell was with those old requirements 
 		#I'll tell you what was up with those old requirements, they included all this important stuff. Pay attention!
 		NOT = { religion = consumerist }
@@ -25,6 +26,7 @@ narrative_event = {
 		d_consumerist = {
 			has_holder = no
 		}
+		NOT = { has_global_flag = consumerist_revolt_ongoing }
 		any_realm_province = {
 			kingdom = {
 				OR = {
@@ -92,8 +94,8 @@ narrative_event = {
 	
 	immediate = {
 		set_character_flag = consumerist_revolt
-		set_global_flag = consumerist_revolt_ocurred
-		clear_global_event_target = consumerist_prophet
+		set_global_flag = consumerist_revolt_ongoing
+		clr_global_event_target = consumerist_prophet
 		
 		activate_title = { title = d_consumerist status = yes }
 		
@@ -929,19 +931,17 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	desc = EVTDESC_MONETARIST_6 # "An Investor, one of the companions to the Prophet of Profit, has declared what they claim is truthful doctrine: save, don't spend."
 	major = yes
-	
-	prisoner = no
-	has_global_flag = monetarist_grumbles
-	capable_only = yes
-	only_playable = yes
-	
 	major_trigger = {
 		capital_scope = { region = custom_usa }
 	}
 	
 	trigger = {
+		has_global_flag = monetarist_grumbles
 		NOT = { has_global_flag = monetarist_heresy }
 		trait = investor
+		is_playable = yes
+		prisoner = no
+		NOT = { is_incapable = yes }
 		NOT = { has_landed_title = d_consumerist }
 	}
 	
@@ -1033,14 +1033,13 @@ character_event = {
 	id = consumer.9
 	desc = EVTDESC_MONETARIST_9
 	picture = GFX_evt_imam
-	
-	religion = consumerist
-	has_global_flag = monetarist_heresy
 	only_playable = yes
 	only_capable = yes
 	prisoner = no
 	
 	trigger = {
+		religion = consumerist
+		has_global_flag = monetarist_heresy
 		NOT = {
 			has_character_flag = monetarist_chosen_side
 		}
@@ -1126,15 +1125,14 @@ narrative_event = {
 	desc = EVTDESCCONSUMER1
 	picture = GFX_evt_consumerist_uprising
 	
-	ai = no
-	only_playable = yes
-	religion = consumerist
-	
 	trigger = {
-		tier = duke
-		capital_scope = {
-			region = custom_usa
-		}
+			ai = no
+			tier = duke
+			religion = consumerist
+			capital_scope = {
+				region = custom_usa
+			}
+			is_feudal = yes
 		OR = {
 			is_feudal = yes
 			is_merchant_republic = yes
@@ -1335,5 +1333,6 @@ narrative_event = {
 			}
 			religion = ROOT
 		}
+		set_global_flag = consumerist_revolt_successful
 	}
 }

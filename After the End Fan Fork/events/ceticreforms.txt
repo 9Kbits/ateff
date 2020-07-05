@@ -623,6 +623,14 @@ character_event = {
 			trait = way_fist
 		}
 		religion = imamite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = imamite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -642,6 +650,14 @@ character_event = {
 			trait = way_fist
 		}
 		religion = qingzhen
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = qingzhen
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -663,6 +679,15 @@ character_event = {
 		}
 		religion = sacred_heart
 		add_trait = marian_el_santo
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_el_santo
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -671,7 +696,6 @@ character_event = {
 				religion = sacred_heart
 			}
 		}
-
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = californio }
@@ -684,6 +708,16 @@ character_event = {
 			trait = way_dove
 		}
 		religion = sacred_heart
+		add_trait = marian_guadalupe
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_guadalupe
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -692,7 +726,6 @@ character_event = {
 				religion = sacred_heart
 			}
 		}
-		add_trait = marian_guadalupe
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = californio }
@@ -705,6 +738,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -725,6 +766,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = neogodbeite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neogodbeite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -746,6 +795,15 @@ character_event = {
 		}
 		religion = sacred_heart
 		add_trait = marian_santa_muerte
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_santa_muerte
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -754,7 +812,6 @@ character_event = {
 				religion = sacred_heart
 			}
 		}
-
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = californio }
@@ -768,6 +825,14 @@ character_event = {
 			has_global_flag = consumerist_revolt_ocurred
 		}
 		religion = consumerist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = consumerist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -788,6 +853,14 @@ character_event = {
 			trait = way_cowl
 		}
 		religion = hamiltonian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = hamiltonian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -809,6 +882,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = aphite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = aphite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -828,6 +909,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = reform
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = reform
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -848,6 +937,14 @@ character_event = {
 			trait = way_branch
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -920,12 +1017,28 @@ character_event = {
 				has_global_flag = trailwalker_reformation
 			}
 			religion = trailwalker_reformed
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker_reformed
+			}
 		}
 		else_if = {
 			limit = {
 				NOT = { has_global_flag = trailwalker_reformation }
 			}
 			religion = trailwalker
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker
+			}
 		}
 		any_demesne_province = {
 			if = {
@@ -955,6 +1068,14 @@ character_event = {
 			trait = way_fist
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -977,6 +1098,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = mormon
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = mormon
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -996,6 +1125,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1015,6 +1152,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = neogodbeite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neogodbeite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1035,6 +1180,14 @@ character_event = {
 			has_global_flag = consumerist_revolt_ocurred
 		}
 		religion = consumerist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = consumerist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1055,6 +1208,14 @@ character_event = {
 			trait = way_cowl
 		}
 		religion = hamiltonian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = hamiltonian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1074,6 +1235,14 @@ character_event = {
 			trait = way_cowl
 		}
 		religion = woolleyite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = woolleyite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1094,6 +1263,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1115,6 +1292,14 @@ character_event = {
 			trait = way_branch
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1137,6 +1322,14 @@ character_event = {
 			has_global_flag = monetarist_heresy
 		}
 		religion = monetarist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = monetarist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1204,6 +1397,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = sedevacantist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sedevacantist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1225,6 +1426,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1248,6 +1457,14 @@ character_event = {
 			has_global_flag = consumerist_revolt_ocurred
 		}
 		religion = consumerist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = consumerist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1269,6 +1486,15 @@ character_event = {
 		}
 		religion = sacred_heart
 		add_trait = marian_santa_muerte
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_santa_muerte
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1277,7 +1503,6 @@ character_event = {
 				religion = sacred_heart
 			}
 		}
-
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = bayfolk }
@@ -1289,6 +1514,14 @@ character_event = {
 			trait = way_cowl
 		}
 		religion = hamiltonian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = hamiltonian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1310,6 +1543,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = neognostic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neognostic
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1330,6 +1571,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = aphite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = aphite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1346,6 +1595,14 @@ character_event = {
 	option = {
 		name = EVTOPT_ceticreformatomicist
 		religion = atomicist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = atomicist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1364,6 +1621,14 @@ character_event = {
 			trait = way_fist
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1384,6 +1649,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1404,6 +1677,14 @@ character_event = {
 			trait = way_branch
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1470,12 +1751,28 @@ character_event = {
 				has_global_flag = trailwalker_reformation
 			}
 			religion = trailwalker_reformed
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker_reformed
+			}
 		}
 		else_if = {
 			limit = {
 				NOT = { has_global_flag = trailwalker_reformation }
 			}
 			religion = trailwalker
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker
+			}
 		}
 		any_demesne_province = {
 			if = {
@@ -1505,6 +1802,14 @@ character_event = {
 			trait = way_fist
 		}
 		religion = imamite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = imamite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1525,6 +1830,15 @@ character_event = {
 		}
 		religion = sacred_heart
 		add_trait = marian_el_santo
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_el_santo
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1545,6 +1859,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = sedevacantist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sedevacantist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1564,6 +1886,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1584,6 +1914,15 @@ character_event = {
 		}
 		religion = sacred_heart
 		add_trait = marian_guadalupe
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_guadalupe
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1605,6 +1944,14 @@ character_event = {
 			has_global_flag = consumerist_revolt_ocurred
 		}
 		religion = consumerist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = consumerist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1624,6 +1971,14 @@ character_event = {
 			trait = way_cowl
 		}
 		religion = hamiltonian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = hamiltonian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1645,6 +2000,15 @@ character_event = {
 		}
 		religion = sacred_heart
 		add_trait = marian_santa_muerte
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_santa_muerte
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1664,6 +2028,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1683,6 +2055,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = aphite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = aphite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1702,6 +2082,14 @@ character_event = {
 			has_global_flag = monetarist_heresy
 		}
 		religion = monetarist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = monetarist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1721,6 +2109,14 @@ character_event = {
 			trait = way_branch
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1786,6 +2182,14 @@ character_event = {
 	option = {
 		name = EVTOPT_ceticreformatomicist
 		religion = atomicist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = atomicist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1803,9 +2207,17 @@ character_event = {
 	}
 	option = {
 		name = EVTOPT_ceticreformaphite
-		religion = aphite
 		trigger = {
 			trait = way_book
+		}
+		religion = aphite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = aphite
 		}
 		any_demesne_province = {
 			if = {
@@ -1824,9 +2236,17 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_ceticreformmormon
-		religion = mormon
 		trigger = {
 			trait = way_dove
+		}
+		religion = mormon
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = mormon
 		}
 		any_demesne_province = {
 			if = {
@@ -1849,6 +2269,15 @@ character_event = {
 		}
 		religion = sacred_heart
 		add_trait = marian_santa_muerte
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_santa_muerte
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1871,6 +2300,15 @@ character_event = {
 		}
 		religion = sacred_heart
 		add_trait = marian_el_santo
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_el_santo
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1893,6 +2331,15 @@ character_event = {
 		}
 		religion = sacred_heart
 		add_trait = marian_guadalupe
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_guadalupe
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1914,6 +2361,14 @@ character_event = {
 			trait = way_branch
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -1985,6 +2440,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = mormon
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = mormon
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2006,6 +2469,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2025,6 +2496,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = neogodbeite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neogodbeite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2046,6 +2525,14 @@ character_event = {
 			trait = way_cowl
 		}
 		religion = woolleyite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = woolleyite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2066,6 +2553,14 @@ character_event = {
 			trait = way_cowl
 		}
 		religion = hamiltonian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = hamiltonian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2086,6 +2581,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = neognostic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neognostic
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2105,6 +2608,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2129,12 +2640,28 @@ character_event = {
 				has_global_flag = trailwalker_reformation
 			}
 			religion = trailwalker_reformed
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker_reformed
+			}
 		}
 		else_if = {
 			limit = {
 				NOT = { has_global_flag = trailwalker_reformation }
 			}
 			religion = trailwalker
+			any_courtier = {
+				limit = {
+					religion = cetic
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				religion = trailwalker
+			}
 		}
 		any_demesne_province = {
 			if = {
@@ -2165,6 +2692,14 @@ character_event = {
 			trait = way_fist
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2181,6 +2716,14 @@ character_event = {
 	option = {
 		name = EVTOPT_ceticreformatomicist
 		religion = atomicist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = atomicist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2200,6 +2743,14 @@ character_event = {
 			trait = way_branch
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2257,6 +2808,14 @@ character_event = {
 	option = {
 		name = EVTOPT_ceticreformshinto
 		religion = shinto
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = shinto
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2322,6 +2881,14 @@ character_event = {
 			trait = way_fist
 		}
 		religion = imamite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = imamite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2340,6 +2907,14 @@ character_event = {
 			trait = way_fist
 		}
 		religion = alawiyya
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = alawiyya
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2358,6 +2933,14 @@ character_event = {
 			trait = way_fist
 		}
 		religion = qingzhen
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = qingzhen
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2377,6 +2960,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = nestorian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = nestorian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2397,6 +2988,16 @@ character_event = {
 			trait = way_dove
 		}
 		religion = sacred_heart
+		add_trait = marian_guadalupe
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_guadalupe
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2405,7 +3006,6 @@ character_event = {
 				religion = sacred_heart
 			}
 		}
-		add_trait = marian_guadalupe
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture = anjalusi }
@@ -2417,6 +3017,14 @@ character_event = {
 			trait = way_dove
 		}
 		religion = catholic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = catholic
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2438,6 +3046,15 @@ character_event = {
 		}
 		religion = sacred_heart
 		add_trait = marian_santa_muerte
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = sacred_heart
+			add_trait = marian_santa_muerte
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2459,6 +3076,14 @@ character_event = {
 			has_global_flag = consumerist_revolt_ocurred
 		}
 		religion = consumerist
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = consumerist
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2479,6 +3104,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = reform
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = reform
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2499,6 +3132,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = neognostic
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = neognostic
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2519,6 +3160,14 @@ character_event = {
 			trait = way_book
 		}
 		religion = aphite
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = aphite
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2538,6 +3187,14 @@ character_event = {
 			trait = way_branch
 		}
 		religion = gaian
+		any_courtier = {
+			limit = {
+				religion = cetic
+				employer = { character = ROOT }
+				dynasty = ROOT
+			}
+			religion = gaian
+		}
 		any_demesne_province = {
 			if = {
 				limit = {
@@ -2736,15 +3393,16 @@ character_event = {
 			trait = way_dove
 		}
 		religion = sacred_heart
+		add_trait = marian_guadalupe
 		any_demesne_province = {
 			if = {
 				limit = {
 					religion = cetic
 				}
 				religion = sacred_heart
+				add_trait = marian_guadalupe
 			}
 		}
-		add_trait = marian_guadalupe
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture_group = chicano }
@@ -2847,9 +3505,9 @@ character_event = {
 					religion = cetic
 				}
 				religion = sacred_heart
+				add_trait = marian_santa_muerte
 			}
 		}
-
 		ai_chance = {
 			factor = 5
 			modifier = { factor = 10 culture_group = chicano }

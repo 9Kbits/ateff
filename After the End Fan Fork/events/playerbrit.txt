@@ -37,9 +37,12 @@ character_event = {
 		set_global_flag = british_arive
 		destroy_landed_title = k_redcoat_outpost
 		any_courtier = {
-			death = { death_reason = death_vanished }
+			limit = {
+				religion = revivalist
+			}
+			death = { death_reason = death_missing }
 		}
-		death = { death_reason = death_vanished }
+		death = { death_reason = death_missing }
 	}
 	option = {
 		trigger = {
