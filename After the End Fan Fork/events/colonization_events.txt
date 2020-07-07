@@ -95,7 +95,7 @@ province_event = {
 			}
 		}
 		NOT = { is_title_active = e_edokko }
-		NOT = { has_global_flag = edokko_defeated }
+		NOT = { has_global_flag = edokko_arrived }
 		NOT = { has_global_flag = overrideedokko }
 		port = yes
 		any_province_holding = { holding_type = city }
@@ -111,14 +111,6 @@ province_event = {
 	
 	mean_time_to_happen = {
 		years = 10
-		modifier = {
-			factor = 0.75
-			has_global_flag = japan_victorious
-		}
-		modifier = {
-			factor = 15.5
-			has_global_flag = edokko_defeated
-		}
 		modifier = {
 			factor = 0.95
 			num_of_settlements = 4
@@ -217,6 +209,10 @@ narrative_event = {
 	
 	picture = "GFX_evt_colonial_japan"
 	border = "GFX_event_narrative_frame_war"
+	
+	immediate = {
+		set_global_flag = edokko_arrived
+	}
 
 	option = {
 		name = col.11.optA
@@ -1054,7 +1050,7 @@ province_event = {
 			}
 		}
 		NOT = { is_title_active = e_novorusskiy }
-		NOT = { has_global_flag = novorusskiy_defeated }
+		NOT = { has_global_flag = novorusskiy_arrived }
 		NOT = { has_global_flag = overridenovorusskiy }
 		port = yes
 		any_province_holding = { holding_type = city }
@@ -1071,14 +1067,6 @@ province_event = {
 	
 	mean_time_to_happen = {
 		years = 10
-		modifier = {
-			factor = 0.75
-			has_global_flag = russia_victorious
-		}
-		modifier = {
-			factor = 15.5
-			has_global_flag = novorusskiy_defeated
-		}
 		modifier = {
 			factor = 0.95
 			num_of_settlements = 4
@@ -1164,6 +1152,10 @@ narrative_event = {
 	
 	picture = "GFX_evt_colonial_russia"
 	border = "GFX_event_narrative_frame_war"
+	
+	immediate = {
+		set_global_flag = novorusskiy_arrived
+	}
 
 	option = {
 		name = col.21.optA
