@@ -5892,13 +5892,17 @@ religious = {
 				is_parent_religion = FROM
 				
 				AND = {
-					religion_group = oldworld
+					OR = {
+						religion_group = oldworld
+						religion_group = pacific
+					}
 					NOT = { religion = FROM }
 					FROM = {
 						NOT = { 
 							any_current_enemy = {
-								NOT = {
+								NOR = {
 									religion_group = oldworld
+									religion_group = pacific
 								}
 							}
 						}
@@ -6094,7 +6098,10 @@ religious = {
 					}
 				}
 				AND = {
-					religion_group = oldworld
+					OR = {
+						religion_group = oldworld
+						religion_group = pacific
+					}
 					NOT = { religion = FROM }
 				}
 				AND = {
