@@ -2,15 +2,15 @@ namespace = AMLT
 
 # Center of Islam conversion event
 
-character_event = {
-	id = AMLT.1
-	is_triggered_only = yes
-	hide_window = yes
-	
-	immediate = {
-		character_event = { id = AMLT.3 days = 7 }
-	}
-}
+#character_event = {
+#	id = AMLT.1
+#	is_triggered_only = yes
+#	hide_window = yes
+#	
+#	immediate = {
+#		character_event = { id = AMLT.3 days = 7 }
+#	}
+#}
 
 character_event = {
 	id = AMLT.2
@@ -142,8 +142,13 @@ character_event = {
 		name = EVTOPTA_LT_20900
 		event_target:target_wonder = { clr_wonder_flag = Center_rust_cult }
 		event_target:target_wonder = { clr_wonder_flag = Center_muslim_cult }
-		event_target:target_wonder = { clr_wonder_flag = Center_norse_cult }
 		event_target:target_wonder = { clr_wonder_flag = Center_ursuline_cult }
+		event_target:target_wonder = { clr_wonder_flag = Center_norse_cult }
+		event_target:target_wonder = { clr_wonder_flag = Center_norse_cult }
+		event_target:target_wonder = { clr_wonder_flag = Center_norse_cult }
+		event_target:target_wonder = { clr_wonder_flag = Center_norse_cult }
+		event_target:target_wonder = { clr_wonder_flag = Center_norse_cult }
+		
 		if = {
 			limit = { religion = rust_cultist }
 			event_target:target_wonder = {
@@ -159,10 +164,7 @@ character_event = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					religion = norse_pagan
-					religion = norse_pagan_reformed
-				}
+				religion_openly_norse_or_reformed_trigger = yes
 			}
 			event_target:target_wonder = {
 				set_wonder_flag = Center_norse_cult
