@@ -11354,3 +11354,35 @@ defined_text = {
 		localisation_key = String_Sir_Lowercase
 	}
 }
+
+defined_text = {
+	name = GetCeticEmperorEmpressCap
+	text = {
+		trigger = {
+			is_female = no
+			religion = cetic
+		}
+		localisation_key = String_Celestial_Emperor
+	}
+	text = {
+		trigger = {
+			is_female = yes
+			religion = cetic
+		}
+		localisation_key = String_Celestial_Empress
+	}
+	text = {
+		trigger = {
+			is_female = no
+			NOT = { religion = cetic }
+		}
+		localisation_key = String_Emperor
+	}
+	text = {
+		trigger = {
+			is_female = yes
+			NOT = { religion = cetic }
+		}
+		localisation_key = String_Empress
+	}
+}
