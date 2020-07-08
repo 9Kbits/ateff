@@ -40,12 +40,26 @@ Shadeoses/BoneLorde
 Lord_Iggy/KaYoS
 jd_stuyvesant/Stuyvesant
 Little Skull Boi
-frederico83
+frederico83/Fred
 Popeato Chips
 Lahom
 Fast Man
 chemist03
 The Dude
+thomas.berubeg
+Ally
+Cruxador
+Nico
+IRSunny
+Jamarik'ib K'utwachinik Nawal
+Jules
+MacMonika
+Iustinus Tempus
+Lord Smilee
+Mr. More
+Mythpunk
+Paint Thinner
+trimeon
 
 Original mod team:
 
@@ -70,7 +84,7 @@ Portraits from Lux Invicta by DarkReborn and others
 Clothing and headgear from AGOT Congenital Overhaul by LancelotLoire
 Druidic religion and event images from Ancient Religions Reborn by theStormWeaver
 Muslim societies from Maal's Sufi Schools mod
-Great Lakes Clothing and Dixie Martial Clothing from Better Looking Garbs and BLG AGOT submod
+Great Lakes Clothing, Dixie Martial Clothing from Better Looking Garbs and BLG AGOT submod
 Adjustments to Combat Tactics and Equus / Homo by redtide
 
 Images:
