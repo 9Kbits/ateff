@@ -8,14 +8,14 @@ pledge_crusade_effect = {
 		duration = 45
 	}
 
-		trigger_switch = {
-			on_trigger = tier
-			EMPEROR = { add_to_crusade_prestige_pot = 2000 add_to_crusade_piety_pot = 800 }
-			KING = { add_to_crusade_prestige_pot = 1000 add_to_crusade_piety_pot = 400 }
-			DUKE = { add_to_crusade_prestige_pot = 500 add_to_crusade_piety_pot = 200 }
-			COUNT = { add_to_crusade_prestige_pot = 250 add_to_crusade_piety_pot = 100 }
-			BARON = { add_to_crusade_prestige_pot = 125 add_to_crusade_piety_pot = 100 }
-		}
+        trigger_switch = {
+            on_trigger = tier
+            EMPEROR = { add_to_crusade_prestige_pot = 2000 add_to_crusade_piety_pot = 800 }
+            KING = { add_to_crusade_prestige_pot = 1000 add_to_crusade_piety_pot = 400 }
+            DUKE = { add_to_crusade_prestige_pot = 500 add_to_crusade_piety_pot = 200 }
+            COUNT = { add_to_crusade_prestige_pot = 250 add_to_crusade_piety_pot = 100 }
+            BARON = { add_to_crusade_prestige_pot = 125 add_to_crusade_piety_pot = 100 }
+        }
 
 	random = {
 		chance = 50
@@ -139,7 +139,7 @@ crusade_give_artifact_effect = {
 				add_artifact = sword_tier_3_vengeance
 			}
 			else = {
-				add_artifact = sword_tier_2_new
+				add_artifact  = sword_tier_2_new
 			}
 			new_artifact = {
 				set_name = crusade_artifact_name
@@ -174,7 +174,7 @@ crusade_give_artifact_effect = {
 				add_artifact = lance_tier_3_impaler
 			}
 			else = {
-				add_artifact = lance_tier_2_new
+				add_artifact  = lance_tier_2_new
 			}
 			new_artifact = {
 				set_name = crusade_artifact_name
@@ -209,7 +209,7 @@ crusade_give_artifact_effect = {
 				add_artifact = axe_tier_3_ravager
 			}
 			else = {
-				add_artifact = axe_tier_2_new
+				add_artifact  = axe_tier_2_new
 			}
 			new_artifact = {
 				set_name = crusade_artifact_name
@@ -244,7 +244,7 @@ crusade_give_artifact_effect = {
 				add_artifact = mace_tier_3_bone_breaker
 			}
 			else = {
-				add_artifact = mace_tier_2_new
+				add_artifact  = mace_tier_2_new
 			}
 			new_artifact = {
 				set_name = crusade_artifact_name
@@ -255,9 +255,6 @@ crusade_give_artifact_effect = {
 		#Random Christian associated artifacts
 		5 = {
 			add_artifact = ate_fragment_of_true_cross
-		}
-		5 = {
-			add_artifact = holy_foreskin
 		}
 		5 = {
 			add_artifact = ate_weeping_statue
@@ -276,7 +273,7 @@ crusade_give_artifact_effect = {
 				add_artifact = armor_tier_3_champion
 			}
 			else = {
-				add_artifact = armor_tier_2
+				add_artifact  = armor_tier_2
 			}
 			new_artifact = {
 				set_name = crusade_artifact_name 
@@ -946,7 +943,7 @@ alternate_crusade_artifact_distribution_effect = {
 					add_artifact = sword_tier_3_vengeance
 				}
 				else = {
-					add_artifact = sword_tier_2_new
+					add_artifact  = sword_tier_2_new
 				}
 				new_artifact = {
 					set_name = alternate_crusade_artifact_name
@@ -981,7 +978,7 @@ alternate_crusade_artifact_distribution_effect = {
 					add_artifact = lance_tier_3_impaler
 				}
 				else = {
-					add_artifact = lance_tier_2_new
+					add_artifact  = lance_tier_2_new
 				}
 				new_artifact = {
 					set_name = alternate_crusade_artifact_name
@@ -1016,7 +1013,7 @@ alternate_crusade_artifact_distribution_effect = {
 					add_artifact = axe_tier_3_ravager
 				}
 				else = {
-					add_artifact = axe_tier_2_new
+					add_artifact  = axe_tier_2_new
 				}
 				new_artifact = {
 					set_name = alternate_crusade_artifact_name
@@ -1051,7 +1048,7 @@ alternate_crusade_artifact_distribution_effect = {
 					add_artifact = mace_tier_3_bone_breaker
 				}
 				else = {
-					add_artifact = mace_tier_2_new
+					add_artifact  = mace_tier_2_new
 				}
 				new_artifact = {
 					set_name = alternate_crusade_artifact_name
@@ -1062,9 +1059,6 @@ alternate_crusade_artifact_distribution_effect = {
 			#Random Christian associated artifacts
 			5 = {
 				add_artifact = ate_fragment_of_true_cross
-			}
-			5 = {
-				add_artifact = holy_foreskin
 			}
 			5 = {
 				add_artifact = ate_weeping_statue
@@ -1083,7 +1077,7 @@ alternate_crusade_artifact_distribution_effect = {
 					add_artifact = armor_tier_3_champion
 				}
 				else = {
-					add_artifact = armor_tier_2
+					add_artifact  = armor_tier_2
 				}
 				new_artifact = {
 					set_name = alternate_crusade_artifact_name 
@@ -1153,6 +1147,26 @@ reconquista_win_effect = {
 			}
 			destroy_landed_title = event_target:second_duchy_title
 		}
+		if = {
+			limit = {
+				event_target:third_duchy_title = {
+					owner = {
+						OR = {
+							character = FROM
+							top_liege = {
+								character = FROM
+							}
+						}
+						NOT = {
+							primary_title = {
+								title = PREVPREV
+							}
+						}
+					}
+				}
+			}
+			destroy_landed_title = event_target:third_duchy_title
+		}
 
 		show_scope_change = no
 		if = {
@@ -1208,7 +1222,7 @@ reconquista_win_effect = {
 
 						PREV = {
 							vassalize_or_take_under_title_destroy_duchies = {
-								title = event_target:second_duchy_title
+								title = event_target:third_duchy_title
 								enemy = FROM
 								same_religion = yes # Only vassalize rulers of my religion
 								is_religious = yes
@@ -1276,6 +1290,33 @@ reconquista_win_effect = {
 					}
 					if = {
 						limit = {
+							event_target:third_duchy_title = {
+								OR = {
+									owner = {
+										OR = {
+											character = FROM
+											any_liege = {
+												character = FROM
+											}
+										}
+									}
+									NOT = {
+										owner = {
+											always = yes
+										}
+									}
+								}
+								any_direct_de_jure_vassal_title = {
+									owner = {
+										character = PREVPREV
+									}
+								}
+							}
+						}
+						grant_title_no_opinion = event_target:third_duchy_title
+					}
+					if = {
+						limit = {
 							event_target:reconquista_kingdom_title = {
 								OR = {
 									NOT = {
@@ -1302,6 +1343,14 @@ reconquista_win_effect = {
 									}
 								}
 							}
+							OR = {
+								has_landed_title = event_target:third_duchy_title
+								NOT = {
+									event_target:third_duchy_title = {
+										always = yes
+									}
+								}
+							}
 						}
 						grant_title_no_opinion = event_target:reconquista_kingdom_title
 						event_target:first_duchy_title = {
@@ -1310,12 +1359,16 @@ reconquista_win_effect = {
 						event_target:second_duchy_title = {
 							de_jure_liege = event_target:reconquista_kingdom_title
 						}
+						event_target:third_duchy_title = {
+							de_jure_liege = event_target:reconquista_kingdom_title
+						}
 					}
 					if = {
 						limit = {
 							NOR = {
 								has_landed_title = event_target:first_duchy_title
 								has_landed_title = event_target:second_duchy_title
+								has_landed_title = event_target:third_duchy_title
 								has_landed_title = event_target:reconquista_kingdom_title
 							}
 						}
@@ -1387,7 +1440,7 @@ reconquista_win_effect = {
 
 					PREV = {
 						vassalize_or_take_under_title_destroy_duchies = {
-							title = event_target:second_duchy_title
+							title = event_target:third_duchy_title #name jeff
 							enemy = FROM
 							same_religion = yes # Only vassalize rulers of my religion
 							is_religious = yes
@@ -1508,6 +1561,14 @@ reconquista_win_effect = {
 								}
 							}
 						}
+						OR = {
+							has_landed_title = event_target:third_duchy_title
+							NOT = {
+								event_target:third_duchy_title = {
+									always = yes
+								}
+							}
+						}
 						ai = yes
 					}
 					grant_title_no_opinion = event_target:reconquista_kingdom_title
@@ -1517,12 +1578,16 @@ reconquista_win_effect = {
 					event_target:second_duchy_title = {
 						de_jure_liege = event_target:reconquista_kingdom_title
 					}
+					event_target:third_duchy_title = {
+						de_jure_liege = event_target:reconquista_kingdom_title
+					}
 				}
 				if = {
 					limit = {
 						NOR = {
 							has_landed_title = event_target:first_duchy_title
 							has_landed_title = event_target:second_duchy_title
+							has_landed_title = event_target:third_duchy_title
 							has_landed_title = event_target:reconquista_kingdom_title
 						}
 						ai = yes
@@ -1610,7 +1675,7 @@ reconquista_win_effect = {
 								value = 2
 							}
 						}
-						religion_group = christian
+						religion_group = cult_of_saints
 					}
 					character_event = { id = HF.49221 }
 				}
@@ -1750,14 +1815,14 @@ check_if_reconquista_finished_effect = {
 				}
 			}
 		}
-		
+		set_global_flag = reconquista_finished 
+
 		ROOT = {
 			narrative_event = { id = HF.49452 }
 		}
 		any_playable_ruler = {
 			narrative_event = { id = HF.49452 }
 		}
-		set_global_flag = reconquista_finished
 	}
 }
 
