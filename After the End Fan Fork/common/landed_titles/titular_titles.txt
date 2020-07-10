@@ -3016,7 +3016,7 @@ e_brethren = {
 		NOT = { tier = emperor }
 		religion = brethren
 		OR = {
-			realm_size = 90
+			realm_size = 150
 			e_brethren = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
@@ -3486,6 +3486,32 @@ e_crow = {
 		OR = {
 			realm_size = 150
 			e_crow = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
+e_cheyenne = {
+	color={ 102 102 205 }
+	color2={ 255 255 255 }
+	capital = 481 # Powder River
+	
+	culture = cheyenne
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = cheyenne
+		OR = {
+			realm_size = 150
+			e_cheyenne = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
