@@ -316,7 +316,7 @@ character_event = { #Decide what to give away before sending out invitations
 	
 	option = { #Not much
 		name = EVTOPTA_northwest_20
-		scaled_wealth = -0.1
+		wealth = -20
 		piety = 20
 		set_character_flag = bad_potlatch
 		ai_chance = { #legit i give up with this one
@@ -330,7 +330,7 @@ character_event = { #Decide what to give away before sending out invitations
 	
 	option = { #Acceptable
 		name = EVTOPTB_northwest_20
-		scaled_wealth = -0.2
+		wealth = -50
 		piety = 30
 		set_character_flag = okay_potlatch
 		ai_chance = {
@@ -344,7 +344,7 @@ character_event = { #Decide what to give away before sending out invitations
 	
 	option = { #Respectable
 		name = EVTOPTC_northwest_20
-		scaled_wealth = -0.3
+		wealth = -100
 		piety = 50
 		set_character_flag = good_potlatch
 		ai_chance = {
@@ -358,7 +358,7 @@ character_event = { #Decide what to give away before sending out invitations
 	
 	option = { #Excellent
 		name = EVTOPTD_northwest_20
-		scaled_wealth = -0.5
+		wealth = -200
 		piety = 100
 		set_character_flag = excellent_potlatch
 		ai_chance = {
@@ -449,6 +449,14 @@ letter_event = {
 	}
 	option = {
 		name = EVTOPTB_northwest_23 #Refuse
+		FROM = {
+			letter_event = {
+				id = northwest.24
+				days = 1
+				random = 2
+				tooltip = EVTTOOLTIP_northwest_24
+			}
+		}
 		ai_chance = {
 			factor = 1
 			modifier  = {
@@ -458,14 +466,6 @@ letter_event = {
 			modifier  = {
 				factor = 2
 				NOT = { opinion = { who = from value = -80 } }
-			}
-		}
-		FROM = {
-			letter_event = {
-				id = northwest.24
-				days = 1
-				random = 2
-				tooltip = EVTTOOLTIP_northwest_24
 			}
 		}
 	}
@@ -588,7 +588,7 @@ character_event = {
 	}
 	
 	after = {
-		character_event = { id = potlatch.35 days = 5 }
+		character_event = { id = northwest.35 days = 5 }
 	}
 }
 
