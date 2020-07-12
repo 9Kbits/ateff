@@ -12666,9 +12666,9 @@ character_event = {
 		NOT = { has_character_flag = is_charlemagne }
 		NOT = { is_inaccessible_trigger = yes }
 		religion_group = christian
-		has_landed_title = e_hre
+		has_landed_title = e_dixie
 		any_artifact = {
-			artifact_type = crown_hre
+			artifact_type = crown_hcc
 			is_artifact_equipped = yes 
 		}
 		any_child = {
@@ -12902,7 +12902,7 @@ character_event = {
 			AND =  { 
 				has_landed_title = e_dixie
 				any_artifact = { artifact_type = crown_hcc }
-				e_dixie = { 
+				e_dixie = {
 					current_heir = { 
 						NOT = { dynasty = ROOT }
 					} 
@@ -13003,7 +13003,7 @@ character_event = {
 
 	immediate = { 
 		if = { 
-			limit = { 
+			limit = {
 				has_landed_title = e_dixie
 				any_artifact = { artifact_type = crown_hcc }
 			}
@@ -13012,7 +13012,7 @@ character_event = {
 			}
 			player_heir = { save_event_target_as = unworthy_hcc_crown }
 			any_artifact = { 
-				limit = { artifact_type = crown_hre }
+				limit = { artifact_type = crown_hcc }
 				save_event_target_as = inheriting_artifact_1
 			}
 			current_heir = { character_event = { id = HF.20407 days = 1 } }
@@ -14301,6 +14301,18 @@ character_event = {
 		}
 		if = {
 			limit = {
+				FROM = { title = e_dixie } 
+				FROMFROM = { any_artifact = { artifact_type = sword_of_the_states } } 
+			} 
+			FROMFROM = { 
+				any_artifact = { 
+					limit = { artifact_type = sword_of_the_states }
+					save_event_target_as = inheriting_artifact_sword_of_the_states
+				}
+			}
+		}
+		if = {
+			limit = {
 				FROM = { title = e_california } 
 				FROMFROM = { any_artifact = { artifact_type = crown_california } } 
 			} 
@@ -14444,6 +14456,18 @@ character_event = {
  			} 
  		}
 		event_target:inheriting_artifact_3 = {
+			transfer_artifact = {
+				from = FROMFROM
+				to = ROOT
+ 			} 
+ 		}
+		event_target:inheriting_artifact_4 = {
+			transfer_artifact = {
+				from = FROMFROM
+				to = ROOT
+ 			} 
+ 		}
+		event_target:inheriting_artifact_sword_of_the_states = {
 			transfer_artifact = {
 				from = FROMFROM
 				to = ROOT
