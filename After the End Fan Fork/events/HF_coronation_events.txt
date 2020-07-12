@@ -12909,6 +12909,15 @@ character_event = {
 				} 
 			}
 			AND =  { 
+				has_landed_title = e_dixie
+				any_artifact = { artifact_type = sword_of_the_states }
+				e_dixie = {
+					current_heir = { 
+						NOT = { dynasty = ROOT }
+					} 
+				} 
+			}
+			AND =  { 
 				has_landed_title = e_caribbean
 				any_artifact = { artifact_type = crown_lion_judah }
 				e_caribbean = { 
@@ -13013,6 +13022,21 @@ character_event = {
 			player_heir = { save_event_target_as = unworthy_hcc_crown }
 			any_artifact = { 
 				limit = { artifact_type = crown_hcc }
+				save_event_target_as = inheriting_artifact_1
+			}
+			current_heir = { character_event = { id = HF.20407 days = 1 } }
+		}
+		if = { 
+			limit = {
+				has_landed_title = e_dixie
+				any_artifact = { artifact_type = sword_of_the_states }
+			}
+			e_dixie = { 
+				current_heir = { save_event_target_as = worthy_sword_of_the_states }
+			}
+			player_heir = { save_event_target_as = unworthy_sword_of_the_states }
+			any_artifact = { 
+				limit = { artifact_type = sword_of_the_states }
 				save_event_target_as = inheriting_artifact_1
 			}
 			current_heir = { character_event = { id = HF.20407 days = 1 } }
@@ -13196,6 +13220,12 @@ character_event = {
 			transfer_artifact = {
 				from = event_target:unworthy_hcc_crown
 				to = event_target:worthy_hcc_crown
+ 			} 
+ 		} 
+		event_target:inheriting_artifact_sword_of_the_states = {
+			transfer_artifact = {
+				from = event_target:unworthy_sword_of_the_states
+				to = event_target:worthy_sword_of_the_states
  			} 
  		} 
 		event_target:inheriting_artifact_2 = {
