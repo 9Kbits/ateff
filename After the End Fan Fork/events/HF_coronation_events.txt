@@ -13037,7 +13037,7 @@ character_event = {
 			player_heir = { save_event_target_as = unworthy_sword_of_the_states }
 			any_artifact = { 
 				limit = { artifact_type = sword_of_the_states }
-				save_event_target_as = inheriting_artifact_1
+				save_event_target_as = inheriting_artifact_sword_of_the_states
 			}
 			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
@@ -14265,7 +14265,11 @@ character_event = {
 			AND = {
 				FROM = { title = e_dixie } 
 				FROMFROM = { any_artifact = { artifact_type = crown_hcc } } 
-			} 
+			}
+			AND = {
+				FROM = { title = e_dixie } 
+				FROMFROM = { any_artifact = { artifact_type = sword_of_the_states } } 
+			}
 			AND = {
 				FROM = { title = e_california } 
 				FROMFROM = { any_artifact = { artifact_type = crown_california } } 
