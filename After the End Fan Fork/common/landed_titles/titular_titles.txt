@@ -4266,13 +4266,17 @@ e_new_south = {
 ### titular kingdoms
 	
 k_jersey = {
-	color={ 136 30 85 }
+	color={ 13 103 147 }
 	color2={ 220 220 0 }
 
 	capital = 23 # Trenton
 
 	deitsch = "Nei-Schaersi"
 	yiddish = "Niu Dzherzi"
+	
+	allow = {
+		has_global_flag = jersey_formed
+	}
 }
 
 k_vermont = {
@@ -4304,8 +4308,12 @@ k_wisconsin = {
 	color={ 209 247 121 }
 	color2={ 221 186 26 }
 
-	culture = dellsman
+	#culture = dellsman
 	capital = 1150 # Four Lakes
+	
+	allow = {
+		has_global_flag = wisconsin_formed
+	}
 }
 
 k_new_mexico = {

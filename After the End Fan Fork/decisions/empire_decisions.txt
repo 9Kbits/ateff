@@ -367,51 +367,50 @@ decisions = {
 					}
 				}
 			}
-			custom_tooltip = { #If the duchies of Raritan and South Jersey are controlled, make them de jure under the Kingdom of Jersey
-				text = form_the_empire_state_tooltip_2
-				hidden_tooltip = {
-					if = {
-						limit = { 
-							completely_controls = d_north_jersey 
-							completely_controls = d_jersey
-							OR = {
-								k_jersey = {
-									is_titular = yes
-								}
-								AND = {
-									k_jersey = {
-										is_titular = no
-									}
-									completely_controls = k_jersey
-								}
-							}
-							OR = {
-								has_landed_title = k_jersey
-								k_jersey = {
-									has_holder = no
-								}
-								k_jersey = {
-									holder_scope = {
-										top_liege = {
-											character = ROOT
-										}
-									}
-								}
-							}
-						}
-						d_north_jersey = {
-							de_jure_liege = k_jersey
-						}
-						d_jersey = {
-							de_jure_liege = k_jersey
-						}
-						k_jersey = {
-							de_jure_liege = e_nys
-						}
-					}
-				}
-				set_global_flag = nys_formed
-			}
+			#custom_tooltip = { #If the duchies of Raritan and South Jersey are controlled, make them de jure under the Kingdom of Jersey
+			#	text = form_the_empire_state_tooltip_2
+			#	hidden_tooltip = {
+			#		if = {
+			#			limit = {
+			#				completely_controls = d_north_jersey 
+			#				completely_controls = d_jersey
+			#				OR = {
+			#					k_jersey = {
+			#						is_titular = yes
+			#					}
+			#					AND = {
+			#						k_jersey = {
+			#							is_titular = no
+			#						}
+			#						completely_controls = k_jersey
+			#					}
+			#				}
+			#				OR = {
+			#					has_landed_title = k_jersey
+			#					k_jersey = {
+			#						has_holder = no
+			#					}
+			#					k_jersey = {
+			#						holder_scope = {
+			#							top_liege = {
+			#								character = ROOT
+			#							}
+			#						}
+			#					}
+			#				}
+			#			}
+			#			d_north_jersey = {
+			#				de_jure_liege = k_jersey
+			#			}
+			#			d_jersey = {
+			#				de_jure_liege = k_jersey
+			#			}
+			#			k_jersey = {
+			#				de_jure_liege = e_nys
+			#			}
+			#		}
+			#	}
+			#}
 			custom_tooltip = { #If the duchy of Niagara is fully controlled, make it de jure under the Kingdom of Hudsonia
 				text = form_the_empire_state_tooltip_3
 				hidden_tooltip = {
@@ -428,6 +427,7 @@ decisions = {
 					}
 				}
 			}
+			set_global_flag = nys_formed
 		}
 		revoke_allowed = {
 			always = no
@@ -1434,6 +1434,93 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	form_wisconsin = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 8
+		
+		potential = {
+			is_alternate_start = no
+			NOT = { has_global_flag = wisconsin_formed }
+			OR = { #emperors can't do this
+				tier = COUNT
+				tier = DUKE
+				tier = KING
+			}
+			capital_scope = {
+				OR = {
+					province = 1149 #Milwaukee
+					province = 1150 #Four Lakes
+					province = 1147 #Galena
+					province = 1146 #Kickapoo
+					province = 1151 #The Dells
+					province = 1145 #La Crosse
+					province = 218 #Wausau
+					province = 217 #Shawano
+					province = 1157 #Green Bay
+					province = 1159 #Manitowoc
+					province = 1158 #Door
+					province = 1156 #Peshtigo
+					province = 219 #Nicolet
+					province = 220 #Hodagland
+					province = 222 #Chequamegon
+					province = 756 #Eau Claire
+					province = 227 #Chetek
+					province = 225 #St Croix
+					province = 226 #Willow
+				}
+			}
+		}
+		
+		allow = {
+			independent = yes
+			OR = {
+				tier = DUKE
+				tier = KING
+			}
+			completely_controls = d_badgerland
+			completely_controls = d_coulee
+			completely_controls = d_green_bay
+			completely_controls = d_northwoods
+			completely_controls = d_chippewa
+			
+			wealth = 200
+			prestige = 500
+		}
+		
+		effect = {
+			wealth = -200
+			prestige = -500
+			custom_tooltip = { text = TXT_form_wisconsin }
+			hidden_tooltip = {
+				d_badgerland = {
+					de_jure_liege = k_wisconsin
+				}
+				d_coulee = {
+					de_jure_liege = k_wisconsin
+				}
+				d_green_bay = {
+					de_jure_liege = k_wisconsin
+				}
+				d_northwoods = {
+					de_jure_liege = k_wisconsin
+				}
+				d_chippewa = {
+					de_jure_liege = k_wisconsin
+				}
+				primary_title = {
+					k_wisconsin = {
+						copy_title_laws = PREV
+					}
+				}
+				grant_title_no_opinion = k_wisconsin
+				k_wisconsin = {
+					de_jure_liege = e_great_lakes
+				}
+				set_global_flag = wisconsin_formed
+			}
 		}
 	}
 }

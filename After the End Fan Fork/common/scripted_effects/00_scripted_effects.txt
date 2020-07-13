@@ -14807,7 +14807,12 @@ spawn_good_commander_effect = {
 
 spawn_great_commander_effect = {
 	if = { 
-		limit = { has_religion_feature = religion_matriarchal }
+		limit = {
+			OR = {
+				religion = gaian
+				has_religion_feature = religion_matriarchal
+			}
+		}
 		create_random_soldier = {
 			random_traits = yes
 			dynasty = actually_culture
@@ -14822,7 +14827,12 @@ spawn_great_commander_effect = {
 		}
 	}
 	if = { 
-		limit = { NOT = { has_religion_feature = religion_matriarchal } }
+		limit = {
+			NOR = {
+				religion = gaian
+				has_religion_feature = religion_matriarchal
+			}
+		}
 		create_random_soldier = {
 			random_traits = yes
 			dynasty = actually_culture
@@ -15006,7 +15016,12 @@ spawn_great_commander_effect = {
 spawn_fantastic_commander_effect = {
 
 	if = { 
-		limit = { has_religion_feature = religion_matriarchal }
+		limit = {
+			OR = {
+				religion = gaian
+				has_religion_feature = religion_matriarchal
+			}
+		}
 		create_random_soldier = {
 			random_traits = yes
 			dynasty = actually_culture
@@ -15021,7 +15036,12 @@ spawn_fantastic_commander_effect = {
 		}
 	}
 	if = { 
-		limit = { NOT = { has_religion_feature = religion_matriarchal } }
+		limit = {
+			NOR = {
+				religion = gaian
+				has_religion_feature = religion_matriarchal
+			}
+		}
 		create_random_soldier = {
 			random_traits = yes
 			dynasty = actually_culture

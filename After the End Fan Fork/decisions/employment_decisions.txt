@@ -580,8 +580,6 @@ decisions = {
 		potential = {
 			NOR = {
 				religion = gaian
-				religion = ursuline
-				religion = angeline
 				has_religion_feature = religion_matriarchal
 			}
 		}
@@ -660,4 +658,88 @@ decisions = {
 		}
 	}
 	
+	present_bachelor = {
+		ai = no
+		only_playable = yes
+
+		potential = {
+			OR = {
+				religion = gaian
+				has_religion_feature = religion_matriarchal
+			}
+		}
+		allow = {
+			scaled_wealth = 0.20
+			NOT = {
+				has_character_modifier = in_seclusion
+			}
+		}
+		effect = {
+			scaled_wealth = -0.20
+			create_character = {
+				random_traits = yes
+				dynasty = actually_culture
+				female = no
+				age = 17
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				character_event = { id = misc.4 } # Physique
+				remove_trait = slow
+				remove_trait = imbecile
+				remove_trait = distractible
+				remove_trait = dull
+				
+				hidden_tooltip = {
+					if = {
+						limit = {
+							OR = {
+								religion = gaian
+								religion = neomayan
+								has_religion_feature = religion_feature_occultist
+								has_religion_feature = religion_astrology
+							}
+						}
+						hidden_tooltip = { add_western_zodiac_trait_effect = yes }
+					}
+					if = {
+						limit = {
+							has_religion_feature = religion_no_leader
+							OR = {
+								religion_group = pagan_group
+								religion_group = american_native
+							}
+							NOR = {
+								religion = occultist
+								religion = occultist_reformed
+							}
+						}
+						random_list = {  
+							5 = {
+								add_trait = pagan_branch_1
+							}
+							25 = {
+								add_trait = pagan_branch_2
+							}
+							25 = {
+								add_trait = pagan_branch_3
+							}
+							25 = {
+								add_trait = pagan_branch_4
+							}
+						}
+					}
+				}
+				set_character_flag = debutante
+				save_event_target_as = invited_character
+			}
+			character_event = { id = NE.1 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
 }
