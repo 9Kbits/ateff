@@ -14,7 +14,8 @@
 # 30-32	easter egg events
 # 40-54	additional easter egg events
 # 60	neognostic abdication event
-# 70	abram events
+# 60	abram events
+# 71-	title conversion
 
 namespace = flavor
 
@@ -2302,6 +2303,342 @@ narrative_event = {
 		trigger = {
 			NOT = { has_landed_title = k_maritimes }
 			NOT = { culture = acadien }
+		}
+	}
+}
+
+# Rebirth of Dakota
+narrative_event = {
+	id = flavor.75
+	title = EVTTITLE_dakota
+	desc = EVTDESC_dakota
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_lakotah
+		NOT = { culture_group = plains }
+		NOT = { culture_group = ameronordic }
+		NOT = { has_global_flag = rebirth_of_dakota }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 382 # Wazi Ahanghang / Pine Ridge / Porcupine
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = rebirth_of_dakota
+		k_lakotah = {
+			set_name = "DAKOTA"
+			adjective = "DAKOTA_ADJ"
+			set_coa = k_dakota
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_lakotah
+		}
+	}
+	option = {
+		name = EVTOPTB_dakota
+		trigger = {
+			culture_group = plains
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			NOT = { culture_group = plains }
+			NOT = { culture = ROOT }
+		}
+	}
+	option = {
+		name = EVTOPTD_dakota
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			culture = ROOT
+		}
+	}
+}
+
+# Birth of Northland
+narrative_event = {
+	id = flavor.76
+	title = EVTTITLE_dakota
+	desc = EVTDESC_northland
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_lakotah
+		culture_group = ameronordic
+		NOT = { has_global_flag = birth_of_northland }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 382 # Wazi Ahanghang / Pine Ridge / Porcupine
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = birth_of_northland
+		k_lakotah = {
+			set_name = "NORTHLAND"
+			adjective = "NORTHLAND_ADJ"
+			set_coa = k_northland
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_northland
+		}
+	}
+	option = {
+		name = EVTOPTB_dakota
+		trigger = {
+			culture_group = plains
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			NOT = { culture_group = plains }
+			NOT = { culture_group = ameronordic }
+		}
+	}
+	option = {
+		name = EVTOPTD_dakota
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			culture_group = ameronordic
+		}
+	}
+}
+
+# Return of Lakotah
+narrative_event = {
+	id = flavor.77
+	title = EVTTITLE_dakota
+	desc = EVTDESC_lakotah
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_lakotah
+		culture_group = plains
+		OR = {
+			has_global_flag = rebirth_of_dakota
+			has_global_flag = birth_of_northland
+		}
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 382 # Wazi Ahanghang / Pine Ridge / Porcupine
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_global_flag = rebirth_of_dakota
+		clr_global_flag = birth_of_northland
+		k_lakotah = {
+			set_name = ""
+			adjective = ""
+			reset_coa = THIS
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_lakotah
+		}
+	}
+	option = {
+		name = EVTOPTB_dakota_2
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			culture_group = plains
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_lakotah }
+			NOT = { culture_group = plains }
+		}
+	}
+}
+
+# Rebirth of Utah
+narrative_event = {
+	id = flavor.78
+	title = EVTTITLE_utah
+	desc = EVTDESC_utah
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_deseret
+		NOT = { religion_group = latter_day_saints }
+		NOT = { has_global_flag = rebirth_of_utah }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 430 # Salt Lake
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = rebirth_of_utah
+		k_deseret = {
+			set_name = "UTAH"
+			adjective = "UTAH_ADJ"
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_deseret
+		}
+	}
+	option = {
+		name = EVTOPTB_dakota
+		trigger = {
+			religion_group = latter_day_saints
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_deseret }
+			NOT = { religion_group = latter_day_saints }
+		}
+	}
+}
+
+# Return of Deseret
+narrative_event = {
+	id = flavor.79
+	title = EVTTITLE_utah
+	desc = EVTDESC_deseret
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = k_deseret
+		religion_group = latter_day_saints
+		has_global_flag = rebirth_of_utah
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 430 # Salt Lake
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_global_flag = rebirth_of_utah
+		k_deseret = {
+			set_name = ""
+			adjective = ""
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_CM_502
+		trigger = {
+			has_landed_title = k_deseret
+		}
+	}
+	option = {
+		name = EVTOPTB_utah
+		trigger = {
+			NOT = { has_landed_title = k_deseret }
+			religion_group = latter_day_saints
+		}
+	}
+	option = {
+		name = EVTOPTC_great_coast
+		trigger = {
+			NOT = { has_landed_title = k_deseret }
+			NOT = { religion_group = latter_day_saints }
 		}
 	}
 }
