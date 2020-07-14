@@ -453,24 +453,53 @@ decisions = {
 			}
 			hidden_tooltip = {
 				narrative_event = { id = ancrel.1150 }
-				create_character = {
-					random_traits = yes
-					religion = ROOT
-					culture = ROOT
-					dynasty = NONE
-					female = no
-					age = 34
-					trait = skilled_tactician
-					trait = fian
-				}
-				new_character = {
-					character_event = { id = misc.3 } # Diversity
-					character_event = { id = misc.4 } # Physique
-					d_round_table = {
-						grant_title = PREV
+				if = {
+					limit = {
+						has_global_flag = celtic_pagan_reformation
 					}
-					prestige = 300
-					wealth = 300
+					create_character = {
+						random_traits = yes
+						religion = celtic_pagan_reformed
+						culture = ROOT
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+						trait = fian
+					}
+					new_character = {
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						d_round_table = {
+							grant_title = PREV
+						}
+						prestige = 300
+						wealth = 300
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { has_global_flag = celtic_pagan_reformation }
+					}
+					create_character = {
+						random_traits = yes
+						religion = celtic_pagan
+						culture = ROOT
+						dynasty = NONE
+						female = no
+						age = 34
+						trait = skilled_tactician
+						trait = fian
+					}
+					new_character = {
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						d_round_table = {
+							grant_title = PREV
+						}
+						prestige = 300
+						wealth = 300
+					}
 				}
 			}
 			religion_authority = {

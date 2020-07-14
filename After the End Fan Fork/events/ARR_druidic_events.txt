@@ -10536,7 +10536,10 @@ narrative_event = {
 			any_playable_ruler = {
 				limit = {
 					ai = no
-					religion = celtic_pagan
+					OR = {
+						religion = celtic_pagan
+						religion = celtic_pagan_reformed
+					}
 				}
 				narrative_event = { id = ancrel.1151 }
 			}
