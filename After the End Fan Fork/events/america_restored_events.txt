@@ -21,7 +21,18 @@ narrative_event={
 			has_landed_title = e_usa
 		}
 		prestige = 1000
-		give_nickname = nick_the_patriot
+		if = {
+			limit = {
+				NOT = { religion_group = latter_day_saints }
+			}
+			give_nickname = nick_the_patriot
+		}
+		else_if = {
+			limit = {
+				religion_group = latter_day_saints
+			}
+			give_nickname = nick_the_white_horse
+		}
 		if = { #New Imperial Bloodline. (male)
 			limit = { 
 				has_dlc = "Holy Fury" 

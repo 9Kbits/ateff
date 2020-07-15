@@ -11,7 +11,6 @@ decisions = {
 					value = off
 				}
 			}
-			NOT = { has_landed_title = e_grand_louisiana }
 			is_playable = yes
 			independent = yes
 			realm_size = 100
@@ -24,6 +23,7 @@ decisions = {
 				}
 				religion_group = jewish_group
 				religion_group = muslim
+				religion_group = latter_day_saints
 			}
 			OR = {
 				culture_group = mid_atlantic
@@ -135,11 +135,27 @@ decisions = {
 					}
 				}
 			}
-			primary_title = {
-				e_usa = {
-					grant_title = ROOT
-					copy_title_laws = PREV
-					add_law = succ_byzantine_elective
+			if = {
+				limit = {
+					is_patrician = no
+				}
+				primary_title = {
+					e_usa = {
+						grant_title = ROOT
+						copy_title_laws = PREV
+						add_law = succ_byzantine_elective
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					is_patrician = yes
+				}
+				primary_title = {
+					e_usa = {
+						grant_title = ROOT
+						copy_title_laws = PREV
+					}
 				}
 			}
 			any_demesne_title = {
