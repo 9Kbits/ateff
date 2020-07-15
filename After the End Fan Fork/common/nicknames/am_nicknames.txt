@@ -1522,6 +1522,56 @@ nick_the_pastor = {
 		}
 	}
 }
-nick_the_grizzly = {}
-nick_the_twice_baptized = {}
+nick_the_grizzly = {
+	allow = {
+		age = 16
+		is_female = no
+		martial = 12
+		OR = {
+			trait = strong
+			trait = robust
+			trait = fair
+		}
+		OR = {
+			trait = shrewd
+			trait = quick
+			trait = genius
+		}
+		capital_scope = {
+			OR = {
+				region = world_western_canada
+				region = world_west_coast
+			}
+		}
+	}
+	chance = {
+		factor = 5
+		modifier = {
+			factor = 2
+			religion = gaian
+		}
+	}
+}
+nick_the_twice_baptized = {
+	allow = {
+		OR = {
+			religion_group = christian
+			religion_group = latter_day_saints
+			religion_group = cult_of_saints
+		}
+		trait = atom_bless
+		trait = zealous
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 2
+			piety = 500
+		}
+		modifier = {
+			factor = 4
+			piety = 1000
+		}
+	}
+}
 nick_the_white_horse = {}
