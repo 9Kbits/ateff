@@ -399,6 +399,7 @@ decisions = {
 					tier = count
 					OR = {
 						de_jure_liege_or_above = k_newfoundland
+						de_jure_liege_or_above = k_maritimes
 						de_jure_liege_or_above = k_new_england
 					}
 				}
@@ -423,16 +424,19 @@ decisions = {
 				OR = {
 					has_landed_title = k_newfoundland
 					has_landed_title = k_new_england
+					has_landed_title = k_maritimes
 				}
 				any_vassal = {
 					OR = {
 						has_landed_title = k_newfoundland
 						has_landed_title = k_new_england
+						has_landed_title = k_maritimes
 					}
 				}
 				OR = {
 					completely_controls = k_newfoundland
 					completely_controls = k_new_england
+					completely_controls = k_maritimes
 				}
 			}
 			prestige = 300
@@ -453,53 +457,25 @@ decisions = {
 			}
 			hidden_tooltip = {
 				narrative_event = { id = ancrel.1150 }
-				if = {
-					limit = {
-						has_global_flag = celtic_pagan_reformation
-					}
-					create_character = {
-						random_traits = yes
-						religion = celtic_pagan_reformed
-						culture = ROOT
-						dynasty = NONE
-						female = no
-						age = 34
-						trait = skilled_tactician
-						trait = fian
-					}
-					new_character = {
-						character_event = { id = misc.3 } # Diversity
-						character_event = { id = misc.4 } # Physique
-						d_round_table = {
-							grant_title = PREV
-						}
-						prestige = 300
-						wealth = 300
-					}
+				create_character = {
+					random_traits = yes
+					religion = celtic_pagan_reformed
+					culture = ROOT
+					dynasty = NONE
+					female = no
+					age = 34
+					trait = skilled_tactician
+					trait = fian
 				}
-				else_if = {
-					limit = {
-						NOT = { has_global_flag = celtic_pagan_reformation }
+				new_character = {
+					character_event = { id = misc.3 } # Diversity
+					character_event = { id = misc.4 } # Physique
+					character_event = { id = ancrel.1186 } # Reformation
+					d_round_table = {
+						grant_title = PREV
 					}
-					create_character = {
-						random_traits = yes
-						religion = celtic_pagan
-						culture = ROOT
-						dynasty = NONE
-						female = no
-						age = 34
-						trait = skilled_tactician
-						trait = fian
-					}
-					new_character = {
-						character_event = { id = misc.3 } # Diversity
-						character_event = { id = misc.4 } # Physique
-						d_round_table = {
-							grant_title = PREV
-						}
-						prestige = 300
-						wealth = 300
-					}
+					prestige = 300
+					wealth = 300
 				}
 			}
 			religion_authority = {
