@@ -1125,12 +1125,14 @@ narrative_event = {
 		name = EVTOPT_salvage_study_keep
 		prestige = 100
 		random = { chance = 10 add_trait = proud }
+		hidden_tooltip = { character_event = { id = salvage.95 } }
 	}
 	
 	option = {
 		name = EVTOPT_salvage_study_sell
 		wealth = 75
 		random = { chance = 15 add_trait = greedy }
+		hidden_tooltip = { character_event = { id = salvage.95 } }
 	}
 	
 	option = {
@@ -1143,6 +1145,7 @@ narrative_event = {
 			10 = { add_trait = patient }
 			50 = { }
 		}
+		hidden_tooltip = { character_event = { id = salvage.95 } }
 	}
 	
 	option = {
@@ -1157,6 +1160,7 @@ narrative_event = {
 			10 = { add_trait = charitable }
 			10 = { add_trait = humble }
 		}
+		hidden_tooltip = { character_event = { id = salvage.95 } }
 	}
 }
 
