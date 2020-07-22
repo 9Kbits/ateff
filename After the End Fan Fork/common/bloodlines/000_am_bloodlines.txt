@@ -220,7 +220,10 @@ tlgunghung = { #Kings of BC
 	picture = GFX_bloodlines_placeholder_symbol_2
 	flags = { historical_bloodline }
 	active = {
-		religion = raven_tales
+		OR = {
+			religion = raven_tales
+			religion = raven_tales_reformed
+		}
 	}
 }
 
