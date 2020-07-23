@@ -834,9 +834,10 @@ d_golden_archers = {
 }
 
 d_round_table = {
-	
 	color={ 75 75 75 }
 	color2={ 255 255 255 }
+	
+	graphical_culture = norseholygfx
 	
 	capital = 2078 #St Johns
 
@@ -851,14 +852,13 @@ d_round_table = {
 	# Parent Religion 
 	religion = celtic_pagan
 	
-	monthly_income = 1
-	
 	culture = newfie
 	
 	# Cannot be held as a secondary title
 	primary = yes
-
-	strength_growth_per_century = 0.1
+	
+	# Extra income due to donations, etc
+	monthly_income = 2 # (Must be an integer between 1 and 512)
 
 	mercenary_type = fianna_composition
 
