@@ -1492,6 +1492,10 @@ decisions = {
 		}
 		
 		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			war = no
 			independent = yes
 			OR = {
 				tier = DUKE
