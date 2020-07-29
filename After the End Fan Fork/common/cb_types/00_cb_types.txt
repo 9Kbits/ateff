@@ -5362,28 +5362,6 @@ new_crusade = {
 				clr_character_flag = crusade_papal_stance
 			}
 			
-			# Checks if First Crusade (Catholic)
-			if = {
-				limit = {
-					most_participating_crusader = { religion = catholic }
-					NOT = {
-						has_global_flag = first_catholic_crusade_complete
-					}
-				}
-				set_global_flag = first_catholic_crusade_complete
-			}
-			
-			# Checks if First Crusade (Ursuline)
-			if = {
-				limit = {
-					most_participating_crusader = { religion = ursuline }
-					NOT = {
-						has_global_flag = first_ursuline_crusade_complete
-					}
-				}
-				set_global_flag = first_ursuline_crusade_complete
-			}
-
 			# Special bloodline for the recipient of the first Catholic Crusade
 			if = {
 				limit = {
@@ -5430,8 +5408,6 @@ new_crusade = {
 					}
 				}
 			}
-
-			
 			
 			# Special bloodline for the recipient of the first Ursuline Crusade
 			if = {
@@ -5478,6 +5454,28 @@ new_crusade = {
 						}
 					}
 				}
+			}
+			
+			# Checks if First Crusade (Catholic)
+			if = {
+				limit = {
+					most_participating_crusader = { religion = catholic }
+					NOT = {
+						has_global_flag = first_catholic_crusade_complete
+					}
+				}
+				set_global_flag = first_catholic_crusade_complete
+			}
+			
+			# Checks if First Crusade (Ursuline)
+			if = {
+				limit = {
+					most_participating_crusader = { religion = ursuline }
+					NOT = {
+						has_global_flag = first_ursuline_crusade_complete
+					}
+				}
+				set_global_flag = first_ursuline_crusade_complete
 			}
 
 			# Adds a negative opinion modifier for selfish Crusaders
