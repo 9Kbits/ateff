@@ -448,7 +448,7 @@ evaluate_extra_duel_result_score_effect = { # [SPECIAL CIRCUMSTANCES - OPTIONAL]
 	# 1. BONUSES ADDED:	adds to the score...
 	################################################################
 	if = {
-		limit = { religion_group = pagan }
+		limit = { religion_group = pagan_group }
 		change_variable = {
 			which = duel_result_score #(50 + X) - Y
 			value = 3
@@ -519,7 +519,7 @@ evaluate_extra_duel_result_score_effect = { # [SPECIAL CIRCUMSTANCES - OPTIONAL]
 		}
 	}
 	if = {
-		limit = { event_target:combatant_2 = { religion_group = pagan } }
+		limit = { event_target:combatant_2 = { religion_group = pagan_group } }
 		subtract_variable = {
 			which = duel_result_score #(50 + X) - Y
 			value = 3
