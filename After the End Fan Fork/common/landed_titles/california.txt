@@ -226,72 +226,6 @@ e_california = {
 		raven_tales_reformed = 100
 		consumerist = 500
 		
-		d_nevada = {
-			color={ 158 206 230 }
-			color2={ 255 255 255 }
-			
-			capital = 2068 # c_reno
-			
-			paiute = "Nabadaa"
-			
-			c_reno = { # 2068
-				color={ 158 166 230 }
-				color2={ 255 255 255 }
-				holy_site = consumerist
-	
-				paiute = "Udino"
-	
-				b_reno_NV = {}
-				b_mccarran_NV = {}
-				b_sparks_NV = {}
-				b_fernley_NV = {}
-				b_portola_NV = {}
-				b_nixon_NV = {}
-				b_sun_valley_NV = {}
-			}
-			c_carson = { # 2069
-				color={ 118 206 230 }
-				color2={ 255 255 255 }
-				
-				paiute = "Kussipati"
-				
-				b_carson_NV = {
-					paiute = "Kussipaa"
-				}
-				b_minden_NV = {}
-				b_tahoma_NV = {}
-				b_dayton_NV = {}
-				b_yerington_NV = {}
-				b_schurz_NV = {}
-				b_gardnerville_NV = {}
-			}
-			c_fallon = {
-				color = { 100 241 211 }
-				color2= { 255 255 255 }
-
-				b_fallon_NV = {}
-				b_austin_NV = {}
-				b_eastgate_NV = {}
-				b_middlegate_NV = {}
-				b_stillwater_NV = {}
-				b_salt_wells_NV = {}
-				b_dixie_valley_NV = {}
-			}
-			c_black_rock = { # 2067
-				color={ 87 105 160 }
-				color2={ 255 255 255 }
-				
-				paiute = "Tuudöpi" #black rock
-				
-				b_rye_patch_NV = {}
-				b_imlay_NV = {}
-				b_sulphur_NV = {}
-				b_lovelock_NV = {}
-				b_mill_city_NV = {}
-				b_unionville_NV = {}
-				b_rochester_NV = {}
-			}
-		}
 		d_north_jefferson = {
 			color = { 15 106 65 }
 			color2 = { 244 220 0 }
@@ -1134,20 +1068,136 @@ e_california = {
 		}
 	}
 	
-	k_death_valley = {
-		color={ 60 60 60 }
+	k_nevada = {
+		color={ 108 156 180 }
 		color2={ 243 215 59 }
 		
-		capital = 2071 # c_inyo
+		capital = 2068 # c_reno
 		
 		mormon = 750
 		
-		paiute = "Töaibaadi"
+		paiute = "Nabadaa"
 		
-		allow = {
-			always = no
+		d_nevada = {
+			color={ 158 206 230 }
+			color2={ 255 255 255 }
+			
+			capital = 2068 # c_reno
+			
+			paiute = "Nabadaa"
+			
+			c_reno = { # 2068
+				color={ 158 166 230 }
+				color2={ 255 255 255 }
+	
+				paiute = "Udino"
+	
+				b_reno_NV = {}
+				b_mccarran_NV = {}
+				b_sparks_NV = {}
+				b_fernley_NV = {}
+				b_portola_NV = {}
+				b_nixon_NV = {}
+				b_sun_valley_NV = {}
+			}
+			c_carson = { # 2069
+				color={ 118 206 230 }
+				color2={ 255 255 255 }
+				
+				paiute = "Kussipati"
+				
+				b_carson_NV = {
+					paiute = "Kussipaa"
+				}
+				b_minden_NV = {}
+				b_tahoma_NV = {}
+				b_dayton_NV = {}
+				b_yerington_NV = {}
+				b_schurz_NV = {}
+				b_gardnerville_NV = {}
+			}
+			c_black_rock = { # 2067
+				color={ 87 105 160 }
+				color2={ 255 255 255 }
+				
+				paiute = "Tuudöpi" #black rock
+				
+				b_rye_patch_NV = {}
+				b_imlay_NV = {}
+				b_sulphur_NV = {}
+				b_lovelock_NV = {}
+				b_mill_city_NV = {}
+				b_unionville_NV = {}
+				b_rochester_NV = {}
+			}
 		}
-		
+		d_basin = {
+			color = { 90 136 190 }
+			color2= { 255 255 255 }
+			
+			capital = 2113 #White Pine
+			
+			c_eastern_ranges = {
+				color = { 212 201 125 }
+				color2= { 255 255 255 }
+
+				b_pioche_NV = {}
+				b_crystal_springs_NV = {}
+				b_caliente_NV = {}
+				b_rachel_NV = {}
+				b_panaca_NV = {}
+				b_ash_springs_NV = {}
+				b_hiko_NV = {}
+			}
+			c_fallon = {
+				color = { 100 241 211 }
+				color2= { 255 255 255 }
+
+				b_fallon_NV = {}
+				b_austin_NV = {}
+				b_eastgate_NV = {}
+				b_middlegate_NV = {}
+				b_stillwater_NV = {}
+				b_salt_wells_NV = {}
+				b_dixie_valley_NV = {}
+			}
+			c_white_pine = {
+				color = { 150 150 150 }
+				color2= { 255 255 255 }
+
+				b_ely_NV = {}
+				b_majors_place_NV = {}
+				b_mcgill_NV = {}
+				b_ruth_NV = {}
+				b_baker_NV = {}
+				b_lund_NV = {}
+				b_shermantown_UT = {}
+			}
+			c_goshute = {
+				color = { 75 121 175 }
+				color2= { 255 255 255 }
+
+				b_goshute_NV = {}
+				b_partoun_UT = {}
+				b_ibapah_UT = {}
+				b_west_wendover_NV = {}
+				b_cherry_creek_NV = {}
+				b_currie_NV = {}
+				b_gandy_NV = {}
+			}
+			c_reese = {
+				color = { 49 157 201 }
+				color2= { 255 255 255 }
+
+				b_battle_mountain_NV = {}
+				b_tomboy_NV = {}
+				b_beowawe_NV = {}
+				b_argenta_NV = {}
+				b_rixies_NV = {}
+				b_copper_basin_NV = {}
+				b_crescent_valley_NV = {}
+			}
+		}
 		d_death_valley = {
 			color={ 60 60 60 }
 			color2={ 255 255 255 }
@@ -1194,6 +1244,37 @@ e_california = {
 				b_bradys_CA = {}
 				b_randsburg_CA = {}
 				b_johannesburg_CA = {}
+			}
+		}
+		d_mojave = {
+			color={ 241 215 194 }
+			color2={ 255 255 255 }
+			
+			capital = 2073 # c_las_vegas
+			
+			paiute = "Mohabe"
+			
+			c_las_vegas = { # 2073
+				color={ 201 215 144 }
+				color2={ 255 255 255 }
+				holy_site = cetic
+				holy_site = neognostic
+				holy_site = atomicist
+				holy_site = aphite
+				holy_site = consumerist
+				
+				paiute = "Begaas"
+				
+				b_nellis_NV = {}
+				b_las_vegas_NV = {}
+				b_boulder_city_NV = {}
+				b_primm_NV = {}
+				b_searchlight_NV = {}
+				b_goodsprings_NV = {}
+				b_nelson_NV = {}
+				b_henderson_NV = {}
+				b_paradise2_NV = {}
+				b_blue_diamond_NV = {}
 			}
 			c_esmeralda_pass = {
 				color={ 142 211 152 }
@@ -1345,7 +1426,6 @@ e_california = {
 				b_menifee_CA = {}
 				b_redlands_CA = {}
 			}
-			
 			c_joshua_tree = { # 2077
 				color={ 221 200 104 }
 				color2={ 255 255 255 }
@@ -1359,6 +1439,34 @@ e_california = {
 				b_desert_heights_CA = {}
 				b_twentynine_palms_CA = {}
 				b_cleghorn_lakes_CA = {}
+			}
+			c_blythe = { # 2018
+				color={ 241 185 144 }
+				color2={ 255 255 255 }
+				
+				# paiute = "Budiizö"
+				
+				b_havasu_CA = {}
+				b_blythe_CA = {}
+				b_mesa_verde_CA = {}
+				b_ripley_CA = {}
+				b_paymaster_landing_CA = {}
+				b_midland_CA = {}
+				b_cox_CA = {}
+			}
+			c_barstow = { # 2075
+				color={ 241 215 104 }
+				color2={ 255 255 255 }
+				
+				#paiute = "Baasöto"
+				
+				b_barstow_CA = {}
+				b_yermo_CA = {}
+				b_baker_CA = {}
+				b_fort_irwin_CA = {}
+				b_kelso_CA = {}
+				b_zzyzx_CA = {}
+				b_glasgow_CA = {}
 			}
 		}
 		d_salton = {
@@ -1485,77 +1593,6 @@ e_california = {
 				b_twin_oaks_CA = {}
 				b_stallion_springs_CA = {}
 				b_keene_CA = {}
-			}
-		}
-		
-		d_mojave = {
-			color={ 241 215 194 }
-			color2={ 255 255 255 }
-			
-			capital = 2073 # c_las_vegas
-			
-			paiute = "Mohabe"
-			
-			c_las_vegas = { # 2073
-				color={ 201 215 144 }
-				color2={ 255 255 255 }
-				holy_site = cetic
-				holy_site = neognostic
-				holy_site = atomicist
-				holy_site = aphite
-				
-				paiute = "Begaas"
-				
-				b_nellis_NV = {}
-				b_las_vegas_NV = {}
-				b_boulder_city_NV = {}
-				b_primm_NV = {}
-				b_searchlight_NV = {}
-				b_goodsprings_NV = {}
-				b_nelson_NV = {}
-				b_henderson_NV = {}
-				b_paradise2_NV = {}
-				b_blue_diamond_NV = {}
-			}
-			c_blythe = { # 2018
-				color={ 241 185 144 }
-				color2={ 255 255 255 }
-				
-				# paiute = "Budiizö"
-				
-				b_havasu_CA = {}
-				b_blythe_CA = {}
-				b_mesa_verde_CA = {}
-				b_ripley_CA = {}
-				b_paymaster_landing_CA = {}
-				b_midland_CA = {}
-				b_cox_CA = {}
-			}
-			c_barstow = { # 2075
-				color={ 241 215 104 }
-				color2={ 255 255 255 }
-				
-				#paiute = "Baasöto"
-				
-				b_barstow_CA = {}
-				b_yermo_CA = {}
-				b_baker_CA = {}
-				b_fort_irwin_CA = {}
-				b_kelso_CA = {}
-				b_zzyzx_CA = {}
-				b_glasgow_CA = {}
-			}
-			c_eastern_ranges = {
-				color = { 212 201 125 }
-				color2= { 255 255 255 }
-
-				b_pioche_NV = {}
-				b_crystal_springs_NV = {}
-				b_caliente_NV = {}
-				b_rachel_NV = {}
-				b_panaca_NV = {}
-				b_ash_springs_NV = {}
-				b_hiko_NV = {}
 			}
 		}
 	}
