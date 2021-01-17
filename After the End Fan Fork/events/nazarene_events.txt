@@ -1,0 +1,54 @@
+namespace = nazarene
+character_event = {
+	id = nazarene.1
+	desc = "EVTDESC_nazarene1"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	religion = nazarene
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_nazarene1
+		hidden_tooltip = {
+			remove_trait = nz_presbyters
+			remove_trait = nz_acolyte
+
+		}
+		add_trait = nz_seraph
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = EVTOPTB_nazarene1
+		hidden_tooltip = {
+			remove_trait = nz_presbyters
+			remove_trait = nz_seraph
+
+		}
+		add_trait = nz_acolyte
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_nazarene1
+		hidden_tooltip = {
+			remove_trait = nz_seraph
+			remove_trait = nz_acolyte
+
+		}
+		add_trait = nz_presbyter
+		ai_chance = {
+			factor = 10
+		}
+	}
+}

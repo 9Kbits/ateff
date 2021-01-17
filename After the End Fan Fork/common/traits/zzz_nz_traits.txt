@@ -1,0 +1,52 @@
+##Nazarene
+nz_acolyte = {
+	opposites = {
+		nz_seraph
+		nz_presbyter
+	}
+	
+	stewardship = 1
+	monthly_character_prestige = 0.1
+	sacred_heart_opinion = 5
+	catholic_opinion = 5
+	apostolic_opinion = 5
+
+	potential = { religion = nazarene }
+	religious_branch = nazarene
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+nz_seraph = {
+	opposites = {
+		nz_acolyte
+		nz_presbyter
+	}
+	
+	learning = 2
+	martial = -1
+	orthodox _opinion = 5
+
+	potential = { religion = nazarene }
+	religious_branch = nazarene
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+nz_presbyter = {
+	opposites = {
+		nz_acolyte
+		nz_seraph
+	}
+	
+	diplomacy = +2
+	intrigue = -1
+	evangelical _opinion = 5
+	religious_head_opinion = -5
+
+	potential = { religion = nazarene }
+	religious_branch = nazarene
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
