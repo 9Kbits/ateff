@@ -341,7 +341,10 @@ feudal_governments = {
 				religion = cetic
 				religion = qingzhen
 				religion = imamite
-				religion = nazarene
+				AND = {
+					religion = nazarene
+					controls_religion = no
+				}
 			}
 			is_patrician = no
 			NOT = { is_government_potential = colonial_government }

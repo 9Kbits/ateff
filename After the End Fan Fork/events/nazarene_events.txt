@@ -52,3 +52,64 @@ character_event = {
 		}
 	}
 }
+
+character_event = {
+	id = nazarene.2
+	hide_window = yes
+	religion = nazarene
+	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = d_nazarene
+	}
+
+	
+	option = {
+		# Make sure they're a good age
+		random_list = {
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 40
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 45
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 50
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 55
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 60
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 65
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 70
+			} }
+		}
+		new_character = { ROOT = { any_demesne_title = { gain_title = PREVPREV } } }
+	}
+}
