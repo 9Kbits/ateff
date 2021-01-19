@@ -119,4 +119,75 @@ decisions = {
 			}			
 		}
 	}
+	
+	nazarene_study_holy_texts = {
+		only_playable = yes
+		ai_check_interval = 120
+		
+		potential = {
+			OR = {
+				NOT = { has_dlc = "Way of Life" }
+				has_focus = focus_theology
+			}
+			religion = nazarene
+			is_playable = yes
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			war = no
+			in_command = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			piety = 50
+			age = 16
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+			NOT = { has_character_flag = studied_nazerene_holy_texts }
+		}
+		
+		effect = {
+			custom_tooltip = { text = TXT_nazarene_holy_text }
+			set_character_flag = do_not_disturb
+			hidden_tooltip = {
+				if = {
+					limit = {
+						trait = nz_seraph
+					}
+					character_event = { 
+						id = nazarene.32
+					}
+				}
+				else_if = {
+					limit = {
+						trait = nz_acolyte
+					}
+					character_event = { 
+						id = nazarene.33
+					}
+				}
+				else_if = {
+					limit = {
+						trait = nz_presbyter
+					}
+					character_event = { 
+						id = nazarene.34
+					}
+				}
+			}
+		}
+	}
 }

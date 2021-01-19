@@ -1,7 +1,7 @@
 namespace = nazarene
 character_event = {
 	id = nazarene.1
-	desc = "EVTDESC_nazarene1"
+	desc = "EVTDESC_nazarene_1"
 	picture = GFX_evt_open_book_hf
 	border = GFX_event_normal_frame_religion
 	religion = nazarene
@@ -14,7 +14,7 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_nazarene1
+		name = EVTOPTA_nazarene_1
 		hidden_tooltip = {
 			remove_trait = nz_presbyters
 			remove_trait = nz_acolyte
@@ -27,7 +27,7 @@ character_event = {
 	}
 
 	option = {
-		name = EVTOPTB_nazarene1
+		name = EVTOPTB_nazarene_1
 		hidden_tooltip = {
 			remove_trait = nz_presbyters
 			remove_trait = nz_seraph
@@ -40,7 +40,7 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTC_nazarene1
+		name = EVTOPTC_nazarene_1
 		hidden_tooltip = {
 			remove_trait = nz_seraph
 			remove_trait = nz_acolyte
@@ -63,8 +63,7 @@ character_event = {
 		has_landed_title = d_nazarene
 	}
 
-	
-	option = {
+	immediate = {
 		# Make sure they're a good age
 		random_list = {
 			10 = { create_random_priest = {
@@ -1054,5 +1053,356 @@ character_event = {
 		remove_trait = on_pilgrimage
 		add_trait = pilgrim
 		clr_character_flag = do_not_disturb
+	}
+}
+
+character_event = {
+	id = nazarene.32
+	desc = EVTDESC_nazarene_32
+	picture = GFX_evt_library #maybe replace with monk reading?
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Seraphim Rose
+		name = EVTOPTA_nazarene_32
+		set_character_flag = studying_seraphim_rose
+		custom_tooltip = { text = TXT_EVTOPTA_nazarene_32 }
+	}
+	
+	option = { #Gregory palamas
+		name = EVTOPTB_nazarene_32
+		set_character_flag = studying_gregory_palamas
+		custom_tooltip = { text = TXT_EVTOPTB_nazarene_32 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.35 } #Tombola Event
+	}
+}
+
+character_event = {
+	id = nazarene.33
+	desc = EVTDESC_nazarene_32
+	picture = GFX_evt_library #maybe replace with monk reading?
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Thomas Aquinas
+		name = EVTOPTA_nazarene_33
+		set_character_flag = studying_thomas_aquinas
+		custom_tooltip = { text = TXT_EVTOPTA_nazarene_33 }
+	}
+	
+	option = { #GK Chesterson
+		name = EVTOPTB_nazarene_33
+		set_character_flag = studying_gk_chesterson
+		custom_tooltip = { text = TXT_EVTOPTB_nazarene_33 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.35 } #Tombola Event
+	}
+}
+
+character_event = {
+	id = nazarene.34
+	desc = EVTDESC_nazarene_32
+	picture = GFX_evt_library #maybe replace with monk reading?
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #MLK
+		name = EVTOPTA_nazarene_34
+		set_character_flag = studying_mlk
+		custom_tooltip = { text = TXT_EVTOPTA_nazarene_34 }
+	}
+	
+	option = { #John Wesley
+		name = EVTOPTB_nazarene_34
+		set_character_flag = studying_john_wesley
+		custom_tooltip = { text = TXT_EVTOPTB_nazarene_34 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.35 } #Tombola Event
+	}
+}
+
+character_event = {
+	id = nazarene.35
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			25 = { #You fail to understand the texts.
+				modifier = {
+					factor = 1.5
+					NOT = { learning = 2 }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { learning = 4 }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { learning = 6 }
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { learning = 8 }
+				}
+				modifier = {
+					factor = 0.8
+					learning = 10
+				}
+				modifier = {
+					factor = 0.8
+					learning = 12
+				}
+				modifier = {
+					factor = 0.6
+					learning = 14
+				}
+				modifier = {
+					factor = 0.6
+					learning = 16
+				}
+				modifier = {
+					factor = 0.4
+					learning = 18
+				}
+				modifier = {
+					factor = 0.4
+					learning = 20
+				}
+				modifier = {
+					factor = 0.2
+					learning = 24
+				}
+				modifier = {
+					factor = 0.2
+					learning = 26
+				}
+				modifier = {
+					factor = 0
+					learning = 28
+				}
+				modifier = {  
+					factor = 2
+					trait = slow
+				}
+				modifier = {  
+					factor = 3
+					trait = imbecile
+				}
+				modifier = {  
+					factor = 3
+					trait = inbred
+				}
+				modifier = {  
+					factor = 2
+					trait = dull
+				}
+				character_event = { id = nazarene.36 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_seraphim_rose }
+				character_event = { id = nazarene.37 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_gregory_palamas }
+				character_event = { id = nazarene.38 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_thomas_aquinas }
+				character_event = { id = nazarene.39 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_gk_chesterson }
+				character_event = { id = nazarene.40 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_mlk }
+				character_event = { id = nazarene.41 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_john_wesley }
+				character_event = { id = nazarene.42 days = 15 random = 3 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.36
+	desc = EVTDESC_nazarene_36
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	option = {
+		name = EVTOPTA_nazarene_36
+		piety = 30
+		prestige = -20
+		if = {
+			limit = {
+				trait = proud
+			}
+			remove_trait = proud
+		}
+		else_if = {
+			limit = {
+				NOT = { trait = humble }
+			}
+			add_trait = humble
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_nazarene_36
+		piety = -40
+		if = {
+			limit = {
+				trait = zealous
+			}
+			remove_trait = zealous
+		}
+		else_if = {
+			limit = {
+				NOT = { trait = cynical }
+			}
+			add_trait = cynical
+		}
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.37
+	desc = EVTDESC_nazarene_37
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	option = {
+		name = EVTOPTA_nazarene_37
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_seraphim_rose duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.38
+	desc = EVTDESC_nazarene_38
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	option = {
+		name = EVTOPTA_nazarene_38
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_gregory_palamas duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.39
+	desc = EVTDESC_nazarene_39
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	option = {
+		name = EVTOPTA_nazarene_39
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_thomas_aquinas duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.40
+	desc = EVTDESC_nazarene_40
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	option = {
+		name = EVTOPTA_nazarene_40
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_gk_chesterson duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.41
+	desc = EVTDESC_nazarene_41
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	option = {
+		name = EVTOPTA_nazarene_41
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_mlk duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.42
+	desc = EVTDESC_nazarene_42
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	option = {
+		name = EVTOPTA_nazarene_42
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_john_wesley duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.35
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = studying_seraphim_rose
+		clr_character_flag = studying_gregory_palamas
+		clr_character_flag = studying_thomas_aquinas
+		clr_character_flag = studying_gk_chesterson
+		clr_character_flag = studying_mlk
+		clr_character_flag = studying_john_wesley
+		set_character_flag = studied_nazerene_holy_texts
 	}
 }
