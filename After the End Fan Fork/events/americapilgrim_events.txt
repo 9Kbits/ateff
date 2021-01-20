@@ -212,7 +212,7 @@ character_event = {
 			limit = {
 				NOT = { character = FROM }
 				NOT = { FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } } }
-				same_realm  = FROM
+				same_realm = FROM #does this actually work?
 			}
 			FROM = { character_event = { id = america_pilgrim.31 } }
 		}
@@ -221,7 +221,7 @@ character_event = {
 		if = {
 			limit = {
 				NOT = { character = FROM }
-				NOT = { same_realm  = FROM }
+				NOT = { same_realm = FROM }
 				NOT = { FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } } }
 				religion = americanist
 			}
@@ -232,7 +232,7 @@ character_event = {
 		if = {
 			limit = {
 				NOT = { character = FROM }
-				NOT = { same_realm  = FROM }
+				NOT = { same_realm = FROM }
 				NOT = { religion = americanist }
 				NOT = { FROM = { has_opinion_modifier = { who = ROOT modifier = allowed_pilgrim } } }
 			}

@@ -9000,3 +9000,615 @@ character_event = {
 		}
 	}
 }
+
+### Suggest a Chief Justice ###
+character_event = {
+	id = cetic.605
+	desc = EVTDESC_cetic_605
+	picture = GFX_evt_emissary #Placeholder!
+	border = GFX_event_normal_frame_religion
+	
+	min_age = 16
+	prisoner = no
+	capable_only = yes
+	war = no
+	
+	trigger = {
+		in_command = no
+		government = bureaucratic_government
+		NOT = {
+			has_minor_title = title_evaluator_of_merit
+		}
+		NOT = {
+			has_character_flag = qadi_suggester
+		}
+		NOT = {
+			has_character_flag = new_qadi_suggester
+		}
+		liege = {
+			NOT = {
+				has_character_modifier = suggested_qadi_timer
+			}
+			NOT = {
+				has_character_modifier = suggested_new_qadi_timer
+			}
+			NOT = {
+				character = ROOT
+			}
+			prisoner = no
+			primary_title = {
+				OR = {
+					tier = duke
+					tier = king
+					tier = emperor
+				}
+			}
+			government = bureaucratic_government
+			NOT = {
+				any_vassal = {
+					has_minor_title = title_evaluator_of_merit
+				}
+			}
+			NOT = {
+				any_courtier = {
+					has_minor_title = title_evaluator_of_merit
+				}
+			}
+			OR = {
+				any_vassal = {
+					age = 16
+					government = bureaucratic_government
+					is_female = no
+					prisoner = no
+					NOT = {
+						has_minor_title = title_evaluator_of_merit
+					}
+					NOT = {
+						character = ROOT
+					}
+					NOT = {
+						any_rival = {
+							character = ROOT
+						}
+					}
+					OR = {
+						trait = indulgent_wastrel
+						trait = thrifty_clerk
+						trait = fortune_builder
+						trait = midas_touched
+					}
+				}
+				any_courtier = {
+					age = 16
+					government = bureaucratic_government
+					is_female = no
+					prisoner = no
+					OR = {
+						trait = indulgent_wastrel
+						trait = thrifty_clerk
+						trait = fortune_builder
+						trait = midas_touched
+					}
+					NOT = {
+						has_minor_title = title_evaluator_of_merit
+					}
+					NOT = {
+						any_rival = {
+							character = ROOT
+						}
+					}
+				}
+				ROOT = {
+					#is_female = no
+					NOT = {
+						has_minor_title = title_evaluator_of_merit
+					}
+					OR = {
+						trait = indulgent_wastrel
+						trait = thrifty_clerk
+						trait = fortune_builder
+						trait = midas_touched
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		years = 21
+		
+		modifier = {
+			factor = 0.5
+			trait = diligent
+		}
+		modifier = {
+			factor = 0.5
+			trait = ambitious
+		}
+		modifier = {
+			factor = 2
+			trait = slothful
+		}
+		modifier = {
+			factor = 2
+			trait = content
+		}
+	}
+	
+	immediate = {
+		set_character_flag = qadi_suggester
+		hidden_tooltip = {
+			liege = {
+				add_character_modifier = {
+					name = suggested_qadi_timer
+					duration = 730
+					hidden = yes
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA105010 #Suggest a courtier
+		trigger = {
+			liege = {
+				any_courtier = {
+					age = 16
+					is_female = no
+					government = bureaucratic_government
+					prisoner = no
+					NOT = { character = PREV }
+					NOT = { character = ROOT }
+					NOT = {
+						has_minor_title = title_evaluator_of_merit
+					}
+					OR = {
+						trait = indulgent_wastrel
+						trait = thrifty_clerk
+						trait = fortune_builder
+						trait = midas_touched
+					}
+					NOT = {
+						any_rival = {
+							character = ROOT
+						}
+					}
+				}
+			}
+		}
+		liege = {
+			random_courtier = {
+				limit = {
+					age = 16
+					government = bureaucratic_government
+					#is_female = no
+					prisoner = no
+					NOT = { character = PREV }
+					NOT = { character = ROOT }
+					NOT = {
+						has_minor_title = title_evaluator_of_merit
+					}
+					OR = {
+						trait = indulgent_wastrel
+						trait = thrifty_clerk
+						trait = fortune_builder
+						trait = midas_touched
+					}
+					NOT = {
+						any_rival = {
+							character = ROOT
+						}
+					}
+				}
+				save_event_target_as = target_suggested_qadi
+				set_character_flag = suggested_qadi
+			}
+			set_character_flag = suggested_qadi_courtier
+			character_event = {
+				id = 105011
+				days = 2
+				random = 4
+				tooltip = "EVTTOOLTIPA_cetic_605"
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB105010" #Suggest yourself
+		trigger = {
+			is_female = no
+			NOT = {
+				has_minor_title = title_evaluator_of_merit
+			}
+			OR = {
+				trait = indulgent_wastrel
+				trait = thrifty_clerk
+				trait = fortune_builder
+				trait = midas_touched
+			}
+		}
+		save_event_target_as = target_suggested_qadi
+		liege = {
+			set_character_flag = suggested_qadi_from
+			character_event = {
+				id = 105011
+				days = 2
+				random = 4
+				tooltip = "EVTTOOLTIPA_cetic_605"
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC105010" #Suggest a vassal
+		trigger = {
+			liege = {
+				any_vassal = {
+					NOT = {
+						has_minor_title = title_evaluator_of_merit
+					}
+					age = 16
+					is_female = no
+					government = bureaucratic_government
+					prisoner = no
+					NOT = {
+						character = ROOT
+					}
+					NOT = {
+						any_rival = {
+							character = ROOT
+						}
+					}
+					OR = {
+						trait = indulgent_wastrel
+						trait = thrifty_clerk
+						trait = fortune_builder
+						trait = midas_touched
+					}
+				}
+			}
+		}
+		liege = {
+			random_vassal = {
+				limit = {
+					NOT = {
+						has_minor_title = title_evaluator_of_merit
+					}
+					age = 16
+					is_female = no
+					government = bureaucratic_government
+					prisoner = no
+					NOT = {
+						character = ROOT
+					}
+					NOT = {
+						any_rival = {
+							character = ROOT
+						}
+					}
+					OR = {
+						trait = indulgent_wastrel
+						trait = thrifty_clerk
+						trait = fortune_builder
+						trait = midas_touched
+					}
+				}
+				save_event_target_as = target_suggested_qadi
+				set_character_flag = suggested_qadi
+			}
+			set_character_flag = suggested_qadi_vassal
+			character_event = {
+				id = 105011
+				days = 2
+				random = 4
+				tooltip = "EVTTOOLTIPA_cetic_605"
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTD_cetic_605" #Do nothing
+	}
+}
+
+#Liege listens to suggestions
+character_event = {
+	id = cetic.606
+	desc = EVTDESC_cetic_606
+	picture = GFX_evt_emissary #Placeholder?
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA105011" #OK
+		trigger = {
+			has_character_flag = suggested_qadi_courtier
+			any_courtier = {
+				NOT = {
+					has_minor_title = title_evaluator_of_merit
+				}
+				has_character_flag = suggested_qadi
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+		clr_character_flag = suggested_qadi_courtier
+		random_courtier = {
+			limit = {
+				NOT = {
+					has_minor_title = title_evaluator_of_merit
+				}
+				has_character_flag = suggested_qadi
+			}
+			clr_character_flag = suggested_qadi
+			give_minor_title = title_evaluator_of_merit
+			character_event = {
+				id = 105012
+				days = 3
+				random = 3
+				tooltip = EVTTOOLTIP_cetic_606
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTB105011" #No
+		trigger = {
+			has_character_flag = suggested_qadi_courtier
+			any_courtier = {
+				NOT = {
+					has_minor_title = title_evaluator_of_merit
+				}
+				has_character_flag = suggested_qadi
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+		clr_character_flag = suggested_qadi_courtier
+		random_courtier = {
+			limit = {
+				NOT = {
+					has_minor_title = title_evaluator_of_merit
+				}
+				has_character_flag = suggested_qadi
+			}
+			clr_character_flag = suggested_qadi
+		}
+		FROM = {
+			set_character_flag = dismissed_suggestion_qadi
+			character_event = {
+				id = 105013
+				days = 3
+				random = 3
+				tooltip = "EVTTOOLTIPA105013"
+			}
+		}
+	}
+	option = {
+		name = "EVTOPTC_cetic_606"
+		trigger = {
+			has_character_flag = suggested_qadi_from
+		}
+		ai_chance = {
+			factor = 40
+		}
+		clr_character_flag = suggested_qadi_from
+		FROM = {
+			give_minor_title = title_evaluator_of_merit
+			character_event = {
+				id = 105014
+				days = 3
+				random = 3
+				tooltip = EVTTOOLTIPA_cetic_608
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_cetic_606 #No
+		trigger = {
+			has_character_flag = suggested_qadi_from
+		}
+		ai_chance = {
+			factor = 60
+		}
+		clr_character_flag = suggested_qadi_from
+		FROM = {
+			set_character_flag = denied_qadi
+			opinion = {
+				modifier = opinion_disappointed
+				who = ROOT
+				years = 5
+			}
+			character_event = {
+				id = 105014
+				days = 3
+				random = 3
+				tooltip = EVTTOOLTIPB_cetic_608
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_cetic_606
+		trigger = {
+			has_character_flag = suggested_qadi_vassal
+			any_vassal = {
+				NOT = {
+					has_minor_title = title_evaluator_of_merit
+				}
+				has_character_flag = suggested_qadi
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+		clr_character_flag = suggested_qadi_vassal
+		random_vassal = {
+			limit = {
+				NOT = {
+					has_minor_title = title_evaluator_of_merit
+				}
+				has_character_flag = suggested_qadi
+			}
+			clr_character_flag = suggested_qadi
+			give_minor_title = title_evaluator_of_merit
+			character_event = {
+				id = 105012
+				days = 3
+				random = 3
+				tooltip = EVTTOOLTIP_cetic_606
+			}
+		}
+	}
+	option = {
+		name = EVTOPTF_cetic_606 #No
+		trigger = {
+			has_character_flag = suggested_qadi_vassal
+			any_vassal = {
+				NOT = {
+					has_minor_title = title_evaluator_of_merit
+				}
+				has_character_flag = suggested_qadi
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+		clr_character_flag = suggested_qadi_vassal
+		random_vassal = {
+			limit = {
+				NOT = {
+					has_minor_title = title_evaluator_of_merit
+				}
+				has_character_flag = suggested_qadi
+			}
+			clr_character_flag = suggested_qadi
+		}
+		FROM = {
+			set_character_flag = dismissed_suggestion_qadi
+			character_event = {
+				id = 105013
+				days = 3
+				random = 3
+				tooltip = "EVTTOOLTIPA105013"
+			}
+		}
+	}
+}
+
+#Vassal/Courtier gets title thanks to ROOT
+character_event = {
+	id = cetic.607
+	desc = EVTDESC_cetic_607
+	picture = GFX_evt_emissary #Placeholder?
+	border = GFX_event_normal_frame_religion
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA105012
+		tooltip = {
+			give_minor_title = title_evaluator_of_merit
+		}
+		FROMFROM = {
+			reverse_opinion = {
+				modifier = opinion_grateful
+				who = ROOT
+				years = 5
+			}
+			set_character_flag = accepted_suggestion_qadi
+			character_event = {
+				id = 105013
+				days = 3
+				random = 3
+				tooltip = "EVTTOOLTIPB_cetic_607"
+			}
+		}
+	}
+}
+
+#ROOT is thanked/dismissed
+character_event = {
+	id = cetic.608
+	desc = EVTDESC_cetic_608
+	picture = GFX_evt_emissary #Placeholder?
+	border = GFX_event_normal_frame_religion
+	
+	show_from_from = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		event_target:target_suggested_qadi = {
+			clr_character_flag = suggested_qadi
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_cetic_608
+		trigger = {
+			has_character_flag = accepted_suggestion_qadi
+		}
+		clr_character_flag = accepted_suggestion_qadi
+		prestige = 15
+		event_target:target_suggested_qadi = {
+			tooltip = {
+				opinion = {
+					modifier = opinion_grateful
+					who = ROOT
+					years = 5
+				}
+			}
+		}		
+	}
+	
+	option = {
+		name = EVTOPTB105013
+		trigger = {
+			has_character_flag = dismissed_suggestion_qadi
+		}
+		clr_character_flag = dismissed_suggestion_qadi
+		prestige = -5
+	}
+}
+
+#ROOT gains title/is dismissed
+character_event = {
+	id = cetic.609
+	desc = EVTDESC_cetic_609
+	picture = GFX_evt_emissary #Placeholder?
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_609
+		trigger = {
+			has_minor_title = title_evaluator_of_merit
+		}
+		tooltip = {
+			give_minor_title = title_evaluator_of_merit
+		}
+		prestige = 20
+		opinion = {
+			modifier = opinion_grateful
+			who = FROM
+			years = 5
+		}
+	}
+	option = {
+		name = EVTOPTB_cetic_609
+		trigger = {
+			has_character_flag = denied_qadi
+		}
+		clr_character_flag = denied_qadi
+		prestige = -5
+		tooltip = {
+			opinion = {
+				modifier = opinion_disappointed
+				who = FROM
+				years = 5
+			}
+		}
+	}
+}
