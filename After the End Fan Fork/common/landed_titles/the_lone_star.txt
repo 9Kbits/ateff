@@ -3,6 +3,18 @@ e_lone_star = {
 	color2= { 255 255 20 }
 
 	capital = 1235 # Travis
+	
+	k_new_mexico = {
+		color={ 231 229 36 }
+		color2={ 137 253 243 }
+		
+		tejano = "Nuevo Méjico"
+		norteno = "Nuevo México"
+		neomexicano = "Nuevo México"
+		navajo = "Yootó Hahoodzo"
+
+		capital = 339 # Santa Fe
+	}
 
 	allow = {
 		war = no
@@ -251,6 +263,76 @@ e_lone_star = {
 		americanist = 50
 
 		capital = 1238 # Harris (Houston)
+		
+		d_galveston = {
+			color = { 220 187 35 }
+			color2= { 255 255 20 }
+
+			capital = 1263  # Galveston
+		}
+		
+		d_longhorns = {
+			color = { 203 87 39 }
+			
+			capital = 1235 # Travis
+
+			short_name = yes
+			allow = { always = no }
+			
+			culture = texan
+		}
+
+		d_aggies = {
+			color = { 80 0 0 }
+
+			capital = 1255 # Brazos
+
+			allow = { always = no }
+
+			culture = texan
+		}
+		
+		d_texoma = {
+			color = { 41 75 164 }
+			color2= { 255 255 255 }
+
+			culture = texan
+
+			capital = 302 # Wichita Falls
+
+			allow = {
+				AND = {
+					301 = { # Grayson
+						owner = {
+							OR = {
+								is_liege_or_above = ROOT
+								character = ROOT
+							}
+						}
+					}
+					302 = { # Wichita Falls
+						owner = {
+							OR = {
+								is_liege_or_above = ROOT
+								character = ROOT
+							}
+						}
+					}
+					303 = { # Childress
+						owner = {
+							OR = {
+								is_liege_or_above = ROOT
+								character = ROOT
+							}
+						}
+					}
+				}
+			}
+
+			creation_requires_capital = no	
+
+		}
+
 
 		d_neches = {
 			color = { 85 78 105 }
@@ -452,18 +534,18 @@ e_lone_star = {
 					used_for_dynasty_names = no
 				}
 			}
-			c_tyler = {
-				color = { 90 37 79 }
-				color2= { 255 255 20 }
+			c_grayson = {
+				color = { 13 44 128 }
+				color2= { 255 255 255 }
 
-				b_tyler_TX = {}
-				b_athens_TX = {}
-				b_jacksonville_TX = {}
-				b_whitehouse_TX = {}
-				b_bullard_TX = {}
-				b_overton_TX = {}
-				b_noonday_TX = {}
-				b_leagueville_TX = {}
+				b_sherman_TX = {}
+				b_gainesville_TX = {}
+				b_bonham_TX = {}
+				b_denison_TX = {}
+				b_whitesboro_TX = {}
+				b_gordonville_TX = {}
+				b_howe_TX = {}
+				b_pottsboro_TX = {}
 			}
 			c_waxahachie = {
 				color = { 140 97 29 }
@@ -607,18 +689,18 @@ e_lone_star = {
 			
 			capital = 1289 # Texarkana
 		
-			c_grayson = {
-				color = { 13 44 128 }
-				color2= { 255 255 255 }
+			c_tyler = {
+				color = { 90 37 79 }
+				color2= { 255 255 20 }
 
-				b_sherman_TX = {}
-				b_gainesville_TX = {}
-				b_bonham_TX = {}
-				b_denison_TX = {}
-				b_whitesboro_TX = {}
-				b_gordonville_TX = {}
-				b_howe_TX = {}
-				b_pottsboro_TX = {}
+				b_tyler_TX = {}
+				b_athens_TX = {}
+				b_jacksonville_TX = {}
+				b_whitehouse_TX = {}
+				b_bullard_TX = {}
+				b_overton_TX = {}
+				b_noonday_TX = {}
+				b_leagueville_TX = {}
 			}
 
 			c_texarkana = {

@@ -120,7 +120,9 @@ Roosevelt flag: Glasshouse
 d_mazatlan flag: ElPirataLeo
 Conway flag: U458625
 Nevada, Central Valley flag: Roberto221
-
+d_suncoast flag: Jikusen
+k_florida flag: Jikusen
+d_long_island flag: Mythpunk
 
 Music:
 "Sardana", "Lord of the Land", "Teller of the Tales" (higher BPM version found in Game Bundle 1 - Medieval), "Drums of the Deep" (edited with bonus melody found in Game Buncle 1 - Medieval), "DD Groove", "Porch Blues", "Virtutes Instrumenti", "Night of the Owl", "Achaidh Cheide", "Black Bird", "Dhaka", "Moorland", "Thunderhead", "Suonatore di Liuto", "Laid Back Guitars, "Angevin B", "Pippin the Hunchback", "Senbazuru", "Finding Movement", "Hidden Past", "Ibn Al-Noor", "Mystery Bazaar", "Tabuk", "Desert City", "Untitled African rhythm" (named Rhythm in-game), "Celtic Impulse", "Master of the Feast" (different instrumentation, assembled from stems in Game Bundle 1 - Medieval), "Ancient Rite", "Return of the Mummy", "Amazing Grace", "Dark Times", "Eastminster", "Grave Matters", "Hidden Wonders", "Kumasi Groove", "Lost Time", "Nu Flute", "Ripples", "Song of the Volga Boatmen", "The Pyre", "Birch Run", "Firesong", "Lotus", "Rite of Passage", "Civilization", "Crisis", "Townsville", "Hall of the Mountain King"
