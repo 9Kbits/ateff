@@ -227,14 +227,14 @@
 	2630.1.1={add_claim=c_mclennan}
 	2666.1.1={
 		raise_levies={
-			location=1255 # Brazos
+			location=1238 # Brazos
 			force_mult=1.0
 		}
 	}
 	2668.1.1={
 		raise_levies={
 			dismiss=yes
-			location=1255 # Brazos
+			location=1238 # Brazos
 			force_mult=1.0
 		}
 	}
@@ -352,10 +352,10 @@
 }
 
 1836022={
-	name="William"
+	name="Guillermo"
 	dynasty=1814034
 	dna="chjklejdlmc"
-	culture=texan
+	culture=tejano
 	religion=americanist
 	martial=7
 	diplomacy=8
@@ -440,9 +440,9 @@
 }
 
 1836026={
-	name="Karl"
-	dynasty=1848029
-	culture=adelsverer
+	name="Carl"
+	dynasty=1779202
+	culture=deitsch
 	religion=americanist
 	martial=1
 	diplomacy=3
@@ -531,12 +531,21 @@
 	trait=brave
 	trait=misguided_warrior
 	2626.2.6={birth=yes}
+	
+	2666.1.1={
+		raise_levies={
+			location=1242 # Travis
+			force_mult=1.0
+		}
+	}
 	2700.1.1={death=yes}
+	
 }
 
 1836031={
 	name="Hollis"
 	dynasty=1814003 # Hannegan
+
 	culture=texan
 	religion=catholic
 	2587.1.1={birth=yes}
@@ -682,7 +691,8 @@
 	trait=arbitrary
 	trait=shy
 	trait=cynical
-	2596.5.1={birth=yes
+	2596.5.1={
+		birth=yes
 		culture=tejano
 	}
 	2612.11.11={add_spouse=1836044}
@@ -705,7 +715,8 @@
 	trait=deceitful
 	trait=ambitious
 	trait=gregarious
-	2594.3.9={birth=yes
+	2594.3.9={
+		birth=yes
 		culture=tejano
 	}
 	2612.11.11={add_spouse=1836043}
@@ -730,7 +741,8 @@
 	trait=wroth
 	father=1836044
 	mother=1836043
-	2621.7.9={birth=yes
+	2621.7.9={
+		birth=yes
 		culture=tejano
 	}
 	2642.12.31={add_spouse=1836046}
@@ -752,7 +764,8 @@
 	
 	trait=gluttonous
 	trait=charitable
-	2625.9.4={birth=yes
+	2625.9.4={
+		birth=yes
 		culture=tejano
 	}
 	2642.12.31={add_spouse=1836045}
@@ -777,7 +790,8 @@
 	trait=greedy
 	father=1836045
 	mother=1836046
-	2644.12.20={birth=yes
+	2644.12.20={
+		birth=yes
 		culture=tejano
 	}
 	2687.6.29={death=yes}
@@ -801,7 +815,8 @@
 	trait=honest
 	father=1836045
 	mother=1836046
-	2649.6.4={birth=yes
+	2649.6.4={
+		birth=yes
 		culture=tejano
 	}
 	2694.9.7={death=yes}
@@ -819,7 +834,6 @@
 	intrigue=2
 	learning=5
 	trait=thrifty_clerk
-	trait=sympathy_christendom
 	trait=hunter
 	trait=gregarious
 	trait=kind
@@ -859,7 +873,6 @@
 	intrigue=4
 	learning=4
 	trait=thrifty_clerk
-	trait=sympathy_cult_of_saints
 	trait=gregarious
 	trait=proud
 	trait=just
@@ -960,17 +973,6 @@
 	2677.7.1={death=yes}
 }
 
-1836057={ #Count of Kerr
-	name="Otto"
-	dynasty=1848014
-	culture=adelsverer
-	religion=catholic
-	trait=wroth
-	trait=kind
-	2620.3.4={birth=yes}
-	2700.1.1={death=yes}
-}
-
 1836060={
 	name="Eulogio"
 	dynasty=1612001
@@ -992,6 +994,27 @@
 	2643.10.26={add_spouse=1810203}
 	2691.9.7={death=yes}
 }
+
+#1836061={
+#	name="Estefanita"
+#	female=yes
+#	dna="omfjkbiafap"
+#	culture=neomexicano
+#	religion=atomicist
+#	martial=3
+#	diplomacy=1
+#	stewardship=5
+#	intrigue=5
+#	learning=3
+#	trait=midas_touched
+#	trait=atom_deny
+#	trait=shy
+#	trait=craven
+#	trait=arbitrary
+#	2637.7.12={birth=yes}
+#	2653.10.26={add_spouse=1836060}
+#	2677.5.3={death=yes}
+#}
 
 1836062={
 	name="Iris"
@@ -1080,73 +1103,25 @@
 	2632.3.1={birth=yes culture=tejano}
 }
 
-1836066={ #Merchant Republic Guy
+1836066={#Count of Galveston
 	name="Simon"
-	dynasty=1814061
 	culture=texan
 	religion=catholic
 	martial=3
 	diplomacy=5
-	stewardship=9
-	intrigue=6
-	learning=5
-	trait=thrifty_clerk
-	trait=diligent
-	trait=greedy
-	trait=stubborn
-	2631.4.7={birth=yes}
-	2651.1.1={add_spouse=1836067}
-	2700.1.1={death=yes}
-}
-
-1836067={ #Count of Galveston's wife
-	name="Abby"
-	female=yes
-	culture=texan
-	religion=catholic
+	stewardship=6
 	intrigue=9
+	learning=5
 	trait=amateurish_plotter
 	trait=gluttonous
 	trait=deceitful
-	trait=gregarious
-	2631.10.2={birth=yes}
-	2651.1.1={add_spouse=1836066}
-	2700.1.1={death=yes}
-}
-
-1836068={ #Count of Galveston's daughter
-	name="Betsy"
-	female=yes
-	dynasty=1814061
-	culture=texan
-	religion=catholic
-	stewardship=8
-	intrigue=6
-	trait=indulgent_wastrel
-	trait=gluttonous
-	trait=deceitful
-	trait=cynical
-	father=1836066
-	mother=1836067
-	2652.6.14={birth=yes}
-	2700.1.1={death=yes}
-}
-
-1836069={ #Count of Galveston's son
-	name="Randall"
-	dynasty=1814061
-	culture=texan
-	religion=catholic
-	martial=6
-	father=1836066
-	mother=1836067
-	2654.2.13={birth=yes}
-	2700.1.1={death=yes}
+	trait=shy
+	trait=ambitious
+	2631.4.7={birth=yes}
 }
 
 1836070={#Playable Renovator
 	name="George"
-	dynasty=1814073
 	culture=texan
 	religion=falling_star
 	martial=10
@@ -1159,61 +1134,4 @@
 	trait=ambitious
 	trait=holy_warrior
 	2631.4.7={birth=yes}
-}
-
-18360671={ #Merchant Republic Guy 2
-	name="Bill"
-	dynasty=1814068
-	culture=texan
-	religion=catholic
-	intrigue=7
-	trait=intricate_webweaver
-	trait=ambitious
-	trait=greedy
-	trait=zealous
-	2623.2.5={birth=yes}
-	2700.1.1={death=yes}
-}
-
-1836072={ #Merchant Republic Guy 3
-	name="Conan"
-	dynasty=1814072
-	culture=texan
-	religion=catholic
-	martial=9
-	trait=tough_soldier
-	trait=strong
-	trait=wroth
-	trait=brave
-	trait=cynical
-	2632.12.6={birth=yes}
-	2700.1.1={death=yes}
-}
-
-1836073={ #Merchant Republic Guy 4
-	name="August"
-	dynasty=1848069
-	culture=adelsverer
-	religion=catholic
-	diplomacy=9
-	trait=charismatic_negotiator
-	trait=just
-	trait=honest
-	2637.5.2={birth=yes}
-	2700.1.1={death=yes}
-}
-
-1836074={ #Merchant Republic Guy 5
-	name="Luis"
-	dynasty=1815051
-	culture=tejano
-	religion=catholic
-	martial=9
-	trait=skilled_tactician
-	trait=ambitious
-	trait=gregarious
-	trait=greedy
-	trait=diligent
-	2638.9.19={birth=yes}
-	2700.1.1={death=yes}
 }
