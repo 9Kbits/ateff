@@ -1,0 +1,767 @@
+decisions = {
+	
+	state_testing = {
+		is_high_prio = yes
+		potential = {
+			is_alternate_start = no
+			is_playable = yes
+			independent = yes
+		} 
+		
+		allow = {
+			is_adult = yes
+			scaled_wealth = 1
+		}
+		
+		
+		effect = {
+		
+			########################################################
+		
+			#shatters Lonestar and
+			
+			#union texas
+			#creates the kingdom of panhandle out of Texan Comancheria
+			d_estacado = { de_jure_liege = k_panhandle }
+			d_abilene = { de_jure_liege = k_panhandle }
+			d_amarillo = { de_jure_liege = k_panhandle }
+			c_caddo = { de_jure_liege = d_ouachita }
+			
+			d_el_paso = { de_jure_liege = k_rio_grande } 
+			k_rio_grande = { de_jure_liege = e_union_texas }
+			k_jacinto = { de_jure_liege = e_union_texas }
+			k_panhandle = { de_jure_liege = e_union_texas }
+			k_comancheria = { de_jure_liege = e_heartland }
+		
+			#new mexico
+			d_new_mexico = { de_jure_liege = k_union_new_mexico }
+			d_apacheria = { de_jure_liege = k_union_new_mexico }
+			c_crownpoint = { de_jure_liege = d_apacheria }
+			c_luna = { de_jure_liege = d_apacheria }
+			c_hidalgo = { de_jure_liege = d_apacheria }
+			c_white_sands = { de_jure_liege = d_new_mexico }
+			c_mescalero = { de_jure_liege = d_new_mexico }
+			
+			k_union_new_mexico = { de_jure_liege = e_the_rockies }
+			
+			
+			#oklahoma
+			d_outlet = { de_jure_liege = k_union_oklahoma }
+			d_washita = { de_jure_liege = k_union_oklahoma }
+			d_oklahoma = { de_jure_liege = k_union_oklahoma }
+			d_sequoyah = { de_jure_liege = k_union_oklahoma }
+			
+			k_union_oklahoma =  { de_jure_liege = e_heartland }
+			
+			#arizona
+			d_navajoland = { de_jure_liege = k_union_arizona }
+			d_hopi = { de_jure_liege = k_union_arizona }
+			d_arizona = { de_jure_liege = k_union_arizona }
+			d_colorado_river = { de_jure_liege = k_union_arizona }
+			d_gadsden = { de_jure_liege = k_union_arizona }
+			
+			k_union_arizona =  { de_jure_liege = e_the_rockies }
+			
+			
+			#colorado
+			d_boulder = { de_jure_liege = k_union_colorado }
+			d_western_slope = { de_jure_liege = k_union_colorado }
+			d_pueblo = { de_jure_liege = k_union_colorado }
+			d_denver = { de_jure_liege = k_union_colorado }
+			
+			k_union_colorado =  { de_jure_liege = e_the_rockies }
+
+			##########################################
+
+			#kansas and Nebraska
+			d_republican_valley = { de_jure_liege = k_union_kansas }
+			d_chisholm = { de_jure_liege = k_union_kansas }
+			d_kansas = { de_jure_liege = k_union_kansas }
+			
+			d_nebraska = { de_jure_liege = k_union_nebraska }
+			d_kickatus = { de_jure_liege = k_union_nebraska }
+			c_republican = { de_jure_liege = d_kickatus }
+			
+			k_union_kansas =  { de_jure_liege = e_heartland }
+			k_union_nebraska = { de_jure_liege = e_heartland }
+
+			###########################################
+			
+			#california
+			c_ridgecrest = { de_jure_liege = d_mojave }
+			c_las_vegas = { de_jure_liege = d_death_valley }
+			c_grand_canyon = { de_jure_liege = d_death_valley }
+			c_modoc = { de_jure_liege = d_shasta_cascade}
+			c_lassen = { de_jure_liege = d_shasta_cascade}
+			
+			d_sacramento = { de_jure_liege = k_the_valley}
+			
+			k_socal = { de_jure_liege = e_union_new_california}
+			k_francisco = { de_jure_liege = e_union_new_california}
+			k_the_valley = { de_jure_liege = e_union_new_california}
+			
+			k_baja_california = { de_jure_liege = e_aztlan}
+			
+			#splitting jefferson
+			k_jefferson = { de_jure_liege = e_union_new_california}
+			
+			d_north_jefferson = { de_jure_liege = k_cascadia}
+			
+			#nevada
+			d_nevada = { de_jure_liege = k_union_nevada }
+			d_death_valley = { de_jure_liege = k_union_nevada }
+			d_northern_basin = { de_jure_liege = k_union_nevada }
+			c_elmore = { de_jure_liege = d_east_snake }
+			c_owyhee = { de_jure_liege = d_west_snake }
+			
+			k_union_nevada = { de_jure_liege = e_the_rockies}
+			
+			######################################################
+			
+			#utah
+			d_green_river  = { de_jure_liege = k_union_utah }
+			d_wasatch  = { de_jure_liege = k_union_utah }
+			d_great_salt_duchy  = { de_jure_liege = k_union_utah }
+			
+			k_union_utah = { de_jure_liege = e_the_rockies}
+			
+			########################################################
+			
+			#wyoming
+			
+			d_wyoming  = { de_jure_liege = k_union_wyoming }
+			d_sweetwater  = { de_jure_liege = k_union_wyoming }
+			d_highland_springs  = { de_jure_liege = k_union_wyoming }
+			d_beartooth  = { de_jure_liege = k_union_wyoming }
+			d_beartooth  = { de_jure_liege = k_union_wyoming }
+			c_campbell = { de_jure_liege = d_wyoming }
+			c_black_hills = { de_jure_liege = d_wyoming }
+			
+			k_union_wyoming = { de_jure_liege = e_the_rockies}
+			
+			#montana
+			
+			d_deer_lodge  = { de_jure_liege = k_union_montana }
+			d_glacier  = { de_jure_liege = k_union_montana }
+			d_chouteau  = { de_jure_liege = k_union_montana }
+			d_peck_lake  = { de_jure_liege = k_union_montana }
+			d_custer = { de_jure_liege = k_union_montana }
+			d_golden_valley = { de_jure_liege = k_union_montana }
+			c_beaverhead = { de_jure_liege = d_deer_lodge }
+			c_flathead = { de_jure_liege = d_deer_lodge }
+			c_bitterroot_valley = { de_jure_liege = d_deer_lodge }
+			
+			k_union_montana = { de_jure_liege = e_the_rockies}
+			
+			#idaho
+			
+			d_west_snake  = { de_jure_liege = k_union_idaho }
+			d_clearwater  = { de_jure_liege = k_union_idaho }
+			d_silver_bow  = { de_jure_liege = k_union_idaho }
+			d_east_snake  = { de_jure_liege = k_union_idaho }
+			c_wallowa = { de_jure_liege = d_highdesert }
+			c_baker = { de_jure_liege = d_highdesert }
+			c_priest_lake = { de_jure_liege = d_clearwater }
+			
+			k_union_idaho = { de_jure_liege = e_the_rockies}
+			
+			#################################################
+			
+			#Missouri
+			
+			d_forgottonia = { de_jure_liege = k_chicagoland }
+			c_kaskaskia = { de_jure_liege = d_little_egypt }
+			d_salem = { de_jure_liege = k_union_missouri }
+			d_gateway = { de_jure_liege = k_union_missouri }
+			d_boonslick = { de_jure_liege = k_union_missouri }
+			d_chariton = { de_jure_liege = k_union_missouri }
+			d_twain = { de_jure_liege = k_union_missouri }
+			d_lead_belt = { de_jure_liege = k_union_missouri }
+			d_great_river = { de_jure_liege = k_union_missouri }
+			
+			k_union_missouri = { de_jure_liege = e_heartland}
+			
+			#arkansas
+			
+			d_turner_ward_knob = { de_jure_liege = k_union_arkansas }
+			d_timberland = { de_jure_liege = k_union_arkansas }
+			d_arkansas = { de_jure_liege = k_union_arkansas }
+			d_arkansas_delta = { de_jure_liege = k_union_arkansas }
+			
+			
+			k_union_arkansas = { de_jure_liege = e_heartland }
+			
+			
+			#iowa
+			
+			c_rock_island = { de_jure_liege = d_illinois }
+			
+			# louisiana
+			
+			d_west_florida = { de_jure_liege = k_union_louisiana }
+			d_ouachita = { de_jure_liege = k_union_louisiana }
+			d_alexandria = { de_jure_liege = k_union_louisiana }
+			d_acadiana = { de_jure_liege = k_union_louisiana }
+			d_orleans = { de_jure_liege = k_union_louisiana }
+			
+			k_union_louisiana = { de_jure_liege = e_gulfcoast }
+			
+			
+			
+			c_biloxi = { de_jure_liege = d_pine_belt }
+			
+			#minnesota
+			
+			c_south_shore = { de_jure_liege = d_northwoods }
+			c_cannon = { de_jure_liege = d_twin_cities }
+			c_grand_forks = { de_jure_liege = d_sheyenne }
+			c_duluth = { de_jure_liege = d_arrowhead }
+			d_minnesota = { de_jure_liege = k_union_minnesota }
+			d_twin_cities = { de_jure_liege = k_union_minnesota }
+			d_arrowhead = { de_jure_liege = k_union_minnesota }
+			d_pembina = { de_jure_liege = k_union_minnesota }
+			d_duluth = { de_jure_liege = k_union_minnesota }
+			
+			k_union_minnesota = { de_jure_liege = e_great_lakes}
+			
+			#dakota
+			
+			d_sheyenne = { de_jure_liege = k_union_n_dakota }
+			d_bismarck = { de_jure_liege = k_union_n_dakota }
+			d_wichiyena = { de_jure_liege = k_union_n_dakota }
+			d_badlands = { de_jure_liege = k_union_n_dakota }
+			d_brule = { de_jure_liege = k_union_n_dakota }
+			d_yankton = { de_jure_liege = k_union_n_dakota }
+			
+			k_union_n_dakota = { de_jure_liege = e_heartland}
+			
+			
+			
+			
+			##########################################
+			
+			#Washington
+			c_okanogan = { de_jure_liege = d_horse_heaven }
+			d_horse_heaven = { de_jure_liege = k_union_washington }
+			d_puget = { de_jure_liege = k_union_washington }
+			d_olympus = { de_jure_liege = k_union_washington }
+			d_columbia_valley = { de_jure_liege = k_union_washington }
+			d_colville = { de_jure_liege = k_union_washington }
+			
+			k_union_washington = { de_jure_liege = e_cascadia }
+			
+			
+			#oregon
+			
+			d_north_jefferson = { de_jure_liege = k_union_oregon }
+			d_highdesert = { de_jure_liege = k_union_oregon }
+			d_portlandia = { de_jure_liege = k_union_oregon }
+			d_blue_mountains = { de_jure_liege = k_union_oregon }
+			d_willamette = { de_jure_liege = k_union_oregon }
+			c_wallawalla = { de_jure_liege = d_columbia_valley }
+			c_clark = { de_jure_liege = d_olympus }
+			
+			k_union_oregon = { de_jure_liege = e_cascadia }
+			
+			#North Cascadia/New Columbia/Chinook/Illahee 
+			
+			d_haida_gwaii = { de_jure_liege = k_union_new_columbia }
+			d_the_coast = { de_jure_liege = k_union_new_columbia }
+			d_up_island = { de_jure_liege = k_union_new_columbia }
+			d_victoria = { de_jure_liege = k_union_new_columbia }
+			d_dire_straits = { de_jure_liege = k_union_new_columbia }
+			d_fraser = { de_jure_liege = k_union_new_columbia }
+			d_omineca = { de_jure_liege = k_union_new_columbia }
+			d_cariboo = { de_jure_liege = k_union_new_columbia }
+			d_okanagan = { de_jure_liege = k_union_new_columbia }
+			d_kootenay = { de_jure_liege = k_union_new_columbia }
+			
+			k_union_new_columbia = { de_jure_liege = e_cascadia }
+			
+			#alaska
+			
+			d_juneau = { de_jure_liege = k_union_alaska }
+			d_alexander = { de_jure_liege = k_union_alaska }
+			
+			k_union_alaska = { de_jure_liege = e_cascadia }
+			
+			###################################
+			
+			
+		}
+	}
+	
+	liberate_panhandle = {
+		is_high_prio = yes
+		potential = {
+			is_alternate_start = no
+			is_playable = yes
+			independent = yes
+			OR = {			
+				culture_group = west_anglo
+				culture = tejano
+				}
+			NOT = { has_global_flag = panhandle_liberated } 
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			has_landed_title = d_abilene
+			has_landed_title = d_estacado
+			has_landed_title = d_amarillo
+			has_landed_title = c_amarillo
+			scaled_wealth = 1
+		}
+		effect = {
+			activate_title = { title = k_panhandle status = yes }
+			set_global_flag = panhandle_liberated
+			primary_title = {
+				k_panhandle = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			scaled_wealth = -1
+			k_panhandle = {
+				de_jure_liege = e_lone_star
+			}
+			k_new_mexico = {
+				de_jure_liege = e_lone_star
+			}
+			d_new_mexico = {
+				de_jure_liege = k_new_mexico
+			}
+			d_estacado = {
+				de_jure_liege = k_panhandle
+			}
+			d_abilene = {
+				de_jure_liege = k_panhandle
+			}
+			d_amarillo = {
+				de_jure_liege = k_panhandle
+			}
+			
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	greater_texas_new_columbia_and_california = {
+		is_high_prio = yes
+		potential = {
+			is_alternate_start = no
+			is_playable = yes
+			independent = yes
+		} 
+		
+		allow = {
+			is_adult = yes
+			scaled_wealth = 1
+		}
+		effect = {
+		
+			k_union_nevada = { de_jure_liege = e_union_new_california }
+			k_union_utah = { de_jure_liege = e_union_new_california }
+			k_union_arizona = { de_jure_liege = e_union_new_california }
+			
+			
+			k_union_colorado = { de_jure_liege = e_union_texas }
+			k_union_new_mexico = { de_jure_liege = e_union_texas }
+			k_union_oklahoma = { de_jure_liege = e_union_texas }
+			
+			k_union_idaho = { de_jure_liege = e_union_cascadia }
+			k_union_oregon = { de_jure_liege = e_union_cascadia }
+			k_union_alaska = { de_jure_liege = e_union_cascadia }
+		
+		}	
+	}
+	
+	consolidate_texas_and_california = {
+		is_high_prio = yes
+		potential = {
+			is_alternate_start = no
+			is_playable = yes
+			independent = yes
+		} 
+		
+		allow = {
+			is_adult = yes
+			scaled_wealth = 1
+		}
+		effect = {
+		
+		
+		
+		
+		
+		}	
+	}
+	
+	establish_cascadia = {
+		is_high_prio = yes
+		potential = {
+			is_alternate_start = no
+			is_playable = yes
+			independent = yes
+		} 
+		
+		allow = {
+			is_adult = yes
+			scaled_wealth = 1
+		}
+		effect = {
+		
+			k_union_new_columbia = { de_jure_liege = e_union_cascadia }
+			k_union_washington = { de_jure_liege = e_union_cascadia }
+		
+		
+		
+		
+		}	
+	}
+	
+	
+	
+	form_union_texas = {
+		is_high_prio = yes
+		potential = {
+			is_alternate_start = no
+			NOT = {
+				has_game_rule = {
+					name = empire_decisions
+					value = off
+				}
+			}
+			NOT = { has_global_flag = true_texas_restored }
+			NOT = { has_landed_title = e_new_france }
+			is_playable = yes
+			independent = yes
+			AND = {
+				religion = americanist
+				culture_group = west_anglo
+			}
+			e_usa = {
+				has_holder = no
+			}
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 1000
+			has_landed_title = k_jacinto
+			has_landed_title = k_rio_grande
+			custom_tooltip = {
+				text = form_union_texas_tooltip_1
+				hidden_tooltip = {
+					OR = {
+						has_landed_title = k_comancheria
+						AND = {
+							has_global_flag = panhandle_liberated
+							has_landed_title = k_jacinto
+						}
+					}
+				}
+			}
+			
+			
+			scaled_wealth = 2
+			religion = americanist
+		}
+		effect = {
+			#1---- events are state formation
+			hidden_tooltip = { narrative_event = { id = TX.10001 } }     
+			set_global_flag = true_texas_restored
+			set_government_type = state_government
+			set_global_flag = texas_restored
+			activate_title = { title = e_union_texas status = yes }
+			
+			if = {
+				limit = { NOT = { has_global_flag = panhandle_liberated } }
+				
+				set_global_flag = panhandle_liberated
+				activate_title = { title = k_panhandle status = yes }
+				primary_title = {
+					k_panhandle = {
+						grant_title = ROOT
+						copy_title_laws = PREV
+					}
+				}
+				
+				#if comanche right to texas is invalidated, new mexico would be by extension 
+				d_new_mexico = {
+					de_jure_liege = k_arixo
+				}
+				#creates the kingdom of panhandle out of Texan Comancheria
+				d_estacado = {
+					de_jure_liege = k_panhandle
+				}
+				d_abilene = {
+					de_jure_liege = k_panhandle
+				}
+				d_amarillo = {
+					de_jure_liege = k_panhandle
+				}
+				c_caddo = {
+					de_jure_liege = d_ouachita
+				}
+			}
+			
+			
+			primary_title = {
+				e_union_texas = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+					add_law = succ_byzantine_elective
+				}
+			}
+
+			any_demesne_title = {
+				limit = {
+					tier = EMPEROR
+					NOT = { title = e_union_texas }
+				}
+				destroy_landed_title = THIS
+				hidden_tooltip = { activate_title = { title = THIS status = no } }
+				
+			}
+			
+			set_government_type = state_government
+			scaled_wealth = -2
+			k_rio_grande = {
+				de_jure_liege = e_union_texas
+			}
+			k_jacinto = {
+				de_jure_liege = e_union_texas
+			}
+			k_panhandle = {
+				de_jure_liege = e_union_texas
+			}
+			k_comancheria = {
+				de_jure_liege = e_heartland
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	
+	form_texarkana = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		ai_will_do = {
+	        factor = 25
+	        modifier = {
+	            factor = .5
+	            trait = content
+	        }
+	        modifier = {
+	            factor = .5
+	            trait = craven
+	        }
+	        modifier = {
+	            factor = 2
+	        	trait = ambitious
+	        }
+	        modifier = {
+	            factor = 2
+	        	trait = brave
+	        }
+	        modifier = {
+	            factor = 2
+	        	trait = zealous
+	        }
+	    }
+		
+		potential = {
+			is_alternate_start = no
+			NOT = {
+				has_game_rule = {
+					name = empire_decisions
+					value = off
+				}
+			}
+			NOT = { has_landed_title = e_new_france }
+			NOT = { has_global_flag = america_restored }
+			independent = yes
+			religion = catholic
+			NOT = { has_landed_title = e_dixie }
+			e_texarkana = {
+				has_holder = no
+			}
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 1000
+			conditional_tooltip = {
+				trigger = {
+					is_alternate_start = no
+				}
+				custom_tooltip = {
+					text = form_texarkana_tooltip_1
+					hidden_tooltip = {
+						AND = {
+							has_landed_title = k_ozarks
+							has_landed_title = k_jacinto
+						}
+					}
+				}
+				custom_tooltip = {
+					text = form_texarkana_tooltip_2
+					hidden_tooltip = {
+						any_demesne_title = {
+							OR = {
+								OR = {
+									title = e_heartland
+									title = e_lone_star
+								}
+								OR = {
+									title = k_comancheria
+									title = k_panhandle
+									title = k_louisiana
+									title = k_missouri
+									title = k_platte
+								}
+							}
+						}
+					}
+				}
+				custom_tooltip = {
+					text = form_texarkana_tooltip_3
+					hidden_tooltip = {
+						OR = {
+							has_landed_title = e_lone_star
+							e_lone_star = {	has_holder = no	}
+							e_lone_star= { holder_scope = { NOT = { religion = catholic } } }
+						}
+						OR = {
+							has_landed_title = e_heartland
+							e_heartland = {	has_holder = no	}
+							e_heartland = { holder_scope = { NOT = { religion = catholic } } }
+						}
+					}
+				}
+				
+				custom_tooltip = {
+					text = form_texarkana_tooltip_4
+					hidden_tooltip = {
+						OR = {
+							e_dixie = {	has_holder = no	}
+							e_dixie = { holder_scope = { NOT = { religion = catholic } } }
+						}
+					}
+				}
+			}
+			conditional_tooltip = {
+				trigger = {
+					ai = no
+				}
+				AND = {
+					religion_head = {
+						opinion = { who = ROOT value = 25 }
+					}
+					scaled_wealth = 2
+				}
+			}
+		}
+		effect = {
+			set_global_flag = texarkana_rises
+			activate_title = { title = e_texarkana status = yes }
+			if = {
+				limit = {
+					ai = no
+				}
+				scaled_wealth = -2
+			}
+			#Create Electors, depending on capital location:
+			princely_elective_apply_elector_setup_effect = yes
+			primary_title = {
+				show_scope_change = no
+				e_texarkana = {
+					show_scope_change = no
+					grant_title = ROOT
+					copy_title_laws = PREV
+					add_law = succ_hre_elective
+				}
+			}
+			any_demesne_title = {
+				limit = { tier = KING }
+				de_jure_liege = e_texarkana
+			}
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = { tier = EMPEROR }
+						any_direct_de_jure_vassal_title = {
+							de_jure_liege = e_texarkana
+						}
+					}
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					tier = EMPEROR
+					NOT = { title = e_texarkana }
+				}
+				destroy_landed_title = THIS
+				hidden_tooltip = { activate_title = { title = THIS status = no } }
+			}
+			any_demesne_title = {
+				limit = { tier = KING }
+				destroy_landed_title = THIS
+			}
+			e_dixie = {
+				show_scope_change = no
+				holder_scope = {
+					show_scope_change = no
+					opinion = {
+						who = ROOT
+						modifier = opinion_unhappy
+						months = 1200
+					}
+					hidden_tooltip = {
+						k_papal_state = {
+							holder_scope = {
+								reverse_opinion = {
+									who = PREVPREV
+									modifier = opinion_unhappy
+									months = 1200
+								}
+							}
+						}
+					}
+				}
+			}
+
+			#triggers announcement, 3---- events are non americanist realms
+			hidden_tooltip = { narrative_event = { id = TX.30001 } }        # announcement
+			set_character_flag = founded_texarkana
+			
+			chronicle = {
+				entry = CHRONICLE_FOUNDED_TEXARKANA
+				picture = GFX_evt_coronation
+			}
+			
+			
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

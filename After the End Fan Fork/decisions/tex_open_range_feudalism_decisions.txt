@@ -1,0 +1,257 @@
+
+
+decisions = {
+	
+#decision to adopt if independent	
+adopt_open_range_feudalism_independent = {
+		only_playable = yes
+		is_high_prio = yes
+		is_mercenary = yes
+		ai_check_interval = 24
+
+		potential = {
+			NOT = {
+				is_tributary = {
+					type = cow_tributary
+				}						
+			}
+			OR = {
+				government = aspiring_red_kingship_government
+				government = open_range_feudalism_government
+			}
+		}
+
+		allow = {
+			OR = {
+			
+			
+			}
+		}
+
+		effect = {
+		
+			
+			prestige = -75
+			if = {
+				limit = { 
+					AND = {
+						has_law = frontier_land_use_0 
+
+					}
+				}
+				capital_scope = {
+					ROOT = {
+						spawn_unit = {
+							owner = ROOT
+							province = PREV
+							home = PREV
+							troops = {
+								light_cavalry = { 250 250 }
+							}
+							reinforces = yes
+							can_toggle_looting = yes
+							attrition = 0.5
+							disband_on_peace = yes
+							maintenance_multiplier = 0.50
+							earmark = cowboy_troops
+							cannot_inherit = no
+						}	
+					}
+				}
+				any_demesne_province  = {
+					if = {
+						limit = { 	
+							AND = {
+								
+								NOT = {
+									OR = {
+										num_of_empty_holdings	= 1
+										num_of_empty_holdings	= 2
+										num_of_empty_holdings	= 3
+										num_of_empty_holdings	= 4
+										num_of_empty_holdings	= 5
+										num_of_empty_holdings	= 6
+									}
+								}
+							}
+						}
+						ROOT = {
+							spawn_unit = {
+								owner = ROOT
+								province = PREV
+								home = PREV
+								troops = {
+									light_cavalry = { 50 50 }
+								}
+								reinforces = yes
+								can_toggle_looting = yes
+								attrition = 0.5
+								disband_on_peace = yes
+								maintenance_multiplier = 0.50
+								earmark = cowboy_troops
+								cannot_inherit = no
+							}	
+						}
+					}
+					else_if = {
+						limit = { num_of_empty_holdings	= 1}
+						ROOT = {
+							spawn_unit = {
+								owner = ROOT
+								province = PREV
+								home = PREV
+								troops = {
+									light_cavalry = { 75 75 }
+								}
+								reinforces = yes
+								can_toggle_looting = yes
+								attrition = 0.5
+								disband_on_peace = yes
+								maintenance_multiplier = 0.50
+								earmark = cowboy_troops
+								cannot_inherit = no
+							}	
+						}
+					}	
+					else_if = {
+						limit = { num_of_empty_holdings	= 2}
+						ROOT = {
+							spawn_unit = {
+								owner = ROOT
+								province = PREV
+								home = PREV
+								troops = {
+									light_cavalry = { 100 100 }
+								}
+								reinforces = yes
+								can_toggle_looting = yes
+								attrition = 0.5
+								disband_on_peace = yes
+								maintenance_multiplier = 0.50
+								earmark = cowboy_troops
+								cannot_inherit = no
+							}	
+						}	
+					}
+					else_if = {
+						limit = { num_of_empty_holdings	= 3}
+						ROOT = {
+							spawn_unit = {
+								owner = ROOT
+								province = PREV
+								home = PREV
+								troops = {
+									light_cavalry = { 125 125 }
+								}
+								reinforces = yes
+								can_toggle_looting = yes
+								attrition = 0.5
+								disband_on_peace = yes
+								maintenance_multiplier = 0.50
+								earmark = cowboy_troops
+								cannot_inherit = no
+							}	
+						}	
+					}	
+					else_if = {
+						limit = { num_of_empty_holdings	= 4}
+						ROOT = {
+							spawn_unit = {
+								owner = ROOT
+								province = PREV
+								home = PREV
+								troops = {
+									light_cavalry = { 150 150 }
+								}
+								reinforces = yes
+								can_toggle_looting = yes
+								attrition = 0.5
+								disband_on_peace = yes
+								maintenance_multiplier = 0.50
+								earmark = cowboy_troops
+								cannot_inherit = no
+							}	
+						}	
+					}						
+					else_if = {
+						limit = { num_of_empty_holdings	= 5}
+						ROOT = {
+							spawn_unit = {
+								owner = ROOT
+								province = PREV
+								home = PREV
+								troops = {
+									light_cavalry = { 175 175 }
+								}
+								reinforces = yes
+								can_toggle_looting = yes
+								attrition = 0.5
+								disband_on_peace = yes
+								maintenance_multiplier = 0.50
+								earmark = cowboy_troops
+								cannot_inherit = no
+							}	
+						}	
+					}
+					else_if = {
+						limit = { num_of_empty_holdings	= 6}
+						ROOT = {
+							spawn_unit = {
+								owner = ROOT
+								province = PREV
+								home = PREV
+								troops = {
+									light_cavalry = { 200 200 }
+								}
+								reinforces = yes
+								can_toggle_looting = yes
+								attrition = 0.5
+								disband_on_peace = yes
+								maintenance_multiplier = 0.50
+								earmark = cowboy_troops
+								cannot_inherit = no
+							}	
+						}	
+					}
+				}		
+				
+			}
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = rancher_gentry_levied_cooldown
+					hidden = yes
+					years = 1
+				}
+				any_tributary = {
+					limit = {
+						is_tributary = {
+							type = cow_tributary
+						}	
+					}
+					letter_event = {
+						id = TX.50002
+						days = 10
+						tooltip = EVTTOOLTIP660102						
+					}	
+				}
+			}
+			sound_effect = generic_click_01
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					war = no
+				}
+			}
+
+		}
+	}
+	
+}

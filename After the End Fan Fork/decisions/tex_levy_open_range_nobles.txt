@@ -1,0 +1,71 @@
+
+
+decisions = {
+	
+#generic decision	
+levy_cattle_nobility = {
+		only_playable = yes
+		
+		is_high_prio = yes
+		is_mercenary = yes
+		ai_check_interval = 24
+
+		potential = {
+			NOT = {
+				is_tributary = {
+					type = cow_tributary
+				}						
+			}
+			OR = {
+				government = aspiring_red_kingship_government
+				government = open_range_feudalism_government
+			}
+		}
+
+		allow = {
+			prestige = 75
+		}
+
+		effect = {
+		
+			
+			prestige = -75
+			hidden_tooltip = {
+				add_character_modifier = {
+					name = rancher_gentry_levied_cooldown
+					hidden = yes
+					years = 1
+				}
+				any_tributary = {
+					limit = {
+						is_tributary = {
+							type = cow_tributary
+						}	
+					}
+					letter_event = {
+						id = TX.50002
+						days = 10
+						tooltip = EVTTOOLTIP660102						
+					}	
+				}
+			}
+			sound_effect = generic_click_01
+		}
+
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					war = no
+				}
+			}
+
+		}
+	}
+	
+}
