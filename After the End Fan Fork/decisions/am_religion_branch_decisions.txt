@@ -505,4 +505,34 @@ decisions = {
 			always = no
 		}
 	}
+	change_nazarene_branch = {
+		ai = no
+		
+		potential = {
+			religion = nazarene
+			is_playable = yes
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_character_flag = changednazarenebranch }
+		}
+		
+		allow = {
+			religion = nazarene
+			is_playable = yes
+			NOT = { has_character_flag = changednazarenebranch }
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = nazarene.1 }		
+			}
+			custom_tooltip = { text = TXT_change_nazarene_branch }
+			set_character_flag = changednazarenebranch
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+	}
 }

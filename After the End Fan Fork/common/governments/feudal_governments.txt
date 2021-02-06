@@ -31,12 +31,14 @@ feudal_governments = {
 				religion = revivalist
 				religion = alawiyya
 				religion = qingzhen
+				religion = nazarene
 				religion = exovedate
 				religion = nousthreskeia
 				religion = sol_invicta
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
+				religion = true_cross
 				#religion_group = pagan_group
 				has_religion_feature = religion_temporal_head
 				AND = {
@@ -50,12 +52,14 @@ feudal_governments = {
 						religion = revivalist
 						religion = alawiyya
 						religion = qingzhen
+						religion = nazarene
 						religion = exovedate
 						religion = nousthreskeia
 						religion = sol_invicta
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
+						religion = true_cross
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
@@ -63,6 +67,7 @@ feudal_governments = {
 			NOT = {	religion = cetic }
 			NOT = {	religion = imamite }
 			NOT = {	religion = qingzhen }
+			NOT = {	religion = nazarene }
 			NOR = {
 				religion = traditionalist
 				religion = revivalist
@@ -206,12 +211,14 @@ feudal_governments = {
 				religion = revivalist
 				religion = alawiyya
 				religion = qingzhen
+				religion = nazarene
 				religion = exovedate
 				religion = nousthreskeia
 				religion = sol_invicta
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
+				religion = true_cross
 				religion_group = latter_day_saints
 				has_religion_feature = religion_temporal_head
 				AND = {
@@ -225,12 +232,14 @@ feudal_governments = {
 						religion = revivalist
 						religion = alawiyya
 						religion = qingzhen
+						religion = nazarene
 						religion = exovedate
 						religion = nousthreskeia
 						religion = sol_invicta
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
+						religion = true_cross
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
@@ -302,12 +311,14 @@ feudal_governments = {
 				religion = revivalist
 				religion = alawiyya
 				religion = qingzhen
+				religion = nazarene
 				religion = exovedate
 				religion = nousthreskeia
 				religion = sol_invicta
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
+				religion = true_cross
 				has_religion_feature = religion_temporal_head
 				AND = {
 					OR = {
@@ -320,12 +331,14 @@ feudal_governments = {
 						religion = revivalist
 						religion = alawiyya
 						religion = qingzhen
+						religion = nazarene
 						religion = exovedate
 						religion = nousthreskeia
 						religion = sol_invicta
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
+						religion = true_cross
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
@@ -334,6 +347,10 @@ feudal_governments = {
 				religion = cetic
 				religion = qingzhen
 				religion = imamite
+				AND = {
+					religion = nazarene
+					controls_religion = no
+				}
 			}
 			is_patrician = no
 			NOT = { is_government_potential = colonial_government }
@@ -398,12 +415,14 @@ feudal_governments = {
 				religion = revivalist
 				religion = alawiyya
 				religion = qingzhen
+				religion = nazarene
 				religion = exovedate
 				religion = nousthreskeia
 				religion = sol_invicta
 				religion = patria_grande
 				religion = atomicist
 				religion = celeste
+				religion = true_cross
 				#religion_group = pagan_group
 				has_religion_feature = religion_temporal_head
 				AND = {
@@ -417,12 +436,14 @@ feudal_governments = {
 						religion = revivalist
 						religion = alawiyya
 						religion = qingzhen
+						religion = nazarene
 						religion = exovedate
 						religion = nousthreskeia
 						religion = sol_invicta
 						religion = patria_grande
 						religion = atomicist
 						religion = celeste
+						religion = true_cross
 					}
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}

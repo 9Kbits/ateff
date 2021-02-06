@@ -1,0 +1,1422 @@
+namespace = nazarene
+character_event = {
+	id = nazarene.1
+	desc = "EVTDESC_nazarene_1"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	religion = nazarene
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_nazarene_1
+		hidden_tooltip = {
+			remove_trait = nz_presbyters
+			remove_trait = nz_acolyte
+
+		}
+		add_trait = nz_seraph
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = EVTOPTB_nazarene_1
+		hidden_tooltip = {
+			remove_trait = nz_presbyters
+			remove_trait = nz_seraph
+
+		}
+		add_trait = nz_acolyte
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_nazarene_1
+		hidden_tooltip = {
+			remove_trait = nz_seraph
+			remove_trait = nz_acolyte
+
+		}
+		add_trait = nz_presbyter
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.2
+	hide_window = yes
+	religion = nazarene
+	is_triggered_only = yes
+	
+	trigger = {
+		has_landed_title = d_nazarene
+	}
+
+	immediate = {
+		# Make sure they're a good age
+		random_list = {
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 40
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 45
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 50
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 55
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 60
+			} }
+			20 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 65
+			} }
+			10 = { create_random_priest = {
+				random_traits = yes
+				religion = nazarene
+				dynasty = culture
+				age = 70
+			} }
+		}
+		new_character = { ROOT = { any_demesne_title = { gain_title = PREVPREV } } }
+	}
+}
+
+# Setting out for Redding
+character_event = {
+	id = nazarene.3
+	desc = EVTDESC_redding_start
+	picture = GFX_evt_icon
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_redding_start
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			narrative_event = { id = nazarene.20 days = 45 } #Arrival in Redding
+		}
+		hidden_tooltip = {
+			random_list = {
+				20 = {  character_event = { id = nazarene.8 days = 15 random = 5 } } #Meet a friend
+				20 = {  character_event = { id = nazarene.9 days = 15 random = 5 } } #Get lost
+				20 = {  character_event = { id = nazarene.10 days = 15 random = 5 } } #Bandits
+				20 = {  character_event = { id = nazarene.11 days = 15 random = 5 } } #Play cards
+				20 = {  character_event = { id = nazarene.12 days = 15 random = 5 } } #Cart breaks down
+				
+			}
+			random_list = {
+				15 = {  character_event = { id = nazarene.6 days = 30 random = 5 } } #Road Work Ahead
+				10 = {  character_event = { id = nazarene.7 days = 30 random = 5 } } #Become ill
+				15 = {  character_event = { id = nazarene.13 days = 30 random = 5 } } #Ponder Christian theology
+				15 = {  character_event = { id = nazarene.14 days = 30 random = 5 } } #Mysterious encounter
+				15 = {  character_event = { id = nazarene.15 days = 30 random = 5 } } #Comet sighted (maybe change?)
+				15 = {  character_event = { id = nazarene.16 days = 30 random = 5 } } #Mountain Lion part 1
+				15 = {  character_event = { id = nazarene.17 days = 30 random = 5 } } #Pacific Sunset
+			}
+		}
+	}
+}
+
+# Setting out for San Diego
+character_event = {
+	id = nazarene.4
+	desc = EVTDESC_san_diego_start
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_san_diego_start
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			narrative_event = { id = nazarene.21 days = 45 } #Arrival in San Diego
+		}
+		hidden_tooltip = {
+			random_list = {
+				20 = {  character_event = { id = nazarene.8 days = 15 random = 5 } } #Meet a friend
+				20 = {  character_event = { id = nazarene.9 days = 15 random = 5 } } #Get lost
+				20 = {  character_event = { id = nazarene.10 days = 15 random = 5 } } #Bandits
+				20 = {  character_event = { id = nazarene.11 days = 15 random = 5 } } #Play cards
+				20 = {  character_event = { id = nazarene.12 days = 15 random = 5 } } #Cart breaks down
+				
+			}
+			random_list = {
+				15 = {  character_event = { id = nazarene.6 days = 30 random = 5 } } #Road Work Ahead
+				10 = {  character_event = { id = nazarene.7 days = 30 random = 5 } } #Become ill
+				15 = {  character_event = { id = nazarene.13 days = 30 random = 5 } } #Ponder Christian theology
+				15 = {  character_event = { id = nazarene.14 days = 30 random = 5 } } #Mysterious encounter
+				15 = {  character_event = { id = nazarene.15 days = 30 random = 5 } } #Comet sighted (maybe change?)
+				15 = {  character_event = { id = nazarene.16 days = 30 random = 5 } } #Mountain Lion part 1
+				15 = {  character_event = { id = nazarene.17 days = 30 random = 5 } } #Pacific Sunset
+			}
+		}
+	}
+}
+
+# Setting out for Los Angeles
+character_event = {
+	id = nazarene.5
+	desc = EVTDESC_los_angeles_start
+	picture = GFX_evt_icon
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_los_angeles_start
+		hidden_tooltip = {
+			add_trait = on_pilgrimage
+			narrative_event = { id = nazarene.22 days = 45 } #Arrival in Los Angeles
+		}
+		hidden_tooltip = {
+			random_list = {
+				20 = {  character_event = { id = nazarene.8 days = 15 random = 5 } } #Meet a friend
+				20 = {  character_event = { id = nazarene.9 days = 15 random = 5 } } #Get lost
+				20 = {  character_event = { id = nazarene.10 days = 15 random = 5 } } #Bandits
+				20 = {  character_event = { id = nazarene.11 days = 15 random = 5 } } #Play cards
+				20 = {  character_event = { id = nazarene.12 days = 15 random = 5 } } #Cart breaks down
+				
+			}
+			random_list = {
+				15 = {  character_event = { id = nazarene.6 days = 30 random = 5 } } #Road Work Ahead
+				10 = {  character_event = { id = nazarene.7 days = 30 random = 5 } } #Become ill
+				15 = {  character_event = { id = nazarene.13 days = 30 random = 5 } } #Ponder Christian theology
+				15 = {  character_event = { id = nazarene.14 days = 30 random = 5 } } #Mysterious encounter
+				15 = {  character_event = { id = nazarene.15 days = 30 random = 5 } } #Comet sighted (maybe change?)
+				15 = {  character_event = { id = nazarene.16 days = 30 random = 5 } } #Mountain Lion part 1
+				15 = {  character_event = { id = nazarene.17 days = 30 random = 5 } } #Pacific Sunset
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.6
+	desc = EVTDESC_cetic_pilgrim_road_work
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_road_work
+		prestige = 50
+		if = {
+			limit = {
+				trait = humble
+			}
+			remove_trait = humble
+		}
+		else_if = {
+			limit = {
+				NOT = { trait = proud }
+			}
+			add_trait = proud
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_cetic_pilgrim_road_work
+		piety = 25
+		if = {
+			limit = {
+				trait = wroth
+			}
+			remove_trait = wroth
+		}
+		else_if = {
+			limit = {
+				NOT = { trait = patient }
+			}
+			add_trait = patient
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.7
+	desc = EVTDESC_nazarene_pilgrim_illness
+	picture = GFX_evt_carriage
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_pilgrim_illness
+		random = {
+			chance = 50
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Reapers"
+					}
+				}
+				add_trait = ill
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				add_symptom_effect = yes
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.8
+	desc = EVTDESC_cetic_pilgrim_friend
+	picture = GFX_evt_courtiers_talking
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_friend
+		piety = 25
+		if = {
+			limit = {
+				NOT = { trait = gregarious }
+			}
+			random = {
+				chance = 30
+				add_trait = gregarious
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_cetic_pilgrim_friend
+		prestige = 50
+		if = {
+			limit = {
+				NOT = { trait = proud }
+			}
+			random = {
+				chance = 30
+				add_trait = proud
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_cetic_pilgrim_friend
+		piety = 30
+		custom_tooltip = { text = TXT_EVTOPTC_cetic_pilgrim_friend }
+		create_character = {
+			random_traits = yes
+			dynasty = NONE
+			is_female = no
+			age = 22
+			religion = ROOT
+			culture = ROOT
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			add_friend = ROOT
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.9
+	desc = EVTDESC_cetic_pilgrim_lost
+	picture = GFX_evt_noble_haughty_talking_to_peasants
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_lost
+		piety = 15
+		if = {
+			limit = {
+				NOT = { trait = patient }
+			}
+			random = {
+				chance = 30
+				add_trait = patient
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_cetic_pilgrim_lost
+		prestige = 15
+		if = {
+			limit = {
+				NOT = { trait = wroth }
+			}
+			random = {
+				chance = 30
+				add_trait = wroth
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.10
+	desc = EVTDESC_cetic_pilgrim_bandits
+	picture = GFX_evt_bandits
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_bandits
+		prestige = -15
+		piety = 30
+		scaled_wealth = -0.1
+		if = {
+			limit = {
+				NOT = { trait = craven }
+			}
+			random = {
+				chance = 25
+				add_trait = craven
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_cetic_pilgrim_bandits
+		piety = -20
+		prestige = 40
+		if = {
+			limit = {
+				NOT = { trait = brave }
+			}
+			random = {
+				chance = 25
+				add_trait = brave
+			}
+		}
+		if = {
+			limit = {
+				NOT = { trait = wounded }
+			}
+			random = {
+				chance = 50
+				add_trait = wounded
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.11
+	desc = EVTDESC_cetic_pilgrim_cards
+	picture = GFX_evt_path
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_cards
+		piety = -10
+		custom_tooltip = { text = TXT_EVTOPTA_cetic_pilgrim_cards }
+		random_list = {
+			33 = {
+				scaled_wealth = 0.15
+				prestige = 20
+			}
+			33 = {
+				scaled_wealth = 0.35
+				prestige = 45
+			}
+			33 = {
+				scaled_wealth = -0.2
+				prestige = -30
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_cetic_pilgrim_cards
+		piety = 25
+		if = {
+			limit = {
+				trait = greedy
+			}
+			random = {
+				chance = 30
+				remove_trait = greedy
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_cetic_pilgrim_cards
+		piety = 50
+		prestige = -25
+		if = {
+			limit = {
+				trait = greedy
+			}
+			random = {
+				chance = 60
+				remove_trait = greedy
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.12
+	desc = EVTDESC_cetic_pilgrim_cart
+	picture = GFX_evt_path
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_cart
+		piety = 20
+		if = {
+			limit = {
+				NOT = { trait = diligent }
+			}
+			random = {
+				chance = 30
+				add_trait = diligent
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_cetic_pilgrim_cart
+		prestige = 10
+		if = {
+			limit = {
+				NOT = { trait = slothful }
+			}
+			random = {
+				chance = 30
+				add_trait = slothful
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.13
+	desc = EVTDESC_nazarene_pilgrim_theology
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_philosophy
+		if = {
+			limit = {
+				NOT = { trait = erudite }
+			}
+			random = {
+				chance = 25
+				add_trait = erudite
+			}
+			piety = 25
+		}
+		else = {
+			piety = 50
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_cetic_pilgrim_philosophy
+		prestige = 10
+		if = {
+			limit = {
+				NOT = { trait = cynical }
+			}
+			random = {
+				chance = 30
+				add_trait = cynical
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.14
+	desc = EVTDESC_nazarene_pilgrim_encounter
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_pilgrim_encounter
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+			}
+			random = {
+				chance = 30
+				add_trait = zealous
+			}
+			piety = 30
+		}
+		else = {
+			piety = 60
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_nazarene_pilgrim_encounter
+		prestige = 25
+		if = {
+			limit = {
+				NOT = { trait = cynical }
+			}
+			random = {
+				chance = 30
+				add_trait = cynical
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.15
+	desc = EVTDESC_cetic_pilgrim_comet
+	picture = GFX_evt_comet
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_comet
+		trigger = {
+			OR = {
+				trait = humble
+				trait = kind
+			}
+		}
+		piety = -10
+		prestige = -25
+	}
+	
+	option = {
+		name = EVTOPTB_cetic_pilgrim_comet
+		trigger = {
+			OR = {
+				trait = proud
+				trait = ambitious
+			}
+		}
+		piety = 15
+		prestige = 25
+	}
+}
+
+character_event = {
+	id = nazarene.16
+	desc = EVTDESC_nazarene_pilgrim_mountain_lion
+	picture = GFX_evt_carriage #placeholder
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_mountain_lion
+		if = {
+			limit = {
+				trait = brave
+			}
+			remove_trait = brave
+		}
+		prestige = -15
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { trait = wounded }
+				}
+				random_list = {
+					50 = { character_event = { id = ceticpilgrim.18 } }
+					50 = { character_event = { id = ceticpilgrim.19 } }
+				}
+			}
+			else = {
+				character_event = { id = ceticpilgrim.19 }
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_cetic_pilgrim_mountain_lion
+		if = {
+			limit = {
+				trait = craven
+			}
+			remove_trait = craven
+		}
+		prestige = 25
+		hidden_tooltip = {
+			if = {
+				limit = {
+					NOT = { trait = wounded }
+				}
+				random_list = {
+					25 = { character_event = { id = ceticpilgrim.18 } }
+					75 = { character_event = { id = ceticpilgrim.19 } }
+				}
+			}
+			else = {
+				character_event = { id = ceticpilgrim.19 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.17
+	desc = EVTDESC_cetic_pilgrim_sunset
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_sunset
+		piety = 35
+		prestige = 35
+	}
+}
+
+character_event = {
+	id = nazarene.18
+	desc = EVTDESC_nazarene_pilgrim_wounded
+	picture = GFX_evt_carriage #placeholder
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_pilgrim_wounded
+		prestige = -35
+		add_trait = wounded
+	}
+}
+
+character_event = {
+	id = nazarene.19
+	desc = EVTDESC_cetic_pilgrim_win
+	picture = GFX_evt_carriage #placeholder
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_win
+		prestige = 50
+	}
+}
+
+narrative_event = {
+	id = nazarene.20
+	title = EVTTITLE_nazarene_pilgrim_redding #to be written later
+	desc = EVTDESC_nazarene_pilgrim_redding
+	picture = GFX_evt_monastery_monks
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_sacramento
+		hidden_tooltip = {
+			character_event = { id = nazarene.30 days = 30 } #end
+			random_list = {
+				33 = { character_event = { id = nazarene.25 days = 3 } } #glean wisdom from guru
+				33 = { character_event = { id = nazarene.26 days = 3 } } #visit shrine
+				33 = { character_event = { id = nazarene.27 days = 3 } } #develop sympathy with christianity
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = nazarene.21
+	title = EVTTITLE_nazarene_pilgrim_san_diego #to be written later
+	desc = EVTDESC_nazarene_pilgrim_san_diego
+	picture = GFX_evt_monastery_monks
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_pilgrim_san_diego
+		hidden_tooltip = {
+			character_event = { id = nazarene.30 days = 30 } #end
+			random_list = {
+				33 = { character_event = { id = nazarene.25 days = 3 } } #glean wisdom from guru
+				33 = { character_event = { id = nazarene.26 days = 3 } } #visit shrine
+				33 = { character_event = { id = nazarene.28 days = 3 } } #develop sympathy with christianity
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = nazarene.22
+	title = EVTTITLE_nazarene_pilgrim_los_angeles
+	desc = EVTDESC_nazarene_pilgrim_los_angeles
+	picture = GFX_evt_monastery_monks
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_pilgrim_los_angeles
+		hidden_tooltip = {
+			character_event = { id = nazarene.3 days = 30 } #end
+			random_list = {
+				33 = { character_event = { id = nazarene.25 days = 3 } } #glean wisdom from guru
+				33 = { character_event = { id = nazarene.26 days = 3 } } #visit shrine
+				33 = { character_event = { id = nazarene.29 days = 3 } } #develop sympathy with christianity
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.25
+	desc = EVTDESC_nazarene_pilgrim_preacher
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_pilgrim_preacher
+		piety = 50
+	}
+}
+
+character_event = {
+	id = nazarene.26
+	desc = EVTDESC_nazarene_pilgrim_church
+	picture = GFX_evt_meditating_in_temple
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_cetic_pilgrim_shrine
+		piety = 15
+		remove_random_sin_effect = yes
+	}
+}
+
+character_event = {
+	id = nazarene.27
+	desc = EVTDESC_nazarene_pilgrim_sympathy_redding
+	picture = GFX_evt_india_temple
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_nazarene_pilgrim_sympathy_pacific
+		trigger = {
+			NOT = { trait = sympathy_pacific }
+		}
+		add_trait = sympathy_pacific
+	}
+	
+	option = {
+		name = EVTOPT_nazarene_pilgrim_sympathy_no
+		trigger = {
+			NOT = { trait = sympathy_pacific }
+		}
+		piety = 50
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+			}
+			random = {
+				chance = 35
+				add_trait = zealous
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_nazarene_pilgrim_sympathy_already
+		trigger = {
+			trait = sympathy_pacific
+		}
+		piety = 50
+	}
+}
+
+character_event = {
+	id = nazarene.28
+	desc = EVTDESC_nazarene_pilgrim_sympathy_san_diego
+	picture = GFX_evt_india_temple
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_nazarene_pilgrim_sympathy_cos
+		trigger = {
+			NOT = { trait = sympathy_cult_of_saints }
+		}
+		add_trait = sympathy_cult_of_saints
+	}
+	
+	option = {
+		name = EVTOPT_cetic_pilgrim_sympathy_islam
+		trigger = {
+			NOT = { trait = sympathy_islam }
+		}
+		add_trait = sympathy_islam
+	}
+	
+	option = {
+		name = EVTOPT_cetic_pilgrim_sympathy_latter_day_saints
+		trigger = {
+			NOT = { trait = sympathy_latter_day_saints }
+		}
+		add_trait = sympathy_latter_day_saints
+	}
+	
+	option = {
+		name = EVTOPT_cetic_pilgrim_sympathy_no
+		trigger = {
+			NOR = {
+				trait = sympathy_cult_of_saints
+				trait = sympathy_islam
+				trait = sympathy_latter_day_saints
+			}
+		}
+		piety = 50
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+			}
+			random = {
+				chance = 35
+				add_trait = zealous
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_cetic_pilgrim_sympathy_already
+		trigger = {
+			OR = {
+				trait = sympathy_cult_of_saints
+				trait = sympathy_cult_of_saints
+				trait = sympathy_latter_day_saints
+			}
+		}
+		piety = 50
+	}
+}
+
+character_event = {
+	id = nazarene.29
+	desc = EVTDESC_nazarene_pilgrim_sympathy_la
+	picture = GFX_evt_india_temple
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_cetic_pilgrim_sympathy_pacific
+		trigger = {
+			NOT = { trait = sympathy_pacific }
+		}
+		add_trait = sympathy_pacific
+	}
+	
+	option = {
+		name = EVTOPT_cetic_pilgrim_sympathy_cos
+		trigger = {
+			NOT = { trait = sympathy_cult_of_saints }
+		}
+		add_trait = sympathy_cult_of_saints
+	}
+	
+	option = {
+		name = EVTOPT_cetic_pilgrim_sympathy_oldworld
+		trigger = {
+			has_global_flag = consumerist_revolt_ocurred
+			NOT = { trait = sympathy_oldworld }
+		}
+		add_trait = sympathy_oldworld
+	}
+	
+	option = {
+		name = EVTOPT_cetic_pilgrim_sympathy_no
+		trigger = {
+			NOR = {
+				trait = sympathy_pacific
+				trait = sympathy_cult_of_saints
+				trait = sympathy_oldworld
+			}
+		}
+		piety = 50
+		if = {
+			limit = {
+				NOT = { trait = zealous }
+			}
+			random = {
+				chance = 35
+				add_trait = zealous
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPT_cetic_pilgrim_sympathy_already
+		trigger = {
+			OR = {
+				trait = sympathy_pacific
+				trait = sympathy_cult_of_saints
+				trait = sympathy_oldworld
+			}
+		}
+		piety = 50
+	}
+}
+
+character_event = {
+	id = nazarene.30
+	desc = EVTDESC_nazarene_pilgrim_end
+	picture = GFX_evt_stone_church
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_pilgrim_end
+		piety = 50
+		remove_trait = on_pilgrimage
+		add_trait = pilgrim
+		clr_character_flag = do_not_disturb
+		#if = {
+		#	limit = {
+		#		has_quest = quest_monastic_order_pilgrimage_cetic
+		#	}
+		#	character_event = { id = MNM.40201 days = 1}
+		#}
+	}
+}
+
+character_event = {
+	id = nazarene.31
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		remove_trait = on_pilgrimage
+		add_trait = pilgrim
+		clr_character_flag = do_not_disturb
+	}
+}
+
+character_event = {
+	id = nazarene.32
+	desc = EVTDESC_nazarene_32
+	picture = GFX_evt_library #maybe replace with monk reading?
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Seraphim Rose
+		name = EVTOPTA_nazarene_32
+		set_character_flag = studying_seraphim_rose
+		custom_tooltip = { text = TXT_EVTOPTA_nazarene_32 }
+	}
+	
+	option = { #Gregory palamas
+		name = EVTOPTB_nazarene_32
+		set_character_flag = studying_gregory_palamas
+		custom_tooltip = { text = TXT_EVTOPTB_nazarene_32 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.35 } #Tombola Event
+	}
+}
+
+character_event = {
+	id = nazarene.33
+	desc = EVTDESC_nazarene_32
+	picture = GFX_evt_library #maybe replace with monk reading?
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #Thomas Aquinas
+		name = EVTOPTA_nazarene_33
+		set_character_flag = studying_thomas_aquinas
+		custom_tooltip = { text = TXT_EVTOPTA_nazarene_33 }
+	}
+	
+	option = { #GK Chesterson
+		name = EVTOPTB_nazarene_33
+		set_character_flag = studying_gk_chesterson
+		custom_tooltip = { text = TXT_EVTOPTB_nazarene_33 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.35 } #Tombola Event
+	}
+}
+
+character_event = {
+	id = nazarene.34
+	desc = EVTDESC_nazarene_32
+	picture = GFX_evt_library #maybe replace with monk reading?
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = { #MLK
+		name = EVTOPTA_nazarene_34
+		set_character_flag = studying_mlk
+		custom_tooltip = { text = TXT_EVTOPTA_nazarene_34 }
+	}
+	
+	option = { #John Wesley
+		name = EVTOPTB_nazarene_34
+		set_character_flag = studying_john_wesley
+		custom_tooltip = { text = TXT_EVTOPTB_nazarene_34 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.35 } #Tombola Event
+	}
+}
+
+character_event = {
+	id = nazarene.35
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			25 = { #You fail to understand the texts.
+				modifier = {
+					factor = 1.5
+					NOT = { learning = 2 }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { learning = 4 }
+				}
+				modifier = {
+					factor = 1.5
+					NOT = { learning = 6 }
+				}
+				modifier = {
+					factor = 1.25
+					NOT = { learning = 8 }
+				}
+				modifier = {
+					factor = 0.8
+					learning = 10
+				}
+				modifier = {
+					factor = 0.8
+					learning = 12
+				}
+				modifier = {
+					factor = 0.6
+					learning = 14
+				}
+				modifier = {
+					factor = 0.6
+					learning = 16
+				}
+				modifier = {
+					factor = 0.4
+					learning = 18
+				}
+				modifier = {
+					factor = 0.4
+					learning = 20
+				}
+				modifier = {
+					factor = 0.2
+					learning = 24
+				}
+				modifier = {
+					factor = 0.2
+					learning = 26
+				}
+				modifier = {
+					factor = 0
+					learning = 28
+				}
+				modifier = {  
+					factor = 2
+					trait = slow
+				}
+				modifier = {  
+					factor = 3
+					trait = imbecile
+				}
+				modifier = {  
+					factor = 3
+					trait = inbred
+				}
+				modifier = {  
+					factor = 2
+					trait = dull
+				}
+				character_event = { id = nazarene.36 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_seraphim_rose }
+				character_event = { id = nazarene.37 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_gregory_palamas }
+				character_event = { id = nazarene.38 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_thomas_aquinas }
+				character_event = { id = nazarene.39 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_gk_chesterson }
+				character_event = { id = nazarene.40 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_mlk }
+				character_event = { id = nazarene.41 days = 15 random = 3 }
+			}
+			75 = { #Success!
+				trigger = { has_character_flag = studying_john_wesley }
+				character_event = { id = nazarene.42 days = 15 random = 3 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = nazarene.36
+	desc = EVTDESC_nazarene_36
+	picture = GFX_evt_bad_news
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_36
+		piety = 30
+		prestige = -20
+		if = {
+			limit = {
+				trait = proud
+			}
+			remove_trait = proud
+		}
+		else_if = {
+			limit = {
+				NOT = { trait = humble }
+			}
+			add_trait = humble
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_nazarene_36
+		piety = -40
+		if = {
+			limit = {
+				trait = zealous
+			}
+			remove_trait = zealous
+		}
+		else_if = {
+			limit = {
+				NOT = { trait = cynical }
+			}
+			add_trait = cynical
+		}
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.37
+	desc = EVTDESC_nazarene_37
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_37
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_seraphim_rose duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.38
+	desc = EVTDESC_nazarene_38
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_38
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_gregory_palamas duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.39
+	desc = EVTDESC_nazarene_39
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_39
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_thomas_aquinas duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.40
+	desc = EVTDESC_nazarene_40
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_40
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_gk_chesterson duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.41
+	desc = EVTDESC_nazarene_41
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_41
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_mlk duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.42
+	desc = EVTDESC_nazarene_42
+	picture = GFX_evt_religious_exultation
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_nazarene_42
+		piety = 100
+		prestige = 50
+		add_character_modifier = { name = studied_john_wesley duration = -1 }
+	}
+	
+	after = {
+		character_event = { id = nazarene.43 } #cleanup
+	}
+}
+
+character_event = {
+	id = nazarene.35
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = studying_seraphim_rose
+		clr_character_flag = studying_gregory_palamas
+		clr_character_flag = studying_thomas_aquinas
+		clr_character_flag = studying_gk_chesterson
+		clr_character_flag = studying_mlk
+		clr_character_flag = studying_john_wesley
+		set_character_flag = studied_nazerene_holy_texts
+	}
+}

@@ -1479,3 +1479,106 @@ d_patria_grande={
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
 }
+
+d_nazarene = {
+	color={ 94 18 36 }
+	color2={ 220 220 220 }
+	
+	capital = 2059 # Redding
+	
+	title = "ABBOT"
+	title_female = "ABBESS"
+	foa = "ECUMENICAL_PATRIARCH_FOA"
+	
+	short_name = yes
+
+	# Always exists
+	landless = yes
+	
+	# Controls a religion
+	controls_religion = nazarene
+	
+	religion = nazarene
+	
+	culture = valleyan
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+	
+	# Regnal names
+	male_names = {
+		Abraham Alexander Alexis Andrew 
+		Basil
+		Constantine Cyril
+		Demetrius Diego
+		Francisco Fydor
+		Herman
+		Joachim Junipero John
+		Kirill
+		Methodius
+		Nicholas
+		Paul
+		Raphael
+		Seraphim Stephen Sergei
+		Theodore 
+		Yuri
+	}
+}
+
+d_true_cross = { #why the fuck is this a caliphate title do you have any idea how badly this fucks up the code holy shit
+	color={ 30 30 30 }
+	color2={ 0 0 0 }
+	
+	capital = 2059 # Redding
+	
+	title = "DEFENDER_OF_THE_FAITH"
+	title_female = "DEFENDER_OF_THE_FAITH"
+	foa = "POPE_FOA"
+	
+	short_name = yes
+	creation_requires_capital = no
+
+	# Always exists
+	landless = no
+	caliphate = yes
+	
+	# Controls a religion
+	controls_religion = true_cross
+	
+	religion = true_cross
+	allow = {
+		religion = true_cross
+		OR = {
+			wealth = 500
+		}
+	}
+	
+	culture = valleyan
+	
+	# Cannot be held as a secondary title
+	primary = yes
+	
+	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
+	
+	# Regnal names
+	male_names = {
+		Aba:200 Abdisho:500 Abris Addai:200 Aggai Ahadabui Ahai Akakios Ammanuel:300 Avrahim:300
+		Babai Babowai Barbashmin
+		Dadisho Dinkha:400
+		Elisha Eliya:1400 Enosh Ezekiel
+		Farbokht
+		Gewargis:300 Grigorios
+		Hnanisho
+		Isho Ishoyahb:500 Iskhaq Israel:200
+		Makkikha:200 Mana Maremmeh Mari
+		Narsai Nicholas
+		Papa Pethion Polous:200
+		Qayyoma
+		Raphael
+		Sabrisho:500 Sargis Shahdost Shahlufa Shila Shimun:2300 Slibazkha Surin
+		Tamuza Theodosios Timataos:200
+		Yahballaha:300 Yaqub:200 Yohannan:700 Yosep:700
+	}
+}
