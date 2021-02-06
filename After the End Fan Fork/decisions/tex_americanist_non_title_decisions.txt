@@ -1,0 +1,84 @@
+decisions = {
+
+	raise_the_banner_of_union_texas = {
+		is_high_prio = yes
+		potential = {
+			is_alternate_start = no
+			is_playable = yes
+			independent = yes
+			OR = {			
+				culture_group = west_anglo
+				culture = tejano
+				}
+			NOT = { 
+				has_global_flag = silver_star_established 
+				has_character_flag = failed_union_texas
+			} 
+			NOT = {
+			has_landed_title = e_lonestar
+			
+			}
+		}
+		allow = {
+			OR = {
+				has_landed_title = k_jacinto
+				has_landed_title = k_rio_grande
+				OR = {
+					has_landed_title = k_comancheria
+					AND = {
+						has_landed_title = k_panhandle
+						custom_tooltip = {
+							text = panhandle_liberated_tooltip_1
+							has_global_flag = panhandle_liberated
+						}
+					}
+				}
+			}
+		}
+	
+	effect ={
+		hidden_tooltip = { narrative_event = { id = TX.30001 } }
+	
+	
+	
+	}
+	
+	
+	
+	
+	
+	
+	}
+	
+
+	establish_silver_star = {
+		is_high_prio = yes
+		potential = {
+			is_alternate_start = no
+			is_playable = yes
+			independent = yes
+			religion = americanist
+			OR = {			
+				culture_group = west_anglo
+				culture = tejano
+				}
+			NOT = { has_global_flag = silver_star_established } 
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			scaled_wealth = 1
+		}
+		effect = {
+			set_global_flag = silver_star_established
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
