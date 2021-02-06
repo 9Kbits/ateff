@@ -4263,7 +4263,67 @@ e_new_south = {
 	}
 }
 
-### titular kingdoms (mostly moved to relevant empire file to prevent holes in the de jure map)
+### titular kingdoms
+	
+k_jersey = {
+	color={ 13 103 147 }
+	color2={ 220 220 0 }
+
+	capital = 23 # Trenton
+
+	deitsch = "Nei-Schaersi"
+	yiddish = "Niu Dzherzi"
+}
+
+k_vermont = {
+	color={ 51 136 70 }
+	color2={ 220 220 0 }
+
+	culture = yankee
+
+	capital = 43 # Montpelier
+}
+
+k_grand_trinidad = {
+	color= { 106 140 80 }
+	color2={ 220 220 0 }
+
+	culture = calypsonian
+	capital = 1878 # Trinidad
+}
+
+k_maine = {
+	color={ 222 232 249 }
+	color2={ 220 220 0 }
+	
+	culture = yankee
+	capital = 128 # Kennebec
+}
+
+k_wisconsin = {
+	color={ 209 247 121 }
+	color2={ 221 186 26 }
+
+	#culture = dellsman
+	capital = 1150 # Four Lakes
+	
+	allow = {
+		has_global_flag = wisconsin_formed
+	}
+}
+
+k_new_mexico = {
+	color={ 231 229 36 }
+	color2={ 137 253 243 }
+	
+	tejano = "Nuevo Méjico"
+	norteno = "Nuevo México"
+	neomexicano = "Nuevo México"
+	navajo = "Yootó Hahoodzo"
+
+	capital = 339 # Santa Fe
+}
+	
 k_s_mart = {
 	color={ 142 142 142 }
 	color2={ 255 255 255 }
@@ -4278,7 +4338,154 @@ k_s_mart = {
 	}
 }
 
+k_colima = {
+	color={ 45 141 236 }
+	color2={ 255 255 255 }
+		
+	capital = 1749 # c_colima
+}
+
 ### titular duchies
+
+d_erie = {
+	color={ 190 110 70 }
+	color2={ 220 220 0 }
+
+	capital = 91 # Erie
+
+}
+
+d_philadelphia = {
+	color={ 50 150 200 }
+	color2={ 220 220 0 }
+
+	deitsch = "Filadelfi"
+	yiddish = "Filadelfyi"
+	
+	capital = 27 # Philadelphia
+}
+
+
+d_watauga = {
+	color={ 255 209 187 }
+	color2={ 220 220 0 }
+
+	capital = 145 # Wataugua
+	culture = melungeon
+}
+
+
+
+d_chesapeake = {
+	color = { 52 52 250 }
+	capital = 74 # Hampton Roads
+	allow = { is_republic = yes }
+}
+
+d_longhorns = {
+	color = { 203 87 39 }
+	
+	capital = 1235 # Travis
+
+	short_name = yes
+	allow = { always = no }
+	
+	culture = texan
+}
+
+d_aggies = {
+	color = { 80 0 0 }
+
+	capital = 1255 # Brazos
+
+	allow = { always = no }
+
+	culture = texan
+}
+
+d_texoma = {
+	color = { 41 75 164 }
+	color2= { 255 255 255 }
+
+	culture = texan
+
+	capital = 302 # Wichita Falls
+
+	allow = {
+		AND = {
+			301 = { # Grayson
+				owner = {
+					OR = {
+						is_liege_or_above = ROOT
+						character = ROOT
+					}
+				}
+			}
+			302 = { # Wichita Falls
+				owner = {
+					OR = {
+						is_liege_or_above = ROOT
+						character = ROOT
+					}
+				}
+			}
+			303 = { # Childress
+				owner = {
+					OR = {
+						is_liege_or_above = ROOT
+						character = ROOT
+					}
+				}
+			}
+		}
+	}
+
+	creation_requires_capital = no	
+
+}
+
+d_siouxland = {
+	color = { 102 187 193 }
+	color2= { 255 255 255 }
+
+	culture = sioux
+
+	capital = 375 # Minnehaha
+
+	allow = {
+		OR = {
+			culture = sioux
+			AND = {
+				has_landed_title = c_minnehaha
+				has_landed_title = c_floyd
+				has_landed_title = c_rock
+			}
+		}
+	}
+}
+
+d_rhode_island = {
+	color={	216	239	227 }
+	color2={ 50 24 214 }
+
+	culture = yankee
+	capital = 58 # Providence
+}
+
+d_channel_islands = {
+	color={ 189 187 190 }
+	color2={ 255 255 255 }
+				
+	capital = 2023
+}
+
+d_nantucket = {
+	color={ 31 126 162 }
+	color2={ 255 255 255 }
+				
+	capital = 559 # Nantucket
+}
+
 k_northern_protectorate = {
 	color={ 112 219 112 }
 	color2={ 255 255 255 }
