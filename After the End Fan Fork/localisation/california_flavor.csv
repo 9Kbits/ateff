@@ -73,6 +73,23 @@ bureaucratic_building;Construct a Bureaucratic Structure;;;;;;;;;;;;;x
 bureaucratic_building_desc;In order to properly function, a bureaucracy requires things such as local offices and a road system. Currently, our realm lacks both, and as a bureaucratic ruler, it's my duty to foster a well-running bureaucracy.;;;;;;;;;;;;;x
 is_not_currently_building_TT;Is not currently building anything.;;;;;;;;;;;;;x
 
+appoint_governator;Syncreticize Cetic Philosophy;;;;;;;;;;;;;x
+appoint_governator_desc;[From.GetTitledFirstName] and I do not always see eye to eye in matters of personal philosophy, yet I cannot deny the merit of their guru's wisdom, and could do well in adopting certain aspects of their belief into my own day to day life.;;;;;;;;;;;;;x
+
+resume_northern_campaign;Resume the Campaign to Pacify the North;;;;;;;;;;;;;x
+resume_northern_campaign_desc;At the hands of our forebears, imperial authority was crushed as a result of the attempts to pacify the savage north. With imperial authority restored, the question remains: Can we succeed where our predecessors failed?;;;;;;;;;;;;;x
+
+start_great_sea_wall;Begin Constructing the Wall;;;;;;;;;;;;;x
+start_great_sea_wall_desc;The matter of raiders who savage the coasts of California weighs heavily on your mind. The Wall would be a simple, yet costly solution...;;;;;;;;;;;;;x
+
+cetic_syncretize;Syncretize Philosophy
+cetic_syncretize_desc;The wisdom of [From.GetTitledFirstName]'s gurus are not so opposed to that of my own. Perhaps it would be beneficial to open my mind and incorporate this wisdom into my daily life.;;;;;;;;;;;;;x
+
+greatwall_donation;Donate 200¤ to the Wall Project;;;;;;;;;;;;;x
+greatwall_donation_desc;The [liege.GetCeticEmperorEmpressCap] has been hard at work raising funds for the construction of some magnificent sea wall. Perhaps it would be advantageous to get into their good graces by donating 200¤?;;;;;;;;;;;;;x
+
+greatwall_selfdonation;Self-Fund the Wall Project;;;;;;;;;;;;;x
+greatwall_selfdonation;To accelerate construction of the wall, perhaps it would be wisest to expand the project's funding with wealth from my own treasury.;;;;;;;;;;;;;x
 #Events
 EVTDESCIE1;I have just received an application to take the Imperial Exam from [From.GetTitledFirstName]. As the Evaluator of Merit for [From.PrimaryTitle.GetName], it is my duty to either accept or deny each application.;;;;;;;;;;;;;x
 EVTOPTAIE1;This application is fine enough.;;;;;;;;;;;;;x
@@ -171,6 +188,26 @@ EVTOPTAIE22;Hopefully the next ruler can actually pass the exams.;;;;;;;;;;;;;x
 
 EVTDESCIE23;Now that I am no longer a bureaucrat, it makes little sense for me to be chained to the Imperial Exam system.;;;;;;;;;;;;;x
 EVTOPTAIE23;No loss to me!;;;;;;;;;;;;;x
+
+EVTDESCIE25;You arrive at the massive examination center, where [Root.Government.GetName] lords from all walks of life come to receive their certification. You enter, are greeted by the Evaluator of Merit, and are given a test packet and a place to sit.\nHowever, as you pore over page after page of the examination, you come to a harrowing conclusion - you don't know a single answer. How is this possible?! You studied so hard! The pressure builds up in your head as you come to understand just how pathetically stupid you truly are, until you can no longer take it, and begin to scream and cry.;;;;;;;;;;;;;x
+EVTOPTAIE25;I'm such a failure. I'm such a failure. I'm such a failure...;;;;;;;;;;;;;x
+
+EVTDESCIE26;You arrive at the massive examination center, where [Root.Government.GetName] lords from all walks of life come to receive their certification. You enter, and are shocked by how crowded the corridors are with people, all of them seemingly walking in the opposition direction that you are...\nYou push your way through the mass of people, and approach the Evaluator of Merit, who sits behind a massive stack of papers. The Evaluator gives you a strange look as you stand expectantly, waiting for your test. Finally, they speak up - "I'm sorry, [Root.GetName], but the examination has already ended. You are late. You failed.";;;;;;;;;;;;;x
+EVTOPTAIE26;Late... no... this isn't possible!;;;;;;;;;;;;;x
+
+EVTDESCIE27;You arrive at the massive examination center, where [Root.Government.GetName] lords from all walks of life come to receive their certification. You enter, are greeted by the Evaluator of Merit, and are given a test packet and a place to sit.\nAs you pore over page after page of the examination, you come to a harrowing conclusion - you don't know a single answer. How is this possible?! You quickly check the examination's date, and your mind immediately goes numb as you realize that all this time you had been studying for last year's examination... All those hours of studying were now wasted.;;;;;;;;;;;;;x
+EVTOPTAIE27;L-last year's examination... hahahahAHAHAHA;;;;;;;;;;;;;x
+
+EVTDESCIE28;You arrive at the massive examination center, where [Root.Government.GetName] lords from all walks of life come to receive their certification. You enter, pick up a test packet, and find a place to sit.\nAs you begin going through the exam at a steady pace, you can feel the heavy stare of the Evaluator of Merit, along with several of your fellow test-takers. At first you were determined not to let it bother you, but it soon becomes too much and you snap. As you look around in anger, however, you quickly realize why they are staring at you... you are completely nude! The room erupts in laughter as you feebly attempt to cover yourself...;;;;;;;;;;;;;x
+EVTOPTAIE28;Naked...? How is this possible... my life, it's ruined!;;;;;;;;;;;;;x
+
+EVTDESCIE29;You shoot upright, cold sweat caking your body. You are in a delirium, and do not know where you are. As you struggle in the dark, however, you quickly come to realize that you're just in bed. Your bed? Oh... so it had all been a dream. Of course, you passed the imperial exam long ago! There is no cause to worry about it now.;;;;;;;;;;;;;x
+EVTOPTAIE29;Even so, what a nightmare...;;;;;;;;;;;;;x
+
+TT_fake_exam_01;Lose §Rall§! prestige.\n§Y[Root.GetTitledNameWithNick]§! gains the trait '§YFailed Exam§!'\n§Y[Root.GetTitledNameWithNick]§! gains the trait '§YHopeless Failure§!';;;;;;;;;;;;;x
+TT_fake_exam_02;Lose §Rall§! prestige.\n§Y[Root.GetTitledNameWithNick]§! gains the trait '§YFailed Exam§!'\n§Y[Root.GetTitledNameWithNick]§! gains the trait '§YTardy Loser§!';;;;;;;;;;;;;x
+TT_fake_exam_03;Lose §Rall§! prestige.\n§Y[Root.GetTitledNameWithNick]§! gains the trait '§YFailed Exam§!'\n§Y[Root.GetTitledNameWithNick]§! gains the trait '§YAlmost Passed§!';;;;;;;;;;;;;x
+TT_fake_exam_04;Lose §Rall§! prestige.\n§Y[Root.GetTitledNameWithNick]§! gains the trait '§YFailed Exam§!'\n§Y[Root.GetTitledNameWithNick]§! gains the trait '§YCreepy Pervert§!';;;;;;;;;;;;;x
 
 EVTTITLECETIC105;A New [Root.GetCeticEmperorEmpressCap];;;;;;;;;;;;;x
 EVTDESCCETIC105;"The [Root.GetCeticEmperorEmpressCap] of California is dead! May the [Root.GetCeticEmperorEmpressCap] reign for ten thousand years!"\n\nIn an elaborate and extravagent ceremony, the new [Root.GetCeticEmperorEmpressCap] of California has been enthroned as the [Root.GetEraAdjective] [Root.GetEraNoun] [Root.GetCeticEmperorEmpressCap].;;;;;;;;;;;;;x
@@ -442,8 +479,11 @@ impauth_increase_7_TT;§YImperial Authority§! will §Bincrease§! by 7%;;;;;;;;;;;;
 impauth_increase_10_TT;§YImperial Authority§! will §Bincrease§! by 10%;;;;;;;;;;;;;x
 impauth_increase_20_TT;§YImperial Authority§! will §Bincrease§! by 20%;;;;;;;;;;;;;x
 
+impauth_decrease_1_TT;§YImperial Authority§! will §Rdecrease§! by 1%;;;;;;;;;;;;;x
+impauth_decrease_2_TT;§YImperial Authority§! will §Rdecrease§! by 2%;;;;;;;;;;;;;x
 impauth_decrease_3_TT;§YImperial Authority§! will §Rdecrease§! by 3%;;;;;;;;;;;;;x
 impauth_decrease_5_TT;§YImperial Authority§! will §Rdecrease§! by 5%;;;;;;;;;;;;;x
+impauth_decrease_7_TT;§YImperial Authority§! will §Rdecrease§! by 7%;;;;;;;;;;;;;x
 impauth_decrease_10_TT;§YImperial Authority§! will §Rdecrease§! by 10%;;;;;;;;;;;;;x
 
 bureau_increase_1_TT;§YRealm Bureaucratic Efficiency§! will §Bincrease§! by 1%;;;;;;;;;;;;;x
@@ -487,10 +527,152 @@ String_Celestial_Empress;Celestial Empress;;;;;;;;;;;;;x
 String_Emperor;Emperor;;;;;;;;;;;;;x
 String_Empress;Empress;;;;;;;;;;;;;x
 
-#Modifiers
-imperial_authority;Imperial Authority ([Root.global_imp_auth.GetValue]%);;;;;;;;;;;;;x
-imperial_authority_desc;The authority of the [Root.GetCeticEmperorEmpress] is determined by how much control over bureaucratic California they has. As it ebbs and flows, so does the power of the [Root.GetCeticEmperorEmpress].\nImperial authority can be §Bincreased§! by:\n§Y*§! Having high stewardship or learning\n§Y*§! Uniting California\n§Y*§! Influential imperial writings\n§Y*§! Direct action by the [Root.GetCeticEmperorEmpress]\nImperial authority can be §Rdecreased§! by:\n§Y*§! Having low stewardship or learning\n§Y*§! Revolts\n§Y*§! Succession\n§Y*§! Long regencies\n§Y*§! Bad imperial writings\n§Y*§! Direct action by the Governatus;;;;;;;;;;;;;x
+TITLE_northern_campaign;The Grand Coalition Resumes!;;;;;;;;;;;;;x
+EVTDESC_northern_campaign;In the twentieth year of the Brave and Sixth Filial Emperor, a momentous declaration was made – the Gaian heretics in the north had too long tested imperial benevolence, and thus the grand coalition to pacify the North was declared. This decision would prove disastrous for the Celestial Empire of California, resulting in the eventual death of Emperor Hetch Yudkow the First and a great period of ensuing civil unrest that shattered imperial authority. \nYet, this dark age of imperial history is now but a memory! Imperial authority is restored, and none live now who recall those terrible days. The Celestial Empire has made known a new declaration: the time has come for a reckoning upon the unenlightened barbarians that have so long defied imperial authority – the Campaign to Pacify the North has been resumed!;;;;;;;;;;;;;x
 
+northern_campaign_emperor;These savages shall rage against the heavens no longer!;;;;;;;;;;;;;x
+northern_campaign_elsewhere;Better them than us...;;;;;;;;;;;;;x
+northern_campaign_targets;Foreboding news. War is on the horizon.;;;;;;;;;;;;;x
+northern_campaign_cetics;A thousand years of glory to the Empire!;;;;;;;;;;;;;x
+
+greatwall_started_TT;Begin planning of the Wall. This promises to be a lengthy and costly endeavor.;;;;;;;;;;;;;x
+greatwall_phase2_TT;Begin construction of the Wall. This will be a three-stage process, and the last brick shall be laid in San Francisco §Y90 years§! from now, heavens willing.;;;;;;;;;;;;;x
+
+greatwall_increase_3_TT;Progress on the Wall will §Bincrease§! by 3%;;;;;;;;;;;;;x
+greatwall_increase_6_TT;Progress on the Wall will §Bincrease§! by 6%;;;;;;;;;;;;;x
+greatwall_increase_15_TT;Progress on the Wall will §Bincrease§! by 15%;;;;;;;;;;;;;x
+greatwall_increase_30_TT;Progress on the Wall will §Bincrease§! by 30%;;;;;;;;;;;;;x
+greatwall_decrease_3_TT;Progress on the Wall will §Rdecrease§! by 3%;;;;;;;;;;;;;x
+greatwall_decrease_6_TT;Progress on the Wall will §Rdecrease§! by 6%;;;;;;;;;;;;;x
+greatwall_decrease_15_TT;Progress on the Wall will §Rdecrease§! by 15%;;;;;;;;;;;;;x
+greatwall_decrease_30_TT;Progress on the Wall will §Rdecrease§! by 30%;;;;;;;;;;;;;x
+greatwall_nochange_TT;Progress on the Wall will be unaffected.;;;;;;;;;;;;;x
+
+greatwall_casusbelli_TT;You will gain a special one-time-use CB, to be used on raiding nations to collect reparations for the wall.;;;;;;;;;;;;;x
+greatwall_greattaxation_TT;All provinces throughout the heartland will suffer the effects of overtaxation for §Y10 years§!.;;;;;;;;;;;;;x
+
+greatwall_localmaterials_TT;Peasants throughout §Y[k_francisco.GetName]§! will suffer the effects of §YRepurposed Homes§!, increasing revolt risk for 20 years.;;;;;;;;;;;;;x
+greatwall_overworkquarries_TT;The provinces of §Y[c_joshua_tree.GetName]§!, §Y[c_riverside.GetName]§!, §Y[c_yuba.GetName]§!, and §Y[c_tahoe.GetName]§! will suffer the effects of §YLocal Quarries Drained§!, decreasing output for 30 years.;;;;;;;;;;;;;x
+greatwall_newquarry_TT;A new imperial quarry will be built within the provinces of §Y[d_east_bay.GetName]§!, improving local productivity and prosperity.;;;;;;;;;;;;;x
+greatwall_museum_TT;Museums preserving the §YAncient Walls§! will be erected in the provinces of §Y[c_san_francisco.GetName]§!, §Y[c_bragg.GetName]§!, §Y[c_napa.GetName]§!, and §Y[c_obispo.GetName]§!, increasing local prosperity.;;;;;;;;;;;;;x
+
+TITLE_greatwall_start;A Curtain of Stone;;;;;;;;;;;;;x
+EVTDESC_greatwall_start;Though the empire now stands united, raiders and pirates continue to savage the natural beauty of the Californian coasts. These insolent fools who despoil your heavenly lands pay no respect to the righteousness of the empire, and while they deserve nothing more than to be crushed by the imperial army, a more permanent solution is required. After countless weeks of tireless study, you believe you have found this solution. Ancient legends speak of a sprawling empire not unlike our own that dominated the old world. Most singular of this legendary empire's wonders was a magnificent and impenetrable wall that divided the lands, keeping the empire's enemies out in the cold. This wall, the 'Iron Curtain', was said to have been visible from the heavens themselves, and to your mind seemed expressly designed to ward off raiders like those that plague your coasts today. Perhaps the time has come to construct a great wall of our own!;;;;;;;;;;;;;x
+
+greatwall_begin;All the walls of the world, old and new, shall pale in comparison to ours!;;;;;;;;;;;;;x
+greatwall_dontbegin;A curious legend, but a legend nonetheless. We have no need for walls.;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_startvassal;The [From.GetCeticEmperorEmpressCap] has announced in a bold declaration to the realm the construction of a grand sea wall, designed to repel the raider and foil the pirate. This wall promises to defend the natural bounty of the Californian coasts, thereby increasing the wealth and security of the realm. It shall be a costly endeavor, however, that will surely tax both us and the whole of the empire...;;;;;;;;;;;;;x
+greatwall_beginvassal;Only time shall tell whether this was wisdom or folly.;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_phase1;The proclamation declaring the construction of a great wall has by now reached all corners of the empire yet, despite the investments you initially made, no progress has occurred. The project promises to be a pricely endeavor, and your scribes estimate a cost far beyond your initial investment. A simple question remains: who will pay for this wall?;;;;;;;;;;;;;x
+greatwall_phase1_peasants;The wall is for the peasants, so let them pay for it!;;;;;;;;;;;;;x
+greatwall_phase1_nobles;The nobles have ample treasuries: let them shoulder the cost!;;;;;;;;;;;;;x
+greatwall_phase1_enemies;Who better to pay than the raiders the wall shall defend against?!;;;;;;;;;;;;;x
+greatwall_phase1_me;What kind of [Root.GetCeticEmperorEmpressCap] would I be if I couldn't pay for my own wall?;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_phase1nobles;The [From.GetCeticEmperorEmpressCap] has declared a solution to the matter of procuring funding for the wall construction: the nobles of the realm shall pay a mandatory donation to the project! The proclamation is not very well received, but it seems that there is no option to decline...;;;;;;;;;;;;;x
+greatwall_phase1nobles_ok;This is an outrage!;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_reparations;The campaign to procure reparations from the rapacious savages who have for so long despoiled our beautiful lands has been nothing short of a wild success; the enemy has crumbled beneath the might of our imperial forces, and in just punishment for their raiding all of their lands have been looted in a like manner. Looking at the now overflowing coffers designated for the wall project, you do feel the slightest hint of temptation...;;;;;;;;;;;;;x
+greatwall_honestreparations;This treasure has been procured for the wall, and to the wall it goes!;;;;;;;;;;;;;x
+greatwall_stealreparations;To the victor go the spoils, and am I not deserving of some spoils?;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_donation;Your loyal subject, [From.GetFullName], has sent you a courier with an offer. [From.GetSheHeCap] is willing to make a significant donation to the treasury in order to fund the construction of the Wall, but in return you must promise to return the favor in the future.;;;;;;;;;;;;;x
+EVTDESC_greatwall_donation_accepted;The [From.Root.GetCeticEmperorEmpressCap] has decided to accept your donation offer! Now that we have leverage on [From.GetHerHim], we must make sure to use it wisely.;;;;;;;;;;;;;x
+EVTDESC_greatwall_donation_rejected;The [From.Root.GetCeticEmperorEmpressCap] has refused your generous donation offer. [From.GetSheHeCap] claims that you are just trying to gain leverage on the imperial court. Outrageous!;;;;;;;;;;;;;x
+greatwall_donationstolen;Excellent! Half for the wall, half for me.;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_selfdonation;Despite your initial investment and the contributions of your entire realm, progress on the Wall is not progressing as quickly as you would like and the date of its completion seems to be forever away. Perhaps progress would quicken if you would but pour a little more money into the project?;;;;;;;;;;;;;x
+greatwall_bigselfdonation;I shall make a massive donation to the project!;;;;;;;;;;;;;x
+greatwall_normalselfdonation;I shall make a modest donation to the project.;;;;;;;;;;;;;x
+greatwall_noselfdonation;These things take time. I won't make any donation.;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_architect;With the realm abuzz with news of the commencement of the Wall project, and with the matter of funding secured, the time has come to appoint a chief architect responsible for the Wall's construction. The title will no doubt be a prestigious one, and one granted great authority over the realm's resources. As such, only a trusted member of the imperial court could hold the title...;;;;;;;;;;;;;x
+greatwall_architectmyself;There is no one more suitable than myself, of course!;;;;;;;;;;;;;x
+greatwall_architectsteward;Naturally, I appoint my [Root.GetMyTreasurerName]!;;;;;;;;;;;;;x
+greatwall_architectfamily;The bond of blood is all I'd ever trust with such a role.;;;;;;;;;;;;;x
+greatwall_architectfriend;Clearly, only someone dear to me deserves this role.;;;;;;;;;;;;;x
+greatwall_architectgovernatus;I have no choice but to leave everything to my Governatus.;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_architectplans;The [From.GetCeticEmperorEmpressCap], in all their wisdom, has seen fit to appoint you the Grand-Architect of the Wall. The title carries with it a great deal of prestige and authority over the realm's resources, but also a certain responsibility to construct the Wall on schedule. Now, it is time to actually create that schedule...;;;;;;;;;;;;;x
+greatwall_architectplans_excellent;I will put all of my effort into creating a perfect plan!;;;;;;;;;;;;;x
+greatwall_architectplans_terrible;I will put all of my effort into creating a perfect plan!;;;;;;;;;;;;;x
+greatwall_architectplans_steals;A good plan is the perfect cover for embezzlement.;;;;;;;;;;;;;x
+greatwall_architectplans_wastes;A plan? That can come later! What to do with all this money...;;;;;;;;;;;;;x
+greatwall_architectplans_decent;I will do the best I can with the resources I have.;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_greatplan;The time has finally come to review the plan for the Wall project. The project's council gathers around as your [Root.GetMyChancellorName] reads it aloud, and you can hear their murmurs of appreciation as your [Root.GetMyChancellorName] details the Grand-Architect's plan, which is in a word brilliant. It is so efficient that it even proposes reducing the budget!;;;;;;;;;;;;;x
+EVTDESC_greatwall_okplan;The time has finally come to review the plan for the Wall project. The project's council gathers around as your [Root.GetMyChancellorName] reads it aloud, and you can hear no complaint as your [Root.GetMyChancellorName] details the Grand-Architect's thoroughly acceptable plan. They have managed to keep everything under the budget initially set. The court agrees to enact the plan.;;;;;;;;;;;;;x
+EVTDESC_greatwall_badplan;The time has finally come to review the plan for the Wall project. The project's council gathers around as your [Root.GetMyChancellorName] details your Grand-Architect's obviously half-finished plan. It is clear that the Grand-Architect did not put much thought into this plan. The project is still salvageable, but you can tell the court is questioning your appointment of the Grand-Architect.;;;;;;;;;;;;;x
+EVTDESC_greatwall_awfulplan;The time has finally come to review the plan for the Wall project. The project's council gathers around as your [Root.GetMyChancellorName] struggles to detail the Grand-Architect's plan. A passerby would be justified in thinking it was some work of fiction, as the plan relies more on fantasy than any realistic estimates! Many courtiers are now openly questioning your appointment of the Grand-Architect.;;;;;;;;;;;;;x
+
+EVTOPTA_greatwall_greatplan;Brilliant! I knew I could count on [event_target:grand_architect.GetTitledFirstName]!;;;;;;;;;;;;;x
+EVTOPTB_greatwall_okplan;This is an acceptable outcome.;;;;;;;;;;;;;x
+EVTOPTC_greatwall_badplan;This can still be salvaged...;;;;;;;;;;;;;x
+EVTOPTD_greatwall_awfulplan;This is an unbelievable setback!;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_quarry;Preparing the resources for constructing the Wall will be an ordeal in and of itself, and this fact clearly manifests itself as you and your foremen review the stone available for the project. One thing is clear: the existing quarries simply are not outputting enough stone! Short of commanding the workers to scrounge up local building materials, or discovering some ancient long-lost quarry of myth, this project will never be complete unless the existing quarries double their output!;;;;;;;;;;;;;x
+greatwall_quarry_localmaterials;Loose boulders, mud bricks, peasant houses! Any local materials will do!;;;;;;;;;;;;;x
+greatwall_quarry_overworkquarries;Every man, woman, and child will work in the quarries if need be!;;;;;;;;;;;;;x
+greatwall_quarry_newquarry;I am the [Root.GetCeticEmperorEmpressCap]! Any quarry I dig will become mythical in time!;;;;;;;;;;;;;x
+
+EVTNAME_greatwall_warlords;Ancient Walls;;;;;;;;;;;;;x
+EVTDESC_greatwall_warlords;Once, before Elton Yudkow I the Lawgiver united the Empire, all of California was divided by bickering warlords who knew no greater allegiance than their own avarice. The richest of these warlord states, who dwelt along the bountiful Gran Franciscan coasts, built large stone walls to mark their borders and protect them from other warlords. Our surveyors, analyzing the land set aside for the Wall project, have determined that several of these walls are still standing, hidden amongst brush and dilapidated from disuse. They could be quickly repaired and connected to the greater Wall, thereby reducing the project's total costs.;;;;;;;;;;;;;x
+greatwall_warlords_repurposed;This windfall is sorely needed. Make the preparations at once.;;;;;;;;;;;;;x
+greatwall_warlords_museum;These walls are relics of the past, and should be preserved as such!;;;;;;;;;;;;;x
+greatwall_warlords_destroyed;These 'walls' are the crude constructs of savages. Destroy them entirely.;;;;;;;;;;;;;x
+
+TITLE_greatwall_phase2;A Greater Wall;;;;;;;;;;;;;x
+EVTDESC_greatwall_phase2;At long last, the arduous days of planning for the Wall's construction are now at an end! Let it forever be known that it was under your reign that the first brick of the wall was laid. Should the heavens be fortunate, it will be your reign that sees the last brick laid as well, though this seems unlikely as the architects estimate the wall will only see fruition in at least ninety years time. You can only hope that your successors shall enjoy the fruit of your hard labors.;;;;;;;;;;;;;x
+EVTOPTA_greatwall_phase2;Let this brick be immortalized.;;;;;;;;;;;;;x
+
+EVTDESC_greatwall_navalbarriers;After thirty years of labor, your architects report that the first stage of the Wall's construction has been completed. The workers are readily paving their way towards [c_san_francisco] itself at a steady pace, and naval barriers have been constructed along the entire coast, along with ramparts and watchtowers at the very fringes.;;;;;;;;;;;;;x
+EVTOPT_greatwall_navalbarriers;Excellent news, but there is still a long way to go.;;;;;;;;;;;;;
+
+EVTDESC_greatwall_watchtowers;Sixty years of labor have passed, and your architects - many of whom were born after the Wall began construction - report that the second stage of construction has been completed. Watchtowers and ramparts now stand high along the entirety of the southern Californian coast, and the bay of [c_san_francisco.GetName] itself is nearly in sight of the weary workers.;;;;;;;;;;;;;x
+EVTOPT_greatwall_watchtowers;Excellent news. Construction is almost at an end!;;;;;;;;;;;;;
+
+TITLE_greatwall_finished;The Californian Wall;;;;;;;;;;;;;
+EVTDESC_greatwall_finished_emperor;Over ninety years have passed since planning of the Long Sea Wall began under the rule of [first_greatwall_emperor.GetBestName], and few live now who remember the day construction began. Yet, history shall record forever the momentous occasion the final brick of the Wall was laid in the heart of [c_san_francisco.GetName], completing the greatest feat of engineering ever witnessed in this post-Event world. At its highest point measuring forty-five feet tall and protecting over eight hundred miles of Californian coast, the Long Sea Wall shall surely serve as California's mightiest shield for generations to come, and you, [Root.GetBestName], under whose reign it was completed, shall be remembered forevermore as California's protector.;;;;;;;;;;;;;x
+EVTDESC_greatwall_finished;All of California celebrates as a project over ninety years in the making reaches fruition - from the hills of [c_humboldt.GetName] to the beaches of [c_santa_barbara.GetName] now stretches a mighty rampart: the Long Sea Wall of California, which serves to protect the Gran Franciscan coasts and the Valleyan heartland from raider and naval invader. At its highest point the wall measures forty-five feet tall and it protects over eight hundred miles of Californian coast, causing many to consider it the largest man-made structure ever built. Though construction of the wall began over ninety years ago under the reign of [first_greatwall_emperor.GetBestName], it will surely be [last_greatwall_emperor.GetBestName] who is immortalized for guiding its construction to the end!;;;;;;;;;;;;;x
+EVTOPTA_greatwall_finished;Let my legacy be as immortal as this wall!;;;;;;;;;;;;;
+EVTOPTB_greatwall_finished;An impressive feat, to be sure.;;;;;;;;;;;;;
+
+EVTDESC_warbike;The velocipede has long been a uniquely Californian machine, and a machine of high stature reserved for lords and their wheeler retainers. Yet, you do not currently possess a velocipede, and have not possessed one for some time. Throughout your court, rumors have long been circulating as to the reason why, and everytime you travel abroad on horse, the rumors only intensify.;;;;;;;;;;;;;x
+EVTOPT_warbike_yes;Send for a velocicraftsman at once!;;;;;;;;;;;;;
+EVTOPT_warbike_no;A horse travels just fine, thank you very much.;;;;;;;;;;;;;
+
+EVTDESC_warbike_frame;The precise design of a velocipede is a secret kept closely by their crafters, but anyone can tell that the key element is its frame. Most velocipede frames are constructed from wood such as redwood or bamboo. However, the best and most expensive velocipedes take after pre-Event designs, and are constructed from the ancient metals that were left behind.;;;;;;;;;;;;;x
+EVTOPT_warbike_aluminiumframe;Only the bitter-steel of the old world is suitable!;;;;;;;;;;;;;
+EVTOPT_warbike_redwoodframe;Redwoods grow but for one purpose!;;;;;;;;;;;;;
+EVTOPT_warbike_bambooframe;A sturdy bamboo frame is suitable enough.;;;;;;;;;;;;;
+EVTOPT_warbike_ironframe;Wood is too flimsy! Surely iron is best!;;;;;;;;;;;;;
+
+EVTDESC_warbike_wheels;Second only to the frame is a velocipede's wheels. Before the Event, velocipede wheels were surfaced with rubber, and even today many lords of California choose to buy rubber from over the seas for just this purpose. Most velocipedes, however, instead possess wheels surfaced with leather, providing for a cheaper but less reliable machine.;;;;;;;;;;;;;x
+EVTOPT_warbike_rubberwheels;The rubber farms of exotic lands exist only to fuel California's demand!;;;;;;;;;;;;;
+EVTOPT_warbike_leatherwheels;It would be imprudent to purchase rubber when leather does about as well.;;;;;;;;;;;;;
+EVTOPT_warbike_nowheels;A wagon needs no tire, so why should a velocipede?;;;;;;;;;;;;;
+
+EVTDESC_warbike_chain;Last, but not least, the function of a velocipede is reliant on the chain that connects the drive-wheel to the pedals. The secrecy regarding the construction of velocipede chains is the key to the continued guild monopoly over velocipede production, and many craftsmen have tried and failed to replicate their lightweight yet durable design.;;;;;;;;;;;;;x
+EVTOPT_warbike_customchain;The velocicraftsmen are wise, and I would be foolish to defy them.;;;;;;;;;;;;;
+EVTOPT_warbike_badchain;What nonsense! A chain is a simple task for a local blacksmith!;;;;;;;;;;;;;
+
+EVTDESC_warbike_finished;The day has finally arrived. After many long days of planning and a number of costly investments towards its construction, the craftsmen gather to present to you a prized artifact of Californian culture - your very own velocipede! Even the crudest velocipede would outshine a horse, and yours is no different. All that's left to do is name it.;;;;;;;;;;;;;x
+EVTOPT_warbike_redracer;'Red Racer', after its striking color.;;;;;;;;;;;;;
+EVTOPT_warbike_amelia;'Amelia Earhart', after the mythical explorer.;;;;;;;;;;;;;
+EVTOPT_warbike_rosebud;'Rosebud'... such nostalgia...;;;;;;;;;;;;;
+EVTOPT_warbike_washington;'Ol' Nelson', after the general's trusty steed.;;;;;;;;;;;;;
+EVTOPT_warbike_secretariat;'Secretariat', after the legendary speedster.;;;;;;;;;;;;;
+EVTOPT_warbike_mississippi;'Mississippi Pharoah', after those exotic eastern kings.;;;;;;;;;;;;;
+EVTOPT_warbike_glitterspoke;'Glitterspoke', for the way its wheels shine in the sun.;;;;;;;;;;;;;
+EVTOPT_warbike_harley;'Harley', of course!;;;;;;;;;;;;;
+EVTOPT_warbike_emperor;It is the finest in the empire, the 'Emperor's Finest'!;;;;;;;;;;;;;
+
+EVTOPT_warbike_more;Second Page.;;;;;;;;;;;;;
+EVTOPT_warbike_evenmore;Third Page.;;;;;;;;;;;;;
+EVTOPT_warbike_goback;First Page.;;;;;;;;;;;;;
+#Modifiers
 bureaucracy;Realm Bureaucratic Efficiency ([From.PrimaryTitle.bureau_number.GetValue]%) \ Average Bureaucratic Efficiency ([global_bureau_number.GetValue]%);;;;;;;;;;;;;x
 bureaucracy_desc;The bureaucracy of a realm is determined by how much bureaucratic norms are prevalent in said realm. As it changes, the norms of the realm change with it.\nRealm bureaucracy can be §Bincreased§! by:\n§Y*§! Having qualified lords\n§Y*§! Having a powerful or qualified council\n§Y*§! Bureaucratic reforms\n§Y*§! Direct action by the [Root.GetCeticEmperorEmpress] or Governatus\nRealm bureaucracy can be §Rdecreased§! by:\n§Y*§! Having unqualified lords\n§Y*§! Having a weak or unqualified council\n§Y*§! Succession\n§Y*§! Direct action by the [Root.GetCeticEmperorEmpress] or Governatus;;;;;;;;;;;;;x
 
@@ -517,6 +699,30 @@ bureau_roads_desc;This province is the center of a realm-wide road network, fost
 
 influenced_authority;Influenced Imperial Authority;;;;;;;;;;;;;x
 influenced_authority_desc;This character has acted to influence the authority of the [Root.GetCeticEmperorEmpressCap].;;;;;;;;;;;;;x
+
+peasant_homes_savaged;Peasant Homes Repurposed;;;;;;;;;;;;;x
+quarries_drained;Local Quarries Drained;;;;;;;;;;;;;x
+masons_outraged;Mason Guilds Outraged;;;;;;;;;;;;;x
+overworked_quarries;Overworked the Quarries;;;;;;;;;;;;;x
+black_mt_quarry;Black Mt. Quarry;;;;;;;;;;;;;x
+greatwall_taxation;Severe Overtaxation;;;;;;;;;;;;;x
+demesne_greatwall_taxation;Severe Overtaxation;;;;;;;;;;;;;x
+greatwall_noblestaxed;Outraged Nobility;;;;;;;;;;;;;x
+greatwall_reparations;Crippled by Reparations;;;;;;;;;;;;;x
+greatwall_selflessliege;Selfless Liege;;;;;;;;;;;;;x
+selffunded_greatwall;Self-funded the Wall;;;;;;;;;;;;;x
+greatwall_architect;Grand-Architect of the Wall;;;;;;;;;;;;;x
+wall_museum;§YAncient Walls§!\nBefore the Celestial Empire, California was divided by various warlord states who fought amongst each other for territory and resources in a dire post-Event world. These ancient walls are a relic of this savage age, constructed by wealthy coastal warlords to defend against other neighboring warlords. Nowadays, all they defend is grass and moss from the trampling feet of cattle.;;;;;;;;;;;;;x
+greatwall_construction;Long Wall Construction;;;;;;;;;;;;;x
+greatwall_navalbarriers;Long Wall Naval Barriers;;;;;;;;;;;;;x
+greatwall_watchtowers;Long Wall Watchtowers;;;;;;;;;;;;;x
+greatwall_ramparts;Long Wall Ramparts;;;;;;;;;;;;;x
+californian_great_wall;§YThe Long Sea Wall§!\nConstruction of the Long Sea Wall of California took over ninety years to complete, beginning in the reign of [event_target:first_greatwall_emperor.GetBestName] and ending in the reign of [event_target:last_greatwall_emperor.GetBestName]. The Wall protects over eight hundred miles of Californian coast and its highest point in [c_san_francisco.GetName] is over forty-five feet tall, causing most to consider it to be the largest man-made structure ever built, a testament to the might of California. The Wall itself consists of massive ramparts which serve to deter climbing, along with a series of evenly spaced watchtowers along its entire length and a net of stone naval barriers along important shorelines to deter landing. It remains to be seen whether or not the wall can be seen from the heavens.;;;;;;;;;;;;;x
+emperor_ofthe_wall;[last_greatwall_emperor.GetCeticEmperorEmpressCap] of the Wall;;;;;;;;;;;;;x
+greatwall_progresscheck;Planning the Wall ([Root.global_greatwall_progress.GetValue]% Complete);;;;;;;;;;;;;x
+
+redwood_bike;Felled Redwood;;;;;;;;;;;;;x
+examination_nightmares;Examination Nightmares;;;;;;;;;;;;;x
 
 #Traits
 not_evaluated;Unevaluated;;;;;;;;;;;;;x
@@ -588,6 +794,8 @@ model_bureaucrat;Model Bureaucrat;;;;;;;;;;;;;x
 
 bad_bureaucrat;Poor Bureaucrat;;;;;;;;;;;;;x
 
+appointed_grand_architect;Appointed Me Grand-Architect;;;;;;;;;;;;;x
+
 #Minor Titles
 title_governator;Governatus;;;;;;;;;;;;;x
 title_governator_desc;The Governatus of the Empire of California is a very influential title among the Imperial Court and all throughout California. As the highest ranking official within the Imperial Court, surpassing even the kings and queens of the bureaucratic realms, the Governatus has the ear of the [Root.GetCeticEmperorEmpress] at all times.;;;;;;;;;;;;;x
@@ -601,6 +809,10 @@ vassal_gov_removed_TT;Any Governatus courtier will be removed;;;;;;;;;;;;;x
 CB_NAME_SANCGOVERNATOR_WAR;Anti-Governatus Claim War;;;;;;;;;;;;;x
 WAR_NAME_SANCGOVERNATOR_WAR;$ORDER$Anti-Governatus Claim War;;;;;;;;;;;;;x
 sanc_governator_war_desc;The Anti-Governatus has the authority to invade the Governatus' realm;;;;;;;;;;;;;x
+
+CB_NAME_GREATWALL;Collect Raiding Reparations;;;;;;;;;;;;;x
+WAR_NAME_GREATWALL;$ORDER$ War to Collect Reparations for Damages Done;;;;;;;;;;;;;x
+greatwall_cb_desc;For too long California has been subject to all manner of vile depravations at the hand of savage raiders who pour in from the north and from the sea. No longer! We shall reclaim the wealth that is rightfull ours from §Y$TARGET$§!!;;;;;;;;;;;;;x
 
 #Laws and Succession
 bureaucratic_war_declaration;Bureaucratic War Declaration;;;;;;;;;;;;;x

@@ -33,6 +33,10 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 5
+			modifier = {
+				FROM = { has_character_flag = tributary_scholar_application }
+				factor = 0
+			}
 		}
 	}
 }
@@ -5902,6 +5906,19 @@ character_event = {
 		set_character_flag = cheated_exam
 		prestige = -100
 		piety = -100
+				hidden_effect = {
+			if = {
+				limit = {
+					has_character_flag = tributary_scholar_application
+					#persistent_event_target:tributary_scholar_liege = { character = persistent_event_target:tributary_scholar_liege }
+				}
+				persistent_event_target:tributary_scholar_liege = {
+					letter_event = { id = offmapcali.113 }
+				}
+				clr_character_flag = tributary_scholar_application
+				clear_persistent_event_target = tributary_scholar_liege
+			}
+		}
 	}
 	option = { #Attempt to bribe
 		name = EVTOPTBIE13
@@ -6035,6 +6052,19 @@ character_event = {
 			add_trait = imp_ex4
 			prestige = 100
 		}
+		hidden_effect = {
+			if = {
+				limit = {
+					has_character_flag = tributary_scholar_application
+					#persistent_event_target:tributary_scholar_liege = { character = persistent_event_target:tributary_scholar_liege }
+				}
+				persistent_event_target:tributary_scholar_liege = {
+					letter_event = { id = offmapcali.111 }
+				}
+				clr_character_flag = tributary_scholar_application
+				clear_persistent_event_target = tributary_scholar_liege
+			}
+		}							
 	}
 }	
 
@@ -6059,6 +6089,19 @@ character_event = {
 		clr_character_flag = study_sc
 		clr_character_flag = study_hi
 		clr_character_flag = ie_applied
+				hidden_effect = {
+			if = {
+				limit = {
+					has_character_flag = tributary_scholar_application
+					#persistent_event_target:tributary_scholar_liege = { character = persistent_event_target:tributary_scholar_liege }
+				}
+				persistent_event_target:tributary_scholar_liege = {
+					letter_event = { id = offmapcali.112 }
+				}
+				clr_character_flag = tributary_scholar_application
+				clear_persistent_event_target = tributary_scholar_liege
+			}
+		}
 	}
 	option = { #Attempt to bribe
 		trigger = {
@@ -6212,6 +6255,19 @@ character_event = {
 		name = EVTOPTAIE19
 		add_trait = imp_ex1
 		set_character_flag = ie_applied
+				hidden_effect = {
+			if = {
+				limit = {
+					has_character_flag = tributary_scholar_application
+					#persistent_event_target:tributary_scholar_liege = { character = persistent_event_target:tributary_scholar_liege }
+				}
+				persistent_event_target:tributary_scholar_liege = {
+					letter_event = { id = offmapcali.111 }
+				}
+				clr_character_flag = tributary_scholar_application
+				clear_persistent_event_target = tributary_scholar_liege
+			}
+		}
 	}
 }
 
@@ -6235,6 +6291,19 @@ character_event = {
 		clr_character_flag = study_hi
 		clr_character_flag = ie_applied
 		set_character_flag = cheated_exam
+				hidden_effect = {
+			if = {
+				limit = {
+					has_character_flag = tributary_scholar_application
+					#persistent_event_target:tributary_scholar_liege = { character = persistent_event_target:tributary_scholar_liege }
+				}
+				persistent_event_target:tributary_scholar_liege = {
+					letter_event = { id = offmapcali.113 }
+				}
+				clr_character_flag = tributary_scholar_application
+				clear_persistent_event_target = tributary_scholar_liege
+			}
+		}
 	}	
 }
 
@@ -6320,5 +6389,118 @@ character_event = {
 		remove_trait = imp_ex2
 		remove_trait = imp_ex3
 		remove_trait = imp_ex4
+	}
+}
+
+character_event = {
+	id = IE.24
+	hide_window = yes
+	trigger = {
+		OR = {
+			trait = imp_ex1
+			trait = imp_ex2
+			trait = imp_ex3
+			trait = imp_ex4
+		}
+		NOT = { has_character_modifier = examination_nightmares }
+	}
+	
+	mean_time_to_happen = {
+		years = 10
+		modifier = { factor = 0.5 trait = paranoid }
+		modifier = { factor = 0.8 trait = diligent }
+		modifier = { factor = 0.8 trait = honest }
+		modifier = { factor = 0.9 trait = ambitious }
+		modifier = { factor = 0.9 trait = cynical }
+		modifier = { factor = 1.5 trait = content }
+	}
+	immediate = {
+		random_list = {
+			25 = {
+				narrative_event = { id = IE.25 }
+			}
+			25 = {
+				narrative_event = { id = IE.26 }
+			}
+			25 = {
+				narrative_event = { id = IE.27 }
+			}
+			25 = {
+				narrative_event = { id = IE.28 }
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = IE.25
+	title = EVTTITLEIE7
+	desc = EVTDESCIE25
+	picture = GFX_evt_china_open
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAIE25
+		character_event = { id = IE.29 }
+		custom_tooltip = { text = TT_fake_exam_01 }
+	}
+}
+
+narrative_event = {
+	id = IE.26
+	title = EVTTITLEIE7
+	desc = EVTDESCIE26
+	picture = GFX_evt_china_open
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAIE26
+		character_event = { id = IE.29 }
+		custom_tooltip = { text = TT_fake_exam_02 }
+	}
+}
+
+narrative_event = {
+	id = IE.27
+	title = EVTTITLEIE7
+	desc = EVTDESCIE27
+	picture = GFX_evt_china_open
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAIE27
+		character_event = { id = IE.29 }
+		custom_tooltip = { text = TT_fake_exam_03 }
+	}
+}
+
+narrative_event = {
+	id = IE.28
+	title = EVTTITLEIE7
+	desc = EVTDESCIE28
+	picture = GFX_evt_china_open
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAIE28
+		character_event = { id = IE.29 }
+		custom_tooltip = { text = TT_fake_exam_04 }
+	}
+}
+
+character_event = {
+	id = IE.29
+	desc = EVTDESCIE29
+	picture = GFX_evt_sleeping_town_hf
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAIE29
+		add_character_modifier = { name = examination_nightmares duration = 3650 }
 	}
 }

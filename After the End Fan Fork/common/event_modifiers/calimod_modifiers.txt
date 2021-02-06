@@ -1,0 +1,206 @@
+offmapcali_tribute_refused_timer = {
+	icon = 19
+}
+
+offmapcali_boon_refused_timer = {
+	icon = 19
+}
+
+offmapcali_contract_timer = {
+	icon = 1
+}
+
+offmapcali_send_gift_timer = {
+	icon = 1
+}
+
+offmapcali_send_concubine_timer = {
+	icon = 1
+}
+
+offmapcali_send_scholar_timer = {
+	icon = 1
+}
+
+offmapcali_send_hostage_timer = {
+	icon = 1
+}
+
+offmapcali_send_artifact_timer = {
+	icon = 1
+}
+
+
+#not timers
+offmapcali_threshold_increasecontract = { #1000 grace each
+	icon = 97
+	visible = {
+		OR = {
+			has_landed_title = e_california #some things are just between you and the EMPRAH
+			character = FROM
+		}
+	}
+}
+offmapcali_threshold_takepsat = { #800 grace
+	icon = 99
+	visible = {
+		OR = {
+			has_landed_title = e_california
+			character = FROM
+		}
+	}
+}
+offmapcali_threshold_embraceceticism = { #1000 grace
+	icon = 101
+	visible = {
+		OR = {
+			has_landed_title = e_california
+			character = FROM
+		}
+	}
+}
+offmapcali_threshold_integrate = { #1200 grace
+	icon = 125
+	visible = {
+		OR = {
+			has_landed_title = e_california
+			character = FROM
+		}
+	}
+}
+
+offmapcali_low_cooperation = {
+	icon = 34
+	cetic_opinion = -20
+	global_tax_modifier = -0.1
+	build_time_modifier = 0.1
+	build_cost_modifier = 0.1
+	demesne_size = -1
+}
+offmapcali_high_cooperation = {
+	icon = 16
+	cetic_opinion = 10
+	global_tax_modifier = 0.1
+	build_time_modifier = -0.1
+	build_cost_modifier = -0.1
+	demesne_size = 1
+}
+
+
+offmapcali_multilingual = {
+	icon = 2
+	diplomacy = 1
+	learning = 1
+}
+
+offmapcali_stressed = {
+	icon = 40
+	health = -1
+	fertility = -0.1
+}
+
+offmapcali_depressed = {
+	icon = 40
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	intrigue = -1
+	health = -1
+	fertility = -0.05
+	combat_rating = -5
+}
+
+offmapcali_uncool = {
+	icon = 36
+	diplomacy = -1
+	general_opinion = -5
+}
+
+offmapcali_addict = {
+	icon = 53
+	health = -1
+	general_opinion = -10
+	monthly_character_wealth = -1.0
+}
+
+offmapcali_greatvision = { 
+	icon = 52
+	learning = 3
+	diplomacy = 1
+	stewardship = 1
+	intrigue = 1
+	fertility = 0.1
+	health = 1
+}
+
+offmapcali_goodvision = {
+	icon = 52
+	learning = 2
+	diplomacy = 1
+	intrigue = 1
+	fertility = 0.05
+	health = 0.5
+}
+
+offmapcali_okvision = {
+	icon = 52
+	learning = 1
+	intrigue = 1
+}
+
+offmapcali_grounded = {
+	icon = 20
+	diplomacy = -1
+	martial = -1
+	stewardship = -1
+	learning = -1
+}
+
+offmapcali_passedlearning = {
+	icon = 2
+	learning = 1
+}
+
+offmapcali_passedstewardship = {
+	icon = 4
+	stewardship = 1
+}
+
+offmapcali_passedmartial = {
+	icon = 1
+	martial = 1
+}
+
+offmapcali_passeddiplomacy = {
+	icon = 3
+	diplomacy = 1
+}
+
+offmapcali_looted_museums = {
+	icon = 34
+	general_opinion = -5
+	cetic_opinion = -10
+}
+
+offmapcali_directing_trade = {
+	icon = 22
+	city_opinion = -15
+	multiplicative_trade_post_income_modifier = -0.5
+	global_tax_modifier = -0.05
+	city_tax_modifier = -0.1
+}
+
+#Province Modifiers
+
+offmapcali_province_receiving_trade = {
+	icon = 4
+	tradevalue = 5
+	city_tax_modifier = 0.1
+	local_tax_modifier = 0.1
+}
+
+offmapcali_capital_receiving_trade = {
+	icon = 4
+	tradevalue = 1
+	local_tax_modifier = 0.01
+}

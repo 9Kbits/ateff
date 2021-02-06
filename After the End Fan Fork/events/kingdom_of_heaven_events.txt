@@ -1,0 +1,1070 @@
+namespace = heavenlykingdom
+
+character_event = {
+	id = heavenlykingdom.1
+	desc = EVTDESC_heavenlykingdom_mission
+	picture = GFX_evt_diplomat_hf
+	border = GFX_event_normal_frame_religion
+
+	only_playable = yes
+
+	trigger = { #any mormon duke+ can be contacted to sponsor edwin's mission
+		is_landed = yes
+		is_tribal = no
+		religion = mormon
+		NOT = { has_global_flag = heavenlykingdom_mormon_mission }
+		capital_scope = { region = custom_greater_deseret }
+		higher_tier_than = COUNT
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		e_california = {
+			has_holder = yes
+		}
+		total_years_played = 20
+	}
+	
+	mean_time_to_happen = {
+		years = 10
+		modifier = {
+			factor = 2
+			e_california = {
+				holder_scope = {
+					trait = strong_emperor
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.5
+			e_california = {
+				holder_scope = {
+					trait = figurehead
+				}
+			}
+		}
+
+		modifier = {
+			factor = 0.25
+			e_california = {
+				holder_scope = {
+					trait = weak_emperor
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			e_california = {
+				holder_scope = {
+					NOT = { completely_controls = e_california }
+				}
+			}
+		}
+		
+		modifier = {
+			factor = 0.5
+			year = 2700
+		}
+		
+		modifier = {
+			factor = 0.5
+			year = 2720
+		}
+	}
+	
+	immediate = {
+		set_global_flag = heavenlykingdom_mormon_mission
+	}
+	
+	option = {
+		name = EVTOPT_heavenlykingdom_sponsor
+		set_global_flag = heavenlykingdom_mission_sponsored
+		set_character_flag = sponsored_calimormons
+		wealth = -100
+		piety = 100
+		
+		ai_chance = {
+			factor = 60
+			modifier = { factor = 2 trait = zealous }
+			modifier = { factor = 2 trait = charitable }
+			modifier = { factor = 0 NOT = { wealth = 100 } }
+			modifier = { factor = 1.2 trait = proud }
+			modifier = { factor = 1.2 trait = diligent }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_heavenlykingdom_reject
+		piety = -50
+		
+		ai_chance = {
+			factor = 40
+			modifier = { factor = 2 trait = cynical }
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 0.8 trait = slothful }
+		}
+	}
+}
+
+province_event = {
+	id = heavenlykingdom.2
+	desc = EVTDESC_heavenlykingdom_mormons
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		NOT = { religion = mormon }
+		holder_scope = {
+			NOT = { religion = mormon }
+		}
+		has_global_flag = heavenlykingdom_mormon_mission
+		NOT = { has_global_flag = heavenlykingdom_mormon_mission_successful }
+		OR = {
+			kingdom = { title = k_socal }
+			kingdom = { title = k_jefferson }
+		}
+		e_california = {
+			has_holder = yes
+		}
+	}
+
+	mean_time_to_happen = {
+		years = 5
+		modifier = {
+			factor = 0.2
+			has_global_flag = heavenlykingdom_mission_sponsored
+		}
+	}
+		
+	immediate = {
+		religion = mormon
+		set_province_flag = heavenlykingdom_epicenter
+		set_global_flag = heavenlykingdom_mormon_mission_successful
+	}
+		
+	option = {
+		name = EVTOPT_heavenlykingdom_supportmormons
+		set_global_flag = heavenlykingdom_mormon_mission_ignored
+		holder_scope = {
+			piety = -100
+			prestige = -50
+		}
+		random_neighbor_province = {
+			religion = mormon
+		}
+	}
+		
+	option = {
+		name = EVTOPT_heavenlykingdom_turnmormonsaway
+		holder_scope = {
+			piety = 50
+			wealth = -50
+		}
+		add_province_modifier = { name = mormon_unrest duration = 1825 }
+	}
+}
+
+character_event = {
+	id = heavenlykingdom.3
+	desc = EVTDESC_heavenlykingdom_debt
+	picture = GFX_evt_diplomat_hf
+	border = GFX_event_normal_frame_religion
+
+	only_playable = yes
+
+	trigger = {
+		has_character_flag = sponsored_calimormons
+		has_global_flag = heavenlykingdom_mormon_mission_ignored
+	}
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+	
+	immediate = {
+		clr_character_flag = sponsored_calimormons
+	}
+	
+	option = {
+		name = EVTOPT_heavenlykingdom_acceptdebt
+		wealth = 150
+		prestige = 100
+	}		
+
+}
+
+province_event = {
+	id = heavenlykingdom.4
+	desc = EVTDESC_heavenlykingdom_mormons_strikeback
+	picture = GFX_evt_hiding_from_pursuers
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		has_province_flag = heavenlykingdom_epicenter
+		has_global_flag = heavenlykingdom_mormon_mission_ignored
+		NOT = { has_global_flag = heavenlykingdom_karen_flees }		
+	}
+
+	mean_time_to_happen = {
+		days = 180
+		modifier = {
+			factor = 0.25
+			NOT = { has_global_flag = heavenlykingdom_mormon_mission_ignored }
+		}
+	}
+		
+	immediate = {
+		set_global_flag = heavenlykingdom_karen_flees
+	}
+		
+	option = {
+		name = EVTOPT_heavenlykingdom_ignoredmormons
+		trigger = { has_global_flag = heavenlykingdom_mormon_mission_ignored }
+
+		religion = mormon
+		remove_province_modifier = mormon_unrest
+		add_province_modifier = { name = mormon_revolt duration = 912 }
+		random_neighbor_province = {
+			religion = mormon
+		}
+		
+		any_neighbor_province = {
+			limit = { religion = mormon }
+			add_province_modifier = { name = mormon_revolt duration = 912 }
+		}
+	}
+		
+	option = {
+		name = EVTOPT_heavenlykingdom_expelledmormons
+		trigger = { NOT = { has_global_flag = heavenlykingdom_mormon_mission_ignored } }
+	}
+}
+
+narrative_event = {
+	id = heavenlykingdom.5
+	title = EVTNAME_heavenlykingdom_mormonhead
+	desc = EVTDESC_heavenlykingdom_mormonhead
+	picture = GFX_evt_emissary
+	border = GFX_event_narrative_frame_religion
+
+	only_playable = yes
+
+	trigger = {
+		religion = mormon
+		NOT = { has_global_flag = heavenlykingdom_karen_deseret }
+		OR = {
+			AND = { #if mormon pope is independent, send it to him
+				controls_religion = yes
+				independent = yes
+			}
+			AND = {#if mormon pope is vassalized, send it to his liege
+				controls_religion = no
+				any_vassal = {
+					religion = mormon
+					controls_religion = yes
+				}
+			}	
+		}
+		e_california = {
+			has_holder = yes
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 180
+	}
+	
+	immediate = {
+		set_global_flag = heavenlykingdom_karen_deseret
+	}
+	
+	option = {
+		name = EVTOPT_heavenlykingdom_mormonheadaccepts
+		wealth = -500
+		prestige = -100
+		piety = -250
+		add_character_modifier = { name = heavenly_heresy duration = 3650 }
+		set_global_flag = heavenlykingdom_mormonsupports_karen
+		
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 1.2 trait = cynical }
+			modifier = { factor = 1.2 trait = arbitrary }
+			modifier = { factor = 1.2 trait = trusting }
+			modifier = { factor = 1.2 trait = bad_priest_mormon }
+			modifier = { factor = 1.2 NOT = { piety = 100 } }
+			modifier = { factor = 1.2 NOT = { piety = 0 } }
+			modifier = { factor = 0 NOT = { wealth = 500 } }
+		}
+
+	}
+		
+	option = {
+		name = EVTOPT_heavenlykingdom_mormonhead_rejects
+		piety = 50
+		
+		ai_chance = {
+			factor = 90
+			modifier = { factor = 2 trait = zealous }
+			modifier = { factor = 1.5 trait = just }
+			modifier = { factor = 1.5 trait = paranoid }
+			modifier = { factor = 1.2 NOT = { trait = bad_priest_mormon } }
+			modifier = { factor = 1.2 piety = 750 }
+			modifier = { factor = 1.2 piety = 1250 }
+		}
+	}
+}
+
+province_event = {
+	id = heavenlykingdom.6
+	desc = EVTDESC_heavenlykingdom_karen_returns
+	picture = GFX_evt_china_unrest
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		has_province_flag = heavenlykingdom_epicenter
+		has_global_flag = heavenlykingdom_karen_deseret
+		NOT = { has_global_flag = heavenlykingdom_revolt_begins }		
+
+	}
+		mean_time_to_happen = {
+			days = 90
+		}
+		
+	immediate = {
+		holder_scope = {
+			set_character_flag = broke_california_again
+		}
+		set_global_flag = heavenlykingdom_revolt_begins
+	}
+	option = {
+		name = EVTOPT_heavenlykingdom_karen_returns
+		hidden_tooltip = {
+			holder_scope = {
+				top_liege = { narrative_event = { id = heavenlykingdom.7 } }
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = heavenlykingdom.7
+	title = EVTNAME_heavenlykingdom_war
+	desc = {
+		trigger = { has_global_flag = heavenlykingdom_mormonsupports_karen }
+		text = EVTDESCA_heavenlykingdom_war
+	}
+	desc = {
+		trigger = { NOT = { has_global_flag = heavenlykingdom_mormonsupports_karen } }
+		text = EVTDESCB_heavenlykingdom_war
+	}
+	picture = GFX_evt_china_civil_war
+	border = GFX_event_narrative_frame_war
+
+	is_triggered_only = yes
+	major = yes
+
+	immediate = { #oh god oh fuck why doesn't this fucking work
+		set_global_flag = heavenlykingdom_revolt_ongoing
+		activate_title = { title = e_heaven status = yes }
+		
+		any_realm_province = {
+			limit = {
+				has_province_flag = heavenlykingdom_epicenter
+			}
+			ROOT = {
+				create_character = {
+					name="Karen"
+					dynasty = culture
+					culture = calaotian
+					female = yes
+					age = 37
+					health = 6.5
+					fertility = 0.6
+					trait = shrewd
+					trait = detached_priest
+					trait = failed_exam
+					trait = diligent
+					trait = ambitious
+					trait = zealous
+					trait = trusting
+					trait = gregarious
+					trait = erudite
+					trait = poet
+					trait = danite
+					trait = holy_warrior
+					trait = inspiring_leader
+					trait = brave
+					trait = possessed
+					attributes = {
+						learning = 8
+						diplomacy = 6
+						martial = 8
+						stewardship = 6
+						intrigue = 6
+					}
+				}
+				
+				new_character = { #rejigger troop counts so its not just consumerist uprising 2
+					set_dynasty_name = "Moroni"
+					set_character_flag = heavenly_kingdom_cb
+					set_character_flag = moroni_incarnate
+					#save_global_event_target_as = karen_moroni_incarnate
+					character_event = { id = misc.3 }
+					add_character_modifier = { name = voice_of_jesus duration = -1 }
+					if = {
+						limit = { has_global_flag = heavenlykingdom_mormonsupports_karen}
+							wealth = 5000
+							prestige = 1000
+							give_nickname = nick_moroni_reborn
+							religion = mormon
+							add_trait = peasant_leader
+					}
+					else = {
+						wealth = 2500
+						prestige = 500
+						give_nickname = nick_the_heresiarch
+						religion = neogodbeite
+						add_trait = heresiarch
+					}
+					create_title = {
+						tier = KING
+						landless = yes
+						temporary = yes
+						culture = THIS
+						name = HEAVEN_REVOLT
+						holder = THIS
+					}
+					spawn_unit = {
+						province = PREVPREV
+						home = PREVPREV
+						owner = THIS
+						leader = THIS
+						troops = {
+							light_cavalry = { 800 800 }
+							light_infantry = { 2000 2000 }
+							pikemen = { 500 500 }
+							archers = { 700 700 }
+						}
+						attrition = 0.25
+						maintenance_multiplier = 0.15
+						cannot_inherit = yes
+					}
+					create_random_steward = {
+						random_traits = yes
+						female = no
+						dynasty = random
+						religion = THIS
+						culture = THIS
+						age = 40
+						trait = zealous
+						trait = greedy
+					}
+					new_character = {
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						add_spouse_matrilineal = PREV
+
+						create_character = {
+							name = "Tianguifu"
+							female = yes
+							dynasty = PREV
+							religion = THIS
+							culture = THIS
+							age = 2
+							trait = timid
+							trait = affectionate
+							genetic_father = THIS
+							genetic_mother = PREVPREV
+						}
+						new_character = {
+							set_mother = PREVPREV
+							set_father = THIS
+						}
+					}
+					create_character = {
+						name="Xiucheng"
+						female = no
+						random_traits = yes
+						dynasty = random
+						religion = THIS
+						culture = THIS
+						age = 30
+						trait = brilliant_strategist
+						trait = genius
+						trait = shrewd
+						trait = diligent
+						trait = trusting
+						trait = honest
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							troops = {
+								light_cavalry = { 300 300 }
+								light_infantry = { 1000 1000 }
+								pikemen = { 200 200 }
+								archers = { 300 300 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = PREV
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Xiying"
+						female = yes
+						random_traits = yes
+						dynasty = THIS
+						religion = THIS
+						culture = THIS
+						age = 27
+						trait = brilliant_strategist
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							troops = {
+								light_cavalry = { 300 300 }
+								light_infantry = { 1000 1000 }
+								pikemen = { 200 200 }
+								archers = { 300 300 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = PREV
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse_matrilineal = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Fa"
+						female = no
+						random_traits = yes
+						dynasty = THIS
+						religion = THIS
+						culture = THIS
+						age = 25
+						trait = skilled_tactician
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							troops = {
+								light_cavalry = { 300 300 }
+								light_infantry = { 1000 1000 }
+								pikemen = { 200 200 }
+								archers = { 300 300 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = PREV
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Huoxiu"
+						female = no
+						random_traits = yes
+						dynasty = THIS
+						religion = THIS
+						culture = THIS
+						age = 23
+						trait = skilled_tactician
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							troops = {
+								light_cavalry = { 300 300 }
+								light_infantry = { 1000 1000 }
+								pikemen = { 200 200 }
+								archers = { 300 300 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+							disband_on_peace = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = PREV
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Gus"
+						female = no
+						random_traits = yes
+						dynasty = THIS
+						religion = THIS
+						culture = THIS
+						age = 27
+						trait = skilled_tactician
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							troops = {
+								light_cavalry = { 400 400 }
+								light_infantry = { 1000 1000 }
+								pikemen = { 200 200 }
+								archers = { 300 300 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+							disband_on_peace = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = PREV
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					create_character = {
+						name="Zeb"
+						female = no
+						random_traits = yes
+						dynasty = THIS
+						religion = THIS
+						culture = THIS
+						age = 24
+						trait = skilled_tactician
+					}
+					new_character = {
+						spawn_unit = {
+							province = PREVPREVPREV
+							home = PREVPREVPREV
+							owner = PREV
+							leader = THIS
+							troops = {
+								light_cavalry = { 400 400 }
+								light_infantry = { 1000 1000 }
+								pikemen = { 200 200 }
+								archers = { 300 300 }
+							}
+							attrition = 0.5
+							maintenance_multiplier = 0.3
+							cannot_inherit = yes
+						}
+						character_event = { id = misc.3 } # Diversity
+						character_event = { id = misc.4 } # Physique
+						create_random_steward = {
+							random_traits = yes
+							female = yes
+							dynasty = random
+							religion = PREV
+							culture = PREV
+							age = 16
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							add_spouse = PREV
+							impregnate = PREV
+						}
+					}
+					if = {
+						limit = { has_global_flag = heavenlykingdom_mormonsupports_karen }
+						create_character = {
+							name="Gilbert"
+							female = no
+							random_traits = yes
+							dynasty = none
+							religion = THIS
+							culture = utahn
+							age = 32
+							trait = brilliant_strategist
+						}
+						new_character = {
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								leader = THIS
+								troops = {
+									heavy_infantry = { 800 800 }
+									knights = { 150 150 }
+									pikemen = { 400 400 }
+									archers = { 300 300 }
+								}
+								attrition = 0.0
+								maintenance_multiplier = 0.3
+								cannot_inherit = yes
+								disband_on_peace = yes
+							}
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							create_random_steward = {
+								random_traits = yes
+								female = yes
+								dynasty = random
+								religion = PREV
+								culture = PREV
+								age = 16
+							}
+							new_character = {
+								character_event = { id = misc.3 } # Diversity
+								character_event = { id = misc.4 } # Physique
+								add_spouse = PREV
+								impregnate = PREV
+							}
+						}
+						create_character = {
+							name="Abraham"
+							female = no
+							random_traits = yes
+							dynasty = none
+							religion = THIS
+							culture = utahn
+							age = 25
+							trait = skilled_tactician
+						}
+						new_character = {
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								leader = THIS
+								troops = {
+									heavy_infantry = { 800 800 }
+									knights = { 150 150 }
+									pikemen = { 400 400 }
+									archers = { 300 300 }
+								}
+								attrition = 0.0
+								maintenance_multiplier = 0.3
+								cannot_inherit = yes
+								disband_on_peace = yes
+							}
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							create_random_steward = {
+								random_traits = yes
+								female = yes
+								dynasty = random
+								religion = PREV
+								culture = PREV
+								age = 16
+							}
+							new_character = {
+								character_event = { id = misc.3 } # Diversity
+								character_event = { id = misc.4 } # Physique
+								add_spouse = PREV
+								impregnate = PREV
+							}
+						}
+						create_character = {
+							name="Moses"
+							female = no
+							random_traits = yes
+							dynasty = none
+							religion = THIS
+							culture = utahn
+							age = 28
+							trait = skilled_tactician
+						}
+						new_character = {
+							spawn_unit = {
+								province = PREVPREVPREV
+								home = PREVPREVPREV
+								owner = PREV
+								leader = THIS
+								troops = {
+									heavy_infantry = { 800 800 }
+									knights = { 200 200 }
+									pikemen = { 400 400 }
+									archers = { 300 300 }
+								}
+								attrition = 0.0
+								maintenance_multiplier = 0.3
+								cannot_inherit = yes
+								disband_on_peace = yes
+							}
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							create_random_steward = {
+								random_traits = yes
+								female = yes
+								dynasty = random
+								religion = PREV
+								culture = PREV
+								age = 16
+							}
+							new_character = {
+								character_event = { id = misc.3 } # Diversity
+								character_event = { id = misc.4 } # Physique
+								add_spouse = PREV
+								impregnate = PREV
+							}
+						}
+					}
+					war = {
+						target = ROOT
+						casus_belli = heavenly_uprising
+						thirdparty_title = PREVPREV #target_kingdom
+						tier = KING
+					}
+				}
+			}
+		}
+	}
+
+	option = {
+		name = {
+			text = EVTOPTA_heavenlykingdom_war_A
+			trigger = { has_global_flag = heavenlykingdom_mormonsupports_karen }
+		}
+		name = {
+			text = EVTOPTA_heavenlykingdom_war_B
+			trigger = { NOT = { has_global_flag = heavenlykingdom_mormonsupports_karen } }
+		}
+		trigger = {
+			religion = cetic
+			NOT = { has_character_flag = broke_california_again }
+		}
+	}
+	option = {
+		name = {
+			text = EVTOPTB_heavenlykingdom_war_A
+			trigger = { has_global_flag = heavenlykingdom_mormonsupports_karen }
+		}
+		name = {
+			text = EVTOPTB_heavenlykingdom_war_B
+			trigger = { NOT = { has_global_flag = heavenlykingdom_mormonsupports_karen } }
+		}
+		trigger = {
+			religion = mormon
+			NOT = { has_character_flag = broke_california_again }
+		}
+	}
+	option = {
+		name = {
+			text = EVTOPTC_heavenlykingdom_war_A
+			trigger = { has_global_flag = heavenlykingdom_mormonsupports_karen }
+		}
+		name = {
+			text = EVTOPTC_heavenlykingdom_war_B
+			trigger = { NOT = { has_global_flag = heavenlykingdom_mormonsupports_karen } }
+		}
+		trigger = {
+			NOR = {
+				religion = mormon
+				religion = cetic
+				has_character_flag = broke_california_again
+			}
+		}
+	}
+	option = {
+		name = {
+			text = EVTOPTD_heavenlykingdom_war_A
+			trigger = { has_global_flag = heavenlykingdom_mormonsupports_karen }
+		}
+		name = {
+			text = EVTOPTD_heavenlykingdom_war_B
+			trigger = { NOT = { has_global_flag = heavenlykingdom_mormonsupports_karen } }
+		}
+		trigger = {
+			has_character_flag = broke_california_again
+		}
+		clr_character_flag = broke_california_again
+	}
+}
+
+narrative_event = {
+	id = heavenlykingdom.8
+	title = EVTNAME_heavenlykingdom_success
+	desc = EVTDESC_heavenlykingdom_success
+	picture = GFX_evt_china_golden_age
+	border = GFX_event_narrative_frame_war
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = EVTOPTA_heavenlykingdom_success
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTB_heavenlykingdom_success
+		trigger = {
+			religion = mormon
+		}
+	}
+	option = {
+		name = EVTOPTC_heavenlykingdom_success
+		trigger = {
+			NOR = {
+				religion = mormon
+				religion = cetic
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = heavenlykingdom.9
+	title = EVTNAME_heavenlykingdom_fail
+	desc = EVTDESC_heavenlykingdom_fail
+	picture = GFX_evt_china_isolationist
+	border = GFX_event_narrative_frame_war
+
+	is_triggered_only = yes
+	major = yes
+
+	option = {
+		name = EVTOPTA_heavenlykingdom_fail
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTB_heavenlykingdom_fail
+		trigger = {
+			religion = mormon
+		}
+	}
+	option = {
+		name = EVTOPTC_heavenlykingdom_fail
+		trigger = {
+			NOR = {
+				religion = mormon
+				religion = cetic
+			}
+		}
+	}
+}
+
+# Karen converts province
+province_event = {
+	id = heavenlykingdom.10
+	desc = EVTDESC_heavenlykingdom_conversion
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_global_flag = heavenlykingdom_mormonsupports_karen
+				NOT = { religion = mormon }
+			}
+			AND = {
+				NOT = { has_global_flag = heavenlykingdom_mormonsupports_karen }
+				NOT = { religion = neogodbeite }
+			}
+		}
+		e_heaven = { has_holder = yes }		
+		holder_scope = {
+			OR = {
+				any_liege = {
+					has_character_flag = moroni_incarnate
+				}
+				has_character_flag = moroni_incarnate
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		if = {
+			limit = { has_global_flag = heavenlykingdom_mormonsupports_karen }
+			religion = mormon
+		}
+		else = {
+			religion = neogodbeite
+		}
+	}
+	
+	option = {
+		name = EVTOPT_heavenlykingdom_conversion
+	}
+}

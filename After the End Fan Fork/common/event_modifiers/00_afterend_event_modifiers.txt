@@ -141,6 +141,131 @@ bureau_roads = {
 	global_tax_modifier = -0.03
 }
 
+mormon_unrest = {
+	icon = 106
+	local_tax_modifier = -0.05
+	local_revolt_risk = 0.05
+	levy_size = -0.05
+}
+
+mormon_revolt = {
+	icon = 106
+	local_tax_modifier = -0.1
+	local_revolt_risk = 0.1
+	levy_size = -0.1
+}
+
+greatwall_taxation = {
+	icon = 106
+	levy_reinforce_rate = -0.05
+	local_revolt_risk = 0.025
+	temple_tax_modifier = -0.05
+	castle_tax_modifier = -0.025
+	city_tax_modifier = -0.1
+}
+
+demesne_greatwall_taxation = {
+	icon = 106
+	levy_reinforce_rate = -0.1
+	local_revolt_risk = 0.05
+	temple_tax_modifier = -0.1
+	castle_tax_modifier = -0.05
+	city_tax_modifier = -0.2
+}
+
+greatwall_reparations = {
+	icon = 106
+	local_revolt_risk = 0.05
+	local_tax_modifier = -0.2
+	local_levy_size = -0.1
+}
+
+peasant_homes_savaged = {
+	icon = 106
+	local_revolt_risk = 0.05
+	local_tax_modifier = -0.1
+}
+
+quarries_drained = {
+	icon = 22
+	local_tax_modifier = -0.05
+	local_build_cost_modifier = 0.1
+	local_build_time_modifier = 0.1
+}
+
+masons_outraged = {
+	icon = 22
+	local_revolt_risk = 0.05
+	local_tax_modifier = -0.1
+	local_build_cost_modifier = 0.2
+	local_build_time_modifier = 0.2
+}
+
+black_mt_quarry = {
+	icon = 101
+	local_tax_modifier = 0.05
+	local_build_time_modifier = -0.2
+	local_build_cost_modifier = -0.25
+}
+
+wall_museum = {
+	icon = 81
+	local_tax_modifier = 0.01
+	local_revolt_risk = -0.025
+	tech_growth_modifier_culture = 0.1
+	tech_growth_modifier_military = 0.1
+}
+
+greatwall_construction = {
+	icon = 102
+	local_tax_modifier = -0.05
+	local_revolt_risk = 0.02
+	local_build_time_modifier = 0.2
+	local_build_cost_modifier = 0.2
+}
+
+greatwall_navalbarriers = {
+	icon = 101
+	fort_level = 2
+	siege_defence = 0.025
+	garrison_size = 0.05
+	local_tax_modifier = 0.02
+}
+
+greatwall_watchtowers = {
+	icon = 101
+	fort_level = 2
+	siege_defence = 0.025
+	local_tax_modifier = 0.02
+}
+
+greatwall_ramparts = {
+	icon = 101
+	fort_level = 2
+	siege_defence = 0.05
+	garrison_size = 0.05
+	local_tax_modifier = 0.01
+}
+
+californian_great_wall = {
+	icon = 81
+	fort_level = 6
+	siege_defence = 0.1
+	garrison_size = 0.1
+	local_tax_modifier = 0.05
+	local_movement_speed = 0.25
+	tradevalue = 10
+}
+
+greatwall_progresscheck = {
+	icon = 21
+	local_tax_modifier = -0.15
+	local_build_time_modifier = 0.1
+	local_build_time_cost = 0.1
+}
+	
+	
+
 # Character Modifiers
 
 held_thanksgiving_timer = {
@@ -255,6 +380,11 @@ bokor_consort = {
 	icon = 26
 }
 
+heavenly_heresy = {
+	church_opinion = -15
+	icon = 26
+}
+
 faustian_contest = {
 	monthly_character_piety = -0.05
 	icon = 35
@@ -294,6 +424,47 @@ unmasked = {
 	monthly_character_prestige = -0.5
 	icon = 25
 }
+
+greatwall_noblestaxed = {
+	vassal_opinion = -30
+	icon = 106
+}
+
+greatwall_selflessliege = {
+	vassal_opinion = 10
+	monthly_character_prestige = 0.2
+	icon = 7
+}
+
+selffunded_greatwall = {
+	vassal_opinion = 5
+	monthly_character_prestige = 0.1
+	icon = 7
+}
+
+greatwall_architect = {
+	icon = 4
+	general_opinion = 5
+	monthly_character_prestige = 0.2
+	local_build_cost_modifier = -0.1
+	local_build_time_modifier = -0.1
+	monthly_character_wealth = 2.0
+}
+
+overworked_quarries = {
+	general_opinion = -5
+	local_build_cost_modifier = 0.1
+	local_build_time_modifier = 0.1
+	global_tax_modifier = -0.05
+	icon = 22
+}
+
+emperor_ofthe_wall = {
+	icon = 7
+	general_opinion = 15
+	monthly_character_prestige = 1
+}
+
 
 # Bank loan system
 recent_loan_request = {
@@ -447,6 +618,18 @@ burned_over = {
 recent_whaling = {
 	monthly_character_prestige = 0.5
 	icon = 8
+}
+
+redwood_bike = {
+	gaian_opinion = -20
+	monthly_character_piety = -0.1
+	icon = 88
+}
+
+examination_nightmares = {
+	health = -0.2
+	ferility = -0.1
+	icon = 20
 }
 
 # Secret communities

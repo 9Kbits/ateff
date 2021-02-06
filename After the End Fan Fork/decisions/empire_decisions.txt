@@ -1360,6 +1360,7 @@ decisions = {
 			is_alternate_start = no
 			has_landed_title = e_california
 			NOT = { has_global_flag = gaians_incorporated }
+			has_global_flag = northern_campaign_resumed
 		}
 		
 		allow = {
@@ -1383,6 +1384,85 @@ decisions = {
 			factor = 1
 		}
 	}
+		resume_northern_campaign = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		potential = {
+			is_alternate_start = no
+			has_landed_title = e_california
+			NOR = { 
+				has_global_flag = northern_campaign_resumed
+				trait = figurehead
+			}
+		}
+		
+		allow = {
+			completely_controls = e_california	
+			trait = strong_emperor
+			prestige = 1000
+			wealth = 500
+
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				narrative_event = { id = cetic.700 }				
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	start_great_sea_wall = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		potential = {
+			is_alternate_start = no
+			OR = {
+				has_landed_title = e_california
+				has_landed_title = e_new_california
+			}
+			NOR = { 
+				trait = figurehead
+				trait = weak_emperor
+			}
+			NOT = { has_global_flag = greatwall_started }
+		}
+		
+		allow = {
+			OR = {
+				completely_controls = e_california
+				completely_controls = e_new_california
+			}
+			trait = strong_emperor
+			prestige = 1000
+			wealth = 3000
+
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				narrative_event = { id = cetic.800 }				
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
+
 	form_the_metis_confederacy = {
 		is_high_prio = yes
 		only_playable = yes
