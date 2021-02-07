@@ -1420,3 +1420,53 @@ character_event = {
 		set_character_flag = studied_nazerene_holy_texts
 	}
 }
+
+narrative_event = {
+	id = nazarene.36
+	title = EVTTITLE_nazarene_36
+	desc = EVTDESC_nazarene_36
+	picture = GFX_evt_great_schism
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = true_cross_head_formed }
+	}
+	
+	immediate = {
+		set_global_flag = true_cross_head_formed
+		d_true_cross = { grant_title = ROOT }
+	}
+	
+	option = {
+		name = EVTOPTA_nazarene_36
+		trigger = {
+			religion = true_cross
+			NOT = { has_landed_title = d_true_cross }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_nazarene_36
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_nazarene_36
+		trigger = {
+			religion_group = christian
+			NOT = { religion = true_cross }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_true_cross
+		trigger = {
+			religion = true_cross
+			has_landed_title = d_true_cross
+		}
+	}
+}

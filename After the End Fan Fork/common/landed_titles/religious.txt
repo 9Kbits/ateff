@@ -1549,8 +1549,10 @@ d_true_cross = { #why the fuck is this a caliphate title do you have any idea ho
 	
 	religion = true_cross
 	allow = {
+		has_global_flag = true_cross_head_formed #must form with decision first
 		religion = true_cross
-		OR = {
+		AND = {
+			piety = 500
 			wealth = 500
 		}
 	}
@@ -1561,24 +1563,4 @@ d_true_cross = { #why the fuck is this a caliphate title do you have any idea ho
 	primary = yes
 	
 	dynasty_title_names = no 	# Will not be named "Seljuk", etc.
-	
-	# Regnal names
-	male_names = {
-		Aba:200 Abdisho:500 Abris Addai:200 Aggai Ahadabui Ahai Akakios Ammanuel:300 Avrahim:300
-		Babai Babowai Barbashmin
-		Dadisho Dinkha:400
-		Elisha Eliya:1400 Enosh Ezekiel
-		Farbokht
-		Gewargis:300 Grigorios
-		Hnanisho
-		Isho Ishoyahb:500 Iskhaq Israel:200
-		Makkikha:200 Mana Maremmeh Mari
-		Narsai Nicholas
-		Papa Pethion Polous:200
-		Qayyoma
-		Raphael
-		Sabrisho:500 Sargis Shahdost Shahlufa Shila Shimun:2300 Slibazkha Surin
-		Tamuza Theodosios Timataos:200
-		Yahballaha:300 Yaqub:200 Yohannan:700 Yosep:700
-	}
 }
