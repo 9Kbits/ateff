@@ -263,10 +263,7 @@ character_event = {
 	
 	immediate = {
 		current_heir = { 
-			add_character_modifier = {
-				name = imperial_authority
-				duration = -1
-			}
+			remove_imperial_authority_modifier = yes
 			if = {
 				limit = {
 					check_variable = { which = global_imp_auth value < 10 }
@@ -297,6 +294,7 @@ character_event = {
 				set_variable = { which = global_imp_auth value = 55 }
 				set_character_flag = imp_auth_dont_change
 			}
+			add_imperial_authority_modifier = yes
 		}
 	}
 	
@@ -327,10 +325,7 @@ narrative_event = {
 		}
 		add_trait = weak_emperor
 		FROMFROM = { remove_trait = weak_emperor }
-		add_character_modifier = {
-			name = imperial_authority
-			duration = -1
-		}
+		add_imperial_authority_modifier = yes
 		add_trait = weak_emperor
 		ai_chance = { factor = 100 }
 	}
@@ -344,10 +339,7 @@ narrative_event = {
 		}
 		add_trait = figurehead
 		FROMFROM = { remove_trait = figurehead }
-		add_character_modifier = {
-			name = imperial_authority
-			duration = -1
-		}
+		add_imperial_authority_modifier = yes
 		ai_chance = { factor = 100 }
 	}
 	
@@ -385,10 +377,7 @@ narrative_event = {
 			diplomacy = 14
 		}
 		tooltip_info = diplomacy
-		add_character_modifier = {
-			name = imperial_authority
-			duration = -1
-		}
+		add_imperial_authority_modifier = yes
 		add_trait = strong_emperor
 		FROMFROM = { remove_trait = figurehead }
 		ai_chance = { factor = 100 }
@@ -402,10 +391,7 @@ narrative_event = {
 			learning = 14
 		}
 		tooltip_info = learning
-		add_character_modifier = {
-			name = imperial_authority
-			duration = -1
-		}
+		add_imperial_authority_modifier = yes
 		add_trait = strong_emperor
 		FROMFROM = { remove_trait = figurehead }
 		ai_chance = { factor = 100 }
@@ -1757,10 +1743,7 @@ narrative_event = {
 		prestige = -100
 		hidden_tooltip = {
 			current_heir = {
-				add_character_modifier = {
-					name = imperial_authority
-					duration = -1
-				}
+				remove_imperial_authority_modifier = yes
 				if = {
 					limit = {
 						check_variable = { which = global_imp_auth value < 10 }
@@ -1792,11 +1775,12 @@ narrative_event = {
 					set_variable = { which = global_imp_auth value = 55 }
 					set_character_flag = imp_auth_dont_change
 				}
+				add_imperial_authority_modifier = yes
 			}
 			remove_trait = figurehead
 			remove_trait = weak_emperor
 			remove_trait = strong_emperor
-			remove_character_modifier = imperial_authority
+			remove_imperial_authority_modifier = yes
 			clr_character_flag = era_name
 		}
 		abdicate = yes
@@ -1818,10 +1802,7 @@ narrative_event = {
 		prestige = -100
 		hidden_tooltip = {
 			current_heir = {
-				add_character_modifier = {
-					name = imperial_authority
-					duration = -1
-				}
+				remove_imperial_authority_modifier = yes
 				if = {
 					limit = {
 						check_variable = { which = global_imp_auth value < 10 }
@@ -1853,11 +1834,12 @@ narrative_event = {
 					set_variable = { which = global_imp_auth value = 55 }
 					set_character_flag = imp_auth_dont_change
 				}
+				add_imperial_authority_modifier = yes
 			}
 			remove_trait = figurehead
 			remove_trait = weak_emperor
 			remove_trait = strong_emperor
-			remove_character_modifier = imperial_authority
+			remove_imperial_authority_modifier = yes
 			clr_character_flag = era_name
 		}
 		abdicate = yes
@@ -1878,10 +1860,7 @@ narrative_event = {
 		}
 		hidden_tooltip = {
 			current_heir = {
-				add_character_modifier = {
-					name = imperial_authority
-					duration = -1
-				}
+				remove_imperial_authority_modifier = yes
 				if = {
 					limit = {
 						check_variable = { which = global_imp_auth value < 10 }
@@ -1913,11 +1892,12 @@ narrative_event = {
 					set_variable = { which = global_imp_auth value = 55 }
 					set_character_flag = imp_auth_dont_change
 				}
+				add_imperial_authority_modifier = yes
 			}
 			remove_trait = figurehead
 			remove_trait = weak_emperor
 			remove_trait = strong_emperor
-			remove_character_modifier = imperial_authority
+			remove_imperial_authority_modifier = yes
 			clr_character_flag = era_name
 		}
 		prestige = -100
@@ -1940,10 +1920,7 @@ narrative_event = {
 		}
 		hidden_tooltip = {
 			current_heir = {
-				add_character_modifier = {
-					name = imperial_authority
-					duration = -1
-				}
+				remove_imperial_authority_modifier = yes
 				if = {
 					limit = {
 						check_variable = { which = global_imp_auth value < 10 }
@@ -1975,11 +1952,12 @@ narrative_event = {
 					set_variable = { which = global_imp_auth value = 55 }
 					set_character_flag = imp_auth_dont_change
 				}
+				add_imperial_authority_modifier = yes
 			}
 			remove_trait = figurehead
 			remove_trait = weak_emperor
 			remove_trait = strong_emperor
-			remove_character_modifier = imperial_authority
+			remove_imperial_authority_modifier = yes
 			clr_character_flag = era_name
 		}
 		prestige = -100
@@ -2569,7 +2547,9 @@ letter_event = {
 		custom_tooltip = {
 			text = impauth_increase_10_TT
 			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
 				change_variable = { which = global_imp_auth value = 10 }
+				add_imperial_authority_modifier = yes
 			}
 		}
 	}
@@ -2589,7 +2569,9 @@ letter_event = {
 		custom_tooltip = {
 			text = impauth_increase_10_TT
 			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
 				change_variable = { which = global_imp_auth value = 10 }
+				add_imperial_authority_modifier = yes
 			}
 		}
 	}
@@ -2893,7 +2875,9 @@ narrative_event = {
 		grant_title = e_california # insanity check
 		clr_character_flag = imperial_claimant
 		hidden_tooltip = {
+			remove_imperial_authority_modifier = yes
 			set_variable = { which = global_imp_auth value = 70 }
+			add_imperial_authority_modifier = yes
 		}
 		add_trait = strong_emperor
 		add_character_modifier = {
@@ -2912,7 +2896,7 @@ narrative_event = {
 			remove_trait = weak_emperor
 			remove_trait = strong_emperor
 			remove_trait = figurehead
-			remove_character_modifier = imperial_authority
+			remove_imperial_authority_modifier = yes
 			clr_character_flag = era_name
 		}
 	}
@@ -2995,7 +2979,9 @@ narrative_event = {
 		custom_tooltip = {
 			text = impauth_increase_10_TT
 			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
 				change_variable = { which = global_imp_auth value = 10 }
+				add_imperial_authority_modifier = yes
 			}
 		}
 	}
@@ -3076,7 +3062,9 @@ narrative_event = {
 		clr_character_flag = restored_emperor
 		set_defacto_liege = e_california
 		hidden_tooltip = {
+			remove_imperial_authority_modifier = yes
 			set_variable = { which = global_imp_auth value = 70 }
+			add_imperial_authority_modifier = yes
 		}
 	}
 	
@@ -3306,10 +3294,7 @@ character_event = {
 		# set_character_flag = ia_goodstats
 		# set_character_flag = ia_goodscore
 		set_global_flag = imperial_authority_set
-		add_character_modifier = {
-			name = imperial_authority
-			duration = -1
-		}
+		add_imperial_authority_modifier = yes
 	}
 }
 
@@ -3529,31 +3514,59 @@ character_event = {
 			}
 		}
 	}
-}	
+}
 
-#Authority Increase - Win War
-# character_event = {
-	# id = cetic.306
-	# desc = EVTDESCCETIC306
-	# is_triggered_only = yes
-	# trigger = {
-		# OR = {
-			# has_landed_title = e_california
-			# has_landed_title = e_new_california
-		# }
-	# }
+#Authority Decrease - Lost Offensive War
+character_event = {
+	id = cetic.305
+	hide_window = yes
+	is_triggered_only = yes
+	only_playable = yes
 	
-	# immediate = {
-		# change_variable = { which = global_imp_auth value = 5 }
-	# }
+	trigger = {
+		FROM = {
+			OR = {
+				has_landed_title = e_california
+				has_landed_title = e_new_california
+			}
+		}
+	}
 	
-	# option = {
-		# name = opta_excellent
-		# custom_tooltip = {
-			# text = impauth_increase_5_TT
-		# }
-	# }
-# }
+	immediate = {
+		FROM = {
+			character_event = { id = cetic.306 }
+		}
+	}
+}
+
+#Same As Above
+character_event = {
+	id = cetic.306
+	desc = EVTDESCCETIC312
+	picture = GFX_evt_china_isolationist
+	is_triggered_only = yes
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			has_landed_title = e_california
+			has_landed_title = e_new_california
+		}
+	}
+	
+	immediate = {
+		remove_imperial_authority_modifier = yes
+		change_variable = { which = global_imp_auth value = -3 }
+		add_imperial_authority_modifier = yes
+	}
+	
+	option = {
+		name = opta_disappointing
+		custom_tooltip = {
+			text = impauth_decrease_3_TT
+		}
+	}
+}
 
 #Authority Increase - Good Stats
 character_event = {
@@ -3586,7 +3599,9 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = 5 }
+		add_imperial_authority_modifier = yes
 	}
 	
 	option = {
@@ -3627,7 +3642,9 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = 5 }
+		add_imperial_authority_modifier = yes
 	}
 	
 	option = {
@@ -3663,7 +3680,9 @@ narrative_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = 20 }
+		add_imperial_authority_modifier = yes
 	}
 	
 	option = {
@@ -3697,7 +3716,9 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = 2 }
+		add_imperial_authority_modifier = yes
 	}
 	
 	option = {
@@ -3722,7 +3743,9 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = 1 }
+		add_imperial_authority_modifier = yes
 	}
 	
 	option = {
@@ -3733,7 +3756,7 @@ character_event = {
 	}
 }
 
-#Authority Decrease - Lost War
+#Authority Decrease - Lost Defensive War
 character_event = {
 	id = cetic.312
 	desc = EVTDESCCETIC312
@@ -3749,7 +3772,9 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = -10 }
+		add_imperial_authority_modifier = yes
 	}
 	
 	option = {
@@ -3790,7 +3815,9 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = -10 }
+		add_imperial_authority_modifier = yes
 	}
 	
 	option = {
@@ -3830,7 +3857,9 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = -10 }
+		add_imperial_authority_modifier = yes
 	}
 	
 	option = {
@@ -3862,7 +3891,9 @@ province_event = { #bit of a hacky change, idk if this actually works
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = -5 }
+		add_imperial_authority_modifier = yes
 	}
 	
 	option = {
@@ -3885,7 +3916,9 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = -10 }
+		add_imperial_authority_modifier = yes
 	}
 	
 	option = {
@@ -3952,7 +3985,9 @@ character_event = {
 	immediate = {
 		clr_character_flag = california_regent
 		set_character_flag = california_regent
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = -5 }
+		add_imperial_authority_modifier = yes
 	}
 	option = {
 		name = opta_disappointing
@@ -4003,7 +4038,9 @@ character_event = {
 		}
 	}
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		change_variable = { which = global_imp_auth value = -5 }
+		add_imperial_authority_modifier = yes
 	}
 	option = {
 		name = opta_disappointing
@@ -4391,6 +4428,7 @@ character_event = {
 	option = {
 		name = EVTOPTACETIC331
 		remove_trait = governator
+		remove_imperial_authority_modifier = yes
 		if = {
 			limit = {
 				NOT = {
@@ -4467,6 +4505,7 @@ character_event = {
 				character_event = { id = cetic.300 }
 			}
 		}
+		add_imperial_authority_modifier = yes
 	}
 }
 
@@ -6316,7 +6355,9 @@ character_event = {
 		custom_tooltip = {
 			text = impauth_decrease_3_TT
 			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
 				change_variable = { which = global_imp_auth value = -3 }
+				add_imperial_authority_modifier = yes
 			}
 		}
 		any_character = {
@@ -6347,7 +6388,9 @@ character_event = {
 		custom_tooltip = {
 			text = impauth_increase_5_TT
 			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
 				change_variable = { which = global_imp_auth value = 5 }
+				add_imperial_authority_modifier = yes
 			}
 		}
 		any_character = {
@@ -6391,7 +6434,9 @@ character_event = {
 		custom_tooltip = {
 			text = impauth_increase_7_TT
 			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
 				change_variable = { which = global_imp_auth value = 7 }
+				add_imperial_authority_modifier = yes
 			}
 		}
 		any_character = {
@@ -6456,7 +6501,9 @@ character_event = {
 		custom_tooltip = {
 			text = impauth_decrease_5_TT
 			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
 				change_variable = { which = global_imp_auth value = -5 }
+				add_imperial_authority_modifier = yes
 			}
 		}
 	}
@@ -6492,13 +6539,10 @@ character_event = {
 			remove_trait = weak_emperor
 			remove_trait = strong_emperor
 			remove_trait = figurehead
-			remove_character_modifier = imperial_authority
+			remove_imperial_authority_modifier = yes
 			clr_character_flag = era_name
 		}
-		add_character_modifier = {
-			name = imperial_authority
-			duration = -1
-		}
+		add_imperial_authority_modifier = yes
 		if = {
 			limit = {
 				check_variable = { which = global_imp_auth value < 10 }
@@ -6781,7 +6825,9 @@ character_event = {
 			custom_tooltip = {
 				text = impauth_increase_10_TT
 				hidden_tooltip = {
+					remove_imperial_authority_modifier = yes
 					change_variable = { which = global_imp_auth value = 10 }
+					add_imperial_authority_modifier = yes
 				}
 			}
 		}
@@ -6798,7 +6844,9 @@ character_event = {
 			custom_tooltip = {
 				text = impauth_increase_10_TT
 				hidden_tooltip = {
+					remove_imperial_authority_modifier = yes
 					change_variable = { which = global_imp_auth value = 10 }
+					add_imperial_authority_modifier = yes
 				}
 			}
 		}
@@ -6815,7 +6863,9 @@ character_event = {
 			custom_tooltip = {
 				text = impauth_increase_10_TT
 				hidden_tooltip = {
+					remove_imperial_authority_modifier = yes
 					change_variable = { which = global_imp_auth value = 10 }
+					add_imperial_authority_modifier = yes
 				}
 			}
 		}
@@ -6832,7 +6882,9 @@ character_event = {
 			custom_tooltip = {
 				text = impauth_increase_10_TT
 				hidden_tooltip = {
+					remove_imperial_authority_modifier = yes
 					change_variable = { which = global_imp_auth value = 10 }
+					add_imperial_authority_modifier = yes
 				}
 			}
 		}
@@ -6849,7 +6901,9 @@ character_event = {
 			custom_tooltip = {
 				text = impauth_increase_10_TT
 				hidden_tooltip = {
+					remove_imperial_authority_modifier = yes
 					change_variable = { which = global_imp_auth value = 10 }
+					add_imperial_authority_modifier = yes
 				}
 			}
 		}
@@ -6866,7 +6920,9 @@ character_event = {
 			custom_tooltip = {
 				text = impauth_increase_10_TT
 				hidden_tooltip = {
+					remove_imperial_authority_modifier = yes
 					change_variable = { which = global_imp_auth value = 10 }
+					add_imperial_authority_modifier = yes
 				}
 			}
 		}
@@ -6885,10 +6941,7 @@ character_event = {
 		hidden_tooltip = {
 			set_variable = { which = global_imp_auth value = 70 }
 		}
-		add_character_modifier = {
-			name = imperial_authority
-			duration = -1
-		}
+		add_imperial_authority_modifier = yes
 		set_global_flag = bc_get
 		set_global_flag = v_get
 		set_global_flag = j_get
@@ -6902,13 +6955,12 @@ character_event = {
 					has_landed_title = e_california
 					has_landed_title = e_new_california
 				}
-				has_character_modifier = imperial_authority
+				has_character_flag = imperial_authority
 			}
 			remove_trait = weak_emperor
 			remove_trait = strong_emperor
 			remove_trait = figurehead
-			remove_character_modifier = imperial_authority
-			clr_character_flag = era_name
+			remove_imperial_authority_modifier = yes
 		}
 		hidden_tooltip = {
 			if = {
@@ -8938,7 +8990,9 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		set_variable = { which = global_imp_auth value = 100 }
+		add_imperial_authority_modifier = yes
 	}
 }
 
@@ -8955,7 +9009,9 @@ character_event = {
 	}
 	
 	immediate = {
+		remove_imperial_authority_modifier = yes
 		set_variable = { which = global_imp_auth value = 0 }
+		add_imperial_authority_modifier = yes
 	}
 }
 
@@ -8998,5 +9054,2229 @@ character_event = {
 		primary_title = {
 			set_variable = { which = bureau_number value = 0 }
 		}
+	}
+}
+
+#Northern Campaign Events
+
+narrative_event = {
+	id = cetic.700
+	title = TITLE_northern_campaign
+	desc = EVTDESC_northern_campaign
+	
+	picture = GFX_evt_china_invades
+	border = GFX_event_narrative_frame_religion	
+
+	only_rulers = yes
+	major = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		primary_title = { holy_order = no }
+		primary_title = { is_landless_type_title = no }
+		mercenary = no
+		primary_title = { higher_tier_than = BARON }	
+	}
+	
+	option = {
+		name = "northern_campaign_emperor"
+		trigger = {
+			has_landed_title = e_california
+		}
+		set_global_flag = northern_campaign_resumed
+		wealth = -500
+		prestige = -500
+		custom_tooltip = {
+			text = globalbureau_decrease_1_TT
+			hidden_tooltip = {
+				change_variable = { which = global_bureau_number value = -1 }
+			}
+		}
+		custom_tooltip = {
+			text = bureau_decrease_3_TT
+			hidden_tooltip = {
+				primary_title = {
+					change_variable = { which = bureau_number value = -3 }
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 1000
+		}
+	}
+	option = {
+		name = "northern_campaign_elsewhere"
+		trigger = {
+			NOT = {				
+				has_landed_title = e_california
+				primary_title = { is_landless_type_title = yes }
+				mercenary = yes
+				religion = cetic
+				capital_scope = {
+					region = custom_pacific_nw
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1000
+		}
+	}	
+	option = {
+		name = "northern_campaign_targets"
+		trigger = {
+			NOT = { has_landed_title = e_california }
+			NOT = { religion = cetic }
+			capital_scope = {
+				region = custom_pacific_nw
+			}
+		}
+		ai_chance = {
+			factor = 1000	
+		}
+	}
+
+	option = {
+		name = "northern_campaign_cetics"
+		trigger = {
+			religion = cetic
+			NOT = { 
+				has_landed_title = e_california
+				primary_title = { is_landless_type_title = yes }
+				mercenary = yes
+			}
+		}
+		ai_chance = {
+			factor = 1000	
+		}
+	}
+}
+
+# **************************Great Wall Events***********************
+narrative_event = { #decide whether or not to build wall
+	id = cetic.800
+	title = TITLE_greatwall_start
+	desc = EVTDESC_greatwall_start
+	
+	picture = GFX_evt_china_golden_age
+	border = GFX_event_narrative_frame_economy
+
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		ROOT = { save_global_event_target_as = first_greatwall_emperor }
+	}
+	
+	option = {
+		name = "greatwall_begin"
+		set_global_flag = greatwall_started
+		custom_tooltip = {
+			text = greatwall_started_TT
+			hidden_tooltip = {
+				set_variable = { which = global_greatwall_progress value = 0 }
+			}
+		}
+		wealth = -3000
+		capital_scope = {
+			add_province_modifier = { name = greatwall_progresscheck duration = -1 }
+		}
+		custom_tooltip = {
+			text = globalbureau_decrease_1_TT
+			hidden_tooltip = {
+				change_variable = { which = global_bureau_number value = -1 }
+			}
+		}
+		custom_tooltip = {
+			text = bureau_decrease_3_TT
+			hidden_tooltip = {
+				primary_title = {
+					change_variable = { which = bureau_number value = -3 }
+				}
+			}
+		}
+		hidden_tooltip = {
+			character_event = {
+				id = cetic.810
+				months = 1
+			}
+			any_realm_character = {
+				character_event = { id = cetic.801 }
+			}
+		}
+
+		ai_chance = {
+			factor = 1000
+		}
+	}
+	option = {
+		name = "greatwall_dontbegin"
+		ai_chance = {
+			factor = 0
+		}
+	}	
+}
+
+character_event = { #notify the realm
+	id = cetic.801
+	desc = EVTDESC_greatwall_startvassal
+	
+	picture = GFX_evt_china_golden_age
+	border = GFX_event_normal_frame_economy
+
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "greatwall_beginvassal"
+	}	
+}
+
+# Vassal offer donation in return for favor
+character_event = {
+	id = cetic.802
+	desc = EVTDESC_greatwall_donation
+	picture = GFX_evt_bribe_accepted
+	
+	is_triggered_only = yes
+	
+	
+	# Thank you!
+	option = {
+		name = EVTOPTA_ZE_22000
+		
+		ai_chance = {
+			factor = 30
+			
+			modifier = {
+				factor = 0
+				trait = figurehead
+			}
+			
+			modifier = {
+				factor = 2
+				trait = trusting
+			}
+			
+			modifier = {
+				factor = 2
+				trait = slothful
+			}
+		}
+		
+		hidden_tooltip = { 
+			FROM = { character_event = { id = cetic.803 days = 3 } } 
+		}
+
+		custom_tooltip = {
+			text = greatwall_increase_6_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 6 }
+			}
+		}
+		custom_tooltip = {
+			text = impauth_decrease_1_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = -1 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+		tooltip = {
+			FROM = {
+				add_favor = ROOT 
+			}
+		}	
+	}
+	
+	# Steal some money
+	option = {
+		name = greatwall_donationstolen
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 2
+				NOT = { wealth = 0 }
+			}
+			
+			modifier = {
+				factor = 2
+				trait = greedy
+			}
+			
+			modifier = {
+				factor = 1.5
+				NOT = { wealth = 100 }
+			}
+		}
+		
+		hidden_tooltip = { 
+			FROM = { character_event = { id = cetic.803 days = 3 } } 
+		}
+		wealth = 100
+		custom_tooltip = {
+			text = greatwall_increase_3_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 3 }
+			}
+		}
+		custom_tooltip = {
+			text = impauth_decrease_2_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = -2 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+		tooltip = {
+			FROM = {
+				add_favor = ROOT 
+			}
+		}	
+	}
+	
+	# No thanks
+	option = {
+		name = EVTOPTB_ZE_22000
+		
+		ai_chance = {
+			factor = 50
+			
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			
+			modifier = {
+				factor = 2
+				FROM = { is_councillor = yes }
+			}
+			
+			modifier = {
+				factor = 2
+				trait = paranoid
+			}
+			
+			modifier = {
+				factor = 2
+				trait = content
+			}
+		}
+		
+		hidden_tooltip = {
+			FROM = { character_event = { id = cetic.804 days = 3 } }
+		}
+		
+		tooltip = {
+			opinion = {
+				who = FROM
+				modifier = opinion_insulted
+				years = 3
+			}
+		}
+	}
+}
+
+# Offer accepted
+character_event = {
+	id = cetic.803
+	desc = EVTDESC_greatwall_donation_accepted
+	picture = GFX_evt_bribe_accepted
+	
+	is_triggered_only = yes
+	
+	# Offer was accepted
+	option = {
+		name = EXCELLENT
+		
+		ROOT = { 
+			add_favor = FROM 
+		}
+	}
+}
+
+# Offer declined
+character_event = {
+	id = cetic.804
+	desc = EVTDESC_greatwall_donation_rejected
+	picture = GFX_evt_bribe_declined
+	
+	is_triggered_only = yes
+	
+	# Too bad
+	option = {
+		name = EVTOPTA_ZE_22200
+		
+		wealth = 200
+		opinion = {
+			who = FROM
+			modifier = opinion_insulted
+			years = 3
+		}
+	}
+}
+
+character_event = {
+	id = cetic.805
+	desc = EVTDESC_greatwall_selfdonation
+	picture = GFX_evt_bribe_accepted
+	
+	is_triggered_only = yes
+	
+	
+	option = {
+		name = greatwall_bigselfdonation
+		
+		ai_chance = {
+			factor = 20
+			
+			modifier = {
+				factor = 2
+				trait = charitable
+			}
+			
+			modifier = {
+				factor = 10
+				wealth = 2000
+			}
+			
+			modifier = {
+				factor = 0
+				NOT = { wealth = 1000 }
+			}
+		}
+
+		wealth = -1000
+		add_character_modifier = { name = selffunded_greatwall duration = 1825 }
+		custom_tooltip = {
+			text = greatwall_increase_15_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 15 }
+			}
+		}
+		custom_tooltip = {
+			text = impauth_increase_1_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = 1 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+	}
+
+	option = {
+		name = greatwall_normalselfdonation
+		
+		ai_chance = {
+			factor = 80
+			
+			modifier = {
+				factor = 0
+				NOT = { wealth = 500 }
+			}
+		}
+
+		wealth = -500
+		add_character_modifier = { name = selffunded_greatwall duration = 1825 }
+		custom_tooltip = {
+			text = greatwall_increase_6_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 6 }
+			}
+		}
+	}
+
+	option = {
+		name = greatwall_noselfdonation
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 5000
+				NOT = { wealth = 500 }
+			}
+		}
+	}
+}
+
+character_event = { #who will pay for it?
+	id = cetic.810
+	desc = EVTDESC_greatwall_phase1
+	
+	picture = GFX_evt_china_diplomatic_incident
+	border = GFX_event_normal_frame_economy
+
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "greatwall_phase1_peasants"
+		set_global_flag = greatwall_phase1
+		custom_tooltip = {
+			text = greatwall_greattaxation_TT
+			hidden_tooltip = {
+				any_demesne_province = {
+					add_province_modifier = { name = demesne_greatwall_taxation duration = 3650 }
+				}
+				any_realm_province = {
+					limit = {
+						AND = {
+							kingdom = { title = k_the_valley }
+							NOT = { has_province_modifier = demesne_greatwall_taxation }
+						}
+					}
+					add_province_modifier = { name = greatwall_taxation duration = 3650 }
+				}
+			}
+		}
+		custom_tooltip = {
+			text = greatwall_increase_15_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 15 }
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 1.5 trait = cruel }
+			modifier = { factor = 1.5 trait = greedy }
+			modifier = { factor = 1.2 trait = proud }
+			modifier = { factor = 0.5 trait = kind }
+		}
+	}
+	option = {
+		name = "greatwall_phase1_nobles"
+		set_global_flag = greatwall_phase1
+		add_character_modifier = { name = greatwall_noblestaxed duration = 3650 }
+		custom_tooltip = {
+			text = greatwall_increase_15_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 15 }
+			}
+		}
+		custom_tooltip = {
+			text = impauth_decrease_5_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = -5 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+		hidden_tooltip = {
+			any_realm_character = {
+				limit = { higher_tier_than = COUNT }
+				character_event = { id = cetic.811 }
+			}
+		}
+
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 1.5 trait = deceitful }
+			modifier = { factor = 1.5 trait = arbitrary }
+			modifier = { factor = 1.2 trait = greedy }
+			modifier = { factor = 0.5 trait = just }
+		}
+	}
+
+	option = {
+		name = "greatwall_phase1_enemies"
+		set_global_flag = greatwall_phase1
+		set_global_flag = greatwall_casusbelli
+		custom_tooltip = {
+			text = greatwall_nochange_TT
+		}
+		custom_tooltip = {
+			text = greatwall_casusbelli_TT
+		}
+
+		ai_chance = {
+			factor = 25
+			modifier = { factor = 1.5 trait = proud }
+			modifier = { factor = 1.5 trait = wroth }
+			modifier = { factor = 1.2 trait = ambitious }
+			modifier = { factor = 1.2 trait = zealous }
+			modifier = { factor = 0.5 trait = kind }
+		}
+	}
+	
+	option = {
+		name = "greatwall_phase1_me"
+		set_global_flag = greatwall_phase1
+		wealth = -5000
+		add_character_modifier = { name = greatwall_selflessliege duration = 3650 }
+		custom_tooltip = {
+			text = greatwall_increase_30_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 30 }
+			}
+		}
+		custom_tooltip = {
+			text = impauth_increase_2_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = 2 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+		
+		ai_chance = {
+			factor = 5
+			modifier = { factor = 2 trait = charitable }
+			modifier = { factor = 1.5 trait = honest }
+			modifier = { factor = 1.2 trait = proud }
+			modifier = { factor = 0 trait = greedy }
+			modifier = { factor = 0 NOT = { wealth = 5000 } }
+		}
+	}	
+}
+
+character_event = { #nobles pay for wall
+	id = cetic.811
+	desc = EVTDESC_greatwall_phase1nobles
+	
+	picture = GFX_evt_china_diplomatic_incident
+	border = GFX_event_normal_frame_economy
+
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "greatwall_phase1nobles_ok"
+		scaled_wealth = -1
+	}	
+}
+
+character_event = { #reparations finalized
+	id = cetic.812
+	desc = EVTDESC_greatwall_reparations
+	
+	picture = GFX_evt_china_golden_age
+	border = GFX_event_normal_frame_economy
+
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "greatwall_honestreparations"
+		prestige = 200
+		custom_tooltip = {
+			text = greatwall_increase_15_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 15 }
+			}
+		}
+		custom_tooltip = {
+			text = impauth_increase_2_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = 2 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+		ai_chance = {
+			factor = 80
+			modifier = { factor = 2 trait = charitable }
+			modifier = { factor = 1.2 trait = honest }
+			modifier = { factor = 1.2 trait = just }
+		}
+	}
+
+	option = {
+		name = "greatwall_stealreparations"
+		prestige = -250
+		scaled_wealth = 2
+		custom_tooltip = {
+			text = greatwall_nochange_TT
+		}
+		custom_tooltip = {
+			text = impauth_decrease_5_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = -5 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 1.5 trait = arbitrary }
+			modifier = { factor = 1.5 trait = deceitful }
+		}
+	}	
+}
+
+character_event = { #appoint a grand-architect
+	id = cetic.813
+	desc = EVTDESC_greatwall_architect
+	picture = GFX_evt_emissary
+	border = GFX_event_normal_frame_economy
+	
+	trigger = {
+		has_global_flag = greatwall_phase1
+		NOT = { has_global_flag = greatwall_architect }
+		OR = {
+			has_landed_title = e_california
+			has_landed_title = e_new_california
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+		modifier = {
+			factor = 0.5
+			check_variable = { which = global_greatwall_progress value >= 25 }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = greatwall_architect
+	}
+
+	option = {
+		name = greatwall_architectmyself
+		trigger = {
+			AND = {
+				OR = {
+					trait = strong_emperor
+					NOT = { any_realm_character = { trait = governator } }
+				}
+				is_incapable = no
+			}
+		}
+
+		add_character_modifier = { name = greatwall_architect duration = 3650 }
+
+		custom_tooltip = {
+			text = greatwall_increase_6_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 6 }
+			}
+		}
+		save_global_event_target_as = grand_architect
+		character_event = { id = cetic.814 days = 14 }
+		
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = architect }
+			modifier = { factor = 3 trait = paranoid }
+			modifier = { factor = 2 trait = proud }
+			modifier = { factor = 2 trait = ambitious }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.2 trait = greedy }
+			modifier = { factor = 1.2 trait = stubborn }
+			modifier = { factor = 0.5 trait = content }
+			modifier = { factor = 0 trait = slothful }
+		}
+	}
+
+	option = {
+		name = greatwall_architectsteward
+		trigger = {
+			AND = {
+				OR = {
+					trait = strong_emperor
+					NOT = { any_realm_character = { trait = governator } }
+				}
+				job_treasurer = {
+					always = yes
+				}
+			}
+		}
+
+		job_treasurer = {
+			add_character_modifier = { name = greatwall_architect duration = 3650 }
+			opinion = {
+				modifier = appointed_grand_architect
+				who = ROOT 
+			}
+			save_global_event_target_as = grand_architect
+			character_event = { id = cetic.814 days = 14 }
+		}
+		custom_tooltip = {
+			text = greatwall_increase_6_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 6 }
+			}
+		}
+
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 1.2 trait = just }
+			modifier = { factor = 1.2 trait = content }
+			modifier = { factor = 1.2 trait = honest }
+			modifier = { factor = 0.5 trait = arbitrary }
+		}		
+	}
+	option = {
+		name = greatwall_architectfamily
+		trigger = {
+			AND = {
+				OR = {
+					trait = strong_emperor
+					NOT = { any_realm_character = { trait = governator } }
+				}
+				any_realm_character = {
+					is_close_relative = ROOT
+				}
+			}
+		}
+		
+		random_close_relative = {
+			limit = {
+				same_realm = ROOT
+				is_adult = yes
+				
+			}
+			add_character_modifier = { name = greatwall_architect duration = 3650 }
+			opinion = {
+				modifier = appointed_grand_architect
+				who = ROOT 
+			}
+			save_global_event_target_as = grand_architect
+			character_event = { id = cetic.814 days = 14 }
+		}
+		custom_tooltip = {
+			text = greatwall_increase_6_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 6 }
+			}
+		}
+
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = gregarious }
+			modifier = { factor = 1.2 trait = proud }
+			modifier = { factor = 1.2 trait = trusting }
+			modifier = { factor = 1.2 trait = kind }
+			modifier = { factor = 0.5 trait = paranoid }
+		}
+	}
+	option = {
+		name = greatwall_architectfriend
+		trigger = {
+			AND = {
+				OR = {
+					trait = strong_emperor
+					NOT = { any_realm_character = { trait = governator } }
+				}
+				any_realm_character = {
+					OR = {
+						is_lover = ROOT
+						is_friend = ROOT
+					}
+				}
+			}
+		}
+
+		if = {
+			limit = { num_of_lovers > 0 }
+			random_lover = {
+				limit = { same_realm = ROOT }
+				add_character_modifier = { name = greatwall_architect duration = 3650 }
+				opinion = {
+					modifier = appointed_grand_architect
+					who = ROOT 
+				}
+				save_global_event_target_as = grand_architect
+				character_event = { id = cetic.814 days = 14 }
+			}
+		}
+		else = {
+			random_friend = {
+				limit = { same_realm = ROOT }
+				add_character_modifier = { name = greatwall_architect duration = 3650 }
+				opinion = {
+					modifier = appointed_grand_architect
+					who = ROOT 
+				}
+				save_global_event_target_as = grand_architect
+				character_event = { id = cetic.814 days = 14 }
+			}
+		}
+		custom_tooltip = {
+			text = greatwall_increase_6_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 6 }
+			}
+		}
+
+		ai_chance = {
+			factor = 20
+			modifier = { factor = 2 trait = hedonist }
+			modifier = { factor = 2 trait = seductress }
+			modifier = { factor = 2 trait = seducer }
+			modifier = { factor = 2 trait = socializer }
+			modifier = { factor = 2 trait = lustful }
+			modifier = { factor = 1.2 trait = gregarious }
+			modifier = { factor = 1.2 trait = trusting }
+			modifier = { factor = 1.2 trait = kind }
+			modifier = { factor = 0.5 trait = shy }
+			modifier = { factor = 0.2 trait = paranoid }
+		}
+	}
+	option = {
+		name = greatwall_architectgovernatus
+		trigger = {
+			AND = {
+				any_realm_character = { trait = governator }
+				NOT = { trait = strong_emperor }
+			}
+		}
+		
+		any_realm_character = {
+			limit = { trait = governator }
+			add_character_modifier = { name = greatwall_architect duration = 3650 }
+			opinion = {
+				modifier = appointed_grand_architect
+				who = ROOT 
+			}
+			save_global_event_target_as = grand_architect
+			character_event = { id = cetic.814 days = 14 }
+		}
+		custom_tooltip = {
+			text = greatwall_increase_6_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 6 }
+			}
+		}
+	}
+}
+
+character_event = { #grand-architect sets a plan
+	id = cetic.814
+	desc = EVTDESC_greatwall_architectplans
+	
+	picture = GFX_evt_bribe_accepted
+	border = GFX_event_normal_frame_economy
+
+	only_rulers = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = greatwall_planned
+	}
+	
+	option = { #architect does a great job - high stewardship/genius/diligent/architect/etc
+		name = "greatwall_architectplans_excellent"
+		trigger = {
+			OR = {
+				stewardship = 16
+				trait = genius
+				trait = quick
+				trait = diligent
+				trait = architect
+				trait = midas_touched
+			}
+			NOR = {
+				NOT = { stewardship = 6 }
+				trait = imbecile
+				trait = slow
+				trait = slothful
+				trait = lunatic
+				trait = indulgent_wastrel
+			}
+		}
+		tooltip_info_custom = available_due_to_smart
+		set_character_flag = grandarchitect_greatplan
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { #architect does a terrible job
+		name = "greatwall_architectplans_terrible"
+		trigger = {
+			OR = {
+				NOT = { stewardship = 6 }
+				trait = imbecile
+				trait = slow
+				trait = lunatic
+				trait = indulgent_wastrel
+			}
+		}
+		tooltip_info_custom = available_because_dumb
+		set_character_flag = grandarchitect_awfulplan
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { #architect stealthily misappropriates funds
+		name = "greatwall_architectplans_steals"
+		trigger = {
+			OR = {
+				intrigue = 16
+				trait = schemer
+				trait = elusive_shadow
+			}
+		}
+		tooltip_info = intrigue
+		scaled_wealth = {
+			value = 1
+			min = 300
+		}
+		set_character_flag = grandarchitect_okplan
+		
+		ai_chance = {
+			factor = 100
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 2 trait = deceitful }
+			modifier = { factor = 0.25 trait = honest }
+			modifier = { factor = 0.25 trait = charitable }
+		}
+	}
+	option = { #architect obviously misappropriates funds
+		name = "greatwall_architectplans_wastes"
+		trigger = {
+			OR = {
+				NOT = { intrigue = 6 }
+				trait = lustful
+				trait = gluttonous
+				trait = deceitful
+				trait = hedonist
+				trait = amateurish_plotter
+			}
+			NOR = {
+				intrigue = 16
+				trait = schemer
+				trait = elusive_shadow
+			}
+		}
+		wealth = 150
+		set_character_flag = grandarchitect_badplan
+
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 2 trait = greedy }
+			modifier = { factor = 2 trait = deceitful }
+			modifier = { factor = 0.25 trait = honest }
+			modifier = { factor = 0.25 trait = charitable }
+		}
+	}
+	option = { #architect does a decent job
+		name = "greatwall_architectplans_decent"
+		trigger = {
+			NOR = {
+				NOT = { stewardship = 6 }
+				trait = imbecile
+				trait = slow
+				trait = lunatic
+				trait = indulgent_wastrel
+			}
+		}
+		set_character_flag = grandarchitect_okplan
+
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+character_event = { #emperor reviews the plan
+	id = cetic.815
+	desc = { #brilliant plan
+		trigger = {
+			event_target:grand_architect = {
+				has_character_flag = grandarchitect_greatplan
+			}
+		}
+		text = EVTDESC_greatwall_greatplan
+	}
+	desc = { #ok plan
+		trigger = {
+			event_target:grand_architect = {
+				has_character_flag = grandarchitect_okplan
+			}
+		}
+		text = EVTDESC_greatwall_okplan
+	}
+	desc = { #bad plan
+		trigger = {
+			event_target:grand_architect = {
+				has_character_flag = grandarchitect_badplan
+			}
+		}
+		text = EVTDESC_greatwall_badplan
+	}
+	desc = { #awful plan
+		trigger = {
+			event_target:grand_architect = {
+				has_character_flag = grandarchitect_greatplan
+			}
+		}
+		text = EVTDESC_greatwall_awfulplan
+	}			
+	
+	picture = GFX_evt_bribe_accepted
+	border = GFX_event_normal_frame_economy
+
+	only_rulers = yes
+
+	trigger = {
+		has_global_flag = greatwall_planned
+		NOT = { has_global_flag = greatwall_planreviewed }
+		OR = {
+			has_landed_title = e_california
+			has_landed_title = e_new_california
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.5
+			event_target:grand_architect = {
+				OR = {
+					trait = diligent
+					trait = quick
+					trait = genius
+					trait = midas_touched
+					stewardship = 16
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			event_target:grand_architect = {
+				OR = {
+					trait = slothful
+					trait = slow
+					trait = imbecile
+					trait = indulgent_wastrel
+					trait = lunatic
+					NOT = { stewardship = 6 }
+				}
+			}	
+		}
+	}
+	
+	immediate = {
+		set_global_flag = greatwall_planreviewed
+	}
+	
+	option = {
+		name = EVTOPTA_greatwall_greatplan
+		trigger = {
+			event_target:grand_architect = {
+				has_character_flag = grandarchitect_greatplan
+			}
+		}
+		scaled_wealth = 0.5
+		prestige = 200
+		event_target:grand_architect = {
+			prestige = 500
+		}
+		custom_tooltip = {
+			text = greatwall_increase_30_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 30 }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_greatwall_okplan
+		trigger = {
+			event_target:grand_architect = {
+				has_character_flag = grandarchitect_okplan
+			}
+		}
+		prestige = 100
+		event_target:grand_architect = {
+			prestige = 250
+		}
+		custom_tooltip = {
+			text = greatwall_increase_15_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 15 }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_greatwall_badplan
+		trigger = {
+			event_target:grand_architect = {
+				has_character_flag = grandarchitect_badplan
+			}
+		}
+		prestige = 100
+		event_target:grand_architect = {
+			prestige = -250
+		}
+		custom_tooltip = {
+			text = greatwall_nochange_TT
+		}
+		custom_tooltip = {
+			text = impauth_decrease_2_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = -2 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_greatwall_awfulplan
+		trigger = {
+			event_target:grand_architect = {
+				has_character_flag = grandarchitect_awfulplan
+			}
+		}
+		scaled_wealth = -0.5
+		prestige = -200
+		event_target:grand_architect = {
+			prestige = -500
+		}
+		custom_tooltip = {
+			text = greatwall_decrease_15_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = -15 }
+			}
+		}
+		custom_tooltip = {
+			text = impauth_decrease_5_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = -5 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+	}
+}
+
+character_event = { #quarry decision
+	id = cetic.816
+	desc = EVTDESC_greatwall_quarry
+	picture = GFX_evt_stressed_ruler
+	border = GFX_event_normal_frame_economy
+	
+	trigger = {
+		has_global_flag = greatwall_phase1
+		NOT = { has_global_flag = greatwall_materials }
+		OR = {
+			has_landed_title = e_california
+			has_landed_title = e_new_california
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.5
+			check_variable = { which = global_greatwall_progress value >= 50 }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = greatwall_materials
+	}
+	
+	option = {
+		name = greatwall_quarry_localmaterials
+		custom_tooltip = {
+			text = greatwall_localmaterials_TT
+			hidden_tooltip = {
+				any_realm_province = {
+					limit = { kingdom = { title = k_francisco } }
+					add_province_modifier = { name = peasant_homes_savaged duration = 7300 }
+				}
+			}
+		}
+		custom_tooltip = {
+			text = greatwall_decrease_15_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = -15 }
+			}
+		}
+	}
+
+	option = {
+		name = greatwall_quarry_overworkquarries
+		custom_tooltip = {
+			text = greatwall_overworkquarries_TT
+			hidden_tooltip = {
+				any_realm_province = {
+					limit = {
+						OR = {
+							county = { title = c_joshua_tree }
+							county = { title = c_riverside }
+							county = { title = c_yuba }
+							county = { title = c_tahoe }
+						}
+					}
+					add_province_modifier = { name = quarries_drained duration = 10950 }
+				}
+			}
+		}
+		capital_scope = {
+			add_province_modifier = { name = masons_outraged duration = 3650 }
+		}
+		add_character_modifier = { name = overworked_quarries duration = 7300 }
+		custom_tooltip = {
+			text = greatwall_nochange_TT
+		}
+		custom_tooltip = {
+			text = impauth_decrease_2_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = -2 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+	}
+
+	option = {
+		name = greatwall_quarry_newquarry
+		custom_tooltip = {
+			text = greatwall_newquarry_TT
+			hidden_tooltip = {
+				scaled_wealth = -5
+				any_realm_province = {
+					limit = { duchy = { title = d_east_bay } }
+					add_province_modifier = { name = black_mt_quarry duration = -1 }
+				}
+			}
+		}
+		custom_tooltip = {
+			text = greatwall_increase_15_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 15 }
+			}
+		}
+		custom_tooltip = {
+			text = impauth_increase_2_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = 2 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+	}
+}
+
+
+narrative_event = { #warlord walls
+	id = cetic.817
+	title = EVTNAME_greatwall_warlords
+	desc = EVTDESC_greatwall_warlords
+	picture = GFX_evt_china_invades
+	border = GFX_event_narrative_frame_economy
+	
+	trigger = {
+		has_global_flag = greatwall_materials
+		NOT = { has_global_flag = greatwall_warlords }
+		OR = {
+			has_landed_title = e_california
+			has_landed_title = e_new_california
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+		modifier = {
+			factor = 0.5
+			check_variable = { which = global_greatwall_progress value >= 75 }
+		}
+	}
+	
+	immediate = {
+		set_global_flag = greatwall_warlords
+	}
+	
+	option = {
+		name = greatwall_warlords_repurposed
+		scaled_wealth = 2
+		custom_tooltip = {
+			text = greatwall_increase_6_TT
+			hidden_tooltip = {
+				change_variable = { which = global_greatwall_progress value = 6 }
+			}
+		}
+	}
+
+	option = {
+		name = greatwall_warlords_museum
+		piety = -50
+		custom_tooltip = {
+			text = greatwall_museum_TT
+			hidden_tooltip = {
+				any_realm_province = {
+					limit = {
+						OR = {
+							county = { title = c_napa }
+							county = { title = c_san_francisco }
+							county = { title = c_bragg }
+							county = { title = c_obispo }
+						}
+					}
+					add_province_modifier = { name = wall_museum duration = -1 }
+				}
+			}
+		}
+		custom_tooltip = {
+			text = greatwall_nochange_TT
+		}
+	}
+
+	option = {
+		name = greatwall_warlords_destroyed
+		piety = 100
+		custom_tooltip = {
+			text = impauth_increase_1_TT
+			hidden_tooltip = {
+				remove_imperial_authority_modifier = yes
+				change_variable = { which = global_imp_auth value = 1 }
+				add_imperial_authority_modifier = yes
+			}
+		}
+		custom_tooltip = {
+			text = greatwall_nochange_TT
+		}
+	}
+}
+
+narrative_event = { #begin phase2
+	id = cetic.820
+	title = TITLE_greatwall_phase2
+	desc = EVTDESC_greatwall_phase2
+	picture = GFX_evt_china_golden_age
+	border = GFX_event_narrative_frame_economy
+	
+	trigger = {
+		check_variable = { which = global_greatwall_progress value >= 100 }
+		has_global_flag = greatwall_phase1
+		has_global_flag = greatwall_planreviewed
+		has_global_flag = greatwall_materials
+		has_global_flag = greatwall_warlords
+		NOT = { has_global_flag = greatwall_phase2 }
+		OR = {
+			has_landed_title = e_california
+			has_landed_title = e_new_california
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	immediate = {
+		clr_global_flag = greatwall_phase1
+		set_global_flag = greatwall_phase2
+	}
+	
+	option = {
+		name = EVTOPTA_greatwall_phase2
+		prestige = 200
+		any_realm_province = {
+			limit = { has_province_modifier = greatwall_progresscheck }
+			remove_province_modifier = greatwall_progresscheck
+		}
+		custom_tooltip = {
+			text = greatwall_phase2_TT
+			hidden_tooltip = {
+				any_realm_province = {
+					limit = {
+						AND = {
+							OR = {
+								duchy = { title = d_goldengate }
+								duchy = { title = d_wineland }
+							}
+							port = yes
+						}
+					}
+					add_province_modifier = { name = greatwall_construction duration = 32850 }
+				}
+				any_realm_province = {
+					limit = {
+						AND = {
+							OR = {
+								duchy = { title = d_salinas }
+								duchy = { title = d_east_bay }
+							}
+							port = yes
+						}
+					}
+					add_province_modifier = { name = greatwall_construction duration = 21900 }
+				}
+				any_realm_province = {
+					limit = {
+						AND = {
+							OR = {
+								county = { title = c_santa_barbara }
+								county = { title = c_bragg }
+								county = { title = c_humboldt }
+							}
+							port = yes
+						}
+					}
+					add_province_modifier = { name = greatwall_construction duration = 10950 }
+				}
+				any_realm_province = {
+					limit = {
+						county = { title = c_sacramento }
+					}
+					province_event = { id = cetic.821 days = 10950 }
+					province_event = { id = cetic.821 days = 21900 }
+					province_event = { id = cetic.821 days = 32850 }
+				}
+			}
+		}
+	}
+}
+
+province_event = {
+	id = cetic.821
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = { NOT = { has_global_flag = greatwall_seabarriers } }
+			set_global_flag = greatwall_seabarriers
+			owner = {
+				top_liege = {
+					limit = {
+						OR = {
+							has_landed_title = e_california
+							has_landed_title = e_new_california
+						}
+					}
+					character_event = { id = cetic.822 }
+					any_realm_province = {
+						limit = {
+							AND = {
+								OR = {
+									county = { title = c_santa_barbara }
+									county = { title = c_bragg }
+									county = { title = c_humboldt }
+								}
+								port = yes
+							}
+						}
+						remove_province_modifier = greatwall_construction
+						add_province_modifier = { name = greatwall_navalbarriers duration = -1 }
+						add_province_modifier = { name = greatwall_watchtowers duration = -1 }
+						add_province_modifier = { name = greatwall_ramparts duration = -1 }
+					}
+					any_realm_province = {
+						limit = {
+							AND = {
+								OR = {
+									duchy = { title = d_goldengate }
+									duchy = { title = d_wineland }
+									duchy = { title = d_salinas }
+									duchy = { title = d_east_bay }
+								}
+								port = yes
+							}
+						}
+						add_province_modifier = { name = greatwall_navalbarriers duration = -1 }
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { NOT = { has_global_flag = greatwall_watchtowers } }
+			set_global_flag = greatwall_watchtowers
+			owner = {
+				top_liege = {
+					limit = {
+						OR = {
+							has_landed_title = e_california
+							has_landed_title = e_new_california
+						}
+					}
+					character_event = { id = cetic.823 }
+					any_realm_province = {
+						limit = {
+							AND = {
+								OR = {
+									duchy = { title = d_salinas }
+									duchy = { title = d_east_bay }
+								}
+								port = yes
+							}
+						}
+						remove_province_modifier = greatwall_construction
+						add_province_modifier = { name = greatwall_watchtowers duration = -1 }
+						add_province_modifier = { name = greatwall_ramparts duration = -1 }
+					}
+					any_realm_province = {
+						limit = {
+							AND = {
+								OR = {
+									duchy = { title = d_goldengate }
+									duchy = { title = d_wineland }
+								}
+								port = yes
+							}
+						}
+						add_province_modifier = { name = greatwall_watchtowers duration = -1 }
+					}
+				}
+			}
+		}
+		else = {
+			clr_global_flag = greatwall_phase2
+			set_global_flag = greatwall_finished
+			owner = {
+				top_liege = {
+					limit = {
+						OR = {
+							has_landed_title = e_california
+							has_landed_title = e_new_california
+						}
+					}
+					save_global_event_target_as = last_greatwall_emperor
+					narrative_event = { id = cetic.830 }
+					any_realm_province = {
+						limit = {
+							AND = {
+								OR = {
+									county = { title = c_santa_barbara }
+									county = { title = c_bragg }
+									county = { title = c_humboldt }
+									duchy = { title = d_goldengate }
+									duchy = { title = d_wineland }
+									duchy = { title = d_salinas }
+									duchy = { title = d_east_bay }
+								}
+								port = yes
+							}
+						}
+						remove_province_modifier = greatwall_construction
+						remove_province_modifier = greatwall_navalbarriers
+						remove_province_modifier = greatwall_watchtowers
+						remove_province_modifier = greatwall_ramparts
+						add_province_modifier = { name = californian_great_wall duration = -1 }
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = cetic.822
+	desc = EVTDESC_greatwall_navalbarriers
+	picture = GFX_evt_china_diplomatic_success
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_greatwall_navalbarriers
+		prestige = 250
+		piety = 100
+	}
+}
+
+character_event = {
+	id = cetic.823
+	desc = EVTDESC_greatwall_watchtowers
+	picture = GFX_evt_china_diplomatic_success
+	border = GFX_event_normal_frame_economy
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_greatwall_watchtowers
+		prestige = 500
+		piety = 200
+	}
+}
+
+narrative_event = { #let it be done
+	id = cetic.830
+	title = TITLE_greatwall_finished
+	desc = {
+		trigger = {
+			OR = {
+				has_landed_title = e_california
+				has_landed_title = e_new_california
+			}
+		}
+		text = EVTDESC_greatwall_finished_emperor
+	}
+	desc = {
+		trigger = {
+			NOR = {
+				has_landed_title = e_california
+				has_landed_title = e_new_california
+			}
+		}
+		text = EVTDESC_greatwall_finished
+	}
+	picture = GFX_evt_china_open
+	border = GFX_event_narrative_frame_economy
+	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = EVTOPTA_greatwall_finished
+		trigger = {
+			OR = {
+				has_landed_title = e_california
+				has_landed_title = e_new_california
+			}
+		}
+		prestige = 1000
+		piety = 400
+		add_character_modifier = { name = emperor_ofthe_wall duration = -1 }
+	}
+
+	option = {
+		name = EVTOPTB_greatwall_finished
+		trigger = {
+			NOR = {
+				has_landed_title = e_california
+				has_landed_title = e_new_california
+			}
+		}
+	}
+}
+
+#Generic Californian events. At this point this file might as well called be california_events.txt
+
+#Warbike event, for any culture that can hire Wheelers.
+character_event = {
+	id = cetic.900
+	desc = EVTDESC_warbike
+	picture = GFX_evt_prospering_province
+	border = GFX_event_normal_frame_war
+	only_playable = yes
+	
+	trigger = {
+		NOR = { 
+			has_character_flag = uninterested_in_warbikes
+			has_character_flag = interested_in_warbikes
+		}
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californio
+			culture = chino
+		}
+		NOR = {
+			has_artifact = high_quality_bike
+			has_artifact = normal_quality_bike
+			has_artifact = low_quality_bike
+		}
+		primary_title = {
+			higher_tier_than = COUNT
+		}
+		wealth = 100
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = EVTOPT_warbike_yes
+		wealth = -100
+		set_character_flag = interested_in_warbikes
+		hidden_tooltip = { set_variable = { which = local_bike_quality value = 0 } }
+	}
+	
+	option = {
+		name = EVTOPT_warbike_no
+		set_character_flag = uninterested_in_warbikes
+		prestige = -100
+	}
+}
+
+#choosing the frame
+character_event = {
+	id = cetic.901
+	desc = EVTDESC_warbike_frame
+	picture = GFX_evt_machines_of_war
+	border = GFX_event_normal_frame_war
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = interested_in_warbikes
+		NOT = { has_character_flag = picked_out_frame }
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californio
+			culture = chino
+		}
+		NOR = {
+			has_artifact = high_quality_bike
+			has_artifact = normal_quality_bike
+			has_artifact = low_quality_bike
+		}
+		primary_title = {
+			higher_tier_than = COUNT
+		}
+		wealth = 0
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	immediate = {
+		set_character_flag = picked_out_frame
+	}
+	
+	option = {
+		name = EVTOPT_warbike_aluminiumframe
+		hidden_tooltip = { change_variable = { which = local_bike_quality value = 2 } }
+		scaled_wealth = {
+			value = -2
+			min = -500
+			max = -2000
+		}
+	}
+	
+	option = {
+		name = EVTOPT_warbike_redwoodframe
+		hidden_tooltip = { change_variable = { which = local_bike_quality value = 1 } }
+		add_character_modifier = { name = redwood_bike duration = 3650 }
+		scaled_wealth = {
+			value = -1
+			min = -250
+			max = -1000
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_bambooframe
+		scaled_wealth = {
+			value = -0.5
+			min = -100
+			max = -500
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_ironframe
+		hidden_tooltip = { change_variable = { which = local_bike_quality value = -1 } }
+		scaled_wealth = {
+			value = -0.1
+			min = -50
+			max = -100
+		}
+	}
+}
+
+#picking material for the wheels
+character_event = {
+	id = cetic.902
+	desc = EVTDESC_warbike_wheels
+	picture = GFX_evt_experiment
+	border = GFX_event_normal_frame_war
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = picked_out_frame
+		NOT = { has_character_flag = picked_out_wheels }
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californio
+			culture = chino
+		}
+		NOR = {
+			has_artifact = high_quality_bike
+			has_artifact = normal_quality_bike
+			has_artifact = low_quality_bike
+		}
+		primary_title = {
+			higher_tier_than = COUNT
+		}
+		wealth = 0
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	immediate = {
+		set_character_flag = picked_out_wheels
+	}
+	
+	option = {
+		name = EVTOPT_warbike_rubberwheels
+		hidden_tooltip = { change_variable = { which = local_bike_quality value = 1 } }
+		scaled_wealth = {
+			value = -1
+			min = -300
+			max = -1000
+		}
+	}
+	
+	option = {
+		name = EVTOPT_warbike_leatherwheels
+		scaled_wealth = {
+			value = -0.5
+			min = -100
+			max = -500
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_nowheels
+		hidden_tooltip = { change_variable = { which = local_bike_quality value = -1 } }
+	}
+}
+
+#picking out a chain
+character_event = {
+	id = cetic.903
+	desc = EVTDESC_warbike_chain
+	picture = GFX_evt_scientist
+	border = GFX_event_normal_frame_war
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = picked_out_wheels
+		NOT = { has_character_flag = picked_out_chain }
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californio
+			culture = chino
+		}
+		NOR = {
+			has_artifact = high_quality_bike
+			has_artifact = normal_quality_bike
+			has_artifact = low_quality_bike
+		}
+		primary_title = {
+			higher_tier_than = COUNT
+		}
+		wealth = 0
+	}
+	
+	mean_time_to_happen = {
+		days = 14
+	}
+	
+	immediate = {
+		set_character_flag = picked_out_chain
+	}
+	
+	option = {
+		name = EVTOPT_warbike_customchain
+		hidden_tooltip = { change_variable = { which = local_bike_quality value = 1 } }
+		scaled_wealth = {
+			value = -0.5
+			min = -200
+			max = -800
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_badchain
+		hidden_tooltip = { change_variable = { which = local_bike_quality value = -1 } }
+		scaled_wealth = {
+			value = -0.1
+			min = -20
+			max = -100
+		}
+	}
+}
+
+#bike is done
+character_event = {
+	id = cetic.904
+	hide_window = yes
+	only_playable = yes
+	
+	trigger = {
+		has_character_flag = picked_out_chain
+		OR = {
+			culture_group = californian
+			culture = hawaiian
+			culture = californio
+			culture = chino
+		}
+		NOR = {
+			has_artifact = high_quality_bike
+			has_artifact = normal_quality_bike
+			has_artifact = low_quality_bike
+		}
+		primary_title = {
+			higher_tier_than = COUNT
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		clr_character_flag = interested_in_warbikes
+		clr_character_flag = picked_out_frame
+		clr_character_flag = picked_out_wheels
+		clr_character_flag = picked_out_chain
+		set_character_flag = velocipede_nerd #Remove this if I don't add any further warbikeophilia events.
+		if = { #if we let the AI name their bikes then we'd have 100 Glitterspokes.
+			limit = { ai = no }
+			character_event = { id = cetic.905 }
+		}
+		else = {
+			if = { 
+				limit = { check_variable = { which = local_bike_quality value >= 3 } }
+				add_artifact = high_quality_bike
+			}
+			else_if = {
+				limit = { check_variable = { which = local_bike_quality value < 1 } }
+				add_artifact = low_quality_bike
+			}
+			else = {
+				add_artifact = normal_quality_bike
+			}
+		}
+	}
+}
+
+character_event = {
+	id = cetic.905
+	desc = EVTDESC_warbike_finished
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_warbike_redracer
+		if = { 
+			limit = { check_variable = { which = local_bike_quality value >= 3 } }
+			add_artifact = high_quality_bike
+			new_artifact = {
+				set_name = "Red Racer"
+			}
+		}
+		else_if = {
+			limit = { check_variable = { which = local_bike_quality value < 1 } }
+			add_artifact = low_quality_bike
+			new_artifact = {
+				set_name = "Red Racer"
+			}
+		}
+		else = {
+			add_artifact = normal_quality_bike
+			new_artifact = {
+				set_name = "Red Racer"
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_amelia
+		if = { 
+			limit = { check_variable = { which = local_bike_quality value >= 3 } }
+			add_artifact = high_quality_bike
+			new_artifact = {
+				set_name = "Amelia Earhart"
+			}
+		}
+		else_if = {
+			limit = { check_variable = { which = local_bike_quality value < 1 } }
+			add_artifact = low_quality_bike
+			new_artifact = {
+				set_name = "Amelia Earhart"
+			}
+		}
+		else = {
+			add_artifact = normal_quality_bike
+			new_artifact = {
+				set_name = "Amelia Earhart"
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_rosebud
+		if = { 
+			limit = { check_variable = { which = local_bike_quality value >= 3 } }
+			add_artifact = high_quality_bike
+			new_artifact = {
+				set_name = "Rosebud"
+			}
+		}
+		else_if = {
+			limit = { check_variable = { which = local_bike_quality value < 1 } }
+			add_artifact = low_quality_bike
+			new_artifact = {
+				set_name = "Rosebud"
+			}
+		}
+		else = {
+			add_artifact = normal_quality_bike
+			new_artifact = {
+				set_name = "Rosebud"
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_more
+		character_event = { id = cetic.906 }
+	}
+}
+
+
+character_event = {
+	id = cetic.906
+	desc = EVTDESC_warbike_finished
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_warbike_washington
+		if = { 
+			limit = { check_variable = { which = local_bike_quality value >= 3 } }
+			add_artifact = high_quality_bike
+			new_artifact = {
+				set_name = "Ol' Nelson"
+			}
+		}
+		else_if = {
+			limit = { check_variable = { which = local_bike_quality value < 1 } }
+			add_artifact = low_quality_bike
+			new_artifact = {
+				set_name = "Ol' Nelson"
+			}
+		}
+		else = {
+			add_artifact = normal_quality_bike
+			new_artifact = {
+				set_name = "Ol' Nelson"
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_secretariat
+		if = { 
+			limit = { check_variable = { which = local_bike_quality value >= 3 } }
+			add_artifact = high_quality_bike
+			new_artifact = {
+				set_name = "Secretariat"
+			}
+		}
+		else_if = {
+			limit = { check_variable = { which = local_bike_quality value < 1 } }
+			add_artifact = low_quality_bike
+			new_artifact = {
+				set_name = "Secretariat"
+			}
+		}
+		else = {
+			add_artifact = normal_quality_bike
+			new_artifact = {
+				set_name = "Secretariat"
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_mississippi
+		if = { 
+			limit = { check_variable = { which = local_bike_quality value >= 3 } }
+			add_artifact = high_quality_bike
+			new_artifact = {
+				set_name = "Mississippi Pharoah"
+			}
+		}
+		else_if = {
+			limit = { check_variable = { which = local_bike_quality value < 1 } }
+			add_artifact = low_quality_bike
+			new_artifact = {
+				set_name = "Mississippi Pharoah"
+			}
+		}
+		else = {
+			add_artifact = normal_quality_bike
+			new_artifact = {
+				set_name = "Mississippi Pharoah"
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_evenmore
+		character_event = { id = cetic.907 }
+	}
+}
+
+character_event = {
+	id = cetic.907
+	desc = EVTDESC_warbike_finished
+	picture = GFX_evt_relic_box
+	border = GFX_event_normal_frame_war
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_warbike_glitterspoke
+		if = { 
+			limit = { check_variable = { which = local_bike_quality value >= 3 } }
+			add_artifact = high_quality_bike
+			new_artifact = {
+				set_name = "Glitterspoke"
+			}
+		}
+		else_if = {
+			limit = { check_variable = { which = local_bike_quality value < 1 } }
+			add_artifact = low_quality_bike
+			new_artifact = {
+				set_name = "Glitterspoke"
+			}
+		}
+		else = {
+			add_artifact = normal_quality_bike
+			new_artifact = {
+				set_name = "Glitterspoke"
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_harley
+		if = { 
+			limit = { check_variable = { which = local_bike_quality value >= 3 } }
+			add_artifact = high_quality_bike
+			new_artifact = {
+				set_name = "Harley"
+			}
+		}
+		else_if = {
+			limit = { check_variable = { which = local_bike_quality value < 1 } }
+			add_artifact = low_quality_bike
+			new_artifact = {
+				set_name = "Harley"
+			}
+		}
+		else = {
+			add_artifact = normal_quality_bike
+			new_artifact = {
+				set_name = "Harley"
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_emperor
+		if = { 
+			limit = { check_variable = { which = local_bike_quality value >= 3 } }
+			add_artifact = high_quality_bike
+			new_artifact = {
+				set_name = "Emperor's Finest"
+			}
+		}
+		else_if = {
+			limit = { check_variable = { which = local_bike_quality value < 1 } }
+			add_artifact = low_quality_bike
+			new_artifact = {
+				set_name = "Emperor's Finest"
+			}
+		}
+		else = {
+			add_artifact = normal_quality_bike
+			new_artifact = {
+				set_name = "Emperor's Finest"
+			}
+		}
+	}
+	option = {
+		name = EVTOPT_warbike_goback
+		character_event = { id = cetic.905 }
 	}
 }

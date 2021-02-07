@@ -2583,7 +2583,7 @@ FROMs_religion_is_playable_trigger = { #Not touching this unless it causes probl
 			}
 			NOT = { has_dlc = "The Old Gods" }
 		}
-		#AND = { #Means you're not allowed to play the Bön religion (Pagan)
+		#AND = { #Means you're not allowed to play the Bï¿½n religion (Pagan)
 		#	FROM = { 
 		#		OR = { 
 		#			religion = bon
@@ -2636,7 +2636,7 @@ ROOTs_religion_is_playable_trigger = { #For targeted decision where FROM is the 
 			}
 			NOT = { has_dlc = "The Old Gods" }
 		}
-		#AND = { #Means you're not allowed to play the Bön religion (Pagan)
+		#AND = { #Means you're not allowed to play the Bï¿½n religion (Pagan)
 		#	ROOT = { 
 		#		OR = { 
 		#			religion = bon 
@@ -2764,7 +2764,7 @@ ROOTs_secret_religion_is_playable_trigger = {
 	#		OR = {
 	#			secret_religion = taoist
 	#			secret_religion = bon 
-	#			#reformed bön prints out as 'bön' and there's no need to display 'bön' twice in the tooltip
+	#			#reformed bï¿½n prints out as 'bï¿½n' and there's no need to display 'bï¿½n' twice in the tooltip
 	#			secret_religion = khurmazta 
 	#		}
 	#		has_dlc = "Jade Dragon" 
@@ -6177,7 +6177,7 @@ china_offmap_decisions_enabled_trigger = {
 	offmap_china = {
 		NOT = { has_policy = china_isolationist }
 		custom_tooltip = {
-			text = china_offmap_decisions_enabled_trigger_war_tt #"Is at peace with §Y[From.GetTitledFirstName]§!"
+			text = china_offmap_decisions_enabled_trigger_war_tt #"Is at peace with ï¿½Y[From.GetTitledFirstName]ï¿½!"
 			NOT = { governor = { war_with = FROM } }
 		}
 		governor = {
@@ -6216,7 +6216,7 @@ china_offmap_decisions_enabled_trigger = {
 china_offmap_hostile_decisions_enabled_trigger = {
 	offmap_china = {
 		custom_tooltip = {
-			text = china_offmap_decisions_enabled_trigger_war_tt #"Is at peace with §Y[From.GetTitledFirstName]§!"
+			text = china_offmap_decisions_enabled_trigger_war_tt #"Is at peace with ï¿½Y[From.GetTitledFirstName]ï¿½!"
 			NOT = { governor = { war_with = FROM } }
 		}
 		governor = {
@@ -10206,5 +10206,47 @@ has_atomicist_particle_trigger = {
 		has_character_modifier = atomicist_quark
 		has_character_modifier = atomicist_lepton
 		has_character_modifier = atomicist_boson
+	}
+}
+
+offmapcali_boon_decisions_enabled_trigger = {
+	offmapcali_decisions_enabled_trigger = yes
+	cetic_california = { NOT = { has_policy = california_figurehead } }
+	custom_tooltip = {
+		text = china_offmap_boon_decisions_enabled_trigger_cd_tt #From is player character
+		FROM = { NOT = { has_character_modifier = offmapcali_boon_cd } } #boon cooldown, which is set in each decision (one year!)...
+	}
+}
+
+offmapcali_tribute_decisions_enabled_trigger = {
+	offmapcali_decisions_enabled_trigger = yes
+}
+
+offmapcali_decisions_enabled_trigger = { 
+	cetic_california = {
+		has_status = california_exists
+		NOT = {
+			has_policy = california_weak
+		}
+		custom_tooltip = {
+			text = china_offmap_decisions_enabled_trigger_war_tt #"Is at peace with ï¿½Y[From.GetTitledFirstName]ï¿½!"
+			NOT = { governor = { war_with = FROM } }
+		}
+		governor = {
+			show_scope_change = no
+			is_within_diplo_range = FROM
+			hidden_trigger = { NOT = { character = FROM } } #Governor cannot use boon/tributes decisions
+		}
+		FROM = {
+			hidden_trigger = { NOT = { has_character_flag = emperor_considering_offer } }
+			AND = {
+				OR = {
+					is_tributary = { type = cetic_low }
+					is_tributary = { type = cetic_middle }
+					is_tributary = { type = cetic_high }
+				}
+				suzerain = { has_landed_title = e_california }
+			}
+		}
 	}
 }
