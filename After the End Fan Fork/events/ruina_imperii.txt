@@ -14,11 +14,14 @@ narrative_event = {
 	trigger = {
 		independent = yes
 		real_tier = emperor
+		is_offmap_governor = no
+		is_offmap_ruler = no
+		
 		#Char flags
 		NOT = { has_character_flag = settled_nomad }
 		NOT = { has_character_flag = the_protector_general }
 		NOT = {	has_character_flag = empress_portia	}
-		NOT = { primary_title = { has_title_flag = rebel_general_title } }
+		NOT = { primary_title = { has_title_flag = { rebel_general_title } }
 		
 		#Republics, nomads and colonies are exempt
 		NOR = {
