@@ -108,6 +108,12 @@ character_event = {
 	only_playable = yes
 
 	trigger = {
+		NOT = {
+			has_game_rule = {
+				name = weather_events
+				value = off
+			}
+		}
 		any_realm_province = {
 			is_land = yes
 			region = custom_weather_region
@@ -142,9 +148,15 @@ character_event = {
 	only_playable = yes
 
 	trigger = {
+		NOT = {
+			has_game_rule = {
+				name = weather_events
+				value = off
+			}
+		}
 		any_demesne_province = {
 			is_land = yes
-		   region = custom_weather_region
+		    region = custom_weather_region
 			has_rain_or_drought_modifier_trigger = yes
 		}
 	}
@@ -209,6 +221,15 @@ character_event = {
 	capable_only = yes
 	prisoner = no
 	has_dlc = "Holy Fury"
+	
+	trigger = {
+		NOT = {
+			has_game_rule = {
+				name = weather_events
+				value = off
+			}
+		}
+	}
 
 	immediate = { character_event = { id = HF.15120 days = 5 } }
 }
