@@ -4140,12 +4140,12 @@ e_catawba = {
 	creation_requires_capital = no	
 }
 
-e_adelsverer = {
+e_texaner = {
 	color={ 80 55 150 }
 	color2={ 210 50 20 }
 	capital = 1232 # Comal
 	
-	culture = adelsverer
+	culture = texaner
 	allow = {
 		NOT = {
 			has_game_rule = {
@@ -4155,10 +4155,10 @@ e_adelsverer = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = adelsverer
+		culture = texaner
 		OR = {
 			realm_size = 150
-			e_adelsverer = { OR = { is_titular = no has_holder = yes } }
+			e_texaner = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
