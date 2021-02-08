@@ -1302,10 +1302,21 @@
 		}
 	}
 	
-	2666.4.2={add_spouse=2302209}
+	2666.4.2={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
 }
 2302209={
-	name="Morgan" # AKA: Susanne the Brave
+	name="Morgan" # AKA: Morgan the Brave
 	dna="dcegfefdjdo"
 	properties="qj0cln00000000000000000000000000000000"
 	dynasty=1793093
@@ -1330,10 +1341,11 @@
 	2650.4.2={
 		birth=yes
 		effect={ 
-			set_character_flag=is_susanne
+			set_character_flag=is_susanne #???
 			set_character_flag=is_special_character
 		}
 	}
+	2666.4.2={spouse=2302208}
 }
 2302211={
 	name="William" #Ironhorse
