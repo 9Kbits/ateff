@@ -11,7 +11,6 @@ character_event = {
 	trigger = { #any mormon duke+ can be contacted to sponsor edwin's mission
 		is_landed = yes
 		is_tribal = no
-		religion = mormon
 		NOT = { has_global_flag = heavenlykingdom_mormon_mission }
 		capital_scope = { region = custom_greater_deseret }
 		higher_tier_than = COUNT
@@ -114,9 +113,9 @@ province_event = {
 	border = GFX_event_normal_frame_religion
 	
 	trigger = {
-		NOT = { religion = mormon }
+		NOT = { religion = true_cross }
 		holder_scope = {
-			NOT = { religion = mormon }
+			NOT = { religion = true_cross }
 		}
 		has_global_flag = heavenlykingdom_mormon_mission
 		NOT = { has_global_flag = heavenlykingdom_mormon_mission_successful }
@@ -138,7 +137,7 @@ province_event = {
 	}
 		
 	immediate = {
-		religion = mormon
+		religion = true_cross
 		set_province_flag = heavenlykingdom_epicenter
 		set_global_flag = heavenlykingdom_mormon_mission_successful
 	}
@@ -151,7 +150,7 @@ province_event = {
 			prestige = -50
 		}
 		random_neighbor_province = {
-			religion = mormon
+			religion = true_cross
 		}
 	}
 		
@@ -161,7 +160,7 @@ province_event = {
 			piety = 50
 			wealth = -50
 		}
-		add_province_modifier = { name = mormon_unrest duration = 1825 }
+		add_province_modifier = { name = true_cross_unrest duration = 1825 }
 	}
 }
 
@@ -222,16 +221,16 @@ province_event = {
 		name = EVTOPT_heavenlykingdom_ignoredmormons
 		trigger = { has_global_flag = heavenlykingdom_mormon_mission_ignored }
 
-		religion = mormon
-		remove_province_modifier = mormon_unrest
-		add_province_modifier = { name = mormon_revolt duration = 912 }
+		religion = true_cross
+		remove_province_modifier = true_cross_unrest
+		add_province_modifier = { name = true_cross_revolt duration = 912 }
 		random_neighbor_province = {
-			religion = mormon
+			religion = true_cross
 		}
 		
 		any_neighbor_province = {
-			limit = { religion = mormon }
-			add_province_modifier = { name = mormon_revolt duration = 912 }
+			limit = { religion = true_cross }
+			add_province_modifier = { name = true_cross_revolt duration = 912 }
 		}
 	}
 		
@@ -251,7 +250,7 @@ narrative_event = {
 	only_playable = yes
 
 	trigger = {
-		religion = mormon
+		religion = true_cross
 		NOT = { has_global_flag = heavenlykingdom_karen_deseret }
 		OR = {
 			AND = { #if mormon pope is independent, send it to him
@@ -261,7 +260,7 @@ narrative_event = {
 			AND = {#if mormon pope is vassalized, send it to his liege
 				controls_religion = no
 				any_vassal = {
-					religion = mormon
+					religion = true_cross
 					controls_religion = yes
 				}
 			}	
@@ -407,7 +406,7 @@ narrative_event = {
 				}
 				
 				new_character = { #rejigger troop counts so its not just consumerist uprising 2
-					set_dynasty_name = "Moroni"
+					set_dynasty_name = "Heavenly Empress"
 					set_character_flag = heavenly_kingdom_cb
 					set_character_flag = moroni_incarnate
 					#save_global_event_target_as = karen_moroni_incarnate
@@ -418,14 +417,14 @@ narrative_event = {
 							wealth = 5000
 							prestige = 1000
 							give_nickname = nick_moroni_reborn
-							religion = mormon
+							religion = true_cross
 							add_trait = peasant_leader
 					}
 					else = {
 						wealth = 2500
 						prestige = 500
 						give_nickname = nick_the_heresiarch
-						religion = neogodbeite
+						religion = true_cross
 						add_trait = heresiarch
 					}
 					create_title = {
@@ -918,7 +917,7 @@ narrative_event = {
 			trigger = { NOT = { has_global_flag = heavenlykingdom_mormonsupports_karen } }
 		}
 		trigger = {
-			religion = mormon
+			religion = true_cross
 			NOT = { has_character_flag = broke_california_again }
 		}
 	}
@@ -933,7 +932,7 @@ narrative_event = {
 		}
 		trigger = {
 			NOR = {
-				religion = mormon
+				religion = true_cross
 				religion = cetic
 				has_character_flag = broke_california_again
 			}
@@ -974,14 +973,14 @@ narrative_event = {
 	option = {
 		name = EVTOPTB_heavenlykingdom_success
 		trigger = {
-			religion = mormon
+			religion = true_cross
 		}
 	}
 	option = {
 		name = EVTOPTC_heavenlykingdom_success
 		trigger = {
 			NOR = {
-				religion = mormon
+				religion = true_cross
 				religion = cetic
 			}
 		}
@@ -1007,14 +1006,14 @@ narrative_event = {
 	option = {
 		name = EVTOPTB_heavenlykingdom_fail
 		trigger = {
-			religion = mormon
+			religion = true_cross
 		}
 	}
 	option = {
 		name = EVTOPTC_heavenlykingdom_fail
 		trigger = {
 			NOR = {
-				religion = mormon
+				religion = true_cross
 				religion = cetic
 			}
 		}
@@ -1032,11 +1031,11 @@ province_event = {
 		OR = {
 			AND = {
 				has_global_flag = heavenlykingdom_mormonsupports_karen
-				NOT = { religion = mormon }
+				NOT = { religion = true_cross }
 			}
 			AND = {
 				NOT = { has_global_flag = heavenlykingdom_mormonsupports_karen }
-				NOT = { religion = neogodbeite }
+				NOT = { religion = true_cross }
 			}
 		}
 		e_heaven = { has_holder = yes }		
@@ -1057,10 +1056,10 @@ province_event = {
 	immediate = {
 		if = {
 			limit = { has_global_flag = heavenlykingdom_mormonsupports_karen }
-			religion = mormon
+			religion = true_cross
 		}
 		else = {
-			religion = neogodbeite
+			religion = true_cross
 		}
 	}
 	
