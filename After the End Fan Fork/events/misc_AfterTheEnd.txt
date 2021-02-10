@@ -14581,3 +14581,24 @@ character_event = {
 		}
 	}
 }
+
+#On_death: sunglasses
+character_event = {
+	id = misc.13
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = { 
+		any_artifact = { artifact_type = old_world_shades } 
+	}
+	
+	immediate = {
+		if =  { 
+			limit =  { 
+				any_artifact = { artifact_type = old_world_shades }
+			}
+			add_trait = dead_shades
+		}
+	}
+}
