@@ -1244,8 +1244,6 @@
 
 2302210={
 	name="Emily"
-	dna="deeeazhdaba"
-	properties="qj0cln00000000000000000000000000000000"
 	female=yes
 	dynasty=1814076
 	martial=10
@@ -1275,17 +1273,17 @@
 
 2302208={
 	name="Allison" # AKA: Allison Maverick
+	religion = americanist
+	culture = texan
 	dna="deeeazhdaba" #dna="dcegfefdjdo"
 	properties="qj0cln00000000000000000000000000000000"  #properties="qj0cln00000000000000000000000000000000"
-	female=yes
-	dynasty=1814074
+	female = yes
+	dynasty = 1814074
 	martial=7
 	diplomacy=5
 	intrigue=3
 	stewardship=5
 	learning=7
-	religion=americanist
-	culture=texan
 	disallow_random_traits=yes
 	trait=fair
 	trait=robust
@@ -1293,9 +1291,8 @@
 	trait=zealous
 	trait=stubborn
 	trait=tough_soldier
-	fertility=0.5
 	father=2302216 
-	health=6.000
+	mother = 2302226
 	2649.4.2={
 		birth=yes
 		effect={ 
@@ -1304,7 +1301,8 @@
 	}
 	
 	2666.4.2={
-		add_spouse=2302209
+		add_lover = 2302209
+		add_spouse = 2302209
 		effect={
 			set_character_flag=recieved_royal_marriage_aid_duty
 			spouse={
@@ -1319,8 +1317,6 @@
 }
 2302209={
 	name="Morgan" # AKA: Morgan the Brave
-	dna="dcegfefdjdo"
-	properties="qj0cln00000000000000000000000000000000"
 	dynasty=1793093
 	martial=8
 	diplomacy=4
@@ -1328,7 +1324,7 @@
 	stewardship=5
 	learning=3
 	religion=americanist
-	culture=northlander
+	culture=rostmann
 	disallow_random_traits=yes
 	trait=tall
 	trait=strong
@@ -1338,8 +1334,6 @@
 	trait=wroth
 	trait=stubborn
 	trait=tough_soldier
-	fertility=0.5
-	health=6.0
 	2650.4.2={
 		birth=yes
 		effect={ 
@@ -1366,7 +1360,6 @@
 	trait=wroth
 	trait=stubborn
 	trait=tough_soldier
-	trait=homosexual
 	2630.7.3={birth=yes}
 }
 
@@ -1382,6 +1375,7 @@
 	trait=cruel
 	trait=bad_priest_christian
 	trait=fortune_builder
+	father=2302218
 	2628.2.1={birth=yes}
 }
 2302213={
@@ -1393,6 +1387,7 @@
 	trait=brave
 	trait=kind
 	trait=underhanded_rogue
+	father=2302218
 	2647.5.6={birth=yes}
 }
 2302214={
@@ -1400,6 +1395,7 @@
 	dynasty=2055161
 	religion=catholic
 	culture=czexan
+	father=2302218
 	2655.4.2={birth=yes}
 }
 2302215={
@@ -1407,6 +1403,7 @@
 	dynasty=2055161
 	religion=catholic
 	culture=czexan
+	father=2302218
 	2644.4.2={birth=yes}
 }
 
@@ -1423,7 +1420,8 @@
 	trait=just
 	trait=tough_soldier
 	2621.4.2={birth=yes}
-	2651.12.26={death={
+	2651.12.26={
+		death={
 			death_reason=death_battle
 			killer=1836030
 		}
@@ -1447,4 +1445,170 @@
 	trait=charismatic_negotiator
 	trait=tough_soldier
 	2651.2.9={birth=yes}
+}
+2302218={
+	name="Bohdan"
+	dynasty=2055161
+	religion=catholic
+	culture=czexan
+	2620.4.2={birth=yes}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=2302216
+		}
+	}
+}
+2302219={
+	name="Ashleigh"
+	dynasty=1814078
+	religion=americanist
+	culture=texan
+	female = yes
+	martial = 16
+	trait = brave
+	trait = slothful
+	trait = robust
+	trait = fair
+	trait = uncouth
+	friend = 2302220
+	father = 2302222
+	2648.2.2={
+		give_nickname=nick_the_charger
+		birth=yes
+	}
+	2550.6.4={
+		add_friend = 2302220
+	}
+}
+
+2302220={
+	name="Elizabeth"
+	dynasty=1814079
+	religion=americanist
+	culture=texan
+	female = yes
+	stewardship = 16
+	trait = brave
+	trait = diligent
+	trait = just
+	trait = honest
+	trait = strong
+	trait = robust
+	father = 2302221
+	mother = 2302225
+	2639.9.2={
+		give_nickname=nick_appletree
+		birth=yes
+	}
+}
+
+2302221={
+	name="Alexander"
+	dynasty=1814079
+	martial=15
+	religion=americanist
+	culture=texan
+	trait = strong
+	2621.4.2={
+		give_nickname=nick_bright
+		birth=yes
+	}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=1836030
+		}
+	}
+}
+
+2302222={
+	name="Jason"
+	dynasty=1814078
+	martial=15
+	religion=americanist
+	culture=texan
+	2623.4.2={
+		birth=yes
+	}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=1836030
+		}
+	}
+}
+
+2302223={
+	name="Michelle"
+	dynasty=1814079
+	religion=americanist
+	culture=texan
+	female = yes
+	trait = robust
+	father = 2302221
+	mother = 2302225
+	2651.12.25={birth=yes}
+}
+
+2302224={
+	name="Macintosh"
+	dynasty=1814079
+	religion=americanist
+	culture=texan
+	trait = strong
+	trait = robust
+	father = 2302221
+	mother = 2302225
+	2645.12.25={birth=yes}
+}
+
+
+
+2302225={
+	name="Penny"
+	martial=15
+	religion=evangelical
+	female = yes
+	trait = brave
+	trait = robust
+	culture=dixie
+	2624.4.2={
+		give_nickname=nick_bright
+		birth=yes
+	}
+	2644.1.14={
+		add_spouse = 2302221
+	}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=1836030
+		}
+	}
+}
+
+
+
+2302226={
+	name="Kristina"
+	martial=15
+	religion=norse_pagan
+	female = yes
+	trait = brave
+	trait = robust
+	trait = shieldmaiden
+	culture=dellsman
+	2623.8.2={
+		birth=yes
+	}
+	2644.1.14={
+		add_spouse = 2302216
+	}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=1836030
+		}
+	}
 }

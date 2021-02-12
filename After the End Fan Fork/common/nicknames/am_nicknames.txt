@@ -682,8 +682,66 @@ nick_the_kid = {
 		factor = 2
 		modifier = {
 			factor = 1.5
-			culture_group = west_anglo
+			OR = {
+				culture_group = west_anglo
+				culture_group = texan_group
+			}
 		}
+	}
+}
+
+
+
+nick_appletree = {
+	allow = {
+		ruled_years = 2
+		stewarship = 5
+		trait = diligent
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			OR = {
+				culture_group = west_anglo
+				culture_group = texan_group
+			}
+		}
+	}
+}
+
+
+nick_the_charger = {
+	allow = {
+		ruled_years = 2
+		martial = 5
+		trait = brave
+	}
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 1.5
+			OR = {
+				culture_group = west_anglo
+				culture_group = texan_group
+			}
+		}
+	}
+}
+
+nick_bright = {
+	allow = {
+		is_adult = yes
+		ruled_years = 2
+		learning = 5
+		OR = {
+			learning = 10
+			trait = erudite
+			trait = kind
+		}
+	}
+	chance = {
+		factor = 2
 	}
 }
 
@@ -876,7 +934,10 @@ nick_the_kingfish = {
 nick_the_mysterious = {
 	allow = {
 		is_adult = yes
-		culture_group = west_anglo
+		OR = {
+			culture_group = west_anglo
+			culture_group = texan_group
+		}
 		trait = shy
 	}
 	chance = {
@@ -891,7 +952,10 @@ nick_the_mysterious = {
 nick_the_wild = {
 	allow = {
 		is_adult = yes
-		culture_group = west_anglo
+		OR = {
+			culture_group = west_anglo
+			culture_group = texan_group
+		}
 		is_female = no
 		trait = wroth
 	}
@@ -914,6 +978,7 @@ nick_the_buffalo = {
 		OR = {
 			culture_group = west_anglo
 			culture_group = plains
+			culture_group = texan_group
 		}
 		trait = strong
 		trait = brave
@@ -934,7 +999,10 @@ nick_the_buffalo = {
 nick_the_calamity = {
 	allow = {
 		is_adult = yes
-		culture_group = west_anglo
+		OR = {
+			culture_group = west_anglo
+			culture_group = texan_group
+		}
 		is_female = yes
 		trait = wroth
 	}
@@ -986,7 +1054,10 @@ nick_the_doctor = {
 		factor = 5
 		modifier = {
 			factor = 3
-			culture_group = west_anglo
+			OR = {
+				culture_group = west_anglo
+				culture_group = texan_group
+			}
 		}
 		modifier = {
 			factor = 2

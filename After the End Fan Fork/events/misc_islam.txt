@@ -2246,7 +2246,10 @@ character_event = {
 		}
 		is_landed = no
 		is_ruler = no
-		culture_group = west_anglo
+		OR = {
+			culture_group = west_anglo
+			culture_group = texan_group
+		}
 		NOT = { has_disease = yes }
 		OR = {
 			martial = 10
