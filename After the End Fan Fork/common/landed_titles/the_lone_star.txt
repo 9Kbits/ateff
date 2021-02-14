@@ -10,6 +10,18 @@ e_lone_star = {
 			has_holder = no
 		}
 	}
+	
+	k_new_mexico = {
+		color={ 231 229 36 }
+		color2={ 137 253 243 }
+		
+		tejano = "Nuevo Méjico"
+		norteno = "Nuevo México"
+		neomexicano = "Nuevo México"
+		navajo = "Yootó Hahoodzo"
+
+		capital = 339 # Santa Fe
+	}
 
 	k_rio_grande = {
 		color = { 154 163 201 }
@@ -225,6 +237,101 @@ e_lone_star = {
 		americanist = 50
 
 		capital = 1235 # Austin
+		
+		d_longhorns = {
+			color = { 203 87 39 }
+			
+			capital = 1235 # Travis
+
+			short_name = yes
+			allow = { always = no }
+			
+			culture = texan
+		}
+		
+		d_aggies = {
+			color = { 80 0 0 }
+
+			capital = 1255 # Brazos
+
+			allow = { always = no }
+
+			culture = texan
+		}
+		
+		d_texoma = {
+			color = { 41 75 164 }
+			color2= { 255 255 255 }
+
+			culture = texan
+
+			capital = 302 # Wichita Falls
+
+			allow = {
+				AND = {
+					301 = { # Grayson
+						owner = {
+							OR = {
+								is_liege_or_above = ROOT
+								character = ROOT
+							}
+						}
+					}
+					302 = { # Wichita Falls
+						owner = {
+							OR = {
+								is_liege_or_above = ROOT
+								character = ROOT
+							}
+						}
+					}
+					303 = { # Childress
+						owner = {
+							OR = {
+								is_liege_or_above = ROOT
+								character = ROOT
+							}
+						}
+					}
+				}
+			}
+
+			creation_requires_capital = no	
+
+		}
+		
+		d_airmen = {
+			color = { 109 191 255 }
+			
+			capital = 1231 # Bexar
+			
+			#tribe = yes
+			allow = { always = no }
+			culture = texan
+			religion = americanist
+			
+			title = "GENERAL"
+			title_female = "GENERAL"
+			foa = "CAPTAIN_FOA"
+			title_prefix = "TRIBE_OF"
+		}
+
+		d_first_cav = {
+			color = { 255 201 51 }
+			
+			capital = 973 # Centrex
+			
+			#tribe = yes
+			allow = { always = no }
+			culture = texan
+			religion = americanist
+			
+			title = "GENERAL"
+			title_female = "GENERAL"
+			foa = "CAPTAIN_FOA"
+			title_prefix = "TRIBE_OF"
+		}
+
 
 		d_neches = {
 			color = { 85 78 105 }
@@ -860,6 +967,23 @@ e_lone_star = {
 		atomicist = 200
 		americanist = 50
 		
+		d_saucers = {
+			color = { 177 217 43 }
+			color2={ 220 220 20 }
+			
+			#tribe = yes
+			
+			allow = {
+				always = no
+			}
+			
+			capital = 1728 # Roswell
+			religion = atomicist
+			title = "HIGH_CHIEF"
+			foa = "HIGH_CHIEF_FOA"
+			title_prefix = "TRIBE_OF"
+		}
+
 		d_abilene = {
 			color = { 232 180 0 }
 			color2= { 255 255 255 }
