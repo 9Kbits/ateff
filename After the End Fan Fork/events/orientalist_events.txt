@@ -1,0 +1,60 @@
+namespace = orientalist
+
+#Hidden event to grant trait and bloodline
+character_event = {
+	id = orientalist.1
+	
+	hide_window = yes
+	religion = orientalist
+	only_playable = yes
+	
+	trigger = {
+		has_landed_title = c_detroit
+		NOT = { has_global_flag = ya_shamal_declared }
+	}
+	
+	option = {
+		set_global_flag = ya_shamal_declared
+		add_trait = ya_shamal
+		create_bloodline = {
+			type = ya_shamal_bloodline
+		}
+		narrative_event = orientalist.2
+	}
+}
+
+#Narrative event announcing liberation of Detroit
+narrative_event = {
+	id = orientalist.2
+	title = "EVTTITLE_yashamal"
+	desc = "EVTDESC_yashamal"
+	picture = GFX_evt_moors
+	border = "GFX_event_narrative_frame_religion"
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA_yashamal"
+		trigger = {
+			religion = orientalist
+		}
+	}
+	
+	option = {
+		name = "EVTOPTB_yashamal"
+		trigger = {
+			religion_group = muslim
+			NOT = { religion = orientalist }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTC_yashamal"
+		trigger = {
+			NOT = { religion_group = muslim }
+		}
+	}
+}
+
+#Sandman stuff: TODO maybe
