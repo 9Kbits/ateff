@@ -3,6 +3,56 @@ e_atlantica = {
 	color2={ 250 190 10 }
 	
 	capital = 3 # Manhattan
+	
+	k_jersey = {
+		color={ 13 103 147 }
+		color2={ 220 220 0 }
+
+		capital = 23 # Trenton
+
+		deitsch = "Nei-Schaersi"
+		yiddish = "Niu Dzherzi"
+	}
+	
+	k_vermont = {
+		color={ 51 136 70 }
+		color2={ 220 220 0 }
+
+		culture = yankee
+
+		capital = 43 # Montpelier
+	}
+	
+	k_maine = {
+		color={ 222 232 249 }
+		color2={ 220 220 0 }
+			
+		culture = yankee
+		capital = 128 # Kennebec
+	}
+	
+	k_redcoat_outpost = {
+		color = { 202 26 26 }
+
+		color2= { 255 255 255 }
+
+		capital = 69 # Boston
+
+		culture = british
+		religion = thelemic
+
+		title = "CAPTAIN"
+		foa = "CAPTAIN_FOA"
+
+
+		#tribe = yes
+
+		short_name = yes
+
+		allow = {
+			always = no
+		}
+	}
 
 	k_hudsonia = {
 		color={ 223 89 10 }
@@ -995,6 +1045,16 @@ e_atlantica = {
 		deitsch = "Kolumbi"
 		yiddish = "Amerika"
 		
+		d_philadelphia = {
+			color={ 50 150 200 }
+			color2={ 220 220 0 }
+
+			deitsch = "Filadelfi"
+			yiddish = "Filadelfyi"
+			
+			capital = 27 # Philadelphia
+		}
+
 		d_delaware_valley = {
 			color={ 55 124 208 }
 			color2={ 220 220 0 }
@@ -1697,7 +1757,73 @@ e_atlantica = {
 		}
 		
 		capital = 69
+		
+		d_rhode_island = {
+			color={	216	239	227 }
+			color2={ 50 24 214 }
 
+			culture = yankee
+			capital = 58 # Providence
+		}
+		
+		d_nantucket = {
+			color={ 31 126 162 }
+			color2={ 255 255 255 }
+						
+			capital = 559 # Nantucket
+		}
+		
+		d_nogad = {
+			color = { 141 55 29 }
+			color2={ 220 220 20 }
+			
+			#tribe = yes
+			
+			allow = {
+				always = no
+			}
+			
+			capital	= 70 # Merrimack
+			culture = yankee
+			title = "HIGH_CHIEF"
+			foa = "HIGH_CHIEF_FOA"
+			title_prefix = "TRIBE_OF"
+		}
+		
+		d_migonids = {
+			color={ 199 214 112 }
+			color2={ 220 220 20 }
+
+			#tribe = yes
+			
+			allow = {
+				always = no
+			}
+			
+			capital = 41 # Bennington
+			culture = yankee
+			title = "HIGH_CHIEF"
+			foa = "HIGH_CHIEF_FOA"
+			title_prefix = "TRIBE_OF"
+		}
+		
+		d_newopies = {
+			color = { 45 155 82 }
+			color2={ 220 220 20 }
+			
+			#tribe = yes
+			
+			allow = {
+				always = no
+			}
+			
+			capital = 200 # Katahdin
+			culture = yankee
+			title = "HIGH_CHIEF"
+			foa = "HIGH_CHIEF_FOA"
+			title_prefix = "TRIBE_OF"
+		}
+		
 		# Crusade target weight
 		catholic = 5
 		ursuline = 100

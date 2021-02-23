@@ -1863,62 +1863,95 @@
 	}
     2710.1.1={death=yes}
 }
+
 2500088={
-    name="Oneca"
-	female=yes
-    dynasty= "1912076"
-    culture=californio
-    religion=nazarene
-	trait=fortune_builder
-	trait=sympathy_cult_of_saints
-	trait=administrator
-	trait = imp_ex3
-	trait=nz_acolyte
-	trait=weak
-	trait=wroth
-	trait=kind
-    2626.7.2={birth=yes}
-	2658.5.1={effect={add_lover=2500089}}
-	2659.2.1={add_matrilineal_spouse=2500089}
-    2710.1.1={death=yes}
-}
-2500089={
-    name="Bruno"
-    dynasty= "1912071"
-    culture=californio
-    religion=sacred_heart
-	trait=skilled_tactician
-	trait=unyielding_leader 
-	trait=honest
-	trait=humble
-	trait=trusting
-	trait=kind
-    2626.8.12={birth=yes}
-    2710.1.1={death=yes}
-}
-2500090={
-    name="Raquel"
-	female=yes
-    dynasty= "1912076"
-    culture=californio
-    religion=nazarene
-	father=2500089
-	mother=2500088
-	trait=nz_acolyte
-    2665.4.8={birth=yes}
-    2730.1.1={death=yes}
-}
-2500091={
-    name="Aya"
-	female=yes
-    dynasty= "1849100"
-    culture=bayfolk
-    religion=true_cross
-	trait=charismatic_negotiator
+	name="Osbourne"
+	dynasty=1864103 #Groom
+	culture=battleborn
+	religion=atomicist
+	intrigue=9
+	trait=elusive_shadow
+	trait=shy
 	trait=ambitious
-	trait=lustful
+	2645.4.4={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2500089={
+	name="John"
+	dynasty=1864102 #McQueen
+	culture=battleborn
+	religion=mormon
+	trait=proud
+	trait=ambitious
+	2646.6.9={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2500090={
+	name="Jimmy"
+	dynasty=1864095 #Sevilla
+	culture=battleborn
+	religion=cetic
+	trait=trusting
+	trait=greedy
+	2629.12.2={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2500091={
+	name="Tubboge"
+	dynasty=1491917
+	culture=paiute
+	religion=cetic
+	trait=gregarious
+	trait=erudite
+	2641.4.26={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2500092={
+	name="Wewawewa"
+	dynasty=1491924
+	culture=paiute
+	religion=mormon
 	trait=just
-	trait=charitable
-    2645.4.8={birth=yes}
-    2730.1.1={death=yes}
+	trait=chaste
+	trait=shy
+	2641.4.26={birth=yes}
+	2710.1.1={death=yes}
+}
+
+2502077={
+	name="Johnny"
+	dynasty=1850083
+	culture=chino
+	religion=cetic
+	martial=10
+	diplomacy=8
+	stewardship=6
+	intrigue=7
+	learning=4
+	trait=skilled_tactician
+	trait=way_fist
+	trait=fair
+	trait=strong
+	trait=musician
+	trait=one_handed
+	trait=proud
+	trait=ambitious
+	trait=wroth
+	trait=lustful
+	give_nickname=nick_iron_hand
+	2634.11.16={birth=yes
+		culture=angeleno
+		effect = {
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2665.11.28={effect={add_artifact=ate_firearm}}
+	2665.11.29={effect={add_artifact=prosthetic_hand_metal}}
+	2665.11.29={effect={add_artifact=old_world_shades}}
+	2677.8.20={death=yes}
 }

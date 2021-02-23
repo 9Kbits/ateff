@@ -908,6 +908,30 @@ offmap_china = {
 			likes_wealth = {
 				value = 100
 			}
+			likes_indigenous = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							OR = {
+								culture_group = andean
+								culture_group = arawak
+							}
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						OR = {
+							culture_group = andean
+							culture_group = arawak
+						}
+					}
+				}
+			}
 			likes_andino = {
 				value = 100
 				modifier = {
@@ -1061,6 +1085,24 @@ offmap_china = {
 					factor = 0
 					FROMFROM = {
 						likes_amerodeutsch = yes
+					}
+				}
+			}
+			likes_viking = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_viking = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = {
+						likes_viking = yes
 					}
 				}
 			}
@@ -1226,6 +1268,46 @@ offmap_china = {
 					}
 				}
 			}
+			likes_rastafarian = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = rastafarian
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { religion = rastafarian }
+				}
+				modifier = {
+					factor = 2
+					FROMFROM = { religion = charismatic }
+				}
+			}
+			likes_voodoo = {
+				value = 100
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							religion = voodoo
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { religion = voodoo }
+				}
+				modifier = {
+					factor = 2
+					FROMFROM = { religion = charismatic }
+				}
+			}
 			likes_nautical = {
 				value = 100
 				modifier = {
@@ -1298,20 +1380,20 @@ offmap_china = {
 					FROMFROM = { religion_group = jewish_group }
 				}
 			}
-			likes_cult_of_saints = {
+			likes_patria_grande = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							religion_group = cult_of_saints
+							religion = patria_grande
 							is_within_diplo_range = offmap_china
 						}
 					}
 				}
 				modifier = {
 					factor = 0
-					FROMFROM = { religion_group = cult_of_saints }
+					FROMFROM = { religion = patria_grande }
 				}
 				modifier = {
 					factor = 0.75
@@ -1330,47 +1412,31 @@ offmap_china = {
 					FROMFROM = { religion = charismatic }
 				}
 			}
-			likes_rastafarian = {
+			likes_sacred_heart = {
 				value = 100
 				modifier = {
 					factor = 0
 					NOT = {
 						any_province = {
-							religion = rastafarian
+							religion = sacred_heart
 							is_within_diplo_range = offmap_china
 						}
 					}
 				}
 				modifier = {
 					factor = 0
-					FROMFROM = { religion = rastafarian }
+					FROMFROM = { religion = sacred_heart }
 				}
 				modifier = {
-					factor = 0.5
-					FROMFROM = { religion = candomble }
+					factor = 0.75
+					FROMFROM = { religion = apostolic }
 				}
 				modifier = {
-					factor = 2
-					FROMFROM = { religion = charismatic }
-				}
-			}
-			likes_voodoo = {
-				value = 100
-				modifier = {
-					factor = 0
-					NOT = {
-						any_province = {
-							religion = voodoo
-							is_within_diplo_range = offmap_china
-						}
-					}
+					factor = 0.75
+					FROMFROM = { religion = celeste }
 				}
 				modifier = {
-					factor = 0
-					FROMFROM = { religion = voodoo }
-				}
-				modifier = {
-					factor = 0.5
+					factor = 1.25
 					FROMFROM = { religion = candomble }
 				}
 				modifier = {
@@ -1508,6 +1574,26 @@ offmap_china = {
 				modifier = {
 					factor = 0
 					FROMFROM = { likes_oldworld = yes }
+				}
+				modifier = {
+					factor = 2
+					FROMFROM = { religion = charismatic }
+				}
+			}
+			likes_muslims = {
+				value = 10
+				modifier = {
+					factor = 0
+					NOT = {
+						any_province = {
+							likes_muslims = yes
+							is_within_diplo_range = offmap_china
+						}
+					}
+				}
+				modifier = {
+					factor = 0
+					FROMFROM = { likes_muslims = yes }
 				}
 				modifier = {
 					factor = 2

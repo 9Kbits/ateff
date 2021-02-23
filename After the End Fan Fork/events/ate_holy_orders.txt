@@ -188,7 +188,7 @@ narrative_event = {
 		
 		NOT = { is_title_active = d_flaming_sword }
 		
-		1015 { # Mammoth
+		1015 = { # Mammoth
 			owner = { religion = revelationist_reformed }
 		}
 	}
@@ -1182,7 +1182,10 @@ narrative_event = {
 		
 		is_heretic = no
 		
-		NOT = { is_title_active = d_st_ursulas_chosen }
+		NOT = {
+			is_title_active = d_st_ursulas_chosen
+			is_title_active = k_ursuline_state
+		}
 		
 		has_global_flag = ursuline_crusades_unlocked
 		

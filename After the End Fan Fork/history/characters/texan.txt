@@ -119,11 +119,11 @@
 	stewardship=3
 	intrigue=6
 	learning=4
-	trait=skilled_tactician
-	trait=honest
-	trait=patient
+	trait=intricate_webweaver
+	trait=deceitful
+	trait=ambitious
 	trait=kind
-	trait=shy
+	trait=erudite
 	father=1836010
 	mother=1836011
 	2632.6.25={birth=yes}
@@ -131,6 +131,8 @@
 		raise_levies={
 			location=1235 # Travis
 			force_mult=1.0
+			set_character_flag=is_mack
+			set_character_flag=is_special_character
 		}
 	}
 	2668.1.1={
@@ -227,14 +229,16 @@
 	2630.1.1={add_claim=c_mclennan}
 	2666.1.1={
 		raise_levies={
-			location=1255 # Brazos
+			location=1238 # houston
 			force_mult=1.0
+			set_character_flag=is_floyd
+			set_character_flag=is_special_character
 		}
 	}
 	2668.1.1={
 		raise_levies={
 			dismiss=yes
-			location=1255 # Brazos
+			location=1238 # houston
 			force_mult=1.0
 		}
 	}
@@ -352,10 +356,10 @@
 }
 
 1836022={
-	name="William"
-	dynasty=1814034
+	name="Guillermo"
+	dynasty=1815062
 	dna="chjklejdlmc"
-	culture=texan
+	culture=tejano
 	religion=americanist
 	martial=7
 	diplomacy=8
@@ -395,7 +399,7 @@
 1836024={
 	name="Marjorie"
 	female=yes
-	dynasty=1814034
+	dynasty=1815062
 	dna="chlblnkblmo"
 	culture=texan
 	religion=americanist
@@ -419,7 +423,7 @@
 1836025={
 	name="Jane"
 	female=yes
-	dynasty=1814034
+	dynasty=1815062
 	dna="chlklnoddmo"
 	culture=texan
 	religion=americanist
@@ -440,9 +444,9 @@
 }
 
 1836026={
-	name="Karl"
-	dynasty=1848029
-	culture=adelsverer
+	name="Carl"
+	dynasty=1779202
+	culture=texaner
 	religion=americanist
 	martial=1
 	diplomacy=3
@@ -472,6 +476,7 @@
 	trait=charismatic_negotiator
 	2635.1.1={birth=yes}
 	2657.1.1={
+		add_spouse=1836028
 		effect={
 			set_character_flag=recieved_royal_marriage_aid_duty
 			spouse={
@@ -531,12 +536,21 @@
 	trait=brave
 	trait=misguided_warrior
 	2626.2.6={birth=yes}
+	
+	2666.1.1={
+		raise_levies={
+			location=1242 # Travis
+			force_mult=1.0
+		}
+	}
 	2700.1.1={death=yes}
+	
 }
 
 1836031={
 	name="Hollis"
 	dynasty=1814003 # Hannegan
+
 	culture=texan
 	religion=catholic
 	2587.1.1={birth=yes}
@@ -682,7 +696,8 @@
 	trait=arbitrary
 	trait=shy
 	trait=cynical
-	2596.5.1={birth=yes
+	2596.5.1={
+		birth=yes
 		culture=tejano
 	}
 	2612.11.11={add_spouse=1836044}
@@ -705,7 +720,8 @@
 	trait=deceitful
 	trait=ambitious
 	trait=gregarious
-	2594.3.9={birth=yes
+	2594.3.9={
+		birth=yes
 		culture=tejano
 	}
 	2612.11.11={add_spouse=1836043}
@@ -730,7 +746,8 @@
 	trait=wroth
 	father=1836044
 	mother=1836043
-	2621.7.9={birth=yes
+	2621.7.9={
+		birth=yes
 		culture=tejano
 	}
 	2642.12.31={add_spouse=1836046}
@@ -752,7 +769,8 @@
 	
 	trait=gluttonous
 	trait=charitable
-	2625.9.4={birth=yes
+	2625.9.4={
+		birth=yes
 		culture=tejano
 	}
 	2642.12.31={add_spouse=1836045}
@@ -777,7 +795,8 @@
 	trait=greedy
 	father=1836045
 	mother=1836046
-	2644.12.20={birth=yes
+	2644.12.20={
+		birth=yes
 		culture=tejano
 	}
 	2687.6.29={death=yes}
@@ -801,7 +820,8 @@
 	trait=honest
 	father=1836045
 	mother=1836046
-	2649.6.4={birth=yes
+	2649.6.4={
+		birth=yes
 		culture=tejano
 	}
 	2694.9.7={death=yes}
@@ -819,7 +839,6 @@
 	intrigue=2
 	learning=5
 	trait=thrifty_clerk
-	trait=sympathy_christendom
 	trait=hunter
 	trait=gregarious
 	trait=kind
@@ -859,7 +878,6 @@
 	intrigue=4
 	learning=4
 	trait=thrifty_clerk
-	trait=sympathy_cult_of_saints
 	trait=gregarious
 	trait=proud
 	trait=just
@@ -960,17 +978,6 @@
 	2677.7.1={death=yes}
 }
 
-1836057={ #Count of Kerr
-	name="Otto"
-	dynasty=1848014
-	culture=adelsverer
-	religion=catholic
-	trait=wroth
-	trait=kind
-	2620.3.4={birth=yes}
-	2700.1.1={death=yes}
-}
-
 1836060={
 	name="Eulogio"
 	dynasty=1612001
@@ -992,6 +999,27 @@
 	2643.10.26={add_spouse=1810203}
 	2691.9.7={death=yes}
 }
+
+#1836061={
+#	name="Estefanita"
+#	female=yes
+#	dna="omfjkbiafap"
+#	culture=neomexicano
+#	religion=atomicist
+#	martial=3
+#	diplomacy=1
+#	stewardship=5
+#	intrigue=5
+#	learning=3
+#	trait=midas_touched
+#	trait=atom_deny
+#	trait=shy
+#	trait=craven
+#	trait=arbitrary
+#	2637.7.12={birth=yes}
+#	2653.10.26={add_spouse=1836060}
+#	2677.5.3={death=yes}
+#}
 
 1836062={
 	name="Iris"
@@ -1193,7 +1221,7 @@
 1836073={ #Merchant Republic Guy 4
 	name="August"
 	dynasty=1848069
-	culture=adelsverer
+	culture=texaner
 	religion=catholic
 	diplomacy=9
 	trait=charismatic_negotiator
@@ -1216,4 +1244,376 @@
 	trait=diligent
 	2638.9.19={birth=yes}
 	2700.1.1={death=yes}
+}
+
+2302210={
+	name="Emily"
+	female=yes
+	dynasty=1814076
+	martial=10
+	diplomacy=3
+	intrigue=3
+	stewardship=5
+	learning=7
+	religion="catholic"
+	culture="tuskegean"
+	disallow_random_traits=yes
+	trait=strong
+	trait=robust
+	trait=zealous
+	trait=uncouth
+	trait=fair
+	trait=tough_soldier
+	2650.4.2={ 
+		birth=yes
+		culture=texan
+		effect={ 
+			set_character_flag=yellow_rose_lady
+			set_character_flag=is_special_character
+		}
+	}
+	2666.1.1={add_claim=d_neches}
+}
+
+2302208={
+	name="Allison" # AKA: Allison Maverick
+	religion = americanist
+	culture = texan
+	dna="deeeazhdaba" #dna="dcegfefdjdo"
+	properties="qj0cln00000000000000000000000000000000"  #properties="qj0cln00000000000000000000000000000000"
+	female = yes
+	dynasty = 1814074
+	martial=7
+	diplomacy=5
+	intrigue=3
+	stewardship=5
+	learning=7
+	disallow_random_traits=yes
+	trait=fair
+	trait=robust
+	trait=kind
+	trait=zealous
+	trait=stubborn
+	trait=tough_soldier
+	trait = bisexual
+	father=2302216 
+	mother = 2302226
+	2644.4.2={
+		birth=yes
+		effect={ 
+			set_character_flag=is_special_character
+		}
+	}
+	
+	2666.4.2={
+		add_lover = 2302209
+		add_spouse = 2302209
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
+}
+2302209={
+	name="Morgan" # AKA: Morgan the Brave
+	dynasty=1793093
+	martial=8
+	diplomacy=4
+	intrigue=5
+	stewardship=5
+	learning=3
+	religion=americanist
+	culture=rostmann
+	disallow_random_traits=yes
+	trait=tall
+	trait=strong
+	trait=robust
+	trait=brave
+	trait=gregarious
+	trait=wroth
+	trait=stubborn
+	trait=tough_soldier
+	2645.4.2={
+		birth=yes
+		effect={ 
+			set_character_flag=is_morgan #???
+			set_character_flag=is_special_character
+		}
+	}
+	2666.4.2={add_spouse=2302208}
+}
+2302211={
+	name="William" #Ironhorse
+	dynasty=1814077
+	martial=8
+	diplomacy=4
+	intrigue=5
+	stewardship=5
+	learning=3
+	religion=americanist
+	culture=czexan
+	trait=tall
+	trait=strong
+	trait=robust
+	trait=brave
+	trait=wroth
+	trait=stubborn
+	trait=tough_soldier
+	2630.7.3={birth=yes}
+}
+
+2302212={
+	name="Boleslav"
+	dynasty=2055161
+	learning=3
+	religion="catholic"
+	culture=czexan
+	trait=cynical
+	trait=lustful
+	trait=deceitful
+	trait=cruel
+	trait=bad_priest_christian
+	trait=fortune_builder
+	father=2302218
+	2628.2.1={birth=yes}
+}
+2302213={
+	name="Jakeb"
+	dynasty=2055161
+	learning=3
+	religion=catholic
+	culture=czexan
+	trait=brave
+	trait=kind
+	trait=underhanded_rogue
+	father=2302218
+	2647.5.6={birth=yes}
+}
+2302214={
+	name="Izak"
+	dynasty=2055161
+	religion=catholic
+	culture=czexan
+	father=2302218
+	2655.4.2={birth=yes}
+}
+2302215={
+	name="Bohdan"
+	dynasty=2055161
+	religion=catholic
+	culture=czexan
+	father=2302218
+	2644.4.2={birth=yes}
+}
+
+2302216={
+	name="Johnathon"
+	dynasty=1814074
+	martial=15
+	religion=americanist
+	culture=texan
+	trait=strong
+	trait=robust
+	trait=zealous
+	trait=brave
+	trait=just
+	trait=tough_soldier
+	2611.4.2={birth=yes}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=1836030
+		}
+	}
+}
+
+2302217={
+	name="Luna"
+	dynasty=1815061
+	martial=3
+	diplomacy=5
+	intrigue=7
+	stewardship=3
+	learning=4
+	religion=americanist
+	culture=tejano
+	trait=mystic
+	trait=gregarious
+	trait=lunatic
+	trait=quick
+	trait=charismatic_negotiator
+	trait=tough_soldier
+	2651.2.9={birth=yes}
+}
+2302218={
+	name="Bohdan"
+	dynasty=2055161
+	religion=catholic
+	culture=czexan
+	2620.4.2={birth=yes}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=2302216
+		}
+	}
+}
+2302219={
+	name="Ashleigh"
+	dynasty=1814078
+	religion=americanist
+	culture=texan
+	female = yes
+	martial = 16
+	trait = brave
+	trait = slothful
+	trait = robust
+	trait = fair
+	trait = uncouth
+	friend = 2302220
+	father = 2302222
+	2648.2.2={
+		give_nickname=nick_the_charger
+		birth=yes
+	}
+	2550.6.4={
+		add_friend = 2302220
+	}
+}
+
+2302220={
+	name="Elizabeth"
+	dynasty=1814079
+	religion=americanist
+	culture=texan
+	female = yes
+	stewardship = 16
+	trait = brave
+	trait = diligent
+	trait = just
+	trait = honest
+	trait = strong
+	trait = robust
+	father = 2302221
+	mother = 2302225
+	2639.9.2={
+		give_nickname=nick_appletree
+		birth=yes
+	}
+}
+
+2302221={
+	name="Alexander"
+	dynasty=1814079
+	martial=15
+	religion=americanist
+	culture=texan
+	trait = strong
+	2621.4.2={
+		give_nickname=nick_bright
+		birth=yes
+	}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=1836030
+		}
+	}
+}
+
+2302222={
+	name="Jason"
+	dynasty=1814078
+	martial=15
+	religion=americanist
+	culture=texan
+	2623.4.2={
+		birth=yes
+	}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=1836030
+		}
+	}
+}
+
+2302223={
+	name="Michelle"
+	dynasty=1814079
+	religion=americanist
+	culture=texan
+	female = yes
+	trait = robust
+	father = 2302221
+	mother = 2302225
+	2651.12.25={birth=yes}
+}
+
+2302224={
+	name="Macintosh"
+	dynasty=1814079
+	religion=americanist
+	culture=texan
+	trait = strong
+	trait = robust
+	father = 2302221
+	mother = 2302225
+	2645.12.25={birth=yes}
+}
+
+
+
+2302225={
+	name="Penny"
+	martial=15
+	religion=evangelical
+	female = yes
+	trait = brave
+	trait = robust
+	culture=dixie
+	2624.4.2={
+		give_nickname=nick_bright
+		birth=yes
+	}
+	2644.1.14={
+		add_spouse = 2302221
+	}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=1836030
+		}
+	}
+}
+
+
+
+2302226={
+	name="Kristina"
+	martial=15
+	religion=norse_pagan
+	female = yes
+	trait = brave
+	trait = robust
+	trait = shieldmaiden
+	culture=dellsman
+	2613.8.2={
+		birth=yes
+	}
+	2644.1.14={
+		add_spouse = 2302216
+	}
+	2651.12.26={
+		death={
+			death_reason=death_battle
+			killer=1836030
+		}
+	}
 }

@@ -1,0 +1,67 @@
+namespace = tex
+
+narrative_event = {
+	id = tex.1
+	title = EVTTITLE_tex_1
+	
+	desc = {
+		trigger = {
+			has_landed_title = d_aggies
+		}
+		text = EVTDESC_tex_1
+	}
+	
+	desc = {
+		trigger = {
+			has_landed_title = d_longhorns
+		}
+		text = EVTDESC_tex_2
+	}
+	
+	desc = {
+		trigger = {
+			NOR = {
+				has_landed_title = d_aggies
+				has_landed_title = d_longhorns
+			}
+		}
+		text = EVTDESC_tex_3
+	}
+	
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_texas }
+		NOT = { has_global_flag = texas_setup_done }
+	}
+	
+	immediate = {
+		set_global_flag = texas_setup_done
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_1
+		trigger = { has_landed_title = d_aggies }
+		add_claim = c_milashison
+	}
+	
+	option = {
+		name = EVTOPTA_tex_2
+		trigger = { has_landed_title = d_longhorns }
+		add_claim = c_colorado
+	}
+	
+	option = {
+		name = EVTOPTA_tex_3
+		trigger = {
+			NOR = {
+				has_landed_title = d_aggies
+				has_landed_title = d_longhorns
+			}
+		}
+	}
+}

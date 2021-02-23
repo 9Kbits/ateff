@@ -41,6 +41,9 @@ RULE_RENOVATOR_INVASION_OFF_DESC;The Renovator and Viceroy will not spread their
 RULE_HOLY_WAR_COOLDOWN;Holy War Cooldowns;;;;;;;;;;;;;x
 RULE_COOLDOWN_ON;Declaring a holy war will impose a 5 or 10 year cooldown, preventing characters from declaring multiple holy wars in quick succession.;;;;;;;;;;;;;x
 RULE_COOLDOWN_OFF;Declaring a holy war will not impose a cooldown, allowing characters to declare multiple holy wars in quick succession.;;;;;;;;;;;;;x
+RULE_WEATHER_EVENTS;Weather Events;;;;;;;;;;;;;x
+RULE_WEATHER_EVENTS_ON;Events relating to heavy rain, droughts, and floods will occur.;;;;;;;;;;;;;x
+RULE_WEATHER_EVENTS_OFF;Events relating to heavy rain, droughts, and floods will not occur.;;;;;;;;;;;;;x
 
 ###########Bookmarks###########
 
@@ -178,7 +181,6 @@ GUYANA;Guyana;Guyana;Guyana;;Guyana;;;;;;;;;x
 ###########Cultures###########
 
 acadien;Acadien;;;;;;;;;;;;;x
-adelsverer;Adelsverer;;;;;;;;;;;;;x
 afroanglo;Afro-Anglo;;;;;;;;;;;;;x
 afrocubano;Lucumí;;;;;;;;;;;;;x
 caraqueno;Caraqueño;;;;;;;;;;;;;x
@@ -245,6 +247,7 @@ cree;Cree;;;;;;;;;;;;;x
 creole;Creole;;;;;;;;;;;;;x
 crow;Crow;;;;;;;;;;;;;x
 cubano;Cubano;;;;;;;;;;;;;x
+czexan;Czexan;;;;;;;;;;;;;x
 deitsch;Deitsch;;;;;;;;;;;;;x
 delawarean;Delawarean;;;;;;;;;;;;;x
 dellsman;Dellsman;;;;;;;;;;;;;x
@@ -381,6 +384,8 @@ tagalog;Tagalog;;;;;;;;;;;;;x
 tapatio;Tapatio;;;;;;;;;;;;;x
 tejano;Tejano;;;;;;;;;;;;;x
 texan;Texan;;;;;;;;;;;;;x
+texan_group;Starfolk;;;;;;;;;;;;;x
+texaner;Texaner;;;;;;;;;;;;;x
 tlingit;Tlingit;;;;;;;;;;;;;x
 truenonato;Truenonato;;;;;;;;;;;;;x
 tsimshianic;Tsimshianic;;;;;;;;;;;;;x
@@ -529,7 +534,7 @@ neomayan_DESC;Neomayanism is a mixture of both traditional Maya beliefs and obsc
 neomayan_FEATURES;§Y*§! Women are capable of fighting as warriors. \n§Y*§! Are adherents of the ancient practice of Astrology. \n§Y*§! Homosexual Neomayan rulers are allowed to marry other homosexual characters.\n§Y*§! Neomayans may sacrifice animals to Hunab Ku.;;;;;;;;;;;;;x
 qabantajik;Qab’antajik;;;;;;;;;;;;;x
 qabantajik_DESC;The Qab’antajik faith blends aspects of both Christianity and the traditional Mayan faith. Qab’antajik believe that the Event was the end of the 5th world cycle, which was caused by both a lack of sacrifices and the conversion of Mayan believers to monotheism. Gods in the Qab’antajik pantheon are referred to as ‘angels’, but most of these ‘angels’ are simply pre-Christian Maya deities under a different name.;;;;;;;;;;;;;x
-neomayan_FEATURES;§Y*§! Rulers may choose to conduct a bloodletting ritual to honor the gods.\n§Y*§! Neomayans may sacrifice animals to Hunab Ku.;;;;;;;;;;;;;x
+qabantajik_FEATURES;§Y*§! Rulers may choose to conduct a bloodletting ritual to honor the gods.\n§Y*§! Neomayans may sacrifice animals to Hunab Ku.;;;;;;;;;;;;;x
 celtic_pagan;Druidic;;;;;;;;;;;;;x
 celtic_pagan_DESC;Followers of Druidism believe in a diverse and eclectic pantheon of gods, drawn from both classical paganism and native beliefs. The core tenet of Druidism is animism - the belief that all of nature is inhabited by divine spirits. Although Druidism was once commonly practiced throughout the North Atlantic, it has been mostly supplanted by other religions and is today only practiced on the fringes of its old territory.;;;;;;;;;;;;;x
 celtic_pagan_FEATURES;§Y*§! Only characters with the Druid trait can be appointed as Chancellor for a Druidic realm.\n;;;;;;;;;;;;;x
@@ -625,7 +630,7 @@ orthodox_DESC;The religion of the Tlingit is said to have been brought to them l
 pelagic;Pelagic;;;;;;;;;;;;;x
 pelagic_DESC;Followers of the Pelagic faith roam the seven seas, much like their Brethren cousins. However, that is where their similarities end. Rather than live through piracy and murder, Pelagics instead draw on the natural gifts of the sea. In particular, Pelagics regard whales as the most powerful of all seaborne beings, capable of both giving and taking life at a moment's notice. Pelagics work to gain the favor of the sea goddess, Sedna, creator of the sea and mother of all its creatures, so that she may give them her gifts via her first and greatest child- the whale.;;;;;;;;;;;;;x
 aria_de_machete;Aria de Machete;;;;;;;;;;;;;x
-aria_de_machete_DESC;The Songs of Machete are the old oral tradition of the nomads who roam the Llanos. The storytellers preserve in the form of joropo ballads the tales of the terrifying “rancheros”, capricious supernatural being who govern the destinies of men. The faithful of the Llanos spirituality are sharply divided between those who think men should govern the land and those who favor the rule of women.;;;;;;;;;;;;;x #should we keep that last sentence in?
+aria_de_machete_DESC;The Songs of Machete are the old oral tradition of the nomads who roam the Llanos. The storytellers preserve in the form of joropo ballads the tales of the terrifying “rancheros”, capricious supernatural beings who govern the destinies of men. The faithful of the Llanos spirituality are sharply divided between those who think men should govern the land and those who favor the rule of women.;;;;;;;;;;;;;x #should we keep that last sentence in?
 aria_de_machete_reformed;Aria de Machete;;;;;;;;;;;;;x
 aria_de_machete_reformed_DESC;The Songs of Machete are the old oral tradition of the nomads who roam the Llanos. The storytellers preserve in the form of joropo ballads the tales of the terrifying “rancheros”, capricious supernatural being who govern the destinies of men. The faithful of the Llanos spirituality are sharply divided between those who think men should govern the land and those who favor the rule of women. The reformed Aria de Machete faith has a new religious hierarchy and a codified holy text.;;;;;;;;;;;;;x
 
@@ -734,11 +739,11 @@ lore_masons_ref_desc;This character follows the obscured legacy of the ancient M
 lore_pact_ref;Lore of the Pact;;;;;;;;;;;;;x
 lore_pact_ref_desc;This character is a student of the Diabolic Pact. This ancient covenant is how humanity survived the cataclysmic destruction of the world.;;;;;;;;;;;;;x
 patria_bolivar;Follower of Bolívar;;;;;;;;;;;;;x
-patria_bolivar_desc;Simón Bolívar, also called Saint Peter, is the prócer of war and freedom. His followers are known to imitate his war-like nature.;;;;;;;;;;;;;x
+patria_bolivar_desc;Simón Bolívar, also called Saint Peter, is the prócer of war and freedom. His followers are known to imitate his war-like nature, and can declare wars easily. However, they may find it difficult to manage succession...;;;;;;;;;;;;;x
 patria_manuelita;Follower of Manuelita;;;;;;;;;;;;;x
-patria_manuelita_desc;Manuela Sáenz, also called the Magdalene, is the prócer of love and fertility. Her followers are passionate, gregarious and devoted to their families.;;;;;;;;;;;;;x
+patria_manuelita_desc;Manuela Sáenz, also called the Magdalene, is the prócer of love and fertility. Her followers are passionate, gregarious and devoted to their families. Her followers are able to manage succeession via election.;;;;;;;;;;;;;x
 patria_santander;Follower of Santander;;;;;;;;;;;;;x
-patria_santander_desc;Francisco Santader, also called Saint Francis, is the prócer of law and order. His followers are known to be great administrators.;;;;;;;;;;;;;x
+patria_santander_desc;Francisco Santader, also called Saint Francis, is the prócer of law and order. His followers are known to be great administrators. His followers shy awway from war, but have great flexibility in choosing successors.;;;;;;;;;;;;;x
 fords_striker;Ford's Striker;;;;;;;;;;;;;x
 fords_striker_desc;This character has fought to defend the holy factories in the name of Father Ford.;;;;;;;;;;;;;x
 joropo_cantor;Joropo Cantor;;;;;;;;;;;;;x
@@ -852,6 +857,9 @@ machete_female_ref;Night Mare;;;;;;;;;;;;;x
 machete_female_ref_desc;The Night Mares believe that leadership requires the cold head and nurturing ways of a woman. They worship the wise Bolefuego and mysterious Sayona.;;;;;;;;;;;;;x
 distractible;Distractible;;;;;;;;;;;;;x
 distractible_desc;This character is forgetful and often loses their train of thought. This does not affect their raw intelligence, but it does affect their ability to apply it.;;;;;;;;;;;;;x
+reclusive;Reclusive;;;;;;;;;;;;;x
+reclusive_desc;This character is socially withdrawn and awkward, but they are also highly knowledgeable about their topics of interest.;;;;;;;;;;;;;x
+
 
 ya_shamal;Ya-Shamal;;;;;;;;;;;;;x
 ya_shamal_desc;This character is revered as a champion of the Orientalist faith and greater Islamic world for fulfilling the prophesized reconquest of Detroit and ending the persecution of the Muslims therein.;;;;;;;;;;;;;x
@@ -1018,6 +1026,7 @@ custom_chicagoland;Chicagoland;;;;;;;;;;;;;x
 custom_mississippi_river;Lower Mississippi;;;;;;;;;;;;;x
 custom_gran_colombia;Gran Colombia;;;;;;;;;;;;;x
 custom_earthquake_region;Earthquake Zone;;;;;;;;;;;;;x
+custom_texas;Greater Texas;;;;;;;;;;;;;x
 custom_historical_plague_free_zone;"Historical" Plague Exclusion Zone;Zone d'exclusion historique de la peste;Historische Pestausnahmezone;;Zona histórica de exclusión de la Peste;;;;;;;;;x
 
 ###########Other###########
@@ -1657,7 +1666,7 @@ ojibwe_opinion;[ojibwe.GetName] Opinion;;;;;;;;;;;;;x
 amerodeutsch_opinion;[amerodeutsch.GetGroupName] Opinion;;;;;;;;;;;;;x
 deitsch_opinion;[deitsch.GetName] Opinion;;;;;;;;;;;;;x
 rostmann_opinion;[rostmann.GetName] Opinion;;;;;;;;;;;;;x
-adelsverer_opinion;[adelsverer.GetName] Opinion;;;;;;;;;;;;;x
+texaner_opinion;[texaner.GetName] Opinion;;;;;;;;;;;;;x
 ameronordic_opinion;[ameronordic.GetName] Opinion;;;;;;;;;;;;;x
 dellsman_opinion;[dellsman.GetName] Opinion;;;;;;;;;;;;;x
 yooper_opinion;[yooper.GetName] Opinion;;;;;;;;;;;;;x
@@ -1803,6 +1812,7 @@ iyyu_opinion;[iyyu.GetName] Opinion;;;;;;;;;;;;;x
 west_anglo_opinion;[west_anglo.GetGroupName] Opinion;;;;;;;;;;;;;x
 grangelander_opinion;[grangelander.GetName] Opinion;;;;;;;;;;;;;x
 texan_opinion;[texan.GetName] Opinion;;;;;;;;;;;;;x
+texan_group_opinion;[texan_group.GetName] Opinion;;;;;;;;;;;;;x
 arixan_opinion;[arixan.GetName] Opinion;;;;;;;;;;;;;x
 battleborn_opinion;[battleborn.GetName] Opinion;;;;;;;;;;;;;x
 ozark_opinion;[ozark.GetName] Opinion;;;;;;;;;;;;;x

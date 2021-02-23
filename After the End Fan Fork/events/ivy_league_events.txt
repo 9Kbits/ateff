@@ -122,11 +122,11 @@ character_event = {
 }
 
 # Students fighting
-character_event = {
+narrative_event = {
 	id = faculty.150
 	desc = EVTDESC_faculty_150
 	picture = GFX_evt_throne_room
-	border = GFX_event_normal_frame_war
+	border = GFX_event_narrative_frame_war
 	
 	only_playable = yes
 	capable_only = yes
@@ -155,12 +155,14 @@ character_event = {
 					factor = 10
 					martial = 20
 				}
+				prestige = 30
 			}
 			100 = {
 				modifier = {
 					factor = 10
 					trait = strong
 				}
+				prestige = 15
 			}	
 			100 = {
 				modifier = {

@@ -448,6 +448,7 @@
 				AND = {
 					OR = {
 						culture_group = west_anglo
+						culture_group = texan_group
 						culture_group = rockland
 						is_nomadic = yes
 					}
@@ -481,6 +482,7 @@
 					OR = {
 						culture_group = west_anglo
 						culture_group = rockland
+						culture_group = texan_group
 						is_nomadic = yes
 					}
 				}
@@ -3548,6 +3550,15 @@
 		factor = 100
 		modifier = {
 			factor = 0
+			OR = { 
+				any_artifact = {
+					artifact_type = old_world_shades
+				}
+				trait = dead_shades
+			}
+		}
+		modifier = {
+			factor = 0
 			trait = blinded
 		}
 	}
@@ -3556,8 +3567,88 @@
 		factor = 100
 		modifier = {
 			factor = 0
+			OR = { 
+				any_artifact = {
+					artifact_type = old_world_shades
+				}
+				trait = dead_shades
+			}
+		}
+		modifier = {
+			factor = 0
 			NOT = {
 				trait = blinded
+			}
+		}
+		modifier = {
+			factor = 0
+			religion = brethren
+		}
+	}
+	
+	2 =  {
+		factor = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	
+	3 =  {
+		factor = 50
+		modifier = {
+			factor = 0
+			OR = { 
+				any_artifact = {
+					artifact_type = old_world_shades
+				}
+				trait = dead_shades
+			}
+		}
+		modifier = {
+			factor = 0
+			NAND = {
+				trait = blinded
+				religion = brethren
+			}
+		}
+	}
+	
+	4 =  {
+		factor = 0
+		modifier = {
+			factor = 0
+		}
+	}
+	
+	5 =  {
+		factor = 50
+		modifier = {
+			factor = 0
+			OR = { 
+				any_artifact = {
+					artifact_type = old_world_shades
+				}
+				trait = dead_shades
+			}
+		}
+		modifier = {
+			factor = 0
+			NAND = {
+				trait = blinded
+				religion = brethren
+			}
+		}
+	}
+	
+	6 =  {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOR = {
+				any_artifact = {
+					artifact_type = old_world_shades
+				}
+				trait = dead_shades
 			}
 		}
 	}
