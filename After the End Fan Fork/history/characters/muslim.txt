@@ -14,6 +14,7 @@
 	trait=fair
 	trait=faqih
 	trait=ambitious
+	trait=pious
 	trait=diligent
 	trait=patient
 	trait=brilliant_strategist
@@ -107,7 +108,9 @@
 	culture=anjalusi
 	religion=imamite
 	trait=sayyid2
-	trait=zealous
+	trait=pious
+	trait=just
+	trait=brave
 	give_nickname=nick_the_martyr
 	2200.1.1={birth=yes}
 	2247.3.7={death={
@@ -126,6 +129,8 @@
 	trait=sayyid2
 	trait=duelist
 	trait=ambitious
+	trait=zealous
+	trait=wroth
 	trait=strong
 	give_nickname=nick_the_avenger
 	2242.2.4={birth=yes}
@@ -138,7 +143,7 @@
 	culture=anjalusi
 	religion=imamite
 	trait=sayyid2
-	trait=zealous
+	trait=pious
 	trait=ambitious
 	trait=on_hajj
 	give_nickname=nick_the_pilgrim
@@ -272,6 +277,7 @@
 	trait=just
 	trait=kind
 	trait=patient
+	trait=ambitious
 	trait=flowered
 	trait=imp_ex3
 	2648.1.1={birth=yes}
@@ -285,6 +291,7 @@
 			add_friend=2200040
 			add_friend=1384010
 			add_friend=1384011
+			add_friend=1911151
 		}
 	}
 	2660.1.2={
@@ -404,7 +411,7 @@
 	2720.12.2={death=yes}
 }
 2200024={
-	name="Jasmin"
+	name="Jasmine"
 	female=yes
 	culture=chiraqi
 	religion=traditionalist
@@ -466,6 +473,7 @@
 	trait=kind
 	trait=scholar
 	trait=musician
+	trait=pious
 	trait=scholarly_theologian
 	trait=way_book
 	2649.4.5={birth=yes}
@@ -490,7 +498,7 @@
 	learning=6
 	trait=fair
 	trait=proud
-	trait=arbitrary
+	trait=just
 	trait=brave
 	trait=cynical
 	trait=socializer
@@ -789,6 +797,7 @@
 			set_character_flag=physique
 		}
 	}
+	2665.1.1={employer=2200016}
 	2666.7.4={
 		effect={
 			add_friend=2200035
@@ -1302,6 +1311,16 @@
 	disallow_random_traits=yes
 	give_nickname=nick_the_surfer
 	2649.8.10={birth=yes}
+	2660.1.1={
+	effect={
+			set_character_flag=no_historical_family
+			set_character_flag=diversity
+			set_character_flag=physique
+			add_friend=1384011
+			add_friend=1911151
+			add_friend=2200016
+		}
+	}
 	2680.3.24={death=yes}
 
 }
@@ -1328,7 +1347,17 @@
 	disallow_random_traits=yes
 	give_nickname=nick_the_dove
 	2649.8.10={birth=yes}
-	2680.3.24={death=yes}
+	2660.1.1={
+	effect={
+			set_character_flag=no_historical_family
+			set_character_flag=diversity
+			set_character_flag=physique
+			add_friend=1384010
+			add_friend=1911151
+			add_friend=2200016
+		}
+	}
+	2690.3.24={death=yes}
 
 }
 
