@@ -5,10 +5,14 @@ character_event = {
 	id = orientalist.1
 	
 	hide_window = yes
-	religion = orientalist
+	religion_group = muslim
 	only_playable = yes
 	
 	trigger = {
+		OR = {
+			religion = orientalist
+			religion = misrist
+		}
 		has_landed_title = c_detroit
 		NOT = { has_global_flag = ya_shamal_declared }
 	}
@@ -23,6 +27,9 @@ character_event = {
 			id = orientalist.2
 			days = 1
 		}
+		any_child_even_if_dead = {
+			character_event = { id = orientalist.3 }
+		}
 	}
 }
 
@@ -31,7 +38,7 @@ narrative_event = {
 	id = orientalist.2
 	title = "EVTTITLE_yashamal"
 	desc = "EVTDESC_yashamal"
-	picture = GFX_evt_moors
+	picture = GFX_evt_yashamal
 	border = "GFX_event_narrative_frame_religion"
 	
 	major = yes
@@ -40,7 +47,10 @@ narrative_event = {
 	option = {
 		name = "EVTOPTA_yashamal"
 		trigger = {
-			religion = orientalist
+			OR = {
+				religion = orientalist
+				religion = misrist
+			}
 		}
 	}
 	
@@ -48,7 +58,10 @@ narrative_event = {
 		name = "EVTOPTB_yashamal"
 		trigger = {
 			religion_group = muslim
-			NOT = { religion = orientalist }
+			NOR = {
+				religion = orientalist
+				religion = misrist
+			}
 		}
 	}
 	
@@ -57,6 +70,19 @@ narrative_event = {
 		trigger = {
 			NOT = { religion_group = muslim }
 		}
+	}
+}
+
+character_event = { # Make all existing descendants also yashamal descendants
+	id = orientalist.3
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		add_trait = ya_shamal_descendant
+		any_child_even_if_dead = { repeat_event = { id = orientalist.3 } }
 	}
 }
 

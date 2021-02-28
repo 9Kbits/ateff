@@ -2678,7 +2678,10 @@ on_hajj2 = {
 
 ya_shamal = {
 	potential = {
-		religion = orientalist
+		OR = {
+			religion = orientalist
+			religion = misrist
+		}
 	}
 	
 	random = no
@@ -2687,6 +2690,22 @@ ya_shamal = {
 	muslim_opinion = 10
 	orientalist_opinion = 10
 	misrist_opinion = 10
+}
+
+ya_shamal_descendant = {
+	potential = {
+		OR = {
+			religion = orientalist
+			religion = misrist
+		}
+	}
+	
+	random = no
+	customizer = no
+	
+	muslim_opinion = 5
+	orientalist_opinion = 5
+	misrist_opinion = 5
 }
 
 pious = {					
