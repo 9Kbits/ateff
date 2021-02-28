@@ -1859,6 +1859,14 @@ set_bloodline_founder_religion_flag_effect = {
 		new_bloodline = { set_bloodline_flag = requires_celeste_religion }
 	}
 	else_if = {
+		limit = { religion = nazarene }
+		new_bloodline = { set_bloodline_flag = requires_nazarene_religion }
+	}
+	else_if = {
+		limit = { religion = true_cross }
+		new_bloodline = { set_bloodline_flag = requires_true_cross_religion }
+	}
+	else_if = {
 		limit = { religion = sacred_heart }
 		new_bloodline = { set_bloodline_flag = requires_sacred_heart_religion }
 	}

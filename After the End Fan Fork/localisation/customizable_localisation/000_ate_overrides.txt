@@ -6848,6 +6848,24 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = GetReligiousCommunityName_nazarene
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_nazarene
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_snazarene
+	}
+}
+defined_text = {
+	name = GetReligiousCommunityName_true_cross
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_true_cross
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_true_cross
+	}
+}
+defined_text = {
 	name = GetReligiousCommunityName_cetic
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_name_cetic
@@ -8103,6 +8121,42 @@ defined_text = {
 	text = {
 		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
 		localisation_key = secret_religious_society_apostolic_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_celeste
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_celeste_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_nazarene
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_nazarene_desc_REAL
+	}
+}
+
+defined_text = {
+	name = GetReligiousSocietyDesc_true_cross
+	text = {
+		trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_desc
+	}
+	text = {
+		trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_true_cross_desc_REAL
 	}
 }
 

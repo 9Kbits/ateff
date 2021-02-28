@@ -4118,6 +4118,20 @@ character_event = {
 			}
 		}
 		if = {
+			limit = { nazarene = { has_religion_feature = religion_cosmopolitan } }
+			random_playable_ruler = {
+				limit = { religion = nazarene }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { true_cross = { has_religion_feature = religion_cosmopolitan } }
+			random_playable_ruler = {
+				limit = { religion = true_cross }
+				apply_cosmopolian_on_start_effect = yes
+			}
+		}
+		if = {
 			limit = { sacred_heart = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
 				limit = { religion = sacred_heart }
@@ -4653,6 +4667,20 @@ character_event = {
 			limit = { celeste = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
 				limit = { religion = celeste }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { nazarene = { has_religion_feature = religion_dogmatic } }
+			random_playable_ruler = {
+				limit = { religion = nazarene }
+				apply_dogmatic_on_start_effect = yes
+			}
+		}
+		if = {
+			limit = { true_cross = { has_religion_feature = religion_dogmatic } }
+			random_playable_ruler = {
+				limit = { religion = true_cross }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}

@@ -4005,6 +4005,18 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = {
+			has_character_flag = character_was_nazarene
+			any_character = {
+				religion = nazarene
+			}
+		}
+		AND = {
+			has_character_flag = character_was_true_cross
+			any_character = {
+				religion = true_cross
+			}
+		}
+		AND = {
 			has_character_flag = character_was_sacred_heart
 			any_character = {
 				religion = sacred_heart
@@ -9298,6 +9310,8 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_nonconformist
 		has_character_flag = character_was_apostolic
 		has_character_flag = character_was_celeste
+		has_character_flag = character_was_nazarene
+		has_character_flag = character_was_true_cross
 		has_character_flag = character_was_sacred_heart
 		has_character_flag = character_was_patria_grande
 		has_character_flag = character_was_cetic

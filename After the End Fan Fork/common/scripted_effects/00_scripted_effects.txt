@@ -10046,13 +10046,29 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
-					religion = celeste
+					religion = nazarene
 				}
-				has_character_flag = character_was_celeste
+				has_character_flag = character_was_nazarene
 			}
 		}
-		set_secret_religion = celeste
-		clr_character_flag = character_was_celeste
+		set_secret_religion = nazarene
+		clr_character_flag = character_was_nazarene
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
+					religion = true_cross
+				}
+				has_character_flag = character_was_true_cross
+			}
+		}
+		set_secret_religion = true_cross
+		clr_character_flag = character_was_true_cross
 		break = yes
 	}
 	if = {
@@ -11055,6 +11071,14 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_celeste
 	}
 	if = {
+		limit = { religion = nazarene }
+		set_character_flag = character_was_nazarene
+	}
+	if = {
+		limit = { religion = true_cross }
+		set_character_flag = character_was_true_cross
+	}
+	if = {
 		limit = { religion = sacred_heart }
 		set_character_flag = character_was_sacred_heart
 	}
@@ -11305,6 +11329,8 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_nonconformist
 	clr_character_flag = character_was_apostolic
 	clr_character_flag = character_was_celeste
+	clr_character_flag = character_was_nazarene
+	clr_character_flag = character_was_true_cross
 	clr_character_flag = character_was_sacred_heart
 	clr_character_flag = character_was_patria_grande
 	clr_character_flag = character_was_cetic
@@ -11570,6 +11596,20 @@ event_target_old_religion_from_flag_effect = {
 		limit = { has_character_flag = character_was_celeste }
 		random_character = {
 			limit = { religion = celeste }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_nazarene }
+		random_character = {
+			limit = { religion = nazarene }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_true_cross }
+		random_character = {
+			limit = { religion = true_cross }
 			save_event_target_as = old_religion
 		}
 	}
@@ -13751,6 +13791,28 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = celeste
 					remove_province_modifier = secret_celeste_community
+				}
+			}
+		}
+		secret_religious_society_nazarene = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_nazarene_community
+					}
+					religion = nazarene
+					remove_province_modifier = secret_nazarene_community
+				}
+			}
+		}
+		secret_religious_society_true_cross = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_true_cross_community
+					}
+					religion = true_cross
+					remove_province_modifier = secret_true_cross_community
 				}
 			}
 		}
@@ -18534,6 +18596,28 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = celeste
 						remove_province_modifier = secret_celeste_community
+					}
+				}
+			}
+			secret_religious_society_nazarene = {
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_nazarene_community
+						}
+						religion = nazarene
+						remove_province_modifier = secret_nazarene_community
+					}
+				}
+			}
+			secret_religious_society_true_cross = {
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_true_cross_community
+						}
+						religion = true_cross
+						remove_province_modifier = secret_true_cross_community
 					}
 				}
 			}
