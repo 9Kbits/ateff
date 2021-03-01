@@ -5718,18 +5718,6 @@ new_crusade = {
 			}
 		}
 
-		# Checks if First Crusade
-		if = {
-			limit = {
-				ROOT = {
-					religion = catholic
-				}
-				NOT = {
-					has_global_flag = first_crusade_complete
-				}
-			}
-			set_global_flag = first_crusade_complete
-		}
 		any_defender = {
 			limit = {
 				ai = no
