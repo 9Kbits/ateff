@@ -1314,7 +1314,6 @@
 	trait=gregarious
 	trait=sympathy_pacific
 	trait=sayyid2
-	trait=celibate
 	disallow_random_traits=yes
 	give_nickname=nick_the_surfer
 	2649.8.10={birth=yes}
@@ -1328,7 +1327,8 @@
 			add_friend=2200016
 		}
 	}
-	2680.3.24={death=yes}
+	2665.12.19={add_spouse=1911153}
+	2720.3.24={death=yes}
 
 }
 1384011={
@@ -2796,4 +2796,40 @@
 	father=1384037
 	2310.1.22={birth=yes}
 	2390.11.2={death=yes}
+}
+
+1911153={
+	name="Trini"
+	female=yes
+	dynasty=1851165
+	martial=12
+	diplomacy=6
+	stewardship=6
+	intrigue=4
+	learning=8
+	culture=calaotian
+	religion=qingzhen
+	trait=tough_soldier
+	trait=strong
+	trait=duelist
+	trait=charitable
+	trait=ambitious
+	trait=shy
+	trait=brave
+	trait=buddhism_qingzhen
+	trait=just
+	trait=devout
+	2645.8.6={birth=yes}
+	2660.1.1={
+	effect={
+			set_character_flag=no_historical_family
+			set_character_flag=diversity
+			set_character_flag=physique
+			add_friend=1384010
+			add_friend=1384011
+			add_friend=2200016
+		}
+	}
+	2665.12.19={add_spouse=1384010}
+	2740.12.1={death=yes}
 }
