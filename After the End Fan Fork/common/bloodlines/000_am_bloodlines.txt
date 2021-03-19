@@ -250,6 +250,45 @@ gable = { #Kings of Jefferson
 	picture = GFX_bloodlines_symbol_cetic
 	flags = { historical_bloodline}
 }
+
+moroni_bloodline = {
+	monthly_character_piety = 0.15
+	command_modifier = {
+		religious_enemy = 0.1
+		morale_offence = 0.05
+	}
+	mormon_opinion = -15
+	neogodbeite_opinion = 10
+	cetic_opinion = -10
+	inheritance = patrilineal
+	allow_bastards = no
+	bloodline_effect_better_inquisition = 1
+	picture = GFX_bloodlines_symbol_cross_crusader
+	flags = { historical_bloodline bloodline_better_inquisition }
+	active = {
+		religion_group = latter_day_saints
+	}
+}
+
+super_moroni_bloodline = {
+	monthly_character_piety = 0.3
+	command_modifier = {
+		religious_enemy = 0.2
+		morale_offence = 0.1
+	}
+	latter_day_saints_opinion = 15
+	cetic_opinion -10
+	inheritance = patrilineal
+	allow_bastards = no
+	bloodline_effect_better_inquisition = 1
+	bloodline_effect_religious_liberation = 1
+	picture = GFX_bloodlines_symbol_cross_crusader
+	flags = { historical_bloodline bloodline_better_inquisition bloodline_religious_liberation }
+	active = {
+		religion_group = latter_day_saints
+	}
+}
+
 ##Earned Bloodlines
 
 

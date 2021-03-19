@@ -809,3 +809,519 @@ get_random_era_name = {
 		}
 	}
 }
+remove_imperial_authority_modifier = {
+	clr_character_flag = imperial_authority
+	remove_character_modifier = imperial_authority_modifier_0
+	remove_character_modifier = imperial_authority_modifier_1
+	remove_character_modifier = imperial_authority_modifier_2
+	remove_character_modifier = imperial_authority_modifier_3
+	remove_character_modifier = imperial_authority_modifier_4
+	remove_character_modifier = imperial_authority_modifier_5
+	remove_character_modifier = imperial_authority_modifier_6
+	remove_character_modifier = imperial_authority_modifier_7
+	remove_character_modifier = imperial_authority_modifier_8
+	remove_character_modifier = imperial_authority_modifier_9
+	remove_character_modifier = imperial_authority_modifier_10
+	remove_character_modifier = imperial_authority_modifier_11
+	remove_character_modifier = imperial_authority_modifier_12
+	remove_character_modifier = imperial_authority_modifier_13
+	remove_character_modifier = imperial_authority_modifier_14
+	remove_character_modifier = imperial_authority_modifier_15
+	remove_character_modifier = imperial_authority_modifier_16
+	remove_character_modifier = imperial_authority_modifier_17
+	remove_character_modifier = imperial_authority_modifier_18
+	remove_character_modifier = imperial_authority_modifier_19
+	remove_character_modifier = imperial_authority_modifier_20
+	remove_character_modifier = imperial_authority_modifier_21
+	remove_character_modifier = imperial_authority_modifier_22
+	remove_character_modifier = imperial_authority_modifier_23
+	remove_character_modifier = imperial_authority_modifier_24
+	remove_character_modifier = imperial_authority_modifier_25
+	remove_character_modifier = imperial_authority_modifier_26
+	remove_character_modifier = imperial_authority_modifier_27
+	remove_character_modifier = imperial_authority_modifier_28
+	remove_character_modifier = imperial_authority_modifier_29
+	remove_character_modifier = imperial_authority_modifier_30
+	remove_character_modifier = imperial_authority_modifier_31
+	remove_character_modifier = imperial_authority_modifier_32
+	remove_character_modifier = imperial_authority_modifier_33
+	remove_character_modifier = imperial_authority_modifier_34
+	remove_character_modifier = imperial_authority_modifier_35
+	remove_character_modifier = imperial_authority_modifier_36
+	remove_character_modifier = imperial_authority_modifier_37
+	remove_character_modifier = imperial_authority_modifier_38
+	remove_character_modifier = imperial_authority_modifier_39
+	remove_character_modifier = imperial_authority_modifier_40
+	remove_character_modifier = imperial_authority_modifier_41
+	remove_character_modifier = imperial_authority_modifier_42
+	remove_character_modifier = imperial_authority_modifier_43
+	remove_character_modifier = imperial_authority_modifier_44
+	remove_character_modifier = imperial_authority_modifier_45
+	remove_character_modifier = imperial_authority_modifier_46
+	remove_character_modifier = imperial_authority_modifier_47
+	remove_character_modifier = imperial_authority_modifier_48
+	remove_character_modifier = imperial_authority_modifier_49
+	remove_character_modifier = imperial_authority_modifier_50
+	remove_character_modifier = imperial_authority_modifier_51
+	remove_character_modifier = imperial_authority_modifier_52
+	remove_character_modifier = imperial_authority_modifier_53
+	remove_character_modifier = imperial_authority_modifier_54
+	remove_character_modifier = imperial_authority_modifier_55
+	remove_character_modifier = imperial_authority_modifier_56
+	remove_character_modifier = imperial_authority_modifier_57
+	remove_character_modifier = imperial_authority_modifier_58
+	remove_character_modifier = imperial_authority_modifier_59
+	remove_character_modifier = imperial_authority_modifier_60
+	remove_character_modifier = imperial_authority_modifier_61
+	remove_character_modifier = imperial_authority_modifier_62
+	remove_character_modifier = imperial_authority_modifier_63
+	remove_character_modifier = imperial_authority_modifier_64
+	remove_character_modifier = imperial_authority_modifier_65
+	remove_character_modifier = imperial_authority_modifier_66
+	remove_character_modifier = imperial_authority_modifier_67
+	remove_character_modifier = imperial_authority_modifier_68
+	remove_character_modifier = imperial_authority_modifier_69
+	remove_character_modifier = imperial_authority_modifier_70
+	remove_character_modifier = imperial_authority_modifier_71
+	remove_character_modifier = imperial_authority_modifier_72
+	remove_character_modifier = imperial_authority_modifier_73
+	remove_character_modifier = imperial_authority_modifier_74
+	remove_character_modifier = imperial_authority_modifier_75
+	remove_character_modifier = imperial_authority_modifier_76
+	remove_character_modifier = imperial_authority_modifier_77
+	remove_character_modifier = imperial_authority_modifier_78
+	remove_character_modifier = imperial_authority_modifier_79
+	remove_character_modifier = imperial_authority_modifier_80
+	remove_character_modifier = imperial_authority_modifier_81
+	remove_character_modifier = imperial_authority_modifier_82
+	remove_character_modifier = imperial_authority_modifier_83
+	remove_character_modifier = imperial_authority_modifier_84
+	remove_character_modifier = imperial_authority_modifier_85
+	remove_character_modifier = imperial_authority_modifier_86
+	remove_character_modifier = imperial_authority_modifier_87
+	remove_character_modifier = imperial_authority_modifier_88
+	remove_character_modifier = imperial_authority_modifier_89
+	remove_character_modifier = imperial_authority_modifier_90
+	remove_character_modifier = imperial_authority_modifier_91
+	remove_character_modifier = imperial_authority_modifier_92
+	remove_character_modifier = imperial_authority_modifier_93
+	remove_character_modifier = imperial_authority_modifier_94
+	remove_character_modifier = imperial_authority_modifier_95
+	remove_character_modifier = imperial_authority_modifier_96
+	remove_character_modifier = imperial_authority_modifier_97
+	remove_character_modifier = imperial_authority_modifier_98
+	remove_character_modifier = imperial_authority_modifier_99
+	remove_character_modifier = imperial_authority_modifier_100
+}
+
+
+
+add_imperial_authority_modifier = {
+	set_character_flag = imperial_authority
+	if = {
+		limit = { check_variable = { which = global_imp_auth value < 1 } }
+		add_character_modifier = { name = imperial_authority_modifier_0 duration = -1 }
+		set_variable = { which = global_imp_auth value = 0 }
+		}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 1 } }
+		add_character_modifier = { name = imperial_authority_modifier_1 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 2 } }
+		add_character_modifier = { name = imperial_authority_modifier_2 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 3 } }
+		add_character_modifier = { name = imperial_authority_modifier_3 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 4 } }
+		add_character_modifier = { name = imperial_authority_modifier_4 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 5 } }
+		add_character_modifier = { name = imperial_authority_modifier_5 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 6 } }
+		add_character_modifier = { name = imperial_authority_modifier_6 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 7 } }
+		add_character_modifier = { name = imperial_authority_modifier_7 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 8 } }
+		add_character_modifier = { name = imperial_authority_modifier_8 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 9 } }
+		add_character_modifier = { name = imperial_authority_modifier_9 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 10 } }
+		add_character_modifier = { name = imperial_authority_modifier_10 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 11 } }
+		add_character_modifier = { name = imperial_authority_modifier_11 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 12 } }
+		add_character_modifier = { name = imperial_authority_modifier_12 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 13 } }
+		add_character_modifier = { name = imperial_authority_modifier_13 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 14 } }
+		add_character_modifier = { name = imperial_authority_modifier_14 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 15 } }
+		add_character_modifier = { name = imperial_authority_modifier_15 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 16 } }
+		add_character_modifier = { name = imperial_authority_modifier_16 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 17 } }
+		add_character_modifier = { name = imperial_authority_modifier_17 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 18 } }
+		add_character_modifier = { name = imperial_authority_modifier_18 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 19 } }
+		add_character_modifier = { name = imperial_authority_modifier_19 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 20 } }
+		add_character_modifier = { name = imperial_authority_modifier_20 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 21 } }
+		add_character_modifier = { name = imperial_authority_modifier_21 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 22 } }
+		add_character_modifier = { name = imperial_authority_modifier_22 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 23 } }
+		add_character_modifier = { name = imperial_authority_modifier_23 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 24 } }
+		add_character_modifier = { name = imperial_authority_modifier_24 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 25 } }
+		add_character_modifier = { name = imperial_authority_modifier_25 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 26 } }
+		add_character_modifier = { name = imperial_authority_modifier_26 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 27 } }
+		add_character_modifier = { name = imperial_authority_modifier_27 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 28 } }
+		add_character_modifier = { name = imperial_authority_modifier_28 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 29 } }
+		add_character_modifier = { name = imperial_authority_modifier_29 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 30 } }
+		add_character_modifier = { name = imperial_authority_modifier_30 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 31 } }
+		add_character_modifier = { name = imperial_authority_modifier_31 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 32 } }
+		add_character_modifier = { name = imperial_authority_modifier_32 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 33 } }
+		add_character_modifier = { name = imperial_authority_modifier_33 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 34 } }
+		add_character_modifier = { name = imperial_authority_modifier_34 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 35 } }
+		add_character_modifier = { name = imperial_authority_modifier_35 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 36 } }
+		add_character_modifier = { name = imperial_authority_modifier_36 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 37 } }
+		add_character_modifier = { name = imperial_authority_modifier_37 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 38 } }
+		add_character_modifier = { name = imperial_authority_modifier_38 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 39 } }
+		add_character_modifier = { name = imperial_authority_modifier_39 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 40 } }
+		add_character_modifier = { name = imperial_authority_modifier_40 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 41 } }
+		add_character_modifier = { name = imperial_authority_modifier_41 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 42 } }
+		add_character_modifier = { name = imperial_authority_modifier_42 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 43 } }
+		add_character_modifier = { name = imperial_authority_modifier_43 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 44 } }
+		add_character_modifier = { name = imperial_authority_modifier_44 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 45 } }
+		add_character_modifier = { name = imperial_authority_modifier_45 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 46 } }
+		add_character_modifier = { name = imperial_authority_modifier_46 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 47 } }
+		add_character_modifier = { name = imperial_authority_modifier_47 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 48 } }
+		add_character_modifier = { name = imperial_authority_modifier_48 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 49 } }
+		add_character_modifier = { name = imperial_authority_modifier_49 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 50 } }
+		add_character_modifier = { name = imperial_authority_modifier_50 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 51 } }
+		add_character_modifier = { name = imperial_authority_modifier_51 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 52 } }
+		add_character_modifier = { name = imperial_authority_modifier_52 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 53 } }
+		add_character_modifier = { name = imperial_authority_modifier_53 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 54 } }
+		add_character_modifier = { name = imperial_authority_modifier_54 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 55 } }
+		add_character_modifier = { name = imperial_authority_modifier_55 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 56 } }
+		add_character_modifier = { name = imperial_authority_modifier_56 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 57 } }
+		add_character_modifier = { name = imperial_authority_modifier_57 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 58 } }
+		add_character_modifier = { name = imperial_authority_modifier_58 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 59 } }
+		add_character_modifier = { name = imperial_authority_modifier_59 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 60 } }
+		add_character_modifier = { name = imperial_authority_modifier_60 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 61 } }
+		add_character_modifier = { name = imperial_authority_modifier_61 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 62 } }
+		add_character_modifier = { name = imperial_authority_modifier_62 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 63 } }
+		add_character_modifier = { name = imperial_authority_modifier_63 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 64 } }
+		add_character_modifier = { name = imperial_authority_modifier_64 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 65 } }
+		add_character_modifier = { name = imperial_authority_modifier_65 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 66 } }
+		add_character_modifier = { name = imperial_authority_modifier_66 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 67 } }
+		add_character_modifier = { name = imperial_authority_modifier_67 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 68 } }
+		add_character_modifier = { name = imperial_authority_modifier_68 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 69 } }
+		add_character_modifier = { name = imperial_authority_modifier_69 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 70 } }
+		add_character_modifier = { name = imperial_authority_modifier_70 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 71 } }
+		add_character_modifier = { name = imperial_authority_modifier_71 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 72 } }
+		add_character_modifier = { name = imperial_authority_modifier_72 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 73 } }
+		add_character_modifier = { name = imperial_authority_modifier_73 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 74 } }
+		add_character_modifier = { name = imperial_authority_modifier_74 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 75 } }
+		add_character_modifier = { name = imperial_authority_modifier_75 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 76 } }
+		add_character_modifier = { name = imperial_authority_modifier_76 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 77 } }
+		add_character_modifier = { name = imperial_authority_modifier_77 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 78 } }
+		add_character_modifier = { name = imperial_authority_modifier_78 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 79 } }
+		add_character_modifier = { name = imperial_authority_modifier_79 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 80 } }
+		add_character_modifier = { name = imperial_authority_modifier_80 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 81 } }
+		add_character_modifier = { name = imperial_authority_modifier_81 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 82 } }
+		add_character_modifier = { name = imperial_authority_modifier_82 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 83 } }
+		add_character_modifier = { name = imperial_authority_modifier_83 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 84 } }
+		add_character_modifier = { name = imperial_authority_modifier_84 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 85 } }
+		add_character_modifier = { name = imperial_authority_modifier_85 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 86 } }
+		add_character_modifier = { name = imperial_authority_modifier_86 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 87 } }
+		add_character_modifier = { name = imperial_authority_modifier_87 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 88 } }
+		add_character_modifier = { name = imperial_authority_modifier_88 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 89 } }
+		add_character_modifier = { name = imperial_authority_modifier_89 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 90 } }
+		add_character_modifier = { name = imperial_authority_modifier_90 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 91 } }
+		add_character_modifier = { name = imperial_authority_modifier_91 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 92 } }
+		add_character_modifier = { name = imperial_authority_modifier_92 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 93 } }
+		add_character_modifier = { name = imperial_authority_modifier_93 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 94 } }
+		add_character_modifier = { name = imperial_authority_modifier_94 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 95 } }
+		add_character_modifier = { name = imperial_authority_modifier_95 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 96 } }
+		add_character_modifier = { name = imperial_authority_modifier_96 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 97 } }
+		add_character_modifier = { name = imperial_authority_modifier_97 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 98 } }
+		add_character_modifier = { name = imperial_authority_modifier_98 duration = -1 }
+	}
+	if = {
+		limit = { is_variable_equal = { which = global_imp_auth value = 99 } }
+		add_character_modifier = { name = imperial_authority_modifier_99 duration = -1 }
+	}
+	if = {
+		limit = { check_variable = { which = global_imp_auth value > 99 } }
+		add_character_modifier = { name = imperial_authority_modifier_100 duration = -1 }
+		set_variable = { which = global_imp_auth value = 100 }
+	}
+}
