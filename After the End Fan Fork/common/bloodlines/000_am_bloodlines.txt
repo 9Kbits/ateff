@@ -233,7 +233,7 @@ freeland = { #Gaian lords
 	martial = 2
 	inheritance = patrilineal
 	allow_bastards = yes
-	picture = GFX_bloodlines_symbol_cetic
+	picture = GFX_bloodlines_symbol_gaian
 	flags = { historical_bloodline }
 	active = {
 		culture_group = north_pacific
@@ -250,7 +250,6 @@ gable = { #Kings of Jefferson
 	picture = GFX_bloodlines_symbol_cetic
 	flags = { historical_bloodline}
 }
-
 moroni_bloodline = {
 	monthly_character_piety = 0.15
 	command_modifier = {
@@ -288,7 +287,6 @@ super_moroni_bloodline = {
 		religion_group = latter_day_saints
 	}
 }
-
 ##Earned Bloodlines
 
 
@@ -617,7 +615,7 @@ guevara_bloodline_01 = {
 	flags = { created_bloodline bloodline_ambition bloodline_better_inquisition bloodline_religious_liberation bloodline_great_conquerors bloodline_guevara }
 }
 
-general_gaia_male= {
+general_gaia_male_cali= {
 	monthly_character_piety = 0.5
 	gaian_opinion = 10
 	cetic_opinion = -10
@@ -626,14 +624,14 @@ general_gaia_male= {
 	}
 	inheritance = patrilineal
 	allow_bastards = yes
-	picture = GFX_bloodlines_symbol_cetic
+	picture = GFX_bloodlines_symbol_gaian
 	flags = { created_bloodline }
 	active = {
 		religion = gaian
 	}
 }
 
-general_gaia_female= {
+general_gaia_female_cali= {
 	monthly_character_piety = 0.5
 	gaian_opinion = 10
 	cetic_opinion = -10
@@ -642,7 +640,73 @@ general_gaia_female= {
 	}
 	inheritance = matrilineal
 	allow_bastards = yes
-	picture = GFX_bloodlines_symbol_cetic
+	picture = GFX_bloodlines_symbol_gaian
+	flags = { created_bloodline }
+	active = {
+		religion = gaian
+	}
+}
+
+general_gaia_male_haida= {
+	monthly_character_piety = 0.5
+	gaian_opinion = 10
+	raven_tales_opinion = -10
+	command_modifier = {
+		religious_enemy = 0.3
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_gaian
+	flags = { created_bloodline }
+	active = {
+		religion = gaian
+	}
+}
+
+general_gaia_female_haida= {
+	monthly_character_piety = 0.5
+	gaian_opinion = 10
+	raven_tales_opinion = -10
+	command_modifier = {
+		religious_enemy = 0.3
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_gaian
+	flags = { created_bloodline }
+	active = {
+		religion = gaian
+	}
+}
+
+general_gaia_male_both= {
+	monthly_character_piety = 1.0
+	gaian_opinion = 15
+	cetic_opinion = -10
+	raven_tales_opinion = -10
+	command_modifier = {
+		religious_enemy = 0.6
+	}
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_gaian
+	flags = { created_bloodline }
+	active = {
+		religion = gaian
+	}
+}
+
+general_gaia_female_both= {
+	monthly_character_piety = 1.0
+	gaian_opinion = 15
+	cetic_opinion = -10
+	raven_tales_opinion = -10
+	command_modifier = {
+		religious_enemy = 0.6
+	}
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_gaian
 	flags = { created_bloodline }
 	active = {
 		religion = gaian

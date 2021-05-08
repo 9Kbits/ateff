@@ -401,6 +401,7 @@ decisions = {
 					OR = {
 						religion = imamite
 						religion = qingzhen
+						religion = nazarene
 					}
 					NOT = { has_global_flag = imamite_jihad_unlocked }
 				}
@@ -1440,7 +1441,6 @@ decisions = {
 			prisoner = no
 			OR = {
 				religion = imamite
-				religion = nazarene
 				religion = qingzhen
 			}
 			NOT = { trait = sympathy_pacific }
@@ -1563,49 +1563,172 @@ decisions = {
 			NOT = { has_global_flag = general_of_gaia_appears }
 		}
 		allow = {
+			OR = {
 			completely_controls = k_jefferson
+			completely_controls = k_vancouver
+			}
 			prestige = 2000
 			piety = 500
 		}
 		effect = {
 			piety = 500 
 			set_global_flag = general_of_gaia_appears
-			k_jefferson = {
-				de_jure_liege = e_cascadia 
-			}
-
 		if = {
 			limit = { 
+				completely_controls = k_vancouver
+				completely_controls = k_jefferson
 				has_dlc = "Holy Fury" 
 				is_female = no
 			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			narrative_event = { id = gaian.19 }
+				any_child = {
+					character_event = { id = gaian.20 }
+			}
 			create_bloodline = {
-				type = general_gaia_male
+				type = general_gaia_male_both
 			}
 			new_bloodline = {
-				set_description = "bloodline_desc_general_gaia"
-			}	
-			sound_effect = bloodline_added	
+				set_description = "bloodline_desc_general_gaia_both"
+			}
+			sound_effect = bloodline_added
 		}
 		else_if = {
 			limit = { 
+				completely_controls = k_vancouver
+				completely_controls = k_jefferson
 				has_dlc = "Holy Fury" 
 				is_female = yes
 			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			narrative_event = { id = gaian.19 }
+				any_child = {
+					character_event = { id = gaian.20 }
+			}
 			create_bloodline = {
-				type = general_gaia_female
+				type = general_gaia_female_both
 			}
 			new_bloodline = {
-				set_description = "bloodline_desc_general_gaia"
-			}	
-			sound_effect = bloodline_added		
+				set_description = "bloodline_desc_general_gaia_both"
+			}
+			sound_effect = bloodline_added
 		}
-			hidden_tooltip = {
-				narrative_event = { id = gaian.15 }
+		else_if = {
+			limit = { 
+				completely_controls = k_vancouver
+				completely_controls = k_jefferson
+			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			narrative_event = { id = gaian.19 }
+				any_child = {
+					character_event = { id = gaian.20 }
+			}
+		}
+		else_if = {
+			limit = { 
+				completely_controls = k_jefferson
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			narrative_event = { id = gaian.15 }
 				any_child = {
 					character_event = { id = gaian.16 }
-				}
 			}
+			create_bloodline = {
+				type = general_gaia_male_cali
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_general_gaia_cali"
+			}
+			sound_effect = bloodline_added
+		}
+		else_if = {
+			limit = { 
+				completely_controls = k_jefferson
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			narrative_event = { id = gaian.15 }
+				any_child = {
+					character_event = { id = gaian.16 }
+			}
+			create_bloodline = {
+				type = general_gaia_female_cali
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_general_gaia_cali"
+			}
+			sound_effect = bloodline_added
+		}
+		else_if = {
+			limit = { 
+				completely_controls = k_jefferson
+			}
+			k_jefferson = {
+				de_jure_liege = e_cascadia 
+			}
+			narrative_event = { id = gaian.15 }
+				any_child = {
+					character_event = { id = gaian.16 }
+			}
+		}
+		else_if = {
+			limit = { 
+				completely_controls = k_vancouver
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			narrative_event = { id = gaian.17 }
+				any_child = {
+					character_event = { id = gaian.18 }
+			}
+			create_bloodline = {
+				type = general_gaia_male_haida
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_general_gaia_haida"
+			}
+			sound_effect = bloodline_added
+		}
+		else_if = {
+			limit = { 
+				completely_controls = k_vancouver
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			narrative_event = { id = gaian.17 }
+				any_child = {
+					character_event = { id = gaian.18 }
+			}
+			create_bloodline = {
+				type = general_gaia_female_haida
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_general_gaia_haida"
+			}
+			sound_effect = bloodline_added
+		}
+		else_if = {
+			limit = { 
+				completely_controls = k_vancouver
+			}
+			narrative_event = { id = gaian.17 }
+				any_child = {
+					character_event = { id = gaian.18 }
+			}
+		}
 		}
 		revoke_allowed = {
 			always = no
@@ -4312,7 +4435,7 @@ decisions = {
 			factor = 1
 		}
 	}
-
+	
 	greatwall_donation = {
 		only_playable = yes
 		is_high_prio = yes
@@ -4502,7 +4625,8 @@ decisions = {
 			}
 		}
 	}
-}	
+
+}
 
 targetted_decisions = {
 	
@@ -5820,7 +5944,6 @@ targetted_decisions = {
 
 		}
 	}
-	
 	cetic_syncretize = {
 		only_playable = yes
 		ai_check_interval = 20
