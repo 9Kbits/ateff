@@ -360,7 +360,7 @@
 	trait=kind
 	trait=charitable
 	trait=martial_cleric
-	father={1788288}
+	father=1788288
 	2625.1.1={birth=yes
 		culture=gothamite}
 	2647.1.1={
@@ -474,6 +474,8 @@
 	trait=deceitful
 	trait=diligent
 	trait=intricate_webweaver
+	father=1788295
+	mother=1788294
 	2622.1.1={birth=yes}
 	2642.1.1={add_spouse=1788229}
 	2695.1.1={death=yes}
@@ -495,7 +497,7 @@
 	trait=deceitful
 	trait=paranoid
 	trait=grey_eminence
-	father={1788279}
+	father=1788279
 	2624.1.1={birth=yes}
 	2654.5.5={add_spouse=1788026}
 	2654.5.6={
@@ -705,10 +707,9 @@
 	trait=gregarious
 	trait=trusting
 	trait=grey_eminence
-	father={1788282}
+	father=1788282
 	2624.1.1={birth=yes
 		culture=gothamite}
-	2650.1.1={add_spouse=1788230}
 	2695.1.1={death=yes}
 }
 
@@ -1255,7 +1256,7 @@
 	trait=greedy
 	trait=diligent
 	trait=ambitious
-	father={1788256}
+	father=1788256
 	2599.1.1={birth=yes}
 	2620.1.1={add_spouse=1788226}
 	2648.1.1={death=yes}
@@ -1310,13 +1311,13 @@
 	culture=hudsonian
 	religion=americanist
 	father=1788034
-	mother=1788230
 	trait=ambitious
 	trait=strong
 	trait=brave
 	trait=proud
 	trait=paranoid
 	trait=tough_soldier
+	father=1788034
 	2654.1.1={birth=yes
 		culture=gothamite}
 	2700.1.1={death=yes}
@@ -1328,7 +1329,6 @@
 	culture=hudsonian
 	religion=americanist
 	father=1788034
-	mother=1788230
 	trait=ambitious
 	trait=quick
 	trait=brave
@@ -1344,7 +1344,6 @@
 	culture=hudsonian
 	religion=americanist
 	father=1788034
-	mother=1788230
 	2656.1.1={birth=yes
 		culture=gothamite}
 	2700.1.1={death=yes}
@@ -1355,7 +1354,6 @@
 	culture=hudsonian
 	religion=americanist
 	father=1788034
-	mother=1788230
 	2660.1.1={birth=yes
 		culture=gothamite}
 	2700.1.1={death=yes}
@@ -1431,10 +1429,16 @@
 	2625.1.1={birth=yes}
 	2700.1.1={death=yes}
 }
-#Tyrants of New York
+ #Tyrants of New York
 1788230={
 	name="Victor" 
 	dynasty=1777056 #Franzino
+	martial=5
+	diplomacy=7
+	intrigue=6
+	stewardship=8
+	learning=3
+	disallow_random_traits=yes
 	culture=gothamite 
 	occluded=yes 
 	religion=catholic
@@ -1449,10 +1453,15 @@
 	2163.1.1={birth=yes} 
 	2227.1.1={death=yes}
 }
-
 1788231={
 	name="Isaiah" 
 	dynasty=1777056 #Franzino
+	martial=9
+	diplomacy=5
+	intrigue=6
+	stewardship=8
+	learning=3
+	disallow_random_traits=yes
 	culture=gothamite 
 	occluded=yes 
 	religion=catholic
@@ -1464,33 +1473,20 @@
 	trait=brave 
 	trait=robust
 	trait=proud
-	father={1788230}
+	father=1788230
 	2191.1.1={birth=yes} 
-	2230.1.1={give nickname=nick_iron_fist}
-	2240.1.1={death=death_reason=death_murder_unknown}
+	2230.1.1={give_nickname=nick_iron_fist}
+	2240.1.1={death={death_reason=death_murder_unknown}}
 }
-
-1788233={
-	name="Isaiah" # this guy isnt a ruler
-	dynasty=1777056 #Franzino
-	culture=gothamite 
-	occluded=yes 
-	religion=catholic
-	trait=legendary 
-	trait=misguided_warrior
-	trait=erudite
-	trait=honest
-	trait=shy
-	trait=temperate 
-	trait=blinded
-	father={1788231}
-	2210.1.1={birth=yes} 
-	2235.1.1={death=yes}
-}
-
 1788232={
 	name="Antonio" 
 	dynasty=1777056 #Franzino
+	martial=4
+	diplomacy=8
+	intrigue=3
+	stewardship=6
+	learning=6
+	disallow_random_traits=yes
 	culture=gothamite 
 	occluded=yes 
 	religion=catholic
@@ -1503,15 +1499,45 @@
 	trait=humble 
 	trait=diligent
 	trait=has_typhus
-	father={1788231}
+	father=1788231
 	2215.1.1={birth=yes} 
-	2271.1.1={death={death_reason=death_has_typhus}
-	}
+	2271.1.1={death={death_reason=death_trait}}
+}
+
+
+1788233={
+	name="Isaiah" # this guy isnt a ruler
+	dynasty=1777056 #Franzino
+	martial=4
+	diplomacy=8
+	intrigue=3
+	stewardship=3
+	learning=8
+	disallow_random_traits=yes
+	culture=gothamite 
+	occluded=yes 
+	religion=catholic
+	trait=legendary 
+	trait=misguided_warrior
+	trait=erudite
+	trait=honest
+	trait=shy
+	trait=temperate 
+	trait=blinded
+	father=1788231
+	2210.1.1={birth=yes} 
+	2235.1.1={death=yes}
 }
 
 1788234={
 	name="Dante" 
 	dynasty=1777056 #Franzino
+	martial=9
+	diplomacy=7
+	intrigue=7
+	stewardship=8
+	learning=9
+	disallow_random_traits=yes
 	culture=gothamite 
 	occluded=yes 
 	religion=americanist
@@ -1523,15 +1549,21 @@
 	trait=lustful
 	trait=proud 
 	trait=diligent
-	father={1788233}
+	father=1788233
 	2234.1.1={birth=yes} 
-	2284.1.1={give nickname=nick_the_dragon}
+	2284.1.1={give_nickname=nick_the_dragon}
 	2315.1.1={death=yes}
 }
 
 1788235={
 	name="Tiziano" 
 	dynasty=1777056 #Franzino
+	martial=3
+	diplomacy=5
+	intrigue=6
+	stewardship=7
+	learning=6
+	disallow_random_traits=yes
 	culture=gothamite 
 	occluded=yes 
 	religion=americanist
@@ -1544,18 +1576,24 @@
 	trait=proud 
 	trait=deceitful
 	trait=gregarious
-	father={1788234}
+	father=1788234
 	2298.1.1={birth=yes} 
-	2320.1.1={death={death_reason=death_murder killer=1788236}}
+	2320.1.1={death={death_reason=death_murder killer=1788236}
+	}
 }
 
-#End of the Kings of NewYork
+#End of the Kings of New York
 
 1788236={
 	name="Philip"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=9
+	diplomacy=9
+	intrigue=6
+	stewardship=5
+	learning=6
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=midas_touched
 	trait=genius
@@ -1565,9 +1603,8 @@
 	trait=administrator
 	trait=diligent
 	2260.1.1={birth=yes
-	effect={
-		set_character_flag=diversity
-		}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2347.1.1={death=yes}
 	
@@ -1575,9 +1612,14 @@
 
 1788257={
 	name="Andrew"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=6
+	diplomacy=5
+	intrigue=4
+	stewardship=4
+	learning=6
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=tough_soldier
 	trait=robust
@@ -1586,41 +1628,51 @@
 	trait=humble
 	trait=erudite
 	trait=drunkard
-	father={1788236}
+	father=1788236
 	2300.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2354.1.1={death=yes}
 }
 
 1788237={
 	name="Daniel"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=8
+	diplomacy=6
+	intrigue=4
+	stewardship=7
+	learning=6
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
-	trait=thrifty_clerk
+	trait=brilliant_strategist
+	trait=quick
+	trait=robust
 	trait=brave
 	trait=patient
 	trait=lustful
-	trait=gluttonous
+	trait=temperate
 	trait=greedy
-	father={1788236}
+	father=1788236
 	2305.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2376.1.1={death=yes}
 }
 
 1788258={
 	name="Tullis"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=8
+	diplomacy=4
+	intrigue=8
+	stewardship=4
+	learning=6
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=elusive_shadow
 	trait=gregarious
@@ -1629,20 +1681,24 @@
 	trait=kind
 	trait=cynical
 	trait=patient
-	father={1788257}
+	father=1788257
 	2329.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2375.1.1={death=yes}
 }
 
 1788259={
 	name="Florell"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=2
+	diplomacy=6
+	intrigue=4
+	stewardship=3
+	learning=3
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=naive_appeaser
 	trait=shy
@@ -1651,20 +1707,24 @@
 	trait=arbitrary
 	trait=stubborn
 	trait=temperate
-	father={1788257}
+	father=1788257
 	2331.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2393.1.1={death=yes}
 }
 
 1788260={
 	name="Achilles"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=4
+	diplomacy=6
+	intrigue=1
+	stewardship=3
+	learning=6
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=mastermind_theologian
 	trait=genius
@@ -1673,11 +1733,10 @@
 	trait=charitable
 	trait=gluttonous
 	trait=chaste
-	father={1788237}
+	father=1788237
 	2340.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2408.1.1={death=yes}
 	
@@ -1685,9 +1744,14 @@
 
 1788261={
 	name="Ezra"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=8
+	diplomacy=8
+	intrigue=0
+	stewardship=1
+	learning=4
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=martial_cleric
 	trait=ambitious
@@ -1696,20 +1760,24 @@
 	trait=charitable
 	trait=kind
 	trait=wroth
-	father={1788260}
+	father=1788260
 	2370.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2436.1.1={death=yes}
 }
 
 1788262={
 	name="Ludovick"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=4
+	diplomacy=8
+	intrigue=4
+	stewardship=7
+	learning=4
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=skilled_tactician
 	trait=brave
@@ -1718,20 +1786,24 @@
 	trait=greedy
 	trait=temperate
 	trait=humble
-	father={1788260}
+	father=1788260
 	2372.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2421.1.1={death=yes}
 }
 
 1788263={
 	name="Orion"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=6
+	diplomacy=5
+	intrigue=9
+	stewardship=9
+	learning=9
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=underhanded_rogue
 	trait=gregarious
@@ -1740,20 +1812,24 @@
 	trait=greedy
 	trait=temperate
 	trait=proud
-	father={1788262}
+	father=1788262
 	2410.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2460.1.1={death={death_reason=death_murder killer=1788246}}
 }
 
 1788242={
 	name="Jason"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chinese
+	dynasty=1777057 #Skulski
+	martial=9
+	diplomacy=7
+	intrigue=7
+	stewardship=8
+	learning=8
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=intricate_webweaver
 	trait=ambitious
@@ -1762,20 +1838,24 @@
 	trait=paranoid
 	trait=greedy
 	trait=slothful
-	father={1788259}
+	father=1788259
 	2388.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
-	}
-	2433.1.1={death={death_reason=killed_by_rabble}}
+	2433.1.1={death={death_reason=death_rabble}}
 }
 
 1788245={
 	name="Salvador"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=1
+	diplomacy=9
+	intrigue=3
+	stewardship=9
+	learning=5
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=midas_touched
 	trait=quick
@@ -1784,20 +1864,24 @@
 	trait=just
 	trait=cruel
 	trait=craven
-	father={1788242}
+	father=1788242
 	2426.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2460.1.1={death={death_reason=death_murder killer=1788246}}
 }
 
 1788264={
 	name="Marcus"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=4
+	diplomacy=6
+	intrigue=4
+	stewardship=9
+	learning=8
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=fortune_builder
 	trait=arbitrary
@@ -1806,20 +1890,24 @@
 	trait=trusting
 	trait=zealous
 	trait=patient
-	father={1788258}
+	father=1788258
 	2350.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2429.1.1={death=yes}
 }
 
 1788265={
 	name="Yuri"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=5
+	diplomacy=9
+	intrigue=6
+	stewardship=3
+	learning=8
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=brilliant_strategist
 	trait=strong
@@ -1828,20 +1916,24 @@
 	trait=arbitrary
 	trait=brave
 	trait=cruel
-	father={1788264}
+	father=1788264
 	2406.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2460.1.1={death={death_reason=death_murder killer=1788246}}
 }
 
 1788266={
 	name="Nestor"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=8
+	diplomacy=7
+	intrigue=4
+	stewardship=8
+	learning=9
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=midas_touched
 	trait=stubborn
@@ -1850,8 +1942,9 @@
 	trait=paranoid
 	trait=content
 	trait=humble
-	father={1788264}
+	father=1788264
 	2418.1.1={birth=yes
+	culture=gothamite
 	effect={
 	set_character_flag=diversity
 	}
@@ -1862,20 +1955,24 @@
 
 1788267={
 	name="Vladimir"
-	dynasty=3876584 #Skulski
-	culture=gothamite
-	ethnicity=chicagoan
+	dynasty=1777057 #Skulski
+	martial=2
+	diplomacy=1
+	intrigue=5
+	stewardship=3
+	learning=3
+	disallow_random_traits=yes
+	culture=chicagoan
 	religion=americanist
 	trait=fair
 	trait=quick
 	trait=playful
 	trait=haughty
 	trait=brooding
-	father={1788245}
+	father=1788245
 	2451.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2460.1.1={death={death_reason=death_murder killer=1788246}}
 }
@@ -1883,6 +1980,12 @@
 1788268={
 	name="Gianpaul"
 	dynasty=1777058 #DellaRocca
+	martial=8
+	diplomacy=9
+	intrigue=4
+	stewardship=8
+	learning=8
+	disallow_random_traits=yes
 	culture=gothamite
 	religion=americanist
 	occluded=yes
@@ -1900,6 +2003,12 @@
 1788269={
 	name="Salvador"
 	dynasty=1777058 #DellaRocca
+	martial=9
+	diplomacy=7
+	intrigue=4
+	stewardship=8
+	learning=6
+	disallow_random_traits=yes
 	culture=gothamite
 	religion=americanist
 	occluded=yes
@@ -1911,7 +2020,7 @@
 	trait=uncouth
 	trait=brave
 	trait=cynical
-	father={1788268}
+	father=1788268
 	2281.1.1={birth=yes}
 	2304.1.1={death={death_reason=death_battle killer=1788292}}
 }
@@ -1919,6 +2028,12 @@
 1788238={
 	name="Frederick"
 	dynasty=1777058 #DellaRocca
+	martial=8
+	diplomacy=7
+	intrigue=4
+	stewardship=9
+	learning=6
+	disallow_random_traits=yes
 	culture=gothamite
 	religion=americanist
 	trait=grey_eminence
@@ -1927,7 +2042,7 @@
 	trait=honest
 	trait=greedy
 	trait=cruel
-	father={1788268}
+	father=1788268
 	2286.1.1={birth=yes}
 	2384.1.1={death=yes}
 }
@@ -1944,7 +2059,7 @@
 	trait=paranoid
 	trait=zealous
 	trait=stubborn
-	father={1788238}
+	father=1788238
 	2340.1.1={birth=yes}
 	2406.1.1={death=yes}
 }
@@ -1961,7 +2076,7 @@
 	trait=brave
 	trait=cynical
 	trait=groomed
-	father={1788240}
+	father=1788240
 	2370.1.1={birth=yes}
 	2427.1.1={death=yes}
 }
@@ -1979,12 +2094,12 @@
 	trait=cruel
 	trait=arbitrary
 	trait=syphilitic
-	father={1788270}
+	father=1788270
 	2405.1.1={birth=yes}
-	2449.1.1={death={death_reason=death_syphilitic}}
+	2449.1.1={death={death_reason=death_trait}}
 }
 
-1788272={
+1788247={
 	name="Peregrin"
 	dynasty=1777058 #DellaRocca
 	culture=gothamite
@@ -1996,7 +2111,7 @@
 	trait=diligent
 	trait=envious
 	trait=slothful
-	father={1788271}
+	father=1788271
 	2423.1.1={birth=yes}
 	2478.1.1={death=yes}
 }
@@ -2013,7 +2128,7 @@
 	trait=kind
 	trait=charitable
 	trait=uncouth
-	father={1788247}
+	father=1788247
 	2456.1.1={birth=yes}
 	2518.1.1={death=yes}
 }
@@ -2030,7 +2145,7 @@
 	trait=paranoid
 	trait=wroth
 	trait=diligent
-	father={1788273}
+	father=1788273
 	2477.1.1={birth=yes}
 	2533.1.1={death=yes}
 }
@@ -2048,15 +2163,14 @@
 	trait=just
 	trait=diligent
 	trait=incapable
-	father={1788250}
+	father=1788250
 	2510.1.1={birth=yes}
-	2599.1.1={death={death_reason=death_incapable}}
+	2599.1.1={death={death_reason=death_trait}}
 }
 1788241={
 	name="Horatis"
 	dynasty=1777059 #Chen
-	culture=gothamite
-	ethnicity=chinese
+	culture=chinese
 	religion=americanist
 	trait=fortune_builder
 	trait=content
@@ -2066,9 +2180,8 @@
 	trait=kind
 	trait=slothful
 	2364.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2431.1.1={death=yes}
 }
@@ -2076,8 +2189,7 @@
 1788244={
 	name="Param"
 	dynasty=1777059 #Chen
-	culture=gothamite
-	ethnicity=chinese
+	culture=chinese
 	religion=americanist
 	trait=charismatic_negotiator
 	trait=trusting
@@ -2086,11 +2198,10 @@
 	trait=just
 	trait=kind
 	trait=patient
-	father={1788241}
+	father=1788241
 	2398.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2455.1.1={death=yes}
 }
@@ -2098,8 +2209,7 @@
 1788274={
 	name="Manohar"
 	dynasty=1777059 #Chen
-	culture=gothamite
-	ethnicity=chinese
+	culture=chinese
 	religion=americanist
 	trait=thrifty_clerk
 	trait=groomed
@@ -2108,11 +2218,10 @@
 	trait=kind
 	trait=greedy
 	trait=paranoid
-	father={1788241}
+	father=1788241
 	2415.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2478.1.1={death=yes}
 }
@@ -2120,8 +2229,7 @@
 1788275={
 	name="Dorian"
 	dynasty=1777059 #Chen
-	culture=gothamite
-	ethnicity=chinese
+	culture=chinese
 	religion=americanist
 	trait=brilliant_strategist
 	trait=uncouth
@@ -2130,11 +2238,10 @@
 	trait=cruel
 	trait=brave
 	trait=ambitious
-	father={1788274}
+	father=1788274
 	2433.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2481.1.1={death={death_reason=death_battle killer=1788109}}
 }
@@ -2142,8 +2249,7 @@
 1788276={
 	name="Seth"
 	dynasty=1777059 #Chen
-	culture=gothamite
-	ethnicity=chinese
+	culture=chinese
 	religion=americanist
 	trait=tough_soldier
 	trait=uncouth
@@ -2152,11 +2258,10 @@
 	trait=content
 	trait=deceitful
 	trait=cynical
-	father={1788274}
+	father=1788274
 	2446.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2481.1.1={death={death_reason=death_battle killer=1788109}}
 }
@@ -2164,8 +2269,7 @@
 1788277={
 	name="Isidorr"
 	dynasty=1777059 #Chen
-	culture=gothamite
-	ethnicity=chinese
+	culture=chinese
 	religion=americanist
 	trait=brilliant_strategist
 	trait=lefthanded
@@ -2175,11 +2279,10 @@
 	trait=cruel
 	trait=arbitrary
 	trait=zealous
-	father={1788274}
+	father=1788274
 	2460.1.1={birth=yes
-	effect={
-	set_character_flag=diversity
-	}
+	culture=gothamite
+	effect={set_character_flag=diversity}
 	}
 	2481.1.1={death={death_reason=death_battle killer=1788109}}
 
@@ -2214,8 +2317,8 @@
 	trait=deceitful
 	trait=greedy
 	trait=diligent
-	father={1788248}
-	24581.1={birth=yes}
+	father=1788248
+	2458.1.1={birth=yes}
 	2530.1.1={death=yes}
 }
 
@@ -2230,7 +2333,7 @@
 	trait=patient
 	trait=stubborn
 	trait=slothful
-	father={1788278}
+	father=1788278
 	2504.1.1={birth=yes}
 	2580.1.1={death=yes}
 }
@@ -2246,7 +2349,7 @@
 	trait=paranoid
 	trait=stubborn
 	trait=slothful
-	father={1788252}
+	father=1788252
 	2561.1.1={birth=yes}
 	2624.1.1={death=yes}
 }
@@ -2255,7 +2358,7 @@
 	name="Levi"
 	dynasty=2005026 #Rothschild
 	culture=yiddish
-	religion=haredi
+	religion=jewish
 	trait=grey_eminence
 	trait=fair
 	trait=groomed
@@ -2267,11 +2370,11 @@
 	2610.1.1={death={death_reason=death_murder killer=666100}}
 }
 
-1788279={ #Lazar Rothschild’s father
+1788279={ 
 	name="Baruch"
 	dynasty=2005026 #Rothschild
 	culture=yiddish
-	religion=haredi
+	religion=jewish
 	trait=tough_soldier
 	trait=fair
 	trait=wroth
@@ -2279,15 +2382,21 @@
 	trait=zealous
 	trait=stubborn
 	trait=shrewd
-	father={1788255}
+	father=1788255
 	2587.1.1={birth=yes}
 	2649.1.1={death=yes}
 }
 
 1788249={
 	name="Ulderic"
-	dynasty=9162835 #Theovelt
-	culture=gothamite
+	dynasty=1777022 #Theovelt
+	martial=9
+	diplomacy=7
+	intrigue=4
+	stewardship=8
+	learning=8
+	disallow_random_traits=yes
+	culture=hudsonian
 	religion=americanist
 	trait=brilliant_strategist
 	trait=defensive_leader
@@ -2297,14 +2406,16 @@
 	trait=just
 	trait=patient
 	trait=deceitful
-	2443.1.1={birth=yes}
+	2443.1.1={birth=yes
+	culture=gothamite
+	}
 	2520.1.1={death=yes}
 }
 
 1788280={
 	name="Francelin"
-	dynasty=9162835 #Theovelt
-	culture=gothamite
+	dynasty=1777022 #Theovelt
+	culture=hudsonian
 	religion=americanist
 	trait=intricate_webweaver
 	trait=quick
@@ -2313,15 +2424,17 @@
 	trait=chaste
 	trait=lunatic
 	trait=wroth
-	father={1788249}
-	2480.1.1={birth=yes}
+	father=1788249
+	2480.1.1={birth=yes
+	culture=gothamite
+	}
 	2547.1.1={death=yes}
 }
 
 1788281={
 	name="Nicholas"
-	dynasty=9162835 #Theovelt
-	culture=gothamite
+	dynasty=1777022 #Theovelt
+	culture=hudsonian
 	religion=americanist
 	trait=scholarly_theologian
 	trait=mystic
@@ -2330,15 +2443,17 @@
 	trait=chaste
 	trait=kind
 	trait=honest
-	father={1788280}
-	2505.1.1={birth=yes}
+	father=1788280
+	2505.1.1={birth=yes
+	culture=gothamite
+	}
 	2578.1.1={death=yes}
 }
 
 1788253={
 	name="Wagner"
-	dynasty=9162835 #Theovelt
-	culture=gothamite
+	dynasty=1777022 #Theovelt
+	culture=hudsonian
 	religion=americanist
 	trait=charismatic_negotiator
 	trait=fair
@@ -2347,15 +2462,17 @@
 	trait=brave
 	trait=charitable
 	trait=has_tuberculosis
-	father={1788281}
-	2551.1.1={birth=yes}
-	2591.1.1={death={death_reason=death_consumption}}
+	father=1788281
+	2551.1.1={birth=yes
+	culture=gothamite
+	}
+	2591.1.1={death={death_reason=death_trait}}
 }
 
 1788282={ #current Theovelt’s father
 	name="Meyer"
-	dynasty=9162835 #Theovelt
-	culture=gothamite
+	dynasty=1777022 #Theovelt
+	culture=hudsonian
 	religion=americanist
 	trait=thrify_clerk
 	trait=greedy
@@ -2364,15 +2481,17 @@
 	trait=kind
 	trait=gluttonous
 	trait=slothful
-	father={1788253}
-	2583.1.1={birth=yes}
+	father=1788253
+	2583.1.1={birth=yes
+	culture=gothamite
+	}
 	2642.1.1={death=yes}
 }
 
 1788239={
 	name="German"
 	dynasty=1777000 #Wayne
-	culture=gothamite
+	culture=hudsonian
 	religion=americanist
 	trait=skilled_tactician
 	trait=hunter
@@ -2381,14 +2500,16 @@
 	trait=gregarious
 	trait=arbitrary
 	trait=honest
-	2342.1.1={birth=yes}
+	2342.1.1={birth=yes
+	culture=gothamite
+	}
 	2391.1.1={death=yes}
 }
 
 1788283={
 	name="Corydon"
 	dynasty=1777000 #Wayne
-	culture=gothamite
+	culture=hudsonian
 	religion=americanist
 	trait=underhanded_rogue
 	trait=cruel
@@ -2397,15 +2518,17 @@
 	trait=content
 	trait=paranoid
 	trait=honest
-	father={1788239}
-	2375.1.1={birth=yes}
+	father=1788239
+	2375.1.1={birth=yes
+	culture=gothamite
+	}
 	2440.1.1={death=yes}
 }
 
 1788284={
 	name="Varian"
 	dynasty=1777000 #Wayne
-	culture=gothamite
+	culture=hudsonian
 	religion=americanist
 	trait=midas_touched
 	trait=ambitious
@@ -2413,15 +2536,17 @@
 	trait=trusting
 	trait=just
 	trait=zealous
-	father={1788283}
-	2403.1.1={birth=yes}
+	father=1788283
+	2403.1.1={birth=yes
+	culture=gothamite
+	}
 	2478.1.1={death=yes}
 }
 
 1788285={
 	name="Henreyk"
 	dynasty=1777000 #Wayne
-	culture=gothamite
+	culture=hudsonian
 	religion=americanist
 	trait=flamboyant_schemer
 	trait=ambitious
@@ -2430,15 +2555,17 @@
 	trait=diligent
 	trait=proud
 	trait=lustful
-	father={1788284}
-	2448.1.1={birth=yes}
+	father=1788284
+	2448.1.1={birth=yes
+	culture=gothamite
+	}
 	2504.1.1={death=yes}
 }
 
 1788251={
 	name="Jonas"
 	dynasty=1777000 #Wayne
-	culture=gothamite
+	culture=hudsonian
 	religion=americanist
 	trait=tough_soldier
 	trait=proud
@@ -2447,15 +2574,17 @@
 	trait=arbitrary
 	trait=gregarious
 	trait=diligent
-	father={1788285}
-	2481.1.1={birth=yes}
+	father=1788285
+	2481.1.1={birth=yes
+	culture=gothamite
+	}
 	2545.1.1={death=yes}
 }
 
 1788286={
 	name="Varian"
 	dynasty=1777000 #Wayne
-	culture=gothamite
+	culture=hudsonian
 	religion=americanist
 	trait=skilled_tactician
 	trait=genius
@@ -2464,15 +2593,17 @@
 	trait=stubborn
 	trait=just
 	trait=kind
-	father={1788251}
-	2507.1.1={birth=yes}
+	father=1788251
+	2507.1.1={birth=yes
+	culture=gothamite
+	}
 	2565.1.1={death=yes}
 }
 
 1788287={
 	name="Idrees"
 	dynasty=1777000 #Wayne
-	culture=gothamite
+	culture=hudsonian
 	religion=americanist
 	trait=thrifty_clerk
 	trait=slow
@@ -2481,15 +2612,17 @@
 	trait=diligent
 	trait=stubborn
 	trait=gregarious
-	father={1788286}
-	2534.1.1={birth=yes}
+	father=1788286
+	2534.1.1={birth=yes
+	culture=gothamite
+	}
 	2597.1.1={death=yes}
 }
 
 1788288={ #Thom Wayne’s father
 	name="Leander"
 	dynasty=1777000 #Wayne
-	culture=gothamite
+	culture=hudsonian
 	religion=americanist
 	trait=misguided_warrior
 	trait=ambitious
@@ -2498,8 +2631,10 @@
 	trait=deceitful
 	trait=brave
 	trait=wroth
-	father={1788287}
-	2579.1.1={birth=yes}
+	father=1788287
+	2579.1.1={birth=yes
+	culture=gothamite
+	}
 	2640.1.1={death=yes}
 }
 
@@ -2531,12 +2666,12 @@
 	trait=slothful
 	trait=kind
 	trait=patient
-	father={1788289}
+	father=1788289
 	2307.1.1={birth=yes}
 	2366.1.1={death=yes}
 }
 
-1788291={ #Vega Espinal’s father
+1788291={ 
 	name="Luis"
 	dynasty=1917042 #Espinal
 	culture=nuyorican
@@ -2548,7 +2683,7 @@
 	trait=trusting
 	trait=charitable
 	trait=chaste
-	father={1788290}
+	father=1788290
 	2349.1.1={birth=yes}
 	2426.1.1={death=yes}
 }
@@ -2565,7 +2700,7 @@
 	trait=just
 	trait=wroth
 	trait=deceitful
-	father={1788291}
+	father=1788291
 	2378.1.1={birth=yes}
 	2440.1.1={death=yes}
 }
@@ -2582,7 +2717,7 @@
 	trait=chaste
 	trait=just
 	trait=brave
-	father={1788243}
+	father=1788243
 	2401.1.1={birth=yes}
 	2463.1.1={death={death_reason=death_battle killer=1788248}}
 }
@@ -2606,4 +2741,63 @@
 	give_nickname=nick_the_last_judge
 	2275.1.1={birth=yes} 
 	2304.1.1={death={death_reason=death_battle killer=1788269}}
+}
+1788293={
+	name="Bow"
+	dynasty=1777060 #Galante
+	martial=7
+	diplomacy=7
+	intrigue=7
+	stewardship=7
+	learning=7
+	disallow_random_traits=yes
+	culture=yiddish
+	religion=americanist
+	trait=fortune_builder
+	trait=quick
+	trait=robust
+	trait=erudite
+	trait=stubborn
+	trait=just
+	trait=slothful
+	give_nickname=nick_the_deadass
+	2645.1.1={birth=yes
+	culture=gothamite
+	}
+	2660.1.1={
+		employer=1788002
+	}
+}
+1788294={ 
+	name="Graziella" 
+	dynasty=1777058 #DellaRocca
+	culture=gothamite
+	female=yes
+	religion=americanist
+	trait=elusive_shadow
+	trait=fair
+	trait=ambitious
+	trait=frail
+	trait=diligent
+	trait=deceitful 
+	trait=humble
+	father=1788254
+	2590.1.1={birth=yes} 
+	2615.4.10={add_spouse=1788295}
+	2651.1.1={death=yes}
+}
+1788295={ 
+	name="Aurel" 
+	dynasty=1777006 #Falcone
+	culture=gothamite
+	religion=jeffersonian
+	trait=midas_touched
+	trait=kind
+	trait=slothful
+	trait=trusting
+	trait=
+	trait=deceitful 
+	2595.1.1={birth=yes} 
+	2615.4.10={add_spouse=1788294}
+	2660.1.1={death=yes}
 }
