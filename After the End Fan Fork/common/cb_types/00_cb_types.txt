@@ -10936,6 +10936,18 @@ duchy_adventure = {
 					}
 				}
 			}
+			hidden_tooltip = {
+				# Special case: Renovator succeeds in his first conquest
+				if = {
+					limit = {
+						has_character_flag = iron_chief_himself
+					}
+					narrative_event = {
+						id = iron.7
+						days = 1
+					}
+				}
+			}
 		}
 	}
 

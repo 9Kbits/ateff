@@ -1,0 +1,1167 @@
+namespace = iron
+
+# The Iron Chief distinguishes himself at a Plains court
+character_event = {
+	id = iron.1
+	desc = EVTDESC_iron_1
+	
+	picture = GFX_evt_native_horseback
+	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
+	culture_group = plains
+	
+	trigger = {
+		NOT = {
+			has_game_rule = {
+				name = genghis_cree_invasion
+				value = off
+			}
+		}
+		OR = {
+			AND = {
+				has_game_rule = {
+					name = genghis_cree_invasion
+					value = historical
+				}
+				year = 2850
+				NOT = { year = 2870 }
+			}
+			AND = {
+				has_game_rule = {
+					name = genghis_cree_invasion
+					value = random
+				}
+				year = 2700
+			}
+		}
+		NOR = {
+			has_global_flag = iron_horde_arrival
+			has_global_flag = iron_horde_united #prevent double firing
+		}
+		culture = cree
+		higher_tier_than = count
+		
+		NOT = { has_global_flag = iron_chief_spawned }
+		
+		any_realm_province = {
+			region = world_western_canada
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Kisikawasan"
+			dynasty = 1491846 #Frencheater
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 18
+			attributes = {
+				martial = 12
+				diplomacy = 8
+				stewardship = 9
+				intrigue = 9
+				learning = 6
+			}
+			health = 6
+			fertility = 0.8
+			trait = brilliant_strategist
+			trait = diligent
+			trait = ambitious
+			trait = proud
+			trait = quick
+			trait = adventurer
+		}
+		
+		new_character = {
+			set_character_flag = is_special_character
+			set_character_flag = iron_chief_himself
+			if = {
+				limit = {
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = { #we have to add this!
+					type = iron_chief
+				}
+			}
+			character_event = {
+				id = iron.2
+				days = 3285
+				random = 730
+			}
+		}
+	}
+	
+	option = { # A most capable young man
+		name = EVTOPTA_iron_1
+		
+		set_global_flag = iron_chief_spawned
+		set_global_flag = iron_chief_spawned_by_event
+		
+		tooltip = {
+			create_character = {
+				random_traits = no
+				name = "Kisikawasan"
+				dynasty = 1491846 #Frencheater
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 18
+				attributes = {
+					martial = 12
+					diplomacy = 8
+					stewardship = 9
+					intrigue = 9
+					learning = 6
+				}
+				health = 6
+				fertility = 0.8
+				trait = brilliant_strategist
+				trait = diligent
+				trait = ambitious
+				trait = proud
+				trait = quick
+			}
+		}
+	}
+}
+
+# Iron Chief and his men consider starting an adventure
+character_event = {
+	id = iron.2
+	desc = EVTDESC_iron_2
+	
+	picture = GFX_evt_native_horseback
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		is_alive = yes
+		NOT = { trait = blinded }
+		NOT = { trait = eunuch }
+		NOT = { trait = infirm }
+		lower_tier_than = king
+		
+		OR = {
+			839 = { # Firebag
+				owner = {
+					NOT = { same_realm = ROOT }
+				}
+			}
+			2095 = { # Lloydminster
+				owner = {
+					NOT = { same_realm = ROOT }
+				}
+			}
+			616 = { # Prince Albert
+				owner = {
+					NOT = { same_realm = ROOT }
+				}
+			}
+		}
+	}
+	
+	option = { # Firebag it is!
+		name = EVTOPTA_iron_2
+		trigger = {
+			839 = { # Firebag
+				owner = {
+					NOT = { same_realm = ROOT }
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 10000
+		}
+		
+		839 = {
+			province_event = {
+				id = iron.3
+				days = 2
+			}
+		}
+	}
+	option = { # Lloydminster
+		name = EVTOPTB_iron_2
+		trigger = {
+			2095 = { # Lloydminster
+				owner = {
+					NOT = { same_realm = ROOT }
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1000
+		}
+		
+		2095 = {
+			province_event = {
+				id = iron.3
+				days = 2
+			}
+		}
+	}
+	option = { # Prince Albert
+		name = EVTOPTC60201
+		trigger = {
+			616 = { # Prince Albert
+				owner = {
+					NOT = { same_realm = ROOT }
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		616 = {
+			province_event = {
+				id = iron.3
+				days = 2
+			}
+		}
+	}
+}
+
+# Ping the target province
+province_event = {
+	id = iron.3
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				FROM = {
+					is_ruler = yes
+				}
+			}
+			FROM = {
+				character_event = {
+					id = iron.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_ruler = no
+				}
+			}
+			FROM = {
+				character_event = {
+					id = iron.4
+				}
+			}
+		}
+	}
+}
+
+# The landless Iron Chief and his men start an adventure
+character_event = {
+	id = iron.4
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		is_alive = yes
+		NOT = { trait = blinded }
+		NOT = { trait = eunuch }
+		NOT = { trait = infirm }
+		lower_tier_than = king
+	}
+	
+	immediate = {
+		wealth = 500
+		
+		any_liege = {
+			character_event = {
+				id = iron.6
+				days = 1
+			}
+		}
+		
+		liege = {
+			capital_scope = {
+				FROM = {
+					owner = {
+						top_liege = {
+							ROOT = {
+								set_defacto_liege = ROOT
+								create_title = {
+									tier = DUKE
+									landless = yes
+									temporary = yes
+									culture = ROOT
+									name = "CLAIMANT_ADVENTURE"
+									holder = ROOT
+								}
+								
+								set_character_flag = duchy_adventurer
+							
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									#leader = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								war = {
+									target = PREV
+									casus_belli = duchy_adventure
+									thirdparty_title = PREVPREVPREV
+									tier = DUKE
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		# Create some characters
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 28
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 24
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 23
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 17
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 18
+		}
+		
+		log = "Genghis Cree Rises"
+	}
+}
+
+# The landed Timur and his men start an adventure
+character_event = {
+	id = iron.5
+	desc = EVTDESC_iron_5
+	
+	picture = GFX_evt_mongols
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		is_alive = yes
+		NOT = { trait = blinded }
+		NOT = { trait = eunuch }
+		NOT = { trait = infirm }
+		lower_tier_than = king
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				tier = BARON
+			}
+			abdicate = yes
+			character_event = { id = iron.4 } #???
+			break = yes
+		}
+		wealth = 500
+		
+		any_liege = {
+			character_event = {
+				id = iron.6
+				days = 1
+			}
+		}
+		
+		FROM = {
+			owner = {
+				top_liege = {
+					ROOT = {
+						capital_scope = {
+							ROOT = {
+								set_character_flag = duchy_adventurer
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									#leader = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+							}
+						}
+						
+						war = {
+							target = PREV
+							casus_belli = duchy_adventure
+							thirdparty_title = PREVPREVPREV
+							tier = DUKE
+						}
+					}
+				}
+			}
+		}
+		
+		# Create some characters
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 28
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 24
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 23
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 17
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 18
+		}
+		
+		log = "Genghis Cree Rises"
+	}
+	
+	option = {
+		name = EVTOPTA_iron_5
+	}
+}
+
+# Notify Timur's old liege
+character_event = {
+	id = iron.6
+	desc = EVTDESC_iron_6
+	picture = GFX_evt_native_horseback
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_ruler = yes } # The DoW worked and the adventurer has a temporary title
+	}
+	
+	option = {
+		name = EVTOPTA_iron_6
+	}
+}
+
+# Iron Chief is successful!
+# Fired from the duchy_adventure CB
+narrative_event = {
+	id = iron.7
+	title = EVTNAME_iron_7
+	desc = EVTDESC_iron_7
+	picture = GFX_evt_native_horseback
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					independent = yes
+					liege = {
+						ai = yes
+					}
+				}
+			}
+			set_defacto_liege = ROOT
+			activate_title = { title = e_iron_confederacy status = yes }
+			e_iron_confederacy = {
+				grant_title = ROOT
+			}
+		}
+		
+		prestige = 1000
+		
+		set_global_flag = iron_horde_united #prevent double formation
+		
+		capital_scope = {
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				
+				random = {
+					chance = 50
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+			}
+		}
+		
+		log = "Genghis Cree Succeeds!"
+	}
+	
+	option = {
+		name = EVTOPTA_iron_7
+		trigger = {
+			has_character_flag = iron_chief_himself
+		}
+	}
+	option = {
+		name = EVTOPTB_iron_7
+		trigger = {
+			NOT = { has_character_flag = iron_chief_himself }
+			culture_group = plains
+		}
+	}
+	option = {
+		name = EVTOPTC_iron_7
+		trigger = {
+			NOT = { has_character_flag = iron_chief_himself }
+			NOT = { culture_group = plains }
+		}
+	}
+}
+
+# Iron Chief's successors revitalize the state
+character_event = {
+	id = iron.8
+	desc = EVTDESC_iron_8
+	
+	picture = GFX_evt_native_horseback
+	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
+	only_independent = yes
+	has_global_flag = iron_chief_spawned_by_event
+	
+	trigger = {
+		year = 2870
+		NOT = { year = 3000 }
+		
+		dynasty = 1491846 # Sheepeater
+		
+		higher_tier_than = duke
+		
+		martial = 7
+		
+		NOT = { has_character_flag = iron_chief_himself }
+		NOT = { has_character_flag = iron_chief_reinforcements }
+	}
+	
+	mean_time_to_happen = {
+		months = 360
+		modifier = {
+			factor = 0.5
+			martial = 9
+		}
+		modifier = {
+			factor = 0.5
+			martial = 11
+		}
+		modifier = {
+			factor = 0.5
+			martial = 13
+		}
+	}
+	
+	immediate = {
+		set_character_flag = iron_chief_reinforcements
+		
+		capital_scope = { 
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				if = {
+					limit = {
+						martial = 9
+					}
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+				if = {
+					limit = {
+						martial = 11
+					}
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+				if = {
+					limit = {
+						martial = 13
+					}
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_iron_8
+	}
+}
