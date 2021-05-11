@@ -281,4 +281,48 @@ targetted_decisions = {
 			factor = 1	
 		}
 	}
+	go_hiking = {
+		only_playable = yes
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		
+	    
+		potential = {	
+			is_playable = yes
+			religion = gaian
+			NOT = { #nor block instead of not or
+				trait = zealous
+				trait = devout
+				has_character_modifier = went_hiking
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			piety = 200
+			trait = mystic
+		}
+		
+		effect = {
+		    piety = -200
+			add_character_modifier = {
+				modifier = went_hiking
+				duration = 5 years
+			}
+			character_event = { id = gaian.30 tooltip = EVTTOOLTIP_GOHIKING }
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1	
+		}
+	}
 }
