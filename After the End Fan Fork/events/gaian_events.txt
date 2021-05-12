@@ -1,8 +1,768 @@
-# 1		you have been castrated
-# 2		you have castrated a prisoner
 # 10	druids demand you switch away from agnatic succession
 
 namespace = gaian
+character_event = {
+	id = gaian.1
+	desc = EVTDESC_gaian_hike
+	picture = GFX_evt_rider_adventure
+
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_gaian_hike_mountain
+		piety = 20
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5
+			attribute = martial >= 9 
+			}
+		}
+		character_event = { id = gaian.2 }
+	}
+	
+	option = {
+		name = EVTOPT_gaian_hike_river
+		piety = 20
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5
+			attribute = stewardship >= 9 
+			}
+		}
+		character_event = { id = gaian.3 }
+	}
+	
+	option = {
+		name = EVTOPT_gaian_hike_forest
+		piety = 20
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5
+			attribute = diplomacy >= 9 
+			}
+		}
+		character_event = { id = gaian.4 }
+	}
+	
+	option = {
+		name = EVTOPT_gaian_hike_giveup
+		piety = -20
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+character_event = {
+	id = gaian.2
+	desc = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTDESC_gaian_csc_mountain
+	}
+	desc = {
+		trigger = {
+			culture = canuck
+		}
+		text = EVTDESC_gaian_cnk_mountain
+	}
+	desc = {
+		trigger = {
+			culture = inlander
+		}
+		text = EVTDESC_gaian_inl_mountain
+	}
+	desc = {
+		trigger = {
+			culture = siskiyouan
+		}
+		text = EVTDESC_gaian_sku_mountain
+	}
+	desc = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTDESC_gaian_gnr_mountain
+	}
+	picture = GFX_evt_moonlit_mountains_hf
+
+	is_triggered_only = yes
+	
+	option = {
+		name = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTOPTA_gaian_csc_mountain
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTA_gaian_cnk_mountain
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTA_gaian_inl_mountain
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTA_gaian_sku_mountain
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTA_gaian_gnr_mountain
+		}
+	}
+	
+	option = {
+		name = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTOPTB_gaian_csc_mountain
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTB_gaian_cnk_mountain
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTB_gaian_inl_mountain
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTB_gaian_sku_mountain
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTB_gaian_gnr_mountain
+		}
+	}
+	
+	option = {
+		name = {
+			trigger = {
+				culture = cascadian
+			}
+			text = EVTOPTC_gaian_csc_mountain
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTC_gaian_cnk_mountain
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTC_gaian_inl_mountain
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTC_gaian_sku_mountain
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTC_gaian_gnr_mountain
+		}
+	}
+	
+	option = {
+		name = {
+			trigger = {
+				culture = cascadian
+			}
+			text = EVTOPTD_gaian_csc_mountain
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTD_gaian_cnk_mountain
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTD_gaian_inl_mountain
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTD_gaian_sku_mountain
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTD_gaian_gnr_mountain
+		}
+	}
+}
+
+character_event = {
+	id = gaian.3
+	desc = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTDESC_gaian_csc_river
+	}
+	desc = {
+		trigger = {
+			culture = canuck
+		}
+		text = EVTDESC_gaian_cnk_river
+	}
+	desc = {
+		trigger = {
+			culture = inlander
+		}
+		text = EVTDESC_gaian_inl_river
+	}
+	desc = {
+		trigger = {
+			culture = siskiyouan
+		}
+		text = EVTDESC_gaian_sku_river
+	}
+	desc = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTDESC_gaian_gnr_river
+	}
+	picture = GFX_evt_fishing
+
+	is_triggered_only = yes
+	
+	option = {
+		name = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTOPTA_gaian_csc_river
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTA_gaian_cnk_river
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTA_gaian_inl_river
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTA_gaian_sku_river
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTA_gaian_gnr_river
+		}
+	}
+	
+	option = {
+		name = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTOPTB_gaian_csc_river
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTB_gaian_cnk_river
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTB_gaian_inl_river
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTB_gaian_sku_river
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTB_gaian_gnr_river
+		}
+	}
+	
+	option = {
+		name = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTOPTC_gaian_csc_river
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTC_gaian_cnk_river
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTC_gaian_inl_river
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTC_gaian_sku_river
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTC_gaian_gnr_river
+		}
+	}
+	
+	option = {
+		name = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTOPTD_gaian_csc_river
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTD_gaian_cnk_river
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTD_gaian_inl_river
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTD_gaian_sku_river
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTD_gaian_gnr_river
+		}
+	}
+}
+
+character_event = {
+	id = gaian.4
+	desc = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTDESC_gaian_csc_forest
+	}
+	desc = {
+		trigger = {
+			culture = canuck
+		}
+		text = EVTDESC_gaian_cnk_forest
+	}
+	desc = {
+		trigger = {
+			culture = inlander
+		}
+		text = EVTDESC_gaian_inl_forest
+	}
+	desc = {
+		trigger = {
+			culture = siskiyouan
+		}
+		text = EVTDESC_gaian_sku_forest
+	}
+	desc = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTDESC_gaian_gnr_forest
+	}
+	picture = GFX_evt_bandits
+
+	is_triggered_only = yes
+	
+	option = {
+		name = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTOPTA_gaian_csc_forest
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTA_gaian_cnk_forest
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTA_gaian_inl_forest
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTA_gaian_sku_forest
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTA_gaian_gnr_forest
+		}
+	}
+	
+	option = {
+		name = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTOPTB_gaian_csc_forest
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTB_gaian_cnk_forest
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTB_gaian_inl_forest
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTB_gaian_sku_forest
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTB_gaian_gnr_forest
+		}
+	}
+	
+	option = {
+		name = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTOPTC_gaian_csc_forest
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTC_gaian_cnk_forest
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTC_gaian_inl_forest
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTC_gaian_sku_forest
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTC_gaian_gnr_forest
+		}
+	}
+	
+	option = {
+		name = {
+		trigger = {
+			culture = cascadian
+		}
+		text = EVTOPTD_gaian_csc_forest
+		}
+		name = {
+			trigger = {
+				culture = canuck
+			}
+			text = EVTOPTD_gaian_cnk_forest
+		}
+		name = {
+			trigger = {
+				culture = inlander
+			}
+			text = EVTOPTD_gaian_inl_forest
+		}
+		name = {
+			trigger = {
+				culture = siskiyouan
+			}
+			text = EVTOPTD_gaian_sku_forest
+		}
+		name = {
+			trigger = {
+				NOR = {
+					culture = siskiyouan
+					culture = inlander
+					culture = canuck
+					culture = cascadian
+				}
+			}
+			text = EVTOPTD_gaian_gnr_forest
+		}
+	}
+}
+
+character_event = {
+	id = gaian.5
+	title = EVTTITLE_GAIAN5
+	desc = EVTDESC_GAIAN5
+	picture = GFX_evt_mysterious_forest
+	border = GFX_event_narrative_frame_religion
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_GAIAN5
+		trigger = {
+		NOT = { trait = cynical }
+		}
+		add_trait = devout
+		add_learning = 1
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				OR = {
+					trait = zodiac_scorpio
+					trait = zodiac_sagittarius
+					trait = erudite
+					trait = zodiac_aries
+					trait = diligent
+					trait = trusting
+					trait = scholar
+					trait = theologian
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_GAIAN5
+		add_trait = mystic
+		add_diplomacy = 1
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				OR = {
+					trait = zodiac_leo
+					trait = zodiac_libra
+					trait = zodiac_virgo
+					trait = honest
+					trait = uncouth
+					trait = paranoid
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = slothful
+					trait = theologian
+					trait = craven
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_GAIAN5
+		trigger = {
+		NOT = { trait = cynical }
+		}
+		add_trait = zealous
+		add_learning = 2
+		add_diplomacy = -1
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 0
+				OR = {
+					trait = gregarious
+					trait = kind
+					trait = zodiac_cancer
+					trait = sympathy_christendom
+					trait = sympathy_cult_of_saints
+					trait = sympathy_latter_day_saints
+					trait = sympathy_pacific
+					trait = sympathy_judaism
+					trait = sympathy_islam
+					trait = sympathy_afro_syncretic
+					trait = sympathy_amero_syncretic
+					trait = sympathy_american_native
+					trait = sympathy_mesoamerican_gods
+					trait = sympathy_oldworld
+					trait = sympathy_nautical
+					trait = temperate
+					trait = slothful
+				}
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					trait = shy
+					trait = cruel
+					trait = erudite
+					trait = paranoid  
+					trait = diligent
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_GAIAN5
+		add_character_modifier = {
+			name = failed_to_choose_gaian
+			months = 24 
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				if = {
+					OR = {
+					trait = arbitrary
+					trait = zodiac_libra
+					}
+					factor = 10
+				}
+				else = {
+					factor = 0
+				}
+			}
+		}
+	}
+}
 
 character_event = {
 	id = gaian.10
