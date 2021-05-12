@@ -4,9 +4,9 @@
 britannic = {
 	graphical_cultures = { westerngfx }
 
-	british = {
+	british = { #keeping this here for now while I add the other cultures
 		graphical_cultures = { celticgfx englishgfx westerngfx }
-		unit_graphical_cultures = { englishgfx celticgfx }
+		unit_graphical_cultures = { englishgfx celticgfx westerngfx }
 
 		#horde = yes
 
@@ -75,15 +75,104 @@ britannic = {
 		mother_name_chance = 5
 		
 		modifier = default_culture_modifier
-	}	
+	}
+	
+	english = {
+		graphical_cultures = { englishgfx westerngfx }
+		unit_graphical_cultures = { englishgfx westerngfx }
+		
+		color = { 0.8 0.2 0.2 }
+		
+		male_names = {
+			Bazza_Basil Darryl Frank Gazza_Gary Jezza_Jeremy Mohammad_Muhammad
+		}
+		
+		female_names = {
+			Amy Chloe Juniper
+		}
+		
+		from_dynasty_prefix = "of "
+		bastard_dynasty_prefix = "Fitz"
+		
+		modifier = default_culture_modifier
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 10
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 20
+		mat_grm_name_chance = 40
+		mother_name_chance = 5
+	}
+	
+	scottish = {
+		graphical_cultures = { celticgfx westerngfx }
+		unit_graphical_cultures = { englishgfx celticgfx westerngfx }
+		
+		color = { 0.3 0.7 0.7 }
+
+		male_names = {
+			Angus
+			Cameron
+			
+		}
+		female_names = {
+			Sharon
+		}
+		
+		dukes_called_kings = yes
+		
+		from_dynasty_prefix = "of "
+		prefix = yes
+
+		modifier = default_culture_modifier
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+		
+		tribal_name = "TRIBAL_NAME_PROV_CLAN"
+	}
+	
+	irish = {
+		graphical_cultures = { celticgfx westerngfx }
+		unit_graphical_cultures = { celticgfx westerngfx }
+		
+		color = { 0.3 0.8 0.8 }
+
+		male_names = {
+			Neil Eamon
+		}
+		female_names = {
+			Rose
+		}
+		
+		dukes_called_kings = yes
+		
+		from_dynasty_prefix = "de "
+		prefix = yes
+
+		modifier = default_culture_modifier
+		pat_grf_name_chance = 30
+		mat_grf_name_chance = 15
+		father_name_chance = 5
+		
+		pat_grm_name_chance = 30
+		mat_grm_name_chance = 15
+		mother_name_chance = 10
+	}
 }
 
 patagonian = {
 	graphical_cultures = { westerngfx }
 	
 	gwladfeg = { #Patagonian Welsh
-		graphical_cultures = { celticgfx }
-		unit_graphical_cultures = { englishgfx celticgfx }
+		graphical_cultures = { celticgfx westerngfx }
+		unit_graphical_cultures = { englishgfx celticgfx westerngfx }
 
 		color = { 0.3 0.8 0.6 }
 		
