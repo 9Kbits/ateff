@@ -4,7 +4,8 @@
 	dynasty=2004053 #Bragança (PROPERLY SPELLED)
 	culture=brazilian
 	occluded=yes
-	religion=catholic
+	religion=apostolic
+	occluded=yes
 	trait=legendary
 	trait=tough_soldier
 	trait=fair
@@ -13,6 +14,7 @@
 	trait=wroth
 	trait=proud
 	trait=robust
+	father = 2100023
 	1798.10.12={birth=yes}
 	1817.5.13={add_spouse=1801001}
 	1822.9.7={give_nickname=nick_the_liberator}
@@ -24,7 +26,7 @@
 	dynasty=1779209 #Habsburg
 	culture=deitsch
 	occluded=yes
-	religion=catholic
+	religion=apostolic
 	trait=legendary
 	trait=scholarly_theologian
 	trait=kind
@@ -39,7 +41,7 @@
 	dynasty=2004053 #Bragança (PROPERLY SPELLED)
 	culture=brazilian
 	occluded=yes
-	religion=catholic
+	religion=apostolic
 	father=1801000
 	mother=1801001
 	trait=legendary
@@ -60,7 +62,7 @@
 	dynasty=2004052 #Bourbon
 	culture=brazilian
 	occluded=yes
-	religion=catholic
+	religion=apostolic
 	trait=legendary
 	trait=scholarly_theologian
 	trait=shy
@@ -76,7 +78,7 @@
 	dynasty=2004053 #de Bragança (PROPERLY SPELLED)
 	culture=brazilian
 	occluded=yes
-	religion=catholic
+	religion=apostolic
 	father=1801002
 	mother=1801003
 	trait=legendary
@@ -93,14 +95,16 @@
 	dynasty=2013000 #de Pelourinho
 	culture=baiano
 	religion=candomble
+	father = 2100042
+	mother = 2100043
 	trait=grey_eminence
 	trait=genius
 	trait=diligent
 	trait=just
 	trait=ambitious
 	trait=brave
-	2298.7.2={birth=yes}
-	2353.5.12={death=yes}
+	2198.7.2={birth=yes}
+	2253.5.12={death=yes}
 }
 2100001={
 	name="Tristão" #the Priest
@@ -114,8 +118,8 @@
 	trait=erudite
 	trait=zealous
 	trait=shy
-	2328.6.14={birth=yes}
-	2379.8.17={death=yes}
+	2228.6.14={birth=yes}
+	2279.8.17={death=yes}
 }
 2100002={
 	name="Damiãno" #the Warrior
@@ -129,8 +133,8 @@
 	trait=ambitious
 	trait=lustful
 	trait=gregarious
-	2365.6.14={birth=yes}
-	2419.8.17={death=yes}
+	2265.6.14={birth=yes}
+	2319.8.17={death=yes}
 }
 2100003={
 	name="Rui" #the Kind
@@ -143,8 +147,8 @@
 	trait=gregarious
 	trait=gluttonous
 	trait=drunkard
-	2385.12.19={birth=yes}
-	2437.10.31={death=yes}
+	2285.12.19={birth=yes}
+	2337.10.31={death=yes}
 }
 2100004={
 	name="Ulisses" #the Tyrant
@@ -153,13 +157,13 @@
 	religion=candomble
 	father=2100003
 	trait=intricate_webweaver
-	trait=impaler
+	trait=genius
 	trait=cruel
-	trait=arbitrary
+	trait=just
 	trait=wroth
 	trait=temperate
-	2408.4.1={birth=yes}
-	2443.9.7={death={
+	2308.4.1={birth=yes}
+	2343.9.7={death={
 			death_reason=death_battle
 			killer=2100005
 		}
@@ -442,3 +446,334 @@
 	2645.06.29={birth=yes}
 }
 
+# Extended Brazil History Moment
+
+2100022 = {
+	name = "Maria"	
+	dynasty = 2004053 #Bragança (PROPERLY SPELLED)
+	religion = apostolic
+	culture = brazilian
+	female = yes
+	occluded=yes
+	trait=legendary
+	1734.12.17 = {
+		birth = yes
+	}
+	1816.3.20 = {
+		death = yes
+	}
+}
+2100023 = {
+	name = "João"	
+	dynasty = 2004053 #Bragança (PROPERLY SPELLED)
+	religion = apostolic
+	culture = brazilian
+	mother = 2100022
+	occluded=yes
+	trait=legendary
+	1756.5.13 = {
+		birth = yes
+	}
+	1822.9.7 = {
+	death = {
+		death_reason=death_missing
+	}
+	}
+}
+2100024 = {
+	name = "Pedro Álvares"	#Pedro Alvares Cabral
+	dynasty = 2004057 #Cabral
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	culture = brazilian
+	1468.1.1 = {
+		birth = yes
+	}
+	1520.1.1 = {
+		death = yes
+	}
+}
+2100025 = {
+	name = "Tomé"	#First Governor of Brazil
+	dynasty = 2004046
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	culture = brazilian
+	1503.1.1 = {
+		birth = yes
+	}
+	1558.1.1 = {
+		death = yes
+	}
+}
+2100026 = {
+	name = "Mem"	#Third ( Second Relevant ) Governor of Brazil
+	dynasty = 2004058
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	culture = brazilian
+	1500.1.1 = {
+		birth = yes
+	}
+	1572.1.1 = {
+		death = yes
+	}
+}
+2100027 = {
+	name = "Fernão"
+	dynasty = 2004058
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	culture = brazilian
+	father = 2100026
+	1519.1.1 = {
+		birth = yes
+	}
+	1557.1.1 = {
+		death = yes
+	}
+}
+2100028 = {
+	name = "Estácio"
+	dynasty = 2004058
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	culture = brazilian
+	father = 2100026
+	1520.1.1 = {
+		birth = yes
+	}
+	1567.1.1 = {
+		death = yes
+	}
+}
+2100029 = {
+	name = "Diogo-Teles"
+	dynasty = 2004059
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	culture = brazilian
+	1590.1.1 = {
+		birth = yes
+	}
+	1671.5.8 = {
+		death = yes
+	}
+}
+2100030 = {
+	name = "Afonso Luís"
+	dynasty = 2004059
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	culture = brazilian
+	father = 2100029
+	1632.1.1 = {
+		birth = yes
+	}
+	1720.1.23 = {
+		death = yes
+	}
+}
+2100031 = {
+	name = "Vasco"
+	dynasty = 2004059
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	culture = brazilian
+	father = 2100030
+	1700.1.1 = {
+		birth = yes
+	}
+	1775.1.1 = {
+		death = yes
+	}
+}
+2100032 = {
+	name = "Antônio Álvares"
+	dynasty = 2004006
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	culture = brazilian
+	1700.1.1 = {
+		birth = yes
+	}
+	1791.7.9 = {
+		death = yes
+	}
+}
+2100033 = {
+	name = "José Luís"
+	dynasty = 2004006
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	culture = brazilian
+	father = 2100032
+	1744.8.19 = {
+		birth = yes
+	}
+	1816.9.9 = {
+		death = yes
+	}
+}
+2100034 = {
+	name = "Johan Maurits"
+	dynasty = 1603081
+	occluded=yes
+	trait=legendary
+	religion = evangelical
+	culture = sranan
+	1604.6.17 = {
+		birth = yes
+	}
+	1679.12.20 = {
+		death = yes
+	}
+}
+2100035 = {
+	name = "Crestofle"
+	dynasty = 1789051
+	occluded=yes
+	trait=legendary
+	religion = evangelical
+	culture = chicagoan
+	1592.12.9 = {
+		birth = yes
+	}
+	1656.4.7 = {
+		death = yes
+	}
+}
+2100036 = {
+	name = "Deodoro"
+	dynasty = 2004060
+	occluded=yes
+	trait=legendary
+	religion = pagan
+	culture = baiano
+	1827.8.5 = {
+		birth = yes
+	}
+	1892.8.23 = {
+		death = yes
+	}
+}
+2100037 = {
+	name = "Floriano"
+	dynasty = 2013031
+	occluded=yes
+	trait=legendary
+	religion = pagan
+	culture = baiano
+	1839.4.30 = {
+		birth = yes
+	}
+	1895.7.29 = {
+		death = yes
+	}
+}
+2100038 = {
+	name = "Hermes"
+	dynasty = 2004060
+	occluded=yes
+	trait=legendary
+	religion = apostolic
+	father = 2100036
+	culture = baiano
+	1855.3.12 = {
+		birth = yes
+	}
+	1923.8.23 = {
+		death = yes
+	}
+}
+2100039 ={
+	name="Luís Campos"
+	dynasty= 2004061
+	occluded=yes
+	trait=legendary
+	culture= brazilian
+	religion= apostolic
+	trait=naive_apeaser
+	trait=arrogant
+	trait=stubborn
+	trait=content
+	1889.11.15={birth=yes}
+	1931.1.1={death=yes}
+}
+2100040 = {
+	name = "Getúlio"	
+	dynasty = 2012040
+	occluded=yes
+	trait=legendary
+	religion = pagan
+	culture = gaucho
+	1882.4.19 = {
+		birth = yes
+	}
+	1954.8.24 = {
+	death = {
+		death_reason = death_left_life_entered_history
+	}
+	}
+}
+2100041 ={
+	name="Juscelino"
+	dynasty= 2004062
+	occluded=yes
+	trait=legendary
+	culture= brazilian
+	religion= pagan
+	trait=midas_touched
+	trait=diligent
+	trait=compassionate
+	trait=impatient
+	trait=architect
+	1902.9.12={birth=yes}
+	1976.4.1={
+	death = {
+		death_reason = death_murder_unknown
+	}
+	}
+}
+2100042 = {
+	name ="José Tristão"
+	dynasty= 2013000 #de Pelourinho
+	culture=baiano
+	religion=candomble
+	trait= brilliant_strategist
+	trait = honest
+	trait = compassionate
+	trait = brave
+	trait = peasant_leader
+	trait = organizer
+	trait = wroth
+	2173.8.17={birth=yes}
+	2190.1.21={add_spouse=2100043}
+	2219.2.2={death=yes}
+}
+2100043 = {
+	name="Maria da Graça"
+	female=yes
+	dynasty= 0
+	culture=baiano
+	religion=apostolic
+	trait=midas_touched	
+	trait = peasant_leader
+	trait=admnistrator
+	trait=temperate
+	trait=just
+	trait=stubborn
+	trait=aggressive_leader
+	2173.8.17={birth=yes}
+	2219.2.2={death=yes}
+}
