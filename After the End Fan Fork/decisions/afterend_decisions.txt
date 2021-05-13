@@ -1616,7 +1616,7 @@ decisions = {
 			piety = 500 
 			set_global_flag = general_of_gaia_appears
 		if = {
-			limit = { 
+			limit = {
 				completely_controls = k_vancouver
 				completely_controls = k_jefferson
 				has_dlc = "Holy Fury" 
@@ -1624,6 +1624,9 @@ decisions = {
 			}
 			k_jefferson = {
 				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_lincoln
 			}
 			narrative_event = { id = gaian.19 }
 				any_child = {
@@ -1638,7 +1641,7 @@ decisions = {
 			sound_effect = bloodline_added
 		}
 		else_if = {
-			limit = { 
+			limit = {
 				completely_controls = k_vancouver
 				completely_controls = k_jefferson
 				has_dlc = "Holy Fury" 
@@ -1646,6 +1649,9 @@ decisions = {
 			}
 			k_jefferson = {
 				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_lincoln
 			}
 			narrative_event = { id = gaian.19 }
 				any_child = {
@@ -1660,12 +1666,15 @@ decisions = {
 			sound_effect = bloodline_added
 		}
 		else_if = {
-			limit = { 
+			limit = {
 				completely_controls = k_vancouver
 				completely_controls = k_jefferson
 			}
 			k_jefferson = {
 				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_lincoln
 			}
 			narrative_event = { id = gaian.19 }
 				any_child = {
@@ -1673,13 +1682,16 @@ decisions = {
 			}
 		}
 		else_if = {
-			limit = { 
+			limit = {
 				completely_controls = k_jefferson
 				has_dlc = "Holy Fury" 
 				is_female = no
 			}
 			k_jefferson = {
 				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_lincoln
 			}
 			narrative_event = { id = gaian.15 }
 				any_child = {
@@ -1694,13 +1706,16 @@ decisions = {
 			sound_effect = bloodline_added
 		}
 		else_if = {
-			limit = { 
+			limit = {
 				completely_controls = k_jefferson
 				has_dlc = "Holy Fury" 
 				is_female = yes
 			}
 			k_jefferson = {
 				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_lincoln
 			}
 			narrative_event = { id = gaian.15 }
 				any_child = {
@@ -1720,6 +1735,9 @@ decisions = {
 			}
 			k_jefferson = {
 				de_jure_liege = e_cascadia 
+			}
+			d_highdesert = {
+				de_jure_liege = k_lincoln
 			}
 			narrative_event = { id = gaian.15 }
 				any_child = {

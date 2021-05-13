@@ -1650,6 +1650,75 @@ culture =
 culture = {
 	religion = {
 		"gaian"
+	}
+	
+	templates = { 
+		"coa_plain_gaian:1"
+	}
+
+	color = {
+		{ 242 188 81 }	#0		Or (Gold)
+		{ 246 246 246 } #1		Argent (White)
+		{ 31 74 31 }	#2		Dark green
+		{ 188 46 46 } 	#3		Gules (Red)
+		{ 62 147 62 } 	#4		Vert (Green)
+		{ 51 51 51 }	#5		Sable (Black)
+		{ 114 89 66 }	#6	 	Brunatre (Brown)
+		{ 165 47 45 }	#7		Sanguine (Blood Red)
+		{ 229 138 56 }	#6		Orange (Orange)
+		{ 93 201 93 } 	#9 		Light Green
+		{ 164 44 69 }	#10		Murrey (Mulberry) Burgundy
+		{ 7 52 74 }		#11		Deep Blue
+		{ 50 173 192 }	#12		Turqouise
+		{ 203 202 202 }	#13		Cendree (Gray)
+	}
+	
+	rebel_colors = { 3 5 7 }
+	
+	banned_colors = 
+	{
+		{ 0 1 4 9 13 }				# Gold
+		{ 1 0 9 13 }				# White
+		{ 2 4 6 8 9 10 11 12 }		# Dark Green
+		{ 3 4 6 7 8 10 11 }			# Red
+		{ 4 0 2 3 6 8 9 11 12 }		# Green
+		{ 5 6 }						# Black
+		{ 6 2 3 4 5 7 8 9 10 11 12 } # Brown
+		{ 7 3 6 8 10 11 }			# Dark Red
+		{ 8 2 3 4 6 7 9 10 12 }		# Orange
+		{ 9 0 1 2 4 6 8 12 13 }		# Light Green
+		{ 10 2 3 6 7 8 11 }			# Mulberry
+		{ 11 2 3 4 6 7 10 }			# Deep Blue
+		{ 12 2 4 6 8 9	}			# Turqouise
+		{ 13 0 1 9	}				# Silver
+	}
+
+	emblem = {
+		file = "gfx\\coats_of_arms\\emblem_muslim.dds"
+		noOfFrames = 1
+	}
+
+	# WHEN ADDING NEW, ALWAYS ADD AT THE END
+	textures = {
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_gaian.tga"
+			size = { x = 10 y = 7 }
+			noOfFrames = 68
+			color = 3
+			emblem = no
+		}
+		texture = {
+			file = "gfx\\coats_of_arms\\pattern_pagan.tga"
+			size = { x = 10 y = 4 }
+			noOfFrames = 32
+			color = 2
+			emblem = no
+		}
+	}
+}
+
+culture = {
+	religion = {
 		"celtic_pagan"
 		"celtic_pagan_reformed"
 	}

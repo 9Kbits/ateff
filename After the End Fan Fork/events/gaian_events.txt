@@ -49,6 +49,10 @@ character_event = {
 	option = {
 		name = EVTOPT_gaian_hike_giveup
 		piety = -20
+		random = {
+		chance = 25
+		add_trait = slothful
+		}
 		ai_chance = {
 			factor = 1
 		}
@@ -699,7 +703,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_GAIAN5
+		name = EVTOPTC_GAIAN5
 		trigger = {
 		NOT = { trait = cynical }
 		}
