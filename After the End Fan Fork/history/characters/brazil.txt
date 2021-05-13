@@ -165,7 +165,6 @@
 	2308.4.1={birth=yes}
 	2343.9.7={death={
 			death_reason=death_battle
-			killer=2100005
 		}
 	}
 }
@@ -175,13 +174,14 @@
 	culture=brazilian
 	religion=apostolic
 	trait=brilliant_strategist
+	father = 2100047
 	trait=strong
 	trait=brave
 	trait=humble
 	trait=diligent
 	trait=zealous
-	2425.12.2={birth=yes}
-	2491.12.5={death=yes}
+	2358.1.28 = {birth=yes}
+	2435.6.25 = {death=yes}
 }
 2100006={
 	name="Isabel" #the Diligent
@@ -189,35 +189,38 @@
 	dynasty=2004043 #de Bragan?
 	culture=brazilian
 	religion=apostolic
-	father=2100005
+	mother=2100053
 	trait=midas_touched
 	trait=kind
 	trait=diligent
 	trait=gregarious
 	trait=lustful
-	2450.7.12={birth=yes}
-	2500.8.1={death=yes}
+	2402.7.12={birth=yes}
+	2474.8.1={death=yes}
 }
+
 2100007={
 	name="João" #the Cruel
-	dynasty=2004020 #da Costa
+	dynasty=2004063 #Tavares
 	culture=brazilian
 	religion=apostolic
 	mother=2100006
 	trait=intricate_webweaver
 	trait=cynical
+	trait = bastard
 	trait=cruel
 	trait=charitable
 	trait=deceitful
-	2473.9.18={birth=yes}
-	2500.8.1={death={
+	2422.9.18={birth=yes}
+	2445.8.1={ death ={
 			death_reason=death_duel
 			killer=2100008
 		}
 	}
 }
+
 2100008={
-	name="Pedro" #the Just
+	name="José" #the Just
 	dynasty=2004043 #de Bragan?
 	culture=amazonense
 	religion=apostolic
@@ -228,12 +231,11 @@
 	trait=stubborn
 	trait=just
 	trait=wroth
-	2468.10.12={birth=yes
+	2424.10.12={birth=yes
 		culture=brazilian
 	}
-	2502.2.28={death={
-			death_reason=death_murder_unknown
-		}
+	2445.9.12={
+		death ={death_reason=death_murder_unknown}
 	}
 }
 2100009={
@@ -246,61 +248,68 @@
 	trait=greedy
 	trait=possessed
 	trait=arbitrary
-	2465.12.25={birth=yes}
-	2524.10.2={death={
-			death_reason=death_battle
+	2390.12.25={birth=yes}
+	2445.10.2={death={
+			death_reason=death_murder_unknown
 			killer=2100010
 		}
 	}
 }
+
 2100010={
-	name="Pedro"
-	dynasty=2004043 #de Bragan?
+	name="Marco"
+	dynasty=0
 	culture=brazilian
 	religion=apostolic
-	father=2100008
-	trait=tough_soldier
-	trait=brave
+	trait=midas_touched
+	trait=quick
+	trait=administrator
+	trait=temperate
+	trait=diligent
 	trait=kind
 	trait=just
-	trait=humble
+	trait=patient
+	trait=stubborn
 	trait=cancer
-	2501.2.28={birth=yes}
-	2566.6.7={death={
+	stewardship=16
+	diplomacy=10
+	2424.2.17={birth=yes}
+	2500.9.4={death={
 			death_reason=death_trait
 		}
 	}
 }
 2100011={
-	name="Pedro"
+	name="Teresa"
 	dynasty=2004043 #de Bragan?
 	culture=brazilian
 	religion=apostolic
-	father=2100010
+	female = yes
+	father=2100054
 	trait=grey_eminence
 	trait=patient
 	trait=humble
 	trait=charitable
 	trait=cynical
-	2528.5.19={birth=yes}
-	2586.11.20={death=yes}
+	2479.5.19={birth=yes}
+	2524.11.20={death=yes}
 }
 2100012={
-	name="Pedro"
+	name="Fernando"
 	dynasty=2004043 #de Bragan?
 	culture=brazilian
 	religion=apostolic
-	father=2100011
+	mother=2100011
 	trait=fortune_builder
 	trait=diligent
 	trait=greedy
 	trait=lustful
 	trait=gluttonous
-	2551.4.20={birth=yes}
-	2603.1.12={death=yes}
+	2499.4.20={birth=yes}
+	2566.6.7={death=yes}
 }
 2100013={
-	name="Pedro"
+	name="Henrique"
 	dynasty=2004043 #de Bragan?
 	culture=brazilian
 	religion=apostolic
@@ -310,12 +319,11 @@
 	trait=gregarious
 	trait=cynical
 	trait=patient
-	2577.7.19={birth=yes}
-	2610.2.16={death=yes}
+	2519.7.19={birth=yes}
+	2586.2.16={death=yes}
 }
 2100014={
-	name="Isabel"
-	female=yes
+	name="Filipe"
 	dynasty=2004043 #de Bragan?
 	culture=brazilian
 	religion=apostolic
@@ -326,27 +334,27 @@
 	trait=shy
 	trait=kind
 	trait=sympathy_afro_syncretic
-	2594.10.14={birth=yes}
-	2640.2.17={death=yes}
+	2555.10.14={birth=yes}
+	2603.2.17={death=yes}
 }
 2100015={
-	name="Pedro"
+	name="Filipe"
 	dynasty=2004043 #de Bragan?
 	culture=brazilian
 	religion=apostolic
-	mother=2100014
+	father=2100014
 	trait=gluttonous
 	trait=content
 	trait=wroth
-	2614.1.8={birth=yes}
-	2648.8.20={death=yes}
+	2574.1.8={birth=yes}
+	2610.8.20={death=yes}
 }
 2100016={
 	name="Pedro"
 	dynasty=2004043 #de Bragan?
 	culture=brazilian
 	religion=apostolic
-	father=2100015
+	father=2100052
 	trait=trusting
 	trait=gregarious
 	trait=humble
@@ -358,10 +366,10 @@
 	dynasty=2004043 #de Bragan?
 	culture=brazilian
 	religion=apostolic
-	mother=2100014
+	father=2100051
 	trait=midas_touched
 	trait=ambitious
-	trait=bastard
+	trait=legit_bastard
 	trait=paranoid
 	trait=disfigured
 	trait=quick
@@ -776,4 +784,204 @@
 	trait=aggressive_leader
 	2173.8.17={birth=yes}
 	2219.2.2={death=yes}
+}
+
+2100044 = {
+	name = "Alexandre" #Alexandre Cantarini
+	dynasty = 2004064
+	religion = apostolic
+	culture = brazilian
+	disallow_random_traits = yes
+	trait = brilliant_strategist
+	trait = genius
+	trait = adventurer
+	trait = ambitious
+	trait = arrogant
+	trait = brave
+	trait = agressive_leader
+	
+	martial = 8
+	diplomacy = 10
+	intrigue = 5
+	stewardship = 10
+	learning = 5
+	
+	2222.3.5 = {
+		birth = yes
+	}
+	2264.9.9 = {
+		death = yes
+	}
+}
+
+2100045 = {
+	name = "Augusto"
+	#Augusto Cantarini, son of Alexandre
+	dynasty = 2004064
+	religion = apostolic
+	culture = brazilian
+	father = 2100044
+	trait = quick
+	trait = trusting
+	trait = content
+	trait = gregarious
+	trait=drunkard
+	2247.10.10 = {
+		birth = yes
+	}
+	2322.8.12 = {
+		death = yes
+	}
+}
+
+2100046 = {
+	name = "Sérgio"
+	dynasty = 2004064
+	religion = apostolicism
+	culture = paulistano
+	father = 2100045
+	trait = genius
+	trait = humble
+	trait = callous
+	trait = brave
+	2267.10.10 = {
+		birth = yes
+	}
+	2337.10.31 = {
+		death = yes
+	}
+}
+
+2100047 = {
+	name = "Renato"
+	dynasty = 2004043 # Braganç?
+	religion = apostolic
+	culture = brazilian
+	father = 2100045
+	trait = shrewd
+	trait = gregarious
+	trait = calm
+	trait = trusting
+	2277.10.10 = {
+		birth = yes
+	}
+	2341.3.4={
+		death = yes
+	}
+	
+}
+
+2100048 = {
+	name = "João"
+	dynasty = 2004056 #Uberaba
+	religion = apostolic
+	culture = brazilian
+	father = 2100045
+	trait = quick
+	trait = diligent
+	trait = content
+	trait = brave
+	2281.7.21 = {
+		birth = yes
+	}
+	2366.8.13={
+		death = yes
+	}
+}
+
+2100049 = {
+	name = "Caetano"
+	dynasty = 2004056
+	religion = apostolic
+	culture = brazilian
+	father = 2100048
+	trait = quick
+	trait = temperate
+	trait = calm
+	trait = cruel
+	trait = deceitful
+	2315.1.1 = {
+		birth = yes
+	}
+	2380.4.11={
+		death = { death_reason = death_offmap }
+	}
+}
+
+2100050 = {
+	name = "Ruan"
+	dynasty = 2004056
+	religion = apostolic
+	culture = brazilian
+	father = 2100049
+	trait = quick
+	trait = temperate
+	trait = brave
+	2358.7.21 = {
+		birth = yes
+	}
+	2381.9.14={
+		death = yes
+	}
+}
+
+2100051={
+	name="Pedro"
+	dynasty=2004043 #de Bragan?
+	culture=brazilian
+	religion=apostolic
+	father=2100015
+	trait=skilled_tactician
+	trait=envious
+	trait=just
+	trait=paranoid
+	2581.10.22={birth=yes}
+	2640.2.17={death=yes}
+}
+
+2100052={
+	name="Sebastião"
+	dynasty=2004043 #de Bragan?
+	culture=brazilian
+	religion=apostolic
+	father=2100051
+	trait=lustful
+	trait=kind
+	trait=thrifty_clerk
+	2602.3.29={birth=yes}
+	2648.3.10={death=yes}
+}
+
+2100053={
+	name="Catarina"
+	female = yes
+	dynasty=2004043 #de Bragan?
+	culture=brazilian
+	religion=apostolic
+	father = 2100005
+	trait=underhanded_rogue
+	trait=uncouth
+	trait=charitable
+	trait=sapper
+	trait=diligent
+	2373.3.12 = {birth=yes}
+	2422.3.21 = {death=yes}
+}
+2100054 = {
+	name="Rodrigo"
+	dynasty=2004043 #de Bragan?
+	culture=amazonense
+	religion=apostolic
+	father=2100008
+	trait = charismatic_negotiator
+	trait = shy
+	trait = content
+	trait = feeble
+	trait = shrewd
+	2446.1.2={birth=yes
+		culture=brazilian
+	}
+	2511.1.2={
+		death ={death_reason=death_murder_unknown}
+	}
 }
