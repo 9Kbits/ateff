@@ -1,0 +1,146 @@
+decisions = {
+	attend_yeshiva = {
+		only_playable= yes
+		is_high_prio = yes
+	
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 24
+		
+		potential = {			
+			is_playable = yes
+			is_adult = yes
+			religion_group = jewish_group
+			OR = {
+				has_focus = focus_theology
+				#trait = haredi_yashvai
+			}
+			NOR = { 
+				trait = incapable
+				trait = avrach
+				trait = maskil
+				trait = hakham
+				is_inaccessible_trigger = yes
+				AND = {
+					OR= {
+						religion = jewish
+						religion = meshichist
+					}
+					is_female = yes
+				}
+			}
+			war = no
+			prisoner = no
+		}
+		
+		allow = {
+			NOR = {
+				is_ill = yes
+				has_character_flag = talmud_studytimer
+			}
+			piety = 100
+			wealth = 50
+		}
+		effect = {
+			custom_tooltip = { text = TXT_talmud_study		}
+			set_character_flag = talmud_studytimer
+			wealth = -50
+			hidden_tooltip = {
+				narrative_event = { id = jewish.150 }				
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor =.05
+			modifier = {
+				factor = 5
+				trait = erudite
+			}
+		}	
+	}
+}
+
+targeted_decisions = {						
+	bar_mitzvah = {
+		only_playable = yes
+		is_high_prio = yes
+		
+		filter = home_court
+		ai_target_filter = home_court
+		ai_check_interval = 12
+	
+		from_potential = {
+			is_playable = yes
+			religion_group = jewish_group
+			prisoner = no
+			NOR = { 
+				trait = incapable
+				is_inaccessible_trigger = yes
+			}
+			war = no
+		}
+		
+		potential = {
+			is_alive = yes
+			religion_group = jewish_group
+			NOR = {
+				has_character_flag = bar_mitzvahed
+				AND = {
+					OR= {
+						religion = jewish
+						religion = meshichist
+					}
+					is_female = yes
+				}
+				
+			}
+			is_child_of = FROM
+		}
+		allow = {
+			age = 12
+			NOR = {
+				is_landed = yes
+				prisoner = yes
+				is_adult = yes
+				custom_tooltip = {
+					text = bastard_eunuch_celibate_or_incapable_tt
+					OR = {
+						trait = bastard
+						trait = eunuch
+						trait = celibate
+						trait = incapable
+					}
+				}
+				is_ascetic_trigger = yes
+			}
+			is_inaccessible_trigger = no
+			host = { character = FROM }
+		}
+		effect = {
+			custom_tooltip = {
+				text = bar_mitzvah_custom_tooltip
+				hidden_tooltip = {
+					set_character_flag = bar_mitzvahed
+					save_event_target_as = bar_mitzvah_target
+					FROM = { character_event = { id = jewish.101 } }
+				}
+			}
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.1
+				always = yes
+			}
+		}
+	}
+	
+}
