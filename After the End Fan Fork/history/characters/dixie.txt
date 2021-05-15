@@ -7192,6 +7192,7 @@
 	trait=charitable
 	trait=kind
 	trait=experimenter
+	trait=peasant_leader
 #	give_nickname = nick_hanover
 	disallow_random_traits = yes
 	2080.1.10={birth=yes}
@@ -7386,7 +7387,7 @@
 	trait=willful
 	disallow_random_traits = yes
 	2127.1.29={birth=yes}
-	2141.6.18={death={death_murder_unknown killer=1861450}}
+	2141.6.18={death={death_reason=death_murder_unknown}}
 }
 1861457={
 	name="Henriette"
@@ -7420,7 +7421,408 @@
 	trait=content
 	disallow_random_traits = yes
 	2149.10.16={birth=yes}
-	2221.12.9={death=yes}
+	2180.7.6={add_spouse=1861461}
+	2200.1.1={death={death_reason=death_suicide_poison}}
 }
-#1861459={
+1861459={
+	name="Charles"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861447
+	mother=1861452
+	trait=indulgent_wastrel
+	trait=envious
+	trait=bastard
+	trait=cynical
+	trait=drunkard
+	trait=wroth
+	disallow_random_traits = yes
+	2156.7.11={birth=yes}
+	2192.12.1={add_spouse=1861462}
+	2184.5.1={death=yes}
+}
+1861460={
+	name="Anastasia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861447
+	mother=1861452
+	trait=detached_priest
+	trait=bastard
+	trait=feeble
+	trait=devout
+	trait=celibate
+	trait=chaste
+	trait=charitable
+	disallow_random_traits = yes
+	2158.10.7={birth=yes}
+	2218.2.7={death=yes}
+}
+1861461={
+	name="Belle" #Thomas' wife
+	female=yes
+	culture=southron
+	religion=evangelical
+	trait=underhanded_rogue
+	trait=scarred
+	trait=charitable
+	trait=gluttonous
+	trait=craven
+	trait=troubled_pregnancy
+	disallow_random_traits = yes
+	2154.5.29={birth=yes}
+	2180.7.6={add_spouse=1861458}
+	2182.11.17={death={death_reason=death_childbirth}}
+}
+1861462={
+	name="Alyssa" #Charles the bastard's wife
+	female=yes
+	culture=southron
+	religion=americanist
+	trait=naive_appeaser
+	trait=cynical
+	trait=gregarious
+	trait=lustful
+	trait=seductress
+	trait=fair
+	disallow_random_traits = yes
+	2174.12.31={birth=yes}
+	2192.12.1={add_spouse=1861459}
+	2216.1.15={death=yes}
+}
+1861463={
+	name="William"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861458
+	mother=1861461
+	disallow_random_traits = yes
+	2182.11.17={birth=yes}
+	2182.11.17={death={death_reason=death_childbirth}}
+}
+1861464={
+	name="Susanna"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861448
+	mother=1861450
+	trait=grey_eminence
+	trait=quick
+	trait=shrewd
+	trait=groomed
+	trait=temperate
+	trait=cruel
+	trait=cynical
+	trait=honest
+	disallow_random_traits = yes
+	2152.6.19={birth=yes}
+	2173.3.10={add_spouse=1861466}
+	2228.4.16={death=yes}
+}
+1861465={
+	name="Bradley"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861453
+	mother=1861449
+	trait=misguided_warrior
+	trait=charitable
+	trait=slothful
+	trait=dull
+	trait=kind
+	disallow_random_traits = yes
+	2150.11.1={birth=yes}
+	2231.1.30={death=yes}
+}
+1861466={
+	name="Octavian"
+	culture=southron
+	religion=evangelical
+	trait=flamboyant_schemer
+	trait=fair
+	trait=groomed
+	trait=lustful
+	trait=trusting
+	trait=content
+	disallow_random_traits = yes
+	2157.5.14={birth=yes}
+	2173.3.10={add_spouse=1861464}
+	2226.2.3={death=yes}
+	
+}
+1861467={
+	name="Elaine"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861466
+	mother=1861464
+	trait=thrifty_clerk
+	trait=humble
+	trait=slothful
+	trait=stubborn
+	trait=flu
+	2174.2.15={birth=yes}
+	2200.9.17={death={death_reason=death_trait}}
+}
+1861468={
+	name="Christina"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861466
+	mother=1861464
+	trait=mastermind_theologian
+	trait=genius
+	trait=shrewd
+	trait=erudite
+	trait=patient
+	trait=diligent
+	trait=scholar
+	disallow_random_traits = yes
+	2176.6.6={birth=yes}
+	2192.2.8={add_spouse=1861470}
+	2237.8.28={death=yes}
+}
+1861469={
+	name="April"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861466
+	mother=1861464
+	trait=scholarly_theologian
+	trait=diligent
+	trait=arbitrary
+	trait=stubborn
+	trait=zealous
+	disallow_random_traits = yes
+	2177.2.15={birth=yes}
+	2241.9.17={death=yes}
+}
+1861470={
+	name="Samuel"
+	culture=southron
+	religion=evangelical
+	trait=underhanded_rogue
+	trait=Stutter
+	trait=patient
+	trait=envious
+	trait=erudite
+	disallow_random_traits = yes
+	2177.7.12={birth=yes}
+	2192.2.8={add_spouse=1861468}
+	2236.12.18={death=yes}
+}
+1861471={
+	name="Atalanta"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861470
+	mother=1861468
+	trait=midas_touched
+	trait=one_legged
+	trait=fair
+	trait=quick
+	trait=groomed
+	trait=gregarious
+	trait=devout
+	trait=lefthanded
+	trait=freckles
+	trait=socializer
+	disallow_random_traits = yes
+	2199.5.24={birth=yes}
+	2218.6.7={add_spouse=1861472}
+	2253.2.28={death=yes}
+}
+1861472={
+	name="Winfield"
+	culture=southron
+	religion=evangelical
+	trait=underhanded_rogue
+	trait=sturdy
+	trait=charitable
+	trait=gregarious
+	trait=stubborn
+	disallow_random_traits = yes
+	2197.4.19={birth=yes}
+	2218.6.7={add_spouse=1861471}
+	2257.2.25={death=yes}
+}
+1861473={
+	name="Virginia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	trait=martial_cleric
+	trait=stutter
+	trait=diligent
+	trait=wroth
+	trait=zealous
+	disallow_random_traits = yes
+	2216.10.1={birth=yes}
+	2275.10.12={death=yes}
+}
+1861474={
+	name="Olivia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	trait=naive_appeaser
+	trait=drunkard
+	trait=feeble
+	trait=kind
+	trait=envious
+	disallow_random_traits = yes
+	2218.12.15={birth=yes}
+	2299.9.9={death=yes}
+}
+1861475={
+	name="Abigail"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	trait=fortune_builder
+	trait=greedy
+	trait=gluttonous
+	trait=kind
+	trait=content
+	disallow_random_traits = yes
+	2219.3.20={birth=yes}
+	2277.10.6={death=yes}
+}
+1861476={
+	name="Catherine"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	trait=thrifty_clerk
+	trait=paranoid
+	trait=shy
+	trait=deceitful
+	trait=craven
+	disallow_random_traits = yes
+	2220.5.10={birth=yes}
+	2282.4.20={death=yes}
+}
+1861477={
+	name="Anna"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	trait=tough_soldier
+	trait=fair
+	trait=lefthanded
+	trait=lustful
+	trait=giant
+	trait=socializer
+	trait=poet
+	trait=twin
+	disallow_random_traits = yes
+	2223.5.10={birth=yes}
+	2284.11.11={death=yes}
+}
+1861478={
+	name="Charles" #IV
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861472
+	mother=1861471
+	diplomacy=10
+	martial=20
+	stewardship=10
+	intrigue=5
+	learning=5
+	trait=brilliant_strategist
+	trait=strong
+	trait=giant
+	trait=robust
+	trait=duelist
+	trait=strategist
+	trait=kind
+	trait=diligent
+	trait=proud
+	trait=ambitious
+	trait=zealous
+	trait=brave
+	trait=twin
+	trait=scared
+	give_nickname = nick_the_butcher
+	disallow_random_traits = yes
+	2223.5.10={birth=yes}
+#	..={add_spouse=1861480}
+	2258.4.17={death={death_reason=death_humbled killer=1861479}} #need's to be fixed
+}
+1861479={
+	name=""
+	occluded=yes
+	dynasty=0
+	culture=riverlander
+	religion=revelationist
+	diplomacy=2
+	martial=1
+	stewardship=3
+	intrigue=4
+	learning=1
+	trait=legendary
+	give_nickname = nick_faceless_archer
+	disallow_random_traits = yes
+	2240.4.17={birth=yes}
+	2258.4.17={death={death_reason=death_missing}}
+}
+#1861480={
+#	name="Anna"
+#	female=yes
+#}
+#1861481={
+#	name="Victor"
+#	dynasty=1782165 #Hanover
+#	culture=southron
+#	religion=evangelical
+#	father=1861478
+#	mother=1861480
+#}
+#1861482={
+#}
+#1861483={
+#}
+#1861484={
+#}
+#1861485={
+#}
+#1861486={
+#}
+#1861487={
+#}
+#1861488={
+#}
+#1861489={
 #}
