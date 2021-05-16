@@ -895,15 +895,19 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	offmap = only
+	
 	trigger = {
 		is_offmap_tag = offmap_china
 	}
+	
 	immediate = {
 		religion_scope = {
 			religion_authority = { modifier = brazil_religion }
 		}
-	any_playable_ruler = {
-        wealth = 500
-    }
+		character_event = {
+			id = NC.5000
+			years = 1
+		}
 	}
 }
+
