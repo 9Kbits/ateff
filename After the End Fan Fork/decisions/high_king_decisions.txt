@@ -1,0 +1,92 @@
+decisions = {
+	announce_candidacy = {
+		is_high_prio = yes
+		potential = {
+			culture_group = texan_group
+			is_playable = yes
+			independent = yes
+			num_of_duke_titles >= 1
+			capital_scope = {
+				region = custom_texas
+			}
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = {
+				any_independent_ruler = {
+					trait = high_king_candidate
+					count >= 4
+				}
+			}
+			OR = { 
+				AND = { 
+					NOT = {
+						any_independent_ruler = {
+							trait = high_king_candidate
+							count = 1
+						}
+					}
+					prestige = 500
+				}
+				AND = {
+					NOT = {
+						any_independent_ruler = {
+							trait = high_king_candidate
+							count = 2
+						}
+					}
+					prestige = 750
+				}
+				AND = { 
+					NOT = {
+						any_independent_ruler = {
+							trait = high_king_candidate
+							count = 3
+						}
+					}
+					prestige = 1000
+				}
+				prestige = 1250
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_independent_ruler = {
+						trait = high_king_candidate
+						count = 3
+					}
+				}
+				prestige = -1250
+			}
+			else_if = {
+				limit = {
+					any_independent_ruler = {
+						trait = high_king_candidate
+						count = 3
+					}
+				}
+				prestige = -1000
+			}
+			else_if = {
+				limit = {
+				limit = {
+					any_independent_ruler = {
+						trait = high_king_candidate
+						count = 3
+					}
+				}
+				prestige = -750
+			}
+			else = {
+				prestige = -500
+			}	
+			add_trait = high_king_candidate		
+			set_global_flag = king_candidate_unannouced
+			event = tex_king.1	
+		}
+	}
+}
+

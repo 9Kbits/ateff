@@ -1,0 +1,108 @@
+namespace = tex_king
+
+narrative_event = {
+	id = tex_king.1
+	title = EVTTITLE_tex_king_1
+	
+	desc = {
+		trigger = {
+			trait = high_king_candidate
+		}
+		text = EVTDESC_tex_king_1_rival
+	}
+	
+	desc = {
+		trigger = {
+			AND = {
+				culture_group = texan_group
+				personal_opinion = {	
+					who = FROM
+					value < 0
+				}
+			}
+		}
+		text = EVTDESC_tex_king_texan_dislike
+	}
+	
+	desc = {
+		trigger = {
+			AND = {
+				culture_group = texan_group
+				personal_opinion = {	
+					who = FROM
+					value >= 50
+				}
+			}
+		}
+		text = EVTDESC_tex_king_texan_like
+	}
+	
+	desc = {
+		trigger = {
+			AND = {
+				culture_group = texan_group
+				trait = cynical
+			}
+		}
+		text = EVTDESC_tex_king_cynic
+	}
+	
+	desc = {
+		trigger = {
+			culture_group = texan_group
+		}
+		text = EVTDESC_tex_king_texan_neutral
+	}
+	
+	desc = {
+		trigger = {
+			NOT = {
+				culture_group = texan_group
+			}
+		}
+		text = EVTDESC_tex_king_cynic
+	}
+	
+	
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		any_title_under = { region = custom_texas }
+		has_global_flag = king_candidate_unannouced
+#		NOT = {
+#			ROOT = {
+#				who = FROM
+#			}
+		}
+	}
+	
+	immediate = {
+		clr_global_flag = king_candidate_unannouced
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_1
+		trigger = { has_landed_title = d_aggies }
+		add_claim = c_milashison
+	}
+	
+	option = {
+		name = EVTOPTA_tex_2
+		trigger = { has_landed_title = d_longhorns }
+		add_claim = c_colorado
+	}
+	
+	option = {
+		name = EVTOPTA_tex_3
+		trigger = {
+			NOR = {
+				has_landed_title = d_aggies
+				has_landed_title = d_longhorns
+			}
+		}
+	}
+}
