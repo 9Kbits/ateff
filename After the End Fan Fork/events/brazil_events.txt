@@ -893,17 +893,17 @@ narrative_event = {
 character_event = {
 	id = NC.5000
 	hide_window = yes
-	only_rulers = yes
-	only_capable = yes
 	is_triggered_only = yes
+	offmap = only
 	trigger = {
-		primary_title = {
-			title = title_china_emperor
-		}
+		is_offmap_tag = offmap_china
 	}
 	immediate = {
 		religion_scope = {
 			religion_authority = { modifier = brazil_religion }
 		}
+	any_playable_ruler = {
+        wealth = 500
+    }
 	}
 }
