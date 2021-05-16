@@ -1,6 +1,6 @@
 # 10	druids demand you switch away from agnatic succession
-# 21-99 end state hike events
-# 100-300 interestiing hike encounters
+# 100-200 end state hike events
+# 300-400 interestiing hike encounters
 
 namespace = gaian
 character_event = {
@@ -19,6 +19,7 @@ character_event = {
 			attribute = martial >= 9 
 			}
 		}
+		add_trait = on_hike
 		character_event = { id = gaian.2 }
 	}
 	
@@ -31,6 +32,7 @@ character_event = {
 			attribute = stewardship >= 9 
 			}
 		}
+		add_trait = on_hike
 		character_event = { id = gaian.3 }
 	}
 	
@@ -43,6 +45,7 @@ character_event = {
 			attribute = diplomacy >= 9 
 			}
 		}
+		add_trait = on_hike
 		character_event = { id = gaian.4 }
 	}
 	
@@ -1002,6 +1005,95 @@ character_event = {
 		add_trait = general_of_gaia_descendant
 		any_child = {
 			character_event = { id = gaian.20 }
+		}
+	}
+}
+
+narrative_event = {
+	id = gaian.100
+	title = EVTITLE_garibaldi_ending
+	desc = EVTDESC_garibaldi_ending
+	picture = GFX_evt_garibaldi
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 5
+		}
+		has_character_flag = mountain_gaian_hike
+		has_character_flag = hike_option_a
+		trait = on_hike
+		culture = canuck
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = peaked_garibaldi
+			years = 2
+		}	
+	}
+	
+	option = {
+		name = EVTOPT_modelmyselfgaribaldi
+		remove_trait = on_hike
+		random_list = {
+			30 = {
+				martial = 1
+				add_character_modifier = {
+				name = peaked_garibaldi
+				years = 2
+			}
+			}
+			15 = {
+				add_trait = inspiring_leader
+			}
+			15 = {
+				add_trait = ambitious
+			}
+			40 = { }
+		}
+	}
+	hidden_tooltip = {
+	after = {
+		clr_character_flag	= mountain_gaian_hike
+		clr_character_flag	= forest_gaian_hike
+		clr_character_flag	= river_gaian_hike
+		clr_character_flag	= hike_option_a
+		clr_character_flag	= hike_option_b
+		clr_character_flag	= hike_option_c
+		clr_character_flag	= hike_option_d
+		set_variable = { which = hike_completion value = 0 }
+	}
+	}
+}
+character_event = {
+	id = gaian.150
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	has_global_flag = general_of_gaia_appears
+	
+	trigger = {
+		OR = {
+			mother = { trait = general_of_gaia }
+			father = { trait = general_of_gaia }
+			mother = { trait = general_of_gaia_descendant }
+			father = { trait = general_of_gaia_descendant } 
+		}
+		NOT = { trait = general_of_gaia_descendant }
+	}
+	
+	immediate = {
+		add_trait = general_of_gaia_descendant
+		any_child = {
+			character_event = { id = gaian.18 }
 		}
 	}
 }
