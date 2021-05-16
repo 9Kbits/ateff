@@ -1,6 +1,7 @@
 # 10	druids demand you switch away from agnatic succession
 # 100-200 end state hike events
 # 300-400 interestiing hike encounters
+# 400- crater lake events
 
 namespace = gaian
 character_event = {
@@ -1072,6 +1073,272 @@ narrative_event = {
 	}
 	}
 }
+
+narrative_event = {
+	id = gaian.105
+	title = EVTITLE_greatbear_ending
+	desc = EVTDESC_greatbear_ending
+	picture = GFX_evt_greatbear
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 5
+		}
+		has_character_flag = forest_gaian_hike
+		has_character_flag = hike_option_a
+		trait = on_hike
+		culture = canuck
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = saw_greatbear
+			years = 2
+		}	
+	}
+	
+	hidden_tooltip = {
+	after = {
+		clr_character_flag	= mountain_gaian_hike
+		clr_character_flag	= forest_gaian_hike
+		clr_character_flag	= river_gaian_hike
+		clr_character_flag	= hike_option_a
+		clr_character_flag	= hike_option_b
+		clr_character_flag	= hike_option_c
+		clr_character_flag	= hike_option_d
+		set_variable = { which = hike_completion value = 0 }
+	}
+	}
+}
+
+narrative_event = {
+	id = gaian.106
+	title = EVTITLE_carmanah_ending
+	desc = EVTDESC_carmanah_ending
+	picture = GFX_evt_carmanah
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 5
+		}
+		has_character_flag = forest_gaian_hike
+		has_character_flag = hike_option_b
+		trait = on_hike
+		culture = canuck
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		remove_trait = greedy
+		add_character_modifier = {
+			name = carmanah_hike
+			years = 2
+		}	
+	}
+	
+	hidden_tooltip = {
+	after = {
+		clr_character_flag	= mountain_gaian_hike
+		clr_character_flag	= forest_gaian_hike
+		clr_character_flag	= river_gaian_hike
+		clr_character_flag	= hike_option_a
+		clr_character_flag	= hike_option_b
+		clr_character_flag	= hike_option_c
+		clr_character_flag	= hike_option_d
+		set_variable = { which = hike_completion value = 0 }
+	}
+	}
+}
+
+narrative_event = {
+	id = gaian.107
+	title = EVTITLE_sooke_ending
+	desc = EVTDESC_sooke_ending
+	picture = GFX_evt_sooke
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 5
+		}
+		has_character_flag = forest_gaian_hike
+		has_character_flag = hike_option_c
+		trait = on_hike
+		culture = canuck
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = canadian_muir
+			years = 2
+		}	
+	}
+	
+	hidden_tooltip = {
+	after = {
+		clr_character_flag	= mountain_gaian_hike
+		clr_character_flag	= forest_gaian_hike
+		clr_character_flag	= river_gaian_hike
+		clr_character_flag	= hike_option_a
+		clr_character_flag	= hike_option_b
+		clr_character_flag	= hike_option_c
+		clr_character_flag	= hike_option_d
+		set_variable = { which = hike_completion value = 0 }
+	}
+	}
+}
+
+narrative_event = {
+	id = gaian.108
+	title = EVTITLE_bowen_ending
+	desc = EVTDESC_bowen_ending
+	picture = GFX_evt_bowen
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 5
+		}
+		has_character_flag = forest_gaian_hike
+		has_character_flag = hike_option_d
+		trait = on_hike
+		culture = canuck
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = olympic_canada
+			years = 2
+		}	
+	}
+	
+	hidden_tooltip = {
+	after = {
+		clr_character_flag	= mountain_gaian_hike
+		clr_character_flag	= forest_gaian_hike
+		clr_character_flag	= river_gaian_hike
+		clr_character_flag	= hike_option_a
+		clr_character_flag	= hike_option_b
+		clr_character_flag	= hike_option_c
+		clr_character_flag	= hike_option_d
+		set_variable = { which = hike_completion value = 0 }
+	}
+	}
+}
+
+narrative_event = {
+	id = gaian.109
+	title = EVTITLE_fraser_ending
+	desc = EVTDESC_fraser_ending
+	picture = GFX_evt_fraser
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 5
+		}
+		has_character_flag = river_gaian_hike
+		has_character_flag = hike_option_a
+		trait = on_hike
+		culture = canuck
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = in_prospective
+			years = 2
+		}	
+	}
+	
+	hidden_tooltip = {
+	after = {
+		clr_character_flag	= mountain_gaian_hike
+		clr_character_flag	= forest_gaian_hike
+		clr_character_flag	= river_gaian_hike
+		clr_character_flag	= hike_option_a
+		clr_character_flag	= hike_option_b
+		clr_character_flag	= hike_option_c
+		clr_character_flag	= hike_option_d
+		set_variable = { which = hike_completion value = 0 }
+	}
+	}
+}
+
+narrative_event = {
+	id = gaian.110
+	title = EVTITLE_harrison_ending
+	desc = EVTDESC_harrison_ending
+	picture = GFX_evt_harrison
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 5
+		}
+		has_character_flag = river_gaian_hike
+		has_character_flag = hike_option_b
+		trait = on_hike
+		culture = canuck
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = pleased_hike_doc
+			years = 2
+		}	
+	}
+	
+	hidden_tooltip = {
+	after = {
+		clr_character_flag	= mountain_gaian_hike
+		clr_character_flag	= forest_gaian_hike
+		clr_character_flag	= river_gaian_hike
+		clr_character_flag	= hike_option_a
+		clr_character_flag	= hike_option_b
+		clr_character_flag	= hike_option_c
+		clr_character_flag	= hike_option_d
+		set_variable = { which = hike_completion value = 0 }
+	}
+	}
+}
+
 character_event = {
 	id = gaian.150
 	hide_window = yes
