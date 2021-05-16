@@ -1078,7 +1078,11 @@ RETTYPE_CUL_ENG =
 	potential = {
 		is_nomadic = no
 		OR = {
+		
+		AND = {
 			culture_group = britannic #made it into cultural group for consistency
+			NOT = {	culture = scottish }
+			}
 			culture_group = patagonian
 		}
 	}
@@ -1086,6 +1090,24 @@ RETTYPE_CUL_ENG =
 	modifier = {
 		archers_offensive = 0.2
 		archers_defensive = 0.1
+	}
+}
+
+RETTYPE_CUL_SCOT = 
+{
+	first_type = 2
+	first_amount = 200
+	second_type = 5
+	second_amount = 100
+
+	potential = {
+		is_nomadic = no
+		culture = scottish
+	}
+	
+	modifier = {
+		archers_offensive = 0.3
+		pikemen_offensive = 0.2
 	}
 }
 

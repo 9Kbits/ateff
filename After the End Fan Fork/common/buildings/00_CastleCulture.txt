@@ -6518,8 +6518,11 @@ castle = {
 	ca_culture_saxon_english_1 = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
-			OR = { 
-				culture_group = britannic
+			OR = {
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+					}
 				culture_group = patagonian #added patagonian cultural group
 				has_building = ca_culture_saxon_english_1
 			}
@@ -6527,7 +6530,10 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = britannic
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+					}
 					culture_group = patagonian #added patagonian cultural group
 				}
 			}
@@ -6536,7 +6542,10 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 0
 			ROOT = {
 				OR = {
-					culture_group = britannic
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+				}
 					culture_group = patagonian #added patagonian cultural group
 				}
 			}
@@ -6554,7 +6563,10 @@ castle = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = { 
-				culture_group = britannic
+			AND = {
+				culture_group = britannic #made it into cultural group for consistency
+				NOT = {	culture = scottish }
+			}
 				culture_group = patagonian #added patagonian cultural group
 				has_building = ca_culture_saxon_english_1
 				has_building = ca_culture_saxon_english_2
@@ -6563,7 +6575,10 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = britannic
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+					}
 					culture_group = patagonian #added patagonian cultural group
 				}
 			}
@@ -6572,7 +6587,10 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
-					culture_group = britannic
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+				}
 					culture_group = patagonian #added patagonian cultural group
 				}
 			}
@@ -6590,7 +6608,10 @@ castle = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = { 
-				culture_group = britannic
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+				}
 				culture_group = patagonian #added patagonian cultural group
 				has_building = ca_culture_saxon_english_1
 				has_building = ca_culture_saxon_english_2
@@ -6600,7 +6621,10 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = britannic
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+					}
 					culture_group = patagonian #added patagonian cultural group
 				}
 			}
@@ -6609,7 +6633,10 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
 				OR = {
-					culture_group = britannic
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+				}
 					culture_group = patagonian #added patagonian cultural group
 				}
 			}
@@ -6627,7 +6654,10 @@ castle = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = { 
-				culture_group = britannic
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+				}
 				culture_group = patagonian #added patagonian cultural group
 				has_building = ca_culture_saxon_english_1
 				has_building = ca_culture_saxon_english_2
@@ -6638,7 +6668,10 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
-					culture_group = britannic
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+				}
 					culture_group = patagonian #added patagonian cultural group
 				}
 			}
@@ -6661,7 +6694,6 @@ castle = {
 		
 		extra_tech_building_start = 0.8
 	}
-	
 	#Samurai Dojo
 	ca_culture_samurai_1 = {
 		desc = ca_culture_samurai_1_desc
@@ -10383,6 +10415,125 @@ castle = {
 		knights_defensive = 0.075
 		camel_cavalry_defensive = 0.075
 		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	# Scottish highland regiment
+	ca_culture_scottish_1 = {
+		desc = ca_culture_scottish_1_desc
+		potential = {
+			OR = {
+				culture = scottish
+				has_building = ca_culture_scottish_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = scottish
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				culture = scottish
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		pikemen = 30
+		pikemen_offensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_scottish_2 = {
+		desc = ca_culture_scottish_1_desc
+		potential = {
+			OR = {
+				culture = scottish
+				has_building = ca_culture_scottish_1
+				has_building = ca_culture_scottish_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = scottish
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				culture = scottish
+			}
+		}
+		upgrades_from = ca_culture_scottish_1
+		gold_cost = 300
+		build_time = 1095
+		pikemen = 40
+		pikemen_offensive = 0.15
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_scottish_3 = {
+		desc = ca_culture_scottish_1_desc
+		potential = {
+			OR = {
+				culture = scottish
+				has_building = ca_culture_scottish_1
+				has_building = ca_culture_scottish_2
+				has_building = ca_culture_scottish_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = scottish
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2 
+			ROOT = {
+				culture = scottish
+			}
+		}
+		upgrades_from = ca_culture_scottish_2
+		gold_cost = 400
+		build_time = 2190
+		pikemen = 60
+		pikemen_offensive = 0.15
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_scottish_4 = {
+		desc = ca_culture_scottish_1_desc
+		potential = {
+			OR = {
+				culture = scottish
+				has_building = ca_culture_scottish_1
+				has_building = ca_culture_scottish_2
+				has_building = ca_culture_scottish_3
+				has_building = ca_culture_scottish_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = scottish
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4 
+			ROOT = {
+				culture = scottish
+			}
+		}
+		upgrades_from = ca_culture_scottish_3
+		gold_cost = 500
+		build_time = 2190
+		pikemen = 80
+		pikemen_offensivee = 0.15
+		ai_creation_factor = 98
 		
 		extra_tech_building_start = 0.8
 	}
