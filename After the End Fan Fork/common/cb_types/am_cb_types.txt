@@ -5581,3 +5581,80 @@ greatwall_cb = {
 		factor = 100
 	}
 }
+
+#The special war for gaian core territories in Cascadia, Caledonia, Lincoln, and Victoria
+reclamation_cb = {
+	name = CB_NAME_RECLAMATION
+	war_name = WAR_NAME_RECLAMATION
+	sprite = 9
+	truce_days = 3650
+	is_permanent = yes
+	press_claim = yes
+	hostile_against_others = no
+
+	can_use = {
+		has_global_flag = gaianism_under_threat
+		ROOT = {
+			religion = gaian
+			capital_scope = {de_jure_liege = k_cascadia} #for testing purposes until the gaian core area is created
+			}
+		}
+	}
+	can_use_title = {
+		FROM = {
+			de_jure_liege = k_cascadia
+			tier = duke
+			NOT = {religion = gaian}
+			}
+		}
+	}
+	on_success = {
+		FROM = { prestige = -150 }
+		ROOT = { 
+			prestige = 150 
+			piety = 150
+			}
+		}
+	on_success_title = {
+		usurp_title_plus_barony_if_unlanded = ROOT
+	}
+	on_fail = {
+		FROM = { 
+			prestige = 50
+			wealth = 50
+			}
+		ROOT = { 
+			prestige = -50
+			piety = -50
+			}
+		}
+	on_reverse_demand = {
+		FROM = { 
+			prestige = 100
+			wealth = 100
+			}
+		ROOT = { 
+			prestige = -100 
+			piety = -100
+			wealth = -100
+			}
+		}
+	on_reverse_demand_title = {
+		ROOT = { remove_claim = PREV }
+	}
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
