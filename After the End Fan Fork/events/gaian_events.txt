@@ -1153,17 +1153,7 @@ narrative_event = {
 		}
 	}
 	after = {
-		clr_character_flag	= mountain_gaian_hike
-		clr_character_flag	= forest_gaian_hike
-		clr_character_flag	= river_gaian_hike
-		clr_character_flag	= hike_option_a
-		clr_character_flag	= hike_option_b
-		clr_character_flag	= hike_option_c
-		clr_character_flag	= hike_option_d
-		hidden_tooltip = {
-		set_variable = { which = hike_completion value = 0 }
-		clr_character_flag = encountered_rain_already
-		}
+		character_event = { id = gaian.199 }
 	}
 }
 
@@ -1198,15 +1188,7 @@ narrative_event = {
 	}
 	
 	after = {
-		clr_character_flag	= mountain_gaian_hike
-		clr_character_flag	= forest_gaian_hike
-		clr_character_flag	= river_gaian_hike
-		clr_character_flag	= hike_option_a
-		clr_character_flag	= hike_option_b
-		clr_character_flag	= hike_option_c
-		clr_character_flag	= hike_option_d
-		set_variable = { which = hike_completion value = 0 }
-		clr_character_flag = encountered_rain_already
+		character_event = { id = gaian.199 }
 	}
 }
 
@@ -1241,18 +1223,8 @@ narrative_event = {
 		}	
 	}
 	
-	hidden_tooltip = {
 	after = {
-		clr_character_flag	= mountain_gaian_hike
-		clr_character_flag	= forest_gaian_hike
-		clr_character_flag	= river_gaian_hike
-		clr_character_flag	= hike_option_a
-		clr_character_flag	= hike_option_b
-		clr_character_flag	= hike_option_c
-		clr_character_flag	= hike_option_d
-		set_variable = { which = hike_completion value = 0 }
-		clr_character_flag = encountered_rain_already
-	}
+		character_event = { id = gaian.199 }
 	}
 }
 
@@ -1286,18 +1258,8 @@ narrative_event = {
 		}	
 	}
 	
-	hidden_tooltip = {
 	after = {
-		clr_character_flag	= mountain_gaian_hike
-		clr_character_flag	= forest_gaian_hike
-		clr_character_flag	= river_gaian_hike
-		clr_character_flag	= hike_option_a
-		clr_character_flag	= hike_option_b
-		clr_character_flag	= hike_option_c
-		clr_character_flag	= hike_option_d
-		set_variable = { which = hike_completion value = 0 }
-		clr_character_flag = encountered_rain_already
-	}
+		character_event = { id = gaian.199 }
 	}
 }
 
@@ -1331,18 +1293,8 @@ narrative_event = {
 		}	
 	}
 	
-	hidden_tooltip = {
 	after = {
-		clr_character_flag	= mountain_gaian_hike
-		clr_character_flag	= forest_gaian_hike
-		clr_character_flag	= river_gaian_hike
-		clr_character_flag	= hike_option_a
-		clr_character_flag	= hike_option_b
-		clr_character_flag	= hike_option_c
-		clr_character_flag	= hike_option_d
-		set_variable = { which = hike_completion value = 0 }
-		clr_character_flag = encountered_rain_already
-	}
+		character_event = { id = gaian.199 }
 	}
 }
 
@@ -1376,18 +1328,8 @@ narrative_event = {
 		}	
 	}
 	
-	hidden_tooltip = {
 	after = {
-		clr_character_flag	= mountain_gaian_hike
-		clr_character_flag	= forest_gaian_hike
-		clr_character_flag	= river_gaian_hike
-		clr_character_flag	= hike_option_a
-		clr_character_flag	= hike_option_b
-		clr_character_flag	= hike_option_c
-		clr_character_flag	= hike_option_d
-		set_variable = { which = hike_completion value = 0 }
-		clr_character_flag = encountered_rain_already
-	}
+		character_event = { id = gaian.199 }
 	}
 }
 
@@ -1421,18 +1363,8 @@ narrative_event = {
 		}	
 	}
 	
-	hidden_tooltip = {
 	after = {
-		clr_character_flag	= mountain_gaian_hike
-		clr_character_flag	= forest_gaian_hike
-		clr_character_flag	= river_gaian_hike
-		clr_character_flag	= hike_option_a
-		clr_character_flag	= hike_option_b
-		clr_character_flag	= hike_option_c
-		clr_character_flag	= hike_option_d
-		set_variable = { which = hike_completion value = 0 }
-		clr_character_flag = encountered_rain_already
-	}
+		character_event = { id = gaian.199 }
 	}
 }
 
@@ -1459,6 +1391,26 @@ character_event = {
 		any_child = {
 			character_event = { id = gaian.18 }
 		}
+	}
+}
+
+character_event = {
+	id = gaian.199
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag	= mountain_gaian_hike
+		clr_character_flag	= forest_gaian_hike
+		clr_character_flag	= river_gaian_hike
+		clr_character_flag	= hike_option_a
+		clr_character_flag	= hike_option_b
+		clr_character_flag	= hike_option_c
+		clr_character_flag	= hike_option_d
+		hidden_tooltip = {
+		set_variable = { which = hike_completion value = 0 }
+		}
+		clr_character_flag = encountered_rain_already
 	}
 }
 
@@ -1550,8 +1502,8 @@ character_event = {
 		}
 		hidden_tooltip = {
 			random_list = {
-			50 = { character_event = { id = gaian.303 days=3}}
-			50 = {character_event = { id = gaian.304 days=3}}
+			50 = { character_event = { id = gaian.303 days=2 }}
+			50 = { character_event = { id = gaian.304 days=2 }}
 			}
 			set_character_flag = encountered_rain_already
 		}
@@ -1570,6 +1522,10 @@ character_event = {
 		any_vassal = { opinion = {
 		who = ROOT
 		modifier = opinion_didnt_hear_rain
+		}
+		random = {
+			chance = 10
+			add_trait = flu
 		}
 	}
 	}
@@ -1597,6 +1553,460 @@ character_event = {
 		change_variable = {
 		which = hike_completion
 		value = 1
+	}}}
+	}
+}
+
+character_event = {
+	id = gaian.305
+	desc = EVTDESC_hike_bear_encounter
+	picture = GFX_evt_mysterious_forest
+	
+	only_playable = yes
+	religion = gaian
+	
+	mean_time_to_happen = { 
+		months = 8
+	}
+	
+	trigger = {
+		trait = on_hike
+		OR = {
+			has_character_flag	= mountain_gaian_hike
+			has_character_flag	= forest_gaian_hike
+			has_character_flag	= river_gaian_hike
 		}
+		OR = {
+			has_character_flag	= hike_option_a
+			has_character_flag	= hike_option_b
+			has_character_flag	= hike_option_c
+			has_character_flag	= hike_option_d
+		}
+		NOT = { has_character_flag = encountered_bear_already }
+	}
+	
+	option = {
+		name = EVTOPTA_hike_bear_encounter
+		prestige = -20
+		trigger = {
+			NOR = {
+			trait = brave
+			trait = lunatic
+			trait = possessed
+			}
+		}
+		random = {
+			chance = 25 
+			add_trait = craven
+		}
+		hidden_tooltip = {
+		random_list = {
+			20 = { character_event = { id=gaian.306 days=2 }}
+			30 = { mult_modifier = { factor = 2 trait = is_fat } character_event = {id=gaian.307 days=2 }}
+			50 = { character_event = {id=gaian.308 days=2 }}
+		}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_hike_bear_encounter
+		prestige = -10
+		trigger = {}
+		hidden_tooltip = {
+		random_list = {
+			50 = { character_event = {id=gaian.309 days=2 }} 
+			25 = { character_event = {id=gaian.310 days=2}} 
+			25 = { character_event = {id=gaian.311 days=2}}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_hike_bear_encounter
+		prestige = 10
+		trigger = {}
+		hidden_tooltip = {
+		random_list = {
+			50 = { mult_modifier = { factor = 2 trait = is_fat } character_event = {id=gaian.316 days=2}} 
+			25 = { mult_modifier = { factor = 2 trait = strong } character_event = {id=gaian.317 days=2}} 
+			25 = { mult_modifier = { factor = 2 trait = strong } character_event = {id=gaian.318 days=2}}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_hike_bear_encounter
+		prestige = 10
+		NOT = {
+			trait = craven
+		}
+		hidden_tooltip = {
+		random_list = {
+			95 = { character_event = {id=gaian.319 days=2 }} 
+			5 = { character_event = {id=gaian.320 days=2}}
+		}
+		}
+	}
+	option = {
+		name = EVTOPTE_hike_bear_encounter
+		prestige = 10
+		trigger = {
+			OR = {
+			trait = brave
+			trait = lunatic
+			}
+		}
+		hidden_tooltip = {
+			character_event = {id=gaian.321 days=2 }
+		}
+	}	
+}
+
+character_event = {
+	id = gaian.306
+	desc = EVTDESC_hike_bear_encounter_1
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_1
+	hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
+		}
+		set_character_flag = encountered_bear_already
+	}}
+}
+
+character_event = {
+	id = gaian.307
+	desc = EVTDESC_hike_bear_encounter_2
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_2
+	death = { death_reason = death_accident_bear }
+	}
+}
+
+character_event = {
+	id = gaian.308
+	desc = EVTDESC_hike_bear_encounter_3
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_3
+	random_courtier = {
+		death = { death_reason = death_accident_bear }
+	}
+	hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
+		}
+		set_character_flag = encountered_bear_already
+	}}
+}
+
+character_event = {
+	id = gaian.309
+	desc = EVTDESC_hike_bear_encounter_4
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_4
+	hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
+		}
+		set_character_flag = encountered_bear_already
+	}}
+}
+
+character_event = {
+	id = gaian.310
+	desc = EVTDESC_hike_bear_encounter_5
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPTA_hike_bear_encounter_5
+	hidden_tooltip = {
+		random_list = {
+		75 = { character_event = {id=gaian.312 days=2}} 
+		25 = { character_event = {id=gaian.313 days=2}} 
+	}}
+	}
+	option = {
+	name = EVTOPTB_hike_bear_encounter_5
+	hidden_tooltip = {
+		random_list = {
+		75 = { character_event = {id=gaian.314 days=2}} 
+		25 = { character_event = {id=gaian.315 days=2}} 
+	}}
+	}
+}
+character_event = {
+	id = gaian.312
+	desc = EVTDESC_hike_bear_encounter_6
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_6
+	death = { death_reason = death_accident_bear }
+	}
+}
+character_event = {
+	id = gaian.313
+	desc = EVTDESC_hike_bear_encounter_7
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_7
+	add_trait = wounded
+	hidden_tooltip = {
+		character_event = {id=gaian.325 days=2}
+	}
+	random = {
+		chance = 15 
+		add_trait = one_handed
+		}
+	}
+}
+character_event = {
+	id = gaian.314
+	desc = EVTDESC_hike_bear_encounter_8
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_8
+	add_trait = wounded
+	hidden_tooltip = {
+		character_event = {id=gaian.325 days=2}
+	}
+	}
+}
+character_event = {
+	id = gaian.315
+	desc = EVTDESC_hike_bear_encounter_9
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_9
+	death = { death_reason = death_accident_bear }
+	}
+}
+character_event = {
+	id = gaian.316
+	desc = EVTDESC_hike_bear_encounter_10
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_10
+	random = {
+		chance = 50 
+		add_trait = wounded
+	}
+	random = {
+		chance = 10
+		death = { death_reason = death_accident_fall}
+	}
+	hidden_tooltip = {
+		random_list = {
+			50 = { character_event = {id=gaian.309 days=2}} 
+			25 = { character_event = {id=gaian.310 days=2}} 
+			25 = { character_event = {id=gaian.311 days=2}}
+			}
+		}	
+	}
+}
+character_event = {
+	id = gaian.317
+	desc = EVTDESC_hike_bear_encounter_11
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_11
+	random_list = {
+			50 = { add_trait = wounded hidden_tooltip = {character_event = {id=gaian.325 days=2}}}
+			20 = { death = { death_reason = death_accident_fall} }
+			10 = { add_trait = one_eyed }
+			10 = { add_trait = one_legged }
+			10 = { add_trait = one_handed }
+		}
+	}
+}
+character_event = {
+	id = gaian.318
+	desc = EVTDESC_hike_bear_encounter_12
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_12
+	random_courtier = {	
+		random_list = {
+			50 = { add_trait = wounded hidden_tooltip = {character_event = {id=gaian.325 days=2}}}
+			20 = { death = { death_reason = death_accident_fall} }
+			10 = { add_trait = one_eyed }
+			10 = { add_trait = one_legged }
+			10 = { add_trait = one_handed }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = gaian.319
+	desc = EVTDESC_hike_bear_encounter_13
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_13
+	prestige = 20
+	piety = 20
+	hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
+		}
+		set_character_flag = encountered_bear_already
+	}}
+}
+
+character_event = {
+	id = gaian.320
+	desc = EVTDESC_hike_bear_encounter_14
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_14
+	prestige = 20
+	piety = 20
+	random_list = {
+			50 = { death = { death_reason = death_accident_bear} }
+			20 = { add_trait = wounded hidden_tooltip = {character_event = {id=gaian.325 days=2}}}
+			10 = { add_trait = one_eyed hidden_tooltip = {character_event = {id=gaian.325 days=2}}}
+			10 = { add_trait = one_legged hidden_tooltip = {character_event = {id=gaian.325 days=2}}}
+			10 = { add_trait = one_handed hidden_tooltip = {character_event = {id=gaian.325 days=2}}}
+		}
+	}
+	set_character_flag = encountered_bear_already
+}
+
+character_event = {
+	id = gaian.321
+	desc = EVTDESC_hike_bear_encounter_15
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_15
+	hidden_tooltip = {
+	random_list = {
+		10 = { mult_modifier = { factor = 3 combat_rating >= 50 } character_event = {id=gaian.322 days=2} }
+		30 = { mult_modifier = { factor = 2 combat_rating >= 40 } add_trait = wounded character_event = {id=gaian.323 days=2} }
+		10 = { add_trait = wounded character_event = {id=gaian.324 days=2} }
+		10 = { add_trait = one_eyed character_event = {id=gaian.324 days=2} }
+		10 = { add_trait = one_legged character_event = {id=gaian.324 days=2} }
+		10 = { add_trait = one_handed character_event = {id=gaian.324 days=2} }
+		10 = { mult_modifier = { factor = 2 combat_rating >= 20 } death = { death_reason = death_accident_bear } }
+	}
+	}
+	}
+}
+
+character_event = {
+	id = gaian.322
+	desc = EVTDESC_hike_bear_encounter_16
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_16to18
+	prestige = 200
+	piety = -200
+	hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
+		}
+		set_character_flag = encountered_bear_already
+	}}
+}
+
+character_event = {
+	id = gaian.323
+	desc = EVTDESC_hike_bear_encounter_17
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_16to18
+	prestige = 200
+	piety = -200
+	hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
+		}
+		set_character_flag = encountered_bear_already
+	}}
+}
+
+character_event = {
+	id = gaian.324
+	desc = EVTDESC_hike_bear_encounter_18
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_16to18
+	prestige = -200
+	piety = -100
+	set_character_flag = encountered_bear_already
+	}
+}
+
+character_event = {
+	id = gaian.325
+	desc = EVTDESC_hike_bear_encounter_19
+	picture = GFX_evt_mysterious_forest
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = EVTOPT_hike_bear_encounter_19
+	set_character_flag = encountered_bear_already
 	}
 }
