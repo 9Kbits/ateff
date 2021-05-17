@@ -1,7 +1,7 @@
 # 10	druids demand you switch away from agnatic succession
 # 100-200 end state hike events
-# 300-400 interestiing hike encounters
-# 400- crater lake events
+# 300-500 interestiing hike encounters
+# 500- crater lake events
 
 namespace = gaian
 character_event = {
@@ -22,6 +22,9 @@ character_event = {
 		}
 		add_trait = on_hike
 		character_event = { id = gaian.2 }
+		hidden_tooltip = {
+			set_character_flag = mountain_gaian_hike
+		}
 	}
 	
 	option = {
@@ -35,6 +38,9 @@ character_event = {
 		}
 		add_trait = on_hike
 		character_event = { id = gaian.3 }
+		hidden_tooltip = {
+			set_character_flag = river_gaian_hike
+		}
 	}
 	
 	option = {
@@ -48,6 +54,9 @@ character_event = {
 		}
 		add_trait = on_hike
 		character_event = { id = gaian.4 }
+		hidden_tooltip = {
+			set_character_flag = forest_gaian_hike
+		}
 	}
 	
 	option = {
@@ -140,6 +149,9 @@ character_event = {
 			}
 			text = EVTOPTA_gaian_gnr_mountain
 		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_a
+		}
 	}
 	
 	option = {
@@ -177,6 +189,9 @@ character_event = {
 				}
 			}
 			text = EVTOPTB_gaian_gnr_mountain
+		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_b
 		}
 	}
 	
@@ -216,6 +231,9 @@ character_event = {
 			}
 			text = EVTOPTC_gaian_gnr_mountain
 		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_c
+		}
 	}
 	
 	option = {
@@ -253,6 +271,9 @@ character_event = {
 				}
 			}
 			text = EVTOPTD_gaian_gnr_mountain
+		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_d
 		}
 	}
 }
@@ -334,6 +355,9 @@ character_event = {
 			}
 			text = EVTOPTA_gaian_gnr_river
 		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_a
+		}
 	}
 	
 	option = {
@@ -371,6 +395,9 @@ character_event = {
 				}
 			}
 			text = EVTOPTB_gaian_gnr_river
+		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_b
 		}
 	}
 	
@@ -410,6 +437,9 @@ character_event = {
 			}
 			text = EVTOPTC_gaian_gnr_river
 		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_c
+		}
 	}
 	
 	option = {
@@ -447,6 +477,9 @@ character_event = {
 				}
 			}
 			text = EVTOPTD_gaian_gnr_river
+		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_d
 		}
 	}
 }
@@ -528,6 +561,9 @@ character_event = {
 			}
 			text = EVTOPTA_gaian_gnr_forest
 		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_a
+		}
 	}
 	
 	option = {
@@ -565,6 +601,9 @@ character_event = {
 				}
 			}
 			text = EVTOPTB_gaian_gnr_forest
+		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_b
 		}
 	}
 	
@@ -604,6 +643,9 @@ character_event = {
 			}
 			text = EVTOPTC_gaian_gnr_forest
 		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_c
+		}
 	}
 	
 	option = {
@@ -641,6 +683,9 @@ character_event = {
 				}
 			}
 			text = EVTOPTD_gaian_gnr_forest
+		}
+		hidden_tooltip = {
+			set_character_flag = hike_option_d
 		}
 	}
 }
@@ -892,6 +937,7 @@ narrative_event = {
 
 	}
 }
+
 character_event = {
 	id = gaian.16
 	hide_window = yes
@@ -1010,6 +1056,52 @@ character_event = {
 	}
 }
 
+character_event = {
+	id = gaian.21
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		ROOT = {
+			de_jure_liege = k_cascadia
+			tier = duke
+			NOT = {religion = gaian}
+		}
+	}
+	immediate = {
+		set_global_flag = gaianism_under_threat    #set flag for CB
+		any_playable_ruler = {
+			limit = {
+				religion = gaian
+			}
+			narrative_event = {id = gaian.22}
+		}
+	}
+}
+
+#Gaianism under threat
+narrative_event = {
+	id = gaian.22
+	title = EVTTITLE_GAIAN22
+	desc = EVTDESC_GAIAN22
+	picture = GFX_evt_china_rebel_general #placeholder
+	border = GFX_event_narrative_frame_religion
+	religion = gaian
+	only_playable = yes
+	is_triggered_only = yes
+
+	trigger = {
+		ROOT = {
+			capital_scope = {
+				de_jure_liege = k_cascadia #for testing purposes until the gaian core area is created
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_GAIAN22
+		add_trait = stressed #for testing purposes to see if the event fires
+	}
+}
+
 narrative_event = {
 	id = gaian.100
 	title = EVTITLE_garibaldi_ending
@@ -1060,7 +1152,6 @@ narrative_event = {
 			40 = { }
 		}
 	}
-	hidden_tooltip = {
 	after = {
 		clr_character_flag	= mountain_gaian_hike
 		clr_character_flag	= forest_gaian_hike
@@ -1069,8 +1160,10 @@ narrative_event = {
 		clr_character_flag	= hike_option_b
 		clr_character_flag	= hike_option_c
 		clr_character_flag	= hike_option_d
+		hidden_tooltip = {
 		set_variable = { which = hike_completion value = 0 }
-	}
+		clr_character_flag = encountered_rain_already
+		}
 	}
 }
 
@@ -1104,7 +1197,6 @@ narrative_event = {
 		}	
 	}
 	
-	hidden_tooltip = {
 	after = {
 		clr_character_flag	= mountain_gaian_hike
 		clr_character_flag	= forest_gaian_hike
@@ -1114,7 +1206,7 @@ narrative_event = {
 		clr_character_flag	= hike_option_c
 		clr_character_flag	= hike_option_d
 		set_variable = { which = hike_completion value = 0 }
-	}
+		clr_character_flag = encountered_rain_already
 	}
 }
 
@@ -1159,6 +1251,7 @@ narrative_event = {
 		clr_character_flag	= hike_option_c
 		clr_character_flag	= hike_option_d
 		set_variable = { which = hike_completion value = 0 }
+		clr_character_flag = encountered_rain_already
 	}
 	}
 }
@@ -1203,6 +1296,7 @@ narrative_event = {
 		clr_character_flag	= hike_option_c
 		clr_character_flag	= hike_option_d
 		set_variable = { which = hike_completion value = 0 }
+		clr_character_flag = encountered_rain_already
 	}
 	}
 }
@@ -1247,6 +1341,7 @@ narrative_event = {
 		clr_character_flag	= hike_option_c
 		clr_character_flag	= hike_option_d
 		set_variable = { which = hike_completion value = 0 }
+		clr_character_flag = encountered_rain_already
 	}
 	}
 }
@@ -1291,6 +1386,7 @@ narrative_event = {
 		clr_character_flag	= hike_option_c
 		clr_character_flag	= hike_option_d
 		set_variable = { which = hike_completion value = 0 }
+		clr_character_flag = encountered_rain_already
 	}
 	}
 }
@@ -1335,6 +1431,7 @@ narrative_event = {
 		clr_character_flag	= hike_option_c
 		clr_character_flag	= hike_option_d
 		set_variable = { which = hike_completion value = 0 }
+		clr_character_flag = encountered_rain_already
 	}
 	}
 }
@@ -1361,6 +1458,145 @@ character_event = {
 		add_trait = general_of_gaia_descendant
 		any_child = {
 			character_event = { id = gaian.18 }
+		}
+	}
+}
+
+character_event = {
+	id = gaian.300
+	desc = EVTDESC_hike_branchtrip
+	picture = GFX_evt_bandits
+	
+	only_playable = yes
+	religion = gaian
+	
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	trigger = {
+		trait = on_hike
+		OR = {
+			has_character_flag	= mountain_gaian_hike
+			has_character_flag	= forest_gaian_hike
+			has_character_flag	= river_gaian_hike
+		}
+		OR = {
+			has_character_flag	= hike_option_a
+			has_character_flag	= hike_option_b
+			has_character_flag	= hike_option_c
+			has_character_flag	= hike_option_d
+		}
+	}
+	
+	option = {
+		name = evt_DAMNEDROOT
+		prestige = -15
+		hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
+		}
+		}
+		random_list = {
+			80 = {}
+			19 = { add_trait = wounded }
+			1 = { death = { death_reason = death_accident }
+		}
+	}
+	}
+}
+
+character_event = {
+	id = gaian.302
+	desc = EVTDESC_hike_raining
+	picture = GFX_evt_campfire_hf
+	
+	only_playable = yes
+	religion = gaian
+	
+	mean_time_to_happen = {
+		days = 30
+	}
+
+	trigger = {
+		trait = on_hike
+		OR = {
+			has_character_flag	= mountain_gaian_hike
+			has_character_flag	= forest_gaian_hike
+			has_character_flag	= river_gaian_hike
+		}
+		OR = {
+			has_character_flag	= hike_option_a
+			has_character_flag	= hike_option_b
+			has_character_flag	= hike_option_c
+			has_character_flag	= hike_option_d
+		}
+		NOT = { has_character_flag = encountered_rain_already }
+	}
+	
+	option = {
+		name = EVTOPTA_hike_raining
+		piety = -20	
+		hidden_tooltip = {
+			set_character_flag = encountered_rain_already
+		}
+	}
+	option = {
+		name = EVTOPTB_hike_raining
+		piety = 10
+		random_courtier = {
+			opinion = { who = ROOT modifier = opinion_didnt_hear_rain }
+		}
+		hidden_tooltip = {
+			random_list = {
+			50 = { character_event = { id = gaian.303 days=3}}
+			50 = {character_event = { id = gaian.304 days=3}}
+			}
+			set_character_flag = encountered_rain_already
+		}
+	}
+}
+character_event = {
+	id = gaian.303
+	desc = EVTDESC_hike_rain_comes
+	picture = GFX_evt_campfire_hf
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_hike_rain_comes
+		prestige = -10
+		any_vassal = { opinion = {
+		who = ROOT
+		modifier = opinion_didnt_hear_rain
+		}
+	}
+	}
+}
+
+character_event = {
+	id = gaian.304
+	desc = EVTDESC_hike_rain_doesnt_come
+	picture = GFX_evt_campfire_hf
+	
+	only_playable = yes
+	religion = gaian
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_hike_rain_didntcome
+		prestige = 10
+		any_vassal = { opinion = {
+		who = ROOT
+		modifier = opinion_right_about_rain
+		months = 6
+		}
+		hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
 		}
 	}
 }
