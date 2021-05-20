@@ -23,9 +23,35 @@ job_chancellor = {
 	
 	allow = {
 		can_be_chancellor_trigger = yes
+		FROM = {
+			NAND= {
+				hidden_tooltip = {
+				AND ={
+					religion = gaian
+					is_feudal = yes
+					}
+				}
+				custom_tooltip = {
+					text = not_theocratic_feudal
+				}
+				has_character_modifier = lost_oficial_diplomacy_authorization
+			}
+		}
 	}
 	dismiss_trigger = {
 		FROM = {
+			NAND= {
+				hidden_tooltip = {
+				AND ={
+					religion = gaian
+					is_feudal = yes
+					}
+				}
+				custom_tooltip = {
+					text = not_theocratic_feudal
+				}
+				has_character_modifier = lost_oficial_diplomacy_authorization
+			}
 			NOT = { 
 				AND = {
 					has_law = succession_voting_power_1
@@ -273,9 +299,35 @@ job_treasurer = {
 	
 	allow = {
 		can_be_treasurer_trigger = yes
+		FROM = {
+			NAND = {
+				hidden_tooltip = {
+				AND ={
+					religion = gaian
+					is_feudal = yes
+					}
+				}
+				custom_tooltip = {
+					text = not_theocratic_feudal
+				}
+				NOT = { has_character_modifier = oficial_stewardship_authorization }
+			}
+		}		
 	}
 	dismiss_trigger = {
 		FROM = {
+			NAND = {
+				hidden_tooltip = {
+				AND ={
+					religion = gaian
+					is_feudal = yes
+					}
+				}
+				custom_tooltip = {
+					text = not_theocratic_feudal
+				}
+				NOT = { has_character_modifier = oficial_stewardship_authorization }
+			}
 			NOT = { 
 				AND = {
 					has_law = succession_voting_power_1
@@ -457,13 +509,33 @@ job_spiritual = {
 	
 	allow = {
 		can_be_spiritual_trigger = yes
+		FROM = {
+			NOT = {
+				hidden_tooltip = {
+				AND ={
+					religion = gaian
+					is_feudal = yes
+					}
+				}
+				custom_tooltip = {
+					text = not_theocratic_feudal
+				}
+			}
+		}
 	}
 	dismiss_trigger = {
 		FROM = {
-			#OR = {
-			#	NOT = { religion_group = muslim }
-			#	NOT = { religion = ROOT }
-			#}
+			NOT = {
+				hidden_tooltip = {
+				AND ={
+					religion = gaian
+					is_feudal = yes
+					}
+				}
+				custom_tooltip = {
+					text = not_theocratic_feudal
+				}
+			}
 			NOT = { 
 				AND = {
 					has_law = succession_voting_power_1

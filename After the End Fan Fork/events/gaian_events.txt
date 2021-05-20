@@ -2611,3 +2611,92 @@ narrative_event = {
 		name = EVTOPTA_veryfaraway
 	}
 }
+
+character_event = {
+	id = gaian.800
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		religion = gaian
+		is_feudal = yes
+		NOT = {
+			any_courtier_or_vassal = {
+			has_job_title = job_spiritual
+			}
+		}
+	}
+	mean_time_to_happen = {
+	days = 1
+	modifier = {
+		factor = 0.25
+		religion = gaian
+		}
+	}
+	immediate = {
+		random_courtier = {
+			give_job_title = job_spiritual
+		}
+	}
+}
+
+character_event = {
+	id = gaian.801
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		religion = gaian
+		is_feudal = yes
+		NOT = { has_character_modifier = oficial_stewardship_authorization }
+		NOT = {
+			any_courtier_or_vassal = {
+			has_job_title = job_treasurer
+			}
+		}
+	}
+	mean_time_to_happen = {
+	days = 1
+	modifier = {
+		factor = 0.25
+		religion = gaian
+		}
+	}
+	immediate = {
+		random_courtier = {
+			give_job_title = job_treasurer
+		}
+	}
+}
+
+character_event = {
+	id = gaian.802
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		religion = gaian
+		is_feudal = yes
+		has_character_modifier = lost_oficial_diplomacy_authorization
+		NOT = {
+			any_courtier_or_vassal = {
+			has_job_title = job_chancellor
+			}
+		}
+	}
+	mean_time_to_happen = {
+	days = 1
+	modifier = {
+		factor = 0.25
+		religion = gaian
+		}
+	}
+	immediate = {
+		random_courtier = {
+			give_job_title = job_chancellor
+		}
+	}
+}

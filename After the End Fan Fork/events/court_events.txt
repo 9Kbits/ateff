@@ -1676,6 +1676,11 @@ character_event = {
 				NOT = { stewardship = ROOT }
 				NOT = { has_minor_title = title_regent }
 			}
+			NAND = {
+				religion = gaian
+				is_feudal = yes
+				NOT = { has_character_modifier = oficial_stewardship_authorization }
+			}
 		}
 		can_hold_title = job_treasurer
 	}
@@ -1884,6 +1889,10 @@ character_event = {
 	trigger = {
 		NOT = {
 			religion_group = muslim
+		}
+		NAND = {
+			religion = gaian
+			is_feudal = yes
 		}
 		OR = {
 			is_theocracy = yes
@@ -2139,6 +2148,11 @@ character_event = {
 				same_liege = ROOT
 				NOT = { diplomacy = ROOT }
 				NOT = { has_minor_title = title_regent }
+			NAND = {
+				religion = gaian
+				is_feudal = yes
+				has_character_modifier = lost_oficial_diplomacy_authorization
+			}
 			}
 		}
 		can_hold_title = job_chancellor
