@@ -1,0 +1,1539 @@
+namespace = wayne
+
+# John Wayne distinguishes himself at a Trailwalker court
+character_event = {
+	id = wayne.1
+	desc = EVTDESC_wayne_1
+	
+	picture = GFX_evt_cowboy
+	border = GFX_event_normal_frame_war
+	
+	only_playable = yes
+	religion_group = pagan
+	
+	trigger = {
+		NOT = {
+			has_game_rule = {
+				name = renovator_invasion
+				value = off
+			}
+		}
+		OR = {
+			AND = {
+				has_game_rule = {
+					name = renovator_invasion
+					value = historical
+				}
+				year = 2900
+				NOT = { year = 2920 }
+			}
+			AND = {
+				has_game_rule = {
+					name = renovator_invasion
+					value = random
+				}
+				year = 2700
+			}
+		}
+		
+		OR = {
+			religion = trailwalker
+			religion = trailwalker_reformed
+		}
+		higher_tier_than = count
+		
+		NOT = { has_global_flag = john_wayne_spawned }
+		
+		any_realm_province = {
+			region = world_great_plains
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 24
+	}
+	
+	immediate = {
+		create_character = {
+			random_traits = no
+			name = "Marion"
+			dynasty = 1797071
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 20
+			attributes = {
+				martial = 12
+				diplomacy = 8
+				stewardship = 9
+				intrigue = 9
+				learning = 6
+			}
+			health = 6
+			fertility = 0.8
+			trait = brilliant_strategist
+			trait = diligent
+			trait = ambitious
+			trait = proud
+			trait = arbitrary
+			trait = cruel
+			trait = quick
+			trait = adventurer
+		}
+		
+		new_character = {
+			set_character_flag = john_wayne_himself
+			if = {
+				limit = {
+					has_dlc = "Holy Fury"
+				}
+				create_bloodline = {
+					type = john_wayne #need to create this!
+				}
+			}
+			character_event = {
+				id = wayne.2
+				days = 3285
+				random = 730
+			}
+		}
+	}
+	
+	option = { # A most capable young man
+		name = EVTOPTA_wayne_1
+		
+		set_global_flag = john_wayne_spawned
+		set_global_flag = john_wayne_spawned_by_event
+		
+		tooltip = {
+			create_character = {
+				random_traits = no
+				name = "Marion"
+				dynasty = 1797071
+				religion = ROOT
+				culture = ROOT
+				female = no
+				age = 20
+				attributes = {
+					martial = 12
+					diplomacy = 8
+					stewardship = 9
+					intrigue = 9
+					learning = 6
+				}
+				health = 6
+				fertility = 0.8
+				trait = brilliant_strategist
+				trait = diligent
+				trait = ambitious
+				trait = proud
+				trait = arbitrary
+				trait = cruel
+				trait = quick
+			}
+		}
+	}
+}
+
+# Wayne and his men consider starting an adventure
+character_event = {
+	id = wayne.2
+	desc = EVTDESC_wayne_2
+	
+	picture = GFX_evt_cowboy
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		is_alive = yes
+		NOT = { trait = blinded }
+		NOT = { trait = eunuch }
+		NOT = { trait = infirm }
+		lower_tier_than = king
+		
+		OR = { #only targets Phoenix if Arixo hasn't formed
+			439 = { # Phoenix
+				owner = {
+					NOR = {
+						same_realm = ROOT
+						has_landed_title = k_arixo
+					}
+				}
+			}
+			436 = { # Zion
+				owner = {
+					NOT = { same_realm = ROOT }
+				}
+			}
+			2112 = { # Eastern Ranges
+				owner = {
+					NOT = { same_realm = ROOT }
+				}
+			}
+		}
+	}
+	
+	option = { # Phoenix it is!
+		name = EVTOPTA_wayne_2
+		trigger = {
+			439 = { # Phoenix
+				owner = {
+					NOR = {
+						same_realm = ROOT
+						has_landed_title = k_arixo
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 10000
+		}
+		
+		1341 = {
+			province_event = {
+				id = wayne.3
+				days = 2
+			}
+		}
+	}
+	option = { # Zion
+		name = EVTOPTB_wayne_2
+		trigger = {
+			436 = { # Zion
+				owner = {
+					NOT = { same_realm = ROOT }
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1000
+		}
+		
+		1338 = {
+			province_event = {
+				id = wayne.3
+				days = 2
+			}
+		}
+	}
+	option = { # Eastern Ranges
+		name = EVTOPTC_wayne_2
+		trigger = {
+			2112 = { # Eastern Ranges
+				owner = {
+					NOT = { same_realm = ROOT }
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		1362 = {
+			province_event = {
+				id = wayne.3
+				days = 2
+			}
+		}
+	}
+}
+
+# Ping the target province
+province_event = {
+	id = wayne.3
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				FROM = {
+					is_ruler = yes
+				}
+			}
+			FROM = {
+				character_event = {
+					id = wayne.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					is_ruler = no
+				}
+			}
+			FROM = {
+				character_event = {
+					id = wayne.4
+				}
+			}
+		}
+	}
+}
+
+# The landless Wayne and his men start an adventure
+character_event = {
+	id = wayne.4
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		is_alive = yes
+		NOT = { trait = blinded }
+		NOT = { trait = eunuch }
+		NOT = { trait = infirm }
+		lower_tier_than = king
+	}
+	
+	immediate = {
+		wealth = 500
+		
+		any_liege = {
+			character_event = {
+				id = wayne.6
+				days = 1
+			}
+		}
+		
+		liege = {
+			capital_scope = {
+				FROM = {
+					owner = {
+						top_liege = {
+							ROOT = {
+								set_defacto_liege = ROOT
+								create_title = {
+									tier = DUKE
+									landless = yes
+									temporary = yes
+									culture = ROOT
+									name = "CLAIMANT_ADVENTURE"
+									holder = ROOT
+								}
+								
+								set_character_flag = duchy_adventurer
+							
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									#leader = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREVPREVPREVPREV
+									home = PREVPREVPREVPREV
+									owner = THIS
+									match_character = PREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								war = {
+									target = PREV
+									casus_belli = duchy_adventure
+									thirdparty_title = PREVPREVPREV
+									tier = DUKE
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		
+		# Create some characters
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 28
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 24
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 23
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 17
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 18
+		}
+		
+		log = "Wayne's World! Wayne's World! It's party time! It's excellent!"
+	}
+}
+
+# The landed Sabuktigin and his men start an adventure
+character_event = {
+	id = wayne.5
+	desc = EVTDESC_wayne_5
+	
+	picture = GFX_evt_cowboy
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	prisoner = no
+	only_capable = yes
+	
+	trigger = {
+		is_alive = yes
+		NOT = { trait = blinded }
+		NOT = { trait = eunuch }
+		NOT = { trait = infirm }
+		lower_tier_than = king
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				tier = BARON
+			}
+			abdicate = yes
+			character_event = { id = wayne.4 }
+			break = yes
+		}
+		wealth = 500
+		
+		any_liege = {
+			character_event = {
+				id = wayne.6
+				days = 1
+			}
+		}
+		
+		FROM = {
+			owner = {
+				top_liege = {
+					ROOT = {
+						capital_scope = {
+							ROOT = {
+								set_character_flag = duchy_adventurer
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									#leader = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+								spawn_unit = {
+									province = PREV
+									home = PREV
+									owner = THIS
+									match_character = PREVPREVPREV
+									match_mult = 0.33
+									match_min = 500
+									match_max = 10000
+									attrition = 0.25
+								}
+							}
+						}
+						
+						war = {
+							target = PREV
+							casus_belli = duchy_adventure
+							thirdparty_title = PREVPREVPREV
+							tier = DUKE
+						}
+					}
+				}
+			}
+		}
+		
+		# Create some characters
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 28
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 24
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 23
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 30
+			attributes = {
+				martial = 12
+			}
+			trait = brilliant_strategist
+		}
+		
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 16
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 17
+		}
+		create_character = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = yes
+			age = 18
+		}
+		
+		log = "Wayne's World! Wayne's World! It's party time! It's excellent! (landed)"
+	}
+	
+	option = {
+		name = EVTOPTA_wayne_5
+	}
+}
+
+# Notify Wayne's old liege
+character_event = {
+	id = wayne.6
+	desc = EVTDESC_wayne_6
+	picture = GFX_evt_cowboy
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = { is_ruler = yes } # The DoW worked and the adventurer has a temporary title
+	}
+	
+	option = {
+		name = EVTOPTA_wayne_6
+	}
+}
+
+# Wayne is successful!
+# Fired from the duchy_adventure CB
+narrative_event = {
+	id = wayne.7
+	title = EVTNAME_wayne_7
+	desc = EVTDESC_wayne_7
+	picture = GFX_evt_cowboy
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					independent = yes
+					liege = {
+						ai = yes
+					}
+				}
+			}
+			set_defacto_liege = ROOT
+			activate_title = { title = e_ status = yes }
+			e_wayne_empire = {
+				grant_title = ROOT
+			}
+		}
+		
+		prestige = 1000
+		set_global_flag = john_wayne_victory
+		
+		capital_scope = {
+			religion = ROOT
+			culture = ROOT
+			
+			ROOT = {
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						light_infantry = { 2250 2250 }
+						light_cavalry = { 2000 2000 }
+						horse_archers = { 1500 1500 }
+						knights = { 50 50 }
+					}
+				}
+				
+				random = {
+					chance = 50
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+				random = {
+					chance = 50
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 2250 2250 }
+							light_cavalry = { 2000 2000 }
+							horse_archers = { 1500 1500 }
+							knights = { 50 50 }
+						}
+					}
+				}
+			}
+		}
+		
+		random_realm_province = {
+			limit = {
+				OR = {
+					NOT = { culture = ROOT }
+					NOT = { religion = ROOT }
+				}
+			}
+			religion = ROOT
+			culture = ROOT
+		}
+		
+		log = "I am Temujin!"
+	}
+	
+	option = {
+		name = EVTOPTA_wayne_7
+		trigger = {
+			has_character_flag = wayne_himself
+		}
+	}
+	option = {
+		name = EVTOPTB_wayne_7
+		trigger = {
+			NOT = { has_character_flag = wayne_himself }
+		}
+	}
+}
+
+### John Wayne Converts ###
+
+# Archduuchy converts to Atomicist
+character_event = {
+	id = wayne.8
+	desc = EVTDESC_wayne_8
+	picture = GFX_evt_mushroom_cloud
+	border = GFX_event_normal_frame_religion
+	
+	only_playable = yes
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	
+	trigger = {
+		primary_title = {
+			title = e_wayne_empire
+			holder_scope = {
+				religion = trailwalker
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = john_wayne_victory days = 14600 }
+		NOT = { had_global_flag = { flag = john_wayne_victory days = 29200 } }
+		NOT = { has_global_flag = john_wayne_offered_conversion }
+		any_realm_province = {
+			religion = atomicist
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1440
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = atomicist
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = john_wayne_offered_conversion #prevent repeats
+	}
+	
+	option = {	# Convert
+		name = EVTOPTA_wayne_8
+		religion = atomicist
+		capital_scope = {
+			religion = atomicist
+		}
+		
+		any_realm_character = { #should this be automatic?
+			limit = { religion = trailwalker }
+			character_event = { wayne.9 } #decide whether to convert
+		}
+		
+		narrative_event = { id = wayne.10 days = 1 } #inform the world
+	}
+	
+	option = { #Nah
+		name = EVTOPTB_wayne_8
+		piety = 500
+	}
+}
+
+character_event = {
+	id = wayne.9
+	desc = EVTDESC_wayne_9
+	picture = GFX_evt_mushroom_cloud
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_wayne_9
+		
+		religion = atomicist
+		capital_scope = {
+			religion = atomicist
+		}
+		
+		ai_chance = {
+			factor = 10000
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_wayne_9
+		piety = 1000
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+narrative_event = {
+	id = wayne.10
+	title = EVTNAME_wayne_10
+	desc = EVTDESC_wayne_10
+	picture = GFX_evt_cowboy
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			has_landed_title = e_wayne_empire
+		}
+	}
+	option = {
+		name = EVTOPTB_wayne_10
+		trigger = {
+			religion = atomicist
+			NOT = { has_landed_title = e_wayne_empire }
+		}
+	}
+	option = {
+		name = EVTOPTC_wayne_10
+		trigger = {
+			NOT = { religion = atomicist }
+			NOT = { has_landed_title = e_wayne_empire }
+		}
+	}
+}
+
+# Archduuchy converts to Mormon
+character_event = {
+	id = wayne.11
+	desc = EVTDESC_wayne_11
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	only_playable = yes
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	
+	trigger = {
+		primary_title = {
+			title = e_wayne_empire
+			holder_scope = {
+				religion = trailwalker
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = john_wayne_victory days = 14600 }
+		NOT = { had_global_flag = { flag = john_wayne_victory days = 29200 } }
+		NOT = { has_global_flag = john_wayne_offered_conversion }
+		any_realm_province = {
+			religion = mormon
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1440
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = mormon
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = john_wayne_offered_conversion #prevent repeats
+	}
+	
+	option = {	# Convert
+		name = EVTOPTA_wayne_8
+		religion = mormon
+		capital_scope = {
+			religion = mormon
+		}
+		
+		any_realm_character = { #should this be automatic?
+			limit = { religion = trailwalker }
+			character_event = { wayne.12 } #decide whether to convert
+		}
+		
+		narrative_event = { id = wayne.13 days = 1 } #inform the world
+	}
+	
+	option = { #Nah
+		name = EVTOPTB_wayne_8
+		piety = 500
+	}
+}
+
+character_event = {
+	id = wayne.12
+	desc = EVTDESC_wayne_12
+	picture = GFX_evt_bishop
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_wayne_9
+		
+		religion = mormon
+		capital_scope = {
+			religion = mormon
+		}
+		
+		ai_chance = {
+			factor = 10000
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_wayne_9
+		piety = 1000
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+narrative_event = {
+	id = wayne.13
+	title = EVTNAME_wayne_10
+	desc = EVTDESC_wayne_13
+	picture = GFX_evt_cowboy
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			has_landed_title = e_wayne_empire
+		}
+	}
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			religion_group = latter_day_saints
+			NOT = { has_landed_title = e_wayne_empire }
+		}
+	}
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			NOT = { religion_group = latter_day_saints }
+			NOT = { has_landed_title = e_wayne_empire }
+		}
+	}
+}
+
+# Archduuchy converts to Cetic
+character_event = {
+	id = wayne.14
+	desc = EVTDESC_wayne_14
+	picture = GFX_evt_china_open
+	border = GFX_event_normal_frame_religion
+	
+	only_playable = yes
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	
+	trigger = {
+		primary_title = {
+			title = e_wayne_empire
+			holder_scope = {
+				religion = trailwalker
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = john_wayne_victory days = 14600 }
+		NOT = { had_global_flag = { flag = john_wayne_victory days = 29200 } }
+		NOT = { has_global_flag = john_wayne_offered_conversion }
+		any_realm_province = {
+			religion = cetic
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1440
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = cetic
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = john_wayne_offered_conversion #prevent repeats
+	}
+	
+	option = {	# Convert
+		name = EVTOPTA_wayne_8
+		religion = cetic
+		capital_scope = {
+			religion = cetic
+		}
+		
+		any_realm_character = { #should this be automatic?
+			limit = { religion = trailwalker }
+			character_event = { wayne.15 } #decide whether to convert
+		}
+		
+		narrative_event = { id = wayne.16 days = 1 } #inform the world
+	}
+	
+	option = { #Nah
+		name = EVTOPTB_wayne_8
+		piety = 500
+	}
+}
+
+character_event = {
+	id = wayne.15
+	desc = EVTDESC_wayne_15
+	picture = GFX_evt_china_open
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_wayne_9
+		
+		religion = cetic
+		capital_scope = {
+			religion = cetic
+		}
+		
+		ai_chance = {
+			factor = 10000
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_wayne_9
+		piety = 1000
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+narrative_event = {
+	id = wayne.16
+	title = EVTNAME_wayne_10
+	desc = EVTDESC_wayne_16
+	picture = GFX_evt_cowboy
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			has_landed_title = e_wayne_empire
+		}
+	}
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			religion = cetic
+			NOT = { has_landed_title = e_wayne_empire }
+		}
+	}
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			NOT = { religion = cetic }
+			NOT = { has_landed_title = e_wayne_empire }
+		}
+	}
+}
+
+# Archduuchy converts to Nazarene
+character_event = {
+	id = wayne.17
+	desc = EVTDESC_wayne_17
+	picture = GFX_evt_bishop_byzantine
+	border = GFX_event_normal_frame_religion
+	
+	only_playable = yes
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	
+	trigger = {
+		primary_title = {
+			title = e_wayne_empire
+			holder_scope = {
+				religion = trailwalker
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = john_wayne_victory days = 14600 }
+		NOT = { had_global_flag = { flag = john_wayne_victory days = 29200 } }
+		NOT = { has_global_flag = john_wayne_offered_conversion }
+		any_realm_province = {
+			religion = nazarene
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1440
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = nazarene
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = john_wayne_offered_conversion #prevent repeats
+	}
+	
+	option = {	# Convert
+		name = EVTOPTA_wayne_8
+		religion = nazarene
+		capital_scope = {
+			religion = nazarene
+		}
+		
+		any_realm_character = { #should this be automatic?
+			limit = { religion = trailwalker }
+			character_event = { wayne.18 } #decide whether to convert
+		}
+		
+		narrative_event = { id = wayne.19 days = 1 } #inform the world
+	}
+	
+	option = { #Nah
+		name = EVTOPTB_wayne_8
+		piety = 500
+	}
+}
+
+character_event = {
+	id = wayne.18
+	desc = EVTDESC_wayne_18
+	picture = GFX_evt_bishop_byzantine
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_wayne_9
+		
+		religion = nazarene
+		capital_scope = {
+			religion = nazarene
+		}
+		
+		ai_chance = {
+			factor = 10000
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_wayne_9
+		piety = 1000
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+narrative_event = {
+	id = wayne.19
+	title = EVTNAME_wayne_10
+	desc = EVTDESC_wayne_19
+	picture = GFX_evt_cowboy
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			has_landed_title = e_wayne_empire
+		}
+	}
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			religion_group = christian
+			NOT = { has_landed_title = e_wayne_empire }
+		}
+	}
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			NOT = { religion_group = christian }
+			NOT = { has_landed_title = e_wayne_empire }
+		}
+	}
+}
+
+# Archduuchy converts to Imamite
+character_event = {
+	id = wayne.20
+	desc = EVTDESC_wayne_20
+	picture = GFX_evt_imam
+	border = GFX_event_normal_frame_religion
+	
+	only_playable = yes
+	only_independent = yes
+	only_capable = yes
+	min_age = 16
+	prisoner = no 
+	
+	trigger = {
+		primary_title = {
+			title = e_wayne_empire
+			holder_scope = {
+				religion = trailwalker
+				NOT = { trait = zealous }
+			}
+		}
+		had_global_flag = { flag = john_wayne_victory days = 14600 }
+		NOT = { had_global_flag = { flag = john_wayne_victory days = 29200 } }
+		NOT = { has_global_flag = john_wayne_offered_conversion }
+		any_realm_province = {
+			religion = imamite
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1440
+		modifier = {
+			factor = 0.75
+			any_demesne_province = {
+				is_capital = yes
+				religion = imamite
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = john_wayne_offered_conversion #prevent repeats
+	}
+	
+	option = {	# Convert
+		name = EVTOPTA_wayne_8
+		religion = imamite
+		capital_scope = {
+			religion = imamite
+		}
+		
+		any_realm_character = { #should this be automatic?
+			limit = { religion = trailwalker }
+			character_event = { wayne.21 } #decide whether to convert
+		}
+		
+		narrative_event = { id = wayne.22 days = 1 } #inform the world
+	}
+	
+	option = { #Nah
+		name = EVTOPTB_wayne_8
+		piety = 500
+	}
+}
+
+character_event = {
+	id = wayne.21
+	desc = EVTDESC_wayne_21
+	picture = GFX_evt_imam
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_wayne_9
+		
+		religion = imamite
+		capital_scope = {
+			religion = imamite
+		}
+		
+		ai_chance = {
+			factor = 10000
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_wayne_9
+		piety = 1000
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+narrative_event = {
+	id = wayne.22
+	title = EVTNAME_wayne_10
+	desc = EVTDESC_wayne_22
+	picture = GFX_evt_cowboy
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	option = {
+		name = EVTOPTA_wayne_10
+		trigger = {
+			has_landed_title = e_wayne_empire
+		}
+	}
+	option = {
+		name = EVTOPTB_wayne_10
+		trigger = {
+			religion_group = muslim
+			NOT = { has_landed_title = e_wayne_empire }
+		}
+	}
+	option = {
+		name = EVTOPTC_wayne_10
+		trigger = {
+			NOT = { religion_group = muslim }
+			NOT = { has_landed_title = e_wayne_empire }
+		}
+	}
+}

@@ -10898,7 +10898,7 @@ duchy_adventure = {
 	}
 	
 	on_success = {
-		ROOT = { 
+		ROOT = {
 			prestige = 250
 			hidden_tooltip = {
 				clr_character_flag = duchy_adventurer
@@ -10944,6 +10944,19 @@ duchy_adventure = {
 					}
 					narrative_event = {
 						id = iron.7
+						days = 1
+					}
+				}
+			}
+			hidden_tooltip = {
+				# Special case: John Wayne succeeds in his first conquest
+				if = {
+					limit = {
+						has_character_flag = wayne_himself
+					}
+					give_nickname = nick_the_conquering_duke
+					narrative_event = {
+						id = wayne.7
 						days = 1
 					}
 				}
