@@ -1131,7 +1131,7 @@ narrative_event = {
 		remove_trait = on_hike
 		add_character_modifier = {
 			name = peaked_garibaldi
-			years = 2
+			years = 5
 		}	
 	}
 	
@@ -1143,7 +1143,7 @@ narrative_event = {
 				martial = 1
 				add_character_modifier = {
 				name = peaked_garibaldi
-				years = 2
+				years = 5
 			}
 			}
 			15 = {
@@ -1189,7 +1189,7 @@ narrative_event = {
 		remove_trait = on_hike
 		add_character_modifier = {
 			name = saw_greatbear
-			years = 2
+			years = 5
 		}	
 	}
 	
@@ -1228,7 +1228,7 @@ narrative_event = {
 		remove_trait = greedy
 		add_character_modifier = {
 			name = carmanah_hike
-			years = 2
+			years = 5
 		}	
 	}
 	
@@ -1266,7 +1266,7 @@ narrative_event = {
 		remove_trait = on_hike
 		add_character_modifier = {
 			name = canadian_muir
-			years = 2
+			years = 5
 		}	
 	}
 	
@@ -1304,7 +1304,7 @@ narrative_event = {
 		remove_trait = on_hike
 		add_character_modifier = {
 			name = olympic_canada
-			years = 2
+			years = 5
 		}	
 	}
 	
@@ -1342,7 +1342,7 @@ narrative_event = {
 		remove_trait = on_hike
 		add_character_modifier = {
 			name = in_prospective
-			years = 2
+			years = 5
 		}	
 	}
 	
@@ -1380,7 +1380,7 @@ narrative_event = {
 		remove_trait = on_hike
 		add_character_modifier = {
 			name = pleased_hike_doc
-			years = 2
+			years = 5
 		}	
 	}
 	
@@ -1389,6 +1389,115 @@ narrative_event = {
 	}
 }
 
+narrative_event = {
+	id = gaian.113
+	title = EVTITLE_canfield_ending
+	desc = EVTDESC_canfield_ending
+	picture = GFX_evt_canfield
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 5
+		}
+		has_character_flag = mountain_gaian_hike
+		has_character_flag = hike_option_a
+		trait = on_hike
+		culture = inlander
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = peaked_canfield
+			years = 5
+		}	
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
+	id = gaian.116
+	title = EVTITLE_hells_canyon_ending
+	desc = EVTDESC_hells_canyon_ending
+	picture = GFX_evt_hells_canyon
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 5
+		}
+		has_character_flag = river_gaian_hike
+		has_character_flag = hike_option_a
+		trait = on_hike
+		culture = inlander
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = got_through_hellscanyon
+			years = 5
+		}	
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
+	id = gaian.130
+	title = EVTITLE_celilo_falls_ending
+	desc = EVTDESC_celilo_falls_ending
+	picture = GFX_evt_celilo_falls
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 5
+		}
+		has_character_flag = river_gaian_hike
+		has_character_flag = hike_option_a
+		trait = on_hike
+		culture = cascadian
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = went_to_celilo
+			years = 5
+		}	
+	}
+}
 character_event = {
 	id = gaian.150
 	hide_window = yes
