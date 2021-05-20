@@ -211,6 +211,8 @@ character_event = {
 			}
 		}
 		
+		set_character_flag = went_to_zion # need this for fix later
+		
 		ai_chance = {
 			factor = 1000
 		}
@@ -490,7 +492,7 @@ character_event = {
 	}
 }
 
-# The landed Sabuktigin and his men start an adventure
+# The landed Wayne and his men start an adventure
 character_event = {
 	id = wayne.5
 	desc = EVTDESC_wayne_5
@@ -756,6 +758,12 @@ narrative_event = {
 		
 		prestige = 1000
 		set_global_flag = john_wayne_victory
+		if = {
+			limit = {
+				has_character_flag = went_to_zion
+			}
+			set_government_type = feudal_government #no theocratic bs
+		}
 		
 		capital_scope = {
 			religion = ROOT
