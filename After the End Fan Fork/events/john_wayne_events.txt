@@ -155,54 +155,15 @@ character_event = {
 		NOT = { trait = infirm }
 		lower_tier_than = king
 		
-		OR = { #only targets Phoenix if Arixo hasn't formed
-			439 = { # Phoenix
-				owner = {
-					NOR = {
-						same_realm = ROOT
-						has_landed_title = k_arixo
-					}
-				}
-			}
-			436 = { # Zion
-				owner = {
-					NOT = { same_realm = ROOT }
-				}
-			}
-			2112 = { # Eastern Ranges
-				owner = {
-					NOT = { same_realm = ROOT }
-				}
+		436 = { # Zion
+			owner = {
+				NOT = { same_realm = ROOT }
 			}
 		}
 	}
 	
-	option = { # Phoenix it is!
-		name = EVTOPTA_wayne_2
-		trigger = {
-			439 = { # Phoenix
-				owner = {
-					NOR = {
-						same_realm = ROOT
-						has_landed_title = k_arixo
-					}
-				}
-			}
-		}
-		
-		ai_chance = {
-			factor = 10000
-		}
-		
-		1341 = {
-			province_event = {
-				id = wayne.3
-				days = 2
-			}
-		}
-	}
 	option = { # Zion
-		name = EVTOPTB_wayne_2
+		name = EVTOPTA_wayne_2
 		trigger = {
 			436 = { # Zion
 				owner = {
@@ -218,27 +179,6 @@ character_event = {
 		}
 		
 		1338 = {
-			province_event = {
-				id = wayne.3
-				days = 2
-			}
-		}
-	}
-	option = { # Eastern Ranges
-		name = EVTOPTC_wayne_2
-		trigger = {
-			2112 = { # Eastern Ranges
-				owner = {
-					NOT = { same_realm = ROOT }
-				}
-			}
-		}
-		
-		ai_chance = {
-			factor = 100
-		}
-		
-		1362 = {
 			province_event = {
 				id = wayne.3
 				days = 2
