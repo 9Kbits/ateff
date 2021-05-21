@@ -2386,31 +2386,12 @@ decisions = {
 		}
 		allow = {
 			war = no
-			custom_tooltip = {
-				text = TT_NOT_UNREFORMED_PAGAN
-				hidden_tooltip = {
-					OR = {
-						NOT = { religion_group = pagan_group }
-						is_reformed_religion = yes
-					}
-				}
-			}
+			
 			liege = {
 				OR = {
 					is_feudal = yes
 					is_republic = yes
-					AND = {
-						is_theocracy = yes
-						custom_tooltip = {
-							text = TT_NOT_UNREFORMED_PAGAN
-							hidden_tooltip = {
-								OR = {
-									NOT = { religion_group = pagan_group }
-									is_reformed_religion = yes
-								}
-							}
-						}
-					}
+					is_theocracy = yes
 				}
 			}
 			OR = {
@@ -2440,6 +2421,7 @@ decisions = {
 			}
 		}
 		
+		
 		effect = {
 			set_character_flag = achievement_not_a_tribe
 			
@@ -2447,10 +2429,7 @@ decisions = {
 						entry = CHRONICLE_ADOPTED_FEUDALISM
 						picture = GFX_evt_castle_construction
 			}
-				}
-				set_government_type = theocratic_feudal_government
-			}
-			
+			set_government_type = theocratic_feudal_government
 			hidden_tooltip = {
 				if = {
 					limit = {
