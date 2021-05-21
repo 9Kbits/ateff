@@ -2635,9 +2635,69 @@ character_event = {
 		}
 	}
 	immediate = {
-		random_courtier = {
+	if = {
+		limit = {
+		any_courtier_or_vassal = {
+				is_female = yes
+				OR = {
+					is_priest = yes
+					is_landed = false
+				}
+				NOT = {
+				dynasty = ROOT
+				}
+				has_job_title = no
+			}
+		}
+		random_courtier_or_vassal = {
+			limit = {
+					is_female = yes
+					OR = {
+						is_priest = yes
+						is_landed = false
+					}
+					NOT = {
+						dynasty = ROOT
+					}
+					has_job_title = no
+			}
+			prefered_limit = {
+				learning > 35
+			}
+			prefered_limit = {
+				learning > 30
+			}
+			prefered_limit = {
+				learning > 25
+			}
+			prefered_limit = {
+				learning > 20
+			}
+			prefered_limit = {
+				learning > 15
+			}
+			prefered_limit = {
+				learning > 10
+			}
 			give_job_title = job_spiritual
 		}
+	}
+		else = {
+			create_random_priest = {
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 34
+				trait = zealous
+				learning = 6
+				random_traits = yes
+			}
+			new_character = {
+				give_job_title = job_spiritual
+				character_event = { id = misc.3 }
+			}
+	}
 	}
 }
 
@@ -2665,9 +2725,58 @@ character_event = {
 		}
 	}
 	immediate = {
-		random_courtier = {
+	if = {
+		limit = {
+		any_courtier_or_vassal = {
+				NOT = {
+				dynasty = ROOT
+				}
+				has_job_title = no
+			}
+		}
+		random_courtier_or_vassal = {
+			limit = {
+				NOT = {
+					dynasty = ROOT
+				}
+				has_job_title = no
+			}
+			prefered_limit = {
+				stewardship > 35
+			}
+			prefered_limit = {
+				stewardship > 30
+			}
+			prefered_limit = {
+				stewardship > 25
+			}
+			prefered_limit = {
+				stewardship > 20
+			}
+			prefered_limit = {
+				stewardship > 15
+			}
+			prefered_limit = {
+				stewardship > 10
+			}
 			give_job_title = job_treasurer
 		}
+	}
+		else = {
+			create_random_steward = {
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 30
+				stewardship = 6
+				random_traits = yes
+			}
+			new_character = {
+				give_job_title = job_treasurer
+				character_event = { id = misc.3 }
+			}
+	}
 	}
 }
 
@@ -2695,8 +2804,57 @@ character_event = {
 		}
 	}
 	immediate = {
-		random_courtier = {
+		if = {
+		limit = {
+		any_courtier_or_vassal = {
+				NOT = {
+				dynasty = ROOT
+				}
+				has_job_title = no
+			}
+		}
+		random_courtier_or_vassal = {
+			limit = {
+				NOT = {
+					dynasty = ROOT
+				}
+				has_job_title = no
+			}
+			prefered_limit = {
+				diplomacy > 35
+			}
+			prefered_limit = {
+				diplomacy > 30
+			}
+			prefered_limit = {
+				diplomacy > 25
+			}
+			prefered_limit = {
+				diplomacy > 20
+			}
+			prefered_limit = {
+				diplomacy > 15
+			}
+			prefered_limit = {
+				diplomacy > 10
+			}
 			give_job_title = job_chancellor
 		}
+	}
+		else = {
+			create_random_diplomat = {
+				dynasty = random
+				religion = ROOT
+				culture = ROOT
+				female = yes
+				age = 41
+				diplomacy = 6
+				random_traits = yes
+			}
+			new_character = {
+				give_job_title = job_chancellor
+				character_event = { id = misc.3 }
+			}
+	}
 	}
 }
