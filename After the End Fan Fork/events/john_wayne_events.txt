@@ -894,7 +894,7 @@ character_event = {
 		
 		any_realm_character = { #should this be automatic?
 			limit = { religion = trailwalker }
-			character_event = { wayne.9 } #decide whether to convert
+			character_event = { id = wayne.9 } #decide whether to convert
 		}
 		
 		narrative_event = { id = wayne.10 days = 1 } #inform the world
@@ -1023,7 +1023,7 @@ character_event = {
 		
 		any_realm_character = { #should this be automatic?
 			limit = { religion = trailwalker }
-			character_event = { wayne.12 } #decide whether to convert
+			character_event = { id = wayne.12 } #decide whether to convert
 		}
 		
 		narrative_event = { id = wayne.13 days = 1 } #inform the world
@@ -1152,7 +1152,7 @@ character_event = {
 		
 		any_realm_character = { #should this be automatic?
 			limit = { religion = trailwalker }
-			character_event = { wayne.15 } #decide whether to convert
+			character_event = { id = wayne.15 } #decide whether to convert
 		}
 		
 		narrative_event = { id = wayne.16 days = 1 } #inform the world
@@ -1281,7 +1281,7 @@ character_event = {
 		
 		any_realm_character = { #should this be automatic?
 			limit = { religion = trailwalker }
-			character_event = { wayne.18 } #decide whether to convert
+			character_event = { id = wayne.18 } #decide whether to convert
 		}
 		
 		narrative_event = { id = wayne.19 days = 1 } #inform the world
@@ -1410,7 +1410,7 @@ character_event = {
 		
 		any_realm_character = { #should this be automatic?
 			limit = { religion = trailwalker }
-			character_event = { wayne.21 } #decide whether to convert
+			character_event = { id = wayne.21 } #decide whether to convert
 		}
 		
 		narrative_event = { id = wayne.22 days = 1 } #inform the world
@@ -1492,6 +1492,7 @@ character_event = {
 	picture = GFX_evt_open_book_hf
 	
 	is_triggered_only = yes
+	
 	trigger = {
 		has_landed_title = d_wayne_host
 		NOT = { has_global_flag = wayne_player }
