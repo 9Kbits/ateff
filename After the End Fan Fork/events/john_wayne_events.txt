@@ -1545,3 +1545,113 @@ narrative_event = {
 		}
 	}
 }
+
+character_event = {
+	id = wayne.23
+	desc = "EVTDESC_PlayerWayne"
+	picture = GFX_evt_open_book_hf
+	
+	is_triggered_only = yes
+	trigger = {
+		has_landed_title = d_wayne_Host
+		NOT = { has_global_flag = wayne_player }
+		NOT = { 
+			has_game_rule = {
+				name = playercol
+				value = customized
+			}
+		}
+	}
+	option = {
+		trigger = {
+			b_winterset_IA = {
+				holder_scope = {
+					ai = yes #Culls AI colonizers.
+				}
+			}
+		}
+
+		c_des_moines = { 
+			holder_scope = {
+				grant_title_no_opinion = b_winterset_IA
+			}
+		}
+		set_global_flag = wayne_player
+		destroy_landed_title = d_wayne_host
+		death = { death_reason = death_vanished }
+	}
+	option = {
+		trigger = {
+			b_winterset_IA = {
+				holder_scope = {
+					ai = no #Culls AI colonizers.
+				}
+			}
+		}
+		name = "EVTOPT_playerwayne"
+		set_global_flag = wayne_player
+		health = 9
+		add_trait = adventurer
+		fertility = 0.8
+		set_character_flag = is_special_character
+		set_character_flag = wayne_himself
+		set_global_flag = wayne_spawned
+		set_global_flag = wayne_spawned_by_event
+		character_event = { id = wayne.2 }
+	}
+}
+
+character_event = {
+	id = wayne.24
+	desc = "EVTDESC_PlayerWayne"
+	picture = GFX_evt_open_book_hf
+	
+	trigger = {
+		has_landed_title = d_wayne_host
+		NOT = { has_global_flag = wayne_player }
+		has_game_rule = {
+			name = playercol
+			value = customized
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		trigger = {
+			b_winterset_IA = {
+				holder_scope = {
+					ai = yes #Culls AI colonizers.
+				}
+			}
+		}
+
+		c_des_moines = { 
+			holder_scope = {
+				grant_title_no_opinion = b_winterset_IA
+			}
+		}
+		set_global_flag = wayne_player
+		destroy_landed_title = d_wayne_host
+		death = { death_reason = death_vanished }
+	}
+	option = {
+		trigger = {
+			b_winterset_IA = {
+				holder_scope = {
+					ai = no #Culls AI colonizers.
+				}
+			}
+		}
+		name = "EVTOPT_playerwayne"
+		set_global_flag = wayne_player
+		health = 9
+		add_trait = adventurer
+		fertility = 0.8
+		set_character_flag = is_special_character
+		set_character_flag = wayne_himself
+		set_global_flag = wayne_spawned
+		set_global_flag = wayne_spawned_by_event
+		character_event = { id = wayne.2 }
+	}
+}
