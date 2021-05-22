@@ -150,6 +150,8 @@ feudal_governments = {
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = military_governorate }
+			NOT = { is_government_potential = open_range_feudalism_government }
+			NOT = { is_government_potential = mex_imperial_government }
 			is_patrician = no
 		}
 		
@@ -626,5 +628,151 @@ feudal_governments = {
 		free_retract_vassalage = yes
 		## Modifiers
 		court_size_modifier = 15
+	}
+	
+	open_range_feudalism_government = {
+		preferred_holdings = { CASTLE }
+		allowed_holdings = { 
+			CASTLE 
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			bureaucratic_government
+			theocratic_feudal_government
+			#chinese_imperial_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		potential = {
+			OR = {
+				OR = {
+					culture = tejano
+					culture = llanero
+					culture = norteno
+					culture = neomexicano
+					culture = gaucho
+					culture = texan
+					culture = arixan
+					culture = battleborn
+				}	
+				AND = {
+					capital_scope = {
+						terrain	 = steppe
+					}
+				}
+			}
+			is_patrician = no
+			NOT = { is_government_potential = mormon_government }
+			NOT = { is_government_potential = mex_imperial_government }
+			NOT = { is_government_potential = bureaucratic_government }
+		}
+		
+		character_modifier = {
+            global_revolt_risk = 0.02
+            short_reign_length = 2
+        }	
+		
+		color = { 220 20 60 }
+		
+		barons_need_dynasty = yes
+		can_imprison_without_reason = no
+		can_revoke_without_reason = no
+		can_build_tribal = no
+		
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 600
+		
+		## Modifiers
+		court_size_modifier = 10
+		min_vassal_tax = -0.5
+		max_vassal_tax = -0.1
+		max_vassal_levy = -0.7
+		min_vassal_levy = -0.2
+	}
+	
+	mex_imperial_government = {
+		preferred_holdings = { CITY CASTLE }
+		allowed_holdings = {
+			CASTLE
+			CITY
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			feudal_government
+			republic_government
+			merchant_republic_government
+			mex_imperial_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		free_revoke_on_tiers = {
+			duke
+			king
+		}
+		frame_suffix = "_meximperial"
+		title_prefix = "mex_"
+		potential = {
+			NAND = {
+				religion = mormon
+				religion = woolleyite
+				religion = strangite
+				is_government_potential = military_governorate
+			}
+			OR = {
+				primary_title = { 
+					OR = {
+					title = e_mexico
+					title = k_mexico
+						}				
+				}
+				top_liege = {
+					primary_title = { 
+					OR = {
+					title = e_mexico
+					title = k_mexico
+						}
+					}
+				}
+			}
+			is_patrician = no
+			is_theocracy = no
+			}
+		
+		color = { 143 12 125 }
+		
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 2000
+		
+		can_usurp_kingdoms_and_empires = no
+		can_imprison_without_reason = no
+		can_create_empires = no
+		vassal_government_opinion_penalties = no
+		can_grant_kingdoms_and_empires_to_other_government = yes
+		can_grant_kingdoms_and_empires_to_other_government_group = yes
+		can_be_granted_kingdoms_and_empires_by_other_government = no
+		free_retract_vassalage = yes
+		## Modifiers
+		court_size_modifier = 15
+		commanders = 3
 	}
 }
