@@ -155,7 +155,6 @@ targetted_decisions = {
 						}
 					}
 				}
-				piety = 10
 			}
 			hidden_tooltip = {
 				any_dynasty_member = {
@@ -181,7 +180,6 @@ targetted_decisions = {
 				factor = 0
 				OR = {
 					reverse_opinion = { who = FROM value = 40 }
-					FROM = { NOT = { piety = 100 } }
 					FROM = { LIEGE = { dynasty = ROOT } }
 				}
 			}
