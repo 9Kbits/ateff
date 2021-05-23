@@ -311,6 +311,18 @@ e_cascadia = {
 				b_blakely_island_WA = {}
 				b_village_bay_BC = {}
 			}
+			c_carmanah = {
+				color = { 20 150 33 }
+				color2 = { 60 10 125 }
+				
+				b_port_alberni_BC = {}
+				b_bamfield_BC = {}
+				b_port_renfrew_BC = {}
+				b_sarita_BC = {}
+				b_sahara_heights_BC = {}
+				b_san_juan_BC = {}
+				b_tzartus_BC = {}
+			}
 		}
 		
 		d_up_island = {
@@ -362,13 +374,12 @@ e_cascadia = {
 				petropavlovskiy = "Kleyokvot"
 
 				b_tofino_BC = {}
-				b_port_alberni_BC = {}
 				b_ucluelet_BC = {}
-				b_bamfield_BC = {}
 				b_opitsat_BC = {}
 				b_kakawis_BC = {}
 				b_beaver_creek_BC = {}
-				b_tzartus_BC = {}
+				b_port_albion_BC = {}
+				b_vargas_BC = {}
 			}
 			c_port_hardy = {
 				color = { 10 95 45 }
@@ -1300,20 +1311,6 @@ e_cascadia = {
 			
 			haida = "Kak'ahl"	#go up from the shore, into the woods
 			
-			c_coos_bay = {
-				color = { 244 194 4 }
-				color2 = { 10 22 72 }
-				
-				haida = "K'iw"	#the entrance to a bay
-				
-				b_coos_bay_OR = {}
-				b_millington_OR = {}
-				b_coquille_OR = {}
-				b_hauser_OR = {}
-				b_leneve_OR = {}
-				b_bandon_OR = {}
-				b_dellwood_OR = {}
-			}
 			c_umpqua = {
 				color = { 0 107 110 }
 				color2 = { 247 182 36 }
@@ -1344,6 +1341,82 @@ e_cascadia = {
 				b_creswell_OR = {}
 				b_lorane_OR = {}
 			}
+			c_santiam = { # Needs full localization checkup
+				color = { 5 96 89 }
+				color2 = { 122 135 168 }
+				
+				haida = "Gijaawaang" #giving out food
+				
+				b_salem_OR = {}
+				b_albany_OR = {}
+				b_lebanon_OR = {}
+				b_woodburn_OR = {}
+				b_stayton_OR = {}
+				b_molalla_OR = {}
+				b_keizer_OR = {}
+			}
+			c_polk = { # Needs full localization
+				color = { 135 63 125 }
+				color2 = { 100 50 100 }
+				
+				b_corvallis_OR = {}
+				b_dallas_OR = {}
+				b_monmouth_OR = {}
+				b_independence_OR = {}
+				b_philomath_OR = {}
+				b_buena_vista_OR = {}
+				b_falls_city_OR = {}
+			}
+			c_west_cascades = { # Needs full localization
+				color = { 255 10 55 }
+				color2 = { 90 155 10 }
+				
+				b_sweet_home_OR = {}
+				b_detroit_OR = {}
+				b_lyons_OR = {}
+				b_mill_city_OR = {}
+				b_waterloo_OR = {}
+				b_indanha_OR = {}
+				b_gates_OR = {}
+			}
+		}
+		d_oregon_coast = {
+			color = { 249 78 26 }
+			color2 = { 10 100 10 }
+			
+			capital = 532 # Tillamook
+			
+			c_tillamook = { # Needs full localization checkup
+				color = { 203 16 61 }
+				color2 = { 253 194 74 }
+				
+				haida = "Giihliid"	#the tide coming in
+				
+				b_tilamook_OR = {}
+				b_cloverdale_OR = {}
+				b_tigard_OR = {}
+				b_rockaway_beach_OR = {}
+				b_pacific_city_OR = {}
+				b_garibaldi_OR = {}
+				b_netarts_OR = {}
+				b_pleseant_valley_OR = {}
+			}
+			c_clatsop = { # Needs full localization checkup
+				color = { 0 130 74 }
+				color2 = { 255 255 255 }
+				
+				haida = "Waluugdas"	#for air to bubble out with a glug glug sound
+				
+				b_astoria_OR = {}
+				b_warrenton_OR = {}
+				b_seaside_OR = {}
+				b_cannon_beach_OR = {}
+				b_vernonia_OR = {}
+				b_clatskanie_OR = {}
+				b_birkenfeld_OR = {}
+				b_knappa_OR = {}
+				b_svensen_OR = {}
+			}
 			c_siuslaw = {
 				color = { 2 113 63 }
 				color2 = { 0 88 138 }
@@ -1358,19 +1431,19 @@ e_cascadia = {
 				b_tidewater_OR = {}
 				b_eddyville_OR = {}
 			}
-			c_santiam = {
-				color = { 5 96 89 }
-				color2 = { 122 135 168 }
+			c_coos_bay = {
+				color = { 244 194 4 }
+				color2 = { 10 22 72 }
 				
-				haida = "Gijaawaang" #giving out food
+				haida = "K'iw"	#the entrance to a bay
 				
-				b_salem_OR = {}
-				b_corvallis_OR = {}
-				b_albany_OR = {}
-				b_lebanon_OR = {}
-				b_dallas_OR = {}
-				b_monmouth_OR = {}
-				b_stayton_OR = {}
+				b_coos_bay_OR = {}
+				b_millington_OR = {}
+				b_coquille_OR = {}
+				b_hauser_OR = {}
+				b_leneve_OR = {}
+				b_bandon_OR = {}
+				b_dellwood_OR = {}
 			}
 		}
 		d_portlandia = {
@@ -1381,34 +1454,6 @@ e_cascadia = {
 			
 			haida = "Gud K'ala"	#to be unwilling to leave
 			
-			c_tillamook = {
-				color = { 203 16 61 }
-				color2 = { 253 194 74 }
-				
-				haida = "Giihliid"	#the tide coming in
-				
-				b_beaverton_OR = {}
-				b_tigard_OR = {}
-				b_hillsboro_OR = {}
-				b_rockaway_beach_OR = {}
-				b_pacific_city_OR = {}
-				b_garibaldi_OR = {}
-				b_newberg_OR = {}
-			}
-			c_clatsop = {
-				color = { 0 130 74 }
-				color2 = { 255 255 255 }
-				
-				haida = "Waluugdas"	#for air to bubble out with a glug glug sound
-				
-				b_astoria_OR = {}
-				b_warrenton_OR = {}
-				b_cannon_beach_OR = {}
-				b_vernonia_OR = {}
-				b_clatskanie_OR = {}
-				b_scappoose_OR = {}
-				b_birkenfeld_OR = {}
-			}
 			c_portland = {
 				color = { 254 196 70 }
 				color2 = { 0 55 45 }
@@ -1440,7 +1485,7 @@ e_cascadia = {
 				b_dover_OR = {}
 				b_marmot_OR = {}
 			}
-			c_clark = {
+			c_clark = { # Needs full localization checkup
 				color = { 34 103 144 }
 				color2 = { 255 242 174 }
 				
@@ -1451,9 +1496,21 @@ e_cascadia = {
 				b_battle_ground_WA = {}
 				b_camas_WA = {}
 				b_woodland_WA = {}
-				b_longview_WA = {}
+				b_kalama_WA = {} # LOCALIZE
 				b_washougal_WA = {}
 				b_yacolt_WA = {}
+			}
+			c_yamhill = {
+				color = { 40 120 55 }
+				color2 = { 50 15 180 }
+				
+				b_hillsboro_OR = {}
+				b_mcminnville_OR = {}
+				b_beaverton_OR = {}
+				b_scappoose_OR = {}
+				b_newberg_OR = {}
+				b_aloha_OR = {}
+				b_veronia_OR = {}
 			}
 		}
 		d_olympus = {
@@ -1464,20 +1521,6 @@ e_cascadia = {
 			
 			haida = "Kuunjaaw"	#a point of land
 			
-			c_willapa_bay = {
-				color = { 63 88 250 }
-				color2 = { 24 56 40 }
-				
-				haida = "Gadalayaay"	#the bay
-				
-				b_long_beach_WA = {}
-				b_westport_WA = {}
-				b_rosburg_WA = {}
-				b_oysterville_WA = {}
-				b_skamokawa_WA = {}
-				b_frankfort_WA = {}
-				b_nemah_WA = {}
-			}
 			c_quinault = {
 				color = { 219 36 30 }
 				color2 = { 32 27 24 }
@@ -1527,12 +1570,57 @@ e_cascadia = {
 				b_olympia_WA = {}
 				b_turnwater_WA = {}
 				b_grand_mound_WA = {}
-				b_centralia_WA = {}
+				b_delphi_WA = {}
 				b_lacey_WA = {}
 				b_mccleary_WA = {}
 				b_kamiche_WA = {}
 			}
 		}
+		d_lewis = {
+			color = { 0 151 184 }
+			color2 = { 255 255 255 }
+			
+			capital = 2265
+			
+			c_willapa_bay = {
+				color = { 63 88 250 }
+				color2 = { 24 56 40 }
+				
+				haida = "Gadalayaay"	#the bay
+				
+				b_long_beach_WA = {}
+				b_westport_WA = {}
+				b_rosburg_WA = {}
+				b_oysterville_WA = {}
+				b_skamokawa_WA = {}
+				b_frankfort_WA = {}
+				b_nemah_WA = {}
+			}
+			c_mt_st_helens = { # LOCALIZE EVERYTHING HERE FULLY NEW COUNTY
+				color = { 40 120 250 }
+				color2 = { 40 0 40 }
+				
+				b_longview_WA = {}
+				b_castle_rock_WA = {}
+				b_silver_lake_WA = {}
+				b_coal_creek_WA = {}
+				b_kelso_WA = {}
+				b_headquarters_WA = {}
+				b_rose_valley_WA = {}
+			}
+			c_rainier = { # LOCALIZE EVERYTHING HERE FULLY NEW COUNTY
+				color = { 20 20 255 }
+				color2 = { 0 0 100 }
+				
+				b_centralia_WA = {}
+				b_onalaska_WA = {}
+				b_cinebar_WA ={}
+				b_ashford_WA = {}
+				b_elbe_WA = {}
+				b_chehalis_WA = {}
+				b_newaukum_WA = {}
+			}
+		}	
 		d_puget = {
 			color = { 0 131 134 }
 			color2 = { 255 255 255 }
@@ -1542,7 +1630,7 @@ e_cascadia = {
 			haida = "Gii Tl'agang"	#anchor a fleet of boats
 			ktunaxa = "Siyatl"
 			
-			c_rainier = {
+			c_pierce = {
 				color = { 152 203 254 }
 				color2 = { 0 102 0 }
 				
@@ -1552,11 +1640,11 @@ e_cascadia = {
 				holy_site = raven_tales_reformed
 				
 				b_tacoma_WA = {}
-				b_paradise_WA = {}
+				b_fife_WA = {} # LOCALIZE
 				b_federal_way_WA = {}
 				b_puyallup_WA = {}
 				b_lakewood_WA = {}
-				b_ashford_WA = {}
+				b_orting_WA = {} # LOCALIZE
 				b_spanaway_WA = {}
 
 			}
