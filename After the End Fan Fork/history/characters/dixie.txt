@@ -7711,7 +7711,7 @@
 	trait=zealous
 	disallow_random_traits = yes
 	2216.10.1={birth=yes}
-	2275.10.12={death={death_reason=death_americanist_rabble}}
+	2241.10.12={death={death_reason=death_americanist_rabble}}
 }
 1861474={
 	name="Olivia"
@@ -7728,6 +7728,7 @@
 	trait=envious
 	disallow_random_traits = yes
 	2218.12.15={birth=yes}
+	2234.2.19={add_spouse=1861511}
 	2299.9.9={death=yes}
 }
 1861475={
@@ -7743,9 +7744,10 @@
 	trait=gluttonous
 	trait=kind
 	trait=content
+	trait=has_tuberculosis
 	disallow_random_traits = yes
 	2219.3.20={birth=yes}
-	2277.10.6={death=yes}
+	2277.10.6={death={death_reason=death_trait}}
 }
 1861476={
 	name="Catherine"
@@ -7762,6 +7764,7 @@
 	trait=craven
 	disallow_random_traits = yes
 	2220.5.10={birth=yes}
+	2235.1.26={add_spouse=1861516}
 	2282.4.20={death=yes}
 }
 1861477={
@@ -8384,4 +8387,102 @@
 	disallow_random_traits = yes
 	2241.7.4={birth=yes}
 	2259.10.9={death=yes} #murdered by a Kingmaker
+}
+1861511={
+	name="Achilles"
+	dynasty=0 
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2216.1.14={birth=yes}
+	2234.2.19={add_spouse=1861474}
+	2278.11.24={death=yes}
+}
+1861512={
+	name="Jocasta"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861511
+	mother=1861474
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2235.4.6={birth=yes}
+	2252.3.29={add_spouse=1861514}
+	2293.12.20={death=yes}
+}
+1861513={
+	name="Lucia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861511
+	mother=1861474
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2242.5.7={birth=yes}
+	2294.8.14={death=yes}
+}
+1861514={
+	name="William"
+	dynasty=0
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2232.11.30={birth=yes}
+	2252.3.29={add_spouse=1861512}
+	2292.4.22={death=yes}
+}
+1861515={
+	name="Virginius"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861514
+	mother=1861512
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2252.1.17={birth=yes}
+	2341.5.22={death=yes}
+}
+1861516={
+	name="George-Lee"
+	dynasty=0
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2221.11.11={birth=yes}
+	2235.1.26={add_spouse=1861476}
+	2282.1.5={death=yes}
+}
+1861517={
+	name="James"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861516
+	mother=1861476
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2237.7.19={birth=yes}
+	2307.12.23={death=yes}
 }
