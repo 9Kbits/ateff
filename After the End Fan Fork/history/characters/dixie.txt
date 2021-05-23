@@ -7198,9 +7198,15 @@
 	trait=experimenter
 	trait=peasant_leader
 	trait=cancer
-#	give_nickname = nick_hanover
+#	give_nickname = nick_the liberator
 	disallow_random_traits = yes
 	2080.1.10={birth=yes}
+#	2122.12.28={
+#		create_bloodline={
+#			type=hanovers_bloodline
+#			has_dlc="Holy Fury"
+#		}
+#	}
 	2128.9.5={death={death_reason=death_trait}}
 }
 1861445={
@@ -7354,6 +7360,7 @@
 1861453={
 	name="Edward"
 	occluded=yes
+	dynasty=0
 	culture=southron
 	religion=evangelical
 	trait=legendary
@@ -7785,6 +7792,7 @@
 	trait=twin
 	disallow_random_traits = yes
 	2223.5.10={birth=yes}
+	2238.11.4={add_spouse=1861518}
 	2284.11.11={death=yes}
 }
 1861478={
@@ -8386,7 +8394,7 @@
 	trait=curious
 	disallow_random_traits = yes
 	2241.7.4={birth=yes}
-	2259.10.9={death=yes} #murdered by a Kingmaker
+	2253.10.9={death=yes} #murdered by a Kingmaker
 }
 1861511={
 	name="Achilles"
@@ -8485,4 +8493,158 @@
 #	disallow_random_traits = yes
 	2237.7.19={birth=yes}
 	2307.12.23={death=yes}
+}
+1861518={
+	name="Nathanael"
+	dynasty=0
+	culture=tuskegean
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2223.4.15=birth=yes
+	effect={set_character_flag=diversity}
+	}
+	2238.11.4={add_spouse=1861477}
+	2280.9.23={death=yes}
+}
+1861519={
+	name="Raphael"
+	dynasty=1782165 #Hanover
+	culture=tuskegean
+	religion=evangelical
+	father=1861518
+	mother=1861477
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2240.9.4={birth=yes
+	culture=southron
+	effect={set_character_flag=diversity}
+	}
+	2258.5.12={add_spouse=1861520}
+	2309.12.5={death=yes}
+}
+1861520={
+	name="Dahlia"
+	female=yes
+	dynasty=0
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2241.1.19={birth=yes}
+	2258.5.12={add_spouse=1861519}
+	2311.7.12={death=yes}
+}
+1861521={
+	name="Autumn"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2258.11.28={birth=yes}
+	2316.5.12={death=yes}
+}
+
+1861522={
+	name="Tiberius"
+	dynasty=1782165 #Hanover
+	culture=tuskegean
+	religion=evangelical
+	father=1861518
+	mother=1861477
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2241.9.18={birth=yes
+	culture=southron
+	effect={set_character_flag=diversity}
+	}
+	2258.3.29={add_spouse=1861523}
+	2301.7.7={death=yes}
+}
+1861523={
+	name="Clover"
+	female=yes
+	dynasty=0
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2239.10.14={birth=yes}
+	2258.3.29={add_spouse=1861522}
+	2302.1.20={death=yes}
+}
+1861523={
+	name="Ambrosia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861522
+	mother=1861523
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2258.6.14={birth=yes}
+	2320.9.3={death=yes}
+}
+1861524={
+	name="Saunder"
+	dynasty=1782165 #Hanover
+	culture=tuskegean
+	religion=evangelical
+	father=1861522
+	mother=1861523
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2260.12.7={birth=yes
+	culture=southron
+	effect={set_character_flag=diversity}
+	}
+	2274.4.30={add_spouse=1861525}
+	2327.10.1={death=yes}
+}
+1861525={
+	name="Elizabeth"
+	female=yes
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2263.2.4={birth=yes}
+	2274.4.30={add_spouse=1861524}
+	2312.5.15={death=yes}
+}
+1861526={
+	name="Carolina"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861524
+	mother=1861525
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2273.3.10={birth=yes}
+	2338.1.9={death=yes}
 }
