@@ -7198,9 +7198,15 @@
 	trait=experimenter
 	trait=peasant_leader
 	trait=cancer
-#	give_nickname = nick_hanover
+#	give_nickname = nick_the liberator
 	disallow_random_traits = yes
 	2080.1.10={birth=yes}
+#	2122.12.28={
+#		create_bloodline={
+#			type=hanovers_bloodline
+#			has_dlc="Holy Fury"
+#		}
+#	}
 	2128.9.5={death={death_reason=death_trait}}
 }
 1861445={
@@ -7304,7 +7310,7 @@
 	name="Abigail"
 	occluded=yes
 	female=yes
-	dynasty=1778082 #Kingsmaker
+	dynasty=1778082 #Kinmaker
 	father=1861454
 	mother=1861455
 	culture=delawarean
@@ -7354,6 +7360,7 @@
 1861453={
 	name="Edward"
 	occluded=yes
+	dynasty=0
 	culture=southron
 	religion=evangelical
 	trait=legendary
@@ -7369,7 +7376,7 @@
 1861454={
 	name="Danrick"
 	occluded=yes
-	dynasty=1778082 #Kingsmaker
+	dynasty=1778082 #Kingmaker
 	culture=delawarean
 	religion=catholic
 	trait=legendary
@@ -7405,7 +7412,7 @@
 1861456={
 	name="Jasper"
 	occluded=yes
-	dynasty=1778082 #Kingsmaker
+	dynasty=1778082 #Kingmaker
 	father=1861454
 	mother=1861455
 	culture=delawarean
@@ -7421,7 +7428,7 @@
 1861457={
 	name="Henriette"
 	female=yes
-	dynasty=1778082 #Kingsmaker
+	dynasty=1778082 #Kingmaker
 	father=1861454
 	mother=1861455
 	culture=delawarean
@@ -7556,21 +7563,24 @@
 	2228.4.16={death=yes}
 }
 1861465={
-	name="Bradley"
+	name="Daisy"
+	female=yes
 	occluded=yes
-	dynasty=1782165 #Hanover
+	dynasty=1782166 # Eldridge - Hanover
 	culture=southron
 	religion=evangelical
 	father=1861453
 	mother=1861449
 	trait=legendary
 	trait=misguided_warrior
+	trait=ambitious
 	trait=charitable
-	trait=slothful
-	trait=dull
+	trait=diligent
+	trait=slow
 	trait=kind
 	disallow_random_traits = yes
 	2150.11.1={birth=yes}
+	2168.8.17={add_spouse=1861491}
 	2231.1.30={death=yes}
 }
 1861466={
@@ -7708,7 +7718,7 @@
 	trait=zealous
 	disallow_random_traits = yes
 	2216.10.1={birth=yes}
-	2275.10.12={death=yes}
+	2241.10.12={death={death_reason=death_americanist_rabble}}
 }
 1861474={
 	name="Olivia"
@@ -7725,6 +7735,7 @@
 	trait=envious
 	disallow_random_traits = yes
 	2218.12.15={birth=yes}
+	2234.2.19={add_spouse=1861511}
 	2299.9.9={death=yes}
 }
 1861475={
@@ -7740,9 +7751,10 @@
 	trait=gluttonous
 	trait=kind
 	trait=content
+	trait=has_tuberculosis
 	disallow_random_traits = yes
 	2219.3.20={birth=yes}
-	2277.10.6={death=yes}
+	2277.10.6={death={death_reason=death_trait}}
 }
 1861476={
 	name="Catherine"
@@ -7759,6 +7771,7 @@
 	trait=craven
 	disallow_random_traits = yes
 	2220.5.10={birth=yes}
+	2235.1.26={add_spouse=1861516}
 	2282.4.20={death=yes}
 }
 1861477={
@@ -7779,6 +7792,7 @@
 	trait=twin
 	disallow_random_traits = yes
 	2223.5.10={birth=yes}
+	2238.11.4={add_spouse=1861518}
 	2284.11.11={death=yes}
 }
 1861478={
@@ -8020,41 +8034,617 @@
 	2300.11.3={birth=yes}
 	2331.2.26={death=yes}
 }
-#1861491={
-#}
-#1861492={
-#}
-#1861493={
-#}
-#1861494={
-#}
-#1861495={
-#}
-#1861496={
-#}
-#1861497={
-#}
-#1861498={
-#}
-#1861499={
-#}
-#1861500={
-#}
-#1861501={
-#}
-#1861502={
-#}
-#1861503={
-#}
-#1861504={
-#}
-#1861505={
-#}
-#1861506={
-#}
-#1861507={
-#}
-#1861508={
-#}
-#1861509={
-#}
+1861491={
+	name="Zachary"
+	occluded=yes
+	dynasty=0 #low born
+	culture=southron
+	religion=evangelical
+	trait=legendary
+	trait=grey_eminence
+	trait=quick
+	trait=proud
+	trait=wroth
+	disallow_random_traits = yes
+	2148.10.25={birth=yes}
+	2168.8.17={add_spouse=1861465}
+	2232.9.9={death=yes}
+}
+1861492={
+	name="Nicholas"
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861491
+	mother=1861465
+	trait=grey_eminence
+	trait=quick
+	trait=stutter
+	trait=socializer
+	trait=proud
+	trait=charitable
+	trait=lustful
+	disallow_random_traits = yes
+	2168.6.21={birth=yes}
+	2187.3.14={add_spouse=1861494}
+	2232.4.30={death=yes}
+}
+1861493={
+	name="James"
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861491
+	mother=1861465
+	trait=charismatic_negotiator
+	trait=gamer
+	trait=envious
+	trait=craven
+	trait=cynical
+	trait=honest
+	disallow_random_traits = yes
+	2170.8.22={birth=yes}
+	2186.12.9={add_spouse=1861495}
+	2229.6.16={death=yes}
+}
+1861494={
+	name="Gloriana"
+	female=yes
+	culture=beltway
+	religion=evangelical
+	trait=misguided_warrior
+	trait=fair
+	trait=groomed
+	trait=slow
+	trait=kind
+	trait=humble
+	disallow_random_traits = yes
+	2165.8.7={birth=yes}
+	2187.3.14={add_spouse=1861492}
+	2245.2.6={death=yes}
+}
+1861495={
+	name="Brooke"
+	female=yes
+	culture=beltway
+	religion=catholic
+	trait=underhanded_rogue
+	trait=drunkard
+	trait=shrewd
+	trait=poet
+	trait=chaste
+	trait=temperate
+	trait=greedy
+	disallow_random_traits = yes
+	2171.5.27={birth=yes}
+	2186.12.9={add_spouse=1861493}
+	2222.9.10={death=yes}
+}
+1861496={
+	name="Divina"
+	female=yes
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861493
+	mother=1861495
+	trait=scholarly_theologian
+	trait=nun
+	trait=celibate
+	trait=zealous
+	trait=theologian
+	trait=homosexual
+	trait=temperate
+	trait=envious
+	disallow_random_traits = yes
+	2188.8.14={birth=yes}
+	2255.5.8={death=yes}
+}
+1861497={
+	name="Zachary"
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861492
+	mother=1861494
+	trait=underhanded_rogue
+	trait=falconer
+	trait=feeble
+	trait=diligent
+	trait=is_malnourished
+	trait=shrewd
+	trait=wroth
+	disallow_random_traits = yes
+	2186.7.13={birth=yes}
+	2200.11.4={add_spouse=1861500}
+	2235.4.4={death=yes}
+}
+1861498={
+	name="Justice"
+	female=yes
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861492
+	mother=1861494
+	trait=charismatic_negotiator
+	trait=sympathy_oldworld
+	trait=erudite
+	trait=just
+	trait=craven
+	trait=proud
+	trait=lustful
+	trait=charitable
+	trait=twin
+	disallow_random_traits = yes
+	2188.6.2={birth=yes}
+	2208.9.18={add_spouse=1861504}
+	2248.10.22={death=yes}
+}
+1861499={
+	name="Virginia"
+	female=yes
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861492
+	mother=1861494
+	trait=amateurish_plotter
+	trait=gregarious
+	trait=slow
+	trait=lustful
+	trait=content
+	trait=patient
+	trait=twin
+	disallow_random_traits = yes
+	2188.6.2={birth=yes}
+	2249.8.7={death=yes}
+}
+1861500={
+	name="Georgia"
+	female=yes
+	culture=tuskegean
+	religion=evangelical
+	trait=thrifty_clerk
+	trait=just
+	trait=trusting
+	trait=devout
+	trait=patient
+	trait=envious
+	trait=slothful
+	disallow_random_traits = yes
+	2185.5.10={birth=yes}
+	2200.11.4={add_spouse=1861497}
+	2242.7.30={death=yes}
+}
+1861501={
+	name="Walter"
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861497
+	mother=1861500
+	trait=naive_appeaser
+	trait=sturdy
+	trait=greedy
+	trait=wroth
+	trait=paranoid
+	trait=wounded
+	disallow_random_traits = yes
+	2202.7.15={birth=yes}
+	2219.10.18={add_spouse=1861502}
+	2238.9.5={death={death_reason=death_americanist_rabble}}
+}
+1861502={
+	name="Martha"
+	female=yes
+	dynasty=1778082 # Kingmaker
+	culture=delawarean
+	religion=catholic
+#	father=18615
+#	mother=18615
+	trait=grey_eminence
+	trait=scarred
+	trait=shrewd
+	trait=feeble
+	trait=socializer
+	trait=diligent
+	trait=proud
+	trait=gregarious
+	disallow_random_traits = yes
+	2202.3.24={birth=yes}
+	2219.10.18={add_spouse=1861501}
+	2262.1.13={death=yes}
+}
+1861503={
+	name="Maxwell"
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861501
+	mother=1861502
+	trait=affectionate
+	trait=timid
+	trait=wounded
+	disallow_random_traits = yes
+	2228.4.8={birth=yes}
+	2238.9.5={death={death_reason=death_americanist_rabble}}
+}
+1861504={
+	name="Rexford"
+	culture=delawarean
+	religion=americanist
+	trait=detached_priest
+	trait=sympathy_oldworld
+	trait=strong
+	trait=chaste
+	trait=gluttonous
+	trait=slothful
+	trait=is_fat
+	trait=depressed
+	disallow_random_traits = yes
+	2186.7.12={birth=yes}
+	2208.9.18={religion=evangelical}
+	2208.9.18={add_spouse=1861498}
+	2250.3.4={death=yes}
+}
+1861505={
+	name="Randolph"
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861504
+	mother=1861498
+	trait=underhanded_rogue
+	trait=sympathy_oldworld
+	trait=content
+	trait=kind
+	trait=dull
+	trait=weak
+	trait=slothful
+	disallow_random_traits = yes
+	2206.8.24={birth=yes}
+	2222.1.6={add_spouse=1861506}
+	2267.12.7={death=yes}
+}
+1861506={
+	name="Olympia"
+	female=yes
+	culture=delawarean
+	religion=evangelical
+	trait=elusive_shadow
+	trait=seductress
+	trait=fair
+	trait=lustful
+	trait=deceitful
+	trait=ambitious
+	disallow_random_traits = yes
+	2204.9.21={birth=yes}
+	2222.1.6={add_spouse=1861505}
+	2260.4.10={death=yes}
+}
+1861507={
+	name="Randolph"
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861505
+	mother=1861506
+	trait=naive_appeaser
+	trait=shy
+	trait=erudite
+	trait=honest
+	trait=kind
+	trait=patient
+	trait=poet
+	disallow_random_traits = yes
+	2220.5.6={birth=yes}
+	2241.11.19={add_spouse=1861509}
+	2279.6.16={death=yes}
+}
+1861508={
+	name="Victor"
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861505
+	mother=1861506
+	trait=naive_appeaser
+	trait=sympathy_christendom
+	trait=mystic
+	trait=uncouth
+	trait=charitable
+	trait=arbitrary
+	trait=devout
+	trait=stubborn
+	give_nickname = nick_the_apostate
+	disallow_random_traits = yes
+	2221.6.5={birth=yes}
+	2239.4.1={religion=americanist}
+	2271.5.21={death=yes}
+}
+1861509={
+	name="Petra"
+	female=yes
+	culture=beltway
+	religion=catholic
+	trait=mastermind_theologian
+	trait=sympathy_oldworld
+	trait=theologian
+	trait=fair
+	trait=lustful
+	trait=diligent
+	trait=patient
+	trait=zealous
+	disallow_random_traits = yes
+	2221.8.15={birth=yes}
+	2241.11.19={add_spouse=1861507}
+	2284.2.8={death=yes}
+}
+1861510={
+	name="Lee"
+	dynasty=1782166 # Eldridge - Hanover
+	culture=beltway
+	religion=evangelical
+	father=1861507
+	mother=1861509
+	trait=haughty
+	trait=playful
+	trait=rowdy
+	trait=curious
+	disallow_random_traits = yes
+	2241.7.4={birth=yes}
+	2253.10.9={death=yes} #murdered by a Kingmaker
+}
+1861511={
+	name="Achilles"
+	dynasty=0 
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2216.1.14={birth=yes}
+	2234.2.19={add_spouse=1861474}
+	2278.11.24={death=yes}
+}
+1861512={
+	name="Jocasta"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861511
+	mother=1861474
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2235.4.6={birth=yes}
+	2252.3.29={add_spouse=1861514}
+	2293.12.20={death=yes}
+}
+1861513={
+	name="Lucia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861511
+	mother=1861474
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2242.5.7={birth=yes}
+	2294.8.14={death=yes}
+}
+1861514={
+	name="William"
+	dynasty=0
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2232.11.30={birth=yes}
+	2252.3.29={add_spouse=1861512}
+	2292.4.22={death=yes}
+}
+1861515={
+	name="Virginius"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861514
+	mother=1861512
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2252.1.17={birth=yes}
+	2341.5.22={death=yes}
+}
+1861516={
+	name="George-Lee"
+	dynasty=0
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2221.11.11={birth=yes}
+	2235.1.26={add_spouse=1861476}
+	2282.1.5={death=yes}
+}
+1861517={
+	name="James"
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861516
+	mother=1861476
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2237.7.19={birth=yes}
+	2307.12.23={death=yes}
+}
+1861518={
+	name="Nathanael"
+	dynasty=0
+	culture=tuskegean
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2223.4.15=birth=yes
+	effect={set_character_flag=diversity}
+	}
+	2238.11.4={add_spouse=1861477}
+	2280.9.23={death=yes}
+}
+1861519={
+	name="Raphael"
+	dynasty=1782165 #Hanover
+	culture=tuskegean
+	religion=evangelical
+	father=1861518
+	mother=1861477
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2240.9.4={birth=yes
+	culture=southron
+	effect={set_character_flag=diversity}
+	}
+	2258.5.12={add_spouse=1861520}
+	2309.12.5={death=yes}
+}
+1861520={
+	name="Dahlia"
+	female=yes
+	dynasty=0
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2241.1.19={birth=yes}
+	2258.5.12={add_spouse=1861519}
+	2311.7.12={death=yes}
+}
+1861521={
+	name="Autumn"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2258.11.28={birth=yes}
+	2316.5.12={death=yes}
+}
+
+1861522={
+	name="Tiberius"
+	dynasty=1782165 #Hanover
+	culture=tuskegean
+	religion=evangelical
+	father=1861518
+	mother=1861477
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2241.9.18={birth=yes
+	culture=southron
+	effect={set_character_flag=diversity}
+	}
+	2258.3.29={add_spouse=1861523}
+	2301.7.7={death=yes}
+}
+1861523={
+	name="Clover"
+	female=yes
+	dynasty=0
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2239.10.14={birth=yes}
+	2258.3.29={add_spouse=1861522}
+	2302.1.20={death=yes}
+}
+1861523={
+	name="Ambrosia"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861522
+	mother=1861523
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2258.6.14={birth=yes}
+	2320.9.3={death=yes}
+}
+1861524={
+	name="Saunder"
+	dynasty=1782165 #Hanover
+	culture=tuskegean
+	religion=evangelical
+	father=1861522
+	mother=1861523
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2260.12.7={birth=yes
+	culture=southron
+	effect={set_character_flag=diversity}
+	}
+	2274.4.30={add_spouse=1861525}
+	2327.10.1={death=yes}
+}
+1861525={
+	name="Elizabeth"
+	female=yes
+	culture=southron
+	religion=evangelical
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2263.2.4={birth=yes}
+	2274.4.30={add_spouse=1861524}
+	2312.5.15={death=yes}
+}
+1861526={
+	name="Carolina"
+	female=yes
+	dynasty=1782165 #Hanover
+	culture=southron
+	religion=evangelical
+	father=1861524
+	mother=1861525
+#	trait=
+#	trait=
+#	trait=
+#	disallow_random_traits = yes
+	2273.3.10={birth=yes}
+	2338.1.9={death=yes}
+}
