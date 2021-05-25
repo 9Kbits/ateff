@@ -2343,6 +2343,24 @@ true_religion_high_church_trigger = {
 true_religion_nonconformist_trigger = {
 	true_religion = nonconformist
 }
+true_religion_montane_trigger = {
+	true_religion = montane
+}
+true_religion_edenite_trigger = {
+	true_religion = edenite
+}
+true_religion_apostolic_trigger = {
+	true_religion = apostolic
+}
+true_religion_celeste_trigger = {
+	true_religion = celeste
+}
+true_religion_nazarene_trigger = {
+	true_religion = nazarene
+}
+true_religion_true_cross_trigger = { #how many other religions are we missing????
+	true_religion = true_cross
+}
 true_religion_sacred_heart_trigger = {
 	true_religion = sacred_heart
 }
@@ -3544,6 +3562,10 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_sedevacantist }
 		}
 		AND = {
+			society_member_of = secret_religious_society_nestorian
+			PREV = { interested_in_society = secret_religious_society_nestorian }
+		}
+		AND = {
 			society_member_of = secret_religious_society_ursuline
 			PREV = { interested_in_society = secret_religious_society_ursuline }
 		}
@@ -3594,6 +3616,30 @@ is_in_prevs_interesting_society_trigger = {
 		AND = {
 			society_member_of = secret_religious_society_nonconformist
 			PREV = { interested_in_society = secret_religious_society_nonconformist }
+		}
+		AND = {
+			society_member_of = secret_religious_society_apostolic
+			PREV = { interested_in_society = secret_religious_society_apostolic }
+		}
+		AND = {
+			society_member_of = secret_religious_society_celeste
+			PREV = { interested_in_society = secret_religious_society_celeste }
+		}
+		AND = {
+			society_member_of = secret_religious_society_nazarene
+			PREV = { interested_in_society = secret_religious_society_nazarene }
+		}
+		AND = {
+			society_member_of = secret_religious_society_true_cross
+			PREV = { interested_in_society = secret_religious_society_true_cross }
+		}
+		AND = {
+			society_member_of = secret_religious_society_montane
+			PREV = { interested_in_society = secret_religious_society_montane }
+		}
+		AND = {
+			society_member_of = secret_religious_society_edenite
+			PREV = { interested_in_society = secret_religious_society_edenite }
 		}
 		AND = {
 			society_member_of = secret_religious_society_sacred_heart
@@ -4016,6 +4062,18 @@ has_any_char_old_religion = {
 			has_character_flag = character_was_true_cross
 			any_character = {
 				religion = true_cross
+			}
+		}
+		AND = {
+			has_character_flag = character_was_montane
+			any_character = {
+				religion = montane
+			}
+		}
+		AND = {
+			has_character_flag = character_was_edenite
+			any_character = {
+				religion = edenite
 			}
 		}
 		AND = {
@@ -4744,6 +4802,48 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = nonconformist
 				ROOT = { religion = nonconformist }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = apostolic
+				ROOT = { religion = apostolic }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = celeste
+				ROOT = { religion = celeste }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = nazarene
+				ROOT = { religion = nazarene }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = true_cross
+				ROOT = { religion = true_cross }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = montane
+				ROOT = { religion = montane }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = edenite
+				ROOT = { religion = edenite }
 			}
 		}
 		NAND = {
@@ -9314,6 +9414,8 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_celeste
 		has_character_flag = character_was_nazarene
 		has_character_flag = character_was_true_cross
+		has_character_flag = character_was_montane
+		has_character_flag = character_was_edenite
 		has_character_flag = character_was_sacred_heart
 		has_character_flag = character_was_patria_grande
 		has_character_flag = character_was_cetic

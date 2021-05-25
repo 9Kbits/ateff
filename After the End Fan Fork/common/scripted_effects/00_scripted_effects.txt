@@ -10078,6 +10078,38 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
+					religion = montane
+				}
+				has_character_flag = character_was_montane
+			}
+		}
+		set_secret_religion = montane
+		clr_character_flag = character_was_montane
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
+					religion = edenite
+				}
+				has_character_flag = character_was_edenite
+			}
+		}
+		set_secret_religion = edenite
+		clr_character_flag = character_was_edenite
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
 					religion = sacred_heart
 				}
 				has_character_flag = character_was_sacred_heart
@@ -11079,6 +11111,14 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_true_cross
 	}
 	if = {
+		limit = { religion = montane }
+		set_character_flag = character_was_montane
+	}
+	if = {
+		limit = { religion = edenite }
+		set_character_flag = character_was_edenite
+	}
+	if = {
 		limit = { religion = sacred_heart }
 		set_character_flag = character_was_sacred_heart
 	}
@@ -11331,6 +11371,8 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_celeste
 	clr_character_flag = character_was_nazarene
 	clr_character_flag = character_was_true_cross
+	clr_character_flag = character_was_montane
+	clr_character_flag = character_was_edenite
 	clr_character_flag = character_was_sacred_heart
 	clr_character_flag = character_was_patria_grande
 	clr_character_flag = character_was_cetic
@@ -11610,6 +11652,20 @@ event_target_old_religion_from_flag_effect = {
 		limit = { has_character_flag = character_was_true_cross }
 		random_character = {
 			limit = { religion = true_cross }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_montane }
+		random_character = {
+			limit = { religion = montane }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_edenite }
+		random_character = {
+			limit = { religion = edenite }
 			save_event_target_as = old_religion
 		}
 	}
@@ -13813,6 +13869,28 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = true_cross
 					remove_province_modifier = secret_true_cross_community
+				}
+			}
+		}
+		secret_religious_society_montane = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_montane_community
+					}
+					religion = montane
+					remove_province_modifier = secret_montane_community
+				}
+			}
+		}
+		secret_religious_society_edenite = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_edenite_community
+					}
+					religion = edenite
+					remove_province_modifier = secret_edenite_community
 				}
 			}
 		}
@@ -18618,6 +18696,28 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = true_cross
 						remove_province_modifier = secret_true_cross_community
+					}
+				}
+			}
+			secret_religious_society_montane = { 
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_montane_community
+						}
+						religion = montane
+						remove_province_modifier = secret_montane_community
+					}
+				}
+			}
+			secret_religious_society_edenite = { 
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_edenite_community
+						}
+						religion = edenite
+						remove_province_modifier = secret_edenite_community
 					}
 				}
 			}
