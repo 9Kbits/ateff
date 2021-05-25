@@ -8,7 +8,7 @@ character_event = {
 	picture = GFX_evt_stone_church
 	
 	only_playable = yes
-	culture = british
+	culture_group = britannic
 	
 	trigger = {
 		year = 2900
@@ -103,7 +103,7 @@ character_event = {
 			region = custom_new_england
 			OR = {
 				culture = yankee
-				culture = british
+				culture_group = britannic
 			}
 			any_province_holding = {
 				NOT = { holding_type = nomad }
@@ -135,7 +135,7 @@ character_event = {
 				region = custom_new_england
 				OR = {	
 					culture = yankee
-					culture = british
+					culture_group = britannic
 				}
 				any_province_holding = {
 					NOT = { holding_type = nomad }
@@ -168,7 +168,7 @@ character_event = {
 		any_courtier = {
 			OR = {
 				culture = yankee
-				culture = british
+				culture_group = britannic
 			}
 		}
 	}
@@ -196,7 +196,7 @@ character_event = {
 			limit = {
 				OR = {	
 					culture = yankee
-					culture = british
+					culture_group = britannic
 				}
 			}
 			score_value = { #Prioritizes selecting an interesting courtier...
@@ -234,7 +234,7 @@ character_event = {
 		any_vassal = {
 			OR = {
 				culture = yankee
-				culture = british
+				culture_group = britannic
 			}
 		}
 	}
@@ -262,7 +262,7 @@ character_event = {
 			limit = {
 				OR = {	
 					culture = yankee
-					culture = british
+					culture_group = britannic
 				}
 			}
 			score_value = { #Prioritizes selecting an interesting courtier...
@@ -1044,5 +1044,58 @@ character_event = {
 	option = {
 		name = "EVTOPTA_melting_pot_18"
 		culture = omedulac
+	}
+}
+# Province adopts Neomoor culture
+province_event = {
+	id = meltingpot.19
+	desc = EVTDESC_melting_pot_19
+	picture = GFX_evt_cathedral_muslim
+	border = GFX_event_normal_frame_diplomacy
+	
+	trigger = {
+		culture_group = south_anglo
+		owner = {
+			OR = {
+				religion = orientalist
+				religion = misrist
+			}
+		}
+		year = 2680 #doesn't happen unless Orientalism survives long enough
+		NOT = { year = 2770 }
+	}
+	
+	mean_time_to_happen = {
+		months = 600
+		modifier = {
+			factor = 0.3
+			OR = {
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots
+				}
+				has_game_rule = {
+					name = culture_conversion
+					value = faster_melting_pots_and_slower_normal
+				}
+			}
+		}
+	}
+
+	option = {
+		name = EVTOPTA_melting_pot_19
+		trigger = {
+			NOT = {
+				owner = { culture = neomoor }
+			}
+		}
+		culture = neomoor
+	}
+	option = {
+		name = EVTOPTB_melting_pot_19
+		trigger = {
+			owner = { culture = neomoor }
+		}
+		culture = neomoor
 	}
 }
