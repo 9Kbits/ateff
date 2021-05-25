@@ -3940,12 +3940,12 @@ castle = {
 		desc = ca_culture_texan_1_desc
 		potential = {
 			OR = {
-				culture_group = west_anglo
-				culture_group = texan_group
-				culture = llanero
-				culture = norteno
-				culture = neomexicano
-				culture = gaucho
+					culture_group = west_anglo
+					culture_group = texan_group
+					culture = llanero
+					culture = norteno
+					culture = neomexicano
+					culture = gaucho
 				has_building = ca_culture_texan_1
 				has_building = ca_culture_texan_2
 			}
@@ -3990,12 +3990,12 @@ castle = {
 		desc = ca_culture_texan_1_desc
 		potential = {
 			OR = {
-				culture_group = west_anglo
-				culture_group = texan_group
-				culture = llanero
-				culture = norteno
-				culture = neomexicano
-				culture = gaucho
+					culture_group = west_anglo
+					culture_group = texan_group
+					culture = llanero
+					culture = norteno
+					culture = neomexicano
+					culture = gaucho
 				has_building = ca_culture_texan_1
 				has_building = ca_culture_texan_2
 				has_building = ca_culture_texan_3
@@ -4041,12 +4041,12 @@ castle = {
 		desc = ca_culture_texan_1_desc
 		potential = {
 			OR = {
-				culture_group = west_anglo
-				culture_group = texan_group
-				culture = llanero
-				culture = norteno
-				culture = neomexicano
-				culture = gaucho
+					culture_group = west_anglo
+					culture_group = texan_group
+					culture = llanero
+					culture = norteno
+					culture = neomexicano
+					culture = gaucho
 				has_building = ca_culture_texan_1
 				has_building = ca_culture_texan_2
 				has_building = ca_culture_texan_3
@@ -6514,33 +6514,27 @@ castle = {
 		extra_tech_building_start = 0.2
 	}
 	
-	#Anglish and Patagonian Longbow archery range
+	#British and Patagonian Longbow archery range
 	ca_culture_saxon_english_1 = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
-			OR = { 
-				culture_group = patagonian #added patagonian cultural group
+			OR = {
 				AND = {
-					OR = {
-						culture = anglish #invader rework
-						culture = new_english
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
 					}
-					OR = {
-						terrain = forest
-						terrain = hills
-						terrain = marsh
-						terrain = mountains
-					}
-				}
+				culture_group = patagonian #added patagonian cultural group
 				has_building = ca_culture_saxon_english_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
 				OR = {
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+					}
 					culture_group = patagonian #added patagonian cultural group
-					culture = anglish #invader rework
-					culture = new_english
 				}
 			}
 		}
@@ -6548,9 +6542,11 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 0
 			ROOT = {
 				OR = {
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+				}
 					culture_group = patagonian #added patagonian cultural group
-					culture = anglish #invader rework
-					culture = new_english
 				}
 			}
 		}
@@ -6567,19 +6563,11 @@ castle = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = { 
+			AND = {
+				culture_group = britannic #made it into cultural group for consistency
+				NOT = {	culture = scottish }
+			}
 				culture_group = patagonian #added patagonian cultural group
-				AND = {
-					OR = {
-						culture = anglish #invader rework
-						culture = new_english
-					}
-					OR = {
-						terrain = forest
-						terrain = hills
-						terrain = marsh
-						terrain = mountains
-					}
-				}
 				has_building = ca_culture_saxon_english_1
 				has_building = ca_culture_saxon_english_2
 			}
@@ -6587,9 +6575,11 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+					}
 					culture_group = patagonian #added patagonian cultural group
-					culture = anglish #invader rework
-					culture = new_english
 				}
 			}
 		}
@@ -6597,9 +6587,11 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
 				OR = {
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+				}
 					culture_group = patagonian #added patagonian cultural group
-					culture = anglish #invader rework
-					culture = new_english
 				}
 			}
 		}
@@ -6616,19 +6608,11 @@ castle = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = { 
-				culture_group = patagonian #added patagonian cultural group
 				AND = {
-					OR = {
-						culture = anglish #invader rework
-						culture = new_english
-					}
-					OR = {
-						terrain = forest
-						terrain = hills
-						terrain = marsh
-						terrain = mountains
-					}
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
 				}
+				culture_group = patagonian #added patagonian cultural group
 				has_building = ca_culture_saxon_english_1
 				has_building = ca_culture_saxon_english_2
 				has_building = ca_culture_saxon_english_3
@@ -6637,9 +6621,11 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+					}
 					culture_group = patagonian #added patagonian cultural group
-					culture = anglish #invader rework
-					culture = new_english
 				}
 			}
 		}
@@ -6647,9 +6633,11 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
 				OR = {
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+				}
 					culture_group = patagonian #added patagonian cultural group
-					culture = anglish #invader rework
-					culture = new_english
 				}
 			}
 		}
@@ -6666,19 +6654,11 @@ castle = {
 		desc = ca_culture_saxon_english_1_desc
 		potential = {
 			OR = { 
-				culture_group = patagonian #added patagonian cultural group
 				AND = {
-					OR = {
-						culture = anglish #invader rework
-						culture = new_english
-					}
-					OR = {
-						terrain = forest
-						terrain = hills
-						terrain = marsh
-						terrain = mountains
-					}
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
 				}
+				culture_group = patagonian #added patagonian cultural group
 				has_building = ca_culture_saxon_english_1
 				has_building = ca_culture_saxon_english_2
 				has_building = ca_culture_saxon_english_3
@@ -6688,9 +6668,11 @@ castle = {
 		is_active_trigger = {
 			ROOT = {
 				OR = {
+				AND = {
+					culture_group = britannic #made it into cultural group for consistency
+					NOT = {	culture = scottish }
+				}
 					culture_group = patagonian #added patagonian cultural group
-					culture = anglish #invader rework
-					culture = new_english
 				}
 			}
 		}
@@ -6698,9 +6680,8 @@ castle = {
 			TECH_CASTLE_CONSTRUCTION = 4
 			ROOT = {
 				OR = {
+					culture_group = britannic
 					culture_group = patagonian #added patagonian cultural group
-					culture = anglish #invader rework
-					culture = new_english
 				}
 			}
 		}
@@ -6713,7 +6694,6 @@ castle = {
 		
 		extra_tech_building_start = 0.8
 	}
-	
 	#Samurai Dojo
 	ca_culture_samurai_1 = {
 		desc = ca_culture_samurai_1_desc
@@ -10438,741 +10418,122 @@ castle = {
 		
 		extra_tech_building_start = 0.8
 	}
-	
-	#Invader Rework Cultural Buildings
-	
-	#Anglish Billmen Barracks
-	ca_culture_billmen_1 = {
-		desc = ca_culture_billmen_1_desc
+	# Scottish highland regiment
+	ca_culture_scottish_1 = {
+		desc = ca_culture_scottish_1_desc
 		potential = {
-			NOT = {
-				OR = {
-					terrain = forest
-					terrain = hills
-					terrain = marsh
-					terrain = mountains
-				}
-			}
 			OR = {
-				culture = anglish
-				culture = new_english
-				has_building = ca_culture_billmen_1
+				culture = scottish
+				has_building = ca_culture_scottish_1
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				OR = {
-					culture = anglish
-					culture = new_english
-				}
+				culture = scottish
 			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 0
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0 
 			ROOT = {
-				OR = {
-					culture = anglish
-					culture = new_english
-				}
+				culture = scottish
 			}
 		}
 		prerequisites = { ca_wall_2 }
 		gold_cost = 200
 		build_time = 730
 		pikemen = 30
-		pikemen_defensive = 0.15
+		pikemen_offensive = 0.15
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
 	}
-	ca_culture_billmen_2 = {
-		desc = ca_culture_billmen_1_desc
+	ca_culture_scottish_2 = {
+		desc = ca_culture_scottish_1_desc
 		potential = {
-			NOT = {
-				OR = {
-					terrain = forest
-					terrain = hills
-					terrain = marsh
-					terrain = mountains
-				}
-			}
 			OR = {
-				culture = anglish
-				culture = new_english
-				has_building = ca_culture_billmen_1
-				has_building = ca_culture_billmen_2
+				culture = scottish
+				has_building = ca_culture_scottish_1
+				has_building = ca_culture_scottish_2
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				OR = {
-					culture = anglish
-					culture = new_english
-				}
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 1
-			ROOT = {
-				OR = {
-					culture = anglish
-					culture = new_english
-				}
+				culture = scottish
 			}
 		}
-		upgrades_from = ca_culture_billmen_1
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1 
+			ROOT = {
+				culture = scottish
+			}
+		}
+		upgrades_from = ca_culture_scottish_1
 		gold_cost = 300
 		build_time = 1095
 		pikemen = 40
-		pikemen_defensive = 0.15
+		pikemen_offensive = 0.15
 		ai_creation_factor = 100
 		
 		extra_tech_building_start = 0.8
 	}
-	ca_culture_billmen_3 = {
-		desc = ca_culture_billmen_1_desc
+	ca_culture_scottish_3 = {
+		desc = ca_culture_scottish_1_desc
 		potential = {
-			NOT = {
-				OR = {
-					terrain = forest
-					terrain = hills
-					terrain = marsh
-					terrain = mountains
-				}
-			}
 			OR = {
-				culture = anglish
-				culture = new_english
-				has_building = ca_culture_billmen_1
-				has_building = ca_culture_billmen_2
-				has_building = ca_culture_billmen_3
+				culture = scottish
+				has_building = ca_culture_scottish_1
+				has_building = ca_culture_scottish_2
+				has_building = ca_culture_scottish_3
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				OR = {
-					culture = anglish
-					culture = new_english
-				}
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 2
-			ROOT = {
-				OR = {
-					culture = anglish
-					culture = new_english
-				}
+				culture = scottish
 			}
 		}
-		upgrades_from = ca_culture_billmen_2
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2 
+			ROOT = {
+				culture = scottish
+			}
+		}
+		upgrades_from = ca_culture_scottish_2
 		gold_cost = 400
 		build_time = 2190
 		pikemen = 60
-		pikemen_defensive = 0.15
+		pikemen_offensive = 0.15
 		ai_creation_factor = 99
 		
 		extra_tech_building_start = 0.8
 	}
-	ca_culture_billmen_4 = {
-		desc = ca_culture_billmen_1_desc
+	ca_culture_scottish_4 = {
+		desc = ca_culture_scottish_1_desc
 		potential = {
-			NOT = {
-				OR = {
-					terrain = forest
-					terrain = hills
-					terrain = marsh
-					terrain = mountains
-				}
-			}
 			OR = {
-				culture = anglish
-				culture = new_english
-				has_building = ca_culture_billmen_1
-				has_building = ca_culture_billmen_2
-				has_building = ca_culture_billmen_3
-				has_building = ca_culture_billmen_4
+				culture = scottish
+				has_building = ca_culture_scottish_1
+				has_building = ca_culture_scottish_2
+				has_building = ca_culture_scottish_3
+				has_building = ca_culture_scottish_4
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				OR = {
-					culture = anglish
-					culture = new_english
-				}
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 4
-			ROOT = {
-				OR = {
-					culture = anglish
-					culture = new_english
-				}
+				culture = scottish
 			}
 		}
-		upgrades_from = ca_culture_billmen_3
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4 
+			ROOT = {
+				culture = scottish
+			}
+		}
+		upgrades_from = ca_culture_scottish_3
 		gold_cost = 500
 		build_time = 2190
 		pikemen = 80
-		pikemen_defensive = 0.15
+		pikemen_offensivee = 0.15
 		ai_creation_factor = 98
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	#Alban Schiltron Barracks
-	ca_culture_schiltron_1 = {
-		desc = ca_culture_schiltron_1_desc
-		potential = {
-			NOT = {
-				OR = {
-					terrain = hills
-					terrain = mountains
-				}
-			}
-			OR = {
-				culture = alban
-				has_building = ca_culture_schiltron_1
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = alban
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 0
-			ROOT = {
-				culture = alban
-			}
-		}
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		pikemen = 30
-		pikemen_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_schiltron_2 = {
-		desc = ca_culture_schiltron_1_desc
-		potential = {
-			NOT = {
-				OR = {
-					terrain = hills
-					terrain = mountains
-				}
-			}
-			OR = {
-				culture = alban
-				has_building = ca_culture_schiltron_1
-				has_building = ca_culture_schiltron_2
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = alban
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 1
-			ROOT = {
-				culture = alban
-			}
-		}
-		upgrades_from = ca_culture_schiltron_1
-		gold_cost = 300
-		build_time = 1095
-		pikemen = 40
-		pikemen_defensive = 0.15
-		ai_creation_factor = 100
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_schiltron_3 = {
-		desc = ca_culture_schiltron_1_desc
-		potential = {
-			NOT = {
-				OR = {
-					terrain = hills
-					terrain = mountains
-				}
-			}
-			OR = {
-				culture = alban
-				has_building = ca_culture_schiltron_1
-				has_building = ca_culture_schiltron_2
-				has_building = ca_culture_schiltron_3
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = alban
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 2
-			ROOT = {
-				culture = alban
-			}
-		}
-		upgrades_from = ca_culture_schiltron_2
-		gold_cost = 400
-		build_time = 2190
-		pikemen = 60
-		pikemen_defensive = 0.15
-		ai_creation_factor = 99
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_schiltron_4 = {
-		desc = ca_culture_schiltron_1_desc
-		potential = {
-			NOT = {
-				OR = {
-					terrain = hills
-					terrain = mountains
-				}
-			}
-			OR = {
-				culture = alban
-				has_building = ca_culture_schiltron_1
-				has_building = ca_culture_schiltron_2
-				has_building = ca_culture_schiltron_3
-				has_building = ca_culture_schiltron_4
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = alban
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 4
-			ROOT = {
-				culture = alban
-			}
-		}
-		upgrades_from = ca_culture_schiltron_3
-		gold_cost = 500
-		build_time = 2190
-		pikemen = 80
-		pikemen_defensive = 0.15
-		ai_creation_factor = 98
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	#Alban Highlander Barracks
-	ca_culture_highlander_1 = {
-		desc = ca_culture_highlander_1_desc
-		potential = {
-			OR = {
-				terrain = hills
-				terrain = mountains
-			}
-			OR = {
-				culture = alban
-				has_building = ca_culture_highlander_1
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = alban
-			}
-		}
-		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 0
-			ROOT = {
-				culture = alban
-			}
-		}
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 15
-		archers = 15
-		heavy_infantry_offensive = 0.10
-		archers_offensive = 0.10
-		ai_creation_factor = 101
-
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_highlander_2 = {
-		desc = ca_culture_highlander_1_desc
-		potential = {
-			OR = {
-				terrain = hills
-				terrain = mountains
-			}
-			OR = {
-				culture = alban
-				has_building = ca_culture_highlander_1
-				has_building = ca_culture_highlander_2
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = alban
-			}
-		}
-		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 1
-			ROOT = {
-				culture = alban
-			}
-		}
-		upgrades_from = ca_culture_highlander_1
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 20
-		archers = 20
-		heavy_infantry_offensive = 0.10
-		archers_offensive = 0.10
-		ai_creation_factor = 100
-
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_highlander_3 = {
-		desc = ca_culture_highlander_1_desc
-		potential = {
-			OR = {
-				terrain = hills
-				terrain = mountains
-			}
-			OR = {
-				culture = alban
-				has_building = ca_culture_highlander_1
-				has_building = ca_culture_highlander_2
-				has_building = ca_culture_highlander_3
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = alban
-			}
-		}
-		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 2
-			ROOT = {
-				culture = alban
-			}
-		}
-		upgrades_from = ca_culture_highlander_2
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 25
-		archers = 25
-		heavy_infantry_offensive = 0.10
-		archers_offensive = 0.10
-		ai_creation_factor = 99
-
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_highlander_4 = {
-		desc = ca_culture_highlander_1_desc
-		potential = {
-			OR = {
-				terrain = hills
-				terrain = mountains
-			}
-			OR = {
-				culture = alban
-				has_building = ca_culture_highlander_1
-				has_building = ca_culture_highlander_2
-				has_building = ca_culture_highlander_3
-				has_building = ca_culture_highlander_4
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = alban
-			}
-		}
-		trigger = {
-			TECH_CASTLE_CONSTRUCTION = 4
-			ROOT = {
-				culture = alban
-			}
-		}
-		upgrades_from = ca_culture_highlander_3
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 30
-		archers = 30
-		heavy_infantry_offensive = 0.10
-		archers_offensive = 0.10
-		ai_creation_factor = 98
-
-		extra_tech_building_start = 0.8
-	}
-	
-	#Eirish Clan Gallowglass Barracks
-	ca_culture_gallowglass_1 = {
-		desc = ca_culture_gallowglass_1_desc
-		potential = {
-			NOT = {
-				OR = {
-					terrain = hills
-					terrain = mountains
-				}
-			}
-			OR = {
-				culture = eirish
-				has_building = ca_culture_gallowglass_1
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = eirish
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 0
-			ROOT = {
-				culture = eirish
-			}
-		}
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 30
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_gallowglass_2 = {
-		desc = ca_culture_gallowglass_1_desc
-		potential = {
-			NOT = {
-				OR = {
-					terrain = hills
-					terrain = mountains
-				}
-			}
-			OR = {
-				culture = eirish
-				has_building = ca_culture_gallowglass_1
-				has_building = ca_culture_gallowglass_2
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = eirish
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 1
-			ROOT = {
-				culture = eirish
-			}
-		}
-		upgrades_from = ca_culture_gallowglass_1
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 40
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_gallowglass_3 = {
-		desc = ca_culture_gallowglass_1_desc
-		potential = {
-			NOT = {
-				OR = {
-					terrain = hills
-					terrain = mountains
-				}
-			}
-			OR = {
-				culture = eirish
-				has_building = ca_culture_gallowglass_1
-				has_building = ca_culture_gallowglass_2
-				has_building = ca_culture_gallowglass_3
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = eirish
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 2
-			ROOT = {
-				culture = eirish
-			}
-		}
-		upgrades_from = ca_culture_gallowglass_2
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 50
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_gallowglass_4 = {
-		desc = ca_culture_gallowglass_1_desc
-		potential = {
-			NOT = {
-				OR = {
-					terrain = hills
-					terrain = mountains
-				}
-			}
-			OR = {
-				culture = eirish
-				has_building = ca_culture_gallowglass_1
-				has_building = ca_culture_gallowglass_2
-				has_building = ca_culture_gallowglass_3
-				has_building = ca_culture_gallowglass_4
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = eirish
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 4
-			ROOT = {
-				culture = eirish
-			}
-		}
-		upgrades_from = ca_culture_gallowglass_3
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 60
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	#Eirish Redshank Gathering Grounds
-	ca_culture_redshank_1 = {
-		desc = ca_culture_redshank_1_desc
-		potential = {
-			OR = {
-				culture = eirish
-				has_building = ca_culture_redshank_1
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = eirish
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 0
-			ROOT = {
-				culture = eirish
-			}
-		}
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		light_infantry = 30
-		archers = 30
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_redshank_2 = {
-		desc = ca_culture_redshank_1_desc
-		potential = {
-			OR = {
-				culture = eirish
-				has_building = ca_culture_redshank_1
-				has_building = ca_culture_redshank_2
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = eirish
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 1
-			ROOT = {
-				culture = eirish
-			}
-		}
-		upgrades_from = ca_culture_redshank_1
-		gold_cost = 300
-		build_time = 1095
-		light_infantry = 40
-		archers = 40
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_redshank_3 = {
-		desc = ca_culture_redshank_1_desc
-		potential = {
-			OR = {
-				culture = eirish
-				has_building = ca_culture_redshank_1
-				has_building = ca_culture_redshank_2
-				has_building = ca_culture_redshank_3
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = eirish
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 2
-			ROOT = {
-				culture = eirish
-			}
-		}
-		upgrades_from = ca_culture_redshank_2
-		gold_cost = 400
-		build_time = 2190
-		light_infantry = 50
-		archers = 50
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_redshank_4 = {
-		desc = ca_culture_redshank_1_desc
-		potential = {
-			OR = {
-				culture = eirish
-				has_building = ca_culture_redshank_1
-				has_building = ca_culture_redshank_2
-				has_building = ca_culture_redshank_3
-				has_building = ca_culture_redshank_4
-			}
-		}
-		is_active_trigger = {
-			ROOT = {
-				culture = eirish
-			}
-		} 
-		trigger = { 
-			TECH_CASTLE_CONSTRUCTION = 4
-			ROOT = {
-				culture = eirish
-			}
-		}
-		upgrades_from = ca_culture_redshank_3
-		gold_cost = 500
-		build_time = 2190
-		light_infantry = 60
-		archers = 60
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
 	}

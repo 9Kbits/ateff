@@ -1069,7 +1069,7 @@ RETTYPE_CUL_JSM =
 	}
 }
 
-#Anglish and Patagonian Welsh retinues
+#British and Patagonian Welsh retinues
 RETTYPE_CUL_ENG = 
 {
 	first_type = 5
@@ -1078,15 +1078,36 @@ RETTYPE_CUL_ENG =
 	potential = {
 		is_nomadic = no
 		OR = {
+		
+		AND = {
+			culture_group = britannic #made it into cultural group for consistency
+			NOT = {	culture = scottish }
+			}
 			culture_group = patagonian
-			culture = anglish #invader rework
-			culture = new_english
 		}
 	}
 	
 	modifier = {
 		archers_offensive = 0.2
 		archers_defensive = 0.1
+	}
+}
+
+RETTYPE_CUL_SCOT = 
+{
+	first_type = 2
+	first_amount = 200
+	second_type = 5
+	second_amount = 100
+
+	potential = {
+		is_nomadic = no
+		culture = scottish
+	}
+	
+	modifier = {
+		archers_offensive = 0.3
+		pikemen_offensive = 0.2
 	}
 }
 
@@ -1575,100 +1596,7 @@ RETTYPE_CUL_ANDINO =
 	}
 }
 
-# Invader Rework Retinues
 
-#Anglish Billmen Cultural Retinue
-RETTYPE_CUL_BILLMEN = 
-{
-	first_type = 2
-	first_amount = 400
-	
-	potential = {
-		is_nomadic = no
-		OR = {
-			culture = anglish 
-			culture = new_english
-		}
-	}
-	
-	modifier = {
-		pikemen_defensive = 0.2
-		pikemen_offensive = 0.3
-		pikemen_morale = 0.2
-	}
-}
-
-RETTYPE_CUL_SCHILTRON = 
-{
-	first_type = 2
-	first_amount = 400
-	
-	potential = {
-		is_nomadic = no
-		culture = alban
-	}
-	
-	modifier = {
-		pikemen_defensive = 0.5
-		pikemen_offensive = 0.3
-		pikemen_morale = 0.2
-	}
-}
-
-RETTYPE_CUL_HIGHLANDER = 
-{
-	first_type = 1
-	first_amount = 200
-	second_type = 5
-	second_amount = 50
-	
-	potential = {
-		is_nomadic = no
-		culture = alban
-	}
-	
-	modifier = {
-		heavy_infantry_offensive = 0.4
-		heavy_infantry_morale = 0.4
-		archers_offensive = 0.2
-	}
-}
-
-RETTYPE_CUL_GALLOWGLASS = 
-{
-	first_type = 1
-	first_amount = 200
-	
-	potential = {
-		is_nomadic = no
-		culture = eirish
-	}
-	
-	modifier = {
-		heavy_infantry_defensive = 0.5
-		heavy_infantry_morale = 0.3
-	}
-}
-
-RETTYPE_CUL_REDSHANK = 
-{
-	first_type = 0
-	first_amount = 250
-	second_type = 5
-	second_amount = 250
-	
-	potential = {
-		is_nomadic = no
-		culture = eirish
-	}
-	
-	modifier = {
-		light_infantry_offensive = 0.5
-		light_infantry_morale = 0.3
-		archers_offensive = 0.2
-		archers_morale = 0.2
-	}
-}
 	
 HORDE_RETTYPE_CAV1 = 
 {
