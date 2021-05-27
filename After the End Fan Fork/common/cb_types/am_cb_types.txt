@@ -5646,14 +5646,13 @@ gaian_reclamation_cb = {
 			holder_scope = {
 				OR = {
 					character = FROM
-					is_liege_or_above = FROM
+					is_vassal_or_below_of = FROM
 				}
 			}
 		}
 		location = {
 			region = custom_gaian_core_region
 		}
-		check_all_titles = yes
 	}
 
 	is_valid = {
@@ -5701,7 +5700,7 @@ gaian_reclamation_cb = {
 				has_landed_title = PREV
 			}
 			holder_scope = {
-				is_liege_or_above = FROM
+				is_vassal_or_below_of = FROM
 			}
 		}
 	}
