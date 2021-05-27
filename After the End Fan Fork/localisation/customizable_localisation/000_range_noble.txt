@@ -1,0 +1,178 @@
+#cowboy types
+
+########################################################
+#SINGULAR
+defined_text = {
+	name = GetRangeNobilityCulturalSingular
+	use_first_valid = yes
+	
+	#cowboy culture
+	text = { 
+		trigger = { 
+			OR = {
+				culture_group = west_anglo
+			}
+		}
+		localisation_key = GetRangeNobilityCulturalSingular_Ranger
+	}	
+
+	#vaquero culture
+	text = { 
+		trigger = { 
+			OR = {
+				culture = tejano
+				culture = norteno
+				culture = neomexicano
+			}
+		}
+		localisation_key = GetRangeNobilityCulturalSingular_Vaquero
+	}	
+	
+	#japanese
+	text = { 
+		trigger = { 
+			culture_group = nihonjin
+		}
+		localisation_key = GetRangeNobilityCulturalSingular_Ronin
+	}
+	
+	
+	#irish
+	text = { 
+		trigger = { 
+			culture = yankee
+		}
+		localisation_key = GetRangeNobilityCulturalSingular_Fianna
+	}
+	
+	
+	#north german
+	text = { 
+		trigger = { 
+			OR = {
+				culture = northlander
+				culture = yooper
+				culture = dellsman
+			}
+		}
+		localisation_key = GetRangeNobilityCulturalSingular_Wolves
+	}
+	
+	#knightly cultures
+	text = { 
+		trigger = { 
+			OR = {
+				culture = dixie
+				culture = tuskegean
+				culture = southron
+				culture = yanquito
+			}
+		}
+		localisation_key = GetRangeNobilityCulturalSingular_Squires
+	}
+	
+	#russian
+	text = { 
+		trigger = { 
+			culture_group = novorusskiy
+		}
+		localisation_key = GetRangeNobilityCulturalSingular_Druzhina
+	}
+	
+	#generic type
+	text = { 
+		trigger = { 
+			 NOT = { culture = texan }
+		}
+		localisation_key = GetRangeNobilityCulturalSingular_Generic
+	}	
+	
+}
+#############################################
+#PLURAL
+defined_text = {
+	name = GetRangeNobilityCulturalPlural
+	use_first_valid = yes
+	
+	#cowboy culture
+	text = { 
+		trigger = { 
+			OR = {
+				culture_group = west_anglo
+			}
+		}
+		localisation_key = GetRangeNobilityCulturalPlural_Ranger
+	}	
+
+	#vaquero culture
+	text = { 
+		trigger = { 
+			OR = {
+				culture = tejano
+				culture = norteno
+				culture = neomexicano
+			}
+		}
+		localisation_key = GetRangeNobilityCulturalPlural_Vaquero
+	}	
+	
+	#japanese
+	text = { 
+		trigger = { 
+			culture_group = nihonjin
+		}
+		localisation_key = GetRangeNobilityCulturalPlural_Ronin
+	}
+	
+	
+	#irish
+	text = { 
+		trigger = { 
+			culture = yankee
+		}
+		localisation_key = GetRangeNobilityCulturalPlural_Fianna
+	}
+	
+	
+	#north german
+	text = { 
+		trigger = { 
+			OR = {
+				culture = northlander
+				culture = yooper
+				culture = dellsman
+			}
+		}
+		localisation_key = GetRangeNobilityCulturalPlural_Wolves
+	}
+	
+	#knightly cultures
+	text = { 
+		trigger = { 
+			OR = {
+				culture = dixie
+				culture = tuskegean
+				culture = southron
+				culture = yanquito
+			}
+		}
+		localisation_key = GetRangeNobilityCulturalPlural_Squires
+	}
+	
+	#russian
+	text = { 
+		trigger = { 
+			culture_group = novorusskiy
+		}
+		localisation_key = GetRangeNobilityCulturalPlural_Druzhina
+	}
+	
+	#generic type
+	text = { 
+		trigger = { 
+			 NOT = { culture = texan }
+		}
+		localisation_key = GetRangeNobilityCulturalPlural_Generic
+	}	
+	
+}
