@@ -1,0 +1,86 @@
+decisions = {
+	
+    form_oklahoma = {
+		is_high_prio = yes
+		potential = {
+			is_alternate_start = no
+			NOT = {
+				has_game_rule = {
+					name = empire_decisions
+					value = off
+				}
+			}
+			NOT = { has_global_flag = redland_formed }
+			independent = yes
+			OR = {
+				culture = oklahoman
+				culture = comanche
+				culture = navajo
+				culture = sioux
+				culture = muscogee
+				culture = cherokee
+			}
+			OR = {
+				has_landed_title = k_ozarks
+				has_landed_title = k_comancheria
+				has_landed_title = d_sequoyah
+				has_landed_title = d_oklahoma
+				has_landed_title = d_washita
+			}
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 1000
+			scaled_wealth = 1.5
+			war = no
+			OR = {
+				primary_title = { lower_tier_than = KING }
+				primary_title = { title = k_comancheria }
+				primary_title = { title = k_ozarks }
+				primary_title = { title = e_heartland }
+			}
+			completely_controls = d_sequoyah
+			completely_controls = d_washita
+			completely_controls = d_oklahoma
+			completely_controls = d_outlet
+		}
+		effect = {
+			activate_title = { title = k_redland status = yes }
+			primary_title = {
+				k_redland = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+			scaled_wealth = -1.5
+			if = {
+				limit = { has_nickname = no }
+				give_nickname = nick_the_great
+			}
+			d_washita = {
+				de_jure_liege = k_redland
+			}
+			d_oklahoma = {
+				de_jure_liege = k_redland
+			}
+			d_sequoyah = {
+				de_jure_liege = k_redland
+			}
+			d_outlet = {
+				de_jure_liege = k_redland
+			}
+			k_redland = {
+				de_jure_liege = e_heartland
+			}
+			set_global_flag = redland_formed
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

@@ -1,0 +1,80 @@
+namespace = redland
+
+character_event = {
+	id = redland.1 ##Occultist Mason Event. Scottish Rite Temple in Oklahoma
+	desc = redland.1
+	prisoner = no
+	
+	mean_time_to_happen = { days = 5080 }
+	
+	trigger = {
+		NOR = {
+			religion = occultist
+			religion = occultist_reformed
+		}
+		capital_scope = {
+			OR = {
+				province = 325
+				location = {
+					any_neighbor_province = {
+						province = 325
+					}
+				}
+			}
+		}
+	}
+	
+	window = EventWindowNarrative
+
+	immediate = {
+		create_character = {
+			random_traits = no
+			age = 29
+			attributes = {
+				diplomacy = 9
+				stewardship = 9
+				learning = 15
+			}
+			trait = lore_masons ##add reformed masons too
+			trait = mystic
+			female = random
+			religion = occultist
+			culture = oklahoman
+		}
+		new_character = {
+			save_event_target_as = redland_mason
+		}
+	}
+
+	option = {
+		name = EVTOPTAredland.1
+		event_target:redland_mason = { banish = yes }
+	}
+	
+	option = {
+		name = EVTOPTBredland.1
+		event_target:redland_mason = {
+			opinion = {
+				modifier = mason_spared
+				who = ROOT
+				years = 75
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTCredland.1
+		trigger = {
+			NOR = {
+				religion = occultist
+				religion = occultist_reformed
+			}
+		}			
+		event_target:redland_mason = {
+			death = {
+				death_reason = death_execution
+				killer = ROOT
+			}
+		}
+	}
+}

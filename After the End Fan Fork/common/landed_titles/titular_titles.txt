@@ -4193,6 +4193,46 @@ e_catawba = {
 	creation_requires_capital = no	
 }
 
+k_redland = {
+	color = { 174 46 35 }
+	color2 = { 209 247 121 }
+	capital = 325 #Okaysee
+	creation_requires_capital = yes
+	dynasty_title_names = no
+	allow = {
+		always = no # The title has existed before
+	}
+}
+
+e_oklahoman = {
+	color={ 1 114 187 }
+	color2={ 218 165 32 }
+	capital = 325 # OKaysee
+	
+	culture = oklahoman
+	allow = {
+		war = no
+		NOT = { tier = emperor }
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		culture = oklahoman
+		realm_size >= 150
+		e_oklahoman = {
+			NOR = {
+				is_titular = no 
+				has_holder = yes 
+			}
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
 
 
 ### special empires
