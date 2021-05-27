@@ -5588,6 +5588,7 @@ gaian_reclamation_cb = {
 	war_name = WAR_NAME_RECLAMATION
 	sprite = 9
 	truce_days = 3650
+	check_all_titles = yes
 	is_permanent = yes
 	hostile_against_others = no
 	check_de_jure_tier = COUNT
@@ -5641,7 +5642,7 @@ gaian_reclamation_cb = {
 	
 	
 	can_use_title = {
-		check_all_titles = {
+		any_direct_de_jure_vassal_title = {
 			holder_scope = {
 				OR = {
 					character = FROM
