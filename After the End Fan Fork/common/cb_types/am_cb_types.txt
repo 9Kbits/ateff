@@ -5637,16 +5637,10 @@ gaian_reclamation_cb = {
 				}
 			}
 		}
-		FROM = {
-			any_realm_title = {
-				region = custom_gaian_core_region
-			}
-		}
 	}
 	
 	
 	can_use_title = {
-		tier = count
 		any_direct_de_jure_vassal_title = {
 			holder_scope = {
 				OR = {
@@ -5666,35 +5660,47 @@ gaian_reclamation_cb = {
 			NOT = { same_realm = FROM }
 			OR = {
 				NOT = { religion = FROM }
+				AND = {
+					religion = FROM
+					FROM = {
+						has_character_modifier = known_satanist
+					}
+					NOT = {
+						has_character_modifier = known_satanist
+					}
+				}
 			}
 			top_liege = {
 				OR = {
 					NOT = { religion = FROM }
+					AND = {
+						religion = FROM
+						FROM = {
+							has_character_modifier = known_satanist
+						}
+						NOT = {
+							has_character_modifier = known_satanist
+						}
+						ROOT = {
+							NOT = {
+								has_character_modifier = known_satanist
+							}
+						}
+					}
 				}
 			}
-		}
-		FROM = {
-			any_realm_title = {
-					region = custom_gaian_core_region
-				}
 		}
 	}
 
 	
 	is_valid_title = {
-		tier = count
-		location = {
-			county = {
-				any_direct_de_jure_vassal_title = {
-					holder_scope = {
-						OR = {
-							character = FROM
-							is_liege_or_above = FROM
-						}
-					}
-				}
+		OR = {
+			FROM = {
+				has_landed_title = PREV
 			}
-			region = custom_gaian_core_region
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
 		}
 	}
 	
