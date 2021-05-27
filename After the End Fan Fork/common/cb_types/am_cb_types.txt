@@ -5589,6 +5589,7 @@ gaian_reclamation_cb = {
 	sprite = 9
 	truce_days = 3650
 	is_permanent = yes
+	check_all_titles = yes
 	hostile_against_others = no
 	check_de_jure_tier = COUNT
 	sort_priority = 600
@@ -5641,7 +5642,7 @@ gaian_reclamation_cb = {
 	
 	
 	can_use_title = {
-		check_all_titles = {
+		any_de_jure_vassal_title = {
 			holder_scope = {
 				OR = {
 					character = FROM
@@ -5652,6 +5653,7 @@ gaian_reclamation_cb = {
 		location = {
 			region = custom_gaian_core_region
 		}
+		check_all_titles = yes
 	}
 
 	is_valid = {
