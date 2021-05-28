@@ -294,7 +294,7 @@ targetted_decisions = {
 			NOT = { #nor block instead of not or
 				trait = zealous
 				trait = devout
-				has_character_modifier = went_hiking
+				has_character_flag = hike_inecessible
 			}
 			is_adult = yes
 			prisoner = no
@@ -310,11 +310,8 @@ targetted_decisions = {
 		
 		effect = {
 		    piety = -200
-			add_character_modifier = {
-				modifier = went_hiking
-				years = 2
-			}
 			character_event = { id = gaian.1 tooltip = EVTTOOLTIP_GOHIKING }
+			set_character_flag  = hike_inecessible
 		}
 		
 		revoke_allowed = {

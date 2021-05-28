@@ -1070,7 +1070,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = mountain_gaian_hike
 		has_character_flag = hike_option_a
@@ -1128,7 +1128,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = forest_gaian_hike
 		has_character_flag = hike_option_a
@@ -1166,7 +1166,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = forest_gaian_hike
 		has_character_flag = hike_option_b
@@ -1205,7 +1205,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = forest_gaian_hike
 		has_character_flag = hike_option_c
@@ -1243,7 +1243,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = forest_gaian_hike
 		has_character_flag = hike_option_d
@@ -1281,7 +1281,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = river_gaian_hike
 		has_character_flag = hike_option_a
@@ -1319,7 +1319,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = river_gaian_hike
 		has_character_flag = hike_option_b
@@ -1357,7 +1357,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = mountain_gaian_hike
 		has_character_flag = hike_option_a
@@ -1433,7 +1433,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = river_gaian_hike
 		has_character_flag = hike_option_a
@@ -1470,7 +1470,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = river_gaian_hike
 		has_character_flag = hike_option_b
@@ -1508,7 +1508,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = forest_gaian_hike
 		has_character_flag = hike_option_a
@@ -1546,7 +1546,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = forest_gaian_hike
 		has_character_flag = hike_option_b
@@ -1583,7 +1583,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = river_gaian_hike
 		has_character_flag = hike_option_a
@@ -1619,7 +1619,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}
 		has_character_flag = mountain_gaian_hike
 		has_character_flag = hike_option_d
@@ -1682,10 +1682,17 @@ character_event = {
 		clr_character_flag	= hike_option_b
 		clr_character_flag	= hike_option_c
 		clr_character_flag	= hike_option_d
+		clr_character_flag	= hike_lost
+		clr_character_flag	= lost_in_forest
+		clr_character_flag  = lost_in_mountain
+		clr_character_flag  = was_lost
+		clr_character_flag  = encountered_bear_already
+		clr_character_flag  = encountered_rain_already
+		clr_character_flag  = hike_inecessible
 		hidden_tooltip = {
 		set_variable = { which = hike_completion value = 0 }
 		}
-		clr_character_flag = encountered_rain_already
+
 	}
 }
 
@@ -1698,13 +1705,13 @@ character_event = {
 	religion = gaian
 	
 	mean_time_to_happen = {
-		days = 90
+		months = 3
 	}
 
 	trigger = {
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		trait = on_hike
 		OR = {
@@ -1747,14 +1754,14 @@ character_event = {
 	religion = gaian
 	
 	mean_time_to_happen = {
-		days = 30
+		months = 3
 	}
 
 	trigger = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag	= mountain_gaian_hike
@@ -1856,7 +1863,7 @@ character_event = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag	= mountain_gaian_hike
@@ -2307,14 +2314,14 @@ character_event = {
 	religion = gaian
 	
 	mean_time_to_happen = {
-		days = 90
+		months = 4
 	}
 
 	trigger = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		has_character_flag	= river_gaian_hike
 		OR = {
@@ -2366,14 +2373,14 @@ character_event = {
 	religion = gaian
 	
 	mean_time_to_happen = {
-		days = 60
+		months = 5
 	}
 
 	trigger = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag	= mountain_gaian_hike
@@ -2451,7 +2458,7 @@ character_event = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag	= forest_gaian_hike
@@ -2495,6 +2502,12 @@ character_event = {
 			opinion = { who = ROOT modifier = opinion_impressed_by_rock_throw }
 		}
 		prestige = 50
+		hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
+		}
+		}
 	}
 }
 character_event = {
@@ -2507,6 +2520,12 @@ character_event = {
 	option = {
 		name = EVTOPTC_rock_skipping
 		prestige = 5
+		hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
+		}
+		}
 	}
 }
 character_event = {
@@ -2523,6 +2542,12 @@ character_event = {
 			chance = 10
 			add_trait = stressed
 		}
+		hidden_tooltip = {
+		change_variable = {
+		which = hike_completion
+		value = 1
+		}
+		}
 	}
 }
 character_event = {
@@ -2530,14 +2555,14 @@ character_event = {
 	desc = EVTDESC_getting_lost
 	picture = GFX_evt_bandits
 	mean_time_to_happen = {
-		months = 3
+		months = 6
 	}
 	
 	trigger = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag	= mountain_gaian_hike
@@ -2584,7 +2609,7 @@ character_event = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag = lost_in_mountain
@@ -2600,6 +2625,13 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_lost_fixing1
+		hidden_tooltip = {
+			random_list = {
+				40 = { character_event = { id = gaian.341 days = 5 }}
+				50 = { character_event = { id = gaian.342 days = 5 }}
+				10 = { character_event = { id = gaian.343 days = 5 }}
+			}
+		}
 	}
 	option = {
 		name = EVTOPTB_lost_fixing1
@@ -2617,7 +2649,7 @@ character_event = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag = lost_in_mountain
@@ -2633,9 +2665,21 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_lost_fixing2
+		hidden_tooltip = {
+			random_list = {
+				65 = { character_event = { id = gaian.341 days = 5 }}
+				35 = { character_event = { id = gaian.342 days = 5 }}
+			}
+		}
 	}
 	option = {
 		name = EVTOPTB_lost_fixing2
+		hidden_tooltip = {
+			random_list = {
+				80 = { character_event = { id = gaian.341 days = 5 }}
+				20 = { character_event = { id = gaian.342 days = 5 }}
+			}
+		}
 	}
 	option = {
 		name = EVTOPTC_lost_fixing2
@@ -2653,7 +2697,7 @@ character_event = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag = lost_in_mountain
@@ -2669,12 +2713,15 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_lost_fixing3
+		hidden_tooltip = {
+			random_list = {
+				50 = { character_event = { id = gaian.341 days = 5 }}
+				50 = { character_event = { id = gaian.342 days = 5 }}
+			}
+		}
 	}
 	option = {
 		name = EVTOPTB_lost_fixing3
-	}
-	option = {
-		name = EVTOPTC_lost_fixing3
 	}
 }
 long_character_event = {
@@ -2682,14 +2729,14 @@ long_character_event = {
 	desc = EVTDESC_lost_fixing_magical_1
 	picture = GFX_evt_bandits
 	mean_time_to_happen = {
-		months = 3
+		months = 12
 	}
 	
 	trigger = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag = lost_in_mountain
@@ -2705,9 +2752,21 @@ long_character_event = {
 	
 	option = {
 		name = EVTOPTA_lost_fixing_magic
+		hidden_tooltip = {
+			random_list = {
+				50 = { character_event = { id = gaian.341 days = 5 }}
+				50 = { character_event = { id = gaian.342 days = 5 }}
+			}
+		}
 	}
 	option = {
 		name = EVTOPTB_lost_fixing_magic
+		hidden_tooltip = {
+			random_list = {
+				50 = { character_event = { id = gaian.341 days = 5 }}
+				50 = { character_event = { id = gaian.342 days = 5 }}
+			}
+		}
 	}
 }
 long_character_event = {
@@ -2715,7 +2774,7 @@ long_character_event = {
 	desc = EVTDESC_lost_fixing_magical_2
 	picture = GFX_evt_bandits
 	mean_time_to_happen = {
-		months = 3
+		months = 12
 	}
 	
 	trigger = {
@@ -2733,10 +2792,22 @@ long_character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_lost_fixing_magic2
+		name = EVTOPTA_lost_fixing_magic
+		hidden_tooltip = {
+			random_list = {
+				50 = { character_event = { id = gaian.341 days = 5 }}
+				50 = { character_event = { id = gaian.342 days = 5 }}
+			}
+		}
 	}
 	option = {
-		name = EVTOPTB_lost_fixing_magic2
+		name = EVTOPTB_lost_fixing_magic
+		hidden_tooltip = {
+			random_list = {
+				50 = { character_event = { id = gaian.341 days = 5 }}
+				50 = { character_event = { id = gaian.342 days = 5 }}
+			}
+		}
 	}
 }
 character_event = {
@@ -2751,7 +2822,7 @@ character_event = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag = lost_in_mountain
@@ -2767,9 +2838,24 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_lostgoinghome
+		hidden_tooltip = {
+			random = {
+				chance = 10
+				character_event = { id = gaian.341 days = 5 }
+			}
+		}
 	}
 	option = {
 		name = EVTOPTB_lostgoinghome
+		remove_trait = on_hike
+		random = {
+		chance = 25
+		add_trait = depressed
+		}
+		hidden_tooltip = {
+			character_event = { id = gaian.199 }
+		}
+		prestige = -10
 	}
 }
 narrative_event = {
@@ -2783,14 +2869,14 @@ narrative_event = {
 	
 	picture = GFX_evt_very_far_away
 	mean_time_to_happen = {
-		months = 36
+		months = 24
 	}
 	
 	trigger = {
 		trait = on_hike
 		NOT = {check_variable = {
 		which = hike_completion
-		value >= 5
+		value >= 3
 		}}
 		OR = {
 			has_character_flag = lost_in_mountain
@@ -2806,6 +2892,63 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTA_veryfaraway
+	}
+}
+
+character_event = {
+	id = gaian.341
+	desc = EVTDESC_gaianlostresultgood
+	
+	picture = GFX_evt_bandits
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_gaianlostresultgood
+		prestige = 10
+		hidden_tooltip = {
+			set_character_flag = was_lost
+			clr_character_flag = hike_lost
+			clr_character_flag = lost_in_forest
+			clr_character_flag = lost_in_mountain
+			change_variable = {
+			which = hike_completion
+			value = 1
+			}
+		}	
+	}
+}
+
+character_event = {
+	id = gaian.342
+	desc = EVTDESC_gaianlostresultbad
+	
+	picture = GFX_evt_bandits
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_gaianlostresultbad
+		prestige = -10
+		piety = -10
+		random = {
+			chance = 10
+			add_trait = stressed
+		}
+	}
+}
+
+character_event = {
+	id = gaian.343
+	desc = EVTDESC_gaianlostresultforestfire
+	
+	picture = GFX_evt_bandits
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_gaianlostresultforestfire
+		death = { death_reason = death_murder_unknown_combustion }
 	}
 }
 
