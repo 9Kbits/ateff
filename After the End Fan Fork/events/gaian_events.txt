@@ -1459,6 +1459,44 @@ narrative_event = {
 }
 
 narrative_event = {
+	id = gaian.111
+	title = EVTITLE_skookumchuk_narrows
+	desc = EVTDESC_skookumchuk_narrows
+	picture = GFX_evt_skookumchuk_narrows
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = river_gaian_hike
+		has_character_flag = hike_option_c
+		trait = on_hike
+		culture = canuck
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = standing_wave
+			years = 5
+		}	
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
 	id = gaian.112
 	title = EVTITLE_pacific_rim_ending
 	desc = EVTDESC_pacific_rim_ending
