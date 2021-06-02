@@ -1116,6 +1116,120 @@ narrative_event = {
 }
 
 narrative_event = {
+	id = gaian.101
+	title = EVTITLE_van_lions_ending
+	desc = EVTDESC_van_lions_ending
+	picture = GFX_evt_van_lions
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = mountain_gaian_hike
+		has_character_flag = hike_option_b
+		trait = on_hike
+		culture = canuck
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = van_lions
+			years = 5
+		}	
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
+	id = gaian.102
+	title = EVTITLE_waddington_ending
+	desc = EVTDESC_waddington_ending
+	picture = GFX_evt_waddington
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = mountain_gaian_hike
+		has_character_flag = hike_option_c
+		trait = on_hike
+		culture = canuck
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = waddington
+			years = 5
+		}	
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
+	id = gaian.103
+	title = EVTITLE_golden_hind_ending
+	desc = EVTDESC_golden_hind_ending
+	picture = GFX_evt_golden_hind
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = mountain_gaian_hike
+		has_character_flag = hike_option_d
+		trait = on_hike
+		culture = canuck
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = golden_hind
+			years = 5
+		}	
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
 	id = gaian.105
 	title = EVTITLE_greatbear_ending
 	desc = EVTDESC_greatbear_ending
@@ -1335,6 +1449,44 @@ narrative_event = {
 		remove_trait = on_hike
 		add_character_modifier = {
 			name = pleased_hike_doc
+			years = 5
+		}	
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
+	id = gaian.112
+	title = EVTITLE_pacific_rim_ending
+	desc = EVTDESC_pacific_rim_ending
+	picture = GFX_evt_pacific_rim
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = river_gaian_hike
+		has_character_flag = hike_option_d
+		trait = on_hike
+		culture = canuck
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = braved_graveyard
 			years = 5
 		}	
 	}
@@ -2210,8 +2362,11 @@ character_event = {
 			10 = { add_trait = one_legged hidden_tooltip = {character_event = {id=gaian.325 days=2}}}
 			10 = { add_trait = one_handed hidden_tooltip = {character_event = {id=gaian.325 days=2}}}
 		}
+	hidden_tooltip = {	
+		set_character_flag = encountered_bear_already
 	}
-	set_character_flag = encountered_bear_already
+	}
+	
 }
 
 character_event = {
@@ -2470,6 +2625,10 @@ character_event = {
 			has_character_flag	= hike_option_c
 			has_character_flag	= hike_option_d
 		}
+	}
+	
+	mean_time_to_happen = {
+		months = 10
 	}
 	
 	option = {

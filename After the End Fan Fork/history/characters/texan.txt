@@ -1306,7 +1306,6 @@
 	}
 	
 	2666.4.2={
-		add_lover = 2302209
 		add_spouse = 2302209
 		effect={
 			set_character_flag=recieved_royal_marriage_aid_duty
@@ -1317,6 +1316,7 @@
 				clr_character_flag=recieved_royal_marriage_aid_duty
 			}
 			clr_character_flag=recieved_royal_marriage_aid_duty
+			add_lover = 2302209
 		}
 	}
 }
@@ -1381,7 +1381,7 @@
 	trait=bad_priest_christian
 	trait=fortune_builder
 	father=2302218
-	2628.2.1={birth=yes}
+	2635.2.1={birth=yes}
 }
 2302213={
 	name="Jakeb"
@@ -1401,7 +1401,7 @@
 	religion=catholic
 	culture=czexan
 	father=2302218
-	2655.4.2={birth=yes}
+	2653.4.2={birth=yes}
 }
 2302215={
 	name="Bohdan"
@@ -1456,7 +1456,7 @@
 	dynasty=2055161
 	religion=catholic
 	culture=czexan
-	2620.4.2={birth=yes}
+	2612.4.2={birth=yes}
 	2651.12.26={
 		death={
 			death_reason=death_battle
@@ -1476,14 +1476,16 @@
 	trait = robust
 	trait = fair
 	trait = uncouth
-	friend = 2302220
+	
 	father = 2302222
 	2648.2.2={
 		give_nickname=nick_the_charger
 		birth=yes
 	}
 	2550.6.4={
-		add_friend = 2302220
+		effect = {
+			add_friend = 2302220
+		}
 	}
 }
 
