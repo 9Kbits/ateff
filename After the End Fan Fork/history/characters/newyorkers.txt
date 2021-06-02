@@ -2110,7 +2110,6 @@
 	trait=lustful
 	trait=diligent
 	trait=envious
-	trait=slothful
 	father=1788271
 	2423.1.1={birth=yes}
 	2462.1.1={give_nickname=nick_the_bulwark}
@@ -2855,8 +2854,7 @@
 	name="Rebecca" 
 	dynasty=2005061 #Geffner
 	female=yes
-	culture=gothamite
-	ethnicity=yiddish
+	culture=yiddish
 	religion=reform
 	martial=6
 	diplomacy=6
@@ -2873,11 +2871,12 @@
 	trait=charitable
 	trait=shrewd
 	trait=chaste
-	2325.3.5={birth=yes}
-	2351.10.12={death={death_reason=death_battle_duel killer=1620073}}
+	2325.3.5={birth=yes
+	culture=gothamite
 	effect={
 set_character_flag=no_diversity
-}
+}}
+	2351.10.12={death={death_reason=death_battle_duel killer=1620073}}
 }
 1788298={
 	name="Rohan"
@@ -2911,7 +2910,7 @@ set_character_flag=no_diversity
 	intrigue=1
 	learning=9
 	disallow_random_traits=yes
-	trait=scholary_theologian
+	trait=scholarly_theologian
 	trait=zealous
 	trait=genius
 	trait=robust
