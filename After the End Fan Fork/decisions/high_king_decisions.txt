@@ -1,92 +1,175 @@
 decisions = {
-	announce_candidacy = {
+
+
+	form_tex_k_yellowrose = {
 		is_high_prio = yes
 		potential = {
 			culture_group = texan_group
 			is_playable = yes
 			independent = yes
-			num_of_duke_titles >= 1
 			capital_scope = {
 				region = custom_texas
 			}
+			has_landed_title = c_bexar 
 		}	
 		allow = {
 			is_adult = yes
 			prisoner = no
 			NOT = { trait = incapable }
-			NOT = {
-				any_independent_ruler = {
-					trait = high_king_candidate
-					count >= 4
-				}
-			}
-			OR = { 
-				AND = { 
-					NOT = {
-						any_independent_ruler = {
-							trait = high_king_candidate
-							count = 1
-						}
-					}
-					prestige = 500
-				}
-				AND = {
-					NOT = {
-						any_independent_ruler = {
-							trait = high_king_candidate
-							count = 2
-						}
-					}
-					prestige = 750
-				}
-				AND = { 
-					NOT = {
-						any_independent_ruler = {
-							trait = high_king_candidate
-							count = 3
-						}
-					}
-					prestige = 1000
-				}
-				prestige = 1250
-			}
+			prestige = 750
+			completely_controls = d_alamo
 		}
+	
 		effect = {
-			if = {
-				limit = {
-					any_independent_ruler = {
-						trait = high_king_candidate
-						count = 3
-					}
-				}
-				prestige = -1250
+			k_yellowrose = {
+				grant_title = ROOT
+				copy_title_laws = PREV
 			}
-			else_if = {
-				limit = {
-					any_independent_ruler = {
-						trait = high_king_candidate
-						count = 3
-					}
-				}
-				prestige = -1000
-			}
-			else_if = {
-				limit = {
-				limit = {
-					any_independent_ruler = {
-						trait = high_king_candidate
-						count = 3
-					}
-				}
-				prestige = -750
-			}
-			else = {
-				prestige = -500
-			}	
-			add_trait = high_king_candidate		
-			set_global_flag = king_candidate_unannouced
-			event = tex_king.1	
 		}
 	}
+
+
+	form_tex_k_westex = {
+		is_high_prio = yes
+		potential = {
+			culture_group = texan_group
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			has_landed_title = c_el_paso
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			completely_controls = d_transpecos
+		}
+	
+		effect = {
+			k_westex = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+		}
+	}
+
+
+	form_tex_k_highlands = {
+		is_high_prio = yes
+		potential = {
+			culture_group = texan_group
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			has_landed_title = c_lubbock
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			completely_controls = d_estacado
+		}
+	
+		effect = {
+			k_highlands = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+		}
+	}
+
+
+	form_tex_k_texarkana = {
+		is_high_prio = yes
+		potential = {
+			culture_group = texan_group
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			has_landed_title = c_texarkana
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			completely_controls = d_arklatex
+		}
+	
+		effect = {
+			k_texarkana = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+		}
+	}
+
+
+	form_tex_k_silvercrown = {
+		is_high_prio = yes
+		potential = {
+			culture_group = texan_group
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			has_landed_title = c_travis
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			completely_controls = d_violet_crown
+		}
+	
+		effect = {
+			k_silvercrown = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+		}
+	}
+
+
+	form_tex_k_star_coast = {
+		is_high_prio = yes
+		potential = {
+			culture_group = texan_group
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			has_landed_title = c_harris
+		}	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+			completely_controls = d_houston
+		}
+	
+		effect = {
+			k_star_coast = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+		}
+	}
+
+
+
+
 }
 
