@@ -1762,7 +1762,51 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = gaian.124
+	id = gaian.123
+	title = EVTITLE_colville_ending
+	desc = EVTDESC_colville_ending
+	picture = GFX_evt_colville
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = forest_gaian_hike
+		has_character_flag = hike_option_c
+		trait = on_hike
+		culture = inlander
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		random_list = {
+			20 = { add_trait = lunatic }
+			20 = { add_trait = possessed }
+			20 = { add_trait = paranoid }
+			40 = { piety = 100 }
+		}
+		add_character_modifier = {
+			name = firewalked_with_gaia
+			years = 7
+		}	
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
+	id = gaian.125
 	title = EVTITLE_hoh_forest_ending
 	desc = EVTDESC_hoh_forest_ending
 	picture = GFX_evt_hoh_forest
@@ -1799,7 +1843,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = gaian.124
+	id = gaian.126
 	title = EVTITLE_indian_heaven_ending
 	desc = EVTDESC_indian_heaven_ending
 	picture = GFX_evt_indian_heaven
