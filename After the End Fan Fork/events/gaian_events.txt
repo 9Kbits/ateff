@@ -1611,7 +1611,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = gaian.116
+	id = gaian.117
 	title = EVTITLE_hells_canyon_ending
 	desc = EVTDESC_hells_canyon_ending
 	picture = GFX_evt_hells_canyon
@@ -1648,7 +1648,7 @@ narrative_event = {
 	}
 }
 narrative_event = {
-	id = gaian.117
+	id = gaian.118
 	title = EVTITLE_pend_orielle_ending
 	desc = EVTDESC_pend_orielle_ending
 	picture = GFX_evt_pend_orielle
@@ -1686,7 +1686,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = gaian.120
+	id = gaian.121
 	title = EVTITLE_hiawatha_ending
 	desc = EVTDESC_hiawatha_ending
 	picture = GFX_evt_hiawatha
@@ -1724,7 +1724,7 @@ narrative_event = {
 }
 
 narrative_event = {
-	id = gaian.121
+	id = gaian.122
 	title = EVTITLE_trail_courdalenes_ending
 	desc = EVTDESC_trail_courdalenes_ending
 	picture = GFX_evt_trail_courdalenes
@@ -1760,6 +1760,81 @@ narrative_event = {
 		character_event = { id = gaian.199 }
 	}
 }
+
+narrative_event = {
+	id = gaian.124
+	title = EVTITLE_hoh_forest_ending
+	desc = EVTDESC_hoh_forest_ending
+	picture = GFX_evt_hoh_forest
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = forest_gaian_hike
+		has_character_flag = hike_option_a
+		trait = on_hike
+		OR = {
+			culture = cascadian
+			culture = siskiyouan
+		}
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = hoh_forest
+			years = 5
+		}	
+	}
+}
+
+narrative_event = {
+	id = gaian.124
+	title = EVTITLE_indian_heaven_ending
+	desc = EVTDESC_indian_heaven_ending
+	picture = GFX_evt_indian_heaven
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = forest_gaian_hike
+		has_character_flag = hike_option_b
+		trait = on_hike
+		OR = {
+			culture = cascadian
+			culture = siskiyouan
+		}
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = encountered_bigfoot
+			years = 5
+		}	
+	}
+}
+
 narrative_event = {
 	id = gaian.130
 	title = EVTITLE_celilo_falls_ending
@@ -1797,7 +1872,116 @@ narrative_event = {
 	}
 }
 narrative_event = {
-	id = gaian.134
+	id = gaian.131
+	title = EVTITLE_olympic_springs_ending
+	desc = EVTDESC_olympic_springs_ending
+	picture = GFX_evt_olympic_hs
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = river_gaian_hike
+		has_character_flag = hike_option_b
+		trait = on_hike
+		OR = {
+			culture = cascadian
+			culture = siskiyouan
+		}
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		remove_trait = stressed
+		add_character_modifier = {
+			name = hot_spring_olympia
+			years = 5
+		}	
+	}
+}
+narrative_event = {
+	id = gaian.133
+	title = EVTITLE_multnomah_falls_ending
+	desc = EVTDESC_multnomah_falls_ending
+	picture = GFX_evt_multnomah_falls
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = river_gaian_hike
+		has_character_flag = hike_option_d
+		trait = on_hike
+		OR = {
+			culture = cascadian
+			culture = siskiyouan
+		}
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = multnomah_falls
+			years = 5
+		}	
+	}
+}
+narrative_event = {
+	id = gaian.136
+	title = EVTITLE_mount_hood_ending
+	desc = EVTDESC_mount_hood_ending
+	picture = GFX_evt_mount_hood
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = mountain_gaian_hike
+		has_character_flag = hike_option_c
+		trait = on_hike
+		OR = {
+			culture = cascadian
+			culture = siskiyouan
+		}
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = mount_hood
+			years = 5
+		}	
+	}
+}
+narrative_event = {
+	id = gaian.137
 	title = EVTITLE_three_sisters_ending
 	desc = EVTDESC_three_sisters_ending
 	picture = GFX_evt_three_sisters
