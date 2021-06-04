@@ -3838,3 +3838,18 @@ narrative_event = {
 		}
 	}
 }
+
+character_event = {
+	id = islamate.107
+	hide_window = yes
+	trigger = {
+		trait = sayyid2
+		NOT = { religion_group = muslim }
+	}
+	mean_time_to_happen = {
+	days = 2
+	}
+	immediate = {
+		remove_trait = sayyid2
+	}
+}
