@@ -76,7 +76,7 @@ narrative_event = {
 			has_global_flag = hanovers_richmond
 		}
 		AND = {
-			dynasty = 1782165
+			dynasty = 1782060
 			has_landed_title = c_james
 			NOT = {
 				has_global_flag = hanovers_virginia
@@ -108,24 +108,65 @@ narrative_event = {
 		name = "EVTOPT_hanoversrichmondc"
 		trigger = {
 			is_landed = yes
-			religion = americanist
+			ROOT = {
+				NOT = {
+					OR = {
+						religion = americanist
+						religion = hamiltonian
+						religion = jeffersonian
+					}
+				}
+			}
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
 		}
 	}
 	option = {
-		name = "EVTOPT_hanoversrichmondd"
+		name = "EVTOPT_hanoverlandd"
 		trigger = {
 			is_landed = yes
 			NOT = {
 				dynasty = 1782165
 				dynasty = 1782060
 				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
 			}
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoverlandd"
+		trigger = {
+			is_landed = yes
+			ROOT = {
+				OR = {
+					religion = americanist
+					religion = hamiltonian
+					religion = jeffersonian
+				}
+			}
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
+		}
+	}
+	option = {
+		name = "EVTOPT_anastasiarichmond"
+		trigger = {
+			is_landed = yes
+			character = 1861579
+			has_landed_title = c_james
 		}
 	}
 }
 narrative_event = {
 	id = hanovers.3
-	title= EVTTITLE_josias_richmond
+	title= EVTTITLE_hanovers_richmond
 	desc = "EVTDESC_josias_richmond"
 	picture = GFX_evt_virgin_mary_icon #placeholder
 	border = GFX_event_narrative_frame_diplomacy
@@ -167,17 +208,50 @@ narrative_event = {
 		name = "EVTOPT_hanoversrichmondc"
 		trigger = {
 			is_landed = yes
-			religion = americanist
+			ROOT = {
+				NOT = {
+					OR = {
+						religion = americanist
+						religion = hamiltonian
+						religion = jeffersonian
+					}
+				}
+			}
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
 		}
 	}
 	option = {
-		name = "EVTOPT_hanoversrichmondd"
+		name = "EVTOPT_hanoverlandd"
 		trigger = {
 			is_landed = yes
 			NOT = {
 				dynasty = 1782165
 				dynasty = 1782060
 				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoverlandd"
+		trigger = {
+			is_landed = yes
+			ROOT = {
+				OR = {
+					religion = americanist
+					religion = hamiltonian
+					religion = jeffersonian
+				}
+			}
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
 			}
 		}
 	}
@@ -204,7 +278,11 @@ narrative_event = {
 		trigger = {
 			ROOT = {
 				NOT = {
-					religion = americanist
+					OR = {
+						religion = americanist
+						religion = hamiltonian
+						religion = jeffersonian
+					}
 				}
 			}
 		}
@@ -213,7 +291,11 @@ narrative_event = {
 	desc = {
 		trigger = {
 			ROOT = {
-				religion = americanist
+				OR = {
+					religion = americanist
+					religion = hamiltonian
+					religion = jeffersonian
+				}
 			}
 		}
 		text = "EVTDESC_hanovers_virginia_americanist"
@@ -259,16 +341,33 @@ narrative_event = {
 	option = {
 		name = "EVTOPT_hanoversvirginiac"
 		trigger = {
-			religion = americanist
+			is_landed = yes
+			ROOT = {
+				NOT = {
+					OR = {
+						religion = americanist
+						religion = hamiltonian
+						religion = jeffersonian
+					}
+				}
+			}
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
 		}
 	}
 	option = {
 		name = "EVTOPT_hanoversvirginiad"
 		trigger = {
+			is_landed = yes
 			NOT = {
 				dynasty = 1782165
 				dynasty = 1782060
 				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
 			}
 		}
 	}
@@ -277,9 +376,17 @@ narrative_event = {
 		trigger = {
 			is_landed = yes
 			ROOT = {
-				religion = americanist
+				OR = {
+					religion = americanist
+					religion = hamiltonian
+					religion = jeffersonian
+				}
 			}
-			religion = americanist
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
 		}
 	}
 }
@@ -297,7 +404,11 @@ narrative_event = {
 		trigger = {
 			ROOT = {
 				NOT = {
-					religion = americanist
+					OR = {
+						religion = americanist
+						religion = hamiltonian
+						religion = jeffersonian
+					}
 				}
 			}
 		}
@@ -306,7 +417,11 @@ narrative_event = {
 	desc = {
 		trigger = {
 			ROOT = {
-				religion = americanist
+				OR = {
+					religion = americanist
+					religion = hamiltonian
+					religion = jeffersonian
+				}
 			}
 		}
 		text = "EVTDESC_josias_virginia_americanist"
@@ -360,10 +475,18 @@ narrative_event = {
 			is_landed = yes
 			ROOT = {
 				NOT = {
-					religion = americanist
+					OR = {
+						religion = americanist
+						religion = hamiltonian
+						religion = jeffersonian
+					}
 				}
 			}
-			religion = americanist
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
 		}
 	}
 	option = {
@@ -371,9 +494,17 @@ narrative_event = {
 		trigger = {
 			is_landed = yes
 			ROOT = {
-				religion = americanist
+				OR = {
+					religion = americanist
+					religion = hamiltonian
+					religion = jeffersonian
+				}
 			}
-			religion = americanist
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
 		}
 	}
 	option = {
@@ -384,6 +515,8 @@ narrative_event = {
 				dynasty = 1782165
 				dynasty = 1782060
 				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
 			}
 		}
 	}
