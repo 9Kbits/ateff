@@ -1,0 +1,307 @@
+namespace = hanovers
+
+narrative_event = {
+	id = hanovers.1
+	title= EVTTITLE_hanovers_landed
+	desc = "EVTDESC_hanovers_landed"
+	picture = GFX_evt_virgin_mary_icon #placeholder
+	border = GFX_event_narrative_frame_diplomacy
+	major = yes
+	trigger = {
+		NOT = {
+			has_global_flag = hanovers_landed
+		}
+		AND = {
+			dynasty = 1782165
+			OR = {
+				tier = COUNT
+				tier = DUKE
+				tier = KING
+				tier = EMPEROR
+			}
+		}
+		NOT = {
+			has_landed_title = c_james
+			has_landed_title = k_old_dominion
+		}
+	}
+	immediate = {
+		set_global_flag = hanovers_landed
+	}
+	mean_time_to_happen = {
+		days = 1
+	}	
+	option = {
+		name = "EVTOPT_hanoverlanda" #the hanovers
+		trigger = {
+			is_landed = yes
+			dynasty = 1782165
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoverlandb" #the josias
+		trigger = {
+			is_landed = yes
+			dynasty = 1782060
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoverlandc" #the americanist/OWC
+		trigger = {
+			is_landed = yes
+			religion = americanist
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoverlandd" #other
+		trigger = {
+			is_landed = yes
+			NOT = {
+				dynasty = 1782165
+				dynasty = 1782060
+				religion = americanist
+			}
+		}
+	}
+}
+narrative_event = {
+	id = hanovers.2
+	title= EVTTITLE_hanovers_richmond
+	desc = "EVTDESC_hanovers_richmond"
+	picture = GFX_evt_virgin_mary_icon #placeholder
+	border = GFX_event_narrative_frame_diplomacy
+	major = yes
+	trigger = {
+		NOT = {
+			has_global_flag = hanovers_richmond
+		}
+		AND = {
+			dynasty = 1782165
+			has_landed_title = c_james
+			NOT = {
+				has_global_flag = hanovers_virginia
+				has_landed_title = k_old_dominion
+			}
+		}
+	}
+	immediate = {
+		set_global_flag = hanovers_richmond
+	}
+	mean_time_to_happen = {
+		days = 1
+	}	
+	option = {
+		name = "EVTOPT_hanoversrichmonda"
+		trigger = {
+			is_landed = yes
+			dynasty = 1782165
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversrichmondb"
+		trigger = {
+			is_landed = yes
+			dynasty = 1782060
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversrichmondc"
+		trigger = {
+			is_landed = yes
+			religion = americanist
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversrichmondd"
+		trigger = {
+			is_landed = yes
+			NOT = {
+				dynasty = 1782165
+				dynasty = 1782060
+				religion = americanist
+			}
+		}
+	}
+}
+narrative_event = {
+	id = hanovers.3
+	title= EVTTITLE_josias_richmond
+	desc = "EVTDESC_josias_richmond"
+	picture = GFX_evt_virgin_mary_icon #placeholder
+	border = GFX_event_narrative_frame_diplomacy
+	major = yes
+	trigger = {
+		NOT = {
+			has_global_flag = hanovers_richmond
+		}
+		AND = {
+			dynasty = 1782060
+			has_landed_title = c_james
+			NOT = {
+				has_global_flag = hanovers_virginia
+				has_landed_title = k_old_dominion
+			}
+		}
+	}
+	immediate = {
+		set_global_flag = hanovers_richmond
+	}
+	mean_time_to_happen = {
+		days = 1
+	}	
+	option = {
+		name = "EVTOPT_hanoversrichmonda"
+		trigger = {
+			is_landed = yes
+			dynasty = 1782060
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversrichmondb"
+		trigger = {
+			is_landed = yes
+			dynasty = 1782165
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversrichmondc"
+		trigger = {
+			is_landed = yes
+			religion = americanist
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversrichmondd"
+		trigger = {
+			is_landed = yes
+			NOT = {
+				dynasty = 1782165
+				dynasty = 1782060
+				religion = americanist
+			}
+		}
+	}
+}
+narrative_event = {
+	id = hanovers.4
+	title= EVTTITLE_hanovers_virginia
+	desc = "EVTDESC_hanovers_virginia"
+	picture = GFX_evt_virgin_mary_icon #placeholder
+	border = GFX_event_narrative_frame_diplomacy
+	major = yes
+	trigger = {
+		NOT = {
+			has_global_flag = hanovers_virginia
+		}
+		AND = {
+			dynasty = 1782165
+			has_landed_title = k_old_dominion
+		}
+	}
+	immediate = {
+		set_global_flag = hanovers_virginia
+		if = {
+			limit = {
+				has_landed_title = c_james
+			}
+			set_global_flag = hanovers_richmond
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}	
+	option = {
+		name = "EVTOPT_hanoversvirginiaa"
+		trigger = {
+			dynasty = 1782165
+			prestige = 50
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversvirginiab"
+		trigger = {
+			dynasty = 1782060
+			prestige = 20
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversvirginiac"
+		trigger = {
+			religion = americanist
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversvirginiad"
+		trigger = {
+			NOT = {
+				dynasty = 1782165
+				dynasty = 1782060
+				religion = americanist
+			}
+		}
+	}
+}
+narrative_event = {
+	id = hanovers.5
+	title= EVTTITLE_hanovers_virginia
+	desc = "EVTDESC_josias_virginia"
+	picture = GFX_evt_virgin_mary_icon #placeholder
+	border = GFX_event_narrative_frame_diplomacy
+	major = yes
+	trigger = {
+		NOT = {
+			has_global_flag = hanovers_virginia
+		}
+		AND = {
+			dynasty = 1782060
+			has_landed_title = k_old_dominion
+		}
+	}
+	immediate = {
+		set_global_flag = hanovers_virginia
+		if = {
+			limit = {
+				has_landed_title = c_james
+			}
+			set_global_flag = hanovers_richmond
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}	
+	option = {
+		name = "EVTOPT_hanoversvirginiaa"
+		trigger = {
+			is_landed = yes
+			dynasty = 1782060
+			prestige = 50
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversvirginiab"
+		trigger = {
+			is_landed = yes
+			dynasty = 1782165
+			prestige = 20
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversvirginiac"
+		trigger = {
+			is_landed = yes
+			religion = americanist
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversvirginiad"
+		trigger = {
+			is_landed = yes
+			NOT = {
+				dynasty = 1782165
+				dynasty = 1782060
+				religion = americanist
+			}
+		}
+	}
+}
+
