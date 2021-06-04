@@ -181,11 +181,43 @@ narrative_event = {
 			}
 		}
 	}
+	option = {
+		name = "EVTOPT_anastasiarichmond"
+		trigger = {
+			is_landed = yes
+			character = 1861579
+			has_landed_title = c_james
+		}
+	}
 }
 narrative_event = {
 	id = hanovers.4
 	title= EVTTITLE_hanovers_virginia
-	desc = "EVTDESC_hanovers_virginia"
+	desc = {
+		trigger = {
+			dynasty = 1782165
+			has_landed_title = k_old_dominion
+		}
+		text = "EVTDESC_hanover_virginia"
+	}
+	desc = {
+		trigger = {
+			ROOT = {
+				NOT = {
+					religion = americanist
+				}
+			}
+		}
+		text = "EVTDESC_hanovers_virginiab"
+	}
+	desc = {
+		trigger = {
+			ROOT = {
+				religion = americanist
+			}
+		}
+		text = "EVTDESC_hanovers_virginia_americanist"
+	}
 	picture = GFX_evt_virgin_mary_icon #placeholder
 	border = GFX_event_narrative_frame_diplomacy
 	major = yes
@@ -214,15 +246,15 @@ narrative_event = {
 		name = "EVTOPT_hanoversvirginiaa"
 		trigger = {
 			dynasty = 1782165
-			prestige = 50
 		}
+		prestige = 50
 	}
 	option = {
 		name = "EVTOPT_hanoversvirginiab"
 		trigger = {
 			dynasty = 1782060
-			prestige = 20
 		}
+		prestige = 20
 	}
 	option = {
 		name = "EVTOPT_hanoversvirginiac"
@@ -238,13 +270,47 @@ narrative_event = {
 				dynasty = 1782060
 				religion = americanist
 			}
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversvirginiae"
+		trigger = {
+			is_landed = yes
+			ROOT = {
+				religion = americanist
+			}
+			religion = americanist
 		}
 	}
 }
 narrative_event = {
 	id = hanovers.5
 	title= EVTTITLE_hanovers_virginia
-	desc = "EVTDESC_josias_virginia"
+	desc = {
+		trigger = {
+			dynasty = 1782060
+			has_landed_title = k_old_dominion
+		}
+		text = "EVTDESC_hanover_virginia"
+	}
+	desc = {
+		trigger = {
+			ROOT = {
+				NOT = {
+					religion = americanist
+				}
+			}
+		}
+		text = "EVTDESC_josias_virginia"
+	}
+	desc = {
+		trigger = {
+			ROOT = {
+				religion = americanist
+			}
+		}
+		text = "EVTDESC_josias_virginia_americanist"
+	}
 	picture = GFX_evt_virgin_mary_icon #placeholder
 	border = GFX_event_narrative_frame_diplomacy
 	major = yes
@@ -274,21 +340,39 @@ narrative_event = {
 		trigger = {
 			is_landed = yes
 			dynasty = 1782060
-			prestige = 50
+			NOT = {
+				character = 1861579
+			}
 		}
+		prestige = 50
 	}
 	option = {
 		name = "EVTOPT_hanoversvirginiab"
 		trigger = {
 			is_landed = yes
 			dynasty = 1782165
-			prestige = 20
 		}
+		prestige = 20
 	}
 	option = {
 		name = "EVTOPT_hanoversvirginiac"
 		trigger = {
 			is_landed = yes
+			ROOT = {
+				NOT = {
+					religion = americanist
+				}
+			}
+			religion = americanist
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoversvirginiae"
+		trigger = {
+			is_landed = yes
+			ROOT = {
+				religion = americanist
+			}
 			religion = americanist
 		}
 	}
@@ -302,6 +386,15 @@ narrative_event = {
 				religion = americanist
 			}
 		}
+	}
+	option = {
+		name = "EVTOPT_anastasiavirginia"
+		trigger = {
+			is_landed = yes
+			character = 1861579
+			has_landed_title = k_old_dominion
+		}
+		prestige = 50
 	}
 }
 
