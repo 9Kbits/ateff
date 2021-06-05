@@ -49,7 +49,20 @@ narrative_event = {
 		name = "EVTOPT_hanoverlandc" #the americanist/OWC
 		trigger = {
 			is_landed = yes
-			religion = americanist
+			ROOT = {
+				NOT = {
+					OR = {
+						religion = americanist
+						religion = hamiltonian
+						religion = jeffersonian
+					}
+				}
+			}
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
 		}
 	}
 	option = {
@@ -60,6 +73,26 @@ narrative_event = {
 				dynasty = 1782165
 				dynasty = 1782060
 				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
+			}
+		}
+	}
+	option = {
+		name = "EVTOPT_hanoverlandd"
+		trigger = {
+			is_landed = yes
+			ROOT = {
+				OR = {
+					religion = americanist
+					religion = hamiltonian
+					religion = jeffersonian
+				}
+			}
+			OR = {
+				religion = americanist
+				religion = hamiltonian
+				religion = jeffersonian
 			}
 		}
 	}
@@ -76,7 +109,7 @@ narrative_event = {
 			has_global_flag = hanovers_richmond
 		}
 		AND = {
-			dynasty = 1782060
+			dynasty = 1782165
 			has_landed_title = c_james
 			NOT = {
 				has_global_flag = hanovers_virginia
@@ -86,6 +119,7 @@ narrative_event = {
 	}
 	immediate = {
 		set_global_flag = hanovers_richmond
+		set_global_flag = hanovers_landed
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -314,6 +348,7 @@ narrative_event = {
 	}
 	immediate = {
 		set_global_flag = hanovers_virginia
+		set_global_flag = hanovers_landed
 		if = {
 			limit = {
 				has_landed_title = c_james
