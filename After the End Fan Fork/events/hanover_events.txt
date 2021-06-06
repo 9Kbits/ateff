@@ -566,3 +566,100 @@ narrative_event = {
 	}
 }
 
+narrative_event = {
+	id = hanovers.6
+	title= EVTTITLE_anastasiaopening
+	desc = "EVTDESC_anastasia1"
+	picture = GFX_evt_princess_byzantine
+	border = GFX_event_narrative_frame_diplomacy
+	prisoner = no
+	has_character_flag = anastasia
+	trigger = {
+		is_landed = yes
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "EVTOPT_anaread"
+		clr_character_flag = anastasia
+		set_character_flag = anastasia2
+		hidden_tooltip = {
+			character_event = { id = hanovers.7 days = 1 }
+		}
+		random_courtier = {
+			opinion = { who = ROOT modifier = opinion_didnt_hear_rain } #placeholder
+		}
+		ai_chance = { factor = 10 }
+	}
+	option = {
+		name = "EVTOPT_anasulk"
+		add_trait = content
+		ai_chance = { factor = 1 }
+	}
+}
+narrative_event = {
+	id = hanovers.7
+	title= EVTTITLE_anastasiareading
+	desc = "EVTDESC_anastasia2"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_narrative_frame_diplomacy
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_anaambitious"
+		add_trait = ambitious
+		hidden_tooltip = {
+			character_event = { id = hanovers.8 days = 1 }
+		}	
+	}
+}
+narrative_event = {
+	id = hanovers.8
+	title= EVTTITLE_anastasiatriangle
+	desc = "EVTDESC_anastasia3"
+	picture = GFX_evt_woman_at_window_hf
+	border = GFX_event_narrative_frame_intrigue
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_anaforgery"
+		wealth = -50
+		hidden_tooltip = {
+			random_list = {
+				20 = { character_event = { id = hanovers.9 days = 30 }}
+				80 = { character_event = { id = hanovers.10 days = 30 }}
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+	option = {
+		name = "EVTOPT_anaanotherway"
+		piety = 20
+		ai_chance = { factor = 1 }
+	}
+}
+narrative_event = {
+	id = hanovers.9
+	title= EVTTITLE_anastasiacaught
+	desc = "EVTDESC_anastasia4"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_narrative_frame_intrigue
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_anacaught"
+	}
+}
+narrative_event = {
+	id = hanovers.10
+	title= EVTTITLE_anastasiaclaimtri
+	desc = "EVTDESC_anastasia5"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_narrative_frame_intrigue
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_anaclaimtri"
+	}
+}
