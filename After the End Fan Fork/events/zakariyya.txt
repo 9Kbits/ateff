@@ -117,6 +117,23 @@ narrative_event = {
 			} #idk about that one chief
 		}	
 	}
+	
+	option = {
+		name = "EVTOPT_zkmarryno"
+		any_realm_character = {
+			limit = {
+				has_character_flag = peasant_girl
+			}
+			add_friend = ROOT
+		}				
+		hidden_tooltip = {
+			character_event = { id = zakariyya.6 days = 1 }
+			remove_trait = flowered
+			liege = {
+				character_event = { id = zakariyya.23 days = 5 } #Carmine Event- we should be golden.
+			} #idk about that one chief
+		}	
+	}
 }
 
 character_event = {
