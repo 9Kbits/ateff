@@ -203,6 +203,58 @@ e_creole = {
 	creation_requires_capital = no	
 }
 
+e_dixieculture = {
+	color={ 158 11 15 }
+	color2={ 255 255 255 }
+	capital = 149 # Atlanta
+	
+	culture = dixie
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = dixie
+		OR = {
+			realm_size = 150
+			e_dixieculture = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
+e_southron = {
+	color={ 128 119 163 }
+	color2={ 255 255 255 }
+	capital = 75 # The James
+	
+	culture = southron
+	allow = {
+		NOT = {
+			has_game_rule = {
+				name = cultural_empires
+				value = off
+			}
+		}
+		war = no
+		NOT = { tier = emperor }
+		culture = southron
+		OR = {
+			realm_size = 150
+			e_southron = { OR = { is_titular = no has_holder = yes } }
+		}
+	}
+	short_name = yes
+	
+	creation_requires_capital = no	
+}
+
 e_tuskegean = {
 	color={ 115 105 99 }
 	color2={ 210 50 20 }
