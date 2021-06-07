@@ -300,7 +300,8 @@
 	trait=gregarious
 	trait=cruel
 	trait=wroth
-	2633.4.14={birth=yes}
+	mother=1890052
+	2631.4.14={birth=yes}
 	2653.1.1={
 		effect={
 			set_character_flag=recieved_royal_marriage_aid_duty
@@ -498,7 +499,7 @@
 	trait=cynical
 	trait=kind
 	trait=ambitious
-	2640.5.1={birth=yes}
+	2636.5.1={birth=yes}
 	2722.1.1={death=yes}
 }
 1890039={
@@ -507,9 +508,10 @@
 	culture=inlander
 	religion=nazarene
 	trait=sympathy_pagans
-	father=1890048
-	2612.5.1={birth=yes}
-	2722.1.1={death=yes}
+	trait=celibate
+	father=1890053
+	2630.5.1={birth=yes}
+	2679.1.1={death=yes}
 }
 
 1890040={
@@ -616,7 +618,10 @@
 	trait=adventurer
 	father=1890047
 	2554.2.14={birth=yes}
-	2613.4.15={death=yes} #NEEDS TO BE KILLED BY SOMEONE DURING GREEN SASH
+	2613.2.15={death={
+			death_reason=death_battle
+		}
+	}
 }
 
 1890047={
@@ -625,7 +630,7 @@
 	culture=inlander
 	religion=trailwalker
 	2517.1.4={birth=yes}
-	2660.2.15={death=yes}
+	2560.2.15={death=yes}
 }
 
 1890048={
@@ -635,7 +640,11 @@
 	religion=trailwalker
 	father=1890046
 	2587.8.1={birth=yes}
-	2633.7.13={death=yes} #KILLED BY TAVIBO TAGATOKA DURING CONQUEST OF BOISE
+	2633.7.13={death={
+			death_reason=death_battle
+			killer=1890021
+		}
+	}
 }
 
 1890049={
@@ -670,4 +679,29 @@
 	mother=1890042
 	2648.12.27={birth=yes}
 	2696.1.1={death=yes}
+}
+
+1890052={
+	name="Muley"
+	female=yes
+	dynasty=1889020
+	culture=inlander
+	religion=gaian
+	trait=brilliant_strategist
+	2612.4.14={birth=yes}
+	2655.3.21={death=yes}
+}
+
+1890053={
+	name="Stan"
+	dynasty=1863072
+	culture=inlander
+	religion=trailwalker
+	father=1890048
+	2616.6.6={birth=yes}
+	2641.4.13={death={
+			death_reason=death_battle
+			killer=1890052
+		}
+	}
 }
