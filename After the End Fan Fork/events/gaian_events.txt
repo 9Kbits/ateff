@@ -3623,3 +3623,137 @@ character_event = {
 	}
 	}
 }
+
+character_event = {
+	id = gaian.900
+	hide_window = yes
+	religion = gaian
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_gaian_901 #grant boon
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				is_rival = FROMFROM
+			}
+			modifier = {
+				factor = 5
+				is_friend = FROMFROM
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { opinion = { who = FROMFROM value = -25 } }
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = { trait = just }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = zealous }
+			}
+			modifier = {
+				factor = 0.1
+				FROMFROM = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = { trait = greedy }
+			}
+		}
+		hidden_tooltip = { FROMFROM = { character_event = { id = gaian.902 days = 7 } } }
+	}
+	option = {
+		name = EVTOPTB_gaian_901 #decline boon
+		ai_chance = {
+			factor = 1
+		}
+		FROMFROM = {
+			opinion = {
+				modifier = denied_boon
+				who = FROMFROM
+				years = 2
+			}
+		}
+		hidden_tooltip = { FROMFROM = { character_event = { id = gaian.903 days = 7 } } }
+	}
+}
+character_event = {
+	id = gaian.901
+	desc = EVTDESC_boon_choice
+	picture = GFX_evt_courtiers_talking
+	religion = gaian
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_boon_stewardship
+		add_character_modifier = {
+			name = official_stewardship_authorization
+			years = 2
+		}
+	}
+	option = {
+		name = EVTOPTB_boon_sponsorship
+		add_character_modifier = {
+			name = official_druid_sponsorship
+			years = 2
+		}
+	}
+	option = {
+		name = EVTOPTC_boon_delegation
+		add_character_modifier = {
+			name = druidic_delegation
+			years = 2
+		}
+	}
+	option = {
+		name = EVTOPTD_boon_next
+		hidden_tooltip = { character_event = { id = gaian.902 } }
+	}
+}
+character_event = {
+	id = gaian.902
+	desc = EVTDESC_boon_choice
+	picture = GFX_evt_courtiers_talking
+	religion = gaian
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_boon_martial
+		add_character_modifier = {
+			name = martial_land_focus
+			years = 2
+		}
+	}
+	option = {
+		name = EVTOPTB_boon_defensive
+		add_character_modifier = {
+			name = defensive_land_focus
+			years = 2
+		}
+	}
+	option = {
+		name = EVTOPTC_boon_tax
+		add_character_modifier = {
+			name = tax_land_focus
+			years = 2
+		}
+	}
+	option = {
+		name = EVTOPTD_boon_next
+		hidden_tooltip = { character_event = { id = gaian.901 } }
+	}
+}
+character_event = {
+	id = gaian.903
+	desc = EVTDESC_boon_denied
+	picture = GFX_evt_courtiers_talking
+	religion = gaian
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_boon
+	}
+}

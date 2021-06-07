@@ -1,0 +1,39 @@
+targetted_decisions = {
+
+	ask_for_boon = {
+		ai_target_filter = none
+		filter = sub_realm
+		ai = no
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			liege = { character = FROM }
+			has_job_title = job_spiritual
+		}
+		allow = {
+			FROM = { piety = 500 }
+			
+			custom_tooltip = {
+	            text = boon_tooltip_recent_boon
+	            hidden_tooltip = {
+	                FROM = { NOT = { has_character_modifier = boon_timer } }
+	                NOT = { has_character_modifier = boon_timer }
+	            }
+	        }
+		}
+		effect = {
+			FROM = { piety = -500 }
+			add_character_modifier = {
+					modifier = boon_timer
+					years = 2
+				}
+			hidden_tooltip = {
+				character_event = { id = gaian.900 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
