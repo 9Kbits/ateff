@@ -14251,6 +14251,25 @@ character_event = {
 			}
 		}
 		
+		# Gaian priests
+		any_independent_ruler = {
+			any_realm_character = {
+				limit = {
+					NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+					OR = {
+						is_female = no
+						NOT = { has_law = enatic_succession }
+					}
+					religion = gaian
+					OR = {
+						is_theocracy = yes
+					}
+					is_ruler = yes
+				}
+				character_event = { id = misc.16 }
+			}
+		}
+		
 		# Libertarian religious head
 		any_independent_ruler = {
 			any_realm_character = {
@@ -14626,5 +14645,79 @@ character_event = {
 	
 	option = {
 		name = EVTOPTALoR.833
+	}
+}
+
+character_event = {
+	id = misc.16
+	desc = "Make Gaian priests female"
+	is_triggered_only = yes
+	hide_window = yes
+	religion = gaian
+	
+	trigger = {
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		is_theocracy = yes
+		OR = {
+			is_female = no
+			NOT = { has_law = enatic_succession }
+		}
+		is_ruler = yes
+	}
+	
+	immediate = {
+		primary_title = { add_law = enatic_succession }
+		if = {
+			limit = { is_female = no }
+			create_random_priest = {
+				female = yes
+				religion = gaian
+				random_traits = yes
+				dynasty = culture
+			}
+			new_character = {
+				character_event = { id = misc.3 } # Diversity
+				remove_trait = lustful
+				remove_trait = hedonist
+				remove_trait = drunkard
+				remove_trait = imbecile
+				remove_trait = distractible
+				remove_trait = slow
+				character_event = { id = misc.4 } # Physique
+				ROOT = {
+					abdicate_to = PREV
+				}
+			}
+		}
+		set_government_type = theocracy_government
+	}
+}
+
+character_event = {
+	id = misc.17
+	desc = "Gaian death trigger"
+	is_triggered_only = yes
+	hide_window = yes
+	religion = gaian
+	
+	trigger = {
+		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
+		is_theocracy = yes
+		is_ruler = yes
+		NOT = { current_heir = { is_female = yes } } # Preserve investiture if valid
+	}
+	
+	immediate = {
+		create_random_priest = {
+			random_traits = yes
+			female = yes
+			religion = gaian
+		}
+		new_character = {
+			ROOT = {
+				any_demesne_title = { gain_title = PREVPREV }
+			}
+			primary_title = { add_law = enatic_succession }
+		}
 	}
 }
