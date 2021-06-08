@@ -230,7 +230,7 @@
 	name="Paggwe"
 	dynasty=1491901
 	culture=paiute
-	religion=cetic
+	religion=cetic #NEEDS TO BE CETIC NOT A MISTAKE
 	trait=fortune_builder
 	trait=way_dove
 	trait=just
@@ -570,7 +570,7 @@
 }
 
 1890043={
-	name="Phalt"
+	name="Donny"
 	dynasty=1863079
 	culture=inlander
 	religion=trailwalker
@@ -630,8 +630,9 @@
 	dynasty=1863074
 	culture=inlander
 	religion=trailwalker
-	2517.1.4={birth=yes}
-	2560.2.15={death=yes}
+	father=1890055
+	2527.1.4={birth=yes}
+	2568.11.16={death=yes}
 }
 
 1890048={
@@ -715,3 +716,45 @@
 	2575.4.16={birth=yes}
 	2633.7.13={death=yes}
 }
+
+1890055={
+	name="Cameron"
+	dynasty=1863074
+	culture=inlander
+	religion=trailwalker
+	father=1890048
+	2516.3.17={birth=yes}
+	2549.4.6={death={
+			death_reason=death_battle
+			killer=XXXXXXX #Needs to be a Ponderosa
+		}
+	}
+}
+
+1890056={
+	name="Ronnette" #NEEDS TO KILL A PONDEROSA
+	dynasty=1863074
+	female=yes
+	culture=inlander
+	religion=trailwalker
+	father=1890055
+	trait=duelist
+	trait=shieldmaiden
+	trait=strong
+	trait=uncouth
+	2518.2.7={birth=yes}
+	2573.1.4={death=yes}
+	}
+}
+
+1890057={
+	name="Phalt"
+	dynasty=1863074
+	culture=inlander
+	religion=trailwalker
+	father=1890055
+	2489.2.7={birth=yes}
+	2542.5.23={death=yes}
+	}
+}
+
