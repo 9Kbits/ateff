@@ -908,3 +908,14 @@ government_flavor = {
 		has_landed_title = d_revivalist
 	}
 }
+
+government_flavor = {
+	name = gov_cenobitic
+	graphics = GFX_evt_cenobium_christian
+	priority = 5
+	trigger = {
+		AND = {
+			government = cenobitic_government
+		}
+	}
+}

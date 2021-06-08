@@ -1,0 +1,29 @@
+###########################################
+#										 #
+# Cenobitic Events						 #
+#										 #
+# 										 #
+#										 #
+###########################################
+
+namespace = ceno
+
+#set succession law (Cenobitic)
+character_event = {
+	id = ceno.001
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		holder_scope = {
+				government = cenobitic_government
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = { government = cenobitic_government }
+			primary_title = { add_law = { law = succ_cenobitic_elective opinion_effect = no } }
+		}
+	}
+}
