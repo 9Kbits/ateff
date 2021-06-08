@@ -12,7 +12,13 @@ targetted_decisions = {
 			has_job_title = job_spiritual
 		}
 		allow = {
-			FROM = { piety = 500 }
+			FROM = { 
+				piety = 500
+				OR = {
+					trait = zealous
+					trait = devout
+				}
+			}
 			
 			custom_tooltip = {
 	            text = boon_tooltip_recent_boon
