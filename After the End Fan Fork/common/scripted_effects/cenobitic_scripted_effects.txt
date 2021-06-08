@@ -1,0 +1,35 @@
+add_cenobitic_trait_effect = {
+	if = {
+		limit = { is_female = yes }
+		if = {
+			limit = { is_married = no }
+			add_trait = canoness
+		}
+		if = {
+			limit = { is_married = yes }
+			add_trait = deaconess
+		}
+	}
+	if = {
+		limit = { is_female = no }
+		if = {
+			limit = { is_married = no }
+			add_trait = canon
+		}
+		if = {
+			limit = { is_married = yes }
+			add_trait = deacon
+		}
+	}
+}
+
+set_Mountain_name_effect = {
+	if = {
+		limit = { is_female = yes }
+		set_special_character_title = MOUNTAIN_MOTHER_TITLE
+	}
+	if = {
+		limit = { is_female = no }
+		set_special_character_title = MOUNTAIN_FATHER_TITLE
+	}
+}

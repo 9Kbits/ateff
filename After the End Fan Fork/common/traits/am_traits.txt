@@ -2802,6 +2802,139 @@ on_hike = {
 	female_compliment = COMPL_HIKER
 }
 
+canon = {
+	potential = {
+		is_female = no
+	}
+	opposites = {
+		canoness
+		deacon
+		deaconess
+		mountain_father
+		mountain_mother
+	}
+	
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	
+	religious = yes
+	cannot_marry = yes
+	cannot_inherit = no
+	customizer = no
+	random = no
+	
+	male_compliment = COMPL_MONK
+}
+
+canoness = {
+	potential = {
+		is_female = yes
+	}
+	
+	opposites = {
+		canon
+		deacon
+		deaconess
+		mountain_father
+		mountain_mother
+	}	
+	monthly_character_piety = 0.5
+	same_religion_opinion = 10
+	
+	religious = yes
+	cannot_marry = yes
+	cannot_inherit = no
+	customizer = no
+	random = no
+	
+	female_compliment = COMPL_NUN
+}
+
+deacon = {
+	potential = {
+		is_female = no
+	}
+	
+	opposites = {
+		canon
+		canoness
+		deaconess
+		mountain_father
+		mountain_mother
+	}	
+	monthly_character_piety = 0.3
+	same_religion_opinion = 5
+	
+	religious = yes
+	customizer = no
+	random = no
+	
+	male_compliment = COMPL_MONK
+}
+
+deaconess = {
+	potential = {
+		is_female = yes
+	}
+	
+	opposites = {
+		canon
+		canoness
+		deacon
+		mountain_father
+		mountain_mother
+	}	
+	monthly_character_piety = 0.3
+	same_religion_opinion = 5
+	
+	religious = yes
+	customizer = no
+	random = no
+	
+	female_compliment = COMPL_NUN
+}
+
+mountain_father = {
+	potential = {
+		is_female = no
+	}
+	opposites = {
+		canon
+		canoness
+		deacon
+		deaconess
+		mountain_mother
+	}
+	
+	ai_zeal = 20
+	monthly_character_piety = 1.5
+	
+	random = no
+	customizer = no
+	church_opinion = 35
+	same_religion_opinion = 35
+}
+
+mountain_mother = {
+	potential = {
+		is_female = yes
+	}
+	opposites = {
+		canon
+		canoness
+		deacon
+		deaconess
+		mountain_father
+	}
+	ai_zeal = 20
+	monthly_character_piety = 1.5
+	fertility = -1.0	
+	random = no
+	customizer = no
+	church_opinion = 35
+	same_religion_opinion = 35
+}
+
 #Commented these out because I have no idea what these are supposed to do.
 
 #fair_credit = {

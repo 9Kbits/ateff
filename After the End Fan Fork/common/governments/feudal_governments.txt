@@ -68,6 +68,9 @@ feudal_governments = {
 			NOT = {	religion = imamite }
 			NOT = {	religion = qingzhen }
 			NOT = {	religion = nazarene }
+			NOT = {	religion = montane }
+			NOT = {	religion = edenite }
+			NOT = {	religion = angeline }
 			NOR = {
 				religion = traditionalist
 				religion = revivalist
@@ -457,14 +460,6 @@ feudal_governments = {
 					religion = gaian
 					higher_tier_than = BARON
 				}
-				AND = {
-					religion = montane
-					higher_tier_than = BARON
-				}
-				AND = {
-					religion = edenite
-					higher_tier_than = BARON
-				}
 			}
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
@@ -783,4 +778,65 @@ feudal_governments = {
 		court_size_modifier = 15
 		commanders = 3
 	}
+
+	cenobitic_government = {
+		preferred_holdings = { CASTLE TEMPLE }
+		allowed_holdings = { 
+			CASTLE 
+			TEMPLE
+			FORT
+			HOSPITAL
+		}
+		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
+			TRIBAL
+		}
+		accepts_liege_governments = { # Gets the wrong religion modifier instead
+			bureaucratic_government
+			diwan_government
+			theocracy_government
+			feudal_government
+			ghazi_government
+		}
+		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
+			tribal_government
+		}
+		frame_suffix = "_cenobitic_government"
+		potential = {
+		OR= {
+		religion = montane
+		religion = edenite
+		religion = angeline
+		}
+			is_patrician = no		
+		}
+		
+		vassal_call_to_arms  = {
+			bureaucratic_government
+			diwan_government
+			theocracy_government
+			feudal_government
+			ghazi_government
+			cenobitic_government
+		}
+		
+		color = { 216 205 170 }
+		
+		uses_piety_for_law_change = yes
+		dukes_called_kings = yes
+		barons_need_dynasty = yes
+		ignores_de_jure_laws = yes
+		can_imprison_without_reason = yes 
+
+		can_build_tribal = no
+		
+		ignore_in_vassal_limit_calculation = {
+			tribal_government
+		}
+		capital_move_delay = 200
+		## Modifiers
+		court_size_modifier = 10
+		min_vassal_tax = 0.1
+		aggression = -2
+	}
+
 }
