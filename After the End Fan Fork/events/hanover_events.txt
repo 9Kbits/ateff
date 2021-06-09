@@ -136,6 +136,9 @@ narrative_event = {
 		trigger = {
 			is_landed = yes
 			dynasty = 1782060
+			NOT = {
+				character = 1861579
+			}
 		}
 	}
 	option = {
@@ -229,6 +232,9 @@ narrative_event = {
 		trigger = {
 			is_landed = yes
 			dynasty = 1782060
+			NOT = {
+				character = 1861579
+			}
 		}
 	}
 	option = {
@@ -661,5 +667,78 @@ narrative_event = {
 	is_triggered_only = yes
 	option = {
 		name = "EVTOPT_anaclaimtri"
+	}
+}
+
+
+narrative_event = {
+	id = hanovers.20
+	title = EVTTITLE_anastasiabloodHCC
+	desc = {
+		trigger = {
+			character = 1861579
+		}
+		text = EVTDESC_anastasiabloodHCC
+	}
+	desc = {
+		trigger = {
+			NOT = { character = 1861579 }
+		}
+		text = EVTDESC_anastasiabloodHCCgeneric
+	}
+	picture = GFX_evt_virgin_mary_icon
+	border = GFX_event_narrative_frame_war
+	sound = bloodline_added
+	
+	is_triggered_only = yes
+
+	trigger = { 
+		has_dlc = "Holy Fury" 
+	}
+	
+	option = {
+		name = EVTOPT_anabloodline
+		if = { 
+			limit = { 
+				this_has_cool_nickname_trigger = no 
+				this_has_super_cool_nickname_trigger = no 
+			}
+			give_nickname = nick_the_heartbreaker
+		}
+		if = { 
+			limit = { character = 1861579 }
+			create_bloodline = {
+				type = true_anastasia_bloodline
+			}	
+		}
+		else_if = {
+			limit = { is_female = yes } 
+			create_bloodline = {
+				type = heartbraker_female_bloodline
+			}	
+		}
+		else_if = {
+			limit = { is_female = no } 
+			create_bloodline = {
+				type = heartbraker_male_bloodline
+			}	
+		}
+		ai_chance = { 
+			factor = 100
+		}
+	}
+}
+
+character_event = {
+	id = hanovers.21
+	title = EVTTITLE_anadisinherit
+	desc = "EVTDESC_anadisinherit"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_normal_frame_intrigue
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTanadisinherit
+		add_trait = disinherited_trait
 	}
 }

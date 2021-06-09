@@ -1,0 +1,63 @@
+targetted_decisions = {
+
+	disinherit_hanover = {
+		ai_target_filter = none
+		filter = sub_realm
+		ai_target_filter = close_relatives
+		ai = no
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			NOT = {	character = FROM }
+			is_child_or_sibling_of_from_trigger = yes
+			NOT = { trait = disinherited_trait }
+			NOT = { trait = disinherited }
+			FROM = {
+				any_owned_bloodline = {
+					has_bloodline_flag = bloodline_effect_disinherit
+				}
+			}
+		}
+		allow = {
+			FROM = { 
+				prestige = 500
+				is_landed = yes
+				NOT = {
+					OR = {
+						trait = incapable
+						trait = disinherited_trait
+						trait = bastard
+						trait = legit_bastard
+						trait = child_of_consort
+						trait = child_of_consort_male
+						trait = kinslayer
+						trait = familial_kinslayer
+						trait = dynastic_kinslayer
+						trait = excommunicated
+						trait = in_hiding
+						trait = travelling
+					}
+				}
+			}
+			
+			custom_tooltip = {
+#	            text = boon_tooltip_recent_boon
+#	            hidden_tooltip = {
+#	                FROM = { NOT = { has_character_modifier = boon_timer } }
+#	                NOT = { has_character_modifier = boon_timer }
+#	            }
+	        }
+		}
+		effect = {
+			FROM = { prestige = -500 }
+			custom_tooltip = { text = disinherent_custom_tooltip }
+			hidden_tooltip = {
+				character_event = { id = hanovers.21 }
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

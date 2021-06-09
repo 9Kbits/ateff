@@ -900,10 +900,24 @@ hanovers_bloodline = {
 }
 
 true_anastasia_bloodline = {
-	religion_head_opinion = 5
-	southron_opinion = 5
-	bloodline_effect_easy_vows = 1
-	monthly_character_piety = 0.05
+		monthly_character_prestige = 0.5
+	vassal_opinion = 5
+	bloodline_effect_disinherit = 1
+	bloodline_effect_princely_elective_boon = 1
+	inheritance = matrilineal
+	matrilineal_override = no
+	allow_bastards = no
+	active = {
+		religion = evangelical
+	}
+	picture = GFX_bloodlines_symbol_fleur_de_lis
+	flags = { created_bloodline matilde_bloodline bloodline_disinherit bloodline_princely_elective_bonus }
+}
+
+heartbraker_female_bloodline = {
+	vassal_opinion = 10
+	bloodline_effect_disinherit = 1
+	bloodline_effect_princely_elective_boon = 1
 	inheritance = matrilineal
 	matrilineal_override = yes
 	allow_bastards = no
@@ -911,7 +925,21 @@ true_anastasia_bloodline = {
 		religion = evangelical
 	}
 	picture = GFX_bloodlines_symbol_fleur_de_lis
-	flags = { created_bloodline matilde_bloodline bloodline_easy_monks }
+	flags = { created_bloodline matilde_bloodline bloodline_disinherit bloodline_princely_elective_bonus }
+}
+
+heartbraker_male_bloodline = {
+	vassal_opinion = 10
+	bloodline_effect_disinherit = 1
+	bloodline_effect_princely_elective_boon = 1
+	inheritance = matrilineal
+	matrilineal_override = no
+	allow_bastards = no
+	active = {
+		religion = evangelical
+	}
+	picture = GFX_bloodlines_symbol_fleur_de_lis
+	flags = { created_bloodline matilde_bloodline bloodline_disinherit bloodline_princely_elective_bonus }
 }
 
 rodman = {
