@@ -143,10 +143,10 @@
 	2380.2.5={death=yes}
 }
 2500008={
-	name="Mervyn"
+	name="Harvey"
 	dynasty=1849096# Areus
 	culture=bayfolk
-	religion=sedevacantist
+	religion=pagan
 	father=2500007
 	trait=impaler
 	trait=cruel
@@ -1044,7 +1044,7 @@
 	name="Magdalynn"
 	dynasty=1849096# Areus
 	culture=bayfolk
-	religion=sedevacantist
+	religion=nazarene
 	female=yes
 	father=2500008
 	trait=charismatic_negotiator
@@ -1614,10 +1614,10 @@
 }
 
 2500070={
-	name="Joshua"
+	name="Sebas"
 	culture=valleyan
-	religion=evangelical
-	dynasty=1850049 #Garcia
+	religion=pagan
+	dynasty=1850049 #Sofocante
 	occluded=yes
 	trait=brilliant_strategist
 	trait=legendary
@@ -1626,21 +1626,26 @@
 	trait=greedy
 	trait=ambitious
 	trait=zealous
-	trait=paranoid 
+	trait=paranoid
+	trait=depressed
+	trait=blinded
 	give_nickname=nick_the_grizzly
+	mother=2500098
 	2140.1.1={birth=yes}
+	2160.6.21={add_spouse=2500098}
 	2190.2.15={death= {
-		death_reason=death_battle
+		death_reason=
 		}	
 	}
 }
 
 2500071={
-	name="Jacob"
+	name="Ethan"
 	culture=valleyan
-	religion=evangelical
-	dynasty=1850049 #Garcia
+	religion=pagan
+	dynasty=1850049 #Sofocante
 	father=2500070
+	mother=2500098
 	occluded=yes
 	trait=thrifty_clerk
 	trait=legendary
@@ -1651,22 +1656,24 @@
 	trait=lustful
 	trait=craven
 	2170.1.1={birth=yes}
-	2230.1.1={death=yes}
+	2200.1.1={death=yes}
 }
 
 2500072={
-	name="Jonathan"
+	name="Paul"
 	culture=valleyan
-	religion=evangelical
-	dynasty=1850049 #Garcia
-	father=2500071
+	religion=pagan
+	dynasty=1850049 #Sofocante
+	father=2500070
+	mother=2500098
 	trait=tough_soldier
 	trait=brave
 	trait=just
 	trait=diligent
 	trait=honest
 	trait=kind
-	2220.1.1={birth=yes}
+	give_nickname=nick_the_nice
+	2180.1.1={birth=yes}
 	2245.3.24={death={
 			death_reason=death_execution_hanging
 			killer=2500009
@@ -1677,7 +1684,7 @@
 	name="Jerry"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Garcia
+	dynasty=1850049 #Sofocante
 	father=2500072
 	trait=charismatic_negotiator
 	trait=paranoid
@@ -1691,7 +1698,7 @@
 	name="Jason"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Garcia
+	dynasty=1850049 #Sofocante
 	father=2500073
 	trait=thrifty_clerk
 	trait=greedy
@@ -1704,7 +1711,7 @@
 	name="Jordan"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Garcia
+	dynasty=1850049 #Sofocante
 	father=2500074
 	trait=charismatic_negotiator
 	trait=paranoid
@@ -1718,7 +1725,7 @@
 	name="Jules"
 	culture=valleyan
 	religion=evangelical
-	dynasty=1850049 #Garcia
+	dynasty=1850049 #Sofocante
 	father=2500075
 	trait=intricate_webweaver
 	trait=paranoid
@@ -1734,7 +1741,7 @@
 	culture=valleyan
 	female=yes
 	religion=cetic
-	dynasty=1850049 #Garcia
+	dynasty=1850049 #Sofocante
 	father=2500076
 	trait=naive_appeaser
 	trait=paranoid
@@ -2082,7 +2089,7 @@ martial=6
 	2648.3.11={birth=yes}
 }
 2500097={
-	name="Verónica"
+	name="Veronica"
 	culture=californio
 	female=yes
 	dynasty=1912076 #Mendoza
@@ -2097,4 +2104,20 @@ martial=6
 	father=2500094
 	mother=2500088
 	2650.7.2={birth=yes}
+}
+2500098={
+	name="Joyce"
+	culture=valleyan
+	female=yes
+	dynasty=1850049 #Sofocante
+	religion=pagan
+	trait=midas_touched
+	trait=fair
+	trait=just
+	trait=depressed
+	trait=shrewd
+	trait=mystic
+	2125.7.2={birth=yes}
+	2160.6.21={add_spouse=2500070}
+	2190.2.14={death=yes}
 }

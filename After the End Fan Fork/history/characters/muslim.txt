@@ -48,8 +48,12 @@
 	trait=gregarious
 	trait=fair
 	trait=charismatic_negotiator
+	trait=socializer
+	trait=gregarious
 	trait=legendary
+	trait=sympathy_christendom
 	trait=sayyid2
+	give_nickname=nick_the_peacemaker
 	disallow_random_traits=yes
 	2021.8.6={birth=yes}
 	2120.11.21={death=yes}
@@ -81,6 +85,7 @@
 	religion=imamite
 	trait=legendary
 	trait=sayyid2
+	disallow_random_traits=yes
 	2120.1.1={birth=yes}
 	2200.1.1={death=yes}
 }
@@ -93,6 +98,7 @@
 	religion=imamite
 	trait=legendary
 	trait=sayyid2
+	disallow_random_traits=yes
 	2160.1.1={birth=yes}
 	2225.1.1={death=yes}
 }
@@ -111,6 +117,7 @@
 	trait=devout
 	trait=just
 	trait=brave
+	disallow_random_traits=yes
 	give_nickname=nick_the_martyr
 	2200.1.1={birth=yes}
 	2247.3.7={death={
@@ -128,11 +135,13 @@
 	religion=imamite
 	trait=sayyid2
 	trait=duelist
+	trait=brilliant_strategist
 	trait=ambitious
 	trait=zealous
 	trait=wroth
 	trait=strong
 	give_nickname=nick_the_avenger
+	disallow_random_traits=yes
 	2242.2.4={birth=yes}
 	2300.5.9={death=yes}
 }
@@ -146,6 +155,7 @@
 	trait=devout
 	trait=ambitious
 	trait=on_hajj
+	disallow_random_traits=yes
 	give_nickname=nick_the_pilgrim
 	2276.5.3={birth=yes}
 	2337.4.17={death={death_reason=death_missing}}
@@ -157,6 +167,14 @@
 	culture=anjalusi
 	religion=imamite
 	trait=sayyid2
+	trait=kind
+	trait=sympathy_christendom
+	trait=sympathy_pacific
+	trait=sympathy_pagan
+	trait=sympathy_judaism
+	trait=just
+	disallow_random_traits=yes
+	give_nickname=nick_the_pure
 	2320.1.15={birth=yes}
 	2389.9.11={death=yes}
 }
@@ -168,7 +186,10 @@
 	religion=imamite
 	trait=sayyid2
 	trait=humble
+	trait=just
+	trait=shrewd
 	trait=sympathy_pacific
+	disallow_random_traits=yes
 	give_nickname=nick_the_bowed
 	2370.4.6={birth=yes}
 	2430.7.11={death=yes}
@@ -181,6 +202,7 @@
 	religion=imamite
 	trait=sayyid2
 	trait=sympathy_pacific
+	disallow_random_traits=yes
 	2412.8.3={birth=yes}
 	2467.1.9={death=yes}
 }
@@ -192,6 +214,7 @@
 	religion=imamite
 	trait=sayyid2
 	trait=sympathy_pacific
+	disallow_random_traits=yes
 	2460.4.5={birth=yes}
 	2521.6.27={death=yes}
 }
@@ -203,6 +226,7 @@
 	religion=imamite
 	trait=sayyid2
 	trait=sympathy_pacific
+	disallow_random_traits=yes
 	2502.3.10={birth=yes}
 	2560.11.22={death=yes}
 }
@@ -214,6 +238,7 @@
 	religion=imamite
 	trait=sayyid2
 	trait=sympathy_pacific
+	disallow_random_traits=yes
 	2540.8.14={birth=yes}
 	2609.7.14={death=yes}
 }
@@ -229,7 +254,11 @@
 	culture=anjalusi
 	religion=imamite
 	trait=sayyid2
+	trait=slothful
+	trait=content
+	trait=kind
 	trait=sympathy_pacific
+	disallow_random_traits=yes
 	2593.12.14={birth=yes}
 	2618.3.1={add_spouse=2200031}
 	2622.1.1={death={
@@ -2836,3 +2865,232 @@
 	2665.12.19={add_spouse=1384010}
 	2740.12.1={death=yes}
 }
+2500098={
+	name="Qamaria"
+	culture=anjalusi
+	female=yes
+	dynasty=2030000 #Abbas
+	religion=imamite
+	trait=grey_eminence
+	trait=fair
+	trait=ambitious
+	trait=schemer
+	trait=shrewd
+	trait=mystic
+	father=2200010
+	give_nickname=nick_the_charming 
+	2455.7.2={birth=yes}
+	2485.6.21={add_spouse=2500099}
+	2490.2.14={death={
+            death_reason=death_execution
+            killer=2500100
+        }
+    }
+}
+2500099={
+	name="Marcus"
+	culture=valleyan
+	dynasty=1851041 #Yudkow
+	religion=imamite
+	trait=grey_eminence
+	trait=scholar
+	trait=kind
+	trait=patient
+	trait=diligent
+	trait=mystic
+	trait=twin
+	trait=sympathy_pacific
+	father=1910101
+	give_nickname=nick_the_unlucky
+	2437.7.2={birth=yes}
+	2485.6.21={add_spouse=2500098}
+	2490.2.14={death={
+            death_reason=death_execution
+            killer=2500100
+        }
+    }
+}
+2500100={
+	name="August"
+	culture=valleyan
+	female=yes
+	dynasty=1851041 #Yudkow
+	religion=cetic
+	trait=skilled_tactician
+	trait=wroth
+	trait=zealous
+	trait=ambitious
+	trait=shrewd
+	trait=mystic
+	trait=twin
+	father=1910101
+	give_nickname=nick_the_ruthless
+	2437.7.2={birth=yes}
+	2490.2.14={death={
+            death_reason=death_execution
+            killer=1910102
+        }
+    }
+}
+2500101={
+	name="Miriam"
+	culture=valleyan
+	female=yes
+	dynasty=1851041 #Yudkow
+	religion=imamite
+	trait=skilled_tactician
+	trait=content
+	trait=devout
+	trait=kind
+	trait=shrewd
+	trait=mystic
+	trait=twin
+	father=2500099
+	mother=2500098
+	2487.7.2={birth=yes}
+	2510.6.21={
+        effect={
+            set_character_flag=recieved_royal_marriage_aid_duty
+            spouse={
+                set_character_flag=recieved_royal_marriage_aid_duty
+                remove_spouse=spouse
+                add_spouse_matrilineal=ROOT
+                clr_character_flag=recieved_royal_marriage_aid_duty
+            }
+            clr_character_flag=recieved_royal_marriage_aid_duty
+        }
+    }
+	2561.2.14={employer=1845035}
+	2563.2.14={death=yes}
+}
+2500102={
+	name="Zane"
+	culture=valleyan
+	dynasty=1851041 #Yudkow
+	religion=imamite
+	trait=skilled_tactician
+	trait=diligent
+	trait=zealous
+	trait=ambitious
+	trait=shrewd
+	trait=wroth
+	trait=twin
+	trait=strong
+	father=2500099
+	mother=2500098
+	2487.7.2={birth=yes}
+	2560.2.14={death=yes}
+}
+2500103={
+	name="Michael"
+	culture=cascadian
+	dynasty=1845000 #Freeland
+	religion=gaian
+	trait=grey_eminence
+	trait=content
+	trait=sympathy_islam
+	trait=kind
+	trait=shrewd
+	trait=mystic
+	father=1845000
+	mother=1845001
+	2520.7.2={birth=yes}
+	2550.6.21={add_spouse=2500105}
+	2583.2.14={death=yes}
+}
+2500104={
+	name="Musa"
+	culture=anjalusi
+	dynasty=2030000 #Abbas
+	religion=imamite
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=schemer
+	trait=shrewd
+	trait=wroth
+	father=2200011
+	2485.7.2={birth=yes}
+	2510.6.21={add_spouse=2500101}
+	2573.2.14={death=yes}
+    
+}
+2500105={
+	name="Sarah"
+	culture=valleyan
+	dynasty=1851041 #Yudkow
+	religion=imamite
+	trait=grey_eminence
+	trait=ambitious
+	trait=devout
+	trait=shrewd
+	trait=wroth
+	father=2500104
+	mother=2500101
+	2520.7.2={birth=yes}
+	2538.6.21={
+        effect={
+            set_character_flag=recieved_royal_marriage_aid_duty
+            spouse={
+                set_character_flag=recieved_royal_marriage_aid_duty
+                remove_spouse=spouse
+                add_spouse_matrilineal=ROOT
+                clr_character_flag=recieved_royal_marriage_aid_duty
+            }
+            clr_character_flag=recieved_royal_marriage_aid_duty
+        }
+    }
+	2583.2.14={death=yes}
+}
+2500106={
+	name="Dinah"
+	culture=cascadian
+	dynasty=1851041 #Yudkow
+	religion=gaian
+	secret_religion=imamite
+	trait=peasant_leader
+	trait=ambitious
+	trait=zodiac_leo
+	trait=shrewd
+	trait=wroth
+	father=2500103
+	mother=2500105
+	2560.8.4={birth=yes}
+	2619.4.6={death={
+            death_reason=death_battle
+            killer=2500015
+        }
+    }
+}
+2500107={
+	name="Hannah"
+	culture=cascadian
+	dynasty=1851041 #Yudkow
+	religion=gaian
+	secret_religion=imamite
+	trait=kind
+	trait=ambitious
+	trait=zodiac_leo
+	trait=shrewd
+	trait=patient
+	trait=diligent
+	mother=2500106
+	2590.8.4={birth=yes}
+	2660.4.6={death=yes}
+    }
+2500108={
+	name="Leah"
+	culture=cascadian
+	dynasty=1851041 #Yudkow
+	religion=gaian
+	secret_religion=imamite
+	trait=kind
+	trait=ambitious
+	trait=zodiac_leo
+	trait=shrewd
+	trait=patient
+	trait=diligent
+	trait=fair
+	mother=2500106
+	2633.8.4={birth=yes}
+	2699.4.6={death=yes}
+    }
