@@ -10,7 +10,7 @@ decisions = {
 			capital_scope = {
 				region = custom_texas
 			}
-			has_landed_title = c_bexar 
+			#has_landed_title = c_bexar 
 		}	
 		allow = {
 			is_adult = yes
@@ -38,7 +38,7 @@ decisions = {
 			capital_scope = {
 				region = custom_texas
 			}
-			has_landed_title = c_el_paso
+			#has_landed_title = c_el_paso
 		}	
 		allow = {
 			is_adult = yes
@@ -66,7 +66,7 @@ decisions = {
 			capital_scope = {
 				region = custom_texas
 			}
-			has_landed_title = c_lubbock
+			#has_landed_title = c_lubbock
 		}	
 		allow = {
 			is_adult = yes
@@ -94,7 +94,7 @@ decisions = {
 			capital_scope = {
 				region = custom_texas
 			}
-			has_landed_title = c_texarkana
+			#has_landed_title = c_texarkana
 		}	
 		allow = {
 			is_adult = yes
@@ -122,7 +122,7 @@ decisions = {
 			capital_scope = {
 				region = custom_texas
 			}
-			has_landed_title = c_travis
+			#has_landed_title = c_travis
 		}	
 		allow = {
 			is_adult = yes
@@ -150,7 +150,7 @@ decisions = {
 			capital_scope = {
 				region = custom_texas
 			}
-			has_landed_title = c_harris
+			#has_landed_title = c_harris
 		}	
 		allow = {
 			is_adult = yes
@@ -169,6 +169,168 @@ decisions = {
 	}
 
 
+
+	form_e_texas = {
+		is_high_prio = yes
+		potential = {
+			culture_group = texan_group
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			NOT = { has_global_flag = longhorns_decimated }
+			NOT = { has_global_flag = aggies_decimated }
+		}	
+		allow = {
+			independent = yes
+			OR = {
+				has_landed_title = k_rio_grande
+				has_landed_title = k_old_star
+				has_landed_title = k_comancheria
+				custom_tooltip = {
+					text = HOLD_TEXAN_KINGDOM_TITULAR
+					hidden_tooltip = {
+						OR = {
+							has_landed_title = k_westex
+							has_landed_title = k_highlands
+							has_landed_title = k_yellowrose
+							has_landed_title = k_texarkana
+							has_landed_title = k_silvercrown
+							has_landed_title = k_new_mexico
+						}
+					}
+				}
+			}
+			AND = {
+				custom_tooltip = {
+					text = CONTROL_AIRMEN
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_airmen
+							}
+
+							any_vassal = {
+								has_landed_title = d_airmen
+							}
+
+							ROOT = {
+								has_landed_title = d_airmen
+							}
+						}
+					}
+				}
+				custom_tooltip = {
+					text = CONTROL_FIRST_CAV
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_first_cav
+							}
+
+							any_vassal = {
+								has_landed_title = d_first_cav
+							}
+
+							ROOT = {
+								has_landed_title = d_first_cav
+							}
+						}
+					}
+				}
+				
+				custom_tooltip = {
+					text = CONTROL_LONGHORNS
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_longhorns
+							}
+
+							any_vassal = {
+								has_landed_title = d_longhorns
+							}
+
+							ROOT = {
+								has_landed_title = d_longhorns
+							}
+						}
+					}
+				}
+				
+				custom_tooltip = {
+					text = CONTROL_AGGIES
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_aggies
+							}
+
+							any_vassal = {
+								has_landed_title = d_aggies
+							}
+
+							ROOT = {
+								has_landed_title = d_aggies
+							}
+						}
+					}
+				}
+				
+				custom_tooltip = {
+					text = CONTROL_MINERS
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_miners
+							}
+
+							any_vassal = {
+								has_landed_title = d_miners
+							}
+
+							ROOT = {
+								has_landed_title = d_miners
+							}
+						}
+					}
+				}
+				
+				custom_tooltip = {
+					text = CONTROL_RED_RAIDER
+					hidden_tooltip = {
+						OR = {
+							any_tributary = {
+								has_landed_title = d_red_raider
+							}
+
+							any_vassal = {
+								has_landed_title = d_red_raider
+							}
+
+							ROOT = {
+								has_landed_title = d_red_raider
+							}
+						}
+					}
+				}
+				
+			}
+			culture_group = texan_group
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 750
+		}
+	
+		effect = {
+			k_star_coast = {
+				grant_title = ROOT
+				copy_title_laws = PREV
+			}
+		}
+	}
 
 
 }
