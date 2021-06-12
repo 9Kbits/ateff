@@ -2937,6 +2937,28 @@ heartwood_spear= {
 	slot = weapon
 }
 
+vandals_axe= {
+	monthly_character_prestige = 0.2
+	combat_rating = 10
+	martial = 1
+	quality = 3
+	command_modifier = {
+		damage = 0.1
+		light_infantry = 0.1
+	}
+	active = {
+		OR = {
+			age=14
+			religion = gaian
+			religion = trailwalker
+		}
+	}
+	flags = { combat_weapon weapon axe }
+	stacking = no
+	picture = "GFX_viking_axe"
+	slot = weapon
+}
+
 fastest_gun = {
 	monthly_character_prestige = 1.25
 	martial = 5
