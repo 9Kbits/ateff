@@ -421,4 +421,74 @@ north_pacific = {
 		feminist = yes
 		modifier = default_culture_modifier
 	}
+
+	snakelander = {
+		graphical_cultures = { canadiangfx whitepacificgfx }
+		unit_graphical_cultures = { englishgfx saxongfx }
+
+		color = { 80 60 60 }
+	
+		male_names = {
+			Alberto Ander Andoni Antton Arco
+			Baker Bayonne Bieter Blaine Brad Bugler Buhl Butch Butte
+			Cabar Camas Caspar Charbonneau Chase Corraler Craig Custer
+			Davis DeWitt Dermitt Diego Dierkes Don Duner Dutch
+			Eneko Ernst
+			Falconer Favor Feller Francois Frank Fremont
+			Gardener Gourka Gus
+			Hadai Hager Hall Harley Harry Hemingway
+			Inazio Ion Isaac
+			Jack Jackson Jaialdi Jebediah Jose
+			Kerman Ketch
+			Lant Laxalt LeBois Luken
+			Markel Massif Mattin Max Michael Mikel Morley
+			Napoleon Natlab Nikola Nock
+			Omer Otter Oxbow
+			Pedro Penit Perce Petri Pierce Pierre Preston
+			Raul Raygan Reed Reggs Rick Russ Russet
+			Scade Snell Stan Stevens
+			Vial Victor
+			Walt Wester
+			Xanti Xabier
+			Zori
+		}
+		female_names = {
+			Abbey Ada Amelia Anne Ashley
+			Bellevue Blue Bonneville Bou
+			Carey Cari Cassa Charlotte Columbette
+			Della Doka
+			Emma Enid
+			Galena Garnet Gem Gernika Grace Grouse
+			Hilargy Holly
+			Ida Idahome Igone Izaro
+			Jean Jody Jone Joska Josune Judy June
+			Leire
+			Maite Maria May Maya Merid Monika
+			Nahia Nere Nikole
+			Oakley
+			Parma Payette Poky
+			Quail
+			Sally San Sawt Shone Shosh Soda Sue
+			Terese Treasure
+			Udane
+			Wickah
+		}
+		
+		from_dynasty_prefix = "from "
+		
+		prefix = no # The patronym is added as a suffix
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 40
+		mat_grf_name_chance = 15
+		father_name_chance = 20
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 40
+		mat_grm_name_chance = 20
+		mother_name_chance = 15
+		
+		feminist = yes
+		modifier = default_culture_modifier
+	}
 }
