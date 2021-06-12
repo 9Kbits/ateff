@@ -369,7 +369,7 @@ succession_laws = {
 				OR = {
 					religion_group = afro_syncretic
 					religion_group = american_native
-					culture = metis
+					religion = gaian
 					AND = {
 						is_tribal = yes
 						OR = {
@@ -377,6 +377,7 @@ succession_laws = {
 							religion = celtic_pagan
 						}
 					}
+					culture = metis
 					has_religion_feature = religion_beatification
 					has_religion_feature = religion_feature_trailwalker
 					has_religion_feature = religion_feature_revelationist
@@ -570,7 +571,11 @@ succession_laws = {
 				NOT = { tier = baron }
 				holder_scope = { is_patrician = yes }
 			}
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 			holder_scope = {
 				NAND = {
 					OR = {
@@ -753,7 +758,11 @@ succession_laws = {
 				}
 				has_title_flag = alternate_byz
 			}
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 			
 			holder_scope = {
 				NAND = {
@@ -969,7 +978,11 @@ succession_laws = {
 					}
 				}
 			}
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 			NOR = { #Special Elective.
 				title = e_dixie
 				has_title_flag = alternate_hre
@@ -1147,7 +1160,11 @@ succession_laws = {
 			#	temporary = yes
 			#}
 			#is_primary_type_title = no
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 
 		}
 		allow = {
@@ -1366,7 +1383,11 @@ succession_laws = {
 				holder_scope = { is_feudal = yes }
 				is_nomadic = no
 			}
-			NOT = { holder_scope = { government = military_governorate } }
+			NOT = { holder_scope = { 
+				OR = {
+				government = military_governorate 
+				government = theocratic_feudal_government
+			} } }
 			
 			holder_scope = {
 				NAND = {
