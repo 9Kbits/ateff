@@ -121,5 +121,67 @@ succession_laws = {
 		revoke_allowed = {
 			always = no
 		}			
-	}		
+	}
+
+	succ_mil_gaian_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		feudal_opinion = -5
+		potential = {
+			holder_scope = {
+				government = theocratic_feudal_government
+			}
+			NOT = { holder_scope = { government = military_governorate } }
+
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = mil_gaian_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
+	
+	succ_rel_gaian_elective = {
+		oldest_child_opinion = -5
+		child_opinion = -5
+		dynasty_opinion = -5
+		feudal_opinion = -5
+		potential = {
+			holder_scope = {
+				government = theocratic_feudal_government
+			}
+			NOT = { holder_scope = { government = military_governorate } }
+
+		}
+		allow = {
+			custom_tooltip = {
+				text = not_forced_tt
+				hidden_tooltip = {
+					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
+				}
+			}
+		}
+		effect = {
+			succession = {
+				base_type = feudal_elective
+				voting_rules = rel_gaian_elective
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}			
+	}
 }

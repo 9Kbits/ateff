@@ -10693,8 +10693,20 @@ eldership_rules = {
 		days = -5
 		max_amount = 7
 		additive_modifier = { #Ruler is also always an Elector.
-			value = 200
+			value = 1000
 			FROMFROM = { holder_scope = { character = ROOT } }
+		}
+		additive_modifier = { #Gaian Elders will always be Femoids
+			value = -200
+			FROMFROM = { holder_scope = { religion = gaian } }
+			is_female = no
+		}
+		additive_modifier = {
+		value = -200
+		FROMFROM = { holder_scope = { religion = gaian } }
+		NOT = {
+			religion = gaian
+		}
 		}
 		additive_modifier = {
 			value = 4
