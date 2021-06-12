@@ -7300,7 +7300,18 @@
 	trait=charitable
 	disallow_random_traits = yes
 	2129.4.24={birth=yes}
-	2146.6.21={add_matrilineal_spouse=1861453}
+	2146.6.21={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
 	2202.1.31={death=yes}
 }
 1861450={
@@ -7367,7 +7378,7 @@
 	trait=brave
 	disallow_random_traits = yes
 	2125.9.27={birth=yes}
-	2146.6.21={add_matrilineal_spouse=1861449}
+	2146.6.21={add_spouse=1861449}
 	2184.8.2={death=yes}
 }
 1861454={
@@ -7577,7 +7588,18 @@
 	trait=kind
 	disallow_random_traits = yes
 	2150.11.1={birth=yes}
-	2168.8.17={add_spouse_matrilineal=1861491}
+	2168.8.17={
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+		}
+	}
 	2231.1.30={death=yes}
 }
 1861466={
@@ -7959,7 +7981,7 @@
 	disallow_random_traits = yes
 	2283.11.18={birth=yes}
 	2300.1.3={add_spouse=1861487}
-	2330.6.27={death=yes}
+	2330.6.27={death={death_reason=death_battle killer=1861614}}
 }
 1861487={
 	name="Blanchet"
@@ -7992,7 +8014,7 @@
 	trait=stubborn
 	disallow_random_traits = yes
 	2301.2.17={birth=yes}
-	2321.5.8={death=yes}
+	2321.5.8={death={death_reason=death_battle_duel killer=1861614}}
 }
 1861489={
 	name="Margaret"
@@ -8044,7 +8066,7 @@
 	trait=wroth
 	disallow_random_traits = yes
 	2148.10.25={birth=yes}
-	2168.8.17={add_spouse_matrilineal=1861465}
+	2168.8.17={add_spouse=1861465}
 	2232.9.9={death=yes}
 }
 1861492={
@@ -9594,6 +9616,32 @@
 	religion=americanist
 	2224.1.1={birth=yes}
 	2255.5.6={death={death_reason=death_battle_duel killer=1861478}}
+}
+1861612={
+	name="Mercury"
+	dynasty=1782168
+	culture=southron
+	religion=americanist
+	2254.1.1={birth=yes}
+	2317.1.1={death=yes}
+}
+1861613={
+	name="Lionel"
+	dynasty=1782168
+	father=1861612
+	culture=southron
+	religion=americanist
+	2296.1.1={birth=yes}
+	2355.1.1={death=yes}
+}
+1861614={
+	name="Claudius"
+	dynasty=1782168
+	father=1861613
+	culture=southron
+	religion=americanist
+	2330.1.1={birth=yes}
+	2362.1.1={death={death_reason=death_battle_duel killer=1861002}}
 }
 
 1863000={
