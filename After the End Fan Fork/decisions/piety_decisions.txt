@@ -322,4 +322,43 @@ targetted_decisions = {
 			factor = 1	
 		}
 	}
+	choose_evangelical_branch = {
+		only_playable = yes
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
+		potential = {
+			is_playable = yes
+			religion = evangelical
+			NOR = {
+				trait = calvinist
+				trait = arminian
+				has_character_flag = mini_evangelical_stopper_branch
+			}
+			is_adult = yes
+			prisoner = no
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		
+		allow = {
+			piety = 200
+			learning = 10
+		}
+		
+		effect = {
+		    piety = -200
+			long_character_event = { id = eva.110 tooltip = EVTTOOLTIP_EVA_110 }
+			set_character_flag = mini_evangelical_stopper_branch
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+		
+		ai_will_do = {
+			factor = 1	
+		}
+	}
 }

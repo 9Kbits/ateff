@@ -49,6 +49,8 @@ namespace = eva
 #104	Convention of St Louis restored
 #105	Convention of Washington restored
 
+#110	Become Arminian\Become Calvinist
+
 # Antinomian events
 #201	Antinomian Revival Begins in Random Province
 #202	Ruler/Chaplain investigates the revival
@@ -1587,6 +1589,27 @@ character_event = {
 		name = EVTOPTA_eva.105
 		set_global_flag = pat_washington
 		piety = 100
+	}
+}
+
+long_character_event = {
+	id = eva.110
+	title = EVTTITLE_eva.110
+	desc = EVTDESC_eva.110
+	
+	picture = GFX_evt_bishop_byzantine
+	religion = evangelical
+	is_triggered_only = yes
+
+	option = {
+		name = calvinist
+		add_trait = calvinist
+		clr_character_flag = mini_evangelical_stopper_branch
+	}
+	option = {
+		name = arminian
+		add_trait = arminian
+		clr_character_flag = mini_evangelical_stopper_branch
 	}
 }
 
