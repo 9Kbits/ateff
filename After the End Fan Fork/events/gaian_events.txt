@@ -4096,7 +4096,18 @@ character_event = {
 				FROMFROM = { trait = greedy }
 			}
 		}
-		hidden_tooltip = { FROMFROM = { character_event = { id = gaian.902 days = 7 } } }
+		if = {
+			limit = {
+				OR = {
+				FROMFROM = { trait = discharged }
+				FROMFROM = { has_character_modifier = lost_official_diplomacy_authorization }
+				}
+			}
+			hidden_tooltip = { FROMFROM = { character_event = { id = gaian.904 days = 7 } } }
+		}
+		else = {
+			hidden_tooltip = { FROMFROM = { character_event = { id = gaian.902 days = 7 } } }
+		}
 	}
 	option = {
 		name = EVTOPTB_gaian_901 #decline boon
@@ -4126,6 +4137,10 @@ character_event = {
 			name = official_stewardship_authorization
 			years = 2
 		}
+		add_character_modifier = {
+				modifier = boon_timer
+				years = 2
+		}
 	}
 	option = {
 		name = EVTOPTB_boon_sponsorship
@@ -4133,12 +4148,20 @@ character_event = {
 			name = official_druid_sponsorship
 			years = 2
 		}
+		add_character_modifier = {
+				modifier = boon_timer
+				years = 2
+		}
 	}
 	option = {
 		name = EVTOPTC_boon_delegation
 		add_character_modifier = {
 			name = druidic_delegation
 			years = 2
+		}
+		add_character_modifier = {
+				modifier = boon_timer
+				years = 2
 		}
 	}
 	option = {
@@ -4159,6 +4182,10 @@ character_event = {
 			name = martial_land_focus
 			years = 2
 		}
+		add_character_modifier = {
+				modifier = boon_timer
+				years = 2
+		}
 	}
 	option = {
 		name = EVTOPTB_boon_defensive
@@ -4166,12 +4193,20 @@ character_event = {
 			name = defensive_land_focus
 			years = 2
 		}
+		add_character_modifier = {
+				modifier = boon_timer
+				years = 2
+		}
 	}
 	option = {
 		name = EVTOPTC_boon_tax
 		add_character_modifier = {
 			name = tax_land_focus
 			years = 2
+		}
+		add_character_modifier = {
+				modifier = boon_timer
+				years = 2
 		}
 	}
 	option = {
@@ -4188,6 +4223,40 @@ character_event = {
 
 	option = {
 		name = EVTOPT_boon
+		add_character_modifier = {
+				modifier = boon_timer
+				years = 2
+		}
+	}
+}
+character_event = {
+	id = gaian.904
+	desc = EVTDESC_boon_choice_discharge
+	picture = GFX_evt_courtiers_talking
+	religion = gaian
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_boon_reinstate
+		remove_trait = discharged
+		trigger = {
+			trait = discharged
+		}
+		add_character_modifier = {
+				modifier = boon_timer
+				years = 2
+		}
+	}
+	option = {
+		name = EVTOPTB_diplomacy_auth
+		remove_character_modifier = lost_official_diplomacy_authorization
+		trigger = {
+			has_character_modifier = lost_official_diplomacy_authorization
+		}
+		add_character_modifier = {
+				modifier = boon_timer
+				years = 2
+		}
 	}
 }
 

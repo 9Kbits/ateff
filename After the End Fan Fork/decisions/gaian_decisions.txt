@@ -3,9 +3,9 @@ targetted_decisions = {
 	ask_for_boon = {
 		ai_target_filter = none
 		filter = sub_realm
-		ai = no
+		ai = yes
 		from_potential = {
-			ai = no
+			religion = gaian
 		}
 		potential = {
 			liege = { character = FROM }
@@ -30,16 +30,12 @@ targetted_decisions = {
 		}
 		effect = {
 			FROM = { piety = -500 }
-			add_character_modifier = {
-					modifier = boon_timer
-					years = 2
-				}
 			hidden_tooltip = {
 				character_event = { id = gaian.900 }
 			}
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 	}
 }
