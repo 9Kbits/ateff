@@ -2787,6 +2787,49 @@ maskil = {
 	customizer = no
 }
 
+bulldog_hcc = {
+	opposite_opinion = -15
+	church_opinion = 10
+	liege_opinion = -5
+	vassal_opinion = -5
+	monthly_character_piety = 0.5
+	opposites = {
+		ram_hcc
+	}
+}
+
+ram_hcc = {
+	opposite_opinion = -15
+	church_opinion = -10
+	liege_opinion = 5
+	vassal_opinion = 5 
+	monthly_character_prestige = 0.5
+	opposites = {
+		bulldog_hcc
+	}
+}
+
+calvinist = {
+	stewardship = 1
+	monthly_character_prestige = 0.5
+	diplomacy = -1
+	religious = yes
+	potential = { religion = evangelical }
+	opposites = {
+		arminian
+	}
+}
+
+arminian = {
+	diplomacy = 1
+	monthly_character_prestige = 0.5
+	stewardship = -1
+	religious = yes
+	potential = { religion = evangelical }
+	opposites = {
+		calvinist
+	}
+}
 on_hike = {
 	potential = {
 		religion = gaian
