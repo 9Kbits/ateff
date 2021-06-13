@@ -5,6 +5,9 @@ law_groups = {
 	revoke_title_law = {
 		law_type = realm
 	}
+	ze_gaian_vassal_wars = {
+		law_type = realm
+	}
 	ze_administration_laws = {
 		law_type = realm
 	}
@@ -31,6 +34,7 @@ laws = {
 				holder_scope = { has_religion_feature = religion_equal }
 				holder_scope = { has_religion_feature = religion_feature_aria_de_machete }
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
+				holder_scope = { religion = gaian }
 				has_game_rule = {
 					name = gender
 					value = historical
@@ -152,6 +156,7 @@ laws = {
 				holder_scope = { has_religion_feature = religion_feature_aria_de_machete }
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
 				holder_scope = { has_religion_feature = religion_patriarchal }
+				holder_scope = { religion = gaian }
 				has_game_rule = {
 					name = gender
 					value = historical
@@ -264,6 +269,7 @@ laws = {
 				holder_scope = { has_religion_feature = religion_feature_aria_de_machete }
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
 				holder_scope = { has_religion_feature = religion_patriarchal }
+				holder_scope = { religion = gaian }
 				has_game_rule = {
 					name = gender
 					value = historical
@@ -369,6 +375,7 @@ laws = {
 				holder_scope = { has_religion_feature = religion_feature_aria_de_machete }
 				holder_scope = { has_religion_feature = religion_feature_midewiwin }
 				holder_scope = { has_religion_feature = religion_patriarchal }
+				holder_scope = { religion = gaian }
 				has_game_rule = {
 					name = gender
 					value = historical
@@ -474,6 +481,7 @@ laws = {
 					value = all
 				}
 			}
+			NOT = { holder_scope = { religion = gaian }}
 		}
 		revoke_allowed = {
 			always = no
@@ -646,6 +654,17 @@ laws = {
 					}
 				}	
 			}
+			conditional_tooltip = {
+				trigger = {
+					holder_scope = { government = theocratic_feudal_government }
+				}
+				holder_scope = {
+					show_scope_change = no
+					NOT = {
+						government = theocratic_feudal_government
+					}
+				}	
+			}
 		}
 		potential = {
 			has_dlc = "Zeus"
@@ -676,6 +695,69 @@ laws = {
 		}
 	}
 	
+	ze_gaian_vassal_wars_0 = {
+		group = ze_gaian_vassal_wars
+		potential = {
+			holder_scope = {
+				government = theocratic_feudal_government
+			}
+		}
+		allow = {
+			has_law = ze_gaian_vassal_wars_1
+		}
+		effect = {
+			revoke_law = ze_gaian_vassal_wars_1
+			set_the_kings_peace = no
+		}
+		tribal_vassal_max_levy = 0.15
+		castle_vassal_max_levy = 0.15
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+	}
+	ze_gaian_vassal_wars_1 = {
+		group = ze_gaian_vassal_wars
+		potential = {
+			holder_scope = {
+				government = theocratic_feudal_government
+			}
+		}
+		allow = {
+			has_law = ze_gaian_vassal_wars_0
+		}
+		effect = {
+			revoke_law = ze_gaian_vassal_wars_0
+			set_the_kings_peace = yes
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.05
+			modifier = {
+				factor = 0
+				ROOT = {
+					trait = ambitious
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					ai_ambition > 10
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0.5
+		}
+	}
+	
 	ze_administration_laws_0 = {
 		group = ze_administration_laws
 		default = yes
@@ -689,6 +771,7 @@ laws = {
 			NOT = { holder_scope = { is_nomadic = yes } }
 			NOT = { holder_scope = { is_republic = yes } }
 			NOT = { holder_scope = { is_theocracy = yes } }
+			NOT = { holder_scope = { government = theocratic_feudal_government } }
 		}
 		ai_will_do = { factor = 0 }
 		ai_will_revoke = { factor = 0 }
@@ -732,6 +815,7 @@ laws = {
 			NOT = { holder_scope = { is_nomadic = yes } }
 			NOT = { holder_scope = { is_republic = yes } }
 			NOT = { holder_scope = { is_theocracy = yes } }
+			NOT = { holder_scope = { government = theocratic_feudal_government } }
 		}
 		ai_will_do = {
 			factor = 1
@@ -807,6 +891,7 @@ laws = {
 			NOT = { holder_scope = { is_nomadic = yes } }
 			NOT = { holder_scope = { is_republic = yes } }
 			NOT = { holder_scope = { is_theocracy = yes } }
+			NOT = { holder_scope = { government = theocratic_feudal_government } }
 		}
 		ai_will_do = {
 			factor = 10

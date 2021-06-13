@@ -4190,3 +4190,313 @@ character_event = {
 		name = EVTOPT_boon
 	}
 }
+
+character_event = {
+	id = gaian.1000
+	desc =  EVTDESC_yousholuldnotbeseeingthis
+	picture = GFX_evt_courtiers_talking
+	religion = gaian
+	mean_time_to_happen = {
+		years = 5
+	}
+	trigger = {
+		has_job_title = job_spiritual
+		liege = {
+			religion = gaian
+			government = theocratic_feudal_government
+		}
+		NOT = {
+			has_character_flag = selected_succ_law_already
+		}
+	}
+	
+	option = {
+		name = gaian_succ_eldership
+		trigger = {
+			NOR = {
+				trait = content
+				AND = {
+				diplomacy < 8
+				martial > 10
+				stewardship > 10
+				learning > 15
+				}
+				diplomacy < 15
+				liege = {
+				primary_title = {
+						has_law = succ_eldership
+					}
+				}
+			}
+		}
+		liege = { character_event = { id = gaian.1001 } }
+		piety = 20
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = zealous }
+		}
+	}
+	
+	option = {
+		name = gaian_succ_religious
+		trigger = {
+			NOR = {
+				trait = content
+				trait = cynical
+				AND = {
+				diplomacy > 8
+				martial > 10
+				stewardship > 10
+				learning < 15
+				}
+				learning < 18
+				liege = {
+				primary_title = {
+						has_law = succ_rel_gaian_elective
+					}
+				}
+			}
+		}
+		liege = { character_event = { id = gaian.1002 } }
+		piety = 20
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = zealous }
+		}
+	}
+	
+	option = {
+		name = gaian_succ_military
+		trigger = {
+			NOR = {
+				trait = content
+				AND ={
+				diplomacy > 8
+				martial < 10
+				stewardship > 10
+				learning > 15
+				}
+				martial < 15
+				liege = {
+				primary_title = {
+						has_law = succ_mil_gaian_elective
+					}
+				}
+			}
+		}
+		liege = { character_event = { id = gaian.1003 } }
+		piety = 20
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = zealous }
+		}
+	}
+	
+	option = {
+		name = gaian_succ_gavelkind
+		trigger = {
+			NOR = {
+				trait = content
+				AND = {
+				diplomacy > 8
+				martial > 10
+				stewardship < 10
+				learning > 15
+				}
+				stewardship < 16	
+				}
+				
+				liege = {
+				primary_title = {
+						has_law = succ_gavelkind
+					}
+				}
+			}
+		}
+		liege = { character_event = { id = gaian.1004 } }
+		piety = 20
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = zealous }
+		}
+	}
+	
+	option = {
+		name = gaian_succ_content
+		piety = 50
+		ai_chance = {
+			factor = 10
+		}
+	}
+	immediate = {
+		set_character_flag = selected_succ_law_already
+	}
+}
+
+character_event = {
+	id = gaian.1001
+	desc =  EVTDESC_gaian_succ_eldership
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_gaian_laws_succ_approve
+		primary_title = { add_law = succ_eldership }
+		piety = 200
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 10 trait = zealous }
+			modifier = { factor = 5 trait = devout }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaian_laws_succ_deny
+		piety = -50
+		add_character_modifier = { name = refused_succ_law_change years = 3 }
+		
+		ai_chance = { factor = 5 }
+	}
+}
+
+character_event = {
+	id = gaian.1002
+	desc =  EVTDESC_gaian_succ_rel_gaian_elective
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_gaian_laws_succ_approve
+		primary_title = { add_law = succ_rel_gaian_elective }
+		piety = 200
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 10 trait = zealous }
+			modifier = { factor = 5 trait = devout }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaian_laws_succ_deny
+		piety = -50
+		add_character_modifier = { name = refused_succ_law_change years = 3 }
+		
+		ai_chance = { factor = 5 }
+	}
+}
+
+character_event = {
+	id = gaian.1003
+	desc =  EVTDESC_gaian_succ_mil_gaian_elective
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_gaian_laws_succ_approve
+		primary_title = { add_law = succ_mil_gaian_elective }
+		piety = 200
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 10 trait = zealous }
+			modifier = { factor = 5 trait = devout }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaian_laws_succ_deny
+		piety = -50
+		add_character_modifier = { name = refused_succ_law_change years = 3 }
+		
+		ai_chance = { factor = 5 }
+	}
+}
+
+character_event = {
+	id = gaian.1004
+	desc =  EVTDESC_gaian_succ_gavelkind
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_gaian_laws_succ_approve
+		primary_title = { add_law = succ_gavelkind }
+		piety = 200
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 10 trait = zealous }
+			modifier = { factor = 5 trait = devout }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaian_laws_succ_deny
+		piety = -50
+		add_character_modifier = { name = refused_succ_law_change years = 3 }
+		
+		ai_chance = { factor = 5 }
+		modifier = { factor = 5 trait = cynical }
+	}
+}
+
+character_event = {
+	id = gaian.1005
+	desc =  EVTDESC_yousholuldnotbeseeingthis
+	picture = GFX_evt_courtiers_talking
+	religion = gaian
+	mean_time_to_happen = {
+		months = 18
+	}
+	trigger = {
+		has_job_title = job_spiritual
+		liege = {
+			religion = gaian
+			government = theocratic_feudal_government
+			primary_title = { has_law = captaincy_mobilization_ }
+		}
+		OR = {
+			trait = kind
+			trait = craven
+			trait = cynical
+			trait = charismatic_negotiator
+			trait = grey_eminence
+			trait = temperate
+			trait = just
+			trait = arbitrary
+			trait = content
+			trait = paranoid
+			trait = stubborn
+		}
+	}
+	
+	option = {
+		name = screwyouinthatgeneralarea
+		liege = { character_event = { id = gaian.1006 } }
+		piety = 500
+	}
+}
+
+character_event = {
+	id = gaian.1006
+	desc =  EVTDESC_gaian_demiliterize
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_gaian_demiliterize
+		
+		piety = -500
+		add_character_modifier = { name = refused_demilitarize years = 3 }
+		
+		ai_chance = { factor = 5 }
+		modifier = { factor = 5 trait = cynical }
+	}
+	
+	option = {
+		name = EVTOPTB_gaian_demiliterize
+		primary_title = { add_law = succ_gavelkind }
+		piety = 50
+		
+		ai_chance = { factor = 5 }
+		modifier = { factor = 5 trait = cynical }
+	}
+}
