@@ -1,229 +1,230 @@
 decisions = {
-        form_utep_banner = {
-		        is_high_prio = yes
-				only_playable = yes
-				
-				
-			    potential = {
-				        is_playable = yes
-			            independent = yes
-						OR = { culture_group = starfolk
-						       AND = { culture = comanche
-							           has_global_flag = comanche_opt_in
-							    }
-				            }
-					    }
-					
-				allow = {
-			            is_adult = yes
-			            prisoner = no
-			            NOT = { is_incapable = yes }
-						prestige = 1500
-						}
-				effect = {
-				        prestige = -1500
-						narrative_event = { id = tex_king.1 }
-			            activate_title = { title = d_miners status = yes }
-			            d_miners = { grant_title = ROOT }
-			        
-		             }
-		            ai_will_do = {
-			        factor = 1
-		            }  
-                }
+
+	form_utep_banner = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			culture_group = starfolk
+		}
 			
-			form_red_banner = {
-		        is_high_prio = yes
-				only_playable = yes
-				
-				
-			    potential = {
-				        is_playable = yes
-			            independent = yes
-						OR = { culture_group = starfolk
-						       AND = { culture = comanche
-							           has_global_flag = comanche_opt_in
-							    }
-				            }
-					    }
-					
-				allow = {
-			            is_adult = yes
-			            prisoner = no
-			            NOT = { is_incapable = yes }
-						prestige = 1500
-						has_landed_title = c_lubbock
-						}
-				effect = {
-				        prestige = -1500
-						narrative_event = { id = tex_king.2 }
-			            activate_title = { title = d_red_raider status = yes }
-			            d_red_raiders = { grant_title = ROOT }
-			        
-		             }
-		            ai_will_do = {
-			        factor = 1
-		            }  
-                }
-			
-			form_longhorn_banner = {
-		        is_high_prio = yes
-				only_playable = yes
-				
-				
-			    potential = {
-				        is_playable = yes
-			            independent = yes
-						OR = { culture_group = starfolk
-						       AND = { culture = comanche
-							           has_global_flag = comanche_opt_in
-							    }
-				            }
-					    }
-					
-				allow = {
-			            is_adult = yes
-			            prisoner = no
-			            NOT = { is_incapable = yes }
-						prestige = 1500
-						has_landed_title = c_austin
-						}
-				effect = {
-				        prestige = -1500
-						narrative_event = { id = tex_king.3 }
-			            activate_title = { title = d_longhorns status = yes }
-			            d_longhorns = { grant_title = ROOT }
-			        
-		             }
-		            ai_will_do = {
-			        factor = 1
-		            }  
-                }
-				
-				form_aggies_banner = {
-		        is_high_prio = yes
-				only_playable = yes
-				
-				
-			    potential = {
-				        is_playable = yes
-			            independent = yes
-						OR = { culture_group = starfolk
-						       AND = { culture = comanche
-							           has_global_flag = comanche_opt_in
-							    }
-				            }
-					    }
-					
-				allow = {
-			            is_adult = yes
-			            prisoner = no
-			            NOT = { is_incapable = yes }
-						prestige = 1500
-						has_landed_title = c_brazos
-						}
-				effect = {
-				        prestige = -1500
-						narrative_event = { id = tex_king.4 }
-			            activate_title = { title = d_aggies status = yes }
-			            d_aggies = { grant_title = ROOT }
-			        
-		             }
-		            ai_will_do = {
-			        factor = 1
-		            }  
-                }
-				
-				form_airmen_banner = {
-		        is_high_prio = yes
-				only_playable = yes
-				
-				
-			    potential = {
-				        is_playable = yes
-			            independent = yes
-						OR = { culture_group = starfolk
-						       AND = { culture = comanche
-							           has_global_flag = comanche_opt_in
-							    }
-				            }
-					    }
-					
-				allow = {
-			            is_adult = yes
-			            prisoner = no
-			            NOT = { is_incapable = yes }
-						prestige = 1500
-						has_landed_title = c_bexar
-						}
-				effect = {
-				        prestige = -1500
-						narrative_event = { id = tex_king.5 }
-			            activate_title = { title = d_airmen status = yes }
-			            d_airmen = { grant_title = ROOT }
-			        
-		             }
-		            ai_will_do = {
-			        factor = 1
-		            }  
-                }
-				
-				form_first_cav_banner = {
-		        is_high_prio = yes
-				only_playable = yes
-				
-				
-			    potential = {
-				        is_playable = yes
-			            independent = yes
-						OR = { culture_group = starfolk
-						       AND = { culture = comanche
-							           has_global_flag = comanche_opt_in
-							    }
-				            }
-					    }
-					
-				allow = {
-			            is_adult = yes
-			            prisoner = no
-			            NOT = { is_incapable = yes }
-						prestige = 1500
-						has_landed_title = c_centrex
-						}
-				effect = {
-				        prestige = -1500
-						narrative_event = { id = tex_king.6 }
-			            activate_title = { title = d_first_cav status = yes }
-			            d_first_cav = { grant_title = ROOT }
-			        
-		             }
-		            ai_will_do = {
-			        factor = 1
-		            }  
-                }
-				
-				comanche_opt_in = {
-			    
-				is_high_prio = yes
-				only_playable = yes
-				
-				potential = {
-				        culture = comanche
-						has_landed_title k_comancheria
-					    }
-					
-					allow = { 
-					        is_adult = yes
-							prisoner = no
-							NOT = { is_capable = yes }
-							has_landed_title c_austin
-							prestige = 2000
-							}
-					
-					effect = {
-					        prestige = -2000
-							narrative_event = { id = tex_king.7 }
-							set_global_flag = comanche_opt_in
-							}
+		allow = {
+			has_landed_title = c_el_paso
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.1 }
+			activate_title = { title = d_miners status = yes }
+			d_miners = { grant_title = ROOT }
+		}
+		ai_will_do = {
+			factor = 1
+		}  
+	}
+		
+	form_red_banner = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+				   AND = { culture = comanche
+						   has_global_flag = comanche_opt_in
 					}
+				}
+			}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_lubbock
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.2 }
+			activate_title = { title = d_red_raider status = yes }
+			d_red_raiders = { grant_title = ROOT }
+		
+		}
+		ai_will_do = {
+			factor = 1
+		}  
+	}
+		
+		form_longhorn_banner = {
+			is_high_prio = yes
+			only_playable = yes
+			
+			
+			potential = {
+					is_playable = yes
+					independent = yes
+					OR = { culture_group = starfolk
+						   AND = { culture = comanche
+								   has_global_flag = comanche_opt_in
+							}
+						}
+					}
+				
+			allow = {
+					is_adult = yes
+					prisoner = no
+					NOT = { is_incapable = yes }
+					prestige = 500
+					has_landed_title = c_austin
+					}
+			effect = {
+					prestige = -500
+					narrative_event = { id = tex_king.3 }
+					activate_title = { title = d_longhorns status = yes }
+					d_longhorns = { grant_title = ROOT }
+				
+				 }
+				ai_will_do = {
+				factor = 1
+				}  
+			}
+			
+			form_aggies_banner = {
+			is_high_prio = yes
+			only_playable = yes
+			
+			
+			potential = {
+					is_playable = yes
+					independent = yes
+					OR = { culture_group = starfolk
+						   AND = { culture = comanche
+								   has_global_flag = comanche_opt_in
+							}
+						}
+					}
+				
+			allow = {
+					is_adult = yes
+					prisoner = no
+					NOT = { is_incapable = yes }
+					prestige = 500
+					has_landed_title = c_brazos
+					}
+			effect = {
+					prestige = -500
+					narrative_event = { id = tex_king.4 }
+					activate_title = { title = d_aggies status = yes }
+					d_aggies = { grant_title = ROOT }
+				
+				 }
+				ai_will_do = {
+				factor = 1
+				}  
+			}
+			
+			form_airmen_banner = {
+			is_high_prio = yes
+			only_playable = yes
+			
+			
+			potential = {
+					is_playable = yes
+					independent = yes
+					OR = { culture_group = starfolk
+						   AND = { culture = comanche
+								   has_global_flag = comanche_opt_in
+							}
+						}
+					}
+				
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_bexar
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.5 }
+			activate_title = { title = d_airmen status = yes }
+			d_airmen = { grant_title = ROOT }
+		
+		 }
+		ai_will_do = {
+			factor = 1
+		}  
+	}
+	
+	form_first_cav_banner = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+			   AND = { culture = comanche
+				   has_global_flag = comanche_opt_in
+				}
+			}
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_centrex
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.6 }
+			activate_title = { title = d_first_cav status = yes }
+			d_first_cav = { grant_title = ROOT }
+		
+		 }
+		ai_will_do = {
+			factor = 1
+		}  
+	}
+			
+	comanche_opt_in = {
+		
+		is_high_prio = yes
+		only_playable = yes
+		
+		potential = {
+			culture = comanche
+			has_landed_title k_comancheria
+			}
+		
+		allow = { 
+				is_adult = yes
+				prisoner = no
+				NOT = { is_capable = yes }
+				has_landed_title c_austin
+				prestige = 1000
+				}
+		
+		effect = {
+				prestige = -1000
+				narrative_event = { id = tex_king.7 }
+				set_global_flag = comanche_opt_in
+				}
+	}
+				
 }
