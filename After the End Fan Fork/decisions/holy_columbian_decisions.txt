@@ -132,4 +132,48 @@ decisions = {
 			narrative_event = { id = hcc.2 }
 		}
 	}
+	
+	bulldog_ram_fight = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 6
+		
+		potential = {
+			is_adult = yes
+			prisoner = no
+			religion = evangelical
+			is_playable	= yes
+			NOT = { is_incapable = yes }
+			NOR = {
+				trait = bulldog_hcc
+				trait = ram_hcc
+			}
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = {
+				has_character_flag = temporary_hcc_thing_until_you_choose_the_thing
+			}
+		}
+		allow = {
+			war = no
+			wealth = 25
+		}
+		effect = {
+			wealth = -25
+			
+			hidden_tooltip = {
+				character_event = {
+					id = eva.115
+				}
+				set_character_flag = temporary_hcc_thing_until_you_choose_the_thing
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

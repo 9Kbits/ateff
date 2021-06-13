@@ -1598,6 +1598,7 @@ long_character_event = {
 	desc = EVTDESC_eva.110
 	
 	picture = GFX_evt_bishop_byzantine
+	border = GFX_event_long_frame_religion
 	religion = evangelical
 	is_triggered_only = yes
 
@@ -1610,6 +1611,28 @@ long_character_event = {
 		name = arminian
 		add_trait = arminian
 		clr_character_flag = mini_evangelical_stopper_branch
+	}
+}
+
+long_character_event = {
+	id = eva.115
+	title = EVTTITLE_eva.115
+	desc = EVTDESC_eva.115
+	
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_long_frame_religion
+	religion = evangelical
+	is_triggered_only = yes
+
+	option = {
+		name = bulldog_hcc
+		add_trait = bulldog_hcc
+		clr_character_flag = temporary_hcc_thing_until_you_choose_the_thing
+	}
+	option = {
+		name = ram_hcc
+		add_trait = ram_hcc
+		clr_character_flag = temporary_hcc_thing_until_you_choose_the_thing
 	}
 }
 
@@ -3879,6 +3902,91 @@ character_event = {
 				liege = {
 					character_event = { id = eva.709 }
 				}
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = eva.1000
+	title = EVTTITLE_hcc_downfall
+	desc = EVTDESC_hcc_downfall
+	picture = GFX_evt_siege
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_landed_title = e_dixie
+		NOT = { religion = evangelical }
+		NOT = { has_global_flag = fall_hcc }
+	}
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 149
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = fall_hcc
+	}
+	
+	option = {
+		name = EVTOPTA_hcc_fall
+		trigger = {
+			has_landed_title = e_dixie
+		}
+		any_demesne_title = {
+				limit = {
+						higher_tier_than = DUKE
+					NOR = {
+						controls_religion = yes
+						clan = yes
+					}
+				}
+			unsafe_destroy_landed_title = THIS
+		}
+	}
+	option = {
+		name = EVTOPTB_hcc_fall
+		trigger = {
+			trait = bulldog_hcc
+		}
+	}
+	option = {
+		name = EVTOPTC_hcc_fall
+		trigger = {
+			trait = ram_hcc
+		}
+	}
+	option = {
+		name = EVTOPTC_hcc_fall
+		trigger = {
+			NOR = {
+				trait = ram_hcc
+				trait = bulldog_hcc
+			}
+			religion = evangelical
+		}
+	}
+	option = {
+		name = EVTOPTD_hcc_fall
+		trigger = {
+			NOR = {
+				religion = evangelical
+				has_landed_title = e_dixie
 			}
 		}
 	}
