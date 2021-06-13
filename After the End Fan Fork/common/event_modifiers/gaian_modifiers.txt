@@ -1,6 +1,7 @@
 official_stewardship_authorization = {
 	icon = 10
 	stewardship = 1
+	demesne_size = 2
 }
 lost_official_diplomacy_authorization = {
 	icon = 10
@@ -9,22 +10,26 @@ lost_official_diplomacy_authorization = {
 druidic_delegation = {
 	icon = 10
 	gaian_opinion = 10
+	monthly_character_piety = 1
 }
 martial_land_focus = {
 	icon = 10
-	global_levy_size = 0.2
+	global_levy_size = 0.25
+	land_morale = 0.10
 }
 defensive_land_focus = {
 	icon = 10
-	global_garrison_size = 0.2
+	global_garrison_size = 0.25
+	max_attrition = 0.10
 }
 tax_land_focus = {
 	icon = 10
 	global_tax_modifier = 0.2
+	local_build_cost_modifier = -0.25
 }
 official_druid_sponsorship = {
 	icon = 10
-	monthly_character_prestige = 1
+	monthly_character_prestige = 3
 	monthly_character_piety	 = -1
 }
 boon_timer = {
@@ -219,6 +224,16 @@ spokane_summited = {
 	icon = 79
 	learning = 1
 	diplomacy = 1
+}
+
+refused_succ_law_change = {
+	icon = 11
+	church_opinion = -25
+}
+
+refused_demilitarize = {
+	icon = 11
+	church_opinion = -50
 }
 
 climbed_south_sis = {
