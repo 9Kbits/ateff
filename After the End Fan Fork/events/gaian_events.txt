@@ -1184,6 +1184,7 @@ narrative_event = {
 			name = peaked_garibaldi
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	option = {
@@ -1242,6 +1243,7 @@ narrative_event = {
 			name = van_lions
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1280,6 +1282,7 @@ narrative_event = {
 			name = waddington
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1318,6 +1321,7 @@ narrative_event = {
 			name = golden_hind
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1356,6 +1360,7 @@ narrative_event = {
 			name = saw_greatbear
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1395,6 +1400,7 @@ narrative_event = {
 			name = carmanah_hike
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1433,6 +1439,7 @@ narrative_event = {
 			name = canadian_muir
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1471,6 +1478,7 @@ narrative_event = {
 			name = olympic_canada
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1509,6 +1517,7 @@ narrative_event = {
 			name = in_prospective
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1547,6 +1556,7 @@ narrative_event = {
 			name = pleased_hike_doc
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1585,6 +1595,7 @@ narrative_event = {
 			name = standing_wave
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1623,6 +1634,7 @@ narrative_event = {
 			name = braved_graveyard
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1661,6 +1673,7 @@ narrative_event = {
 			name = peaked_canfield
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1699,6 +1712,7 @@ narrative_event = {
 			name = spokane_summited
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1745,6 +1759,7 @@ narrative_event = {
 			name = steptoe_butte
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1783,6 +1798,7 @@ narrative_event = {
 			name = got_through_hellscanyon
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1820,6 +1836,7 @@ narrative_event = {
 			name = pend_orielle_finished
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1859,7 +1876,7 @@ narrative_event = {
 			}
 		}
 		name = EVTOPTA_dynamicfish
-		character_event = { days = 2 id = gaian.120 }
+		narrative_event = { days = 2 id = gaian.120 }
 	}
 	
 	option = {
@@ -1871,12 +1888,33 @@ narrative_event = {
 			}
 		}
 		name = EVTOPTB_dynamicfish
-		character_event = { days = 2 id = gaian.129 }
+		narrative_event = { days = 2 id = gaian.129 }
 	}
 	
 	after = {
 		character_event = { id = gaian.199 }
 	}
+}
+
+narrative_event = {
+	id = gaian.120
+	title = EVTITLE_st_joe_good_ending
+	desc = EVTDESC_st_joe_good_ending
+	picture = GFX_evt_fishing
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = st_joe_good
+			years = 5
+		}
+		piety = 200
+	}
+	after = {
+		character_event = { id = gaian.199 }
+	}
+	piety = 200
 }
 
 narrative_event = {
@@ -1910,6 +1948,7 @@ narrative_event = {
 			name = hiawhata_finished
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1948,6 +1987,7 @@ narrative_event = {
 			name = courdalenes_finished
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -1992,6 +2032,7 @@ narrative_event = {
 			name = firewalked_with_gaia
 			years = 7
 		}	
+		piety = 100
 	}
 	
 	after = {
@@ -2033,6 +2074,7 @@ narrative_event = {
 			name = hoh_forest
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -2074,6 +2116,7 @@ narrative_event = {
 			name = encountered_bigfoot
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -2115,6 +2158,7 @@ narrative_event = {
 			name = redwoods_power
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -2156,8 +2200,29 @@ narrative_event = {
 			name = forest_park
 			years = 5
 		}	
+		piety = 200
 	}
 	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
+	id = gaian.129
+	title = EVTITLE_st_joe_bad_ending
+	desc = EVTDESC_st_joe_bad_ending
+	picture = GFX_evt_fishing
+	is_triggered_only = yes
+	option = {
+		name = EVTOPT_gaianjourneyend_bad
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = st_joe_bad
+			years = 5
+		}
+		piety = -100
+	}
 	after = {
 		character_event = { id = gaian.199 }
 	}
@@ -2198,6 +2263,7 @@ narrative_event = {
 			name = went_to_celilo
 			years = 5
 		}	
+		piety = 200
 	}
 }
 narrative_event = {
@@ -2235,6 +2301,7 @@ narrative_event = {
 			name = hot_spring_olympia
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -2278,6 +2345,7 @@ narrative_event = {
 		hidden_tooltip = {
 			character_event = { id = gaian.199 }
 		}
+		piety = 200
 	}
 	option = {
 		trigger = {
@@ -2324,6 +2392,7 @@ narrative_event = {
 			name = multnomah_falls
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -2365,6 +2434,7 @@ narrative_event = {
 			name = rainier_topping
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -2406,6 +2476,7 @@ narrative_event = {
 			name = braved_helens
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -2447,6 +2518,7 @@ narrative_event = {
 			name = mount_hood
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -2487,6 +2559,7 @@ narrative_event = {
 			name = climbed_south_sis
 			years = 5
 		}	
+		piety = 200
 	}
 	
 	after = {
@@ -4520,7 +4593,7 @@ character_event = {
 		liege = {
 			religion = gaian
 			government = theocratic_feudal_government
-			primary_title = { has_law = captaincy_mobilization_ }
+			primary_title = { has_law = captaincy_mobilization_3 }
 		}
 		OR = {
 			trait = kind
@@ -4567,5 +4640,70 @@ character_event = {
 		
 		ai_chance = { factor = 5 }
 		modifier = { factor = 5 trait = cynical }
+	}
+}
+
+character_event = {
+	id = gaian.2000
+	desc =  EVTDESC_gaian_militerize
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_gaian_militarize
+		primary_title = { add_law = captaincy_mobilization_2 }
+		ai_chance = { factor = 5 }
+	}
+	
+	option = {
+		trigger = {
+			piety > 500
+			NOT = { has_character_modifier = mobilized_druidic_reserves }
+		}
+		name = EVTOPTB_gaian_militarize
+		primary_title = { add_law = captaincy_mobilization_2 }
+		add_character_modifier = { name = mobilized_druidic_reserves years = 10 }
+		capital_scope = {
+		ROOT = {
+		spawn_unit = {
+			owner = THIS
+			province = PREV
+			troops ={
+				light_infantry = { 300 300 }
+				heavy_infantry = { 250 250 }
+				pikemen = { 500 500 }
+				archers = { 100 100 }
+			}
+			earmark = druidic_mobilized_reserves
+			attrition = 0.25
+			reinforces = yes
+		}
+		}
+		}
+		piety = -500
+		
+		ai_chance = { factor = 1 }
+	}
+}
+
+character_event = {
+	id = gaian.2001
+	desc =  EVTDESC_gaian_demiliterize
+	picture = GFX_evt_courtiers_talking
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_gaian_demilitarize
+		primary_title = { add_law = captaincy_mobilization_1 }
+		ai_chance = { factor = 5 }
+		disband_event_forces = druidic_mobilized_reserves
+	}
+	
+	option = {
+		name = EVTOPTB_gaian_demilitarize
+		primary_title = { add_law = captaincy_mobilization_0 }
+		piety = 200
+		disband_event_forces = druidic_mobilized_reserves
+		ai_chance = { factor = 1 }
 	}
 }
