@@ -3114,6 +3114,90 @@ oldworld = {
 		intermarry = aphite
 		intermarry = rust_cultist
 	}
+	
+	glorian = {
+		graphical_culture = hellenicgfx
+		
+		icon = 28
+		heresy_icon = 29
+		
+		ai_convert_other_group = 0
+		ai_convert_same_group = 1
+		
+		color = { 0.6 0.6 0.5 }
+
+		high_god_name = GOD_VICTORIA_GLORIANA
+
+		god_names = {
+			GOD_THE_QUEEN GOD_ALBION GOD_THE_MERRY_BARD GOD_THE_HOLY_LAMB GOD_KING_ARTHUR
+		}
+		evil_god_names = {
+			GOD_THE_RED_DRAGON GOD_THE_ENEMY GOD_ERIS
+		}
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_GREAT_CHARTER
+		priest_title = PRIEST
+		can_call_crusade = yes
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		allow_in_ruler_designer = no
+		raised_vassal_opinion_loss = no
+		peace_prestige_loss = yes
+		
+		aggression = 2.0
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		intermarry = thelemic
+		intermarry = orientalist
+		intermarry = misrist
+
+	}
+	
+	thelemic = { # Crowley
+		graphical_culture = hellenicgfx
+		
+		parent = glorian
+
+		icon = 28
+		heresy_icon = 29
+		
+		color = { 0.6 0.4 0.3 }
+
+		high_god_name = GOD_THE_QUEEN
+
+		god_names = {
+			GOD_THE_QUEEN GOD_NUIT GOD_HADIT GOD_RA_HOOR_KHUIT
+		}
+		evil_god_names = {
+			GOD_JESUS
+		}
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_BOOK_OF_THE_LAW
+		priest_title = PRIEST
+		priests_can_marry = yes
+		allow_rivermovement = yes
+		allow_viking_invasion = yes
+		allow_looting = yes
+		female_temple_holders = yes
+		max_consorts = 3
+		reformed = thelemic_reformed
+		
+		#defensive_attrition = yes
+		aggression = 3.0 # AI aggression factor
+		
+		can_demand_religious_conversion = no
+		hard_to_convert = yes
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		intermarry = glorian
+		intermarry = orientalist
+		intermarry = misrist
+
+	}
 }
 
 pagan_group = {
@@ -3518,47 +3602,6 @@ pagan_group = {
 		religious_clothing_head = 3
 		religious_clothing_priest = 3
 		intermarry = thelemic
-		intermarry = orientalist
-		intermarry = misrist
-
-	}	
-	
-	thelemic = { # Crowley
-		graphical_culture = norsegfx
-
-		icon = 28
-		heresy_icon = 29
-		
-		color = { 0.6 0.4 0.3 }
-
-		high_god_name = GOD_THE_QUEEN
-
-		god_names = {
-			GOD_THE_QUEEN GOD_NUIT GOD_HADIT GOD_RA_HOOR_KHUIT
-		}
-		evil_god_names = {
-			GOD_JESUS
-		}
-		crusade_name = GREAT_HOLY_WAR
-		scripture_name = THE_BOOK_OF_THE_LAW
-		priest_title = PRIEST
-		priests_can_marry = yes
-		allow_rivermovement = yes
-		allow_viking_invasion = yes
-		allow_looting = yes
-		female_temple_holders = yes
-		max_consorts = 3
-		reformed = thelemic_reformed
-		
-		#defensive_attrition = yes
-		aggression = 3.0 # AI aggression factor
-		
-		can_demand_religious_conversion = no
-		hard_to_convert = yes
-		
-		religious_clothing_head = 3
-		religious_clothing_priest = 3
-		intermarry = thelemic_reformed
 		intermarry = orientalist
 		intermarry = misrist
 
