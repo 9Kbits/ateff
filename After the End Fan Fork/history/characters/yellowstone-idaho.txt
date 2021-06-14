@@ -588,6 +588,7 @@
 	trait=quick
 	trait=hunter
 	trait=peasant_leader
+	disallow_random_traits=yes
 	give_nickname=nick_rabble_rouser
 	2647.3.12={birth=yes}
 	2665.1.1={employer=1890035}
@@ -601,7 +602,11 @@
 	religion=trailwalker
 	father=1890047
 	2541.11.5={birth=yes}
-	2593.8.23={death=yes}
+	2593.8.23={death={
+			death_reason=death_battle
+			killer=1845126 #Clive Ponderosa
+		}
+	}
 }
 
 1890045={
