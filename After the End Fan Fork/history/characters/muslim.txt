@@ -56,14 +56,14 @@
 	give_nickname=nick_the_peacemaker
 	disallow_random_traits=yes
 	2041.8.6={birth=yes}
-	2063.6.21={add_spouse=2500111}
+	2063.6.21={add_spouse=2500124}
 	2130.11.21={death=yes}
 }
 2200002={
 	name="Hussayn"
 	dynasty=2030000# Abbas
 	father=2200001
-	mother=2500109
+	mother=2500124
 	culture=anjalusi
 	occluded=yes
 	religion=imamite
@@ -2961,7 +2961,7 @@
 }
 2500101={
 	name="Miriam"
-	culture=valleyan
+	culture=greek
 	female=yes
 	dynasty=1851041 #Yudkow
 	religion=imamite
@@ -2974,7 +2974,9 @@
 	trait=twin
 	father=2500099
 	mother=2500098
-	2487.7.2={birth=yes}
+	2487.7.2={birth=yes
+		culture=valleyan
+	}
 	2510.6.21={
         effect={
             set_character_flag=recieved_royal_marriage_aid_duty
@@ -2992,7 +2994,7 @@
 }
 2500102={
 	name="Zane"
-	culture=valleyan
+	culture=greek
 	dynasty=1851041 #Yudkow
 	religion=imamite
 	trait=skilled_tactician
@@ -3005,8 +3007,11 @@
 	trait=strong
 	father=2500099
 	mother=2500098
-	2487.7.2={birth=yes}
-	2560.2.14={death=yes}
+	give_nickname=nick_the_exiled
+	2487.7.2={birth=yes
+		culture=valleyan
+	}
+	2530.2.14={death={death_reason=death_missing}}
 }
 2500103={
 	name="Michael"
@@ -3046,7 +3051,7 @@
 }
 2500105={
 	name="Sarah"
-	culture=valleyan
+	culture=greek
 	female=yes
 	dynasty=1851041 #Yudkow
 	religion=imamite
@@ -3058,7 +3063,9 @@
 	trait=wroth
 	father=2500104
 	mother=2500101
-	2520.7.2={birth=yes}
+	2520.7.2={birth=yes
+		culture=valleyan
+	}
 	2538.6.21={
         effect={
             set_character_flag=recieved_royal_marriage_aid_duty
@@ -3075,7 +3082,7 @@
 }
 2500106={
 	name="Dinah"
-	culture=cascadian
+	culture=greek
 	female=yes
 	dynasty=1851041 #Yudkow
 	religion=gaian
@@ -3087,7 +3094,9 @@
 	trait=wroth
 	father=2500103
 	mother=2500105
-	2560.8.4={birth=yes}
+	2560.8.4={birth=yes
+		culture=cascadian
+	}
 	2619.4.6={death={
             death_reason=death_battle
             killer=2500015
@@ -3096,7 +3105,7 @@
 }
 2500107={
 	name="Hannah"
-	culture=cascadian
+	culture=greek
 	female=yes
 	dynasty=1851041 #Yudkow
 	religion=gaian
@@ -3108,12 +3117,14 @@
 	trait=patient
 	trait=diligent
 	mother=2500106
-	2590.8.4={birth=yes}
+	2600.8.4={birth=yes
+		culture=cascadian
+	}
 	2660.4.6={death=yes}
     }
 2500108={
 	name="Leah"
-	culture=cascadian
+	culture=greek
 	female=yes
 	dynasty=1851041 #Yudkow
 	religion=gaian
@@ -3125,29 +3136,13 @@
 	trait=patient
 	trait=diligent
 	trait=fair
+	trait=just
 	mother=2500107
-	2636.8.4={birth=yes}
+	2646.8.4={birth=yes
+		culture=cascadian
+	}
 	2699.4.6={death=yes}
     }
-2500111={
-	name="Catarina"
-	culture=angeleno
-	female=yes
-	dynasty=1849055 #delmar
-	religion=sedevacantist
-	trait=grey_eminence
-	trait=fair
-	trait=legendary
-	trait=ambitious
-	trait=charitable
-	trait=devout
-	trait=kind
-	disallow_random_traits=yes
-	give_nickname=nick_the_heavenly
-	2040.7.2={birth=yes}
-	2063.6.21={add_spouse=2200001}
-	2133.2.14={death=yes}
-}
 2500112={
 	name="Linda"
 	culture=brazilian
@@ -3169,7 +3164,7 @@
 }
 2500113={
 	name="Sari"
-	culture=angeleno
+	culture=greek
 	female=yes
 	dynasty=1851169 #taylor
 	religion=reform
@@ -3181,10 +3176,13 @@
 	trait=kind
 	trait=charitable
 	trait=brave
+	trait=kinslayer
 	trait=sympathy_islam
 	disallow_random_traits=yes
 	give_nickname=nick_the_temptress
-	2330.7.2={birth=yes}
+	2330.7.2={birth=yes
+		culture=angeleno
+	}
 	2347.6.21={add_spouse=2500114}
 	2348.3.15={add_spouse=2500115}
 	2350.1.2={add_spouse=2500116}
@@ -3364,9 +3362,27 @@ name="Elfie"
     father = 2500119
     mother = 2500113
     2366.7.5 = { birth = yes }
-    2315.9.2 = { death = yes }
+    2415.9.2 = { death = yes }
 }
-
+2500124={
+	name="Catarina"
+	culture=angeleno
+	female=yes
+	dynasty=1849055 #delmar
+	religion=sedevacantist
+	trait=grey_eminence
+	trait=fair
+	trait=legendary
+	trait=ambitious
+	trait=charitable
+	trait=devout
+	trait=kind
+	disallow_random_traits=yes
+	give_nickname=nick_the_heavenly
+	2040.7.2={birth=yes}
+	2063.6.21={add_spouse=2200001}
+	2133.2.14={death=yes}
+}
 
 
 	
