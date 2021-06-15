@@ -1658,8 +1658,80 @@ nick_the_phoenix = {}
 nick_the_exiled = {}
 nick_the_conquering_duke = {}
 nick_daliksta = {}
-nick_the_vandal = {}
-nick_the_cougar = {}
+nick_the_vandal = {
+	allow = {
+		is_adult = yes
+		martial = 10
+		culture = inlander
+		religion = trailwalker
+		NOT = { trait = craven }
+		OR = {
+			trait = brave
+			trait = aggressive_leader
+			trait = trailwalker_leader
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			trait = brave
+		}
+		modifier = {
+			factor = 1.5
+			trait = one_handed
+		}
+		modifier = {
+			factor = 1.5
+			trait = aggressive_leader
+		}
+		modifier = {
+			factor = 1.5
+			trait = trailwalker_leader
+		}
+		modifier = {
+			factor = 4
+			has_artifact = vandals_axe
+		}
+	}
+}
+nick_the_cougar = {
+	allow = {
+		is_adult = yes
+		martial = 10
+		culture = inlander
+		religion = trailwalker
+		NOT = { trait = craven }
+		OR = {
+			trait = duelist
+			trait = trickster
+			trait = brilliant_strategist
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			trait = deceitful
+		}
+		modifier = {
+			factor = 1.5
+			trait = duelist
+		}
+		modifier = {
+			factor = 1.5
+			trait = trickster
+		}
+		modifier = {
+			factor = 1.5
+			trait = brilliant_strategist
+		}
+		modifier = {
+			factor = 4
+			has_artifact = vandals_axe
+		}
+	}
+}
 nick_the_devil_dog = {}
 nick_the_heartbraker = {}
 nick_the_nice = {}
