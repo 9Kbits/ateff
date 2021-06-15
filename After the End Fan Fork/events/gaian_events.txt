@@ -4629,24 +4629,47 @@ character_event = {
 		piety = -500
 		add_character_modifier = { name = refused_demilitarize years = 3 }
 		
-		ai_chance = { factor = 5 }
+		ai_chance = { factor = 5 
 		modifier = { factor = 5 trait = cynical }
+		modifier = { factor = 5 trait = ambitious }
+		modifier = { factor = 5 trait = proud }
+		}
 	}
 	
 	option = {
 		name = EVTOPTB_gaian_demiliterize
-		primary_title = { add_law = succ_gavelkind }
+		primary_title = { add_law = captaincy_mobilization_2 }
 		piety = 50
 		
 		ai_chance = { factor = 5 }
-		modifier = { factor = 5 trait = cynical }
+		
+	}
+	option = {
+		name = EVTOPTB_gaian_demiliterize
+		primary_title = { add_law = captaincy_mobilization_1 }
+		piety = 100
+		
+		ai_chance = { factor = 5 
+		modifier = { factor = 5 trait = temperate }
+		}
+		
+	}
+	option = {
+		name = EVTOPTB_gaian_demiliterize
+		primary_title = { add_law = captaincy_mobilization_0 }
+		piety = 200
+		
+		ai_chance = { factor = 5 
+		modifier = { factor = 5 trait = devout }
+		}
+		
 	}
 }
 
 character_event = {
 	id = gaian.2000
 	desc =  EVTDESC_gaian_militerize
-	picture = GFX_evt_courtiers_talking
+	picture = GFX_evt_armory
 	is_triggered_only = yes
 	
 	option = {
@@ -4662,7 +4685,7 @@ character_event = {
 		}
 		name = EVTOPTB_gaian_militarize
 		primary_title = { add_law = captaincy_mobilization_2 }
-		add_character_modifier = { name = mobilized_druidic_reserves years = 10 }
+		add_character_modifier = { name = mobilized_druidic_reserves years = 5 }
 		capital_scope = {
 		ROOT = {
 		spawn_unit = {
@@ -4689,7 +4712,7 @@ character_event = {
 character_event = {
 	id = gaian.2001
 	desc =  EVTDESC_gaian_demiliterize
-	picture = GFX_evt_courtiers_talking
+	picture = GFX_evt_armory
 	is_triggered_only = yes
 	
 	option = {
@@ -4704,6 +4727,89 @@ character_event = {
 		primary_title = { add_law = captaincy_mobilization_0 }
 		piety = 200
 		disband_event_forces = druidic_mobilized_reserves
+		remove_character_modifier = mobilized_druidic_reserves
 		ai_chance = { factor = 1 }
+	}
+}
+
+character_event = {
+	id = gaian.5000
+	hide_window = yes
+	trigger = {
+		any_war = {
+			using_cb = gaian_reclamation_cb
+		}
+		religion = gaian
+		NOT = {
+			has_character_flag = the_cycle_that_binds
+		}
+	}
+	mean_time_to_happen = {
+		days = 5
+	}
+	immediate = {
+		any_war = {
+			limit = { defender = { using_cb = gaian_reclamation_cb } }
+			defender = { save_event_target_as = reclamation_war_targ }
+		}
+		any_neighbor_independent_ruler = {
+			limit = {
+			war = no
+			religion = gaian
+			NOT = {
+			has_character_modifier = refused_reclamation
+				}
+			}
+			character_event = { id = gaian.5001 days=2 } 
+		}
+		set_character_flag = the_cycle_that_binds
+	}
+}
+
+character_event = {
+	id = gaian.5001
+	title = EVTITLE_neighbor_reclamation_war
+	desc =  EVTDESC_neighbor_reclamation_war
+	picture = GFX_evt_armory
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_neighbor_reclamation_war
+		ai_chance = { factor = 45 
+		modifier = { factor = 10 trait = ambitious }
+		modifier = { factor = 5 trait = zealous }
+		modifier = { factor = 5 trait = wroth }
+		}
+		random_landed_title = {
+			limit = {
+				tier = COUNT
+				region = custom_gaian_core_region
+				owner = {
+					OR = {
+						character = event_target:reclamation_war_targ
+						vassal_of = event_target:reclamation_war_targ
+					}
+				}
+			}
+			ROOT = {
+				war = {
+					target = event_target:reclamation_war_targ
+					casus_belli = gaian_reclamation_cb
+					thirdparty_title = PREV
+					tier = COUNT
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_neighbor_reclamation_war
+		prestige = 200
+		ai_chance = { factor = 55 
+		modifier = { factor = 10 trait = cynical }
+		modifier = { factor = 10 trait = proud }
+		modifier = { factor = 10 trait = temperate }
+		}
+		add_character_modifier = { name = refused_reclamation years = 2 }
 	}
 }

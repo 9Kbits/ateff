@@ -53,6 +53,9 @@ decisions = {
 			prisoner = no
 			religion = gaian
 			war = yes
+			any_current_enemy = {
+				NOT = { religion = gaian }
+			}
 			government = theocratic_feudal_government
 			NOT = {
 				has_law = captaincy_mobilization_2
