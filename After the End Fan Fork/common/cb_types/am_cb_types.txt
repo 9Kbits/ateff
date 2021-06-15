@@ -5597,6 +5597,7 @@ gaian_reclamation_cb = {
 	can_use_gui = {
 		ROOT = {
 			religion = gaian
+			has_global_flag = global_cycle_that_binds
 		}
 	}
 	
@@ -5604,6 +5605,7 @@ gaian_reclamation_cb = {
 		ROOT = {
 			religion = gaian
 			is_nomadic = no
+			has_global_flag = global_cycle_that_binds
 			NOT = { same_realm = FROM }
 			OR = {
 				NOT = { religion = FROM }

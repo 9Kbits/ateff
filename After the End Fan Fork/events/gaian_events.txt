@@ -4391,7 +4391,7 @@ character_event = {
 				stewardship > 10
 				learning < 15
 				}
-				learning < 18
+				learning < 16
 				liege = {
 				primary_title = {
 						has_law = succ_rel_gaian_elective
@@ -4418,7 +4418,7 @@ character_event = {
 				stewardship > 10
 				learning > 15
 				}
-				martial < 15
+				martial < 12
 				liege = {
 				primary_title = {
 						has_law = succ_mil_gaian_elective
@@ -4445,7 +4445,7 @@ character_event = {
 				stewardship < 10
 				learning > 15
 				}
-				stewardship < 16	
+				stewardship < 16
 				}
 				
 				liege = {
@@ -4454,7 +4454,7 @@ character_event = {
 					}
 				}
 			}
-		}
+
 		liege = { character_event = { id = gaian.1004 } }
 		piety = 20
 		ai_chance = {
@@ -4775,7 +4775,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_neighbor_reclamation_war
-		ai_chance = { factor = 45 
+		ai_chance = { factor = 65
 		modifier = { factor = 10 trait = ambitious }
 		modifier = { factor = 5 trait = zealous }
 		modifier = { factor = 5 trait = wroth }
@@ -4805,11 +4805,491 @@ character_event = {
 	option = {
 		name = EVTOPTB_neighbor_reclamation_war
 		prestige = 200
-		ai_chance = { factor = 55 
+		ai_chance = { factor = 35
 		modifier = { factor = 10 trait = cynical }
 		modifier = { factor = 10 trait = proud }
 		modifier = { factor = 10 trait = temperate }
 		}
 		add_character_modifier = { name = refused_reclamation years = 2 }
+	}
+}
+
+narrative_event = {
+	id = gaian.5002
+	title = EVTITLE_victoria_fallen
+	desc =  EVTDESC_victoria_fallen
+	picture = GFX_evt_magic_ritual
+	
+	trigger = {
+		completely_controls = k_vancouver
+		NOT = {
+			religion = gaian
+		}
+		NOT = {
+			has_global_flag = global_cycle_that_binds
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	major = yes
+	
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 548
+					value = 1000	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_the_great_bind
+		trigger = {
+			OR = {
+				religion = raven_tales
+				religion = raven_tales_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_the_great_bind
+		trigger = {
+			religion = gaian
+		}
+		piety = 200
+		prestige = 100
+	}
+	option = {
+		name = EVTOPTC_the_great_bind
+		trigger = {
+			OR = {
+			religion = trailwalker
+			religion = trailwalker_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_the_great_bind
+		trigger = {
+			OR = {
+			religion = peyotist
+			religion = nazarene
+			religion = true_cross
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_the_great_bind
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTF_the_great_bind
+		trigger = {
+			NOR = {
+				religion = peyotist
+				religion = cetic
+				religion = trailwalker
+				religion = trailwalker_reformed
+				religion = raven_tales
+				religion = raven_tales_reformed
+				religion = gaian
+				religion = nazarene
+				religion = true_cross
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = global_cycle_that_binds
+	}
+}
+
+narrative_event = {
+	id = gaian.5003
+	title = EVTITLE_caledonia_fallen
+	desc =  EVTDESC_caledonia_fallen
+	picture = GFX_evt_magic_ritual
+	
+	trigger = {
+		completely_controls = k_caledonia
+		NOT = {
+			religion = gaian
+		}
+		NOT = {
+			has_global_flag = global_cycle_that_binds
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	major = yes
+	
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 567
+					value = 1000	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_the_great_bind
+		trigger = {
+			OR = {
+				religion = raven_tales
+				religion = raven_tales_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_the_great_bind
+		trigger = {
+			religion = gaian
+		}
+		piety = 200
+		prestige = 100
+	}
+	option = {
+		name = EVTOPTC_the_great_bind
+		trigger = {
+			OR = {
+			religion = trailwalker
+			religion = trailwalker_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_the_great_bind
+		trigger = {
+			OR = {
+			religion = peyotist
+			religion = nazarene
+			religion = true_cross
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_the_great_bind
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTF_the_great_bind
+		trigger = {
+			NOR = {
+				religion = peyotist
+				religion = cetic
+				religion = trailwalker
+				religion = trailwalker_reformed
+				religion = raven_tales
+				religion = raven_tales_reformed
+				religion = gaian
+				religion = nazarene
+				religion = true_cross
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = global_cycle_that_binds
+	}
+}
+
+narrative_event = {
+	id = gaian.5004
+	title = EVTITLE_cascadia_fallen
+	desc =  EVTDESC_cascadia_fallen
+	picture = GFX_evt_magic_ritual
+	
+	trigger = {
+		completely_controls = k_cascadia
+		NOT = {
+			religion = gaian
+		}
+		NOT = {
+			has_global_flag = global_cycle_that_binds
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	major = yes
+	
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 543
+					value = 1000	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_the_great_bind
+		trigger = {
+			OR = {
+				religion = raven_tales
+				religion = raven_tales_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_the_great_bind
+		trigger = {
+			religion = gaian
+		}
+		piety = 200
+		prestige = 100
+	}
+	option = {
+		name = EVTOPTC_the_great_bind
+		trigger = {
+			OR = {
+			religion = trailwalker
+			religion = trailwalker_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_the_great_bind
+		trigger = {
+			OR = {
+			religion = peyotist
+			religion = nazarene
+			religion = true_cross
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_the_great_bind
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTF_the_great_bind
+		trigger = {
+			NOR = {
+				religion = peyotist
+				religion = cetic
+				religion = trailwalker
+				religion = trailwalker_reformed
+				religion = raven_tales
+				religion = raven_tales_reformed
+				religion = gaian
+				religion = nazarene
+				religion = true_cross
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = global_cycle_that_binds
+	}
+}
+
+narrative_event = {
+	id = gaian.5005
+	title = EVTITLE_jefferson_fallen
+	desc =  EVTDESC_jefferson_fallen
+	picture = GFX_evt_steppe_mercenaries
+	
+	trigger = {
+		completely_controls = k_jefferson
+		NOT = {
+			religion = gaian
+		}
+		NOT = {
+			has_global_flag = global_cycle_that_binds
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	major = yes
+	
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 2059
+					value = 1000	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_the_great_bind
+		trigger = {
+			OR = {
+				religion = raven_tales
+				religion = raven_tales_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_the_great_bind
+		trigger = {
+			religion = gaian
+		}
+		piety = 200
+		prestige = 100
+	}
+	option = {
+		name = EVTOPTC_the_great_bind
+		trigger = {
+			OR = {
+			religion = trailwalker
+			religion = trailwalker_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_the_great_bind
+		trigger = {
+			OR = {
+			religion = peyotist
+			religion = nazarene
+			religion = true_cross
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_the_great_bind
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTF_the_great_bind
+		trigger = {
+			NOR = {
+				religion = peyotist
+				religion = cetic
+				religion = trailwalker
+				religion = trailwalker_reformed
+				religion = raven_tales
+				religion = raven_tales_reformed
+				religion = gaian
+				religion = nazarene
+				religion = true_cross
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = global_cycle_that_binds
+	}
+}
+
+narrative_event = {
+	id = gaian.5006
+	title = EVTITLE_lincoln_fallen
+	desc =  EVTDESC_lincoln_fallen
+	picture = GFX_evt_steppe_mercenaries
+	
+	trigger = {
+		completely_controls = k_lincoln
+		NOT = {
+			religion = gaian
+		}
+		NOT = {
+			has_global_flag = global_cycle_that_binds
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	major = yes
+	
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 505
+					value = 1000	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_the_great_bind
+		trigger = {
+			OR = {
+				religion = raven_tales
+				religion = raven_tales_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_the_great_bind
+		trigger = {
+			religion = gaian
+		}
+		piety = 200
+		prestige = 100
+	}
+	option = {
+		name = EVTOPTC_the_great_bind
+		trigger = {
+			OR = {
+			religion = trailwalker
+			religion = trailwalker_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_the_great_bind
+		trigger = {
+			OR = {
+			religion = peyotist
+			religion = nazarene
+			religion = true_cross
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_the_great_bind
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTF_the_great_bind
+		trigger = {
+			NOR = {
+				religion = peyotist
+				religion = cetic
+				religion = trailwalker
+				religion = trailwalker_reformed
+				religion = raven_tales
+				religion = raven_tales_reformed
+				religion = gaian
+				religion = nazarene
+				religion = true_cross
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = global_cycle_that_binds
 	}
 }

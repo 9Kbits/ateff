@@ -1371,13 +1371,14 @@
 	trait=shy
 	trait=chaste
 	trait=proud
+	trait=stressed
 	trait=sympathy_pagans
 	mother=1845120
 	father=1890040
 	2630.6.15={birth=yes}
 	2646.9.16={add_spouse=1845061}
-		2659.12.1={
-		effect={add_artifact=vandals_axe}
+	2659.12.1={
+	effect={add_artifact=vandals_axe}
 	}
 	2665.10.2={capital=c_benton}
 	2690.10.10={death=yes}
@@ -2376,7 +2377,7 @@
     	female=yes
     	mother=1845125
     	give_nickname=nick_the_cougar
-    	2584.3.12={birth=yes}
+    	2584.3.19={birth=yes}
     	2623.3.19=effect={add_artifact=vandals_axe}
 	2629.1.1={death=yes}
 }
@@ -2456,7 +2457,8 @@
 	religion=gaian
 	dynasty=1863076
 	female=yes
-	2538.8.13={birth=yes}
+	mother=1845131
+	2543.8.13={birth=yes}
 	2589.2.25={death=yes}
 }
 
@@ -2484,3 +2486,73 @@
 	2608.10.28={birth=yes}
 	2647.2.19={death=yes}
 }
+
+1845130={
+	name="Ellen" #The Second
+	culture=inlander
+	religion=gaian
+	dynasty=1863076
+	female=yes
+	mother=1845131
+	2542.8.13={birth=yes}
+	2582.2.25={death={
+			death_reason=death_battle
+			killer=1890044 #Joseph Ponderosa
+		}
+	}
+}
+
+1845131={
+	name="Tasha"
+	culture=inlander
+	religion=gaian
+	dynasty=1863076
+	female=yes
+	mother=1845132
+	2521.1.3={birth=yes}
+	2571.5.12={death={
+			death_reason=death_battle
+			killer=1890056 #Ronnette Silvermount
+		}
+	}
+}
+
+1845132={
+	name="Ellen" #The First
+	culture=inlander
+	religion=gaian
+	dynasty=1863076
+	female=yes
+	2501.5.29={birth=yes}
+	2547.6.5={death=yes}
+}
+
+1845133={
+	name="Jane"
+	culture=inlander
+	religion=gaian
+	dynasty=1863076
+	female=yes
+	trait=depressed
+	mother=1845130
+	2561.4.18={birth=yes}
+	2615.2.4={death={
+			death_reason=death_suicide_hanging
+		}
+	}
+}
+
+1845134={
+	name="Eddie"
+	culture=inlander
+	religion=gaian
+	dynasty=1863076
+	mother=1845133
+	2593.7.3={birth=yes}
+	2613.2.4={death={
+			death_reason=death_battle
+			killer=1890041 #Moses Silvermount
+		}
+	}
+}
+

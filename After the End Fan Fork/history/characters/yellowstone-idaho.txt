@@ -24,6 +24,7 @@
 	trait=diligent
 	trait=patient
 	2642.1.1={birth=yes}
+	2662.9.16={add_spouse=1830020}
 	2720.1.1={death=yes}
 }
 
@@ -499,6 +500,7 @@
 	trait=stubborn
 	trait=cynical
 	trait=kind
+	trait=proud
 	trait=ambitious
 	2636.5.1={birth=yes}
 	2722.1.1={death=yes}
@@ -510,8 +512,8 @@
 	religion=cetic
 	trait=sympathy_pagans
 	trait=celibate
-	father=1890053
-	2630.5.1={birth=yes}
+	father=1890048
+	2617.5.2={birth=yes}
 	2679.1.1={death=yes}
 }
 
@@ -534,9 +536,6 @@
 	give_nickname=nick_the_ill_ruler
 	father=1890041
 	2615.6.30={birth=yes}
-		2624.3.5={
-		effect={add_artifact=vandals_axe}
-	}
 	2631.7.20={add_spouse=1845120}
 	2659.12.1={death={death_reason=death_trait}}
 }
@@ -714,7 +713,7 @@
 	2616.6.6={birth=yes}
 	2641.4.13={death={
 			death_reason=death_battle
-			killer=1890052
+			killer=1890052 #Muley Wootten
 		}
 	}
 }
@@ -737,25 +736,35 @@
 	2516.3.17={birth=yes}
 	2549.4.6={death={
 			death_reason=death_battle
-			killer=XXXXXXX #Needs to be a Ponderosa
+			killer=1845131 #Tasha Silvermount
 		}
 	}
 }
 
 1890056={
-	name="Ronnette" #NEEDS TO KILL A PONDEROSA
+	name="Ronnette"
 	dynasty=1863074
 	female=yes
 	culture=inlander
 	religion=trailwalker
 	father=1890055
+	martial=10
+	trait=brilliant_strategist
+	trait=trailwalker_leader
 	trait=duelist
 	trait=shieldmaiden
 	trait=strong
 	trait=uncouth
+	trait=cruel
+	trait=giant
+	disallow_random_traits=yes
 	2518.2.7={birth=yes}
-	2573.1.4={death=yes}
+	2573.1.4=={death={
+			death_reason=death_execution_hanging
+			killer=1200118 #Margaret
+		}
 	}
+}
 
 1890057={
 	name="Phalt"
