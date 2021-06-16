@@ -27,6 +27,7 @@ on_startup = {
 		LT.32000 # Adding the historical flag to wonders.
 		
 		ate_landmarks.0 # Landmark event
+		okla_landmarks.0
 		misc.5 #Startup event
 		flavor.30 #Batman
 		flavor.40 #Scooby-Doo
@@ -4107,12 +4108,5 @@ on_wonder_restore_start = {
 on_wonder_restore_finish = {
 	events = {
 		LT.20808 # clean up looted_artifact flag
-	}
-}
-
-OKIEMOD THINGYMABOB
-on_startup = {
-	events = {
-			okla_landmarks.0
 	}
 }

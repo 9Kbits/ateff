@@ -1171,7 +1171,11 @@ narrative_event = {
 		has_character_flag = mountain_gaian_hike
 		has_character_flag = hike_option_a
 		trait = on_hike
-		culture = canuck
+		NOR = {
+			culture = inlander
+			culture = cascadian
+			culture = siskiyouan
+		}
 		NOT = {
 			has_character_flag = hike_lost
 		}
@@ -1308,7 +1312,11 @@ narrative_event = {
 		has_character_flag = mountain_gaian_hike
 		has_character_flag = hike_option_d
 		trait = on_hike
-		culture = canuck
+		NOR = {
+			culture = cascadian
+			culture = canuck
+			culture = siskiyouan
+		}
 		NOT = {
 			has_character_flag = hike_lost
 		}
@@ -1386,7 +1394,11 @@ narrative_event = {
 		has_character_flag = forest_gaian_hike
 		has_character_flag = hike_option_b
 		trait = on_hike
-		culture = canuck
+		NOR = {
+			culture = cascadian
+			culture = inlander
+			culture = siskiyouan
+		}
 		NOT = {
 			has_character_flag = hike_lost
 		}
@@ -1621,7 +1633,11 @@ narrative_event = {
 		has_character_flag = river_gaian_hike
 		has_character_flag = hike_option_d
 		trait = on_hike
-		culture = canuck
+		NOR = {
+			culture = canuck
+			culture = siskiyouan
+			culture = cascadian
+		}
 		NOT = {
 			has_character_flag = hike_lost
 		}
@@ -1746,7 +1762,11 @@ narrative_event = {
 		has_character_flag = mountain_gaian_hike
 		has_character_flag = hike_option_c
 		trait = on_hike
-		culture = inlander
+		NOR = {
+			culture = canuck
+			culture = siskiyouan
+			culture = cascadian
+		}
 		NOT = {
 			has_character_flag = hike_lost
 		}
@@ -1823,7 +1843,11 @@ narrative_event = {
 		has_character_flag = river_gaian_hike
 		has_character_flag = hike_option_b
 		trait = on_hike
-		culture = inlander
+		NOR = {
+			culture = cascadian
+			culture = canuck
+			culture = siskiyouan
+		}
 		NOT = {
 			has_character_flag = hike_lost
 		}
@@ -2058,9 +2082,9 @@ narrative_event = {
 		has_character_flag = forest_gaian_hike
 		has_character_flag = hike_option_a
 		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
+		NOR = {
+			culture = inlander
+			culture = canuck
 		}
 		NOT = {
 			has_character_flag = hike_lost
@@ -2142,9 +2166,9 @@ narrative_event = {
 		has_character_flag = forest_gaian_hike
 		has_character_flag = hike_option_c
 		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
+		NOR = {
+			cultureculture = inlander
+			culture = canuck
 		}
 		NOT = {
 			has_character_flag = hike_lost
@@ -2246,10 +2270,8 @@ narrative_event = {
 		has_character_flag = river_gaian_hike
 		has_character_flag = hike_option_a
 		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = inlander
-			culture = siskiyouan
+		NOT = {
+			culture = canuck
 		}
 		NOT = {
 			has_character_flag = hike_lost
@@ -2326,9 +2348,9 @@ narrative_event = {
 		has_character_flag = river_gaian_hike
 		has_character_flag = hike_option_c
 		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
+		NOR = {
+			culture = inlander
+			culture = canuck
 		}
 		NOT = {
 			has_character_flag = hike_lost
@@ -2460,9 +2482,9 @@ narrative_event = {
 		has_character_flag = mountain_gaian_hike
 		has_character_flag = hike_option_b
 		trait = on_hike
-		OR = {
-			culture = cascadian
-			culture = siskiyouan
+		NOR = {
+			culture = inlander
+			culture = canuck
 		}
 		NOT = {
 			has_character_flag = hike_lost
