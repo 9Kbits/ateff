@@ -1385,6 +1385,7 @@
 		}
 	}
 	2665.12.19={add_spouse=1911153}
+	2666.1.1={employer=2200016}
 	2720.3.24={death=yes}
 
 }
@@ -2891,6 +2892,7 @@
 		}
 	}
 	2665.12.19={add_spouse=1384010}
+	2666.1.1={employer=2200016}
 	2740.12.1={death=yes}
 }
 2500098={
@@ -3145,6 +3147,7 @@
 	2646.8.4={birth=yes
 		culture=cascadian
 	}
+	2656.8.9={employer=1845051}
 	2699.4.6={death=yes}
     }
 2500112={
@@ -3364,6 +3367,14 @@ name="Elfie"
     dynasty = 1851016 #Steely
     culture = valleyan
     religion = rust_cultist
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=tough_soldier
+	trait=devout
+	trait=sympathy_christendom
+	trait=sympathy_islam
+	trait=sympathy_judaism
     father = 2500119
     mother = 2500113
     2366.7.5 = { birth = yes }
@@ -3411,7 +3422,12 @@ name="Elfie"
 	name="Joseph"
 	culture=valleyan
 	dynasty=1851170 #sabina
-	religion=hamiltonian
+	religion=pagan
+	trait=cynical
+	trait=tough_soldier
+	trait=ambitious
+	trait=quick
+	trait=architect
 	father=2500116
 	mother=2500113
 	2351.1.1={birth=yes}
@@ -3425,6 +3441,7 @@ name="Elfie"
 	religion=hamiltonian
 	father=2500126
 	trait=fair
+	trait=midas_touched
 	trait=kind
 	trait=patient
 	trait=just
@@ -3439,14 +3456,23 @@ name="Elfie"
 	2480.1.1={death=yes}
 }
 2500128={
-	name="Alexandra"
+	name="Rebecca"
 	culture=angeleno #culture and religion of mother, because father was already dead
 	female=yes
 	dynasty=1851171 #invierno
 	religion=reform
+	trait=kind
+	trait=just
+	trait=fair
+	trait=charitable
+	trait=shy
+	trait=deceitful
+	trait=midas_touched
+	trait=lustful
 	father=2500117
 	mother=2500113
 	2353.11.5={birth=yes} #born after her father was killed
+	2389.6.21={add_spouse=2500143}
 	2430.1.1={death=yes}
 }
 2500129={
@@ -3455,10 +3481,22 @@ name="Elfie"
 	female=yes
 	dynasty=1851172 #burgess
 	religion=pagan
+	trait=deceitful
+	trait=intricate_webweaver
+	trait=shrewd
+	trait=diligent
+	trait=ambitious
+	trait=charitable
+	trait=gregarious
+	give_nickname=nick_the_bohemian
 	father=2500118
 	mother=2500113
 	2354.7.1={birth=yes}
-	2425.1.1={death=yes}
+	2425.1.1={death={
+			death_reason= death_execution_beheading #was executed for being the leader of the bohemians
+			killer=1910100
+		}
+	}
 }
 2500130={
 	name="Tinka"
@@ -3466,6 +3504,13 @@ name="Elfie"
 	female=yes
 	dynasty=1851173 #kensington
 	religion=pagan
+	trait=fair
+	trait=tough_soldier
+	trait=genius
+	trait=shrewd
+	trait=adventurer
+	trait=kind
+	trait=charitable 
 	give_nickname=nick_the_belle
 	father=2500120
 	mother=2500113
@@ -3473,11 +3518,16 @@ name="Elfie"
 	2430.1.1={death=yes}
 }
 2500131={
-	name="Livia"
+	name="Natalia"
 	culture=angeleno
 	female=yes
 	dynasty=1851174 #Pringle
-	religion=brethren
+	religion=cetic
+	trait=kind
+	trait=musician
+	trait=way_dove
+	trait=fair
+	trait=fortune_builder
 	father=2500121
 	mother=2500113
 	2364.1.1={birth=yes}
@@ -3489,6 +3539,12 @@ name="Elfie"
 	female=yes
 	dynasty=1851175 #Ballis
 	religion=sacred_heart
+	trait=just
+	trait=charismatic_negotiator
+	trait=kind
+	trait=diligent
+	trait=ambitious
+	trait=shrewd
 	father=2500122
 	mother=2500113
 	2367.1.1={birth=yes}
@@ -3498,7 +3554,12 @@ name="Elfie"
 	name="Martin"
 	culture=bayfolk
 	dynasty=1851176 #asteroida
-	religion=hamiltonian
+	religion=sedevacantist
+	trait=strong
+	trait=deceitful
+	trait=shrewd
+	trait=ambitious
+	trait=trusting
 	2349.1.1={birth=yes}
 	2371.6.21={add_spouse=2500125}
 	2415.1.1={death=yes}
@@ -3644,6 +3705,7 @@ name="Elfie"
 	trait=diligent
 	2620.1.1={birth=yes}
 	2645.6.21={add_spouse=2500140}
+	2665.1.1={employer=2500140}
 	2699.1.1={death=yes}
 }
 2500142={
@@ -3662,5 +3724,91 @@ name="Elfie"
 	trait=diligent
 	trait=duelist
 	2646.1.1={birth=yes}
+	2665.1.1={employer=2500140}
 	2759.1.1={death=yes}
 }
+2500143={
+	name="Juan"
+	culture=californio
+	dynasty=1700041 #infante
+	religion=cetic
+	give_nickname=nick_the_soldier
+	trait=tough_soldier
+	trait=strong
+	trait=way_fist
+	trait=seducer
+	trait=just
+	trait=diligent
+	trait=duelist
+	2350.1.1={birth=yes}
+	2389.6.21={add_spouse=2500128}
+	2429.1.1={death=yes}
+}
+2500144={
+	name="Caroline"
+	female=yes
+	culture=californio
+	dynasty=1700041 #infante
+	religion=cetic
+	give_nickname=nick_the_poet
+	trait=charismatic_negotiator
+	trait=quick
+	trait=fair
+	trait=way_dove
+	trait=poet
+	trait=shrewd
+	trait=gregarious
+	trait=just
+	father=2500143
+	mother=2500128
+	2391.1.1={birth=yes}
+	2420.6.21={
+        effect={
+            set_character_flag=recieved_royal_marriage_aid_duty
+            spouse={
+                set_character_flag=recieved_royal_marriage_aid_duty
+                remove_spouse=spouse
+                add_spouse_matrilineal=ROOT
+                clr_character_flag=recieved_royal_marriage_aid_duty
+            }
+            clr_character_flag=recieved_royal_marriage_aid_duty
+        }
+    }
+	2459.1.1={death=yes}
+}
+2500145={
+	name="Neil"
+	culture=californio
+	religion=cetic
+	trait=charismatic_negotiator
+	trait=quick
+	trait=fair
+	trait=way_dove
+	trait=musician
+	trait=shrewd
+	trait=gregarious
+	trait=just
+	2391.1.1={birth=yes}
+	2420.6.21={add_spouse=2500144}
+	2459.1.1={death=yes} #blocking out numbers 45-55 for linking to current TJ lord
+}
+2500155={
+	name="Jonathan"
+	culture=californio
+	dynasty=1851172 #burgess
+	religion=cetic
+	give_nickname=nick_the_spider
+	trait=intricate_webweaver
+	trait=quick
+	trait=schemer
+	trait=seducer
+	trait=hedonist
+	trait=diligent
+	trait=ambitious
+	trait=legit_bastard
+	mother=2500129
+	2389.6.6={birth=yes}
+	2419.6.21={add_spouse=2500156}
+	2459.1.1={death=yes}
+}
+
