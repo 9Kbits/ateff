@@ -5598,6 +5598,7 @@ gaian_reclamation_cb = {
 		ROOT = {
 			religion = gaian
 			has_global_flag = global_cycle_that_binds
+			NOT = { has_global_flag = the_great_unbind }
 		}
 	}
 	
@@ -5606,6 +5607,7 @@ gaian_reclamation_cb = {
 			religion = gaian
 			is_nomadic = no
 			has_global_flag = global_cycle_that_binds
+			NOT = { has_global_flag = the_great_unbind }
 			NOT = { same_realm = FROM }
 			OR = {
 				NOT = { religion = FROM }

@@ -1694,7 +1694,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value = 5
+		value = 3
 		}
 		has_character_flag = mountain_gaian_hike
 		has_character_flag = hike_option_b
@@ -1741,7 +1741,7 @@ narrative_event = {
 	trigger = {
 		check_variable = {
 		which = hike_completion
-		value = 5
+		value = 3
 		}
 		has_character_flag = mountain_gaian_hike
 		has_character_flag = hike_option_c
@@ -5291,5 +5291,49 @@ narrative_event = {
 	
 	immediate = {
 		set_global_flag = global_cycle_that_binds
+	}
+}
+
+narrative_event = {
+	id = gaian.5007
+	title = EVTITLE_the_end_of_reclamation
+	desc =  EVTDESC_the_end_of_reclamation
+	picture = GFX_evt_china_rebel_general
+	is_triggered_only = yes
+	
+	major = yes
+	
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 543
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_the_great_unbind
+		trigger = {
+			NOT = {
+				religion = gaian
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_the_great_unbind
+		trigger = {
+			religion = gaian
+		}
+		piety = -150
+	}
+	
+	immediate = {
+		set_global_flag = the_great_unbind
+		gaian = {
+			religion_authority = { modifier = the_great_unbinding }
+		}
 	}
 }
