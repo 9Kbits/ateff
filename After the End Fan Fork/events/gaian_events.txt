@@ -2,6 +2,7 @@
 # 100-200 end state hike events
 # 300-500 interestiing hike encounters
 # 500- crater lake events
+# 600 - discharge/priesthood events
 
 namespace = gaian
 character_event = {
@@ -3903,6 +3904,203 @@ character_event = {
 		death = { death_reason = death_murder_unknown_combustion }
 	}
 }
+
+
+character_event = { #ping the court chaplain 
+	id = gaian.600
+	picture = GFX_evt_campfire_hf
+	hide_window = yes	
+	only_playable = yes
+	only_capable = yes
+	prisoner = no
+	min_age = 16
+	religion = gaian
+
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					has_character_modifier = adulterer
+					has_character_modifier = adultress
+					has_character_modifier = incestuous_adulterer
+					has_character_modifier = incestuous_adultress
+					has_character_modifier = known_murderer
+					has_character_modifier = uncivilized_dueler
+					trait = kinslayer
+					calc_true_if = {
+						amount >= 2
+						trait = greedy
+						trait = envious
+						trait = wroth
+						trait = slothful
+						trait = greedy
+						trait = gluttonous
+						trait = lustful
+						trait = cruel
+						trait = drunkard
+						trait = craven
+						trait = hedonist
+						trait = impaler
+						trait = paranoid
+					}
+				}
+				job_spiritual = { 
+					opinion = {
+						who = ROOT
+						value < -10
+					}
+				}
+			}
+			has_character_flag = gaian_repent
+		}
+		NOT = { trait = discharged }
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	immediate = {
+		job_spiritual = {
+			character_event = { id = gaian.601 }
+		}
+	}
+}
+
+character_event = {
+	id = gaian.601
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	
+	immediate = {
+		if = {
+			trigger = {
+				has_character_flag = gaian_repent
+				NOT = {
+					has_character_modifier = adulterer
+					has_character_modifier = adultress
+					has_character_modifier = incestuous_adulterer
+					has_character_modifier = incestuous_adultress
+					has_character_modifier = known_murderer
+					has_character_modifier = uncivilized_dueler
+					trait = kinslayer
+					calc_true_if = {
+						amount >= 2
+						trait = greedy
+						trait = envious
+						trait = wroth
+						trait = slothful
+						trait = greedy
+						trait = gluttonous
+						trait = lustful
+						trait = cruel
+						trait = drunkard
+						trait = craven
+						trait = hedonist
+						trait = impaler
+						trait = paranoid
+					}
+				}
+			}
+			employer = {
+				letter_event = { id = gaian.603 }
+			}
+		}
+		else = {
+			employer = {
+				letter_event = { id = gaian.602 }
+			}
+		}
+	}
+	
+}
+
+letter_event = { #the court chaplain sends a letter
+	id = gaian.602
+	border = GFX_event_letter_frame_religion
+	desc = {
+		trigger = {
+			FROM = {
+				NOT = { has_character_flag = gaian_repent }
+			}
+		}
+		text = EVTDESC_discharged_gaian
+	}
+	desc = {
+		trigger = {
+			FROM = {
+				has_character_flag = gaian_repent
+			}
+		}
+		text = EVTDESC_discharged_gaian_round_2
+	}
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = gaian
+	}
+	
+	
+	option = {
+		name = EVTOPTA_discharged_gaian
+		abdicate = yes
+		piety = 50
+	}
+	option = {
+		name = EVTOPTB_discharged_gaian
+		add_trait = discharged
+		job_spiritual = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_annoyed #add custom opinion modifier
+			}
+		}
+	}
+	option = {
+		trigger = {
+			NOT = {
+				has_character_modifier = adulterer
+				has_character_modifier = adultress
+				has_character_modifier = incestuous_adulterer
+				has_character_modifier = incestuous_adultress
+				has_character_modifier = known_murderer
+				has_character_modifier = uncivilized_dueler
+				trait = kinslayer
+			}
+		}
+		name = EVTOPTC_discharged_gaian
+		set_character_flag = gaian_repent
+		character_event = { id = gaian.600 days = 360 }
+	}
+}
+
+letter_event = { #the court chaplain sends a letter
+	id = gaian.603
+	border = GFX_event_letter_frame_religion
+	desc = EVTDESC_repented_gaian
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = gaian
+	}
+	
+	
+	option = {
+		name = EVTOPTA_repented_gaian
+		job_spiritual = {
+			opinion = {
+				who = ROOT
+				modifier = opinion_impressed_by_rock_throw #add custom opinion modifier
+			}
+		}
+		piety = 250
+	}
+}
+
 
 character_event = {
 	id = gaian.800
