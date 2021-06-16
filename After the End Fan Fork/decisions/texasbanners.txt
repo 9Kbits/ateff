@@ -29,7 +29,12 @@ decisions = {
 			prestige = -500
 			narrative_event = { id = tex_king.1 }
 			activate_title = { title = d_miners status = yes }
-			d_miners = { grant_title = ROOT }
+			primary_title = {
+				d_miners = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -90,7 +95,7 @@ decisions = {
 					prisoner = no
 					NOT = { is_incapable = yes }
 					prestige = 500
-					has_landed_title = c_austin
+					has_landed_title = c_travis
 					}
 			effect = {
 					prestige = -500
