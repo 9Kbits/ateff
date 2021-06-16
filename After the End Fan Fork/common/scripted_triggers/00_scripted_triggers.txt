@@ -767,10 +767,7 @@ has_crusade_trait_trigger = {
 			trait = danite
 		}
 		AND = {
-			OR = {
-				religion = thelemic
-				religion = thelemic_reformed
-			}
+			religion = glorian
 			trait = order_of_the_garter
 		}
 		AND = {
@@ -2448,11 +2445,8 @@ true_religion_occultist_reformed_trigger = {
 true_religion_occultist_trigger = {
 	true_religion = occultist
 }
-true_religion_thelemic_reformed_trigger = {
-	true_religion = thelemic_reformed
-}
-true_religion_thelemic_trigger = {
-	true_religion = thelemic
+true_religion_glorian_trigger = {
+	true_religion = glorian
 }
 true_religion_norse_pagan_reformed_trigger = {
 	true_religion = norse_pagan_reformed
@@ -3240,12 +3234,9 @@ is_occultist_secret_religious_society_member_trigger = {
 	}
 }
 
-is_thelemic_secret_religious_society_member_trigger = {
+is_glorian_secret_religious_society_member_trigger = {
 	society_member_of = secret_religious_cult
-	OR = {
-		society_member_of = secret_religious_society_thelemic_reformed
-		society_member_of = secret_religious_society_thelemic
-	}
+	society_member_of = secret_religious_society_glorian
 }
 
 is_norse_secret_religious_society_member_trigger = {
@@ -3754,12 +3745,8 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_occultist }
 		}
 		AND = {
-			society_member_of = secret_religious_society_thelemic_reformed
-			PREV = { interested_in_society = secret_religious_society_thelemic_reformed }
-		}
-		AND = {
-			society_member_of = secret_religious_society_thelemic
-			PREV = { interested_in_society = secret_religious_society_thelemic }
+			society_member_of = secret_religious_society_glorian
+			PREV = { interested_in_society = secret_religious_society_glorian }
 		}
 		AND = {
 			society_member_of = secret_religious_society_norse_pagan_reformed
@@ -4257,15 +4244,9 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = { 
-			has_character_flag = character_was_thelemic
+			has_character_flag = character_was_glorian
 			any_character = {
-				religion = thelemic
-			}
-		}
-		AND = { 
-			has_character_flag = character_was_thelemic_reformed
-			any_character = {
-				religion = thelemic_reformed
+				religion = glorian
 			}
 		}
 		AND = { 
@@ -4513,8 +4494,7 @@ has_starry_wisdom_prerequisites = {
 	OR = {
 		religion = occultist
 		religion = occultist_reformed
-		religion = thelemic
-		religion = thelemic_reformed
+		#religion = glorian
 	}
 }
 
@@ -5045,15 +5025,8 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = thelemic_reformed
-				ROOT = { religion = thelemic_reformed }
-			}
-		}
-		NAND = {
-			any_artifact = {
-				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = thelemic
-				ROOT = { religion = thelemic }
+				has_artifact_flag = glorian
+				ROOT = { religion = glorian }
 			}
 		}
 		NAND = {
@@ -5862,8 +5835,6 @@ has_unsafe_secret_religion = {
 				secret_religion = chrome_cultist
 				secret_religion = occultist
 				secret_religion = occultist_reformed
-				secret_religion = thelemic
-				secret_religion = thelemic_reformed
 				secret_religion = celtic_pagan
 				secret_religion = celtic_pagan_reformed
 				secret_religion = aria_de_machete
@@ -6683,8 +6654,6 @@ has_unsafe_religion = {
 				religion = chrome_cultist
 				religion = occultist
 				religion = occultist_reformed
-				religion = thelemic
-				religion = thelemic_reformed
 				religion = celtic_pagan
 				religion = celtic_pagan_reformed
 				religion = aria_de_machete
@@ -7750,7 +7719,6 @@ this_is_warrior_culture_trigger = { #Not really about culture - Used in AI votin
 		religion_group = nautical
 		religion = norse_pagan
 		religion = raven_tales
-		religion = thelemic
 		OR = {
 			has_religion_feature = religion_warlike
 			has_religion_feature = religion_feature_raven_tales_1
@@ -7761,10 +7729,10 @@ this_is_warrior_culture_trigger = { #Not really about culture - Used in AI votin
 			NOT = { has_dlc = "Holy Fury"}
 			religion = norse_pagan_reformed
 		}
-		AND = { 
-			NOT = { has_dlc = "Holy Fury"}
-			religion = thelemic_reformed
-		}
+		#AND = { 
+		#	NOT = { has_dlc = "Holy Fury"}
+		#	religion = thelemic_reformed
+		#}
 		#AND = { 
 		#	NOT = { has_dlc = "Holy Fury"}
 		#	religion = aztec_reformed
@@ -9445,8 +9413,7 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_rust_cultist
 		has_character_flag = character_was_occultist_reformed
 		has_character_flag = character_was_occultist
-		has_character_flag = character_was_thelemic_reformed
-		has_character_flag = character_was_thelemic
+		has_character_flag = character_was_glorian
 		has_character_flag = character_was_norse_pagan_reformed
 		has_character_flag = character_was_norse_pagan
 		has_character_flag = character_was_celtic_pagan
@@ -9706,17 +9673,17 @@ religion_openly_rust_cultist_or_heresy_trigger = {
 	}
 }
 
-religion_openly_thelemic_or_reformed_trigger = {
-	custom_tooltip = {
-		text = religion_openly_thelemic_or_reformed_tooltip
-		hidden_trigger = {
-			OR = {
-				religion = thelemic
-				religion = thelemic_reformed
-			}
-		}
-	}
-}
+#religion_openly_thelemic_or_reformed_trigger = {
+#	custom_tooltip = {
+#		text = religion_openly_thelemic_or_reformed_tooltip
+#		hidden_trigger = {
+#			OR = {
+#				religion = glorian
+#				religion = thelemic_reformed
+#			}
+#		}
+#	}
+#}
 
 religion_openly_espiritista_or_reformed_trigger = {
 	custom_tooltip = {
@@ -9832,8 +9799,7 @@ is_accepting_of_homosexuality_trigger = {
 		OR = { 
 			religion = gaian
 			religion = reform
-			religion = thelemic
-			religion = thelemic_reformed
+			religion = glorian #???
 			religion = nonconformist
 			religion = neognostic
 			religion = santeria

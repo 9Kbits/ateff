@@ -1689,7 +1689,7 @@ targetted_decisions = {
 			OR = {
 				religion = revelationist
 				religion = occultist
-				religion = thelemic
+				religion = glorian
 				religion = norse_pagan
 				religion = celtic_pagan
 				religion = espiritista
@@ -1709,10 +1709,6 @@ targetted_decisions = {
 			if = {
 				limit = { religion = occultist }
 				religion = occultist_reformed
-			}
-			if = {
-				limit = { religion = thelemic }
-				religion = thelemic_reformed
 			}
 			if = {
 				limit = { religion = norse_pagan }
@@ -1809,10 +1805,6 @@ targetted_decisions = {
 					AND = {
 						religion = occultist
 						occultist_reformed = { has_religion_feature = religion_proselytizing }
-					}
-					AND = {
-						religion = thelemic
-						thelemic_reformed = { has_religion_feature = religion_proselytizing }
 					}
 					AND = {
 						religion = norse_pagan

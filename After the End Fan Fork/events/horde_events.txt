@@ -86,7 +86,7 @@ narrative_event = {
 			random_traits = no
 			dynasty = 1812044 # FitzSpatstone
 			name = "Havelock"
-			culture = english
+			culture = anglish
 			religion = glorian
 			age = 30
 			attributes = {
@@ -154,7 +154,7 @@ narrative_event = {
 		name = "OK"
 		trigger = {
 			has_landed_title = e_redcoat_dominion
-			culture = british
+			culture_group = britannic
 		}
 		set_global_flag = redcoat_arrival
 		
@@ -180,7 +180,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = no
 			age = 30
 			attributes = {
@@ -207,7 +207,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = no
 			age = 35
 			attributes = {
@@ -260,7 +260,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = no
 			age = 30
 			attributes = {
@@ -312,7 +312,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = no
 			age = 39
 			attributes = {
@@ -390,7 +390,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = no
 			age = 39
 			attributes = {
@@ -470,7 +470,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = no
 			age = 39
 			attributes = {
@@ -569,7 +569,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = actually_culture
 				religion = glorian
-				culture = english
+				culture = anglish
 				female = no
 				age = 39
 				attributes = {
@@ -599,7 +599,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = actually_culture
 				religion = glorian
-				culture = english
+				culture = anglish
 				female = no
 				age = 39
 				attributes = {
@@ -626,7 +626,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = actually_culture
 				religion = glorian
-				culture = english
+				culture = anglish
 				female = no
 				age = 39
 				attributes = {
@@ -653,7 +653,7 @@ narrative_event = {
 				random_traits = yes
 				dynasty = actually_culture
 				religion = glorian
-				culture = english
+				culture = anglish
 				female = no
 				age = 39
 				attributes = {
@@ -719,7 +719,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = no
 			age = 25
 		}
@@ -728,7 +728,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = no
 			age = 26
 		}
@@ -737,7 +737,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = no
 			age = 28
 		}
@@ -746,7 +746,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = yes
 			age = 23
 		}
@@ -757,7 +757,7 @@ narrative_event = {
 			dynasty = 1812072
 			dna=bdedgegcfat
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = yes
 			age = 18
 			attributes={
@@ -809,7 +809,7 @@ narrative_event = {
 			random_traits = yes
 			dynasty = actually_culture
 			religion = glorian
-			culture = english
+			culture = anglish
 			female = yes
 			age = 18
 		}
@@ -822,7 +822,7 @@ narrative_event = {
 			name = "Chloe"
 			dynasty = 1812074
 			religion = glorian
-			culture = english
+			culture = anglish
 			martial = 3
 			diplomacy = 7
 			stewardship = 5
@@ -859,7 +859,7 @@ narrative_event = {
 		name = "redcoats.2.optC"
 		trigger = {
 			NOT = { religion_group = christian }
-			NOT = { religion = thelemic }
+			NOT = { religion = glorian }
 			NOT = { has_landed_title = e_redcoat_dominion }
 		}
 	}
@@ -883,8 +883,8 @@ character_event = {
 		had_global_flag = { flag = redcoat_arrival days = 1825 } # Valid for 5 years rather than vanilla 10
 		e_redcoat_dominion = {
 			holder_scope = {
-				culture = british
-				religion = thelemic
+				culture_group = britannic
+				religion = glorian
 				OR = {
 					war = yes
 					is_landed = yes
@@ -908,8 +908,8 @@ character_event = {
 		create_character = {
 			random_traits = yes
 			dynasty = random
-			religion = thelemic
-			culture = british
+			religion = glorian
+			culture = anglish
 			female = no
 			age = 25
 			attributes = {
@@ -935,8 +935,8 @@ character_event = {
 		create_character = {
 			random_traits = yes
 			dynasty = random
-			religion = thelemic
-			culture = british
+			religion = glorian
+			culture = northumbrian
 			female = no
 			age = 26
 			attributes = {
@@ -962,8 +962,8 @@ character_event = {
 		create_character = {
 			random_traits = yes
 			dynasty = random
-			religion = thelemic
-			culture = british
+			religion = glorian
+			culture = scottish
 			female = no
 			age = 27
 			attributes = {
@@ -992,8 +992,8 @@ character_event = {
 			create_character = {
 				random_traits = yes
 				dynasty = random
-				religion = thelemic
-				culture = british
+				religion = glorian
+				culture = anglish
 				female = no
 				age = 25
 				attributes = {
@@ -1019,8 +1019,8 @@ character_event = {
 			create_character = {
 				random_traits = yes
 				dynasty = random
-				religion = thelemic
-				culture = british
+				religion = glorian
+				culture = northumbrian
 				female = no
 				age = 26
 				attributes = {
@@ -1064,7 +1064,7 @@ character_event = {
 		primary_title = {
 			title = e_redcoat_dominion
 			holder_scope = {
-				religion = thelemic
+				religion = glorian
 				NOT = { trait = zealous }
 			}
 		}
@@ -1102,13 +1102,13 @@ character_event = {
 		}
 		   
 		any_realm_character = {
-			limit = { religion = thelemic }
+			limit = { religion = glorian }
 			religion = ursuline
 			if = {
 				limit = {
 					is_playable = yes
 					capital_scope = {
-						religion = thelemic
+						religion = glorian
 					}
 				}
 				capital_scope = {
@@ -1149,7 +1149,7 @@ character_event = {
 		primary_title = {
 			title = e_redcoat_dominion
 			holder_scope = {
-				religion = thelemic
+				religion = glorian
 				NOT = { trait = zealous }
 			}
 		}
@@ -1183,13 +1183,13 @@ character_event = {
 		}
 		religion = high_church
 		any_realm_character = {
-			limit = { religion = thelemic }
+			limit = { religion = glorian }
 			religion = high_church
 			if = {
 				limit = {
 					is_playable = yes
 					capital_scope = {
-						religion = thelemic
+						religion = glorian
 					}
 				}
 				capital_scope = {
@@ -1239,7 +1239,7 @@ narrative_event = {
 			top_liege = { has_landed_title = e_redcoat_dominion }
 		}
 		FROM = { title = b_washington_DC }
-		culture = british
+		culture_group = britannic
 		NOT = {
 			FROM = {
 				owner = {

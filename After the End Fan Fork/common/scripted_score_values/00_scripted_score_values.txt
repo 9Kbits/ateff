@@ -1926,7 +1926,7 @@ post_reformation_ruler_conversion_score = {
 		OR = { 
 			religion = norse_pagan
 			religion = occultist
-			religion = thelemic
+			religion = glorian
 		}
 	}
 	modifier = { 
@@ -1955,7 +1955,7 @@ post_reformation_ruler_conversion_score = {
 		OR = { 
 			religion = norse_pagan
 			religion = occultist
-			religion = thelemic
+			religion = glorian
 		}
 	}
 	modifier = { 
@@ -1969,7 +1969,7 @@ post_reformation_ruler_conversion_score = {
 		OR = { 
 			religion = norse_pagan
 			religion = occultist
-			religion = thelemic
+			religion = glorian
 		}
 	}
 	modifier = { 
@@ -1990,7 +1990,7 @@ post_reformation_ruler_conversion_score = {
 		ROOT = { has_religion_feature = religion_proselytizing }
 		OR = { 
 			religion = norse_pagan
-			religion = thelemic
+			religion = glorian
 			religion = celtic_pagan
 			religion = occultist
 		}
@@ -2037,7 +2037,7 @@ post_reformation_ruler_conversion_score = {
 	modifier = { 
 		factor = 0.5
 		ROOT = { has_religion_feature = religion_autocephaly }
-		religion = thelemic
+		religion = glorian
 	}
 	modifier = { 
 		factor = 0.5
@@ -2052,7 +2052,6 @@ post_reformation_ruler_conversion_score = {
 				has_religion_feature = religion_feature_norse
 				has_religion_feature = religion_feature_revelationist
 				has_religion_feature = religion_feature_occultist
-				has_religion_feature = religion_feature_thelemic
 				has_religion_feature = religion_feature_celtic
 			}
 		}
@@ -2070,7 +2069,7 @@ post_reformation_ruler_conversion_score = {
 			has_religion_feature = religion_harems
 		}
 		NOR = { 
-			religion = thelemic
+			religion = glorian
 			religion = occultist
 		}
 	}
@@ -2078,7 +2077,7 @@ post_reformation_ruler_conversion_score = {
 		factor = 1.5
 		ROOT = { has_religion_feature = religion_jizya }
 		NOT = { 
-			religion = thelemic
+			religion = glorian
 		}
 	}
 	modifier = { 
@@ -2086,7 +2085,7 @@ post_reformation_ruler_conversion_score = {
 		ROOT = { has_religion_feature = religion_syncretic }
 		OR = { 
 			religion = occultist
-			religion = thelemic
+			religion = glorian
 		}
 	}
 	modifier = { 
@@ -2101,9 +2100,9 @@ post_reformation_ruler_conversion_score = {
 	}
 	modifier = { 
 		factor = 1.75
-		ROOT = { OR = { has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_thelemic } }
+		ROOT = { has_religion_feature = religion_ritual_sacrifice }
 		NOR = { 
-			#religion = thelemic
+			#religion = glorian
 			religion = norse_pagan
 			religion = occultist
 		}

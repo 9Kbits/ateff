@@ -11,10 +11,7 @@ targetted_decisions = {
 		from_potential = {
 			show_only_failed_conditions = yes
 			is_playable = yes
-			OR = {
-				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
-			}
+			has_religion_feature = religion_ritual_sacrifice
 		}
 	
 		potential = {
@@ -1394,7 +1391,6 @@ decisions = {
 					NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 				}
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 			}
 		}
 		
@@ -1491,11 +1487,7 @@ decisions = {
 			is_landed = yes
 			independent = yes
 			NOT = { has_religion_feature = religion_peaceful } #Aztecs could reform as Peaceful.
-			OR = {
-				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
-			}
-			
+			has_religion_feature = religion_ritual_sacrifice
 		}
 		
 		allow = {
@@ -1665,7 +1657,7 @@ settlement_decisions = {
 				religion = norse_pagan
 				religion = revelationist
 				religion = occultist
-				religion = thelemic
+				religion = glorian
 				religion = celtic_pagan 
 				religion = aria_de_machete 
 				religion = trailwalker 
@@ -1682,10 +1674,6 @@ settlement_decisions = {
 				AND = { 
 					religion = occultist
 					any_realm_province = { has_province_flag = flag_great_pillar_occultist } 
-				}
-				AND = { 
-					religion = thelemic
-					any_realm_province = { has_province_flag = flag_great_pillar_thelemic } 
 				}
 				AND = { 
 					religion = celtic_pagan
@@ -1736,7 +1724,6 @@ settlement_decisions = {
 							has_province_flag = flag_great_pillar_norse
 							has_province_flag = flag_great_pillar_revelationist
 							has_province_flag = flag_great_pillar_occultist
-							has_province_flag = flag_great_pillar_thelemic
 							has_province_flag = flag_great_pillar_celtic_pagan
 							has_province_flag = flag_great_pillar_aria_de_machete
 							has_province_flag = flag_great_pillar_trailwalker
@@ -1802,18 +1789,6 @@ settlement_decisions = {
 					if = { 
 						limit = { NOT = { has_building = tb_great_pillar_occultist } } 
 						add_building = tb_great_pillar_occultist
-					}
-				}
-				if = {  
-					limit = { FROM = { religion = thelemic } }
-					hidden_tooltip = {
-						location = {
-							set_province_flag = flag_great_pillar_thelemic
-						}
-					}
-					if = { 
-						limit = { NOT = { has_building = tb_great_pillar_thelemic } } 
-						add_building = tb_great_pillar_thelemic
 					}
 				}
 				if = {  
@@ -1924,7 +1899,6 @@ settlement_decisions = {
 					has_province_flag = flag_great_pillar_norse
 					has_province_flag = flag_great_pillar_revelationist
 					has_province_flag = flag_great_pillar_occultist
-					has_province_flag = flag_great_pillar_thelemic
 					has_province_flag = flag_great_pillar_celtic_pagan
 					has_province_flag = flag_great_pillar_aria_de_machete
 					has_province_flag = flag_great_pillar_trailwalker
@@ -2006,24 +1980,6 @@ settlement_decisions = {
 					}
 				}
 				occultist = {
-					religion_authority = {
-						modifier = destroyed_great_pillar
-						years = 10
-					}
-				}
-			}
-			if = {  
-				limit = { location = { has_province_flag = flag_great_pillar_thelemic } }
-				hidden_tooltip = {
-					location = {
-						clr_province_flag = flag_great_pillar_thelemic
-					}
-					any_realm_character = {
-						limit = { religion = thelemic }
-						character_event = { id = HF.23477 }
-					}
-				}
-				thelemic = {
 					religion_authority = {
 						modifier = destroyed_great_pillar
 						years = 10

@@ -4006,10 +4006,7 @@ add_crusade_trait_effect = {
 	}
 	if = {
 		limit = {
-			OR = {
-				religion = thelemic
-				religion = thelemic_reformed
-			}
+			religion = glorian
 		}
 		add_trait = order_of_the_garter
 		break = yes
@@ -10574,29 +10571,13 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
-					religion = thelemic_reformed
+					religion = glorian
 				}
-				has_character_flag = character_was_thelemic_reformed
+				has_character_flag = character_was_glorian
 			}
 		}
-		set_secret_religion = thelemic_reformed
-		clr_character_flag = character_was_thelemic_reformed
-		break = yes
-	}
-	if = {
-		limit = {
-			OR = {
-				AND = {
-					NOT = {
-						has_character_was_religion_flag_trigger = yes
-					}
-					religion = thelemic
-				}
-				has_character_flag = character_was_thelemic
-			}
-		}
-		set_secret_religion = thelemic
-		clr_character_flag = character_was_thelemic
+		set_secret_religion = glorian
+		clr_character_flag = character_was_glorian
 		break = yes
 	}
 	if = {
@@ -11235,12 +11216,8 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_occultist
 	}
 	if = {
-		limit = { religion = thelemic_reformed }
-		set_character_flag = character_was_thelemic_reformed
-	}
-	if = {
-		limit = { religion = thelemic }
-		set_character_flag = character_was_thelemic
+		limit = { religion = glorian }
+		set_character_flag = character_was_glorian
 	}
 	if = {
 		limit = { religion = norse_pagan_reformed }
@@ -11402,8 +11379,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_rust_cultist
 	clr_character_flag = character_was_occultist_reformed
 	clr_character_flag = character_was_occultist
-	clr_character_flag = character_was_thelemic_reformed
-	clr_character_flag = character_was_thelemic
+	clr_character_flag = character_was_glorian
 	clr_character_flag = character_was_norse_pagan_reformed
 	clr_character_flag = character_was_norse_pagan
 	clr_character_flag = character_was_celtic_pagan_reformed
@@ -11873,16 +11849,16 @@ event_target_old_religion_from_flag_effect = {
 		}
 	}
 	if = {
-		limit = { has_character_flag = character_was_thelemic_reformed }
+		limit = { has_character_flag = character_was_glorian }
 		random_character = {
-			limit = { religion = thelemic_reformed }
+			limit = { religion = glorian }
 			save_event_target_as = old_religion
 		}
 	}
 	if = {
 		limit = { has_character_flag = character_was_thelemic }
 		random_character = {
-			limit = { religion = thelemic }
+			limit = { religion = glorian }
 			save_event_target_as = old_religion
 		}
 	}
@@ -14213,25 +14189,14 @@ flip_secret_religious_community_provinces = {
 				}
 			}
 		}
-		secret_religious_society_thelemic_reformed = {
+		secret_religious_society_glorian = {
 			ROOT = {
 				any_demesne_province = {
 					limit = {
-						has_province_modifier = secret_thelemic_reformed_community
+						has_province_modifier = secret_glorian_community
 					}
-					religion = thelemic_reformed
-					remove_province_modifier = secret_thelemic_reformed_community
-				}
-			}
-		}
-		secret_religious_society_thelemic = {
-			ROOT = {
-				any_demesne_province = {
-					limit = {
-						has_province_modifier = secret_thelemic_community
-					}
-					religion = thelemic
-					remove_province_modifier = secret_thelemic_community
+					religion = glorian
+					remove_province_modifier = secret_glorian_community
 				}
 			}
 		}
@@ -19018,28 +18983,17 @@ root_secret_religion_provinces_convert_effect = {
 					}
 				}
 			}
-			secret_religious_society_thelemic_reformed = { 
+			secret_religious_society_glorian = { 
 				PREV = {
 					any_demesne_province = {
 						limit = {
-							has_province_modifier = secret_thelemic_reformed_community
+							has_province_modifier = secret_glorian_community
 						}
-						religion = thelemic_reformed
-						remove_province_modifier = secret_thelemic_reformed_community
+						religion = glorian
+						remove_province_modifier = secret_glorian_community
 					}
 				}
 			}
-			secret_religious_society_thelemic = { 
-				PREV = {
-					any_demesne_province = {
-						limit = {
-							has_province_modifier = secret_thelemic_community
-						}
-						religion = thelemic 
-						remove_province_modifier = secret_thelemic_community
-					}
-				}
-			} 
 			secret_religious_society_norse_pagan_reformed = { 
 				PREV = {
 					any_demesne_province = {
@@ -24826,20 +24780,20 @@ transfer_crown_on_abdication_effect = {
 				} 
 			}
 	}
-	if = {
-		limit = { 
-			has_landed_title = d_thelemic_reformed
-			any_artifact = { artifact_type = crown_thelemic_fylkir }
-		}
-			current_heir = { save_event_target_as = crown_thelemic_fylkir_heir }
-			any_artifact = { 
-				limit = { artifact_type = crown_thelemic_fylkir }
-				transfer_artifact = {
-					from = PREV
-					to = event_target:crown_thelemic_fylkir_heir
-				} 
-			}
-	}
+	#if = {
+	#	limit = { 
+	#		has_landed_title = d_thelemic_reformed
+	#		any_artifact = { artifact_type = crown_thelemic_fylkir }
+	#	}
+	#		current_heir = { save_event_target_as = crown_thelemic_fylkir_heir }
+	#		any_artifact = { 
+	#			limit = { artifact_type = crown_thelemic_fylkir }
+	#			transfer_artifact = {
+	#				from = PREV
+	#				to = event_target:crown_thelemic_fylkir_heir
+	#			} 
+	#		}
+	#}
 	if = {
 		limit = { 
 			has_landed_title = d_celtic_pagan_reformed
@@ -28361,67 +28315,67 @@ reformation_god_names_changes_effect = { #Reforming religion with certain Doctri
 				break = yes
 			}
 
-			if = { #A ruler reforms Thelemic.
-				limit = {
-					has_dlc = "Holy Fury" 
-					religion = thelemic_reformed
-					OR = { 
-						has_religion_feature = religion_matriarchal
-						has_religion_feature = religion_patriarchal
-						has_religion_feature = religion_dogmatic
-						has_religion_feature = religion_proselytizing
-					}
-				}
-				remove_god_names = yes
-				remove_evil_god_names = yes
-				if = { #Religion is not sexist, add just Proselytizing set.
-					limit = {
-						NOR = {
-							has_religion_feature = religion_matriarchal
-							has_religion_feature = religion_patriarchal
-						}
-						has_religion_feature = religion_proselytizing
-					}
-					set_high_god_name = GOD_RA_HOOR_KHUIT
-					add_god_name = GOD_RA_HOOR_KHUIT_2
-					add_evil_god_name = GOD_JESUS
-				}
-				if = { #Religion is not sexist, add just Dogmatic set.
-					limit = {
-						NOR = {
-							has_religion_feature = religion_matriarchal
-							has_religion_feature = religion_patriarchal
-						}
-						has_religion_feature = religion_dogmatic
-					}
-					set_high_god_name = GOD_THE_QUEEN
-					add_god_name = GOD_THE_QUEEN_2
-					add_evil_god_name = GOD_JESUS
-				}
-				if = { #Religion is Patriarchal
-					limit = {
-						has_religion_feature = religion_patriarchal
-					}
-					set_high_god_name = GOD_THE_KING 
-					add_god_name = GOD_THE_KING_2	
-					add_god_name = GOD_HADIT 
-					add_god_name = GOD_RA_HOOR_KHUIT
-					add_evil_god_name = GOD_JESUS
-				}
-				if = { #Religion is Matriarchal
-					limit = {
-						has_religion_feature = religion_matriarchal
-					}
-					set_high_god_name = GOD_THE_QUEEN
-					add_god_name = GOD_THE_QUEEN_2
-					add_god_name = GOD_NUIT
-					add_evil_god_name = GOD_HADIT 
-					add_evil_god_name = GOD_RA_HOOR_KHUIT 
-					add_evil_god_name = GOD_JESUS
-				}
-				
-				break = yes
-			}
+			#if = { #A ruler reforms Thelemic.
+			#	limit = {
+			#		has_dlc = "Holy Fury" 
+			#		religion = thelemic_reformed
+			#		OR = { 
+			#			has_religion_feature = religion_matriarchal
+			#			has_religion_feature = religion_patriarchal
+			#			has_religion_feature = religion_dogmatic
+			#			has_religion_feature = religion_proselytizing
+			#		}
+			#	}
+			#	remove_god_names = yes
+			#	remove_evil_god_names = yes
+			#	if = { #Religion is not sexist, add just Proselytizing set.
+			#		limit = {
+			#			NOR = {
+			#				has_religion_feature = religion_matriarchal
+			#				has_religion_feature = religion_patriarchal
+			#			}
+			#			has_religion_feature = religion_proselytizing
+			#		}
+			#		set_high_god_name = GOD_RA_HOOR_KHUIT
+			#		add_god_name = GOD_RA_HOOR_KHUIT_2
+			#		add_evil_god_name = GOD_JESUS
+			#	}
+			#	if = { #Religion is not sexist, add just Dogmatic set.
+			#		limit = {
+			#			NOR = {
+			#				has_religion_feature = religion_matriarchal
+			#				has_religion_feature = religion_patriarchal
+			#			}
+			#			has_religion_feature = religion_dogmatic
+			#		}
+			#		set_high_god_name = GOD_THE_QUEEN
+			#		add_god_name = GOD_THE_QUEEN_2
+			#		add_evil_god_name = GOD_JESUS
+			#	}
+			#	if = { #Religion is Patriarchal
+			#		limit = {
+			#			has_religion_feature = religion_patriarchal
+			#		}
+			#		set_high_god_name = GOD_THE_KING 
+			#		add_god_name = GOD_THE_KING_2	
+			#		add_god_name = GOD_HADIT 
+			#		add_god_name = GOD_RA_HOOR_KHUIT
+			#		add_evil_god_name = GOD_JESUS
+			#	}
+			#	if = { #Religion is Matriarchal
+			#		limit = {
+			#			has_religion_feature = religion_matriarchal
+			#		}
+			#		set_high_god_name = GOD_THE_QUEEN
+			#		add_god_name = GOD_THE_QUEEN_2
+			#		add_god_name = GOD_NUIT
+			#		add_evil_god_name = GOD_HADIT 
+			#		add_evil_god_name = GOD_RA_HOOR_KHUIT 
+			#		add_evil_god_name = GOD_JESUS
+			#	}
+			#	
+			#	break = yes
+			#}
 
 			if = { #A ruler reforms Celtic Paganism
 				limit = {
@@ -30922,27 +30876,14 @@ abdicate_holy_order_if_religion_changes_effect = { #why. why did you add this ef
 		if = {
 			limit = {
 				is_title_active = d_oto
-				religion = thelemic_reformed
+				religion = glorian
 				owner = { 
 					ai = yes
 					holy_order = yes 
-					NOT = { religion = thelemic_reformed } 
+					NOT = { religion = glorian } 
 				}
 			}
-			log = "[d_oto.owner.GetTitledFirstName] was found to be unfit to lead the [d_oto.GetName] due to religious conflict! Title is thelemic_reformed, but owner is not. "
-			log = "ROOT = [Root.GetTitledFirstName] FROM = [From.GetTitledFirstName] PREV = [Prev.GetTitledFirstName]"
-		}
-		if = {
-			limit = {
-				is_title_active = d_oto
-				religion = thelemic
-				owner = { 
-					ai = yes
-					holy_order = yes 
-					NOT = { religion = thelemic } 
-				}
-			}
-			log = "[d_oto.owner.GetTitledFirstName] was found to be unfit to lead the [d_oto.GetName] due to religious conflict! Title is thelemic, but owner is not. "
+			log = "[d_oto.owner.GetTitledFirstName] was found to be unfit to lead the [d_oto.GetName] due to religious conflict! Title is glorian, but owner is not. "
 			log = "ROOT = [Root.GetTitledFirstName] FROM = [From.GetTitledFirstName] PREV = [Prev.GetTitledFirstName]"
 		}
 	}

@@ -1257,7 +1257,6 @@ character_event = {
 				religion = occultist
 				religion = occultist_reformed
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 				religion = mictlantec
 			} 
 		}
@@ -1330,7 +1329,6 @@ character_event = {
 				religion = occultist_reformed
 				religion = mictlantec
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 			} 
 		}
 		add_character_modifier = { 
@@ -1427,7 +1425,7 @@ character_event = {
 			manpower = -150
 		}
 		if = { 
-			limit = { NOR = { religion_group = pagan_group has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_thelemic } }
+			limit = { NOR = { religion_group = pagan_group has_religion_feature = religion_ritual_sacrifice } }
 			tiered_high_piety_negative_effect = yes 
 		}
 		add_blood_splatter_effect = yes

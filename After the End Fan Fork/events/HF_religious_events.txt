@@ -1079,8 +1079,6 @@ character_event = {
 			has_religion_feature = religion_haruspicy
 			has_religion_feature = religion_feature_occultist
 			religion_group = mesoamerican_gods
-			religion = thelemic
-			religion = thelemic_reformed
 			AND = {
 					religion = occultist_reformed
 					has_religion_features = no
@@ -1153,8 +1151,6 @@ character_event = {
 			has_religion_feature = religion_haruspicy 
 			has_religion_feature = religion_feature_occultist 
 			religion_group = mesoamerican_gods
-			religion = thelemic
-			religion = thelemic_reformed
 			AND = {
 				religion = occultist_reformed
 				has_religion_features = no
@@ -1201,8 +1197,6 @@ character_event = {
 			has_religion_feature = religion_haruspicy 
 			has_religion_feature = religion_feature_occultist
 			religion_group = mesoamerican_gods
-			religion = thelemic
-			religion = thelemic_reformed
 			AND = {
 				religion = occultist_reformed
 				has_religion_features = no
@@ -1231,7 +1225,6 @@ character_event = {
 			limit = {
 				OR = {
 					has_religion_feature = religion_ritual_sacrifice
-					has_religion_feature = religion_feature_thelemic
 					religion = mictlantec
 				}
 			}
@@ -1270,7 +1263,6 @@ character_event = {
 		trigger = { 
 			OR = {
 				has_religion_feature = religion_ritual_sacrifice 
-				has_religion_feature = religion_feature_thelemic
 				religion = mictlantec
 			}
 			event_target:potential_victim = { is_alive = yes } 
@@ -1309,7 +1301,7 @@ character_event = {
 	}
 	option = { #Great bull - Ensure no Critical Fail - Unlocks Critical success
 		name = EVTOPTAHF23007
-		trigger = { NOR = { has_religion_feature = religion_ritual_sacrifice has_religion_feature = religion_feature_thelemic religion = mictlantec } }
+		trigger = { NOR = { has_religion_feature = religion_ritual_sacrifice religion = mictlantec } }
 		if = { 
 			limit = { ai = no }
 			scaled_wealth = { value = -1 min = -175 max = -500 } 
@@ -4321,9 +4313,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { thelemic = { has_religion_feature = religion_cosmopolitan } }
+			limit = { glorian = { has_religion_feature = religion_cosmopolitan } }
 			random_playable_ruler = {
-				limit = { religion = thelemic }
+				limit = { religion = glorian }
 				apply_cosmopolian_on_start_effect = yes
 			}
 		}
@@ -4874,9 +4866,9 @@ character_event = {
 			}
 		}
 		if = {
-			limit = { thelemic = { has_religion_feature = religion_dogmatic } }
+			limit = { glorian = { has_religion_feature = religion_dogmatic } }
 			random_playable_ruler = {
-				limit = { religion = thelemic }
+				limit = { religion = glorian }
 				apply_dogmatic_on_start_effect = yes
 			}
 		}
@@ -5070,7 +5062,7 @@ character_event = {
 	option = {
 		name = EVTOPTAHF23207
 		trigger = { 
-			OR = { religion = mictlantec has_religion_feature = religion_feature_thelemic has_religion_feature = religion_ritual_sacrifice } 
+			OR = { religion = mictlantec has_religion_feature = religion_ritual_sacrifice } 
 			FROM = { location = { NOT = { religion = ROOT } } } #Only if province is of some other religion.
 		}
 		hidden_tooltip = { FROM = { owner = { character_event = { id = HF.23208 } } } } #Notify owner
@@ -7800,7 +7792,6 @@ character_event = {
 			NOT = { is_incapable = yes }
 			OR = {
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 				religion = mictlantec
 			}
 			OR = { 
@@ -8493,7 +8484,6 @@ character_event = {
 			NOT = { is_incapable = yes }
 			OR = { 
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 				religion = mictlantec
 			}
 		}
@@ -8571,7 +8561,6 @@ character_event = {
 		NOT = { trait = bloodthirsty_gods_1 }
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
-			has_religion_feature = religion_feature_thelemic
 			religion = mictlantec
 		}
 	}
@@ -8635,7 +8624,6 @@ character_event = {
 	trigger = {
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
-			has_religion_feature = religion_feature_thelemic
 			religion = mictlantec
 		}
 		NOR = { 
@@ -8710,7 +8698,6 @@ character_event = {
 	trigger = {
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
-			has_religion_feature = religion_feature_thelemic
 			religion = mictlantec
 		}
 		NOT = { 
@@ -8782,7 +8769,6 @@ narrative_event = {
 	trigger = {
 		OR = { 
 			has_religion_feature = religion_ritual_sacrifice
-			has_religion_feature = religion_feature_thelemic
 			religion = mictlantec
 		}
 		NOT = { 
@@ -8899,7 +8885,6 @@ narrative_event = {
 			OR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 				religion = mictlantec
 			}
 		}
@@ -8910,7 +8895,6 @@ narrative_event = {
 			NOR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 				religion = mictlantec
 			}
 		}
@@ -8944,7 +8928,6 @@ narrative_event = {
 			OR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 				religion = mictlantec
 			}
 		}
@@ -8955,7 +8938,6 @@ narrative_event = {
 			NOR = {
 				religion = FROM
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 				religion = mictlantec
 			}
 		}
@@ -10774,7 +10756,6 @@ character_event = {
 	trigger = {
 		NOR = {
 			has_religion_feature = religion_ritual_sacrifice
-			has_religion_feature = religion_feature_thelemic
 			religion = mictlantec
 		}
 	}
@@ -10831,7 +10812,6 @@ character_event = {
 		trigger  = {  
 			OR = {
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 				religion = mictlantec
 			}
 		}
@@ -10844,7 +10824,6 @@ character_event = {
 		trigger  = {  
 			NOR = {
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 				religion = mictlantec
 			}
 		}
@@ -10985,7 +10964,6 @@ character_event = {
 						religion = ROOT  
 						religion = mictlantec
 						has_religion_feature = religion_ritual_sacrifice
-						has_religion_feature = religion_feature_thelemic
 					}
 				} 
 				character_event = { id = HF.23464 } 
@@ -11086,7 +11064,6 @@ character_event = {
 						religion = ROOT  
 						religion = mictlantec
 						has_religion_feature = religion_ritual_sacrifice
-						has_religion_feature = religion_feature_thelemic
 					}
 				} 
 				character_event = { id = HF.23464 } 
@@ -11149,7 +11126,6 @@ character_event = {
 							NOT = { has_religion_feature = religion_peaceful }
 						}
 						has_religion_feature = religion_ritual_sacrifice
-						has_religion_feature = religion_feature_thelemic
 					}
 				} 
 				character_event = { id = HF.23464 } 
@@ -11274,7 +11250,6 @@ character_event = {
 			OR = {
 				religion = mictlantec
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 			}
 		}
 		if = { 
@@ -11295,7 +11270,6 @@ character_event = {
 			NOR = {
 				religion = mictlantec
 				has_religion_feature = religion_ritual_sacrifice
-				has_religion_feature = religion_feature_thelemic
 			}
 		}
 	}
@@ -11335,7 +11309,7 @@ character_event = {
 	}
 	desc = { 
 		trigger = { 
-			religion = thelemic
+			religion = glorian
 		} 
 		text = EVTDESCEHF23470
 	}
@@ -11426,10 +11400,6 @@ character_event = {
 					AND = {
 						has_province_flag = flag_great_pillar_occultist
 						ROOT = { religion_openly_occultist_or_reformed_trigger = no }
-					}
-					AND = {
-						has_province_flag = flag_great_pillar_thelemic
-						ROOT = { religion_openly_thelemic_or_reformed_trigger = no }
 					}
 					AND = {
 						has_province_flag = flag_great_pillar_celtic_pagan
@@ -11544,30 +11514,6 @@ character_event = {
 							character_event = { id = HF.23474 }
 						}
 					}
-				}
-				if = { 
-					limit = {
-						location = { has_province_flag = flag_great_pillar_thelemic }
-					}
-					location = { 
-						clr_province_flag = flag_great_pillar_thelemic
-						set_province_flag = flag_just_destroyed_thelemic_pillar #Needed for next event.
-						province_event = { id = HF.23475 days = 60 } #Clean up flag.
-					}
-					thelemic = {
-						religion_authority = {
-							modifier = destroyed_great_pillar
-							years = 10
-						}
-					}	
-					owner = {
-						any_realm_character = {
-							limit = {  
-								religion = thelemic
-							}
-							character_event = { id = HF.23474 }
-						}
-					}	
 				}
 				if = { 
 					limit = {
@@ -11777,31 +11723,6 @@ character_event = {
 		}
 		if = { 
 			limit = {
-				FROMFROM = { location = { has_province_flag = flag_just_destroyed_thelemic_pillar } }
-				religion = thelemic
-			}
-			tooltip = { #Already removed in previous event.
-				religion_authority = {
-					modifier = destroyed_great_pillar
-					years = 10
-				}
-			}
-			if = { 
-				limit = { has_character_modifier = recently_built_great_pillar }
-				remove_character_modifier = recently_built_great_pillar
-			}
-			add_character_modifier = { #Prevents rebuilding one immediately after.
-				name = recently_destroyed_great_pillar_cooldown
-				years = 30
-			}
-			opinion = {
-				who = FROM
-				modifier = opinion_sacrilege
-				years = 10
-			}
-		}
-		if = { 
-			limit = {
 				FROMFROM = { location = { has_province_flag = flag_just_destroyed_celtic_pagan_pillar } }
 				religion = celtic_pagan
 			}
@@ -11893,7 +11814,6 @@ province_event = {
 		clr_province_flag = flag_just_destroyed_norse_pillar
 		clr_province_flag = flag_just_destroyed_revelationist_pillar
 		clr_province_flag = flag_just_destroyed_occultist_pillar
-		clr_province_flag = flag_just_destroyed_thelemic_pillar
 		clr_province_flag = flag_just_destroyed_celtic_pagan_pillar
 		clr_province_flag = flag_just_destroyed_aria_de_machete_pillar
 		clr_province_flag = flag_just_destroyed_trailwalker_pillar

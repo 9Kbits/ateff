@@ -636,7 +636,7 @@ volley_tactic = {
 						culture_group = mayan
 						culture = gulfard
 						culture = gullah
-						culture = british
+						culture_group = britannic
 						culture = gwladfeg
 					}
 				}
@@ -4091,95 +4091,95 @@ glorious_raven_tales_tactic = {
 }
 
 #Call to Glory - Wild Boar Tactic - Celtic (pikemen)
-glorious_thelemic_tactic = {
-	days = 18
-	sprite = 5
-	group = charge
-
-	trigger = {
-		phase = melee
-		OR = {
-			troops = {
-				who = pikemen
-				value = 0.01
-			}
-			troops = {
-				who = pike_cavalry
-				value = 0.01
-			}
-		}
-		leader = {
-			has_character_modifier = call_to_glory
-			society_member_of = warrior_lodge_celtic
-		}
-	}
-
-	mean_time_to_happen = {
-		days = 15
-		modifier = {
-			factor = 1.5
-			flank_has_leader = yes
-			leader = {
-				martial = 8
-			}
-			OR = {
-				heavy_troops = { 
-					who = pikemen
-					value = 0.7
-				}
-				light_troops = { 
-					who = pike_cavalry
-					value = 0.7
-				}
-			}
-		}
-		modifier = {
-			factor = 1.5
-			flank_has_leader = yes
-			leader = {
-				martial = 12
-			}
-			OR = {
-				heavy_troops = { 
-					who = pikemen
-					value = 0.6
-				}
-				light_troops = { 
-					who = pike_cavalry
-					value = 0.6
-				}
-			}
-		}
-		modifier = {
-			factor = 1.5
-			flank_has_leader = yes
-			leader = {
-				martial = 16
-			}
-			OR = {
-				heavy_troops = { 
-					who = pikemen
-					value = 0.5
-				}
-				light_troops = { 
-					who = pike_cavalry
-					value = 0.5
-				}
-			}
-		}
-	}
-
-	archers_offensive = 1.5
-	light_infantry_offensive = 1.5
-	pikemen_offensive = 2.5
-	ballestero_offensive = 1.5
-	pike_cavalry_offensive = 2.5
-	samurai_offensive = 1.5
-	enemy = {
-		group = advance
-		factor = 3
-	}
-}
+#glorious_thelemic_tactic = {
+#	days = 18
+#	sprite = 5
+#	group = charge
+#
+#	trigger = {
+#		phase = melee
+#		OR = {
+#			troops = {
+#				who = pikemen
+#				value = 0.01
+#			}
+#			troops = {
+#				who = pike_cavalry
+#				value = 0.01
+#			}
+#		}
+#		leader = {
+#			has_character_modifier = call_to_glory
+#			society_member_of = warrior_lodge_celtic
+#		}
+#	}
+#
+#	mean_time_to_happen = {
+#		days = 15
+#		modifier = {
+#			factor = 1.5
+#			flank_has_leader = yes
+#			leader = {
+#				martial = 8
+#			}
+#			OR = {
+#				heavy_troops = { 
+#					who = pikemen
+#					value = 0.7
+#				}
+#				light_troops = { 
+#					who = pike_cavalry
+#					value = 0.7
+#				}
+#			}
+#		}
+#		modifier = {
+#			factor = 1.5
+#			flank_has_leader = yes
+#			leader = {
+#				martial = 12
+#			}
+#			OR = {
+#				heavy_troops = { 
+#					who = pikemen
+#					value = 0.6
+#				}
+#				light_troops = { 
+#					who = pike_cavalry
+#					value = 0.6
+#				}
+#			}
+#		}
+#		modifier = {
+#			factor = 1.5
+#			flank_has_leader = yes
+#			leader = {
+#				martial = 16
+#			}
+#			OR = {
+#				heavy_troops = { 
+#					who = pikemen
+#					value = 0.5
+#				}
+#				light_troops = { 
+#					who = pike_cavalry
+#					value = 0.5
+#				}
+#			}
+#		}
+#	}
+#
+#	archers_offensive = 1.5
+#	light_infantry_offensive = 1.5
+#	pikemen_offensive = 2.5
+#	ballestero_offensive = 1.5
+#	pike_cavalry_offensive = 2.5
+#	samurai_offensive = 1.5
+#	enemy = {
+#		group = advance
+#		factor = 3
+#	}
+#}
 
 #Call to Glory - Angel of Death Tactic - Revelationist (archers)
 glorious_revelationist_tactic = {

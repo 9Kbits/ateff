@@ -4474,8 +4474,7 @@ narrative_event = {
 			if = {
 				limit = { #If religion being reformed is western paganism, other western pagan are emboldened, facilitating a chain reaction of reformation.
 					ROOT = { 
-						NOR = { 
-							religion = thelemic_reformed
+						NOT = { 
 							religion = aria_de_machete_reformed
 						} 
 					}
@@ -4639,8 +4638,7 @@ narrative_event = {
 					remove_intermarry = chrome_cultist
 					remove_intermarry = occultist_reformed
 					remove_intermarry = occultist
-					remove_intermarry = thelemic_reformed
-					remove_intermarry = thelemic
+					remove_intermarry = glorian
 					remove_intermarry = norse_pagan_reformed
 					remove_intermarry = norse_pagan
 					remove_intermarry = celtic_pagan_reformed
@@ -4854,40 +4852,40 @@ narrative_event = {
 					set_can_grant_claim = yes
 				} 
 			}
-			if = {
-				limit = { #Apply default special features if player doesn't have dlc.
-					NOT = { has_dlc = "Holy Fury" } 
-					ROOT = {
-						religion = thelemic_reformed
-					}
-				}
-				ROOT = { 
-					set_ignores_defensive_attrition = yes
-					set_seafaring = yes
-					set_unit_modifier = { 
-						light_infantry_offensive = 0.1
-						heavy_infantry_offensive = 0.1
-						light_cavalry_offensive = 0.1 
-						knights_offensive = 0.1 
-						pikemen_offensive = 0.1 
-						archers_offensive = 0.1
-						horse_archers_offensive = 0.1
-						camel_cavalry_offensive = 0.1
-						war_elephants_offensive = 0.1
-						mushers_offensive = 0.1
-						ballestero_offensive = 0.1
-						cossacks_offensive = 0.1
-						cowboys_offensive = 0.1
-						pike_cavalry_offensive = 0.1
-						samurai_offensive = 0.1
-						key = "THELEMIC_RELENTLESS_RELIGION"
-					}
-					set_can_excommunicate = yes
-					set_can_grant_divorce = yes
-					set_can_grant_invasion_cb = invasion
-					set_can_grant_claim = yes
-				} 
-			}
+			#if = {
+			#	limit = { #Apply default special features if player doesn't have dlc.
+			#		NOT = { has_dlc = "Holy Fury" } 
+			#		ROOT = {
+			#			religion = thelemic_reformed
+			#		}
+			#	}
+			#	ROOT = { 
+			#		set_ignores_defensive_attrition = yes
+			#		set_seafaring = yes
+			#		set_unit_modifier = { 
+			#			light_infantry_offensive = 0.1
+			#			heavy_infantry_offensive = 0.1
+			#			light_cavalry_offensive = 0.1 
+			#			knights_offensive = 0.1 
+			#			pikemen_offensive = 0.1 
+			#			archers_offensive = 0.1
+			#			horse_archers_offensive = 0.1
+			#			camel_cavalry_offensive = 0.1
+			#			war_elephants_offensive = 0.1
+			#			mushers_offensive = 0.1
+			#			ballestero_offensive = 0.1
+			#			cossacks_offensive = 0.1
+			#			cowboys_offensive = 0.1
+			#			pike_cavalry_offensive = 0.1
+			#			samurai_offensive = 0.1
+			#			key = "THELEMIC_RELENTLESS_RELIGION"
+			#		}
+			#		set_can_excommunicate = yes
+			#		set_can_grant_divorce = yes
+			#		set_can_grant_invasion_cb = invasion
+			#		set_can_grant_claim = yes
+			#	} 
+			#}
 			if = {
 				limit = { #Apply default special features if player doesn't have dlc.
 					NOT = { has_dlc = "Holy Fury" } 
@@ -5135,14 +5133,14 @@ narrative_event = {
 				}
 				add_artifact = crown_fylkir
 			}
-			if = {
-				limit = { 
-					has_religion_feature = religion_temporal_head 
-					religion = thelemic_reformed 
-
-				}
-				add_artifact = crown_thelemic_fylkir
-			}
+			#if = {
+			#	limit = { 
+			#		has_religion_feature = religion_temporal_head 
+			#		religion = thelemic_reformed 
+			#
+			#	}
+			#	add_artifact = crown_thelemic_fylkir
+			#}
 			if = {
 				limit = { 
 					has_religion_feature = religion_temporal_head 
@@ -5228,10 +5226,10 @@ narrative_event = {
 				limit = { religion = occultist_reformed }
 				set_global_flag = occultist_reformation
 			}
-			if = {
-				limit = { religion = thelemic_reformed }
-				set_global_flag = thelemic_reformation
-			}
+			#if = {
+			#	limit = { religion = thelemic_reformed }
+			#	set_global_flag = thelemic_reformation
+			#}
 			if = {
 				limit = { religion = celtic_pagan_reformed }
 				d_round_table = {

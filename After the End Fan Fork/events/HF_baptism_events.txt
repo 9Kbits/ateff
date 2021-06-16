@@ -165,9 +165,9 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:sponsoring_king = { religion = thelemic_reformed }
+			event_target:sponsoring_king = { religion = glorian }
 		}
-		text = EVTDESCHFG20003
+		text = EVTDESCHFG20003 #NEEDS UPDATING!
 	}
 	desc = {
 		trigger = {
@@ -753,9 +753,9 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			religion = thelemic_reformed
+			religion = glorian
 		}
-		text = EVTDESCHFG20004
+		text = EVTDESCHFG20004 #NEEDS UPDATING!
 	}
 	desc = {
 		trigger = {
@@ -1676,9 +1676,9 @@ narrative_event = {
 	desc = {
 		trigger = {
 			NOT  = { has_character_flag = ai_flag_refuse_conversion }
-			event_target:sponsoring_king = { religion = thelemic_reformed }
+			event_target:sponsoring_king = { religion = glorian }
 		}
-		text = EVTDESCHFG20008
+		text = EVTDESCHFG20008 #NEEDS UPDATING!
 	}
 	desc = {
 		trigger = {
@@ -1805,9 +1805,9 @@ narrative_event = {
 	desc = {
 		trigger = {
 			has_character_flag = ai_flag_refuse_conversion
-			event_target:sponsoring_king = { religion = thelemic_reformed }
+			event_target:sponsoring_king = { religion = glorian }
 		}
-		text = EVTDESCHFT20008
+		text = EVTDESCHFT20008 #NEEDS UPDATING!
 	}
 	desc = {
 		trigger = {
@@ -3385,12 +3385,12 @@ character_event = {
 			}
 		}
 		if = { 
-			limit = { secret_religion = thelemic }
+			limit = { secret_religion = glorian }
 			any_demesne_province = {
 				random = {
 					chance = 80
 					add_province_modifier = { 
-						name = secret_thelemic_community
+						name = secret_glorian_community
 						duration = -1
 					} 
 				}

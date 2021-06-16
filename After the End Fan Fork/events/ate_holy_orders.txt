@@ -416,7 +416,7 @@ narrative_event = {
 	major = yes
 	only_playable = yes
 	only_men = yes
-	religion = thelemic_reformed
+	religion = glorian
 	
 	trigger = {
 		NOT = { #immersion-breaking
@@ -428,7 +428,7 @@ narrative_event = {
 		NOT = { is_title_active = d_oto }
 		
 		68 = { # Plymouth
-			owner = { religion = thelemic_reformed }
+			owner = { religion = glorian }
 		}
 	}
 	
@@ -443,8 +443,8 @@ narrative_event = {
 			random_traits = yes
 			trait = mystic
 			trait = mastermind_theologian
-			unsafe_religion = thelemic_reformed
-			culture= british
+			unsafe_religion = glorian
+			culture_group = britannic
 		}
 		new_character = {
 			character_event = { id = misc.3 } # Diversity
@@ -464,7 +464,7 @@ narrative_event = {
 	option = {
 		name = "EVTOPTA_OTO_creation"
 		trigger = {
-			religion = thelemic_reformed
+			religion = glorian
 		}
 	}
 	option = {
@@ -477,7 +477,7 @@ narrative_event = {
 		name = "EVTOPTC_OTO_creation"
 		trigger = {
 			religion_group = pagan_group
-			NOT = { religion = thelemic_reformed }
+			NOT = { religion = glorian }
 		}
 	}
 }
