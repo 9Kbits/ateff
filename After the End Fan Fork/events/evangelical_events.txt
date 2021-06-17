@@ -1541,7 +1541,7 @@ character_event = {
 	}
 }
 
-#Ecumenical Seat of St Louis
+#Ecumenical Seat of New Orleans
 character_event = {
 	id = eva.104
 	desc = EVTDESC_eva.104
@@ -1549,10 +1549,10 @@ character_event = {
 	religion = evangelical
 	
 	trigger = {
-		NOT = { has_global_flag = pat_st_louis }
+		NOT = { has_global_flag = pat_new_orleans }
 		NOT = { has_alternate_start_parameter = { key = religion_names value = random } }
 		has_landed_title = e_dixie
-		completely_controls = c_st_louis
+		completely_controls = c_new_orleans
 	}
 	
 	mean_time_to_happen = {
@@ -1561,7 +1561,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_eva.104
-		set_global_flag = pat_st_louis
+		set_global_flag = pat_new_orleans
 		piety = 100
 	}
 }
@@ -3951,6 +3951,9 @@ narrative_event = {
 		name = EVTOPTA_hcc_fall
 		trigger = {
 			has_landed_title = e_dixie
+			NOT = {
+				character = 1861579
+			}
 		}
 		any_demesne_title = {
 				limit = {
@@ -3976,7 +3979,7 @@ narrative_event = {
 		}
 	}
 	option = {
-		name = EVTOPTC_hcc_fall
+		name = EVTOPTD_hcc_fall
 		trigger = {
 			NOR = {
 				trait = ram_hcc
@@ -3986,12 +3989,53 @@ narrative_event = {
 		}
 	}
 	option = {
-		name = EVTOPTD_hcc_fall
+		name = EVTOPTE_hcc_fall
 		trigger = {
 			NOR = {
 				religion = evangelical
+				religion = americanist
+				religion = revelationist
+				religion = revelationist_reformed
 				has_landed_title = e_dixie
 			}
+		}
+	}
+	option = {
+		name = EVTOPTF_hcc_fall
+		trigger = {
+			NOR = {
+				religion = evangelical
+				religion = revelationist
+				religion = revelationist_reformed
+				has_landed_title = e_dixie
+			}
+		}
+	}
+	option = {
+		name = EVTOPTG_hcc_fall
+		trigger = {
+			NOR = {
+				religion = evangelical
+				religion = americanist
+				has_landed_title = e_dixie
+			}
+		}
+	}
+	option = {
+		name = EVTOPTH_hcc_fall
+		trigger = {
+			has_landed_title = e_dixie
+			character = 1861579
+		}
+		any_demesne_title = {
+				limit = {
+						higher_tier_than = DUKE
+					NOR = {
+						controls_religion = yes
+						clan = yes
+					}
+				}
+			unsafe_destroy_landed_title = THIS
 		}
 	}
 }
