@@ -245,7 +245,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		religion_group = afro_syncretic
 		NOR = {
@@ -281,7 +281,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		religion_group = afro_syncretic
 		OR = {
@@ -316,7 +316,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		religion_group = afro_syncretic
 		NOR = {
@@ -363,7 +363,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		religion_group = afro_syncretic
 		OR = {
@@ -409,7 +409,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		religion_group = afro_syncretic
 		NOR = {
@@ -439,7 +439,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		religion_group = afro_syncretic
 		OR = {
@@ -468,7 +468,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		OR = {
 			has_law = imperial_administration
@@ -498,7 +498,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		OR = {
 			has_law = imperial_administration
@@ -527,7 +527,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		religion_group = afro_syncretic
 		NOR = {
@@ -574,7 +574,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		religion_group = afro_syncretic
 		OR = {
@@ -620,7 +620,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		religion_group = afro_syncretic
 		NOR = {
@@ -653,7 +653,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		religion_group = afro_syncretic
 		OR = {
@@ -689,7 +689,7 @@ government_flavor = {
 			AND = {
 				OR = {
 					government = feudal_government
-					government = theocratic_feudal_government
+				
 				}
 				has_law = succ_feudal_elective
 				has_law = succ_hre_elective
@@ -725,7 +725,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		NOR = {
 			has_law = succ_feudal_elective
@@ -745,7 +745,7 @@ government_flavor = {
 	trigger = {
 		OR = {
 			government = feudal_government
-			government = theocratic_feudal_government
+		
 		}
 		OR = {
 			has_law = succ_feudal_elective
@@ -916,6 +916,94 @@ government_flavor = {
 	trigger = {
 		AND = {
 			government = cenobitic_government
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_eldership
+	graphics = GFX_evt_gaian_eldership
+	priority = 5
+	trigger = {
+		AND = {
+			religion = gaian
+			has_law = succ_eldership
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_learned_apointment
+	graphics = GFX_evt_gaian_learned_apointment
+	priority = 5
+	trigger = {
+		AND = {
+			government = theocratic_feudal_government
+			has_law = succ_rel_gaian_elective
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_military_apointment
+	graphics = GFX_evt_gaian_military_apointment
+	priority = 5
+	trigger = {
+		AND = {
+			government = theocratic_feudal_government
+			has_law = succ_mil_gaian_elective
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_gavelkind
+	graphics = GFX_evt_daughter_asking_mother
+	priority = 5
+	trigger = {
+		AND = {
+			government = theocratic_feudal_government
+			has_law = succ_gavelkind
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_fully_militarized
+	graphics = GFX_evt_fully_militarized
+	priority = 10
+	trigger = {
+		AND = {
+			government = theocratic_feudal_government
+			has_law = captaincy_mobilization_3
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_tribe
+	graphics = GFX_evt_gaian_tribal
+	priority = 6
+	trigger = {
+		AND = {
+			government = tribal_government
+			religion = gaian
+			NOT = {
+				has_law = succ_eldership
+			}
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_gaian_tribe_eldership
+	graphics = GFX_evt_gaian_eldership
+	priority = 6
+	trigger = {
+		AND = {
+			government = tribal_government
+			religion = gaian
+			has_law = succ_eldership
 		}
 	}
 }
