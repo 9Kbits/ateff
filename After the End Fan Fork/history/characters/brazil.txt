@@ -437,7 +437,7 @@
 	name="Bianca"
 	female=yes
 	dynasty=1963022
-	culture=ribeirinho
+	culture=brazilian
 	religion=apostolic
 	martial=3
 	diplomacy=4
@@ -451,7 +451,33 @@
 	trait=diligent
 	trait=charitable
 	trait=lefthanded
-	2645.06.29={birth=yes}
+	2645.06.29={birth=yes
+	culture=ribeirinho
+	}
+}
+
+#some north american person
+666154={
+	name="Zechariah"
+	dynasty=1787142
+	culture=southron
+	religion=evangelical
+	dna="ddjfhpbabcj"
+	trait=quick
+	trait=charitable
+	#trait=feeble
+	trait=kind
+	trait=ambitious
+	trait=slothful
+	2646.1.1={birth=yes
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2666.1.1={effect={add_artifact=old_world_shades}}
+	2666.1.2={employer=1861579}
+	2700.1.1={death=yes}
 }
 
 # Extended Brazil History Moment
