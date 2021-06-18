@@ -770,12 +770,31 @@ death_whistle = {
 
 old_dominion_old_crown = {
 	monthly_character_prestige = 0.1
+	stewardship = 2
 	active = {
 	}
-	flags = { religious unique crown jewelry crown_jewel }
-	picture = "GFX_crown_slavic_fylkir"
+	flags = { unique crown jewelry crown_jewel }
+	picture = "GFX_old_dominion_old_crown"
 	quality = 1
 	stacking = no
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+dogwood_crown = {
+	monthly_character_prestige = 1.0
+	stewardship = 2
+	diplomacy = 2
+	vassal_opinion = 10
+	active = {
+	}
+	flags = { unique crown jewelry crown_jewel }
+	picture = "GFX_dogwood_crown"
+	quality = 5
+	stacking = no
+	slot = crown
 	indestructible = yes
 	allowed_gift = {
 		always = no
