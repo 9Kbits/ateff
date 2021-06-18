@@ -25,12 +25,24 @@ decisions = {
 				}
 			}
 			NOT = { has_global_flag = dogwood_crown_recreated }
+			NOT = { has_global_flag = dogwood_crown_restored }
 		}
 		allow = {
 			is_adult = yes
 			prisoner = no
 			NOT = { is_incapable = yes }
-			has_landed_title = e_grand_virginia
+			OR = {
+				has_landed_title = e_grand_virginia
+				AND = {
+					OR = {
+						dynasty = 1782165
+						dynasty = 1782060
+					}
+					any_demesne_title = {
+						tier = EMPEROR
+					}
+				}
+			}
 			scaled_wealth = 1
 		}
 		effect = {
@@ -76,19 +88,25 @@ decisions = {
 			is_adult = yes
 			prisoner = no
 			NOT = { is_incapable = yes }
-			has_landed_title = e_grand_virginia
+			OR = {
+				has_landed_title = e_grand_virginia
+				AND = {
+					OR = {
+						dynasty = 1782165
+						dynasty = 1782060
+					}
+					any_demesne_title = {
+						tier = EMPEROR
+					}
+				}
+			}
 			scaled_wealth = 1
 		}
 		effect = {
 			scaled_wealth = -1
 			prestige = 500
 			add_artifact=dogwood_crown
-			random_artifact = {
-				limit = {
-					has_artifact_flag = old_dogwood
-				}
-				destroy_artifact = yes
-			}
+			destroy_artifact=old_dominion_old_crown
 			set_global_flag = dogwood_crown_restored
 #			narrative_event = { id = americarestored.1 }
 		}
