@@ -4977,6 +4977,7 @@ character_event = {
 			religion = gaian
 			NOT = {
 			has_character_modifier = refused_reclamation
+			has_character_modifier = gaian_took_part_in_reclamation
 				}
 			}
 			character_event = { id = gaian.5001 days=2 } 
@@ -4999,6 +5000,7 @@ character_event = {
 		modifier = { factor = 5 trait = zealous }
 		modifier = { factor = 5 trait = wroth }
 		}
+		add_character_modifier = { name = gaian_took_part_in_reclamation years = 5 }
 		random_landed_title = {
 			limit = {
 				tier = COUNT
