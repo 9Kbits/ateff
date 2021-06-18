@@ -1732,6 +1732,44 @@ nick_the_cougar = {
 		}
 	}
 }
+nick_fire_and_brimstone = {
+	allow = {
+		is_adult = yes
+		culture = siskiyouan
+		OR = {
+			religion = rust_cultist
+			religion = true_cross
+			religion = evangelical
+			religion = charismatic
+		}
+		NOT = { trait = temperate }
+		OR = {
+			trait = wroth
+			trait = zealous
+			trait = aggressive_leader
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			trait = wroth
+		}
+		modifier = {
+			factor = 1.5
+			trait = zealous
+		}
+		modifier = {
+			factor = 1.5
+			trait = aggressive_leader
+		}
+		modifier = {
+			factor = 1.5
+			trait = proud
+		}
+	}
+}
+nick_triumvir_of_beecee = {}
 nick_the_devil_dog = {}
 nick_the_heartbraker = {}
 nick_the_nice = {}
