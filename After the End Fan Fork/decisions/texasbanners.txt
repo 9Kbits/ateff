@@ -65,111 +65,133 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			narrative_event = { id = tex_king.2 }
+			narrative_event = { id = tex_king.21 }
 			activate_title = { title = d_red_raider status = yes }
-			d_red_raiders = { grant_title = ROOT }
+			primary_title = {
+				d_red_raider = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}		
+		}
+		ai_will_do = {
+			factor = 1
+		}  
+	}
+	
+	form_longhorn_banner = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { 
+				culture_group = starfolk
+				AND = { 
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+			
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_travis
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.3 }
+			activate_title = { title = d_longhorns status = yes }
+			primary_title = {
+				d_longhorns = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}		
+			
+		}
+		ai_will_do = {
+			factor = 1
+		}  
+	}
+	
+	form_aggies_banner = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+				AND = { 
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+			
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_brazos
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.4 }
+			activate_title = { title = d_aggies status = yes }
+			primary_title = {
+				d_aggies = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}		
 		
 		}
 		ai_will_do = {
 			factor = 1
 		}  
 	}
-		
-		form_longhorn_banner = {
-			is_high_prio = yes
-			only_playable = yes
+	
+	form_airmen_banner = {
+		is_high_prio = yes
+		only_playable = yes
 			
 			
-			potential = {
-					is_playable = yes
-					independent = yes
-					OR = { culture_group = starfolk
-						   AND = { culture = comanche
-								   has_global_flag = comanche_opt_in
-							}
-						}
-					}
-				
-			allow = {
-					is_adult = yes
-					prisoner = no
-					NOT = { is_incapable = yes }
-					prestige = 500
-					has_landed_title = c_travis
-					}
-			effect = {
-					prestige = -500
-					narrative_event = { id = tex_king.3 }
-					activate_title = { title = d_longhorns status = yes }
-					d_longhorns = { grant_title = ROOT }
-				
-				 }
-				ai_will_do = {
-				factor = 1
-				}  
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+				   AND = { culture = comanche
+						   has_global_flag = comanche_opt_in
+				}
 			}
-			
-			form_aggies_banner = {
-			is_high_prio = yes
-			only_playable = yes
-			
-			
-			potential = {
-					is_playable = yes
-					independent = yes
-					OR = { culture_group = starfolk
-						   AND = { culture = comanche
-								   has_global_flag = comanche_opt_in
-							}
-						}
-					}
-				
-			allow = {
-					is_adult = yes
-					prisoner = no
-					NOT = { is_incapable = yes }
-					prestige = 500
-					has_landed_title = c_brazos
-					}
-			effect = {
-					prestige = -500
-					narrative_event = { id = tex_king.4 }
-					activate_title = { title = d_aggies status = yes }
-					d_aggies = { grant_title = ROOT }
-				
-				 }
-				ai_will_do = {
-				factor = 1
-				}  
-			}
-			
-			form_airmen_banner = {
-			is_high_prio = yes
-			only_playable = yes
-			
-			
-			potential = {
-					is_playable = yes
-					independent = yes
-					OR = { culture_group = starfolk
-						   AND = { culture = comanche
-								   has_global_flag = comanche_opt_in
-							}
-						}
-					}
+		}
 				
 		allow = {
 			is_adult = yes
 			prisoner = no
 			NOT = { is_incapable = yes }
-			prestige = 500
+			prestige = 5
 			has_landed_title = c_bexar
 		}
 		effect = {
-			prestige = -500
-			narrative_event = { id = tex_king.5 }
+			prestige = -5
+			narrative_event = { id = tex.21 }
 			activate_title = { title = d_airmen status = yes }
-			d_airmen = { grant_title = ROOT }
+			primary_title = {
+				d_airmen = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}		
 		
 		 }
 		ai_will_do = {
@@ -203,7 +225,12 @@ decisions = {
 			prestige = -500
 			narrative_event = { id = tex_king.6 }
 			activate_title = { title = d_first_cav status = yes }
-			d_first_cav = { grant_title = ROOT }
+			primary_title = {
+				d_first_cav = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}	
 		
 		 }
 		ai_will_do = {

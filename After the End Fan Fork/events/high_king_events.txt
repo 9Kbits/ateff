@@ -1,68 +1,24 @@
 namespace = tex_king
 
 narrative_event = {
-	id = tex_king.1
-	title = EVTTITLE_tex_king_1
+	id = tex_king.21
+	title = EVTTITLE_tex_21
 	
 	desc = {
 		trigger = {
-			trait = high_king_candidate
+			has_landed_title = d_airmen
 		}
-		text = EVTDESC_tex_king_1_rival
-	}
-	
-	desc = {
-		trigger = {
-			AND = {
-				culture_group = starfolk
-				personal_opinion = {	
-					who = FROM
-					value < 0
-				}
-			}
-		}
-		text = EVTDESC_tex_king_texan_dislike
-	}
-	
-	desc = {
-		trigger = {
-			AND = {
-				culture_group = starfolk
-				personal_opinion = {	
-					who = FROM
-					value >= 50
-				}
-			}
-		}
-		text = EVTDESC_tex_king_texan_like
-	}
-	
-	desc = {
-		trigger = {
-			AND = {
-				culture_group = starfolk
-				trait = cynical
-			}
-		}
-		text = EVTDESC_tex_king_cynic
-	}
-	
-	desc = {
-		trigger = {
-			culture_group = starfolk
-		}
-		text = EVTDESC_tex_king_texan_neutral
+		text = EVTDESC_tex_21_oathgiver
 	}
 	
 	desc = {
 		trigger = {
 			NOT = {
-				culture_group = starfolk
+				has_landed_title = d_airmen
 			}
 		}
-		text = EVTDESC_tex_king_cynic
+		text = EVTDESC_tex_21_oathhearer
 	}
-	
 	
 	picture = GFX_evt_battle
 	border = GFX_event_narrative_frame_war
@@ -72,36 +28,42 @@ narrative_event = {
 	trigger = {
 		is_playable = yes
 		any_title_under = { region = custom_texas }
-		has_global_flag = king_candidate_unannouced
-#		NOT = {
-#			ROOT = {
-#				who = FROM
-#			}
-		}
+		NOT = { has_global_flag = candidate_unannouced }
 	}
 	
 	immediate = {
-		clr_global_flag = king_candidate_unannouced
-	}z
+		set_global_flag = texas_setup_done
+	}
 	
 	option = { 
-		name = EVTOPTA_tex_1
-		trigger = { has_landed_title = d_aggies }
-		add_claim = c_milashison
+		name = EVTOPTA_tex_21_banner
+		trigger = { has_landed_title = d_airmen }
 	}
 	
 	option = {
-		name = EVTOPTA_tex_2
-		trigger = { has_landed_title = d_longhorns }
-		add_claim = c_colorado
+		name = EVTOPTA_tex_21_honor
+		trigger = { 
+			NOT = { has_landed_title = d_airmen } 
+			OR = {
+				culture_group = starfolk
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
 	}
 	
 	option = {
-		name = EVTOPTA_tex_3
-		trigger = {
-			NOR = {
-				has_landed_title = d_aggies
-				has_landed_title = d_longhorns
+		name = EVTOPTA_tex_21_foreign
+		trigger = { 
+			NOT = { has_landed_title = d_airmen } 
+			NOT = { culture_group = starfolk }
+			NOT = {
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
 			}
 		}
 	}
