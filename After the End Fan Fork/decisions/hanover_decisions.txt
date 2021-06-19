@@ -1,63 +1,110 @@
-targetted_decisions = {
-
-	disinherit_hanover = {
-		ai_target_filter = none
-		filter = sub_realm
-		ai_target_filter = close_relatives
-		ai = no
-		from_potential = {
-			ai = no
-		}
+decisions = {
+	recreate_the_dogwood_crown = {
+		is_high_prio = yes
+		only_playable = yes
+		
 		potential = {
-			NOT = {	character = FROM }
-			is_child_or_sibling_of_from_trigger = yes
-			NOT = { trait = disinherited_trait }
-			NOT = { trait = disinherited }
-			FROM = {
-				any_owned_bloodline = {
-					has_bloodline_flag = bloodline_effect_disinherit
+			is_alternate_start = no
+			is_playable = yes
+			independent = yes
+			OR = {
+				has_landed_title = e_grand_virginia
+				OR = {
+					dynasty = 1782165
+					dynasty = 1782060
 				}
 			}
+			NOT = {
+				any_artifact = {
+					artifact_type = old_dominion_old_crown
+				}
+			}
+			NOT = { has_global_flag = dogwood_crown_recreated }
+			NOT = { has_global_flag = dogwood_crown_restored }
 		}
 		allow = {
-			FROM = { 
-				prestige = 500
-				is_landed = yes
-				NOT = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			OR = {
+				has_landed_title = e_grand_virginia
+				AND = {
 					OR = {
-						trait = incapable
-						trait = disinherited_trait
-						trait = bastard
-						trait = legit_bastard
-						trait = child_of_consort
-						trait = child_of_consort_male
-						trait = kinslayer
-						trait = familial_kinslayer
-						trait = dynastic_kinslayer
-						trait = excommunicated
-						trait = in_hiding
-						trait = travelling
+						dynasty = 1782165
+						dynasty = 1782060
+					}
+					any_demesne_title = {
+						tier = EMPEROR
 					}
 				}
 			}
-			
-			custom_tooltip = {
-#	            text = boon_tooltip_recent_boon
-#	            hidden_tooltip = {
-#	                FROM = { NOT = { has_character_modifier = boon_timer } }
-#	                NOT = { has_character_modifier = boon_timer }
-#	            }
-	        }
+			scaled_wealth = 1
 		}
 		effect = {
-			FROM = { prestige = -500 }
-			custom_tooltip = { text = disinherent_custom_tooltip }
-			hidden_tooltip = {
-				character_event = { id = hanovers.21 }
-			}
+			scaled_wealth = -1
+			prestige = 500
+			add_artifact=dogwood_crown
+			set_global_flag = dogwood_crown_recreated
+#			narrative_event = { id = americarestored.1 }
+		}
+		revoke_allowed = {
+			always = no
 		}
 		ai_will_do = {
-			factor = 0
+			factor = 1
+		}
+	}
+	restore_the_dogwood_crown = {
+		is_high_prio = yes
+		only_playable = yes
+		
+		potential = {
+			is_alternate_start = no
+			is_playable = yes
+			independent = yes
+			OR = {
+				has_landed_title = e_grand_virginia
+				OR = {
+					dynasty = 1782165
+					dynasty = 1782060
+				}
+			}
+			any_artifact = {
+				artifact_type = old_dominion_old_crown
+			}
+			NOT = { has_global_flag = dogwood_crown_restored }
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			OR = {
+				has_landed_title = e_grand_virginia
+				AND = {
+					OR = {
+						dynasty = 1782165
+						dynasty = 1782060
+					}
+					any_demesne_title = {
+						tier = EMPEROR
+					}
+				}
+			}
+			scaled_wealth = 1
+		}
+		effect = {
+			scaled_wealth = -1
+			prestige = 500
+			add_artifact=dogwood_crown
+			destroy_artifact=old_dominion_old_crown
+			set_global_flag = dogwood_crown_restored
+#			narrative_event = { id = americarestored.1 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }

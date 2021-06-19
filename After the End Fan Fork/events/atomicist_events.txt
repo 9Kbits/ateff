@@ -517,6 +517,14 @@ narrative_event = {
 
 	is_triggered_only = yes
 	
+	major_trigger = {
+		OR = {
+		capital_scope = { region = custom_mountain_zone }
+		religion = atomicist
+		religion = aphite
+		}
+	}
+	
 	trigger = {
 		NOT = { has_global_flag = atomic_commission }
 	}
