@@ -1130,30 +1130,6 @@ character_event = {
 	}
 }
 
-#Gaianism under threat
-narrative_event = {
-	id = gaian.22
-	title = EVTTITLE_GAIAN22
-	desc = EVTDESC_GAIAN22
-	picture = GFX_evt_china_rebel_general #placeholder
-	border = GFX_event_narrative_frame_religion
-	religion = gaian
-	only_playable = yes
-	is_triggered_only = yes
-
-	trigger = {
-		ROOT = {
-			capital_scope = {
-				de_jure_liege = k_cascadia #for testing purposes until the gaian core area is created
-			}
-		}
-	}
-	option = {
-		name = EVTOPTA_GAIAN22
-		add_trait = stressed #for testing purposes to see if the event fires
-	}
-}
-
 narrative_event = {
 	id = gaian.100
 	title = EVTITLE_garibaldi_ending
