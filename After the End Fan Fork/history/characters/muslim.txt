@@ -60,7 +60,7 @@
 	2130.11.21={death=yes}
 }
 2200002={
-	name="Hussayn"
+	name="Jalal"
 	dynasty=2030000# Abbas
 	father=2200001
 	mother=2500124
@@ -633,8 +633,16 @@
 	intrigue=4 
 	learning=2
 	trait=way_cowl
+	trait=strong
+	trait=brilliant_strategist
+	trait=shrewd
+	trait=deceitful
+	trait=ambitious
+	trait=arbitrary
 	culture=angeleno
 	religion=cetic
+	give_nickname=nick_the_soldier
+	father=2200203
 	2576.4.5={birth=yes}
 	2616.11.7={death=yes}
 }
@@ -699,6 +707,7 @@
 	disallow_random_traits=yes
 	culture=german
 	religion=cetic
+	mother=2200205
 	2648.12.5={
 		birth=yes
 		culture=siskiyouan
@@ -724,8 +733,8 @@
 		effect={
 			add_friend=2200016
 			add_friend=2200037
-			add_friend=2200034
 			add_friend=2200036
+			add_friend=2200034
 			add_friend=2200035
 			add_friend=2200038
 			add_friend=2200040
@@ -735,54 +744,56 @@
 	2690.11.7={death=yes}
 }
 2200034={
-	name="Ciaran" #Xaviers
-	dynasty=2030025
-	dna="aaaaaybchce"
-	properties="wi0c0d000000"
-	martial=2
-	diplomacy=5
-	stewardship=10
-	intrigue=3
-	learning=1
-	trait=midas_touched
-	trait=greedy
-	trait=shrewd
-	trait=child_of_consort
-	trait=architect
-	trait=way_book
-	disallow_random_traits=yes
-	culture=german
-	religion=cetic
-	2648.4.5={
-		birth=yes
-		culture=angeleno
-		effect={
-			set_character_flag=diversity
-			set_character_flag=physique
-		}
-	}
-	2665.1.1={employer=2200016}
-	2666.1.1={
-		effect={
-			remove_title=job_chancellor
-			remove_title=job_marshal
-			remove_title=job_spymaster
-			remove_title=job_spiritual
-			give_job_title=job_treasurer
-		}
-	}
+    name="Ciaran" #Jensen
+    dynasty=2030025
+    dna="aaaaaybchce"
+    properties="wi0c0d000000"
+    martial=2
+    diplomacy=5
+    stewardship=10
+    intrigue=3
+    learning=1
+    trait=midas_touched
+    trait=greedy
+    trait=shrewd
+	trait=diligent
+    trait=child_of_consort
+    trait=architect
+    trait=way_book
+    disallow_random_traits=yes
+	father=2200188
+    culture=german
+    religion=cetic
+    2648.4.5={
+        birth=yes
+        culture=angeleno
+        effect={
+            set_character_flag=diversity
+            set_character_flag=physique
+        }
+    }
+    2665.1.1={employer=2200016}
+    2666.1.1={
+        effect={
+            remove_title=job_chancellor
+            remove_title=job_marshal
+            remove_title=job_spymaster
+            remove_title=job_spiritual
+            give_job_title=job_treasurer
+        }
+    }
 
-	2666.7.4={
-		effect={
-			add_friend=2200035
-			add_friend=2200037
-			add_friend=2200033
-			add_friend=2200036
-			add_friend=2200016
+    2666.7.4={
+        effect={
+            add_friend=2200035
+            add_friend=2200037
+            add_friend=2200033
+            add_friend=2200036
+            add_friend=2200016
 
-		}
-	}
-	2690.11.7={death=yes}
+        }
+    }
+    2690.11.7={death=yes}
 }
 2200035={
 	name="Zane" #Zanesson
@@ -826,8 +837,8 @@
 		effect={
 			add_friend=2200036
 			add_friend=2200037
-			add_friend=2200033
 			add_friend=2200034
+			add_friend=2200033
 			add_friend=2200016
 
 		}
@@ -835,7 +846,7 @@
 	2690.11.7={death=yes}
 }
 2200036={
-	name="Andras" #Barge-Man
+	name="Andras" #Nomesky
 	dynasty=2030027
 	dna="bacagabbfaf"
 	properties="wj0cdd000000"
@@ -866,8 +877,8 @@
 		effect={
 			add_friend=2200035
 			add_friend=2200037
-			add_friend=2200033
 			add_friend=2200034
+			add_friend=2200033
 			add_friend=2200016
 
 		}
@@ -877,7 +888,7 @@
 
 
 2200037={
-	name="Kaleb" #Sachsen
+	name="Kaleb" #Briton
 	dynasty=2030026
 	dna="abjabchbjco"
 	properties="wi0djw000000"
@@ -902,7 +913,11 @@
 			set_character_flag=diversity
 			set_character_flag=physique
 			add_friend=2200016
-
+			add_friend=2200036
+			add_friend=2200034
+			add_friend=2200035
+			add_friend=2200038
+			add_friend=2200040
 		}
 	}
 	2665.1.1={employer=2200016}
@@ -1829,6 +1844,7 @@
 	trait=ambitious
 	trait=ansari
 	trait=sayyid2
+	trait=zealous
 	father=1384032
 	give_nickname=nick_the_guardian
 	2150.11.21={birth=yes}
@@ -1995,8 +2011,8 @@
 	2650.2.21={death=yes}
 }
 
-1384044={ #duke of mojave and count of blythe
-	name="Uthman"
+1384044={
+	name="Sharif"
 	dynasty=2030000 #abbas
 	culture=anjalusi
 	religion=imamite
@@ -2074,7 +2090,7 @@
 	2178.6.9={death=yes}
 }
 
-1384048={ #duke of mojave and death valley and count of blythe
+1384048={
 	name="Maryam"
 	dynasty=2030000 #abbas
 	female=yes
@@ -2089,7 +2105,6 @@
 	trait=just
 	trait=patient
 	trait=sayyid2
-	give_nickname=nick_yilidrim
 	father=1384047
 	2130.12.5={birth=yes}
 	2149.1.1={add_spouse=1384049}
@@ -2098,7 +2113,7 @@
 
 1384049={ #
 	name="Imad"
-	dynasty=2030018 #Qazwini
+	dynasty=1850085 #irving
 	culture=anjalusi
 	religion=imamite
 	occluded=yes
@@ -2116,7 +2131,7 @@
 
 1384050={ #duke of mojave and death valley and count of blythe
 	name="Suleyman"
-	dynasty=2030018 #Qazwini
+	dynasty=1850085 #irving
 	culture=anjalusi
 	religion=imamite
 	occluded=yes
@@ -2137,7 +2152,7 @@
 
 1384051={ #duke of mojave and death valley and count of blythe
 	name="Musa"
-	dynasty=2030018 #Qazwini
+	dynasty=1850085 #irving
 	culture=anjalusi
 	religion=imamite
 	occluded=yes
@@ -2159,7 +2174,7 @@
 
 1384052={ #duke of mojave and death valley and count of blythe
 	name="Isa"
-	dynasty=2030018 #Qazwini
+	dynasty=1850085 #irving
 	culture=anjalusi
 	religion=imamite
 	occluded=yes
@@ -2181,7 +2196,7 @@
 
 1384053={ #duke of mojave and count of blythe
 	name="Muhammad"
-	dynasty=2030018 #Qazwini
+	dynasty=1850085 #irving
 	culture=anjalusi
 	religion=imamite
 	occluded=yes
@@ -2203,7 +2218,7 @@
 
 1384054={ #duke of mojave and count of blythe
 	name="Zakariyya"
-	dynasty=2030018 #Qazwini
+	dynasty=1850085 #irving
 	culture=anjalusi
 	religion=imamite
 	trait=charismatic_negotiator
@@ -2219,7 +2234,7 @@
 
 1384055={ #duke of mojave and count of blythe
 	name="Yusuf"
-	dynasty=2030018 #Qazwini
+	dynasty=1850085 #irving
 	culture=anjalusi
 	religion=imamite
 	trait=tough_soldier
@@ -2236,7 +2251,7 @@
 
 1384056={ #duke of mojave and count of blythe
 	name="Salim"
-	dynasty=2030018 #Qazwini
+	dynasty=1850085 #irving
 	culture=anjalusi
 	religion=imamite
 	trait=martial_cleric
@@ -2252,7 +2267,7 @@
 
 1384057={ #duke of mojave and count of blythe
 	name="Karim"
-	dynasty=2030018 #Qazwini
+	dynasty=1850085 #irving
 	culture=anjalusi
 	religion=imamite
 	trait=midas_touched
@@ -3515,6 +3530,7 @@ name="Elfie"
 	father=2500120
 	mother=2500113
 	2358.10.1={birth=yes}
+	2373.3.1={add_spouse=2200182}
 	2430.1.1={death=yes}
 }
 2500131={
@@ -3793,7 +3809,7 @@ name="Elfie"
 	2459.1.1={death=yes} #blocking out numbers 45-55 for linking to current TJ lord
 }
 2500155={
-	name="Jonathan"
+	name="Jonathan" #blocking out numbers 55-75 for rest of characters
 	culture=californio
 	dynasty=1851172 #burgess
 	religion=cetic
@@ -3810,5 +3826,976 @@ name="Elfie"
 	2389.6.6={birth=yes}
 	2419.6.21={add_spouse=2500156}
 	2459.1.1={death=yes}
+}
+2200176={
+	name="Jag" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=fortune_builder
+	trait=diligent
+	trait=shrewd
+	trait=architect
+	trait=legendary
+	disallow_random_traits=yes
+	father=2200189
+	culture=german
+	religion=libertarian
+	occluded=yes
+	2041.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2125.11.7={death=yes}
+}
+2200177={
+	name="Shawn" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=indulgent_wastrel
+	trait=greedy
+	trait=shrewd
+	trait=architect
+	trait=legendary
+	disallow_random_traits=yes
+	father=2200176
+	culture=german
+	religion=libertarian
+	occluded=yes
+	2081.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2160.11.7={death=yes}
+}
+2200178={
+	name="James" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=content
+	trait=shrewd
+	trait=architect
+	trait=legendary
+	disallow_random_traits=yes
+	father=2200177
+	culture=german
+	religion=libertarian
+	occluded=yes
+	2126.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2200.11.7={death=yes}
+}
+2200179={
+	name="Cooper" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=architect
+	disallow_random_traits=yes
+	father=2200178
+	culture=german
+	religion=rust_cultist
+	2176.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2247.3.7={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=2500009
+		}
+	}
+}
+2200180={
+	name="Cameron" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=architect
+	disallow_random_traits=yes
+	father=2200179
+	culture=german
+	religion=rust_cultist
+	2216.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2287.3.7={death=yes}
+}
+2200181={
+	name="Ciaran" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=architect
+	disallow_random_traits=yes
+	father=2200180
+	culture=german
+	religion=rust_cultist
+	2246.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2320.3.7={death=yes}
+}
+2200182={
+	name="Deegs" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=architect
+	disallow_random_traits=yes
+	father=2200180
+	culture=german
+	religion=libertarian
+	2300.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2380.3.7={death=yes}
+}
+2200182={
+	name="Rufio" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=architect
+	disallow_random_traits=yes
+	father=2200181
+	culture=german
+	religion=libertarian
+	2350.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2373.3.1={add_spouse=2500130}
+	2410.3.7={death=yes}
+}
+2200183={
+	name="James" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=wroth
+	trait=diligent
+	trait=seaking
+	disallow_random_traits=yes
+	father=2200182
+	mother=2500130
+	culture=german
+	religion=brethren
+	give_nickname=nick_the_hook
+	2374.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2418.3.7={death={
+			death_reason=death_execution_beheading #was executed for being a warlord
+			killer=1910100
+		}
+}
+}
+2200184={
+	name="Peter" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=way_book
+	trait=architect
+	disallow_random_traits=yes
+	father=2200183
+	culture=german
+	religion=cetic
+	2410.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2473.3.7={death=yes}
+}
+2200185={
+	name="Morgan" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=way_book
+	trait=architect
+	disallow_random_traits=yes
+	father=2200184
+	culture=german
+	religion=cetic
+	2450.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2523.3.7={death=yes}
+}
+2200186={
+	name="Cooper" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=way_book
+	trait=architect
+	disallow_random_traits=yes
+	father=2200185
+	culture=german
+	religion=cetic
+	2490.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2563.3.7={death=yes}
+}
+2200187={
+	name="Jag" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=way_book
+	trait=architect
+	disallow_random_traits=yes
+	father=2200186
+	culture=german
+	religion=cetic
+	2530.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2600.3.7={death=yes}
+}
+2200188={
+	name="Cooper" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=thrifty_clerk
+	trait=ambitious
+	trait=shrewd
+	trait=diligent
+	trait=way_book
+	trait=architect
+	disallow_random_traits=yes
+	father=2200187
+	culture=german
+	religion=cetic
+	2570.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2650.3.7={death=yes}
+}
+2200189={
+	name="Ciaran" #jensen
+	dynasty=2030025
+	dna="aaaaaybchce"
+	properties="wi0c0d000000"
+	martial=2
+	diplomacy=5
+	stewardship=10
+	intrigue=3
+	learning=1
+	trait=midas_touched
+	trait=greedy
+	trait=shrewd
+	trait=child_of_consort
+	trait=architect
+	trait=legendary
+	disallow_random_traits=yes
+	culture=german
+	religion=libertarian
+	occluded=yes
+	2001.4.5={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2090.11.7={death=yes}
+}
+2200190={
+	name="Vivienne" #Flowers
+	female=yes
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=2030024
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=charismatic_negotiator
+	trait=shrewd
+	trait=kind
+	trait=fair
+	trait=bisexual
+	trait=shy
+	trait=poet
+	trait=legendary
+	disallow_random_traits=yes
+	occluded=yes
+	culture=german
+	religion=sedevacantist
+	2001.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2089.11.7={death=yes}
+		}
+	}
+}
+2200191={
+	name="Arthur" #Flowers
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=2030024
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=charismatic_negotiator
+	trait=shrewd
+	trait=kind
+	trait=fair
+	trait=strong
+	trait=just
+	trait=poet
+	trait=legendary
+	disallow_random_traits=yes
+	occluded=yes
+	mother=2200190
+	culture=german
+	religion=sedevacantist
+	2050.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2130.11.7={death=yes}
+		}
+	}
+}
+2200192={
+	name="Constance" #Flowers
+	female=yes
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=2030024
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=charismatic_negotiator
+	trait=shrewd
+	trait=diligent
+	trait=fair
+	trait=humble
+	trait=content
+	trait=legendary
+	disallow_random_traits=yes
+	occluded=yes
+	father=2200191
+	culture=german
+	religion=sedevacantist
+	2090.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2160.11.7={death=yes}
+		}
+	}
+}
+2200193={
+	name="Frederic" #Flowers
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=2030024
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=underhanded_rogue
+	trait=diligent
+	trait=humble
+	trait=content
+	trait=legendary
+	disallow_random_traits=yes
+	occluded=yes
+	mother=2200192
+	culture=german
+	religion=sedevacantist
+	2130.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2200.11.7={death=yes}
+		}
+	}
+}
+2200194={
+	name="Emilia" #Flowers
+	female=yes
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=2030024
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=underhanded_rogue
+	trait=diligent
+	trait=humble
+	trait=content
+	trait=legendary
+	disallow_random_traits=yes
+	father=2200193
+	culture=german
+	religion=sedevacantist
+	2170.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2230.11.7={death=yes}
+		}
+	}
+}
+2200195={
+	name="John" #Flowers
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=2030024
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=skilled_tactician
+	trait=shrewd
+	trait=ambitious
+	trait=strong
+	trait=duelist
+	disallow_random_traits=yes
+	mother=2200194
+	culture=german
+	religion=sedevacantist
+	2200.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2270.11.7={death=yes}
+		}
+	}
+}
+2200196={
+	name="Seneca" #Flowers
+	female=yes
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=2030024
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=fortune_builder
+	trait=shrewd
+	trait=ambitious
+	trait=quick
+	trait=scholar
+	disallow_random_traits=yes
+	father=2200195
+	culture=german
+	religion=sedevacantist
+	2230.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2320.11.7={death=yes}
+		}
+	}
+}
+2200197={
+	name="David" #Flowers
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=2030024
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=flamboyant_schemer
+	trait=shrewd
+	trait=ambitious
+	trait=lustful
+	trait=scholar
+	disallow_random_traits=yes
+	mother=2200196
+	culture=german
+	religion=sedevacantist
+	2270.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2350.11.7={death=yes}
+		}
+	}
+}
+2200198={
+	name="Eris" #Carmine
+	female=yes
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=1850066
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=flamboyant_schemer
+	trait=bastard
+	trait=ambitious
+	trait=kind
+	trait=schemer
+	disallow_random_traits=yes
+	father=2200197
+	culture=german
+	religion=sedevacantist
+	2310.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2380.11.7={death=yes}
+		}
+	}
+}
+2200199={
+	name="Daniel" #Carmine
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=1850066
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=flamboyant_schemer
+	trait=wroth
+	trait=ambitious
+	trait=cynical
+	trait=schemer
+	disallow_random_traits=yes
+	mother=2200198
+	culture=german
+	religion=sedevacantist
+	2350.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2419.7.11={death={
+			death_reason=death_battle_duel #Murdered in combat.
+			killer=2200009
+		}
+	}
+		}
+	}
+}
+2200200={
+	name="John" #Carmine
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=1850066
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=flamboyant_schemer
+	trait=patient
+	trait=ambitious
+	trait=diligent
+	trait=schemer
+	trait=way_book
+	disallow_random_traits=yes
+	father=2200199
+	culture=german
+	religion=cetic
+	2390.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2469.7.11={death=yes}
+		}
+	}
+}
+2200201={
+	name="Michael" #Carmine
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=1850066
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=flamboyant_schemer
+	trait=patient
+	trait=ambitious
+	trait=way_cowl
+	trait=diligent
+	trait=schemer
+	trait=lustful
+	disallow_random_traits=yes
+	father=2200200
+	culture=german
+	religion=cetic
+	2430.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2500.7.11={death=yes}
+		}
+	}
+}
+2200202={
+	name="Skyler" #Carmine
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=1850066
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=flamboyant_schemer
+	trait=patient
+	trait=ambitious
+	trait=diligent
+	trait=shrewd
+	trait=schemer
+	trait=imp_ex4
+	trait=way_fist
+	disallow_random_traits=yes
+	father=2200201
+	culture=german
+	religion=cetic
+	2480.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2530.7.11={death=yes}
+		}
+	}
+}
+2200203={
+	name="Michael" #Carmine
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=1850066
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=elusive_shadow
+	trait=patient
+	trait=ambitious
+	trait=diligent
+	trait=shrewd
+	trait=schemer
+	trait=way_cowl
+	trait=imp_ex4
+	disallow_random_traits=yes
+	father=2200202
+	culture=german
+	religion=cetic
+	2520.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2600.7.11={death=yes}
+		}
+	}
+}
+2200204={
+	name="Madeleine" #Flowers
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=2030024
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=grey_eminence
+	trait=patient
+	trait=kind
+	trait=ambitious
+	trait=diligent
+	trait=shrewd
+	trait=way_dove
+	trait=legit_bastard
+	trait=imp_ex4
+	disallow_random_traits=yes
+	father=2200201
+	culture=german
+	religion=cetic
+	2560.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2620.7.11={death=yes}
+		}
+	}
+}
+2200205={
+	name="Cynthia" #Flowers
+	dna="bhbdjmhabbs"
+	properties="wf0cjd000000"
+	dynasty=2030024
+	martial=4
+	diplomacy=10
+	stewardship=4
+	intrigue=6
+	learning=6
+	trait=grey_eminence
+	trait=patient
+	trait=kind
+	trait=content
+	trait=diligent
+	trait=shrewd
+	trait=way_book
+	trait=imp_ex4
+	disallow_random_traits=yes
+	mother=2200204
+	culture=german
+	religion=cetic
+	2604.12.20={
+		birth=yes
+		culture=angeleno
+		effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+			set_character_flag=overridemarriage
+	2660.7.11={death=yes}
+		}
+	}
 }
 
