@@ -16,6 +16,297 @@ namespace = jewish
 
 
 
+character_event = {
+	id = jewish.1
+	desc = EVTDESC_jewish_choose
+	picture = GFX_evt_bishop
+	religion = jewish
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+
+	option = {
+		name = EVTOPT_jewish_yashvai
+		desc = EVTOPT_jewish_yashvai_desc
+		hidden_tooltip = {
+			remove_trait = jewish_derekh_eretz
+			remove_trait = jewish_chassid
+		}
+		add_trait = jewish_yashvai
+		show_trait = jewish_yashvai
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = jewish_yashvai }
+			modifier = { factor = 1.5 trait = erudite }
+			modifier = { factor = 1.5 trait = proud }
+			modifier = { factor = 5 culture = yiddish }
+		}
+	}
+
+	option = {
+		name = EVTOPT_jewish_derekh_eretz
+		desc = EVTOPT_jewish_derekh_eretz_desc
+		hidden_tooltip = {
+			remove_trait = jewish_yashvai
+			remove_trait = jewish_chassid
+		}
+		add_trait = jewish_derekh_eretz
+		show_trait = jewish_derekh_eretz
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = jewish_derekh_eretz }
+			modifier = { factor = 2 trait = gregarious }
+			modifier = { factor = 5 trait = mystic }
+			modifier = { factor = 2 culture = neoladino }
+			modifier = { factor = 2 culture = tehrangeleno }
+			modifier = { factor = 4 trait = kind }
+			
+		}
+	}
+	
+	option = {
+		name = EVTOPT_jewish_chassid
+		desc = EVTOPT_jewish_chassid_desc
+		hidden_tooltip = {
+			remove_trait = jewish_derekh_eretz
+			remove_trait = jewish_yashvai
+		}
+		add_trait = jewish_chassid
+		show_trait = jewish_chassid
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = jewish_chassid }
+			modifier = { factor = 2 trait = humble }
+			modifier = { factor = 1.5 trait = lustful }
+			modifier = { factor = 1.5 trait = gregarious }
+			modifier = { factor = 0.1 culture = sefardi }
+			modifier = { factor = 0.1 culture = neoladino }
+			modifier = { factor = 5 culture = yiddish }
+		}
+	}
+
+}
+
+######################HAREDI EVENTS#####################
+
+#Hold Tish for your Court Rabbi
+narrative_event = {
+	id = jewish.10
+	title = EVTTITLE_TISH_INVITATION
+	desc = EVTDESC_TISH_INVITATION
+	picture = GFX_weinles_synagogue
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_inform_haredi_rabbi
+		job_spiritual = {
+			set_character_flag = invited_to_tish
+		}
+		character_event = { id = jewish.11 days = 2 }
+	}
+}
+character_event = {
+	id = jewish.11
+	desc = OK
+	picture = GFX_evt_synagogue
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		random_list = {
+			25 = { set_character_flag = random_torah_verse_1 }
+			25 = { set_character_flag = random_torah_verse_2 }
+			25 = { set_character_flag = random_torah_verse_3 }
+			25 = { set_character_flag = random_torah_verse_4 }
+		}
+		narrative_event = { id = jewish.12 days = 2 }
+	}
+}
+narrative_event = {
+	id = jewish.12
+	title = EVTTITLE_RECITING_TORAH
+	#Have the Same Intro in the localization just change out the Torah Verses the Rabbi recites
+	desc = {
+		trigger = {
+			has_character_flag = random_torah_verse_1
+		}
+		text = TORAH_VERSE_1
+	}
+	desc = {
+		trigger = {
+			has_character_flag = random_torah_verse_2
+		}
+		text = TORAH_VERSE_2
+	}
+	desc = {
+		trigger = {
+			has_character_flag = random_torah_verse_3
+		}
+		text = TORAH_VERSE_3
+	}
+	desc = {
+		trigger = {
+			has_character_flag = random_torah_verse_4
+		}
+		text = TORAH_VERSE_4
+	}
+	picture = GFX_rebbe_wisdom
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_praise_rabbi
+		add_character_modifier = { name = haredi_learning years = 1 }
+		AND = {
+			clr_character_flag = { random_torah_verse_1 }
+			clr_character_flag = { random_torah_verse_2 }
+			clr_character_flag = { random_torah_verse_3 }
+			clr_character_flag = { random_torah_verse_4 }
+		}
+		narrative_event = { id = jewish.13 days = 2 }
+	}
+}
+narrative_event = {
+	id = jewish.13
+	title = EVTTITLE_A_NIGHT_OUT
+	desc = EVTDESC_TISH_PARTY
+	picture = GFX_evt_feast
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_party_with_rabbi
+		hidden_tooltip = {
+			random_list = {
+				5 = { add_trait = drunkard }
+				95 = { }
+			}
+			piety = 10
+		}
+		narrative_event = { id = jewish.14 days = 2 }
+	}
+	option = {
+		name = EVTOPTB_party_with_rabbi
+		hidden_tooltip = {
+			random_list = {
+				5 = { add_trait = wounded }
+				95 = { }
+			}
+			prestige = 10
+		}
+		narrative_event = { id = jewish.14 days = 2 }
+	}
+}
+narrative_event = {
+	id = jewish.14
+	title = EVTTITLE_TISH_FAREWELLS
+	desc = EVTDESC_TISH_END
+	picture = GFX_evt_carriage
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPT_tish_memories
+		job_spiritual = {
+		holder_scope = {
+			opinion = {
+					who = ROOT
+					modifier = opinion_tish_celebration
+				}
+			}
+		}
+		clr_character_flag = invited_to_tish
+	}
+}
+
+#####Interfaith Dialogue
+
+character_event = {
+	id = jewish.31
+	desc = EVTDESC_dialogue_1
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	option = {
+		name = EVTOPTA_dialogue_1
+		FROM = {
+			trigger_switch = {##adds symapthy in accordance with gentiles religion
+				#### rememder to update as more religion groups are added
+				on_trigger = religion_group
+				christian				= { ROOT = { add_trait = sympathy_christendom}}
+				cult_of_saints	 			= { ROOT = { add_trait = sympathy_cult_of_saints } }
+				amero_syncretic 			= { add_trait = sympathy_amero_syncretic }}
+				pagan_group 			= { ROOT = { add_trait = sympathy_pagans }}
+				muslim 					= { ROOT = { add_trait = sympathy_islam }}
+				oldworld	= { ROOT = { add_trait = sympathy_oldworld }}
+				afro_syncretic			= { ROOT = { add_trait = sympathy_afro_syncretic }}
+				american_native				= { ROOT = { add_trait = sympathy_american_native }}
+				mesoamerican_gods				= { ROOT = { add_trait = sympathy_mesoamerican_gods}}
+				indian_group	 			= { ROOT = { add_trait = sympathy_indian } }
+				nautical 			= { add_trait = sympathy_nautical }}
+				latter_day_saints 			= { ROOT = { add_trait = sympathy_latter_day_saints }}
+				pacific 					= { ROOT = { add_trait = sympathy_pacific }}
+			}
+		}
+		clr_character_flag = dialoguing
+		add_character_modifier = {
+			name = recently_dialogued
+			months = 6
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_dialogue_1
+		trigger = {
+			opinion = {
+				who = FROM
+				value = 25
+			}
+			reverse_opinion = {
+				who = FROM
+				value = 25
+			}
+		}
+		
+		FROM = {
+			trigger_switch = {##adds symapthy in accordance with gentiles religion
+				#### remember to update as more religion groups are added
+				on_trigger = religion_group
+				christian				= { ROOT = { add_trait = sympathy_christendom}}
+				cult_of_saints	 			= { ROOT = { add_trait = sympathy_cult_of_saints } }
+				amero_syncretic 			= { add_trait = sympathy_amero_syncretic }}
+				pagan_group 			= { ROOT = { add_trait = sympathy_pagans }}
+				muslim 					= { ROOT = { add_trait = sympathy_islam }}
+				oldworld	= { ROOT = { add_trait = sympathy_oldworld }}
+				afro_syncretic			= { ROOT = { add_trait = sympathy_afro_syncretic }}
+				american_native				= { ROOT = { add_trait = sympathy_american_native }}
+				mesoamerican_gods				= { ROOT = { add_trait = sympathy_mesoamerican_gods}}
+				indian_group	 			= { ROOT = { add_trait = sympathy_indian } }
+				nautical 			= { add_trait = sympathy_nautical }}
+				latter_day_saints 			= { ROOT = { add_trait = sympathy_latter_day_saints }}
+				pacific 					= { ROOT = { add_trait = sympathy_pacific }}
+			}
+			opinion = {
+				who = PREV
+				modifier = opinion_delighted
+			}
+			#character_event = {id = jewish.32 days = 3}
+			clr_character_flag = dialoguing
+			add_character_modifier = {
+				name = recently_dialogued
+				months = 6
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+
 ####################General Jewish Events##############
 
 #######Bar Mitzvah Events

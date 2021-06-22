@@ -2787,6 +2787,58 @@ maskil = {
 	customizer = no
 }
 
+jewish_derekh_eretz = {
+	opposites = {
+		jewish_yashvai
+		jewish_chassid
+	}
+
+	opposite_opinion = -5
+	
+	diplomacy = 1
+
+	
+	potential = { religion = jewish }
+	religious_branch = jewish
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+jewish_chassid = {
+	opposites = {
+		jewish_yashvai
+		jewish_derekh_eretz
+	}
+
+	opposite_opinion = -5
+	
+
+	stewardship = 1
+	
+	potential = { religion = jewish }
+	religious_branch = jewish
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+jewish_yashvai = {
+	opposites = {
+		jewish_derekh_eretz
+		jewish_chassid
+	}
+
+	opposite_opinion = -5
+	
+	learning = 1
+	
+	
+	potential = { religion = jewish }
+	religious_branch = jewish
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+}
+
 bulldog_hcc = {
 	opposite_opinion = -15
 	church_opinion = 10
@@ -2990,6 +3042,8 @@ disinherited_trait = {
 	customizer = no
 	random = no
 }
+
+
 
 #Commented these out because I have no idea what these are supposed to do.
 

@@ -1,4 +1,35 @@
 decisions = {
+	switch_jewish = {
+		ai = no
+		
+		potential = {
+			religion = jewish
+			is_playable = yes
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_character_flag = changedjewishbranch }
+		}
+		
+		allow = {
+			religion = jewish
+			is_playable = yes
+			piety = 500
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				narrative_event = { id = jewish.1 }				
+			}
+			piety = -250
+			add_character_modifier = { name = jewish_outrage years = 10 }
+			set_character_flag = changedjewishbranch
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+	}
 	attend_yeshiva = {
 		only_playable= yes
 		is_high_prio = yes
@@ -13,7 +44,7 @@ decisions = {
 			religion_group = jewish_group
 			OR = {
 				has_focus = focus_theology
-				#trait = haredi_yashvai
+				trait = jewish_yashvai
 			}
 			NOR = { 
 				trait = incapable
@@ -59,6 +90,94 @@ decisions = {
 				trait = erudite
 			}
 		}	
+	}
+	celebrate_tish = {
+		only_playable = yes
+		is_high_prio = yes
+		ai_check_interval = 3
+		potential = {
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			religion = jewish
+			trait = jewish_chassid
+			NOT = {	has_character_flag = tish_in_progress }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			war = no
+			custom_tooltip = {
+				text = UNOCCUPIED_DEMESNE_TITLE
+				hidden_tooltip = {
+					any_demesne_title = {
+						NOT = { higher_tier_than = count }
+						is_occupied = no
+					}
+				}
+			}
+			wealth = 100
+			prisoner = no
+			NOT = { is_inaccessible_trigger = yes }
+			custom_tooltip = {
+				text = is_not_busy_trigger_tooltip
+				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			}
+		}
+		effect = {
+			wealth = -100
+			piety = 50
+			set_character_flag = tish_in_progress
+			set_character_flag = recent_minor_decision
+			set_character_flag = do_not_disturb
+			custom_tooltip = {
+				text = tish_decision
+				hidden_tooltip = { 
+					character_event = { id = jewish.10 } 
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Reapers"
+				}
+				custom_tooltip = {
+					text = capital_prospers_custom_tooltip
+					hidden_tooltip = {
+						capital_scope = {
+							change_variable = { which = prosperity_value value = 8 }
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0
+				NOT = {
+					wealth = 200
+				}
+			}
+			modifier = {
+				factor = 0
+				trait = cynical
+			}	
+			modifier = {
+				factor = 0
+				has_character_flag = recent_minor_decision
+				NOT = {
+					had_character_flag = {
+						flag = recent_minor_decision
+						days = 730
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -143,4 +262,123 @@ targeted_decisions = {
 		}
 	}
 	
+	gain_sympathy = {
+		only_playable = yes
+		from_potential = {
+			#Conditions on the decision taker for the decision to appear. Not taken into account when filter = self, use potential instead.
+			religion = reform
+		}
+		potential = {
+			#Conditions on the targeted character for the decision to appear
+			OR = {#either within the same realm or the realms are neighboring
+				same_realm = FROM
+				any_neighbor_independent_ruler = {
+					any_realm_lord = {
+						character = FROM
+					}
+				}
+			}
+			NOT = {religion_group = jewish_group}
+		}
+		allow = {
+			#Conditions for the decision to be enabled
+			ROOT = {
+				NAND = {
+					trait = zealous
+					has_character_modifier = expelled_jewish
+				}
+				opinion = {
+					who = FROM
+					value = -30
+				}
+				custom_tooltip = {
+					text = not_have_corresponding_sympathy_tooltip
+					OR = {
+						#### reminder to update as more religion groups are added
+						AND = {
+							religion_group = christian
+							FROM = { NOT = { trait = sympathy_christendom}}
+						}
+						AND = {
+							religion_group = cult_of_saints
+							FROM = { NOT = { trait = sympathy_cult_of_saints}}
+						}
+						AND = {
+							religion_group = pagan_group
+							FROM = { NOT = { trait = sympathy_pagans}}
+						}
+						AND = {
+							religion_group = muslim
+							FROM = { NOT = { trait = sympathy_islam}}
+						}
+						AND = {
+							religion_group = oldworld
+							FROM = { NOT = { trait = sympathy_oldworld}}
+						}
+						AND = {
+							religion_group = afro_syncretic
+							FROM = { NOT = { trait = sympathy_afro_syncretic}}
+						}
+						AND = {
+							religion_group = american_native
+							FROM = { NOT = { trait = sympathy_american_native}}
+						}
+						AND = {#in case we ever add the decision to more religions
+							religion_group = amero_syncretic
+							FROM = { NOT = { trait = sympathy_amero_syncretic}}
+						}
+						AND = {#in case we ever add the decision to more religions
+							religion_group = mesoamerican_gods
+							FROM = { NOT = { trait = sympathy_mesoamerican_gods}}
+						}
+						AND = {#in case we ever add the decision to more religions
+							religion_group = indian_group
+							FROM = { NOT = { trait = sympathy_indian}}
+						}
+						AND = {#in case we ever add the decision to more religions
+							religion_group = nautical
+							FROM = { NOT = { trait = sympathy_nautical}}
+						}
+						AND = {#in case we ever add the decision to more religions
+							religion_group = latter_day_saints
+							FROM = { NOT = { trait = sympathy_latter_day_saints}}
+						}	
+						AND = {#in case we ever add the decision to more religions
+							religion_group = pacific
+							FROM = { NOT = { trait = sympathy_pacific}}
+						}
+					}
+				}
+			}
+			FROM = {
+				piety = 50
+				NOT = {is_rival = ROOT}	
+				opinion = {
+					who = ROOT
+					value = -30
+				}
+				NOR = {
+					has_character_flag = dialoguing
+					has_character_modifier = recently_dialogued
+				}	
+			}
+		}	
+		effect = {
+			#Commands executed when taking the decision
+			FROM = {
+				piety = -50
+				set_character_flag = dialoguing
+				character_event ={ id = jewish.31}
+			}
+			ROOT = {
+			}
+		}
+		revoke_allowed = {
+			always = no #Not used in vanilla
+		}
+		ai_will_do = {
+			#Factors for an AI character to take the decision (1 = 100% chance every month - for each allowed target!)
+			factor = 0 #needs to add more later, now at 0 so it won't bug shit
+		}
+	}
 }

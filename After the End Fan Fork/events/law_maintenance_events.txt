@@ -1,0 +1,338 @@
+namespace = law
+
+character_event = {
+	id = law.1
+	desc = OK
+	picture = GFX_evt_religious_exultation
+	hide_window = yes
+	
+	only_independent = yes
+	only_playable = yes
+	
+	
+	trigger = {
+		has_law = religion_tolerance_0
+		is_tribal = no
+		is_nomadic = no	
+		any_realm_province = {
+			NOT = { has_province_modifier = pacifist_province }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		ROOT = {
+			any_realm_province = {	
+				limit = {
+					NOT = { has_province_modifier = pacifist_province }
+				}
+				remove_province_modifier = pacifist_province
+				remove_province_modifier = tolerant_province
+				remove_province_modifier = dogmatic_province
+				remove_province_modifier = inquisitional_province
+				add_province_modifier = {
+					name = pacifist_province
+					duration = -1
+				}
+			}
+		}			
+	}
+}
+
+character_event = {
+	id = law.2
+	desc = OK
+	picture = GFX_evt_religious_exultation
+	hide_window = yes
+	
+	only_independent = yes
+	only_playable = yes
+	
+	
+	trigger = {
+		has_law = religion_tolerance_1
+		is_tribal = no
+		is_nomadic = no	
+		any_realm_province = {
+			NOT = { has_province_modifier = tolerant_province }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		ROOT = {
+			any_realm_province = {	
+				limit = {
+					NOT = { has_province_modifier = tolerant_province }
+				}
+				remove_province_modifier = pacifist_province
+				remove_province_modifier = tolerant_province
+				remove_province_modifier = dogmatic_province
+				remove_province_modifier = inquisitional_province
+				add_province_modifier = {
+					name = tolerant_province
+					duration = -1
+				}
+			}
+		}			
+	}
+}
+
+character_event = {
+	id = law.3
+	desc = OK
+	picture = GFX_evt_religious_exultation
+	hide_window = yes
+	
+	only_independent = yes
+	only_playable = yes
+	
+	
+	trigger = {
+		has_law = religion_tolerance_2
+		is_tribal = no
+		is_nomadic = no	
+		any_realm_province = {
+			has_province_modifier = pacifist_province
+			has_province_modifier = tolerant_province
+			has_province_modifier = dogmatic_province
+			has_province_modifier = inquisitional_province
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		ROOT = {
+			any_realm_province = {	
+				limit= { 
+					OR= {
+						has_province_modifier = pacifist_province
+						has_province_modifier = tolerant_province
+						has_province_modifier = dogmatic_province
+						has_province_modifier = inquisitional_province
+					}
+				}
+				remove_province_modifier = pacifist_province
+				remove_province_modifier = tolerant_province
+				remove_province_modifier = dogmatic_province
+				remove_province_modifier = inquisitional_province
+			}
+		}			
+	}
+}
+
+character_event = {
+	id = law.4
+	desc = OK
+	picture = GFX_evt_religious_exultation
+	hide_window = yes
+	
+	only_independent = yes
+	only_playable = yes
+	
+	
+	trigger = {
+		has_law = religion_tolerance_3
+		is_tribal = no
+		is_nomadic = no	
+		any_realm_province = {
+			NOT = { has_province_modifier = dogmatic_province }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		ROOT = {
+			any_realm_province = {
+				limit= { 
+					NOT = { has_province_modifier = dogmatic_province } 
+				}
+				remove_province_modifier = pacifist_province
+				remove_province_modifier = tolerant_province
+				remove_province_modifier = dogmatic_province
+				remove_province_modifier = inquisitional_province
+				add_province_modifier = {
+					name = dogmatic_province
+					duration = -1
+				}
+			}
+		}			
+	}
+}
+
+
+character_event = {
+	id = law.5
+	desc = OK
+	picture = GFX_evt_religious_exultation
+	hide_window = yes
+	
+	only_independent = yes
+	only_playable = yes
+	
+	
+	trigger = {
+		has_law = religion_tolerance_4
+		is_tribal = no
+		is_nomadic = no	
+		any_realm_province = {
+			NOT = { has_province_modifier = inquisitional_province }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		ROOT = {
+			any_realm_province = {	
+				limit = {
+					NOT = { has_province_modifier = inquisitional_province }
+				}
+				remove_province_modifier = pacifist_province
+				remove_province_modifier = tolerant_province
+				remove_province_modifier = dogmatic_province
+				remove_province_modifier = inquisitional_province
+				add_province_modifier = {
+					name = inquisitional_province
+					duration = -1
+				}
+			}
+		}			
+	}
+}
+
+character_event = {
+	id = law.6
+	desc = OK
+	picture = GFX_evt_religious_exultation
+	hide_window = yes
+
+	only_independent = yes
+	only_playable = yes
+	
+	
+	trigger = {
+		has_law = culture_tolerance_0
+		is_tribal = no
+		is_nomadic = no	
+		any_realm_province = {
+			NOT = { has_province_modifier = autonomous_province }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		ROOT = {
+			any_realm_province = {	
+				limit = {
+					NOT = { has_province_modifier = autonomous_province }
+				}
+				remove_province_modifier = autonomous_province
+				remove_province_modifier = assimilationist_province
+				add_province_modifier = {
+					name = autonomous_province
+					duration = -1
+				}
+			}
+		}			
+	}
+}
+
+character_event = {
+	id = law.7
+	desc = OK
+	picture = GFX_evt_religious_exultation
+	hide_window = yes
+
+	only_independent = yes
+	only_playable = yes
+	
+	
+	trigger = {
+		has_law = culture_tolerance_1
+		is_tribal = no
+		is_nomadic = no	
+		any_realm_province = {
+			OR = { 	
+				has_province_modifier = autonomous_province
+				has_province_modifier = assimilationist_province
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		ROOT = {
+			any_realm_province = {	
+				limit = {
+					OR = { 	
+						has_province_modifier = autonomous_province
+						has_province_modifier = assimilationist_province
+					}
+				}
+				remove_province_modifier = assimilationist_province
+				remove_province_modifier = autonomous_province
+			}
+		}			
+	}
+}
+
+character_event = {
+	id = law.8
+	desc = OK
+	picture = GFX_evt_religious_exultation
+	hide_window = yes
+	
+	only_independent = yes
+	only_playable = yes
+	
+	
+	trigger = {
+		has_law = culture_tolerance_2
+		is_tribal = no
+		is_nomadic = no	
+		any_realm_province = {
+			NOT = { has_province_modifier = assimilationist_province }
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		ROOT = {
+			any_realm_province = {	
+				limit = {
+					NOT = { has_province_modifier = assimilationist_province }
+				}
+				remove_province_modifier = autonomous_province
+				remove_province_modifier = assimilationist_province
+				add_province_modifier = {
+					name = assimilationist_province
+					duration = -1
+				}
+			}
+		}			
+	}
+}

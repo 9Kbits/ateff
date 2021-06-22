@@ -1,0 +1,847 @@
+
+laws = {
+
+# CULTURE TOLERANCE
+
+	#autonomous
+	culture_tolerance_0 = {
+		show_as_title = yes
+		group = culture_tolerance
+		
+		
+		potential = {
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no	
+				independent = yes
+			}
+		}
+		allow = {
+			has_law = culture_tolerance_1
+			TECH_CULTURE_FLEX>=2
+		}
+
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = .01
+			}
+			modifier = {
+				factor = 10
+				holder_scope = { 
+					any_vassal = {
+						limit = { NOT = { culture_group = PREV } }
+						count = 2 
+						always = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = charitable
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+				}
+			}	
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		
+		pass_effect = {
+			owner = {
+				hidden_tooltip = {
+					any_realm_province = {	
+						remove_province_modifier = autonomous_province
+						remove_province_modifier = assimilationist_province
+						add_province_modifier = {
+							name = autonomous_province
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = culture_tolerance_0
+				revoke_law = culture_tolerance_1
+				revoke_law = culture_tolerance_2
+			}
+
+		}
+		
+		culture_flex = -1.0
+
+	}
+
+	#normal
+	culture_tolerance_1 = {
+		show_as_title = yes
+		group = culture_tolerance
+		default = yes
+			
+		potential = {
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+				independent = yes
+			}
+		}
+		allow = {
+			OR = {
+				has_law = culture_tolerance_0
+				has_law = culture_tolerance_2
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 0
+				has_law = culture_tolerance_0
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = charitable
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				has_law = culture_tolerance_0
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+				}
+			}
+			modifier = {
+				factor = 20
+				has_law = culture_tolerance_2
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = charitable
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_law = culture_tolerance_2
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			owner = {
+				hidden_tooltip = {
+					any_realm_province = {	
+						remove_province_modifier = autonomous_province
+						remove_province_modifier = assimilationist_province
+					}	
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = culture_tolerance_0
+				revoke_law = culture_tolerance_1
+				revoke_law = culture_tolerance_2
+			}
+
+		}
+
+	}
+	
+	#assimilationist
+	culture_tolerance_2 = {
+		show_as_title = yes
+		group = culture_tolerance
+		
+		potential = {
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+				independent = yes
+			}
+		}		
+		allow = {
+			has_law = culture_tolerance_1
+			TECH_CULTURE_FLEX>=2
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 0
+				has_law = culture_tolerance_1
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = charitable
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				has_law = culture_tolerance_1
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		
+		pass_effect = {
+			owner = {
+				hidden_tooltip = {
+					any_realm_province = {	
+						remove_province_modifier = autonomous_province
+						remove_province_modifier = assimilationist_province
+						add_province_modifier = {
+							name = assimilationist_province
+							duration = -1
+						}
+					}	
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = culture_tolerance_0
+				revoke_law = culture_tolerance_1
+				revoke_law = culture_tolerance_2
+			}
+
+		}
+		culture_flex = 1.0
+
+	}
+	
+# RELIGIOUS TOLERANCE
+
+	#
+	religion_tolerance_0 = {
+		show_as_title = yes
+		group = religion_tolerance
+		
+		default_selection = {
+			factor = 0
+			additive_modifier = { 
+				value = 10			
+				holder_scope = { 
+					OR = {
+						religion = ruhi
+						religion = neuhumanist
+						religion = haskalah
+					}
+					is_feudal = yes
+				}	
+			}
+			additive_modifier = { 
+				value = 10			
+				title = e_carribean
+			}
+		}
+		
+		potential = {
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no	
+				independent = yes
+			}
+		}
+		allow = {
+			has_law = religion_tolerance_1
+			TECH_CULTURE_FLEX>=1
+		}
+
+		revoke_allowed = {
+			always = no
+		}			
+
+		
+		pass_effect = {
+			hidden_tooltip = {
+				owner = {
+					any_realm_province = {
+						remove_province_modifier = pacifist_province
+						remove_province_modifier = tolerant_province
+						remove_province_modifier = dogmatic_province
+						remove_province_modifier = inquisitional_province
+						add_province_modifier = {
+							name = pacifist_province
+							duration = -1
+						}
+					}
+				}	
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = religion_tolerance_0
+				revoke_law = religion_tolerance_1
+				revoke_law = religion_tolerance_2
+				revoke_law = religion_tolerance_3
+				revoke_law = religion_tolerance_4
+			}
+			set_allow_free_infidel_revokation = no
+			can_demand_religious_conversion = no
+
+		}
+				
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 5
+				holder_scope = {
+					OR = {
+						religion = anabaptist
+						religion = reform
+						religion = neuhumanist
+					}
+				}
+			}
+			modifier = {
+				factor = 10
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = sympathy_christendom
+						trait = sympathy_vernacular
+						trait = sympathy_judaism
+						trait = sympathy_pagans
+						trait = sympathy_islam
+						trait = sympathy_old_world_cults
+						trait = sympathy_islamosyncretic
+						trait = sympathy_scholastic	
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+					trait = zealous
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		
+		zealous_opinion = -10
+		religion_flex = -1.0
+
+	}
+	
+	religion_tolerance_1 = {
+		show_as_title = yes
+		group = religion_tolerance
+		
+		default_selection = {
+			factor = 0
+			additive_modifier = { 
+				value = 10			
+				holder_scope = { 
+					government = merchant_republic_government
+				}	
+			}
+			additive_modifier = { 
+				value = 10
+				capital_scope = {
+					region = custom_fertile_crescent
+				}
+			}
+			additive_modifier = { 
+				value = 10			
+				title = e_baltic
+			}
+		}
+		
+		potential = {
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no	
+				independent = yes
+			}
+		}
+		allow = {	
+			OR = {
+				has_law = religion_tolerance_0
+				has_law = religion_tolerance_2
+			}
+			TECH_CULTURE_FLEX>=1
+		}
+
+		revoke_allowed = {
+			always = no
+		}			
+		
+		pass_effect = {
+			hidden_tooltip = {
+				owner = {
+					any_realm_province = {	
+						remove_province_modifier = pacifist_province
+						remove_province_modifier = tolerant_province
+						remove_province_modifier = dogmatic_province
+						remove_province_modifier = inquisitional_province
+						add_province_modifier = {
+							name = tolerant_province
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = religion_tolerance_0
+				revoke_law = religion_tolerance_1
+				revoke_law = religion_tolerance_2
+				revoke_law = religion_tolerance_3
+				revoke_law = religion_tolerance_4
+			}
+			set_allow_free_infidel_revokation = no
+
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 10
+				has_law = religion_tolerance_2
+				holder_scope = { 
+					any_vassal = {
+						limit = { NOT = { religion_group = PREV } }
+						count = 2 
+						always = yes
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				has_law = religion_tolerance_2
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = sympathy_christendom
+						trait = sympathy_vernacular
+						trait = sympathy_judaism
+						trait = sympathy_pagans
+						trait = sympathy_islam
+						trait = sympathy_old_world_cults
+						trait = sympathy_islamosyncretic
+						trait = sympathy_scholastic	
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_law = religion_tolerance_2
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+					trait = zealous
+				}
+			}
+			modifier = {
+				factor = 0
+				has_law = religion_tolerance_0
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = sympathy_christendom
+						trait = sympathy_vernacular
+						trait = sympathy_judaism
+						trait = sympathy_pagans
+						trait = sympathy_islam
+						trait = sympathy_old_world_cults
+						trait = sympathy_islamosyncretic
+						trait = sympathy_scholastic	
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				has_law = religion_tolerance_0
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+					trait = zealous
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		
+		zealous_opinion = -5
+		religion_flex = -0.5
+	}
+
+	#normal
+	religion_tolerance_2 = {
+		show_as_title = yes
+		group = religion_tolerance
+		default = yes
+			
+		potential = {
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+				independent = yes
+			}
+		}
+		allow = {
+			OR = {
+				has_law = religion_tolerance_1
+				has_law = religion_tolerance_3
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 5
+				has_law = religion_tolerance_3
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = sympathy_christendom
+						trait = sympathy_vernacular
+						trait = sympathy_judaism
+						trait = sympathy_pagans
+						trait = sympathy_islam
+						trait = sympathy_old_world_cults
+						trait = sympathy_islamosyncretic
+						trait = sympathy_scholastic	
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_law = religion_tolerance_3
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+					trait = zealous
+				}
+			}
+			modifier = {
+				factor = 0
+				has_law = religion_tolerance_1
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = sympathy_christendom
+						trait = sympathy_vernacular
+						trait = sympathy_judaism
+						trait = sympathy_pagans
+						trait = sympathy_islam
+						trait = sympathy_old_world_cults
+						trait = sympathy_islamosyncretic
+						trait = sympathy_scholastic	
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				has_law = religion_tolerance_1
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+					trait = zealous
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			hidden_tooltip = {
+				owner = {
+					any_realm_province = {	
+						remove_province_modifier = pacifist_province
+						remove_province_modifier = tolerant_province
+						remove_province_modifier = dogmatic_province
+						remove_province_modifier = inquisitional_province
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				revoke_law = religion_tolerance_0
+				revoke_law = religion_tolerance_1
+				revoke_law = religion_tolerance_2
+				revoke_law = religion_tolerance_3
+				revoke_law = religion_tolerance_4
+			}
+		}
+
+	}
+	
+	#assimilationist
+	religion_tolerance_3 = {
+		show_as_title = yes
+		group = religion_tolerance
+		
+		potential = {
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+				independent = yes
+			}
+		}		
+		allow = {
+			OR= {
+				has_law = religion_tolerance_2
+				has_law = religion_tolerance_4
+			}
+			TECH_CULTURE_FLEX>=1
+		}
+		revoke_allowed = {
+			always = no
+		}			
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 20
+				has_law = religion_tolerance_4
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = sympathy_christendom
+						trait = sympathy_vernacular
+						trait = sympathy_judaism
+						trait = sympathy_pagans
+						trait = sympathy_islam
+						trait = sympathy_old_world_cults
+						trait = sympathy_islamosyncretic
+						trait = sympathy_scholastic	
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_law = religion_tolerance_4
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+					trait = zealous
+				}
+			}
+			modifier = {
+				factor = 0
+				has_law = religion_tolerance_2
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = sympathy_christendom
+						trait = sympathy_vernacular
+						trait = sympathy_judaism
+						trait = sympathy_pagans
+						trait = sympathy_islam
+						trait = sympathy_old_world_cults
+						trait = sympathy_islamosyncretic
+						trait = sympathy_scholastic	
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				has_law = religion_tolerance_2
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+					trait = zealous
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		
+		pass_effect = {
+			hidden_tooltip = {
+				owner = {
+					any_realm_province = {	
+						remove_province_modifier = pacifist_province
+						remove_province_modifier = tolerant_province
+						remove_province_modifier = dogmatic_province
+						remove_province_modifier = inquisitional_province
+						add_province_modifier = {
+							name = dogmatic_province
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = religion_tolerance_0
+				revoke_law = religion_tolerance_1
+				revoke_law = religion_tolerance_2
+				revoke_law = religion_tolerance_3
+				revoke_law = religion_tolerance_4
+			}
+
+		}
+		
+		
+		zealous_opinion = 5
+		religion_flex = 1.0
+		
+	}
+	
+	religion_tolerance_4 = {
+		show_as_title = yes
+		group = religion_tolerance
+		
+		potential = {
+			holder_scope = {
+				is_tribal = no
+				is_nomadic = no
+				independent = yes
+			}
+		}		
+		allow = {
+			has_law = religion_tolerance_3
+			TECH_CULTURE_FLEX>=2
+		}
+		revoke_allowed = {
+			always = no
+		}			
+
+		
+		pass_effect = {
+			hidden_tooltip = {
+				owner = { 
+					any_realm_province = {	
+						remove_province_modifier = pacifist_province
+						remove_province_modifier = tolerant_province
+						remove_province_modifier = dogmatic_province
+						remove_province_modifier = inquisitional_province
+						add_province_modifier = {
+							name = inquisitional_province
+							duration = -1
+						}
+					}	
+				
+				}
+			}
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				revoke_law = religion_tolerance_0
+				revoke_law = religion_tolerance_1
+				revoke_law = religion_tolerance_2
+				revoke_law = religion_tolerance_3
+				revoke_law = religion_tolerance_4
+			}
+		
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
+					OR = {
+						trait = kind
+						trait = sympathy_christendom
+						trait = sympathy_vernacular
+						trait = sympathy_judaism
+						trait = sympathy_pagans
+						trait = sympathy_islam
+						trait = sympathy_old_world_cults
+						trait = sympathy_islamosyncretic
+						trait = sympathy_scholastic	
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				holder_scope = {
+					trait = cruel
+					trait = paranoid
+					trait = possessed
+					trait = zealous
+				}
+			}
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		
+		zealous_opinion = 10
+		religion_flex = 2.0
+	}
+}

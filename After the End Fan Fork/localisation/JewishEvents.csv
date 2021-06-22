@@ -72,7 +72,55 @@ EVTOPTA_yeshiva_teach_2;I hope I can helpful.;;;;;;;;;;;;;x
 EVTDESC_yeshiva_teach_3;You have been looking at the same Daf for what feels like ages, trying to find some way to understand the argument. You turn to [chevruta_partner.GetFirstName] who confuses you further with some nonsense.;;;;;;;;;;;;;x
 EVTOPTA_yeshiva_teach_3;Ugh, useless!;;;;;;;;;;;;;x
 
+EVTDESC_jewish_choose;I find myself distanced from the community I was raised in. The teachings I once valued no longer hold the same meaning. While it might cause scandal, I can choose to join another Haredi community, but which teachings should I choose to follow?;;;;;;;;;;;;;x
+EVTOPT_jewish_yashvai;I will follow the teachings of the Roshei Yeshiva;;;;;;;;;;;;;x
+EVTOPT_jewish_yashvai_desc;Gain the Yashva'i trait;;;;;;;;;;;;;x
+EVTOPT_jewish_chassid;I will follow the wisdom of the Tzadikim;;;;;;;;;;;;;x
+EVTOPT_jewish_chassid_desc;Gain the Chassid trait;;;;;;;;;;;;;x
+EVTOPT_jewish_derekh_eretz;I will follow the philosophers of Torah im Derekh Eretz;;;;;;;;;;;;;x
+EVTOPT_jewish_breslov_desc;Gain the Derekh Eretz trait;;;;;;;;;;;;;x
+
+#dialogue event(s?)
+EVTDESC_dialogue_1;After reading in [From.Religion.GetScriptureName] and other [From.Religion.GetGroupName] texts, I now have a better understanding of their religion and a new appreciation for its followers.;;;;;;;;;;;;;x
+EVTOPTA_dialogue_1;Let there be no hate between me and [From.Religion.GetGroupName] believers.;;;;;;;;;;;;;x
+EVTOPTB_dialogue_1;I shall invite [From.GetTitledFirstName], a [From.Religion.GetFullName] believer, over to my house for further discussion.;;;;;;;;;;;;;x
+not_have_corresponding_sympathy_tooltip; Doesn't have Sympathy for [Root.Religion.GetGroupName]s;;;;;;;;;;;;;x
+
+#Tish Localizations;;;;;;;;;;;;;;
+EVTTITLE_TISH_INVITATION;A Grand Tish;;;;;;;;;;;;;x
+EVTDESC_TISH_INVITATION;To celebrate your great Rebbe [Root.job_spiritual.GetFirstName], Admor of [Root.Capital.GetName], you have decided to hold a grand tish in his honor, inviting all his disciples from far and wide to celebrate.;;;;;;;;;;;;;x
+EVTOPT_inform_haredi_rabbi;Let all come and honor this wise Tzaddik!;;;;;;;;;;;;;x
+EVTTITLE_RECITING_TORAH;The Wisdom of The Rebbe;;;;;;;;;;;;;x
+TORAH_VERSE_1;A silence fills the room as the Rebbe clears his throat and begins to share some words of wisdom: \n A disciple once asked the Baal Shem Tov: "Why is it that one who clings to God and knows he is close to him, sometimes experiences a sense of interruption and remoteness?" \n The Baal Shem explained: "When a father sets out to teach his little son to walk, he stands in front of him and holds his two hands on either side of the child, so that he cannot fall, and the boy goes toward his father between his father's hands. But the moment he is close to his father, he moves away a little, and holds his hands farther apart, and he does this over and over, so that the child may learn to walk.";;;;;;;;;;;;;x
+TORAH_VERSE_2;A silence fills the room as the Rebbe clears his throat and begins to share some words of wisdom: \n Rabbi Pinhas of Koretz once said: "God's relationship to the wicked may be compared to that of a prince who, besides his magnificent palaces, owns all manner of little houses hidden away in the woods and in villages, and visits them occasionally to hunt or to rest. The dignity of a palace is no greater than that of such a temporary abode, for the two are not alike, and what the lesser accomplishes, the greater cannot. It is the same with the righteous man. Though his value and service be great, he cannot accomplish what the wicked man accomplishes in the hour he prays, or does something to honor God, and God who is watching the worlds of confusion, rejoices in him. That is why the righteous man should not consider himself better than the wicked.";;;;;;;;;;;;;x
+TORAH_VERSE_3;A silence fills the room as the Rebbe clears his throat and begins to share some words of wisdom: \n Rabbi Yehiel Mikhal once said: "It is written: 'Who shall ascend into the mountain of the Lord? And who shall stand in His holy place?' For the sake of comparison, let us take a man who rides up a mountain in his carriage, and when he is half-way up, the horses are tired and he must stop and give them a rest. Now, whoever has no sense at this point, will roll down. But he who has sense will take a stone and put it under the wheel while the carriage is standing. Then he will be able to reach the top. The man who does not fall, when he is forced to interrupt his service, but knows how to pause, will get to the top of the mountain of the Lord.";;;;;;;;;;;;;x
+TORAH_VERSE_4;A silence fills the room as the Rebbe clears his throat and begins to share some words of wisdom: \n Rabbi Shelomo of Karlin once said: "When he, who has done all the commandments of the Torah, but has not felt the blaze of holy ecstasy in so doing, comes to that other world, they open the gates of paradise for him. But because he has not felt the blaze of ecstasy in this world, he does not feel the ecstasy of paradise. Now, if he is a fool, and complains, and grumbles: 'And they make so much to-do about paradise!' he is instantly thrown out. But if he is wise, he leaves of his own accord, and goes to the tzaddik, and he teaches the poor soul how to feel ecstasy.";;;;;;;;;;;;;x
+EVTOPT_praise_rabbi;Wise Words!;;;;;;;;;;;;;x
+EVTTITLE_A_NIGHT_OUT;Kol Sasson v'Kol Simcha!;;;;;;;;;;;;;x
+EVTDESC_TISH_PARTY;Your servants bring out a sumptous feast arranged for your Rabbi and the other dignitaries on the high table: kugel filled with raisins and cinnamon, lamb tsimmes, goblets filled to the brim with wine. While many of the disciples ate their meals at home, the Rebbe passes out wine and food for each of them as shiyarim, each recieved with a personal blessing from the Rebbe. \n After the meal, the Rebbe begins with a slight voice, singing a wordless melody. Slowly his disciples begin to join in, the song building in passionate intensity as voices fill the great dining hall with music. Soon the young chassids are dancing on the tables, as their elders clap and sway in the benches!;;;;;;;;;;;;;x
+EVTOPTA_party_with_rabbi;Stay on the benches with another glass of wine;;;;;;;;;;;;;x
+EVTOPTB_party_with_rabbi;Dance with the younger chassids;;;;;;;;;;;;;x
+EVTTITLE_TISH_FAREWELLS;The Tish Ends;;;;;;;;;;;;;x
+EVTDESC_TISH_END;The feasting has finally wound down, and most of the guests have left your court, with many meeting later with the Rebbe individually. Clearly it was a time of great holiness and joy for all who came.;;;;;;;;;;;;;x
+EVTOPT_tish_memories;Rebbe [Root.job_spiritual.GetFirstName] is truly a righteous man!;;;;;;;;;;;;;x
+
+
 bar_mitzvah_good;Impressive Bar Mitzvah;;;;;;;;;;;;;x
 bar_mitzvah_good_desc;After [root.GetHerHis] Bar Mitzvah, [root.GetFirstName] has impressed the nearby Jewish community with [root.GetHerHis] performance.;;;;;;;;;;;;;x
 bar_mitzvah_bad;Disasterous Bar Mitzvah;;;;;;;;;;;;;x
 bar_mitzvah_bad_desc;After [root.GetHerHis] Bar Mitzvah, [root.GetFirstName] has disappointed the nearby Jewish community with [root.GetHerHis] performance.;;;;;;;;;;;;;x
+celebrate_tish;Celebrate a Grand Tish;;;;;;;;;;;;;x
+celebrate_tish_desc;The time has come to invite all the disciples of your Rebbe to an extravagant Tish to hear his words and worship with him.;;;;;;;;;;;;;x
+gain_sympathy;Gain Sympathy for [Root.Religion.GetGroupName] religions;;;;;;;;;;;;;x
+gain_sympathy_desc;Interfaith Dialogue is an important aspect of religon for pious Haskalah Jews, surrounded by powerful non-Jewish Realms you could study about your neighbors faith and and their customs.;;;;;;;;;;;;;x
+switch_jewish;Switch Haredi Movement;;;;;;;;;;;;;x
+switch_jewish_desc;I can change which Haredi movement that I belong to;;;;;;;;;;;;;x
+TXT_change_jewish_branch;Change your Haredi movement;;;;;;;;;;;;;x
+jewish_yashvai;Yashva'i;;;;;;;;;;;;;x
+jewish_yashvai_desc;Yashva'im stress highly intellectual and rationalist Talmud study through yeshivas, rejecting the emphasis on popularized mysticism prevalent in Chasssidim. Many belong to the traditions of the Ashenazi Litvaks or the Sefaradi Haredis.;;;;;;;;;;;;;x
+jewish_derekh_eretz;Torah im Derekh Eretz;;;;;;;;;;;;;x
+jewish_derekh_eretz_desc;Torah im Derekh Eretz, lit. "Torah and the way of the land", is a movement that seeks to balance a strict adherence to the teachings of Halakha with a more open appoach to the outside world, garnering suspicion from the more isolationist Haredi groups.;;;;;;;;;;;;;x
+jewish_chassid;Chassid;;;;;;;;;;;;;x
+jewish_chassid_desc;The Chassidic movement developed in Eastern Europe beginning with the Baal Shem Tov. Chassids follow one of many rabbinical courts, each run by a Rebbe of a given dynasty who guides his followers in all their life decisions and whose position is passed down from father to son.;;;;;;;;;;;;;x
+jewish_outrage;Haredi Outrage;;;;;;;;;;;;;x
+jewish_outrage_desc;The Haredi Community is outraged by the actions of this individual.;;;;;;;;;;;;;x

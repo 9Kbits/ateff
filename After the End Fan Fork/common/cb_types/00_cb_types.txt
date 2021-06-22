@@ -5809,6 +5809,7 @@ religious = {
 		ROOT = {
 			NOT = { religion = cetic }
 			NOT = { trait = patria_santander }
+			NOT = { has_law = religion_tolerance_0 }
 			OR = {
 				NOT = { has_character_modifier = holy_war_cooldown }
 				has_game_rule = { name = holy_war_cooldown_rule value = off }
@@ -5868,6 +5869,7 @@ religious = {
 				religion = transcendentalist
 				religion = libertarian
 				religion = espiritista
+				has_law = religion_tolerance_0
 			}
 			NOT = { pacifist = yes }
 			NAND = { #Reserved for Ursulines
@@ -6203,20 +6205,50 @@ religious = {
 	}
 
 	on_success_title = {
-		custom_tooltip = {
-			text = religious_cb_succ_tip
-			hidden_tooltip = {
+		if = { 
+			show_scope_change = no
+			limit = {
 				ROOT = {
-					vassalize_or_take_under_title = {
-						title = PREV
-						enemy = FROM
-						same_religion = yes # Only vassalize rulers of my religion
-						is_religious = yes
-						type = holy_war
+					NOT = {
+						has_law = religion_tolerance_1
+					}
+				}
+			}
+			custom_tooltip = {
+				text = religious_cb_succ_tip
+				hidden_tooltip = {
+					ROOT = {
+						vassalize_or_take_under_title = {
+							title = PREV
+							enemy = FROM
+							same_religion = yes # Only vassalize rulers of my religion
+							is_religious = yes
+							type = holy_war
+						}
 					}
 				}
 			}
 		}
+		if = { # Preserve Vassals if Tolerant
+			show_scope_change = no
+			limit = {
+				ROOT = { has_law = religion_tolerance_1 }
+			}
+			custom_tooltip = {
+				text = religious_cb_succ_muslim_tip
+				hidden_tooltip = {
+					ROOT = {
+						vassalize_or_take_under_title = {
+							title = PREV
+							enemy = FROM
+							is_religious = yes
+							type = holy_war
+						}
+					}
+				}
+			}
+		}
+
 	}
 
 	on_fail = {
@@ -11315,6 +11347,9 @@ pagan_holy_war = { #
 	
 	can_use_gui = {
 		ROOT = {
+			NOT = {
+				has_law = religion_tolerance_0
+			}
 			OR = {
 				NOT = { has_character_modifier = holy_war_cooldown }
 				has_game_rule = { name = holy_war_cooldown_rule value = off }

@@ -4541,17 +4541,35 @@ faction_independence = {
 			is_reformed_religion = no
 		}
 		
+		
 		modifier = {
 			factor = 2.0
+				AND = {
+					NOT = { religion_group = ROOT }
+					NOR = { 
+						has_law = religion_tolerance_0
+						has_law = religion_tolerance_1
+					}
+				}
+		}
+		
+		modifier = {
+			factor = 1.5
 			liege = {
-				NOT = { religion_group = ROOT }
+				AND = {
+					NOT = { culture_group = ROOT }
+					NOT = { has_law = culture_tolerance_0 }
+				}
 			}
 		}
 		
 		modifier = {
-			factor = 2.0
+			factor = 1.5
 			liege = {
-				NOT = { culture_group = ROOT }
+				AND = {
+					NOT = { culture_group = ROOT }
+					has_law = culture_tolerance_2
+				}
 			}
 		}
 		

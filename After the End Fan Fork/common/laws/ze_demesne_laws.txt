@@ -631,6 +631,10 @@ laws = {
 		group = revoke_title_law
 		allow = {
 			NOT = { has_law = revoke_title_law_0 }
+			NOR = {
+				has_law = religion_tolerance_0
+				has_law = religion_tolerance_1
+			}
 			NOT = { holder_scope = { has_religion_feature = religion_cosmopolitan } }
 			conditional_tooltip = {
 				trigger = {
@@ -876,7 +880,8 @@ laws = {
 						NOR = { 
 							government = military_governorate 
 							has_religion_feature = religion_cosmopolitan
-							
+							has_law = religion_tolerance_0
+							has_law = religion_tolerance_1
 						} 
 					}
 				}

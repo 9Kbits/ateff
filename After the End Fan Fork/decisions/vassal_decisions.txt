@@ -413,4 +413,80 @@ targetted_decisions = {
 		}
 	}	
 	
+	demand_religious_conversion = {
+		filter = sub_realm
+		ai_target_filter = sub_realm
+		
+		from_potential = {
+			is_playable = yes
+			has_regent = no
+			NOT = { has_law = religion_tolerance_0 }
+			NOR = { 
+				government = merchant_republic_government
+				religion = reform
+				religion = anabaptist
+				AND = {
+					religion_group = pagan_group
+					is_reformed_religion = no
+				}
+			}
+		}
+		potential = {
+			NOR = {
+				character = FROM
+				religion = FROM
+				trait = incapable
+			}
+			is_adult = yes
+			liege = {
+				character = FROM
+			}
+			OR = {
+				prisoner = no
+				host = {
+					character = FROM
+				}
+			}
+		}
+		allow = {
+			OR = {
+				NOT = {
+					has_opinion_modifier = {	#Can not try to convert if recently failed to convert
+						who = FROM
+						modifier = tried_to_convert_me
+					}
+				}
+				AND = {
+					prisoner = yes
+					host = {
+						character = FROM
+					}
+				}
+			}				
+		}
+		effect = {
+			letter_event = {
+				id = demand_conversion.1
+				days = 3
+				random = 7
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.001	#slow it down
+			}
+			modifier = {
+				limit = {	
+					AND = {
+						has_law = religion_tolerance_1
+						NOT = { trait = zealous }
+					}
+				}
+			}
+		}
+	}
 }
