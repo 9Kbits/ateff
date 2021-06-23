@@ -1,0 +1,1891 @@
+###################################
+#
+# Guy Fawke Day Bonfire Festival
+# - Edited Blot Events
+#
+###################################
+
+# Blot Event written by Henrik Eklund
+# Edited by Derrick
+
+#Things to ADD the reflavoring
+#Things Edited the removal of all forms of Sacrifice from the events
+
+namespace = bonfire
+
+# You summon your vassals to a Bonfire
+character_event = {
+	id = bonfire.600
+	desc = EVTDESC_bonfire_600
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_600
+		any_vassal = {
+			limit = {
+				religion = glorian
+				NOT = { is_inaccessible_trigger = yes }
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { trait = incapable }
+			}
+			character_event = { id = bonfire.601 tooltip = EVTTOOLTIP_bonfire_601 }
+			hidden_tooltip = { narrative_event = { id = bonfire.605 days = 10 } }
+		}
+		any_vassal = {
+			limit = {
+				NOT = {
+					religion = glorian
+				}
+				NOT = { is_inaccessible_trigger = yes }
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { trait = incapable }
+			}
+			character_event = { id = bonfire.602 tooltip = EVTTOOLTIP_bonfire_602 }
+		}
+		hidden_tooltip = { narrative_event = { id = bonfire.604 days = 10 } }
+	}
+	option = {
+		trigger = {
+			OR = {
+				trait = lunatic
+				trait = possessed
+				trait = cruel
+				trait = arbitrary
+			}
+		}
+		name = EVTOPTB_bonfire_600
+		any_vassal = {
+			limit = {
+				religion = glorian
+				NOT = { is_inaccessible_trigger = yes }
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { trait = incapable }
+			}
+			character_event = { id = bonfire.601 tooltip = EVTTOOLTIP_bonfire_601 }
+			hidden_tooltip = { narrative_event = { id = bonfire.605 days = 10 } }
+		}
+		any_vassal = {
+			limit = {
+				NOT = {
+					religion = glorian
+				}
+				NOT = { is_inaccessible_trigger = yes }
+				age = 16
+				prisoner = no
+				war = no
+				NOT = { trait = incapable }
+			}
+			character_event = { id = bonfire.602 tooltip = EVTTOOLTIP_bonfire_602 }
+		}
+		hidden_tooltip = { narrative_event = { id = bonfire.604 days = 10 } }
+	}
+}
+
+# Summoned to light the Bonfire (Vassal)
+character_event = {
+	id = bonfire.601
+	desc = EVTDESC_bonfire_601
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	trigger = { NOT = { is_inaccessible_trigger = yes } }
+	
+	option = {
+		name = EVTOPTA_bonfire_601
+		set_character_flag = attending_bonfire
+		set_character_flag = do_not_disturb
+		
+		hidden_tooltip = { character_event = { id = bonfire.699 days = 50 } } # Safety catch flag clearing
+	}
+}
+
+# Non-Glorians pay to skip Bonfire
+character_event = {
+	id = bonfire.602
+	desc = EVTDESC_bonfire_602
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = { # Pay
+		name = EVTOPTA_bonfire_602
+		trigger = {
+			wealth = 5
+		}
+		FROM = {
+			character_event = { id = bonfire.603 tooltip = EVTTOOLTIP_bonfire_603 }
+		}
+		wealth = -5
+	}
+	option = { # Don't pay
+		name = EVTOPTB_bonfire_602
+		FROM = {
+			character_event = { id = bonfire.636 tooltip = EVTTOOLTIP_bonfire_636 }
+		}
+		tooltip = {
+			FROM = {
+				opinion = {
+					modifier = opinion_refused_bonfire
+					who = ROOT
+				}
+				any_vassal = {
+					limit = { has_character_flag = attending_bonfire }
+					opinion = {
+						modifier = opinion_refused_bonfire
+						who = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+
+# Non-Glorians pay to skip Bonfire (Liege)
+character_event = {
+	id = bonfire.603
+	desc = EVTDESC_bonfire_603
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_603
+		wealth = 20
+	}
+}
+
+# Non-Glorians refuse to pay to skip Bonfire (Liege)
+character_event = {
+	id = bonfire.636
+	desc = EVTDESC_bonfire_636
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_636
+	}
+}
+
+# Bonfire Begins! (Liege)
+narrative_event = {
+	id = bonfire.604
+	title = bonfire605_TITLE
+	desc = EVTDESC_bonfire_604
+	picture = GFX_glorian_bonfire
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_604
+		custom_tooltip = { text = blot_begins }
+		if = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_HELD_BLOT
+				picture = GFX_glorian_bonfire
+			}
+		}
+		character_event = { id = bonfire.610 days = 5 }
+	}
+}
+
+###Future Space for the Kids begging for Change (graphics: GFX_gift_giving_british)
+
+# Bonfire Begins! (Vassal)
+narrative_event = {
+	id = bonfire.605
+	title = bonfire605_TITLE
+	desc = EVTDESC_bonfire_605
+	picture = GFX_glorian_bonfire
+	border = GFX_event_narrative_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_604
+		character_event = { id = bonfire.641 days = 5 }
+	}
+}
+
+# Sacrifice Effigy... (Liege) - Currently Needs to be redone
+character_event = {
+	id = bonfire.610
+	desc = EVTDESC_bonfire_610
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPT_bonfire_610
+		character_event = { id = bonfire.640 days = 5 }
+	}
+}
+
+# Feast Begins (Liege)
+character_event = {
+	id = bonfire.640
+	desc = EVTDESC_bonfire_640
+	picture = GFX_glorian_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_640
+		hidden_tooltip = {
+			any_vassal = {
+				limit = { has_character_flag = attending_bonfire }
+				character_event = { id = bonfire.641 }
+			}
+			character_event = { id = bonfire.642 days = 25 }
+			random_list = {
+				10 = { character_event = { id = bonfire.683 days = 3 } }
+				10 = { character_event = { id = bonfire.684 days = 3 } }
+				10 = { character_event = { id = bonfire.685 days = 3 } }
+				10 = { character_event = { id = bonfire.686 days = 3 } }
+				10 = { character_event = { id = bonfire.687 days = 3 } }
+				10 = { character_event = { id = bonfire.688 days = 3 } }
+				10 = { character_event = { id = bonfire.689 days = 3 } }
+			}
+			random_list = {
+				10 = { character_event = { id = bonfire.683 days = 8 } }
+				10 = { character_event = { id = bonfire.684 days = 8 } }
+				10 = { character_event = { id = bonfire.685 days = 8 } }
+				10 = { character_event = { id = bonfire.686 days = 8 } }
+				10 = { character_event = { id = bonfire.687 days = 8 } }
+				10 = { character_event = { id = bonfire.688 days = 8 } }
+				10 = { character_event = { id = bonfire.689 days = 8 } }
+			}
+			random_list = {
+				10 = { character_event = { id = bonfire.683 days = 13 } }
+				10 = { character_event = { id = bonfire.684 days = 13 } }
+				10 = { character_event = { id = bonfire.685 days = 13 } }
+				10 = { character_event = { id = bonfire.686 days = 13 } }
+				10 = { character_event = { id = bonfire.687 days = 13 } }
+				10 = { character_event = { id = bonfire.688 days = 13 } }
+				10 = { character_event = { id = bonfire.689 days = 13 } }
+			}
+			random_list = {
+				10 = { character_event = { id = bonfire.683 days = 18 } }
+				10 = { character_event = { id = bonfire.684 days = 18 } }
+				10 = { character_event = { id = bonfire.685 days = 18 } }
+				10 = { character_event = { id = bonfire.686 days = 18 } }
+				10 = { character_event = { id = bonfire.687 days = 18 } }
+				10 = { character_event = { id = bonfire.688 days = 18 } }
+				10 = { character_event = { id = bonfire.689 days = 18 } }
+			}
+		}
+		set_character_flag = blot_feast
+		
+		hidden_tooltip = {
+			any_vassal = {
+				limit = { has_character_flag = attending_bonfire }
+				opinion = {
+					modifier = opinion_held_blot
+					who = ROOT
+				}
+			}
+		}
+		
+		custom_tooltip = { text = feast_begins }
+	}
+}
+
+# Feast Begins (Vassal)
+character_event = {
+	id = bonfire.641
+	desc = EVTDESC_bonfire_640
+	picture = GFX_glorian_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_641
+		set_character_flag = blot_feast_vassal
+		custom_tooltip = { text = feast_begins }
+	}
+}
+
+# Feast Ends (Liege)
+character_event = {
+	id = bonfire.642
+	desc = EVTDESC_bonfire_642
+	picture = GFX_glorian_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	hide_from = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_642
+		hidden_tooltip = {
+			any_vassal = {
+				limit = { has_character_flag = attending_bonfire }
+				character_event = { id = bonfire.643 }
+			}
+		}
+		add_character_modifier = {
+			name = held_blot_timer
+			duration = 3285
+			hidden = yes
+		}
+		add_character_modifier = {
+			name = held_blot_modifier
+			duration = 365
+		}
+		clr_character_flag = holding_blot
+		clr_character_flag = blot_feast
+		clr_character_flag = feast_drunkard
+		clr_character_flag = feast_gluttonous
+		clr_character_flag = feast_lunatic
+		clr_character_flag = feast_lustful
+		clr_character_flag = feast_homosexual
+		clr_character_flag = do_not_disturb
+	}
+}
+
+# Feast Ends (Vassal)
+character_event = {
+	id = bonfire.643
+	desc = EVTDESC_bonfire_643
+	picture = GFX_glorian_feast
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_642
+		clr_character_flag = attending_bonfire
+		clr_character_flag = blot_feast_vassal
+		clr_character_flag = feast_drunkard
+		clr_character_flag = feast_gluttonous
+		clr_character_flag = feast_lunatic
+		clr_character_flag = feast_lustful
+		clr_character_flag = feast_friendship
+		clr_character_flag = feast_homosexual
+		clr_character_flag = do_not_disturb
+	}
+}
+
+### Feast Events
+
+# Drunkard (Guest)
+character_event = {
+	id = bonfire.650
+	desc = EVTDESC_bonfire_650
+	picture = GFX_evt_drunk
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast_vassal
+		NOT = { has_character_flag = feast_drunkard }
+		liege = { 
+			has_character_flag = blot_feast
+			NOT = { has_character_flag = feast_drunkard }
+		}
+		trait = drunkard
+	}
+	
+#	mean_time_to_happen = {
+#		days = 60
+#		
+#		modifier = {
+#			factor = 1.1
+#			liege = { num_of_vassals = 10 }
+#		}
+#		modifier = {
+#			factor = 1.2
+#			liege = { num_of_vassals = 20 }
+#		}
+#		modifier = {
+#			factor = 1.3
+#			liege = { num_of_vassals = 30 }
+#		}
+#		modifier = {
+#			factor = 1.4
+#			liege = { num_of_vassals = 40 }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			liege = { num_of_vassals = 50 }
+#		}
+#		modifier = {
+#			factor = 3
+#			liege = { num_of_vassals = 100 }
+#		}
+#	}
+	
+	option = {
+		name = EVTOPTA_bonfire_650
+		tooltip_info = drunkard
+		set_character_flag = feast_drunkard
+		hidden_tooltip = {
+			liege = {
+				set_character_flag = feast_drunkard
+				character_event = { id = bonfire.651 }
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+					}
+					character_event = { id = bonfire.651 }
+				}
+			}
+		}
+		tooltip = {
+			liege = {
+				if = {
+					limit = { NOT = { trait = drunkard } }
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+				if = {
+					limit = { trait = drunkard }
+					opinion = {
+						modifier = opinion_drinking_buddy
+						who = ROOT
+					}
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+						NOT = { trait = drunkard }
+					}
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+						trait = drunkard
+					}
+					opinion = {
+						modifier = opinion_drinking_buddy
+						who = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+
+# Drunkard (Host and Other Guests)
+character_event = {
+	id = bonfire.651
+	desc = EVTDESC_bonfire_651
+	picture = GFX_evt_drunk
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_651
+		trigger = { 
+			NOT = { trait = drunkard } 
+		}
+		opinion = {
+			modifier = opinion_feast_scandal
+			who = FROM
+		}
+	}
+	option = {
+		name = EVTOPTB_bonfire_651
+		tooltip_info = drunkard
+		trigger = { 
+			trait = drunkard
+		}
+		opinion = {
+			modifier = opinion_drinking_buddy
+			who = FROM
+		}
+	}
+}
+
+# Gluttonous (Victim Hidden)
+character_event = {
+	id = bonfire.652
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast_vassal
+		liege = {
+			has_character_flag = blot_feast
+			NOT = { has_character_flag = feast_gluttonous }
+			any_vassal = {
+				has_character_flag = blot_feast_vassal
+				NOT = { has_character_flag = feast_gluttonous }
+				trait = gluttonous
+				NOT = { character = ROOT }
+			}
+		}
+	}
+	
+#	mean_time_to_happen = {
+#		days = 60
+#		
+#		modifier = {
+#			factor = 1.1
+#			liege = { num_of_vassals = 10 }
+#		}
+#		modifier = {
+#			factor = 1.2
+#			liege = { num_of_vassals = 20 }
+#		}
+#		modifier = {
+#			factor = 1.3
+#			liege = { num_of_vassals = 30 }
+#		}
+#		modifier = {
+#			factor = 1.4
+#			liege = { num_of_vassals = 40 }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			liege = { num_of_vassals = 50 }
+#		}
+#		modifier = {
+#			factor = 3
+#			liege = { num_of_vassals = 100 }
+#		}
+#	}
+	
+	immediate = {
+		liege = {
+			set_character_flag = feast_gluttonous
+			random_vassal = {
+				limit = {
+					has_character_flag = blot_feast_vassal
+					trait = gluttonous
+					NOT = { character = ROOT }
+				}
+				character_event = { id = bonfire.653 }
+				set_character_flag = feast_gluttonous
+			}
+		}
+	}
+}
+
+# Gluttonous (Guest)
+character_event = {
+	id = bonfire.653
+	desc = EVTDESC_bonfire_653
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_653
+		tooltip_info = gluttonous
+		FROM = {
+			character_event = { id = bonfire.654 tooltip = EVTTOOLTIP_bonfire_654 }
+		}	
+		hidden_tooltip = {
+			liege = {
+				character_event = { id = bonfire.655 }
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { 
+							character = ROOT 
+							character = FROM
+						}
+					}
+					character_event = { id = bonfire.655 }
+				}
+			}
+		}
+		tooltip = {
+			FROM = {
+				opinion = {
+					modifier = opinion_vomit
+					who = ROOT
+				}
+			}
+			liege = {
+				opinion = {
+					modifier = opinion_feast_scandal
+					who = ROOT
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { 
+							character = ROOT 
+							character = FROM
+						}
+					}
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+
+# Gluttonous (Victim)
+character_event = {
+	id = bonfire.654
+	desc = EVTDESC_bonfire_654
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_654
+		opinion = {
+			modifier = opinion_vomit
+			who = FROM
+		}
+	}
+}
+
+# Gluttonous (Host and Other Guests)
+character_event = {
+	id = bonfire.655
+	desc = EVTDESC_bonfire_655
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_655
+		opinion = {
+			modifier = opinion_feast_scandal
+			who = FROM
+		}
+	}
+}
+
+# Lunatic (Guest)
+character_event = {
+	id = bonfire.656
+	desc = EVTDESC_bonfire_656
+	picture = GFX_evt_lunatic
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast_vassal
+		NOT = { has_character_flag = feast_lunatic }
+		liege = { 
+			has_character_flag = blot_feast
+			NOT = { has_character_flag = feast_lunatic }
+		}
+		trait = lunatic
+	}
+	
+#	mean_time_to_happen = {
+#		days = 60
+#		
+#		modifier = {
+#			factor = 1.1
+#			liege = { num_of_vassals = 10 }
+#		}
+#		modifier = {
+#			factor = 1.2
+#			liege = { num_of_vassals = 20 }
+#		}
+#		modifier = {
+#			factor = 1.3
+#			liege = { num_of_vassals = 30 }
+#		}
+#		modifier = {
+#			factor = 1.4
+#			liege = { num_of_vassals = 40 }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			liege = { num_of_vassals = 50 }
+#		}
+#		modifier = {
+#			factor = 3
+#			liege = { num_of_vassals = 100 }
+#		}
+#	}
+	
+	option = {
+		name = EVTOPTA_bonfire_656
+		tooltip_info = lunatic
+		set_character_flag = feast_lunatic
+		hidden_tooltip = {
+			liege = {
+				set_character_flag = feast_lunatic
+				character_event = { id = bonfire.657 }
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+					}
+					character_event = { id = bonfire.657 }
+				}
+			}
+		}
+		tooltip = {
+			liege = {
+				if = {
+					limit = { NOT = { trait = lunatic } }
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+				if = {
+					limit = { trait = lunatic }
+					opinion = {
+						modifier = opinion_feast_friend
+						who = ROOT
+					}
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+						NOT = { trait = lunatic }
+					}
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+						trait = lunatic
+					}
+					opinion = {
+						modifier = opinion_feast_friend
+						who = ROOT
+					}
+				}
+			}
+		}	
+	}
+}
+
+# Lunatic (Host and Other Guests)
+character_event = {
+	id = bonfire.657
+	desc = EVTDESC_bonfire_657
+	picture = GFX_evt_lunatic
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_657
+		trigger = {
+			NOT = { trait = lunatic }
+		}
+		opinion = {
+			modifier = opinion_feast_scandal
+			who = ROOT
+		}
+	}
+	option = {
+		name = EVTOPTB_bonfire_657
+		tooltip_info = lunatic
+		trigger = {
+			trait = lunatic
+		}
+		opinion = {
+			modifier = opinion_feast_friend
+			who = ROOT
+		}
+	}
+}
+
+# Lustful (Guest)
+character_event = {
+	id = bonfire.658
+	desc = EVTDESC_bonfire_658
+	picture = GFX_evt_brothel
+	border = GFX_event_normal_frame_religion
+	hide_from = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast_vassal
+		NOT = { has_character_flag = feast_lustful }
+		liege = { 
+			has_character_flag = blot_feast
+			NOT = { has_character_flag = feast_lustful }
+		}
+		trait = lustful
+		is_female = no
+	}
+	
+#	mean_time_to_happen = {
+#		days = 60
+#		
+#		modifier = {
+#			factor = 1.1
+#			liege = { num_of_vassals = 10 }
+#		}
+#		modifier = {
+#			factor = 1.2
+#			liege = { num_of_vassals = 20 }
+#		}
+#		modifier = {
+#			factor = 1.3
+#			liege = { num_of_vassals = 30 }
+#		}
+#		modifier = {
+#			factor = 1.4
+#			liege = { num_of_vassals = 40 }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			liege = { num_of_vassals = 50 }
+#		}
+#		modifier = {
+#			factor = 3
+#			liege = { num_of_vassals = 100 }
+#		}
+#	}
+	
+	option = {
+		name = EVTOPTA_bonfire_658
+		tooltip_info = lustful
+		set_character_flag = feast_lustful
+		trigger = {
+			is_married = no
+		}
+		hidden_tooltip = {
+			liege = {
+				set_character_flag = feast_lustful
+				character_event = { id = bonfire.659 }
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+					}
+					character_event = { id = bonfire.659 }
+				}
+			}
+		}
+		tooltip = {
+			liege = {
+				if = {
+					limit = { NOT = { trait = lustful } }
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+				if = {
+					limit = { trait = lustful }
+					opinion = {
+						modifier = opinion_lustful_buddy
+						who = ROOT
+					}
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+						NOT = { trait = lustful }
+					}
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+						trait = lustful
+					}
+					opinion = {
+						modifier = opinion_lustful_buddy
+						who = ROOT
+					}
+				}
+			}
+		}	
+	}
+	option = {
+		name = EVTOPTB_bonfire_658
+		tooltip_info = lustful
+		set_character_flag = feast_lustful
+		trigger = {
+			is_married = yes
+		}
+		hidden_tooltip = {
+			liege = {
+				set_character_flag = feast_lustful
+				character_event = { id = bonfire.659 }
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+					}
+					character_event = { id = bonfire.659 }
+				}
+			}
+		}
+		tooltip = {
+			liege = {
+				if = {
+					limit = { NOT = { trait = lustful } }
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+				if = {
+					limit = { trait = lustful }
+					opinion = {
+						modifier = opinion_lustful_buddy
+						who = ROOT
+					}
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+						NOT = { trait = lustful }
+					}
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+						trait = lustful
+					}
+					opinion = {
+						modifier = opinion_lustful_buddy
+						who = ROOT
+					}
+				}
+			}
+			any_spouse = {
+				opinion = {
+					modifier = opinion_mad_as_hell
+					who = ROOT
+					years = 1
+				}
+			}
+		}	
+	}
+}
+
+# Lustful (Host and Other Guests)
+character_event = {
+	id = bonfire.659
+	desc = EVTDESC_bonfire_659
+	picture = GFX_evt_brothel
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_659
+		trigger = {
+			NOT = { trait = lustful }
+			NOT = { any_spouse = { character = FROM } }
+		}
+		opinion = {
+			modifier = opinion_feast_scandal
+			who = FROM
+		}
+	}
+	option = {
+		name = EVTOPTB_bonfire_659
+		tooltip_info = lustful
+		trigger = {
+			trait = lustful
+			NOT = { any_spouse = { character = FROM } }
+		}
+		opinion = {
+			modifier = opinion_lustful_buddy
+			who = FROM
+		}
+	}
+	option = {
+		name = EVTOPTC_bonfire_659
+		trigger = {
+			any_spouse = { character = FROM }
+		}
+		opinion = {
+			modifier = opinion_mad_as_hell
+			who = FROM
+			years = 1
+		}
+	}
+}
+
+# Friendship Formed (Guest 1 Hidden)
+character_event = {
+	id = bonfire.660
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast_vassal
+		NOT = { has_character_flag = feast_friendship }
+		liege = { 
+			has_character_flag = blot_feast
+			any_vassal = {
+				has_character_flag = blot_feast_vassal
+				NOT = { has_character_flag = feast_friendship }
+				NOT = { character = ROOT }
+				opinion = { who = ROOT value = 20 }
+			}		
+		}
+	}
+	
+#	mean_time_to_happen = {
+#		days = 60
+#		
+#		modifier = {
+#			factor = 1.1
+#			liege = { num_of_vassals = 10 }
+#		}
+#		modifier = {
+#			factor = 1.2
+#			liege = { num_of_vassals = 20 }
+#		}
+#		modifier = {
+#			factor = 1.3
+#			liege = { num_of_vassals = 30 }
+#		}
+#		modifier = {
+#			factor = 1.4
+#			liege = { num_of_vassals = 40 }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			liege = { num_of_vassals = 50 }
+#		}
+#		modifier = {
+#			factor = 3
+#			liege = { num_of_vassals = 100 }
+#		}
+#	}
+	
+	immediate = {
+		set_character_flag = feast_friendship
+		liege = { 
+			random_vassal = {
+				limit = {
+					has_character_flag = blot_feast_vassal
+					NOT = { character = ROOT }
+					opinion = { who = ROOT value = 20 }
+				}
+				character_event = { id = bonfire.661 }
+				set_character_flag = feast_friendship
+				opinion = {
+					modifier = opinion_feast_friend
+					who = ROOT
+				}
+				reverse_opinion = {
+					modifier = opinion_feast_friend
+					who = ROOT
+				}
+			}		
+		}
+	}
+}
+
+# Friendship Formed (Guest 2)
+character_event = {
+	id = bonfire.661
+	desc = EVTDESC_bonfire_661
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_661
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = bonfire.662 }
+			}
+		}
+		tooltip = {
+			FROM = {
+				opinion = {
+					modifier = opinion_feast_friend
+					who = ROOT
+				}
+			}
+			opinion = {
+				modifier = opinion_feast_friend
+				who = FROM
+			}
+		}
+	}
+}
+
+# Friendship Formed (Guest 1)
+character_event = {
+	id = bonfire.662
+	desc = EVTDESC_bonfire_661
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_661
+		tooltip = {
+			FROM = {
+				opinion = {
+					modifier = opinion_feast_friend
+					who = ROOT
+				}
+			}
+			opinion = {
+				modifier = opinion_feast_friend
+				who = FROM
+			}
+		}
+	}
+}
+
+# Homosexual Male (Guest 1 Hidden)
+character_event = {
+	id = bonfire.663
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast_vassal
+		NOT = { has_character_flag = feast_homosexual }
+		trait = homosexual
+		is_female = no
+		has_lover = no
+		liege = { 
+			NOT = { has_character_flag = feast_homosexual }
+			has_character_flag = blot_feast
+			any_vassal = {
+				has_character_flag = blot_feast_vassal
+				NOT = { has_character_flag = feast_homosexual }
+				NOT = { character = ROOT }
+				opinion = { who = ROOT value = 0 }
+				trait = homosexual
+				is_female = no
+				has_lover = no
+			}		
+		}
+	}
+	
+#	mean_time_to_happen = {
+#		days = 40
+#		
+#		modifier = {
+#			factor = 1.1
+#			liege = { num_of_vassals = 10 }
+#		}
+#		modifier = {
+#			factor = 1.2
+#			liege = { num_of_vassals = 20 }
+#		}
+#		modifier = {
+#			factor = 1.3
+#			liege = { num_of_vassals = 30 }
+#		}
+#		modifier = {
+#			factor = 1.4
+#			liege = { num_of_vassals = 40 }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			liege = { num_of_vassals = 50 }
+#		}
+#		modifier = {
+#			factor = 3
+#			liege = { num_of_vassals = 100 }
+#		}
+#	}
+	
+	immediate = {
+		set_character_flag = feast_homosexual
+		liege = { 
+			set_character_flag = feast_homosexual
+			random_vassal = {
+				limit = {
+					has_character_flag = blot_feast_vassal
+					NOT = { has_character_flag = feast_homosexual }
+					NOT = { character = ROOT }
+					opinion = { who = ROOT value = 0 }
+					trait = homosexual
+					is_female = no
+				}
+				character_event = { id = bonfire.664 }
+				add_lover = ROOT
+				set_character_flag = feast_homosexual
+			}		
+		}
+	}
+}
+
+# Homosexual Male (Guest 2)
+character_event = {
+	id = bonfire.664
+	desc = EVTDESC_bonfire_664
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_664
+		tooltip_info = homosexual
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = bonfire.665 }
+			}
+			liege = {
+				character_event = { id = bonfire.670 }
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = {
+							character = ROOT
+							character = FROM
+						}
+					}
+					character_event = { id = bonfire.670 }
+				}
+			}
+		}
+		tooltip = {
+			random = {
+				chance = 50
+				character_event = { id = bonfire.669 tooltip = EVTTOOLTIP_bonfire_669 }
+			}
+			add_lover = FROM
+		}
+	}
+}
+
+# Homosexual Male (Guest 1)
+character_event = {
+	id = bonfire.665
+	desc = EVTDESC_bonfire_664
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_664
+		tooltip_info = homosexual
+		random = {
+			chance = 50
+			character_event = { id = bonfire.669 tooltip = EVTTOOLTIP_bonfire_669 }
+			hidden_tooltip = {
+				FROM = {
+					character_event = { id = bonfire.669 }
+				}
+			}
+		}
+		tooltip = {
+			add_lover = FROM
+		}
+	}
+}
+
+# Homosexual Female (Guest 1 Hidden)
+character_event = {
+	id = bonfire.666
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast_vassal
+		NOT = { has_character_flag = feast_homosexual }
+		trait = homosexual
+		is_female = yes
+		has_lover = no
+		liege = { 
+			NOT = { has_character_flag = feast_homosexual }
+			has_character_flag = blot_feast
+			any_vassal = {
+				has_character_flag = blot_feast_vassal
+				NOT = { has_character_flag = feast_homosexual }
+				NOT = { character = ROOT }
+				opinion = { who = ROOT value = 0 }
+				trait = homosexual
+				is_female = yes
+				has_lover = no
+			}		
+		}
+	}
+	
+#	mean_time_to_happen = {
+#		days = 40
+#		
+#		modifier = {
+#			factor = 1.1
+#			liege = { num_of_vassals = 10 }
+#		}
+#		modifier = {
+#			factor = 1.2
+#			liege = { num_of_vassals = 20 }
+#		}
+#		modifier = {
+#			factor = 1.3
+#			liege = { num_of_vassals = 30 }
+#		}
+#		modifier = {
+#			factor = 1.4
+#			liege = { num_of_vassals = 40 }
+#		}
+#		modifier = {
+#			factor = 1.5
+#			liege = { num_of_vassals = 50 }
+#		}
+#		modifier = {
+#			factor = 3
+#			liege = { num_of_vassals = 100 }
+#		}
+#	}
+	
+	immediate = {
+		set_character_flag = feast_homosexual
+		liege = { 
+			set_character_flag = feast_homosexual
+			random_vassal = {
+				limit = {
+					has_character_flag = blot_feast_vassal
+					NOT = { has_character_flag = feast_homosexual }
+					NOT = { character = ROOT }
+					opinion = { who = ROOT value = 0 }
+					trait = homosexual
+					is_female = yes
+				}
+				character_event = { id = bonfire.667 }
+				set_character_flag = feast_homosexual
+				add_lover = ROOT
+			}		
+		}
+	}
+}
+
+# Homosexual Female (Guest 2)
+character_event = {
+	id = bonfire.667
+	desc = EVTDESC_bonfire_664
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_664
+		tooltip_info = homosexual
+		hidden_tooltip = {
+			FROM = {
+				character_event = { id = bonfire.668 }
+			}
+			liege = {
+				character_event = { id = bonfire.670 }
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = {
+							character = ROOT
+							character = FROM
+						}
+					}
+					character_event = { id = bonfire.670 }
+				}
+			}			
+		}
+		tooltip = {
+			random = {
+				chance = 50
+				character_event = { id = bonfire.669 tooltip = EVTTOOLTIP_bonfire_669 }
+			}
+			add_lover = FROM
+		}
+	}
+}
+
+# Homosexual Female (Guest 1)
+character_event = {
+	id = bonfire.668
+	desc = EVTDESC_bonfire_664
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_664
+		tooltip_info = homosexual
+		random = {
+			chance = 50
+			character_event = { id = bonfire.669 tooltip = EVTTOOLTIP_bonfire_669 }
+			hidden_tooltip = {
+				FROM = {
+					character_event = { id = bonfire.669 }
+				}
+			}
+		}
+		tooltip = {
+			add_lover = FROM
+		}
+	}
+}
+
+# Homosexual Caught
+character_event = {
+	id = bonfire.669
+	desc = EVTDESC_bonfire_669
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_669
+		tooltip = {
+			liege = {
+				if = {
+					limit = { NOT = { trait = homosexual } }
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+				if = {
+					limit = { trait = homosexual }
+					opinion = {
+						modifier = opinion_homosexual_sympathy
+						who = ROOT
+					}
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+						NOT = { trait = homosexual }
+					}
+					opinion = {
+						modifier = opinion_feast_scandal
+						who = ROOT
+					}
+				}
+				any_vassal = {
+					limit = {
+						has_character_flag = blot_feast_vassal
+						NOT = { character = ROOT }
+						trait = homosexual
+					}
+					opinion = {
+						modifier = opinion_homosexual_sympathy
+						who = ROOT
+					}
+				}
+			}
+		}	
+	}
+}
+
+# Homosexual Caught (Host and Other Guests)
+character_event = {
+	id = bonfire.670
+	desc = EVTDESC_bonfire_670
+	picture = GFX_glorian_bonfire
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_bonfire_670
+		trigger = {
+			NOT = { trait = homosexual }
+		}
+		opinion = {
+			modifier = opinion_feast_scandal
+			who = FROM
+		}
+		opinion = {
+			modifier = opinion_feast_scandal
+			who = FROMFROM
+		}
+	}
+	option = {
+		name = EVTOPTB_bonfire_670
+		tooltip_info = homosexual
+		trigger = {
+			trait = homosexual
+		}
+		opinion = {
+			modifier = opinion_homosexual_sympathy
+			who = FROM
+		}
+		opinion = {
+			modifier = opinion_homosexual_sympathy
+			who = FROMFROM
+		}
+	}
+}
+
+### Feast event bounces
+character_event = { #feast_drunkard
+	id = bonfire.683
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast
+		NOT = { has_character_flag = feast_drunkard }
+		any_vassal = {
+			has_character_flag = blot_feast_vassal
+			NOT = { has_character_flag = feast_drunkard }
+			trait = drunkard
+		}
+	}
+	
+	immediate = {
+		random_vassal = {
+			limit = {
+				has_character_flag = blot_feast_vassal
+				trait = drunkard
+			}
+			character_event = { id = bonfire.650 }
+		}
+	}
+}
+
+character_event = {
+	id = bonfire.684 #feast_gluttonous
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast
+		NOT = { has_character_flag = feast_gluttonous }
+		any_vassal = {
+			has_character_flag = blot_feast_vassal
+			NOT = { has_character_flag = feast_gluttonous }
+			trait = gluttonous
+		}
+	}
+	
+	immediate = {
+		random_vassal = {
+			limit = {
+				has_character_flag = blot_feast_vassal
+				trait = gluttonous
+			}
+			character_event = { id = bonfire.652 }
+		}
+	}
+}
+
+character_event = {
+	id = bonfire.685 #feast_lunatic
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast
+		NOT = { has_character_flag = feast_lunatic }
+		any_vassal = {
+			has_character_flag = blot_feast_vassal
+			NOT = { has_character_flag = feast_lunatic }
+			trait = lunatic
+		}
+	}
+	
+	immediate = {
+		random_vassal = {
+			limit = {
+				has_character_flag = blot_feast_vassal
+				trait = lunatic
+			}
+			character_event = { id = bonfire.656 }
+		}
+	}
+}
+
+character_event = {
+	id = bonfire.686 #feast_lustful
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast
+		NOT = { has_character_flag = feast_lustful }
+		any_vassal = { 
+			has_character_flag = blot_feast_vassal
+			NOT = { has_character_flag = feast_lustful }
+			trait = lustful
+			is_female = no
+		}
+	}
+	
+	immediate = {
+		random_vassal = {
+			limit = {
+				has_character_flag = blot_feast_vassal
+				trait = lustful
+				is_female = no
+			}
+			character_event = { id = bonfire.658 }
+		}
+	}
+}
+
+character_event = {
+	id = bonfire.687 #feast_friendship
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		has_character_flag = blot_feast
+		NOT = { has_character_flag = feast_friendship }
+		has_character_flag = blot_feast_vassal
+		any_vassal = {
+			has_character_flag = blot_feast_vassal
+			NOT = { has_character_flag = feast_friendship }
+			liege = { 
+				any_vassal = {
+					has_character_flag = blot_feast_vassal
+					NOT = { has_character_flag = feast_friendship }
+					NOT = { character = PREVPREV }
+					opinion = { who = PREVPREV value = 20 }
+				}		
+			}
+		}
+	}
+	
+	immediate = {
+		random_vassal = {
+			limit = {
+				has_character_flag = blot_feast_vassal
+				NOT = { has_character_flag = feast_friendship }
+				liege = { 
+					any_vassal = {
+						has_character_flag = blot_feast_vassal
+						NOT = { has_character_flag = feast_friendship }
+						NOT = { character = PREVPREV }
+						opinion = { who = PREVPREV value = 20 }
+					}		
+				}
+			}
+			character_event = { id = bonfire.660 }
+		}
+	}
+}
+
+character_event = {
+	id = bonfire.688 #male_homosexual
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		NOT = { has_character_flag = feast_homosexual }
+		has_character_flag = blot_feast
+		any_vassal = { 
+			has_character_flag = blot_feast_vassal
+			NOT = { has_character_flag = feast_homosexual }
+			trait = homosexual
+			is_female = no
+			has_lover = no
+			liege = { 
+				any_vassal = {
+					has_character_flag = blot_feast_vassal
+					NOT = { has_character_flag = feast_homosexual }
+					NOT = { character = PREVPREV }
+					opinion = { who = PREVPREV value = 0 }
+					trait = homosexual
+					is_female = no
+					has_lover = no
+				}		
+			}
+		}
+	}
+	
+	immediate = {
+		random_vassal = {
+			limit = {
+				has_character_flag = blot_feast_vassal
+				NOT = { has_character_flag = feast_homosexual }
+				trait = homosexual
+				is_female = no
+				has_lover = no
+				liege = { 
+					any_vassal = {
+						has_character_flag = blot_feast_vassal
+						NOT = { has_character_flag = feast_homosexual }
+						NOT = { character = PREVPREV }
+						opinion = { who = PREVPREV value = 0 }
+						trait = homosexual
+						is_female = no
+						has_lover = no
+					}		
+				}
+			}
+			character_event = { id = bonfire.663 }
+		}
+	}
+}
+
+character_event = {
+	id = bonfire.689 #female_homosexual
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		has_dlc = "The Old Gods"
+		NOT = { has_character_flag = feast_homosexual }
+		has_character_flag = blot_feast
+		any_vassal = { 
+			has_character_flag = blot_feast_vassal
+			NOT = { has_character_flag = feast_homosexual }
+			trait = homosexual
+			is_female = yes
+			has_lover = no
+			liege = { 
+				any_vassal = {
+					has_character_flag = blot_feast_vassal
+					NOT = { has_character_flag = feast_homosexual }
+					NOT = { character = PREVPREV }
+					opinion = { who = PREVPREV value = 0 }
+					trait = homosexual
+					is_female = yes
+					has_lover = no
+				}		
+			}
+		}
+	}
+	
+	immediate = {
+		random_vassal = {
+			limit = {
+				has_character_flag = blot_feast_vassal
+				NOT = { has_character_flag = feast_homosexual }
+				trait = homosexual
+				is_female = yes
+				has_lover = no
+				liege = { 
+					any_vassal = {
+						has_character_flag = blot_feast_vassal
+						NOT = { has_character_flag = feast_homosexual }
+						NOT = { character = PREVPREV }
+						opinion = { who = PREVPREV value = 0 }
+						trait = homosexual
+						is_female = yes
+						has_lover = no
+					}		
+				}
+			}
+			character_event = { id = bonfire.666 }
+		}
+	}
+}
+
+###########################################
+# Flag management						 #
+###########################################
+
+# Safety catch - clears character flags and modifiers
+character_event = {
+	id = bonfire.699
+
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		clr_character_flag = holding_blot
+		clr_character_flag = blot_feast
+		clr_character_flag = attending_bonfire
+		clr_character_flag = blot_feast_vassal
+		clr_character_flag = feast_drunkard
+		clr_character_flag = feast_gluttonous
+		clr_character_flag = feast_lunatic
+		clr_character_flag = feast_lustful
+		clr_character_flag = feast_homosexual
+		clr_character_flag = feast_friendship
+		clr_character_flag = do_not_disturb
+	}
+}
+
+
+
