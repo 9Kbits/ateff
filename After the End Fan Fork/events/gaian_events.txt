@@ -2041,6 +2041,45 @@ narrative_event = {
 }
 
 narrative_event = {
+	id = gaian.124
+	title = EVTITLE_umatilla_ending
+	desc = EVTDESC_umatilla_ending
+	picture = GFX_evt_umatilla
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = forest_gaian_hike
+		has_character_flag = hike_option_d
+		trait = on_hike
+		culture = inlander
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = umatilla_bested
+			years = 5
+		}
+		piety = 200
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
 	id = gaian.125
 	title = EVTITLE_hoh_forest_ending
 	desc = EVTDESC_hoh_forest_ending
@@ -2345,16 +2384,17 @@ narrative_event = {
 		}
 		piety = 200
 	}
-	option = {
-		trigger = {
-			OR = {
-				trait = lunatic
-				trait = possessed
-			}
-		}
-		name = EVTOPT_theheartoflaochain
-		set_character_flag = the_heart_of_lao
-	}
+	### Removed if bow master doesnt finish it
+	###option = {
+	###	trigger = {
+	###		OR = {
+	###			trait = lunatic
+	###			trait = possessed
+	###		}
+	###	}
+	###	name = EVTOPT_theheartoflaochain
+	###	set_character_flag = the_heart_of_lao
+	###}
 }
 narrative_event = {
 	id = gaian.133
@@ -3785,42 +3825,6 @@ character_event = {
 			character_event = { id = gaian.199 }
 		}
 		prestige = -10
-	}
-}
-narrative_event = {
-	id = gaian.340
-	title = EVTTITLE_veryfaraway
-	desc = EVTDESC_veryfaraway1
-	desc = EVTDESC_veryfaraway2
-	desc = EVTDESC_veryfaraway3
-	desc = EVTDESC_veryfaraway4
-	desc = EVTDESC_veryfaraway5
-	
-	picture = GFX_evt_very_far_away
-	mean_time_to_happen = {
-		months = 24
-	}
-	
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = lost_in_mountain
-			has_character_flag = lost_in_forest
-		}
-		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_veryfaraway
 	}
 }
 
