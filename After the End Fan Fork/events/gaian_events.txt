@@ -5553,3 +5553,102 @@ narrative_event = {
 		}
 	}
 }
+
+narrative_event = {
+	id = gaian.5008
+	title = EVTITLE_sagebrush_fallen
+	desc =  EVTDESC_sagebrush_fallen
+	picture = GFX_evt_steppe_mercenaries
+	
+	trigger = {
+		completely_controls = k_sagebrush
+		NOT = {
+			religion = gaian
+		}
+		NOT = {
+			has_global_flag = global_cycle_that_binds
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	major = yes
+	
+	major_trigger = {
+		OR = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 526
+					value = 700	# Same part of the world
+				}
+			}
+		}
+		religion = gaian
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_the_great_bind
+		trigger = {
+			OR = {
+				religion = raven_tales
+				religion = raven_tales_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_the_great_bind
+		trigger = {
+			religion = gaian
+		}
+		piety = 200
+		prestige = 100
+	}
+	option = {
+		name = EVTOPTC_the_great_bind
+		trigger = {
+			OR = {
+			religion = trailwalker
+			religion = trailwalker_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_the_great_bind
+		trigger = {
+			OR = {
+			religion = peyotist
+			religion = nazarene
+			religion = true_cross
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_the_great_bind
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTF_the_great_bind
+		trigger = {
+			NOR = {
+				religion = peyotist
+				religion = cetic
+				religion = trailwalker
+				religion = trailwalker_reformed
+				religion = raven_tales
+				religion = raven_tales_reformed
+				religion = gaian
+				religion = nazarene
+				religion = true_cross
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = global_cycle_that_binds
+	}
+}
