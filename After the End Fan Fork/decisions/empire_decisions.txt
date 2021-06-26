@@ -1629,6 +1629,16 @@ decisions = {
 						de_jure_liege = d_outer_chicagoland
 					}
 				}
+				if = {
+					limit = {
+						NOT = {
+							completely_controls = d_twin_cities
+						}
+					}
+					d_twin_cities = {
+						de_jure_liege = k_lakotah
+					}
+				}
 				grant_title_no_opinion = k_wisconsin
 				k_wisconsin = {
 					de_jure_liege = e_great_lakes
@@ -1732,6 +1742,117 @@ decisions = {
 					de_jure_liege = e_great_lakes
 				}
 				set_global_flag = indiana_formed
+			}
+		}
+	}
+	revive_the_charter = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 8
+		
+		potential = {
+			is_alternate_start = no
+			NOT = { has_global_flag = grand_virginia_formed }
+			has_landed_title = e_grand_virginia
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			war = no
+			independent = yes
+			has_landed_title = e_grand_virginia
+			
+			completely_controls = k_old_dominion
+			completely_controls = k_appalachia
+			completely_controls = k_booneland
+			completely_controls = k_ohio
+			completely_controls = k_chicagoland
+			completely_controls = k_michigan
+			completely_controls = k_superior
+			
+			wealth = 2000
+			prestige = 5000
+		}
+		
+		effect = {
+			wealth = -2000
+			prestige = -5000
+			custom_tooltip = { text = TXT_formed_grand_virginia }
+			hidden_tooltip = {
+				k_old_dominion = {
+					de_jure_liege = e_grand_virginia
+				}
+				k_appalachia = {
+					de_jure_liege = e_grand_virginia
+				}
+				k_booneland = {
+					de_jure_liege = e_grand_virginia
+				}
+				k_ohio = {
+					de_jure_liege = e_grand_virginia
+				}
+				k_chicagoland = {
+					de_jure_liege = e_grand_virginia
+				}
+				k_michigan = {
+					de_jure_liege = e_grand_virginia
+				}
+				k_superior = {
+					de_jure_liege = e_grand_virginia
+				}
+				k_indiana = {
+					de_jure_liege = e_grand_virginia
+				}
+				k_wisconsin = {
+					de_jure_liege = e_grand_virginia
+				}
+				k_tennessee = {
+					de_jure_liege = e_grand_virginia
+				}
+				k_west_virginia = {
+					de_jure_liege = e_grand_virginia
+				}
+				if = {
+					limit = {
+						completely_controls = k_tarheel
+					}
+					k_tarheel = {
+						de_jure_liege = e_grand_virginia
+					}
+				}
+				if = {
+					limit = {
+						completely_controls = k_palmetto
+					}
+					k_palmetto = {
+						de_jure_liege = e_grand_virginia
+					}
+				}
+				if = {
+					limit = {
+						completely_controls = k_columbia
+					}
+					k_columbia = {
+						de_jure_liege = e_grand_virginia
+					}
+				}
+				if = {
+					limit = {
+						e_great_lakes = {
+							has_holder = no
+						}
+					}
+					k_allegheny = {
+						de_jure_liege = e_atlantica
+					}
+				}
+				e_grand_virginia = {
+					set_name = "GRANDVIRGINIA"
+					adjective = "GRANDVIRGINIA_ADJ"
+					set_coa = e_charter
+				}
+				set_global_flag = grand_virginia_formed
 			}
 		}
 	}
