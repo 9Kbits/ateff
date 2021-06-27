@@ -1754,6 +1754,11 @@ decisions = {
 			is_alternate_start = no
 			NOT = { has_global_flag = grand_virginia_formed }
 			has_landed_title = e_grand_virginia
+			OR = {
+				culture = southron
+				culture = dixie
+				culture = tuskegean
+			}
 		}
 		allow = {
 			is_adult = yes
@@ -1762,6 +1767,12 @@ decisions = {
 			war = no
 			independent = yes
 			has_landed_title = e_grand_virginia
+			has_landed_title = k_old_dominion
+			OR = {
+				culture = southron
+				culture = dixie
+				culture = tuskegean
+			}
 			
 			completely_controls = k_old_dominion
 			completely_controls = k_appalachia
@@ -1849,8 +1860,6 @@ decisions = {
 				}
 				e_grand_virginia = {
 					set_name = "GRANDVIRGINIA"
-					adjective = "GRANDVIRGINIA_ADJ"
-					set_coa = e_charter
 				}
 				set_global_flag = grand_virginia_formed
 			}
