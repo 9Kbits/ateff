@@ -12,7 +12,10 @@ e_great_lakes = {
 		capital = 1150 # Four Lakes
 		
 		allow = {
-			has_global_flag = wisconsin_formed
+			OR = {
+				has_global_flag = wisconsin_formed
+				has_global_flag = fall_of_chicagoland_illinois
+			}
 		}
 	}
 
@@ -23,7 +26,10 @@ e_great_lakes = {
 		capital = 1063 # Indianapolis
 		
 		allow = {
-			has_global_flag = indiana_formed
+			OR = {
+				has_global_flag = indiana_formed
+				has_global_flag = fall_of_chicagoland_illinois
+			}
 		}
 	}
 
