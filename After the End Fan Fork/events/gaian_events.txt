@@ -1765,6 +1765,44 @@ narrative_event = {
 }
 
 narrative_event = {
+	id = gaian.116
+	title = EVTITLE_sacajawea
+	desc = EVTDESC_sacajawea
+	picture = GFX_evt_sacajawea
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 3
+		}
+		has_character_flag = mountain_gaian_hike
+		has_character_flag = hike_option_d
+		trait = on_hike
+		culture = inlander
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = sacajawea_sundown
+			years = 5
+		}	
+		piety = 200
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
 	id = gaian.117
 	title = EVTITLE_hells_canyon_ending
 	desc = EVTDESC_hells_canyon_ending
