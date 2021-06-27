@@ -1541,6 +1541,11 @@ decisions = {
 		potential = {
 			is_alternate_start = no
 			NOT = { has_global_flag = wisconsin_formed }
+			NOT = { 
+				k_wisconsin = {
+					is_titular = no
+				}
+			}
 			OR = { #emperors can't do this
 				tier = COUNT
 				tier = DUKE
@@ -1602,6 +1607,9 @@ decisions = {
 				d_badgerland = {
 					de_jure_liege = k_wisconsin
 				}
+				d_badgerlings = {
+					de_jure_liege = k_wisconsin
+				}
 				d_coulee = {
 					de_jure_liege = k_wisconsin
 				}
@@ -1655,6 +1663,11 @@ decisions = {
 		potential = {
 			is_alternate_start = no
 			NOT = { has_global_flag = indiana_formed }
+			NOT = { 
+				k_indiana = {
+					is_titular = no
+				}
+			}
 			OR = { #emperors can't do this
 				tier = COUNT
 				tier = DUKE
@@ -1861,7 +1874,134 @@ decisions = {
 				e_grand_virginia = {
 					set_name = "GRANDVIRGINIA"
 				}
+				if = {
+					limit = { has_nickname = no }
+					give_nickname = nick_the_great
+				}
 				set_global_flag = grand_virginia_formed
+			}
+		}
+	}
+	unite_illinois = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 8
+		
+		potential = {
+			is_alternate_start = no
+			NOT = { has_global_flag = illinois_united }
+			OR = { #emperors can't do this
+				tier = COUNT
+				tier = DUKE
+				tier = KING
+			}
+			OR = {
+				NOT = {
+					has_landed_title = k_chicagoland
+				}
+			}
+			capital_scope = {
+				OR = {
+					province = 1055 #Cairo
+					province = 1057 #Mount Vernon
+					province = 1058 #Effingham
+					province = 1056 #Kaskaskia
+					province = 1075 #Chambana
+					province = 1074 #West okaw
+					province = 1077 #Alton
+					province = 1078 #Quincy
+					province = 1076 #Watseka
+					province = 1073 #Decatur
+					province = 1072 #Sangamon
+					province = 1071 #Peoria
+					province = 1079 #La Moine
+				}
+			}
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			war = no
+			independent = yes
+			OR = {
+				tier = DUKE
+				tier = KING
+			}
+			has_landed_title = d_illinois
+			has_landed_title = d_little_egypt
+			has_landed_title = c_chicago
+			k_chicagoland = {
+				has_holder = no
+			}
+			completely_controls = d_illinois
+			completely_controls = d_little_egypt
+			completely_controls = d_forgottonia
+			completely_controls = d_cook
+			completely_controls = d_outer_chicagoland
+			completely_controls = c_watseka
+			completely_controls = c_chambana
+			completely_controls = c_peoria
+			completely_controls = c_kaskaskia
+			completely_controls = c_galena
+			
+			wealth = 200
+			prestige = 500
+		}
+		
+		effect = {
+			wealth = -200
+			prestige = -500
+			custom_tooltip = { text = TXT_form_illinois }
+			custom_tooltip = { text = TXT_illinois_de_jure }
+			hidden_tooltip = {
+				d_illinois = {
+					de_jure_liege = k_chicagoland
+				}
+				d_little_egypt = {
+					de_jure_liege = k_chicagoland
+				}
+				d_forgottonia = {
+					de_jure_liege = k_chicagoland
+				}
+				d_outer_chicagoland = {
+					de_jure_liege = k_chicagoland
+				}
+				d_cook = {
+					de_jure_liege = k_chicagoland
+				}
+				c_peoria = {
+					de_jure_liege = d_forgottonia
+				}
+				c_kaskaskia = {
+					de_jure_liege = d_little_egypt
+				}
+				c_chambana = {
+					de_jure_liege = d_illinois
+				}
+				c_watseka = {
+					de_jure_liege = d_illinois
+				}
+				c_galena = {
+					de_jure_liege = d_outer_chicagoland
+				}
+				k_chicagoland = {
+					set_name = "ILLINOIS"
+					adjective = "ILLINOIS_ADJ"
+					set_coa = k_illinois
+				}
+				d_illinois = {
+					set_name = "LITTLEILLINOIS"
+					adjective = "LITTLEILLINOIS_ADJ"
+				}
+				primary_title = {
+					k_chicagoland = {
+						copy_title_laws = PREV
+					}
+				}
+				grant_title_no_opinion = k_chicagoland
+				set_global_flag = illinois_united
 			}
 		}
 	}
