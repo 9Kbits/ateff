@@ -1373,6 +1373,7 @@
 	name="Shelley"
 	female=yes
 	dynasty=1863076
+	dna="snpjooxujdn"
 	culture=inlander
 	religion=gaian
 	trait=elusive_shadow
@@ -2587,7 +2588,11 @@
 	dynasty=1863076
 	mother=1845125
 	2586.4.19={birth=yes}
-	2621.5.15={death=yes} #Perhaps Gets killed by someone
+	2621.5.15={death={
+			death_reason=death_battle
+			killer=1890041 #Moses Silvermount
+		}
+	}
 }
 
 1845136={
@@ -2971,12 +2976,29 @@
 	name="Hanford"
 	culture=inlander
 	religion=gaian
+	dynasty=1863076
 	trait=brilliant_strategist
 	trait=brave
 	trait=strong
 	trait=ambitious
-	dynasty=1863076
 	2359.7.4={birth=yes}
 	2388.1.1={give_nickname=nick_the_usurper}
 	2416.9.12={death=yes}
+}
+
+1845166={
+	name="Clarkia"
+	culture=inlander
+	religion=gaian
+	female=yes
+	dynasty=1863076
+	trait=underhanded_rogue
+	trait=chaste
+	trait=cynical
+	trait=sympathy_pagans
+	trait=charitable
+	mother=1845120
+	father=1890040
+	2632.2.26={birth=yes}
+	2680.10.1={death=yes}
 }

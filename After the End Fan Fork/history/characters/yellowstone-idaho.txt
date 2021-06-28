@@ -825,15 +825,20 @@
 }
 
 1890060={
-	name="Heckler" #The MAN himself
+	name="Heckler"
 	dynasty=1863074
 	culture=inlander
 	religion=trailwalker
 	trait=brilliant_strategist
-	trait=unyielding
+	trait=unyielding_leader
 	trait=trailwalker_leader
+	trait=adventurer
 	2405.1.17={birth=yes} 
-	2465.12.25={death=yes} #Needs to be killed by some avenging coloradan or something idk lmao
+	2465.12.25={death={
+			death_reason=death_duel
+			killer=1890064 #Stonarm Flatiron
+		}
+	}
 }
 
 1890061={
@@ -843,7 +848,11 @@
 	religion=trailwalker
 	father=1890060
 	2447.11.8={birth=yes}
-	2464.4.14={death=yes} #Needs to be killed by someone
+	2464.4.14={death={
+			death_reason=death_duel
+			killer=1890064 #Stonarm Flatiron
+		}
+	}
 }
 
 1890062={
@@ -854,4 +863,27 @@
 	father=1890060
 	2448.7.28={birth=yes}
 	2480.9.27={death=yes}
+}
+
+1890063={
+	name="Dutch"
+	dynasty=1876034
+	culture=coloradan
+	religion=trailwalker
+	2397.3.16={birth=yes}
+	2431.4.22={death={
+			death_reason=death_battle_duel
+			killer=1890060 #Heckler Silvermount
+		}
+	}
+}
+
+1890064={
+	name="Stonarm"
+	dynasty=1876034
+	culture=coloradan
+	religion=trailwalker
+	father=1890063
+	2426.1.12={birth=yes}
+	2484.4.2={death=yes}
 }
