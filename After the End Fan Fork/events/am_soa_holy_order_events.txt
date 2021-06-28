@@ -12624,7 +12624,24 @@ character_event = {
 		}
 		text = expel_afl
 	}
-
+	title = { # d_chrismon_tree
+		trigger = {
+			has_character_flag = expel_chrismon_tree_check
+		}
+		text = expel_chrismon_tree
+	}
+	title = { # d_order_of_baptists
+		trigger = {
+			has_character_flag = expel_order_of_baptists_check
+		}
+		text = expel_order_of_baptists
+	}
+	title = { # d_pentecostal_oathsworn
+		trigger = {
+			has_character_flag = expel_pentecostal_oathsworn_check
+		}
+		text = expel_pentecostal_oathsworn
+	}
 	
 	only_rulers = yes
 	
@@ -14078,6 +14095,96 @@ character_event = {
 			clr_character_flag = expel_afl_check
 		}
 	}
+	option = { # d_chrismon_tree
+		trigger = {
+			has_character_flag = expel_chrismon_tree_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_chrismon_tree = {
+				holder_scope = {
+					character_event = {
+						id = SoAtE.3060
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_chrismon_tree
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_chrismon_tree_check
+		}
+	}
+	option = { # d_order_of_baptists
+		trigger = {
+			has_character_flag = expel_order_of_baptists_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_order_of_baptists = {
+				holder_scope = {
+					character_event = {
+						id = SoAtE.3060
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_order_of_baptists
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_order_of_baptists_check
+		}
+	}
+	option = { # d_pentecostal_oathsworn
+		trigger = {
+			has_character_flag = expel_pentecostal_oathsworn_check
+		}
+		name = "EVTOPTA_SOA_2990"
+		piety = -1000
+		
+		religion_authority = {
+			modifier = holy_order_expelled
+			years = 20
+		}
+		custom_tooltip = {
+			text = expelling_holy_order_event_tooltip_a
+		}
+		hidden_tooltip = {
+			d_pentecostal_oathsworn = {
+				holder_scope = {
+					character_event = {
+						id = SoAtE.3060
+					}
+				}
+			}
+			add_character_modifier = {
+				name = expelled_d_pentecostal_oathsworn
+				duration = -1
+				inherit = yes
+			}
+			clr_character_flag = expel_pentecostal_oathsworn_check
+		}
+	}
 
 	option = { # Allow them to stay
 		name = "EVTOPTB_SOA_2990"
@@ -14132,6 +14239,9 @@ character_event = {
 			clr_character_flag = expel_iron_workers_check
 			clr_character_flag = expel_teamsters_check
 			clr_character_flag = expel_afl_check
+			clr_character_flag = expel_chrismon_tree_check
+			clr_character_flag = expel_order_of_baptists_check
+			clr_character_flag = expel_pentecostal_oathsworn_check
 		}
 	}
 	after = {
