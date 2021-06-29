@@ -2381,78 +2381,6 @@ narrative_event = {
 	}
 }
 
-# Rebirth of Chicagoland
-narrative_event = {
-	id = flavor.75
-	title = EVTTITLE_dakota
-	desc = EVTDESC_dakota
-	picture = GFX_evt_book_carolingian_script
-	border = GFX_event_narrative_frame_war
-	
-	only_playable = yes
-
-	major = yes
-	
-	trigger = {
-		has_landed_title = k_lakotah
-		NOT = { culture_group = plains }
-		NOT = { culture_group = ameronordic }
-		NOT = { has_global_flag = rebirth_of_dakota }
-	}
-
-	major_trigger = {
-		capital_scope = {
-			NOT = {
-				distance = {
-					where = 382 # Wazi Ahanghang / Pine Ridge / Porcupine
-					value = 800	# Same part of the world
-				}
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		set_global_flag = rebirth_of_dakota
-		k_lakotah = {
-			set_name = "DAKOTA"
-			adjective = "DAKOTA_ADJ"
-			set_coa = k_dakota
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_CM_502
-		trigger = {
-			has_landed_title = k_lakotah
-		}
-	}
-	option = {
-		name = EVTOPTB_dakota
-		trigger = {
-			culture_group = plains
-		}
-	}
-	option = {
-		name = EVTOPTC_great_coast
-		trigger = {
-			NOT = { has_landed_title = k_lakotah }
-			NOT = { culture_group = plains }
-			NOT = { culture = ROOT }
-		}
-	}
-	option = {
-		name = EVTOPTD_dakota
-		trigger = {
-			NOT = { has_landed_title = k_lakotah }
-			culture = ROOT
-		}
-	}
-}
-
 # Birth of Northland
 narrative_event = {
 	id = flavor.76
@@ -2721,7 +2649,7 @@ narrative_event = {
 narrative_event = {
 	id = flavor.80
 	title = EVTTITLE_fall_chicagoland
-	desc = EVTDESC_fall_chicagoland
+	desc = EVTDESC_wiscon_indiana_formed
 	picture = GFX_evt_book_carolingian_script
 	border = GFX_event_narrative_frame_war
 	
@@ -2776,30 +2704,16 @@ narrative_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_CM_502
+		name = EVTOPTA_illinois
 		trigger = {
 			has_landed_title = k_chicagoland
 		}
 	}
-#	option = {
-#		name = EVTOPTB_dakota
-#		trigger = {
-#			culture_group = plains
-#		}
-#	}
-#	option = {
-#		name = EVTOPTC_great_coast
-#		trigger = {
-#			NOT = { has_landed_title = k_chicagoland }
-#			NOT = { culture_group = plains }
-#			NOT = { culture = ROOT }
-#		}
-#	}
+
 	option = {
-		name = EVTOPTD_chicagoland
+		name = EVTOPTB_illinois
 		trigger = {
 			NOT = { has_landed_title = k_chicagoland }
-			culture = ROOT
 		}
 	}
 }
@@ -2808,7 +2722,7 @@ narrative_event = {
 narrative_event = {
 	id = flavor.81
 	title = EVTTITLE_fall_chicagoland
-	desc = EVTDESC_fall_chicagoland
+	desc = EVTDESC_illinois_formed
 	picture = GFX_evt_book_carolingian_script
 	border = GFX_event_narrative_frame_war
 	
@@ -2818,7 +2732,7 @@ narrative_event = {
 	
 	trigger = {
 		has_global_flag = illinois_united
-		NOT = { has_global_flag = fall_of_chicagoland_illinois }
+		NOT = { has_global_flag = fall_of_chicagoland }
 	}
 	
 	mean_time_to_happen = {
@@ -2826,7 +2740,7 @@ narrative_event = {
 	}
 	
 	immediate = {
-		set_global_flag = fall_of_chicagoland_illinois
+		set_global_flag = fall_of_chicagoland
 		d_indianapolis = {
 			de_jure_liege = k_indiana
 		}
@@ -2881,30 +2795,28 @@ narrative_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_CM_502
+		name = EVTOPTD_illinois
 		trigger = {
 			has_landed_title = k_chicagoland
 		}
 	}
-#	option = {
-#		name = EVTOPTB_dakota
-#		trigger = {
-#			culture_group = plains
-#		}
-#	}
-#	option = {
-#		name = EVTOPTC_great_coast
-#		trigger = {
-#			NOT = { has_landed_title = k_chicagoland }
-#			NOT = { culture_group = plains }
-#			NOT = { culture = ROOT }
-#		}
-#	}
 	option = {
-		name = EVTOPTD_chicagoland
+		name = EVTOPTC_illinois
+		trigger = {
+			OR = {
+				has_landed_title = k_wisconsin
+				has_landed_title = k_indiana
+				has_landed_title = k_superior
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_illinois
 		trigger = {
 			NOT = { has_landed_title = k_chicagoland }
-			culture = ROOT
+			NOT = { has_landed_title = k_wisconsin }
+			NOT = { has_landed_title = k_indiana }
+			NOT = { has_landed_title = k_superior }
 		}
 	}
 }
