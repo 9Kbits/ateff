@@ -3935,9 +3935,8 @@ character_event = { #ping the court chaplain
 	religion = gaian
 
 	trigger = {
-		OR = {
-			AND = {
-				OR = {
+		AND = {
+			OR = {
 					has_character_modifier = adulterer
 					has_character_modifier = adultress
 					has_character_modifier = incestuous_adulterer
@@ -3968,8 +3967,6 @@ character_event = { #ping the court chaplain
 						value < -10
 					}
 				}
-			}
-			has_character_flag = gaian_repent
 		}
 		NOT = { trait = discharged }
 	}
@@ -3993,8 +3990,9 @@ character_event = {
 	
 	
 	immediate = {
+		piety = 50
 		if = {
-			trigger = {
+			limit = {
 				has_character_flag = gaian_repent
 				NOT = {
 					has_character_modifier = adulterer
