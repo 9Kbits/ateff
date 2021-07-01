@@ -38,6 +38,171 @@ targetted_decisions = {
 			factor = 1
 		}
 	}
+
+	gaian_request_chaplain_abdication = {
+		is_high_prio = yes
+		ai_check_interval = 60
+		
+		from_potential = {
+			is_adult = yes
+			religion = gaian
+		}
+		potential = {
+			is_adult = yes
+			religion = gaian
+			has_job_title = job_spiritual
+			liege = {
+				higher_tier_than = BARON
+			}
+		}
+		allow = {
+			ROOT = {
+				is_inaccessible_trigger = no
+				is_incapable = no 
+				prisoner = no
+				liege = {
+					 OR = {
+						AND = {
+							OR = {
+								has_character_modifier = adulterer
+								has_character_modifier = adultress
+								has_character_modifier = incestuous_adulterer
+								has_character_modifier = incestuous_adultress
+								has_character_modifier = known_murderer
+								has_character_modifier = uncivilized_dueler
+								trait = kinslayer
+								calc_true_if = {
+									amount >= 2
+									trait = greedy
+									trait = envious
+									trait = wroth
+									trait = slothful
+									trait = greedy
+									trait = gluttonous
+									trait = lustful
+									trait = cruel
+									trait = drunkard
+									trait = craven
+									trait = hedonist
+									trait = impaler
+									trait = paranoid
+								}
+							}
+							job_spiritual = { 
+								opinion = {
+									who = ROOT
+									value < -10
+								}
+							}
+						}
+						has_character_flag = gaian_repent
+					}
+					NOT = { trait = discharged }
+				}
+			}
+			FROM = {
+				is_inaccessible_trigger = no
+				is_incapable = no 
+				prisoner = no
+			}
+		}
+		effect = {
+			ROOT = {
+				character_event = { id = gaian.601 }
+			}
+		}
+		ai_acceptance = {
+			yes_threshold = 50
+			show_maybe_for_human = no
+			additive_modifier = {
+				value = 5
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = 20 } }
+				opinion = { who = from value = 0 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+
+			additive_modifier = {
+				value = 10
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = 40 } }
+				opinion = { who = from value = 20 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 15
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = 60 } }
+				opinion = { who = from value = 40 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = 80 } }
+				opinion = { who = from value = 60 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 25
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = 100 } }
+				opinion = { who = from value = 80 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 30
+				localisation_key = baptism_sponsor_opinion
+				opinion = { who = from value = 100 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+
+			additive_modifier = {
+				value = -5
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = 0 } }
+				opinion = { who = from value = -20 }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -10
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = -20 } }
+				opinion = { who = from value = -40 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -15
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = -40 } }
+				opinion = { who = from value = -60 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -20
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = -60 } }
+				opinion = { who = from value = -80 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -25
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = -80 } }
+				opinion = { who = from value = -100 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -30
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = from value = -100 } }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+		}
+		ai_will_do = {
+			factor = 0.5
+		}
+	}
 }
 
 decisions = {

@@ -8070,9 +8070,9 @@ character_event = {
 		primary_title = {
 			has_title_flag = bureaucracy_set
 		}
-		ROOT = {
-			government = bureaucratic_government
-		}
+		# ROOT = {
+			# government = bureaucratic_government
+		# }
 		higher_real_tier_than = BARON
 	}
 	
@@ -8094,9 +8094,76 @@ character_event = {
 	id = cetic.504
 	hide_window = yes
 	trigger = {
-		NOT = {
-			ROOT = {
-				government = bureaucratic_government
+		NOR = {
+			government = bureaucratic_government
+			AND = {
+				primary_title = {
+					has_title_flag = devolved_bureaucracy
+				}
+				OR = {
+					controls_religion = no
+					religion = cetic
+					religion = imamite
+					religion = americanist
+					religion = consumerist
+					religion = monetarist
+					religion = rust_cultist
+					religion = revivalist
+					religion = alawiyya
+					religion = qingzhen
+					religion = nazarene
+					religion = exovedate
+					religion = nousthreskeia
+					religion = sol_invicta
+					religion = patria_grande
+					religion = atomicist
+					religion = celeste
+					religion = true_cross
+					has_religion_feature = religion_temporal_head
+					AND = {
+						OR = {
+							religion = norse_pagan_reformed
+							religion = rust_cultist
+							religion = americanist
+							religion = consumerist
+							religion = monetarist
+							religion = imamite
+							religion = revivalist
+							religion = alawiyya
+							religion = qingzhen
+							religion = nazarene
+							religion = exovedate
+							religion = nousthreskeia
+							religion = sol_invicta
+							religion = patria_grande
+							religion = atomicist
+							religion = celeste
+							religion = true_cross
+						}
+						has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
+					}
+				}
+				OR = {
+					religion = cetic
+					religion = qingzhen
+					religion = imamite
+					AND = {
+						culture_group = californian
+						NOT = {
+							religion = nazarene
+						}
+					}
+					AND = {
+						religion = nazarene
+						controls_religion = no
+					}
+				}
+				is_patrician = no
+				NOT = { is_government_potential = colonial_government }
+				NOT = { is_government_potential = mex_imperial_government }
+				NOT = { is_government_potential = roman_imperial_government }
+				NOT = { is_government_potential = order_government }
+				NOT = { is_government_potential = military_governorate }
 			}
 		}
 		OR = {
@@ -8118,6 +8185,7 @@ character_event = {
 		any_demesne_title = {
 			clr_title_flag = bureaucracy_set
 			clr_title_flag = primary_set
+			clr_title_flag = devolved_bureaucracy
 		} 
 		hidden_tooltip = {
 			remove_character_modifier = bureaucracy
@@ -8136,7 +8204,7 @@ character_event = {
 	hide_window = yes
 	trigger = {
 		higher_real_tier_than = BARON
-		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 		any_demesne_title = {
 			has_title_flag = bureaucracy_set
 			has_title_flag = primary_set
@@ -8164,6 +8232,19 @@ character_event = {
 			set_variable = { which = bureau_number which = global_selfbureau_number }
 			set_title_flag = bureaucracy_set
 			set_title_flag = primary_set
+		}
+		if = {
+			limit = {
+				any_demesne_title = {
+					has_title_flag = devolved_bureaucracy
+				}
+			}
+			any_demesne_title = {
+				clr_title_flag = devolved_bureaucracy
+			}
+			primary_title = {
+				set_title_flag = devolved_bureaucracy
+			}
 		}
 	}
 }
@@ -8173,7 +8254,7 @@ character_event = {
 	hide_window = yes
 	trigger = {
 		higher_real_tier_than = BARON
-		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 		any_demesne_title = {
 			has_title_flag = bureaucracy_set
 			has_title_flag = primary_set
@@ -8201,6 +8282,19 @@ character_event = {
 			set_variable = { which = bureau_number which = global_selfbureau_number }
 			set_title_flag = bureaucracy_set
 			set_title_flag = primary_set
+		}
+		if = {
+			limit = {
+				any_demesne_title = {
+					has_title_flag = devolved_bureaucracy
+				}
+			}
+			any_demesne_title = {
+				clr_title_flag = devolved_bureaucracy
+			}
+			primary_title = {
+				set_title_flag = devolved_bureaucracy
+			}
 		}
 	}
 }
@@ -8217,7 +8311,7 @@ character_event = {
 		NOT = {
 			has_character_flag = no_fire_law_change
 		}
-		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 	}
 	
 	immediate = {
@@ -8341,7 +8435,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 	}
 	
 	immediate = {
@@ -8518,7 +8612,7 @@ character_event = {
 	only_playable = yes
 	
 	trigger = {
-		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 		current_heir = {
 			is_landed = no
 		}
@@ -8553,7 +8647,6 @@ character_event = {
 	desc = EVTDESCCETIC525
 	picture = GFX_evt_china_isolationist
 	trigger = {
-		government = bureaucratic_government
 		has_character_modifier = bureaucracy
 		primary_title = {
 			check_variable = { which = bureau_number value < 40 }
@@ -8582,7 +8675,6 @@ character_event = {
 	desc = EVTDESCCETIC526
 	picture = GFX_evt_china_isolationist
 	trigger = {
-		government = bureaucratic_government
 		has_character_modifier = bureaucracy
 		primary_title = {
 			check_variable = { which = bureau_number value < 70 }
@@ -8606,7 +8698,6 @@ character_event = {
 	desc = EVTDESCCETIC527
 	picture = GFX_evt_china_expansionist
 	trigger = {
-		government = bureaucratic_government
 		has_character_modifier = bureaucracy
 		primary_title = {
 			AND = {
@@ -8633,7 +8724,6 @@ character_event = {
 	desc = EVTDESCCETIC528
 	picture = GFX_evt_china_expansionist
 	trigger = {
-		government = bureaucratic_government
 		has_character_modifier = bureaucracy
 		primary_title = {
 			check_variable = { which = bureau_number value > 70 }
@@ -9169,7 +9259,7 @@ character_event = {
 				has_province_flag = office_set
 			}
 		}
-		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 	}
 	
 	mean_time_to_happen = {
@@ -9217,7 +9307,7 @@ character_event = {
 				has_province_flag = roads_set
 			}
 		}
-		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 	}
 	
 	mean_time_to_happen = {
@@ -9361,9 +9451,9 @@ character_event = {
 
 #Fall to Feudal
 character_event = {
-	id = cetic.541
+	id = cetic.542
 	picture = GFX_evt_china_isolationist
-	desc = EVTDESCCETIC541
+	desc = EVTDESCCETIC542
 	trigger = {
 		has_character_modifier = bureaucracy
 		primary_title = {
@@ -9375,28 +9465,43 @@ character_event = {
 	}
 	
 	option = {
-		name = opta_disappointing
+		name = EVTOPTACETIC542
 		set_government_type = feudal_government
-		hidden_tooltip = {
-			any_demesne_title = {
-				clr_title_flag = bureaucracy_set
-				clr_title_flag = primary_set
-			} 
-			hidden_tooltip = {
-				remove_character_modifier = bureaucracy
-				remove_character_modifier = low_bureaucracy
-				remove_character_modifier = high_bureaucracy
-				remove_character_modifier = poor_reforms
-				remove_character_modifier = good_reforms
-				remove_character_modifier = sold_bureaucratic_positions
-			}
+		primary_title = {
+			set_title_flag = devolved_bureaucracy
 		}
 	}
 }
 
+#Rise From Feudal
+character_event = {
+	id = cetic.543
+	picture = GFX_evt_china_isolationist
+	desc = EVTDESCCETIC543
+	trigger = {
+		has_character_modifier = bureaucracy
+		government = feudal_government
+		primary_title = {
+			check_variable = { which = bureau_number value = 25 }
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = EVTOPTACETIC543
+		set_government_type = bureaucratic_government
+		primary_title = {
+			clr_title_flag = devolved_bureaucracy
+		}
+	}
+}
+
+
 #Yearly Bureaucracy Change
 character_event = {
-	id = cetic.542
+	id = cetic.544
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -10228,7 +10333,7 @@ character_event = {
 		primary_title = {
 			check_variable = { which = bureau_number value >= 100 }
 		}
-		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 	}
 	
 	mean_time_to_happen = {
@@ -10246,7 +10351,7 @@ character_event = {
 	id = cetic.6050 # hopefully no one ever uses this number
 	hide_window = yes
 	trigger = {
-		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 		primary_title = {
 			check_variable = { which = bureau_number value < 0 }
 		}
