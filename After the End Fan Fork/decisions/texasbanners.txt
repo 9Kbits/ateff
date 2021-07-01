@@ -1,4 +1,43 @@
 decisions = {
+	
+	form_airmen_banner = {
+		is_high_prio = yes
+		only_playable = yes
+			
+			
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+				   AND = { culture = comanche
+						   has_global_flag = comanche_opt_in
+				}
+			}
+		}
+				
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 5
+			has_landed_title = c_bexar
+		}
+		effect = {
+			prestige = -5
+			narrative_event = { id = tex_king.1 }
+			activate_title = { title = d_airmen status = yes }
+			primary_title = {
+				d_airmen = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}		
+		
+		 }
+		ai_will_do = {
+			factor = 1
+		}  
+	}
 
 	form_utep_banner = {
 		is_high_prio = yes
@@ -27,7 +66,7 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			narrative_event = { id = tex_king.1 }
+			narrative_event = { id = tex_king.2 }
 			activate_title = { title = d_miners status = yes }
 			primary_title = {
 				d_miners = {
@@ -65,7 +104,7 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			narrative_event = { id = tex_king.21 }
+			narrative_event = { id = tex_king.3 }
 			activate_title = { title = d_red_raider status = yes }
 			primary_title = {
 				d_red_raider = {
@@ -105,7 +144,7 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			narrative_event = { id = tex_king.3 }
+			narrative_event = { id = tex_king.4 }
 			activate_title = { title = d_longhorns status = yes }
 			primary_title = {
 				d_longhorns = {
@@ -145,7 +184,7 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			narrative_event = { id = tex_king.4 }
+			narrative_event = { id = tex_king.5 }
 			activate_title = { title = d_aggies status = yes }
 			primary_title = {
 				d_aggies = {
@@ -155,45 +194,6 @@ decisions = {
 			}		
 		
 		}
-		ai_will_do = {
-			factor = 1
-		}  
-	}
-	
-	form_airmen_banner = {
-		is_high_prio = yes
-		only_playable = yes
-			
-			
-		potential = {
-			is_playable = yes
-			independent = yes
-			OR = { culture_group = starfolk
-				   AND = { culture = comanche
-						   has_global_flag = comanche_opt_in
-				}
-			}
-		}
-				
-		allow = {
-			is_adult = yes
-			prisoner = no
-			NOT = { is_incapable = yes }
-			prestige = 5
-			has_landed_title = c_bexar
-		}
-		effect = {
-			prestige = -5
-			narrative_event = { id = tex.21 }
-			activate_title = { title = d_airmen status = yes }
-			primary_title = {
-				d_airmen = {
-					grant_title = ROOT
-					copy_title_laws = PREV
-				}
-			}		
-		
-		 }
 		ai_will_do = {
 			factor = 1
 		}  
