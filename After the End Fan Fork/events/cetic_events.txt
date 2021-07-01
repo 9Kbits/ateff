@@ -3556,92 +3556,6 @@ character_event = {
 	# }
 # }
 
-#Authority Increase - Good Stats
-character_event = {
-	id = cetic.307
-	desc = EVTDESCCETIC307
-	picture = GFX_evt_china_open
-	only_playable = yes
-	min_age = 16
-	
-	trigger = {
-		OR = {
-			has_landed_title = e_california
-			has_landed_title = e_new_california
-		}
-		OR = {
-			stewardship = 15
-			learning = 15
-			trait = genius
-			trait = quick
-			trait = erudite
-			trait = administrator
-		}
-		NOT = {
-			has_character_flag = ia_goodstats
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		change_variable = { which = global_imp_auth value = 5 }
-	}
-	
-	option = {
-		name = opta_excellent
-		custom_tooltip = {
-			text = impauth_increase_5_TT
-		}
-		hidden_tooltip = {
-			set_character_flag = ia_goodstats
-		}
-	}
-}
-
-#Authority Increase - Good Imperial Exam Score
-character_event = {
-	id = cetic.308
-	desc = EVTDESCCETIC308
-	picture = GFX_evt_monk
-	only_playable = yes
-	
-	trigger = {
-		OR = {
-			has_landed_title = e_california
-			has_landed_title = e_new_california
-		}
-		# OR = {
-			# trait = imp_ex3
-			# trait = imp_ex4
-		# }
-		trait = imp_ex4
-		NOT = {
-			has_character_flag = ia_goodscore
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		change_variable = { which = global_imp_auth value = 5 }
-	}
-	
-	option = {
-		name = opta_excellent
-		custom_tooltip = {
-			text = impauth_increase_5_TT
-		}
-		hidden_tooltip = {
-			set_character_flag = ia_goodscore
-		}
-	}
-}
-
 #Authority Increase - Uniting California
 narrative_event = {
 	id = cetic.309
@@ -3757,119 +3671,6 @@ character_event = {
 		name = opta_disappointing
 		custom_tooltip = {
 			text = impauth_decrease_10_TT
-		}
-	}
-}
-
-#Authority Decrease - Low Skills
-character_event = {
-	id = cetic.313
-	desc = EVTDESCCETIC313
-	picture = GFX_evt_bad_news
-	only_playable = yes
-	min_age = 16
-	
-	trigger = {
-		OR = {
-			has_landed_title = e_california
-			has_landed_title = e_new_california
-		}
-		OR = {
-			stewardship < 5
-			learning < 5
-			trait = slow
-			trait = inbred
-			trait = dull
-		}
-		NOT = {
-			has_character_flag = ia_badstats
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		change_variable = { which = global_imp_auth value = -10 }
-	}
-	
-	option = {
-		name = opta_disappointing
-		custom_tooltip = {
-			text = impauth_decrease_10_TT
-		}
-		hidden_tooltip = {
-			set_character_flag = ia_badstats
-		}
-	}
-}
-
-#Authority Decrease - Low Imperial Exam Score
-character_event = {
-	id = cetic.314
-	desc = EVTDESCCETIC314
-	picture = GFX_evt_bad_news
-	only_playable = yes
-	
-	trigger = {
-		OR = {
-			has_landed_title = e_california
-			has_landed_title = e_new_california
-		}
-		OR = {
-			trait = failed_exam
-			trait = imp_ex1
-		}
-		NOT = {
-			has_character_flag = ia_badscore
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		change_variable = { which = global_imp_auth value = -10 }
-	}
-	
-	option = {
-		name = opta_disappointing
-		custom_tooltip = {
-			text = impauth_decrease_10_TT
-		}
-		hidden_tooltip = {
-			set_character_flag = ia_badscore
-		}
-	}
-}
-
-#Authority Decrease - Peasant Revolts
-province_event = { #bit of a hacky change, idk if this actually works
-	id = cetic.315
-	desc = EVTDESCCETIC315
-	picture = GFX_evt_peasants
-	is_triggered_only = yes
-	only_playable = yes
-	
-	trigger = {
-		owner = {
-			OR = {
-				has_landed_title = e_california
-				has_landed_title = e_new_california
-			}
-		}
-	}
-	
-	immediate = {
-		change_variable = { which = global_imp_auth value = -5 }
-	}
-	
-	option = {
-		name = opta_disappointing
-		custom_tooltip = {
-			text = impauth_decrease_5_TT
 		}
 	}
 }
@@ -7032,6 +6833,1119 @@ character_event = {
 	}
 }
 
+#Yearly Imperial Authority
+character_event = {
+	id = cetic.408
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_landed_title = e_california
+			has_landed_title = e_new_california
+		}
+	}
+	
+	immediate = {
+		set_variable = {
+			which = trait_bonus
+			value = 0
+		}
+		set_variable = {
+			which = diplomacy_bonus
+			value = 0
+		}
+		set_variable = {
+			which = martial_bonus
+			value = 0
+		}
+		set_variable = {
+			which = stewardship_bonus
+			value = 0
+		}
+		set_variable = {
+			which = learning_bonus
+			value = 0
+		}
+		set_variable = {
+			which = councilor_bonus
+			value = 0
+		}
+		set_variable = {
+			which = vassal_bonus
+			value = 0
+		}
+		set_variable = {
+			which = trait_penalty
+			value = 0
+		}
+		set_variable = {
+			which = diplomacy_penalty
+			value = 0
+		}
+		set_variable = {
+			which = martial_penalty
+			value = 0
+		}
+		set_variable = {
+			which = stewardship_penalty
+			value = 0
+		}
+		set_variable = {
+			which = learning_penalty
+			value = 0
+		}
+		set_variable = {
+			which = councilor_penalty
+			value = 0
+		}
+		set_variable = {
+			which = vassal_penalty
+			value = 0
+		}
+		set_variable = {
+			which = stability
+			value = 0
+		}
+		set_variable = {
+			which = governator_influence
+			value = 0
+		}
+		set_variable = {
+			which = yearly_imperial_authority_change
+			value = 0
+		}
+		#Positive Effects
+		hidden_tooltip = {
+			# if = {
+				# limit = {
+					# diplomacy = 12
+				# }
+				# set_variable = {
+					# which = diplomacy_bonus
+					# value = 0.5
+				# }
+			# }
+			# if = {
+				# limit = {
+					# martial = 12
+				# }
+				# set_variable = {
+					# which = martial_bonus
+					# value = 0.5
+				# }
+			# }
+			# if = {
+				# limit = {
+					# stewardship = 12
+				# }
+				# set_variable = {
+					# which = stewardship_bonus
+					# value = 0.5
+				# }
+			# }
+			# if = {
+				# limit = {
+					# learning = 12
+				# }
+				# set_variable = {
+					# which = learning_bonus
+					# value = 0.5
+				# }
+			# }
+			if = {
+				limit = {
+					trait = genius
+				}
+				change_variable = {
+					which = trait_bonus
+					value = 0.5
+				}
+			}
+			if = {
+				limit = {
+					trait = imp_ex3
+				}
+				change_variable = {
+					which = trait_bonus
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					trait = imp_ex4
+				}
+				change_variable = {
+					which = trait_bonus
+					value = 3
+				}
+			}
+			if = {
+				limit = {
+					trait = quick
+				}
+				change_variable = {
+					which = trait_bonus
+					value = 0.25
+				}
+			}
+			if = {
+				limit = {
+					trait = grey_eminence
+				}
+				change_variable = {
+					which = trait_bonus
+					value = 0.25
+				}
+			}
+			if = {
+				limit = {
+					trait = brilliant_strategist
+				}
+				change_variable = {
+					which = trait_bonus
+					value = 0.25
+				}
+			}
+			if = {
+				limit = {
+					trait = midas_touched
+				}
+				change_variable = {
+					which = trait_bonus
+					value = 0.25
+				}
+			}
+			if = {
+				limit = {
+					trait = administrator
+				}
+				change_variable = {
+					which = trait_bonus
+					value = 0.25
+				}
+			}
+			if = {
+				limit = {
+					job_chancellor = {
+						has_position = loyalist
+					}
+				}
+				change_variable = {
+					which = councilor_bonus
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					job_marshal = {
+						has_position = loyalist
+					}
+				}
+				change_variable = {
+					which = councilor_bonus
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					job_treasurer = {
+						has_position = loyalist
+					}
+				}
+				change_variable = {
+					which = councilor_bonus
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					job_spymaster = {
+						has_position = loyalist
+					}
+				}
+				change_variable = {
+					which = councilor_bonus
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					job_spiritual = {
+						has_position = loyalist
+					}
+				}
+				change_variable = {
+					which = councilor_bonus
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					job_chancellor = {
+						has_position = loyalist
+						is_powerful_vassal = yes
+					}
+				}
+				change_variable = {
+					which = councilor_bonus
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					job_marshal = {
+						has_position = loyalist
+						is_powerful_vassal = yes
+					}
+				}
+				change_variable = {
+					which = councilor_bonus
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					job_treasurer = {
+						has_position = loyalist
+						is_powerful_vassal = yes
+					}
+				}
+				change_variable = {
+					which = councilor_bonus
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					job_spymaster = {
+						has_position = loyalist
+						is_powerful_vassal = yes
+					}
+				}
+				change_variable = {
+					which = councilor_bonus
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					job_spiritual = {
+						has_position = loyalist
+						is_powerful_vassal = yes
+					}
+				}
+				change_variable = {
+					which = councilor_bonus
+					value = 1
+				}
+			}
+			any_vassal = {
+				limit = {
+					tier = DUKE
+					opinion = {
+						who = ROOT
+						value = 40
+					}
+				}
+				liege = {
+					change_variable = {
+						which = vassal_bonus
+						value = 0.25
+					}
+				}
+			}
+			any_vassal = {
+				limit = {
+					tier = KING
+					opinion = {
+						who = ROOT
+						value = 40
+					}
+				}
+				liege = {
+					change_variable = {
+						which = vassal_bonus
+						value = 1
+					}
+				}
+			}
+			# if = {
+				# limit = {
+					# wealth = 0
+					# NOT = {
+						# any_war = {
+							# defender = {
+								# character = ROOT
+							# }
+							# attacker = {
+								# in_revolt = yes
+							# }
+						# }
+					# }
+					# primary_title = { check_variable = { which = var_imperial_authority value < 65 }}
+				# }
+				# change_variable = {
+					# which = stability
+					# value = 1
+				# }
+			# }
+			# if = {
+				# limit = {
+					# NOT = {
+						# any_realm_province = {
+							# revolt_risk = 0.05
+						# }
+					# }
+					# primary_title = { check_variable = { which = var_imperial_authority value < 65 }}
+				# }
+				# change_variable = {
+					# which = stability
+					# value = 1
+				# }
+			# }
+			if = { 
+				limit = {
+					any_character = {
+						trait = governator
+						reverse_has_opinion_modifier = {
+							who = ROOT
+							modifier = gnator_succeed
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = 2
+				}
+			}
+			if = { 
+				limit = {
+					any_character = {
+						trait = governator
+						reverse_has_opinion_modifier = {
+							who = ROOT
+							modifier = gnator_succeed
+						}
+						higher_real_tier_than = duke
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = 2
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						trait = governator
+						OR = {
+							e_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = 20
+									}
+								}
+							}
+							e_new_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = 20
+									}
+								}
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						trait = governator
+						OR = {
+							e_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = 40
+									}
+								}
+							}
+							e_new_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = 40
+									}
+								}
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						trait = governator
+						OR = {
+							e_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = 60
+									}
+								}
+							}
+							e_new_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = 60
+									}
+								}
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = 1
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						trait = governator
+						OR = {
+							e_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = 80
+									}
+								}
+							}
+							e_new_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = 80
+									}
+								}
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = 1
+				}
+			}
+		}
+		
+		#Negative Effects
+		hidden_tooltip = {
+			if = {
+				limit = {
+					diplomacy < 6
+				}
+				set_variable = {
+					which = diplomacy_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					martial < 6
+				}
+				set_variable = {
+					which = martial_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					stewardship < 6
+				}
+				set_variable = {
+					which = stewardship_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					learning < 6
+				}
+				set_variable = {
+					which = learning_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					trait = dull
+				}
+				change_variable = {
+					which = trait_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					trait = imp_ex1
+				}
+				change_variable = {
+					which = trait_bonus
+					value = -2
+				}
+			}
+			if = {
+				limit = {
+					trait = failed_exam
+				}
+				change_variable = {
+					which = trait_bonus
+					value = -4
+				}
+			}
+			if = {
+				limit = {
+					trait = imbecile
+				}
+				change_variable = {
+					which = trait_penalty
+					value = -5
+				}
+			}
+			if = {
+				limit = {
+					trait = inbred
+				}
+				change_variable = {
+					which = trait_penalty
+					value = -4
+				}
+			}
+			if = {
+				limit = {
+					trait = slow
+				}
+				change_variable = {
+					which = trait_penalty
+					value = -3
+				}
+			}
+			if = {
+				limit = {
+					is_incapable = yes
+				}
+				change_variable = {
+					which = trait_penalty
+					value = -2
+				}
+			}
+			if = {
+				limit = {
+					trait = naive_appeaser
+				}
+				change_variable = {
+					which = trait_penalty
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					trait = misguided_warrior
+				}
+				change_variable = {
+					which = trait_penalty
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					trait = indulgent_wastrel
+				}
+				change_variable = {
+					which = trait_penalty
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					trait = amateurish_plotter
+				}
+				change_variable = {
+					which = trait_penalty
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					job_chancellor = {
+						has_position = malcontent
+					}
+				}
+				change_variable = {
+					which = councilor_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					job_marshal = {
+						has_position = malcontent
+					}
+				}
+				change_variable = {
+					which = councilor_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					job_treasurer = {
+						has_position = malcontent
+					}
+				}
+				change_variable = {
+					which = councilor_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					job_spymaster = {
+						has_position = malcontent
+					}
+				}
+				change_variable = {
+					which = councilor_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					job_spiritual = {
+						has_position = malcontent
+					}
+				}
+				change_variable = {
+					which = councilor_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					job_chancellor = {
+						has_position = malcontent
+						is_powerful_vassal = yes
+					}
+				}
+				change_variable = {
+					which = councilor_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					job_marshal = {
+						has_position = malcontent
+						is_powerful_vassal = yes
+					}
+				}
+				change_variable = {
+					which = councilor_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					job_treasurer = {
+						has_position = malcontent
+						is_powerful_vassal = yes
+					}
+				}
+				change_variable = {
+					which = councilor_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					job_spymaster = {
+						has_position = malcontent
+						is_powerful_vassal = yes
+					}
+				}
+				change_variable = {
+					which = councilor_penalty
+					value = -0.5
+				}
+			}
+			if = {
+				limit = {
+					job_spiritual = {
+						has_position = malcontent
+						is_powerful_vassal = yes
+					}
+				}
+				change_variable = {
+					which = councilor_penalty
+					value = -0.5
+				}
+			}
+			any_vassal = {
+				limit = {
+					tier = DUKE
+					opinion = {
+						who = ROOT
+						value < -40
+					}
+					liege = {
+						ai = no
+					}
+				}
+				liege = {
+					change_variable = {
+						which = vassal_penalty
+						value = -0.25
+					}
+				}
+			}
+			any_vassal = {
+				limit = {
+					tier = KING
+					opinion = {
+						who = ROOT
+						value < -40
+					}
+					liege = {
+						ai = no
+					}
+				}
+				liege = {
+					change_variable = {
+						which = vassal_penalty
+						value = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_character_modifier = negative_money
+				}
+				change_variable = {
+					which = stability
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					any_war = {
+						defender = {
+							character = ROOT
+						}
+						attacker = {
+							in_revolt = yes
+						}
+					}
+				}
+				change_variable = {
+					which = stability
+					value = -0.5
+				}
+			}
+			if = { 
+				limit = {
+					any_character = {
+						trait = governator
+						NOT = {
+							reverse_has_opinion_modifier = {
+								who = ROOT
+								modifier = gnator_succeed
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = -2
+				}
+			}
+			if = { 
+				limit = {
+					any_character = {
+						trait = governator
+						NOT = {
+							reverse_has_opinion_modifier = {
+								who = ROOT
+								modifier = gnator_succeed
+							}
+						}
+						higher_real_tier_than = DUKE
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = -2
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						trait = governator
+						OR = {
+							e_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = -20
+									}
+								}
+							}
+							e_new_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = -20
+									}
+								}
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						trait = governator
+						OR = {
+							e_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = -40
+									}
+								}
+							}
+							e_new_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = -40
+									}
+								}
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						trait = governator
+						OR = {
+							e_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = -60
+									}
+								}
+							}
+							e_new_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = -60
+									}
+								}
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						trait = governator
+						OR = {
+							e_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = -80
+									}
+								}
+							}
+							e_new_california = {
+								holder_scope = {
+									reverse_opinion = {
+										who = ROOT
+										value = -80
+									}
+								}
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = -1
+				}
+			}
+			if = {
+				limit = {
+					any_character = {
+						trait = governator
+						OR = {
+							e_california = {
+								holder_scope = {
+									is_rival = ROOT
+								}
+							}
+							e_new_california = {
+								holder_scope = {
+									is_rival = ROOT
+								}
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = governator_influence
+					value = -1
+				}
+			}
+		}
+		
+		hidden_tooltip = {
+			set_variable = {
+				which = diplomacy_number
+				which = diplomacy_bonus
+			}
+			change_variable = {
+				which = diplomacy_number
+				which = diplomacy_penalty
+			}
+			set_variable = {
+				which = martial_number
+				which = martial_bonus
+			}
+			change_variable = {
+				which = martial_number
+				which = martial_penalty
+			}
+			set_variable = {
+				which = stewardship_number
+				which = stewardship_bonus
+			}
+			change_variable = {
+				which = stewardship_number
+				which = stewardship_penalty
+			}
+			set_variable = {
+				which = learning_number
+				which = learning_bonus
+			}
+			change_variable = {
+				which = learning_number
+				which = learning_penalty
+			}
+		}
+		
+		hidden_tooltip = {
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = diplomacy_bonus
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = martial_bonus
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = stewardship_bonus
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = learning_bonus
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = diplomacy_penalty
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = martial_penalty
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = stewardship_penalty
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = learning_penalty
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = trait_bonus
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = trait_penalty
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = councilor_bonus
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = councilor_penalty
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = vassal_bonus
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = vassal_penalty
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = stability
+			}
+		}
+		
+		change_variable = {
+			which = global_imp_auth
+			which = yearly_imperial_authority_change
+		}
+	}
+}
+
 # ************************** Bureaucracy Events***********************
 
 #Variable for bureaucracy (on_startup)
@@ -7043,6 +7957,7 @@ character_event = {
 	
 	trigger = {
 		government = bureaucratic_government
+		higher_real_tier_than = BARON
 		NOT = {
 			primary_title = {
 				has_title_flag = bureaucracy_set
@@ -7100,6 +8015,7 @@ character_event = {
 	
 	trigger = {
 		government = bureaucratic_government
+		higher_real_tier_than = BARON
 		NOT = {
 			primary_title = {
 				has_title_flag = bureaucracy_set
@@ -7157,6 +8073,7 @@ character_event = {
 		ROOT = {
 			government = bureaucratic_government
 		}
+		higher_real_tier_than = BARON
 	}
 	
 	mean_time_to_happen = {
@@ -7218,6 +8135,7 @@ character_event = {
 	id = cetic.541
 	hide_window = yes
 	trigger = {
+		higher_real_tier_than = BARON
 		government = bureaucratic_government
 		any_demesne_title = {
 			has_title_flag = bureaucracy_set
@@ -7254,6 +8172,7 @@ character_event = {
 	id = cetic.505
 	hide_window = yes
 	trigger = {
+		higher_real_tier_than = BARON
 		government = bureaucratic_government
 		any_demesne_title = {
 			has_title_flag = bureaucracy_set
@@ -7286,94 +8205,6 @@ character_event = {
 	}
 }
 
-#B Rise: Good vassals
-character_event = {
-	id = cetic.506
-	desc = EVTDESCCETIC506
-	picture = GFX_evt_china_golden_age
-	only_playable = yes
-	min_age = 16
-	
-	trigger = {
-		government = bureaucratic_government
-		OR = {
-			trait = imp_ex3
-			trait = imp_ex4
-			trait = just
-			stewardship > 15
-			learning > 15
-		}
-		NOT = {
-			has_character_flag = bureau_set
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		primary_title = {
-			change_variable = { which = bureau_number value = 3 }
-		}
-	}
-	
-	option = {
-		name = opta_excellent
-		set_character_flag = bureau_set
-		custom_tooltip = {
-			text = bureau_increase_3_TT
-		}
-		prestige = 50
-		if = {
-			limit = {
-				independent = no
-			}
-			liege = {
-				character_event = { id = cetic.507 }
-			}
-		}
-	}
-}
-
-#Liege Notification
-character_event = {
-	id = cetic.507
-	desc = EVTDESCCETIC507
-	picture = GFX_evt_china_golden_age
-	notification = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		primary_title = {
-			change_variable = { which = bureau_number value = 2 }
-		}
-	}
-	
-	option = {
-		name = opta_excellent
-		custom_tooltip = {
-			text = bureau_increase_2_TT
-		}
-		if = {
-			limit = {
-				higher_real_tier_than = COUNT
-			}
-			custom_tooltip = {
-				text = globalbureau_increase_1_TT
-				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = 1 }
-				}
-			}
-		}
-		opinion = {
-			modifier = model_bureaucrat
-			who = FROM
-		}
-		prestige = 25
-	}
-}
-
 #B Rise: Strong Council
 character_event = {
 	id = cetic.509
@@ -7403,173 +8234,6 @@ character_event = {
 		}
 		custom_tooltip = {
 			text = globalbureau_increase_02_TT
-		}
-		prestige = 25
-	}
-}
-
-#Set up for quality councillors
-character_event = {
-	id = cetic.510
-	hide_window = yes
-	
-	has_job_title = yes
-	
-	trigger = {
-		OR = {
-			government = bureaucratic_government
-			liege = {
-				government = bureaucratic_government
-			}
-		}
-		OR = {
-			AND = {
-				has_job_title = job_chancellor
-				NOT = {
-					liege = {
-						has_character_flag = set_chancellor
-					}
-				}
-				diplomacy > 15
-			}
-			AND = {
-				has_job_title = job_marshal
-				NOT = {
-					liege = {
-						has_character_flag = set_marshal
-					}
-				}
-				martial > 15
-			}
-			AND = {
-				has_job_title = job_treasurer
-				NOT = {
-					liege = {
-						has_character_flag = set_treasurer
-					}
-				}
-				stewardship > 15
-			}
-			AND = {
-				has_job_title = job_spymaster
-				NOT = {
-					liege = {
-						has_character_flag = set_spymaster
-					}
-				}
-				intrigue > 15
-			}
-			AND = {
-				has_job_title = job_spiritual
-				NOT = {
-					liege = {
-						has_character_flag = set_spiritual
-					}
-				}
-				learning > 15
-			}
-		}
-		NOT = {
-			has_character_flag = councillor_set
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		set_character_flag = councillor_set
-		liege = {
-			character_event = { id = cetic.511 }
-		}
-	}
-	
-	# option = {
-		# name = opta_excellent
-		# set_character_flag = councillor_set
-		# custom_tooltip = {
-			# text = globalbureau_increase_01_TT
-		# }
-		# prestige = 50
-		# liege = {
-			# character_event = { id = cetic.511 }
-		# }		
-	# }
-}
-
-#B Rise: Quality Councillors
-character_event = {
-	id = cetic.511
-	desc = EVTDESCCETIC511
-	picture = GFX_evt_china_golden_age
-	is_triggered_only = yes
-
-	immediate = {
-		primary_title = {
-			change_variable = { which = bureau_number value = 2 }
-		}
-	}
-	
-	option = {
-		name = opta_excellent
-		custom_tooltip = {
-			text = bureau_increase_2_TT
-		}
-		if = {
-			limit = {
-				higher_real_tier_than = COUNT
-			}
-			custom_tooltip = {
-				text = globalbureau_increase_1_TT
-				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = 1 }
-				}
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_job_title = job_chancellor
-				}
-			}
-			set_character_flag = set_chancellor
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_job_title = job_marshal
-				}
-			}
-			set_character_flag = set_marshal
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_job_title = job_treasurer
-				}
-			}
-			set_character_flag = set_treasurer
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_job_title = job_spymaster
-				}
-			}
-			set_character_flag = set_spymaster
-		}
-		if = {
-			limit = {
-				FROM = {
-					has_job_title = job_spiritual
-				}
-			}
-			set_character_flag = set_spiritual
-		}
-		opinion = {
-			modifier = model_bureaucrat
-			who = FROM
 		}
 		prestige = 25
 	}
@@ -7669,93 +8333,6 @@ character_event = {
 	}
 }
 
-#B Fall: Bad vassals
-character_event = {
-	id = cetic.516
-	desc = EVTDESCCETIC516
-	picture = GFX_evt_china_isolationist
-	only_playable = yes
-	min_age = 16
-	
-	trigger = {
-		government = bureaucratic_government
-		OR = {
-			trait = failed_exam
-			trait = imp_ex1
-			trait = arbitrary
-			stewardship < 6
-			learning < 6
-		}
-		NOT = {
-			has_character_flag = bureau_set
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		primary_title = {
-			change_variable = { which = bureau_number value = -2 }
-		}
-	}
-	
-	option = {
-		name = opta_disappointing
-		set_character_flag = bureau_set
-		custom_tooltip = {
-			text = bureau_decrease_2_TT
-		}
-		prestige = -10
-		if = {
-			limit = {
-				independent = no
-			}
-			liege = {
-				character_event = { id = cetic.517 }
-			}
-		}
-	}
-}
-
-#B Fall: Bad Vassals - Liege
-character_event = {
-	id = cetic.517
-	desc = EVTDESCCETIC517
-	picture = GFX_evt_china_isolationist
-	notification = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		primary_title = {
-			change_variable = { which = bureau_number value = -2 }
-		}
-	}
-	
-	option = {
-		name = opta_disappointing
-		custom_tooltip = {
-			text = bureau_decrease_2_TT
-		}
-		if = {
-			limit = {
-				higher_real_tier_than = COUNT
-			}
-			custom_tooltip = {
-				text = globalbureau_decrease_105_TT
-				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = -1.5 }
-				}
-			}
-		}
-		opinion = {
-			modifier = bad_bureaucrat
-			who = FROM
-		}
-	}
-}
-
 #B Fall: Weak Council
 character_event = {
 	id = cetic.518
@@ -7781,118 +8358,6 @@ character_event = {
 		}
 		custom_tooltip = {
 			text = globalbureau_decrease_5_TT
-		}
-		prestige = -10
-	}
-}
-
-#Set up for bad councillors
-character_event = {
-	id = cetic.519
-	hide_window = yes
-	
-	has_job_title = yes
-	
-	trigger = {
-		liege = {
-			government = bureaucratic_government
-		}
-		OR = {
-			AND = {
-				has_job_title = job_chancellor
-				NOT = {
-					liege = {
-						has_character_flag = set_chancellor
-					}
-				}
-				diplomacy < 6
-			}
-			AND = {
-				has_job_title = job_marshal
-				NOT = {
-					liege = {
-						has_character_flag = set_marshal
-					}
-				}
-				martial < 6
-			}
-			AND = {
-				has_job_title = job_treasurer
-				NOT = {
-					liege = {
-						has_character_flag = set_treasurer
-					}
-				}
-				stewardship < 6
-			}
-			AND = {
-				has_job_title = job_spymaster
-				NOT = {
-					liege = {
-						has_character_flag = set_spymaster
-					}
-				}
-				intrigue < 6
-			}
-			AND = {
-				has_job_title = job_spiritual
-				NOT = {
-					liege = {
-						has_character_flag = set_spiritual
-					}
-				}
-				learning < 6
-			}
-		}
-		NOT = {
-			has_character_flag = councillor_set
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		set_character_flag = councillor_set
-		liege = {
-			character_event = { id = cetic.520 }
-		}
-	}
-}
-
-#B Fall: Bad Councillors
-character_event = {
-	id = cetic.520
-	desc = EVTDESCCETIC520
-	picture = GFX_evt_china_isolationist
-	is_triggered_only = yes
-	
-	immediate = {
-		primary_title = {
-			change_variable = { which = bureau_number value = -1 }
-		}
-	}
-	
-	option = {
-		name = opta_disappointing
-		custom_tooltip = {
-			text = bureau_decrease_1_TT
-		}
-		if = {
-			limit = {
-				higher_real_tier_than = COUNT
-			}
-			custom_tooltip = {
-				text = globalbureau_decrease_05_TT
-				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = -0.5 }
-				}
-			}
-		}
-		opinion = {
-			modifier = bad_bureaucrat
-			who = FROM
 		}
 		prestige = -10
 	}
@@ -8089,6 +8554,7 @@ character_event = {
 	picture = GFX_evt_china_isolationist
 	trigger = {
 		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 		primary_title = {
 			check_variable = { which = bureau_number value < 40 }
 		}
@@ -8117,6 +8583,7 @@ character_event = {
 	picture = GFX_evt_china_isolationist
 	trigger = {
 		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 		primary_title = {
 			check_variable = { which = bureau_number value < 70 }
 		}
@@ -8140,6 +8607,7 @@ character_event = {
 	picture = GFX_evt_china_expansionist
 	trigger = {
 		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 		primary_title = {
 			AND = {
 				check_variable = { which = bureau_number value > 40 }
@@ -8166,6 +8634,7 @@ character_event = {
 	picture = GFX_evt_china_expansionist
 	trigger = {
 		government = bureaucratic_government
+		has_character_modifier = bureaucracy
 		primary_title = {
 			check_variable = { which = bureau_number value > 70 }
 		}
@@ -8780,81 +9249,81 @@ character_event = {
 }
 
 #Office yearly bonus
-character_event = {
-	id = cetic.537
-	desc = DEBUG
-	hide_window = yes
-	trigger = {
-		any_demesne_province = {
-			has_province_modifier = bureau_offices
-		}
-		primary_title = {
-			has_title_flag = bureaucracy_set
-		}
-		government = bureaucratic_government
+# character_event = {
+	# id = cetic.537
+	# desc = DEBUG
+	# hide_window = yes
+	# trigger = {
+		# any_demesne_province = {
+			# has_province_modifier = bureau_offices
+		# }
+		# primary_title = {
+			# has_title_flag = bureaucracy_set
+		# }
+		# government = bureaucratic_government
 		
-		OR = {
-			NOT = {
-				has_character_flag = bureau_office_flag
-			}
-			had_character_flag = {
-				flag = bureau_office_flag
-				days = 364
-			}
-		}
-	}
+		# OR = {
+			# NOT = {
+				# has_character_flag = bureau_office_flag
+			# }
+			# had_character_flag = {
+				# flag = bureau_office_flag
+				# days = 364
+			# }
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		days = 1
-	}
+	# mean_time_to_happen = {
+		# days = 1
+	# }
 	
-	immediate = {
-		primary_title = {
-			change_variable = { which = bureau_number value = 1 }
-		}
-		clr_character_flag = bureau_office_flag
-		set_character_flag = bureau_office_flag
-		character_event = { id = cetic.537 days = 365 }
-	}
-	option = {
-		name = DEBUG
-	}
-}
+	# immediate = {
+		# primary_title = {
+			# change_variable = { which = bureau_number value = 1 }
+		# }
+		# clr_character_flag = bureau_office_flag
+		# set_character_flag = bureau_office_flag
+		# character_event = { id = cetic.537 days = 365 }
+	# }
+	# option = {
+		# name = DEBUG
+	# }
+# }
 
 #Roads yearly bonus
-character_event = {
-	id = cetic.538
-	hide_window = yes
-	trigger = {
-		any_demesne_province = {
-			has_province_modifier = bureau_roads
-		}
-		government = bureaucratic_government
-		primary_title = {
-			has_title_flag = bureaucracy_set
-		}
-		OR = {
-			NOT = {
-				has_character_flag = bureau_roads_flag
-			}
-			had_character_flag = {
-				flag = bureau_roads_flag
-				days = 364
-			}
-		}
-	}
+# character_event = {
+	# id = cetic.538
+	# hide_window = yes
+	# trigger = {
+		# any_demesne_province = {
+			# has_province_modifier = bureau_roads
+		# }
+		# government = bureaucratic_government
+		# primary_title = {
+			# has_title_flag = bureaucracy_set
+		# }
+		# OR = {
+			# NOT = {
+				# has_character_flag = bureau_roads_flag
+			# }
+			# had_character_flag = {
+				# flag = bureau_roads_flag
+				# days = 364
+			# }
+		# }
+	# }
 	
-	mean_time_to_happen = {
-		days = 1
-	}
+	# mean_time_to_happen = {
+		# days = 1
+	# }
 	
-	immediate = {
-		clr_character_flag = bureau_roads_flag
-		set_character_flag = bureau_roads_flag
-		change_variable = { which = global_bureau_number value = 0.5 }
-		character_event = { id = cetic.538 days = 365 }
-	}
-}
+	# immediate = {
+		# clr_character_flag = bureau_roads_flag
+		# set_character_flag = bureau_roads_flag
+		# change_variable = { which = global_bureau_number value = 0.5 }
+		# character_event = { id = cetic.538 days = 365 }
+	# }
+# }
 
 # Succession Set up
 # character_event = {
@@ -8889,6 +9358,798 @@ character_event = {
 		}
 	}
 }
+
+#Fall to Feudal
+character_event = {
+	id = cetic.541
+	picture = GFX_evt_china_isolationist
+	desc = EVTDESCCETIC541
+	trigger = {
+		has_character_modifier = bureaucracy
+		primary_title = {
+			check_variable = { which = bureau_number value <= 0 }
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = opta_disappointing
+		set_government_type = feudal_government
+		hidden_tooltip = {
+			any_demesne_title = {
+				clr_title_flag = bureaucracy_set
+				clr_title_flag = primary_set
+			} 
+			hidden_tooltip = {
+				remove_character_modifier = bureaucracy
+				remove_character_modifier = low_bureaucracy
+				remove_character_modifier = high_bureaucracy
+				remove_character_modifier = poor_reforms
+				remove_character_modifier = good_reforms
+				remove_character_modifier = sold_bureaucratic_positions
+			}
+		}
+	}
+}
+
+#Yearly Bureaucracy Change
+character_event = {
+	id = cetic.542
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_character_modifier = bureaucracy
+	}
+	
+	immediate = {
+		set_variable = {
+			which = trait_bonus_bureaucracy
+			value = 0
+		}
+		set_variable = {
+			which = stewardship_bonus_bureaucracy
+			value = 0
+		}
+		set_variable = {
+			which = learning_bonus_bureaucracy
+			value = 0
+		}
+		set_variable = {
+			which = councilor_bonus_bureaucracy
+			value = 0
+		}
+		set_variable = {
+			which = vassal_bonus_bureaucracy
+			value = 0
+		}
+		set_variable = {
+			which = trait_penalty_bureaucracy
+			value = 0
+		}
+		set_variable = {
+			which = stewardship_penalty_bureaucracy
+			value = 0
+		}
+		set_variable = {
+			which = learning_penalty_bureaucracy
+			value = 0
+		}
+		set_variable = {
+			which = councilor_penalty_bureaucracy
+			value = 0
+		}
+		set_variable = {
+			which = vassal_penalty_bureaucracy
+			value = 0
+		}
+		set_variable = {
+			which = yearly_bureaucracy_change
+			value = 0
+		}
+		set_variable = {
+			which = passive_bureaucracy
+			value = 0
+		}
+		#Positive Effects
+		hidden_tooltip = {
+			if = { #Stewardship Bonus
+				limit = {
+					stewardship = 12
+				}
+				set_variable = {
+					which = stewardship_bonus_bureaucracy
+					value = 1
+				}
+			}
+			if = { #Learning Bonus
+				limit = {
+					learning = 12
+				}
+				set_variable = {
+					which = learning_bonus_bureaucracy
+					value = 1
+				}
+			}
+			if = { #Trait Bonus: Genius
+				limit = {
+					trait = genius
+				}
+				change_variable = {
+					which = trait_bonus_bureaucracy
+					value = 0.5
+				}
+			}
+			if = { #Trait Bonus: Just
+				limit = {
+					trait = just
+				}
+				change_variable = {
+					which = trait_bonus_bureaucracy
+					value = 0.25
+				}
+			}
+			if = { #Trait Bonus: Imperial Exam Level 3
+				limit = {
+					trait = imp_ex3
+				}
+				change_variable = {
+					which = trait_bonus_bureaucracy
+					value = 2
+				}
+			}
+			if = { #Trait Bonus: Imperial Exam Level 4
+				limit = {
+					trait = imp_ex4
+				}
+				change_variable = {
+					which = trait_bonus_bureaucracy
+					value = 3
+				}
+			}
+			if = { #Trait Bonus: Administrator
+				limit = {
+					trait = administrator
+				}
+				change_variable = {
+					which = trait_bonus_bureaucracy
+					value = 0.25
+				}
+			}
+			if = { #Councilor Bonus: Chancellor
+				limit = {
+					job_chancellor = {
+						diplomacy = 12
+					}
+				}
+				change_variable = {
+					which = councilor_bonus_bureaucracy
+					value = 0.5
+				}
+			}
+			if = { #Councilor Bonus: Marshal
+				limit = {
+					job_marshal = {
+						martial = 12
+					}
+				}
+				change_variable = {
+					which = councilor_bonus_bureaucracy
+					value = 0.5
+				}
+			}
+			if = { #Councilor Bonus: Steward
+				limit = {
+					job_treasurer = {
+						stewardship = 12
+					}
+				}
+				change_variable = {
+					which = councilor_bonus_bureaucracy
+					value = 0.5
+				}
+			}
+			if = { #Councilor Bonus: Spymaster
+				limit = {
+					job_spymaster = {
+						intrigue = 12
+					}
+				}
+				change_variable = {
+					which = councilor_bonus_bureaucracy
+					value = 0.5
+				}
+			}
+			if = { #Councilor Bonus: Chaplain
+				limit = {
+					job_spiritual = {
+						learning = 12
+					}
+				}
+				change_variable = {
+					which = councilor_bonus_bureaucracy
+					value = 0.5
+				}
+			}
+			any_vassal = { #Vassal Bonus: 12 Stewardship or 12 Learning
+				limit = {
+					OR = {
+						stewardship = 12
+						learning = 12
+					}
+					higher_real_tier_than = BARON
+					is_feudal = yes
+				}
+				liege = {
+					change_variable = {
+						which = vassal_bonus_bureaucracy
+						value = 0.5
+					}
+				}
+			}
+			any_vassal = { #Vassal Bonus: 12 Stewardship and 12 Learning
+				limit = {
+					stewardship = 12
+					learning = 12
+					higher_real_tier_than = BARON
+					is_feudal = yes
+				}
+				liege = {
+					change_variable = {
+						which = vassal_bonus_bureaucracy
+						value = 0.5
+					}
+				}
+			}
+			if = { #Realm Size Bonus: Count
+				limit = {
+					tier = COUNT
+				}
+				change_variable = {
+					which = passive_bureaucracy
+					value = 4
+				}
+			}
+			if = { #Realm Size Bonus: Duke
+				limit = {
+					tier = DUKE
+				}
+				change_variable = {
+					which = passive_bureaucracy
+					value = 2
+				}
+			}
+			if = { #Dependent Bonus: 1 Level of Vassalage
+				limit = {
+					independent = no
+					liege = {
+						independent = yes
+					}
+				}
+				change_variable = {
+					which = passive_bureaucracy
+					value = 1
+				}
+			}
+			if = { #Dependent Bonus: 2 Levels of Vassalage
+				limit = {
+					independent = no
+					liege = {
+						independent = no
+						liege = {
+							independent = yes
+						}
+					}
+				}
+				change_variable = {
+					which = passive_bureaucracy
+					value = 1
+				}
+			}
+			if = { #Dependent Bonus: 3 Levels of Vassalage
+				limit = {
+					independent = no
+					liege = {
+						independent = no
+						liege = {
+							independent = no
+							liege = {
+								independent = yes
+							}
+						}
+					}
+				}
+				change_variable = {
+					which = passive_bureaucracy
+					value = 1
+				}
+			}
+			if = { #Bureaucratic Buildings: Offices
+				limit = {
+					any_demesne_province = {
+						has_province_modifier = bureau_offices
+					}
+				}
+				change_variable = { which = bureau_number value = 1 }
+			}
+		}
+		
+		#Negative Effects
+		hidden_tooltip = {
+			if = { #Stewardship Malus
+				limit = {
+					stewardship < 6
+				}
+				set_variable = {
+					which = stewardship_penalty_bureaucracy
+					value = -1
+				}
+			}
+			if = { #Learning Malus
+				limit = {
+					learning < 6
+				}
+				set_variable = {
+					which = learning_penalty_bureaucracy
+					value = -1
+				}
+			}
+			if = { #Trait Malus: Arbitrary
+				limit = {
+					trait = arbitrary
+				}
+				change_variable = {
+					which = trait_penalty_bureaucracy
+					value = -0.5
+				}
+			}
+			if = { #Trait Malus: Imperial Exam Level 1
+				limit = {
+					trait = imp_ex1
+				}
+				change_variable = {
+					which = trait_penalty_bureaucracy
+					value = -1
+				}
+			}
+			if = { #Trait Malus: Failed Exam
+				limit = {
+					trait = failed_exam
+				}
+				change_variable = {
+					which = trait_penalty_bureaucracy
+					value = -2
+				}
+			}
+			if = { #Trait Malus: Dull
+				limit = {
+					trait = dull
+				}
+				change_variable = {
+					which = trait_penalty_bureaucracy
+					value = -0.5
+				}
+			}
+			if = { #Trait Malus: Imbecile
+				limit = {
+					trait = imbecile
+				}
+				change_variable = {
+					which = trait_penalty_bureaucracy
+					value = -5
+				}
+			}
+			if = { #Trait Malus: Inbred
+				limit = {
+					trait = inbred
+				}
+				change_variable = {
+					which = trait_penalty_bureaucracy
+					value = -4
+				}
+			}
+			if = { #Trait Malus: Slow
+				limit = {
+					trait = slow
+				}
+				change_variable = {
+					which = trait_penalty_bureaucracy
+					value = -3
+				}
+			}
+			if = { #Councilor Malus: Chancellor
+				limit = {
+					job_chancellor = {
+						diplomacy < 6
+					}
+					# OR = {
+						# ai = no
+						# independent = yes
+						# higher_real_tier_than = DUKE
+					# }
+				}
+				change_variable = {
+					which = councilor_penalty_bureaucracy
+					value = -2
+				}
+			}
+			if = { #Councilor Malus: Marshal
+				limit = {
+					job_marshal = {
+						martial < 6
+					}
+					# OR = {
+						# ai = no
+						# independent = yes
+						# higher_real_tier_than = DUKE
+					# }
+				}
+				change_variable = {
+					which = councilor_penalty_bureaucracy
+					value = -2
+				}
+			}
+			if = { #Councilor Malus: Steward
+				limit = {
+					job_treasurer = {
+						stewardship < 6
+					}
+					# OR = {
+						# ai = no
+						# independent = yes
+						# higher_real_tier_than = DUKE
+					# }
+				}
+				change_variable = {
+					which = councilor_penalty_bureaucracy
+					value = -2
+				}
+			}
+			if = { #Councilor Malus: Spymaster
+				limit = {
+					job_spymaster = {
+						intrigue < 6
+					}
+					# OR = {
+						# ai = no
+						# independent = yes
+						# higher_real_tier_than = DUKE
+					# }
+				}
+				change_variable = {
+					which = councilor_penalty_bureaucracy
+					value = -2
+				}
+			}
+			if = { #Councilor Malus: Chaplain
+				limit = {
+					job_spiritual = {
+						learning < 6
+					}
+					# OR = {
+						# ai = no
+						# independent = yes
+						# higher_real_tier_than = DUKE
+					# }
+				}
+				change_variable = {
+					which = councilor_penalty_bureaucracy
+					value = -2
+				}
+			}
+			any_vassal = { #Vassal Bonus: Less than 6 Stewardship or Less than 6 Learning
+				limit = {
+					OR = {
+						stewardship < 6
+						learning < 6
+					}
+					higher_real_tier_than = BARON
+					is_feudal = yes
+					liege = {
+						ai = no
+					}
+				}
+				liege = {
+					change_variable = {
+						which = vassal_penalty_bureaucracy
+						value = -0.25
+					}
+				}
+			}
+			any_vassal = { #Vassal Bonus: Less than 6 Stewardship and Less than 6 Learning
+				limit = {
+					stewardship < 6
+					learning < 6
+					higher_real_tier_than = BARON
+					is_feudal = yes
+					liege = {
+						ai = no
+					}
+				}
+				liege = {
+					change_variable = {
+						which = vassal_penalty_bureaucracy
+						value = -0.25
+					}
+				}
+			}
+			if = { #Passive Malus: Greater than 60 Bureaucracy
+				limit = {
+					primary_title = {
+						check_variable = { which = bureau_number value > 60 }
+					}
+				}
+				change_variable = {
+					which = passive_bureaucracy
+					value = -2
+				}
+			}
+			if = { #Passive Malus: Greater than 70 Bureaucracy
+				limit = {
+					primary_title = {
+						check_variable = { which = bureau_number value > 70 }
+					}
+				}
+				change_variable = {
+					which = passive_bureaucracy
+					value = -2
+				}
+			}
+			if = { #Passive Malus: Greater than 80 Bureaucracy
+				limit = {
+					primary_title = {
+						check_variable = { which = bureau_number value > 80 }
+					}
+				}
+				change_variable = {
+					which = passive_bureaucracy
+					value = -2
+				}
+			}
+			if = { #Passive Malus: Greater than 90 Bureaucracy
+				limit = {
+					primary_title = {
+						check_variable = { which = bureau_number value > 90 }
+					}
+				}
+				change_variable = {
+					which = passive_bureaucracy
+					value = -2
+				}
+			}
+			
+		}	
+		
+		hidden_tooltip = {
+			set_variable = {
+				which = stewardship_number_bureaucracy
+				which = stewardship_bonus_bureaucracy
+			}
+			change_variable = {
+				which = stewardship_number_bureaucracy
+				which = stewardship_penalty_bureaucracy
+			}
+			set_variable = {
+				which = learning_number_bureaucracy
+				which = learning_bonus_bureaucracy
+			}
+			change_variable = {
+				which = learning_number_bureaucracy
+				which = learning_penalty_bureaucracy
+			}
+		}
+		
+		hidden_tooltip = {
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = stewardship_bonus_bureaucracy
+			}
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = learning_bonus_bureaucracy
+			}
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = stewardship_penalty_bureaucracy
+			}
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = learning_penalty_bureaucracy
+			}
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = trait_bonus_bureaucracy
+			}
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = trait_penalty_bureaucracy
+			}
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = councilor_bonus_bureaucracy
+			}
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = councilor_penalty_bureaucracy
+			}
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = vassal_bonus_bureaucracy
+			}
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = vassal_penalty_bureaucracy
+			}
+			change_variable = {
+				which = yearly_bureaucracy_change
+				which = passive_bureaucracy
+			}
+		}
+		
+		hidden_tooltip = {
+			if = {
+				limit = {
+					any_demesne_province = {
+						has_province_modifier = bureau_roads
+					}
+				}
+				change_variable = { which = global_bureau_number value = 0.5 }
+			}
+			if = {
+				limit = {
+					higher_real_tier_than = COUNT
+					job_chancellor = {
+						diplomacy > 12
+					}
+				}
+				hidden_tooltip = {
+					change_variable = { which = global_bureau_number value = 0.5 }
+				}
+			}
+			if = {
+				limit = {
+					higher_real_tier_than = COUNT
+					job_marshal = {
+						martial > 12
+					}
+				}
+				hidden_tooltip = {
+					change_variable = { which = global_bureau_number value = 0.5 }
+				}
+			}
+			if = {
+				limit = {
+					higher_real_tier_than = COUNT
+					job_treasurer = {
+						stewardship > 12
+					}
+				}
+				hidden_tooltip = {
+					change_variable = { which = global_bureau_number value = 0.5 }
+				}
+			}
+			if = {
+				limit = {
+					higher_real_tier_than = COUNT
+					job_spymaster = {
+						intrigue > 12
+					}
+				}
+				hidden_tooltip = {
+					change_variable = { which = global_bureau_number value = 0.5 }
+				}
+			}
+			if = {
+				limit = {
+					higher_real_tier_than = COUNT
+					job_spiritual = {
+						learning > 12
+					}
+				}
+				hidden_tooltip = {
+					change_variable = { which = global_bureau_number value = 0.5 }
+				}
+			}
+			if = {
+				limit = {
+					higher_real_tier_than = COUNT
+					job_chancellor = {
+						diplomacy < 6
+					}
+				}
+				hidden_tooltip = {
+					change_variable = { which = global_bureau_number value = -0.5 }
+				}
+			}
+			if = {
+				limit = {
+					higher_real_tier_than = COUNT
+					job_marshal = {
+						martial < 6
+					}
+				}
+				hidden_tooltip = {
+					change_variable = { which = global_bureau_number value = -0.5 }
+				}
+			}
+			if = {
+				limit = {
+					higher_real_tier_than = COUNT
+					job_treasurer = {
+						stewardship < 6
+					}
+				}
+				hidden_tooltip = {
+					change_variable = { which = global_bureau_number value = -0.5 }
+				}
+			}
+			if = {
+				limit = {
+					higher_real_tier_than = COUNT
+					job_spymaster = {
+						intrigue < 6
+					}
+				}
+				hidden_tooltip = {
+					change_variable = { which = global_bureau_number value = -0.5 }
+				}
+			}
+			if = {
+				limit = {
+					higher_real_tier_than = COUNT
+					job_spiritual = {
+						learning < 6
+					}
+				}
+				hidden_tooltip = {
+					change_variable = { which = global_bureau_number value = -0.1 }
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						trait = imp_ex3
+						trait = imp_ex4
+						trait = just
+						stewardship > 12
+						learning > 12
+					}
+					higher_real_tier_than = COUNT
+				}
+				change_variable = { which = global_bureau_number value = 0.5 }
+			}
+			if = {
+				limit = {
+					OR = {
+						trait = failed_exam
+						trait = imp_ex1
+						trait = arbitrary
+						stewardship < 6
+						learning < 6
+					}
+					higher_real_tier_than = COUNT
+				}
+				change_variable = { which = global_bureau_number value = -0.25 }
+			}
+		}
+		
+		primary_title = {
+			set_variable = {
+				which = yearly_bureaucracy_change
+				which = ROOT
+			}
+		}	
+		
+		primary_title = {
+			change_variable = {
+				which = bureau_number
+				which = yearly_bureaucracy_change
+			}
+		}
+	}	
+}
+
 
 # **************************Variable Boundary Events***********************
 

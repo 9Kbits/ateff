@@ -356,9 +356,21 @@ feudal_governments = {
 				religion = qingzhen
 				religion = imamite
 				AND = {
+					culture_group = californian
+					NOT = {
+						religion = nazarene
+					}
+				}
+				AND = {
 					religion = nazarene
 					controls_religion = no
 				}
+			}
+			OR = { #Coding magic
+				primary_title = {
+					check_variable = { which = bureau_number value < 10 }
+				}
+				year == 2666
 			}
 			is_patrician = no
 			NOT = { is_government_potential = colonial_government }
