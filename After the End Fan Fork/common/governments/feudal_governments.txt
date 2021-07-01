@@ -368,7 +368,7 @@ feudal_governments = {
 			}
 			OR = { #Coding magic
 				primary_title = {
-					check_variable = { which = bureau_number value < 10 }
+					check_variable = { which = bureau_number value <= 0 }
 				}
 				year == 2666
 			}
