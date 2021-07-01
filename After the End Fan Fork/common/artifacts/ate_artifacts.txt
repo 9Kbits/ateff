@@ -2671,23 +2671,6 @@ ceremonial_tomahawk_pipe = {
 	stacking = no
 }
 
-sureshot_bow = { #why was this put in the exovedate/metis section is beyond me
-	monthly_character_prestige = 1.5
-	martial = 5
-	combat_rating = 50
-	command_modifier = {
-		morale_offence = 0.3
-	}
-	quality = 5
-	active = {
-		is_adult = yes
-		religion_openly_trailwalker_or_reformed_trigger = yes
-	}
-	flags = { religious combat_weapon trophy very_rare }
-	stacking = no
-	picture = "GFX_eagle"
-	slot = weapon
-}
 #Pelagic artifacts
 bone_knife = {
 	quality = 2
@@ -3032,14 +3015,15 @@ vandals_axe= {
 		light_infantry = 0.1
 	}
 	active = {
-		OR = {
 			age=14
+		OR = {
 			religion = gaian
-			religion = trailwalker
+			religion_openly_trailwalker_or_reformed_trigger
 			culture = inlander
 		}
 	}
 	flags = { combat_weapon weapon axe }
+	indestructible = yes
 	stacking = no
 	picture = "GFX_viking_axe"
 	slot = weapon
@@ -3153,6 +3137,47 @@ dinosaur = {
 	flags = { religious trailwalker revelationist rare }
 	stacking = no
 	picture = "GFX_dinosaur"
+}
+
+pulaskis_axe = {
+	combat_rating = 5
+	inlander_opinion = 5
+	same_religion_opinion = 5
+	stewardship = 3
+	monthly_character_prestige = 0.15
+	monthly_character_piety = 0.1
+	active = {
+			age=14
+		OR = {
+			religion = gaian
+			religion_openly_trailwalker_or_reformed_trigger
+			culture = inlander
+		}
+	}
+	quality = 3
+	flags = { religious axe ceremonial_weapon }
+	picture = "GFX_viking_axe"
+	stacking = no
+
+    	slot = ceremonial_weapon
+}
+
+sureshot_bow = {
+	monthly_character_prestige = 1.5
+	martial = 5
+	combat_rating = 50
+	command_modifier = {
+		morale_offence = 0.3
+	}
+	quality = 5
+	active = {
+		is_adult = yes
+		religion_openly_trailwalker_or_reformed_trigger = yes
+	}
+	flags = { religious combat_weapon trophy very_rare }
+	stacking = no
+	picture = "GFX_eagle"
+	slot = weapon
 }
 
 #wheeler warbikes

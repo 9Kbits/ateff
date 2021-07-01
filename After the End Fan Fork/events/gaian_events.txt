@@ -1765,6 +1765,44 @@ narrative_event = {
 }
 
 narrative_event = {
+	id = gaian.116
+	title = EVTITLE_sacajawea
+	desc = EVTDESC_sacajawea
+	picture = GFX_evt_sacajawea
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value = 3
+		}
+		has_character_flag = mountain_gaian_hike
+		has_character_flag = hike_option_d
+		trait = on_hike
+		culture = inlander
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = sacajawea_sundown
+			years = 5
+		}	
+		piety = 200
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
 	id = gaian.117
 	title = EVTITLE_hells_canyon_ending
 	desc = EVTDESC_hells_canyon_ending
@@ -2041,6 +2079,45 @@ narrative_event = {
 }
 
 narrative_event = {
+	id = gaian.124
+	title = EVTITLE_umatilla_ending
+	desc = EVTDESC_umatilla_ending
+	picture = GFX_evt_umatilla
+	
+	mean_time_to_happen = {
+		days = 5
+	}
+	
+	trigger = {
+		check_variable = {
+		which = hike_completion
+		value >= 3
+		}
+		has_character_flag = forest_gaian_hike
+		has_character_flag = hike_option_d
+		trait = on_hike
+		culture = inlander
+		NOT = {
+			has_character_flag = hike_lost
+		}
+	}
+	
+	option = {
+		name = EVTOPT_gaianjourneyend
+		remove_trait = on_hike
+		add_character_modifier = {
+			name = umatilla_bested
+			years = 5
+		}
+		piety = 200
+	}
+	
+	after = {
+		character_event = { id = gaian.199 }
+	}
+}
+
+narrative_event = {
 	id = gaian.125
 	title = EVTITLE_hoh_forest_ending
 	desc = EVTDESC_hoh_forest_ending
@@ -2143,7 +2220,7 @@ narrative_event = {
 		has_character_flag = hike_option_c
 		trait = on_hike
 		NOR = {
-			cultureculture = inlander
+			culture = inlander
 			culture = canuck
 		}
 		NOT = {
@@ -2345,16 +2422,17 @@ narrative_event = {
 		}
 		piety = 200
 	}
-	option = {
-		trigger = {
-			OR = {
-				trait = lunatic
-				trait = possessed
-			}
-		}
-		name = EVTOPT_theheartoflaochain
-		set_character_flag = the_heart_of_lao
-	}
+	### Removed if bow master doesnt finish it
+	###option = {
+	###	trigger = {
+	###		OR = {
+	###			trait = lunatic
+	###			trait = possessed
+	###		}
+	###	}
+	###	name = EVTOPT_theheartoflaochain
+	###	set_character_flag = the_heart_of_lao
+	###}
 }
 narrative_event = {
 	id = gaian.133
@@ -3787,42 +3865,6 @@ character_event = {
 		prestige = -10
 	}
 }
-narrative_event = {
-	id = gaian.340
-	title = EVTTITLE_veryfaraway
-	desc = EVTDESC_veryfaraway1
-	desc = EVTDESC_veryfaraway2
-	desc = EVTDESC_veryfaraway3
-	desc = EVTDESC_veryfaraway4
-	desc = EVTDESC_veryfaraway5
-	
-	picture = GFX_evt_very_far_away
-	mean_time_to_happen = {
-		months = 24
-	}
-	
-	trigger = {
-		trait = on_hike
-		NOT = {check_variable = {
-		which = hike_completion
-		value >= 3
-		}}
-		OR = {
-			has_character_flag = lost_in_mountain
-			has_character_flag = lost_in_forest
-		}
-		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_veryfaraway
-	}
-}
 
 character_event = {
 	id = gaian.341
@@ -3893,9 +3935,8 @@ character_event = { #ping the court chaplain
 	religion = gaian
 
 	trigger = {
-		OR = {
-			AND = {
-				OR = {
+		AND = {
+			OR = {
 					has_character_modifier = adulterer
 					has_character_modifier = adultress
 					has_character_modifier = incestuous_adulterer
@@ -3926,8 +3967,6 @@ character_event = { #ping the court chaplain
 						value < -10
 					}
 				}
-			}
-			has_character_flag = gaian_repent
 		}
 		NOT = { trait = discharged }
 	}
@@ -3951,8 +3990,9 @@ character_event = {
 	
 	
 	immediate = {
+		piety = 50
 		if = {
-			trigger = {
+			limit = {
 				has_character_flag = gaian_repent
 				NOT = {
 					has_character_modifier = adulterer
@@ -5547,5 +5587,104 @@ narrative_event = {
 		gaian = {
 			religion_authority = { modifier = the_great_unbinding }
 		}
+	}
+}
+
+narrative_event = {
+	id = gaian.5008
+	title = EVTITLE_sagebrush_fallen
+	desc =  EVTDESC_sagebrush_fallen
+	picture = GFX_evt_steppe_mercenaries
+	
+	trigger = {
+		completely_controls = k_sagebrush
+		NOT = {
+			religion = gaian
+		}
+		NOT = {
+			has_global_flag = global_cycle_that_binds
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	
+	major = yes
+	
+	major_trigger = {
+		OR = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 526
+					value = 700	# Same part of the world
+				}
+			}
+		}
+		religion = gaian
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_the_great_bind
+		trigger = {
+			OR = {
+				religion = raven_tales
+				religion = raven_tales_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_the_great_bind
+		trigger = {
+			religion = gaian
+		}
+		piety = 200
+		prestige = 100
+	}
+	option = {
+		name = EVTOPTC_the_great_bind
+		trigger = {
+			OR = {
+			religion = trailwalker
+			religion = trailwalker_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_the_great_bind
+		trigger = {
+			OR = {
+			religion = peyotist
+			religion = nazarene
+			religion = true_cross
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_the_great_bind
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTF_the_great_bind
+		trigger = {
+			NOR = {
+				religion = peyotist
+				religion = cetic
+				religion = trailwalker
+				religion = trailwalker_reformed
+				religion = raven_tales
+				religion = raven_tales_reformed
+				religion = gaian
+				religion = nazarene
+				religion = true_cross
+			}
+		}
+	}
+	
+	immediate = {
+		set_global_flag = global_cycle_that_binds
 	}
 }

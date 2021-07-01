@@ -15,6 +15,7 @@
 1890002={
 	name="Nathaniel"
 	dynasty=1889028
+	dna="bniigdosopu"
 	culture=snakelander
 	religion=mormon
 	trait=tough_soldier
@@ -68,6 +69,7 @@
 1890006={
 	name="Lyle"
 	dynasty=1889031
+	dna="oqdyxpdjrux"
 	culture=snakelander
 	religion=mormon
 	2630.9.13={birth=yes}
@@ -349,6 +351,7 @@
 1890030={
 	name="Samuel"
 	dynasty=1889021
+	dna="zbcbpargkny"
 	culture=mountainer
 	religion=trailwalker
 	trait=tough_soldier
@@ -409,6 +412,7 @@
 	name="Susan"
 	female=yes
 	dynasty=1889034
+	dna="mzjahqzboyo"
 	culture=snakelander
 	religion=trailwalker
 	diplomacy=7
@@ -426,6 +430,8 @@
 
 1890035={
 	name="Osb"
+	dna="ajaedrhdkcf"
+	properties="oe0cad"
 	dynasty=1863074
 	culture=inlander
 	religion=trailwalker
@@ -484,6 +490,7 @@
 	2644.9.11={birth=yes}
 	2722.1.1={death=yes}
 }
+
 1890038={
 	name="Jack" #Idaho basque reference
 	dynasty=1863071
@@ -535,7 +542,7 @@
 	trait=depressed
 	give_nickname=nick_the_ill_ruler
 	father=1890041
-	2615.6.30={birth=yes}
+	2612.6.30={birth=yes}
 	2631.7.20={add_spouse=1845120}
 	2659.12.1={death={death_reason=death_trait}}
 }
@@ -547,6 +554,7 @@
 	religion=trailwalker
 	martial=10
 	trait=brilliant_strategist
+	trait=scarred_high
 	trait=aggressive_leader
 	trait=trailwalker_leader
 	trait=one_handed
@@ -582,19 +590,30 @@
 1890043={
 	name="Donny"
 	dynasty=1863079
+	dna="aahhetfcbcu"
 	culture=inlander
 	religion=trailwalker
-	trait=naive_appeaser
+	diplomacy=4
+	martial=5
+	stewardship=4
+	intrigue=3
+	learning=4
+	trait=underhanded_rogue
 	trait=content
 	trait=humble
 	trait=gluttonous
 	trait=stressed
+	trait=slothful
 	trait=hunter
 	trait=peasant_leader
 	disallow_random_traits=yes
 	give_nickname=nick_rabble_rouser
-	2647.3.12={birth=yes}
-	2665.1.1={employer=1890035}
+	2647.3.12={birth=yes
+		effect={
+			set_character_flag=diversity
+		}
+	}
+	2666.1.1={employer=1890035}
 	2700.7.4={death=yes}
 }
 
@@ -668,6 +687,12 @@
 	dynasty=1863074
 	culture=inlander
 	religion=trailwalker
+	trait=tough_soldier
+	diplomacy=4
+	martial=7
+	stewardship=4
+	intrigue=2
+	learning=3
 	father=1890035
 	mother=1890042
 	2641.6.14={birth=yes}
@@ -680,6 +705,13 @@
 	culture=inlander
 	religion=trailwalker
 	female=yes
+	trait=naive_appeaser
+	trait=shrewd
+	diplomacy=6
+	martial=3
+	stewardship=2
+	intrigue=5
+	learning=6
 	father=1890035
 	mother=1890042
 	2643.7.3={birth=yes}
@@ -691,6 +723,12 @@
 	dynasty=1863074
 	culture=inlander
 	religion=trailwalker
+	trait=martial_cleric
+	diplomacy=4
+	martial=4
+	stewardship=3
+	intrigue=4
+	learning=6
 	father=1890035
 	mother=1890042
 	2648.12.27={birth=yes}
@@ -802,15 +840,20 @@
 }
 
 1890060={
-	name="Heckler" #The MAN himself
+	name="Heckler"
 	dynasty=1863074
 	culture=inlander
 	religion=trailwalker
 	trait=brilliant_strategist
-	trait=unyielding
+	trait=unyielding_leader
 	trait=trailwalker_leader
-	2405.1.17={birth=yes} #Needs to be killed by some avenging coloradan or something idk lmao
-	2465.12.25={death=yes}
+	trait=adventurer
+	2405.1.17={birth=yes} 
+	2465.12.25={death={
+			death_reason=death_duel
+			killer=1890064 #Stonarm Flatiron
+		}
+	}
 }
 
 1890061={
@@ -820,7 +863,11 @@
 	religion=trailwalker
 	father=1890060
 	2447.11.8={birth=yes}
-	2464.4.14={death=yes} #Needs to be killed by a ponderosa (reconsider this)
+	2464.4.14={death={
+			death_reason=death_duel
+			killer=1890064 #Stonarm Flatiron
+		}
+	}
 }
 
 1890062={
@@ -831,4 +878,27 @@
 	father=1890060
 	2448.7.28={birth=yes}
 	2480.9.27={death=yes}
+}
+
+1890063={
+	name="Dutch"
+	dynasty=1876034
+	culture=coloradan
+	religion=trailwalker
+	2397.3.16={birth=yes}
+	2431.4.22={death={
+			death_reason=death_battle_duel
+			killer=1890060 #Heckler Silvermount
+		}
+	}
+}
+
+1890064={
+	name="Stonarm"
+	dynasty=1876034
+	culture=coloradan
+	religion=trailwalker
+	father=1890063
+	2426.1.12={birth=yes}
+	2484.4.2={death=yes}
 }

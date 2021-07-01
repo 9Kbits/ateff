@@ -1373,6 +1373,7 @@
 	name="Shelley"
 	female=yes
 	dynasty=1863076
+	dna="snpjooxujdn"
 	culture=inlander
 	religion=gaian
 	trait=elusive_shadow
@@ -2393,14 +2394,14 @@
 	trait=trickster
     	trait=duelist
     	trait=deceitful
-    	trait=ambitious
+    trait=ambitious
 	trait=proud
 	trait=one_eyed
-    	female=yes
-    	mother=1845125
-    	give_nickname=nick_the_cougar
-    	2584.3.19={birth=yes}
-    	2623.3.19=effect={add_artifact=vandals_axe}
+    female=yes
+    mother=1845125
+    give_nickname=nick_the_cougar
+    2584.3.19={birth=yes}
+    2623.3.19={effect={add_artifact=vandals_axe}}
 	2629.1.1={death=yes}
 }
 
@@ -2546,6 +2547,7 @@
 	religion=gaian
 	dynasty=1863076
 	female=yes
+	mother=1845160
 	2501.5.29={birth=yes}
 	2547.6.5={death=yes}
 }
@@ -2586,7 +2588,11 @@
 	dynasty=1863076
 	mother=1845125
 	2586.4.19={birth=yes}
-	2621.5.15={death=yes} #Perhaps Gets killed by someone
+	2621.5.15={death={
+			death_reason=death_battle
+			killer=1890041 #Moses Silvermount
+		}
+	}
 }
 
 1845136={
@@ -2680,9 +2686,9 @@
 	female=yes
 	culture=cascadian
 	religion=gaian
-	2468.1.1={birth=yes}
-	2537.1.1={death={
-			death_reason=death_battle
+	2468.3.28={birth=yes}
+	2537.5.2={death={
+			death_reason=death_battle_duel
 			killer=1845000 #Jonathan Freeland
 		}
 	}
@@ -2692,9 +2698,9 @@
 	dynasty=1845043
 	culture=cascadian
 	religion=gaian
-	2490.1.1={birth=yes}
-	2541.1.1={death={
-			death_reason=death_battle
+	2490.11.10={birth=yes}
+	2541.4.13={death={
+			death_reason=death_battle_duel
 			killer=1845000 #Jonathan Freeland
 		}
 	}
@@ -2705,9 +2711,9 @@
 	female=yes
 	culture=cascadian
 	religion=gaian
-	2501.1.1={birth=yes}
-	2551.1.1={death={
-			death_reason=death_battle
+	2501.6.19={birth=yes}
+	2551.9.30={death={
+			death_reason=death_battle_duel
 			killer=1845000 #Jonathan Freeland
 		}
 	}
@@ -2721,9 +2727,9 @@
 	trait=tough_soldier
 	trait=trickster
 	trait=brave
-	2495.1.1={birth=yes}
-	2527.1.1={death={
-			death_reason=death_battle
+	2495.5.18={birth=yes}
+	2527.7.9={death={
+			death_reason=death_battle_duel
 			killer=1845000 #Jonathan Freeland
 		}
 	}
@@ -2737,9 +2743,9 @@
 	trait=disfigured
 	trait=giant
 	trait=possessed
-	2499.1.1={birth=yes}
-	2543.1.1={death={
-			death_reason=death_battle
+	2499.1.25={birth=yes}
+	2543.3.2={death={
+			death_reason=death_battle_duel
 			killer=1845000 #Jonathan Freeland
 		}
 	}
@@ -2752,9 +2758,9 @@
 	trait=skilled_tactician
 	trait=ambitious
 	trait=adventurer
-	2510.1.1={birth=yes}
-	2547.1.1={death={
-			death_reason=death_battle
+	2510.8.19={birth=yes}
+	2547.7.4={death={
+			death_reason=death_battle_duel
 			killer=1845000 #Jonathan Freeland
 		}
 	}
@@ -2766,10 +2772,10 @@
 	religion=rust_cultist
 	trait = proud
 	trait = zealous
-	trait = agressive_leader
+	trait = aggressive_leader
 	trait = wroth
 	2319.1.1={birth=yes}
-	2339.1.1=give_nickname=nick_fire_and_brimstone}
+	2339.1.1={give_nickname=nick_fire_and_brimstone}
 	2380.1.1={death={
 			death_reason=death_battle
 			killer=2500012 # Joaquin Baskett
@@ -2778,56 +2784,85 @@
 }
 #seven samurai reference, the seven siskiyouans
 1845150={
-	name="Hagen"
-	culture=siskiyouan
+	name="Heihachi"
+	culture=chinese
 	religion=gaian
 	trait=tough_soldier
 	trait=brave
-	2518.3.21={birth=yes}
+	trait=gregarious
+	trait=trusting
+	trait=kind
+	trait=humble
+	2518.4.28={birth{
+		birth=yes
+		culture=siskiyouan
+	}
 	2550.12.30={ employer=1845157 }
-	2551.1.1={death={
+	2554.4.26={death={
 			death_reason=death_battle
 			killer=1845000 #Jonathan Freeland
 		}
 	}
 }
 1845151={
-	name="Kurt"
-	culture=siskiyouan
+	name="Kikuchiyo"
+	culture=chinese
 	religion=gaian
 	trait=tough_soldier
 	trait=brave
-	2517.10.12={birth=yes}
+	trait=adventurer
+	trait=duelist
+	trait=deceitful
+	trait=proud
+	trait=kind
+	2517.4.1={birth{
+		birth=yes
+		culture=siskiyouan
+	}
 	2550.12.30={ employer=1845157 }
-	2551.1.1={death={
+	2554.4.26={death={
 			death_reason=death_battle
 			killer=1845000 #Jonathan Freeland
 		}
 	}
 }
 1845152={
-	name="Gordon"
-	culture=siskiyouan
+	name="Gorobei"
+	culture=chinese
 	religion=gaian
-	trait=tough_soldier
+	trait=skilled_tactician
 	trait=brave
-	2520.5.20={birth=yes}
+	trait=honest
+	trait=shrewd
+	trait=gregarious
+	trait=strategist
+	2520.7.15={
+		birth=yes
+		culture=siskiyouan
+	}
 	2550.12.30={ employer=1845157 }
-	2551.1.1={death={
+	2554.4.26={death={
 			death_reason=death_battle
 			killer=1845000 #Jonathan Freeland
 		}
 	}
 }
 1845153={
-	name="Kumail"
-	culture=siskiyouan
+	name="Kyuzo"
+	culture=chinese
 	religion=gaian
-	trait=tough_soldier
+	trait=brilliant_strategist
+	trait=shy
+	trait=zealous
+	trait=kind
 	trait=brave
-	2521.8.7={birth=yes}
+	trait=duelist
+	2521.11.15={
+		birth=yes
+		culture=siskiyouan
+	}
 	2550.12.30={ employer=1845157 }
-	2551.1.1={death={
+	2554.4.26={death={
 			death_reason=death_battle
 			killer=1845000 #Jonathan Freeland
 		}
@@ -2871,4 +2906,99 @@
 	female=yes
 	2487.6.8={birth=yes}
 	2545.8.4={death=yes}
+}
+1845159={
+	name="Cecil"
+	female=yes
+	culture=cascadian
+	religion=gaian
+	occluded=yes
+	trait=legendary
+	2151.1.1={birth=yes}
+	2222.1.1={death={death_reason=death_missing}}
+}
+
+1845160={
+	name="Courtney"
+	culture=inlander
+	religion=gaian
+	female=yes
+	dynasty=1863076
+	mother=1845161
+	2476.6.15={birth=yes}
+	2536.12.24={death=yes}
+}
+
+1845161={
+	name="Margaret"
+	culture=inlander
+	religion=gaian
+	female=yes
+	dynasty=1863076
+	mother=1845162
+	2454.8.5={birth=yes}
+	2501.1.4={death=yes}
+}
+
+1845162={
+	name="Elaine" 
+	culture=inlander
+	religion=gaian
+	female=yes
+	dynasty=1863076
+	father=1845163
+	2435.9.1={birth=yes}
+	2483.2.11={death=yes}
+}
+
+1845163={
+	name="Sage"
+	culture=inlander
+	religion=gaian
+	dynasty=1863076
+	mother=1845164
+	2412.1.13={birth=yes}
+	2461.10.7={death=yes}
+}
+
+1845164={
+	name="Alice"
+	culture=inlander
+	religion=gaian
+	female=yes
+	dynasty=1863076
+	father=1845165
+	2390.7.25={birth=yes}
+	2436.5.29={death=yes}
+}
+
+1845165={
+	name="Hanford"
+	culture=inlander
+	religion=gaian
+	dynasty=1863076
+	trait=brilliant_strategist
+	trait=brave
+	trait=strong
+	trait=ambitious
+	2359.7.4={birth=yes}
+	2388.1.1={give_nickname=nick_the_usurper}
+	2416.9.12={death=yes}
+}
+
+1845166={
+	name="Clarkia"
+	culture=inlander
+	religion=gaian
+	female=yes
+	dynasty=1863076
+	trait=underhanded_rogue
+	trait=chaste
+	trait=cynical
+	trait=sympathy_pagans
+	trait=charitable
+	mother=1845120
+	father=1890040
+	2632.2.26={birth=yes}
+	2680.10.1={death=yes}
 }

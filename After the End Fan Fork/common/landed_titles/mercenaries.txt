@@ -470,7 +470,7 @@ d_anachronists = {
 	color={ 128 0 128 }
 	color2={ 0 128 0 }
 
-	capital = 1222 # Lanaudière
+	capital = 1222 # LanaudiÃ¨re
 	
 	allow = {
 		always = yes
@@ -1488,7 +1488,7 @@ d_pike_place_pikemen = {
 	capital = 543 #Seattle
 		
 	religion = gaian
-	culture = canuck
+	culture = cascadian
 
 	title = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
@@ -1509,7 +1509,7 @@ d_walla_walla_warriors = {
 	capital = 515 #Wallawalla
 	
 	religion = gaian
-	culture = shuswap
+	culture = inlander
 
 	title = "CHIEF"
 	foa = "CHIEF_FOA"
@@ -1529,8 +1529,8 @@ d_stampede = {
 	
 	capital = 499 #Foothills
 	
-	religion = peyotist
-	culture = blackfoot
+	religion = trailwalker
+	culture = prairielander
 
 	title = "CHIEF"
 	foa = "CHIEF_FOA"
@@ -1550,8 +1550,8 @@ d_tri_river_outlaws = {
 	
 	capital = 513 #Kittitas
 	
-	religion = raven_tales
-	culture = cascadian
+	religion = gaian
+	culture = inlander
 	
 	title = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
@@ -2402,7 +2402,7 @@ d_papal_guards = { #The Rustish Guard
 	primary = yes
 }
 
-d_abbey_guards = { #Le Vingt-Deuxième
+d_abbey_guards = { #Le Vingt-DeuxiÃ¨me
 	color={ 2 1 131 }
 	color2 = { 220 220 0 }
 
@@ -3066,4 +3066,27 @@ d_timbers_army = {
 	strength_growth_per_century = 1.0
 
 	mercenary_type = d_pike_place_pikemen_composition
+}
+d_lord_of_the_ringlings = {
+	color = { 255 221 0 }
+	color2 = { 0 20 205 } 
+	
+	capital = 1093 # Tampa #actual hq of the circus + its museum
+	
+	mercenary = yes
+	
+	religion = evangelical
+	
+	culture = gulfard
+	
+	title = "GRANDMASTER"
+	foa = "GRANDMASTER_FOA"
+	
+	landless = yes
+	
+	primary = yes
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = d_lord_of_the_ringlings_composition
 }

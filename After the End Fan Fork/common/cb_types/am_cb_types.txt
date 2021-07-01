@@ -6651,3 +6651,176 @@ loyal_sanctioned_governator_war = {
 		}
 	}
 }
+
+discharged_ruler = {
+	name = CB_NAME_DISCHARGED_RULER
+	war_name = WAR_NAME_DISCHARGED_RULER
+	sprite = 11
+	truce_days = 3650
+	
+	is_permanent = yes
+	can_ask_to_join_war = no
+	
+	defender_unoccupied_warscore = yes
+
+	allowed_to_target_tributaries = no
+	
+	sort_priority = 750
+
+	can_use = {
+		FROM = {
+			has_trait = discharged
+			in_revolt = no
+			NOT = { 
+				any_current_enemy = {
+					NOT = {
+						religion_group = ROOT
+					}
+				}
+			}
+		}
+		ROOT = {
+			NOT = { has_trait = discharged }
+			mercenary = no
+		}
+	}
+	
+	can_use_gui = {
+		check_if_crusader_trigger = yes
+	}
+
+	is_valid = {
+		FROM = {
+			custom_tooltip = {
+				text = tooltip_is_discharged
+				hidden_tooltip = {
+					has_trait = discharged
+				}
+			}
+		}
+	}
+
+	on_add = {
+		hidden_tooltip = { fire_haruspicy_event_effect = yes }
+		if = {
+			limit = { defender = { is_offmap_governor = offmap_china } }
+			attacker = { 
+				sound_effect = china_angered_emperor
+				detract_grace_super_huge_effect = yes 
+			}
+		}
+	}
+	
+	on_success = {
+		ROOT = {
+			if = {
+				limit = {
+					FROM = {
+						primary_title = {
+							tier = BARON
+						}
+					}
+				}
+				ROOT = {
+					piety = 10
+					prestige = 50
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						primary_title = {
+							tier = COUNT
+						}
+					}
+				}
+				ROOT = {
+					piety = 20
+					prestige = 100
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						primary_title = {
+							tier = DUKE
+						}
+					}
+				}
+				ROOT = {
+					piety = 30
+					prestige = 150
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						primary_title = {
+							tier = KING
+						}
+					}
+				}
+				ROOT = {
+					piety = 50
+					prestige = 200
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						primary_title = {
+							tier = EMPEROR
+						}
+					}
+				}
+				ROOT = {
+					piety = 70
+					prestige = 400
+				}
+			}
+		}
+
+		FROM = {
+			prestige = -200
+			abdicate = yes
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			piety = -50
+			prestige = -100
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			piety = -100
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 4.0
+			}
+		}
+		FROM = {
+			prestige = 200
+		}
+	}
+
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}

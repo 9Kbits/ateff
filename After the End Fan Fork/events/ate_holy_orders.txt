@@ -1767,3 +1767,106 @@ character_event = {
 		add_trait = sapper
 	}
 }
+
+# Formation of the Post-Colapse Holy Orders
+narrative_event = {
+	id = holyorder.26
+	title = "EVTNAME_hcc_colapse_holy_orders"
+	desc = "EVTDESC_hcc_colapse_holy_orders"
+	picture = "GFX_evt_crusaders"
+	border = "GFX_event_narrative_frame_religion"
+	
+	major = yes
+	only_playable = yes
+	only_men = yes
+	religion = evangelical
+	
+	trigger = {
+		NOT = { #immersion-breaking
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+		e_dixie = { has_holder = no }
+		NOR = {
+			is_title_active = d_pentecostal_oathsworn 
+			is_title_active = d_order_of_baptists
+			is_title_active = d_chrismon_tree
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	immediate = {
+		activate_title = { title = d_pentecostal_oathsworn  status = yes }
+		create_character = {
+			dynasty = none
+			random_traits = yes
+			trait = zealous
+			trait = brilliant_strategist
+			religion = evangelical
+			culture= tuskegean
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			d_pentecostal_oathsworn = {
+				grant_title = PREV
+			}
+			wealth = 500
+		}
+		activate_title = { title = d_order_of_baptists  status = yes }
+		create_character = {
+			dynasty = none
+			random_traits = yes
+			trait = zealous
+			trait = brilliant_strategist
+			religion = evangelical
+			culture= dixie
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			d_order_of_baptists = {
+				grant_title = PREV
+			}
+			wealth = 500
+		}
+		activate_title = { title = d_chrismon_tree  status = yes }
+		create_character = {
+			dynasty = none
+			random_traits = yes
+			trait = zealous
+			trait = brilliant_strategist
+			religion = evangelical
+			culture= southron
+		}
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			d_chrismon_tree = {
+				grant_title = PREV
+			}
+			wealth = 500
+		}
+	}
+	option = {
+		name = "EVTOPTA_hcc_colapse_holy_orders"
+		trigger = {
+			religion = evangelical
+		}
+	}
+	option = {
+		name = "EVTOPTB_hcc_colapse_holy_orders"
+		trigger = {
+			NOT = { religion_group = christian }
+		}
+	}
+	option = {
+		name = "EVTOPTC_hcc_colapse_holy_orders"
+		trigger = {
+			religion_group = christian
+			NOT = { religion = evangelical }
+		}
+	}
+}

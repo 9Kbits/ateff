@@ -2644,3 +2644,179 @@ narrative_event = {
 		}
 	}
 }
+
+# fall of Chicagoland, other
+narrative_event = {
+	id = flavor.80
+	title = EVTTITLE_fall_chicagoland
+	desc = EVTDESC_wiscon_indiana_formed
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_global_flag = wisconsin_formed
+		has_global_flag = indiana_formed
+		NOT = { has_global_flag = fall_of_chicagoland }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_chicagoland
+		k_chicagoland = {
+			set_name = "ILLINOIS"
+			adjective = "ILLINOIS_ADJ"
+			set_coa = k_illinois
+		}
+		d_illinois = {
+			set_name = "LITTLEILLINOIS"
+			adjective = "LITTLEILLINOIS_ADJ"
+		}
+		if = {
+			limit = {
+				k_missouri = {
+					has_holder = no
+				}
+			}
+			d_forgottonia = {
+				de_jure_liege = k_chicagoland
+			}
+			c_kaskaskia = {
+				de_jure_liege = d_little_egypt
+			}
+		}
+		if = {
+			limit = {
+				k_booneland = {
+					has_holder = no
+				}
+			}
+			d_little_egypt = {
+				de_jure_liege = k_chicagoland
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_illinois
+		trigger = {
+			has_landed_title = k_chicagoland
+		}
+	}
+
+	option = {
+		name = EVTOPTB_illinois
+		trigger = {
+			NOT = { has_landed_title = k_chicagoland }
+		}
+	}
+}
+
+# fall of Chicagoland, Illinois
+narrative_event = {
+	id = flavor.81
+	title = EVTTITLE_fall_chicagoland
+	desc = EVTDESC_illinois_formed
+	picture = GFX_evt_book_carolingian_script
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	trigger = {
+		has_global_flag = illinois_united
+		NOT = { has_global_flag = fall_of_chicagoland }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = fall_of_chicagoland
+		d_indianapolis = {
+			de_jure_liege = k_indiana
+		}
+		d_wabash = {
+			de_jure_liege = k_indiana
+		}
+		d_michiana = {
+			de_jure_liege = k_indiana
+		}
+		d_badgerlings = {
+			de_jure_liege = k_wisconsin
+		}
+		d_green_bay = {
+				de_jure_liege = k_wisconsin
+		}
+		if = {
+			limit = {
+				k_michigan = {
+					has_holder = no
+				}
+			}
+			d_michiana = {
+				de_jure_liege = k_indiana
+			}
+		}
+		if = {
+			limit = {
+				k_superior = {
+					has_holder = no
+				}
+			}
+			d_badgerland = {
+				de_jure_liege = k_wisconsin
+			}
+			d_coulee = {
+				de_jure_liege = k_wisconsin
+			}
+		}
+		if = {
+			limit = {
+				k_superior = {
+					has_holder = yes
+				}
+			}
+			d_badgerland = {
+				de_jure_liege = k_superior
+			}
+			d_coulee = {
+				de_jure_liege = k_superior
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_illinois
+		trigger = {
+			has_landed_title = k_chicagoland
+		}
+	}
+	option = {
+		name = EVTOPTC_illinois
+		trigger = {
+			OR = {
+				has_landed_title = k_wisconsin
+				has_landed_title = k_indiana
+				has_landed_title = k_superior
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_illinois
+		trigger = {
+			NOT = { has_landed_title = k_chicagoland }
+			NOT = { has_landed_title = k_wisconsin }
+			NOT = { has_landed_title = k_indiana }
+			NOT = { has_landed_title = k_superior }
+		}
+	}
+}
