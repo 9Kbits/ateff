@@ -3937,20 +3937,12 @@ character_event = { #ping the court chaplain
 	trigger = {
 		AND = {
 			OR = {
-					has_character_modifier = adulterer
-					has_character_modifier = adultress
-					has_character_modifier = incestuous_adulterer
-					has_character_modifier = incestuous_adultress
-					has_character_modifier = known_murderer
-					has_character_modifier = uncivilized_dueler
-					trait = kinslayer
-					calc_true_if = {
-						amount >= 2
+				AND = {
+				OR = {
 						trait = greedy
 						trait = envious
 						trait = wroth
 						trait = slothful
-						trait = greedy
 						trait = gluttonous
 						trait = lustful
 						trait = cruel
@@ -3959,16 +3951,55 @@ character_event = { #ping the court chaplain
 						trait = hedonist
 						trait = impaler
 						trait = paranoid
+						trait = kinslayer
+						has_character_modifier = adulterer
+						has_character_modifier = adultress
+						has_character_modifier = incestuous_adulterer
+						has_character_modifier = incestuous_adultress
+						has_character_modifier = known_murderer
+						has_character_modifier = uncivilized_dueler
 					}
-				}
-				job_spiritual = { 
+				job_spiritual = {
 					opinion = {
 						who = ROOT
 						value < -10
+						}
 					}
 				}
-		}
+				AND = {
+					calc_true_if = {
+						amount >= 2
+						trait = greedy
+						trait = envious
+						trait = wroth
+						trait = slothful
+						trait = gluttonous
+						trait = lustful
+						trait = cruel
+						trait = drunkard
+						trait = craven
+						trait = hedonist
+						trait = impaler
+						trait = paranoid
+						trait = kinslayer
+						has_character_modifier = adulterer
+						has_character_modifier = adultress
+						has_character_modifier = incestuous_adulterer
+						has_character_modifier = incestuous_adultress
+						has_character_modifier = known_murderer
+						has_character_modifier = uncivilized_dueler
+					}
+				job_spiritual = { 
+					opinion = {
+						who = ROOT
+						value < 10
+						}
+					}
+				}
+				
+			}
 		NOT = { trait = discharged }
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -3994,30 +4025,26 @@ character_event = {
 		if = {
 			limit = {
 				has_character_flag = gaian_repent
-				NOT = {
+				NOR = {
+					trait = greedy
+					trait = envious
+					trait = wroth
+					trait = slothful
+					trait = gluttonous
+					trait = lustful
+					trait = cruel
+					trait = drunkard
+					trait = craven
+					trait = hedonist
+					trait = impaler
+					trait = paranoid
+					trait = kinslayer
 					has_character_modifier = adulterer
 					has_character_modifier = adultress
 					has_character_modifier = incestuous_adulterer
 					has_character_modifier = incestuous_adultress
 					has_character_modifier = known_murderer
 					has_character_modifier = uncivilized_dueler
-					trait = kinslayer
-					calc_true_if = {
-						amount >= 2
-						trait = greedy
-						trait = envious
-						trait = wroth
-						trait = slothful
-						trait = greedy
-						trait = gluttonous
-						trait = lustful
-						trait = cruel
-						trait = drunkard
-						trait = craven
-						trait = hedonist
-						trait = impaler
-						trait = paranoid
-					}
 				}
 			}
 			employer = {
@@ -4071,20 +4098,14 @@ letter_event = { #the court chaplain sends a letter
 		job_spiritual = {
 			opinion = {
 				who = ROOT
-				modifier = opinion_annoyed #add custom opinion modifier
+				modifier = refused_discharging 
 			}
 		}
 	}
 	option = {
 		trigger = {
 			NOT = {
-				has_character_modifier = adulterer
-				has_character_modifier = adultress
-				has_character_modifier = incestuous_adulterer
-				has_character_modifier = incestuous_adultress
-				has_character_modifier = known_murderer
-				has_character_modifier = uncivilized_dueler
-				trait = kinslayer
+				has_character_flag = gaian_repent
 			}
 		}
 		name = EVTOPTC_discharged_gaian
@@ -4110,14 +4131,138 @@ letter_event = { #the court chaplain sends a letter
 		job_spiritual = {
 			opinion = {
 				who = ROOT
-				modifier = opinion_impressed_by_rock_throw #add custom opinion modifier
+				modifier = impressed_dryads
 			}
 		}
 		piety = 250
 	}
 }
 
+character_event = { #the court chaplain event to screw you up
+	id = gaian.604
+	border = GFX_event_letter_frame_religion
+	hide_window = yes
+	
+	is_triggered_only = yes
 
+	trigger = {
+		religion = gaian
+	}
+	
+	immediate = {
+		liege = { letter_event = { id = gaian.605 days = 5 }}
+	}
+}
+
+letter_event = { #the court chaplain event to screw you up
+	id = gaian.605
+	border = GFX_event_letter_frame_religion
+	desc = EVTDESC_smalldischarge
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = gaian
+	}
+	
+	option = {
+		name = EVTOPTA_discharged_gaian
+		abdicate = yes
+		piety = 50
+	}
+	option = {
+		name = EVTOPTB_discharged_gaian
+		add_trait = discharged
+		job_spiritual = {
+			opinion = {
+				who = ROOT
+				modifier = refused_discharging
+			}
+		}
+	}
+}
+
+letter_event = { #response
+	id = gaian.606
+	border = GFX_event_letter_frame_religion
+	desc = EVTDESC_manageddischarging
+	
+	is_triggered_only = yes
+
+	trigger = {
+		religion = gaian
+	}
+	
+	option = {
+		name = Ok
+		piety = 200
+	}
+}
+
+character_event = { #ping the court chaplain 
+	id = gaian.610
+	picture = GFX_evt_campfire_hf
+	hide_window = yes	
+	only_playable = yes
+	only_capable = yes
+	prisoner = no
+	min_age = 16
+	religion = gaian
+
+	trigger = {
+		OR = {
+			trait = shy
+			trait = paranoid
+			trait = stubborn
+			trait = midas_touched
+		}
+		job_spiritual = {
+			opinion = {
+			who = ROOT
+			value < 15
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	immediate = {
+		job_spiritual = {
+			character_event = { id = gaian.611 }
+		}
+	}
+}
+
+character_event = { #ping liege
+	id = gaian.611
+	picture = GFX_evt_campfire_hf
+	hide_window = yes
+	
+	immediate = {
+		liege = {
+			letter_event = { id = gaian.612 }
+		}
+	}
+}	
+
+letter_event = {
+	id = gaian.612
+	picture = GFX_evt_courtiers_talking
+	desc = EVTDESC_GAIAN612
+	border = GFX_event_letter_frame_diplomacy
+	
+	option = {
+		name = EVTOPTA_GAIAN612
+		add_character_modifier = {
+			name = lost_official_diplomacy_authorization
+			years = 2
+		}
+		piety = -100
+	}
+}
+	
 character_event = {
 	id = gaian.800
 	hide_window = yes

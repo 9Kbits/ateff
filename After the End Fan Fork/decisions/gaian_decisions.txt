@@ -53,66 +53,39 @@ targetted_decisions = {
 			has_job_title = job_spiritual
 			liege = {
 				higher_tier_than = BARON
+				is_feudal = yes
 			}
 		}
 		allow = {
+			FROM = {
+				is_inaccessible_trigger = no
+				is_incapable = no 
+				prisoner = no
+				OR = {
+					trait = zealous
+					trait = devout
+				}
+				piety = 250
+			}
 			ROOT = {
 				is_inaccessible_trigger = no
 				is_incapable = no 
 				prisoner = no
 				liege = {
-					 OR = {
-						AND = {
-							OR = {
-								has_character_modifier = adulterer
-								has_character_modifier = adultress
-								has_character_modifier = incestuous_adulterer
-								has_character_modifier = incestuous_adultress
-								has_character_modifier = known_murderer
-								has_character_modifier = uncivilized_dueler
-								trait = kinslayer
-								calc_true_if = {
-									amount >= 2
-									trait = greedy
-									trait = envious
-									trait = wroth
-									trait = slothful
-									trait = greedy
-									trait = gluttonous
-									trait = lustful
-									trait = cruel
-									trait = drunkard
-									trait = craven
-									trait = hedonist
-									trait = impaler
-									trait = paranoid
-								}
-							}
-							job_spiritual = { 
-								opinion = {
-									who = ROOT
-									value < -10
-								}
-							}
-						}
-						has_character_flag = gaian_repent
-					}
 					NOT = { trait = discharged }
 				}
-			}
-			FROM = {
-				is_inaccessible_trigger = no
-				is_incapable = no 
-				prisoner = no
 			}
 		}
 		effect = {
 			ROOT = {
-				character_event = { id = gaian.601 }
+				character_event = { id = gaian.604 }
+			}
+			FROM = {
+				letter_event = { id = gaian.606 days = 10 }
 			}
 		}
 		ai_acceptance = {
-			yes_threshold = 50
+			factor = -50 
 			show_maybe_for_human = no
 			additive_modifier = {
 				value = 5
@@ -121,7 +94,6 @@ targetted_decisions = {
 				opinion = { who = from value = 0 } 
 				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
 			}
-
 			additive_modifier = {
 				value = 10
 				localisation_key = baptism_sponsor_opinion
@@ -196,6 +168,152 @@ targetted_decisions = {
 				value = -30
 				localisation_key = baptism_sponsor_opinion
 				NOT = { opinion = { who = from value = -100 } }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 5
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = liege value = 0 } }
+				opinion = { who = liege value = -20 }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 10
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = liege value = -20 } }
+				opinion = { who = liege value = -40 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 15
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = liege value = -40 } }
+				opinion = { who = liege value = -60 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = liege value = -60 } }
+				opinion = { who = liege value = -80 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 25
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = liege value = -80 } }
+				opinion = { who = liege value = -100 } 
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 30
+				localisation_key = baptism_sponsor_opinion
+				NOT = { opinion = { who = liege value = -100 } }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -10
+				liege = { trait = charitable }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -10
+				liege = { trait = kind }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -10
+				liege = { trait = patient }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -10
+				liege = { trait = diligent }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -10
+				liege = { trait = temperate }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -10
+				liege = { trait = chaste }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -10
+				liege = { trait = brave }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = -10
+				liege = { trait = trusting }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = kinslayer }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = greedy }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = envious }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = wroth }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = slothful }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = gluttonous }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = lustful }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = cruel }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = drunkard }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = craven }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = hedonist }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = impaler }
+				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
+			}
+			additive_modifier = {
+				value = 20
+				liege = { trait = paranoid }
 				#NOT = { ROOT = { is_offmap_governor = offmap_china } }
 			}
 		}
