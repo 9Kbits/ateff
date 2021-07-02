@@ -3017,9 +3017,10 @@ vandals_axe= {
 	active = {
 			age=14
 		OR = {
-			religion = gaian
-			religion_openly_trailwalker_or_reformed_trigger
 			culture = inlander
+			religion = gaian
+			religion = trailwalker
+			religion = trailwalker_reformed
 		}
 	}
 	flags = { combat_weapon weapon axe }
@@ -3153,9 +3154,10 @@ pulaskis_axe = {
 	active = {
 			age=14
 		OR = {
-			religion = gaian
-			religion_openly_trailwalker_or_reformed_trigger
 			culture = inlander
+			religion = trailwalker
+			religion = trailwalker_reformed
+			religion = gaian
 		}
 	}
 	quality = 3
