@@ -3996,14 +3996,17 @@ character_event = { #ping the court chaplain
 						}
 					}
 				}
-				
 			}
 		NOT = { trait = discharged }
+		any_courtier_or_vassal = {
+			has_job_title = job_spiritual
+		}
+		is_feudal = yes
 		}
 	}
 	
 	mean_time_to_happen = {
-		months = 6
+		years = 6
 	}
 	
 	immediate = {
@@ -4210,11 +4213,15 @@ character_event = { #ping the court chaplain
 	religion = gaian
 
 	trigger = {
+		NOT = { has_character_modifier = lost_official_diplomacy_authorization }
 		OR = {
 			trait = shy
 			trait = paranoid
 			trait = stubborn
 			trait = midas_touched
+		}
+		any_courtier_or_vassal = {
+			has_job_title = job_spiritual
 		}
 		job_spiritual = {
 			opinion = {
@@ -4222,10 +4229,11 @@ character_event = { #ping the court chaplain
 			value < 15
 			}
 		}
+		is_feudal = yes
 	}
 	
 	mean_time_to_happen = {
-		months = 6
+		years = 2
 	}
 	
 	immediate = {
@@ -4239,6 +4247,7 @@ character_event = { #ping liege
 	id = gaian.611
 	picture = GFX_evt_campfire_hf
 	hide_window = yes
+	is_triggered_only = yes
 	
 	immediate = {
 		liege = {
@@ -4252,6 +4261,7 @@ letter_event = {
 	picture = GFX_evt_courtiers_talking
 	desc = EVTDESC_GAIAN612
 	border = GFX_event_letter_frame_diplomacy
+	is_triggered_only = yes
 	
 	option = {
 		name = EVTOPTA_GAIAN612
