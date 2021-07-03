@@ -6669,7 +6669,7 @@ discharged_ruler = {
 
 	can_use = {
 		FROM = {
-			has_trait = discharged
+			trait = discharged
 			in_revolt = no
 			NOT = { 
 				any_current_enemy = {
@@ -6680,7 +6680,7 @@ discharged_ruler = {
 			}
 		}
 		ROOT = {
-			NOT = { has_trait = discharged }
+			NOT = { trait = discharged }
 			mercenary = no
 		}
 	}
@@ -6694,12 +6694,12 @@ discharged_ruler = {
 			custom_tooltip = {
 				text = tooltip_is_discharged
 				hidden_tooltip = {
-					has_trait = discharged
+					trait = discharged
 				}
 			}
 		}
 		OR = { 
-			ROOT = { NOT = { has_trait = discharged } }
+			ROOT = { NOT = { trait = discharged } }
 		}
 	}
 
