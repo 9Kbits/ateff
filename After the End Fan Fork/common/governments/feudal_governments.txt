@@ -64,21 +64,21 @@ feudal_governments = {
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
-			NOT = {	religion = cetic }
-			NOT = {	religion = imamite }
-			NOT = {	religion = qingzhen }
-			NOT = {	religion = nazarene }
-			NOT = {	religion = montane }
-			NOT = {	religion = edenite }
-			NOT = {	religion = angeline }
-			NOR = {
-				religion = traditionalist
-				religion = revivalist
-				religion = misrist
-				religion = orientalist
-				religion = alawiyya
-			}
-
+			# NOT = {	religion = cetic }
+			# NOT = {	religion = imamite }
+			# NOT = {	religion = qingzhen }
+			# NOT = {	religion = nazarene }
+			# NOT = {	religion = montane }
+			# NOT = {	religion = edenite }
+			# NOT = {	religion = angeline }
+			# NOR = {
+				# religion = traditionalist
+				# religion = revivalist
+				# religion = misrist
+				# religion = orientalist
+				# religion = alawiyya
+			# }
+			NOT = { is_government_potential = bureaucratic_government }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = mormon_government }
@@ -366,11 +366,10 @@ feudal_governments = {
 					controls_religion = no
 				}
 			}
-			OR = { #Coding magic
+			NOT = {
 				primary_title = {
-					check_variable = { which = bureau_number value <= 0 }
+					has_title_flag = devolved_bureaucracy
 				}
-				year == 2666
 			}
 			is_patrician = no
 			NOT = { is_government_potential = colonial_government }
