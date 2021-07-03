@@ -4798,6 +4798,32 @@ upgrade_tabernacle = {
 	}
 }
 
+upgrade_alamo_mission = {
+	picture = GFX_upgrade_icon_book_red
+
+	potential = {
+	}
+	allow = { }
+	active = {
+		culture_group = starfolk
+	}
+
+	flags = {
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 300
+	gold_cost_ticking = 1
+	flags = {
+		is_singular
+		religion_conversion_faster
+	}
+	owner_modifier = {
+		diplomacy = 1
+		starfolk_opinion = 5
+	}
+}
+
 upgrade_riverwalk = {
 	picture = GFX_upgrade_icon_anchor
 
@@ -4819,7 +4845,8 @@ upgrade_riverwalk = {
 	}
 	owner_modifier = {
 		diplomacy = 1
-		vassal_opinion = 5
+		monthly_character_prestige = 0.1
+		fertility = 0.05
 	}
 }
 
