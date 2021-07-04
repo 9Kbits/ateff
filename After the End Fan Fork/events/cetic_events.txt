@@ -7823,12 +7823,12 @@ character_event = {
 						OR = {
 							e_california = {
 								holder_scope = {
-									is_rival = ROOT
+									is_rival = PREVPREV
 								}
 							}
 							e_new_california = {
 								holder_scope = {
-									is_rival = ROOT
+									is_rival = PREVPREV
 								}
 							}
 						}
@@ -7936,6 +7936,10 @@ character_event = {
 			change_variable = {
 				which = yearly_imperial_authority_change
 				which = stability
+			}
+			change_variable = {
+				which = yearly_imperial_authority_change
+				which = governator_influence
 			}
 		}
 		
@@ -8315,7 +8319,7 @@ character_event = {
 	}
 	
 	immediate = {
-		change_variable = { which = global_bureau_number value = 0.2 }
+		change_variable = { which = global_bureau_number value = 0.1 }
 		primary_title = {
 			change_variable = { which = bureau_number value = 1.5 }
 		}
@@ -8327,7 +8331,7 @@ character_event = {
 			text = bureau_increase_105_TT
 		}
 		custom_tooltip = {
-			text = globalbureau_increase_02_TT
+			text = globalbureau_increase_01_TT
 		}
 		prestige = 25
 	}
@@ -8569,13 +8573,13 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		change_variable = { which = global_bureau_number value = 1 }
+		change_variable = { which = global_bureau_number value = 0.1 }
 	}
 	
 	option = {
 		name = opta_excellent
 		custom_tooltip = {
-			text = globalbureau_increase_1_TT
+			text = globalbureau_increase_01_TT
 		}
 	}
 }
@@ -8588,13 +8592,13 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		change_variable = { which = global_bureau_number value = -1.5 }
+		change_variable = { which = global_bureau_number value = -0.5 }
 	}
 	
 	option = {
 		name = opta_disappointing
 		custom_tooltip = {
-			text = globalbureau_decrease_105_TT
+			text = globalbureau_decrease_05_TT
 		}
 		opinion = {
 			modifier = bad_bureaucrat
@@ -9053,7 +9057,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		change_variable = { which = global_bureau_number value = -1 }
+		change_variable = { which = global_bureau_number value = -0.5 }
 		primary_title = {
 			change_variable = { which = bureau_number value = -3 }
 		}
@@ -9065,7 +9069,7 @@ character_event = {
 			name = bureau_decrease_3_TT
 		}
 		custom_tooltip = {
-			name = globalbureau_decrease_1_TT
+			name = globalbureau_decrease_05_TT
 		}
 		add_character_modifier = {
 			modifier = poor_reforms
@@ -9082,7 +9086,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		change_variable = { which = global_bureau_number value = 1 }
+		change_variable = { which = global_bureau_number value = 0.2 }
 		primary_title = {
 			change_variable = { which = bureau_number value = 3 }
 		}
@@ -9094,7 +9098,7 @@ character_event = {
 			name = bureau_increase_3_TT
 		}
 		custom_tooltip = {
-			name = globalbureau_increase_1_TT
+			name = globalbureau_increase_02_TT
 		}
 	}
 }
@@ -9107,7 +9111,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		change_variable = { which = global_bureau_number value = 2 }
+		change_variable = { which = global_bureau_number value = 0.5 }
 		primary_title = {
 			change_variable = { which = bureau_number value = 5 }
 		}
@@ -9119,7 +9123,7 @@ character_event = {
 			name = bureau_increase_3_TT
 		}
 		custom_tooltip = {
-			name = globalbureau_increase_1_TT
+			name = globalbureau_increase_05_TT
 		}
 		add_character_modifier = {
 			modifier = good_reforms
@@ -9458,6 +9462,9 @@ character_event = {
 		has_character_modifier = bureaucracy
 		primary_title = {
 			check_variable = { which = bureau_number value <= 0 }
+			NOT = {
+				has_title_flag = devolved_bureaucracy
+			}
 		}
 	}
 	mean_time_to_happen = {
@@ -9483,6 +9490,7 @@ character_event = {
 		government = feudal_government
 		primary_title = {
 			check_variable = { which = bureau_number value = 25 }
+			has_title_flag = devolved_bureaucracy
 		}
 	}
 	mean_time_to_happen = {
@@ -9713,7 +9721,7 @@ character_event = {
 				}
 				change_variable = {
 					which = passive_bureaucracy
-					value = 4
+					value = 2
 				}
 			}
 			if = { #Realm Size Bonus: Duke
@@ -9722,7 +9730,7 @@ character_event = {
 				}
 				change_variable = {
 					which = passive_bureaucracy
-					value = 2
+					value = 1
 				}
 			}
 			if = { #Dependent Bonus: 1 Level of Vassalage
@@ -9730,6 +9738,9 @@ character_event = {
 					independent = no
 					liege = {
 						independent = yes
+						NOT = {
+							has_character_modifier = low_bureaucracy
+						}
 					}
 				}
 				change_variable = {
@@ -9742,8 +9753,14 @@ character_event = {
 					independent = no
 					liege = {
 						independent = no
+						NOT = {
+							has_character_modifier = low_bureaucracy
+						}
 						liege = {
 							independent = yes
+							NOT = {
+								has_character_modifier = low_bureaucracy
+							}
 						}
 					}
 				}
@@ -9757,10 +9774,19 @@ character_event = {
 					independent = no
 					liege = {
 						independent = no
+						NOT = {
+							has_character_modifier = low_bureaucracy
+						}
 						liege = {
 							independent = no
+							NOT = {
+								has_character_modifier = low_bureaucracy
+							}
 							liege = {
 								independent = yes
+								NOT = {
+									has_character_modifier = low_bureaucracy
+								}
 							}
 						}
 					}
@@ -10099,7 +10125,7 @@ character_event = {
 						has_province_modifier = bureau_roads
 					}
 				}
-				change_variable = { which = global_bureau_number value = 0.5 }
+				change_variable = { which = global_bureau_number value = 0.1 }
 			}
 			if = {
 				limit = {
@@ -10109,7 +10135,7 @@ character_event = {
 					}
 				}
 				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = 0.5 }
+					change_variable = { which = global_bureau_number value = 0.1 }
 				}
 			}
 			if = {
@@ -10120,7 +10146,7 @@ character_event = {
 					}
 				}
 				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = 0.5 }
+					change_variable = { which = global_bureau_number value = 0.1 }
 				}
 			}
 			if = {
@@ -10131,7 +10157,7 @@ character_event = {
 					}
 				}
 				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = 0.5 }
+					change_variable = { which = global_bureau_number value = 0.1 }
 				}
 			}
 			if = {
@@ -10142,7 +10168,7 @@ character_event = {
 					}
 				}
 				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = 0.5 }
+					change_variable = { which = global_bureau_number value = 0.1 }
 				}
 			}
 			if = {
@@ -10153,7 +10179,7 @@ character_event = {
 					}
 				}
 				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = 0.5 }
+					change_variable = { which = global_bureau_number value = 0.1}
 				}
 			}
 			if = {
@@ -10164,7 +10190,7 @@ character_event = {
 					}
 				}
 				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = -0.5 }
+					change_variable = { which = global_bureau_number value = -0.2 }
 				}
 			}
 			if = {
@@ -10175,7 +10201,7 @@ character_event = {
 					}
 				}
 				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = -0.5 }
+					change_variable = { which = global_bureau_number value = -0.2 }
 				}
 			}
 			if = {
@@ -10186,7 +10212,7 @@ character_event = {
 					}
 				}
 				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = -0.5 }
+					change_variable = { which = global_bureau_number value = -0.2 }
 				}
 			}
 			if = {
@@ -10197,7 +10223,7 @@ character_event = {
 					}
 				}
 				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = -0.5 }
+					change_variable = { which = global_bureau_number value = -0.2 }
 				}
 			}
 			if = {
@@ -10208,7 +10234,7 @@ character_event = {
 					}
 				}
 				hidden_tooltip = {
-					change_variable = { which = global_bureau_number value = -0.1 }
+					change_variable = { which = global_bureau_number value = -0.2 }
 				}
 			}
 			if = {
@@ -10222,7 +10248,7 @@ character_event = {
 					}
 					higher_real_tier_than = COUNT
 				}
-				change_variable = { which = global_bureau_number value = 0.5 }
+				change_variable = { which = global_bureau_number value = 0.2 }
 			}
 			if = {
 				limit = {

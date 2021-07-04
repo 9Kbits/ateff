@@ -307,6 +307,7 @@
 	learning=4
 	trait=grey_eminence
 	trait=duelist
+	trait=discharged
 	trait=craven
 	trait=charitable
 	trait=humble
@@ -2185,6 +2186,10 @@
 	culture=cascadian
 	religion=gaian
 	female=yes
+	trait=discharged
+	trait=underhanded_rogue
+	trait=ambitious
+	mother=1845167
 	2634.1.1={birth=yes}
 }
 
@@ -2793,7 +2798,7 @@
 	trait=trusting
 	trait=kind
 	trait=humble
-	2518.4.28={birth{
+	2518.4.28={
 		birth=yes
 		culture=siskiyouan
 	}
@@ -2815,7 +2820,7 @@
 	trait=deceitful
 	trait=proud
 	trait=kind
-	2517.4.1={birth{
+	2517.4.1={
 		birth=yes
 		culture=siskiyouan
 	}
@@ -3001,4 +3006,29 @@
 	father=1890040
 	2632.2.26={birth=yes}
 	2680.10.1={death=yes}
+}
+
+1845167={
+	name="Clarkia"
+	culture=cascadian
+	religion=gaian
+	female=yes
+	dynasty=1845064
+	trait=cynical
+	trait=scholarly_theologian
+	2604.1.1={birth=yes}
+	2650.10.1={death=yes}
+}
+
+1845168={
+	name="Mark"
+	culture=cascadian
+	religion=gaian
+	dynasty=1845064
+	mother=1845167
+	trait=discharged
+	trait=tough_soldier
+	trait=content
+	2637.1.1={birth=yes}
+	2683.10.1={death=yes}
 }

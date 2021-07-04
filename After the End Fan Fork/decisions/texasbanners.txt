@@ -13,18 +13,21 @@ decisions = {
 						   has_global_flag = comanche_opt_in
 				}
 			}
+			d_airmen = {
+				has_holder = no
+			}
 		}
 				
 		allow = {
 			is_adult = yes
 			prisoner = no
 			NOT = { is_incapable = yes }
-			prestige = 5
+			prestige = 500
 			has_landed_title = c_bexar
 		}
 		effect = {
-			prestige = -5
-			narrative_event = { id = tex_king.1 }
+			prestige = -500
+			narrative_event = { id = tex_king.7 }
 			activate_title = { title = d_airmen status = yes }
 			primary_title = {
 				d_airmen = {
@@ -51,11 +54,15 @@ decisions = {
 				region = custom_texas
 			}
 			OR = { culture_group = starfolk
-				   AND = { culture = comanche
-						   has_global_flag = comanche_opt_in
-					}
+			   AND = { culture = comanche
+					   has_global_flag = comanche_opt_in
 				}
 			}
+			
+			d_miners = {
+				has_holder = no
+			}
+		}
 			
 		allow = {
 			has_landed_title = c_el_paso
@@ -89,11 +96,15 @@ decisions = {
 			is_playable = yes
 			independent = yes
 			OR = { culture_group = starfolk
-				   AND = { culture = comanche
-						   has_global_flag = comanche_opt_in
-					}
+			   AND = { culture = comanche
+					   has_global_flag = comanche_opt_in
 				}
 			}
+			
+			d_red_raider = {
+				has_holder = no
+			}
+		}
 		
 		allow = {
 			is_adult = yes
@@ -132,6 +143,10 @@ decisions = {
 					culture = comanche
 					has_global_flag = comanche_opt_in
 				}
+			}
+			
+			d_longhorns = {
+				has_holder = no
 			}
 		}
 			
@@ -173,6 +188,10 @@ decisions = {
 					has_global_flag = comanche_opt_in
 				}
 			}
+			
+			d_aggies = {
+				has_holder = no
+			}
 		}
 			
 		allow = {
@@ -211,6 +230,10 @@ decisions = {
 			   AND = { culture = comanche
 				   has_global_flag = comanche_opt_in
 				}
+			}
+			
+			d_first_cav = {
+				has_holder = no
 			}
 		}
 		
