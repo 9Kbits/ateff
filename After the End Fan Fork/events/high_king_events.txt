@@ -275,3 +275,285 @@ narrative_event = {
 		}
 	}
 }
+
+
+narrative_event = {
+	id = tex_king.7
+	title = EVTTITLE_tex_king_7
+	desc = EVTDESC_tex_king_7
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_texas }
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_7_banner
+		trigger = { has_landed_title = k_yellowrose }
+	}
+	
+	option = {
+		name = EVTOPTA_tex_king_7_honor
+		trigger = { 
+			NOT = { has_landed_title = k_yellowrose } 
+			OR = {
+				culture_group = starfolk
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_tex_king_7_foreign
+		trigger = { 
+			NOT = { has_landed_title = k_yellowrose } 
+			NOT = { culture_group = starfolk }
+			NOT = {
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+}
+
+
+narrative_event = {
+	id = tex_king.8
+	title = EVTTITLE_tex_king_8
+	desc = EVTDESC_tex_king_8
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_texas }
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_8_banner
+		trigger = { has_landed_title = k_silvercrown }
+	}
+	
+	option = {
+		name = EVTOPTA_tex_king_8_honor
+		trigger = { 
+			NOT = { has_landed_title = k_silvercrown } 
+			OR = {
+				culture_group = starfolk
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_tex_king_8_foreign
+		trigger = { 
+			NOT = { has_landed_title = k_silvercrown } 
+			NOT = { culture_group = starfolk }
+			NOT = {
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+}
+
+
+narrative_event = {
+	id = tex_king.9
+	title = EVTTITLE_tex_king_9
+	desc = EVTDESC_tex_king_9
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_texas }
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_9_banner
+		trigger = { has_landed_title = k_star_coast }
+	}
+	
+	option = {
+		name = EVTOPTA_tex_king_9_honor
+		trigger = { 
+			NOT = { has_landed_title = k_star_coast } 
+			OR = {
+				culture_group = starfolk
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_tex_king_9_foreign
+		trigger = { 
+			NOT = { has_landed_title = k_star_coast } 
+			NOT = { culture_group = starfolk }
+			NOT = {
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+}
+
+
+narrative_event = {
+	id = tex_king.10
+	title = EVTTITLE_tex_king_10
+	desc = EVTDESC_tex_king_10
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_texas }
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_10_banner
+		trigger = { has_landed_title = k_texarkana }
+	}
+	
+	option = {
+		name = EVTOPTA_tex_king_10_honor
+		trigger = { 
+			NOT = { has_landed_title = k_texarkana } 
+			OR = {
+				culture_group = starfolk
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_tex_king_10_foreign
+		trigger = { 
+			NOT = { has_landed_title = k_texarkana } 
+			NOT = { culture_group = starfolk }
+			NOT = {
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+}
+
+
+narrative_event = {
+	id = tex_king.11
+	title = EVTTITLE_tex_king_11
+	desc = EVTDESC_tex_king_11
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_texas }
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_11_banner
+		trigger = { has_landed_title = k_highlands }
+	}
+	
+	option = {
+		name = EVTOPTA_tex_king_11_honor
+		trigger = { 
+			NOT = { has_landed_title = k_highlands } 
+			OR = {
+				culture_group = starfolk
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_tex_king_11_foreign
+		trigger = { 
+			NOT = { has_landed_title = k_highlands } 
+			NOT = { culture_group = starfolk }
+			NOT = {
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+}
+
+
+narrative_event = {
+	id = tex_king.12
+	title = EVTTITLE_tex_king_12
+	desc = EVTDESC_tex_king_12
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_texas }
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_12_banner
+		trigger = { has_landed_title = k_westex }
+	}
+	
+	option = {
+		name = EVTOPTA_tex_king_12_honor
+		trigger = { 
+			NOT = { has_landed_title = k_westex } 
+			OR = {
+				culture_group = starfolk
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_tex_king_12_foreign
+		trigger = { 
+			NOT = { has_landed_title = k_westex } 
+			NOT = { culture_group = starfolk }
+			NOT = {
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+}
