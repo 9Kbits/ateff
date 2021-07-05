@@ -23,7 +23,7 @@ add_cenobitic_trait_effect = {
 	}
 }
 
-set_Mountain_name_effect = {
+set_mountain_name_effect = {
 	if = {
 		limit = { is_female = yes }
 		set_special_character_title = MOUNTAIN_MOTHER_TITLE
@@ -31,5 +31,16 @@ set_Mountain_name_effect = {
 	if = {
 		limit = { is_female = no }
 		set_special_character_title = MOUNTAIN_FATHER_TITLE
+	}
+}
+
+add_mountain_trait_effect = {
+	if = {
+		limit = { is_female = yes }
+		add_trait = mountain_mother
+	}
+	if = {
+		limit = { is_female = no }
+		add_trait = mountain_father
 	}
 }

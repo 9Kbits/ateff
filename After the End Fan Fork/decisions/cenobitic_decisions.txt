@@ -121,8 +121,6 @@ decisions = {
 				trait = hedonist
 				trait = excommunicated
 				trait = bad_priest_christian
-				trait = proud
-				trait = cynical
 				has_character_flag = ordainedinthechurchmarried
 			}
 		}
@@ -214,8 +212,6 @@ decisions = {
 				trait = hedonist
 				trait = excommunicated
 				trait = bad_priest_christian
-				trait = proud
-				trait = cynical
 				has_character_flag = ordainedinthechurchunmarried
 			}
 		}
@@ -295,14 +291,14 @@ decisions = {
 					religion = edenite
 			}
 			OR = {
-					has_trait = canon
-					has_trait = canoness
-					has_trait = deacon
-					has_trait = deaconess
+					trait = canon
+					trait = canoness
+					trait = deacon
+					trait = deaconess
 			}
 			NOT = { has_character_flag = becomingchristianascetic }
-			NOT = { has_trait = mountain_father }
-			NOT = { has_trait = mountain_mother }
+			NOT = { trait = mountain_father }
+			NOT = { trait = mountain_mother }
 		}
 		allow = {
 			is_ill = no
@@ -314,8 +310,6 @@ decisions = {
 				trait = schemer
 				trait = seducer
 				trait = seductress
-				trait = canon
-				trait = canoness
 				trait = mountain_father
 				trait = mountain_mother
 				trait = hedonist
@@ -330,6 +324,7 @@ decisions = {
 			change_learning = 1
 			add_piety = 400
 			set_character_flag = becomingchristianascetic
+			character_event = { id = ceno.002 days = 1 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -398,5 +393,122 @@ decisions = {
 				trait = lustful
 			}
 		}
-	}	
+	}
+
+	become_christian_ascetic = {
+		ai_check_interval = 24
+		potential = {
+			is_adult = yes
+			OR = {
+					religion = montane
+					religion = edenite
+			}
+			OR = {
+					trait = canon
+					trait = canoness
+					trait = deacon
+					trait = deaconess
+			}
+			NOT = { has_character_flag = becamechristianascetic }
+			NOT = { trait = mountain_father }
+			NOT = { trait = mountain_mother }
+			has_character_flag = becomingchristianascetic
+		}
+		allow = {
+			is_pregnant = no
+			prisoner = no
+			piety = 2000
+			NOR = {
+				trait = lustful
+				trait = gluttonous
+				trait = greedy
+				trait = slothful
+				trait = wroth
+				trait = envious
+				trait = mountain_mother
+				trait = hedonist
+				trait = excommunicated
+				trait = bad_priest_christian
+				trait = proud
+				trait = cynical
+				trait = cruel
+				trait = craven
+				has_character_flag = becamechristianascetic
+			}
+		}
+		effect = {
+			change_learning = 1
+			add_piety = 400
+			set_character_flag = becamechristianascetic
+			add_mountain_trait_effect = yes
+			set_mountain_name_effect = yes
+			character_event = { id = ceno.003 days = 1 }
+			remove_spouse = yes
+			clr_character_flag = becomingchristianascetic
+			if = {
+				limit = {
+					is_female = yes
+				}
+				set_special_character_title = MOUNTAIN_MOTHER_TITLE
+			}
+			else = {
+				set_special_character_title = MOUNTAIN_FATHER_TITLE
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				trait = detached_priest
+			}
+			modifier = {
+				factor = 20
+				trait = martial_cleric
+			}
+			modifier = {
+				factor = 40
+				trait = scholarly_theologian
+			}
+			modifier = {
+				factor = 60
+				trait = mastermind_theologian
+			}
+			modifier = {
+				factor = 30
+				trait = zealous
+			}
+			modifier = {
+				factor = 30
+				trait = devout
+			}
+			modifier = {
+				factor = 2
+				trait = humble
+			}
+			modifier = {
+				factor = 150
+				has_character_modifier = voice_of_jesus
+			}
+			modifier = {
+				factor = 100
+				trait = theologian	
+			}
+			modifier = {
+				factor = 250
+				trait = deacon	
+			}
+			modifier = {
+				factor = 250
+				trait = deaconess	
+			}
+			modifier = {
+				factor = 500
+				trait = canoness	
+			}
+			modifier = {
+				factor = 500
+				trait = canon
+			}
+		}
+	}
 }

@@ -27,3 +27,32 @@ character_event = {
 		}
 	}
 }
+
+character_event = {
+	id = ceno.002
+	desc = "EVTDESC_ceno002"
+	picture = GFX_evt_court_physician
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPT_ceno002"	
+	}
+}
+
+character_event = {
+	id = ceno.003
+	desc = "EVTDESC_ceno003"
+	picture = GFX_evt_court_physician
+	border = GFX_event_normal_frame_religion
+	prisoner = no
+	is_triggered_only = yes
+		effect = {
+			FROM = { piety = -50 }
+			set_mountain_name_effect = yes
+
+			}
+	option = {
+		name = "EVTOPT_ceno003"	
+	}
+}
