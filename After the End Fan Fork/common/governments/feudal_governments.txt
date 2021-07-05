@@ -86,10 +86,9 @@ feudal_governments = {
 			#NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = open_range_feudalism_government }
-			NAND = {
-				religion = gaian
-				higher_tier_than = BARON
-			}
+			NOT = { is_government_potential = cenobitic_government }
+			NOT = { is_government_potential = ghazi_government }
+			NOT = { is_government_potential = theocratic_feudal_government }
 			#Removed Chinese Imperial stuff
 			is_patrician = no
 		}
@@ -821,17 +820,17 @@ feudal_governments = {
 		}
 		frame_suffix = "_cenobiticgovernment"
 		potential = {
-		OR= {
-		religion = montane
-		religion = edenite
-		religion = angeline
-		}
+			OR= {
+			religion = montane
+			religion = edenite
+			religion = angeline
+			}
 			is_patrician = no
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
-			NOT = { is_government_potential = mex_imperial_government }			
+			NOT = { is_government_potential = mex_imperial_government }		
 		}
 		
 		vassal_call_to_arms  = {
