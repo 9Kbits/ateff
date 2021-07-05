@@ -284,5 +284,119 @@ decisions = {
 				num_of_children <= 4
 			}
 		}
-	}		
+	}	
+
+	attempt_christian_ascetic = {
+		ai_check_interval = 24
+		potential = {
+			is_adult = yes
+			OR = {
+					religion = montane
+					religion = edenite
+			}
+			OR = {
+					has_trait = canon
+					has_trait = canoness
+					has_trait = deacon
+					has_trait = deaconess
+			}
+			NOT = { has_character_flag = becomingchristianascetic }
+			NOT = { has_trait = mountain_father }
+			NOT = { has_trait = mountain_mother }
+		}
+		allow = {
+			is_ill = no
+			is_pregnant = no
+			prisoner = no
+			piety = 1000
+			NOR = {
+				is_incapable = yes
+				trait = schemer
+				trait = seducer
+				trait = seductress
+				trait = canon
+				trait = canoness
+				trait = mountain_father
+				trait = mountain_mother
+				trait = hedonist
+				trait = excommunicated
+				trait = bad_priest_christian
+				trait = proud
+				trait = cynical
+				has_character_flag = becomingchristianascetic
+			}
+		}
+		effect = {
+			change_learning = 1
+			add_piety = 400
+			set_character_flag = becomingchristianascetic
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1
+				trait = detached_priest
+			}
+			modifier = {
+				factor = 2
+				trait = martial_cleric
+			}
+			modifier = {
+				factor = 4
+				trait = scholarly_theologian
+			}
+			modifier = {
+				factor = 6
+				trait = mastermind_theologian
+			}
+			modifier = {
+				factor = 3
+				trait = zealous
+			}
+			modifier = {
+				factor = 3
+				trait = devout
+			}
+			modifier = {
+				factor = 2
+				trait = humble
+			}
+			modifier = {
+				factor = 15
+				has_character_modifier = voice_of_jesus
+			}
+			modifier = {
+				factor = 10
+				trait = theologian	
+			}
+			modifier = {
+				factor = 25
+				trait = deacon	
+			}
+			modifier = {
+				factor = 25
+				trait = deaconess	
+			}
+			modifier = {
+				factor = 50
+				trait = canoness	
+			}
+			modifier = {
+				factor = 50
+				trait = canon
+			}
+			modifier = {
+				factor = 0
+				trait = proud
+			}
+			modifier = {
+				factor = 0
+				trait = slothful
+			}
+			modifier = {
+				factor = 0
+				trait = lustful
+			}
+		}
+	}	
 }
