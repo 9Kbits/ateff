@@ -4829,6 +4829,101 @@ decisions = {
 		}
 	}
 	
+	solve_hcc_ram = {
+		is_high_prio = yes
+		religion = evangelical
+		only_playable = yes
+		ai_check_interval = 24
+		
+		potential = {
+			age = 16
+			prisoner = no
+			is_ruler = yes
+			religion = evangelical
+			trait = ram_hcc
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_global_flag = westphalian_treatise
+		}
+		allow = {
+			war = no
+			wealth = 1000
+			prestige = 1000
+			has_landed_title = e_dixie
+			NOT = {
+				has_law = succ_hre_elective
+			}
+			realm_size >= 300
+		}
+
+		effect = {
+			character_event = { 
+				id = eva.2001
+				wealth = -1000
+				prestige = -1000
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.005 }
+			modifier = { factor = 2	trait = brave }
+		}
+	}
+	
+	solve_hcc_bulldog = {
+		is_high_prio = yes
+		religion = evangelical
+		only_playable = yes
+		ai_check_interval = 24
+		
+		potential = {
+			age = 16
+			prisoner = no
+			is_ruler = yes
+			religion = evangelical
+			trait = bulldog_hcc
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			has_global_flag = westphalian_treatise
+		}
+		allow = {
+			war = no
+			wealth = 1000
+			piety = 1000
+			custom_tooltip = {
+				text = solution_bulldog_tooltip
+				hidden_tooltip = {
+					OR = {
+						has_global_flag = pat_chicago
+						has_global_flag = pat_washington
+						has_global_flag = pat_new_orleans
+					}
+				}
+			}
+		}
+
+		effect = {
+			character_event = { 
+				id = eva.2000
+				wealth = -1000
+				piety = -1000
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0.005 }
+			modifier = { factor = 2	trait = brave }
+		}
+	}
+	
 }
 
 targetted_decisions = {
