@@ -6,12 +6,12 @@ title=c_mexico
 # Settlements
 max_settlements=7
 
-b_mexico_MX=castle
-b_tlalpan_MX=city
-b_tacuba_MX=temple
-b_azcapotzalco_MX=temple
-b_naucalpan_MX=city
-b_xochimilco_MX=castle
+b_mexico_MX=city
+b_chapultepec_MX=castle
+b_villa_de_guadalupe_MX=temple
+b_coyoacan_MX=city
+b_tlahuac_MX=temple
+b_iztapalapa_MX=castle
 
 # Misc
 culture=chilango
@@ -20,9 +20,31 @@ terrain=farmlands
 
 #History
 
-2465.5.5={
-	build_wonder=wonder_basilica_guadalupe
-	build_wonder_upgrade=upgrade_grand_basilica
-	build_wonder_upgrade=upgrade_ate_lady_guadalupe
+1551.9.21={
+	b_mexico_MX=ct_university_1
+}
+1785.8.16={
+	build_wonder=wonder_palace_chapultepec
+	build_wonder_upgrade=upgrade_roads
+}
+1833.1.1={	
+	set_wonder_stage=1
+}
+1843.5.5={
+	set_wonder_stage=2
+}
+1864.5.5={
 	set_wonder_stage=3
+}
+1939.3.2={
+	build_wonder_upgrade=upgrade_grand_mural
+}
+2256.12.6={
+	build_wonder_upgrade=upgrade_aquaduct
+	build_wonder_upgrade=upgrade_general_archive_nation
+	b_chapultepec_MX=ca_wall_q_1
+	b_chapultepec_MX=ca_wall_q_2
+	b_chapultepec_MX=ca_wall_q_3
+	b_chapultepec_MX=ca_wall_q_4
+	b_chapultepec_MX=ca_wall_q_5
 }

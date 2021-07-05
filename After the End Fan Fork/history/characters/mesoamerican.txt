@@ -2,7 +2,7 @@
 
 # Mictlantec Kingdoms
 1325000={
-	name="Kuruchi"
+	name="Uriel Kuruchi"
 	dynasty=1350000
 	culture=purepecha
 	religion=sol_invicta
@@ -12,8 +12,6 @@
 	intrigue=5
 	learning=2
 	trait=brilliant_strategist
-	trait=peasant_leader
-	trait=incarnate
 	trait=mystic
 	trait=ambitious
 	trait=diligent
@@ -21,6 +19,7 @@
 	trait=brave
 	trait=zealous
 	trait=holy_warrior
+	give_nickname=nick_sword_of_curicaueri 
 	2578.11.28={birth=yes}
 	2628.6.3={death=yes}
 }
@@ -36,7 +35,6 @@
 	intrigue=4
 	learning=3
 	trait=fortune_builder
-	trait=incarnate
 	trait=mystic
 	trait=ambitious
 	trait=just
@@ -48,7 +46,7 @@
 }
 
 1325002={
-	name="Zuangua"
+	name="Primo"
 	dynasty=1350000
 	culture=purepecha
 	religion=sol_invicta
@@ -59,13 +57,13 @@
 	learning=6
 	trait=mystic
 	trait=ambitious
-	trait=cruel
-	trait=greedy
+	trait=shy
+	trait=charitable
 	trait=brave
 	trait=zealous
 	father=1325001
-	2631.11.28={birth=yes
-		add_claim=d_mexico
+	2631.11.28={
+		birth=yes
 	}
 	2655.9.9={add_spouse=1325050}
 	2706.6.3={death=yes}
@@ -88,8 +86,8 @@
 	trait=diligent
 	trait=craven
 	father=1325001
-	2646.4.28={birth=yes
-		add_claim=d_mexico
+	2646.4.28={
+		birth=yes
 	}
 	2716.6.3={death=yes}
 }
@@ -113,7 +111,8 @@
 	trait=humble
 	trait=gregarious
 	father=1325001
-	2643.1.31={birth=yes
+	2643.1.31={
+		birth=yes
 		effect={
 			add_weak_claim=k_michoacan
 		}
@@ -136,7 +135,6 @@
 	trait=ugly
 	trait=content
 	2626.4.28={birth=yes}
-	#2660.1.1={add_claim=d_mexico}
 	2701.6.3={death=yes}
 }
 
@@ -145,7 +143,7 @@
 	female=yes
 	dynasty=1350035
 	culture=purepecha
-	religion=mictlantec
+	religion=sol_invicta
 	martial=3
 	diplomacy=2
 	stewardship=3
@@ -157,11 +155,11 @@
 	2711.6.3={death=yes}
 }
 
-1325012={
+11325012={
 	name="Tajkáki"
 	dynasty=1350035
 	culture=purepecha
-	religion=mictlantec
+	religion=sol_invicta
 	martial=3
 	diplomacy=2
 	stewardship=3
@@ -177,7 +175,7 @@
 	name="Zolton"
 	dynasty=1428024
 	culture=nahua
-	religion=mictlantec
+	religion=sol_invicta
 	trait=proud
 	trait=just
 	trait=wroth
@@ -192,7 +190,7 @@
 	name="Eztli"
 	female=yes
 	culture=nahua
-	religion=sacred_heart
+	religion=sol_invicta
 	trait=humble
 	trait=shy
 	trait=kind
@@ -204,17 +202,23 @@
 }
 
 1325015={
-	name="Sapijauiri"
+	name="Jaime"
 	dynasty=1350049
-	culture=purepecha
-	religion=sol_invicta
+	culture=chilango
+	religion=mictlantec
 	2641.4.28={birth=yes}
 	2701.6.3={death=yes}
 }
 
 1325016={
-	name="Itzcoatl"
+	name="Tonalpixki"
 	dynasty=1386024
+	female=yes
+	trait=fortune_builder
+	trait=diligent
+	trait=stressed
+	trait=shrewd
+	trait=charitable
 	culture=nahua
 	religion=mictlantec
 	2637.4.28={birth=yes}
@@ -225,24 +229,23 @@
 	name="Ecatzin"
 	dynasty=1325008
 	culture=nahua
-	religion=mictlantec
+	religion=sol_invicta
 	2633.4.28={birth=yes}
 	2701.6.3={death=yes}
 }
 
 1325020={
-	name="Alfonso"
+	name="Santiaagu"
 	dynasty=1115031
-	culture=mixtec
+	culture=zapotec
 	religion=mictlantec
 	martial=8
 	diplomacy=6
 	stewardship=3
 	intrigue=5
 	learning=2
-	trait=fortune_builder
+	trait=mastermind_theologian
 	trait=peasant_leader
-	trait=incarnate
 	trait=quick
 	trait=ambitious
 	trait=diligent
@@ -252,9 +255,9 @@
 }
 
 1325021={
-	name="Dzawindanda"
+	name="Guiiguyeche'"
 	dynasty=1115031
-	culture=mixtec
+	culture=zapotec
 	religion=mictlantec
 	martial=4
 	diplomacy=3
@@ -262,20 +265,21 @@
 	intrigue=4
 	learning=4
 	trait=grey_eminence
-	trait=incarnate
 	trait=quick
-	trait=ambitious
-	trait=diligent
+	trait=content
+	trait=craven
+	trait=patient
 	father=1325020
 	2609.10.23={birth=yes}
-	2661.3.25={death=yes}
+	2666.6.25={death=yes}
 }
 
 1325022={
 	name="Pinopiaa"
 	dynasty=1115031
 	female=yes
-	culture=mixtec
+	dna="0fgbk0dd0c0" 
+	culture=zapotec
 	religion=mictlantec
 	martial=7
 	diplomacy=7
@@ -283,23 +287,24 @@
 	intrigue=4
 	learning=1
 	trait=charismatic_negotiator
-	trait=gardener
 	trait=quick
 	trait=kind
 	trait=patient
 	trait=proud
-	trait=gluttonous
+	trait=zealous
 	father=1325021
 	2645.11.28={birth=yes}
-	2664.1.1={add_spouse=1325051}
+	2662.1.2={effect={add_lover=1325051}}
+	2664.11.2={add_spouse=1325051}
 	2706.6.3={death=yes}
 }
 
 1325023={
-	name="Citlali"
+	name="Nadxieelii"
 	dynasty=1115031
 	female=yes
-	culture=mixtec
+	dna="aggbf0i00b0"
+	culture=zapotec
 	religion=mictlantec
 	martial=2
 	diplomacy=3
@@ -307,15 +312,16 @@
 	intrigue=3
 	learning=1
 	father=1325021
-	2652.11.28={birth=yes
-		add_claim=k_mixteca
+	2652.11.28={
+		birth=yes
+		add_claim=k_oaxaca
 	}
 	2706.6.3={death=yes}
 }
 
 
 1325030={
-	name="Juan Diego"
+	name="Juan Diego"
 	dynasty=1115015
 	culture=black
 	religion=mictlantec
@@ -353,7 +359,7 @@
 }
 
 1325032={
-	name="Elena María"
+	name="Elena María"
 	dynasty=1115015
 	female=yes
 	culture=black
@@ -393,6 +399,7 @@
 	}
 	2706.6.3={death=yes}
 }
+
 
 1325034={
 	name="Gracia"
@@ -444,7 +451,7 @@
 }
 
 1325043={
-	name="Na Yel"
+	name="Na Yel"
 	dynasty=1115012
 	culture=mixtec
 	religion=mictlantec
@@ -453,7 +460,7 @@
 }
 
 1325050={
-	name="No Kósti"
+	name="No Kósti"
 	female=yes
 	dna="plnbhiaemgf"
 	culture=purepecha
@@ -472,10 +479,10 @@
 }
 
 1325051={
-	name="Tigr"
+	name="Diegu"
 	dynasty=1386001
 	dna="nejejjmccpc"
-	culture=zapotec
+	culture=mixtec
 	religion=mictlantec
 	martial=4
 	diplomacy=5
@@ -484,18 +491,17 @@
 	learning=6
 	trait=fortune_builder
 	trait=fair
-	trait=kind
-	trait=deceitful
 	trait=wroth
-	trait=cynical
+	trait=honest
 	father=1325117
-	2637.6.24={birth=yes}
+	2643.6.24={birth=yes}
+	2662.1.2={effect={add_lover=1325022}}
 	2664.1.1={add_spouse=1325022}
 	2690.11.26={death=yes}
 }
 
 1325052={
-	name="Na Xani"
+	name="Na Xani"
 	female=yes
 	dynasty=1350000
 	dna="nenbjjmchkc"
@@ -615,7 +621,7 @@
 }
 
 1325058={
-	name="Seti Gyalana"
+	name="Seti Gyalana"
 	dynasty=1386002
 	dna="pjfgjckfnih"
 	culture=zapotec
@@ -635,7 +641,7 @@
 }
 
 1325059={
-	name="Xiichi Yezezii"
+	name="Xiichi Yezezii"
 	female=yes
 	dynasty=1386002
 	dna="pifjlcifhab"
@@ -680,7 +686,7 @@
 }
 
 1325061={
-	name="Gus Kkaloo"
+	name="Gus Kkaloo"
 	dynasty=1386002
 	dna="pinjjcifnih"
 	culture=zapotec
@@ -764,7 +770,7 @@
 	father=1325101
 	trait=legendary
 	1410.3.26={birth=yes} # No idea when he was born
-	1433.5.3={add_spouse=1325106}
+	1430.10.26={add_spouse=1325106}
 	1465.11.12={death=yes} # Or when he died...
 }
 1325106={
@@ -776,8 +782,7 @@
 	religion=mictlantec
 	father=1325104
 	trait=legendary
-	1417.3.13={birth=yes} # No idea when she was born
-	1433.5.3={add_spouse=1325105}
+	1410.3.13={birth=yes} # No idea when she was born
 	1485.10.9={death=yes} # Or when she died...
 }
 1325107={
@@ -791,7 +796,8 @@
 	trait=legendary
 	trait=ill
 	1435.12.21={birth=yes}
-	1486.4.15={death={
+	1486.4.15={
+		death={
 			death_reason=death_trait
 		}
 	}
@@ -819,7 +825,8 @@
 	trait=legendary
 	trait=ill
 	1449.1.1={birth=yes}
-	1481.6.2={death={
+	1481.6.2={
+		death={
 			death_reason=death_trait
 		}
 	}
@@ -833,7 +840,8 @@
 	father=1325109
 	trait=legendary
 	1466.1.1={birth=yes}
-	1520.9.16={death={
+	1520.9.16={
+		death={
 			death_reason=death_battle
 		}
 	}
@@ -848,7 +856,8 @@
 	trait=legendary
 	trait=has_small_pox
 	1476.1.1={birth=yes}
-	1520.12.3={death={
+	1520.12.3={
+		death={
 			death_reason=death_trait
 		}
 	}
@@ -862,7 +871,8 @@
 	father=1325108
 	trait=legendary
 	1495.1.1={birth=yes}
-	1525.2.27={death={
+	1525.2.27={
+		death={
 			death_reason=death_execution
 		}
 	}
@@ -884,8 +894,9 @@
 	trait=trusting
 	trait=kind
 	trait=honest
-	2645.4.16={birth=yes
-		culture=zapotec
+	2645.4.16={
+		birth=yes
+		culture=mixtec
 		effect={set_character_flag=diversity}
 	}
 	2661.4.16={add_spouse=1325114}
@@ -907,8 +918,9 @@
 	trait=stubborn
 	trait=kind
 	trait=wroth
-	2644.11.5={birth=yes
-		culture=zapotec
+	2644.11.5={
+		birth=yes
+		culture=mixtec
 		effect={set_character_flag=diversity}
 	}
 	2661.4.16={add_spouse=1325113}
@@ -921,7 +933,8 @@
 	father=1325113
 	mother=1325114
 	trait=strong
-	2662.5.18={birth=yes
-		culture=zapotec
+	2662.5.18={
+		birth=yes
+		culture=mixtec
 	}
 }
