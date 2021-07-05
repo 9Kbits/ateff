@@ -24,6 +24,7 @@ feudal_governments = {
 			OR = {
 				controls_religion = no
 				religion = americanist
+				religion = cetic
 				religion = consumerist
 				religion = monetarist
 				religion = rust_cultist
@@ -64,21 +65,9 @@ feudal_governments = {
 					has_religion_features = no # Old saves, and campaigns without HF, need the Fylkirate to continue working
 				}
 			}
-			# NOT = {	religion = cetic }
-			# NOT = {	religion = imamite }
-			# NOT = {	religion = qingzhen }
-			# NOT = {	religion = nazarene }
-			# NOT = {	religion = montane }
-			# NOT = {	religion = edenite }
-			# NOT = {	religion = angeline }
-			# NOR = {
-				# religion = traditionalist
-				# religion = revivalist
-				# religion = misrist
-				# religion = orientalist
-				# religion = alawiyya
-			# }
 			NOT = { is_government_potential = bureaucratic_government }
+			NOT = { is_government_potential = cenobitic_government }
+			NOT = { is_government_potential = ghazi_government }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = mormon_government }
@@ -86,8 +75,6 @@ feudal_governments = {
 			#NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = open_range_feudalism_government }
-			NOT = { is_government_potential = cenobitic_government }
-			NOT = { is_government_potential = ghazi_government }
 			NOT = { is_government_potential = theocratic_feudal_government }
 			#Removed Chinese Imperial stuff
 			is_patrician = no
@@ -108,6 +95,7 @@ feudal_governments = {
 		## Modifiers
 		court_size_modifier = 10
 	}
+	
 	ghazi_government = {
 		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
@@ -141,8 +129,7 @@ feudal_governments = {
 				controls_religion = yes
 				religion = traditionalist
 			}
-
-
+			
 			OR = { 
 				religion = traditionalist
 				religion = revivalist
@@ -180,7 +167,6 @@ feudal_governments = {
 		court_size_modifier = 10
 	}
 
-	
 	mormon_government = {
 		preferred_holdings = { CASTLE }
 		allowed_holdings = { 
@@ -820,17 +806,17 @@ feudal_governments = {
 		}
 		frame_suffix = "_cenobiticgovernment"
 		potential = {
-			OR= {
-			religion = montane
-			religion = edenite
-			religion = angeline
+			OR = {
+				religion = montane
+				religion = edenite
+				religion = angeline
 			}
 			is_patrician = no
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = order_government }
 			NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
-			NOT = { is_government_potential = mex_imperial_government }		
+			NOT = { is_government_potential = mex_imperial_government }			
 		}
 		
 		vassal_call_to_arms  = {

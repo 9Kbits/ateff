@@ -7207,9 +7207,11 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
-						reverse_has_opinion_modifier = {
-							who = ROOT
-							modifier = gnator_succeed
+						ROOT = {
+							has_opinion_modifier = {
+								who = PREV
+								modifier = gnator_succeed
+							}
 						}
 					}
 				}
@@ -7222,9 +7224,11 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
-						reverse_has_opinion_modifier = {
-							who = ROOT
-							modifier = gnator_succeed
+						ROOT = {
+							has_opinion_modifier = {
+								who = PREV
+								modifier = gnator_succeed
+							}
 						}
 						higher_real_tier_than = duke
 					}
@@ -7240,18 +7244,20 @@ character_event = {
 						trait = governator
 						OR = {
 							e_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = 20
+										who = PREVPREV
+										value > 20
 									}
 								}
 							}
 							e_new_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = 20
+										who = PREVPREV
+										value > 20
 									}
 								}
 							}
@@ -7269,18 +7275,20 @@ character_event = {
 						trait = governator
 						OR = {
 							e_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = 40
+										who = PREVPREV
+										value > 40
 									}
 								}
 							}
 							e_new_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = 40
+										who = PREVPREV
+										value > 40
 									}
 								}
 							}
@@ -7298,18 +7306,20 @@ character_event = {
 						trait = governator
 						OR = {
 							e_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = 60
+										who = PREVPREV
+										value > 60
 									}
 								}
 							}
 							e_new_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = 60
+										who = PREVPREV
+										value > 60
 									}
 								}
 							}
@@ -7327,18 +7337,20 @@ character_event = {
 						trait = governator
 						OR = {
 							e_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = 80
+										who = PREVPREV
+										value > 80
 									}
 								}
 							}
 							e_new_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = 80
+										who = PREVPREV
+										value > 80
 									}
 								}
 							}
@@ -7665,59 +7677,26 @@ character_event = {
 					value = -0.5
 				}
 			}
-			if = { 
-				limit = {
-					any_character = {
-						trait = governator
-						NOT = {
-							reverse_has_opinion_modifier = {
-								who = ROOT
-								modifier = gnator_succeed
-							}
-						}
-					}
-				}
-				change_variable = {
-					which = governator_influence
-					value = -2
-				}
-			}
-			if = { 
-				limit = {
-					any_character = {
-						trait = governator
-						NOT = {
-							reverse_has_opinion_modifier = {
-								who = ROOT
-								modifier = gnator_succeed
-							}
-						}
-						higher_real_tier_than = DUKE
-					}
-				}
-				change_variable = {
-					which = governator_influence
-					value = -2
-				}
-			}
 			if = {
 				limit = {
 					any_character = {
 						trait = governator
 						OR = {
 							e_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = -20
+										who = PREVPREV
+										value < -20
 									}
 								}
 							}
 							e_new_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = -20
+										who = PREVPREV
+										value < -20
 									}
 								}
 							}
@@ -7735,18 +7714,20 @@ character_event = {
 						trait = governator
 						OR = {
 							e_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = -40
+										who = PREVPREV
+										value < -40
 									}
 								}
 							}
 							e_new_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = -40
+										who = PREVPREV
+										value < -40
 									}
 								}
 							}
@@ -7764,18 +7745,20 @@ character_event = {
 						trait = governator
 						OR = {
 							e_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = -60
+										who = PREVPREV
+										value < -60
 									}
 								}
 							}
 							e_new_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = -60
+										who = PREVPREV
+										value < -60
 									}
 								}
 							}
@@ -7793,18 +7776,20 @@ character_event = {
 						trait = governator
 						OR = {
 							e_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = -80
+										who = PREVPREV
+										value < -80
 									}
 								}
 							}
 							e_new_california = {
+								has_holder = yes
 								holder_scope = {
 									reverse_opinion = {
-										who = ROOT
-										value = -80
+										who = PREVPREV
+										value < -80
 									}
 								}
 							}
@@ -7822,11 +7807,13 @@ character_event = {
 						trait = governator
 						OR = {
 							e_california = {
+								has_holder = yes
 								holder_scope = {
 									is_rival = PREVPREV
 								}
 							}
 							e_new_california = {
+								has_holder = yes
 								holder_scope = {
 									is_rival = PREVPREV
 								}
