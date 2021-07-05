@@ -34,6 +34,7 @@ discharged = {
 
 	religious = yes
 	customizer = no
+	cannot_inherit = yes
 	
 	male_insult = INSULT_RENEGADE
 	female_insult = INSULT_RENEGADE
@@ -3043,6 +3044,39 @@ disinherited_trait = {
 	random = no
 }
 
+knight = {
+	monthly_character_prestige = 0.1
+	martial = 1
+	sex_appeal_opinion = 5
+	church_opinion = 10
+	evangelical_opinion = 5
+	customizer = no
+	command_modifier = {
+		cavalry = 0.1
+	}
+	religious = yes
+	
+	opposites = {
+		squire
+	}
+	
+	male_compliment_adj = COMPL_CHIVALROUS
+	female_compliment_adj = COMPL_CHIVALROUS
+	female_insult = INSULT_SHE_KNIGHT
+	male_insult = INSULT_FALSE_KNIGHT
+	child_compliment = COMPL_KNIGHT
+}
+squire = {
+	religious = yes
+	monthly_character_prestige = 0.01
+	church_opinion = 5
+	same_opinion = 5
+	customizer = no
+	
+	opposites = {
+		knight
+	}
+}
 
 
 #Commented these out because I have no idea what these are supposed to do.

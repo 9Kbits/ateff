@@ -1204,3 +1204,32 @@ title_fire_lighter = {
 		religion = sol_invicta
 	}
 }
+
+title_squire = {
+	dignity = 0.05
+	show_as_title = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { trait = knight }
+	}
+	
+	allowed_to_grant = {
+		religion = evangelical
+	}
+	
+	gain_effect = {
+		add_trait = squire
+	}
+	lose_effect = {
+		remove_trait = squire
+	}
+
+	message = yes
+}

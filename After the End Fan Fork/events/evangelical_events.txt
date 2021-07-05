@@ -3907,6 +3907,34 @@ character_event = {
 	}
 }
 
+character_event = {
+	id = eva.800
+	desc = EVTDESC_eva.800
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTA_eva.800
+		add_trait = squire
+		piety = 100
+	}
+}
+
+character_event = {
+	id = eva.801
+	desc = EVTDESC_eva.801
+	picture = GFX_evt_knight_kneeling
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = EVTOPTA_eva.801
+		add_trait = knight
+		remove_trait = squire
+		piety = 100
+	}
+}
 narrative_event = {
 	id = eva.1000
 	title = EVTTITLE_hcc_downfall
