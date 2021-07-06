@@ -35,3 +35,45 @@ title_sol_cardinal = {
 
 	message = yes
 }
+
+title_lamanita_cardinal = {
+	religion = lamanita
+	can_elect_head = yes
+	
+	grant_limit = 12
+	
+	realm_in_name = no
+	show_as_title = yes
+	
+	opinion_effect = 20
+	dignity = 0.9
+	
+	monthly_salary = 0.1
+	monthly_prestige = 0.5
+	
+	allowed_to_grant = {
+		always = no
+	}
+	allow = {
+		religion = lamanita
+		is_theocracy = yes
+		
+		NOT = {
+			top_liege = {
+				any_vassal = {
+					any_claim = {
+						title = d_quorum_of_the_lamanites
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+	}
+	
+	lose_effect = {
+	}
+
+	message = yes
+}
