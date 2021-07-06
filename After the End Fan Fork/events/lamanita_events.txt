@@ -1,0 +1,160 @@
+
+namespace=MHR
+narrative_event = {
+	id = MHR.1
+	desc = EVTDESCMHR1
+	picture = GFX_evt_mass_baptism
+	border = GFX_event_narrative_frame_religion
+	show_from_from = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTAMHR1
+		character_event = { id = MHR.2 }
+		if = { #Bloodline Male
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			create_bloodline = {
+				type = lamanita_emperor_male
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_lamanita"
+			}	
+			sound_effect = bloodline_added			
+		}
+		else_if = { #Bloodline Female
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			create_bloodline = {
+				type = lamanita_emperor_female
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_lamanita"
+			}	
+			sound_effect = bloodline_added			
+		}
+	}
+}
+
+character_event = {
+	id = MHR.2
+
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_realm_lord = {
+			limit = {
+				religion = lamanita
+				is_theocracy = yes
+				prisoner = no
+				is_incapable = no
+			}
+			
+	d_quorum_of_the_lamanites = { grant_title = PREV }
+			ROOT = {
+				random_realm_title = {
+					limit = { is_holy_site = ROOT }
+					gain_title = PREVPREV
+				}
+			}
+			set_defacto_liege = ROOT
+			save_event_target_as = primer_elder_established
+			ROOT = { narrative_event = { id = MHR.3 } }
+			break = yes
+		}
+		random_realm_character = {
+			limit = {
+				religion = lamanita
+				is_ruler = no
+				prisoner = no
+				learning = 10
+				is_incapable = no
+			}
+			d_quorum_of_the_lamanites = { grant_title = PREV }
+			ROOT = {
+				random_realm_title = {
+					limit = { is_holy_site = ROOT }
+					gain_title = PREVPREV
+				}
+			}
+			set_defacto_liege = ROOT
+			save_event_target_as = primer_elder_established
+			ROOT = { narrative_event = { id = MHR.3 } }
+			break = yes
+		}
+		create_random_priest = {
+			random_traits = yes
+			dynasty = random
+			religion = lamanita
+			culture = ROOT
+			age = 40
+			health = 8
+			trait = quick
+			trait = pious
+			trait = honest
+			trait = scholar
+			trait = mastermind_theologian
+			attributes = {
+				learning = 6
+				diplomacy = 6
+				martial = 6
+				stewardship = 6
+				intrigue = 6
+			}
+		}
+		new_character = {
+			d_quorum_of_the_lamanites = { grant_title = PREV }
+			ROOT = {
+				random_realm_title = {
+					limit = { is_holy_site = ROOT }
+					gain_title = PREVPREV
+				}
+			}
+			set_defacto_liege = ROOT
+			save_event_target_as = primer_elder_established
+		}
+		narrative_event = { id = MHR.3 days = 4 }		
+	}
+}
+
+narrative_event = {
+	id = MHR.3
+	title = EVTTITLE_MHR.3
+	desc = EVTDESC_MHR.3
+	picture = GFX_evt_mass_baptism
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_MHR.3
+		trigger = { religion_group = latter_day_saints 
+		NOT = { title = e_centroamerica } 
+		}
+	}
+
+	option = {
+		name = EVTOPTB_MHR.3
+		trigger = {
+			NOT = { religion_group = latter_day_saints }
+			religion_group = christian 
+		}
+	}
+	option = {
+		name = EVTOPTC_MHR.3
+		trigger = {
+			NOR = {
+				religion_group = christian
+				religion_group = latter_day_saints
+			}
+		}
+	}
+}

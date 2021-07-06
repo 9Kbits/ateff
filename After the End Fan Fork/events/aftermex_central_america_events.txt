@@ -1,0 +1,38 @@
+namespace = unitasfratrum
+
+character_event = {
+	id = unitasfratrum.710
+	desc = EVTDESC_unitasfratrum_710
+	picture = GFX_evt_pilgrims_epic_journey
+	border = GFX_event_normal_frame_religion
+	religion = moravian
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = {
+			has_alternate_start_parameter = { key = religion_names value = random }
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_unitasfratrum_710
+		hidden_tooltip = {
+			remove_trait = parroquial
+		}
+		add_trait = pastoral
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = {
+		name = EVTOPTB_unitasfratrum_710
+		hidden_tooltip = {
+			remove_trait = pastoral
+		}
+		add_trait = parroquial
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
