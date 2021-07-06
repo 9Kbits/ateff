@@ -1,0 +1,205 @@
+namespace = newnestorian
+
+#Choose patron saint
+character_event = {
+	id = newnestorian.1
+	desc = "EVTDESC_newnestorian_1"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVOTPA_newnestorian_1
+		trigger = {
+		}
+		custom_tooltip = { text = TXT_nestorian_mar_zaya }
+		hidden_effect = {
+			add_character_modifier = { name = nestorian_mar_zaya duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVOTPB_newnestorian_1
+		custom_tooltip = { text = TXT_nestorian_mar_maroun }
+		hidden_effect = {
+			add_character_modifier = { name = nestorian_mar_maroun duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVOTPC_newnestorian_1
+		custom_tooltip = { text = TXT_nestorian_mar_nestor }
+		hidden_effect = {
+			add_character_modifier = { name = nestorian_mar_nestor duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = EVOTPD_newnestorian_1
+		custom_tooltip = { text = TXT_nestorian_mar_abba }
+		hidden_effect = {
+			add_character_modifier = { name = nestorian_mar_abba duration = -1 }
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	after = {
+		clr_character_flag = nestorian_select
+	}
+}
+
+#Become more like Mar Zaya - become mystic
+character_event = {
+	id = newnestorian.2
+	desc = "EVTDESC_newnestorian.2"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	trigger = {
+		has_character_modifier = nestorian_mar_zaya
+		NOT = { trait = zealous }
+		NOT = { trait = mystic }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newnestorian.2
+		hidden_effect = {
+			remove_trait = cynical
+			add_trait = mystic
+		}
+	}
+}
+
+#Become more like Mar Maroun - become humble
+character_event = {
+	id = newnestorian.3
+	desc = "EVTDESC_newnestorian.3"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	trigger = {
+		has_character_modifier = nestorian_mar_maroun
+		NOT = { trait = humble }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newnestorian.2
+		hidden_effect = {
+			remove_trait = proud
+			add_trait = humble
+		}
+	}
+}
+
+#Become more like Mar Nestor - become erudite
+character_event = {
+	id = newnestorian.4
+	desc = "EVTDESC_newnestorian.4"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	trigger = {
+		has_character_modifier = nestorian_mar_nestor
+		NOT = { trait = erudite }
+		NOT = { has_character_flag = imbecilenestorian }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newnestorian.2
+		hidden_effect = {
+			add_trait = erudite
+		}
+		NOR = {
+			has_trait = imbecile
+			has_trait = slow
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_newnestorian.2
+		piety = 100
+		OR = {
+			has_trait = imbecile
+			has_trait slow
+		}
+		set_character_flag = imbecilenestorian
+	}
+}
+
+#Become more like Mar Abba - become just
+character_event = {
+	id = newnestorian.5
+	desc = "EVTDESC_newnestorian.5"
+	picture = GFX_evt_virgin_mary_icon
+	
+	religion = nestorian
+	
+	trigger = {
+		has_character_modifier = nestorian_mar_abba
+		NOT = { trait = just }
+	}
+	
+	mean_time_to_happen = {
+		months = 40
+	}
+	
+	option = {
+		name = EVTOPTA_newnestorian.2
+		hidden_effect = {
+			add_trait = just
+			remove_trait = arbitrary
+		}
+	}
+}
+
+#Remove patron saint if you stop being Nestorian
+character_event = {
+	id = newnestorian.6
+	desc = "EVTDESC_newnestorian_6"
+	picture = GFX_evt_virgin_mary_icon
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { religion = nestorian }
+		has_nestorian_patron_saint_trigger = yes
+	}
+	
+	weight_multiplier = {
+		days = 5
+	}
+	
+	option = {
+		name = EVTOPTC_newnestorian.2
+		hidden_effect = {
+			remove_nestorian_patron_saint_effect = yes
+		}
+	}
+}

@@ -1,0 +1,42 @@
+#Select patron saint
+
+decisions = {
+	select_nestorian_patron_saint = {
+		is_high_prio = yes
+		only_rulers = yes
+		
+		potential = {
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			religion = nestorian
+			is_adult = yes
+			has_nestorian_patron_saint_trigger = no
+			NOT = {has_character_flag = nestorian_select}
+		}
+		allow = {
+			block_general_event_trigger = no
+			piety = 250
+			OR = {
+				trait = devout
+				trait = zealous
+			}
+		}
+		effect = {
+			character_event = { id = newnestorian.1 }
+			piety = -250
+			set_character_flag = nestorian_select
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.3 # Slow it down a little
+			}
+		}
+	}
+	
+
+}
