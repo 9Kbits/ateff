@@ -2459,10 +2459,11 @@
 	religion=gaian
 	dynasty=1863076
 	trait=twin
+	trait=maimed
 	female=yes
 	mother=1845127
 	2559.4.17={birth=yes}
-	2601.1.1={death=yes}
+	2601.1.1={death={death_reason=death_trait}}
 }
 
 1845126={
@@ -2982,6 +2983,7 @@
 	name="Hanford"
 	culture=inlander
 	religion=gaian
+	properties="fm0hmk"
 	dynasty=1863076
 	trait=brilliant_strategist
 	trait=brave
@@ -3033,3 +3035,27 @@
 	2637.1.1={birth=yes}
 	2683.10.1={death=yes}
 }
+
+1845169={
+	name="Terrible Tyrant"
+	culture=inlander
+	religion=batenburger
+	dynasty=0
+	occluded=yes
+	trait=legendary
+	trait=cruel
+	trait=drunkard
+	trait=wroth
+	trait=impaler
+	trait=arbitrary
+	trait=greedy
+	trait=hedonist
+	disallow_random_traits=yes
+	2340.1.1={birth=yes}
+	2388.5.10={death={
+			death_reason=death_execution
+			killer=1845165 #Hanford "The Usurper" Ponderosa
+		}
+	}
+}
+
