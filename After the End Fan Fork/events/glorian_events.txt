@@ -1,0 +1,58 @@
+namespace = glorian
+
+narrative_event = {
+	id = glorian.1
+	title = EVTNAME_gg
+	desc = EVTDESC_gg
+	picture = GFX_evt_coronation
+	border = GFX_event_narrative_frame_religion
+
+	major = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_global_flag = gg }
+	}
+	
+	immediate = {
+		set_global_flag = gg
+		d_glorian = { grant_title = ROOT }
+		primary_title = {
+				d_glorian = {
+					copy_title_laws = PREV
+				}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_gg
+		trigger = {
+			religion = glorian
+			NOT = { has_landed_title = d_glorian }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_gg
+		trigger = {
+			NOT = { religion_group = old_world_cultist }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_gg
+		trigger = {
+			religion_group = old_world_cultist
+			NOT = { religion = glorian }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_gg
+		trigger = {
+			religion = glorian
+			has_landed_title = d_glorian
+		}
+	}
+}
