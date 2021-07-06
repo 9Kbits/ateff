@@ -3950,6 +3950,10 @@ character_event = {
 					prisoner = no
 					higher_real_tier_than = COUNT
 					government = bureaucratic_government
+					NOR = {
+						has_landed_title = e_california
+						has_landed_title = e_new_california
+					}
 				}
 				preferred_limit = {
 					higher_real_tier_than = DUKE
@@ -7207,6 +7211,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						ROOT = {
 							has_opinion_modifier = {
 								who = PREV
@@ -7224,6 +7231,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						ROOT = {
 							has_opinion_modifier = {
 								who = PREV
@@ -7242,6 +7252,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						OR = {
 							e_california = {
 								has_holder = yes
@@ -7273,6 +7286,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						OR = {
 							e_california = {
 								has_holder = yes
@@ -7304,6 +7320,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						OR = {
 							e_california = {
 								has_holder = yes
@@ -7335,6 +7354,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						OR = {
 							e_california = {
 								has_holder = yes
@@ -7681,6 +7703,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						OR = {
 							e_california = {
 								has_holder = yes
@@ -7712,6 +7737,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						OR = {
 							e_california = {
 								has_holder = yes
@@ -7743,6 +7771,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						OR = {
 							e_california = {
 								has_holder = yes
@@ -7774,6 +7805,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						OR = {
 							e_california = {
 								has_holder = yes
@@ -7805,6 +7839,9 @@ character_event = {
 				limit = {
 					any_character = {
 						trait = governator
+						prisoner = no
+						# is_incapable = no
+						# in_hiding = no
 						OR = {
 							e_california = {
 								has_holder = yes
@@ -9493,7 +9530,6 @@ character_event = {
 	}
 }
 
-
 #Yearly Bureaucracy Change
 character_event = {
 	id = cetic.544
@@ -9964,9 +10000,9 @@ character_event = {
 					}
 					higher_real_tier_than = BARON
 					is_feudal = yes
-					liege = {
-						ai = no
-					}
+					# liege = {
+						# ai = no
+					# }
 				}
 				liege = {
 					change_variable = {
@@ -9981,9 +10017,9 @@ character_event = {
 					learning < 6
 					higher_real_tier_than = BARON
 					is_feudal = yes
-					liege = {
-						ai = no
-					}
+					# liege = {
+						# ai = no
+					# }
 				}
 				liege = {
 					change_variable = {
@@ -10000,7 +10036,7 @@ character_event = {
 				}
 				change_variable = {
 					which = passive_bureaucracy
-					value = -2
+					value = -4
 				}
 			}
 			if = { #Passive Malus: Greater than 70 Bureaucracy
@@ -10011,7 +10047,7 @@ character_event = {
 				}
 				change_variable = {
 					which = passive_bureaucracy
-					value = -2
+					value = -4
 				}
 			}
 			if = { #Passive Malus: Greater than 80 Bureaucracy
@@ -10250,6 +10286,74 @@ character_event = {
 				}
 				change_variable = { which = global_bureau_number value = -0.25 }
 			}
+			if = {
+				limit = {
+					has_character_modifier = low_bureaucracy
+					higher_real_tier_than = COUNT
+				}
+				change_variable = { which = global_bureau_number value = -0.5 }
+			}
+			if = {
+				limit = {
+					has_character_modifier = low_bureaucracy
+					higher_real_tier_than = DUKE
+				}
+				change_variable = { which = global_bureau_number value = -0.5 }
+			}
+			if = {
+				limit = {
+					has_character_modifier = low_bureaucracy
+					higher_real_tier_than = KING
+				}
+				change_variable = { which = global_bureau_number value = -0.5 }
+			}
+			if = {
+				limit = {
+					has_character_modifier = low_bureaucracy
+					higher_real_tier_than = EMPEROR
+				}
+				change_variable = { which = global_bureau_number value = -0.5 }
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_character_modifier = low_bureaucracy
+						has_character_modifier = high_bureaucracy
+					}
+				}
+				change_variable = { which = global_bureau_number value = 0.25 }
+			}
+			if = {
+				limit = {
+					has_character_modifier = high_bureaucracy
+					higher_real_tier_than = COUNT
+				}
+				change_variable = { which = global_bureau_number value = 0.5 }
+			}
+			if = {
+				limit = {
+					has_character_modifier = high_bureaucracy
+					higher_real_tier_than = DUKE
+					check_variable = { which = global_bureau_number = value > 80 }
+				}
+				change_variable = { which = global_bureau_number value = 0.5 }
+			}
+			if = {
+				limit = {
+					has_character_modifier = high_bureaucracy
+					higher_real_tier_than = KING
+				}
+				check_variable = { which = global_bureau_number = value > 70 }
+				change_variable = { which = global_bureau_number value = 0.5 }
+			}
+			if = {
+				limit = {
+					has_character_modifier = high_bureaucracy
+					higher_real_tier_than = EMPEROR
+					check_variable = { which = global_bureau_number = value > 60 }
+				}
+				change_variable = { which = global_bureau_number value = 0.5 }
+			}
 		}
 		
 		primary_title = {
@@ -10268,6 +10372,37 @@ character_event = {
 	}	
 }
 
+# character_event = {
+	# id = cetic.545
+	# hide_window = yes
+	# mean_time_to_happen = {
+		# days = 1
+	# }
+	# trigger = {
+		# any_demesne_title = {
+			# NOT = {
+				# primary_title = {
+					# title = PREV
+				# }
+			# }
+			# has_title_flag = primary_set
+		# }
+	# }
+	# immediate = {
+		# any_demesne_title = {
+			# limit = {
+				# NOT = {
+				# primary_title = {
+						# title = PREV
+					# }
+				# }
+				# has_title_flag = primary_set
+			# }
+			# clr_title_flag = primary_set
+			# clr_title_flag = bureaucracy_set
+		# }
+	# }
+# }
 
 # **************************Variable Boundary Events***********************
 
