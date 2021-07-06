@@ -1886,9 +1886,10 @@
 	trait=mystic
 	trait=possessed
 	trait=lunatic
+	trait=giant
+	give_nickname=nick_the_goliath
 	2555.4.18={birth=yes}
-	2573.1.4={give_nickname=nick_the_witch}
-	2619.8.16={death=yes}
+	2617.12.19={death=yes}
 }
 
 1200119={
@@ -1909,8 +1910,25 @@
 	dynasty=1863073
 	culture=chicagoan
 	religion=trailwalker
+	trait=cruel
+	father=1200121
 	2603.6.5={birth=yes
 		culture=inlander
 			}
 	2652.12.1={death=yes}
+}
+
+1200121={
+	name="Maxim"
+	dynasty=1863073
+	culture=chicagoan
+	religion=trailwalker
+	2581.5.2={birth=yes
+		culture=inlander
+			}
+	2617.3.15={death={
+			death_reason=death_battle
+			killer=1845121 #Julia Ponderosa
+		}
+	}
 }
