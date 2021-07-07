@@ -66,3 +66,91 @@ narrative_event = {
 	}
 }
 
+narrative_event={
+	id = tex.2
+	title = EVTNAME_texarkana_established
+	desc = EVTDESC_texarkana_established
+	picture = GFX_evt_americanist_intervention
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_usa }
+		has_global_flag = texarkana_established
+	}
+	
+	option = {
+		name = EVTOPT_texarkana_emperor
+		trigger = {
+			NOT = { has_landed_title = e_dixie }
+			has_landed_title = e_dixie
+		}
+		prestige = 500
+		if = { #New Imperial Bloodline. (male)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			create_bloodline = {
+				type = tex_texarkana_male
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_texarkana"
+			}	
+			sound_effect = bloodline_added			
+		}
+		else_if = { #New Imperial Bloodline. (female)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			create_bloodline = {
+				type = tex_texarkana_female
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_texarkana"
+			}	
+			sound_effect = bloodline_added			
+		}
+	}
+	
+	option = {
+		name = EVTOPT_texarkana_catholic
+		trigger = {
+			NOT = { has_landed_title = e_texarkana }
+			NOT = { has_landed_title = e_dixie }
+			e_usa = {
+				holder_scope = {
+					religion = ROOT
+				}
+			}
+		}
+		piety = 100
+	}
+	
+	option = {
+		name = EVTOPT_texarkana_infidel
+		trigger = {
+			NOT = { has_landed_title = e_texarkana }
+			NOT = { has_landed_title = e_dixie }
+			e_usa = {
+				holder_scope = {
+					NOT = { religion = ROOT }
+				}
+			}
+		}
+		piety = -100
+	}
+	
+	option = {
+		name = EVTOPT_texarkana_dixie
+		trigger = {
+			NOT = { has_landed_title = e_texarkana }
+			AND = {
+				has_landed_title = e_dixie
+				religion = evangelical
+			}
+		}
+		prestige = -500
+	}
+}

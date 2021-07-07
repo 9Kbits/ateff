@@ -1881,4 +1881,201 @@ decisions = {
 			}
 		}
 	}
+	form_e_texarkana = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		ai_will_do = {
+	        factor = 25
+	        modifier = {
+	            factor = .5
+	            trait = content
+	        }
+	        modifier = {
+	            factor = .5
+	            trait = craven
+	        }
+	        modifier = {
+	            factor = 2
+	        	trait = ambitious
+	        }
+	        modifier = {
+	            factor = 2
+	        	trait = brave
+	        }
+	        modifier = {
+	            factor = 2
+	        	trait = zealous
+	        }
+	    }
+		
+		potential = {
+			is_alternate_start = no
+			NOT = {
+				has_game_rule = {
+					name = empire_decisions
+					value = off
+				}
+			}
+			NOT = { has_landed_title = e_new_france }
+			NOT = { has_global_flag = america_restored }
+			independent = yes
+			religion = catholic
+			NOT = { has_landed_title = e_dixie }
+			e_texarkana = {
+				has_holder = no
+			}
+		}
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			prestige = 1000
+			has_landed_title = k_ozarks
+			has_landed_title = k_lousiana
+			OR = {
+				has_landed_title = k_old_star
+				has_landed_title = k_texarkana
+			}
+			custom_tooltip = {
+				text = form_texarkana_tooltip_1
+				hidden_tooltip = {
+					AND = {
+						e_dixie = { holder_scope = { NOT = { religion = catholic } } }
+						e_new_south = { holder_scope = { NOT = { religion = catholic } } }
+						
+						
+					}
+				}
+			}
+			conditional_tooltip = {
+				trigger = {
+					ai = no
+				}
+				AND = {
+					religion_head = {
+						opinion = { who = ROOT value = 25 }
+					}
+					scaled_wealth = 2
+				}
+			}
+		}
+		effect = {
+			set_global_flag = texarkana_rises
+			activate_title = { title = e_texarkana status = yes }
+			if = {
+				limit = {
+					ai = no
+				}
+				scaled_wealth = -2
+			}
+			#Create Electors, depending on capital location:
+			princely_elective_apply_elector_setup_effect = yes
+			primary_title = {
+				show_scope_change = no
+				e_texarkana = {
+					show_scope_change = no
+					grant_title = ROOT
+					copy_title_laws = PREV
+					add_law = succ_hre_elective
+				}
+			}
+			any_demesne_title = {
+				limit = { tier = KING }
+				de_jure_liege = e_texarkana
+			}
+			
+			if = {
+				limit = {
+					has_landed_title = k_texarkana
+					NOT = { has_landed_title = k_old_star}
+				}
+				
+				d_texarkana = {
+					de_jure_liege = k_texarkana
+				}
+				
+				if = {
+					limit = {
+						has_landed_title = d_metroplex
+					}
+					d_metroplex = { de_jure_liege = k_texarkana }					
+				}
+				
+				if = {
+					limit = {
+						has_landed_title = d_neches
+					}
+					d_neches = { de_jure_liege = k_texarkana }					
+				}
+				
+				if = {
+					limit = {
+						has_landed_title = d_houston
+					}
+					d_houston = { de_jure_liege = k_texarkana }					
+				}
+			}
+			
+			hidden_tooltip = {
+				any_demesne_title = {
+					if = {
+						limit = { tier = EMPEROR }
+						any_direct_de_jure_vassal_title = {
+							de_jure_liege = e_texarkana
+						}
+					}
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					tier = EMPEROR
+					NOT = { title = e_texarkana }
+				}
+				destroy_landed_title = THIS
+				hidden_tooltip = { activate_title = { title = THIS status = no } }
+			}
+			any_demesne_title = {
+				limit = { tier = KING }
+				destroy_landed_title = THIS
+			}
+			e_dixie = {
+				show_scope_change = no
+				holder_scope = {
+					show_scope_change = no
+					opinion = {
+						who = ROOT
+						modifier = opinion_unhappy
+						months = 1200
+					}
+					hidden_tooltip = {
+						k_papal_state = {
+							holder_scope = {
+								reverse_opinion = {
+									who = PREVPREV
+									modifier = opinion_unhappy
+									months = 1200
+								}
+							}
+						}
+					}
+				}
+			}
+			hidden_tooltip = { narrative_event = { id = tex.2 } } 
+			set_character_flag = founded_texarkana
+			
+			chronicle = {
+				entry = CHRONICLE_FOUNDED_TEXARKANA
+				picture = GFX_evt_coronation
+			}
+			
+			
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }
