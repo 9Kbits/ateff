@@ -1,0 +1,160 @@
+#Historical Bloodlines
+
+tizon = { #Mexican Emperors
+	mexicano_opinion = 10
+	norteno_opinion = 10
+        sacred_heart_opinion = 5
+	monthly_character_prestige = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_tizon_flaming_sword
+	flags = { historical_bloodline pre_event_bloodline cheap_reconquista }
+}
+
+jacaranda = { #Jacaranda Bloodline
+	global_revolt_risk = -0.02
+	bloodline_effect_dynastic_meddling = 1
+	monthly_character_piety = 0.3
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_jacaranda_tree
+	flags = { historical_bloodline bloodline_heroes }
+}
+
+cucaracha = { # Rey Luis 'la Cucaracha'
+	atomicist_opinion = 5
+	monthly_character_prestige = 0.2
+	monthly_character_piety = 0.1
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_placeholder_symbol_2
+	flags = { historical_bloodline }
+	active = {
+		OR = {
+			religion = atomicist
+			culture_group = chicano
+			culture_group = norteno
+		}
+	}
+}
+
+##Earned Bloodlines
+
+centaur_male = {
+	norteno_opinion = 10
+	mexicano_opinion = 10
+	fidencista_opinion = 5
+	command_modifier = {
+		religious_enemy = 0.3
+	}
+	command_modifier = {
+        speed = 0.15
+    }
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_horse
+	flags = { created_bloodline bloodline_great_conquerors bloodline_centaur }
+	active = {
+		OR = {
+			culture_group = norteno
+			culture_group = mexicano
+			religion = fidencista
+		}
+	}
+}
+
+centaur_female = {
+	norteno_opinion = 10
+	mexicano_opinion = 10
+	fidencista_opinion = 5
+	command_modifier = {
+		religious_enemy = 0.3
+	}
+	command_modifier = {
+        speed = 0.15
+    }
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_horse
+	flags = { created_bloodline bloodline_conquerorcreated_bloodline bloodline_great_conquerors bloodline_centaur }
+	active = {
+		OR = {
+			culture_group = norteno
+			culture_group = mexicano
+			religion = fidencista
+		}
+	}
+}
+
+#earned by restorer of Mexico
+restaurador_male = {
+	monthly_character_piety = 1
+	monthly_character_prestige = 0.25
+	church_opinion = 5
+	cult_of_saints_opinion = 5
+	mexicano_opinion = 5
+	norteno_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_virgin
+	flags = { created_bloodline restaurador_bloodline }
+	active = {
+		OR = {
+			culture_group = mexicano
+			culture_group = norteno
+			religion = sacred_heart
+			religion = cristo_rey
+			religion = fidencista
+		}
+	}
+}
+
+restaurador_female = {
+	monthly_character_piety = 1
+	monthly_character_prestige = 0.25
+	church_opinion = 5
+	cult_of_saints_opinion = 5
+	mexicano_opinion = 5
+	norteno_opinion = 5
+	inheritance = matrilineal
+	allow_bastards = yes
+	picture = GFX_bloodlines_symbol_virgin
+	flags = { created_bloodline restaurador_bloodline }
+	active = {
+		OR = {
+			culture_group = mexicano
+			culture_group = norteno
+			religion = sacred_heart
+			religion = cristo_rey
+			religion = fidencista
+		}
+	}
+}
+
+lamanita_emperor_male = {
+	monthly_character_piety = 0.25
+	bloodline_effect_great_heroes_appear = 1
+	latter_day_saints_opinion = 10
+	church_opinion = 5
+	inheritance = patrilineal
+	allow_bastards = no
+	flags = { created_bloodline bloodline_heroes }
+	picture = GFX_bloodlines_blooming_rose
+	active = {
+		religion = lamanita
+	}
+}
+
+lamanita_emperor_female = {
+	monthly_character_piety = 0.25
+	bloodline_effect_great_heroes_appear = 1
+	latter_day_saints_opinion = 10
+	church_opinion = 5
+	inheritance = matrilineal
+	allow_bastards = no
+	flags = { created_bloodline bloodline_heroes }
+	picture = GFX_bloodlines_blooming_rose
+	active = {
+		religion = lamanita
+	}
+}

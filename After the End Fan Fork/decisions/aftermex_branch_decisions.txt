@@ -1,0 +1,59 @@
+decisions = {	
+	change_moravian_branch = {
+		ai = no
+		
+		potential = {
+			religion = moravian
+			age = 16
+			is_playable = yes
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			NOT = { has_character_flag = changedmoravianbranch }
+		}
+		
+		allow = {
+			religion = moravian
+			is_playable = yes
+			NOT = { has_character_flag = changedmoravianbranch }
+		}
+		
+		effect = {
+			hidden_tooltip = {
+				character_event = { id = unitasfratrum.710 }
+			}
+			custom_tooltip = { text = TXT_change_moravian_branch }
+			set_character_flag = changedmoravianbranch
+		}
+		
+		revoke_allowed = {
+			always = no
+		}
+	}
+	
+	sagrado_mystic = {
+		
+		potential = {
+			religion = sacred_heart
+			age = 16
+			learning = 14
+		}
+		
+		allow = { 
+			religion = sacred_heart
+			age = 16
+			learning = 14
+			NOT = {trait = mystic}
+		}
+		
+		effect = { 
+			hidden_tooltip = {
+				character_event = sacred_heart.210
+			}
+		}
+			
+		revoke_allowed = { 
+			always = no
+		}
+	}
+}

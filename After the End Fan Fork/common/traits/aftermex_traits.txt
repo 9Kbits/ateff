@@ -1,0 +1,358 @@
+cristero = {
+	opposites = {
+		crusader
+		valhalla_bound
+		jaguar_warrior
+		fords_striker
+		sword_of_the_lamb
+		knight_templar
+		order_of_the_garter
+		danite
+		shaddai
+		lughs_own
+		thunderbird_warrior
+		raven_warrior
+		dragon_soldier
+		cavalier
+		hivernant
+		joropo_cantor
+		medal_of_honor
+		patriota
+	}
+	
+	martial = 2
+	combat_rating = 10 #old value: 1
+	
+	church_opinion = 15
+	same_opinion_if_same_religion = 15
+	
+	ai_zeal = 10
+	customizer = yes
+	
+	male_insult = INSULT_FANATIC
+	female_insult = INSULT_FANATIC
+	male_insult_adj = INSULT_NARROWMINDED
+	female_insult_adj = INSULT_NARROWMINDED
+	male_compliment_adj = COMPL_CRUSADER
+	female_compliment_adj = COMPL_CRUSADER
+}
+
+adelita  = {	
+
+	monthly_character_prestige = 0.1
+	cult_of_saints_opinion = 5
+	mexicano_opinion = 15
+	norteno_opinion = 15
+	
+	combat_rating = 10 #new value!
+
+	ai_zeal = 10
+	
+	customizer = yes
+	random = no
+
+	female_compliment = COMPL_VALKYRIE
+	female_compliment_adj = COMPL_VIKING_adj
+}
+
+cajita = {
+	opposites = {
+		unworthy
+	}
+	potential = { religion = fidencista }
+	command_modifier = {
+		morale_defence = 0.1
+	}
+	same_religion_opinion = 10
+	monthly_character_prestige = 1.0
+	monthly_character_piety = 1.0
+	ai_zeal = 30
+	ai_ambition = 30
+	customizer = no
+	random = no
+	
+	male_compliment_adj = COMPL_GODLIKE
+	female_compliment_adj = COMPL_GODLIKE
+	child_compliment_adj = COMPL_STRONG
+}
+
+unworthy = {
+	opposites = {
+		cajita
+	}
+	potential = { religion = fidencista }
+	same_religion_opinion = -10
+	monthly_character_prestige = -0.5
+	diplomacy = -2
+	ai_zeal = -20
+	ai_ambition = -20
+	ai_rationality = 20
+	customizer = yes
+	random = no
+	
+	male_insult_adj = INSULT_WEAK
+	female_insult_adj = INSULT_WEAK
+	child_insult_adj = INSULT_WEAK
+}
+
+bloodlet = {
+	mesoamerican_gods_opinion = 10
+	cult_of_saints_opinion = -10
+	christian_opinion = -10
+	muslim_opinion = -10
+	jewish_group_opinion = -10
+
+	potential = {
+		OR = {
+			religion = neomayan
+			religion = qabantajik
+			religion = mictlantec
+		}
+	}
+
+	random = no
+	religious = yes
+	customizer = no
+}
+
+dorado = {
+	martial = 2
+	diplomacy = 1
+	
+	combat_rating = 10 #old value: 2
+	
+	same_opinion = 10
+	
+	customizer = no
+}
+
+parroquial  = {
+    monthly_character_piety = 0.25 #balancing
+    demesne_size = 3
+    religious = yes
+    
+    potential = {religion = moravian}
+    religious_branch = moravian
+    opposites =  {
+        pastoral
+    }
+    
+    opposite_opinion = -5
+    same_opinion = 10
+    
+    customizer = no
+    random = no
+}
+
+pastoral = {
+    monthly_character_piety = 0.25
+    
+    religious = yes
+    
+    potential = {religion = moravian}
+    religious_branch = moravian
+    opposites =  {
+        parroquial
+    }
+    
+    opposite_opinion = -5
+    same_opinion = 10
+    
+    customizer = no
+    random = no
+}
+
+born_in_the_caul = {
+	customizer = yes
+	birth = 25	
+	potential = {
+	religion = navegante
+	}	
+	
+	same_religion_opinion = 5
+	monthly_character_prestige = 0.5
+	
+	male_compliment_adj = COMPL_CAUL_BORN
+	female_compliment_adj = COMPL_CAUL_BORN
+}
+
+marian_el_santo = {
+	opposites = {
+		marian_guadalupe
+		marian_santa_muerte
+		marian_san_charbel
+		marian_san_juditas
+	}
+
+	opposite_opinion = -5
+	
+	martial = 1
+
+	potential = { religion = sacred_heart }
+	religious_branch = sacred_heart
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+	
+	male_insult = INSULT_BRUTE
+	female_insult = INSULT_BRUTE
+	child_insult_adj = INSULT_STUPID
+	
+	male_compliment_adj = COMPL_BRAVE
+	female_compliment_adj = COMPL_BRAVE
+	child_compliment_adj = COMPL_STRONG
+}
+
+marian_guadalupe = {
+	opposites = {
+		marian_el_santo
+		marian_santa_muerte
+		marian_san_charbel
+		marian_san_juditas
+	}
+
+	opposite_opinion = -5
+	
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.25
+
+	potential = { religion = sacred_heart }
+	religious_branch = sacred_heart
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+	
+	male_compliment_adj = COMPL_KINDHEARTED
+	female_compliment_adj = COMPL_KINDHEARTED
+	child_compliment_adj = COMPL_NICE
+}
+
+marian_santa_muerte = {
+	opposites = {
+		marian_guadalupe
+		marian_el_santo
+		marian_san_charbel
+		marian_san_juditas
+	}
+
+	opposite_opinion = -5
+	
+	intrigue = 1
+
+	potential = { religion = sacred_heart }
+	religious_branch = sacred_heart
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+	
+	male_insult_adj = INSULT_DEMONIC
+	female_insult_adj = INSULT_DEMONIC
+	child_insult_adj = INSULT_SCARY
+}
+
+
+marian_san_charbel = {
+	opposites = {
+		marian_guadalupe
+		marian_santa_muerte
+		marian_el_santo
+		marian_san_juditas
+	}
+
+	opposite_opinion = -5
+	
+	health = 1
+	learning = 1
+
+	potential = { religion = sacred_heart }
+	religious_branch = sacred_heart
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+	
+	male_insult = INSULT_BRUTE
+	female_insult = INSULT_BRUTE
+	child_insult_adj = INSULT_STUPID
+	
+	male_compliment_adj = COMPL_BRAVE
+	female_compliment_adj = COMPL_BRAVE
+	child_compliment_adj = COMPL_STRONG
+}
+
+marian_san_juditas = {
+	opposites = {
+		marian_guadalupe
+		marian_santa_muerte
+		marian_el_santo
+		marian_san_charbel
+	}
+
+	opposite_opinion = -5
+	tax_income = 1
+	stewardship = 1
+	
+	monthly_character_piety = 0.25
+	monthly_character_prestige = 0.25
+
+	potential = { religion = sacred_heart }
+	religious_branch = sacred_heart
+	random = no
+	religious = yes
+	ruler_designer_cost = 0
+	
+	male_compliment_adj = COMPL_KINDHEARTED
+	female_compliment_adj = COMPL_KINDHEARTED
+	child_compliment_adj = COMPL_NICE
+}
+
+############USED IN MEX IMPERIAL SUCCESSION##########
+
+tapado = {
+	hidden = no
+	is_visible = {
+		OR = {
+			has_character_flag = knows_tapado
+			has_landed_title = k_mexico
+			has_landed_title = e_mexico
+		}
+	}
+	random = no
+	customizer = no
+	
+	opposites = { 
+		destapado
+		se_movio
+	}
+}
+
+se_movio = {
+	hidden = no
+	random = no
+	customizer = no
+	
+	opposites = { 
+		destapado
+		tapado
+	}
+}
+
+destapado = {
+	hidden = no
+	random = no
+	customizer = no
+	
+	opposites = { 
+		tapado
+		se_movio
+	}
+}
+
+jefe_maximo = {
+	hidden = yes
+	random = no
+	customizer = no
+	
+}
+
+######################################################
+	
