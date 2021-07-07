@@ -1,13 +1,34 @@
 #high king candidate
-high_king_candidate = {
+
+party_populist = {
 	martial = 1
-	sex_appeal_opinion = 5
-	prestige = -0.5
-	#can be mitigated by restoring texan "institutions"
-	starfolk_opinion = -10
-	#rival candidates won't like you
-	same_opinion = -10
-	random = no
-	customizer = no
-	
+	opposites = {
+		trait = party_magnate
+		trait = party_theocratic
+	}
 }
+party_magnate = {
+	diplomacy = 1
+	opposites = {
+		trait = party_populist
+	}
+}
+party_royalist = {
+	stewardship = 1
+	opposites = {
+		trait = party_opposition
+	}
+}
+party_theocratic = {
+	learning = 1
+	opposites = {
+		trait = party_populist
+	}
+}
+party_opposition = {
+	intrigue = 1
+	opposites = {
+		trait = party_royalist
+	}
+}
+
