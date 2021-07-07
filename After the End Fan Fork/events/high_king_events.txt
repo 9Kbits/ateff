@@ -557,3 +557,50 @@ narrative_event = {
 		}
 	}
 }
+
+
+narrative_event = {
+	id = tex_king.13
+	title = EVTTITLE_tex_king_13
+	desc = EVTDESC_tex_king_13
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_texas }
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_13_banner
+		trigger = { has_landed_title = k_westex }
+	}
+	
+	option = {
+		name = EVTOPTA_tex_king_13_honor
+		trigger = { 
+			NOT = { has_landed_title = k_westex } 
+			OR = {
+				culture_group = starfolk
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_tex_king_13_foreign
+		trigger = { 
+			NOT = { has_landed_title = k_westex } 
+			NOT = { culture_group = starfolk }
+			NOT = {
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+}
