@@ -10095,17 +10095,17 @@ character_event = {
 					value = -4
 				}
 			}
-			if = { #Passive Malus: Greater than 70 Bureaucracy
-				limit = {
-					primary_title = {
-						check_variable = { which = bureau_number value > 70 }
-					}
-				}
-				change_variable = {
-					which = passive_bureaucracy
-					value = -4
-				}
-			}
+			# if = { #Passive Malus: Greater than 70 Bureaucracy
+				# limit = {
+					# primary_title = {
+						# check_variable = { which = bureau_number value > 70 }
+					# }
+				# }
+				# change_variable = {
+					# which = passive_bureaucracy
+					# value = -4
+				# }
+			# }
 			if = { #Passive Malus: Greater than 80 Bureaucracy
 				limit = {
 					primary_title = {
@@ -10114,7 +10114,7 @@ character_event = {
 				}
 				change_variable = {
 					which = passive_bureaucracy
-					value = -2
+					value = -4
 				}
 			}
 			if = { #Passive Malus: Greater than 90 Bureaucracy
@@ -10125,7 +10125,7 @@ character_event = {
 				}
 				change_variable = {
 					which = passive_bureaucracy
-					value = -2
+					value = -4
 				}
 			}
 			
