@@ -8775,6 +8775,13 @@ character_event = {
 		if = {
 			limit = {
 				has_dlc = "Zeus"
+				NOT = {
+					has_character_modifier = dont_change_laws
+				}
+			}
+			add_character_modifier = {
+				modifier = dont_change_laws
+				years = 10
 			}
 			primary_title = {
 				add_law = {
@@ -8823,7 +8830,16 @@ character_event = {
 				}
 			}
 		}
-		else = {
+		else_if = {
+			limit = {
+				NOT = {
+					has_character_modifier = dont_change_laws
+				}
+			}
+			add_character_modifier = {
+				modifier = dont_change_laws
+				years = 10
+			}
 			primary_title = {
 				add_law = {
 					law = crown_authority_0
@@ -8849,6 +8865,13 @@ character_event = {
 						has_law = succ_bureaucratic_elective
 					}
 				}
+				NOT = {
+					has_character_modifier = dont_change_laws
+				}
+			}
+			add_character_modifier = {
+				modifier = dont_change_laws
+				years = 10
 			}
 			any_demesne_title = {
 				limit = {
@@ -8869,6 +8892,13 @@ character_event = {
 						has_law = succ_bureaucratic_elective
 					}
 				}
+				NOT = {
+					has_character_modifier = dont_change_laws
+				}
+			}
+			add_character_modifier = {
+				modifier = dont_change_laws
+				years = 10
 			}
 			any_demesne_title = {
 				limit = {
@@ -8889,6 +8919,13 @@ character_event = {
 						has_law = succ_bureaucratic_elective
 					}
 				}
+				NOT = {
+					has_character_modifier = dont_change_laws
+				}
+			}
+			add_character_modifier = {
+				modifier = dont_change_laws
+				years = 10
 			}
 			any_demesne_title = {
 				limit = {
@@ -8909,6 +8946,13 @@ character_event = {
 						has_law = succ_bureaucratic_elective
 					}
 				}
+				NOT = {
+					has_character_modifier = dont_change_laws
+				}
+			}
+			add_character_modifier = {
+				modifier = dont_change_laws
+				years = 10
 			}
 			any_demesne_title = {
 				limit = {
