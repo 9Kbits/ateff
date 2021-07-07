@@ -613,11 +613,14 @@ narrative_event = {
 	prisoner = no
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPT_anaambitious"
-		add_trait = ambitious
+		name = "EVTOPT_anastasia2a"
 		hidden_tooltip = {
 			character_event = { id = hanovers.8 days = 1 }
 		}	
+	}
+	option = {
+		name = "EVTOPT_anaambitious"
+		add_trait = ambitious
 	}
 }
 narrative_event = {
@@ -629,32 +632,46 @@ narrative_event = {
 	prisoner = no
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPT_anaforgery"
-		wealth = -50
+		name = "EVTOPT_anastasia3a"
 		hidden_tooltip = {
-			random_list = {
-				20 = { character_event = { id = hanovers.9 days = 30 }}
-				80 = { character_event = { id = hanovers.10 days = 30 }}
+			if = {
+				limit = {
+					e_dixie = {
+						holder_scope = {
+							is_married = yes
+							NOT = { 
+								any_spouse = {
+									has_character_flag = anastasia2
+								} 
+							}
+						}
+					}
+				}
+				narrative_event = { id = hanovers.9 days = 1 }
+			}
+			else = {
+				narrative_event = { id = hanovers.10 days = 1 }
 			}
 		}
 		ai_chance = { factor = 10 }
 	}
 	option = {
-		name = "EVTOPT_anaanotherway"
-		piety = 20
+		name = "EVTOPT_anastasia3b"
+		change_intrigue = 2
 		ai_chance = { factor = 1 }
 	}
 }
 narrative_event = {
 	id = hanovers.9
-	title= EVTTITLE_anastasiacaught
+	title= EVTTITLE_anastasia4
 	desc = "EVTDESC_anastasia4"
 	picture = GFX_evt_open_book_hf
 	border = GFX_event_narrative_frame_intrigue
 	prisoner = no
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPT_anacaught"
+		name = "EVTOPT_anastasia4a"
+		change_intrigue = 2
 	}
 }
 narrative_event = {
@@ -664,9 +681,63 @@ narrative_event = {
 	picture = GFX_evt_open_book_hf
 	border = GFX_event_narrative_frame_intrigue
 	prisoner = no
-	is_triggered_only = yes
+	has_character_flag = anastasia2
+	
+	trigger = {
+		e_dixie = {
+			holder_scope = {
+				is_married = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
 	option = {
-		name = "EVTOPT_anaclaimtri"
+		name = "EVTOPT_anastasia5a"
+		e_dixie = {
+			holder_scope = {
+				add_spouse = ROOT
+			}
+		}
+	}
+}
+narrative_event = {
+	id = hanovers.11
+	title = EVTTITLE_anastasia6
+	desc = EVTDESC_anastasia6
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_narrative_frame_intrigue
+	prisoner = no
+	has_character_flag = anastasia2
+	
+	trigger = {
+		e_dixie = {
+			holder_scope = {
+				is_incapable = no
+				any_spouse = {
+					has_character_flag = anastasia2
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = { days = 30 }
+	
+	option = {
+		name = "EVTOPT_anastasia5a"
+		random_list = {
+			90 = {
+				e_dixie = {
+					holder_scope = {
+						add_trait = incapable
+					}
+				}
+			}
+			10 = {
+				#nothing, or some lesser effect if desired
+			}
+		}
 	}
 }
 
@@ -726,19 +797,5 @@ narrative_event = {
 		ai_chance = { 
 			factor = 100
 		}
-	}
-}
-
-character_event = {
-	id = hanovers.21
-	title = EVTTITLE_anadisinherit
-	desc = "EVTDESC_anadisinherit"
-	picture = GFX_evt_open_book_hf
-	border = GFX_event_normal_frame_intrigue
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTanadisinherit
-		add_trait = disinherited_trait
 	}
 }
