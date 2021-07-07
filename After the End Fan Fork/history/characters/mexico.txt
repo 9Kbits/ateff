@@ -2,69 +2,78 @@
 1810000={
 	name="Carbajal"
 	dynasty=1810000 # dos Santos
-	culture=norteno
-	religion=sacred_heart
+	culture=tejano
+	religion=catholic
 	martial=5
 	diplomacy=6
 	stewardship=6
 	intrigue=4
 	learning=6
 	trait=marian_guadalupe
-	trait=charitable
-	trait=zealous
-	trait=trusting
-	trait=inspiring_leader
+	trait=greedy
+	trait=deceitful
+	trait=ambitious
 	trait=naive_appeaser
-	father=1810001
 	2639.1.17={birth=yes}
-	2660.1.1={add_claim=d_huasteca}
 	2700.1.1={death=yes}
 }
 
 1810001={
 	name="Octavio"
-	dynasty=1810000 # dos Santos
-	culture=norteno
-	religion=sacred_heart
+	dynasty=1810016 # Reyes
+	culture=bravo
+	religion=fidencista
 	trait=legit_bastard
+	trait=cajita
 	father=1810002
 	2603.1.1={birth=yes}
 	2660.1.1={death=yes}
 }
 
 1810002={
-	name="Pancho"
-	dynasty=1810000 # dos Santos
-	culture=norteno
-	religion=sacred_heart
+	name="Gaspar"
+	dynasty=1810016 # Reyes
+	culture=bravo
+	religion=fidencista
 	martial=8
 	diplomacy=6
 	stewardship=6
 	intrigue=4
 	learning=3
 	trait=brilliant_strategist
+	trait=cajita
+	trait=brave
+	give_nickname=nick_the_culture
 	2578.6.5={birth=yes}
 	2623.7.20={death=yes}
 }
 
 1810003={
-	name="Gaspar"
-	dynasty=1810015 # de la Mastranza
-	culture=norteno
+	name="Pancho"
+	dynasty=1810016 # Reyes
+	culture=bravo
 	religion=sacred_heart
 	martial=5
 	diplomacy=3
 	stewardship=2
 	intrigue=2
 	learning=3
-	2610.1.1={birth=yes}
+	trait=charitable
+	trait=zealous
+	trait=trusting
+	trait=inspiring_leader
+	trait=skilled_tactician
+	trait=twin
+	father=1810001
+	2627.6.1={birth=yes}
+	2650.1.1={effect={add_rival=1810008}}
 	2700.1.1={death=yes}
 }
 
 1810004={
 	name="Cándido"
-	dynasty=1810016
-	culture=norteno
+	dynasty=1810015 # Garza
+	culture=bravo
 	religion=sacred_heart
 	martial=1
 	diplomacy=3
@@ -74,6 +83,7 @@
 	trait=naive_appeaser
 	trait=just
 	2620.10.3={birth=yes}
+	2660.1.1={add_claim=c_tampico}
 	2672.1.1={death=yes}
 }
 
@@ -85,7 +95,7 @@
 	intrigue=4
 	stewardship=5
 	learning=5
-	culture=norteno
+	culture=bravo
 	religion=sacred_heart
 	trait=marian_el_santo
 	trait=proud
@@ -96,10 +106,10 @@
 }
 
 1810005={
-	name="Cheno"
-	dynasty=1815056
+	name="Chente"
+	dynasty=1810019 # Cortina
 	culture=tejano
-	religion=sacred_heart
+	religion=fidencista
 	martial=3
 	diplomacy=7
 	stewardship=2
@@ -107,15 +117,17 @@
 	learning=2
 	trait=zealous
 	trait=ambitious
+	trait=inspiring_leader
+	trait=brilliant_strategist
 	2624.5.16={birth=yes}
 	2700.1.1={death=yes}
 }
 
 1810006={
-	name="Natividad"
-	dynasty=1542018
+	name="Heraclio"
+	dynasty=1542021
 	culture=tapatio
-	religion=sacred_heart
+	religion=cristo_rey
 	martial=5
 	diplomacy=3
 	stewardship=3
@@ -131,9 +143,9 @@
 1810007={
 	name="Margarita"
 	female=yes
-	dynasty=1542021
+	dynasty=1542018
 	culture=tapatio
-	religion=sacred_heart
+	religion=cristo_rey
 	martial=5
 	diplomacy=5
 	stewardship=6
@@ -144,22 +156,29 @@
 }
 
 1810008={
-	name="César"
-	dynasty=1810017
-	culture=norteno
-	religion=sacred_heart
-	martial=2
-	diplomacy=2
-	stewardship=2
-	intrigue=2
+	name="Pepe"
+	dynasty=1810016 # Reyes
+	culture=bravo
+	religion=fidencista
+	martial=3
+	diplomacy=5
+	stewardship=3
+	intrigue=5
 	learning=2
+	trait=deceitful
+	trait=greedy
+	trait=cynical
+	trait=twin
+	father=1810001
 	2627.6.1={birth=yes}
+	2650.1.1={effect={add_rival=1810003}}
+	2645.9.13={add_spouse=1810204}
 	2700.1.1={death=yes}
 }
 
 1810010={
-	name="Yanga"
-	dynasty=1823000
+	name="Vicente"
+	dynasty=1823000 #Cimarrón
 	dna="gkbkleaklcf"
 	culture=west_indian
 	religion=sacred_heart
@@ -173,7 +192,8 @@
 	trait=trusting
 	trait=just
 	trait=wroth
-	2623.8.16={birth=yes
+	2623.8.16={
+		birth=yes
 		culture=jarocho
 	}
 	2642.9.13={add_spouse=1810011}
@@ -183,7 +203,7 @@
 1810011={
 	name="Marina"
 	female=yes
-	#dynasty=1823001
+	#dynasty=2035030
 	dna="lcnndllbgep"
 	culture=west_indian
 	religion=sacred_heart
@@ -197,7 +217,8 @@
 	trait=greedy
 	trait=kind
 	trait=deceitful
-	2625.4.15={birth=yes
+	2625.4.15={
+		birth=yes
 		culture=jarocho
 	}
 	2642.9.13={add_spouse=1810010}
@@ -207,7 +228,7 @@
 1810012={
 	name="Elodia"
 	female=yes
-	dynasty=1823000
+	dynasty=1823000 #Cimarrón
 	dna="gibndlabgcp"
 	culture=west_indian
 	religion=sacred_heart
@@ -223,7 +244,8 @@
 	trait=proud
 	father=1810010
 	mother=1810011
-	2647.2.9={birth=yes
+	2647.2.9={
+		birth=yes
 		culture=jarocho
 	}
 	2716.10.25={death=yes}
@@ -231,7 +253,7 @@
 
 1810013={
 	name="Marcelino"
-	dynasty=1823000
+	dynasty=1823000 #Cimarrón
 	dna="lkbndeabacp"
 	culture=west_indian
 	religion=sacred_heart
@@ -248,7 +270,8 @@
 	trait=bastard
 	father=1810010
 	#mother=1810011
-	2652.12.10={birth=yes
+	2652.12.10={
+		birth=yes
 		culture=jarocho
 	}
 	2685.3.20={death=yes}
@@ -257,7 +280,7 @@
 1810014={
 	name="Bonita"
 	female=yes
-	dynasty=1823000
+	dynasty=1823000 #Cimarrón
 	dna="lcbklllbgep"
 	culture=west_indian
 	religion=sacred_heart
@@ -274,7 +297,8 @@
 	trait=stressed
 	father=1810010
 	mother=1810011
-	2654.7.5={birth=yes
+	2654.7.5={
+		birth=yes
 		culture=jarocho
 	}
 	2689.7.29={death=yes}
@@ -282,7 +306,7 @@
 
 1810015={
 	name="Yanga"
-	dynasty=1823000
+	dynasty=1823000 #Cimarrón
 	dna="gpbnbelkgcp"
 	culture=west_indian
 	religion=sacred_heart
@@ -298,7 +322,8 @@
 	trait=trusting
 	father=1810010
 	mother=1810011
-	2656.2.17={birth=yes
+	2656.2.17={
+		birth=yes
 		culture=jarocho
 	}
 	2713.12.26={death=yes}
@@ -325,9 +350,9 @@
 
 1810021={
 	name="Pedro"
-	dynasty=1823001
+	dynasty=2035030 #Raffoul
 	dna="bfghhjidpok"
-	culture=jarocho
+	culture=filastino
 	religion=sacred_heart
 	martial=5
 	diplomacy=3
@@ -345,9 +370,9 @@
 1810022={
 	name="María"
 	female=yes
-	dynasty=1823001
+	dynasty=2035030 #Raffoul
 	dna="epphbjlcpok"
-	culture=jarocho
+	culture=filastino
 	religion=sacred_heart
 	martial=5
 	diplomacy=0
@@ -363,10 +388,10 @@
 }
 
 1810023={
-	name="Anton"
-	dynasty=1823001
+	name="Antón"
+	dynasty=2035030 #Raffoul
 	dna="bfphbhlcpdk"
-	culture=jarocho
+	culture=filastino
 	religion=sacred_heart
 	martial=6
 	diplomacy=6
@@ -399,7 +424,8 @@
 	trait=ambitious
 	trait=cruel
 	trait=proud
-	2637.5.27={birth=yes
+	2637.5.27={
+		birth=yes
 		culture=jarocho
 	}
 	2661.1.29={add_spouse=1810031}
@@ -422,7 +448,8 @@
 	trait=cynical
 	trait=gregarious
 	trait=wroth
-	2641.7.2={birth=yes
+	2641.7.2={
+		birth=yes
 		culture=jarocho
 	}
 	2661.1.29={add_spouse=1810030}
@@ -444,7 +471,8 @@
 	trait=gardener
 	trait=humble
 	trait=kind
-	2639.2.1={birth=yes
+	2639.2.1={
+		birth=yes
 		culture=jarocho
 	}
 	2657.3.4={add_spouse=1810036}
@@ -466,7 +494,8 @@
 	trait=poet
 	trait=gluttonous
 	trait=envious
-	2641.7.4={birth=yes
+	2641.7.4={
+		birth=yes
 		culture=jarocho
 	}
 	2657.3.4={add_spouse=1810035}
@@ -490,7 +519,8 @@
 	trait=greedy
 	father=1810036
 	mother=1810035
-	2659.4.25={birth=yes
+	2659.4.25={
+		birth=yes
 		culture=jarocho
 	}
 	2723.6.29={death=yes}
@@ -512,7 +542,8 @@
 	trait=humble
 	father=1810036
 	mother=1810035
-	2660.8.7={birth=yes
+	2660.8.7={
+		birth=yes
 		culture=jarocho
 	}
 	2729.1.24={death=yes}
@@ -537,7 +568,8 @@
 	trait=lustful
 	father=1810036
 	mother=1810035
-	2664.5.25={birth=yes
+	2664.5.25={
+		birth=yes
 		culture=jarocho
 	}
 	2733.11.2={death=yes}
@@ -690,13 +722,13 @@
 	trait=content
 	father=1810041
 	mother=1810040
-	2639.7.4={birth=yes}
+	2642.7.4={birth=yes}
 	2685.11.30={death=yes}
 }
 
 1810050={
 	name="Santiago"
-	dynasty=1823005
+	dynasty=1823020
 	dna="kkhmoajaokm"
 	culture=jarocho
 	religion=sacred_heart
@@ -707,13 +739,15 @@
 	learning=2
 	trait=tough_soldier
 	trait=craven
-	trait=ambitious
+	trait=content
 	trait=just
 	trait=wroth
+	#father=14400016
 	2614.6.18={birth=yes}
 	2631.10.15={add_spouse=1810051}
-	2658.8.24={death={
-			death_reason=death_battle
+	2658.8.24={
+		death={
+			death_reason=death_drank_poison
 			killer=1810056
 		}
 	}
@@ -740,8 +774,8 @@
 }
 
 1810052={
-	name="Adalberto"
-	dynasty=1823005
+	name="Dagoberto"
+	dynasty=1823020
 	dna="bkaddblakki"
 	culture=jarocho
 	religion=sacred_heart
@@ -753,6 +787,7 @@
 	trait=midas_touched
 	trait=humble
 	trait=arbitrary
+	trait=ambitious
 	father=1810050
 	mother=1810051
 	2637.1.20={birth=yes}
@@ -761,8 +796,8 @@
 }
 
 1810053={
-	name="Porfirio"
-	dynasty=1823005
+	name="Pánfilo"
+	dynasty=1823020
 	dna="blhddagmokm"
 	culture=jarocho
 	religion=sacred_heart
@@ -777,15 +812,17 @@
 	trait=arbitrary
 	trait=cruel
 	trait=syphilitic
+	trait=lustful
 	father=1810050
 	mother=1810051
 	2639.9.19={birth=yes}
+	2658.8.24={effect={add_rival=1810056}}
 	2699.11.1={death=yes}
 }
 
 1810054={
 	name="Javier"
-	dynasty=1823005
+	dynasty=1823020
 	dna="blhmohjfofi"
 	culture=jarocho
 	religion=sacred_heart
@@ -796,20 +833,21 @@
 	learning=3
 	trait=skilled_tactician
 	trait=celibate
-	trait=wroth
+	trait=patient
 	trait=charitable
 	trait=humble
-	trait=cruel
+	trait=just
 	father=1810050
 	mother=1810051
 	2642.7.27={birth=yes}
+	2658.8.24={effect={add_rival=1810056}}
 	2675.5.7={death=yes}
 }
 
 1810055={
 	name="Rica"
 	female=yes
-	dynasty=1823005
+	dynasty=1823020
 	dna="klamdhjakfg"
 	culture=jarocho
 	religion=sacred_heart
@@ -824,26 +862,27 @@
 	father=1810050
 	mother=1810051
 	2648.4.3={birth=yes}
+	2658.8.24={effect={add_rival=1810056}}
 	2724.2.22={death=yes}
 }
 
 1810056={
-	name="Lucrecia"
+	name="Antonia María"
 	female=yes
-	dynasty=1823006
+	dynasty=1823031
 	dna="hcnmgjebhee"
 	culture=jarocho
 	religion=sacred_heart
-	martial=6
+	martial=2
 	diplomacy=7
 	stewardship=2
 	intrigue=6
 	learning=6
-	trait=skilled_tactician
-	trait=marian_el_santo
+	trait=elusive_shadow
 	trait=greedy
 	trait=cynical
-	trait=brave
+	trait=ambitious
+	trait=patient
 	2628.5.15={birth=yes}
 	2651.9.15={
 		effect={
@@ -864,6 +903,7 @@
 1810057={
 	name="Javier"
 	dna="jbodomnjkij"
+	dynasty=1823006
 	culture=jarocho
 	religion=sacred_heart
 	martial=4
@@ -871,10 +911,9 @@
 	stewardship=2
 	intrigue=7
 	learning=4
-	trait=intricate_webweaver
-	trait=impaler
-	trait=ambitious
-	trait=temperate
+	trait=fortune_builder
+	trait=greedy
+	trait=content
 	trait=cruel
 	trait=just
 	2631.8.15={birth=yes}
@@ -884,7 +923,7 @@
 
 1810058={
 	name="Guillermo"
-	dynasty=1823006
+	dynasty=1823031
 	dna="hcodgmnohij"
 	culture=jarocho
 	religion=sacred_heart
@@ -908,7 +947,7 @@
 1810059={
 	name="Marina"
 	female=yes
-	dynasty=1823006
+	dynasty=1823031
 	dna="jpnmgmnbhie"
 	culture=jarocho
 	religion=sacred_heart
@@ -931,7 +970,7 @@
 
 1810060={
 	name="Rubén"
-	dynasty=1823006
+	dynasty=1823031
 	dna="jdfmomeekej"
 	culture=jarocho
 	religion=sacred_heart
@@ -952,7 +991,7 @@
 }
 
 1810061={
-	name="Osvaldo"
+	name="Oswaldo"
 	dynasty=1519000
 	dna="pjnbpdmedck"
 	culture=chilango
@@ -964,9 +1003,10 @@
 	learning=3
 	trait=tough_soldier
 	trait=marian_guadalupe
-	trait=ambitious
-	trait=wroth
-	trait=cynical
+	trait=trusting
+	trait=kind
+	trait=zealous
+	trait=charitable
 	trait=brave
 	father=1810255
 	2548.7.15={birth=yes}
@@ -985,12 +1025,11 @@
 	stewardship=5
 	intrigue=4
 	learning=6
-	trait=brilliant_strategist
-	trait=mystic
-	trait=gluttonous
+	trait=charismatic_negotiator
+	trait=trusting
 	trait=lustful
-	trait=wroth
-	trait=proud
+	trait=patient
+	trait=humble
 	2551.4.28={birth=yes}
 	2568.4.18={add_spouse=1810061}
 	2607.7.3={death=yes}
@@ -1021,8 +1060,9 @@
 	2608.11.6={death=yes}
 }
 
+#Ezequiel, formally Renato
 1810064={
-	name="Renato"
+	name="Ezequiel"
 	dynasty=1519000
 	dna="ljnbjefedcf"
 	culture=chilango
@@ -1041,17 +1081,16 @@
 	mother=1810062
 	2574.4.28={birth=yes}
 	2593.8.3={add_spouse=1810069}
-	2609.2.17={death={
-			death_reason=death_battle
-			killer=1325000
+	2609.2.17={death = {
+			death_reason = death_poor_health 
 		}
 	}
 }
 
+#Cristóbal Nájera
 1810065={
-	name="Édgar"
-	dynasty=1519000
-	dna="ppnepehadcf"
+	name="Cristóbal "
+	dynasty=5001131
 	culture=chilango
 	religion=sacred_heart
 	martial=3
@@ -1059,15 +1098,14 @@
 	stewardship=2
 	intrigue=4
 	learning=2
-	trait=thrifty_clerk
-	trait=hedonist
-	trait=paranoid
-	trait=deceitful
-	trait=ambitious
-	father=1810061
-	mother=1810062
-	2579.8.8={birth=yes}
-	2602.9.11={add_spouse=1810070}
+	trait=skilled_tactician
+	trait=gregarious
+	trait=content
+	trait=temperate
+	trait=just
+	father=14400105
+	2575.8.8={birth=yes}
+	2601.9.11={add_matrilineal_spouse=1810070} 
 	2635.7.11={death=yes}
 }
 
@@ -1077,7 +1115,7 @@
 	dynasty=1519000
 	dna="ejjejjcgdfk"
 	culture=chilango
-	religion=sacred_heart
+	religion=cristo_rey
 	martial=7
 	diplomacy=2
 	stewardship=3
@@ -1094,9 +1132,9 @@
 
 1810067={
 	name="Aldo"
-	dynasty=1519002
+	dynasty=4201067
 	dna="pjbjliamkkm"
-	culture=chilango
+	culture=istmeno
 	religion=sacred_heart
 	martial=4
 	diplomacy=3
@@ -1107,13 +1145,16 @@
 	trait=kind
 	trait=paranoid
 	trait=brave
-	2576.3.3={birth=yes}
+	2576.3.3={
+		birth=yes
+		culture=abajeno
+	}
 	2594.2.18={add_spouse=1810063}
 	2618.12.4={death=yes}
 }
 
 1810068={
-	name="Diego Carlos"
+	name="José María"
 	dynasty=1519001
 	dna="ipjefllgmkb"
 	culture=chilango
@@ -1123,8 +1164,13 @@
 	stewardship=3
 	intrigue=1
 	learning=5
-	trait=elusive_shadow
+	trait=skilled_tactician
+	trait=marian_el_santo
 	trait=gregarious
+	trait=honest
+	trait=brave
+	father=14450501
+	mother=14450500
 	2581.9.6={birth=yes}
 	2599.9.29={add_spouse=1810066}
 	2635.8.7={death=yes}
@@ -1152,31 +1198,30 @@
 	2609.3.22={death=yes}
 }
 
+#Neomí de Annaba
 1810070={
-	name="Magnolia"
+	name="Neomí"
 	female=yes
-	dna="oodilddfgjc"
-	culture=chilango
-	religion=sacred_heart
-	martial=3
-	diplomacy=7
-	stewardship=6
-	intrigue=2
-	learning=0
-	trait=thrifty_clerk
-	trait=wroth
-	trait=cruel
-	trait=depressed
-	2584.6.5={birth=yes}
-	2602.9.11={add_spouse=1810065}
+	dynasty=5001132
+	culture=menomex
+	religion=cristo_rey
+	trait=charismatic_negotiator
+	trait=kind
+	trait=groomed
+	trait=diligent
+	trait=content
+	trait=stubborn
+	trait=zealous
+	father=14400104
+	2580.6.5={birth=yes}
 	2640.6.8={death=yes}
 }
 
 1810071={
-	name="Gastón"
-	dynasty=1519002
+	name="Juan"
+	dynasty=4201067
 	dna="pjmipdfmkkm"
-	culture=chilango
+	culture=istmeno
 	religion=sacred_heart
 	martial=4
 	diplomacy=0
@@ -1189,7 +1234,10 @@
 	trait=diligent
 	father=1810067
 	mother=1810063
-	2599.10.17={birth=yes}
+	2599.10.17={
+		birth=yes
+		culture=abajeno
+	}
 	2619.4.21={add_spouse=1810072}
 	2634.8.21={death=yes}
 }
@@ -1198,7 +1246,7 @@
 	name="Calixta"
 	female=yes
 	dna="llonmjndnml"
-	culture=chilango
+	culture=abajeno
 	religion=sacred_heart
 	martial=4
 	diplomacy=2
@@ -1216,9 +1264,9 @@
 
 1810073={
 	name="Urbano"
-	dynasty=1519002
+	dynasty=4201067
 	dna="doonpdnmnka"
-	culture=chilango
+	culture=istmeno
 	religion=sacred_heart
 	martial=4
 	diplomacy=2
@@ -1232,16 +1280,19 @@
 	trait=lustful
 	father=1810071
 	mother=1810072
-	2623.1.4={birth=yes}
+	2623.1.4={
+		birth=yes
+		culture=chilango
+	}
 	2645.1.5={add_spouse=1810075}
 	2678.5.30={death=yes}
 }
 
 1810074={
-	name="Diego Carlos"
-	dynasty=1519002
+	name="Juan Diego"
+	dynasty=4201067
 	dna="ploamjfdnkm"
-	culture=chilango
+	culture=abajeno
 	religion=sacred_heart
 	martial=4
 	diplomacy=3
@@ -1263,7 +1314,7 @@
 	name="Soraya"
 	female=yes
 	dna="faakhjjmlgl"
-	culture=chilango
+	culture=abajeno
 	religion=sacred_heart
 	martial=2
 	diplomacy=3
@@ -1284,7 +1335,7 @@
 	name="Flordeluna"
 	female=yes
 	dna="joflleaibkj"
-	culture=chilango
+	culture=abajeno
 	religion=sacred_heart
 	martial=4
 	diplomacy=7
@@ -1303,9 +1354,9 @@
 
 1810077={
 	name="Tristán"
-	dynasty=1519002
+	dynasty=4201067
 	dna="plflleainkj"
-	culture=chilango
+	culture=abajeno
 	religion=sacred_heart
 	martial=4
 	diplomacy=5
@@ -1322,9 +1373,9 @@
 
 1810078={
 	name="Cruz"
-	dynasty=1519002
+	dynasty=4201067
 	dna="joolleadnkm"
-	culture=chilango
+	culture=istmeno
 	religion=sacred_heart
 	martial=2
 	diplomacy=3
@@ -1339,15 +1390,18 @@
 	trait=gregarious
 	father=1810074
 	mother=1810076
-	2654.2.27={birth=yes}
+	2654.2.27={
+		birth=yes
+		culture=abajeno
+	}
 	2696.11.5={death=yes}
 }
 
 1810079={
-	name="Hernando"
-	dynasty=1519002
+	name="Germán"
+	dynasty=4201067
 	dna="haonpcjmlgl"
-	culture=chilango
+	culture=abajeno
 	religion=sacred_heart
 	martial=4
 	diplomacy=8
@@ -1366,11 +1420,11 @@
 }
 
 1810080={
-	name="Raymunda"
+	name="Lluvia"
 	female=yes
-	dynasty=1519002
+	dynasty=4201067
 	dna="faanpjnmlga"
-	culture=chilango
+	culture=istmeno
 	religion=sacred_heart
 	martial=6
 	diplomacy=5
@@ -1379,14 +1433,16 @@
 	learning=2
 	trait=thrifty_clerk
 	trait=impaler
-	
 	trait=just
 	trait=honest
 	trait=slothful
 	trait=gluttonous
 	father=1810073
 	mother=1810075
-	2651.8.25={birth=yes}
+	2651.8.25={
+		birth=yes
+		culture=abajeno
+	}
 	2691.6.22={death=yes}
 }
 
@@ -1401,12 +1457,14 @@
 	stewardship=5
 	intrigue=4
 	learning=4
-	trait=skilled_tactician
+	trait=indulgent_wastrel
 	trait=marian_guadalupe
-	trait=just
-	trait=charitable
-	trait=kind
-	trait=cynical
+	trait=arbitrary
+	trait=greedy
+	trait=slothful
+	trait=zealous
+	trait=content
+	trait=craven
 	father=1810064
 	mother=1810069
 	2599.1.25={birth=yes}
@@ -1427,7 +1485,8 @@
 	learning=8
 	trait=intricate_webweaver
 	trait=marian_guadalupe
-	trait=ambitious
+	trait=gluttonous
+	trait=deceitful
 	trait=envious
 	trait=wroth
 	trait=zealous
@@ -1436,10 +1495,11 @@
 	2671.10.20={death=yes}
 }
 
+#Jefe Politico Germán, formerly called Benemérito Wenceslao de Iturbide
 1810083={
-	name="Wenceslao"
+	name="Germán"
 	dynasty=1519000
-	dna="iddbkelneca"
+	dna="cibdd0ga000"
 	culture=chilango
 	religion=sacred_heart
 	martial=5
@@ -1486,7 +1546,7 @@
 	name="Laura"
 	female=yes
 	dna="kcmmkcfegaj"
-	culture=chilango
+	culture=istmeno
 	religion=sacred_heart
 	martial=6
 	diplomacy=0
@@ -1499,7 +1559,10 @@
 	trait=brave
 	trait=diligent
 	trait=humble
-	2626.10.1={birth=yes}
+	2626.10.1={
+		birth=yes
+		culture=chilango
+	}
 	2645.2.11={add_spouse=1810083}
 	2687.12.10={death=yes}
 }
@@ -1531,7 +1594,7 @@
 	name="Porfirio"
 	dynasty=1519000
 	dna="cddbkcfneca"
-	culture=chilango
+	culture=istmeno
 	religion=sacred_heart
 	martial=4
 	diplomacy=5
@@ -1546,16 +1609,19 @@
 	trait=deceitful
 	father=1810083
 	mother=1810085
-	2652.2.20={birth=yes}
+	2652.2.20={
+		birth=yes
+		culture=chilango
+	}
 	2701.10.22={death=yes}
 }
 
 1810088={
-	name="Cacilda"
+	name="Cachita"
 	female=yes
 	dynasty=1519000
 	dna="idmbkefebaa"
-	culture=chilango
+	culture=istmeno
 	religion=sacred_heart
 	martial=8
 	diplomacy=5
@@ -1569,7 +1635,10 @@
 	trait=cruel
 	father=1810083
 	mother=1810085
-	2652.12.23={birth=yes}
+	2652.12.23={
+		birth=yes
+		culture=chilango
+	}
 	2694.7.9={death=yes}
 }
 
@@ -1596,11 +1665,10 @@
 }
 
 1810090={
-	name="Mariano"
-	dynasty=1519000
-	dna="olcnndhadcc"
-	culture=chilango
-	religion=sacred_heart
+	name="Jetró"
+	dynasty=5001132
+	culture=menomex
+	religion=cristo_rey
 	martial=7
 	diplomacy=4
 	stewardship=5
@@ -1611,8 +1679,8 @@
 	trait=content
 	father=1810065
 	mother=1810070
-	2607.9.2={birth=yes}
-	2627.9.18={add_spouse=1810096}
+	2602.9.2={birth=yes}
+	2621.4.11={add_spouse=1810096}
 	2655.3.2={death=yes}
 }
 
@@ -1629,14 +1697,14 @@
 	intrigue=7
 	learning=3
 	trait=tough_soldier
+	trait=nun
 	trait=proud
 	trait=honest
 	trait=gluttonous
 	trait=greedy
 	father=1810068
 	mother=1810066
-	2600.7.19={birth=yes}
-	2641.1.31={death=yes}
+	2602.7.19={birth=yes}
 }
 
 1810092={
@@ -1682,8 +1750,7 @@
 }
 
 1810094={
-	name="Penélope"
-	female=yes
+	name="Sebastián"
 	dynasty=1519001
 	dna="mhdmhmdjffb"
 	culture=chilango
@@ -1694,6 +1761,7 @@
 	intrigue=2
 	learning=5
 	trait=fortune_builder
+	trait=marian_santa_muerte
 	trait=honest
 	trait=ambitious
 	trait=gluttonous
@@ -1705,21 +1773,21 @@
 
 1810095={
 	name="Marcos"
-	dynasty=1519001
+	dynasty=1519001 # Angeles
 	dna="ehdenmdjdhi"
 	culture=chilango
 	religion=sacred_heart
 	martial=5
-	diplomacy=2
+	diplomacy=4
 	stewardship=6
-	intrigue=1
+	intrigue=3
 	learning=5
 	trait=underhanded_rogue
-	trait=hunter
 	trait=just
 	father=1810092
 	mother=1810093
 	2632.2.23={birth=yes}
+	2658.5.19={add_spouse=14400019}
 	2675.10.15={death=yes}
 }
 
@@ -1728,7 +1796,7 @@
 	female=yes
 	dna="geniafneeol"
 	culture=chilango
-	religion=sacred_heart
+	religion=cristo_rey
 	martial=8
 	diplomacy=3
 	stewardship=5
@@ -1737,57 +1805,152 @@
 	trait=flamboyant_schemer
 	trait=duelist
 	trait=humble
-	2608.2.3={birth=yes}
-	2627.9.18={add_spouse=1810090}
+	2602.2.3={birth=yes}
+	2621.4.11={add_spouse=1810090}
 	2664.3.12={death=yes}
 }
 
 1810097={
-	name="Carlota"
+	name="Enriqueta"
 	female=yes
-	dynasty=1519000
-	dna="olnnndneejc"
-	culture=chilango
-	religion=sacred_heart
-	martial=1
+	dynasty=5001132
+	culture=menomex
+	religion=cristo_rey
+	martial=6
+	learning=6
 	diplomacy=7
-	stewardship=7
-	intrigue=4
-	learning=5
-	trait=underhanded_rogue
-	trait=craven
+	stewardship=8
+	intrigue=8
+	trait=fortune_builder
+	trait=shy
+	trait=patient
 	trait=greedy
-	trait=humble
+	trait=brave
 	father=1810090
 	mother=1810096
-	2633.9.13={birth=yes}
+	2623.9.13={birth=yes}
+	2640.3.12={add_spouse=14400031}
 	2687.10.6={death=yes}
 }
 
-1810098={
-	name="Cuauhtémoc"
-	dynasty=1519000
-	dna="oecnnfaedoc"
-	culture=chilango
-	religion=sacred_heart
-	martial=5
-	diplomacy=1
-	stewardship=6
-	intrigue=0
-	learning=7
-	trait=midas_touched
-	trait=shy
+14450485={
+	name="Raquel"
+	female=yes
+	dynasty=5001132
+	culture=menomex
+	religion=cristo_rey
+	martial=6
+	learning=12
+	diplomacy=7
+	stewardship=2
+	intrigue=2
+	trait=mastermind_theologian
+	trait=nun
+	trait=devout
+	trait=charitable
 	trait=humble
-	trait=kind
 	father=1810090
 	mother=1810096
-	2635.9.6={birth=yes}
+	2626.12.3={birth=yes}
+}
+ 
+1810098={
+	name="Benjamín"
+	dynasty=5001132
+	culture=menomex
+	religion=cristo_rey
+	martial=6
+	diplomacy=10
+	stewardship=11
+	intrigue=6
+	learning=7
+	trait=midas_touched
+	trait=socializer
+	trait=sympathy_cult_of_saints
+	trait=brave
+	trait=humble
+	trait=kind
+	trait=gregarious
+	father=1810090
+	mother=1810096
+	2641.9.6={birth=yes}
 	2700.1.3={death=yes}
+}
+
+14450480={
+	name="Abigaíl"
+	female=yes
+	culture=menomex
+	religion=cristo_rey
+	martial=7
+	diplomacy=10
+	stewardship=10
+	intrigue=6
+	learning=6
+	trait=fair
+	trait=grey_eminence
+	2644.6.6={birth=yes}
+	2659.2.19={add_spouse=14450484}
+	2701.1.3={death=yes}
+}
+
+14450484={
+	name="Isacar"
+	dynasty=5001132
+	culture=menomex
+	religion=cristo_rey
+	martial=6
+	diplomacy=10
+	stewardship=11
+	intrigue=6
+	learning=7
+	trait=indulgent_wastrel
+	trait=humble
+	trait=slothful
+	trait=lustful
+	trait=content
+	father=1810090
+	mother=1810096
+	2644.2.15={birth=yes}
+	2701.1.3={death=yes}
+}
+
+14450481={
+	name="Saúl"
+	dynasty=5001132
+	culture=menomex
+	religion=cristo_rey
+	martial=6
+	diplomacy=10
+	stewardship=11
+	intrigue=6
+	learning=7
+	trait=conscientious
+	father=14450484
+	mother=14450480
+	2663.5.26={birth=yes}
+}
+
+14450482={
+	name="Betania"
+	dynasty=5001132
+	female=yes
+	culture=menomex
+	religion=cristo_rey
+	martial=6
+	diplomacy=10
+	stewardship=11
+	intrigue=6
+	learning=7
+	trait=lefthanded
+	father=14450484
+	mother=14450480
+	2665.1.12={birth=yes}
 }
 
 1810099={
 	name="Aurelio"
-	dynasty=1823005
+	dynasty=1823020
 	dna="eabckkblacp"
 	culture=jarocho
 	religion=sacred_heart
@@ -1813,8 +1976,8 @@
 	name="Penélope"
 	female=yes
 	dna="jhkmiickcpp"
-	culture=west_indian
 	religion=sacred_heart
+	culture=nahua
 	martial=3
 	diplomacy=4
 	stewardship=3
@@ -1831,21 +1994,18 @@
 }
 
 1810101={
-	name="Baltasar"
+	name="Augustín"
 	dynasty=1519003
 	dna="jcmhojoolck"
-	culture=west_indian
 	religion=sacred_heart
+	culture=chilango
 	martial=7
 	diplomacy=4
 	stewardship=6
 	intrigue=4
 	learning=4
 	trait=misguided_warrior
-	2645.10.25={
-		culture=chilango
-		birth=yes
-	}
+	2645.10.25={birth=yes}
 	2665.12.8={add_spouse=1810100}
 	2687.9.8={death=yes}
 }
@@ -1855,8 +2015,8 @@
 	female=yes
 	dynasty=1519003
 	dna="jcmhijcolck"
-	culture=west_indian
 	religion=sacred_heart
+	culture=nahua
 	martial=1
 	diplomacy=3
 	stewardship=5
@@ -1878,23 +2038,29 @@
 
 1810103={
 	name="Agustín"
-	dynasty=1519999 # Iturbide
+	dynasty=1519999 # de Iturbide
 	culture=chilango
 	occluded=yes
 	religion=catholic
 	trait=legendary
 	1783.9.27={birth=yes}
-	1824.7.19={death=yes}
+	1824.7.19={
+		death={
+			death_reason=death_execution
+		} 
+	}
 }
+
 1810104={
-	name="Maximilian"
+	name="Maximiliano"
 	dynasty=1779208 # Habsburg
 	culture=deitsch
 	occluded=yes
 	religion=catholic
 	trait=legendary
 	1832.7.6={birth=yes}
-	1867.6.19={death={
+	1867.6.19={
+		death={
 			death_reason=death_execution
 		} 
 	}
@@ -1905,14 +2071,13 @@
 	name="Lázaro"
 	dynasty=1542003
 	culture=tapatio
-	religion=sacred_heart
+	religion=sol_invicta
 	martial=7
 	diplomacy=3
 	stewardship=3
 	intrigue=4
 	learning=4
 	trait=intricate_webweaver
-	trait=marian_el_santo
 	trait=cynical
 	trait=envious
 	2601.11.28={birth=yes}
@@ -1920,17 +2085,16 @@
 }
 
 1810111={
-	name="Gustavo"
+	name="Panchito"
 	dynasty=1542003
 	culture=tapatio
-	religion=sacred_heart
+	religion=sol_invicta
 	martial=7
 	diplomacy=3
 	stewardship=4
 	intrigue=4
 	learning=4
 	trait=tough_soldier
-	trait=marian_el_santo
 	trait=honest
 	trait=just
 	father=1810110
@@ -1944,24 +2108,24 @@
 	female=yes
 	dynasty=1542003
 	culture=tapatio
-	religion=sacred_heart
+	religion=sol_invicta
 	father=1810110
 	2637.11.28={birth=yes}
 	2705.6.3={death=yes}
 }
 
 1810113={
-	name="Pardo"
+	name="Saturnino"
 	dynasty=1542003
 	culture=tapatio
-	religion=sacred_heart
+	religion=sol_invicta
 	father=1810110
 	2639.11.28={birth=yes}
 	2705.6.3={death=yes}
 }
 
 1810120={
-	name="Humberto"
+	name="Héctor"
 	dynasty=1542012
 	culture=tapatio
 	religion=sacred_heart
@@ -1979,7 +2143,7 @@
 }
 
 1810121={
-	name="Rubín"
+	name="Rubén"
 	dynasty=1542012
 	culture=tapatio
 	religion=sacred_heart
@@ -2013,7 +2177,6 @@
 	dynasty=1542012
 	culture=tapatio
 	religion=sacred_heart
-	trait=marian_guadalupe
 	trait=just
 	trait=humble
 	trait=brave
@@ -2024,37 +2187,39 @@
 }
 
 1810130={
-	name="Ramón"
+	name="Takamba"
 	dynasty=1542029
-	culture=tapatio
-	religion=sacred_heart
+	culture=purepecha
+	religion=sol_invicta
 	martial=2
 	diplomacy=3
 	stewardship=6
 	intrigue=4
 	learning=4
 	trait=midas_touched
-	trait=marian_el_santo
 	2631.11.28={birth=yes}
 	2660.1.1={add_spouse=1810131}
 	2700.6.3={death=yes}
 }
 
 1810131={
-	name="Nydia"
+	name="Xarheni"
 	female=yes
 	culture=tapatio
-	religion=sacred_heart
-	2637.11.28={birth=yes}
+	religion=sol_invicta
+	2637.11.28={
+		birth=yes
+		culture=purepecha
+	}
 	2660.1.1={add_spouse=1810130}
 	2705.6.3={death=yes}
 }
 
 1810132={
-	name="Emmanuel"
+	name="Tsintsuni"
 	dynasty=1542029
-	culture=tapatio
-	religion=sacred_heart
+	culture=purepecha
+	religion=sol_invicta
 	father=1810130
 	mother=1810131
 	2663.11.28={birth=yes}
@@ -2113,10 +2278,10 @@
 }
 
 1810150={
-	name="Cabrillo"
+	name="Esaú"
 	dynasty=1519022
-	culture=chilango
-	religion=sacred_heart
+	culture=tapatio
+	religion=cristo_rey
 	martial=1
 	diplomacy=3
 	stewardship=5
@@ -2125,15 +2290,17 @@
 	trait=brilliant_strategist
 	trait=strong
 	trait=homosexual
+	trait=zealous
 	2618.11.28={birth=yes}
 	2700.6.3={death=yes}
 }
 
 1810151={
-	name="Aureliano"
-	dynasty=1823024 #Arriaga
+	name="Manuela"
+	dynasty=1823024 #Madrina
 	dna="bkkkdknjhmg"
-	culture=jarocho
+	female=yes
+	culture=cholano
 	religion=neomayan
 	martial=5
 	diplomacy=3
@@ -2146,15 +2313,14 @@
 	trait=craven
 	trait=patient
 	2629.6.17={birth=yes}
-	2648.3.13={add_spouse=1810152}
+	2648.3.13={add_matrilineal_spouse=1810152}
 	2680.1.20={death=yes}
 }
 
 1810152={
-	name="Dolores"
-	female=yes
+	name="Rafael"
 	dna="obenailmdfm"
-	culture=cholano
+	culture=jarocho
 	religion=neomayan
 	martial=0
 	diplomacy=2
@@ -2166,8 +2332,10 @@
 	trait=cruel
 	trait=paranoid
 	trait=charitable
-	2631.10.25={birth=yes}
-	2648.3.13={add_spouse=1810151}
+	2631.10.25={
+		birth=yes
+		culture=cholano}
+	2648.3.13={add_matrilineal_spouse=1810151}
 	2682.4.19={death=yes}
 }
 
@@ -2189,10 +2357,9 @@
 	trait=lustful
 	trait=charitable
 	trait=diligent
-	father=1810151
-	mother=1810152
+	father=1810152
+	mother=1810151
 	2650.6.4={birth=yes
-		culture=jarocho
 		effect={
 			set_character_flag=diversity
 		}
@@ -2216,10 +2383,9 @@
 	trait=cynical
 	trait=proud
 	trait=ambitious
-	father=1810151
-	mother=1810152
+	father=1810152
+	mother=1810151
 	2656.6.12={birth=yes
-		culture=jarocho
 		effect={
 			set_character_flag=diversity
 		}
@@ -2270,21 +2436,21 @@
 }
 
 1810160={
-	name="Hernando"
-	dynasty=1519013
-	culture=chilango
-	religion=sacred_heart
+	name="Gerardo"
+	dynasty=4201078
+	culture=abajeno
+	religion=cristo_rey
 	martial=8
 	diplomacy=3
 	stewardship=4
 	intrigue=2
 	learning=4
 	trait=brilliant_strategist
-	trait=marian_el_santo
 	trait=wroth
 	trait=ambitious
 	trait=charitable
 	trait=just
+	father=14400024
 	give_nickname=nick_the_old
 	2578.1.8={birth=yes}
 	2609.1.31={add_spouse=1810171}
@@ -2295,16 +2461,15 @@
 
 1810161={
 	name="Baltasar"
-	dynasty=1519013
-	culture=chilango
-	religion=sacred_heart
+	dynasty=4201078
+	culture=abajeno
+	religion=cristo_rey
 	martial=5
 	diplomacy=7
 	stewardship=4
 	intrigue=3
 	learning=4
 	trait=skilled_tactician
-	trait=marian_el_santo
 	trait=gregarious
 	trait=ambitious
 	trait=temperate
@@ -2319,8 +2484,8 @@
 1810162={
 	name="Laura"
 	female=yes
-	culture=chilango
-	religion=sacred_heart
+	culture=abajeno
+	religion=cristo_rey
 	martial=5
 	diplomacy=3
 	stewardship=4
@@ -2334,10 +2499,10 @@
 }
 
 1810163={
-	name="Hernando"
-	dynasty=1519013
-	culture=chilango
-	religion=sacred_heart
+	name="Gerardo"
+	dynasty=4201078
+	culture=abajeno
+	religion=cristo_rey
 	martial=6
 	diplomacy=6
 	stewardship=4
@@ -2355,11 +2520,11 @@
 }
 
 1810164={
-	name="Magnolia"
+	name="Magdalena"
 	female=yes
-	dynasty=1519013
-	culture=chilango
-	religion=sacred_heart
+	dynasty=4201078
+	culture=abajeno
+	religion=cristo_rey
 	martial=2
 	diplomacy=2
 	stewardship=4
@@ -2377,11 +2542,11 @@
 }
 
 1810165={
-	name="Fellipa"
+	name="Filipa"
 	female=yes
-	dynasty=1519013
-	culture=chilango
-	religion=sacred_heart
+	dynasty=4201078
+	culture=abajeno
+	religion=cristo_rey
 	martial=5
 	diplomacy=1
 	stewardship=4
@@ -2397,17 +2562,16 @@
 }
 
 1810166={
-	name="Jofre"
-	dynasty=1519013
-	culture=chilango
-	religion=sacred_heart
+	name="Gaspar"
+	dynasty=4201078
+	culture=abajeno
+	religion=cristo_rey
 	martial=5
 	diplomacy=7
 	stewardship=7
 	intrigue=3
 	learning=4
 	trait=fortune_builder
-	trait=marian_guadalupe
 	trait=twin
 	trait=greedy
 	trait=patient
@@ -2419,17 +2583,16 @@
 }
 
 1810167={
-	name="Tito"
-	dynasty=1519013
-	culture=chilango
-	religion=sacred_heart
+	name="Melchor"
+	dynasty=4201078
+	culture=abajeno
+	religion=cristo_rey
 	martial=4
 	diplomacy=8
 	stewardship=7
 	intrigue=2
 	learning=3
 	trait=fortune_builder
-	trait=marian_guadalupe
 	trait=twin
 	trait=diligent
 	trait=patient
@@ -2441,38 +2604,49 @@
 }
 
 1810168={
-	name="Ponce"
-	dynasty=1519012
-	culture=chilango
-	religion=sacred_heart
+	name="Abdiel"
+	dynasty=4201081
+	culture=abajeno
+	religion=cristo_rey
 	2637.1.8={birth=yes}
 	2703.7.13={death=yes}
 }
 
 1810169={
 	name="Bartolomé"
-	dynasty=1519009
-	culture=chilango
-	religion=sacred_heart
+	dynasty=4201108
+	culture=abajeno
+	religion=cristo_rey
 	2637.1.8={birth=yes}
 	2703.7.13={death=yes}
 }
 
 1810170={
-	name="Cacilda"
-	female=yes
-	dynasty=1519005
-	culture=chilango
-	religion=sacred_heart
-	2637.1.8={birth=yes}
+	name="Natanael"
+	dynasty=4201072
+	dna="cdc0f0gc0b0"
+	properties="fm0k0k00000000000000000000000000000000"
+	culture=istmeno
+	religion=cristo_rey
+	trait=patient
+	trait=cynical
+	trait=shy
+	trait=slothful
+	trait=temperate
+	trait=martial_cleric
+	2638.12.10={
+		birth=yes
+		culture=abajeno
+	}
+	2665.10.12={add_spouse=14400017}
 	2703.7.13={death=yes}
 }
 
 1810171={
 	name="Isabel"
 	female=yes
-	culture=chilango
-	religion=sacred_heart
+	culture=abajeno
+	religion=cristo_rey
 	2593.1.8={birth=yes}
 	2609.1.31={add_spouse=1810160}
 	2633.7.13={death=yes}
@@ -2481,8 +2655,8 @@
 1810172={
 	name="Verónica"
 	female=yes
-	culture=chilango
-	religion=sacred_heart
+	culture=abajeno
+	religion=cristo_rey
 	2610.1.8={birth=yes}
 	2635.1.31={add_spouse=1810160}
 	2673.7.13={death=yes}
@@ -2491,23 +2665,28 @@
 1810180={
 	name="Oswaldo"
 	dynasty=1542007
-	culture=tapatio
+	culture=chilango
 	religion=sacred_heart
-	martial=8
+	martial=10
 	diplomacy=1
 	stewardship=3
 	intrigue=8
 	learning=2
 	trait=intricate_webweaver
-	trait=marian_santa_muerte
+	trait=adventurer
 	trait=strong
 	trait=lunatic
 	trait=ambitious
 	trait=greedy
 	trait=cruel
 	trait=lustful
-	give_nickname=nick_the_mad 
-	2637.1.8={birth=yes}
+	trait=bastard
+	give_nickname=nick_mascara_de_oro
+	2637.1.8={
+		birth=yes
+		add_claim=d_mexico
+		add_claim=c_tlaxcala
+	}
 	2663.1.1={effect={add_lover=1810190}}
 	2663.1.1={effect={add_lover=1810191}}
 	2663.1.1={effect={add_lover=1810192}}
@@ -2515,13 +2694,13 @@
 }
 
 1810181={
-	name="Oswaldo"
+	name="Renato"
 	dynasty=1542007
 	culture=tapatio
-	religion=sacred_heart
-	trait=marian_santa_muerte
+	religion=navegante
 	trait=bastard
 	father=1810180
+	mother=1810191
 	2654.1.8={birth=yes}
 	2693.7.13={death=yes}
 }
@@ -2532,9 +2711,9 @@
 	dynasty=1542007
 	culture=tapatio
 	religion=sacred_heart
-	trait=marian_santa_muerte
 	trait=bastard
 	father=1810180
+	mother=1810190
 	2655.5.8={birth=yes}
 	2693.7.13={death=yes}
 }
@@ -2543,10 +2722,10 @@
 	name="Sergio"
 	dynasty=1542007
 	culture=tapatio
-	religion=sacred_heart
-	trait=marian_santa_muerte
+	religion=sol_invicta
 	trait=bastard
 	father=1810180
+	mother=1810192
 	2656.7.8={birth=yes}
 	2693.7.13={death=yes}
 }
@@ -2557,7 +2736,6 @@
 	dynasty=1542007
 	culture=tapatio
 	religion=sacred_heart
-	trait=marian_santa_muerte
 	trait=bastard
 	father=1810180
 	2658.3.8={birth=yes}
@@ -2565,14 +2743,14 @@
 }
 
 1810185={
-	name="Yesca"
+	name="Yesica"
 	female=yes
 	dynasty=1542007
 	culture=tapatio
-	religion=sacred_heart
-	trait=marian_santa_muerte
+	religion=sol_invicta
 	trait=bastard
 	father=1810180
+	mother=1810192
 	2659.5.8={birth=yes}
 	2703.7.13={death=yes}
 }
@@ -2582,20 +2760,19 @@
 	dynasty=1542007
 	culture=tapatio
 	religion=sacred_heart
-	trait=marian_santa_muerte
 	trait=bastard
 	father=1810180
+	mother=1810192
 	2661.5.8={birth=yes}
 	2703.7.13={death=yes}
 }
 
 1810187={
-	name="Dúrcal"
+	name="Dorotea"
 	female=yes
 	dynasty=1542007
 	culture=tapatio
-	religion=sacred_heart
-	trait=marian_santa_muerte
+	religion=sol_invicta
 	trait=bastard
 	father=1810180
 	2664.5.8={birth=yes}
@@ -2628,7 +2805,7 @@
 }
 
 1810190={
-	name="Jenni"
+	name="Jennifer"
 	female=yes
 	culture=tapatio
 	religion=sacred_heart
@@ -2648,7 +2825,7 @@
 	trait=ugly
 	trait=lunatic
 	trait=lustful
-	2639.5.8={birth=yes}
+	2638.5.8={birth=yes}
 	2663.1.1={effect={add_lover=1810180}}
 	2713.7.13={death=yes}
 }
@@ -2657,11 +2834,11 @@
 	name="Adrianna"
 	female=yes
 	culture=tapatio
-	religion=sacred_heart
+	religion=sol_invicta
 	trait=fair
 	trait=possessed
 	trait=lustful
-	2642.5.8={birth=yes}
+	2640.5.8={birth=yes}
 	2663.1.1={effect={add_lover=1810180}}
 	2713.7.13={death=yes}
 }
@@ -2669,31 +2846,46 @@
 1810200={
 	name="Luis"
 	dynasty=1815018
-	culture=tejano
+	dna="abba00fc0f0"
+	properties="ci0ihk0c0000000000000000000000000000000"
+	culture=anjalusi
 	religion=atomicist
-	martial=5
+	martial=3
 	diplomacy=4
 	stewardship=3
 	intrigue=5
 	learning=3
 	trait=strong
-	trait=skilled_tactician
+	trait=brilliant_strategist
+	trait=adventurer
+	trait=dorado
 	trait=atom_bless
 	trait=just
 	trait=wroth
 	trait=zealous
 	trait=paranoid
-	give_nickname=nick_the_conqueror
-	2593.5.8={birth=yes}
+	trait=scarred
+	give_nickname=nick_the_cockroach
+	2586.5.8={
+		birth=yes
+		culture=bravo
+	}
+	2610.3.10={
+		effect={add_artifact=old_world_shades
+				add_friend=14450462}
+	}
 	2620.1.31={add_spouse=1810201}
+	2656.8.24={
+		effect={add_rival=1810226}
+	}
 	2670.7.13={death=yes}
 }
 
 1810201={
 	name="Gabriela"
 	female=yes
-	culture=norteno
-	religion=atomicist #sacred_heart
+	culture=menomex
+	religion=atomicist
 	trait=intricate_webweaver
 	trait=atom_deny
 	trait=humble
@@ -2707,7 +2899,7 @@
 	name="Alejandra"
 	female=yes
 	dynasty=1815018
-	culture=tejano
+	culture=bravo
 	religion=atomicist
 	trait=intricate_webweaver
 	trait=atom_deny
@@ -2724,7 +2916,7 @@
 	name="Magdalena"
 	female=yes
 	dynasty=1815018
-	culture=tejano
+	culture=bravo
 	religion=atomicist
 	trait=skilled_tactician
 	trait=atom_bless
@@ -2741,7 +2933,7 @@
 	name="Susana"
 	female=yes
 	dynasty=1815018
-	culture=tejano
+	culture=bravo
 	religion=atomicist
 	trait=intricate_webweaver
 	trait=atom_bless
@@ -2750,6 +2942,7 @@
 	mother=1810201
 	father=1810200
 	2629.5.8={birth=yes}
+	2645.9.13={add_spouse=1810008}
 	2690.7.13={death=yes}
 }
 
@@ -2757,7 +2950,7 @@
 	name="Dulce"
 	female=yes
 	dynasty=1815018
-	culture=tejano
+	culture=bravo
 	religion=atomicist
 	trait=intricate_webweaver
 	trait=atom_bless
@@ -2772,7 +2965,7 @@
 1810206={
 	name="Jesús"
 	dynasty=1815018
-	culture=tejano
+	culture=bravo
 	religion=atomicist
 	trait=brilliant_strategist
 	trait=atom_bless
@@ -2797,8 +2990,8 @@
 	trait=ambitious
 	trait=chaste
 	2600.7.18={birth=yes}
-	2620.1.30={add_spouse=1810208}
-	2621.2.14={add_spouse=1810209}
+	2620.1.31={add_spouse=1810208}
+	2620.2.14={add_spouse=1810209}
 	2639.1.1={death=yes}
 }
 
@@ -2812,7 +3005,7 @@
 	trait=kind
 	trait=proud
 	2601.11.28={birth=yes}
-	2620.1.30={add_spouse=1810207}
+	2638.1.31={add_spouse=1810207}
 	2650.12.13={death=yes}
 }
 
@@ -2827,7 +3020,7 @@
 	trait=ambitious
 	trait=gregarious
 	2602.9.20={birth=yes}
-	2621.2.14={add_spouse=1810207}
+	2620.2.14={add_spouse=1810207}
 	2652.10.19={death=yes}
 }
 
@@ -2853,7 +3046,7 @@
 1810211={
 	name="Luis"
 	dynasty=1815021
-	culture=norteno
+	culture=tejano
 	religion=atomicist
 	trait=indulgent_wastrel
 	trait=atom_bless
@@ -2870,7 +3063,7 @@
 	name="Paola"
 	female=yes
 	dynasty=1815021
-	culture=norteno
+	culture=tejano
 	religion=atomicist
 	trait=midas_touched
 	trait=atom_bless
@@ -2887,14 +3080,14 @@
 	dynasty=1260000
 	culture=raramuri
 	religion=sol_invicta
-	trait=charismatic_negotiator
+	trait=skilled_tactician
 	trait=cynical
 	trait=arbitrary
 	trait=envious
 	trait=brave
 	trait=honest
-	father=1325118
-	2627.5.8={birth=yes}
+	father=14400008
+	2639.5.8={birth=yes}
 	2659.1.31={add_spouse=1325004}
 	2691.7.13={death=yes}
 }
@@ -2930,23 +3123,24 @@
 }
 
 1810218={
-	name="Torécani"
+	name="Genaro"
 	dynasty=1260017
-	culture=raramuri
-	religion=sol_invicta
-	trait=sympathy_oldworld
+	culture=altiplanense
+	religion=sacred_heart
+	trait=sympathy_mesoamerican_gods
 	trait=kind
 	trait=slothful
-	2650.2.4={birth=yes}
+	2650.2.4={
+		birth=yes
+	}
 }
 
 1810220={
 	name="Fernando"
-	dynasty=1700003
-	culture=sonorense
-	religion=atomicist
+	dynasty=4401166
+	culture=occidental
+	religion=navegante
 	trait=grey_eminence
-	trait=atom_curse
 	trait=weak
 	trait=gregarious
 	trait=diligent
@@ -2961,10 +3155,9 @@
 1810221={
 	name="Veronica"
 	female=yes
-	culture=sonorense
-	religion=atomicist
+	culture=occidental
+	religion=navegante
 	trait=fortune_builder
-	trait=atom_bless
 	trait=quick
 	trait=ambitious
 	2646.5.8={birth=yes}
@@ -2974,32 +3167,34 @@
 
 1810222={
 	name="Raúl"
-	dynasty=1700003
-	culture=sonorense
-	religion=atomicist
-	trait=atom_bless
+	dynasty=4401166
+	culture=occidental
+	religion=navegante
 	trait=quick
 	father=1810220
 	mother=1810221
-	2665.5.8={birth=yes}
+	2665.5.8={
+		birth=yes
+	}
 	2721.7.13={death=yes}
 }
 
 1810225={
 	name="Lázaro"
 	dynasty=1700008
-	culture=sonorense
-	religion=atomicist
+	culture=occidental
+	religion=sol_invicta
 	trait=grey_eminence
-	trait=atom_bless
 	trait=brave
 	trait=proud
 	trait=arbitrary
 	trait=charitable
-	2634.5.8={birth=yes}
+	#father=14400006
+	2624.5.8={birth=yes}
 	2655.1.31={add_spouse=1810226}
-	2656.8.24={death={
-			death_reason=death_battle
+	2656.8.24={
+		death={
+			death_reason=death_execution
 			killer=1810200
 		}
 	}
@@ -3008,25 +3203,24 @@
 1810226={
 	name="Amanda"
 	female=yes
-	culture=sonorense
-	religion=atomicist
+	culture=occidental
+	religion=sol_invicta
 	trait=midas_touched
-	trait=atom_bless
 	trait=fair
 	trait=ambitious
 	trait=envious
 	trait=diligent
 	2635.5.8={birth=yes}
 	2655.1.31={add_spouse=1810225}
+	2656.8.24={effect={add_rival=1810200}}
 	2691.7.13={death=yes}
 }
 
 1810227={
 	name="Darío"
 	dynasty=1700008
-	culture=sonorense
+	culture=occidental
 	religion=atomicist
-	trait=atom_deny
 	trait=fair
 	give_nickname=nick_the_unready
 	father=1810225
@@ -3038,21 +3232,21 @@
 1810228={
 	name="Lucio"
 	dynasty=1700010
-	culture=sonorense
-	religion=atomicist
+	culture=yaqui
+	religion=sol_invicta
 	trait=tough_soldier
-	trait=atom_curse
 	trait=brave
 	trait=kind
 	trait=charitable
+	trait=zealous
 	2631.5.8={birth=yes}
 	2701.7.13={death=yes}
 }
 
 1810229={
-	name="Eusebio"
+	name="Félix"
 	dynasty=1700013
-	culture=sonorense
+	culture=occidental
 	religion=atomicist
 	trait=scholarly_theologian
 	trait=atom_bless
@@ -3065,21 +3259,22 @@
 }
 
 1810230={
-	name="Minhua"
+	name="Minjuan"
 	dynasty=1913008
 	culture=chino
 	religion=atomicist
 	trait=brilliant_strategist
 	trait=unyielding_leader
 	trait=inspiring_leader
-	trait=atom_bless
 	trait=impaler
 	trait=brave
 	trait=wroth
 	trait=cruel
 	trait=ambitious
 	trait=zealous
-	give_nickname=nick_the_dragon
+	trait=atom_bless
+	trait=adventurer
+	give_nickname=nick_dragon_del_desierto
 	2637.5.8={birth=yes}
 	2656.1.31={add_spouse=1810231}
 	2701.7.13={death=yes}
@@ -3115,117 +3310,127 @@
 1810233={
 	name="Juan"
 	dynasty=1700026
-	culture=native
-	religion=atomicist
-	trait=atom_bless
+	culture=yaqui
+	religion=sol_invicta
 	martial=7
 	diplomacy=7
 	trait=skilled_tactician
 	trait=brave
 	trait=ambitious
-	2633.8.10={birth=yes
-		culture=sonorense
-		effect={set_character_flag=diversity}
-	}
+	2633.8.10={birth=yes}
 }
 
 1810240={
-	name="Candameña"
-	dynasty=1260046
-	culture=raramuri
-	religion=sol_invicta
-	trait=brilliant_strategist
-	trait=holy_warrior
+	name="Eliseo"
+	dynasty=4201112
+	culture=abajeno
+	religion=sacred_heart
+	trait=fortune_builder
 	trait=strong
 	trait=ambitious
 	trait=zealous
+	trait=stubborn
+	trait=trusting
+	trait=proud
 	trait=greedy
-	give_nickname=nick_the_bold
-	2627.5.8={birth=yes}
-	2648.1.31={add_spouse=1810241}
+	2645.5.8={birth=yes}
+	2662.1.31={add_spouse=1810241}
 	2701.7.13={death=yes}
 }
 
 1810241={
-	name="Rahuí"
+	name="Marisa"
 	female=yes
-	culture=raramuri
-	religion=sol_invicta
+	culture=altiplanense
+	religion=sacred_heart
 	trait=thrifty_clerk
 	trait=content
 	trait=patient
 	trait=zealous
 	trait=greedy
-	2628.5.8={birth=yes}
-	2648.1.31={add_spouse=1810240}
+	2646.5.8={birth=yes}
+	2662.1.31={add_spouse=1810240}
 	2701.7.13={death=yes}
 }
 
 1810242={
-	name="Iyena"
+	name="Irena"
 	female=yes
-	dynasty=1260046
-	culture=raramuri
-	religion=sol_invicta
+	dynasty=4201112
+	culture=abajeno
+	religion=sacred_heart
 	trait=thrifty_clerk
 	trait=quick
 	trait=possessed
 	father=1810240
 	mother=1810241
-	2649.5.8={birth=yes}
+	2662.11.8={birth=yes}
 	2701.7.13={death=yes}
 }
 
 1810243={
-	name="Maparí"
-	dynasty=1260046
-	culture=raramuri
-	religion=sol_invicta
+	name="Melchor"
+	dynasty=4201112
+	culture=abajeno
+	religion=sacred_heart
 	trait=twin
 	trait=brave
 	trait=zealous
 	father=1810240
 	mother=1810241
-	2655.5.8={birth=yes}
+	2665.5.8={birth=yes}
 	2701.7.13={death=yes}
 }
 
 1810244={
-	name="Muripi"
-	dynasty=1260046
-	culture=raramuri
-	religion=sol_invicta
+	name="Arturo"
+	dynasty=4201112
+	culture=abajeno
+	religion=sacred_heart
 	trait=twin
 	trait=diligent
 	trait=zealous
 	father=1810240
 	mother=1810241
-	2655.5.8={birth=yes}
+	2665.5.8={birth=yes}
 	2701.7.13={death=yes}
 }
 
-1810245={
-	name="Awáscina"
-	dynasty=1428026
+1810245={  # needs family
+	name="Taiyari"
+	dynasty=1428026 #Huichol
 	culture=raramuri
 	religion=sol_invicta
-	2612.5.8={birth=yes}
+	trait=ambitious
+	trait=zealous
+	trait=trusting
+	2612.5.8={
+		birth=yes
+		culture=altiplanense
+	}
 	2701.7.13={death=yes}
 }
 
-1810246={
-	name="Carichí"
+1810246={  # needs family
+	name="Belén"
+	female=yes
 	dynasty=1428033
-	culture=raramuri
+	culture=nahua
 	religion=sol_invicta
-	2631.5.8={birth=yes}
+	trait=poet
+	trait=grey_eminence
+	trait=zealous
+	2631.5.8={
+		birth=yes
+		culture=abajeno
+	}
 	2701.7.13={death=yes}
 }
 
 1810247={
 	name="Leovigildo"
 	dynasty=1810021
-	culture=norteno
+	culture=bravo
 	religion=sacred_heart
 	martial=4
 	diplomacy=9
@@ -3236,6 +3441,7 @@
 	trait=quick
 	trait=marian_guadalupe
 	trait=wroth
+	trait=envious
 	trait=gregarious
 	trait=just
 	trait=zealous
@@ -3247,7 +3453,7 @@
 1810248={
 	name="Gosuinda"
 	female=yes
-	culture=tuskegean
+	culture=abajeno
 	religion=sacred_heart
 	martial=4
 	diplomacy=1
@@ -3261,16 +3467,14 @@
 	trait=cruel
 	trait=zealous
 	2641.5.8={birth=yes}
-	2660.2.14={add_spouse=1810247
-		culture=norteno
-	}
+	2660.2.14={add_spouse=1810247}
 	2690.7.13={death=yes}
 }
 
 1810249={
-	name="Hermenegildo"
+	name="Elías Hermilo"
 	dynasty=1810021
-	culture=tuskegean
+	culture=bravo
 	religion=sacred_heart
 	diplomacy=2
 	martial=0
@@ -3281,16 +3485,14 @@
 	trait=marian_guadalupe
 	father=1810247
 	mother=1810248
-	2661.4.13={birth=yes
-		culture=norteno
-	}
+	2661.4.13={birth=yes}
 	2700.7.13={death=yes}
 }
 
 1810250={
 	name="Felipe"
 	dynasty=1810002
-	culture=norteno
+	culture=abajeno
 	religion=sacred_heart
 	trait=indulgent_wastrel
 	trait=marian_guadalupe
@@ -3300,6 +3502,8 @@
 	trait=content
 	trait=trusting
 	trait=craven
+	father=14400012
+	mother=14400013
 	give_nickname=nick_the_simple
 	2643.5.8={birth=yes}
 	2691.7.13={death=yes}
@@ -3310,7 +3514,7 @@
 	dynasty=1810018
 	dna=cfkkbujcdag
 	properties=va0cjg
-	culture=norteno
+	culture=bravo
 	religion=sacred_heart
 	martial=6
 	diplomacy=6
@@ -3325,7 +3529,8 @@
 	trait=brave
 	trait=honest
 	trait=lustful
-	2648.1.1={birth=yes
+	2648.1.1={
+		birth=yes
 		effect={
 			set_character_flag=diversity
 			set_character_flag=physique
@@ -3339,37 +3544,30 @@
 1810252={
 	name="Julián"
 	dynasty=1519000
+	dna="ab0ki0jc0b0"
 	culture=chilango
-	religion=sacred_heart
+	religion=cristo_rey
 	martial=7
 	diplomacy=9
 	stewardship=9
 	intrigue=6
 	learning=8
-	trait=marian_guadalupe
 	trait=brilliant_strategist
 	trait=strong
-	trait=legendary
 	trait=brave
 	trait=ambitious
 	trait=just
 	trait=kind
 	2434.5.5={birth=yes}
-	2453.5.5={
-		create_bloodline={
-			type=iturbide
-			has_dlc="Holy Fury"
-		}
-	}
 	2504.12.4={death=yes}
 }
 
+#Benemérito Agustín de Iturbide, formally called Aureliano
 1810253={
-	name="Aureliano"
+	name="Agustín"
 	dynasty=1519000
 	culture=chilango
-	religion=sacred_heart
-	trait=marian_guadalupe
+	religion=cristo_rey
 	trait=grey_eminence
 	trait=strong
 	trait=erudite
@@ -3378,11 +3576,16 @@
 	trait=diligent
 	father=1810252
 	2464.4.16={birth=yes}
-	2524.12.4={death=yes}
+	2509.3.30={
+		death={
+			death_reason=death_firing_squad
+			killer = 14400078
+		} 
+	}
 }
 
 1810254={
-	name="Santiago"
+	name="Aureliano"
 	dynasty=1519000
 	culture=chilango
 	religion=sacred_heart
@@ -3393,12 +3596,16 @@
 	trait=shy
 	trait=trusting
 	father=1810253
-	2490.1.12={birth=yes}
-	2543.6.24={death=yes}
+	2481.1.12={birth=yes}
+	2543.7.19={
+		death={
+			death_reason=death_execution
+		} 
+	}
 }
 
 1810255={
-	name="Ezequiel"
+	name="Jesús Ezequiel"
 	dynasty=1519000
 	culture=chilango
 	religion=sacred_heart
@@ -3409,15 +3616,15 @@
 	trait=content
 	trait=paranoid
 	father=1810254
-	2513.3.15={birth=yes}
+	2504.3.15={birth=yes}
 	2562.7.25={death=yes}
 }
 
 1810256={
 	name="Joaquín"
 	dynasty=1700025
-	culture=sonorense
-	religion=atomicist
+	culture=occidental
+	religion=sol_invicta
 	martial=6
 	diplomacy=6
 	stewardship=6

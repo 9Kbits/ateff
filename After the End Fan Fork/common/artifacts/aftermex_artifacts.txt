@@ -1,0 +1,88 @@
+###################MEXICAN EMPIRE#####################
+
+crown_mexico = { 
+	monthly_character_prestige = 1.0
+	monthly_character_piety = 1.0
+	intrigue = 4
+	quality = 5
+	church_opinion = 10
+	active = { 
+		is_feudal = yes
+		OR = {
+			has_landed_title = e_mexico
+			has_landed_title = k_mexico
+		}
+	}
+	flags = { unique crown jewelry crown_jewel }
+	picture = "GFX_veil_of_veronica"
+	slot = crown
+	indestructible = yes
+	allowed_gift = {
+		always = no
+	}
+}
+
+image_of_virgin = {
+	same_religion_opinion = 5
+	monthly_character_piety = 1.5
+	monthly_character_prestige = 0.5
+	active = {
+		OR = {
+			religion_group = cult_of_saints
+			religion = catholic
+			religion = ursuline
+			religion = sedevacantist
+			religion = neognostic
+		}
+	}
+	quality = 5
+	flags = { religious cult_of_saints christian mexicano unique }
+	indestructible = yes
+	stacking = no
+	picture = "GFX_seamless_robe_of_jesus"
+}
+
+golden_lance = {
+	monthly_character_prestige = 0.2
+	combat_rating = 15
+	martial = 1
+	stewardship = 1
+	quality = 4
+	command_modifier = {
+		morale_defence = 0.2
+		religious_enemy = 0.15
+	}
+	active = {
+		age = 14
+	}
+	flags = { combat_weapon sword }
+	stacking = no
+	picture = "GFX_golden_lance"
+	slot = weapon
+}
+
+###################MICTLANTECA#####################
+
+corazon_del_pueblo = {
+	quality = 4
+	monthly_character_prestige = 0.25
+	monthly_character_piety = 0.25
+	active = { 
+		OR = {
+			religion_group = mesoamerican_gods
+			culture_group = mesoamerican
+		}
+	}
+	allowed_gift = { 
+		OR = {
+			religion_group = mesoamerican_gods
+			culture_group = mesoamerican
+		}
+	}
+	flags = { unique religious mesoamerican_gods jewelry }
+	stacking = no
+	picture = "GFX_pouch" #placeholder
+}
+
+###################MISCELLANEOUS#####################
+
