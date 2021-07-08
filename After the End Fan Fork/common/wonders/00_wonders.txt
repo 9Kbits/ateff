@@ -2450,7 +2450,6 @@ wonder_pyramid = {
 			religion = revelationist_reformed
 			religion = thelema
 			religion = misrist
-			religion = lamanita
 			religion = orientalist
 			trait = lunatic
 			has_religion_feature = religion_feature_pyramids
@@ -2670,13 +2669,23 @@ wonder_aztec_pyramid = {
 	allow_coastal = no
 	picture = GFX_wonder_strip_aztec_pyramid
 	potential = {
-		religion_group = mesoamerican_gods
-		culture_group = mesoamerican
+		OR = {
+		AND = {
+			religion_group = mesoamerican_gods
+			culture_group = mesoamerican
+		}	
+		religion = lamanita
+		}
 	}
 	active = {
 		ROOT = {
-			religion_group = mesoamerican_gods
-			culture_group = mesoamerican
+			OR = {
+				AND = {
+					religion_group = mesoamerican_gods
+					culture_group = mesoamerican
+				}
+			religion = lamanita
+			}
 		}
 	}
 	flags = {
