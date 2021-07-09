@@ -199,13 +199,13 @@ narrative_event = {
 	
 	option = { 
 		name = EVTOPTA_tex_king_5_banner
-		trigger = { has_landed_title = d_longhorns }
+		trigger = { has_landed_title = d_aggies }
 	}
 	
 	option = {
 		name = EVTOPTA_tex_king_5_honor
 		trigger = { 
-			NOT = { has_landed_title = d_longhorns } 
+			NOT = { has_landed_title = d_aggies } 
 			OR = {
 				culture_group = starfolk
 				AND = {
@@ -218,7 +218,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_tex_king_5_foreign
 		trigger = { 
-			NOT = { has_landed_title = d_longhorns } 
+			NOT = { has_landed_title = d_aggies } 
 			NOT = { culture_group = starfolk }
 			NOT = {
 				AND = {
@@ -559,6 +559,8 @@ narrative_event = {
 }
 
 
+
+
 narrative_event = {
 	id = tex_king.13
 	title = EVTTITLE_tex_king_13
@@ -573,14 +575,28 @@ narrative_event = {
 	}
 	
 	option = { 
+		name = EVTOPTA_tex_king_13_banner_giver
+		trigger = { 
+			OR = {
+				any_tributary = {
+					has_landed_title = d_longhorns
+				}
+				any_vassal = {
+					has_landed_title = d_longhorns
+				}
+			}
+		}
+	}
+	
+	option = { 
 		name = EVTOPTA_tex_king_13_banner
-		trigger = { has_landed_title = k_westex }
+		trigger = { has_landed_title = d_longhorns }
 	}
 	
 	option = {
 		name = EVTOPTA_tex_king_13_honor
 		trigger = { 
-			NOT = { has_landed_title = k_westex } 
+			NOT = { has_landed_title = d_longhorns } 
 			OR = {
 				culture_group = starfolk
 				AND = {
@@ -593,7 +609,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_tex_king_13_foreign
 		trigger = { 
-			NOT = { has_landed_title = k_westex } 
+			NOT = { has_landed_title = d_longhorns } 
 			NOT = { culture_group = starfolk }
 			NOT = {
 				AND = {
@@ -603,4 +619,127 @@ narrative_event = {
 			}
 		}
 	}
+
+
+narrative_event = {
+	id = tex_king.14
+	title = EVTTITLE_tex_king_14
+	desc = EVTDESC_tex_king_14
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_texas }
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_14_banner_giver
+		trigger = { 
+			OR = {
+				any_tributary = {
+					has_landed_title = d_longhorns
+				}
+				any_vassal = {
+					has_landed_title = d_longhorns
+				}
+			}
+		}
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_14_banner
+		trigger = { has_landed_title = d_longhorns }
+	}
+	
+	option = {
+		name = EVTOPTA_tex_king_14_honor
+		trigger = { 
+			NOT = { has_landed_title = d_longhorns } 
+			OR = {
+				culture_group = starfolk
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_tex_king_14_foreign
+		trigger = { 
+			NOT = { has_landed_title = d_longhorns } 
+			NOT = { culture_group = starfolk }
+			NOT = {
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+
+narrative_event = {
+	id = tex_king.15
+	title = EVTTITLE_tex_king_15
+	desc = EVTDESC_tex_king_15
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_texas }
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_15_banner_giver
+		trigger = { 
+			OR = {
+				any_tributary = {
+					has_landed_title = d_longhorns
+				}
+				any_vassal = {
+					has_landed_title = d_longhorns
+				}
+			}
+		}
+	}
+	
+	option = { 
+		name = EVTOPTA_tex_king_15_banner
+		trigger = { has_landed_title = d_longhorns }
+	}
+	
+	option = {
+		name = EVTOPTA_tex_king_15_honor
+		trigger = { 
+			NOT = { has_landed_title = d_longhorns } 
+			OR = {
+				culture_group = starfolk
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_tex_king_15_foreign
+		trigger = { 
+			NOT = { has_landed_title = d_longhorns } 
+			NOT = { culture_group = starfolk }
+			NOT = {
+				AND = {
+					culture = comanche
+					has_global_flag = comanche_opt_in
+				}
+			}
+		}
+	}
+	
+	
+	
+	
 }
