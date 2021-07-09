@@ -1,32 +1,8 @@
-namespace = tex
+namespace = texas
 
 narrative_event = {
-	id = tex.1
-	title = EVTTITLE_tex_1
-	
-	desc = {
-		trigger = {
-			has_landed_title = d_aggies
-		}
-		text = EVTDESC_tex_1
-	}
-	
-	desc = {
-		trigger = {
-			has_landed_title = d_longhorns
-		}
-		text = EVTDESC_tex_2
-	}
-	
-	desc = {
-		trigger = {
-			NOR = {
-				has_landed_title = d_aggies
-				has_landed_title = d_longhorns
-			}
-		}
-		text = EVTDESC_tex_3
-	}
+	id = texas.1
+	title = EVTTITLE_texas_1
 	
 	picture = GFX_evt_battle
 	border = GFX_event_narrative_frame_war
@@ -39,25 +15,63 @@ narrative_event = {
 		NOT = { has_global_flag = candidate_unannouced }
 	}
 	
+	desc = {
+		trigger = {
+			has_landed_title = d_aggies
+		}
+		text = EVTDESC_texas_1_aggies
+	}
+	
+	desc = {
+		trigger = {
+			has_landed_title = d_longhorns
+		}
+		text = EVTDESC_texas_1_longhorns
+	}
+	
+	desc = {
+		trigger = {
+			NOR = {
+				has_landed_title = d_aggies
+				has_landed_title = d_longhorns
+			}
+		}
+		text = EVTDESC_texas_1_other
+	}
+	
 	immediate = {
 		set_global_flag = texas_setup_done
 	}
 	
 	option = { 
-		name = EVTOPTA_tex_1
+		name = EVTOPTA_texas_1_aggies
 		trigger = { has_landed_title = d_aggies }
 		add_claim = c_milashison
 	}
 	
 	option = {
-		name = EVTOPTA_tex_2
+		name = EVTOPTA_texas_1_longhorn
 		trigger = { has_landed_title = d_longhorns }
 		add_claim = c_colorado
 	}
 	
 	option = {
-		name = EVTOPTA_tex_3
+		name = EVTOPTA_texas_1_other
 		trigger = {
+			AND = {
+				NOT = { culture_group = starfolk }
+				NOR = {
+					has_landed_title = d_aggies
+					has_landed_title = d_longhorns
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_texas_1_starfolk
+		trigger = {
+			culture_group = starfolk
 			NOR = {
 				has_landed_title = d_aggies
 				has_landed_title = d_longhorns
@@ -67,7 +81,7 @@ narrative_event = {
 }
 
 narrative_event={
-	id = tex.2
+	id = texas.2
 	title = EVTNAME_texarkana_established
 	desc = EVTDESC_texarkana_established
 	picture = GFX_evt_americanist_intervention
@@ -83,7 +97,7 @@ narrative_event={
 		name = EVTOPT_texarkana_emperor
 		trigger = {
 			NOT = { has_landed_title = e_dixie }
-			has_landed_title = e_dixie
+			has_landed_title = e_texarkana
 		}
 		prestige = 500
 		if = { #New Imperial Bloodline. (male)
@@ -152,5 +166,545 @@ narrative_event={
 			}
 		}
 		prestige = -500
+	}
+}
+
+
+narrative_event = {
+	id = texas.3
+	title = EVTTITLE_texas_3
+	
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		has_landed_title = e_texas
+		NOT = { has_global_flag = royal_guard_decided }
+	}
+	
+	
+	desc = {
+		trigger = {
+			religion = americanist
+		}
+		text = EVTDESC_texas_3_americanist
+	}
+	
+
+	
+	desc = {
+		trigger = {
+			religion = catholic
+		}
+		text = EVTDESC_texas_3_catholic
+	}
+	
+
+	
+	desc = {
+		trigger = {
+			religion = atomicist
+		}
+		text = EVTDESC_texas_3_atomicist
+	}
+	
+	desc = {
+		trigger = {
+			AND = {
+				NOT = { religion = americanist}
+				NOT = { religion = catholic}
+				NOT = { religion = atomicist}
+			}
+		}
+		text = EVTDESC_texas_3_other
+	}
+	
+	immediate = {
+		set_global_flag = royal_guard_decided
+	}
+	
+	option = { 
+		name = EVTOPTA_texas_3_secular
+		set_global_flag = texas_secular_guard
+		narrative_event = { id =texas.4}
+	}
+	
+	option = { 
+		name = EVTOPTA_texas_3_red_raider
+		trigger = {
+			AND = {
+				has_landed_title = d_red_raider
+			}
+		}
+		set_global_flag = texas_red_raider_guard
+		narrative_event = { id =texas.4}
+	}
+	
+	option = { 
+		name = EVTOPTA_texas_3_knights_outrider
+		trigger = {
+			AND = {
+				religion = catholic
+			}
+		}
+		set_global_flag = texas_knights_outrider_guard
+		narrative_event = { id =texas.4}
+	}
+	
+	option = { 
+		name = EVTOPTA_texas_3_airmen
+		trigger = {
+			AND = {
+				has_landed_title = d_airmen
+				religion = americanist
+			}
+		}
+		set_global_flag = texas_airmen_guard
+		narrative_event = { id =texas.4}
+	}
+	
+	option = { 
+		name = EVTOPTA_texas_3_first_cav
+		trigger = {
+			AND = {
+				has_landed_title = d_first_cav
+				religion = americanist
+			}
+		}
+		set_global_flag = texas_first_cav_guard
+		narrative_event = { id =texas.4}
+	}
+}
+	
+narrative_event = {
+	id = texas.4
+	title = EVTTITLE_texas_4
+	
+	picture = GFX_evt_battle
+	border = GFX_event_narrative_frame_war
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		has_landed_title = e_texas
+	}
+	
+	desc = {
+		trigger = {
+			 has_global_flag = texas_secular_guard
+		}
+		text = EVTDESC_texas_4_secular
+	}
+	
+	desc = {
+		trigger = {
+			 has_global_flag = texas_red_raider_guard
+		}
+		text = EVTDESC_texas_4_red_raider
+	}
+	
+	desc = {
+		trigger = {
+			 has_global_flag = texas_knights_outrider_guard
+		}
+		text = EVTDESC_texas_4_knights_outrider
+	}
+	
+	desc = {
+		trigger = {
+			 has_global_flag = texas_airmen_guard
+		}
+		text = EVTDESC_texas_4_airmen
+	}
+	
+	desc = {
+		trigger = {
+			 has_global_flag = texas_first_cav_guard
+		}
+		text = EVTDESC_texas_4_first_cav
+	}
+	
+	immediate = {
+		set_global_flag = royal_guard_finalized
+		spawn_fantastic_commander_effect = yes
+	}
+	
+	option = { 
+		trigger = { has_global_flag = texas_secular_guard }
+		name = EVTOPTA_texas_4_secular
+		activate_title = { title = d_texas_royal_guard status = yes }
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			opinion = {
+				modifier = opinion_legendary_commander
+				years = 50
+				who = ROOT
+			}
+			d_texas_royal_guard = {
+				grant_title = PREV
+			}
+		}
+		d_texas_royal_guard = {
+			holder_scope = {
+				wealth = 500
+				ROOT = {
+					set_defacto_vassal = PREV
+				}
+			}
+		}
+	}
+	
+	option = { 
+		trigger = { has_global_flag = texas_red_raider_guard }
+		name = EVTOPTA_texas_4_red_raider
+		activate_title = { title = d_red_raider_royal_guard status = yes }
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			opinion = {
+				modifier = opinion_legendary_commander
+				years = 50
+				who = ROOT
+			}
+			d_red_raider_royal_guard = {
+				grant_title = PREV
+			}
+		}
+		d_red_raider_royal_guard = {
+			holder_scope = {
+				wealth = 500
+				ROOT = {
+					set_defacto_vassal = PREV
+				}
+			}
+		}
+		
+		d_red_raider = {
+			destroy_landed_title = THIS
+		}
+		
+		activate_title = {
+			title = d_red_raider
+			status = no		
+		}
+		
+	}
+	
+	option = { 
+		trigger = { has_global_flag = texas_knights_outrider_guard }
+		name = EVTOPTA_texas_4_knights_outrider
+		activate_title = { title = d_knights_outrider_royal_guard status = yes }
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			opinion = {
+				modifier = opinion_legendary_commander
+				years = 50
+				who = ROOT
+			}
+			d_knights_outrider_royal_guard = {
+				grant_title = PREV
+			}
+		}
+		d_knights_outrider_royal_guard = {
+			holder_scope = {
+				wealth = 500
+				ROOT = {
+					set_defacto_vassal = PREV
+				}
+			}
+		}
+		
+		
+	}
+	
+	option = { 
+		trigger = { has_global_flag = texas_airmen_guard }
+		name = EVTOPTA_texas_4_airmen
+		activate_title = { title = d_airmen_royal_guard status = yes }
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			opinion = {
+				modifier = opinion_legendary_commander
+				years = 50
+				who = ROOT
+			}
+			d_airmen_royal_guard = {
+				grant_title = PREV
+			}
+		}
+		d_airmen_royal_guard = {
+			holder_scope = {
+				wealth = 500
+				ROOT = {
+					set_defacto_vassal = PREV
+				}
+			}
+		}
+		
+		d_airmen = {
+			destroy_landed_title = THIS
+		}
+		
+		activate_title = {
+			title = d_airmen
+			status = no		
+		}
+	}
+	
+	option = { 
+		trigger = { has_global_flag = texas_first_cav_guard }
+		name = EVTOPTA_texas_4_first_cav
+		activate_title = { title = d_first_cav_royal_guard status = yes }
+		new_character = {
+			character_event = { id = misc.3 } # Diversity
+			character_event = { id = misc.4 } # Physique
+			opinion = {
+				modifier = opinion_legendary_commander
+				years = 50
+				who = ROOT
+			}
+			d_first_cav_royal_guard = {
+				grant_title = PREV
+			}
+		}
+		d_first_cav_royal_guard = {
+			holder_scope = {
+				wealth = 500
+				ROOT = {
+					set_defacto_vassal = PREV
+				}
+			}
+		}
+		
+		d_first_cav = {
+			destroy_landed_title = THIS
+		}
+		
+		activate_title = {
+			title = d_first_cav
+			status = no		
+		}
+	}
+}
+
+
+
+narrative_event={
+	id = texas.5
+	title = EVTNAME_texas_established
+	desc = EVTDESC_texas_established
+	picture = GFX_evt_americanist_intervention
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		capital_scope = { region = custom_usa }
+		has_global_flag = texas_established
+		NOT = { tier = baron }
+	}
+	
+	option = {
+		name = EVTOPT_texas_emperor
+		trigger = {
+			has_landed_title = e_texas
+		}
+		prestige = 500
+		if = { #New Imperial Bloodline. (male)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = no
+			}
+			create_bloodline = {
+				type = high_king_bloodline
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_texas"
+			}	
+			sound_effect = bloodline_added			
+		}
+		else_if = { #New Imperial Bloodline. (female)
+			limit = { 
+				has_dlc = "Holy Fury" 
+				is_female = yes
+			}
+			create_bloodline = {
+				type = high_queen_bloodline
+			}
+			new_bloodline = {
+				set_description = "bloodline_desc_texas"
+			}	
+			sound_effect = bloodline_added			
+		}
+		narrative_event = { id =texas.3}
+		
+	}
+	
+	option = {
+		name = EVTOPT_texas_starfolk_tributary_accept
+		trigger = {
+			NOT = { has_landed_title = e_texas }
+			culture_group = starfolk
+			is_tributary = {
+				SUZERAIN = FROM
+			}
+			NOT = { tier = EMPEROR }
+		}
+		ai_chance = {
+			factor = 20
+			modifier = {
+				factor = 0
+				rival = root
+			}	
+			modifier = {
+				factor = 0
+				tier = KING
+			}	
+			modifier = {
+				factor = 4
+				tier = COUNT
+			}
+			modifier = {
+				factor = 2
+				tier = DUKE
+			}
+		}
+		
+		ROOT = {
+			set_defacto_vassal = PREV
+		}
+		piety = 200
+	}
+	
+	option = {
+		name = EVTOPT_texas_starfolk_tributary_refuse
+		trigger = {
+			NOT = { has_landed_title = e_texas }
+			culture_group = starfolk
+			is_tributary = {
+				SUZERAIN = FROM
+			}
+			NOT = { tier = EMPEROR }
+		}
+		
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				religion = root
+			}	
+		}
+		primary_title = {
+			add_pressed_claim = root
+		}
+		piety = -400
+		prestige = -800
+	}
+	
+	option = {
+		name = EVTOPT_texas_starfolk_tributary_emperor
+		trigger = {
+			NOT = { has_landed_title = e_texas }
+			culture_group = starfolk
+			is_tributary = {
+				SUZERAIN = FROM
+			}
+			tier = EMPEROR
+		}
+		
+		ai_chance = {
+			factor = 40
+			modifier = {
+				factor = 0
+				religion = root
+			}	
+		}
+		prestige = -200
+	}
+	
+	option = {
+		name = EVTOPT_texas_americanist_compatriot
+		trigger = {
+			NOT = { has_landed_title = e_texas }
+			capital_scope = {
+				region = custom_texas
+			}
+			root = { religion = americanist }
+			religion = root
+			NOT = {
+				is_tributary = {
+					SUZERAIN = FROM
+				}
+			}
+		}
+		piety = 100
+	}
+	
+	option = {
+		name = EVTOPT_texas_atomocist_compatriot
+		trigger = {
+			NOT = { has_landed_title = e_texas }
+			capital_scope = {
+				region = custom_texas
+			}
+			root = { religion = atomicist }
+			religion = root
+			NOT = {
+				is_tributary = {
+					SUZERAIN = FROM
+				}
+			}
+		}
+		piety = 100
+	}
+	
+	option = {
+		name = EVTOPT_texas_catholic_compatriot
+		trigger = {
+			NOT = { has_landed_title = e_texas }
+			capital_scope = {
+				region = custom_texas
+			}
+			culture_group = starfolk
+			root = { religion = catholic }
+			religion = root
+		}
+		
+		ai_chance = {factor = 20}
+		ROOT = {
+			set_defacto_vassal = PREV
+		}
+		piety = 100
+	}
+	
+	option = {
+		name = EVTOPT_texas_foreign
+		trigger = {
+			NOT = { has_landed_title = e_texas }
+			NOT = { religion = root }
+			NOT = { culture_group = starfolk }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_starfolk_different_religion
+		trigger = {
+			NOT = { has_landed_title = e_texas }
+			NOT = { religion = root }
+			culture_group = starfolk
+			NOT = {
+				is_tributary = {
+					SUZERAIN = FROM
+				}
+			}
+		}
+		ai_chance = {factor = 5}
+		prestige = -150
 	}
 }

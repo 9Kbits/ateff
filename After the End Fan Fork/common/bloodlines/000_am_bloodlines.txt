@@ -991,3 +991,38 @@ tex_texarkana_female   = {
         religion = catholic
     }
 }
+
+
+#male emperor of texarkana
+high_king_bloodline  = { 
+	starfolk_opinion = 10
+    monthly_character_prestige = 0.5
+	bloodline_effect_one_invasion = 1
+    command_modifier = {
+        religious_enemy = 0.3
+    }
+    inheritance = patrilineal
+    allow_bastards = yes
+    picture = GFX_bloodlines_symbol_cross_crusader
+    flags = { bloodline_heroes }
+    active = {
+        culture_group = starfolk
+    }
+}
+
+#female empress of texarkana
+high_queen_bloodline   = { 
+	starfolk_opinion = 10
+	monthly_character_prestige = 0.5
+	bloodline_effect_one_invasion = 1
+    command_modifier = {
+        religious_enemy = 0.3
+    }
+    inheritance = matrilineal
+    allow_bastards = yes
+    picture = GFX_bloodlines_symbol_cross_crusader
+    flags = { bloodline_heroes }
+    active = {
+        culture_group = starfolk
+    }
+}
