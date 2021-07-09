@@ -86,3 +86,5 @@ NDefines.NLearningScenario.START_YEAR = 2666
 NDefines.NLearningScenario.START_MONTH = 7
 NDefines.NLearningScenario.START_DAY = 4
 NDefines.NLearningScenario.START_CHARACTER = 1788001
+
+NDefines.NDiplomacy.DEMAND_RELIGIOUS_CONVERSION_INTERACTION_ENABLED = 0
