@@ -137,7 +137,9 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_MHR.3
 		trigger = { religion_group = latter_day_saints 
-		NOT = { title = e_centroamerica } 
+					primary_title = {
+						NOT = { title = e_centroamerica }
+					} 
 		}
 	}
 
@@ -146,6 +148,9 @@ narrative_event = {
 		trigger = {
 			NOT = { religion_group = latter_day_saints }
 			religion_group = christian 
+					primary_title = {
+						NOT = { title = e_centroamerica }
+					} 
 		}
 	}
 	option = {
@@ -155,6 +160,9 @@ narrative_event = {
 				religion_group = christian
 				religion_group = latter_day_saints
 			}
+					primary_title = {
+						NOT = { title = e_centroamerica }
+					} 
 		}
 	}
 }
