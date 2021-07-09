@@ -8,6 +8,10 @@ e_california = {
 	
 	controls_religion = cetic
 	
+	californio = "Las Californias"
+	chino = "Las Californias"
+	choyero = "Las Californias"
+	
 	allow = {
 		war = no
 		religion = cetic
@@ -24,6 +28,16 @@ e_california = {
 		raven_tales_reformed = 10
 		
 		paiute = "Baaha"
+		californio = "Las Bajas"
+		choyero = "Las Bajas"
+		chino = "Las Bajas"
+		chilango = "Las Bajas"
+		tapatio = "Las Bajas"
+		menomex = "Las Bajas"
+		bravo = "Las Bajas"
+		jarocho = "Las Bajas"
+		abajeno = "Las Bajas"
+		
 		
 		d_baja = {		
 			color={ 245 247 210 }	
@@ -39,13 +53,20 @@ e_california = {
 				
 				paiute = "Mesikadi"
 				
-				b_puebla_BAJ = {}
-				b_mexicali_BAJ = {}
-				b_santa_isabel_BAJ = {}
-				b_nayarit_BAJ = {}
+				b_mexicali_BAJ = {
+					chino = "la Chinesca"
+				}
+				b_santa_isabel_BAJ = {
+					californiano = "los Santorales"
+				}
 				b_los_algodones_BAJ = {}
-				b_delta_numero_uno_BAJ = {}
-				b_durango_BAJ = {}
+				b_guadalupe_victoria_BAJ = {
+					californiano = "el Cuarenta y Tres"
+				}
+				b_cuervos_BAJ = {}
+				b_carranza_BAJ = {}
+				b_tecolotes_BAJ = {}
+				b_bataquez_BAJ = {}
 			}	
 			c_tijuana = { # 2002	
 				color={ 0 255 163 }
@@ -53,14 +74,17 @@ e_california = {
 				
 				paiute = "Tiwana"
 				
+				holy_site = navegante
+				
 				b_la_joya_BAJ = {}
 				b_tijuana_BAJ = {}
 				b_rosarito_BAJ = {}
 				b_tecate_BAJ = {}
 				b_guadalupe_BAJ = {}
 				b_la_rumorosa_BAJ = {}
-				b_sanchez_taboada_BAJ = {}
-			}	
+				b_lomas_de_santa_ana_BAJ = {}
+				b_la_mision_BAJ = {}
+			}
 		}
 		d_baja_sur = {		
 			color={ 245 212 251 }	
@@ -74,13 +98,16 @@ e_california = {
 				color={ 255 202 0 }
 				color2={ 255 255 255 }
 				
+				holy_site = navegante
+				
 				b_la_paz_BAJ = {}
+				b_el_pescadero_BAJ = {}
 				b_el_centenario_BAJ = {}
-				b_el_zatacal_BAJ = {}
-				b_san_pedro_BAJ = {}
-				b_matape_BAJ = {}
-				b_isla_espirito_santo_BAJ = {}
-				b_bahia_de_la_ventana_BAJ = {}
+				b_todos_santos_BAJ = {}
+				b_los_barriles_BAJ = {}
+				b_chametla_BAJ = {}
+				b_san_antonio_BAJ = {}
+				b_puerto_chale_BAJ = {}
 			}	
 			c_loreto = { # 2009	
 				color={ 210 255 251 }
@@ -91,44 +118,42 @@ e_california = {
 				b_loreto_BAJ = {}
 				b_mulege_BAJ = {}
 				b_ligui_BAJ = {}
-				b_puerto_cancun_BAJ = {}
-				b_puerto_san_carlos_BAJ = {}
-				b_el_tiburon_BAJ = {}
-				b_las_delicias_BAJ = {}
 				b_el_huatamote_BAJ = {}
 				b_santa_rosalia_BAJ = {}
+				b_ensenada_blanca_BAJ = {}
+				b_san_javier_BAJ = {}
+				b_la_danzante_BAJ = {}
+				b_puerto_agua_verde_BAJ = {}
 			}	
 			c_comondu = { # 2008	
 				color={ 173 164 177 }
 				color2={ 255 255 255 }
 				
 				# paiute = "Komoduu"
-				
-				b_comondu_BAJ = {}
+				 
 				b_san_jose_de_comondu_BAJ = {}
-				b_san_juanico_BAJ = {}
 				b_ciudad_insurgentes_BAJ = {}
-				b_isla_delgadito_BAJ = {}
-				b_la_yaqui_BAJ = {}
-				b_la_bocana_BAJ = {}
-				b_la_poza_grande_BAJ = {}
+				b_puerto_san_carlos_BAJ = {}
 				b_adolfo_lopez_mateos_BAJ = {}
-				b_puerto_cortes_BAJ = {}
 				b_ciudad_constitucion_BAJ = {}
+				b_las_barrancas_BAJ = {}
+				b_san_juanico_BAJ = {}
+				b_la_poza_grande_BAJ = {}
 			}	
 			c_los_cabos = { # 2001	
 				color={ 149 255 0 }
 				color2={ 255 255 255 }
 				
-				# paiute = "Udogaabosï¿½"
+				# paiute = "Udogaabosö"
 				
 				b_san_jose_BAJ = {}
 				b_cabo_san_lucas_BAJ = {}
-				b_el_salto_BAJ = {}
-				b_el_paraje_BAJ = {}
-				b_san_rafael_BAJ = {}
-				b_san_jose_viejo_BAJ = {}
-				b_cabo_pulmo_BAJ = {}
+				b_miraflores_BAJ = {}
+				b_la_ribera_BAJ = {}
+				b_santiago_BAJ = {}
+				b_caduano_BAJ = {}
+				b_tsegyalgar_BAJ = {}
+				b_santa_anita_BAJ = {}
 			}	
 		}
 		d_ensenada = {	
@@ -145,27 +170,30 @@ e_california = {
 				
 				# paiute = "Essenaada"
 				
-				b_la_bufadora_BAJ = {}
 				b_ensenada_BAJ = {}
-				b_santo_tomas_BAJ = {}
+				b_maneadero_BAJ = {}
+				b_san_quentin_BAJ = {}
 				b_san_vicente_BAJ = {}
+				b_santo_tomas_BAJ = {}
 				b_real_del_castillo_BAJ = {}
-				b_san_quintin_BAJ = {}
-				b_rodolfo_sanchez_taboada_BAJ = {}
+				b_camalu_BAJ = {}
+				b_vicente_guerrero_BAJ = {}
+				b_erendira_BAJ = {}
 			}	
 			c_el_arco = { # 2006	
 				color={ 255 197 39 }
 				color2={ 255 255 255 }
 				
-				# paiute = "Waadï¿½" #bow
+				# paiute = "Waadö" #bow
 				
 				b_el_arco_BAJ = {}
-				b_rancho_BAJ = {}
-				b_san_ignacio_BAJ = {}
+				b_mision_san_francisco_borja_BAJ = {}
+				b_rancho_BAJ = {}	  
 				b_isla_san_lorenzo_BAJ = {}
 				b_agua_amarga_BAJ = {}
 				b_isla_angel_de_la_guarda_BAJ = {}
 				b_valle_de_los_cirios_BAJ = {}
+				b_bahia_de_los_angeles_BAJ = {}
 			}	
 			c_el_rosario = { # 2005	
 				color={ 200 205 127 }
@@ -174,40 +202,41 @@ e_california = {
 				# paiute = "Udosaayo"
 				
 				b_catavina_BAJ = {}
+				b_punta_prieta_BAJ = {}
 				b_el_rosario_BAJ = {}
-				b_el_rosario_de_abajo_BAJ = {}
+				b_santa_rosalita_BAJ = {}
 				b_el_aguajito_BAJ = {}
-				b_isla_san_luis_BAJ = {}
-				b_las_arrastras_BAJ = {}
-				b_puerto_san_augustin_BAJ = {}
+				b_agua_leon_BAJ = {}
+				b_el_marron_BAJ = {}
+				b_el_rosarito_BAJ = {}
 			}
 			c_el_vizcaino = { # 2007	
 				color={ 93 73 26 }
 				color2={ 255 255 255 }
 				
-				# paiute = "Piizï¿½kaino"
+				# paiute = "Piizökaino"
 				
-				b_vizcaino_BAJ = {}
 				b_guerrero_negro_BAJ = {}
+				b_isla_cedros_BAJ = {}
 				b_bahia_asuncion_BAJ = {}
 				b_bahia_tortugas_BAJ = {}
-				b_isla_cedros_BAJ = {}
 				b_el_vizcaino_BAJ = {}
-				b_santo_domingo_BAJ = {}
 				b_punta_abreojos_BAJ = {}
+				b_los_santitos_BAJ = {}
+				b_el_marasal_BAJ = {} 
 			}
 			c_playa_cortes = {
 				color={ 58 121 56 }
 				color2={ 255 255 255 }
 				
-				# paiute = "Tudupï¿½goteze"
+				# paiute = "Tudupögoteze"
 				
-				b_puertecitos_BAJ = {}
 				b_san_felipe_BAJ = {}
+				b_puertecitos_BAJ = {}
+				b_bahía_san_luis_gonzaga_BAJ = {}
+				b_calamajue_BAJ = {}
 				b_carriso_BAJ = {}
-				b_playa_hawaii_BAJ = {}
 				b_bufeo_BAJ = {}
-				b_punta_final_BAJ = {}
 				b_matomi_BAJ = {}
 			}
 		}
@@ -220,7 +249,7 @@ e_california = {
 		capital = 2059 # Redding
 
 		angeleno = "Norcal"
-		paiute = "Zepposotï¿½ipï¿½" #Jefferson country
+		paiute = "Zepposotöipö" #Jefferson country
 		
 		americanist = 10
 		raven_tales_reformed = 100
@@ -231,14 +260,16 @@ e_california = {
 			color2={ 255 255 255 }
 			
 			capital = 2059 # c_redding
-			# paiute = "Saasï¿½taa"
+			# paiute = "Saasötaa"
+			californiano = "Cascadas Shasta"
 			
 			c_redding = { # 2059
 				color={ 52 108 202 }
 				color2={ 255 255 255 }
 				holy_site = nazarene
 				
-				# paiute = "Udedinngï¿½"
+				# paiute = "Udedinngö"
+				californiano = "Rojizo"
 				
 				b_redding_CA = {}
 				b_anderson_CA = {}
@@ -265,7 +296,8 @@ e_california = {
 				color2={ 255 255 255 }
 				
 
-				# paiute = "Saasï¿½tagaiba"
+				# paiute = "Saasötagaiba"
+				californiano = "Monte Shasta"
 				
 				b_shasta_CA = {}
 				b_weed_CA = {}
@@ -281,6 +313,7 @@ e_california = {
 				color2={ 255 255 255 }
 				
 				paiute = "Udassene"
+				californiano = "Lásen"		
 				
 				b_susanville_NV = {}
 				b_standish_NV = {}
@@ -315,9 +348,11 @@ e_california = {
 				color={ 82 108 162 }
 				color2={ 255 255 255 }
 				
-				paiute = "Goyatï¿½ka" #Crayfish eaters
+				paiute = "Goyatöka" #Crayfish eaters
 				
-				b_fort_jones_CA = {}
+				b_fort_jones_CA = {
+					californiano = "San Juan"
+				}
 				b_etna_CA = {}
 				b_happy_camp_CA = {}
 				b_seiad_valley_CA = {}
@@ -329,7 +364,8 @@ e_california = {
 				color={ 127 115 160 }
 				color2={ 255 255 255 }
 				
-				paiute = "ï¿½diga"
+				paiute = "Ödiga"
+				californiano = "Yireca"
 				
 				b_yreka_CA = {}
 				b_montague_CA = {}
@@ -346,7 +382,9 @@ e_california = {
 				haida = "Hlk'ungadaay"	#miner's root
 				paiute = "Zoosepinö"
 				
-				b_grants_pass_OR = {}
+				b_grants_pass_OR = {
+					californiano = "Otorga Paso"
+				}
 				b_merlin_OR = {}
 				b_redwood_OR = {}
 				b_gold_beach_OR = {}
@@ -378,13 +416,14 @@ e_california = {
 
 			edokko = "Akaizai"
 			paiute = "Atsakutstana" #red wood
+			californiano = "Las Secuoyas"
 			
 			c_eureka = { # 2056
 				color={ 82 68 202 }
 				color2={ 255 255 255 }
 
 				edokko = "Yurikka" #Transliterated
-				paiute = "ï¿½ï¿½diga"
+				paiute = "Öödiga"
 				
 				b_eureka_CA = {}
 				b_mckinleyville_CA = {}
@@ -400,6 +439,7 @@ e_california = {
 
 				edokko = "Kawanogake" #River Cliff
 				paiute = "Pudaaga"
+				californiano = "Peña del Río"
 				
 				b_fort_bragg_CA = {}
 				b_caspar_CA = {}
@@ -414,7 +454,7 @@ e_california = {
 				color2={ 255 255 255 }
 
 				edokko = "Hululu"
-				paiute = "Umï¿½boto"
+				paiute = "Umöboto"
 				
 				b_fortuna_CA = {}
 				b_garberville_CA = {}
@@ -429,7 +469,7 @@ e_california = {
 				color2={ 255 255 255 }
 
 				edokko = "Reiyama" #Cold Mountain
-				paiute = "Sï¿½koigaiba" #Cold Mountain
+				paiute = "Sökoigaiba" #Cold Mountain
 				
 				b_ukiah_CA = {}
 				b_willits_CA = {}
@@ -447,6 +487,7 @@ e_california = {
 				
 				edokko = "Akaizai" #Red Wood
 				paiute = "Atsakutstana"
+				californiano = "Secuoya"
 				
 				b_crescent_CA = {}
 				b_bertsch_CA = {}
@@ -466,7 +507,7 @@ e_california = {
 		
 		capital = 2031 # c_san_francisco
 		edokko = "Kariwan" # Californian Bay
-		paiute = "Paanakwatï¿½" #towards the ocean
+		paiute = "Paanakwatö" #towards the ocean
 		
 		americanist = 10
 		
@@ -476,7 +517,8 @@ e_california = {
 			
 			capital = 2031 # c_san_francisco
 			edokko = "Daikari Hashi" # Great Californian Bridge
-			paiute = "Pisaayï¿½hï¿½" #wealthy gate
+			paiute = "Pisaayöhö" #wealthy gate
+			californiano = "Puente Dorado"
 			
 			c_san_francisco = { # 2031
 				color={ 237 230 150 }
@@ -501,7 +543,7 @@ e_california = {
 				color={ 217 210 160 }
 				color2={ 255 255 255 }
 				
-				# paiute = "Maadinï¿½"
+				# paiute = "Maadinö"
 				
 				b_san_rafael_CA = {}
 				b_novato_CA = {}
@@ -518,6 +560,7 @@ e_california = {
 
 			edokko = "Touwan" #Literally East Bay
 			paiute = "Tabanakwa" #the east side
+			californiano = "Bahía Oriente"
 			
 			capital = 2032 # c_alameda
 			
@@ -557,7 +600,7 @@ e_california = {
 				color2={ 255 255 255 }
 
 				edokko = "Gyakkaigan" #Opposite Coast
-				paiute = "Manapaatï¿½" #other side
+				paiute = "Manapaatö" #other side
 				
 				b_antioch_CA = {}
 				b_concord_CA = {}
@@ -666,9 +709,12 @@ e_california = {
 				color2={ 255 255 255 }
 
 				edokko = "Kouseiko" #High Blue Lake
-				paiute = "Panï¿½nnadï¿½" #lake
+				paiute = "Panönnadö" #lake
+				californiano = "Lago Claro"
 				
-				b_clearlake_CA = {}
+				b_clearlake_CA = {
+					californiano = "Lago Claro"
+				}
 				b_lakeport_CA = {}
 				b_middletown_CA = {}
 				b_kelseyville_CA = {}
@@ -730,6 +776,7 @@ e_california = {
 		capital = 2036 # c_fresno
 		
 		paiute = "Debaadi"
+		californiano = "San Joaquín"
 		
 		d_central_valley = {
 			color={ 157 225 80 }
@@ -738,6 +785,7 @@ e_california = {
 			capital = 2036 # c_fresno
 			
 			paiute = "Nadagonibaadi" #center valley
+			californiano = "Valle Central"
 			
 			c_fresno = { # 2036
 				color={ 127 225 80 }
@@ -781,6 +829,8 @@ e_california = {
 				color={ 147 215 90 }
 				color2={ 255 255 255 }
 				
+				californiano = "Estanislao"
+				
 				b_patterson_CA = {}
 				b_los_banos_CA = {}
 				b_newman_CA = {}
@@ -797,12 +847,14 @@ e_california = {
 			capital = 2027 # c_bako
 			
 			#paiute = "Kaana"
+			californiano = "Quérn"
 			
 			c_bako = { # 2027
 				color={ 163 220 108 }
 				color2={ 255 255 255 }
 				
-				paiute = "Tï¿½guhanidï¿½" #baker
+				paiute = "Töguhanidö" #baker
+				californiano = "Béikersfiel"
 				
 				b_bakersfield_CA = {}
 				b_oildale_CA = {}
@@ -827,6 +879,8 @@ e_california = {
 			c_tollhouse = { # 2037
 				color={ 193 220 68 }
 				color2={ 255 255 255 }
+				
+				californiano = "La Garita"
 				
 				b_tollhouse_CA = {}
 				b_woodlake_CA = {}
@@ -855,7 +909,8 @@ e_california = {
 			
 			capital = 2045 # c_san_joaquin
 			
-			paiute = "Pisaatiipï¿½" #Wealthy ground
+			paiute = "Pisaatiipö" #Wealthy ground
+			californiano = "Las  Minas"
 			
 			c_san_joaquin = { # 2045
 				color={ 196 235 96 }
@@ -875,6 +930,8 @@ e_california = {
 				color={ 236 205 96 }
 				color2={ 255 255 255 }
 				
+				californiano = "El Dorado"
+				
 				b_placerville_CA = {}
 				b_jackson_CA = {}
 				b_san_andreas_CA = {}
@@ -887,6 +944,8 @@ e_california = {
 				color={ 236 235 66 }
 				color2={ 255 255 255 }
 				
+				californiano = "Tolumé"
+				
 				b_modesto_CA = {}
 				b_turlock_CA = {}
 				b_sonora_CA = {}
@@ -898,6 +957,8 @@ e_california = {
 			c_tahoe = { # 2064
 				color={ 138 206 210 }
 				color2={ 255 255 255 }
+				
+				californiano = "Lago Tajóu"
 				
 				b_grass_valley_CA = {}
 				b_nevada_city_CA = {}
@@ -914,7 +975,8 @@ e_california = {
 			
 			capital = 2047 # c_yuba
 			
-			paiute = "Kwinahabaadi"	
+			paiute = "Kwinahabaadi"
+			californiano = "Valle Norte"			
 			
 			c_yuba = { # 2047
 				color={ 118 224 150 }
@@ -931,6 +993,8 @@ e_california = {
 			c_butte = { # 2048
 				color={ 148 194 150 }
 				color2={ 255 255 255 }
+				
+				californiano = "El Cerro"
 				
 				b_chico_CA = {}
 				b_oroville_CA = {}
@@ -992,13 +1056,13 @@ e_california = {
 			color2={ 243 215 59 }
 			
 			edokko = "Shoukoushi" #Little Emperor City 
-			paiute = "Tugupatï¿½dauna" #Heavenly City
+			paiute = "Tugupatödauna" #Heavenly City
 			
 			capital = 2046 # c_sacramento
 			
 			c_sacramento = { # 2046
 				edokko = "Shoukoushi" #Little Emperor City 
-				paiute = "Tugupatï¿½dauna" #Heavenly City
+				paiute = "Tugupatödauna" #Heavenly City
 				color={ 192 61 146 }
 				color2={ 243 215 59 }
 				holy_site = cetic
@@ -1067,7 +1131,8 @@ e_california = {
 				color={ 87 105 160 }
 				color2={ 255 255 255 }
 				
-				paiute = "Tuudï¿½pi" #black rock
+				paiute = "Tuudöpi" #black rock
+				californiano = "Piedra Negra"
 				
 				b_rye_patch_NV = {}
 				b_imlay_NV = {}
@@ -1099,6 +1164,8 @@ e_california = {
 			c_fallon = {
 				color = { 100 241 211 }
 				color2= { 255 255 255 }
+				
+				californiano = "Fálon"
 
 				b_fallon_NV = {}
 				b_austin_NV = {}
@@ -1111,6 +1178,8 @@ e_california = {
 			c_white_pine = {
 				color = { 150 150 150 }
 				color2= { 255 255 255 }
+				
+				californiano = "Pino Blanco"
 
 				b_ely_NV = {}
 				b_majors_place_NV = {}
@@ -1151,13 +1220,15 @@ e_california = {
 			
 			capital = 2071 # c_inyo
 			
-			paiute = "Tï¿½aibaadi"
+			paiute = "Töaibaadi"
+			californiano = "Valle de La Muerte"
 			
 			c_inyo = { # 2071
 				color={ 218 227 105 }
 				color2={ 255 255 255 }
 				holy_site = shinto # mount whitney
 				edokko = "Taiyou no Tengoku no Yama" #The Mountain of the Heavenly Sun (Its a holy site, it deserves some pomp (this also might be "horribly wrong"))
+				californiano = "Monte Huitni"
 
 
 				b_bishop_CA = {}
@@ -1171,6 +1242,8 @@ e_california = {
 			c_hawthorne = { # 2072
 				color={ 218 187 135 }
 				color2={ 255 255 255 }
+				
+				californiano = "Barrancos"
 				
 				b_hawthorne_CA = {}
 				b_yerington_CA = {}
@@ -1196,6 +1269,8 @@ e_california = {
 				color={ 142 211 152 }
 				color2={ 255 255 255 }
 				
+				californiano = "Paso Esmeralda"
+				
 				b_amargosa_valley_CA = {}
 				b_beatty_CA = {}
 				b_rhyolite_CA = {}
@@ -1214,6 +1289,8 @@ e_california = {
 			c_duck_valley = {
 				color = { 0 128 255 }
 				color2 = { 1 129 2 }
+				
+				californiano = "Valle del Pato"
 				
 				b_williams_cabin_NV = {
 					used_for_dynasty_names = no
@@ -1265,6 +1342,7 @@ e_california = {
 		
 		yiddish = "Media"
 		paiute = "Panakwakadi"
+		californiano = "Alta California Sur"
 		
 		#Crusade target weight
 		americanist = 10
@@ -1279,6 +1357,8 @@ e_california = {
 		d_channel_islands = {
 			color={ 189 187 190 }
 			color2={ 255 255 255 }
+			
+			californiano = "Islas del Canal"
 
 			capital = 2023
 		}
@@ -1321,6 +1401,7 @@ e_california = {
 				tehrangeleno = "Tehrangeles"
 				edokko = "Tenshiji"
 				paiute = "Udosaangede"
+				californiano = "Los Ángeles"
 				
 				b_hollywood_CA = {}
 				b_long_beach_CA = {}
@@ -1341,6 +1422,7 @@ e_california = {
 
 				edokko = "Daidairiku" #Land of Bitter Oranges (I am totally not shitting on Orange County)
 				paiute = "Wogoaapo"
+				californiano = "Naranjas"
 				
 				b_anaheim_CA = {}
 				b_irvine_CA = {}
@@ -1357,6 +1439,7 @@ e_california = {
 				color2={ 255 255 255 }
 
 				edokko = "Tenshi no Shima" #Angel's Islands
+				californiano = "Islas del Canal"
 				
 				b_santa_catalina_CA = {}
 				b_santa_cruz_island_CA = {}
@@ -1380,7 +1463,8 @@ e_california = {
 				color={ 201 190 144 }
 				color2={ 255 255 255 }
 				
-				paiute = "Tï¿½nna" #literal antelope
+				paiute = "Tönna" #literal antelope
+				californiano = "Antílope"
 				
 				b_lancaster_CA = {}
 				b_santa_clarita_CA = {}
@@ -1424,6 +1508,7 @@ e_california = {
 				color2={ 255 255 255 }
 				
 				paiute = "Zosuwahuupi"
+				californiano = "Árbol Joshua"
 				
 				b_victorville_CA = {}
 				b_hesperia_CA = {}
@@ -1468,7 +1553,8 @@ e_california = {
 				color={ 241 185 144 }
 				color2={ 255 255 255 }
 				
-				# paiute = "Budiizï¿½"
+				# paiute = "Budiizö"
+				californiano = "Mesa Verde"
 				
 				b_havasu_CA = {}
 				b_blythe_CA = {}
@@ -1482,7 +1568,8 @@ e_california = {
 				color={ 241 215 104 }
 				color2={ 255 255 255 }
 				
-				#paiute = "Baasï¿½to"
+				#paiute = "Baasöto"
+				californiano = "Yermo"
 				
 				b_barstow_CA = {}
 				b_yermo_CA = {}
@@ -1500,7 +1587,7 @@ e_california = {
 			capital = 2010 # c_san_diego
 
 			edokko = "Chofuu" # Saltwater Wind
-			paiute = "Tudupï¿½" #Old lake bed
+			paiute = "Tudupö" #Old lake bed
 			
 			c_san_diego = { # 2010
 				color={ 181 241 144 }
@@ -1542,6 +1629,7 @@ e_california = {
 				holy_site = aphite
 
 				edokko = "Hokusai" #North Fort
+				californiano = "San Onofre"
 				
 				b_camp_pendleton_CA = {}
 				b_escondido_CA = {}
@@ -1554,9 +1642,9 @@ e_california = {
 			c_imperial = { # 2013
 				color={ 221 221 124 }
 				color2={ 255 255 255 }
+				
 				edokko = "Chofuutani" #Saltwater Wind Valley
 
-				
 				b_el_centro_CA = {}
 				b_brawley_CA = {}
 				b_calexico_CA = {}
@@ -1573,7 +1661,7 @@ e_california = {
 			
 			capital = 2021 # c_ventura
 			edokko = "Seirin" # Priest/Holy Forest
-			paiute = "Nanisutï¿½haidï¿½" #priests
+			paiute = "Nanisutöhaidö" #priests
 			
 			c_ventura = { # 2021
 				color={ 169 197 170 }
@@ -1609,6 +1697,7 @@ e_california = {
 
 				edokko = "Anaguma no Touge" #Pass of Badgers
 				paiute = "Tihachipia"
+				californiano = "Pase del Tejón"
 				
 				b_tehachapi_CA = {}
 				b_lebec_CA = {}
