@@ -1690,7 +1690,7 @@ e_chino = {
 	color2={ 210 50 20 }
 	capital = 2000 # c_la_paz
 	
-	culture = chino
+	culture = californiano
 	allow = {
 		NOT = {
 			has_game_rule = {
@@ -1700,7 +1700,7 @@ e_chino = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = chino
+		culture = californiano
 		OR = {
 			realm_size = 150
 			e_chino = { OR = { is_titular = no has_holder = yes } }
@@ -2434,12 +2434,12 @@ e_calaotian = {
 	creation_requires_capital = no	
 }
 
-e_californio = {
+e_californiano = {
 	color={ 190 195 150 }
 	color2={ 210 50 20 }
 	capital = 2003 # c_mexicali
 	
-	culture = californio
+	culture = californiano
 	allow = {
 		NOT = { religion = cetic }
 		NOT = {
@@ -2450,10 +2450,10 @@ e_californio = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = californio
+		culture = californiano
 		OR = {
 			realm_size = 150
-			e_californio = { OR = { is_titular = no has_holder = yes } }
+			e_californiano = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
