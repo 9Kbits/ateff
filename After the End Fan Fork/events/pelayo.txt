@@ -1,0 +1,241 @@
+namespace = pelayo
+
+narrative_event = {
+	id = pelayo.1 # Introduction 
+	title= EVTTITLE_pelayo1
+	desc = "EVTDESC_pelayo1"
+	picture = GFX_evt_open_book_hf
+	prisoner = no
+	has_character_flag = pelayo
+	only_playable = yes
+	trigger = {
+		c_1836060 = {
+			has_landed_title = d_transpecos #You can't have this event fire if the Cibboleros are zero-summed from existence by character creator.
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}	
+
+	option = {
+		name = "EVTOPT_pelayomoment"
+		clr_character_flag = pelayo
+		set_character_flag = pelayo2
+		hidden_tooltip = {
+			c_1836060 = {
+				character_event = { id = pelayo.2 days = 1 }
+			}
+		}
+	}
+}
+
+character_event = {
+	id = pelayo.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		c_2302227 = {
+			narrative_event = { id = pelayo.3 days = 3 }
+		}
+	}
+}
+
+narrative_event = {
+	id = pelayo.3
+	title= EVTTITLE_pelayo3 # This one kills dog
+	desc = "EVTDESC_pelayo3"
+	picture = GFX_evt_open_book_hf
+	prisoner = no
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_pelayomo3"
+		character_event = { id = pelayo.4 days = 30 }
+		c_1836060 = { character_event = {  id = pelayo.5 days = 3 }}
+		add_rival = FROM
+	}
+	option = {
+		name = "EVTOPTB_pelayomo3"
+		prestige = -300
+	}
+}
+
+character_event = {
+	id = pelayo.4 # This one gives troops
+	title= EVTTITLE_pelayo4
+	desc = "EVTDESC_pelayo4"
+	picture = GFX_evt_open_book_hf
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTA_pelayomo4"
+		spawn_unit = {
+			owner = ROOT
+			province = c_white_sands
+			home = c_white_sands
+		troops = {
+			archers = { 200 200 }
+			light_infantry = { 400 400 }
+			heavy_infantry = { 50 50 }
+			light_cavalry = { 100 100 }
+		}
+		attrition = 1.0
+		maintenance_multiplier = 0.5
+		disband_on_peace = yes
+		}
+		add_claim = d_transpecos
+		add_claim = c_pecos
+		d_transpecos = {
+			holder_scope = {	
+				reverse_war = {
+					target = ROOT
+					thirdparty_title = PREV
+					casus_belli = claim
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = pelayo.5 # This one pings the Cibboleros about the Situations
+	title= EVTTITLE_pelayo4
+	desc = "EVTDESC_pelayo4"
+	picture = GFX_evt_open_book_hf
+	prisoner = no
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA_pelayomo5"
+	}
+}
+
+character_event = {
+	id = pelayo.6 # This one is a clean up event to also get the county of pecos
+	title= EVTTITLE_pelayo8
+	desc = "EVTDESC_pelayo8"
+	picture = GFX_evt_open_book_hf
+	prisoner = no
+	hide_window = yes
+	trigger = {
+		has_character_flag = pelayo2
+		NOT = { has_landed_title = c_pecos }
+	}
+	immediate = {
+		grant_title_no_opinion = c_pecos
+		clr_character_flag = pelayo2
+		set_character_flag = pelayo3
+	}
+}
+
+character_event = {
+	id = pelayo.7 # This one is for Luis to declare war on you
+	title= EVTTITLE_pelayo7
+	desc = "EVTDESC_pelayo7"
+	picture = GFX_evt_open_book_hf
+	prisoner = no
+	trigger = {
+		has_landed_title = k_sierra_madre
+		c_2302227 = {
+			has_landed_title = d_transpecos #You can't have this event fire if the Don lost
+		}
+		NOT = { has_character_flag = luisawnser }
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+	option = {
+		name = "EVTOPTA_pelayomo7"
+		prestige = -150
+		piety = 100
+		add_claim = d_transpecos
+		add_claim = c_pecos
+		d_transpecos = {
+			holder_scope = {	
+				reverse_war = {
+					target = ROOT
+					thirdparty_title = PREV
+					casus_belli = claim
+				}
+			}
+		}
+		c_2302227 = { character_event = { id = pelayo.8 days = 1 }}
+	}
+	option = {
+		name = "EVTOPTB_pelayomo7"
+		prestige = 150
+		piety = -100
+	}
+}
+
+character_event = {
+	id = pelayo.8 # This one is after Luis declares war on you
+	title= EVTTITLE_pelayo8
+	desc = "EVTDESC_pelayo8"
+	picture = GFX_evt_open_book_hf
+	prisoner = no
+	is_triggered_only = yes
+	option = {
+		name = "EVTOPTB_pelayomo8"
+		piety = 100
+		clr_character_flag = pelayo3
+		set_character_flag = pelayo4
+	}
+}
+
+character_event = {
+	id = pelayo.9 # Become a vassal of comancheria
+	title= EVTTITLE_pelayo9
+	desc = "EVTDESC_pelayo9"
+	picture = GFX_evt_open_book_hf
+	prisoner = no
+	trigger = {
+		has_character_flag = pelayo4
+	}
+	mean_time_to_happen = {
+		days = 15
+	}
+	option = {
+		name = "EVTOPTA_pelayomo8"
+		prestige = -100
+		piety = -100
+		k_comancheria = {
+			set_defacto_vassal = ROOT
+		}
+		clr_character_flag = pelayo4
+		set_character_flag = pelayo5
+	}
+	option = {
+		name = "EVTOPTB_pelayomo7"
+		prestige = 200
+		piety = 200
+	}
+}
+
+character_event = {
+	id = pelayo.10 # Become a catholic?
+	title= EVTTITLE_pelayo10
+	desc = "EVTDESC_pelayo10"
+	picture = GFX_evt_open_book_hf
+	prisoner = no
+	trigger = {
+		has_character_flag = pelayo5
+		c_1875001 = { has_landed_title = k_comancheria }
+	}
+	mean_time_to_happen = {
+		months = 6
+	}
+	option = {
+		name = "EVTOPTA_pelayomo10"
+		piety = 200
+		religion = catholic
+		c_1875001 = {
+			add_friend = ROOT
+		}
+	}
+	option = {
+		name = "EVTOPTB_peayomo10"
+		prestige = 500
+		piety = 500
+	}
+}
