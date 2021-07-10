@@ -3058,32 +3058,19 @@ knight = {
 	}
 	religious = yes
 	
-	opposites = {
-		squire
-	}
-	
 	male_compliment_adj = COMPL_CHIVALROUS
 	female_compliment_adj = COMPL_CHIVALROUS
 	female_insult = INSULT_SHE_KNIGHT
 	male_insult = INSULT_FALSE_KNIGHT
 	child_compliment = COMPL_KNIGHT
 }
-squire = {
-	religious = yes
-	monthly_character_prestige = 0.01
-	church_opinion = 5
-	same_opinion = 5
-	customizer = no
-	
-	opposites = {
-		knight
-	}
-}
 bible_scholar = {
 	religious = yes
 	church_opinion = 5
 	same_opinion = 5
 }
+
+
 
 #Commented these out because I have no idea what these are supposed to do.
 
@@ -3171,3 +3158,10 @@ bible_scholar = {
 #	religious_branch = yes
 #	customizer = no
 #}
+
+# dont use this
+
+eight_folded_path = { # debug thing
+	combat_rating = 500
+	martial = 500
+}
