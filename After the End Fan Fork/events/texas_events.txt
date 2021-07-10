@@ -1,5 +1,7 @@
 namespace = texas
 
+#texas.50- party traits
+
 narrative_event = {
 	id = texas.1
 	title = EVTTITLE_texas_1
@@ -706,5 +708,37 @@ narrative_event={
 		}
 		ai_chance = {factor = 5}
 		prestige = -150
+	}
+}
+
+#party events
+character_event = {
+	id = texas.50
+	desc = EVTDESC_texas_50
+	
+	trigger = {
+		culture_group = starfolk
+		NOT = {
+			trait = party_populist
+			trait = party_magnate
+			trait = party_royalist
+			trait = party_theocratic
+			trait = party_opposition
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = EVTOPTA_texas_50
+		random_list = {
+			10 = { add_trait = party_populist }
+			10 = { add_trait = party_magnate }
+			10 = { add_trait = party_royalist }
+			10 = { add_trait = party_theocratic }
+			10 = { add_trait = party_opposition }
+		}
 	}
 }
