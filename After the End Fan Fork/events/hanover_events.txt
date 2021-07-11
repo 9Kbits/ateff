@@ -603,6 +603,9 @@ narrative_event = {
 	option = {
 		name = "EVTOPT_anasulk"
 		add_trait = content
+		hidden_tooltip = {
+			remove_trait = flowered
+		}
 		ai_chance = { factor = 1 }
 	}
 }
@@ -635,6 +638,9 @@ narrative_event = {
 		name = "EVTOPT_anastasia3a"
 		change_intrigue = 2
 		ai_chance = { factor = 1 }
+		hidden_tooltip = {
+			remove_trait = flowered
+		}
 	}
 	option = {
 		name = "EVTOPT_anastasia3b"
@@ -672,6 +678,7 @@ narrative_event = {
 	is_triggered_only = yes
 	option = {
 		name = "EVTOPT_anastasia4a"
+		custom_tooltip = { text = TXT_anastasia4a }
 		change_intrigue = 2
 	}
 }
