@@ -619,13 +619,13 @@ narrative_event = {
 		custom_tooltip = { text = TXT_anaambitious }
 		add_trait = ambitious
 		hidden_tooltip = {
-			character_event = { id = hanovers.8 days = 1 }
+			character_event = { id = hanovers.8 days = 10 }
 		}	
 	}
 }
 narrative_event = {
 	id = hanovers.8
-	title= EVTTITLE_anastasiatriangle
+	title= EVTTITLE_anastasiaplot
 	desc = "EVTDESC_anastasia3"
 	picture = GFX_evt_woman_at_window_hf
 	border = GFX_event_narrative_frame_intrigue
@@ -633,6 +633,12 @@ narrative_event = {
 	is_triggered_only = yes
 	option = {
 		name = "EVTOPT_anastasia3a"
+		change_intrigue = 2
+		ai_chance = { factor = 1 }
+	}
+	option = {
+		name = "EVTOPT_anastasia3b"
+		custom_tooltip = { text = TXT_anastasia3b }
 		hidden_tooltip = {
 			if = {
 				limit = {
@@ -654,11 +660,6 @@ narrative_event = {
 			}
 		}
 		ai_chance = { factor = 10 }
-	}
-	option = {
-		name = "EVTOPT_anastasia3b"
-		change_intrigue = 2
-		ai_chance = { factor = 1 }
 	}
 }
 narrative_event = {
