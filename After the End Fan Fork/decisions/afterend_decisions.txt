@@ -4749,7 +4749,11 @@ decisions = {
 			age = 16
 			prisoner = no
 			is_ruler = yes
-			religion = evangelical
+			OR = {
+				religion = evangelical
+				religion = antinomian
+				religion = charismatic
+			}
 			NOT = {
 				trait = knight
 			}
