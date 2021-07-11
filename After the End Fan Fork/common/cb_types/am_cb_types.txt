@@ -6032,8 +6032,7 @@ liberate_texas = {
 							any_realm_province = {
 								duchy = { title = PREVPREVPREV }
 								OR = {
-									culture = texan
-									culture = tejano
+									culture_group = starfolk
 								}
 							}
 						}
@@ -6041,8 +6040,7 @@ liberate_texas = {
 							limit = {
 								duchy = { title = PREVPREVPREV }
 								OR = {
-									culture = texan
-									culture = tejano
+									culture_group = starfolk
 								}
 							}
 							create_character = {
@@ -6050,7 +6048,6 @@ liberate_texas = {
 								culture = THIS
 								dynasty = random
 								random_traits = yes
-								female = no
 								age = 20
 								health = 7
 								fertility = 0.7
@@ -6059,7 +6056,6 @@ liberate_texas = {
 									diplomacy = 10
 									stewardship = 10
 								}
-								flag = is_religious_liberation_ruler
 							}
 							new_character = {
 								remove_trait = cynical
@@ -6083,7 +6079,6 @@ liberate_texas = {
 								culture = ROOT
 								dynasty = random
 								random_traits = yes
-								female = no
 								age = 20
 								health = 7
 								fertility = 0.7
@@ -6092,7 +6087,6 @@ liberate_texas = {
 									diplomacy = 10
 									stewardship = 10
 								}
-								flag = is_religious_liberation_ruler
 							}
 							new_character = {
 								remove_trait = cynical
@@ -6108,6 +6102,7 @@ liberate_texas = {
 				}
 				if = {
 					limit = {
+						OR = {
 						has_holder = no
 					}
 					usurp_title = { target = event_target:new_ruler type = invasion }

@@ -52,7 +52,7 @@ narrative_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_texas_1_longhorn
+		name = EVTOPTA_texas_1_longhorns
 		trigger = { has_landed_title = d_longhorns }
 		add_claim = c_colorado
 	}
@@ -715,9 +715,41 @@ narrative_event={
 character_event = {
 	id = texas.50
 	desc = EVTDESC_texas_50
-	
+	only_playable = yes
 	trigger = {
-		culture_group = starfolk
+		government = open_range_feudalism_government
+		NOT = {
+			trait = party_populist
+			trait = party_magnate
+			trait = party_royalist
+			trait = party_theocratic
+			trait = party_opposition
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = EVTOPTA_texas_50
+		random_list = {
+			10 = { add_trait = party_populist }
+			10 = { add_trait = party_magnate }
+			10 = { add_trait = party_royalist }
+			10 = { add_trait = party_theocratic }
+			10 = { add_trait = party_opposition }
+		}
+	}
+}
+character_event = {
+	id = texas.51
+	desc = EVTDESC_texas_50
+	has_job_title = yes
+	trigger = {
+		
+		liege = { government = open_range_feudalism_government }
+		is_voter = yes
 		NOT = {
 			trait = party_populist
 			trait = party_magnate
