@@ -263,15 +263,15 @@ decisions = {
 			factor = 1
 		}  
 	}
-			
+		
 	comanche_opt_in = {
 		
 		is_high_prio = yes
 		only_playable = yes
-		
+	
 		potential = {
 			culture = comanche
-			has_landed_title k_comancheria
+			has_landed_title = k_comancheria
 		}
 		
 		allow = { 
@@ -811,14 +811,9 @@ decisions = {
 				}
 			}
 			NOT = { has_global_flag = texas_restored }
-		
-			NOT = { 
-
 			d_aggies = {
 				has_holder = no
 			}
-
-			
 		}
 		
 		allow = {
