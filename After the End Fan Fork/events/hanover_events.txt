@@ -590,6 +590,8 @@ narrative_event = {
 		name = "EVTOPT_anaread"
 		clr_character_flag = anastasia
 		set_character_flag = anastasia2
+		custom_tooltip = { text = TXT_anastasia1 }
+		custom_tooltip = { text = TXT_anastasia2 }
 		hidden_tooltip = {
 			character_event = { id = hanovers.7 days = 1 }
 		}
@@ -613,14 +615,12 @@ narrative_event = {
 	prisoner = no
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPT_anastasia2a"
+		name = "EVTOPT_anaambitious"
+		custom_tooltip = { text = TXT_anaambitious }
+		add_trait = ambitious
 		hidden_tooltip = {
 			character_event = { id = hanovers.8 days = 1 }
 		}	
-	}
-	option = {
-		name = "EVTOPT_anaambitious"
-		add_trait = ambitious
 	}
 }
 narrative_event = {
