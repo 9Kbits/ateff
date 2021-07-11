@@ -239,3 +239,29 @@ character_event = {
 		piety = 500
 	}
 }
+
+character_event = {
+	id = pelayo.11 # Number 1 victory royale ye fortnite
+	title= EVTTITLE_pelayo11
+	desc = "EVTDESC_pelayo11"
+	picture = GFX_evt_open_book_hf
+	prisoner = no
+	trigger = {
+		NOT = {
+			has_character_flag = victory_royale
+		}
+		has_landed_title = d_transpecos
+		OR = {
+			has_character_flag = pelayo2
+			has_character_flag = pelayo3
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = "EVTOPTB_peayomo11"
+		prestige = 100
+		set_character_flag = victory_royale
+	}
+}
