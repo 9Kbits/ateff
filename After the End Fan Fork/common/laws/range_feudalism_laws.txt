@@ -103,15 +103,17 @@ range_senate_size_1 = {
 range_senate_size_2 = {
 		group = range_senate_size
 		allow = {
-		OR = {
-			has_law = range_senate_size_1
-			has_law = range_senate_size_3
+			OR = {
+				has_law = range_senate_size_1
+				has_law = range_senate_size_3
 			}
 		}
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
 			}
+			independent = yes
+			higher_tier_than = COUNT
 		}
 		revoke_allowed = {
 			always = no
@@ -158,6 +160,8 @@ range_senate_size_3 = {
 			holder_scope = {
 				government = open_range_feudalism_government
 			}
+			independent = yes
+			higher_tier_than = DUKE
 		}
 		revoke_allowed = {
 			always = no

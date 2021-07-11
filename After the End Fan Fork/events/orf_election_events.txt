@@ -2,8 +2,9 @@ namespace = orfelection
 
 character_event = {
 	id = orfelection.1
-	title = EVTDESC_bounce
-	hide_window = yes
+	title = EVTTITLE_candidate_finder
+	
+	desc = EVTDESC_candidate_finder
 	
 	is_triggered_only = yes
 	
@@ -15,7 +16,7 @@ character_event = {
 	
 	immediate = {
 		
-		#find member of own party set to if found set to oponent_candidate_1 and set oponent_1_found
+		#find member of own party set to if found set to opponent_candidate_1 and set opponent_1_found
 		liege = {
 			any_voter = {
 				if = {
@@ -42,40 +43,46 @@ character_event = {
 								root = { trait = party_opposition }
 							}
 						}
-						NOT = { has_character_flag orf_in_election }
-						OR = {
-							#has never been elected, this means they were appointed and can be run against immediately (maybe add cooldown of 2 years)
-							NOT = { has_character_flag = orf_won_election }
-							#it's been 4 years. upon victory the flag should be removed and then re-added
-							had_character_flag = {
-								flag = orf_won_election
-								years >= 4
+						NOT = { has_character_modifier = orf_election_cooldown }
+						NOT = {
+							OR = {
+								has_job_title = job_chancellor
+								has_job_title = job_marshal
+								has_job_title = job_treasurer
+								has_job_title = job_spymaster
+								has_job_title = job_spiritual
 							}
 						}
 					}
-					root = { set_character_flag = orf_oponent_1_found }
-					save_event_target_as = orf_oponent_candidate_1
+					root = { set_character_flag = orf_opponent_1_found }
+					save_event_target_as = orf_opponent_candidate_1
 					
+				}
+				else = { 
+					set_character_flag = opponent_1_party_not_found
 				}
 			}
 		}
-		#find appointed council member to run against, if found set to oponent_candidate_1 and set oponent_1_found this is intended to overwrite the first candidate.
+		#find appointed council member to run against, if found set to opponent_candidate_1 and set opponent_1_found this is intended to overwrite the first candidate.
 		liege = {
 			any_voter = {
 				if = {
 					limit = { 
-						NOT = { has_character_flag orf_in_election }
+							has_character_flag = unelected_senator
 							#has never been elected, this means they were appointed and can be run against immediately (maybe add cooldown of 2 years)
 							NOT = { has_character_flag = orf_won_election
 						}
 					}
-					root = { set_character_flag = orf_oponent_1_found }
-					save_event_target_as = orf_oponent_candidate_1
+					root = { set_character_flag = orf_opponent_1_found }
+					save_event_target_as = orf_opponent_candidate_1
+				}
+				else = { 
+					set_character_flag = opponent_1_appointee_not_found
 				}
 			}
 		}
 		
-		#find a ruler of a different party to run against, if found set to oponent_candidate_2 and set oponent_2_found
+		#find a ruler of a different party to run against, if found set to opponent_candidate_2 and set opponent_2_found
 		liege = {
 			any_voter = {
 				if = {
@@ -104,55 +111,53 @@ character_event = {
 								}
 							}
 						}
-						NOT = { has_character_flag orf_in_election }
-							#has never been elected, this means they were appointed and can be run against immediately (maybe add cooldown of 2 years)
-							NOT = { has_character_flag = orf_won_election
+						NOT = { has_character_modifier = orf_election_cooldown }
+						NOT = {
+							OR = {
+								has_job_title = job_chancellor
+								has_job_title = job_marshal
+								has_job_title = job_treasurer
+								has_job_title = job_spymaster
+								has_job_title = job_spiritual
+							}
 						}
 					}
-					root = { set_character_flag = orf_oponent_1_found }
-					save_event_target_as = orf_oponent_candidate_1
+					root = { set_character_flag = orf_opponent_1_found }
+					save_event_target_as = orf_opponent_candidate_2
+				}
+				else = { 
+					set_character_flag = opponent_2_not_found
 				}
 			}
 		}
-	
+	}
 	option = { 
-		character_event = { id = orfelection.2 }
+		name = EVTOPTA_orfelection_opponent_appointee
+		trigger = {
+			AND = {
+				NOT = { has_character_flag = opponent_1_appointee_not_found }
+				NOT = { has_character_flag = opponent_1_party_not_found }
+			}
+		}
 	}
-}
-
-character_event = {
-	id = orfelection.2
-	title = EVTTITLE_orf_election_candidates_found
-	
-	picture = GFX_evt_battle
-	border = GFX_event_narrative_frame_war
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		is_playable = yes
-		government = open_range_feudalism_government
-	}
-	
-	desc = {
-		text = EVTDESC_orf_candidates_to_run_against
-	}
-	
-	immediate = {
-		set_global_flag = election_started
-		
-	
-	}
-	
 	option = { 
-		name = EVTOPTA_oponent_1
+		name = EVTOPTA_orfelection_opponent_party
+		trigger = {
+			AND = {
+				has_character_flag = opponent_1_appointee_not_found
+				NOT = { has_character_flag = opponent_1_party_not_found }
+			}
+		}
 	}
 	
 	option = {
-		name = EVTOPTA_oponent_2
+		name = EVTOPTA_orfelection_opponent_opponent
+		trigger = {
+			NOT = { has_character_flag = opponent_2_not_found }
+		}
 	}
 	
 	option = {
-		name = EVTOPTA_nevermind
+		name = EVTOPTA_orfelection_nevermind
 	}
 }
