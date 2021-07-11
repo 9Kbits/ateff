@@ -377,7 +377,109 @@ decisions = {
 	
 	#Deleted
 	
-	#Deleted
+	stem_duchy_of_georgia = { #:Gigachad: Undeleted
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			capital_scope = {
+				OR = {
+					province = 149 #Atlanta
+					province = 150 #Athens
+					province = 148 #Chattahoochee
+					province = 203 #Oconee
+					province = 204 #Deepstep
+					province = 205 #Ocmulgee
+					province = 1030 #Lagrange
+					province = 157 #Augusta
+					province = 159 #Ogeechee
+					province = 158 #Savannah
+					province = 208 #Dublin
+					province = 206 #Hinesville
+				}
+			}
+			top_liege = {
+				has_landed_title = e_dixie
+			}
+			lower_tier_than = KING
+			k_georgia = {
+				is_titular = yes
+			}
+			is_alternate_start = no
+		}
+		allow = {
+			prestige = 3000
+			custom_tooltip = {
+				text = emperor_has_dixie
+
+				liege = {
+					has_landed_title = e_dixie
+				}
+			}
+			tier = DUKE
+			completely_controls = c_atlanta
+			completely_controls = c_athens 
+			completely_controls = c_chattahoochee
+			completely_controls = c_oconee
+			completely_controls = c_deepstep
+			completely_controls = c_ocmulgee
+			completely_controls = c_lagrange
+			completely_controls = c_augusta
+			completely_controls = c_ogeechee
+			completely_controls = c_savannah
+			completely_controls = c_dublin
+			completely_controls = c_hinesville
+		}
+		effect = {
+			hidden_tooltip = {
+				primary_title = {
+					k_georgia = {
+						copy_title_laws = PREV
+					}
+				}
+			}
+			grant_title_no_opinion = k_georgia
+			hidden_tooltip = {
+				d_peachtree = {
+					de_jure_liege = k_georgia
+				}
+				d_savannah = {
+					de_jure_liege = k_georgia
+				}
+				d_altamaha = {
+					de_jure_liege = k_georgia
+				}
+				d_sowega = {
+					de_jure_liege = k_georgia
+				}
+				d_wiregrass = {
+					de_jure_liege = k_georgia
+				}
+				e_dixie = {
+					owner = {
+						ROOT = {
+							set_defacto_liege = PREV
+						}
+					}
+				}
+				ROOT = {
+					narrative_event = { id = HFP.40038 }
+				}
+				any_playable_ruler = {
+					limit = {
+						OR = {
+							has_landed_title = e_dixie
+							top_liege = {
+								has_landed_title = e_dixie
+							}
+						}
+					}
+					narrative_event = { id = HFP.40038 }
+				}
+			}
+		}
+	}
 
 	stem_duchy_of_tuskegee = {
 		is_high_prio = yes
@@ -723,6 +825,83 @@ decisions = {
 		}
 	}
 	
+	declare_kingdom_of_georgia = {
+		is_high_prio = yes
+		only_playable = yes
+		ai_check_interval = 120
+
+		potential = {
+			capital_scope = {
+				OR = {
+					province = 149 #Atlanta
+					province = 150 #Athens
+					province = 148 #Chattahoochee
+					province = 203 #Oconee
+					province = 204 #Deepstep
+					province = 205 #Ocmulgee
+					province = 1030 #Lagrange
+					province = 157 #Augusta
+					province = 159 #Ogeechee
+					province = 158 #Savannah
+					province = 208 #Dublin
+					province = 206 #Hinesville
+				}
+			}
+			e_dixie = {
+				has_holder = no
+			}
+			is_alternate_start = no
+			k_georgia = {
+				is_titular = yes
+			}
+			k_georgia_grand_duchy = {
+				is_titular = no
+			}
+		}
+		allow = {
+			prestige = 500
+			e_dixie = {
+				has_holder = no
+			}
+			completely_controls = c_atlanta
+			completely_controls = c_athens 
+			completely_controls = c_chattahoochee
+			completely_controls = c_oconee
+			completely_controls = c_deepstep
+			completely_controls = c_ocmulgee
+			completely_controls = c_lagrange
+			completely_controls = c_augusta
+			completely_controls = c_ogeechee
+			completely_controls = c_savannah
+			completely_controls = c_dublin
+			completely_controls = c_hinesville
+		}
+		effect = {
+			hidden_tooltip = {
+				d_peachtree = {
+					de_jure_liege = k_georgia
+				}
+				d_savannah = {
+					de_jure_liege = k_georgia
+				}
+				d_altamaha = {
+					de_jure_liege = k_georgia
+				}
+				d_sowega = {
+					de_jure_liege = k_georgia
+				}
+				d_wiregrass = {
+					de_jure_liege = k_georgia
+				}
+				primary_title = {
+					k_tuskegee = {
+						copy_title_laws = PREV
+					}
+				}
+			}
+			grant_title_no_opinion = k_georgia
+		}
+	}
 	declare_kingdom_of_tuskegee = {
 		is_high_prio = yes
 		only_playable = yes

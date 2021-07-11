@@ -120,6 +120,40 @@ e_dixie = {
 			}
 		}
 	}
+	
+	k_georgia_grand_duchy = { #Potential stem duchy, placed here to avoid gaps in de jure map once formed
+		color={ 195 205 185 }
+		color2={ 220 220 0 }
+	
+		capital = 149 # Atlanta
+		neomoor = "Dar al-Yakub"
+		
+		title_prefix = "GRAND_DUCHY_PREFIX"
+		title = "GRAND_DUCHY_RULER"
+		title_female = "GRAND_DUCHY_RULER_FEMALE"
+		foa = "GRAND_DUCHY_FOA"
+		
+		# Crusade target weight
+		catholic = 5
+		americanist = 200
+		revelationist_reformed = 100
+		rust_cultist = 5
+		glorian = 5
+		mormon = 1
+	
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_georgia_grand_duchy = {
+						is_titular = yes
+					}
+				}
+				k_georgia_grand_duchy = {
+					is_titular = no
+				}
+			}
+		}
+	}
 
 	k_georgia = {
 		color={ 195 205 185 }
