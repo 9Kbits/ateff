@@ -636,11 +636,14 @@ narrative_event = {
 	is_triggered_only = yes
 	option = {
 		name = "EVTOPT_anastasia3a"
-		change_intrigue = 2
-		ai_chance = { factor = 1 }
+		add_character_modifier = {
+	    	name = anastasia_general
+    		years = 5			
+		}
 		hidden_tooltip = {
 			remove_trait = flowered
 		}
+		ai_chance = { factor = 1 }
 	}
 	option = {
 		name = "EVTOPT_anastasia3b"
@@ -679,7 +682,10 @@ narrative_event = {
 	option = {
 		name = "EVTOPT_anastasia4a"
 		custom_tooltip = { text = TXT_anastasia4a }
-		change_intrigue = 2
+		add_character_modifier = {
+	    	name = delightfully_devilish_anastasia
+    		years = 3			
+		}
 	}
 }
 narrative_event = {
