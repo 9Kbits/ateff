@@ -537,7 +537,7 @@
 	dynasty=1863074
 	culture=inlander
 	religion=trailwalker
-	trait=dutiful_clerk
+	trait=thrifty_clerk
 	trait=quick
 	trait=kind
 	trait=arbitrary
@@ -855,9 +855,10 @@
 	dynasty=1863074
 	culture=inlander
 	religion=trailwalker
+	trait=drunkard
 	father=1890062
 	2467.4.12={birth=yes}
-	2500.2.23={death=yes}
+	2500.2.23={death={death_reason=death_trait}}
 }
 
 1890060={
@@ -941,7 +942,8 @@
 	culture=snakelander
 	religion=trailwalker
 	2590.1.1={birth=yes}
-	2620.1.1={death=yes}
+	2620.1.1={death={death_reason=death_battle}
+	}
 }
 
 1890067={
@@ -956,7 +958,7 @@
 	name="Silveranos"
 	culture=coloradan
 	religion=trailwalker
-	2535.1.1={birth=yes}
+	2506.1.1={birth=yes}
 	2569.1.1={death=yes}
 }
 
@@ -965,7 +967,8 @@
 	culture=inlander
 	religion=trailwalker
 	2500.1.1={birth=yes}
-	2526.1.1={death=yes}
+	2526.1.1{death={death_reason=death_battle}
+	}
 }
 
 1890070={
@@ -973,7 +976,7 @@
 	culture=utahn
 	religion=trailwalker
 	2480.1.1={birth=yes}
-	2507.1.1={death=yes}
+	2507.1.1={death={death_reason=death_battle}
 }
 
 1890071={
@@ -988,8 +991,10 @@
 	name="Carl"
 	culture=grangelander
 	religion=trailwalker
+	trait=maimed
 	2450.1.1={birth=yes}
-	2473.1.1={death=yes}
+	2473.1.1={death={death_reason=death_trait}}
+	}
 }
 
 1890073={
@@ -1004,6 +1009,7 @@
 	name="Billiam"
 	culture=mountainer
 	religion=trailwalker
+	give_nickname=nick_the_unready
 	2386.1.1={birth=yes}
 	2421.1.1={death={
 			death_reason=death_duel
@@ -1035,6 +1041,7 @@
 	religion=trailwalker
 	2599.1.1={birth=yes}
 	2660.1.1={death=yes}
+	}
 }
 
 1890078={
