@@ -1221,7 +1221,11 @@ title_squire = {
 	}
 	
 	allowed_to_grant = {
-		religion = evangelical
+		OR = {
+			religion = evangelical
+			religion = jacobite
+			religion = charismatic
+		}
 	}
 	
 	gain_effect = {
