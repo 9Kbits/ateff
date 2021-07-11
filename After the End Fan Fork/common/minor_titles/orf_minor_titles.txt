@@ -1,0 +1,1194 @@
+########################################################
+# MINOR TITLES
+# Characters can have any number of these
+########################################################
+#	grant_limit: Max number of holders.
+#	realm_in_name: Append the name of the country after the title (Queen [of Sweden])
+#	allowed_to_hold: conditions for the character to hold the title
+#	allowed_to_grant: conditions for a ruler to grant the title
+#	regent: This is the title for regents (not really "minor")
+#	gain_effect: fires when the title is granted
+#	lose_effect: fires when a title is lost through most causes
+#	retire_effect: fires when a title is lost due to the character stepping down
+#	death_effect: fires when a title is lost due to the character dying
+#	message: should fire a message to the its owner when set
+#	The other fields are all character modifiers.
+
+#######################################
+# HARD: AUTO-GRANTED - DO NOT REMOVE!
+#######################################
+
+title_senator_base_1 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		independent = yes
+		
+		has_dlc = "Zeus"
+		OR = {
+			primary_title = { has_law = range_senate_size_1 }
+			primary_title = { has_law = range_senate_size_2 }
+			primary_title = { has_law = range_senate_size_3 }
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_base_2 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		independent = yes
+		
+		has_dlc = "Zeus"
+
+		OR = {
+			primary_title = { has_law = range_senate_size_1 }
+			primary_title = { has_law = range_senate_size_2 }
+			primary_title = { has_law = range_senate_size_3 }
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_3 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		independent = yes
+		higher_tier_than = COUNT		
+		has_dlc = "Zeus"
+
+		OR = {
+			AND = {
+				primary_title = { has_law = range_senate_size_1 }
+				higher_tier_than = DUKE			
+			}
+			
+			primary_title = { has_law = range_senate_size_2 }
+
+			primary_title = { has_law = range_senate_size_3 }
+			
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_4 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		independent = yes
+		higher_tier_than = COUNT		
+		has_dlc = "Zeus"
+		OR = {
+			AND = {
+				primary_title = { has_law = range_senate_size_1 }
+				higher_tier_than = DUKE			
+			}
+			
+			primary_title = { has_law = range_senate_size_2 }
+
+			primary_title = { has_law = range_senate_size_3 }
+			
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_5 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {	
+		independent = yes
+		
+		has_dlc = "Zeus"
+
+		OR = {
+			primary_title = { has_law = range_senate_size_2 }
+			primary_title = { has_law = range_senate_size_3 }
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_6 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		independent = yes
+		
+		has_dlc = "Zeus"
+		OR = {
+			primary_title = { has_law = range_senate_size_2 }
+			primary_title = { has_law = range_senate_size_3 }
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_7 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		higher_tier_than = DUKE
+		independent = yes
+		
+		has_dlc = "Zeus"
+		
+		OR = {
+			AND = {
+				primary_title = { has_law = range_senate_size_2 }
+				higher_tier_than = KING				
+			}
+			primary_title = { has_law = range_senate_size_3 }
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_8 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		higher_tier_than = DUKE
+		independent = yes
+		
+		has_dlc = "Zeus"
+		
+		OR = {
+			AND = {
+				primary_title = { has_law = range_senate_size_2 }
+				higher_tier_than = KING				
+			}
+			primary_title = { has_law = range_senate_size_3 }
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_9 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		higher_tier_than = DUKE
+		independent = yes
+		
+		has_dlc = "Zeus"
+		
+		AND = {
+			primary_title = { has_law = range_senate_size_3 }
+			higher_tier_than = KING		
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_10 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		higher_tier_than = DUKE
+		independent = yes
+		
+		has_dlc = "Zeus"
+		
+		AND = {
+			primary_title = { has_law = range_senate_size_3 }
+			higher_tier_than = KING		
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_11 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		higher_tier_than = DUKE
+		independent = yes
+		
+		has_dlc = "Zeus"
+		
+		AND = {
+			primary_title = { has_law = range_senate_size_3 }
+			higher_tier_than = KING		
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+
+title_senator_12 = {
+	is_high_prio = yes
+	dignity = 0.050
+	grant_limit = 1
+	opinion_effect = 10
+	monthly_salary = 0.00
+	monthly_prestige = 0.75
+	is_voter = yes
+	
+	allowed_to_grant = {
+		higher_tier_than = DUKE
+		independent = yes
+		
+		has_dlc = "Zeus"
+		
+		AND = {
+			primary_title = { has_law = range_senate_size_3 }
+			higher_tier_than = KING		
+		}
+	}
+	
+	allowed_to_hold = {
+		NOT = { 
+			primary_title = { temporary = yes } 
+		}
+		can_be_councilmember_king_trigger = yes
+	}
+
+	revoke_trigger = {
+		FROM = {
+			primary_title = {
+				NOT = { 
+					AND = {
+						has_law = succession_voting_power_1
+						ROOT = { is_powerful_vassal = yes }
+					}
+				}
+			}
+			NOT = { 
+				AND = {
+					OR = {
+						primary_title = { has_law = range_senate_size_2 }
+						primary_title = { has_law = range_senate_size_3 }
+					}
+				}
+			}
+		}
+	}
+	
+	gain_effect = {
+		ROOT = {
+			if = {
+				limit = { NOT = { has_character_flag = won_election } }
+				set_character_flag = unelected_senator
+			}
+		}
+	}
+	lose_effect = {
+		if = {
+			limit = {
+				FROM = {
+					NOT = {
+						has_character_flag = swapping_councillors
+					}
+				}
+			}
+			ROOT = {
+				remove_character_flag = unelected_senator
+				remove_character_flag = won_election
+			}
+			opinion = { who = FROM modifier = opinion_fired_from_council }
+			opinion = { who = FROM modifier = opinion_recently_fired }
+		}
+	}
+
+	retire_effect = {
+		if = {
+			limit = {
+				NOT = {
+					age = 65
+				}
+				health = 3
+				NOT = {
+					is_sick_or_injured_trigger = yes
+				}
+				can_be_councilmember_king_trigger = yes
+			}
+			
+			FROM = { 
+				opinion = { who = ROOT modifier = opinion_resigned_from_council }
+			}
+		}
+	}
+
+	message = yes
+}
+### New Byzantine Minor Titles (no) ###
