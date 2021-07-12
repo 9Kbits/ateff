@@ -184,3 +184,577 @@ character_event = {
 		name = EVTOPTA_orfelection_nevermind
 	}
 }
+
+haracter_event ={#local meeting
+	id = orfelection.11
+	desc = EVTDESC_orfelec_problem_minor_meeting
+	#picture = something
+	
+	only_playable = yes
+	capable_only = yes
+	is_triggered_only = yes#i..think? maybe we will do a tombola, maybe we will have a MTTH on election events
+	
+	
+	immediate = {
+		narrative_Event = {id = orfelection.12 days = 7}
+		
+	}
+	option = {#skill one
+		name = EVTOPTA_orfelec_problem_minor_meeting
+		random_list = {
+			10 = {
+				set_character_flag = orfelec_good
+				mult_modifier = {
+					factor = 0
+					diplomacy == 0
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 5
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 10
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 15
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 20
+				}
+				mult_modifier = {
+					factor = 0
+					learning == 0
+				}
+				mult_modifier = {
+					factor = 1.5
+					learning = 5
+				}
+				mult_modifier = {
+					factor = 1.5
+					learning = 10
+				}
+				mult_modifier = {
+					factor = 1.5
+					learning = 15
+				}
+				mult_modifier = {
+					factor = 1.5
+					learning = 20
+				}
+				mult_modifier = {
+					factor = 2
+					OR = {
+						trait = socializer
+						trait = scholar
+					}
+				}
+			}
+			20 = {#neutral
+				set_character_flag = orfelec_neutral
+			}
+			40 = {#bad
+				set_character_flag = orfelec_bad
+				mult_modifier = {
+					factor = 1.5
+					diplomacy == 0
+				}
+				mult_modifier = {
+					factor = 0.75
+					diplomacy = 5
+				}
+				mult_modifier = {
+					factor = 0.75
+					diplomacy = 10
+				}
+				mult_modifier = {
+					factor = 0.75
+					diplomacy = 15
+				}
+				mult_modifier = {
+					factor = 0
+					diplomacy = 20
+				}
+				mult_modifier = {
+					factor = 0.75
+					learning == 0
+				}
+				mult_modifier = {
+					factor = 0.75
+					learning = 5
+				}
+				mult_modifier = {
+					factor = 0.75
+					learning = 10
+				}
+				mult_modifier = {
+					factor = 0.75
+					learning = 15
+				}
+				mult_modifier = {
+					factor = 0
+					learning = 20
+				}
+				mult_modifier = {
+					factor = 0
+					OR = {
+						trait = socializer
+						trait = scholar
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_orfelec_problem_minor_meeting
+		prestige = -100
+		random_list = {
+			20 = {#good
+				set_character_flag = orfelec_good
+				mult_modifier = {
+					factor = 0
+					diplomacy == 0
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 5
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 10
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 15
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 20
+				}
+				mult_modifier = {
+					factor = 0
+					prestige < 0
+				}
+				mult_modifier = {
+					factor = 1.5
+					prestige = 500
+				}
+				mult_modifier = {
+					factor = 1.5
+					prestige = 1000
+				}
+				mult_modifier = {
+					factor = 1.5
+					prestige = 2000
+				}
+				mult_modifier = {
+					factor = 1.5
+					prestige = 4000
+				}
+				mult_modifier = {
+					factor = 2
+					OR = {
+						trait = socializer
+					}
+				}
+			}
+			20 = {#neutral
+				set_character_flag = orfelec_neutral
+			}
+			40 = {#bad
+				set_character_flag = orfelec_bad
+				mult_modifier = {
+					factor = 1.5
+					diplomacy == 0
+				}
+				mult_modifier = {
+					factor = 0.75
+					diplomacy = 5
+				}
+				mult_modifier = {
+					factor = 0.75
+					diplomacy = 10
+				}
+				mult_modifier = {
+					factor = 0.75
+					diplomacy = 15
+				}
+				mult_modifier = {
+					factor = 0
+					diplomacy = 20
+				}
+				mult_modifier = {
+					factor = 0.75
+					learning == 0
+				}
+				mult_modifier = {
+					factor = 0.75
+					learning = 5
+				}
+				mult_modifier = {
+					factor = 0.75
+					learning = 10
+				}
+				mult_modifier = {
+					factor = 0.75
+					learning = 15
+				}
+				mult_modifier = {
+					factor = 0
+					learning = 20
+				}
+				mult_modifier = {
+					factor = 0
+					OR = {
+						trait = socializer
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_orfelec_problem_minor_meeting
+		random_list = {
+			10 = {
+				set_character_flag = orfelec_good
+				mult_modifier = {
+					factor = 0
+					diplomacy == 0
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 5
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 10
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 15
+				}
+				mult_modifier = {
+					factor = 1.5
+					diplomacy = 20
+				}
+				mult_modifier = {
+					factor = 0
+					intrigue == 0
+				}
+				mult_modifier = {
+					factor = 1.5
+					intrigue = 5
+				}
+				mult_modifier = {
+					factor = 1.5
+					intrigue = 10
+				}
+				mult_modifier = {
+					factor = 1.5
+					intrigue = 15
+				}
+				mult_modifier = {
+					factor = 1.5
+					intrigue = 20
+				}
+				mult_modifier = {
+					factor = 2
+					OR = {
+						trait = socializer
+						trait = master_schemer
+					}
+				}
+			}
+			20 = {#neutral
+				set_character_flag = orfelec_neutral
+			}
+			40 = {#bad
+				set_character_flag = orfelec_bad
+				mult_modifier = {
+					factor = 1.5
+					diplomacy == 0
+				}
+				mult_modifier = {
+					factor = 0.75
+					diplomacy = 5
+				}
+				mult_modifier = {
+					factor = 0.75
+					diplomacy = 10
+				}
+				mult_modifier = {
+					factor = 0.75
+					diplomacy = 15
+				}
+				mult_modifier = {
+					factor = 0
+					diplomacy = 20
+				}
+				mult_modifier = {
+					factor = 0.75
+					intrigue == 0
+				}
+				mult_modifier = {
+					factor = 0.75
+					intrigue = 5
+				}
+				mult_modifier = {
+					factor = 0.75
+					intrigue = 10
+				}
+				mult_modifier = {
+					factor = 0.75
+					intrigue = 15
+				}
+				mult_modifier = {
+					factor = 0
+					intrigue = 20
+				}
+				mult_modifier = {
+					factor = 0
+					OR = {
+						trait = socializer
+						trait = schemer
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event ={#resolved
+	id = orfelection.12
+	desc = {
+		trigger = { has_character_flag = orfelec_good}
+		text =EVTDESC_orfelec_resolve_good_example
+	}
+	desc = {
+		trigger = { has_character_flag = orfelec_good}
+		text =EVTDESC_orfelec_resolve_neutral_example
+	}
+	desc = {
+		trigger = { has_character_flag = orfelec_good}
+		text =EVTDESC_orfelec_resolve_bad_example
+	}
+	#picture = something
+	
+	only_playable = yes
+	capable_only = yes
+	is_triggered_only = yes
+	
+	option = {#idk, maybe there should be more options that only one show.
+		name = EVTOPT_orfelec_resolve_example
+	}
+}
+
+
+character_event ={#Merchants arrive
+	id = 13
+	desc = EVTDESC_orfelec_problem_merchants
+	
+	only_playable = yes
+	capable_only = yes
+	is_triggered_only = yes#i..think? maybe we will do a tombola, maybe we will have a MTTH on election events
+	
+	
+	immediate = {
+		narrative_Event = {id = orfelection.14 days = 7}
+	}
+	option = {
+		name = EVTOPTA_orfelec_problem_merchants
+		set_character_flag = orfelec_chose_A#those flags may be redundant if we determine the score here, so I might remove them later
+		random_list = {
+			10 = {#good
+				set_character_flag = orfelec_good
+				mult_modifier = {
+					factor = 0
+					stewardship == 0
+				}
+				mult_modifier = {
+					factor = 2
+					stewardship = 5
+				}
+				mult_modifier = {
+					factor = 2
+					stewardship = 10
+				}
+				mult_modifier = {
+					factor = 2
+					stewardship = 15
+				}
+				mult_modifier = {
+					factor = 2
+					stewardship = 20
+				}
+				mult_modifier = {
+					factor = 2
+					trait = administrator
+				}
+			}
+			20 = {#neutral
+				set_character_flag = orfelec_neutral
+			}
+			40 = {#bad
+				set_character_flag = orfelec_bad
+				mult_modifier = {
+					factor = 2
+					stewardship == 0
+				}
+				mult_modifier = {
+					factor = 0.5
+					stewardship = 5
+				}
+				mult_modifier = {
+					factor = 0.5
+					stewardship = 10
+				}
+				mult_modifier = {
+					factor = 0.5
+					stewardship = 15
+				}
+				mult_modifier = {
+					factor = 0
+					stewardship = 20
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_orfelec_problem_merchants
+		wealth = - 50
+		set_character_flag = orfelec_chose_B
+		random_list = {
+			10 = {#good			
+				set_character_flag = orfelec_good
+			}
+			20 = {#neutral
+				set_character_flag = orfelec_neutral
+			}
+			40 = {#bad
+				set_character_flag = orfelec_bad
+			}
+		}
+	}
+	option = {
+		name = EVTOPTC_orfelec_problem_merchants
+		set_character_flag = orfelec_chose_C
+		random_list = {
+			20 = {#good
+				set_character_flag = orfelec_good
+			}
+			20 = {#neutral
+				set_character_flag = orfelec_neutral
+			}
+			20 = {#bad
+				set_character_flag = orfelec_bad
+			}
+		}
+	}
+}
+
+character_event ={#resolved
+	id = 14
+	desc = {
+		trigger = { has_character_flag = orfelec_good}
+		text =EVTDESC_orfelec_resolve_good_merchants
+	}
+	desc = {
+		trigger = { has_character_flag = orfelec_good}
+		text =EVTDESC_orfelec_resolve_neutral_merchants
+	}
+	desc = {
+		trigger = { has_character_flag = orfelec_good}
+		text =EVTDESC_orfelec_resolve_bad_merchants
+	}
+	only_playable = yes
+	capable_only = yes
+	is_triggered_only = yes
+	option = {#idk, maybe there should be more options that only one show.
+		name = EVTOPT_orfelec_resolve_merchants
+	}
+}
+
+##A TEMPLATE FOR ELECTION EVENTS
+
+# character_event ={#a problem occurs
+	# desc = EVTDESC_orfelec_problem_example
+	
+	# only_playable = yes
+	# capable_only = yes
+	# is_triggered_only = yes#i..think? maybe we will do a tombola, maybe we will have a MTTH on election events
+	
+	
+	# immediate = {
+		# narrative_Event = {id = orfelection.nextnumber days = 7}
+	# }
+	# option = {#skill one
+		# name = EVTOPTA_orfelec_problem_example
+		# set_character_flag = orfelec_chose_A#those flags may be redundant if we determine the score here, so I might remove them later
+		# random_list = {
+			# 10 = {#good
+				## mult modifiers go here
+				# set_character_flag = orfelec_good
+			# }
+			# 20 = {#neutral
+				# set_character_flag = orfelec_neutral
+			# }
+			# 10 = {#bad
+				# set_character_flag = orfelec_bad
+			# }
+		# }
+	# }
+	# option = {
+		# name = EVTOPTB_orfelec_problem_example
+		# set_character_flag = orfelec_chose_B
+		# random_list = {
+			# 10 = {#good			
+				# set_character_flag = orfelec_good
+			# }
+			# 20 = {#neutral
+				# set_character_flag = orfelec_neutral
+			# }
+			# 10 = {#bad
+				# set_character_flag = orfelec_bad
+			# }
+		# }
+	# }
+	# option = {
+		# name = EVTOPTC_orfelec_problem_example
+		# set_character_flag = orfelec_chose_C
+		# random_list = {
+			# 10 = {#good
+				# set_character_flag = orfelec_good
+			# }
+			# 20 = {#neutral
+				# set_character_flag = orfelec_neutral
+			# }
+			# 10 = {#bad
+				# set_character_flag = orfelec_bad
+			# }
+		# }
+	# }
+# }
+
+
+# character_event ={#resolved
+	# desc = {
+		# trigger = { has_character_flag = orfelec_good}
+		# text =EVTDESC_orfelec_resolve_good_example
+	# }
+	# desc = {
+		# trigger = { has_character_flag = orfelec_good}
+		# text =EVTDESC_orfelec_resolve_neutral_example
+	# }
+	# desc = {
+		# trigger = { has_character_flag = orfelec_good}
+		# text =EVTDESC_orfelec_resolve_bad_example
+	# }
+	# only_playable = yes
+	# capable_only = yes
+	# is_triggered_only = yes
+	# option = {#idk, maybe there should be more options that only one show.
+		# name = EVTOPT_orfelec_resolve_example
+	# }
+# }
