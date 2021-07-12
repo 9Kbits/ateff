@@ -21,7 +21,20 @@ character_event = {
 	
 	trigger = {
 		OR = {
-			NOT = { government = open_range_feudalism_government }
+			AND = {
+				NOT = { government = open_range_feudalism_government }
+				any_province_holding = {
+					OR = {
+						has_building = open_range_1
+						has_building = open_range_2
+						has_building = open_range_3
+						has_building = open_range_4
+						has_building = open_range_5
+						has_building = open_range_6
+						has_building = open_range_7
+					}
+				}
+			}
 			AND = {
 				num_of_empty_holdings = 0
 				NOT = { num_of_empty_holdings = 1 }

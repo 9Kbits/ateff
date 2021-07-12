@@ -162,6 +162,10 @@ character_event = {
 				NOT = { has_character_flag = opponent_1_party_not_found }
 			}
 		}
+		orf_opponent_candidate_1 = {
+			{ letter_event = { id = orfelection.3 days = 5}
+			save_event_target_as = election_oponent
+		}
 	}
 	option = { 
 		name = EVTOPTA_orfelection_opponent_party
@@ -171,12 +175,20 @@ character_event = {
 				NOT = { has_character_flag = opponent_1_party_not_found }
 			}
 		}
+		orf_opponent_candidate_1 = {
+			{ letter_event = { id = orfelection.3 days = 5}
+			save_event_target_as = election_oponent
+		}
 	}
 	
 	option = {
 		name = EVTOPTA_orfelection_opponent_opponent
 		trigger = {
 			NOT = { has_character_flag = opponent_2_not_found }
+		}
+		orf_opponent_candidate_2 = {
+			{ letter_event = { id = orfelection.3 days = 5}
+			save_event_target_as = election_oponent
 		}
 	}
 	
@@ -185,7 +197,169 @@ character_event = {
 	}
 }
 
-haracter_event ={#local meeting
+letter_event = {
+	id = orfelection.3
+	title = EVTTITLE_orf_election_inform
+	
+	picture = GFX_evt_battle
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		government = open_range_feudalism_government
+	}
+	
+	desc = {
+		text = EVTDESC_orf_election_inform
+	}
+	option = { 
+		name = EVTOPTA_orf_election_inform_run_against
+		FROM = { character_event = { id = orfelection.4  days = 10 } }
+		ROOT = { character_event = { id = orfelection.4  days = 10 } }
+		FROM = { character_event = { id = orfelection.8  days = 125 } }
+	}
+	
+	option = {
+		name = EVTOPTA_orf_election_inform_blackmail
+	}
+	
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = EVTOPTA_orf_election_inform_step_down
+		FROM = { character_event = { id = orfelection.5  days = 10 } }
+	}
+}
+
+letter_event = {
+	id = orfelection.4
+	title = EVTTITLE_orf_election_campaign
+	
+	picture = GFX_evt_battle
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		government = open_range_feudalism_government
+	}
+	
+	desc = {
+		text = EVTDESC_orf_election_inform
+	}
+	option = { 
+		name = EVTOPTA_orfelection_opponent_appointee
+		trigger = {
+			AND = {
+				NOT = { has_character_flag = opponent_1_appointee_not_found }
+				NOT = { has_character_flag = opponent_1_party_not_found }
+			}
+		}
+	}
+	option = { 
+		name = EVTOPTA_orf_election_campaign_range
+		character_event = {id = orfelection.11 days = 25}	
+	}
+	
+	option = {
+		name = EVTOPTA_orf_election_campaign_towns
+		character_event = {id = orfelection.13 days = 25}	
+	}
+	
+	option = {
+		name = EVTOPTA__orf_election_campaign_hold_meeting
+#		character_event = {id = orfelection.11 days = 25}
+	}
+	
+	option = {
+		name = EVTOPTA__orf_election_campaign_done_campaigning
+	}
+}
+
+letter_event = {
+	id = orfelection.5
+	title = EVTTITLE_orf_election_resigned
+	
+	picture = GFX_evt_battle
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		is_playable = yes
+		government = open_range_feudalism_government
+	}
+	
+	desc = {
+		text = EVTDESC_orf_election_resigned
+	}
+	option = { 
+		name = EVTOPTA_orf_election_resigned_that_was_easy
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_12 } }
+			FROM = { remove_title = title_senator_12 }
+			ROOT = { give_title = title_senator_12 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_11 } }
+			FROM = { remove_title = title_senator_11 }
+			ROOT = { give_title = title_senator_11 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_10 } }
+			FROM = { remove_title = title_senator_10 }
+			ROOT = { give_title = title_senator_10 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_9 } }
+			FROM = { remove_title = title_senator_9 }
+			ROOT = { give_title = title_senator_9 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_8 } }
+			FROM = { remove_title = title_senator_8 }
+			ROOT = { give_title = title_senator_8 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_7 } }
+			FROM = { remove_title = title_senator_7 }
+			ROOT = { give_title = title_senator_7 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_6 } }
+			FROM = { remove_title = title_senator_6 }
+			ROOT = { give_title = title_senator_6 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_5 } }
+			FROM = { remove_title = title_senator_5 }
+			ROOT = { give_title = title_senator_5 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_4 } }
+			FROM = { remove_title = title_senator_4 }
+			ROOT = { give_title = title_senator_4 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_3 } }
+			FROM = { remove_title = title_senator_3 }
+			ROOT = { give_title = title_senator_3 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_2 } }
+			FROM = { remove_title = title_senator_2 }
+			ROOT = { give_title = title_senator_2 }
+		}
+		if = {
+			limit = { FROM = { has_minor_title = title_senator_1 } }
+			FROM = { remove_title = title_senator_1 }
+			ROOT = { give_title = title_senator_1 }
+		}		
+	}
+}
+
+character_event ={#local meeting
 	id = orfelection.11
 	desc = EVTDESC_orfelec_problem_minor_meeting
 	#picture = something
@@ -196,8 +370,7 @@ haracter_event ={#local meeting
 	
 	
 	immediate = {
-		narrative_Event = {id = orfelection.12 days = 7}
-		
+		character_event = {id = orfelection.12 days = 7}	
 	}
 	option = {#skill one
 		name = EVTOPTA_orfelec_problem_minor_meeting
