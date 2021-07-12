@@ -146,31 +146,6 @@ narrative_event = {
 					}
 					narrative_event = { id = charismatic.28 }
 				}
-				6 = { #emperor prophecy
-					mult_modifier = {
-						factor = 0
-						OR = {
-							num_of_king_titles <=1
-							num_of_emperor_titles >=1
-							any_demesne_title = {
-								limit = {
-									tier = KING
-								}
-								num_of_realm_counties = {
-  							  		value = 0
-    								title = THIS
-								}
-							}
-						}
-					}
-					mult_modifier = {
-						factor = 4
-						OR = {
-							trait = ambitious
-						}
-					}
-					narrative_event = { id = charismatic.31 }
-				}
 				40 = { #children while old prophecy
 					mult_modifier = {
 						factor = 0
