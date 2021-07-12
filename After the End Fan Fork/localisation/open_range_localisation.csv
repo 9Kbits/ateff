@@ -29,3 +29,37 @@ EVTOPTA_orfelection_opponent_appointee;[orf_opponent_candidate_1.GetParty] [orf_
 EVTOPTA_orfelection_opponent_party;Fellow [Root.GetParty] [orf_opponent_candidate_2.getTitledFirstName] is up for election.;;;;;;;;;;;;;x
 EVTOPTA_orfelection_opponent_opponent;[orf_opponent_candidate_2.GetParty] [orf_opponent_candidate_2.getTitledFirstName] is up for election.;;;;;;;;;;;;;x
 EVTOPTA_orfelection_nevermind;Maybe I should wait a bit before I run.;;;;;;;;;;;;;x
+
+########### format of all election campaign events ####################
+#situation
+#x = event specific identifier such as "minor_meeting"
+
+EVTDESC_orfelec_problem_x;generic;;;;;;;;;;;;x
+EVTOPTA_orfelec_problem_x;generic;;;;;;;;;;;;x
+EVTOPTB_orfelec_problem_x;generic;;;;;;;;;;;;x
+EVTOPTC_orfelec_problem_x;generic;;;;;;;;;;;;x
+
+#result
+EVTDESC_orfelec_resolve_good_x;generic;;;;;;;;;;;;x
+EVTDESC_orfelec_resolve_neutral_x;generic;;;;;;;;;;;;x
+EVTDESC_orfelec_resolve_bad_x;generic;;;;;;;;;;;;x
+EVTOPT_orfelec_resolve_good_x;generic;;;;;;;;;;;;x
+EVTOPT_orfelec_resolve_neutral_x;generic;;;;;;;;;;;;x
+EVTOPT_orfelec_resolve_bad_x;generic;;;;;;;;;;;;x
+
+###########
+
+#situation
+EVTDESC_orfelec_problem_minor_meeting;As the hall finds itself filled by dozens of members of local nobility alongside their families it dawns upon you the barbeque has begun. You pace back and forth in a backroom, mentally preparing for the words you will inevitably have to exchange with these people, until eventually you peek out into the main hall and see that the majority of them are partaking in the merriment, generously provided on your behalf. All the pieces are set, with these fellow nobles satisfied from fine meals and fine wine your potential to maneuver the situation to your benefit is at its greatest. You enter the main room, ready to deliver a speech before the crowd...;;;;;;;;;;;;x
+EVTOPTA_orfelec_problem_minor_meeting;Speak on the shared values you have with your guests;;;;;;;;;;;;x
+EVTOPTB_orfelec_problem_minor_meeting;Move the crowd with an emotional personal story;;;;;;;;;;;;x
+EVTOPTC_orfelec_problem_minor_meeting;Flatter yourself before the crowd;;;;;;;;;;;;x
+EVTOPTD_orfelec_problem_minor_meeting;Try to say whatever they want to hear, however they want to hear it.;;;;;;;;;;;;x
+
+#result
+EVTDESC_orfelec_resolve_good_minor_meeting;You draw the crowd's attention from your reserved seat at the feast table’s head, and instantly every eye in the room is on you. Your nerve nearly slips, but you go right into your prepared speech. Minutes pass, and the crowd remains silent as they hang on every syllable that exits your mouth as you speak about yourself and what they now believe to be your almost countless qualifications for the prestigious title of Senator. Finally, as you finish your speech with an ancient and famous quote, there is a silence, and then an applause!;;;;;;;;;;;;x
+EVTDESC_orfelec_resolve_neutral_minor_meeting;You draw the crowd's attention from your reserved seat at the feast table’s head, and instantly every eye in the room is on you. Your nerve nearly slips, and then it does. Your thoughts become inconsistent and you forget large parts of the speech you had memorized beforehand, but you substitute those parts well enough so as to not seem insane. Your speech ends on a fairly forgettable note. Your scalp begins to burn in embarrassment but quickly cools when you realize most of the barbeques attendees had either stopped paying attention at this point or never started, more interested in their drinks, meals, or prior conversations than whatever it is you stumbled through.;;;;;;;;;;;;x
+EVTDESC_orfelec_resolve_bad_minor_meeting;You draw the crowd's attention from your reserved seat at the feast table’s head, and instantly every eye in the room is on you. Your nerve slips so fast you don’t even realize how wildly you’re jumping between the handful of bullet points you had memorized beforehand. The sheer pressure from both the utter silence of the hall and seeing everyone’s eyes upon you causes you to stutter several times. You think you hear muffled laughter during one of your pauses. You manage to conclude your speech in a way you only realize afterwards sounds like a dirty joke. The silent room stays silent for multiple seconds too long, and you can see the previously lively room drain of color.;;;;;;;;;;;;x
+EVTOPT_orfelec_resolve_good_minor_meeting;The [Root.GetParty] cause has sway!;;;;;;;;;;;;x
+EVTOPT_orfelec_resolve_neutral_minor_meeting;Could have been worse!;;;;;;;;;;;;x
+EVTOPT_orfelec_resolve_bad_minor_meeting;By [Root.GetHighGodNameCap] the embarrassment might just kill me!;;;;;;;;;;;;x
