@@ -686,6 +686,13 @@ narrative_event = {
 	    	name = delightfully_devilish_anastasia
     		years = 3			
 		}
+		hidden_tooltip = {
+			e_dixie = {
+				holder_scope = {
+					add_trait = flowered
+				}
+			}
+		}
 	}
 }
 narrative_event = {
@@ -711,9 +718,7 @@ narrative_event = {
 		name = "EVTOPT_anastasia5a"
 		custom_tooltip = { text = TXT_anastasia5a }
 		e_dixie = {
-			holder_scope = {
-				add_spouse = ROOT
-			}
+			narrative_event = { id = hanovers.12 }
 		}
 	}
 }
@@ -756,6 +761,66 @@ narrative_event = {
 		}
 	}
 }
+
+narrative_event = {
+	id = hanovers.12
+	title= EVTTITLE_anastasiaEMP1
+	desc = "EVTDESC_anastasiaEMP1"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_narrative_frame_diplomacy
+	prisoner = no
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT_anastasiaEMP1a"
+		d_inner_banks = {
+			holder_scope = {
+				add_spouse = ROOT
+			}
+		}
+		hidden_tooltip = {
+			remove_trait = flowered
+			d_inner_banks = {
+				holder_scope = {
+					remove_trait = flowered
+				}
+			}
+		}
+		ai_chance = { factor = 10 }
+	}
+	
+	option = {
+		name = "EVTOPT_anastasiaEMP1b"
+		ai_chance = { factor = 1 }
+		e_dixie = {
+			narrative_event = { id = hanovers.13 }
+		}
+		hidden_tooltip = {
+			remove_trait = flowered
+			d_inner_banks = {
+				holder_scope = {
+					remove_trait = flowered
+				}
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = hanovers.13
+	title= EVTTITLE_anastasiaEMP2
+	desc = "EVTDESC_anastasiaEMP2"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_narrative_frame_diplomacy
+	prisoner = no
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT_anastasiaEMP2a"
+		custom_tooltip = { text = TXT_anastasiaEMP2 }
+		add_trait = wroth
+		ai_chance = { factor = 10 }
+	}
 
 
 narrative_event = {
