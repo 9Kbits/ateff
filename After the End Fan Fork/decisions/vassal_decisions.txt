@@ -425,8 +425,18 @@ targetted_decisions = {
 				government = merchant_republic_government
 				religion = reform
 				religion = anabaptist
+				religion_group = afro_syncretic
+				religion = peyotist
+				religion = orthodox
+				religion = strangite
+				religion = mictlanec
+				religion = qabantajik
 				AND = {
 					religion_group = pagan_group
+					is_reformed_religion = no
+				}
+				AND = {
+					religion_group = american_native
 					is_reformed_religion = no
 				}
 			}
@@ -435,7 +445,6 @@ targetted_decisions = {
 			NOR = {
 				character = FROM
 				religion = FROM
-				trait = incapable
 			}
 			is_adult = yes
 			liege = {
@@ -449,26 +458,35 @@ targetted_decisions = {
 			}
 		}
 		allow = {
-			OR = {
+			#OR = {
 				NOT = {
 					has_opinion_modifier = {	#Can not try to convert if recently failed to convert
 						who = FROM
 						modifier = tried_to_convert_me
 					}
 				}
-				AND = {
-					prisoner = yes
-					host = {
-						character = FROM
-					}
-				}
-			}				
+				#AND = {
+					#prisoner = yes
+					#host = {
+						#character = FROM
+					#}
+				#}
+			#}
+			has_regent = no
+			NOT = {
+				religion = FROM
+			}
+			is_adult = yes
+			liege = {
+				character = FROM
+			}
+			is_incapable = no
 		}
 		effect = {
-			letter_event = {
-				id = demand_conversion.1
-				days = 3
-				random = 7
+			hidden_tooltip = {
+				ROOT = {
+					character_event = {id = demand_conversion.1 days = 3}
+				}
 			}
 		}
 		revoke_allowed = {
@@ -478,14 +496,198 @@ targetted_decisions = {
 			factor = 1
 			modifier = {
 				factor = 0.001	#slow it down
-			}
-			modifier = {
 				limit = {	
 					AND = {
 						has_law = religion_tolerance_1
 						NOT = { trait = zealous }
 					}
 				}
+			}
+		}
+		ai_acceptance = {
+			acceptance_score =
+			factor = 0
+			
+			additive_modifier = {
+				value = 10
+				opinion = {who =  FROM value >=95}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = 9
+				AND = {
+					opinion = {who =  FROM value >=85}
+					opinion = {who =  FROM value <95}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = 8
+				AND = {
+					opinion = {who =  FROM value >=75}
+					opinion = {who =  FROM value <85}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = 7
+				AND = {
+					opinion = {who =  FROM value >=65}
+					opinion = {who =  FROM value <75}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = 6
+				AND = {
+					opinion = {who =  FROM value >=55}
+					opinion = {who =  FROM value <65}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = 5
+				AND = {
+					opinion = {who =  FROM value >=45}
+					opinion = {who =  FROM value <55}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = 4
+				AND = {
+					opinion = {who =  FROM value >=35}
+					opinion = {who =  FROM value <45}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = 3
+				AND = {
+					opinion = {who =  FROM value >=25}
+					opinion = {who =  FROM value <35}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = 2
+				AND = {
+					opinion = {who =  FROM value >=15}
+					opinion = {who =  FROM value <25}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = 1
+				AND = {
+					opinion = {who =  FROM value >=5}
+					opinion = {who =  FROM value <15}
+				}
+				localisation_key = REASON_OPINION
+			}
+			#additive_modifier = {#redundant, but i'm keeping this for clarity's sake
+			#	value = 0
+			#	AND = {
+			#		opinion = {who = FROM value >=-5}
+			#		opinion = {who = FROM value <5}
+			#	}
+			#	localisation_key = REASON_OPINION
+			#}
+			additive_modifier = {
+				value = -1
+				AND = {
+					opinion = {who = FROM value >-15}
+					opinion = {who = FROM value <=-5}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = -2
+				AND = {
+					opinion = {who = FROM value >-25}
+					opinion = {who = FROM value <=-15}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = -3
+				AND = {
+					opinion = {who = FROM value >-35}
+					opinion = {who = FROM value <=-25}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = -4
+				AND = {
+					opinion = {who = FROM value >-45}
+					opinion = {who = FROM value <=-35}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = -5
+				AND = {
+					opinion = {who = FROM value >-55}
+					opinion = {who = FROM value <=-45}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = -6
+				AND = {
+					opinion = {who = FROM value >-65}
+					opinion = {who = FROM value <=-55}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = -7
+				AND = {
+					opinion = {who = FROM value >-75}
+					opinion = {who = FROM value <=-65}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = -8
+				AND = {
+					opinion = {who = FROM value >-85}
+					opinion = {who = FROM value <=-75}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = -9
+				AND = {
+					opinion = {who = FROM value >-95}
+					opinion = {who = FROM value <=-85}
+				}
+				localisation_key = REASON_OPINION
+			}
+			additive_modifier = {
+				value = -10
+				opinion = {who = FROM value <=-95}
+				localisation_key = REASON_OPINION
+			}
+			
+			
+			additive_modifier  = {#religion is hard to convert
+				value = -3
+				ROOT = {
+					is_hard_to_convert = yes
+				}
+				localisation_key = REASON_HARD_TO_CONVERT
+			}
+			additive_modifier = {#base reluctance
+				value = -1
+				ROOT = {is_ruler = yes}
+				localisation_key = REASON_IS_RULER
+			}
+			additive_modifier = {#base reluctance
+				value = -3
+				always = yes
+				localisation_key = REASON_BASE_RELUCTANCE
 			}
 		}
 	}

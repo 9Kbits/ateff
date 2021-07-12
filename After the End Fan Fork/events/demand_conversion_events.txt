@@ -116,102 +116,7 @@ letter_event = {
 			}
 		}
 		ai_chance = {
-			factor = 100
-			#Less likely to convert if he doesn't like you
-			modifier = {
-				factor = 1.5
-				NOT = {
-					opinion = {
-						who = FROMFROM
-						value = -25
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				NOT = {
-					opinion = {
-						who = FROMFROM
-						value = -50
-					}
-				}
-			}
-			modifier = {
-				factor = 1.5
-				NOT = {
-					opinion = {
-						who = FROMFROM
-						value = -75
-					}
-				}
-			}
-			#Less likely to convert if zealous or devout
-			modifier = {
-				factor = 10.0
-				OR = {
-					trait = zealous
-					trait = devout
-				}
-			}
-			#Less likely to convert if learning is higher than liege's
-			modifier = {
-				factor = 1.5
-				attribute_diff = {
-					attribute = learning
-					character = FROMFROM
-					value = 5
-				}
-			}
-			modifier = {
-				factor = 1.5
-				attribute_diff = {
-					attribute = learning
-					character = FROMFROM
-					value = 10
-				}
-			}
-			modifier = {
-				factor = 1.5
-				attribute_diff = {
-					attribute = learning
-					character = FROMFROM
-					value = 15
-				}
-			}
-			modifier = {
-				factor = 1.5
-				attribute_diff = {
-					attribute = learning
-					character = FROMFROM
-					value = 20
-				}
-			}
-			modifier = {
-				factor = 1.5
-				attribute_diff = {
-					attribute = learning
-					character = FROMFROM
-					value = 25
-				}
-			}
-
-			#Less likely to convert if organized religion
-			modifier = {
-				factor = 2.0
-				organized_religion_trigger = yes
-			}
-			#Less likely to convert if different religion group
-			modifier = {
-				factor = 2.0
-				NOT = {
-					religion_group = FROMFROM
-				}
-			}
-			#Less likely to convert if a vassal rather than courtier
-			modifier = {
-				factor = 1.2
-				is_ruler = yes
-			}
+			factor = 0
 		}
 		tooltip = {
 			opinion = {
@@ -232,7 +137,7 @@ letter_event = {
 
 #Notification event: accepted conversion
 letter_event = {
-	id = EVTDESC_demand_conversion_2
+	id = EVTDESC_demand_conversion_2ot
 	desc = EVTDESC202
 	border = GFX_event_letter_frame_religion
 	
