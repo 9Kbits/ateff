@@ -210,7 +210,8 @@ character_event = {
 		show_portrait = event_target:orf_opponent_candidate_appointee
 		#set this particular target as THE target and send letter
 		event_target:orf_opponent_candidate_appointee = { save_event_target_as = orf_election_opponent_defender }
-		event_target:orf_election_opponent_defender = { letter_event = { id = orfelection.3 } }
+		ROOT = { save_event_target_as = orf_election_opponent_attacker }
+		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.3 } }
 		#remove repeat blockers
 	}
 	option = { 
@@ -222,7 +223,8 @@ character_event = {
 		show_portrait = event_target:orf_opponent_candidate_party
 		#set this particular target as THE target and send letter
 		event_target:orf_opponent_candidate_party = { save_event_target_as = orf_election_opponent_defender }
-		event_target:orf_election_opponent_defender = { letter_event = { id = orfelection.3 } }
+		ROOT = { save_event_target_as = orf_election_opponent_attacker }
+		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.3 } }
 	}
 	
 	option = {
@@ -233,7 +235,8 @@ character_event = {
 		show_portrait = event_target:orf_opponent_candidate_outsider
 		#set this particular target as THE target and send letter
 		event_target:orf_opponent_candidate_outsider = { save_event_target_as = orf_election_opponent_defender }
-		event_target:orf_election_opponent_defender = { letter_event = { id = orfelection.3 } }
+		ROOT = { save_event_target_as = orf_election_opponent_attacker }
+		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.3 } }
 		#remove repeat blockers
 	}
 	
@@ -242,7 +245,7 @@ character_event = {
 	}
 }
 
-letter_event = {
+character_event = {
 	id = orfelection.3
 	title = EVTTITLE_orf_election_inform
 	
@@ -260,17 +263,18 @@ letter_event = {
 	}
 	option = { 
 		name = EVTOPTA_orf_election_inform_run_against
-		
+		ROOT = { save_event_target_as = orf_election_opponent_defender }
 		FROM = { save_event_target_as = orf_election_opponent_attacker }
 		
-		orf_election_opponent_attacker = { letter_event = { id = orfelection.4  days = 10 } }
-		orf_election_opponent_defender = { letter_event = { id = orfelection.4  days = 10 } }
-		orf_election_opponent_attacker = { letter_event = { id = orfelection.8  days = 125 } }
-		orf_election_opponent_defender = { letter_event = { id = orfelection.8  days = 130 } }
+		
+		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.4  days = 10 } }
+		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.4  days = 10 } }
+		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.8  days = 125 } }
+		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.8  days = 130 } }
 	}
 }
 
-letter_event = {
+character_event = {
 	id = orfelection.4
 	title = EVTTITLE_orf_election_campaign
 	
@@ -298,7 +302,7 @@ letter_event = {
 	
 	option = {
 		name = EVTOPTA__orf_election_campaign_hold_meeting
-#		character_event = {id = orfelection.11 days = 25}
+		character_event = {id = orfelection.11 days = 25}
 	}
 	
 	option = {
@@ -306,7 +310,7 @@ letter_event = {
 	}
 }
 
-letter_event = {
+character_event = {
 	id = orfelection.5
 	title = EVTTITLE_orf_election_resigned
 	
@@ -387,7 +391,7 @@ letter_event = {
 	}
 }
 
-character_event ={#local meeting
+character_event ={
 	id = orfelection.11
 	desc = EVTDESC_orfelec_problem_minor_meeting
 	#picture = something
@@ -725,7 +729,7 @@ character_event ={#local meeting
 	}
 }
 
-character_event ={#resolved
+character_event ={
 	id = orfelection.12
 	desc = {
 		trigger = { has_character_flag = orfelec_good}
@@ -752,7 +756,7 @@ character_event ={#resolved
 
 
 character_event ={#Merchants arrive
-	id = 13
+	id = orfelection.13
 	desc = EVTDESC_orfelec_problem_merchants
 	
 	only_playable = yes
@@ -856,7 +860,7 @@ character_event ={#Merchants arrive
 }
 
 character_event ={#resolved
-	id = 14
+	id = orfelection.14
 	desc = {
 		trigger = { has_character_flag = orfelec_good}
 		text =EVTDESC_orfelec_resolve_good_merchants
