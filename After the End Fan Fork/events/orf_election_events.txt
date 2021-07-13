@@ -2,9 +2,8 @@ namespace = orfelection
 
 character_event = {
 	id = orfelection.1
-	title = EVTTITLE_candidate_finder
 	
-	desc = EVTDESC_candidate_finder
+	desc = EVTDESC_orf_candidates_to_run_against
 	
 	is_triggered_only = yes
 	
@@ -17,10 +16,145 @@ character_event = {
 	immediate = {
 		
 		#find member of own party set to if found set to opponent_candidate_1 and set opponent_1_found
-		liege = {
-			any_voter = {
-				if = {
+		if = {
+			limit = { trait = party_populist }
+			liege = { 
+				random_voter = {
 					limit = { 
+						trait = party_populist
+						NOT = { has_character_modifier = orf_election_cooldown }
+						NOT = {
+							OR = {
+								has_job_title = job_chancellor
+								has_job_title = job_marshal
+								has_job_title = job_treasurer
+								has_job_title = job_spymaster
+								has_job_title = job_spiritual
+							}
+						}
+					}
+					save_event_target_as = orf_opponent_candidate_party
+					root = { set_character_flag = orf_opponent_1_party_found }
+					set_character_flag = temp_block_orf
+				}
+			}
+		}
+		if = {
+			limit = { trait = party_magnate }
+			liege = { 
+				random_voter = {
+					limit = { 
+						trait = party_magnate
+						NOT = { has_character_modifier = orf_election_cooldown }
+						NOT = {
+							OR = {
+								has_job_title = job_chancellor
+								has_job_title = job_marshal
+								has_job_title = job_treasurer
+								has_job_title = job_spymaster
+								has_job_title = job_spiritual
+							}
+						}
+					}
+					save_event_target_as = orf_opponent_candidate_party
+					root = { set_character_flag = orf_opponent_1_party_found }
+					set_character_flag = temp_block_orf
+				}
+			}
+		}
+		if = {
+			limit = { trait = party_royalist }
+			liege = { 
+				random_voter = {
+					limit = { 
+						trait = party_royalist
+						NOT = { has_character_modifier = orf_election_cooldown }
+						NOT = {
+							OR = {
+								has_job_title = job_chancellor
+								has_job_title = job_marshal
+								has_job_title = job_treasurer
+								has_job_title = job_spymaster
+								has_job_title = job_spiritual
+							}
+						}
+					}
+					save_event_target_as = orf_opponent_candidate_party
+					root = { set_character_flag = orf_opponent_1_party_found }
+					set_character_flag = temp_block_orf
+				}
+			}
+		}
+		if = {
+			limit = { trait = party_theocratic }
+			liege = { 
+				random_voter = {
+					limit = { 
+						trait = party_theocratic
+						NOT = { has_character_modifier = orf_election_cooldown }
+						NOT = {
+							OR = {
+								has_job_title = job_chancellor
+								has_job_title = job_marshal
+								has_job_title = job_treasurer
+								has_job_title = job_spymaster
+								has_job_title = job_spiritual
+							}
+						}
+					}
+					save_event_target_as = orf_opponent_candidate_party
+					root = { set_character_flag = orf_opponent_1_party_found }
+					set_character_flag = temp_block_orf
+				}
+			}
+		}
+		if = {
+			limit = { trait = party_opposition }
+			liege = { 
+				random_voter = {
+					limit = { 
+						trait = party_opposition
+						NOT = { has_character_modifier = orf_election_cooldown }
+						NOT = {
+							OR = {
+								has_job_title = job_chancellor
+								has_job_title = job_marshal
+								has_job_title = job_treasurer
+								has_job_title = job_spymaster
+								has_job_title = job_spiritual
+							}
+						}
+					}
+					save_event_target_as = orf_opponent_candidate_party
+					root = { set_character_flag = orf_opponent_1_party_found }
+					set_character_flag = temp_block_orf
+				}
+			}
+		}
+		#find appointed council member to run against, if found set to opponent_candidate_1 and set opponent_1_found this is intended to overwrite the first candidate.
+		liege = {
+			random_voter = {
+				limit = { 
+					has_character_flag = unelected_senator
+					#has never been elected, this means they were appointed and can be run against immediately (maybe add cooldown of 2 years)
+					NOT = { 
+						has_character_flag = orf_won_election
+					}
+					NOT = { 
+						has_character_flag = temp_block_orf
+					}
+				}
+				root = { set_character_flag = orf_opponent_1_appointee_found }
+				save_event_target_as = orf_opponent_candidate_appointee
+				set_character_flag = temp_block_orf
+			}
+		}
+		
+		#find a ruler of a different party to run against, if found set to opponent_candidate_2 and set opponent_2_found
+		liege = {
+			random_voter = {
+				limit = { 
+					NOT = {
 						OR = {
 							AND = {
 								trait = party_populist
@@ -43,153 +177,64 @@ character_event = {
 								root = { trait = party_opposition }
 							}
 						}
-						NOT = { has_character_modifier = orf_election_cooldown }
-						NOT = {
-							OR = {
-								has_job_title = job_chancellor
-								has_job_title = job_marshal
-								has_job_title = job_treasurer
-								has_job_title = job_spymaster
-								has_job_title = job_spiritual
-							}
+					}
+					NOT = { 
+						has_character_flag = temp_block_orf
+					}
+					NOT = { has_character_modifier = orf_election_cooldown }
+					NOT = {
+						OR = {
+							has_job_title = job_chancellor
+							has_job_title = job_marshal
+							has_job_title = job_treasurer
+							has_job_title = job_spymaster
+							has_job_title = job_spiritual
 						}
 					}
-					root = { set_character_flag = orf_opponent_1_found }
-					save_event_target_as = orf_opponent_candidate_1
-					
 				}
-				else = { 
-					set_character_flag = opponent_1_party_not_found
-				}
+				root = { set_character_flag = orf_opponent_2_found }
+				save_event_target_as = orf_opponent_candidate_outsider		
+				set_character_flag = temp_block_orf	
 			}
 		}
-		#find appointed council member to run against, if found set to opponent_candidate_1 and set opponent_1_found this is intended to overwrite the first candidate.
-		liege = {
-			any_voter = {
-				if = {
-					limit = { 
-							has_character_flag = unelected_senator
-							#has never been elected, this means they were appointed and can be run against immediately (maybe add cooldown of 2 years)
-							NOT = { has_character_flag = orf_won_election
-						}
-					}
-					root = { set_character_flag = orf_opponent_1_found }
-					save_event_target_as = orf_opponent_candidate_1
-				}
-				else = { 
-					set_character_flag = opponent_1_appointee_not_found
-				}
-			}
-		}
-		
-		#find a ruler of a different party to run against, if found set to opponent_candidate_2 and set opponent_2_found
-		liege = {
-			any_voter = {
-				if = {
-					limit = { 
-						NOT = {
-							OR = {
-								AND = {
-									trait = party_populist
-									root = { trait = party_populist }
-								}
-								AND = {
-									trait = party_magnate
-									root = { trait = party_magnate }
-								}
-								AND = {
-									trait = party_royalist
-									root = { trait = party_royalist }
-								}
-								AND = {
-									trait = party_theocratic
-									root = { trait = party_theocratic }
-								}
-								AND = {
-									trait = party_opposition
-									root = { trait = party_opposition }
-								}
-							}
-						}
-						NOT = { has_character_modifier = orf_election_cooldown }
-						NOT = {
-							OR = {
-								has_job_title = job_chancellor
-								has_job_title = job_marshal
-								has_job_title = job_treasurer
-								has_job_title = job_spymaster
-								has_job_title = job_spiritual
-							}
-						}
-					}
-					root = { set_character_flag = orf_opponent_1_found }
-					save_event_target_as = orf_opponent_candidate_2
-				}
-				else = { 
-					set_character_flag = opponent_2_not_found
-				}
-			}
-		}
+		#remove repeat blockers
+		event_target:orf_opponent_candidate_party = { remove_character_flag = temp_block_orf }
+		event_target:orf_opponent_candidate_appointee = { remove_character_flag = temp_block_orf }
+		event_target:orf_opponent_candidate_outsider = { remove_character_flag = temp_block_orf }
 	}	
-		
-	option = { 
-		character_event = { id = orfelection.2 }
-	}
-}
-
-character_event = {
-	id = orfelection.2
-	title = EVTTITLE_orf_election_candidates_found
-	
-	picture = GFX_evt_battle
-	border = GFX_event_narrative_frame_war
-	
-	is_triggered_only = yes
-	
-	trigger = {
-		is_playable = yes
-		government = open_range_feudalism_government
-	}
-	
-	desc = {
-		text = EVTDESC_orf_candidates_to_run_against
-	}
 	option = { 
 		name = EVTOPTA_orfelection_opponent_appointee
 		trigger = {
-			AND = {
-				NOT = { has_character_flag = opponent_1_appointee_not_found }
-				NOT = { has_character_flag = opponent_1_party_not_found }
-			}
+			has_character_flag = orf_opponent_1_appointee_found
 		}
-		orf_opponent_candidate_1 = {
-			{ letter_event = { id = orfelection.3 days = 5}
-			save_event_target_as = election_oponent
-		}
+		show_portrait = event_target:orf_opponent_candidate_appointee
+		#set this particular target as THE target and send letter
+		event_target:orf_opponent_candidate_appointee = { save_event_target_as = orf_election_opponent_defender }
+		event_target:orf_election_opponent_defender = { letter_event = { id = orfelection.3 } }
+		#remove repeat blockers
 	}
 	option = { 
 		name = EVTOPTA_orfelection_opponent_party
+		#remove repeat blockers
 		trigger = {
-			AND = {
-				has_character_flag = opponent_1_appointee_not_found
-				NOT = { has_character_flag = opponent_1_party_not_found }
-			}
+			has_character_flag = orf_opponent_1_party_found
 		}
-		orf_opponent_candidate_1 = {
-			{ letter_event = { id = orfelection.3 days = 5}
-			save_event_target_as = election_oponent
-		}
+		show_portrait = event_target:orf_opponent_candidate_party
+		#set this particular target as THE target and send letter
+		event_target:orf_opponent_candidate_party = { save_event_target_as = orf_election_opponent_defender }
+		event_target:orf_election_opponent_defender = { letter_event = { id = orfelection.3 } }
 	}
 	
 	option = {
 		name = EVTOPTA_orfelection_opponent_opponent
 		trigger = {
-			NOT = { has_character_flag = opponent_2_not_found }
+			has_character_flag = orf_opponent_2_found
 		}
-		orf_opponent_candidate_2 = {
-			{ letter_event = { id = orfelection.3 days = 5}
-			save_event_target_as = election_oponent
-		}
+		show_portrait = event_target:orf_opponent_candidate_outsider
+		#set this particular target as THE target and send letter
+		event_target:orf_opponent_candidate_outsider = { save_event_target_as = orf_election_opponent_defender }
+		event_target:orf_election_opponent_defender = { letter_event = { id = orfelection.3 } }
+		#remove repeat blockers
 	}
 	
 	option = {
@@ -215,21 +260,13 @@ letter_event = {
 	}
 	option = { 
 		name = EVTOPTA_orf_election_inform_run_against
-		FROM = { character_event = { id = orfelection.4  days = 10 } }
-		ROOT = { character_event = { id = orfelection.4  days = 10 } }
-		FROM = { character_event = { id = orfelection.8  days = 125 } }
-	}
-	
-	option = {
-		name = EVTOPTA_orf_election_inform_blackmail
-	}
-	
-	option = {
-		ai_chance = {
-			factor = 100
-		}
-		name = EVTOPTA_orf_election_inform_step_down
-		FROM = { character_event = { id = orfelection.5  days = 10 } }
+		
+		FROM = { save_event_target_as = orf_election_opponent_attacker }
+		
+		orf_election_opponent_attacker = { letter_event = { id = orfelection.4  days = 10 } }
+		orf_election_opponent_defender = { letter_event = { id = orfelection.4  days = 10 } }
+		orf_election_opponent_attacker = { letter_event = { id = orfelection.8  days = 125 } }
+		orf_election_opponent_defender = { letter_event = { id = orfelection.8  days = 130 } }
 	}
 }
 
@@ -248,15 +285,6 @@ letter_event = {
 	
 	desc = {
 		text = EVTDESC_orf_election_inform
-	}
-	option = { 
-		name = EVTOPTA_orfelection_opponent_appointee
-		trigger = {
-			AND = {
-				NOT = { has_character_flag = opponent_1_appointee_not_found }
-				NOT = { has_character_flag = opponent_1_party_not_found }
-			}
-		}
 	}
 	option = { 
 		name = EVTOPTA_orf_election_campaign_range
