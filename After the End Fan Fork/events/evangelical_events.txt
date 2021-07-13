@@ -4213,3 +4213,149 @@ narrative_event = {
 		}
 	}
 }
+
+narrative_event = {
+	id = eva.1001
+	title = EVTTITLE_hcc_solution_ram
+	desc = EVTDESC_hcc_solution_ram
+	picture = GFX_evt_siege
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	is_triggered_only = yes
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 149
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = westphalia_fix
+	}
+	
+	option = {
+		name = EVTOPTA_solution_ram
+		trigger = {
+			trait = bulldog_hcc
+		}
+		piety = -200
+	}
+	option = {
+		name = EVTOPTB_solution_ram
+		trigger = {
+			trait = ram_hcc
+		}
+		piety = 100
+		prestige = 500
+	}
+	option = {
+		name = EVTOPTC_solution_ram
+		trigger = {
+			NOR = {
+				trait = ram_hcc
+				trait = bulldog_hcc
+			}
+			OR = {
+				religion = evangelical
+				religion = antinomian
+				religion = charismatic
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_solution_ram
+		trigger = {
+			NOR = {
+				religion = evangelical
+				religion = antinomian
+				religion = charismatic
+			}
+		}
+	}
+}
+
+narrative_event = {
+	id = eva.1002
+	title = EVTTITLE_hcc_solution_bulldog
+	desc = EVTDESC_hcc_solution_bulldog
+	picture = GFX_evt_siege
+	border = GFX_event_narrative_frame_war
+	
+	only_playable = yes
+
+	major = yes
+	
+	is_triggered_only = yes
+
+	major_trigger = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					where = 149
+					value = 800	# Same part of the world
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = westphalia_fix
+	}
+	
+	option = {
+		name = EVTOPTA_solution_bulldog
+		trigger = {
+			trait = bulldog_hcc
+		}
+		piety = 500
+		prestige = 100
+	}
+	option = {
+		name = EVTOPTB_solution_bulldog
+		trigger = {
+			trait = ram_hcc
+		}
+		prestige = -200
+	}
+	option = {
+		name = EVTOPTC_solution_bulldog
+		trigger = {
+			NOR = {
+				trait = ram_hcc
+				trait = bulldog_hcc
+			}
+			OR = {
+				religion = evangelical
+				religion = antinomian
+				religion = charismatic
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_solution_bulldog
+		trigger = {
+			NOR = {
+				religion = evangelical
+				religion = antinomian
+				religion = charismatic
+			}
+		}
+	}
+}
