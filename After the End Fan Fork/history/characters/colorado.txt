@@ -1,10 +1,20 @@
 ###ÄNSI
 1876001={
-	name="Cole"
+	name="Rockhart"
 	dynasty=5001185
 	culture=coloradan
 	religion=montane
 	father=1875052
+	diplomacy = 4
+	martial = 6
+	stewardship = 6 
+	intrigue = 3
+	learnin = 6
+	trait = thrifty_clerk
+	trait = kind
+	trait = devout
+	trait = brave
+	trait = honest
 	2601.1.1={birth=yes}
 	2620.1.1={add_spouse=1876002}
 	2700.1.1={death=yes}
@@ -169,8 +179,19 @@
 	name="Bolder"
 	dynasty=1876036
 	culture=coloradan
-	religion=montane
+	religion=edenite
 	trait=brave
+	father=1875063
+	diplomacy = 5
+	martial = 6
+	stewardship = 6 
+	intrigue = 4
+	learnin = 4
+	trait = tough_soldier
+	trait = brawny
+	trait = stubborn
+	trait = zealous
+	trait = slothful
 	2625.2.4={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -396,7 +417,12 @@
 	trait=diligent
 	father=1875029
 	2176.3.26= {birth=yes
-	give_nickname=nick_the_holy}
+	give_nickname=nick_the_holy
+			create_bloodline={
+			type=silbern
+			has_dlc="Holy Fury"
+		}
+	}
 	2240.1.1= {death=yes}
 }
 
@@ -758,6 +784,7 @@
 	father=1875049
 	2552.6.23= {birth=yes
 	give_nickname=nick_the_apostate}
+	2590.3.18={add_spouse=1875062}
 	2613.1.1= {death=yes}
 }
 
@@ -774,6 +801,7 @@
 	trait=stubborn
 	trait=just
 	father=1875050
+	mother=1875062
 	2592.3.18= {birth=yes}
 	2619.1.1={
 		death={
@@ -790,6 +818,7 @@
 	trait=intricate_webweaver
 	trait=duelist
 	trait=ambitious
+	trait=familial_kinslayer
 	trait=groomed
 	trait=envious
 	trait=deceitful
@@ -915,4 +944,72 @@
 	2628.1.1={birth=yes}
 	2650.1.10={add_matrilineal_spouse=1876007}
 	2700.1.1={death=yes}
+}
+
+
+1875061={
+	name="Simon"
+	dynasty=1876036
+	culture=coloradan
+	religion=edenite
+	diplomacy = 6
+	martial = 3
+	stewardship = 6 
+	intrigue = 5
+	learnin = 5
+	trait = midas_touched
+	trait = socializer
+	trait = shrewd
+	trait = ambitious
+	trait = gregarious
+	trait = envious
+	trait = diligent
+	trait = cynical
+	2524.3.13={birth=yes}
+	2584.6.16={death=yes}
+}
+
+1875062={
+	name="Charlie"
+	dynasty=1876036
+	culture=coloradan
+	religion=edenite
+	diplomacy = 2
+	martial = 7
+	stewardship = 4 
+	intrigue = 6
+	learnin = 6
+	father=1875061
+	trait = brilliant_strategist
+	trait = unyielding
+	trait = attractive
+	trait = homosexual
+	trait = brave
+	trait = patient
+	trait = diligent
+	trait = stubborn
+	2552.3.25={birth=yes
+	give_nickname=nick_the_fair}
+	2624.4.2={death=yes}
+}
+
+1875063={
+	name="Lyon"
+	dynasty=1876036
+	culture=coloradan
+	religion=edenite
+	diplomacy = 6
+	martial = 6
+	stewardship = 4 
+	intrigue = 4
+	learnin = 3
+	father=1875061
+	trait = tough_soldier
+	trait = duelist
+	trait = wroth
+	trait = gregarious
+	trait = brave
+	trait = lustful
+	2567.12.4={birth=yes}
+	2635.7.10={death=yes}
 }
