@@ -2340,9 +2340,6 @@ true_religion_high_church_trigger = {
 true_religion_nonconformist_trigger = {
 	true_religion = nonconformist
 }
-true_religion_montane_trigger = {
-	true_religion = montane
-}
 true_religion_edenite_trigger = {
 	true_religion = edenite
 }
@@ -3625,10 +3622,6 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_true_cross }
 		}
 		AND = {
-			society_member_of = secret_religious_society_montane
-			PREV = { interested_in_society = secret_religious_society_montane }
-		}
-		AND = {
 			society_member_of = secret_religious_society_edenite
 			PREV = { interested_in_society = secret_religious_society_edenite }
 		}
@@ -4049,12 +4042,6 @@ has_any_char_old_religion = {
 			has_character_flag = character_was_true_cross
 			any_character = {
 				religion = true_cross
-			}
-		}
-		AND = {
-			has_character_flag = character_was_montane
-			any_character = {
-				religion = montane
 			}
 		}
 		AND = {
@@ -4810,13 +4797,6 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = true_cross
 				ROOT = { religion = true_cross }
-			}
-		}
-		NAND = {
-			any_artifact = {
-				has_artifact_flag = looted_artifact_tooltip_1
-				has_artifact_flag = montane
-				ROOT = { religion = montane }
 			}
 		}
 		NAND = {
@@ -9382,7 +9362,6 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_celeste
 		has_character_flag = character_was_nazarene
 		has_character_flag = character_was_true_cross
-		has_character_flag = character_was_montane
 		has_character_flag = character_was_edenite
 		has_character_flag = character_was_sacred_heart
 		has_character_flag = character_was_patria_grande
