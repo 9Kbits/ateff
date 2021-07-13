@@ -2,15 +2,15 @@ namespace=charismatic
 
 narrative_event = {
 	id = charismatic.1
-	title=CHARISMATITLE1
-	desc=CHARISMADESC1
+	title=EVTITLE_charismatic.1
+	desc=EVTDESC_charismatic.1
 	is_triggered_only=yes
 	picture=GFX_evt_bishop
 	immediate = {
 		set_character_flag = charismatic_prophecy_current
 	}
 	option = {
-		name = CAHRISMATICOPTA1
+		name = EVTOPT_charismatic.1
 		custom_tooltip = {
  		   text = CHARISMATIC_GIFT_OF_PROPHECY
 		}
@@ -184,8 +184,8 @@ narrative_event = {
 }
 narrative_event = {
 	id = charismatic.10
-	title=charismatic.10.t
-	desc=charismatic.10.d
+	title=EVTITLE_charismatic.10
+	desc=EVTDESC_charismatic.10
 	picture=GFX_evt_bishop
 	is_triggered_only=yes
   	immediate = {
@@ -217,7 +217,7 @@ narrative_event = {
     	}   
   	}
 	option = {
-		name = charismatic.10.a
+		name = EVTOPT_charismatic.10
 		set_character_flag = charismatic_prophecy_current
 		add_character_modifier = {
 	    	name = charismatic_conquest_prophecy
@@ -230,8 +230,8 @@ narrative_event = {
 }
 character_event = {
 	id = charismatic.11
-	title=charismatic.11.t
-	desc=charismatic.11.d
+	title=EVTITLE_charismatic.11
+	desc=EVTDESC_charismatic.11
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -246,7 +246,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.11.a
+		name = EVTOPT_charismatic.11
 		piety = 50
 		prestige = 50
 		clr_character_flag = charismatic_prophecy_current
@@ -260,8 +260,8 @@ character_event = {
 }
 character_event = {
 	id = charismatic.12
-	title=charismatic.12.t
-	desc=charismatic.12.d
+	title=EVTITLE_charismatic.12
+	desc=EVTDESC_charismatic.12
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -278,7 +278,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.12.a
+		name = EVTOPT_charismatic.12
 		clr_character_flag = charismatic_prophecy_current
 		piety = -50
 		prestige = -50
@@ -308,12 +308,12 @@ character_event = {
 }
 narrative_event = {
 	id = charismatic.13
-	title=charismatic.13.t
-	desc=charismatic.13.d
+	title=EVTITLE_charismatic.13
+	desc=EVTDESC_charismatic.13
 	is_triggered_only=yes
 	picture=GFX_evt_bishop
 	option = {
-		name = charismatic.13.a
+		name = EVTOPT_charismatic.13
 		set_character_flag = charismatic_prophecy_current
 		set_character_flag = charismatic_prophecy_peace_flag
 		add_character_modifier = {
@@ -324,8 +324,8 @@ narrative_event = {
 	}
 character_event = {
 	id = charismatic.14
-	title=charismatic.14.t
-	desc=charismatic.14.d
+	title=EVTITLE_charismatic.14
+	desc=EVTDESC_charismatic.14
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -342,7 +342,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.11.a
+		name = EVTOPT_charismatic.14
 		piety = 50
 		prestige = 50
 		clr_character_flag = charismatic_prophecy_current
@@ -356,8 +356,8 @@ character_event = {
 
 character_event = {
 	id = charismatic.15
-	title=charismatic.15.t
-	desc=charismatic.15.d
+	title=EVTITLE_charismatic.15
+	desc=EVTDESC_charismatic.15
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -372,7 +372,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.15.a
+		name = EVTOPT_charismatic.15
 		clr_character_flag = charismatic_prophecy_current
 		clr_character_flag = charismatic_prophecy_peace_flag
 		if = {
@@ -416,12 +416,12 @@ character_event = {
 }
 narrative_event = {
 	id = charismatic.16
-	title=charismatic.16.t
-	desc=charismatic.16.d
+	title=EVTITLE_charismatic.16
+	desc=EVTDESC_charismatic.16
 	is_triggered_only=yes
 	picture=GFX_evt_bishop
 	option = {
-		name = charismatic.16.a
+		name = EVTOPT_charismatic.16
 		set_character_flag = charismatic_prophecy_current
 		set_character_flag = charismatic_prophecy_family_flag
 		add_character_modifier = {
@@ -433,8 +433,8 @@ narrative_event = {
 
 character_event = {
 	id = charismatic.17
-	title=charismatic.17.t
-	desc=charismatic.17.d
+	title=EVTITLE_charismatic.17
+	desc=EVTDESC_charismatic.17
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -449,7 +449,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.17.a
+		name = EVTOPT_charismatic.17
 		piety = 50
 		prestige = 50
 		clr_character_flag = charismatic_prophecy_current
@@ -470,8 +470,8 @@ character_event = {
 }
 character_event = {
 	id = charismatic.18
-	title=charismatic.18.t
-	desc=charismatic.18.d
+	title=EVTITLE_charismatic.18
+	desc=EVTDESC_charismatic.18
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -484,7 +484,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.15.a
+		name = EVTOPT_charismatic.18
 		clr_character_flag = charismatic_prophecy_current
 		clr_character_flag = charismatic_prophecy_family_flag
 		piety = -50
@@ -524,8 +524,8 @@ character_event = {
 }
 narrative_event = {
 	id = charismatic.19
-	title=charismatic.19.t
-	desc=charismatic.19.d
+	title=EVTITLE_charismatic.19
+	desc=EVTDESC_charismatic.19
 	picture=GFX_evt_bishop
 	is_triggered_only=yes
   	immediate = {
@@ -625,7 +625,7 @@ narrative_event = {
 		} 
   	}
 	option = {
-		name = charismatic.19.a
+		name = EVTOPT_charismatic.19
 		set_character_flag = charismatic_prophecy_current
 		add_character_modifier = {
 	    		name = charismatic_death_prophecy_3
@@ -642,8 +642,8 @@ narrative_event = {
 }
 character_event = {
 	id = charismatic.20
-	title=charismatic.20.t
-	desc=charismatic.20.d
+	title=EVTITLE_charismatic.20
+	desc=EVTDESC_charismatic.20
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -655,7 +655,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.20.a
+		name = EVTOPT_charismatic.20
 		piety = 50
 		prestige = 50
 		clr_character_flag = charismatic_prophecy_current
@@ -693,8 +693,8 @@ character_event = {
 }
 character_event = {
 	id = charismatic.21
-	title=charismatic.21.t
-	desc=charismatic.21.d
+	title=EVTITLE_charismatic.21
+	desc=EVTDESC_charismatic.21
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -713,7 +713,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.21.a
+		name = EVTOPT_charismatic.21
 		clr_character_flag = charismatic_prophecy_current
 		clear_persistent_event_target = prophesied_to_die
 		piety = -100
@@ -742,12 +742,12 @@ character_event = {
 }
 narrative_event = {
 	id = charismatic.22
-	title=charismatic.22.t
-	desc=charismatic.22.d
+	title=EVTITLE_charismatic.22
+	desc=EVTDESC_charismatic.22
 	is_triggered_only=yes
 	picture=GFX_evt_bishop
 	option = {
-		name = charismatic.22.a
+		name = EVTOPT_charismatic.22
 		set_character_flag = charismatic_prophecy_current
 		set_character_flag = charismatic_prophecy_friend_flag
 		add_character_modifier = {
@@ -758,8 +758,8 @@ narrative_event = {
 }
 character_event = {
 	id = charismatic.23
-	title=charismatic.23.t
-	desc=charismatic.23.d
+	title=EVTITLE_charismatic.23
+	desc=EVTDESC_charismatic.23
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -770,7 +770,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.23.a
+		name = EVTOPT_charismatic.23
 		piety = 50
 		prestige = 50
 		clr_character_flag = charismatic_prophecy_current
@@ -791,8 +791,8 @@ character_event = {
 }
 character_event = {
 	id = charismatic.24
-	title=charismatic.24.t
-	desc=charismatic.24.d
+	title=EVTITLE_charismatic.24
+	desc=EVTDESC_charismatic.24
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -805,7 +805,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.24.a
+		name = EVTOPT_charismatic.24
 		clr_character_flag = charismatic_prophecy_current
 		clr_character_flag = charismatic_prophecy_friend_flag
 		piety = -50
@@ -834,8 +834,8 @@ character_event = {
 }
 narrative_event = {
 	id = charismatic.25
-	title=charismatic.25.t
-	desc=charismatic.25.d
+	title=EVTITLE_charismatic.25
+	desc=EVTDESC_charismatic.25
 	picture=GFX_evt_bishop
 	is_triggered_only=yes
   	immediate = {
@@ -856,7 +856,7 @@ narrative_event = {
     	}   
   	}
 	option = {
-		name = charismatic.25.a
+		name = EVTOPT_charismatic.25
 		set_character_flag = charismatic_prophecy_current
 		add_character_modifier = {
 	    		name = charismatic_duchy_prophecy
@@ -870,8 +870,8 @@ narrative_event = {
 
 character_event = {
 	id = charismatic.26
-	title=charismatic.26.t
-	desc=charismatic.26.d
+	title=EVTITLE_charismatic.26
+	desc=EVTDESC_charismatic.26
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -886,7 +886,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.26.a
+		name = EVTOPT_charismatic.26
 		piety = 50
 		prestige = 75
 		clr_character_flag = charismatic_prophecy_current
@@ -907,8 +907,8 @@ character_event = {
 }
 character_event = {
 	id = charismatic.27
-	title=charismatic.27.t
-	desc=charismatic.27.d
+	title=EVTITLE_charismatic.27
+	desc=EVTDESC_charismatic.27
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -925,7 +925,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.27.a
+		name = EVTOPT_charismatic.27
 		clr_character_flag = charismatic_prophecy_current
 		piety = -50
 		prestige = -50
@@ -955,8 +955,8 @@ character_event = {
 }
 narrative_event = {
 	id = charismatic.28
-	title=charismatic.28.t
-	desc=charismatic.28.d
+	title=EVTITLE_charismatic.28
+	desc=EVTDESC_charismatic.28
 	picture=GFX_evt_bishop
 	is_triggered_only=yes
   	immediate = {
@@ -983,7 +983,7 @@ narrative_event = {
     	}   
   	}
 	option = {
-		name = charismatic.28.a
+		name = EVTOPT_charismatic.28
 		set_character_flag = charismatic_prophecy_current
 		add_character_modifier = {
 	    		name = charismatic_kingdom_prophecy
@@ -996,8 +996,8 @@ narrative_event = {
 }
 character_event = {
 	id = charismatic.29
-	title=charismatic.29.t
-	desc=charismatic.29.d
+	title=EVTITLE_charismatic.29
+	desc=EVTDESC_charismatic.29
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -1012,7 +1012,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.29.a
+		name = EVTOPT_charismatic.29
 		piety = 50
 		prestige = 100
 		clr_character_flag = charismatic_prophecy_current
@@ -1033,8 +1033,8 @@ character_event = {
 }
 character_event = {
 	id = charismatic.30
-	title=charismatic.30.t
-	desc=charismatic.30.d
+	title=EVTITLE_charismatic.30
+	desc=EVTDESC_charismatic.30
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -1051,7 +1051,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.30.a
+		name = EVTOPT_charismatic.30
 		clr_character_flag = charismatic_prophecy_current
 		piety = -50
 		prestige = -50
@@ -1081,12 +1081,12 @@ character_event = {
 }
 narrative_event = {
 	id = charismatic.34
-	title=charismatic.34.t
-	desc=charismatic.34.d
+	title=EVTITLE_charismatic.34
+	desc=EVTDESC_charismatic.34
 	is_triggered_only=yes
 	picture=GFX_evt_bishop
 	option = {
-		name = charismatic.34.a
+		name = EVTOPT_charismatic.34
 		set_character_flag = charismatic_prophecy_current
 		set_character_flag = charismatic_prophecy_old_children_flag
 		add_character_modifier = {
@@ -1097,8 +1097,8 @@ narrative_event = {
 }
 character_event = {
 	id = charismatic.35
-	title=charismatic.35.t
-	desc=charismatic.35.d
+	title=EVTITLE_charismatic.35
+	desc=EVTDESC_charismatic.35
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -1114,7 +1114,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = charismatic.35.a
+		name = EVTOPT_charismatic.35
 		piety = 50
 		prestige = 50
 		clr_character_flag = charismatic_prophecy_current
@@ -1138,8 +1138,8 @@ character_event = {
 }
 character_event = {
 	id = charismatic.36
-	title=charismatic.36.t
-	desc=charismatic.36.d
+	title=EVTITLE_charismatic.36
+	desc=EVTDESC_charismatic.36
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -1152,7 +1152,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.36.a
+		name = EVTOPT_charismatic.36
 		clr_character_flag = charismatic_prophecy_current
 		clr_character_flag = charismatic_prophecy_old_children_flag
 		piety = -50
@@ -1202,12 +1202,12 @@ character_event = {
 }
 narrative_event = {
 	id = charismatic.40
-	title=charismatic.40.t
-	desc=charismatic.40.d
+	title=EVTITLE_charismatic.40
+	desc=EVTDESC_charismatic.40
 	is_triggered_only=yes
 	picture=GFX_evt_bishop
 	option = {
-		name = charismatic.40.a
+		name = EVTOPT_charismatic.40
 		set_character_flag = charismatic_prophecy_current
 		set_character_flag = charismatic_prophecy_wealth_flag
 		add_character_modifier = {
@@ -1218,8 +1218,8 @@ narrative_event = {
 }
 character_event = {
 	id = charismatic.41
-	title=charismatic.41.t
-	desc=charismatic.41.d
+	title=EVTITLE_charismatic.41
+	desc=EVTDESC_charismatic.41
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -1230,7 +1230,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.41.a
+		name = EVTOPT_charismatic.41
 		piety = 50
 		prestige = 50
 		clr_character_flag = charismatic_prophecy_current
@@ -1252,8 +1252,8 @@ character_event = {
 }
 character_event = {
 	id = charismatic.42
-	title=charismatic.42.t
-	desc=charismatic.42.d
+	title=EVTITLE_charismatic.42
+	desc=EVTDESC_charismatic.42
 	religion = charismatic
 	picture=GFX_evt_bishop
 	trigger = {
@@ -1266,7 +1266,7 @@ character_event = {
 		days = 1
 	}
 	option = {
-		name = charismatic.42.a
+		name = EVTOPT_charismatic.42
 		clr_character_flag = charismatic_prophecy_current
 		clr_character_flag = charismatic_prophecy_wealth_flag
 		piety = -50
@@ -1295,12 +1295,12 @@ character_event = {
 }
 narrative_event = {
 	id = charismatic.43
-	title=charismatic.43.t
-	desc=charismatic.43.d
+	title=EVTITLE_charismatic.43
+	desc=EVTDESC_charismatic.43
 	is_triggered_only=yes
 	picture=GFX_evt_bishop
 	option = {
-		name = charismatic.43.a
+		name = EVTOPT_charismatic.43
 		piety = -25
 		prestige = -25
 		set_character_flag = charismatic_prophecy_current

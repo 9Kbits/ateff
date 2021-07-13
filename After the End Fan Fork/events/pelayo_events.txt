@@ -111,27 +111,6 @@ character_event = {
 }
 
 character_event = {
-	id = pelayo.6 # This one is a clean up event to also get the county of pecos
-	title= EVTTITLE_pelayo8
-	desc = "EVTDESC_pelayo8"
-	picture = GFX_evt_open_book_hf
-	prisoner = no
-	hide_window = yes
-	trigger = {
-		has_character_flag = pelayo2
-		NOT = { has_landed_title = c_pecos }
-	}
-	mean_time_to_happen = {
-		days = 2
-	}
-	immediate = {
-		grant_title_no_opinion = c_pecos
-		clr_character_flag = pelayo2
-		set_character_flag = pelayo3
-	}
-}
-
-character_event = {
 	id = pelayo.7 # This one is for Luis to declare war on you
 	title= EVTTITLE_pelayo7
 	desc = "EVTDESC_pelayo7"
@@ -179,7 +158,7 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPTB_pelayomo8"
+		name = "EVTOPTA_pelayomo8"
 		piety = 100
 		clr_character_flag = pelayo3
 		set_character_flag = pelayo4
@@ -199,7 +178,7 @@ character_event = {
 		days = 15
 	}
 	option = {
-		name = "EVTOPTA_pelayomo8"
+		name = "EVTOPTA_pelayomo9"
 		prestige = -100
 		piety = -100
 		k_comancheria = {
@@ -209,7 +188,7 @@ character_event = {
 		set_character_flag = pelayo5
 	}
 	option = {
-		name = "EVTOPTB_pelayomo7"
+		name = "EVTOPTB_pelayomo9"
 		prestige = 200
 		piety = 200
 	}
@@ -237,7 +216,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB_peayomo10"
+		name = "EVTOPTB_pelayomo10"
 		prestige = 500
 		piety = 500
 	}
