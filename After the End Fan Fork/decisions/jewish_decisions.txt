@@ -378,7 +378,59 @@ targeted_decisions = {
 		}
 		ai_will_do = {
 			#Factors for an AI character to take the decision (1 = 100% chance every month - for each allowed target!)
-			factor = 0 #needs to add more later, now at 0 so it won't bug shit
+			factor = 1 
+			modifier = {
+				factor = 0.2
+				always = yes
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					trait = theologian
+					trait = scholar
+					learning = 15
+				}
+			}
+			modifier = {
+				factor = 4
+				is_vassal_or_below_of = ROOT
+			}
+			modifier = {
+				factor = 2
+				OR = {
+					any_demesne_province = {
+						religion = ROOT
+					}
+					any_vassal = {
+						religion = ROOT
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					trait = zealous
+					calc_true_if = {
+						amount >= 4
+						trait = sympathy_christendom
+						trait = sympathy_pacific
+						trait = sympathy_latter_day_saints
+						trait = sympathy_nautical
+						trait = sympathy_indian
+						trait = sympathy_mesoamerican_gods
+						trait = sympathy_amero_syncretic
+						trait = sympathy_american_native
+						trait = sympathy_afro_syncretic
+						trait = sympathy_oldworld
+						trait = sympathy_islam
+						trait = sympathy_pagans
+						trait = sympathy_cult_of_saints
+						trait = sympathy_christendom
+						}
+					}
+				}
+			}
 		}
+		
 	}
 }

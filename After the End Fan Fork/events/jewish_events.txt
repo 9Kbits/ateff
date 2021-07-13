@@ -451,6 +451,20 @@ character_event = { #training to read Torah
 			min = 50
 			max = 50
 		}
+		ai_chance = {
+			factor = 8
+			modifier = {
+				factor = 0
+				OR = {
+					trait = proud
+					opinion = {
+						who = job_spiritual
+						value < 10
+					}
+			}
+			#I  just put all the modifiers on the other option, I don't think it matters 
+		}
+		
 	}
 	#Teach the kid yourself
 	option = {
@@ -563,6 +577,30 @@ character_event = { #training to read Torah
 				}
 			}
 		}
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor  = 0
+				OR ={ 
+					trait = humble
+					trait = dull
+					trait = slow
+					trait = imbecile
+				}
+			}
+			modifier = {
+				factor  = 3
+				OR ={ 
+					trait = theologian
+					trait = scholar
+					learning > 12
+				}
+			}
+			modifier = {
+				factor  = 4
+				trait = proud
+			}
+		}
 	}
 	#Decline offer
 	option = {
@@ -570,7 +608,7 @@ character_event = { #training to read Torah
 		event_target:bar_mitzvah_target = {
 			random_list = {
 				30 = {#succeds
-					mult_modifier = {#can't succed unless child have education focus of learning
+					mult_modifier = {#can't succeed unless child have education focus of learning
 						factor = 0
 						trigger = {
 							NOT = {
@@ -655,9 +693,12 @@ character_event = { #training to read Torah
 				}
 			}
 		}
+		ai_chance = {
+			factor = 0
+		}
 	}
 	after={
-		character_event = { id = jewish.102 days= 3 }#should be 10 months but im bugtesting
+		character_event = { id = jewish.102 months = 8 }
 	}
 }
 
