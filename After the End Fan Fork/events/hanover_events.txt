@@ -751,7 +751,7 @@ narrative_event = {
 			90 = {
 				e_dixie = {
 					holder_scope = {
-						add_trait = incapable
+						narrative_event = { id = hanovers.14 }
 					}
 				}
 			}
@@ -793,7 +793,9 @@ narrative_event = {
 		name = "EVTOPT_anastasiaEMP1b"
 		ai_chance = { factor = 1 }
 		e_dixie = {
-			narrative_event = { id = hanovers.13 }
+			holder_scope = {
+				narrative_event = { id = hanovers.13 }
+			}
 		}
 		hidden_tooltip = {
 			remove_trait = flowered
@@ -819,7 +821,21 @@ narrative_event = {
 		name = "EVTOPT_anastasiaEMP2a"
 		custom_tooltip = { text = TXT_anastasiaEMP2 }
 		add_trait = wroth
-		ai_chance = { factor = 10 }
+	}
+}
+
+narrative_event = {
+	id = hanovers.14
+	title= EVTTITLE_anastasiaEMP3
+	desc = "EVTDESC_anastasiaEMP3"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_narrative_frame_intrigue
+	prisoner = no
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPT_anastasiaEMP3a"
+		add_trait = incapable
 	}
 }
 
