@@ -198,9 +198,9 @@ character_event = {
 			}
 		}
 		#remove repeat blockers
-		event_target:orf_opponent_candidate_party = { remove_character_flag = temp_block_orf }
-		event_target:orf_opponent_candidate_appointee = { remove_character_flag = temp_block_orf }
-		event_target:orf_opponent_candidate_outsider = { remove_character_flag = temp_block_orf }
+		event_target:orf_opponent_candidate_party = { clr_character_flag = temp_block_orf }
+		event_target:orf_opponent_candidate_appointee = { clr_character_flag = temp_block_orf }
+		event_target:orf_opponent_candidate_outsider = { clr_character_flag = temp_block_orf }
 	}	
 	option = { 
 		name = EVTOPTA_orfelection_opponent_appointee
