@@ -17,13 +17,9 @@ letter_event = {
 		ai_chance = {
 			factor = 100
 		}
-		tooltip = {
-			religion = FROMFROM
-		}
+		religion = FROMFROM
 		letter_event = {
 			id = demand_conversion.2
-			days = 3
-			random = 3
 		}
 	}
 	#Refuse to convert
@@ -50,8 +46,6 @@ letter_event = {
 		FROMFROM = {
 			letter_event = {
 				id = demand_conversion.3
-				days = 3
-				random = 7
 			}
 		}
 	}
@@ -67,8 +61,10 @@ letter_event = {
 	
 	option = {
 		name = OK
-		FROM = {
-			religion = ROOT
+		tooltip = {
+			FROM = {
+				religion = ROOT
+			}
 		}
 	}
 }

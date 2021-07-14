@@ -459,12 +459,12 @@ targetted_decisions = {
 		}
 		allow = {
 			#OR = {
-				NOT = {
-					has_opinion_modifier = {	#Can not try to convert if recently failed to convert
-						who = FROM
-						modifier = tried_to_convert_me
-					}
-				}
+				#NOT = {
+				#	has_opinion_modifier = {	#Can not try to convert if recently failed to convert
+				#		who = FROM
+				#		modifier = tried_to_convert_me
+				#	}
+				#}
 				#AND = {
 					#prisoner = yes
 					#host = {
@@ -495,12 +495,47 @@ targetted_decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
+				factor = 0.05
+				always = yes
+			}
+			modifier = {
+				factor = 1.5
+				ai_zeal >10
+			}
+			modifier = {
+				factor = 1.5
+				ai_zeal >20
+			}
+			modifier = {
+				factor = 1.5
+				ai_zeal >30
+			}
+			modifier = {
+				factor = 1.5
+				ai_zeal >40
+			}
+			modifier = {
+				factor = 1.5
+				ai_zeal >50
+			}
+			modifier = {
+				factor = 1.5
+				ai_zeal >60
+			}
+			modifier = {
 				factor = 0.001	#slow it down
 				limit = {	
 					AND = {
 						has_law = religion_tolerance_1
 						NOT = { trait = zealous }
 					}
+				}
+			}
+			modifier = {
+				factor = 0
+				has_opinion_modifier = {	#Can not try to convert if recently failed to convert
+					who = FROM
+					modifier = tried_to_convert_me
 				}
 			}
 		}

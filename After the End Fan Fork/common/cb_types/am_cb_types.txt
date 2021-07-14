@@ -5694,20 +5694,23 @@ gaian_reclamation_cb = {
 					}
 				}
 			}
-			is_vassal_or_below_of = {
-				OR = {
-					NOT = { religion = FROM }
-					AND = {
-						religion = FROM
-						FROM = {
-							has_character_modifier = known_satanist
-						}
-						NOT = {
-							has_character_modifier = known_satanist
-						}
-						ROOT = {
+			OR = {
+				independent = yes
+				is_vassal_or_below_of = {
+					OR = {
+						NOT = { religion = FROM }
+						AND = {
+							religion = FROM
+							FROM = {
+								has_character_modifier = known_satanist
+							}
 							NOT = {
 								has_character_modifier = known_satanist
+							}
+							ROOT = {
+								NOT = {
+									has_character_modifier = known_satanist
+								}
 							}
 						}
 					}
