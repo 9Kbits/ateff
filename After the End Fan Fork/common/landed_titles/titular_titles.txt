@@ -899,6 +899,8 @@ e_nahua = {
 	color2={ 210 50 20 }
 	capital = 1767 # c_mexico
 	
+	nahua = "inAnauak Nauatlakaj"
+	
 	culture = nahua
 	allow = {
 		NOT = {
@@ -1164,12 +1166,12 @@ e_cayennais = {
 	creation_requires_capital = no	
 }
 
-e_centrano = {
+e_trifinio = {
 	color={ 10 55 200 }
 	color2={ 210 50 20 }
 	capital = 1847 # c_guatemala
 	
-	culture = centrano
+	culture = trifinio
 	allow = {
 		NOT = {
 			has_game_rule = {
@@ -1179,10 +1181,10 @@ e_centrano = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = centrano
+		culture = trifinio
 		OR = {
 			realm_size = 150
-			e_centrano = { OR = { is_titular = no has_holder = yes } }
+			e_trifinio = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
@@ -1658,32 +1660,32 @@ e_cherokee = {
 	creation_requires_capital = no	
 }
 
-e_chilango = {
-	color={ 230 235 120 }
-	color2={ 210 50 20 }
-	capital = 1767 # c_mexico
+# e_chilango = {
+	# color={ 230 235 120 }
+	# color2={ 210 50 20 }
+	# capital = 1767 # c_mexico
 	
-	culture = chilango
-	allow = {
-		NOT = { religion = sacred_heart }
-		NOT = {
-			has_game_rule = {
-				name = cultural_empires
-				value = off
-			}
-		}
-		war = no
-		NOT = { tier = emperor }
-		culture = chilango
-		OR = {
-			realm_size = 150
-			e_chilango = { OR = { is_titular = no has_holder = yes } }
-		}
-	}
-	short_name = yes
+	# culture = chilango
+	# allow = {
+		# NOT = { religion = sacred_heart }
+		# NOT = {
+			# has_game_rule = {
+				# name = cultural_empires
+				# value = off
+			# }
+		# }
+		# war = no
+		# NOT = { tier = emperor }
+		# culture = chilango
+		# OR = {
+			# realm_size = 150
+			# e_chilango = { OR = { is_titular = no has_holder = yes } }
+		# }
+	# }
+	# short_name = yes
 	
-	creation_requires_capital = no	
-}
+	# creation_requires_capital = no	
+# }
 
 e_chino = {
 	color={ 190 135 180 }
@@ -1767,7 +1769,7 @@ e_jarocho = {
 e_mixtec = {
 	color={ 190 135 180 }
 	color2={ 210 50 20 }
-	capital = 1801 # c_chilpancingo
+	capital = 1797 # c_tlaxiaco
 	
 	culture = mixtec
 	allow = {
@@ -1816,12 +1818,12 @@ e_neomexicano = {
 	creation_requires_capital = no	
 }
 
-e_norteno = {
+e_bravo = {
 	color={ 230 235 80 }
 	color2={ 210 50 20 }
-	capital = 231 # Nuevo Laredo
+	capital = 817 # Monterrey
 	
-	culture = norteno
+	culture = bravo
 	allow = {
 		NOT = {
 			has_game_rule = {
@@ -1831,10 +1833,10 @@ e_norteno = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = norteno
+		culture = bravo
 		OR = {
 			realm_size = 150
-			e_norteno = { OR = { is_titular = no has_holder = yes } }
+			e_bravo = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
@@ -1897,7 +1899,7 @@ e_purepecha = {
 e_raramuri = {
 	color={ 110 115 210 }
 	color2={ 210 50 20 }
-	capital = 807 # c_durango
+	capital = 805 # c_guachochi
 	
 	culture = raramuri
 	allow = {
@@ -2095,7 +2097,7 @@ e_tejano = {
 e_yucateco = {
 	color={ 50 135 210 }
 	color2={ 210 50 20 }
-	capital = 1809 # c_chacchoben
+	capital = 1813 # # c_chichen_itza
 	
 	culture = yucateco
 	allow = {
@@ -2327,12 +2329,12 @@ e_ontarian = {
 	creation_requires_capital = no	
 }
 
-e_sonorense = {
+e_occidental = {
 	color={ 130 130 10 }
 	color2={ 210 50 20 }
 	capital = 793 # c_hermosillo
 	
-	culture = sonorense
+	culture = occidental
 	allow = {
 		NOT = {
 			has_game_rule = {
@@ -2342,10 +2344,10 @@ e_sonorense = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = sonorense
+		culture = occidental
 		OR = {
 			realm_size = 150
-			e_sonorense = { OR = { is_titular = no has_holder = yes } }
+			e_occidental = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
@@ -2434,7 +2436,7 @@ e_calaotian = {
 	creation_requires_capital = no	
 }
 
-e_californio = {
+e_californiano = {
 	color={ 190 195 150 }
 	color2={ 210 50 20 }
 	capital = 2003 # c_mexicali
@@ -2453,7 +2455,7 @@ e_californio = {
 		culture = californiano
 		OR = {
 			realm_size = 150
-			e_californio = { OR = { is_titular = no has_holder = yes } }
+			e_californiano = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
