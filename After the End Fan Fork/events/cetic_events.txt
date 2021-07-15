@@ -8124,10 +8124,12 @@ character_event = {
 	trigger = {
 		NOR = {
 			government = bureaucratic_government
+			higher_real_tier_than = BARON
 			AND = {
 				primary_title = {
 					has_title_flag = devolved_bureaucracy
 				}
+				government = feudal_government
 				OR = {
 					controls_religion = no
 					religion = cetic
