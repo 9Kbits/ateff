@@ -98,7 +98,6 @@ range_senate_size_1 = {
 				revoke_law = range_senate_size_3
 			}
 		}
-		global_revolt_risk = -0.05
 	}
 range_senate_size_2 = {
 		group = range_senate_size
@@ -111,9 +110,8 @@ range_senate_size_2 = {
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
+				independent = yes
 			}
-			independent = yes
-			higher_tier_than = COUNT
 		}
 		revoke_allowed = {
 			always = no
@@ -149,19 +147,74 @@ range_senate_size_2 = {
 				revoke_law = range_senate_size_3
 			}
 		}
-		global_revolt_risk = -0.075
+		global_revolt_risk = -0.05
 	}
 range_senate_size_3 = {
 		group = range_senate_size
 		allow = {
-			has_law = range_senate_size_2
+			OR = {
+				has_law = range_senate_size_2
+				has_law = range_senate_size_4
+			}
+			higher_tier_than = DUKE
 		}
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
+				independent = yes
 			}
-			independent = yes
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+		ai_will_revoke = {
+			factor = 0
+		}
+		pass_effect = {
+			
+		}
+		effect = {
+			if = {
+				limit = {
+					has_law = range_senate_size_0
+				}
+			}
+			if = {
+				limit = {
+					has_law = range_senate_size_1
+				}
+			}
+			if = {
+				limit = {
+					has_law = range_senate_size_2
+				}
+			}
+			hidden_tooltip = {
+				revoke_law = range_senate_size_0
+				revoke_law = range_senate_size_1
+				revoke_law = range_senate_size_2
+			}
+		}
+		global_revolt_risk = -0.075
+	}
+}
+range_senate_size_3 = {
+		group = range_senate_size
+		allow = {
+			OR = {
+				has_law = range_senate_size_2
+				has_law = range_senate_size_4
+			}
 			higher_tier_than = DUKE
+		}
+		potential = {
+			holder_scope = {
+				government = open_range_feudalism_government
+				independent = yes
+			}
 		}
 		revoke_allowed = {
 			always = no
