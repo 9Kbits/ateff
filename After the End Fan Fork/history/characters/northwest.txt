@@ -2224,6 +2224,18 @@
 	trait=strategist
 	father=1845011
 	2614.1.11={birth=yes}
+	2641.1.1={add_spouse=1845186
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+			prestige=250
+	}}
 	2700.1.1={death=yes}
 }
 
@@ -2235,6 +2247,7 @@
 	religion=gaian
 	trait=quick
 	mother=1845105
+	father=1845186
 	2646.4.16={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -3270,4 +3283,25 @@
 			killer=1890055 #Cameron Silvermount
 		}
 	}
+}
+
+1845186={
+	name="Hanford"
+	dynasty=0
+	culture=cascadian
+	trait=content
+	2616.9.1={birth=yes}
+	2641.1.1={add_spouse=1845105
+		effect={
+			set_character_flag=recieved_royal_marriage_aid_duty
+			spouse={
+				set_character_flag=recieved_royal_marriage_aid_duty
+				remove_spouse=spouse
+				add_spouse_matrilineal=ROOT
+				clr_character_flag=recieved_royal_marriage_aid_duty
+			}
+			clr_character_flag=recieved_royal_marriage_aid_duty
+			prestige=250
+	}}
+	2700.1.1={death=yes}
 }
