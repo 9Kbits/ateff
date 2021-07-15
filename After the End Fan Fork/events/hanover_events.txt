@@ -684,7 +684,7 @@ narrative_event = {
 		custom_tooltip = { text = TXT_anastasia4a }
 		add_character_modifier = {
 	    	name = delightfully_devilish_anastasia
-    		years = 3			
+    		years = 3
 		}
 		hidden_tooltip = {
 			e_dixie = {
@@ -861,15 +861,24 @@ narrative_event = {
 	is_triggered_only = yes
 
 	trigger = { 
-		has_dlc = "Holy Fury" 
+		has_dlc = "Holy Fury"
+		e_dixie = {
+			holder_scope = {
+				has_flag = anastasia_war
+				NOT = {
+					is_bloodline_member_of = true_anastasia_bloodline
+					is_bloodline_member_of = heartbraker_female_bloodline
+				}
+			}
+		}
 	}
 	
 	option = {
 		name = EVTOPT_anabloodline
 		if = { 
 			limit = { 
-				this_has_cool_nickname_trigger = no 
-				this_has_super_cool_nickname_trigger = no 
+				this_has_cool_nickname_trigger = no
+				this_has_super_cool_nickname_trigger = no
 			}
 			give_nickname = nick_the_heartbreaker
 		}
@@ -886,13 +895,48 @@ narrative_event = {
 			}	
 		}
 		else_if = {
-			limit = { is_female = no } 
+			limit = { is_female = no }
 			create_bloodline = {
 				type = heartbraker_male_bloodline
 			}	
 		}
-		ai_chance = { 
+		ai_chance = {
 			factor = 100
 		}
+	}
+}
+
+narrative_event = {
+	id = hanovers.21
+	title= EVTTITLE_cogsuc
+	desc = "EVTDESC_cogsuc"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_narrative_frame_intrigue
+	prisoner = no
+	is_triggered_only = yes
+	
+	trigger = {
+		e_dixie = {
+			holder_scope = {
+				is_female = yes
+				OR = {
+					is_bloodline_member_of = true_anastasia_bloodline
+					is_bloodline_member_of = heartbraker_female_bloodline
+				}
+			}
+			NOT = { has_law = true_cognatic_succession }
+		}
+	}
+	
+	option = {
+		name = "EVTOPTA_cogsuc"
+		primary_title = { add_law = { law = true_cognatic_succession } }
+		current_heir = {
+			dynasty = ROOT
+		}
+	}
+	option = {
+		name = "EVTOPTB_cogsuc"
+		prestige = -50
 	}
 }

@@ -11059,7 +11059,7 @@ character_event = {
 
 	#Sword
 	option = { 
-		trigger = { NOR = { religion_group = afro_syncretic religion_group = muslim has_dharmic_religion_trigger = yes } has_character_flag = weaponsmith }
+		trigger = { NOR = { religion_group = afro_syncretic religion_group = muslim has_dharmic_religion_trigger = yes culture_group = starfolk  government = open_range_feudalism_government} has_character_flag = weaponsmith }
 		name = EVTOPTA_MNM_9118
 		custom_tooltip = { text = EVTOPTA_MNM_9118_TT }
 		hidden_tooltip = { FROM = { set_character_flag = weapon_sword } }
@@ -11072,6 +11072,15 @@ character_event = {
 		name = EVTOPTB_MNM_9118
 		custom_tooltip = { text = EVTOPTB_MNM_9118_TT }
 		hidden_tooltip = { FROM = { set_character_flag = weapon_scimitar } }
+		ai_chance = { factor = 2 }
+	}
+	
+	#Saber
+	option = {
+		trigger = { OR = {culture_group = starfolk  government = open_range_feudalism_government } } has_character_flag = weaponsmith }
+		name = EVTOPTB_MNM_9118
+		custom_tooltip = { text = EVTOPTB_MNM_9118_TT }
+		hidden_tooltip = { FROM = { set_character_flag = weapon_saber } }
 		ai_chance = { factor = 2 }
 	}
 	
@@ -11181,6 +11190,10 @@ character_event = {
 		if = {
 			limit = { FROM = { has_character_flag = weapon_scimitar } }
 			custom_tooltip = { text = EVTOPTA_MNM_9120_TT_SWORDSCIMITAR_EMPEROR }
+		}
+		if = {
+			limit = { FROM = { has_character_flag = weapon_saber } }
+			custom_tooltip = { text = EVTOPTA_MNM_9120_TT_SWORDSABER_EMPEROR }
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
@@ -11318,6 +11331,21 @@ character_event = {
 					tier = KING
 				}
 				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORDSCIMITAR_KING }
+			}
+		}
+		if = {
+			limit = { FROM = { has_character_flag = weapon_saber } }
+			if = {
+				limit = {
+					tier = EMPEROR
+				}
+				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORDSABER_EMPEROR }
+			}
+			else_if = {
+				limit = {
+					tier = KING
+				}
+				custom_tooltip = { text = EVTOPTB_MNM_9120_TT_SWORDSABER_KING }
 			}
 		}
 		if = {
@@ -11719,6 +11747,10 @@ character_event = {
 			trigger = { FROM = { has_character_flag = weapon_scimitar } }
 		}
 		name = {
+			text = EVTOPTA_MNM_40000_SABER
+			trigger = { FROM = { has_character_flag = weapon_saber } }
+		}
+		name = {
 			text = EVTOPTA_MNM_40000_LANCE
 			trigger = { FROM = { has_character_flag = weapon_lance } }
 		}
@@ -11746,6 +11778,10 @@ character_event = {
 		if = {
 			limit = { FROM = { has_character_flag = weapon_scimitar } }
 			add_artifact = scimitar_tier_4_golden
+		}
+		if = {
+			limit = { FROM = { has_character_flag = weapon_saber } }
+			add_artifact = saber_tier_4_throat_cutter 
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
@@ -11778,6 +11814,10 @@ character_event = {
 			trigger = { FROM = { has_character_flag = weapon_scimitar } }
 		}
 		name = {
+			text = EVTOPTA_MNM_40000_SABER
+			trigger = { FROM = { has_character_flag = weapon_saber } }
+		}
+		name = {
 			text = EVTOPTB_MNM_40000_LANCE
 			trigger = { FROM = { has_character_flag = weapon_lance } }
 		}
@@ -11804,6 +11844,10 @@ character_event = {
 		if = {
 			limit = { FROM = { has_character_flag = weapon_scimitar } }
 			add_artifact = scimitar_tier_4_fortune
+		}
+		if = {
+			limit = { FROM = { has_character_flag = weapon_saber } }
+			add_artifact = saber_tier_4_vengeance
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
@@ -11837,6 +11881,10 @@ character_event = {
 			trigger = { FROM = { has_character_flag = weapon_scimitar } }
 		}
 		name = {
+			text = EVTOPTC_MNM_40000_SABERR
+			trigger = { FROM = { has_character_flag = weapon_saber } }
+		}
+		name = {
 			text = EVTOPTC_MNM_40000_LANCE
 			trigger = { FROM = { has_character_flag = weapon_lance } }
 		}
@@ -11864,6 +11912,10 @@ character_event = {
 		if = {
 			limit = { FROM = { has_character_flag = weapon_scimitar } }
 			add_artifact = scimitar_tier_4_conquest
+		}
+		if = {
+			limit = { FROM = { has_character_flag = weapon_saber } }
+			add_artifact = saber_tier_4_fury
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
@@ -11930,7 +11982,11 @@ character_event = {
 		name = {
 			text = EVTOPTA_MNM_9122_SCIMITAR
 			trigger = { FROM = { has_character_flag = weapon_scimitar } }
-		} 
+		}
+		name = {
+			text = EVTOPTA_MNM_9122_SABER
+			trigger = { FROM = { has_character_flag = weapon_saber } }
+		} 		
 		name = {
 			text = EVTOPTA_MNM_9122_LANCE
 			trigger = { FROM = { has_character_flag = weapon_lance } }
@@ -11959,6 +12015,10 @@ character_event = {
 		if = {
 			limit = { FROM = { has_character_flag = weapon_scimitar } }
 			add_artifact = scimitar_tier_3_golden
+		}
+		if = {
+			limit = { FROM = { has_character_flag = weapon_saber } }
+			add_artifact = saber_tier_3_throat_cutter
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
@@ -11990,7 +12050,11 @@ character_event = {
 		name = {
 			text = EVTOPTB_MNM_9122_SCIMITAR
 			trigger = { FROM = { has_character_flag = weapon_scimitar } }
-		} 
+		}
+		name = {
+			text = EVTOPTB_MNM_9122_SABER
+			trigger = { FROM = { has_character_flag = weapon_saber } }
+		}		
 		name = {
 			text = EVTOPTB_MNM_9122_LANCE
 			trigger = { FROM = { has_character_flag = weapon_lance } }
@@ -12019,6 +12083,14 @@ character_event = {
 		if = {
 			limit = { FROM = { has_character_flag = weapon_scimitar } }
 			add_artifact = scimitar_tier_3_fortune
+		}
+		if = {
+			limit = { FROM = { has_character_flag = weapon_saber } }
+			add_artifact = saber_tier_3_vengeance
+		}
+		if = {
+			limit = { FROM = { has_character_flag = weapon_scimitar } }
+			add_artifact = saber_tier_3_vengeance
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
@@ -12052,6 +12124,10 @@ character_event = {
 			trigger = { FROM = { has_character_flag = weapon_scimitar } }
 		} 
 		name = {
+			text = EVTOPTC_MNM_9122_SABER
+			trigger = { FROM = { has_character_flag = weapon_saber } }
+		}
+		name = {
 			text = EVTOPTC_MNM_9122_LANCE
 			trigger = { FROM = { has_character_flag = weapon_lance } }
 		} 
@@ -12079,6 +12155,10 @@ character_event = {
 		if = {
 			limit = { FROM = { has_character_flag = weapon_scimitar } }
 			add_artifact = scimitar_tier_3_conquest
+		}
+		if = {
+			limit = { FROM = { has_character_flag = weapon_saber } }
+			add_artifact = saber_tier_3_fury
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
@@ -12154,6 +12234,17 @@ character_event = {
 			}
 		}
 		if = {
+			limit = { FROM = { has_character_flag = weapon_scimitar } }
+			hidden_tooltip = {
+				add_artifact = saber_tier_2_new
+			}
+			set_character_flag = saber_tier_2   
+			new_artifact = {
+				set_name = artifact_name
+				set_description = artifact_description_smith_tier_2
+			}
+		}
+		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
 			hidden_tooltip = {
 				add_artifact = lance_tier_2_new
@@ -12212,6 +12303,7 @@ character_event = {
 		clr_character_flag = armorsmith
 		clr_character_flag = sword_tier_2
 		clr_character_flag = scimitar_tier_2
+		clr_character_flag = saber_tier_2
 		clr_character_flag = lance_tier_2
 		clr_character_flag = axe_tier_2
 		clr_character_flag = mace_tier_2
@@ -12282,6 +12374,18 @@ character_event = {
 			custom_tooltip = { text = MNM_9124_TT_SCIMITAR_T1 }
 		}
 		if = {
+			limit = { FROM = { has_character_flag = weapon_saber } }
+			hidden_tooltip = {
+				add_artifact = saber_tier_1_new
+			}
+			set_character_flag = saber_tier_1
+			new_artifact = {
+				set_name = artifact_name
+				set_description = artifact_description_smith_tier_1
+			}
+			custom_tooltip = { text = MNM_9124_TT_SABER_T1 }
+		}
+		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
 			hidden_tooltip = {
 				add_artifact = lance_tier_1_new
@@ -12344,6 +12448,7 @@ character_event = {
 		clr_character_flag = armorsmith
 		clr_character_flag = sword_tier_1
 		clr_character_flag = scimitar_tier_1
+		clr_character_flag = saber_tier_1
 		clr_character_flag = lance_tier_1
 		clr_character_flag = axe_tier_1
 		clr_character_flag = mace_tier_1
@@ -12922,6 +13027,14 @@ character_event = {
 						}
 						new_artifact = { set_artifact_flag = stolen_by_smith }
 					}
+					weapon_saber = {
+						random_list = {
+							1 = { add_artifact = saber_tier_4_throat_cutter }
+							1 = { add_artifact = saber_tier_4_vengeance }
+							1 = { add_artifact = saber_tier_4_fury }
+						}
+						new_artifact = { set_artifact_flag = stolen_by_smith }
+					}
 					weapon_lance = { 
 						random_list = {
 							1 = { add_artifact = lance_tier_4_impaler }
@@ -12983,6 +13096,14 @@ character_event = {
 						}
 						new_artifact = { set_artifact_flag = stolen_by_smith }
 					}
+					weapon_saber = { 
+						random_list = {
+							1 = { add_artifact = saber_tier_3_throat_cutter }
+							1 = { add_artifact = saber_tier_3_vengeance }
+							1 = { add_artifact = saber_tier_3_fury }
+						}
+						new_artifact = { set_artifact_flag = stolen_by_smith }
+					}
 					weapon_lance = { 
 						random_list = {
 							1 = { add_artifact = lance_tier_3_impaler }
@@ -13030,6 +13151,7 @@ character_event = {
 					on_trigger = has_character_flag
 					weapon_sword = { add_artifact = sword_tier_2_new new_artifact = { set_artifact_flag = stolen_by_smith } }
 					weapon_scimitar = { add_artifact = scimitar_tier_2_new new_artifact = { set_artifact_flag = stolen_by_smith } }
+					weapon_saber = { add_artifact = saber_tier_2_new new_artifact = { set_artifact_flag = stolen_by_smith } }
 					weapon_lance = { add_artifact = lance_tier_2_new new_artifact = { set_artifact_flag = stolen_by_smith } }
 					weapon_axe = { add_artifact = axe_tier_2_new new_artifact = { set_artifact_flag = stolen_by_smith } }
 					weapon_mace = { add_artifact = mace_tier_2_new new_artifact = { set_artifact_flag = stolen_by_smith } }
@@ -13042,6 +13164,7 @@ character_event = {
 					on_trigger = has_character_flag
 					weapon_sword = { add_artifact = sword_tier_1_new new_artifact = { set_artifact_flag = stolen_by_smith } }
 					weapon_scimitar = { add_artifact = scimitar_tier_1_new new_artifact = { set_artifact_flag = stolen_by_smith } }
+					weapon_saber = { add_artifact = saberr_tier_1_new new_artifact = { set_artifact_flag = stolen_by_smith } }
 					weapon_lance = { add_artifact = lance_tier_1_new new_artifact = { set_artifact_flag = stolen_by_smith } }
 					weapon_axe = { add_artifact = axe_tier_1_new new_artifact = { set_artifact_flag = stolen_by_smith } }
 					weapon_mace = { add_artifact = mace_tier_1_new new_artifact = { set_artifact_flag = stolen_by_smith } }
