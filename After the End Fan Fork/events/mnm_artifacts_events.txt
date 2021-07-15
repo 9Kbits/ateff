@@ -11077,9 +11077,9 @@ character_event = {
 	
 	#Saber
 	option = {
-		trigger = { OR = {culture_group = starfolk  government = open_range_feudalism_government } } has_character_flag = weaponsmith }
-		name = EVTOPTB_MNM_9118
-		custom_tooltip = { text = EVTOPTB_MNM_9118_TT }
+		trigger = { OR = {culture_group = starfolk  government = open_range_feudalism_government } has_character_flag = weaponsmith }
+		name = EVTOPTH_MNM_9118
+		custom_tooltip = { text = EVTOPTH_MNM_9118_TT }
 		hidden_tooltip = { FROM = { set_character_flag = weapon_saber } }
 		ai_chance = { factor = 2 }
 	}
@@ -11847,7 +11847,7 @@ character_event = {
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_saber } }
-			add_artifact = saber_tier_4_vengeance
+			add_artifact = saber_tier_4_horse_sunder
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
@@ -11881,7 +11881,7 @@ character_event = {
 			trigger = { FROM = { has_character_flag = weapon_scimitar } }
 		}
 		name = {
-			text = EVTOPTC_MNM_40000_SABERR
+			text = EVTOPTC_MNM_40000_SABER
 			trigger = { FROM = { has_character_flag = weapon_saber } }
 		}
 		name = {
@@ -11915,7 +11915,7 @@ character_event = {
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_saber } }
-			add_artifact = saber_tier_4_fury
+			add_artifact = saber_tier_4_liberator
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
@@ -12086,7 +12086,7 @@ character_event = {
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_saber } }
-			add_artifact = saber_tier_3_vengeance
+			add_artifact = saber_tier_3_horse_sunder
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_scimitar } }
@@ -12158,7 +12158,7 @@ character_event = {
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_saber } }
-			add_artifact = saber_tier_3_fury
+			add_artifact = saber_tier_3_liberator
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
@@ -13030,8 +13030,8 @@ character_event = {
 					weapon_saber = {
 						random_list = {
 							1 = { add_artifact = saber_tier_4_throat_cutter }
-							1 = { add_artifact = saber_tier_4_vengeance }
-							1 = { add_artifact = saber_tier_4_fury }
+							1 = { add_artifact = saber_tier_4_horse_sunder }
+							1 = { add_artifact = saber_tier_4_liberator }
 						}
 						new_artifact = { set_artifact_flag = stolen_by_smith }
 					}
@@ -13099,8 +13099,8 @@ character_event = {
 					weapon_saber = { 
 						random_list = {
 							1 = { add_artifact = saber_tier_3_throat_cutter }
-							1 = { add_artifact = saber_tier_3_vengeance }
-							1 = { add_artifact = saber_tier_3_fury }
+							1 = { add_artifact = saber_tier_3_horse_sunder }
+							1 = { add_artifact = saber_tier_3_liberator }
 						}
 						new_artifact = { set_artifact_flag = stolen_by_smith }
 					}
