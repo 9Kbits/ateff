@@ -795,3 +795,95 @@ character_event = {
 		}
 	}
 }
+
+character_event = {
+	id = teaxs.51
+	desc = EVTDESC_texas_51
+	only_playable = yes
+	trigger = {
+		government = open_range_feudalism_government
+		any_voter = {
+			OR = {
+				AND = {
+					count >= 5#you set it
+					ROOT = { has_law = range_senate_size_2}#the law setting the size of the voter pool
+				}
+				AND = {
+					count >= 7#you set it
+					ROOT = { has_law = range_senate_size_3}#the law setting the size of the voter pool
+				}
+				AND = {
+					count >= 9#you set it
+					ROOT = { has_law = range_senate_size_4}#the law setting the size of the voter pool
+				}
+			}
+			trait = party_y#according to party
+		}
+		has_law = z#the law you vote on
+		is_law_allowed = z+1
+		NOT = {
+			had_character_flag = { flag = orf_forced_law_vote months <= 60}#you can't have this event if you had it in the last 5 years
+		}
+	}
+	mean_time_to_happen = {
+		months = 12#is a year a good time?
+		modifier = {# cuts the time by half if the party has 2/3 of the senate
+			factor = 0.5 
+			any_voter = {
+				OR = {
+					AND = {
+						count >= 7#you set it
+						ROOT = { has_law = range_senate_size_2}#the law setting the size of the voter pool
+					}
+					AND = {
+						count >= 9
+						ROOT = { has_law = range_senate_size_3}#the law setting the size of the voter pool
+					}
+					AND = {
+						count >= 11
+						ROOT = { has_law = range_senate_size_4}#the law setting the size of the voter pool
+					}
+				}
+				trait = party_y#according to party
+			}
+		}
+	}
+	immediate = {
+		clr_character_flag = orf_forced_law_vote
+		add_character_flag = orf_forced_law_vote
+	}
+	option = {#approve
+		ai_chance = {
+			factor = 70
+			modifier = { factor = 4 trait = just}
+			modifier = { factor = 2 trait = proud}
+			modifier = { factor = 1.5 trait = content}
+			modifier = { factor = 3 trait = craven}
+			#you might wanna add more depending on the laws
+		}
+		name = EVTOPTA_texas_51
+		primary_title = {
+			approve_law = y+1
+		}
+		prestige = -100
+	}
+	option = {#decline
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 4 trait = arbitrary}
+			modifier = { factor = 2 trait = humble}
+			modifier = { factor = 3 trait = ambitious}
+			#you might wanna add more depending on the laws
+		}
+		name = EVTOPTB_texas_51
+		any_realm_character = {
+			add_character_modifier = {
+				opinion = {
+					modifier = opinion_tyrant
+					who = ROOT
+					months = 120
+				}
+			}
+		}
+	}
+}
