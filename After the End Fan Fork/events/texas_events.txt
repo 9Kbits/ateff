@@ -721,9 +721,14 @@ character_event = {
 	trigger = {
 		OR = {
 			government = open_range_feudalism_government
-			has_job_title = yes
 			liege = {
 				government = open_range_feudalism_government
+			}
+			AND = {
+				has_job_title = yes
+				liege = {
+					government = open_range_feudalism_government
+				}
 			}
 		}
 		NOT = {
