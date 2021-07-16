@@ -802,7 +802,7 @@ character_event = {
 }
 
 character_event = {
-	id = teaxs.51
+	id = texas.51
 	desc = EVTDESC_texas_51
 	only_playable = yes
 	trigger = {
@@ -890,5 +890,170 @@ character_event = {
 				}
 			}
 		}
+	}
+}
+
+character_event = {
+	id = texas.52
+	desc = EVTDESC_texas_52
+	only_playable = yes
+	hide_window = yes
+	trigger = {
+		government = open_range_feudalism_government
+	}
+	immediate = {
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 20
+		}
+		new_character = {
+			ROOT = { character_event = {id = texas.53}}
+			gold = 50
+			piety = 30
+			prestige = 100
+			set_character_flag = ranger
+			random_list = {
+				10 = {
+					add_trait = party_populist
+				}
+				10 = {
+					add_trait = party_royalist
+				}
+				10 = {
+					add_trait = party_magnate
+				}
+				10 = {
+					add_trait = party_theocratic
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years = 15
+	}
+}
+
+character_event = {#rangers trying to organize
+	id = texas.53
+	desc = EVTDESC_texas_53
+	option = {
+		name = EVTOPTA_texas_53
+		#you gain election buff that i will code after the election
+		trigger = {
+			FROM = {
+				OR = {
+					AND = {
+						trait = party_populist
+						ROOT = {trait = party_populist}
+					}
+					AND = {
+						trait = party_magnate
+						ROOT = {trait = party_magnate}
+					}
+					AND = {
+						trait = party_royalist
+						ROOT = {trait = party_royalist}
+					}
+					AND = {
+						trait = party_theocratic
+						ROOT = {trait = party_thocratic}
+					}
+				}
+			}
+		}
+	}
+	option = {#ignore them
+		name = EVTOPTB_texas_53
+		trigger = {
+			FROM = {
+				NOR = {
+					AND = {
+						trait = party_populist
+						ROOT = {trait = party_populist}
+					}
+					AND = {
+						trait = party_magnate
+						ROOT = {trait = party_magnate}
+					}
+					AND = {
+						trait = party_royalist
+						ROOT = {trait = party_royalist}
+					}
+					AND = {
+						trait = party_theocratic
+						ROOT = {trait = party_thocratic}
+					}
+				}
+			}
+		}
+		#election penalty
+	}
+	option = {#expel them
+		name = EVTOPTC_texas_53
+		trigger = {
+			FROM = {
+				NOR = {
+					AND = {
+						trait = party_populist
+						ROOT = {trait = party_populist}
+					}
+					AND = {
+						trait = party_magnate
+						ROOT = {trait = party_magnate}
+					}
+					AND = {
+						trait = party_royalist
+						ROOT = {trait = party_royalist}
+					}
+					AND = {
+						trait = party_theocratic
+						ROOT = {trait = party_thocratic}
+					}
+				}
+			}
+		}
+		add_character_modifier = {
+			name = expelled_rangers
+			years = 5
+		}
+		custom_tooltip = {
+			text = RANGERS_EXPELLED_TT
+			liege = {
+				random_vassal = {
+					limit = {
+						OR = {
+							AND = {
+								trait = party_populist
+								FROM = {trait = party_populist}
+							}
+							AND = {
+								trait = party_magnate
+								FROM = {trait = party_magnate}
+							}
+							AND = {
+								trait = party_royalist
+								FROM = {trait = party_royalist}
+							}
+							AND = {
+								trait = party_theocratic
+								FROM = {trait = party_thocratic}
+							}
+						}
+					}
+					FROM = {PREV = {character_event = {id = texas.54 days = 7 random = 3 }}}
+				}
+			}
+		}
+	}
+}
+character_event = {
+	id = texas.54
+	desc = EVTDESC_texas_54
+	option = {
+		FROM = 
 	}
 }

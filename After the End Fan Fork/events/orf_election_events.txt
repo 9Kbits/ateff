@@ -23,6 +23,7 @@ character_event = {
 					limit = { 
 						trait = party_populist
 						NOT = { has_character_modifier = orf_election_cooldown }
+						NOT = {has_character_flag = orf_election_running}
 						NOT = {
 							OR = {
 								has_job_title = job_chancellor
@@ -45,6 +46,7 @@ character_event = {
 				random_voter = {
 					limit = { 
 						trait = party_magnate
+						NOT = {has_character_flag = orf_election_running}
 						NOT = { has_character_modifier = orf_election_cooldown }
 						NOT = {
 							OR = {
@@ -68,6 +70,7 @@ character_event = {
 				random_voter = {
 					limit = { 
 						trait = party_royalist
+						NOT = {has_character_flag = orf_election_running}
 						NOT = { has_character_modifier = orf_election_cooldown }
 						NOT = {
 							OR = {
@@ -91,6 +94,7 @@ character_event = {
 				random_voter = {
 					limit = { 
 						trait = party_theocratic
+						NOT = {has_character_flag = orf_election_running}
 						NOT = { has_character_modifier = orf_election_cooldown }
 						NOT = {
 							OR = {
@@ -114,6 +118,7 @@ character_event = {
 				random_voter = {
 					limit = { 
 						trait = party_opposition
+						NOT = {has_character_flag = orf_election_running}
 						NOT = { has_character_modifier = orf_election_cooldown }
 						NOT = {
 							OR = {
@@ -143,6 +148,7 @@ character_event = {
 					NOT = { 
 						has_character_flag = temp_block_orf
 					}
+					NOT = {has_character_flag = orf_election_running}
 				}
 				root = { set_character_flag = orf_opponent_1_appointee_found }
 				save_event_target_as = orf_opponent_candidate_appointee
@@ -181,6 +187,7 @@ character_event = {
 					NOT = { 
 						has_character_flag = temp_block_orf
 					}
+					NOT = {has_character_flag = orf_election_running}
 					NOT = { has_character_modifier = orf_election_cooldown }
 					NOT = {
 						OR = {
@@ -209,9 +216,8 @@ character_event = {
 		}
 		show_portrait = event_target:orf_opponent_candidate_appointee
 		#set this particular target as THE target and send letter
-		event_target:orf_opponent_candidate_appointee = { save_event_target_as = orf_election_opponent_defender }
 		ROOT = { save_event_target_as = orf_election_opponent_attacker }
-		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.3 } }
+		
 		#remove repeat blockers
 	}
 	option = { 
@@ -224,7 +230,6 @@ character_event = {
 		#set this particular target as THE target and send letter
 		event_target:orf_opponent_candidate_party = { save_event_target_as = orf_election_opponent_defender }
 		ROOT = { save_event_target_as = orf_election_opponent_attacker }
-		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.3 } }
 	}
 	
 	option = {
@@ -236,10 +241,19 @@ character_event = {
 		#set this particular target as THE target and send letter
 		event_target:orf_opponent_candidate_outsider = { save_event_target_as = orf_election_opponent_defender }
 		ROOT = { save_event_target_as = orf_election_opponent_attacker }
-		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.3 } }
 		#remove repeat blockers
 	}
-	
+	after = {
+		event_target:orf_election_opponent_defender = {
+			character_event = { id = orfelection.3 }
+			set_character_flag = orf_election_running
+		}
+		event_target:orf_election_opponent_attacker ={ #this is just ROOT
+			set_character_flag = orf_election_running
+		}
+		
+	}
+
 	option = {
 		name = EVTOPTA_orfelection_nevermind
 	}
@@ -282,7 +296,6 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		 
 		government = open_range_feudalism_government
 	}
 	
@@ -291,7 +304,7 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTA_orf_election_campaign_range
-		character_event = {id = orfelection.11 days = 25}	
+		character_event = {id = orfelection.15 days = 25}	
 	}
 	
 	option = {
@@ -751,7 +764,7 @@ character_event ={#local speech
 			text = ORFELECCUSTOM
 			random_list = {
 				10 = {
-					set_character_flag = orfelec_good
+					set_character_flag = orfelec_good_11
 					mult_modifier = {
 						factor = 0
 						diplomacy == 0
@@ -801,10 +814,10 @@ character_event ={#local speech
 					}
 				}
 				20 = {#neutral
-					set_character_flag = orfelec_neutral
+					set_character_flag = orfelec_neutral_11
 				}
 				40 = {#bad
-					set_character_flag = orfelec_bad
+					set_character_flag = orfelec_bad_11
 					mult_modifier = {
 						factor = 1.5
 						diplomacy == 0
@@ -863,7 +876,7 @@ character_event ={#local speech
 			text = ORFELECCUSTOM
 			random_list = {
 				20 = {#good
-					set_character_flag = orfelec_good
+					set_character_flag = orfelec_good_11
 					mult_modifier = {
 						factor = 0
 						diplomacy == 0
@@ -912,10 +925,10 @@ character_event ={#local speech
 					}
 				}
 				20 = {#neutral
-					set_character_flag = orfelec_neutral
+					set_character_flag = orfelec_neutral_11
 				}
 				40 = {#bad
-					set_character_flag = orfelec_bad
+					set_character_flag = orfelec_bad_11
 					mult_modifier = {
 						factor = 1.5
 						diplomacy == 0
@@ -972,7 +985,7 @@ character_event ={#local speech
 			text = ORFELECCUSTOM
 			random_list = {
 				10 = {
-					set_character_flag = orfelec_good
+					set_character_flag = orfelec_good_11
 					mult_modifier = {
 						factor = 0
 						diplomacy == 0
@@ -1022,10 +1035,10 @@ character_event ={#local speech
 					}
 				}
 				20 = {#neutral
-					set_character_flag = orfelec_neutral
+					set_character_flag = orfelec_neutral_11
 				}
 				40 = {#bad
-					set_character_flag = orfelec_bad
+					set_character_flag = orfelec_bad_11
 					mult_modifier = {
 						factor = 1.5
 						diplomacy == 0
@@ -1082,15 +1095,15 @@ character_event ={#local speech
 character_event ={#resolved
 	id = orfelection.12
 	desc = {
-		trigger = { has_character_flag = orfelec_good}
+		trigger = { has_character_flag = orfelec_good_11}
 		text =EVTDESC_orfelec_resolve_good_minor_meeting
 	}
 	desc = {
-		trigger = { has_character_flag = orfelec_good}
+		trigger = { has_character_flag = orfelec_neutral_11}
 		text =EVTDESC_orfelec_resolve_neutral_minor_meeting
 	}
 	desc = {
-		trigger = { has_character_flag = orfelec_good}
+		trigger = { has_character_flag = orfelec_bad_11}
 		text =EVTDESC_orfelec_resolve_bad_minor_meeting
 	}
 	#picture = something
@@ -1100,18 +1113,15 @@ character_event ={#resolved
 	is_triggered_only = yes
 	
 	option = {
-		trigger = { has_character_flag = orfelec_good}
-		clr_character_flag = orfelec_good
+		trigger = { has_character_flag = orfelec_good_11}
 		name = EVTOPT_orfelec_resolve_good_minor_meeting
 	}
 	option = {
-		trigger = { has_character_flag = orfelec_neutral}
-		clr_character_flag = orfelec_neutral
+		trigger = { has_character_flag = orfelec_neutral_11}
 		name = EVTOPT_orfelec_resolve_neutral_minor_meeting
 	}
 	option = {
-		trigger = { has_character_flag = orfelec_bad}
-		clr_character_flag = orfelec_bad
+		trigger = { has_character_flag = orfelec_bad_11}
 		name = EVTOPT_orfelec_resolve_bad_minor_meeting
 	}
 }
@@ -1134,7 +1144,7 @@ character_event ={#Merchants arrive
 		custom_tooltip = {
 			random_list = {
 				10 = {#good
-					set_character_flag = orfelec_good
+					set_character_flag = orfelec_good_13
 					mult_modifier = {
 						factor = 0
 						stewardship == 0
@@ -1161,10 +1171,10 @@ character_event ={#Merchants arrive
 					}
 				}
 				20 = {#neutral
-					set_character_flag = orfelec_neutral
+					set_character_flag = orfelec_neutral_13
 				}
 				40 = {#bad
-					set_character_flag = orfelec_bad
+					set_character_flag = orfelec_bad_13
 					mult_modifier = {
 						factor = 2
 						stewardship == 0
@@ -1200,7 +1210,7 @@ character_event ={#Merchants arrive
 		custom_tooltip = {
 			random_list = {
 				15 = {#good			
-					set_character_flag = orfelec_good
+					set_character_flag = orfelec_good_13
 					mult_modifier = {
 						factor = 2
 						trait = groomed
@@ -1231,10 +1241,10 @@ character_event ={#Merchants arrive
 					}
 				}
 				20 = {#neutral
-					set_character_flag = orfelec_neutral
+					set_character_flag = orfelec_neutral_13
 				}
 				30 = {#bad
-					set_character_flag = orfelec_bad
+					set_character_flag = orfelec_bad_13
 					mult_modifier = {
 						factor = 0
 						trait = groomed
@@ -1273,13 +1283,13 @@ character_event ={#Merchants arrive
 		custom_tooltip = {
 			random_list = {
 				20 = {#good
-					set_character_flag = orfelec_good
+					set_character_flag = orfelec_good_13
 				}
 				30 = {#neutral
-					set_character_flag = orfelec_neutral
+					set_character_flag = orfelec_neutral_13
 				}
 				20 = {#bad
-					set_character_flag = orfelec_bad
+					set_character_flag = orfelec_bad_13
 				}
 			}
 			text = ORFELECCUSTOM
@@ -1290,34 +1300,31 @@ character_event ={#Merchants arrive
 character_event ={#resolved
 	id = orfelection.14
 	desc = {
-		trigger = { has_character_flag = orfelec_good}
+		trigger = { has_character_flag = orfelec_good_13}
 		text =EVTDESC_orfelec_resolve_good_merchants
 	}
 	desc = {
-		trigger = { has_character_flag = orfelec_neutral}
+		trigger = { has_character_flag = orfelec_neutral_13}
 		text =EVTDESC_orfelec_resolve_neutral_merchants
 	}
 	desc = {
-		trigger = { has_character_flag = orfelec_bad}
+		trigger = { has_character_flag = orfelec_bad_13}
 		text =EVTDESC_orfelec_resolve_bad_merchants
 	}
 	only_playable = yes
 	capable_only = yes
 	is_triggered_only = yes
 	option = {
-		trigger = { has_character_flag = orfelec_good}
-		clr_character_flag = orfelec_good
+		trigger = { has_character_flag = orfelec_good_13}
 		name = EVTOPT_orfelec_resolve_good_merchants
 	}
 	option = {
 		name = EVTOPT_orfelec_resolve_neutral_merchants
-		trigger = { has_character_flag = orfelec_neutral}
-		clr_character_flag = orfelec_neutral
+		trigger = { has_character_flag = orfelec_neutral_13}
 	}
 	option = {
 		name = EVTOPT_orfelec_resolve_bad_merchants
-		trigger = { has_character_flag = orfelec_bad}
-		clr_character_flag = orfelec_bad
+		trigger = { has_character_flag = orfelec_bad_13}
 	}
 }
 
@@ -1339,7 +1346,7 @@ character_event ={#a problem occurs
 			text = ORFELECCUSTOM
 			random_list = {
 				10 = {#good
-					set_character_flag = orfelec_good
+					set_character_flag = orfelec_good_15
 					mult_modifier = {
 						factor = 0
 						diplomacy == 0
@@ -1366,10 +1373,10 @@ character_event ={#a problem occurs
 					}
 				}
 				20 = {#neutral
-					set_character_flag = orfelec_neutral
+					set_character_flag = orfelec_neutral_15
 				}
 				40 = {#bad
-					set_character_flag = orfelec_bad
+					set_character_flag = orfelec_bad_15
 					mult_modifier = {
 						factor = 2
 						diplomacy == 0
@@ -1403,7 +1410,7 @@ character_event ={#a problem occurs
 			text = ORFELECCUSTOM
 			random_list = {
 				10 = {#good
-					set_character_flag = orfelec_good
+					set_character_flag = orfelec_good_15
 					mult_modifier = {
 						factor = 0
 						martial == 0
@@ -1430,10 +1437,10 @@ character_event ={#a problem occurs
 					}
 				}
 				20 = {#neutral
-					set_character_flag = orfelec_neutral
+					set_character_flag = orfelec_neutral_15
 				}
 				40 = {#bad
-					set_character_flag = orfelec_bad
+					set_character_flag = orfelec_bad_15
 					mult_modifier = {
 						factor = 2
 						martial == 0
@@ -1468,7 +1475,7 @@ character_event ={#a problem occurs
 			text = ORFELECCUSTOM
 			random_list = {
 				10 = {#good
-					set_character_flag = orfelec_good
+					set_character_flag = orfelec_good_15
 					mult_modifier = {
 						factor = 0
 						learning == 0
@@ -1495,10 +1502,10 @@ character_event ={#a problem occurs
 					}
 				}
 				20 = {#neutral
-					set_character_flag = orfelec_neutral
+					set_character_flag = orfelec_neutral_15
 				}
 				40 = {#bad
-					set_character_flag = orfelec_bad
+					set_character_flag = orfelec_bad_15
 					mult_modifier = {
 						factor = 2
 						learning == 0
@@ -1533,14 +1540,14 @@ character_event ={#resolved
 	id = orfelection.16
 	desc = {
 		text =EVTDESC_orfelec_resolve_good_rangers
-		trigger = { has_character_flag = orfelec_good}
+		trigger = { has_character_flag = orfelec_good_15}
 	}
 	desc = {
-		trigger = { has_character_flag = orfelec_neutral}
+		trigger = { has_character_flag = orfelec_neutral_15}
 		text =EVTDESC_orfelec_resolve_neutral_rangers
 	}
 	desc = {
-		trigger = { has_character_flag = orfelec_bad}
+		trigger = { has_character_flag = orfelec_bad_15}
 		text =EVTDESC_orfelec_resolve_bad_rangers
 	}
 	only_playable = yes
@@ -1548,18 +1555,15 @@ character_event ={#resolved
 	is_triggered_only = yes
 	option = {
 		name = EVTOPT_orfelec_resolve_good_rangers
-		trigger = { has_character_flag = orfelec_good}
-		clr_character_flag = orfelec_good
+		trigger = { has_character_flag = orfelec_good_15}
 	}
 	option = {
-		trigger = { has_character_flag = orfelec_neutral}
+		trigger = { has_character_flag = orfelec_neutral_15}
 		name = EVTOPT_orfelec_resolve_neutral_rangers
-		clr_character_flag = orfelec_neutral
 	}
 	option = {
 		name = EVTOPT_orfelec_resolve_bad_rangers
-		trigger = { has_character_flag = orfelec_bad}
-		clr_character_flag = orfelec_bad
+		trigger = { has_character_flag = orfelec_bad_15}
 	}
 }
 
