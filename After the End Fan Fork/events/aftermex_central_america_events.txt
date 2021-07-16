@@ -36,3 +36,29 @@ character_event = {
 		}
 	}
 }
+
+# I know this is the wrong file, too bad!
+
+character_event = {
+	id = unitasfratrum.711
+	is_triggered_only = yes
+	hide_window = yes
+	
+	immediate = {
+		capital_scope = {
+		ROOT = {
+		spawn_unit = {
+			province = PREV
+			home = PREV
+			owner = THIS
+			troops ={
+				light_infantry = { 300 300 }
+				archers = { 300 300 }
+				light_cavalry = { 100 100 }
+			}
+			earmark = cristero_raised_peasants
+			attrition = 0.50
+			reinforces = yes
+		}}}
+	}
+}
