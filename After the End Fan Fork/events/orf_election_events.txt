@@ -262,12 +262,14 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTA_orf_election_inform_run_against
-		
-		
 		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.4  days = 10 } }
 		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.4  days = 10 } }
 		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.8  days = 125 } }
 		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.8  days = 130 } }
+	}
+	option = { 
+		name = EVTOPTA_orf_election_inform_resign
+		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.5  days = 10 } }
 	}
 }
 
@@ -316,8 +318,6 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		 
-		government = open_range_feudalism_government
 	}
 	
 	desc = {
@@ -326,67 +326,411 @@ character_event = {
 	option = { 
 		name = EVTOPTA_orf_election_resigned_that_was_easy
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_12 } }
-			FROM = { remove_title = title_senator_12 }
-			ROOT = { give_title = title_senator_12 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_12 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_12 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_12 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_11 } }
-			FROM = { remove_title = title_senator_11 }
-			ROOT = { give_title = title_senator_11 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_11 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_11 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_11 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_10 } }
-			FROM = { remove_title = title_senator_10 }
-			ROOT = { give_title = title_senator_10 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_10 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_10 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_10 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_9 } }
-			FROM = { remove_title = title_senator_9 }
-			ROOT = { give_title = title_senator_9 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_9 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_9 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_9 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_8 } }
-			FROM = { remove_title = title_senator_8 }
-			ROOT = { give_title = title_senator_8 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_8 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_8 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_8 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_7 } }
-			FROM = { remove_title = title_senator_7 }
-			ROOT = { give_title = title_senator_7 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_7 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_7 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_7 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_6 } }
-			FROM = { remove_title = title_senator_6 }
-			ROOT = { give_title = title_senator_6 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_6 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_6 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_6 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_5 } }
-			FROM = { remove_title = title_senator_5 }
-			ROOT = { give_title = title_senator_5 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_5 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_5 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_5 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_4 } }
-			FROM = { remove_title = title_senator_4 }
-			ROOT = { give_title = title_senator_4 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_4 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_4 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_4 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_3 } }
-			FROM = { remove_title = title_senator_3 }
-			ROOT = { give_title = title_senator_3 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_4 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_4 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_4 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_2 } }
-			FROM = { remove_title = title_senator_2 }
-			ROOT = { give_title = title_senator_2 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_3 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_3 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_3 }
 		}
 		if = {
-			limit = { FROM = { has_minor_title = title_senator_1 } }
-			FROM = { remove_title = title_senator_1 }
-			ROOT = { give_title = title_senator_1 }
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_2 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_2 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_2 }
+		}		
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_1 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_1 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_1 }
 		}		
 	}
 }
+
+
+
+#when a new orf election event should affect elections just apply it here
+#for organization sake try to keep modifiers in the list sourced from the person the list is about
+#aka, penalties hurt the person that has the penalty rather than buff the other person, let's bad results for one and good results for the other
+#predictably roll results, plus it's easy
+
+
+character_event = {
+	id = orfelection.8
+	title = EVTTITLE_orf_election_waiting_results
+	
+	picture = GFX_evt_battle
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	desc = {
+		text = EVTDESC_orf_election_waiting_results
+	}
+	
+	immediate = {
+		random_list = {
+			50 = {
+				mult_modifier = {
+					factor = 1.3
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_good }
+				}
+				mult_modifier = {
+					factor = 1.1
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_neutral }
+				}
+				mult_modifier = {
+					factor = 0.75
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_bad }
+				}
+							
+				event_target:orf_election_opponent_attacker = { set_character_flag = election_won }
+				event_target:orf_election_opponent_attacker = { narrative_event = { id =  orfelection.10 days = 10} }
+			}
+			
+			
+			
+			50 = {
+				mult_modifier = {
+					factor = 1.3
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_good }
+				}
+				mult_modifier = {
+					factor = 1.1
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_neutral }
+				}
+				mult_modifier = {
+					factor = 0.75
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_bad }
+				}
+								
+				event_target:orf_election_opponent_defender = { set_character_flag = election_won }
+				event_target:orf_election_opponent_defender = { narrative_event = { id =  orfelection.10 days = 10} }
+			}			
+		}
+	}
+	
+	option = { 
+		name = EVTOPTA_orf_election_waiting_results
+	}
+}
+
+
+
+narrative_event = {
+	id = orfelection.10
+	title = EVTTITLE_orf_election_attacker_won
+	
+	picture = GFX_evt_battle
+	
+	is_triggered_only = yes
+	
+	trigger = {
+		same_realm = FROM
+		adult = yes
+	}
+	
+	desc = {
+		text = EVTDESC_orf_election_attacker_won
+		trigger = { event_target:orf_election_opponent_attacker = { has_character_flag = election_won } }
+	}
+	
+	desc = {
+		text = EVTDESC_orf_election_defender_won
+		trigger = { event_target:orf_election_opponent_defender = { has_character_flag = election_won } }
+	}
+	
+	immediate = {
+		event_target:orf_election_opponent_attacker = { set_character_flag = election_attacker } 
+		event_target:orf_election_opponent_defender = { set_character_flag = election_defender } 
+	}
+	
+	
+	option = { 
+		name = EVTOPTA_orf_election_attacker_won
+		trigger = { 
+			event_target:orf_election_opponent_attacker = { has_character_flag = election_won } 
+			has_character_flag = election_attacker
+		}
+		event_target:orf_election_opponent_attacker = { clr_character_flag = election_won } 
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_12 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_12 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_12 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_11 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_11 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_11 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_10 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_10 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_10 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_9 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_9 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_9 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_8 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_8 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_8 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_7 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_7 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_7 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_6 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_6 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_6 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_5 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_5 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_5 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_4 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_4 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_4 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_4 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_4 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_4 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_3 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_3 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_3 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_2 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_2 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_2 }
+		}		
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_1 } }
+			event_target:orf_election_opponent_defender = { remove_title = title_senator_1 }
+			event_target:orf_election_opponent_attacker = { give_title = title_senator_1 }
+		}
+		add_character_modifier = {
+			name = orf_election_cooldown
+			duration = 1310
+		}
+		clr_character_flag = election_won
+		clr_character_flag = election_defender
+	}
+
+	option = { 
+		name = EVTOPTA_orf_election_defender_won
+		trigger = { 
+			event_target:orf_election_opponent_defender = { has_character_flag = election_won } 
+			has_character_flag = election_defender
+		}
+		
+		add_character_modifier = {
+			name = orf_election_cooldown
+			duration = 1310
+		}		
+		
+		clr_character_flag = election_won
+		clr_character_flag = election_defender
+		
+	}
+
+	option = { 
+		name = EVTOPTA_orf_election_attacker_lost
+		trigger = { 
+			event_target:orf_election_opponent_defender = { has_character_flag = election_won } 
+			has_character_flag = election_attacker
+		}
+		add_character_modifier = {
+			name = orf_election_lost_cooldown
+			duration = 365
+		}		
+		
+		clr_character_flag = election_defender
+		
+	}
+
+	option = { 
+		name = EVTOPTA_orf_election_defender_lost
+		trigger = { 
+			event_target:orf_election_opponent_attacker = { has_character_flag = election_won } 
+			has_character_flag = election_defender
+		}
+		add_character_modifier = {
+			name = orf_election_lost_cooldown
+			duration = 365
+		}	
+		clr_character_flag = election_defender
+		
+	}
+	
+	option = {
+		name = EVTOPTA_orf_election_result_agnostic
+		trigger = {
+			NOT = { has_character_flag = election_defender }
+			NOT = { has_character_flag = election_attacker }
+		}
+	}
+}
+
+
+
+character_event = {
+	id = orfelection.10
+	title = EVTTITLE_orf_election_defender_won
+	
+	picture = GFX_evt_battle
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+	
+	desc = {
+		text = EVTDESC_orf_election_resigned
+	}
+	option = { 
+		name = EVTOPTA_orf_election_resigned_that_was_easy
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_12 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_12 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_12 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_11 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_11 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_11 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_10 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_10 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_10 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_9 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_9 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_9 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_8 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_8 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_8 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_7 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_7 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_7 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_6 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_6 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_6 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_5 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_5 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_5 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_4 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_4 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_4 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_4 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_4 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_4 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_3 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_3 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_3 }
+		}
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_2 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_2 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_2 }
+		}		
+		if = {
+			limit = { event_target:orf_election_opponent_defender = { has_minor_title = title_senator_1 } }
+			event_target:orf_election_opponent_attacker = { remove_title = title_senator_1 }
+			event_target:orf_election_opponent_defender = { give_title = title_senator_1 }
+		}
+		event_target:orf_election_opponent_attacker = {
+			add_character_modifier = {
+				name = orf_election_cooldown
+				duration = 1310
+			}		
+		}
+		event_target:orf_election_opponent_defender  = {
+			add_character_modifier = {
+				name = orf_election_lost_cooldown
+				duration = 365
+			}		
+		}
+	}
+}
+
+
+
+
+
 #TODO AI_will_do, and connect it to the rest of the chain
 character_event ={#local speech
 	id = orfelection.11
