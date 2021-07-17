@@ -65,15 +65,17 @@ decisions = {
 		}
 		
 		allow = {
-			NOR = {
-				is_ill = yes
-				has_character_flag = talmud_studytimer
+			is_ill = no
+			custom_tooltip = {
+				text = YESHIVA_TIMER_TT
+				NOT = {had_character_flag = talmud_studytimer months = 60}
 			}
 			piety = 100
 			wealth = 50
 		}
 		effect = {
-			custom_tooltip = { text = TXT_talmud_study		}
+			custom_tooltip = { text = TXT_talmud_study}
+			clr_character_flag = talmud_studytimer
 			set_character_flag = talmud_studytimer
 			wealth = -50
 			hidden_tooltip = {
@@ -426,7 +428,6 @@ targeted_decisions = {
 						trait = sympathy_pagans
 						trait = sympathy_cult_of_saints
 						trait = sympathy_christendom
-						}
 					}
 				}
 			}

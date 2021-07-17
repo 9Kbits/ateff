@@ -103,6 +103,34 @@ selfish_pattern_for = {
 			}
 		}
 	}
+	culture_tolerance_0 = {
+		NOT = {culture = FROM}
+	}
+	culture_tolerance_1 = {
+		liege = {has_law = culture_tolerance_2}
+		NOT = {culture = FROM}
+	}
+	culture_tolerance_2 = {
+		always = no 
+	}
+	religion_tolerance_0 = {
+		NOT = {religion = FROM}
+	}
+	religion_tolerance_1 = {
+		NOT = {religion = FROM}
+		liege = {has_law = religion_tolerance_2}
+	}
+	religion_tolerance_2 = {
+		NOT = {religion = FROM}
+		liege = {has_law = religion_tolerance_3}
+	}
+	religion_tolerance_3 = {
+		NOT = {religion = FROM}
+		liege = {has_law = religion_tolerance_4}
+	}
+	religion_tolerance_4 = {
+		always = no
+	}
 }
 
 selfish_pattern_against = {
@@ -304,5 +332,34 @@ selfish_pattern_against = {
 				}
 			}
 		}
+	}
+	culture_tolerance_0 = {
+		always = no
+	}
+	culture_tolerance_1 = {
+		liege = {has_law = culture_tolerance_0}
+		NOT = {culture = FROM}
+	}
+	culture_tolerance_2 = {
+		NOT = {culture = FROM}
+	}
+	
+	religion_tolerance_0 = {
+		always = no
+	}
+	religion_tolerance_1 = {
+		NOT = {religion = FROM}
+		liege = {has_law = religion_tolerance_0}
+	}
+	religion_tolerance_2 = {
+		NOT = {religion = FROM}
+		liege = {has_law = religion_tolerance_1}
+	}
+	religion_tolerance_3 = {
+		NOT = {religion = FROM}
+		liege = {has_law = religion_tolerance_2}
+	}
+	religion_tolerance_4 = {
+		NOT = {religion = FROM}
 	}
 }

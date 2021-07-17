@@ -461,6 +461,7 @@ character_event = { #training to read Torah
 						who = job_spiritual
 						value < 10
 					}
+				}
 			}
 			#I  just put all the modifiers on the other option, I don't think it matters 
 		}
@@ -1754,17 +1755,17 @@ character_event = {
 						set_character_flag = yeshiva_evt_9
 					}
 				}
-				100 = { #visit with the rosh yeshiva
-					trigger = {
-						NOT = { has_character_flag = yeshiva_evt_10 }
-					}
-					character_event = { id = jewish.164 } # send event
-					set_character_flag = yeshiva_evt_10
-					persistent_event_target:chevruta_partner = {
-						character_event = { id = jewish.164 } # send event
-						set_character_flag = yeshiva_evt_10
-					}
-				}
+				# 100 = { #visit with the rosh yeshiva
+					# trigger = {
+						# NOT = { has_character_flag = yeshiva_evt_10 }
+					# }
+					# character_event = { id = jewish.164 } # send event
+					# set_character_flag = yeshiva_evt_10
+					# persistent_event_target:chevruta_partner = {
+						# character_event = { id = jewish.164 } # send event
+						# set_character_flag = yeshiva_evt_10
+					# }
+				# }
 			}
 		}
 	}
@@ -2024,13 +2025,6 @@ character_event = {
 			duration = -1
 		}
 	}
-	option = {
-		name = EVTOPTB_yeshiva_library
-		add_character_modifier = {
-			name = yeshiva_halakha
-			duration = -1
-		}
-	}
 	after = {
 		if = {
 			limit = { has_character_flag = chevruta_1 }
@@ -2184,39 +2178,39 @@ character_event = {
 		}
 	}
 }
-character_event = {
-	id = jewish.164
-	desc = EVTDESC_yeshiva_rabbi
-	picture = GFX_contemplation_jewish
+# character_event = {
+	# id = jewish.164
+	# desc = EVTDESC_yeshiva_rabbi
+	# picture = GFX_contemplation_jewish
 	
-	is_triggered_only = yes
+	# is_triggered_only = yes
 	
-	trigger = {
-		persistent_event_target:chevruta_partner = {
-			is_alive = yes
-		}
-	}
+	# trigger = {
+		# persistent_event_target:chevruta_partner = {
+			# is_alive = yes
+		# }
+	# }
 
-	fail_trigger_effect = {
-		character_event = { id = jewish.151 days = 10 random = 5 } #new partner
-	}
+	# fail_trigger_effect = {
+		# character_event = { id = jewish.151 days = 10 random = 5 } #new partner
+	# }
 	
-	option = {
-		name = EVTOPTA_yeshiva_rabbi
-		add_trait = humble
-	}
-	option = {
-		name = EVTOPTB_yeshiva_rabbi
-		add_trait = proud
-	}
-	after = {
-		if = {
-			limit = { has_character_flag = chevruta_1 }
-			hidden_effect = {
-				character_event = { id = jewish.153 days = 30 random = 5 } #send tombola again
-			}
-		}
-	}
-}
+	# option = {
+		# name = EVTOPTA_yeshiva_rabbi
+		# add_trait = humble
+	# }
+	# option = {
+		# name = EVTOPTB_yeshiva_rabbi
+		# add_trait = proud
+	# }
+	# after = {
+		# if = {
+			# limit = { has_character_flag = chevruta_1 }
+			# hidden_effect = {
+				# character_event = { id = jewish.153 days = 30 random = 5 } #send tombola again
+			# }
+		# }
+	# }
+# }
 #Gedol Ha'Dor Event
 
