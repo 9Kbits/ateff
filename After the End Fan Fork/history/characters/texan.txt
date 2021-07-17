@@ -581,6 +581,7 @@
 
 1836034={
 	name="Buffalo"
+	father=1836083
 	dynasty=1814039
 	martial=6
 	diplomacy=6
@@ -652,6 +653,7 @@
 1836040={
 	name="Dwight"
 	dynasty=1814042
+	father=1836089
 	culture=texan
 	religion=catholic
 	2626.2.1={birth=yes}
@@ -659,10 +661,10 @@
 }
 
 1836041={
-	name="Ildefonso"
+	name="Adrian"
 	dynasty=1815005
 	culture=tejano
-	religion=sacred_heart
+	religion=fidencista
 	2650.7.6={birth=yes}
 	2700.1.1={death=yes}
 }
@@ -691,7 +693,6 @@
 	intrigue=4
 	learning=8
 	trait=elusive_shadow
-	
 	trait=gluttonous
 	trait=arbitrary
 	trait=shy
@@ -956,19 +957,24 @@
 }
 
 1836055={
-	name="Durán"
+	name="Alberto"
 	dynasty=1612019
 	culture=neomexicano
 	religion=atomicist
 	trait=atom_bless
+	trait=charitable
+	trait=gregarious
+	trait=musician
+	trait=lunatic
 	2612.1.6={birth=yes}
+	2612.2.6={give_nickname=nick_the_weird}
 	2629.1.1={add_spouse=1836056}
 	2666.1.1={add_claim=c_raton}
 	2677.7.1={death=yes}
 }
 
 1836056={
-	name="Fé"
+	name="Zelda"
 	female=yes
 	culture=neomexicano
 	religion=atomicist
@@ -979,8 +985,10 @@
 }
 
 1836060={
-	name="Eulogio"
+	name="Oscar"
 	dynasty=1612001
+	father=1836075
+	mother=1836076
 	dna="dijkjbpjmjf"
 	culture=neomexicano
 	religion=atomicist
@@ -990,18 +998,19 @@
 	intrigue=2
 	learning=3
 	trait=skilled_tactician
+    trait=quick
 	trait=atom_deny
 	trait=greedy
 	trait=cruel
 	trait=arbitrary
 	trait=cynical
-	2625.2.3={birth=yes}
+    2613.4.7={birth=yes}
 	2643.10.26={add_spouse=1810203}
-	2691.9.7={death=yes}
+	
 }
 
 #1836061={
-#	name="Estefanita"
+#	name="Britney"
 #	female=yes
 #	dna="omfjkbiafap"
 #	culture=neomexicano
@@ -1018,7 +1027,6 @@
 #	trait=arbitrary
 #	2637.7.12={birth=yes}
 #	2653.10.26={add_spouse=1836060}
-#	2677.5.3={death=yes}
 #}
 
 1836062={
@@ -1042,11 +1050,10 @@
 	father=1836060
 	mother=1810203
 	2647.8.2={birth=yes}
-	2701.3.7={death=yes}
 }
 
 1836063={
-	name="Javier"
+	name="Luis"
 	dynasty=1612001
 	dna="omfjkbiafmf"
 	culture=neomexicano
@@ -1057,14 +1064,14 @@
 	intrigue=4
 	learning=4
 	trait=thrifty_clerk
-	trait=atom_deny
+	trait=atom_bless
 	trait=lustful
 	trait=diligent
 	trait=shy
+	trait=quick
 	father=1836060
 	mother=1810203
 	2652.6.2={birth=yes}
-	2711.6.9={death=yes}
 }
 
 1836064={
@@ -1295,7 +1302,7 @@
 	trait=zealous
 	trait=stubborn
 	trait=tough_soldier
-	trait = bisexual
+	trait=bisexual
 	father=2302216 
 	mother = 2302226
 	2644.4.2={
@@ -1470,11 +1477,11 @@
 	culture=texan
 	female = yes
 	martial = 16
-	trait = brave
-	trait = slothful
-	trait = robust
-	trait = fair
-	trait = uncouth
+	trait=brave
+	trait=slothful
+	trait=robust
+	trait=fair
+	trait=uncouth
 	
 	father = 2302222
 	2648.2.2={
@@ -1483,7 +1490,7 @@
 	}
 	2650.6.4={
 		effect = {
-			add_friend = 2302220
+			add_friend=2302220
 		}
 	}
 }
@@ -1495,22 +1502,22 @@
 	culture=texan
 	female = yes
 	stewardship = 16
-	trait = brave
-	trait = diligent
-	trait = just
-	trait = honest
-	trait = strong
-	trait = robust
-	trait = legit_bastard
-	father = 2302221
-	mother = 2302225
+	trait=brave
+	trait=diligent
+	trait=just
+	trait=honest
+	trait=strong
+	trait=robust
+	trait=legit_bastard
+	father=2302221
+	mother=2302225
 	2639.9.2={
 		give_nickname=nick_appletree
 		birth=yes
 	}
 	2650.6.4={
 		effect = {
-			add_friend = 2302220
+			add_friend = 2302219
 		}
 	}
 }
@@ -1521,7 +1528,7 @@
 	martial=15
 	religion=americanist
 	culture=texan
-	trait = strong
+	trait=strong
 	2621.4.2={
 		give_nickname=nick_bright
 		birth=yes
@@ -1556,10 +1563,10 @@
 	dynasty=1814079
 	religion=americanist
 	culture=texan
-	female = yes
-	trait = robust
-	father = 2302221
-	mother = 2302225
+	female=yes
+	trait=robust
+	father=2302221
+	mother=2302225
 	2651.12.25={birth=yes}
 }
 
@@ -1568,10 +1575,10 @@
 	dynasty=1814079
 	religion=americanist
 	culture=texan
-	trait = strong
-	trait = robust
-	father = 2302221
-	mother = 2302225
+	trait=strong
+	trait=robust
+	father=2302221
+	mother=2302225
 	2645.12.25={birth=yes}
 }
 
@@ -1581,9 +1588,9 @@
 	name="Penny"
 	martial=15
 	religion=evangelical
-	female = yes
-	trait = brave
-	trait = robust
+	female=yes
+	trait=brave
+	trait=robust
 	culture=dixie
 	2624.4.2={
 		give_nickname=nick_bright
@@ -1606,10 +1613,10 @@
 	name="Kristina"
 	martial=15
 	religion=norse_pagan
-	female = yes
-	trait = brave
-	trait = robust
-	trait = shieldmaiden
+	female=yes
+	trait=brave
+	trait=robust
+	trait=shieldmaiden
 	culture=dellsman
 	2613.8.2={
 		birth=yes
@@ -1624,3 +1631,135 @@
 		}
 	}
 }
+
+1836075={
+    name="César"
+    dynasty=1612001   
+    religion=atomicist
+    culture=neomexicano
+	trait=brilliant_strategist
+	trait=inspiring_leader
+	trait=aggressive_leader
+	trait=trickster
+	trait=fair
+	trait=genius
+	trait=ambitious
+	trait=cruel
+	trait=atom_bless
+	trait=deceitful
+	trait=schemer
+	trait=brave
+	trait=proud
+	trait=cynical
+	trait=heresiarch
+	2581.6.16={birth=yes}
+	2614.7.16={give_nickname=nick_silverplate}
+	2619.10.28={
+	    death={
+		    death_reason=death_miracle_arrow
+			killer=1875014
+		}
+    }
+}
+
+1836076={
+    name="Marina"
+	female=yes
+	culture=angeleno
+	religion=atomicist
+	trait=flamboyant_schemer
+	trait=craven
+	trait=sympathy_pacific
+	trait=erudite
+	trait=lisp
+	trait=imp_ex3
+	trait=administrator
+	trait=envious
+	2588.5.29={birth=yes}
+	2611.1.1={add_spouse=1836077}
+	2614.7.16={give_nickname=nick_malinche}
+}
+
+1836077={
+    name="Kiran"
+	culture=bayfolk
+	religion=nazarene
+	trait=mastermind_theologian
+	trait=aggressive_leader
+	trait=unyielding_leader
+	trait=scholar
+	trait=shrewd
+	trait=diligent
+	trait=kind
+	trait=brave
+	trait=depressed
+	trait=imp_ex3
+	2559.7.12={birth=yes}
+	2572.1.1={add_spouse=1836078}
+	2619.10.28={
+        death={
+		    death_reason=death_duel
+			killer=1836075
+        }
+    }
+}
+
+1836078={
+    name="Kyou"
+	female=yes
+	culture=bayfolk
+	religion=nazarene
+	trait=charismatic_negotiator
+	trait=content
+	trait=kind
+	trait=charitable
+	trait=honest
+	2562.4.6={birth=yes}
+	2572.1.1={add_spouse=1836078}
+	2614.7.16={
+	    death={
+		    death_reason=death_murder
+			killer=1836075
+        }
+    }
+}
+
+1836079={
+    name="Ajay"
+	culture=bayfolk
+	religion=nazarene
+	father=1836077
+	mother=1836078
+	trait=robust
+	trait=fortune_builder
+	trait=diligent
+	trait=gregarious
+	2575.3.23={birth=yes}
+    2594.1.13={add_spouse=1836080}
+	2614.7.16={
+	    death={
+		    death_reason=death_murder
+			killer=1836075
+		}
+	}
+}
+
+1836080={
+    name="Janet"
+	female=yes
+	culture=tejano
+	religion=catholic
+	trait=fair
+	trait=kind
+	2575.6.2={birth=yes}
+	2594.1.13={add_spouse=1836079}
+	2614.7.16={
+	    death={
+		    death_reason=death_murder
+			killer=1836075
+		}
+	}
+}
+
+	
+	

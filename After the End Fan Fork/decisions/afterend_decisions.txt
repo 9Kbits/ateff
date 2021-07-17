@@ -4915,6 +4915,40 @@ decisions = {
 		}
 	}
 	
+	cristero_peasant_army = {
+		is_high_prio = yes
+		ai_check_interval = 12
+		potential = {
+			religion = cristo_rey
+			is_adult = yes
+			NOT = { 
+				trait = incapable 
+			}
+			prisoner = no
+		}
+		allow = {
+			piety = 150
+			NOT = {
+				has_character_modifier = cristero_raised_peasants
+			}
+			war = yes 
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 5 
+				OR = {
+					trait = zealous
+				}
+			}
+		}
+		effect = {
+			piety = -150
+			add_character_modifier = { modifier = cristero_raised_peasants duration = 1825 }
+			hidden_tooltip = { character_event = { id = unitasfratrum.711 }}
+		}
+	}
+	
 }
 
 targetted_decisions = {

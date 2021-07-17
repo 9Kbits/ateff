@@ -408,6 +408,23 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+			modifier = {
+				factor = 0.5
+				trait = brave
+			}
+			modifier = {
+				factor = 0.5
+				trait = cynical
+			}
+			modifier = {
+				any_neighbor_independent_ruler = {
+					NAND = {
+						religion = gaian
+						has_truce = yes
+					}
+				}
+				factor = 0.01
+			}
 		}
 	}
 }
