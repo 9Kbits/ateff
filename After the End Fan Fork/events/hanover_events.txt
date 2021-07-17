@@ -864,13 +864,19 @@ narrative_event = {
 		has_dlc = "Holy Fury"
 		e_dixie = {
 			holder_scope = {
-				has_flag = anastasia_war
+				has_character_flag = anastasia_war
 				NOT = {
-					is_bloodline_member_of = true_anastasia_bloodline
-					is_bloodline_member_of = heartbraker_female_bloodline
+					any_owned_bloodline = {
+						has_bloodline_flag = matilde_bloodline
+						ROOT = {
+							is_bloodline_member_of = PREV
+						}
 					}
 				}
 			}
+		}
+		NOT = {
+			has_character_flag = anastasia_win
 		}
 	}
 	
@@ -891,19 +897,25 @@ narrative_event = {
 			limit = { character = 1861579 }
 			create_bloodline = {
 				type = true_anastasia_bloodline
-			}	
+			}
+			clr_character_flag = anastasia_war
+			add_character_flag = anastasia_win
 		}
 		else_if = {
 			limit = { is_female = yes } 
 			create_bloodline = {
 				type = heartbraker_female_bloodline
-			}	
+			}
+			clr_character_flag = anastasia_war
+			add_character_flag = anastasia_win
 		}
 		else_if = {
 			limit = { is_female = no }
 			create_bloodline = {
 				type = heartbraker_male_bloodline
-			}	
+			}
+			clr_character_flag = anastasia_war
+			add_character_flag = anastasia_win
 		}
 		ai_chance = {
 			factor = 100
@@ -923,10 +935,13 @@ narrative_event = {
 		e_dixie = {
 			holder_scope = {
 				is_female = yes
-				OR = {
-					is_bloodline_member_of = true_anastasia_bloodline
-					is_bloodline_member_of = heartbraker_female_bloodline
+				any_owned_bloodline = {
+					has_bloodline_flag = matilde_bloodline
+					ROOT = {
+						is_bloodline_member_of = PREV
+					}
 				}
+				
 			}
 			NOT = { has_law = true_cognatic_succession }
 		}
@@ -939,7 +954,7 @@ narrative_event = {
 	option = {
 		name = "EVTOPTA_cogsuc"
 		primary_title = { add_law = { law = true_cognatic_succession } }
-		current_heir = {
+		any_child = {
 			dynasty = ROOT
 		}
 	}
