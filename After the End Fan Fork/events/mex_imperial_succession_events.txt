@@ -127,7 +127,7 @@ narrative_event = {
 			set_character_flag = destape_begins
 			any_realm_character = {
 				limit = {
-					character_flag = attending_destape
+					has_character_flag = attending_destape
 				}
 				character_event = { id = destape.8 }
 			}
@@ -136,7 +136,7 @@ narrative_event = {
 			set_character_flag = destape_begins
 			any_realm_character = {
 				limit = {
-					character_flag = attending_destape
+					has_character_flag = attending_destape
 					NOT = { trait = tapado }
 					NOT = { # Benemérito awaits verdict
 						character = ROOT
