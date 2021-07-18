@@ -129,7 +129,9 @@ laws = {
 				has_law = range_senate_size_1
 				has_law = range_senate_size_3
 			}
-			independent = yes
+			holder_scope = {
+				independent = yes
+			}
 		}
 		potential = {
 			holder_scope = {
@@ -185,8 +187,10 @@ laws = {
 				has_law = range_senate_size_2
 				has_law = range_senate_size_4
 			}
-			higher_tier_than = DUKE
-			independent = yes
+			holder_scope = {
+				independent = yes
+				higher_tier_than = DUKE
+			}
 		}
 		potential = {
 			holder_scope = {
@@ -241,8 +245,10 @@ laws = {
 		group = range_senate_size
 		allow = {
 			has_law = range_senate_size_3
-			higher_tier_than = DUKE
-			independent = yes
+			holder_scope = {
+				independent = yes
+				higher_tier_than = DUKE
+			}
 		}
 		potential = {
 			holder_scope = {
