@@ -69,6 +69,12 @@ laws = {
 				has_law	= tribal_organization_3
 				has_law = tribal_organization_4
 			}
+			OR = {
+				holder_scope = {
+					NOT = { has_government = open_range_feudalism_government }
+				}
+				has_law = range_senate_size_0
+			}
 		}
 		revoke_allowed = {
 			always = no

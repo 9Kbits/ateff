@@ -30,6 +30,10 @@ decisions = {
 				}
 			}
 			NOT = { has_character_modifier = orf_election_lost_cooldown }
+			OR = {
+				liege = { has_law = orf_senate_type_law_2 }
+				government = open_range_feudalism_government
+			}
 		}
 		
 		effect = {

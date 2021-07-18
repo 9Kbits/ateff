@@ -2,7 +2,13 @@ law_groups = {
 	range_senate_size = {
 		law_type = realm
 	}
-	range_privileges = {
+	range_privileges_trade = {
+		law_type = realm
+	}
+	range_privileges_church = {
+		law_type = realm
+	}
+	orf_senate_type_law = {
 		law_type = realm
 	}
 }
@@ -62,10 +68,11 @@ laws = {
 	range_senate_size_1 = {
 		group = range_senate_size
 		allow = {
-		OR = {
-			has_law = range_senate_size_0
-			has_law = range_senate_size_2
+			OR = {
+				has_law = range_senate_size_0
+				has_law = range_senate_size_2
 			}
+			NOT = { has_law = law_voting_power_0 }
 		}
 		potential = {
 			holder_scope = {
@@ -285,10 +292,152 @@ laws = {
 		vassal_limit = 30
 		feudal_opinion = 10
 	}
-	range_privileges_trade_0 = {
-		group = range_privileges
+	
+
+	orf_senate_type_law_0 = {
+		group = orf_senate_type_law
+		default = yes
 		allow = {
-			has_law = range_privileges_trade_1
+			NOT = { has_law = orf_senate_type_law_2 }
+		}
+
+		potential = {
+			holder_scope = { government = open_range_feudalism_government } 
+		}
+		ai_will_do = { factor = 0 }
+		ai_will_revoke = { factor = 0 }
+		pass_effect = { }
+		effect = {
+			if = {
+				limit = {
+					has_law = orf_senate_type_law_1 
+				}
+				custom_tooltip = {
+					text = TOOLTIP_orf_senate_type_law_0
+				}
+			}
+			if = {
+				limit = { 
+					NOT = { has_dlc = "Charlemagne" } 
+				}
+				set_allow_free_duchy_revokation = no
+			}
+			if = {
+				limit = { 
+					has_dlc = "Charlemagne" 
+				}
+				set_allow_free_vice_royalty_revokation = no
+			}
+			hidden_tooltip = {
+				revoke_law = orf_senate_type_law_1
+				revoke_law = orf_senate_type_law_2
+			}
+		}
+	}
+	orf_senate_type_law_1 = {
+		group = orf_senate_type_law
+		allow = {
+
+		}
+
+		potential = {
+			holder_scope = { government = open_range_feudalism_government } 
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.2
+				always = yes
+			}
+			modifier = {
+				factor = 0
+				has_law = orf_senate_type_law_2
+			}
+		}
+		ai_will_revoke = { factor = 0 }
+		pass_effect = { }
+		effect = {
+			if = {
+				limit = { has_law = orf_senate_type_law_0 }
+				custom_tooltip = {
+					text = TOOLTIP_orf_senate_type_law_1
+				}
+			}
+			if = {
+				limit = { 
+					NOT = { has_dlc = "Charlemagne" } 
+				}
+				set_allow_free_duchy_revokation = no
+			}
+			if = {
+				limit = { 
+					has_dlc = "Charlemagne" 
+				}
+				set_allow_free_vice_royalty_revokation = no
+			}
+			hidden_tooltip = {
+				revoke_law = orf_senate_type_law_0
+				revoke_law = orf_senate_type_law_2
+				#revoke_law = orf_senate_type_law_3
+			}
+			feudal_vassal_min_levy = 0.45
+			feudal_opinion = 10
+		}
+	}
+	orf_senate_type_law_2 = {
+		group = orf_senate_type_law
+		allow = {
+			tier = EMPEROR
+			NOT = { 
+				has_law = orf_senate_type_law_0
+			}
+		}
+		potential = {
+			holder_scope = { government = open_range_feudalism_government } 
+		}
+		ai_will_do = {
+			factor = 10
+		}
+		ai_will_revoke = { factor = 0 }
+		pass_effect = { }
+		effect = {
+			if = {
+				limit = { has_law = orf_senate_type_law_0 }
+				custom_tooltip = {
+					text = TOOLTIP_orf_senate_type_law_1
+				}
+			}
+			if = {
+				limit = { 
+					NOT = { has_dlc = "Charlemagne" } 
+				}
+				set_allow_free_duchy_revokation = yes
+			}
+			if = {
+				limit = {
+					has_dlc = "Charlemagne"
+				}
+				add_law = vice_royalty_2
+				set_allow_free_vice_royalty_revokation = yes
+			}
+			hidden_tooltip = {
+				revoke_law = orf_senate_type_law_0
+				revoke_law = orf_senate_type_law_1
+				#revoke_law = orf_senate_type_law_3
+			}
+		}
+		
+		city_vassal_min_levy = 0.45
+		temple_vassal_min_levy = 0.45
+		feudal_vassal_min_levy = 0.45
+		feudal_opinion = -5
+	}
+
+
+	range_privileges_trade_0 = {
+		group = range_privileges_trade
+		allow = {
+			has_law = range_privileges_trade
 			holder_scope = {
 				OR = {
 					indendent = yes
@@ -334,7 +483,7 @@ laws = {
 	}
 
 	range_privileges_trade_1 = {
-		group = range_privileges
+		group = range_privileges_trade
 		allow = {
 			has_law = range_privileges_trade_0
 		}
@@ -374,11 +523,10 @@ laws = {
 		cowboys_offensive = 0.05
 		cowboys_defensive = 0.05
 		city_opinion = -5
-		nomad_tax_modifier = 0.15
 		city_vassal_tax_modifier = -0.15
 	}
 	range_privileges_church_0 = {
-		group = range_privileges
+		group = range_privileges_church
 		allow = {
 			has_law = range_privileges_church_1
 			holder_scope = {
@@ -421,14 +569,14 @@ laws = {
 			}
 		}
 		cowboys_morale = -0.05
-		church_opinion = 5
-		city_vassal_tax_modifier = 0.05
+		temple_opinion = 5
+		temple_vassal_tax_modifier = 0.05
 	}
 
 	range_privileges_church_1 = {
-		group = range_privileges
+		group = range_privileges_church
 		allow = {
-			has_law = range_privileges_church_1
+			has_law = range_privileges_church_0
 		}
 		potential = {
 			holder_scope = {
@@ -462,8 +610,7 @@ laws = {
 			}
 		}
 		cowboys_morale = 0.1
-		nomad_tax_modifier = 0.15
-		church_opinion = -5
-		church_vassal_tax_modifier = -0.15
+		temple_opinion = -5
+		temple_vassal_tax_modifier = -0.15
 	}
 }
