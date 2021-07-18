@@ -20,6 +20,7 @@ character_event = {
 	}
 	
 	trigger = {
+		NOT = { had_flag = range_shrinkage days = 100 }
 		OR = {
 			AND = {
 				NOT = { government = open_range_feudalism_government }
@@ -140,6 +141,12 @@ character_event = {
 				add_building = ca_range_6
 			}
 		}
+		set_province_flag = range_shrinkage
+		add_province_modifier = {
+			name = range_shrinkage_mod
+			days = 120
+		}
+		
 	}
 	option = { 
 		name = EVTOPTA_rangeloss_feudal

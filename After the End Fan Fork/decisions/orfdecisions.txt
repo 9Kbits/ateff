@@ -79,4 +79,132 @@ decisions = {
 			}	
 		}  
 	}
+	abandon_orf = {
+		is_high_prio = no
+			
+			
+		potential = {
+			is_playable = yes
+			government = open_range_feudalism_government
+			OR = {
+				NOT = {
+					capital_scope = {
+						region = custom_range_range
+					}
+				}
+				liege = { NOT = { government = open_range_feudalism_government } }
+			}
+		}
+				
+		allow = {
+			prestige = 500
+			is_adult = yes
+			prisoner = no			
+			OR = {
+				independent = yes
+				liege = { NOT = { government = open_range_feudalism_government } }
+			}
+			num_of_titles_in_realm <= 15
+		}
+		
+		effect = {
+			prestige = -500
+			set_government_type = feudal_government
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				liege = { government = open_range_feudalism_government}			 
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
+			}	
+		}  
+	}
+	adopt_orf = {
+		is_high_prio = no
+			
+			
+		potential = {
+			is_playable = yes
+			government = feudal_government
+			OR = {
+				capital_scope = {
+					region = custom_range_range
+				}
+				liege = { government = open_range_feudalism_government }
+			}
+		}
+				
+		allow = {
+			prestige = 500
+			is_adult = yes
+			prisoner = no			
+			OR = {
+				independent = yes
+				liege = { government = open_range_feudalism_government }
+			}
+			num_of_titles_in_realm <= 15
+		}
+		
+		effect = {
+			prestige = -500
+			set_government_type = open_range_feudalism_government
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				liege = { NOT = { government = open_range_feudalism_government}	}		 
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
+			}	
+		}  
+	}
+	endorse_party = {
+		is_high_prio = no
+			
+			
+		potential = {
+			is_playable = yes
+			government = feudal_government
+			OR = {
+				capital_scope = {
+					region = custom_range_range
+				}
+				liege = { government = open_range_feudalism_government }
+			}
+		}
+				
+		allow = {
+			prestige = 500
+			is_adult = yes
+			prisoner = no			
+			OR = {
+				independent = yes
+				liege = { government = open_range_feudalism_government }
+			}
+			num_of_titles_in_realm <= 15
+		}
+		
+		effect = {
+			prestige = -500
+			character_event = { id = texas.49 }
+		}
+		ai_will_do = {
+			factor = 1
+		}  
+	}
 }

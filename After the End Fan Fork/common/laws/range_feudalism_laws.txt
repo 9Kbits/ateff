@@ -70,9 +70,19 @@ laws = {
 		allow = {
 			OR = {
 				has_law = range_senate_size_0
+				AND = {
+					has_law = range_senate_size_2
+					NOT = { has_law = orf_senate_type_law_1 }
+				}
+				AND = {
+					has_law = range_senate_size_2
+					NOT = { has_law = orf_senate_type_law_2 }
+				}
+			}
+			OR = {
+				NOT = { has_law = law_voting_power_0 }
 				has_law = range_senate_size_2
 			}
-			NOT = { has_law = law_voting_power_0 }
 		}
 		potential = {
 			holder_scope = {
@@ -337,7 +347,11 @@ laws = {
 	orf_senate_type_law_1 = {
 		group = orf_senate_type_law
 		allow = {
-
+			OR = {
+				has_law = range_senate_size_2
+				has_law = range_senate_size_3
+				has_law = range_senate_size_4
+			}
 		}
 
 		potential = {
@@ -387,7 +401,10 @@ laws = {
 	orf_senate_type_law_2 = {
 		group = orf_senate_type_law
 		allow = {
-			tier = EMPEROR
+			OR = {
+				tier = EMPEROR
+				tier = KING
+			}
 			NOT = { 
 				has_law = orf_senate_type_law_0
 			}

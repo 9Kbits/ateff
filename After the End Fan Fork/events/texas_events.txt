@@ -713,6 +713,62 @@ narrative_event={
 
 #party events
 character_event = {
+	id = texas.49
+	desc = EVTDESC_texas_49
+	is_triggered_only = yes
+	
+	
+	
+	min_age = 16
+	
+	trigger = {
+		government = open_range_feudalism_government
+		independent = yes
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = EVTOPTA_texas_50
+		add_character_modifier = endorsed_populist
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 10 trait = party_populist }
+			modifier = { factor = 2 trait = just }
+			modifier = { factor = 1.5 trait = ambitious }
+			modifier = { factor = 5 tier = BARON }
+		}
+	}
+	option = {
+		name = EVTOPTB_texas_50
+		add_character_modifier = endorsed_magnate
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 10 trait = party_magnate }
+			modifier = { factor = 3 trait = ambitious }
+			modifier = { factor = 2 trait = arbitrary }
+			modifier = { factor = 1.5 trait = greedy }
+			modifier = { factor = 1.5 trait = proud }
+			modifier = { factor = 0.1 trait = content }
+			modifier = { factor = 0.1 trait = slothful }
+		}
+	}
+	option = {
+		name = EVTOPTD_texas_50
+		add_character_modifier = endorsed_theocratic
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 10 trait = party_theocratic }
+			modifier = { factor = 5 trait = zealous }
+			modifier = { factor = 4 trait = devout }
+			modifier = { factor = 0 trait = cynical }
+			modifier = { factor = 10 government = theocracy_government }
+		}
+	}
+}
+character_event = {
 	id = texas.50
 	desc = EVTDESC_texas_50
 	
@@ -753,7 +809,6 @@ character_event = {
 			modifier = { factor = 1.5 trait = ambitious }
 			modifier = { factor = 5 tier = BARON }
 			modifier = { factor = 10 government = republic_government }
-			modifier = { factor = 10 government = merchant_republic_government }
 		}
 	}
 	option = {
@@ -767,6 +822,7 @@ character_event = {
 			modifier = { factor = 1.5 trait = proud }
 			modifier = { factor = 0.1 trait = content }
 			modifier = { factor = 0.1 trait = slothful }
+			modifier = { factor = 10 government = merchant_republic_government }
 		}
 	}
 	option = {
