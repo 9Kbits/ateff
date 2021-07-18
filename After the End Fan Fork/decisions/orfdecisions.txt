@@ -12,6 +12,7 @@ decisions = {
 				liege = { has_law = range_senate_size_4 }
 			}
 			NOT = { has_character_flag = running_for_office_attacker }
+			is_councillor = no
 		}
 				
 		allow = {
@@ -20,13 +21,10 @@ decisions = {
 			prisoner = no			
 			liege = { 
 				any_voter = {
-					limit = { 
-						NOT = { has_character_modifier = orf_won_election }
-						NOT = { has_character_flag = temp_block_orf }
-						NOT = { has_character_flag = orf_election_running }
-						NOT = { has_character_flag = running_for_office_defender }
-					}
-					count = >=1
+					NOT = { has_character_modifier = orf_won_election }
+					NOT = { has_character_flag = temp_block_orf }
+					NOT = { has_character_flag = orf_election_running }
+					NOT = { has_character_flag = running_for_office_defender }
 				}
 			}
 			NOT = { has_character_modifier = orf_election_lost_cooldown }
@@ -72,7 +70,7 @@ decisions = {
 								NOT = { has_character_flag = orf_election_running }
 								NOT = { has_character_flag = running_for_office_defender }
 							}
-							count = >=2
+							count >=2
 						}
 					}
 				}
