@@ -909,7 +909,7 @@ character_event = {
 			limit = { trait = magnate }
 			add_character_modifier = {
 				opinion = {
-					modifier = populist_trash
+					modifier = opinion_tyrant
 					who = ROOT
 					months = 120
 				}
@@ -941,7 +941,7 @@ character_event = {
 			limit = { trait = magnate }
 			add_character_modifier = {
 				opinion = {
-					modifier = populist_trash
+					modifier = opinion_tyrant
 					who = ROOT
 					months = 120
 				}
@@ -1081,7 +1081,7 @@ character_event = {
 			limit = { trait = populist }
 			add_character_modifier = {
 				opinion = {
-					modifier = magnate_trash
+					modifier = opinion_tyrant
 					who = ROOT
 					months = 120
 				}
@@ -1112,7 +1112,7 @@ character_event = {
 			limit = { trait = populist }
 			add_character_modifier = {
 				opinion = {
-					modifier = magnate_trash
+					modifier = opinion_tyrant
 					who = ROOT
 					months = 120
 				}
@@ -1627,6 +1627,225 @@ character_event = {
 		name = EVTOPTA_texas_54_reject
 		any_realm_character = {
 			limit = { trait = party_magnate }
+			add_character_modifier = {
+				opinion = {
+					modifier = opinion_tyrant
+					who = ROOT
+					months = 120
+				}
+			}
+		}
+	}
+}
+
+#senate, just for populist since magnates not likely to revoke their own power
+character_event = {
+	id = texas.55
+	desc = EVTDESC_texas_55
+	only_playable = yes
+	trigger = {
+		government = open_range_feudalism_government
+		OR = {
+			AND = {
+				any_voter = {
+					limit = { trait = party_populist }
+					count >= 4 #over half
+				}
+				ROOT = { has_law = range_senate_size_1}#the law setting the size of the voter pool
+			}
+			AND = {
+				any_voter = {
+					limit = { trait = party_populist }
+					count >= 5 #over half
+				}
+				ROOT = { has_law = range_senate_size_2}#the law setting the size of the voter pool
+			}
+			AND = {
+				any_voter = {
+					limit = { trait = party_populist }
+					count >= 7 #over half
+				}
+				ROOT = { has_law = range_senate_size_3}#the law setting the size of the voter pool
+			}
+			AND = { #left in for consistency
+				any_voter = {
+					limit = { trait = party_populist }
+					count >= 9 #over half
+				}
+				ROOT = { has_law = range_senate_size_4}#the law setting the size of the voter pool
+			}
+		}
+		OR = { 
+			AND = {
+				has_law = range_senate_size_1
+				is_law_allowed = range_senate_size_2
+			} 
+			AND = {
+				has_law = range_senate_size_2
+				is_law_allowed = range_senate_size_3
+			} 
+			AND = {
+				has_law = range_senate_size_3
+				is_law_allowed = range_senate_size_4
+			} 
+		}
+		NOT = {
+			had_character_flag = { flag = orf_forced_law_vote months <= 48 }#you can't have this event if you had it in the last 4 years
+		}
+	}
+	mean_time_to_happen = {
+		months = 24 #is a year a good time?
+		modifier = {# cuts the time by half if the party has 2/3 of the senate
+			factor = 0.5 
+			AND = {
+				any_voter = {
+					limit = { trait = party_populist }
+					count >= 5 #over half
+				}
+				ROOT = { has_law = range_senate_size_2}#the law setting the size of the voter pool
+			}
+		}
+		modifier = {# cuts the time by half if the party has 2/3 of the senate
+			factor = 0.5 
+			AND = {
+				any_voter = {
+					limit = { trait = party_populist }
+					count >= 7 #over half
+				}
+				ROOT = { has_law = range_senate_size_3}#the law setting the size of the voter pool
+			}
+		}
+		modifier = {# cuts the time by half if the party has 2/3 of the senate
+			factor = 0.5 
+			AND = {
+				any_voter = {
+					limit = { trait = party_populist }
+					count >= 9 #over half
+				}
+				ROOT = { has_law = range_senate_size_4}#the law setting the size of the voter pool
+			}
+		}
+		modifier = {# cuts the time by half if the party has 2/3 of the senate
+			factor = 0.5 
+			ROOT = { has_character_modifier = endorsed_populist}#the law setting the size of the voter pool
+		}
+	}
+	immediate = {
+		clr_character_flag = orf_forced_law_vote
+		add_character_flag = orf_forced_law_vote
+	}
+	
+	option = { #approve
+		trigger = {
+			has_law = range_senate_size_1
+			is_law_allowed = range_senate_size_2
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 4 trait = just}
+			modifier = { factor = 2 trait = humble}
+			modifier = { factor = 1.5 trait = content}
+			modifier = { factor = 3 trait = craven}
+			modifier = { factor = 3 trait = ambitious}
+			modifier = { factor = 2 has_character_modifier = endorsed_populist }
+			modifier = { factor = 0.25 has_character_modifier = endorsed_magnate }
+			#you might wanna add more depending on the laws
+		}
+		name = EVTOPTA_texas_53_trade
+		primary_title = {
+			approve_law = range_senate_size_2
+		}
+		any_realm_character = {
+			limit = { trait = party_magnate }
+			add_character_modifier = {
+				opinion = {
+					modifier = opinion_tyrant
+					who = ROOT
+					months = 120
+				}
+			}
+		}
+		prestige = -100
+	}
+	
+	option = { #approve
+		trigger = {
+			has_law = range_senate_size_2
+			is_law_allowed = range_senate_size_3
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 4 trait = just}
+			modifier = { factor = 2 trait = humble}
+			modifier = { factor = 1.5 trait = content}
+			modifier = { factor = 3 trait = craven}
+			modifier = { factor = 3 trait = ambitious}
+			modifier = { factor = 2 has_character_modifier = endorsed_populist }
+			modifier = { factor = 0.25 has_character_modifier = endorsed_magnate }
+			#you might wanna add more depending on the laws
+		}
+		name = EVTOPTA_texas_53_trade
+		primary_title = {
+			approve_law = range_senate_size_3
+		}
+		any_realm_character = {
+			limit = { trait = party_magnate }
+			add_character_modifier = {
+				opinion = {
+					modifier = opinion_tyrant
+					who = ROOT
+					months = 120
+				}
+			}
+		}
+		prestige = -100
+	}
+	
+	option = { #approve
+		trigger = {
+			has_law = range_senate_size_3
+			is_law_allowed = range_senate_size_4
+		}
+		ai_chance = {
+			factor = 50
+			modifier = { factor = 4 trait = just}
+			modifier = { factor = 2 trait = humble}
+			modifier = { factor = 1.5 trait = content}
+			modifier = { factor = 3 trait = craven}
+			modifier = { factor = 3 trait = ambitious}
+			modifier = { factor = 2 has_character_modifier = endorsed_populist }
+			modifier = { factor = 0.25 has_character_modifier = endorsed_magnate }
+			#you might wanna add more depending on the laws
+		}
+		name = EVTOPTA_texas_53_trade
+		primary_title = {
+			approve_law = range_senate_size_4
+		}
+		any_realm_character = {
+			limit = { trait = party_magnate }
+			add_character_modifier = {
+				opinion = {
+					modifier = opinion_tyrant
+					who = ROOT
+					months = 120
+				}
+			}
+		}
+		prestige = -100
+	}
+	option = {#decline
+		ai_chance = {
+			factor = 30
+			modifier = { factor = 4 trait = arbitrary}
+			modifier = { factor = 2 trait = proud}
+			modifier = { factor = 1.5 trait = wroth}
+			modifier = { factor = 2 has_character_modifier = endorsed_magnate }
+			modifier = { factor = 0.25 has_character_modifier = endorsed_populist }
+			#you might wanna add more depending on the laws
+		}
+		name = EVTOPTA_texas_53_reject
+		any_realm_character = {
+			limit = { trait = party_populist }
 			add_character_modifier = {
 				opinion = {
 					modifier = opinion_tyrant
