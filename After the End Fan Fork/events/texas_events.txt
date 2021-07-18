@@ -780,11 +780,11 @@ character_event = {
 			modifier = { factor = 0.5 trait = ambitious }
 			modifier = {
 				factor = 2
-				opinion = { who = liege value = 50 }
+				opinion = { who = liege value = 150 }
 			}
 			modifier = {
-				factor = 0.1
-				opinion = { who = liege value = -50 }
+				factor = 0
+				opinion = { who = liege value = 75 }
 			}
 		}
 	}
@@ -1425,20 +1425,20 @@ character_event = {
 		}
 		OR = { 
 			AND = {
-				has_law = centralization_0
-				is_law_allowed = centralization_1
-			} 
-			AND = {
 				has_law = centralization_1
-				is_law_allowed = centralization_2
+				is_law_allowed = centralization_0
 			} 
 			AND = {
 				has_law = centralization_2
-				is_law_allowed = centralization_3
+				is_law_allowed = centralization_1
 			} 
 			AND = {
 				has_law = centralization_3
-				is_law_allowed = centralization_4
+				is_law_allowed = centralization_2
+			} 
+			AND = {
+				has_law = centralization_4
+				is_law_allowed = centralization_3
 			} 
 		}
 		NOT = {
@@ -1645,6 +1645,10 @@ province_event = {
 	hide_window = yes
 	trigger = {
 		holder_scope = {  government = open_range_feudalism_government }
+		OR = {
+			holder_scope = {  has_law = range_privileges_church_0 }
+			holder_scope = {  has_law = range_privileges_trade_0 }
+		}
 		holder_scope = {  NOT = { has_character_modifier = had_party_localize } }
 	}
 	immediate = {
@@ -1678,6 +1682,9 @@ province_event = {
 	hide_window = yes
 	trigger = {
 		holder_scope = {  government = open_range_feudalism_government }
+		
+		holder_scope = {  has_law = range_privileges_trade_1 }
+		
 		holder_scope = {  NOT = { has_character_modifier = had_party_localize } }
 	}
 	immediate = {
@@ -1711,6 +1718,7 @@ province_event = {
 	hide_window = yes
 	trigger = {
 		holder_scope = {  government = open_range_feudalism_government }
+		holder_scope = {  has_law = range_privileges_church_1 }
 		holder_scope = {  NOT = { has_character_modifier = had_party_localize } }
 	}
 	immediate = {
@@ -1749,6 +1757,61 @@ character_event = {#rangers trying to organize
 		#you gain election buff that i will code after the election
 		trigger = {
 			FROM = {
+				trait = party_populist
+				OR = {
+					AND = {
+						trait = party_populist
+						ROOT = {trait = party_populist}
+					}
+					AND = {
+						trait = party_magnate
+						ROOT = {trait = party_magnate}
+					}
+					AND = {
+						trait = party_royalist
+						ROOT = {trait = party_royalist}
+					}
+					AND = {
+						trait = party_theocratic
+						ROOT = {trait = party_thocratic}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_texas_75
+		#you gain election buff that i will code after the election
+		trigger = {
+			FROM = {
+				trait = party_magnate
+				OR = {
+					AND = {
+						trait = party_populist
+						ROOT = {trait = party_populist}
+					}
+					AND = {
+						trait = party_magnate
+						ROOT = {trait = party_magnate}
+					}
+					AND = {
+						trait = party_royalist
+						ROOT = {trait = party_royalist}
+					}
+					AND = {
+						trait = party_theocratic
+						ROOT = {trait = party_thocratic}
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = EVTOPTA_texas_75
+		#you gain election buff that i will code after the election
+		trigger = {
+			FROM = {
+				trait = party_theocratic
 				OR = {
 					AND = {
 						trait = party_populist
