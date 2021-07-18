@@ -1,0 +1,26 @@
+character_event = { #Choose Rites
+	id = edenite.1
+	desc = EVTDESC_edenite_1
+	picture = GFX_evt_tipi
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_edenite_1 #Syncretize with Doves and Christians
+		add_trait = sympathy_pacific
+		add_trait = sympathy_latter_day_saints
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	has_native_culture_trigger = no }
+		}
+	}
+	
+	option = {		
+		name = EVTOPTB_edenite_1 #Syncretize with Gaians and Trailwalker
+		add_trait = sympathy_pacific
+		add_trait = sympathy_pagans
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	has_native_culture_trigger = yes }
+		}
+	}
+}

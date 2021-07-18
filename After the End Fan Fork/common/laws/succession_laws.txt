@@ -124,7 +124,10 @@ succession_laws = {
 				holder_scope = { is_tribal = yes }
 			}
 			
+			NOT = { holder_scope = { government = cenobitic_government } }
+			
 			is_primary_type_title = no
+			
 		}
 		allow = {
 			holder_scope = {
@@ -165,7 +168,6 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
-						government = cenobitic_government
 					}
 				}
 				in_revolt = no
@@ -286,10 +288,10 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
-						government = cenobitic_government
 					}
 				}
 			}
+			NOT = { holder_scope = { government = cenobitic_government } }
 		}
 		allow = {
 			conditional_tooltip = {
@@ -342,7 +344,6 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
-						government = cenobitic_government
 					}
 				}
 			}
@@ -370,6 +371,8 @@ succession_laws = {
 					religion_group = afro_syncretic
 					religion_group = american_native
 					religion = gaian
+					religion = nazarene
+					religion = edenite
 					religion = moravian
 					AND = {
 						is_tribal = yes
@@ -591,10 +594,10 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
-						government = cenobitic_government
 					}
 				}
 			}
+			NOT = { holder_scope = { government = cenobitic_government } }
 		}
 		
 		allow = {
@@ -687,7 +690,6 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
-						government = cenobitic_government
 					}
 				}
 			}
@@ -779,10 +781,10 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
-						government = cenobitic_government
 					}
 				}
 			}
+			NOT = { holder_scope = { government = cenobitic_government } }
 		}
 		allow = {
 			conditional_tooltip = {
@@ -885,7 +887,6 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
-						government = cenobitic_government
 					}
 				}
 			}
@@ -1404,10 +1405,10 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
-						government = cenobitic_government
 					}
 				}
 			}
+			NOT = { holder_scope = { government = cenobitic_government } }
 		}
 		allow = {
 			conditional_tooltip = {
@@ -1563,7 +1564,6 @@ succession_laws = {
 					OR = {
 						government = mormon_government
 						government = ghazi_government
-						government = cenobitic_government
 					}
 				}
 			}
