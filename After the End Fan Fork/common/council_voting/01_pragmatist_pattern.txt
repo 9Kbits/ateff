@@ -124,47 +124,77 @@ pragmatist_pattern_for = {
 	}
 	centralization_1 = {
 		OR = {
-			liege = {
-				primary_title = {
-					has_law = centralization_2
-				}
+			AND = {
+				liege = { government = open_range_feudalism_government }
+				liege = has_law = centralization_2
 			}
-			opinion = {
-				who = liege
-				value = 20
+			AND = {
+				NOT = { liege = { government = open_range_feudalism_government }} 
+				OR = {
+					liege = {
+						primary_title = {
+							has_law = centralization_2
+						}
+					}
+					opinion = {
+						who = liege
+						value = 20
+					}
+				}
 			}
 		}
 	}
 	centralization_2 = {
 		OR = {
-			liege = {
-				primary_title = {
-					has_law = centralization_3
-				}
+			AND = {
+				liege = { government = open_range_feudalism_government }
+				liege = has_law = centralization_3
 			}
-			opinion = {
-				who = liege
-				value = 20
+			AND = {
+				NOT = { liege = { government = open_range_feudalism_government }} 
+				OR = {
+					liege = {
+						primary_title = {
+							has_law = centralization_3
+						}
+					}
+					opinion = {
+						who = liege
+						value = 20
+					}
+				}
 			}
 		}
 	}
 	centralization_3 = {
 		OR = {
-			liege = {
-				primary_title = {
-					has_law = centralization_4
-				}
+			AND = {
+				liege = { government = open_range_feudalism_government }
+				liege = has_law = centralization_4
 			}
-			opinion = {
-				who = liege
-				value = 20
+			AND = {
+				NOT = { liege = { government = open_range_feudalism_government }} 
+				OR = {
+					liege = {
+						primary_title = {
+							has_law = centralization_4
+						}
+					}
+					opinion = {
+						who = liege
+						value = 20
+					}
+				}
 			}
 		}
 	}
 	centralization_4 = {
-		opinion = {
-			who = liege 
-			value = 20
+		AND = {
+			NOT = { liege = { government = open_range_feudalism_government }} 
+			opinion = {
+				who = liege
+				value = 20
+			}
 		}
 	}
 	vice_royalty_0 = {
@@ -426,6 +456,22 @@ pragmatist_pattern_for = {
 	}
 	status_of_women_4 = { 
 		is_female = yes
+	}
+	
+	range_senate_size_0 = { 
+		always = yes
+	}
+	range_senate_size_1 = { 
+		NOT = { has_law = range_senate_size_0 }
+	}
+	range_senate_size_2 = { 
+		NOT = { has_law = range_senate_size_1 }
+	}
+	range_senate_size_3 = { 
+		NOT = { has_law = range_senate_size_2 }
+	}
+	range_senate_size_4 = { 
+		always = no
 	}
 	
 	revoke_title_law_0 = {
