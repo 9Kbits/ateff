@@ -89,8 +89,25 @@ glory_hound_pattern_for = {
 	war_voting_power_1 = { always = yes }
 	succession_voting_power_0 = { always = no }
 	succession_voting_power_1 = { always = yes }
-	vassal_wars_law_0 = { always = yes }
-	vassal_wars_law_1 = { always = no }
+
+	vassal_wars_law_0 = {
+		OR = {
+			AND = {
+				liege = { government = open_range_feudalism_government }
+				trait = party_magnate
+			}
+			NOT = { liege = { government = open_range_feudalism_government }}
+		}
+	}
+	vassal_wars_law_1 = {
+		OR = {
+			AND = {
+				liege = { government = open_range_feudalism_government }
+				trait = party_magnate
+			}
+			NOT = { liege = { government = open_range_feudalism_government }}
+		}
+	}
 	vassal_wars_law_2 = { always = no }
 	
 	centralization_0 = {

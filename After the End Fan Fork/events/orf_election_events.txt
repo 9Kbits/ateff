@@ -290,6 +290,7 @@ character_event = {
 
 	option = {
 		name = EVTOPTA_orfelection_nevermind
+		prestige = 250
 	}
 }
 
@@ -565,15 +566,15 @@ character_event = {
 				}
 				mult_modifier = {
 					factor = 1.5
-					event_target:orf_election_opponent_attacker = { has_character_flag = range_ambush_fight_won }
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_great_21 }
 				}
 				mult_modifier = {
 					factor = 1.25
-					event_target:orf_election_opponent_attacker = { has_character_flag = range_ambush_defense_won }
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_good_21 }
 				}
 				mult_modifier = {
 					factor = 0.5
-					event_target:orf_election_opponent_attacker = { has_character_flag = range_ambush_defeat }
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_bad_21 }
 				}
 				mult_modifier = {
 					factor = 1.5
@@ -601,27 +602,46 @@ character_event = {
 				}
 				mult_modifier = {
 					factor = 1.5
-					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_range_squatter_good }
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_good_19 }
 				}
 				mult_modifier = {
 					factor = 1.25
-					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_range_squatter_neutral }
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_neutral_19 }
 				}
 				mult_modifier = {
 					factor = 0.75
-					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_range_squatter_bad }
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_bad_19 }
 				}
 				mult_modifier = {
 					factor = 1.5
-					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_destitute_ranger_good }
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_good_17 }
 				}
 				mult_modifier = {
 					factor = 1.25
-					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_destitute_ranger_neutral }
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_neutral_17 }
 				}
 				mult_modifier = {
 					factor = 0.75
-					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_destitute_ranger_bad }
+					event_target:orf_election_opponent_attacker = { has_character_flag = orfelec_bad_17 }
+				}
+				mult_modifier = {
+					factor = 1.25
+					event_target:orf_election_opponent_attacker = { trait = party_populist }
+					liege = { has_character_modifier = endorsed_populist }
+				}
+				mult_modifier = {
+					factor = 1.25
+					event_target:orf_election_opponent_attacker = { trait = party_magnate }
+					liege = { has_character_modifier = endorsed_magnate }
+				}
+				mult_modifier = {
+					factor = 1.25
+					event_target:orf_election_opponent_attacker = { trait = party_theocratic }
+					liege = { has_character_modifier = endorsed_theocratic }
+				}
+				mult_modifier = {
+					factor = 1.25
+					event_target:orf_election_opponent_attacker = { has_character_flag = endorsed_by_liege }
 				}
 							
 				event_target:orf_election_opponent_attacker = { set_character_flag = election_won }
@@ -645,15 +665,15 @@ character_event = {
 				}
 				mult_modifier = {
 					factor = 1.5
-					event_target:orf_election_opponent_defender = { has_character_flag = range_ambush_fight_won }
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_great_21 }
 				}
 				mult_modifier = {
 					factor = 1.25
-					event_target:orf_election_opponent_defender = { has_character_flag = range_ambush_defense_won }
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_good_21 }
 				}
 				mult_modifier = {
 					factor = 0.5
-					event_target:orf_election_opponent_defender = { has_character_flag = range_ambush_defeat }
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_bad_21 }
 				}
 				mult_modifier = {
 					factor = 1.5
@@ -681,27 +701,46 @@ character_event = {
 				}
 				mult_modifier = {
 					factor = 1.5
-					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_range_squatter_good }
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_good_19 }
 				}
 				mult_modifier = {
 					factor = 1.25
-					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_range_squatter_neutral }
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_neutral_19 }
 				}
 				mult_modifier = {
 					factor = 0.75
-					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_range_squatter_bad }
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_bad_19 }
 				}
 				mult_modifier = {
 					factor = 1.5
-					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_destitute_ranger_good }
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_good_17 }
 				}
 				mult_modifier = {
 					factor = 1.25
-					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_destitute_ranger_neutral }
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_neutral_17 }
 				}
 				mult_modifier = {
 					factor = 0.75
-					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_destitute_ranger_bad }
+					event_target:orf_election_opponent_defender = { has_character_flag = orfelec_bad_17 }
+				}
+				mult_modifier = {
+					factor = 1.25
+					event_target:orf_election_opponent_defender = { trait = party_populist }
+					liege = { has_character_modifier = endorsed_populist }
+				}
+				mult_modifier = {
+					factor = 1.25
+					event_target:orf_election_opponent_defender = { trait = party_magnate }
+					liege = { has_character_modifier = endorsed_magnate }
+				}
+				mult_modifier = {
+					factor = 1.25
+					event_target:orf_election_opponent_defender = { trait = party_theocratic }
+					liege = { has_character_modifier = endorsed_theocratic }
+				}
+				mult_modifier = {
+					factor = 1.25
+					event_target:orf_election_opponent_defender = { has_character_flag = endorsed_by_liege }
 				}
 								
 				event_target:orf_election_opponent_defender = { set_character_flag = election_won }
@@ -715,7 +754,7 @@ character_event = {
 
 narrative_event = {
 	id = orfelection.10
-	title = EVTTITLE_orf_election_attacker_won
+	title = EVTTITLE_orf_running_for_office_attacker_won
 	
 	picture = GFX_evt_battle
 	
@@ -727,26 +766,26 @@ narrative_event = {
 	}
 	
 	desc = {
-		text = EVTDESC_orf_election_attacker_won
+		text = EVTDESC_orf_running_for_office_attacker_won
 		trigger = { event_target:orf_election_opponent_attacker = { has_character_flag = election_won } }
 	}
 	
 	desc = {
-		text = EVTDESC_orf_election_defender_won
+		text = EVTDESC_orf_running_for_office_defender_won
 		trigger = { event_target:orf_election_opponent_defender = { has_character_flag = election_won } }
 	}
 	
 	immediate = {
-		event_target:orf_election_opponent_attacker = { set_character_flag = election_attacker } 
-		event_target:orf_election_opponent_defender = { set_character_flag = election_defender } 
+		event_target:orf_election_opponent_attacker = { set_character_flag = running_for_office_attacker } 
+		event_target:orf_election_opponent_defender = { set_character_flag = running_for_office_defender } 
 	}
 	
 	
 	option = { 
-		name = EVTOPTA_orf_election_attacker_won
+		name = EVTOPTA_orf_running_for_office_attacker_won
 		trigger = { 
 			event_target:orf_election_opponent_attacker = { has_character_flag = election_won } 
-			has_character_flag = election_attacker
+			has_character_flag = running_for_office_attacker
 		}
 		event_target:orf_election_opponent_attacker = { clr_character_flag = election_won } 
 		if = {
@@ -819,14 +858,32 @@ narrative_event = {
 			duration = 1310
 		}
 		clr_character_flag = election_won
-		clr_character_flag = election_defender
+		clr_character_flag = running_for_office_attacker
+		clr_character_flag = orfelect_good_11
+		clr_character_flag = orfelect_neutral_11
+		clr_character_flag = orfelect_bad_11
+		clr_character_flag = orfelect_good_13
+		clr_character_flag = orfelect_neutral_13
+		clr_character_flag = orfelect_bad_13
+		clr_character_flag = orfelect_good_15
+		clr_character_flag = orfelect_neutral_15
+		clr_character_flag = orfelect_bad_15
+		clr_character_flag = orfelect_good_17
+		clr_character_flag = orfelect_neutral_17
+		clr_character_flag = orfelect_bad_17
+		clr_character_flag = orfelect_good_19
+		clr_character_flag = orfelect_neutral_19
+		clr_character_flag = orfelect_bad_19
+		clr_character_flag = orfelect_good_21
+		clr_character_flag = orfelect_neutral_21
+		clr_character_flag = orfelect_bad_21
 	}
 
 	option = { 
-		name = EVTOPTA_orf_election_defender_won
+		name = EVTOPTA_orf_running_for_office_defender_won
 		trigger = { 
 			event_target:orf_election_opponent_defender = { has_character_flag = election_won } 
-			has_character_flag = election_defender
+			has_character_flag = running_for_office_defender
 		}
 		
 		add_character_modifier = {
@@ -835,44 +892,101 @@ narrative_event = {
 		}		
 		
 		clr_character_flag = election_won
-		clr_character_flag = election_defender
+		clr_character_flag = running_for_office_defender
+		clr_character_flag = running_for_office_attacker
+		clr_character_flag = orfelect_good_11
+		clr_character_flag = orfelect_neutral_11
+		clr_character_flag = orfelect_bad_11
+		clr_character_flag = orfelect_good_13
+		clr_character_flag = orfelect_neutral_13
+		clr_character_flag = orfelect_bad_13
+		clr_character_flag = orfelect_good_15
+		clr_character_flag = orfelect_neutral_15
+		clr_character_flag = orfelect_bad_15
+		clr_character_flag = orfelect_good_17
+		clr_character_flag = orfelect_neutral_17
+		clr_character_flag = orfelect_bad_17
+		clr_character_flag = orfelect_good_19
+		clr_character_flag = orfelect_neutral_19
+		clr_character_flag = orfelect_bad_19
+		clr_character_flag = orfelect_good_21
+		clr_character_flag = orfelect_neutral_21
+		clr_character_flag = orfelect_bad_21
 		
 	}
 
 	option = { 
-		name = EVTOPTA_orf_election_attacker_lost
+		name = EVTOPTA_orf_running_for_office_attacker_lost
 		trigger = { 
 			event_target:orf_election_opponent_defender = { has_character_flag = election_won } 
-			has_character_flag = election_attacker
+			has_character_flag = running_for_office_attacker
 		}
 		add_character_modifier = {
 			name = orf_election_lost_cooldown
 			duration = 365
 		}		
 		
-		clr_character_flag = election_defender
+		clr_character_flag = running_for_office_defender
+		clr_character_flag = running_for_office_attacker
+		clr_character_flag = orfelect_good_11
+		clr_character_flag = orfelect_neutral_11
+		clr_character_flag = orfelect_bad_11
+		clr_character_flag = orfelect_good_13
+		clr_character_flag = orfelect_neutral_13
+		clr_character_flag = orfelect_bad_13
+		clr_character_flag = orfelect_good_15
+		clr_character_flag = orfelect_neutral_15
+		clr_character_flag = orfelect_bad_15
+		clr_character_flag = orfelect_good_17
+		clr_character_flag = orfelect_neutral_17
+		clr_character_flag = orfelect_bad_17
+		clr_character_flag = orfelect_good_19
+		clr_character_flag = orfelect_neutral_19
+		clr_character_flag = orfelect_bad_19
+		clr_character_flag = orfelect_good_21
+		clr_character_flag = orfelect_neutral_21
+		clr_character_flag = orfelect_bad_21
 		
 	}
 
 	option = { 
-		name = EVTOPTA_orf_election_defender_lost
+		name = EVTOPTA_orf_running_for_office_defender_lost
 		trigger = { 
 			event_target:orf_election_opponent_attacker = { has_character_flag = election_won } 
-			has_character_flag = election_defender
+			has_character_flag = running_for_office_defender
 		}
 		add_character_modifier = {
 			name = orf_election_lost_cooldown
 			duration = 365
 		}	
-		clr_character_flag = election_defender
+		clr_character_flag = running_for_office_defender
+		clr_character_flag = running_for_office_attacker
+		clr_character_flag = orfelect_good_11
+		clr_character_flag = orfelect_neutral_11
+		clr_character_flag = orfelect_bad_11
+		clr_character_flag = orfelect_good_13
+		clr_character_flag = orfelect_neutral_13
+		clr_character_flag = orfelect_bad_13
+		clr_character_flag = orfelect_good_15
+		clr_character_flag = orfelect_neutral_15
+		clr_character_flag = orfelect_bad_15
+		clr_character_flag = orfelect_good_17
+		clr_character_flag = orfelect_neutral_17
+		clr_character_flag = orfelect_bad_17
+		clr_character_flag = orfelect_good_19
+		clr_character_flag = orfelect_neutral_19
+		clr_character_flag = orfelect_bad_19
+		clr_character_flag = orfelect_good_21
+		clr_character_flag = orfelect_neutral_21
+		clr_character_flag = orfelect_bad_21
 		
 	}
 	
 	option = {
 		name = EVTOPTA_orf_election_result_agnostic
 		trigger = {
-			NOT = { has_character_flag = election_defender }
-			NOT = { has_character_flag = election_attacker }
+			NOT = { has_character_flag = running_for_office_defender }
+			NOT = { has_character_flag = running_for_office_attacker }
 		}
 	}
 }
@@ -881,7 +995,7 @@ narrative_event = {
 
 character_event = {
 	id = orfelection.10
-	title = EVTTITLE_orf_election_defender_won
+	title = EVTTITLE_orf_running_for_office_defender_won
 	
 	picture = GFX_evt_battle
 	
@@ -1849,14 +1963,14 @@ character_event ={#resolved
 	}
 	desc = {
 		trigger = { 
-			has_character_flag = orfelec_destitute_ranger_bad
+			has_character_flag = orfelec_bad_17
 			NOT = { has_character_flag = destitute_ranger_encourage_them }
 		}
 		text = EVTDESC_orfelec_problem_destitute_ranger_resolve_bad
 	}
 	desc = {
 		trigger = { 
-			has_character_flag = orfelec_destitute_ranger_bad
+			has_character_flag = orfelec_bad_17
 			has_character_flag = destitute_ranger_encourage_them
 		}
 		text = EVTDESC_orfelec_problem_destitute_ranger_resolve_bad_worse
@@ -1903,7 +2017,7 @@ character_event ={#resolved
 					factor = 1.25
 					has_character_flag = destitute_ranger_organize_help
 				}
-				set_character_flag = orfelec_destitute_ranger_good
+				set_character_flag = orfelec_good_17
 			}
 			20 = {
 				mult_modifier = {
@@ -1928,7 +2042,7 @@ character_event ={#resolved
 					factor = 1.1
 					has_character_flag = destitute_ranger_organize_help
 				}
-				set_character_flag = orfelec_destitute_ranger_neutral
+				set_character_flag = orfelec_neutral_17
 			}
 			30 = {
 				mult_modifier = {
@@ -1953,20 +2067,20 @@ character_event ={#resolved
 					factor = 0.85
 					has_character_flag = destitute_ranger_organize_help
 				}
-				set_character_flag = orfelec_destitute_ranger_bad
+				set_character_flag = orfelec_bad_17
 			}
 		}
 	}
 	
 	option = {
-		trigger = { has_character_flag = orfelec_destitute_ranger_good}
+		trigger = { has_character_flag = orfelec_good_17}
 		name = EVTOPT_orfelec_resolve_destitute_ranger_good
 		clr_character_flag = destitute_ranger_organize_help
 		clr_character_flag = destitute_ranger_encourage_them
 		clr_character_flag = destitute_ranger_charity
 	}
 	option = {
-		trigger = { has_character_flag = orfelec_destitute_ranger_neutral}
+		trigger = { has_character_flag = orfelec_neutral_17}
 		name = EVTOPT_orfelec_resolve_destitute_ranger_neutral
 		clr_character_flag = destitute_ranger_organize_help
 		clr_character_flag = destitute_ranger_encourage_them
@@ -1974,7 +2088,7 @@ character_event ={#resolved
 	}
 	option = {
 		trigger = { 
-			has_character_flag = orfelec_destitute_ranger_bad
+			has_character_flag = orfelec_bad_17
 			NOT = { has_character_flag = destitute_ranger_encourage_them }
 		}
 		name = EVTOPT_orfelec_resolve_destitute_ranger_bad
@@ -1984,7 +2098,7 @@ character_event ={#resolved
 	}
 	option = {
 		trigger = { 
-			has_character_flag = orfelec_destitute_ranger_bad
+			has_character_flag = orfelec_bad_17
 			has_character_flag = destitute_ranger_encourage_them
 		}
 		name = EVTOPT_orfelec_resolve_destitute_ranger_bad_worse
@@ -2055,34 +2169,34 @@ character_event ={#resolved
 					factor = 0.25
 					has_character_flag = destitute_ranger_encourage_them
 				}
-				set_character_flag = orfelec_range_squatter_good
+				set_character_flag = orfelec_good_19
 			}
 			20 = {
 				mult_modifier = {
 					factor = 0.5
 					has_character_flag = destitute_ranger_encourage_them
 				}
-				set_character_flag = orfelec_range_squatter_neutral
+				set_character_flag = orfelec_neutral_19
 			}
 			30 = {
 				mult_modifier = {
 					factor = 0.85
 					has_character_flag = destitute_ranger_organize_help
 				}
-				set_character_flag = orfelec_range_squatter_bad
+				set_character_flag = orfelec_bad_19
 			}
 		}
 	}
 	
 	option = {
-		trigger = { has_character_flag = orfelec_range_squatter_good}
+		trigger = { has_character_flag = orfelec_good_19}
 		name = EVTOPT_orfelec_resolve_destitute_ranger_good
 		clr_character_flag = range_squatter_force_out
 		clr_character_flag = range_squatter_convince
 		clr_character_flag = range_squatter_charity
 	}
 	option = {
-		trigger = { has_character_flag = orfelec_range_squatter_neutral}
+		trigger = { has_character_flag = orfelec_neutral_19}
 		name = EVTOPT_orfelec_resolve_destitute_ranger_neutral
 		clr_character_flag = range_squatter_force_out
 		clr_character_flag = range_squatter_convince
@@ -2090,7 +2204,7 @@ character_event ={#resolved
 	}
 	option = {
 		trigger = { 
-			has_character_flag = orfelec_range_squatter_bad
+			has_character_flag = orfelec_bad_19
 		}
 		name = EVTOPT_orfelec_resolve_destitute_ranger_bad
 		clr_character_flag = range_squatter_force_out
@@ -2198,7 +2312,7 @@ character_event ={#resolved
 					trait = craven
 					factor = 0.5
 				}
-				add_character_flag = range_ambush_fight_won #Ending event
+				add_character_flag = orfelec_great_21 #Ending event
 			}
 			50 = {
 				mult_modifier = {
@@ -2229,7 +2343,7 @@ character_event ={#resolved
 					trait = strategist
 					factor = 1.5
 				}
-				add_character_flag = range_ambush_defense_won #Ending event
+				add_character_flag = orfelec_good_21 #Ending event
 			}
 			20 = {
 				mult_modifier = {
@@ -2311,20 +2425,20 @@ character_event ={#resolved
 					trait = duelist
 					factor = 0.5
 				}
-				add_character_flag = range_ambush_defeat #Ending event
+				add_character_flag = orfelec_bad_21 #Ending event
 			}
 		}
 	}
 	
 	option = {
-		trigger = { has_character_flag = range_ambush_fight_won}
+		trigger = { has_character_flag = orfelec_great_21}
 		name = EVTOPT_orfelec_resolve_range_ambush_fight
 		clr_character_flag = range_ambush_fight
 		clr_character_flag = range_ambush_hide
 		clr_character_flag = range_ambush_organize
 	}
 	option = {
-		trigger = { has_character_flag = range_ambush_defense_won }
+		trigger = { has_character_flag = orfelec_good_21 }
 		name = EVTOPT_orfelec_resolve_range_ambush_organized
 		clr_character_flag = range_ambush_fight
 		clr_character_flag = range_ambush_hide
@@ -2339,7 +2453,7 @@ character_event ={#resolved
 		clr_character_flag = range_ambush_organize
 	}
 	option = {
-		trigger = { has_character_flag = range_ambush_defeat }
+		trigger = { has_character_flag = orfelec_bad_21 }
 		name = EVTOPT_orfelec_resolve_range_ambush_defeat
 		clr_character_flag = range_ambush_fight
 		clr_character_flag = range_ambush_hide

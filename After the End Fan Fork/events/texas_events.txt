@@ -831,7 +831,7 @@ character_event = {
 		}
 	}
 	mean_time_to_happen = {
-		months = 12#is a year a good time?
+		months = 16#is a year a good time?
 		modifier = {# cuts the time by half if the party has 2/3 of the senate
 			factor = 0.5 
 			any_voter = {
@@ -861,7 +861,7 @@ character_event = {
 		ai_chance = {
 			factor = 70
 			modifier = { factor = 4 trait = just}
-			modifier = { factor = 2 trait = proud}
+			modifier = { factor = 2 trait = humble}
 			modifier = { factor = 1.5 trait = content}
 			modifier = { factor = 3 trait = craven}
 			#you might wanna add more depending on the laws
@@ -876,8 +876,8 @@ character_event = {
 		ai_chance = {
 			factor = 30
 			modifier = { factor = 4 trait = arbitrary}
-			modifier = { factor = 2 trait = humble}
 			modifier = { factor = 3 trait = ambitious}
+			modifier = { factor = 2 trait = proud}
 			#you might wanna add more depending on the laws
 		}
 		name = EVTOPTB_texas_51
@@ -893,13 +893,14 @@ character_event = {
 	}
 }
 
-character_event = {
+province_event = {
 	id = texas.52
 	desc = EVTDESC_texas_52
 	only_playable = yes
 	hide_window = yes
 	trigger = {
-		government = open_range_feudalism_government
+		holder_scope = {  government = open_range_feudalism_government }
+		holder_scope = {  NOT = { has_character_modifier = had_party_localize } }
 	}
 	immediate = {
 		create_random_soldier = {
@@ -911,25 +912,77 @@ character_event = {
 			age = 20
 		}
 		new_character = {
-			ROOT = { character_event = {id = texas.53}}
+			holder_scope = { character_event = {id = texas.53}}
 			gold = 50
 			piety = 30
 			prestige = 100
-			set_character_flag = ranger
-			random_list = {
-				10 = {
-					add_trait = party_populist
-				}
-				10 = {
-					add_trait = party_royalist
-				}
-				10 = {
-					add_trait = party_magnate
-				}
-				10 = {
-					add_trait = party_theocratic
-				}
-			}
+			set_character_flag = range_warrior
+			add_trait = party_populist
+		}
+	}
+	mean_time_to_happen = {
+		years = 10
+	}
+}
+
+province_event = {
+	id = texas.53
+	desc = EVTDESC_texas_53
+	only_playable = yes
+	hide_window = yes
+	trigger = {
+		holder_scope = {  government = open_range_feudalism_government }
+		holder_scope = {  NOT = { has_character_modifier = had_party_localize } }
+	}
+	immediate = {
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 20
+		}
+		new_character = {
+			holder_scope = { character_event = {id = texas.53}}
+			gold = 50
+			piety = 30
+			prestige = 100
+			set_character_flag = range_merchant
+			add_trait = party_magnate
+		}
+	}
+	mean_time_to_happen = {
+		years = 15
+	}
+}
+
+province_event = {
+	id = texas.54
+	desc = EVTDESC_texas_54
+	only_playable = yes
+	hide_window = yes
+	trigger = {
+		holder_scope = {  government = open_range_feudalism_government }
+		holder_scope = {  NOT = { has_character_modifier = had_party_localize } }
+	}
+	immediate = {
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = ROOT
+			culture = ROOT
+			female = no
+			age = 20
+		}
+		new_character = {
+			holder_scope = { character_event = {id = texas.53}}
+			gold = 50
+			piety = 30
+			prestige = 100
+			set_character_flag = range_priest
+			add_trait = party_theocratic
+			add_trait = zealous
 		}
 	}
 	mean_time_to_happen = {
@@ -938,10 +991,13 @@ character_event = {
 }
 
 character_event = {#rangers trying to organize
-	id = texas.53
-	desc = EVTDESC_texas_53
+	id = texas.55
+	desc = EVTDESC_texas_55
+	
+	trigger = { government = open_range_feudalism_government }
+	
 	option = {
-		name = EVTOPTA_texas_53
+		name = EVTOPTA_texas_55
 		#you gain election buff that i will code after the election
 		trigger = {
 			FROM = {
@@ -990,7 +1046,7 @@ character_event = {#rangers trying to organize
 				}
 			}
 		}
-		#election penalty
+		
 	}
 	option = {#expel them
 		name = EVTOPTC_texas_53
@@ -1004,10 +1060,6 @@ character_event = {#rangers trying to organize
 					AND = {
 						trait = party_magnate
 						ROOT = {trait = party_magnate}
-					}
-					AND = {
-						trait = party_royalist
-						ROOT = {trait = party_royalist}
 					}
 					AND = {
 						trait = party_theocratic
