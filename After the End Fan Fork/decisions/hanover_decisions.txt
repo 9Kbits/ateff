@@ -110,41 +110,43 @@ decisions = {
 }
 
 targetted_decisions = {
-	assume_controll_over_the_HCC = {
-		potential = {
-			has_dlc = "Holy Fury"
-			has_landed_title = e_dixie
-			
-		}
-		allow = {
-			FROM = {
-				is_adult = yes
-				prisoner = no
-				OR = {
-					trait = amateurish_plotter
-					trait = flamboyant_schemer
-					trait = intricate_webweaver
-					trait = elusive_shadow
-					trait = grey_eminence
-					trait = schemer
-					trait = deceitful
-				}
-				OR = {
-					trait = proud
-					trait = ambitious
-				}
-				NOT = {
-					trait = content
-					trait = humble
-					trait = imbecile
-					has_claim = e_dixie
+	assume_control_over_the_HCC = {
+			potential = {
+				has_dlc = "Holy Fury"
+				has_landed_title = e_dixie
+				has_regent = yes
+				spouse = {
+					character = FROM
 				}
 			}
-		}
-		effect = {
-			FROM = {
-				add_claim = e_dixie
-				set_character_flag = anastasia_war
+			allow = {
+				FROM = {
+					is_adult = yes
+					prisoner = no
+					OR = {
+						trait = amateurish_plotter
+						trait = flamboyant_schemer
+						trait = intricate_webweaver
+						trait = elusive_shadow
+						trait = grey_eminence
+						trait = schemer
+						trait = deceitful
+					}
+					OR = {
+						trait = proud
+						trait = ambitious
+					}
+					NOT = {
+						trait = content
+						trait = humble
+						trait = imbecile
+					}
+				}
+			}
+			effect = {
+				hidden_tooltip = {
+					FROM = { narrative_event = { id = hanovers.19 } }
+				}
 			}
 		}
 	}

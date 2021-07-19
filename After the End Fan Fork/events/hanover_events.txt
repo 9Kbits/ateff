@@ -842,6 +842,32 @@ narrative_event = {
 }
 
 narrative_event = {
+	id = hanovers.19
+	title= EVTTITLE_hcc_war
+	desc = "EVTDESC_hcc_war"
+	picture = GFX_evt_open_book_hf
+	border = GFX_event_narrative_frame_intrigue
+	prisoner = no
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA_hcc_war"
+		add_claim = e_dixie
+		e_dixie = {
+			holder_scope = {
+				reverse_war = {
+					target = ROOT
+					thirdparty_title = PREV
+					casus_belli = claim
+				}
+			}
+		}
+		set_character_flag = anastasia_war
+	}
+}
+
+narrative_event = {
 	id = hanovers.20
 	title = EVTTITLE_anastasiabloodHCC
 	desc = {
