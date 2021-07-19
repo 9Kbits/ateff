@@ -800,7 +800,7 @@ character_event = {
 	option = {
 		name = EVTOPT_gaian_law_enat
 		trigger = { is_female = yes }
-		primary_title = { add_law = enatic_succession }
+		primary_title = { add_law = { law = enatic_succession opinion_effect = no }}
 		piety = 20
 		ai_chance = {
 			factor = 10
@@ -810,7 +810,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_gaian_law_en_cog
-		primary_title = { add_law = enatic_cognatic_succession }
+		primary_title = { add_law = { law = enatic_cognatic_succession opinion_effect = no }}
 		piety = 10
 		if = {
 			limit = { is_female = no }
@@ -821,7 +821,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_gaian_law_true_cog
-		primary_title = { add_law = true_cognatic_succession }
+		primary_title = { add_law = { law = true_cognatic_succession opinion_effect = no }}
 		ai_chance = {
 			factor = 20
 			modifier = { factor = 2 is_female = no }
@@ -897,7 +897,7 @@ character_event = {
 	option = {
 		name = EVTOPT_gaian_law_enat
 		trigger = { is_female = yes }
-		primary_title = { add_law = enatic_succession }
+		primary_title = { add_law = { law = enatic_succession opinion_effect = no }}
 		piety = 20
 		ai_chance = {
 			factor = 10
@@ -907,7 +907,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_gaian_law_en_cog
-		primary_title = { add_law = enatic_cognatic_succession }
+		primary_title = { add_law = { law = enatic_cognatic_succession opinion_effect = no }}
 		piety = 10
 		if = {
 			limit = { is_female = no }
@@ -918,7 +918,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_gaian_law_true_cog
-		primary_title = { add_law = true_cognatic_succession }
+		primary_title = { add_law = { law = true_cognatic_succession opinion_effect = no }}
 		ai_chance = {
 			factor = 20
 			modifier = { factor = 2 is_female = no }
@@ -4872,7 +4872,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_gaian_laws_succ_approve
-		primary_title = { add_law = succ_eldership }
+		primary_title = { add_law = { law = succ_eldership opinion_effect = no }}
 		piety = 200
 		ai_chance = {
 			factor = 10
@@ -4898,7 +4898,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_gaian_laws_succ_approve
-		primary_title = { add_law = succ_rel_gaian_elective }
+		primary_title = { add_law = { law = succ_rel_gaian_elective opinion_effect = no }}
 		piety = 200
 		ai_chance = {
 			factor = 10
@@ -4924,7 +4924,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_gaian_laws_succ_approve
-		primary_title = { add_law = succ_mil_gaian_elective }
+		primary_title = { add_law = { law = succ_mil_gaian_elective opinion_effect = no }}
 		piety = 200
 		ai_chance = {
 			factor = 10
@@ -4950,7 +4950,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_gaian_laws_succ_approve
-		primary_title = { add_law = succ_gavelkind }
+		primary_title = { add_law = { law = succ_gavelkind opinion_effect = no }}
 		piety = 200
 		ai_chance = {
 			factor = 10
@@ -5027,7 +5027,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTB_gaian_demiliterize
-		primary_title = { add_law = captaincy_mobilization_2 }
+		primary_title = { add_law = { law = captaincy_mobilization_2 opinion_effect = no }}
 		piety = 50
 		
 		ai_chance = { factor = 5 }
@@ -5035,7 +5035,7 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTB_gaian_demiliterize
-		primary_title = { add_law = captaincy_mobilization_1 }
+		primary_title = { add_law = { law = captaincy_mobilization_1 opinion_effect = no }}
 		piety = 100
 		
 		ai_chance = { factor = 5 
@@ -5045,7 +5045,7 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTB_gaian_demiliterize
-		primary_title = { add_law = captaincy_mobilization_0 }
+		primary_title = { add_law = { law = captaincy_mobilization_0 opinion_effect = no }}
 		piety = 200
 		
 		ai_chance = { factor = 5 
@@ -5063,7 +5063,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_gaian_militarize
-		primary_title = { add_law = captaincy_mobilization_2 }
+		primary_title = { add_law = { law = captaincy_mobilization_2 opinion_effect = no }}
 		ai_chance = { factor = 5 }
 	}
 	
@@ -5073,7 +5073,7 @@ character_event = {
 			NOT = { has_character_modifier = mobilized_druidic_reserves }
 		}
 		name = EVTOPTB_gaian_militarize
-		primary_title = { add_law = captaincy_mobilization_2 }
+		primary_title = { add_law = { law = captaincy_mobilization_2 opinion_effect = no }}
 		add_character_modifier = { name = mobilized_druidic_reserves years = 5 }
 		capital_scope = {
 		ROOT = {
@@ -5106,14 +5106,14 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_gaian_demilitarize
-		primary_title = { add_law = captaincy_mobilization_1 }
+		primary_title = { add_law = { law = captaincy_mobilization_1 opinion_effect = no }}
 		ai_chance = { factor = 5 }
 		disband_event_forces = druidic_mobilized_reserves
 	}
 	
 	option = {
 		name = EVTOPTB_gaian_demilitarize
-		primary_title = { add_law = captaincy_mobilization_0 }
+		primary_title = { add_law = { law = captaincy_mobilization_0 opinion_effect = no }}
 		piety = 200
 		disband_event_forces = druidic_mobilized_reserves
 		remove_character_modifier = mobilized_druidic_reserves
