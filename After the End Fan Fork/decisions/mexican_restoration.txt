@@ -1,0 +1,301 @@
+restore_mexican_empire = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			is_playable = yes
+			has_dlc = "Legacy of Rome"
+			has_landed_title = k_mexico
+			is_adult = yes
+			prisoner = no
+			NOT = { trait = incapable }
+			NOT = { has_global_flag = mexico_restored }
+			NOR = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			primary_title = { title = k_mexico }
+			prestige = 3000
+			completely_controls = d_mexico
+			completely_controls = d_puebla
+			completely_controls = d_veracruz
+			completely_controls = d_jalisco
+			completely_controls = d_oaxaca
+			completely_controls = d_michoacan
+			completely_controls = d_guerrero
+			completely_controls = d_guanajato
+		}
+		effect = {
+			set_global_flag = mexico_restored
+			narrative_event = { id = MXR.20 tooltip = EVTTOOLTIPMXR.20 }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	enforce_orthodoxy = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 24
+		
+		potential = {
+			has_dlc = "Legacy of Rome"
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			independent = yes
+			NOT = { trait = incapable }
+			OR = {
+				religion = cristo_rey
+				religion = reformista
+			}
+			OR = {
+				has_landed_title = e_mexico
+			}
+			is_heretic = no
+			NOT = { has_global_flag = orthodoxy_enforced }
+			d_prelate = {
+				holder_scope = {
+					is_heretic = no
+				}
+			}
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+		}
+		allow = {
+			piety = 2000
+			religion_authority = 0.9
+			completely_controls = c_mexico
+			b_villa_de_guadalupe_MX = {
+				custom_tooltip = { # Custom tooltip to shorten the in-game tooltip
+					text = enforce_orthodoxy_holder_religion
+					hidden_tooltip = {
+						holder_scope = {
+							OR = {
+								religion = cristo_rey
+								religion = reformista
+							}
+							is_heretic = no
+						}
+					}
+				}
+			}
+			completely_controls = c_monterrey
+			b_espinazo_NL = {
+				custom_tooltip = {
+					text = enforce_orthodoxy_holder_religion
+					hidden_tooltip = {
+						holder_scope = {
+							OR = {
+								religion = cristo_rey
+								religion = reformista
+							}
+							is_heretic = no
+						}
+					}
+				}
+			}
+			completely_controls = c_merida
+			b_izamal_YU = {
+				custom_tooltip = {
+					text = enforce_orthodoxy_holder_religion
+					hidden_tooltip = {
+						holder_scope = {
+							OR = {
+								religion = cristo_rey
+								religion = reformista
+							}
+							is_heretic = no
+						}
+					}
+				}
+			}
+			completely_controls = c_jamiltepec
+			b_villa_de_tututepec_OA = {
+				custom_tooltip = {
+					text = enforce_orthodoxy_holder_religion
+					hidden_tooltip = {
+						holder_scope = {
+							OR = {
+								religion = cristo_rey
+								religion = reformista
+							}
+							is_heretic = no
+						}
+					}
+				}
+			}
+			completely_controls = c_somberete
+			b_nora_de_san_pantaleon_ZA = {
+				custom_tooltip = {
+					text = enforce_orthodoxy_holder_religion
+					hidden_tooltip = {
+						holder_scope = {
+							OR = {
+								religion = cristo_rey
+								religion = reformista
+							}
+							is_heretic = no
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			narrative_event = { id = MXR.210 tooltip = EVTTOOLTIPMXR.210}
+			set_global_flag = orthodoxy_enforced
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	claim_cdmx = {
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_nomadic = no
+			is_playable = yes
+			has_dlc = "Legacy of Rome"
+			OR = {
+			        has_landed_title = k_mexico
+					has_landed_title = e_mexico
+			}
+			NOT = { has_landed_title = c_mexico }
+			any_realm_lord = { 
+				ai = yes
+			    has_landed_title = c_mexico
+			}
+		}
+		allow = {
+			NOT = { has_landed_title = c_mexico }
+			any_realm_lord = { 
+				has_landed_title = c_mexico
+			}
+		}
+		effect = {
+			ROOT = {
+				c_mexico = {
+					usurp_title_plus_barony_if_unlanded_and_vassals = PREV
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	make_cdmx_capital = {
+		only_independent = yes
+		is_high_prio = yes
+		
+		potential = {
+			is_playable = yes
+			ai = no
+			has_dlc = "Legacy of Rome"
+			OR = {
+			        has_landed_title = k_mexico
+					has_landed_title = e_mexico
+			}
+			capital_scope = {
+				NOT = { province_id = 1767 }
+			}
+			any_realm_lord = { 
+				ai = yes
+				has_landed_title = c_mexico
+			}
+			any_realm_lord = { 
+				ai = yes
+				has_landed_title = b_chapultepec_MX
+			}
+		}
+		allow = {
+			has_landed_title = e_mexico
+			any_realm_lord = { has_landed_title = c_mexico }
+		}
+		effect = {
+			custom_tooltip = {
+				text = rome_capital
+				hidden_tooltip = {
+					b_tivoli = { province_capital = yes }
+					ROOT = {
+						b_chapultepec_MX = {
+							usurp_title = PREV
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+narrative_event = {
+	id = MXR.210
+	title = EVTNAMEMXR.210
+	desc = EVTDESCMXR.210
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTAMXR.200
+
+		if = {
+			limit = { religion = cristo_rey }
+		}
+		if = {
+			limit = { religion = reformista }
+		}
+
+		set_global_flag = orthodoxy_enforced
+		give_nickname = nick_the_saint
+		hidden_tooltip = {
+			any_playable_ruler = {
+				limit = {
+					religion = sacred_heart
+					controls_religion = no
+				}
+				narrative_event = { id = MXR.211 }
+			}
+		}
+	}
+}
+
+# Convert or Not?
+narrative_event = {
+	id = MXR.211
+	title = EVTNAMEMXR.210
+	desc = EVTDESCMXR.210
+	
+	picture = GFX_evt_icon
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = EVTOPTAMXR.211
+		ai_chance = { factor = 75 }
+		religion = FROM
+		any_courtier = {
+			limit = {
+				religion = sacred_heart
+				liege = { character = ROOT }
+			}
+			religion = FROM
+		}
+		capital_scope = {
+			religion = FROM
+		}
+	}
+	option = { # No
+		name = EVTOPTBMXR.211
+		ai_chance = { factor = 25 }
+	}
+}

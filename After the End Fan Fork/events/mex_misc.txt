@@ -1,0 +1,548 @@
+character_event = {
+	id = FIDE.120
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		clr_character_flag = ascetic_arriving
+		random_list = {
+			40 = {
+				random_list = {
+					33 = {
+						create_character = {
+							random_traits = yes
+							dynasty = none
+							religion = ROOT
+							age = 22
+							health = 6
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							save_event_target_as = mystic
+						}
+					}
+					33 = {
+						create_character = {
+							random_traits = yes
+							dynasty = none
+							religion = ROOT
+							age = 42
+							health = 6
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							save_event_target_as = mystic
+						}
+					}
+					33 = {
+						create_character = {
+							random_traits = yes
+							dynasty = none
+							religion = ROOT
+							female = no
+							age = 65
+							health = 6
+						}
+						new_character = {
+							character_event = { id = misc.3 } # Diversity
+							character_event = { id = misc.4 } # Physique
+							save_event_target_as = mystic
+						}
+					}
+				}
+			}
+		}
+
+		event_target:mystic = {
+		
+			#Set correct education
+			remove_education_effect = yes
+			random_list = {
+				60 = { add_trait = scholarly_theologian }
+				40 = { add_trait = mastermind_theologian }
+			}
+
+			#Up  learning
+			random_list = {
+				25 = { change_learning = 3 }
+				25 = { change_learning = 4 }
+				25 = { change_learning = 5 }
+				25 = { change_learning = 6 }
+			}
+
+			#Set some interesting traits 
+
+			#Nun/monk traits
+			add_trait = zealous
+			remove_trait = cynical
+			if = {
+				limit = { NOT = { religion_group = jewish_group } }
+				add_ascetic_trait_effect = yes
+				add_trait = celibate
+			}
+
+			#Nice congential
+			random_list = {
+				10 = {
+					add_trait = fair
+					remove_trait = ugly
+				}
+				5 = {
+					add_trait = genius
+					remove_trait = imbecile
+					remove_trait = quick
+					remove_trait = slow
+				}
+				10 = {
+					add_trait = quick
+					remove_trait = imbecile
+					remove_trait = genius
+					remove_trait = slow
+				}
+				5 = {
+					add_trait = strong
+					remove_trait = weak
+				}
+				100 = { }
+			}
+
+			#Lifestyle
+			remove_lifestyle_trait_effect = yes
+			random_list = {
+				15 = { add_trait = scholar }
+				15 = { add_trait = theologian }
+				100 = { add_trait = mystic }
+				20 = { 
+					modifier = {
+						factor = 0
+						NOT = { ROOT = { society_member_of = monastic_order_benedictine } }
+					}
+					add_trait = gardener
+				}
+			}
+
+			#Virtues
+			if = {
+				limit = { NOT = { religion_group = jewish_group } }
+				remove_trait = lustful
+			}
+			remove_trait = wroth
+			remove_trait = gluttonous
+			remove_trait = cruel
+			random = {
+				chance = 20
+				add_trait = chaste
+			}
+			random = {
+				chance = 20
+				remove_trait = envious
+				add_trait = kind
+			}
+			random = {
+				chance = 20
+				remove_trait = greedy
+				add_trait = charitable
+			}
+			random = {
+				chance = 10
+				add_trait = temperate
+				lose_weight_small_effect = yes
+				weight_trait_check_effect = yes
+			}
+			random = {
+				chance = 5
+				add_trait = patient
+				remove_trait = wroth
+			}
+			random = {
+				chance = 10
+				add_trait = humble
+				remove_trait = proud
+			}
+			random = {
+				chance = 5
+				remove_trait = slothful
+				remove_trait = diligent
+			}
+			if = {
+				limit = { religion_group = jewish_group }
+				remove_trait = chaste
+			}
+			
+			#Misc traits
+			remove_trait = deceitful
+			remove_trait = arbitrary
+			remove_trait = cynical
+			random = {
+				chance = 10
+				add_trait = honest
+			}
+			random = {
+				chance = 10
+				add_trait = just
+			}
+			random = {
+				chance = 15
+				add_trait = erudite
+			}
+			random = {
+				chance = 10
+				add_trait = content
+				remove_trait = ambitious
+			}
+			random = {
+				chance = 15
+				add_trait = homosexual
+			}
+			random = {
+				chance = 15
+				add_trait = bisexual
+			}
+			if = {
+				limit = { has_dlc = "Reapers" }
+				random = {
+					chance = 33
+					add_trait = physician
+				}
+			}
+
+			#Nicknames
+			random_list = {
+				10 = {
+					give_nickname = nick_the_holy
+				}
+				10 = { 
+					modifier = {
+						factor = 0
+						NAND = {
+							trait = kind
+							trait = charitable
+							trait = humble
+						}
+					}
+					give_nickname = nick_the_saint
+				}
+				10 = { 
+					modifier = {
+						factor = 0
+						NAND = {
+							trait = kind
+							trait = charitable
+						}
+					}
+					give_nickname = nick_the_kind
+				}
+				10 = { 
+					modifier = {
+						factor = 0
+						NAND = {
+							trait = charitable
+							trait = just
+						}
+					}
+					give_nickname = nick_the_good
+				}
+				10 = { 
+					modifier = {
+						factor = 0
+						OR = {
+							is_smart_trigger = yes
+							trait = just
+							trait = patient
+							trait = scholar
+						}
+					}
+					give_nickname = nick_the_wise
+				}
+				10 = { 
+					modifier = {
+						factor = 0
+						NOR = {
+							religion_group = christian
+							religion_group = latter_day_saints
+						}
+					}
+					give_nickname = nick_the_confessor
+				}
+				10 = { 
+					modifier = {
+						factor = 0
+						NOR = {
+							religion_group = christian
+							religion_group = jewish_group
+							religion_group = latter_day_saints
+						}
+					}
+					give_nickname = nick_the_blessed
+				}
+				10 = { 
+					modifier = {
+						factor = 0
+						NOR = {
+							religion_group = christian
+							religion_group = latter_day_saints
+						}
+					}
+					give_nickname = nick_the_apostle
+				}
+				10 = { 
+					modifier = {
+						factor = 0
+						NOR = {
+							religion_group = christian
+							religion_group = jewish_group
+							religion_group = latter_day_saints
+							
+						}
+					}
+					give_nickname = nick_the_pious
+				}
+				50 = { }
+			}
+			character_event = { id = FIDE.122 }	
+		}
+	}
+}
+
+#Ping event for new monk/nun
+character_event = {
+	id = FIDE.121
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROM = { character_event = { id = FIDE.121 } }
+	}
+}
+
+#Introduction of mystic
+character_event = {
+	id = FIDE.122
+	desc = EVTDESC_FIDE_122
+	picture = GFX_evt_monastery_nuns
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVTOPTA_FIDE_122
+		reverse_opinion = {
+			who = FROM
+			modifier = opinion_loyal_servant
+		}
+	}
+}
+
+character_event = {
+	id = FIDE.123
+	desc = EVTDESC_FIDE_123
+	picture = GFX_evt_monastery_nuns
+	border = GFX_event_normal_frame_religion
+
+	is_triggered_only = yes
+	
+	trigger = {
+	    has_character_flag = becoming_cajita
+	}
+
+	option = {
+		name = EVTOPTA_FIDE_123
+		clr_character_flag = becoming_cajita
+		set_character_flag = fasting_for_incarnation
+		add_trait = in_hiding
+	}
+	
+	option = {
+	    name = EVTOPTB_FIDE_123
+	}
+}
+
+character_event = {
+    id = FIDE.124
+	desc = EVTDESC_FIDE_124
+	picture = GFX_evt_lady_guadalupe
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	trigger = {
+	    has_character_flag = fasting_for_incarnation
+	}
+	
+	mean_time_to_happen = {
+		days = 10
+	}	
+	
+	option = {
+		name = EVTOPTA_FIDE_124
+		ai_chance = {
+			factor = 10
+		}
+		piety = 100
+		random_list = {
+			20 = {
+				add_trait = is_malnourished
+				clr_character_flag = fasting_for_incarnation
+                set_character_flag = fasting_for_incarnation1				
+			}
+			80 = {
+			    clr_character_flag = fasting_for_incarnation
+                set_character_flag = fasting_for_incarnation1				
+
+			}
+		}
+	}
+}
+
+character_event = {
+    id = FIDE.125
+	desc = EVTDESC_FIDE_125
+	picture = GFX_evt_lady_guadalupe
+	border = GFX_event_normal_frame_religion
+	
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+		days = 10
+	}	
+	
+	trigger = {
+	    has_character_flag = fasting_for_incarnation1
+	}
+	
+	option = {
+		name = EVTOPTA_FIDE_125
+		ai_chance = {
+			factor = 5
+			random_list = {
+			35 = {
+			    give_pneumonic_effect = yes				
+			}
+			65 = {
+			}
+			clr_character_flag = fasting_for_incarnation1
+			set_character_flag = fasting_for_incarnation2
+		}
+	}
+	option = {
+		name = EVTOPTB_FIDE_125
+		ai_chance = {
+			factor = 5
+		}
+		piety = -150
+		random_list = {
+			20 = {
+				add_trait = gluttonous
+				clr_character_flag = fasting_for_incarnation1	
+                set_character_flag = failed_fast_fide				
+			}
+			20 = {
+			    add_trait = lustful
+			    clr_character_flag = fasting_for_incarnation1
+                set_character_flag = failed_fast_fide				
+            }
+			20 = {
+			    add_trait = wroth
+			    clr_character_flag = fasting_for_incarnation1
+                set_character_flag = failed_fast_fide				
+            }
+			20 = {
+			    add_trait = slothful
+			    clr_character_flag = fasting_for_incarnation1
+                set_character_flag = failed_fast_fide				
+            }
+			20 = {
+			    add_trait = greedy
+			    clr_character_flag = fasting_for_incarnation1
+                set_character_flag = failed_fast_fide				
+            }
+		}
+		remove_trait = in_hiding
+	}
+}
+
+character_event = {
+    id = FIDE.127
+	desc = EVT_DESC_FIDE.127
+	picture = GFX_evt_lady_guadalupe
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+	    has_character_flag = fasting_for_incarnation2
+	}
+	
+	mean_time_to_happen = {
+	    days = 10
+	}
+	
+    option = {
+		name = EVTOPTA_FIDE_127
+		ai_chance = {
+			factor = 5
+		}
+		random_list = {
+		    10 = {
+			    clr_character_flag = fasting_for_incarnation2
+				set_character_flag = failed_fast_fide
+			}
+            5 = {
+			    ROOT = {
+			        death = {
+				        death_reason = death_execution_eaten #whatever for now
+			        }
+		        }
+			}
+			85 = {
+			    clr_character_flag = fasting_for_incarnation2
+				set_character_flag = fasting_for_incarnation3
+			}
+	    }
+	}
+}
+
+character_event = { 
+    id = fide.128
+	desc = EVT_DESC_FIDE.128
+	picture = GFX_evt_lady_guadalupe
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+	    has_character_flag = fasting_for_incarnation3
+	}
+	
+	mean_time_to_happen = {
+	    days = 1
+	}
+	
+	option = {
+	    name = EVTOPTA_FIDE_128
+	    add_trait = cajita
+		remove_trait = in_hiding
+		clr_character_flag = fasting_for_incarnation3
+		piety = 500
+	}
+}
+	    
+character_event = { 
+    id = fide.129
+	desc = EVT_DESC_FIDE.129
+	picture = GFX_evt_lady_guadalupe
+	border = GFX_event_normal_frame_religion
+	
+	trigger = {
+	    has_character_flag = failed_fast_fide
+	}
+	
+	mean_time_to_happen = {
+	    days = 1
+	}
+	
+	option = {
+	    name = EVTOPTA_FIDE.129
+	    piety = -500
+	}
+}

@@ -4930,3 +4930,169 @@ upgrade_hall_of_monsters = {
 		monthly_character_prestige = 0.05
 	}
 }
+upgrade_colegio_militar = { #Heroica Colegio Militar
+	picture = GFX_upgrade_icon_equipment
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		unlocks_minor_title
+	}
+	build_time = 12
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		
+	}
+	owner_modifier = {
+		custom_modifier_text = colegio_militar_custom_modifier_tt
+	}
+}
+
+upgrade_general_archive_nation = { #Archivo General de la Nación
+	picture = GFX_upgrade_icon_written_paper
+
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	local_modifier = {
+		culture_techpoints = 0.15
+	}
+}
+upgrade_aquaduct = { #Aquaduct of Chapultepec
+	picture = GFX_upgrade_icon_stones
+
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+	}
+	build_time = 12
+	gold_cost_flat = 300
+	gold_cost_ticking = 1
+	local_modifier = {
+		disease_defence = 0.02
+	}
+	owner_modifier = {
+		monthly_character_prestige = 0.02
+	}
+}
+upgrade_estado_mayor = { #Presidential bodyguard
+	picture = GFX_upgrade_icon_equipment
+
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		unit
+		defensive
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 550
+	gold_cost_ticking = 1
+	local_modifier = {
+		garrison_size = 0.1
+		supply_limit = 1
+	}
+	owner_modifier = {
+		land_organisation = 0.05
+	}
+}
+upgrade_grand_mural = { #Murals in Chapultepec Castle. Dynastic opinion doesn't make sense
+	picture = GFX_upgrade_icon_decorative
+	
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		is_singular
+		decorative
+		mural
+	}
+	build_time = 30
+	gold_cost_flat = 300
+	gold_cost_ticking = 1
+	local_modifier = {
+		
+	}
+	owner_modifier = {
+		monthly_character_prestige = 0.05
+	}
+}
+upgrade_cincalco = { #Cueva de Cincalco
+	picture = GFX_upgrade_icon_skulls
+
+	potential = {
+		OR = {
+			religion_group = mesoamerican_gods
+			religion = tonaltec
+		}
+	}
+	allow = {
+		trigger_if = {
+			limit = {
+				NOR = {
+					religion_group = mesoamerican_gods
+					religion = tonaltec
+				}
+			}
+			OR = {
+				religion_group = mesoamerican_gods
+				religion = tonaltec
+			}
+		}
+	}
+	active = {
+		OR = {
+			religion_group = mesoamerican_gods
+			religion = tonaltec
+		}
+	}
+
+	flags = {
+		decorative
+		is_singular
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	owner_modifier = {
+		monthly_character_piety = 0.15
+	}
+	local_modifier = {
+		siege_defence = 0.1
+	}
+}
+upgrade_chapultepec_zoo = { # Zoológico de Chapultepec
+	picture = GFX_upgrade_icon_crates
+	potential = { }
+	allow = { }
+	active = { }
+
+	flags = {
+		animal_cages
+		is_singular
+		entertainment
+	}
+	build_time = 24
+	gold_cost_flat = 450
+	gold_cost_ticking = 1
+	owner_modifier = {
+		monthly_character_prestige = 0.1
+		hunter_opinion = 5
+	}
+}
