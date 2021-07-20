@@ -114,12 +114,13 @@ targetted_decisions = {
 			potential = {
 				has_dlc = "Holy Fury"
 				has_landed_title = e_dixie
+				NOT = { has_global_flag = flag_anastasia_bloodline } #Just once.
+			}
+			allow = {
 				has_regent = yes
 				spouse = {
 					character = FROM
 				}
-			}
-			allow = {
 				FROM = {
 					is_adult = yes
 					prisoner = no
