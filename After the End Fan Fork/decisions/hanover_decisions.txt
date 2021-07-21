@@ -106,48 +106,46 @@ decisions = {
 			factor = 1
 		}
 	}
-	
 }
 
 targetted_decisions = {
 	assume_control_over_the_HCC = {
-			potential = {
-				has_dlc = "Holy Fury"
-				has_landed_title = e_dixie
-				NOT = { has_global_flag = flag_anastasia_bloodline } #Just once.
+		potential = {
+			has_dlc = "Holy Fury"
+			has_landed_title = e_dixie
+			NOT = { has_global_flag = flag_anastasia_bloodline } #Just once.
+		}
+		allow = {
+			has_regent = yes
+			spouse = {
+				character = FROM
 			}
-			allow = {
-				has_regent = yes
-				spouse = {
-					character = FROM
+			FROM = {
+				is_adult = yes
+				prisoner = no
+				OR = {
+					trait = amateurish_plotter
+					trait = flamboyant_schemer
+					trait = intricate_webweaver
+					trait = elusive_shadow
+					trait = grey_eminence
+					trait = schemer
+					trait = deceitful
 				}
-				FROM = {
-					is_adult = yes
-					prisoner = no
-					OR = {
-						trait = amateurish_plotter
-						trait = flamboyant_schemer
-						trait = intricate_webweaver
-						trait = elusive_shadow
-						trait = grey_eminence
-						trait = schemer
-						trait = deceitful
-					}
-					OR = {
-						trait = proud
-						trait = ambitious
-					}
-					NOT = {
-						trait = content
-						trait = humble
-						trait = imbecile
-					}
+				OR = {
+					trait = proud
+					trait = ambitious
+				}
+				NOT = {
+					trait = content
+					trait = humble
+					trait = imbecile
 				}
 			}
-			effect = {
-				hidden_tooltip = {
-					FROM = { narrative_event = { id = hanovers.19 } }
-				}
+		}
+		effect = {
+			hidden_tooltip = {
+				FROM = { narrative_event = { id = hanovers.19 } }
 			}
 		}
 	}
