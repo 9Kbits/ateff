@@ -1396,6 +1396,7 @@
 	trait=proud
 	trait=stressed
 	trait=sympathy_pagans
+	trait=legit_bastard
 	mother=1845120
 	father=1890040
 	2630.6.15={birth=yes}
@@ -1479,6 +1480,7 @@
 	culture=inlander
 	religion=gaian
 	trait=intricate_webweaver
+	trait=twin
 	mother=1845060
 	father=1845061
 	2659.6.15={birth=yes}
@@ -1491,6 +1493,7 @@
 	culture=inlander
 	religion=gaian
 	trait=intricate_webweaver
+	trait=twin
 	mother=1845060
 	father=1845061
 	2659.6.15={birth=yes}
@@ -1718,6 +1721,7 @@
 	trait=kind
 	trait=sympathy_pacific
 	trait=temperate
+	trait=legit_bastard
 	father=1845089
 	mother=1890045
 	2631.5.12={birth=yes}
@@ -1827,6 +1831,7 @@
 	trait=chaste
 	trait=kind
 	trait=just
+	trait=legit_bastard
 	father=1845081
 	mother=1845084
 	2640.12.14={birth=yes}
@@ -2380,6 +2385,7 @@
 	religion=gaian
 	dynasty=1863076
 	female=yes
+	trait=intricate_webweaver
 	trait=deceitful
 	trait=envious
 	trait=temperate
@@ -2428,14 +2434,14 @@
 	trait=trickster
     	trait=duelist
     	trait=deceitful
-    trait=ambitious
+    	trait=ambitious
 	trait=proud
 	trait=one_eyed
-    female=yes
-    mother=1845125
-    give_nickname=nick_the_cougar
-    2584.3.19={birth=yes}
-    2623.3.19={effect={add_artifact=vandals_axe}}
+    	female=yes
+    	mother=1845125
+    	give_nickname=nick_the_cougar
+    	2584.3.19={birth=yes}
+    	2623.3.19={effect={add_artifact=vandals_axe}}
 	2629.1.1={death=yes}
 }
 
@@ -2443,7 +2449,7 @@
 	name="Andrew"
 	culture=inlander
 	religion=gaian
-	2619.3.12={birth=yes}
+	2617.3.12={birth=yes}
 	2641.7.22={add_spouse=1845118}
 	2670.1.1={death=yes}
 }
@@ -2459,6 +2465,7 @@
 	trait=uncouth
 	trait=sturdy
 	trait=charitable
+	trait=legit_bastard
 	mother=1845118
 	father=1845122
 	2634.6.2={birth=yes}
@@ -2475,6 +2482,7 @@
 	trait=fair
 	trait=kind
 	trait=honest
+	trait=legit_bastard
 	mother=1845118
 	father=1845122
 	2635.9.7={birth=yes}
@@ -2526,7 +2534,8 @@
 	culture=inlander
 	religion=gaian
 	trait=skilled_tactician
-	2595.10.28={birth=yes}
+	mother=1845187
+	2585.10.28={birth=yes}
 	2621.11.1={death={
 			death_reason=death_battle
 			killer=1890041 #Moses Silvermount
@@ -2553,6 +2562,8 @@
 	female=yes
 	mother=1845131
 	trait=disfigured
+	trait=shy
+	give_nickname=nick_the_faceless
 	2542.8.13={birth=yes}
 	2582.2.25={death={
 			death_reason=death_battle
@@ -3094,7 +3105,11 @@
 	religion=gaian
 	female=yes
 	dynasty=1845085 #woodburnsky
+	diplomacy=5
 	martial=8
+	stewardship=6
+	intrigue=4
+	learning=4
 	trait=charismatic_negotiator
 	trait=sympathy_amero_syncretic
 	trait=inspiring_leader
@@ -3305,4 +3320,29 @@
 			prestige=250
 	}}
 	2700.1.1={death=yes}
+}
+
+1845187={
+	name="Alice"
+	dynasty=1863002
+	female=yes
+	culture=inlander
+	religion=gaian
+	father=1845188
+	2555.1.14={birth=yes}
+	2615.6.23={death=yes}
+}
+
+1845188={
+	name="Hue"
+	dynasty=1863002
+	culture=inlander
+	religion=gaian
+	trait=skilled_tactician
+	2530.6.19={birth=yes}
+	2564.4.7={death={
+			death_reason=death_battle
+			killer=1890047 #Charbonneau Silvermount
+		}
+	}
 }

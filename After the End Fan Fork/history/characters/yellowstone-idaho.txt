@@ -423,7 +423,7 @@
 	dynasty=1889034
 	dna="mzjahqzboyo"
 	culture=snakelander
-	religion=edenite
+	religion=trailwalker
 	diplomacy=7
 	martial=3
 	stewardship=2
@@ -532,12 +532,20 @@
 	dynasty=1863072
 	culture=snakelander
 	religion=nazarene
+	trait=tough_soldier
 	trait=sympathy_pagans
 	trait=celibate
 	trait=cynical
 	trait=depressed
 	father=1890053
 	2628.5.2={birth=yes}
+	2660.1.1={
+		effect={
+			add_claim=c_boise
+			add_claim=c_elmore
+			add_claim=c_gem_valley
+		}
+	}
 	2689.1.1={death=yes}
 }
 
@@ -608,36 +616,6 @@
 	2690.3.5={death=yes}
 }
 
-1890043={
-	name="Donny"
-	dynasty=1863079
-	dna="aahhetfcbcu"
-	culture=inlander
-	religion=trailwalker
-	diplomacy=4
-	martial=5
-	stewardship=4
-	intrigue=3
-	learning=4
-	trait=underhanded_rogue
-	trait=content
-	trait=humble
-	trait=gluttonous
-	trait=stressed
-	trait=slothful
-	trait=hunter
-	trait=peasant_leader
-	disallow_random_traits=yes
-	give_nickname=nick_rabble_rouser
-	2647.3.12={birth=yes
-		effect={
-			set_character_flag=diversity
-		}
-	}
-	2666.1.1={employer=1890035}
-	2700.7.4={death=yes}
-}
-
 1890044={
 	name="Joseph"
 	dynasty=1863074
@@ -659,7 +637,7 @@
 	religion=trailwalker
 	female=yes
 	father=1890041
-	2617.2.13={birth=yes}
+	2614.2.13={birth=yes}
 	2632.1.1={add_spouse=1845089}
 	2680.6.3={death=yes}
 }
@@ -672,9 +650,11 @@
 	trait=bastard
 	trait=adventurer
 	father=1890047
+	give_nickname=nick_the_despoiler
 	2554.2.14={birth=yes}
 	2613.2.15={death={
-			death_reason=death_battle
+			death_reason=death_duel
+			killer=1890054 #Awan Tagatoka
 		}
 	}
 }
@@ -685,6 +665,7 @@
 	culture=inlander
 	religion=trailwalker
 	father=1890055
+	give_nickname=nick_pickaxe
 	2527.1.4={birth=yes}
 	2568.11.16={death=yes}
 }
@@ -696,7 +677,7 @@
 	religion=trailwalker
 	father=1890046
 	2587.8.1={birth=yes}
-	2633.7.13={death={
+	2634.4.15={death={
 			death_reason=death_battle
 			killer=1890021
 		}
@@ -864,13 +845,14 @@
 	culture=inlander
 	religion=trailwalker
 	trait=drunkard
+	trait=dysentery
 	father=1890062
 	2467.4.12={birth=yes}
 	2500.2.23={death={death_reason=death_trait}}
 }
 
 1890060={
-	name="Heckler"
+	name="Granger"
 	dynasty=1863074
 	culture=inlander
 	religion=trailwalker
@@ -910,7 +892,7 @@
 	religion=trailwalker
 	father=1890060
 	2448.7.28={birth=yes}
-	2480.9.27={death=yes}
+	2480.9.27={death={death_reason=death_battle}}
 }
 
 1890063={
@@ -921,7 +903,7 @@
 	2397.3.16={birth=yes}
 	2431.4.22={death={
 			death_reason=death_battle_duel
-			killer=1890060 #Heckler Silvermount
+			killer=1890060 #Granger Silvermount
 		}
 	}
 }
@@ -1022,7 +1004,7 @@
 	2386.1.1={birth=yes}
 	2421.1.1={death={
 			death_reason=death_duel
-			killer=1890060 #Heckler Silvermount
+			killer=1890060 #Granger Silvermount
 		}
 	}
 }
@@ -1095,4 +1077,21 @@
 	mother=1890078
 	2660.2.16={birth=yes}
 	2720.2.16={death=yes}
+}
+
+1890081={
+	name="Tubbs"
+	dynasty=1863074
+	culture=inlander
+	religion=trailwalker
+	trait=one_legged
+	trait=brave
+	trait=strong
+	father=1890044
+	2566.2.14={birth=yes}
+	2614.6.3={death={
+			death_reason=death_battle
+			killer=1845121 #Julia Ponderosa
+		}
+	}
 }

@@ -595,8 +595,9 @@ narrative_event = {
 		hidden_tooltip = {
 			character_event = { id = hanovers.7 days = 1 }
 		}
-		random_courtier = {
-			opinion = { who = ROOT modifier = opinion_didnt_hear_rain } #placeholder
+		job_chancellor = {
+			opinion = { who = ROOT modifier = opinion_annoyed } #placeholder
+			reverse_opinion = { who = ROOT modifier = opinion_annoyed } #placeholder
 		}
 		ai_chance = { factor = 10 }
 	}
@@ -720,7 +721,9 @@ narrative_event = {
 		name = "EVTOPT_anastasia5a"
 		custom_tooltip = { text = TXT_anastasia5a }
 		e_dixie = {
-			narrative_event = { id = hanovers.12 }
+			holder_scope = {
+				narrative_event = { id = hanovers.12 }
+			}
 		}
 	}
 }
@@ -793,8 +796,8 @@ narrative_event = {
 	
 	option = {
 		name = "EVTOPT_anastasiaEMP1b"
-		ai_chance = { factor = 1 }
-		e_dixie = {
+		ai_chance = { factor = 0 }
+		d_inner_banks = {
 			holder_scope = {
 				narrative_event = { id = hanovers.13 }
 			}
@@ -908,6 +911,10 @@ narrative_event = {
 	
 	mean_time_to_happen = {
 		days = 10
+	}
+	
+	immediate = {
+		set_global_flag = flag_anastasia_bloodline
 	}
 	
 	option = {
