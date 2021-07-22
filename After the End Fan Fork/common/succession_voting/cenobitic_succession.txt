@@ -3722,10 +3722,7 @@ cenobitic_elective = {
 			}
 		}
 		FROM = {
-			OR = { #Candidate should not be a lan
-			
-			
-			dless Courtier that is about to inherit a Theocracy or Republic
+			OR = { #Candidate should not be a landless Courtier that is about to inherit a Theocracy or Republic
 				AND = {
 					is_ruler = yes
 					is_landed = yes
@@ -3745,10 +3742,10 @@ cenobitic_elective = {
 					}
 				}
 			}
-				OR = {
+			OR = {
 				religion = edenite
 				religion = angeline
-					}
+				}
 			NOR = {
 				trait = cat
 				trait = disinherited
