@@ -417,6 +417,7 @@ character_event = {
 					modifier = { trait = gregarious factor = 1.3 }
 					modifier = { trait = poet factor = 1.5 }
 					modifier = { trait = musician factor = 1.5 }
+					modifier = { trait = painter factor = 1.5 }
 					modifier = { trait = socializer factor = 1.3 }
 					character_event = { id = JD.20012 }
 				}
@@ -2029,6 +2030,7 @@ character_event = { # Special case 2 - The courtier you sent away to China has r
 					is_dumb_trigger = yes
 					trait = poet
 					trait = musician
+					trait = painter
 					trait = kind
 				}
 			}
@@ -2043,7 +2045,7 @@ character_event = { # Special case 2 - The courtier you sent away to China has r
 		}
 		name = {
 			text = EVTOPTA_JD_10019_poet
-			trigger = { OR = { trait = poet trait = musician trait = kind } }
+			trigger = { OR = { trait = poet trait = musician trait = painter trait = kind } }
 		}
 		sound_effect = china_grace_gain
 
