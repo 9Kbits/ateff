@@ -8174,13 +8174,16 @@ character_event = {
 	hide_window = yes
 	trigger = {
 		NOR = {
-			government = bureaucratic_government
-			higher_real_tier_than = BARON
+			AND = {
+				government = bureaucratic_government
+				higher_real_tier_than = BARON
+			}
 			AND = {
 				primary_title = {
 					has_title_flag = devolved_bureaucracy
 				}
 				government = feudal_government
+				higher_real_tier_than = BARON
 				OR = {
 					controls_religion = no
 					religion = cetic
