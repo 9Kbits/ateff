@@ -2124,7 +2124,7 @@
 	father=1845097
 	2489.10.11={birth=yes}
 	2528.5.28={death={death_reason=death_battle_duel
-    killer=1200050}}
+    	killer=1200050}}
 }
 
 1845099={
@@ -3166,7 +3166,7 @@
 	name="Ulysses"
 	dynasty=1863102
 	culture=inlander
-	religion=gaian
+	religion=postadventist
 	2378.2.2={birth=yes}
 	2436.9.14={death=yes}
 }
@@ -3175,10 +3175,14 @@
 	name="Ian"
 	dynasty=1863102
 	culture=inlander
-	religion=gaian
+	religion=postadventist
 	father=1845174
 	2400.7.9={birth=yes}
-	2448.12.16={death=yes}
+	2448.12.16={death={
+			death_reason=death_battle_duel
+			killer=1845163 #Sage Ponderosa
+		}
+	}
 }
 
 1845176={
@@ -3186,6 +3190,7 @@
 	dynasty=1863102
 	culture=inlander
 	religion=gaian
+	trait=sympathy_christendom
 	father=1845175
 	2429.3.22={birth=yes}
 	2475.11.3={death=yes}
