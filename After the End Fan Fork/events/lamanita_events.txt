@@ -133,35 +133,49 @@ narrative_event = {
 	major = yes
 
 	is_triggered_only = yes
+	
+	
+	major_potential = {
+		NOT = { has_landed_title = e_centroamerica }
+	}
 
 	option = {
 		name = EVTOPTA_MHR.3
 		trigger = { religion_group = latter_day_saints 
 					primary_title = {
-						NOT = { title = e_centroamerica }
+						e_centroamerica
 					} 
 		}
 	}
 
 	option = {
 		name = EVTOPTB_MHR.3
+		trigger = { religion_group = latter_day_saints 
+					primary_title = {
+						NOT = { has_landed_title = e_centroamerica }
+					} 
+		}
+	}
+
+	option = {
+		name = EVTOPTC_MHR.3
 		trigger = {
 			NOT = { religion_group = latter_day_saints }
 			religion_group = christian 
 					primary_title = {
-						NOT = { title = e_centroamerica }
+						NOT = { has_landed_title = e_centroamerica }
 					} 
 		}
 	}
 	option = {
-		name = EVTOPTC_MHR.3
+		name = EVTOPTD_MHR.3
 		trigger = {
 			NOR = {
 				religion_group = christian
 				religion_group = latter_day_saints
 			}
 					primary_title = {
-						NOT = { title = e_centroamerica }
+						NOT = { has_landed_title = e_centroamerica }
 					} 
 		}
 	}
