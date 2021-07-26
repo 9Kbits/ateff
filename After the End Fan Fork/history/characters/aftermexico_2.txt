@@ -901,7 +901,6 @@
     trait=adventurer
     trait=zealous
     trait=midas_touched
-    occluded=yes
     2581.8.7={birth=yes}
   2651.7.3={death=yes}
 }
@@ -1601,24 +1600,34 @@
 14450502={
 	name=Abo 
 	religion=cristo_rey
-	culture=neomoor
+	culture=french
 	dynasty=5001164
 	trait=skilled_tactician
 	trait=distractible
 	trait=fair
-	#trait=sympathy_old_world_cults
+	trait=sympathy_old_world_cults
+	disallow_random_traits=yes
 	trait=dorado
 	trait=stubborn
 	trait=gregarious
 	trait=uncouth
-	2644.6.29={birth=yes}
-	2650.6.29={culture=californiano}
+	trait=lustful
+	2644.6.29={birth=yes
+	culture=californiano
+	}
+	2659.1.1={
+	effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2666.1.1={employer=14400061}
 }
 
 #Barro El Gabacho 
 14450503={
 	name=Barro
-	culture=dixie
+	culture=white
 	dynasty=5001165
 	trait=dorado
     trait=cynical
@@ -1628,14 +1637,23 @@
     trait=temperate
     trait=elusive_shadow
     religion=evangelical
-    2646.4.21={birth=yes}
+    2646.4.21={birth=yes
+	culture=dixie
+	}
+	2659.1.1={
+	effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2666.1.1={employer=14400061}
 }
 
 #Vespaciano Coruña
 14450504={
 	name=Vespaciano 
 	religion=moravian
-	culture=trifinio
+	culture=brown
 	dynasty=5001166
 	trait=pastoral
     trait=dorado
@@ -1644,7 +1662,16 @@
     trait=charismatic_negotiator 
     trait=kind
     trait=physician
-    2649.6.26={birth=yes}
+    2649.6.26={birth=yes
+	culture=trifinio
+	}
+	2659.1.1={
+	effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2666.1.1={employer=14400061}
 }
 
 #Benedict
@@ -1661,6 +1688,13 @@
     culture=northlander
     religion=catholic
     2643.8.15={birth=yes}
+	2659.1.1={
+	effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2666.1.1={employer=14400061}
 }
 
 #José Bonez
@@ -1678,6 +1712,13 @@
     culture=tejano
     religion=cristo_rey
     2649.12.5={birth=yes}
+	2659.1.1={
+	effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2666.1.1={employer=14400061}
 }
 
 
@@ -1690,9 +1731,17 @@
     trait=ambitious
     trait=humble
 	trait=slothful 
-    culture=chilango
+    culture=greek
     religion=cristo_rey
-    2649.9.15={birth=yes}
+    2649.9.15={birth=yes
+	culture=chilango}
+	2659.1.1={
+	effect={
+			set_character_flag=diversity
+			set_character_flag=physique
+		}
+	}
+	2666.1.1={employer=14400061}
 }
 
 14450508={
@@ -1782,13 +1831,14 @@
 	name="Cuahtémoc"
 	dynasty=5001170 # Boreal
 	culture=neomoor
-	religion=pagan
+	religion=mictlantec
     martial=8
     diplomacy=5
     stewardship=5
     intrigue=5
     learning=5
     trait=skilled_tactician
+	trait=adventurer
     trait=cannibal_trait
     trait=possessed
     trait=ambitious

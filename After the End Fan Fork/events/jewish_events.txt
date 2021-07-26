@@ -31,7 +31,6 @@ character_event = {
 
 	option = {
 		name = EVTOPT_jewish_yashvai
-		desc = EVTOPT_jewish_yashvai_desc
 		hidden_tooltip = {
 			remove_trait = jewish_derekh_eretz
 			remove_trait = jewish_chassid
@@ -49,7 +48,6 @@ character_event = {
 
 	option = {
 		name = EVTOPT_jewish_derekh_eretz
-		desc = EVTOPT_jewish_derekh_eretz_desc
 		hidden_tooltip = {
 			remove_trait = jewish_yashvai
 			remove_trait = jewish_chassid
@@ -70,7 +68,6 @@ character_event = {
 	
 	option = {
 		name = EVTOPT_jewish_chassid
-		desc = EVTOPT_jewish_chassid_desc
 		hidden_tooltip = {
 			remove_trait = jewish_derekh_eretz
 			remove_trait = jewish_yashvai
@@ -480,8 +477,8 @@ character_event = { #training to read Torah
 		}
 		prestige = 50
 		random_list = {
-			90 = { trait = proud }
-			10 = { trait = erudite }
+			90 = { add_trait = proud }
+			10 = { add_trait = erudite }
 		}
 		event_target:bar_mitzvah_target = { 
 			random_list = {#how well the kid does in his aliyah latora

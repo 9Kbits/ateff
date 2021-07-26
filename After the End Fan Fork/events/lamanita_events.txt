@@ -65,7 +65,6 @@ character_event = {
 			}
 			set_defacto_liege = ROOT
 			save_event_target_as = primer_elder_established
-			ROOT = { narrative_event = { id = MHR.3 } }
 			break = yes
 		}
 		random_realm_character = {
@@ -85,7 +84,6 @@ character_event = {
 			}
 			set_defacto_liege = ROOT
 			save_event_target_as = primer_elder_established
-			ROOT = { narrative_event = { id = MHR.3 } }
 			break = yes
 		}
 		create_random_priest = {
@@ -96,7 +94,7 @@ character_event = {
 			age = 40
 			health = 8
 			trait = quick
-			trait = pious
+			trait = devout
 			trait = honest
 			trait = scholar
 			trait = mastermind_theologian
@@ -133,35 +131,49 @@ narrative_event = {
 	major = yes
 
 	is_triggered_only = yes
+	
+	
+	major_potential = {
+		NOT = { has_landed_title = e_centroamerica }
+	}
 
 	option = {
 		name = EVTOPTA_MHR.3
 		trigger = { religion_group = latter_day_saints 
 					primary_title = {
-						NOT = { title = e_centroamerica }
+						e_centroamerica
 					} 
 		}
 	}
 
 	option = {
 		name = EVTOPTB_MHR.3
+		trigger = { religion_group = latter_day_saints 
+					primary_title = {
+						NOT = { has_landed_title = e_centroamerica }
+					} 
+		}
+	}
+
+	option = {
+		name = EVTOPTC_MHR.3
 		trigger = {
 			NOT = { religion_group = latter_day_saints }
 			religion_group = christian 
 					primary_title = {
-						NOT = { title = e_centroamerica }
+						NOT = { has_landed_title = e_centroamerica }
 					} 
 		}
 	}
 	option = {
-		name = EVTOPTC_MHR.3
+		name = EVTOPTD_MHR.3
 		trigger = {
 			NOR = {
 				religion_group = christian
 				religion_group = latter_day_saints
 			}
 					primary_title = {
-						NOT = { title = e_centroamerica }
+						NOT = { has_landed_title = e_centroamerica }
 					} 
 		}
 	}

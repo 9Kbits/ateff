@@ -1432,7 +1432,7 @@ character_event = {
 				33 = {
 					set_character_flag = escape_successful
 
-					if = { #Saves root for loc nouns
+					if = { #Saves ROOT for loc nouns
 						limit = { NOT = { event_target:assassins_sacrifice = { always = yes } } }
 						save_event_target_as = assassins_sacrifice
 					}
@@ -5309,7 +5309,7 @@ character_event = {
 						AND = {
 							trait = paranoid
 							any_realm_character = {
-		 						same_sex = root
+		 						same_sex = ROOT
 		 						NOT = { character = ROOT }
 							}
 						}
@@ -6445,7 +6445,7 @@ character_event = {
 			}
 			random_realm_character = {
 		 		limit = {
-		 			same_sex = root
+		 			same_sex = ROOT
 		 			NOT = { character = ROOT }
 		 		}
 		 		save_event_target_as = drug_cheater_lover
@@ -6461,7 +6461,7 @@ character_event = {
 		if = {
 			limit = {
 				event_target:drug_cheater_lover = {
-					is_opposite_sex = root
+					is_opposite_sex = ROOT
 				}
 			}
 			event_target:drug_cheater_lover = {
@@ -6480,7 +6480,7 @@ character_event = {
 		if = {
 			limit = {
 				event_target:drug_cheater_lover = {
-					same_sex = root
+					same_sex = ROOT
 				}
 				event_target:drug_cheater_spouse = {
 					dynasty = event_target:drug_cheater_lover
@@ -6520,7 +6520,7 @@ character_event = {
 		if = {
 			limit = {
 				event_target:drug_cheater_lover = {
-					same_sex = root
+					same_sex = ROOT
 				}
 				NOT = {
 					event_target:drug_cheater_spouse = {
