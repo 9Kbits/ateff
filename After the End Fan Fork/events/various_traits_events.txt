@@ -1734,7 +1734,7 @@ character_event = {
 		trigger = {
 			any_vassal = {
 				in_command = yes
-				at_location = root
+				at_location = ROOT
 				NOT = { trait = drunkard }
 				NOT = { has_opinion_modifier = { who = ROOT  modifier= despise_drunkard } }
 			}
@@ -1743,7 +1743,7 @@ character_event = {
 		any_vassal = {
 			limit = {
 				in_command = yes
-				at_location = root
+				at_location = ROOT
 				NOT = { trait = drunkard }
 				NOT = { has_opinion_modifier = { who = ROOT modifier = despise_drunkard } }
 			}

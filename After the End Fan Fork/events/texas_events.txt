@@ -562,7 +562,7 @@ narrative_event={
 			factor = 20
 			modifier = {
 				factor = 0
-				rival = root
+				rival = ROOT
 			}	
 			modifier = {
 				factor = 0
@@ -599,11 +599,11 @@ narrative_event={
 			factor = 40
 			modifier = {
 				factor = 0
-				religion = root
+				religion = ROOT
 			}	
 		}
 		primary_title = {
-			add_pressed_claim = root
+			add_pressed_claim = ROOT
 		}
 		piety = -400
 		prestige = -800
@@ -624,7 +624,7 @@ narrative_event={
 			factor = 40
 			modifier = {
 				factor = 0
-				religion = root
+				religion = ROOT
 			}	
 		}
 		prestige = -200
@@ -637,8 +637,8 @@ narrative_event={
 			capital_scope = {
 				region = custom_texas
 			}
-			root = { religion = americanist }
-			religion = root
+			ROOT = { religion = americanist }
+			religion = ROOT
 			NOT = {
 				is_tributary = {
 					SUZERAIN = FROM
@@ -655,8 +655,8 @@ narrative_event={
 			capital_scope = {
 				region = custom_texas
 			}
-			root = { religion = atomicist }
-			religion = root
+			ROOT = { religion = atomicist }
+			religion = ROOT
 			NOT = {
 				is_tributary = {
 					SUZERAIN = FROM
@@ -674,8 +674,8 @@ narrative_event={
 				region = custom_texas
 			}
 			culture_group = starfolk
-			root = { religion = catholic }
-			religion = root
+			ROOT = { religion = catholic }
+			religion = ROOT
 		}
 		
 		ai_chance = {factor = 20}
@@ -689,7 +689,7 @@ narrative_event={
 		name = EVTOPT_texas_foreign
 		trigger = {
 			NOT = { has_landed_title = e_texas }
-			NOT = { religion = root }
+			NOT = { religion = ROOT }
 			NOT = { culture_group = starfolk }
 		}
 	}
@@ -698,7 +698,7 @@ narrative_event={
 		name = EVTOPT_starfolk_different_religion
 		trigger = {
 			NOT = { has_landed_title = e_texas }
-			NOT = { religion = root }
+			NOT = { religion = ROOT }
 			culture_group = starfolk
 			NOT = {
 				is_tributary = {
@@ -972,12 +972,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1004,12 +1002,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1027,12 +1023,10 @@ character_event = {
 		name = EVTOPTB_texas_51
 		any_realm_character = {
 			limit = { trait = populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 	}
@@ -1144,12 +1138,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1175,12 +1167,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1198,12 +1188,10 @@ character_event = {
 		name = EVTOPTA_texas_52_reject
 		any_realm_character = {
 			limit = { trait = magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 	}
@@ -1345,12 +1333,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1378,12 +1364,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1411,12 +1395,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1444,12 +1426,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1477,12 +1457,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1510,12 +1488,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1543,12 +1519,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1575,12 +1549,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1607,12 +1579,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1630,12 +1600,10 @@ character_event = {
 		name = EVTOPTA_texas_53_reject
 		any_realm_character = {
 			limit = { trait = party_populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 	}
@@ -1772,12 +1740,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1804,12 +1770,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1836,12 +1800,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1868,12 +1830,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1900,12 +1860,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1932,12 +1890,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1964,12 +1920,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -1996,22 +1950,18 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		any_realm_character = {
 			limit = { trait = party_theocratic }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -2029,12 +1979,10 @@ character_event = {
 		name = EVTOPTA_texas_54_reject
 		any_realm_character = {
 			limit = { trait = party_magnate }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 	}
@@ -2159,12 +2107,10 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -2191,22 +2137,18 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		any_realm_character = {
 			limit = { NOT = { religion = ROOT } }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -2233,22 +2175,18 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		any_realm_character = {
 			limit = { NOT = { religion = ROOT } }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -2275,22 +2213,18 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		any_realm_character = {
 			limit = { NOT = { religion = ROOT } }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -2317,22 +2251,18 @@ character_event = {
 		}
 		any_realm_character = {
 			limit = { trait = party_populist }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		any_realm_character = {
 			limit = { NOT = { religion = ROOT } }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		prestige = -100
@@ -2352,12 +2282,10 @@ character_event = {
 		name = EVTOPTA_texas_54_reject
 		any_realm_character = {
 			limit = { trait = party_theocratic }
-			add_character_modifier = {
-				opinion = {
-					modifier = opinion_tyrant
-					who = ROOT
-					months = 120
-				}
+			opinion = {
+				modifier = opinion_tyrant
+				who = ROOT
+				months = 120
 			}
 		}
 		any_realm_character = {

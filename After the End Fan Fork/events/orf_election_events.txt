@@ -36,7 +36,7 @@ character_event = {
 						}
 					}
 					save_event_target_as = orf_opponent_candidate_party
-					root = { set_character_flag = orf_opponent_1_party_found }
+					ROOT = { set_character_flag = orf_opponent_1_party_found }
 					set_character_flag = temp_block_orf
 				}
 			}
@@ -63,7 +63,7 @@ character_event = {
 						}
 					}
 					save_event_target_as = orf_opponent_candidate_party
-					root = { set_character_flag = orf_opponent_1_party_found }
+					ROOT = { set_character_flag = orf_opponent_1_party_found }
 					set_character_flag = temp_block_orf
 				}
 			}
@@ -90,7 +90,7 @@ character_event = {
 						}
 					}
 					save_event_target_as = orf_opponent_candidate_party
-					root = { set_character_flag = orf_opponent_1_party_found }
+					ROOT = { set_character_flag = orf_opponent_1_party_found }
 					set_character_flag = temp_block_orf
 				}
 			}
@@ -117,7 +117,7 @@ character_event = {
 						}
 					}
 					save_event_target_as = orf_opponent_candidate_party
-					root = { set_character_flag = orf_opponent_1_party_found }
+					ROOT = { set_character_flag = orf_opponent_1_party_found }
 					set_character_flag = temp_block_orf
 				}
 			}
@@ -144,7 +144,7 @@ character_event = {
 						}
 					}
 					save_event_target_as = orf_opponent_candidate_party
-					root = { set_character_flag = orf_opponent_1_party_found }
+					ROOT = { set_character_flag = orf_opponent_1_party_found }
 					set_character_flag = temp_block_orf
 				}
 			}
@@ -169,7 +169,7 @@ character_event = {
 					}
  
 				}
-				root = { set_character_flag = orf_opponent_1_appointee_found }
+				ROOT = { set_character_flag = orf_opponent_1_appointee_found }
 				save_event_target_as = orf_opponent_candidate_appointee
 				set_character_flag = temp_block_orf
 			}
@@ -183,23 +183,23 @@ character_event = {
 						OR = {
 							AND = {
 								trait = party_populist
-								root = { trait = party_populist }
+								ROOT = { trait = party_populist }
 							}
 							AND = {
 								trait = party_magnate
-								root = { trait = party_magnate }
+								ROOT = { trait = party_magnate }
 							}
 							AND = {
 								trait = party_royalist
-								root = { trait = party_royalist }
+								ROOT = { trait = party_royalist }
 							}
 							AND = {
 								trait = party_theocratic
-								root = { trait = party_theocratic }
+								ROOT = { trait = party_theocratic }
 							}
 							AND = {
 								trait = party_opposition
-								root = { trait = party_opposition }
+								ROOT = { trait = party_opposition }
 							}
 						}
 					}
@@ -221,7 +221,7 @@ character_event = {
 						has_character_flag = running_for_office_defender
 					}
 				}
-				root = { set_character_flag = orf_opponent_2_found }
+				ROOT = { set_character_flag = orf_opponent_2_found }
 				save_event_target_as = orf_opponent_candidate_outsider		
 				set_character_flag = temp_block_orf	
 			}
