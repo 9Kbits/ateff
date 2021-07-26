@@ -83,6 +83,12 @@ laws = {
 				NOT = { has_law = law_voting_power_0 }
 				has_law = range_senate_size_2
 			}
+			OR = { 
+				tier = COUNT
+				tier = DUKE
+				tier = KING
+				tier = EMPEROR
+			}
 		}
 		potential = {
 			holder_scope = {
@@ -142,6 +148,11 @@ laws = {
 			holder_scope = {
 				independent = yes
 			}
+			OR = { 
+				tier = DUKE
+				tier = KING
+				tier = EMPEROR
+			}
 		}
 		potential = {
 			holder_scope = {
@@ -199,7 +210,10 @@ laws = {
 			}
 			holder_scope = {
 				independent = yes
-				higher_tier_than = DUKE
+			}
+			OR = { 
+				tier = KING
+				tier = EMPEROR
 			}
 		}
 		potential = {
@@ -257,7 +271,10 @@ laws = {
 			has_law = range_senate_size_3
 			holder_scope = {
 				independent = yes
-				higher_tier_than = DUKE
+			}
+			OR = { 
+				tier = KING
+				tier = EMPEROR
 			}
 		}
 		potential = {
