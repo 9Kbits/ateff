@@ -20,11 +20,11 @@
 
 title_senator_base_1 = {
 	is_high_prio = yes
-	dignity = 0.050
+	dignity = 0.100
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -35,6 +35,7 @@ title_senator_base_1 = {
 			primary_title = { has_law = range_senate_size_1 }
 			primary_title = { has_law = range_senate_size_2 }
 			primary_title = { has_law = range_senate_size_3 }
+			primary_title = { has_law = range_senate_size_4 }
 		}
 	}
 	
@@ -55,11 +56,9 @@ title_senator_base_1 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -119,7 +118,7 @@ title_senator_base_2 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -152,11 +151,9 @@ title_senator_base_2 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -216,7 +213,7 @@ title_senator_3 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -249,11 +246,9 @@ title_senator_3 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -313,7 +308,7 @@ title_senator_4 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -346,11 +341,9 @@ title_senator_4 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -410,7 +403,7 @@ title_senator_5 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {	
@@ -442,11 +435,9 @@ title_senator_5 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -506,7 +497,7 @@ title_senator_6 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -538,11 +529,9 @@ title_senator_6 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -602,7 +591,7 @@ title_senator_7 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -636,11 +625,9 @@ title_senator_7 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -700,7 +687,7 @@ title_senator_8 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -734,11 +721,9 @@ title_senator_8 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -798,7 +783,7 @@ title_senator_9 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -828,11 +813,9 @@ title_senator_9 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -892,7 +875,7 @@ title_senator_10 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -922,11 +905,9 @@ title_senator_10 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -986,7 +967,7 @@ title_senator_11 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -1016,11 +997,9 @@ title_senator_11 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
@@ -1080,7 +1059,7 @@ title_senator_12 = {
 	grant_limit = 1
 	opinion_effect = 10
 	monthly_salary = 0.00
-	monthly_prestige = 0.75
+	monthly_prestige = 1
 	is_voter = yes
 	
 	allowed_to_grant = {
@@ -1111,11 +1090,9 @@ title_senator_12 = {
 				}
 			}
 			NOT = { 
-				AND = {
-					OR = {
-						primary_title = { has_law = range_senate_size_2 }
-						primary_title = { has_law = range_senate_size_3 }
-					}
+				OR = {
+					primary_title = { has_law = orf_senate_type_law_1 }
+					primary_title = { has_law = orf_senate_type_law_2 }
 				}
 			}
 		}
