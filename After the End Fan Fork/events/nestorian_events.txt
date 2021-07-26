@@ -134,21 +134,25 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_newnestorian.2
+		trigger = {
+			NOR = {
+				trait = imbecile
+				trait = slow
+			}
+		}
 		hidden_effect = {
 			add_trait = erudite
-		}
-		NOR = {
-			trait = imbecile
-			trait = slow
 		}
 	}
 	
 	option = {
 		name = EVTOPTB_newnestorian.2
 		piety = 100
-		OR = {
-			trait = imbecile
-			trait = slow
+		trigger = {
+			OR = {
+				trait = imbecile
+				trait = slow
+			}
 		}
 		set_character_flag = imbecilenestorian
 	}

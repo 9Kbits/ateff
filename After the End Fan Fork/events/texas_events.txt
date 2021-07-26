@@ -732,7 +732,10 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_texas_50
-		add_character_modifier = endorsed_populist
+		add_character_modifier = {
+			name = endorsed_populist
+			duration = -1
+		}
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 10 trait = party_populist }
@@ -743,7 +746,10 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTB_texas_50
-		add_character_modifier = endorsed_magnate
+		add_character_modifier = {
+			name = endorsed_magnate
+			duration = -1
+		}
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 10 trait = party_magnate }
@@ -757,7 +763,10 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTD_texas_50
-		add_character_modifier = endorsed_theocratic
+		add_character_modifier = {
+			name = endorsed_theocratic
+			duration = -1
+		}
 		ai_chance = {
 			factor = 10
 			modifier = { factor = 10 trait = party_theocratic }

@@ -660,7 +660,7 @@ narrative_event = {
 		NOT = { trait = cynical }
 		}
 		add_trait = devout
-		add_learning = 1
+		change_learning = 1
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -682,7 +682,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTB_GAIAN5
 		add_trait = mystic
-		add_diplomacy = 1
+		change_diplomacy = 1
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -713,8 +713,8 @@ narrative_event = {
 		NOT = { trait = cynical }
 		}
 		add_trait = zealous
-		add_learning = 2
-		add_diplomacy = -1
+		change_learning = 2
+		change_diplomacy = -1
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -4321,22 +4321,22 @@ character_event = {
 					}
 					has_job_title = no
 			}
-			prefered_limit = {
+			preferred_limit = {
 				learning > 35
 			}
-			prefered_limit = {
+			preferred_limit = {
 				learning > 30
 			}
-			prefered_limit = {
+			preferred_limit = {
 				learning > 25
 			}
-			prefered_limit = {
+			preferred_limit = {
 				learning > 20
 			}
-			prefered_limit = {
+			preferred_limit = {
 				learning > 15
 			}
-			prefered_limit = {
+			preferred_limit = {
 				learning > 10
 			}
 			give_job_title = job_spiritual
@@ -4401,22 +4401,22 @@ character_event = {
 				}
 				has_job_title = no
 			}
-			prefered_limit = {
+			preferred_limit = {
 				stewardship > 35
 			}
-			prefered_limit = {
+			preferred_limit = {
 				stewardship > 30
 			}
-			prefered_limit = {
+			preferred_limit = {
 				stewardship > 25
 			}
-			prefered_limit = {
+			preferred_limit = {
 				stewardship > 20
 			}
-			prefered_limit = {
+			preferred_limit = {
 				stewardship > 15
 			}
-			prefered_limit = {
+			preferred_limit = {
 				stewardship > 10
 			}
 			give_job_title = job_treasurer
@@ -4480,22 +4480,22 @@ character_event = {
 				}
 				has_job_title = no
 			}
-			prefered_limit = {
+			preferred_limit = {
 				diplomacy > 35
 			}
-			prefered_limit = {
+			preferred_limit = {
 				diplomacy > 30
 			}
-			prefered_limit = {
+			preferred_limit = {
 				diplomacy > 25
 			}
-			prefered_limit = {
+			preferred_limit = {
 				diplomacy > 20
 			}
-			prefered_limit = {
+			preferred_limit = {
 				diplomacy > 15
 			}
-			prefered_limit = {
+			preferred_limit = {
 				diplomacy > 10
 			}
 			give_job_title = job_chancellor
