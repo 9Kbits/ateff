@@ -4,52 +4,52 @@
 
 namespace = dorado
 
-# Dorados Founded (Emperor)
-narrative_event = {
-	id = dorado.100
-	title = EVTNAMEDORA.100
-	desc = EVTDESCDORA.100
-	picture = GFX_evt_battle_roman
-	border = GFX_event_narrative_frame_war
+# # Dorados Founded (Emperor)
+# narrative_event = {
+	# id = dorado.100
+	# title = EVTNAMEDORA.100
+	# desc = EVTDESCDORA.100
+	# picture = GFX_evt_battle_roman
+	# border = GFX_event_narrative_frame_war
 	
-	is_triggered_only = yes
+	# is_triggered_only = yes
 	
-	hide_from = yes
+	# hide_from = yes
 	
-	option = {
-		name = EVTOPTADORA.100
-		hidden_tooltip = {
-			any_playable_ruler = {
-				limit = {
-					ai = no
-					OR = {
-						culture_group = starfolk
-						culture_group = norteno
-						culture_group = west_anglo
-						culture_group = plains
-					}
-				}
-				narrative_event = { id = dorado.101 }
-			}
-		}
-	}
-}
+	# option = {
+		# name = EVTOPTADORA.100
+		# hidden_tooltip = {
+			# any_playable_ruler = {
+				# limit = {
+					# ai = no
+					# OR = {
+						# culture_group = starfolk
+						# culture_group = norteno
+						# culture_group = west_anglo
+						# culture_group = plains
+					# }
+				# }
+				# narrative_event = { id = dorado.101 }
+			# }
+		# }
+	# }
+# }
 
-# Dorado Founded (Non-Emperors)
-narrative_event = {
-	id = dorado.101
-	title = EVTNAMEDORA.101
-	desc = EVTDESCDORA.101
-	picture = GFX_evt_battle_roman
-	border = GFX_event_narrative_frame_war
+# # Dorado Founded (Non-Emperors)
+# narrative_event = {
+	# id = dorado.101
+	# title = EVTNAMEDORA.101
+	# desc = EVTDESCDORA.101
+	# picture = GFX_evt_battle_roman
+	# border = GFX_event_narrative_frame_war
 	
-	is_triggered_only = yes
+	# is_triggered_only = yes
 	
-	option = {
-		name = EVTOPTADORA.101
-		custom_tooltip = { text = dorados_organized }
-	}
-}
+	# option = {
+		# name = EVTOPTADORA.101
+		# custom_tooltip = { text = dorados_organized }
+	# }
+# }
 
 # Dorado Captain gets Guard trait
 character_event = {

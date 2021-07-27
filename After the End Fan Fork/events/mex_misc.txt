@@ -1,5 +1,7 @@
+namespace = fide
+
 character_event = {
-	id = FIDE.120
+	id = fide.120
 	hide_window = yes
 
 	is_triggered_only = yes
@@ -302,26 +304,26 @@ character_event = {
 				}
 				50 = { }
 			}
-			character_event = { id = FIDE.122 }	
+			character_event = { id = fide.122 }	
 		}
 	}
 }
 
 #Ping event for new monk/nun
 character_event = {
-	id = FIDE.121
+	id = fide.121
 	hide_window = yes
 
 	is_triggered_only = yes
 
 	immediate = {
-		FROM = { character_event = { id = FIDE.121 } }
+		FROM = { character_event = { id = fide.121 } }
 	}
 }
 
 #Introduction of mystic
 character_event = {
-	id = FIDE.122
+	id = fide.122
 	desc = EVTDESC_FIDE_122
 	picture = GFX_evt_monastery_nuns
 	border = GFX_event_normal_frame_religion
@@ -338,7 +340,8 @@ character_event = {
 }
 
 character_event = {
-	id = FIDE.123
+	id = fide.123
+	title = EVTNAME_fide_cajita
 	desc = EVTDESC_FIDE_123
 	picture = GFX_evt_monastery_nuns
 	border = GFX_event_normal_frame_religion
@@ -358,16 +361,18 @@ character_event = {
 	
 	option = {
 	    name = EVTOPTB_FIDE_123
+		clr_character_flag = becoming_cajita
 	}
 }
 
 character_event = {
-    id = FIDE.124
+    id = fide.124
+	title = EVTNAME_fide_fasting
 	desc = EVTDESC_FIDE_124
-	picture = GFX_evt_lady_guadalupe
+	picture = GFX_evt_pilgrims_epic_journey_desert
 	border = GFX_event_normal_frame_religion
 	
-	is_triggered_only = yes
+	#is_triggered_only = yes
 	
 	trigger = {
 	    has_character_flag = fasting_for_incarnation
@@ -382,7 +387,6 @@ character_event = {
 		ai_chance = {
 			factor = 10
 		}
-		piety = 100
 		random_list = {
 			20 = {
 				add_trait = is_malnourished
@@ -399,12 +403,12 @@ character_event = {
 }
 
 character_event = {
-    id = FIDE.125
+    id = fide.125
 	desc = EVTDESC_FIDE_125
-	picture = GFX_evt_lady_guadalupe
+	picture = GFX_evt_religious_exultation_wol
 	border = GFX_event_normal_frame_religion
 	
-	is_triggered_only = yes
+	#is_triggered_only = yes
 	
 	mean_time_to_happen = {
 		days = 10
@@ -417,6 +421,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_FIDE_125
 		ai_chance = {
+<<<<<<< Updated upstream
 			factor = 5
 			random_list = {
 				35 = {
@@ -426,50 +431,72 @@ character_event = {
 					clr_character_flag = fasting_for_incarnation1
 					set_character_flag = fasting_for_incarnation2
 				}
+=======
+			factor = 1
+			modifier = {
+				factor = 100
+				trait = ambitious
+				trait = devout
+				trait = temperate
+				trait = stubborn
+				trait = diligent
+			}
+		}
+		random_list = {
+			35 = {
+				add_trait = ill
+				clr_character_flag = fasting_for_incarnation1
+				set_character_flag = fasting_for_incarnation2
+			}
+			65 = {
+				clr_character_flag = fasting_for_incarnation1
+				set_character_flag = fasting_for_incarnation2
+>>>>>>> Stashed changes
 			}
 		}
 	}
 	option = {
 		name = EVTOPTB_FIDE_125
 		ai_chance = {
-			factor = 5
+			factor = 1
 		}
 		piety = -150
 		random_list = {
 			20 = {
 				add_trait = gluttonous
 				clr_character_flag = fasting_for_incarnation1	
-                set_character_flag = failed_fast_fide				
+                set_character_flag = failed_fast_fide
 			}
 			20 = {
 			    add_trait = lustful
 			    clr_character_flag = fasting_for_incarnation1
-                set_character_flag = failed_fast_fide				
+                set_character_flag = failed_fast_fide
             }
 			20 = {
 			    add_trait = wroth
 			    clr_character_flag = fasting_for_incarnation1
-                set_character_flag = failed_fast_fide				
+                set_character_flag = failed_fast_fide
             }
 			20 = {
 			    add_trait = slothful
 			    clr_character_flag = fasting_for_incarnation1
-                set_character_flag = failed_fast_fide				
+                set_character_flag = failed_fast_fide
             }
 			20 = {
 			    add_trait = greedy
 			    clr_character_flag = fasting_for_incarnation1
-                set_character_flag = failed_fast_fide				
+                set_character_flag = failed_fast_fide
             }
 		}
 		remove_trait = in_hiding
+		custom_tooltip = { text = TXT_fide_give_up }
 	}
 }
 
 character_event = {
-    id = FIDE.127
-	desc = EVT_DESC_FIDE.127
-	picture = GFX_evt_lady_guadalupe
+    id = fide.127
+	desc = EVT_DESC_fide.127
+	picture = GFX_evt_drunk
 	border = GFX_event_normal_frame_religion
 	
 	trigger = {
@@ -489,6 +516,8 @@ character_event = {
 		    10 = {
 			    clr_character_flag = fasting_for_incarnation2
 				set_character_flag = failed_fast_fide
+				remove_trait = in_hiding
+				custom_tooltip = { text = TXT_fide_give_up }
 			}
             5 = {
 			    ROOT = {
@@ -505,11 +534,12 @@ character_event = {
 	}
 }
 
-character_event = { 
+narrative_event = { 
     id = fide.128
-	desc = EVT_DESC_FIDE.128
-	picture = GFX_evt_lady_guadalupe
-	border = GFX_event_normal_frame_religion
+	title = EVTNAME_fide_divine_vessel
+	desc = EVT_DESC_fide.128
+	picture = GFX_evt_tribal_shrine_cm
+	#border = GFX_event_normal_frame_religion
 	
 	trigger = {
 	    has_character_flag = fasting_for_incarnation3
@@ -520,17 +550,82 @@ character_event = {
 	}
 	
 	option = {
-	    name = EVTOPTA_FIDE_128
-	    add_trait = cajita
+		name = EVTOPT_fide_cajita_centaur
+		add_trait = cajita
 		remove_trait = in_hiding
 		clr_character_flag = fasting_for_incarnation3
 		piety = 500
+		religion_authority = { modifier = a_god_made_flesh }
+		hidden_tooltip = {
+			narrative_event = { id = fide.130 days = 10 random = 10 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = duelist }
+			modifier = { factor = 2 trait = temperate }
+			modifier = { factor = 2 trait = stubborn }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_fide_cajita_bejota
+		add_trait = cajita
+		remove_trait = in_hiding
+		clr_character_flag = fasting_for_incarnation3
+		piety = 500
+		religion_authority = { modifier = a_god_made_flesh }
+		hidden_tooltip = {
+			narrative_event = { id = fide.131 days = 10 random = 10 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = administrator }
+			modifier = { factor = 2 trait = just }
+			modifier = { factor = 2 trait = diligent }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_fide_cajita_nino
+		add_trait = cajita
+		remove_trait = in_hiding
+		clr_character_flag = fasting_for_incarnation3
+		piety = 500
+		religion_authority = { modifier = a_god_made_flesh }
+		hidden_tooltip = {
+			narrative_event = { id = fide.132 days = 10 random = 10 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = mystic }
+			modifier = { factor = 2 trait = charitable }
+			modifier = { factor = 2 trait = kind }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_fide_cajita_toribio
+		add_trait = cajita
+		remove_trait = in_hiding
+		clr_character_flag = fasting_for_incarnation3
+		piety = 500
+		religion_authority = { modifier = a_god_made_flesh }
+		hidden_tooltip = {
+			narrative_event = { id = fide.133 days = 10 random = 10 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = theologian }
+			modifier = { factor = 2 trait = zealous }
+			modifier = { factor = 2 trait = brave }
+		}
 	}
 }
 	    
-character_event = { 
+narrative_event = { 
     id = fide.129
-	desc = EVT_DESC_FIDE.129
+	title = EVTNAME_fide_failed_fast
+	desc = EVT_DESC_fide.129
 	picture = GFX_evt_lady_guadalupe
 	border = GFX_event_normal_frame_religion
 	
@@ -543,7 +638,316 @@ character_event = {
 	}
 	
 	option = {
-	    name = EVTOPTA_FIDE.129
+	    name = EVTOPTA_fide.129
 	    piety = -500
+	}
+}
+
+narrative_event = {
+	id = fide.130
+	title = EVTNAME_fide_centaur
+	desc = EVTDESC_fide_centaur
+	picture = GFX_evt_lady_guadalupe
+	
+	is_triggered_only = yes
+	trigger = { religion = fidencista }
+	
+	immediate = {
+		narrative_event = { id = fide.130 days = 1000 random = 2000 }
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_lifestyle
+		trigger = { NOT = { trait = duelist } }
+		hidden_tooltip = {
+			remove_trait = celibate
+			remove_trait = hedonist
+			remove_trait = scholar
+			remove_trait = gardener
+			remove_trait = mystic
+			remove_trait = impaler
+			remove_trait = hunter
+			remove_trait = poet
+			remove_trait = musician
+			remove_trait = falconer
+		}
+		add_trait = duelist
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_traits
+		trigger = {
+			OR = {
+				NOT = { trait = wroth }
+				NOT = { trait = stubborn }
+			}
+		}
+		random_list = {
+			50 = { add_trait = wroth }
+			50 = { add_trait = stubborn }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_aligned
+		trigger = {
+			trait = duelist
+			trait = wroth
+			trait = stubborn
+			has_nickname = no
+		}
+		prestige = 25
+		piety = 25
+		add_trait = ambitious
+		random_list = {
+			10 = { give_nickname = nick_the_general }
+			10 = { give_nickname = nick_the_centaur }
+		}
+		religion_authority = { modifier = royal_apotheosis }
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_aligned
+		trigger = {
+			trait = duelist
+			trait = wroth
+			trait = brave
+			has_nickname = yes
+		}
+		prestige = 25
+		piety = 25
+		add_trait = ambitious
+		religion_authority = { modifier = royal_apotheosis }
+	}
+}
+
+narrative_event = {
+	id = fide.131
+	title = EVTNAME_fide_bejota
+	desc = EVTDESC_fide_bejota
+	picture = GFX_evt_lady_guadalupe
+	
+	is_triggered_only = yes
+	trigger = { religion = fidencista }
+	
+	immediate = {
+		narrative_event = { id = fide.131 days = 1000 random = 2000 }
+	}
+	
+	option = {
+		name = EVTOPT_mictlan_incarnate_lifestyle
+		trigger = { NOT = { trait = administrator } }
+		hidden_tooltip = {
+			remove_trait = celibate
+			remove_trait = hedonist
+			remove_trait = gardener
+			remove_trait = mystic
+			remove_trait = impaler
+			remove_trait = hunter
+			remove_trait = poet
+			remove_trait = musician
+			remove_trait = falconer
+			remove_trait = duelist
+		}
+		add_trait = administrator
+	}
+	
+	option = {
+		name = EVTOPT_fede_incarnate_traits
+		trigger = {
+			OR = {
+				NOT = { trait = just }
+				NOT = { trait = diligent }
+			}
+		}
+		random_list = {
+			50 = { add_trait = just }
+			50 = { add_trait = diligent }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_aligned
+		trigger = {
+			trait = administrator
+			trait = just
+			trait = diligent
+			has_nickname = no
+		}
+		prestige = 25
+		piety = 25
+		add_trait = ambitious
+		random_list = {
+			10 = { give_nickname = nick_the_meritorious }
+		}
+		religion_authority = { modifier = royal_apotheosis }
+	}
+	
+	option = {
+		name = EVTOPT_mictlan_incarnate_aligned
+		trigger = {
+			trait = administrator
+			trait = just
+			trait = diligent
+			has_nickname = yes
+		}
+		prestige = 25
+		piety = 25
+		add_trait = ambitious
+		religion_authority = { modifier = royal_apotheosis }
+	}
+}
+
+narrative_event = {
+	id = fide.132
+	title = EVTNAME_fide_nino
+	desc = EVTDESC_fide_nino
+	picture = GFX_evt_lady_guadalupe
+	
+	is_triggered_only = yes
+	trigger = { religion = fidencista }
+	
+	immediate = {
+		narrative_event = { id = fide.132 days = 1000 random = 2000 }
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_lifestyle
+		trigger = { NOT = { trait = mystic } }
+		hidden_tooltip = {
+			remove_trait = celibate
+			remove_trait = hedonist
+			remove_trait = scholar
+			remove_trait = gardener
+			remove_trait = impaler
+			remove_trait = hunter
+			remove_trait = poet
+			remove_trait = musician
+			remove_trait = falconer
+			remove_trait = duelist
+		}
+		add_trait = mystic
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_traits
+		trigger = {
+			OR = {
+				NOT = { trait = charitable }
+				NOT = { trait = kind }
+			}
+		}
+		random_list = {
+			50 = { add_trait = charitable }
+			50 = { add_trait = kind }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_aligned
+		trigger = {
+			trait = mystic
+			trait = charitable
+			trait = kind
+			has_nickname = no
+		}
+		prestige = 25
+		piety = 25
+		add_trait = ambitious
+		random_list = {
+			10 = { give_nickname = nick_el_nino }
+		}
+		religion_authority = { modifier = royal_apotheosis }
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_aligned
+		trigger = {
+			trait = mystic
+			trait = charitable
+			trait = kind
+			has_nickname = yes
+		}
+		prestige = 25
+		piety = 25
+		add_trait = ambitious
+		religion_authority = { modifier = royal_apotheosis }
+	}
+}
+
+narrative_event = {
+	id = fide.133
+	title = EVTNAME_fide_toribio
+	desc = EVTDESC_fide_toribio
+	picture = GFX_evt_lady_guadalupe
+	
+	is_triggered_only = yes
+	trigger = { religion = fidencista }
+	
+	immediate = {
+		narrative_event = { id = fide.133 days = 1000 random = 2000 }
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_lifestyle
+		trigger = { NOT = { trait = theologian } }
+		hidden_tooltip = {
+			remove_trait = celibate
+			remove_trait = hedonist
+			remove_trait = scholar
+			remove_trait = mystic
+			remove_trait = impaler
+			remove_trait = hunter
+			remove_trait = poet
+			remove_trait = musician
+			remove_trait = falconer
+			remove_trait = duelist
+		}
+		add_trait = theologian
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_traits
+		trigger = {
+			OR = {
+				NOT = { trait = zealous }
+				NOT = { trait = brave }
+			}
+		}
+		random_list = {
+			50 = { add_trait = zealous }
+			50 = { add_trait = brave }
+		}
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_aligned
+		trigger = {
+			trait = theologian
+			trait = zealous
+			trait = brave
+			has_nickname = no
+		}
+		prestige = 25
+		piety = 25
+		add_trait = ambitious
+		random_list = {
+			10 = { give_nickname = nick_the_protector }
+		}
+		religion_authority = { modifier = royal_apotheosis }
+	}
+	
+	option = {
+		name = EVTOPT_fide_incarnate_aligned
+		trigger = {
+			trait = theologian
+			trait = zealous
+			trait = brave
+			has_nickname = yes
+		}
+		prestige = 25
+		piety = 25
+		add_trait = ambitious
+		religion_authority = { modifier = royal_apotheosis }
 	}
 }

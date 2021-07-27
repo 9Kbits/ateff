@@ -1,41 +1,41 @@
-cristero = {
-	opposites = {
-		crusader
-		valhalla_bound
-		jaguar_warrior
-		fords_striker
-		sword_of_the_lamb
-		knight_templar
-		order_of_the_garter
-		danite
-		shaddai
-		lughs_own
-		thunderbird_warrior
-		raven_warrior
-		dragon_soldier
-		cavalier
-		hivernant
-		joropo_cantor
-		medal_of_honor
-		patriota
-	}
+# cristero = {
+	# opposites = {
+		# crusader
+		# valhalla_bound
+		# jaguar_warrior
+		# fords_striker
+		# sword_of_the_lamb
+		# knight_templar
+		# order_of_the_garter
+		# danite
+		# shaddai
+		# lughs_own
+		# thunderbird_warrior
+		# raven_warrior
+		# dragon_soldier
+		# cavalier
+		# hivernant
+		# joropo_cantor
+		# medal_of_honor
+		# patriota
+	# }
 	
-	martial = 2
-	combat_rating = 10 #old value: 1
+	# martial = 2
+	# combat_rating = 10 #old value: 1
 	
-	church_opinion = 15
-	same_opinion_if_same_religion = 15
+	# church_opinion = 15
+	# same_opinion_if_same_religion = 15
 	
-	ai_zeal = 10
-	customizer = yes
+	# ai_zeal = 10
+	# customizer = yes
 	
-	male_insult = INSULT_FANATIC
-	female_insult = INSULT_FANATIC
-	male_insult_adj = INSULT_NARROWMINDED
-	female_insult_adj = INSULT_NARROWMINDED
-	male_compliment_adj = COMPL_CRUSADER
-	female_compliment_adj = COMPL_CRUSADER
-}
+	# male_insult = INSULT_FANATIC
+	# female_insult = INSULT_FANATIC
+	# male_insult_adj = INSULT_NARROWMINDED
+	# female_insult_adj = INSULT_NARROWMINDED
+	# male_compliment_adj = COMPL_CRUSADER
+	# female_compliment_adj = COMPL_CRUSADER
+# }
 
 adelita  = {	
 
@@ -56,9 +56,6 @@ adelita  = {
 }
 
 cajita = {
-	opposites = {
-		unworthy
-	}
 	potential = { religion = fidencista }
 	command_modifier = {
 		morale_defence = 0.1
@@ -74,45 +71,6 @@ cajita = {
 	male_compliment_adj = COMPL_GODLIKE
 	female_compliment_adj = COMPL_GODLIKE
 	child_compliment_adj = COMPL_STRONG
-}
-
-unworthy = {
-	opposites = {
-		cajita
-	}
-	potential = { religion = fidencista }
-	same_religion_opinion = -10
-	monthly_character_prestige = -0.5
-	diplomacy = -2
-	ai_zeal = -20
-	ai_ambition = -20
-	ai_rationality = 20
-	customizer = yes
-	random = no
-	
-	male_insult_adj = INSULT_WEAK
-	female_insult_adj = INSULT_WEAK
-	child_insult_adj = INSULT_WEAK
-}
-
-bloodlet = {
-	mesoamerican_gods_opinion = 10
-	cult_of_saints_opinion = -10
-	christian_opinion = -10
-	muslim_opinion = -10
-	jewish_group_opinion = -10
-
-	potential = {
-		OR = {
-			religion = neomayan
-			religion = qabantajik
-			religion = mictlantec
-		}
-	}
-
-	random = no
-	religious = yes
-	customizer = no
 }
 
 dorado = {

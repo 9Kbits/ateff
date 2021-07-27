@@ -47,29 +47,43 @@ decisions = {
 		only_playable = yes
 		
 		potential = {
+			NOT = { #immersion-breaking
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
 			religion = fidencista
-		    NOT = { has_trait = cajita  }
+		    NOT = { has_trait = cajita }
+			NOT = { has_character_flag = becoming_cajita }
 		}
 
 		allow = {
 			religion = fidencista
 			piety = 500
+			custom_tooltip = {
+				text = is_not_incapable_inbred_or_imbecile_tt
+				NOT = { trait = incapable }
+				NOT = { trait = inbred }
+				NOT = { trait = imbecile }
+			}
 			NOR = {
-			        has_trait = slothful
-					has_trait = wroth
-					has_trait = greedy
-					has_trait = lustful
-					has_trait = gluttonous
-					has_trait = proud
-					has_trait = envious
-					has_trait = cruel
-					has_trait = drunkard
-					has_trait = cynical
-				}
+				trait = slothful
+				trait = wroth
+				trait = greedy
+				trait = lustful
+				trait = gluttonous
+				trait = proud
+				trait = envious
+				trait = cruel
+				trait = drunkard
+				trait = cynical
+			}
+			
 		}
 
 		effect = {
 			set_character_flag = becoming_cajita
+			FROM = {
+				character_event = { id = fide.123 }
+			}
 			
 		}
 

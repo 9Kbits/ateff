@@ -896,7 +896,7 @@ decisions = {
 		}
 	}
 	
-	vassalize_palace_guard = {
+	vassalize_dorados = {
 		is_high_prio = yes
 		only_playable = yes
 		ai_check_interval = 3
@@ -905,10 +905,8 @@ decisions = {
 			is_alternate_start = no
 			
 			has_landed_title = e_mexico
-			culture_group = mexicano
-			religion = sacred_heart
-			is_title_active = d_palace_guard
-			d_palace_guard = {
+			is_title_active = d_dorados
+			d_dorados = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
 					ROOT = { NOT = { has_truce = PREV } }
@@ -917,7 +915,7 @@ decisions = {
 					}
 					NOT = { num_of_count_titles = 3 }
 					independent = yes
-					primary_title = { title = d_palace_guard }
+					primary_title = { title = d_dorados }
 				}
 			}
 		}
@@ -931,7 +929,7 @@ decisions = {
 		
 		effect = {
 			wealth = -500
-			d_palace_guard = {
+			d_dorados = {
 				holder_scope = {
 					wealth = 500
 					ROOT = {
