@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# Rajas of India feast events			 #
-#										 #
+#										#
+# Rajas of India feast events			#
+#										#
 # ID RoI.1000-RoI.1999					#
-#										 #
+#										#
 ###########################################
 
 # Written by Tobias Bodlund
@@ -11,10 +11,10 @@
 namespace = RoI
 
 ###########################################
-#										 #
+#										#
 # Invitations, preparations, gifts		#
 # ID RoI.1000-RoI.1007					#
-#										 #
+#										#
 ###########################################
 
 # Invite vassals to feast
@@ -101,19 +101,19 @@ letter_event = {
 				factor = 5
 				has_focus = focus_carousing
 			}
-			modifier  = {
+			modifier = {
 				factor = 0.1
 				is_inaccessible_trigger = yes
 			}
-			modifier  = {
+			modifier = {
 				factor = 2
 				opinion = { who = from value = -30 }
 			}
-			modifier  = {
+			modifier = {
 				factor = 5
 				opinion = { who = from value = -15 }
 			}
-			modifier  = {
+			modifier = {
 				factor = 5
 				opinion = { who = from value = 0 }
 			}
@@ -139,7 +139,7 @@ letter_event = {
 		name = EVTOPTB_RoI_1001 #Refuse invitation
 		ai_chance = {
 			factor = 1
-			modifier  = {
+			modifier = {
 				factor = 0
 				opinion = { who = from value = 25 } 
 				NOT = { is_inaccessible_trigger = yes }
@@ -172,19 +172,19 @@ letter_event = {
 				factor = 5
 				has_focus = focus_carousing
 			}
-			modifier  = {
+			modifier = {
 				factor = 0.1
 				is_inaccessible_trigger = yes
 			}
-			modifier  = {
+			modifier = {
 				factor = 2
 				opinion = { who = from value = -30 }
 			}
-			modifier  = {
+			modifier = {
 				factor = 5
 				opinion = { who = from value = -15 }
 			}
-			modifier  = {
+			modifier = {
 				factor = 5
 				opinion = { who = from value = 0 }
 			}
@@ -210,7 +210,7 @@ letter_event = {
 		name = EVTOPTB_RoI_1001 #Refuse invitation
 		ai_chance = {
 			factor = 1
-			modifier  = {
+			modifier = {
 				factor = 0
 				opinion = { who = from value = 25 }
 			}
@@ -701,10 +701,10 @@ character_event = {
 }
 
 ###########################################
-#										 #
-# Feast beginning and ending			  #
-# ID RoI.1020, RoI.1095-Roi.1099		  #
-#										 #
+#										#
+# Feast beginning and ending			#
+# ID RoI.1020, RoI.1095-Roi.1099		#
+#										#
 ###########################################
 	
 # Feast begins
@@ -876,15 +876,15 @@ character_event = {
 }
 
 ###########################################
-#										 #
-# Random events at feast				  #
+#										#
+# Random events at feast				#
 # ID RoI.1050-RoI.						#
-#										 #
+#										#
 ###########################################
 
 
 ###########################################
-# Snake charmer						   #
+# Snake charmer						#
 ###########################################
 
 # Snake charmer
@@ -1271,7 +1271,7 @@ narrative_event = {
 }
 
 ###########################################
-# Monkeys								 #
+# Monkeys								#
 ###########################################
 
 # Monkeys 
@@ -1416,7 +1416,7 @@ character_event = {
 }
 
 ###########################################
-# Religious ceremony					  #
+# Religious ceremony					#
 ###########################################
 
 # Religious ceremony - liege
@@ -1830,7 +1830,7 @@ character_event = {
 }
 
 ###########################################
-# Flag management						 #
+# Flag management						#
 ###########################################
 
 # Clear all character flags and modifiers

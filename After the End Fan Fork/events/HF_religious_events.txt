@@ -23,7 +23,7 @@ character_event = {
 	desc = { 
 		trigger = { 
 			ROOT = { 
-				NOR = {  
+				NOR = { 
 					trait = bloodthirsty_gods_1
 					trait = bloodthirsty_gods_2
 					trait = bloodthirsty_gods_3
@@ -41,7 +41,7 @@ character_event = {
 	desc = { 
 		trigger = { 
 			ROOT = { 
-				OR = {  
+				OR = { 
 					trait = bloodthirsty_gods_1
 					trait = bloodthirsty_gods_2
 					trait = bloodthirsty_gods_3
@@ -59,7 +59,7 @@ character_event = {
 	desc = { 
 		trigger = { 
 			ROOT = { 
-				NOR = {  
+				NOR = { 
 					trait = bloodthirsty_gods_1
 					trait = bloodthirsty_gods_2
 					trait = bloodthirsty_gods_3
@@ -75,7 +75,7 @@ character_event = {
 	desc = { 
 		trigger = { 
 			ROOT = { 
-				OR = {  
+				OR = { 
 					trait = bloodthirsty_gods_1
 					trait = bloodthirsty_gods_2
 					trait = bloodthirsty_gods_3
@@ -100,7 +100,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -1246,7 +1246,7 @@ character_event = {
 				save_event_target_as = potential_victim 
 			} 
 		}	
-		clr_character_flag = flag_sacrificing_bull  #Safety cleanup.
+		clr_character_flag = flag_sacrificing_bull #Safety cleanup.
 		clr_character_flag = flag_sacrificing_cow
 		clr_character_flag = flag_sacrificing_goat
 		clr_character_flag = flag_sacrificing_chicken
@@ -2083,7 +2083,7 @@ character_event = {
 					has_focus = focus_scholarship
 					has_focus = focus_theology
 					trait = detached_priest 
-					trait = martial_cleric  
+					trait = martial_cleric 
 					trait = scholarly_theologian 
 					trait = mastermind_theologian 
 				}
@@ -2116,7 +2116,7 @@ character_event = {
 					has_focus = focus_war
 					has_focus = focus_hunting
 					trait = misguided_warrior 
-					trait = tough_soldier   
+					trait = tough_soldier 
 					trait = skilled_tactician 
 					trait = brilliant_strategist 
 				}
@@ -2143,7 +2143,7 @@ character_event = {
 					has_focus = focus_family
 					has_focus = focus_carousing
 					trait = misguided_warrior 
-					trait = tough_soldier   
+					trait = tough_soldier 
 					trait = skilled_tactician 
 					trait = brilliant_strategist 
 				}
@@ -3036,67 +3036,67 @@ character_event = {
 			random_list = { 	
 				10 = { #Failure
 					trigger = { NOT = { has_character_flag = flag_studying_classics_religion } } #Conversion never fails.
-					modifier = {  
+					modifier = { 
 						factor = 1.5
 						NOT = { learning = 2 }
 					}
-					modifier = {  
+					modifier = { 
 						factor = 1.5
 						NOT = { learning = 4 }
 					}
-					modifier = {  
+					modifier = { 
 						factor = 1.5
 						NOT = { learning = 6 }
 					}
-					modifier = {  
+					modifier = { 
 						factor = 1.25
 						NOT = { learning = 8 }
 					}
-					modifier = {  
+					modifier = { 
 						factor = 0.85
 						learning = 10
 					}
-					modifier = {  
+					modifier = { 
 						factor = 0.85
 						learning = 12
 					}
-					modifier = {  
+					modifier = { 
 						factor = 0.75
 						learning = 14
 					}
-					modifier = {  
+					modifier = { 
 						factor = 0.75
 						learning = 16
 					}
-					modifier = {  
+					modifier = { 
 						factor = 0.75
 						learning = 18
 					}
-					modifier = {  
+					modifier = { 
 						factor = 0.5
 						learning = 20
 					}
-					modifier = {  
+					modifier = { 
 						factor = 0.5
 						learning = 24
 					}
-					modifier = {  
+					modifier = { 
 						factor = 0.25
 						learning = 26
 					}
-					modifier = {  
+					modifier = { 
 						factor = 2
 						trait = slow
 					}
-					modifier = {  
+					modifier = { 
 						factor = 3
 						trait = imbecile
 					}
-					modifier = {  
+					modifier = { 
 						factor = 3
 						trait = inbred
 					}
-					modifier = {  
+					modifier = { 
 						factor = 2
 						trait = dull
 					}
@@ -3164,7 +3164,7 @@ character_event = {
 				secret_religion = hamiltonian
 				secret_religion = jeffersonian
 				secret_religion = libertarian
-			}  
+			} 
 		} 
 		if = { 
 			limit = { trait = zealous } 
@@ -3202,7 +3202,7 @@ character_event = {
 				secret_religion = hamiltonian
 				secret_religion = jeffersonian
 				secret_religion = libertarian
-			}  
+			} 
 		} 
 		tiered_piety_reward_effect = yes
 		ai_chance = { factor = 0 } 
@@ -3415,7 +3415,7 @@ character_event = {
 					has_focus = focus_scholarship
 					has_focus = focus_theology
 					trait = detached_priest 
-					trait = martial_cleric  
+					trait = martial_cleric 
 					trait = scholarly_theologian 
 					trait = mastermind_theologian 
 				}
@@ -3448,7 +3448,7 @@ character_event = {
 					has_focus = focus_war
 					has_focus = focus_hunting
 					trait = misguided_warrior 
-					trait = tough_soldier   
+					trait = tough_soldier 
 					trait = skilled_tactician 
 					trait = brilliant_strategist 
 				}
@@ -3475,7 +3475,7 @@ character_event = {
 					has_focus = focus_family
 					has_focus = focus_carousing
 					trait = misguided_warrior 
-					trait = tough_soldier   
+					trait = tough_soldier 
 					trait = skilled_tactician 
 					trait = brilliant_strategist 
 				}
@@ -3508,7 +3508,7 @@ character_event = {
 			limit = { 
 				ROOT = { 
 					has_religion_feature = religion_matriarchal 
-					NOR = {  
+					NOR = { 
 						#is_merchant_republic = yes
 						is_republic = yes
 					}
@@ -3592,7 +3592,7 @@ character_event = {
 						has_religion_feature = religion_feature_aria_de_machete 
 						has_religion_feature = religion_feature_midewiwin
 					}
-					NOR = {  
+					NOR = { 
 						#is_merchant_republic = yes
 						is_republic = yes
 					}
@@ -3916,7 +3916,7 @@ character_event = {
 	}
 }
 ################################################################
-#		 		Reformation via Roman Empire 				   #
+#				Reformation via Roman Empire 				#
 ################################################################
 
 #these events are cursed for some reason
@@ -5228,7 +5228,7 @@ character_event = {
 	}
 	option = {
 		name = EVTOPTBHF23208
-		trigger = { religion = FROM }  
+		trigger = { religion = FROM } 
 	} 
 }
 
@@ -5685,7 +5685,7 @@ narrative_event = {
 			}
 			set_bloodline_founder_religion_flag_effect = yes
 			if = { 
-				limit = { OR = { religion = norse_pagan religion  = norse_pagan_reformed } }
+				limit = { OR = { religion = norse_pagan religion = norse_pagan_reformed } }
 				new_bloodline = {
 					set_description = "bloodline_desc_seaking_bloodline_viking"
 					random_list = { 
@@ -5697,7 +5697,7 @@ narrative_event = {
 				}		
 			}
 			if = { 
-				limit = { NOR = { religion = norse_pagan religion  = norse_pagan_reformed } }
+				limit = { NOR = { religion = norse_pagan religion = norse_pagan_reformed } }
 				new_bloodline = {
 					set_description = "bloodline_desc_seaking_bloodline_pirate"
 					random_list = { 
@@ -5716,7 +5716,7 @@ narrative_event = {
 			}
 			set_bloodline_founder_religion_flag_effect = yes
 			if = { 
-				limit = { OR = { religion = norse_pagan religion  = norse_pagan_reformed } }
+				limit = { OR = { religion = norse_pagan religion = norse_pagan_reformed } }
 				new_bloodline = {
 					set_description = "bloodline_desc_seaking_bloodline_viking"
 					random_list = { 
@@ -5728,7 +5728,7 @@ narrative_event = {
 				}		
 			}
 			if = { 
-				limit = { NOR = { religion = norse_pagan religion  = norse_pagan_reformed } }
+				limit = { NOR = { religion = norse_pagan religion = norse_pagan_reformed } }
 				new_bloodline = {
 					set_description = "bloodline_desc_seaking_bloodline_pirate"
 					random_list = { 
@@ -5873,7 +5873,7 @@ character_event = {
 		FROM = { location = { save_event_target_as = scoped_spawning_point } }
 		FROM = { owner = { save_event_target_as = scoped_province_owner } }
 		random_list = { #Decide mercenary leader's sex.
-			70 = {  
+			70 = { 
 				trigger = { FROM = { owner = { NOT = { has_religion_feature = religion_matriarchal } } } }	
 				create_random_soldier = {
 					random_traits = yes
@@ -6565,11 +6565,11 @@ character_event = {
 		custom_tooltip = { text = TOOLTIP_EVTOPTAHF23219 } 
 		hidden_tooltip = {
 			random_list = { 
-				60 = {  
+				60 = { 
 					good_soldier_outcome_score = yes
 					character_event = { id = HF.23220 } #Success
 				}
-				40 = {  
+				40 = { 
 					bad_soldier_outcome_score = yes
 					character_event = { id = HF.23221 } #Failure
 				}
@@ -6580,7 +6580,7 @@ character_event = {
 		name = EVTOPTBHF23219
 		trigger = { 
 			FROM = { holding_type = temple }
-			OR = {  #check doctrines
+			OR = { #check doctrines
 				AND = { 
 					is_female = yes 
 					FROM = { owner = { has_religion_feature = religion_matriarchal } }
@@ -6605,7 +6605,7 @@ character_event = {
 		custom_tooltip = { text = TOOLTIP_EVTOPTBHF23219 } 
 		hidden_tooltip = {
 			random_list = { #Outcome based on intrigue and a bit of learning.
-				60 = {  
+				60 = { 
 					is_good_intrigue_character_score = yes
 					modifier = {
 						factor = 1.25
@@ -6625,7 +6625,7 @@ character_event = {
 					}
 					character_event = { id = HF.23222 } #Success
 				}
-				40 = {  
+				40 = { 
 					is_bad_intrigue_character_score = yes
 					character_event = { id = HF.23223 } #Failure
 				}
@@ -6636,7 +6636,7 @@ character_event = {
 		name = EVTOPTCHF23219
 		trigger = { 
 			FROM = { holding_type = castle }
-			OR = {  #check doctrines
+			OR = { #check doctrines
 				AND = { 
 					is_female = yes 
 					FROM = { NOT = { owner = { has_religion_feature = religion_matriarchal } } }
@@ -6653,7 +6653,7 @@ character_event = {
 		custom_tooltip = { text = TOOLTIP_EVTOPTCHF23219 } 
 		hidden_tooltip = {
 			random_list = { #Outcome based on intrigue and attraction score.
-				60 = {  
+				60 = { 
 					is_good_intrigue_character_score = yes
 					modifier = {
 						factor = 1.75
@@ -6668,7 +6668,7 @@ character_event = {
 					}
 					character_event = { id = HF.23224 } #Success
 				}
-				40 = {  
+				40 = { 
 					is_bad_intrigue_character_score = yes
 					modifier = {
 						factor = 1.75
@@ -6695,11 +6695,11 @@ character_event = {
 		}
 		hidden_tooltip = {
 			random_list = { #Less risky than the above options, but with lesser reward.
-				75 = {  
+				75 = { 
 					good_soldier_outcome_score = yes
 					character_event = { id = HF.23226 } #Success
 				}
-				25 = {  
+				25 = { 
 					bad_soldier_outcome_score = yes
 					character_event = { id = HF.23227 } #Failure
 				}
@@ -6814,7 +6814,7 @@ character_event = {
 	#Steal wealth from temple.
 	#Desecrate temple.
 
-	immediate  = { 
+	immediate = { 
 		siege = { 
 			morale = 0.05
 			enemy = {
@@ -7599,7 +7599,7 @@ narrative_event = {
 				}
 			}
 		}
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			liege = { 
 				narrative_event = { id = HF.23405 }
 			}
@@ -7817,7 +7817,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8235,7 +8235,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8269,7 +8269,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8303,7 +8303,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8337,7 +8337,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8371,7 +8371,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8401,7 +8401,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8435,7 +8435,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8539,7 +8539,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8603,7 +8603,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8677,7 +8677,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8747,7 +8747,7 @@ narrative_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -8904,7 +8904,7 @@ narrative_event = {
 	picture = { 
 		trigger = { 
 			FROM = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -9568,7 +9568,7 @@ character_event = {
 			save_event_target_as = blood_contender_courtier
 		}
 		if = { 
-			limit = {  
+			limit = { 
 				event_target:blood_contender_prisoner = { is_alive = no }
 				event_target:blood_contender_commander = { is_alive = no }
 				event_target:blood_contender_courtier = { is_alive = no } #In the event of no available other target... 
@@ -9928,14 +9928,14 @@ character_event = {
 		name = EVTOPTAHF23445
 		trigger = { trait = mystic }
 		tooltip_info = mystic
-		persistent_event_target:my_blood_contender = { add_character_modifier =  { name = fearless_potion months = 3 } }
+		persistent_event_target:my_blood_contender = { add_character_modifier = { name = fearless_potion months = 3 } }
 		ai_chance = { factor = 60 }
 	}
 	option = { 
 		name = EVTOPTBHF23445
 		trigger = { trait = deceitful }
 		tooltip_info = deceitful
-		persistent_event_target:my_blood_contender = { add_character_modifier =  { name = poisoned_weapons months = 3 } }
+		persistent_event_target:my_blood_contender = { add_character_modifier = { name = poisoned_weapons months = 3 } }
 		ai_chance = { factor = 60 }
 	}
 	option = { 
@@ -9944,7 +9944,7 @@ character_event = {
 			limit = { ai = no }
 			scaled_wealth = { value = -0.5 min = -50 max = -150 } 
 		}
-		persistent_event_target:my_blood_contender = { add_character_modifier =  { name = gladiatorial_equipment months = 3 } }
+		persistent_event_target:my_blood_contender = { add_character_modifier = { name = gladiatorial_equipment months = 3 } }
 		ai_chance = { factor = 20 }
 	}
 	option = { #Nothing
@@ -10017,7 +10017,7 @@ character_event = {
 	immediate = { 
 		if = { 
 			limit = { 
-				multiplayer = no  #With the delay, the new contender might not make it in time before the tournament ends.
+				multiplayer = no #With the delay, the new contender might not make it in time before the tournament ends.
 			} 
 			spawn_good_commander_effect = yes #Saved as invited_character
 		}
@@ -10111,7 +10111,7 @@ character_event = {
 	immediate = { 
 		if = { 
 			limit = { 
-				multiplayer = no  #With the delay, the new contender might not make it in time before the tournament ends.
+				multiplayer = no #With the delay, the new contender might not make it in time before the tournament ends.
 			} 
 			spawn_good_commander_effect = yes #Saved as invited_character
 		}
@@ -10164,7 +10164,7 @@ character_event = {
 	immediate = { 
 		if = { 
 			limit = { 
-				multiplayer = no  #With the delay, the new contender might not make it in time before the tournament ends.
+				multiplayer = no #With the delay, the new contender might not make it in time before the tournament ends.
 			} 
 			spawn_good_commander_effect = yes #Saved as invited_character
 		}
@@ -10331,7 +10331,7 @@ character_event = {
 
 	immediate = { 
 		#Sacrifice all the losers to the gods.
-		FROM = {  
+		FROM = { 
 			any_realm_character = { 
 				limit = { 
 					NOT = { character = ROOT } 
@@ -10520,7 +10520,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -10574,7 +10574,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -10609,7 +10609,7 @@ character_event = {
 			} 
 		} 
 		tiered_piety_reward_effect = yes
-		hidden_tooltip  = {  
+		hidden_tooltip = { 
 			change_variable = { which = burned_hearts_points value = 10 }
 			bloodthirsty_tiered_traits_effect = yes
 			clear_persistent_event_target = my_blood_contender
@@ -10624,7 +10624,7 @@ character_event = {
 				} 
 			} 
 		}
-		hidden_tooltip  = {  
+		hidden_tooltip = { 
 			bloodthirsty_tiered_traits_effect = yes #You still get a point.
 			clear_persistent_event_target = my_blood_contender
 		}
@@ -10664,7 +10664,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -10690,7 +10690,7 @@ character_event = {
 			years = 5
 		}
 		tiered_piety_reward_effect = yes
-		hidden_tooltip  = {  
+		hidden_tooltip = { 
 			change_variable = { which = burned_hearts_points value = 10 }
 			bloodthirsty_tiered_traits_effect = yes
 			clear_persistent_event_target = my_blood_contender
@@ -10710,7 +10710,7 @@ character_event = {
 			who = FROM
 			years = 5
 		}
-		hidden_tooltip  = {  
+		hidden_tooltip = { 
 			bloodthirsty_tiered_traits_effect = yes #You still get a point.
 			clear_persistent_event_target = my_blood_contender
 		}
@@ -10732,7 +10732,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -10768,7 +10768,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF23458
-		hidden_tooltip  = {  
+		hidden_tooltip = { 
 			clear_persistent_event_target = my_blood_contender
 		}
 	}
@@ -10788,7 +10788,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -10802,25 +10802,25 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF23459
-		trigger  = {  
+		trigger = { 
 			OR = {
 				has_religion_feature = religion_ritual_sacrifice
 				religion = mictlantec
 			}
 		}
-		hidden_tooltip  = {  
+		hidden_tooltip = { 
 			clear_persistent_event_target = my_blood_contender
 		}
 	}
 	option = { 
 		name = EVTOPTBHF23459
-		trigger  = {  
+		trigger = { 
 			NOR = {
 				has_religion_feature = religion_ritual_sacrifice
 				religion = mictlantec
 			}
 		}
-		hidden_tooltip  = {  
+		hidden_tooltip = { 
 			clear_persistent_event_target = my_blood_contender
 		}
 	}
@@ -10855,14 +10855,14 @@ character_event = {
 		name = EVTOPTAHF23445
 		trigger = { trait = mystic }
 		tooltip_info = mystic
-		persistent_event_target:my_blood_contender = { add_character_modifier =  { name = fearless_potion months = 3 } }
+		persistent_event_target:my_blood_contender = { add_character_modifier = { name = fearless_potion months = 3 } }
 		ai_chance = { factor = 60 }
 	}
 	option = { 
 		name = EVTOPTBHF23445
 		trigger = { trait = deceitful }
 		tooltip_info = deceitful
-		persistent_event_target:my_blood_contender = { add_character_modifier =  { name = poisoned_weapons months = 3 } }
+		persistent_event_target:my_blood_contender = { add_character_modifier = { name = poisoned_weapons months = 3 } }
 		ai_chance = { factor = 60 }
 	}
 	option = { 
@@ -10871,7 +10871,7 @@ character_event = {
 			limit = { ai = no }
 			scaled_wealth = { value = -0.5 min = -50 max = -150 } 
 		}
-		persistent_event_target:my_blood_contender = { add_character_modifier =  { name = gladiatorial_equipment months = 3 } }
+		persistent_event_target:my_blood_contender = { add_character_modifier = { name = gladiatorial_equipment months = 3 } }
 		ai_chance = { factor = 20 }
 	}
 	option = { #Nothing
@@ -10898,7 +10898,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -10954,7 +10954,7 @@ character_event = {
 				limit = { 
 					higher_tier_than = BARON 
 					NOR = { 
-						religion = ROOT  
+						religion = ROOT 
 						religion = mictlantec
 						has_religion_feature = religion_ritual_sacrifice
 					}
@@ -11054,7 +11054,7 @@ character_event = {
 				limit = { 
 					higher_tier_than = BARON 
 					NOR = { 
-						religion = ROOT  
+						religion = ROOT 
 						religion = mictlantec
 						has_religion_feature = religion_ritual_sacrifice
 					}
@@ -11113,7 +11113,7 @@ character_event = {
 				limit = { 
 					higher_tier_than = BARON 
 					NOR = { 
-						religion = ROOT  
+						religion = ROOT 
 						AND = { 
 							religion = mictlantec
 							NOT = { has_religion_feature = religion_peaceful }
@@ -11156,7 +11156,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -11191,7 +11191,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -11226,7 +11226,7 @@ character_event = {
 	picture = { 
 		trigger = { 
 			ROOT = { 
-				NOT = {  
+				NOT = { 
 					religion_group = mesoamerican_gods
 				}
 			} 
@@ -11380,7 +11380,7 @@ character_event = {
 		}
 		FROM = {
 			holding_type = tribal
-			location = {  
+			location = { 
 				OR = {
 					AND = {
 						has_province_flag = flag_great_pillar_norse
@@ -11453,7 +11453,7 @@ character_event = {
 					}		
 					owner = {
 						any_realm_character = {
-							limit = {  
+							limit = { 
 								religion = norse_pagan
 							}
 							character_event = { id = HF.23474 }
@@ -11477,7 +11477,7 @@ character_event = {
 					}	
 					owner = {
 						any_realm_character = {
-							limit = {  
+							limit = { 
 								religion = revelationist
 							}
 							character_event = { id = HF.23474 }
@@ -11501,7 +11501,7 @@ character_event = {
 					}		
 					owner = {
 						any_realm_character = {
-							limit = {  
+							limit = { 
 								religion = occultist
 							}
 							character_event = { id = HF.23474 }
@@ -11525,7 +11525,7 @@ character_event = {
 					}	
 					owner = {
 						any_realm_character = {
-							limit = {  
+							limit = { 
 								religion = celtic_pagan
 							}
 							character_event = { id = HF.23474 }
@@ -11549,7 +11549,7 @@ character_event = {
 					}	
 					owner = {
 						any_realm_character = {
-							limit = {  
+							limit = { 
 								religion = aria_de_machete
 							}
 							character_event = { id = HF.23474 }
@@ -11573,7 +11573,7 @@ character_event = {
 					}		
 					owner = {
 						any_realm_character = {
-							limit = {  
+							limit = { 
 								religion = trailwalker
 							}
 							character_event = { id = HF.23474 }
@@ -11598,7 +11598,7 @@ character_event = {
 			}
 		}
 	}
-	option = {  #Leave it be.
+	option = { #Leave it be.
 		name = EVTOPTBHF23473
 		if = {
 			limit = { NOT = { religion_group = pagan_group } } #Friend of heathens
@@ -11895,7 +11895,7 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = { 
-		ROOT = { character_event = { id  = HF.23701 days  = 1 } }
+		ROOT = { character_event = { id = HF.23701 days = 1 } }
 	}
 }
 
@@ -11913,7 +11913,7 @@ character_event = {
 						has_religion_feature = religion_matriarchal 
 						religion = gaian
 					}
-					NOR = {  
+					NOR = { 
 						#is_merchant_republic = yes
 						is_republic = yes
 					}
@@ -11931,7 +11931,7 @@ character_event = {
 					opinion_effect = no
 				}
 				if = { 
-					limit = {  
+					limit = { 
 						NOT = { has_law = succ_byzantine_elective }
 						OR = { 
 							is_feudal = yes 
@@ -11987,7 +11987,7 @@ character_event = {
 						has_religion_feature = religion_feature_aria_de_machete 
 						has_religion_feature = religion_feature_midewiwin
 					}
-					NOR = {  
+					NOR = { 
 						#is_merchant_republic = yes
 						is_republic = yes
 					}
@@ -12179,10 +12179,10 @@ character_event = {
 					character_event = { id = HF.23752 } #Excellent Response.
 				}
 				60 = { 
-					character_event = { id = HF.23753 }  #Good Response.
+					character_event = { id = HF.23753 } #Good Response.
 				}
 				20 = { 
-					character_event = { id = HF.23754 }  #Bad Response.
+					character_event = { id = HF.23754 } #Bad Response.
 				}
 				5 = { 
 					modifier = { 
@@ -12264,9 +12264,9 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTBHF23751
-		FROM = {  
+		FROM = { 
 			show_scope_change = no
-			add_character_modifier = {  
+			add_character_modifier = { 
 				name = child_protected
 				years = 16
 			}
@@ -12290,9 +12290,9 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTCHF23751
-		FROM = {  
+		FROM = { 
 			show_scope_change = no
-			add_character_modifier = {  
+			add_character_modifier = { 
 				name = child_heavily_guarded
 				years = 16
 			}
@@ -13330,7 +13330,7 @@ character_event = {
 	}
 	picture = { 
 		trigger = { 
-			event_target:scoped_improvement_target  = {
+			event_target:scoped_improvement_target = {
 				is_female = yes
 			}
 		} 
@@ -13338,7 +13338,7 @@ character_event = {
 	}
 	picture = { 
 		trigger = { 
-			event_target:scoped_improvement_target  = {
+			event_target:scoped_improvement_target = {
 				is_female = no
 			}
 		} 
@@ -13452,7 +13452,7 @@ character_event = {
 	option = { #Eat more.
 		name = EVTOPTCHF23762
 		trigger = { 
-			NOR  = {
+			NOR = {
 				trait = is_fat
 				trait = is_malnourished
 			}
@@ -13533,7 +13533,7 @@ character_event = {
 	option = { #Eat less.
 		name = EVTOPTDHF23762
 		trigger = { 
-			NOR  = {
+			NOR = {
 				trait = is_fat
 				trait = is_malnourished
 			}
@@ -13662,7 +13662,7 @@ character_event = {
 				remove_trait = elusive_shadow
 				add_trait = intricate_webweaver
 			}
-			
+
 			### Diplomacy ###
 			naive_appeaser = {
 				if = {
@@ -13755,7 +13755,7 @@ character_event = {
 				remove_trait = brilliant_strategist
 				add_trait = skilled_tactician
 			}
-			
+
 			### Learning ###
 			detached_priest = {
 				if = {
@@ -14023,7 +14023,7 @@ character_event = {
 	desc = EVTDESCAHF23769
 	picture = { 
 		trigger = { 
-			event_target:scoped_improvement_target  = {
+			event_target:scoped_improvement_target = {
 				is_female = no
 			}
 		} 
@@ -14031,7 +14031,7 @@ character_event = {
 	}
 	picture = { 
 		trigger = { 
-			event_target:scoped_improvement_target  = {
+			event_target:scoped_improvement_target = {
 				is_female = yes
 			}
 		} 
@@ -14265,7 +14265,7 @@ character_event = {
 		name = EVTOPTAHF23773
 		custom_tooltip = { text = tooltip_EVTOPTAHF23773 }
 		if = { 
-			limit = {  
+			limit = { 
 				ai = no
 			} 
 			scaled_wealth = { value = -1.0 min = -150 max = -350 } 
@@ -14312,7 +14312,7 @@ character_event = {
 		name = EVTOPTBHF23773
 		custom_tooltip = { text = tooltip_EVTOPTBHF23773 }
 		if = { 
-			limit = {  
+			limit = { 
 				ai = no
 			} 
 			scaled_wealth = { value = -1.0 min = -50 max = -100 } 
@@ -14335,7 +14335,7 @@ character_event = {
 		name = EVTOPTCHF23773
 		custom_tooltip = { text = tooltip_EVTOPTCHF23773 }
 		if = { 
-			limit = {  
+			limit = { 
 				ai = no
 			} 
 			scaled_wealth = { value = -1.0 min = -15 max = -50 } 

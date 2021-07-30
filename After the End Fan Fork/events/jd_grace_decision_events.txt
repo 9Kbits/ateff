@@ -384,7 +384,7 @@ character_event = {
 							25 = { add_trait = wroth }
 							25 = { add_trait = proud }
 							25 = { add_trait = greedy }
-						}   
+						} 
 					}
 					20 = { #Herbalist
 						set_character_flag = archetype_supportive
@@ -461,7 +461,7 @@ character_event = {
 						set_focus = focus_seduction
 						remove_trait = clubfooted
 						remove_trait = harelip
-						remove_trait =  hunchback 
+						remove_trait = hunchback 
 						remove_trait = lisp
 						remove_trait = stutter
 						remove_trait = ugly
@@ -638,7 +638,7 @@ character_event = {
 						remove_trait = fair 
 					}
 					1 = { add_trait = dwarf }
-					1 = {  add_trait = weak }
+					1 = { add_trait = weak }
 				}
 				random = {
 					chance = 10
@@ -709,7 +709,7 @@ character_event = {
 							25 = { add_trait = charitable }
 							25 = { add_trait = kind }
 							25 = { add_trait = trusting }
-						}	  
+						}	
 					}
 					#Decisive
 					25 = {
@@ -773,7 +773,7 @@ character_event = {
 							20 = { add_trait = kind }
 							20 = { add_trait = honest }
 							20 = { add_trait = lustful }
-						}   
+						} 
 					}
 				} 
 			}
@@ -1069,7 +1069,7 @@ character_event = {
 							25 = { add_trait = charitable }
 							25 = { add_trait = kind }
 							25 = { add_trait = trusting }
-						}	  
+						}	
 					}
 					#Decisive
 					25 = {
@@ -1133,7 +1133,7 @@ character_event = {
 							20 = { add_trait = kind }
 							20 = { add_trait = honest }
 							20 = { add_trait = lustful }
-						}   
+						} 
 					}
 				} 
 			}
@@ -1255,7 +1255,7 @@ character_event = {
 		#Decide which place to build in
 		random_list = {
 			35 = { #Build in capital
-				trigger = {  event_target:jd_me_capital = { always = yes  } }
+				trigger = { event_target:jd_me_capital = { always = yes } }
 				modifier = { NOT = { event_target:jd_me_capital = { has_province_modifier = jd_paper_mill } } factor = 1.1 }
 				modifier = { NOT = { event_target:jd_me_capital = { has_province_modifier = jd_fireworks_guild } } factor = 1.1 }
 				modifier = { NOT = { event_target:jd_me_capital = { has_province_modifier = jd_dry_docks } } factor = 1.1 }
@@ -1265,13 +1265,13 @@ character_event = {
 				event_target:jd_me_capital = { save_event_target_as = jd_build_province }
 			}
 			40 = { #Build in empty province
-				trigger = {  event_target:jd_empty_province = { always = yes  } }
+				trigger = { event_target:jd_empty_province = { always = yes } }
 				modifier = { NOT = { event_target:jd_built_province = { always = yes } } factor = 1.6 }
 
 				event_target:jd_empty_province = { save_event_target_as = jd_build_province }
 			}
 			25 = { #Build in a province which already has some stuff
-				trigger = {  event_target:jd_built_province = { always = yes  } }
+				trigger = { event_target:jd_built_province = { always = yes } }
 				modifier = { NOT = { event_target:jd_built_province = { has_province_modifier = jd_paper_mill } } factor = 1.1 }
 				modifier = { NOT = { event_target:jd_built_province = { has_province_modifier = jd_fireworks_guild } } factor = 1.1 }
 				modifier = { NOT = { event_target:jd_built_province = { has_province_modifier = jd_dry_docks } } factor = 1.1 }
@@ -1344,7 +1344,7 @@ character_event = {
 	option = { 
 
 	}
-}   
+} 
 
 
 character_event = {
@@ -1378,7 +1378,7 @@ character_event = {
 	option = { 
 
 	}
-}   
+} 
 
 character_event = {
 	id = JD.20036
@@ -1411,7 +1411,7 @@ character_event = {
 	option = { 
 
 	}
-}   
+} 
 
 character_event = {
 	id = JD.20037
@@ -1444,7 +1444,7 @@ character_event = {
 	option = { 
 
 	}
-}   
+} 
 
 character_event = {
 	id = JD.20038
@@ -1477,7 +1477,7 @@ character_event = {
 	option = { 
 
 	}
-}   
+} 
 
 #Strategist
 character_event = {
@@ -1645,7 +1645,7 @@ character_event = {
 							25 = { add_trait = charitable }
 							25 = { add_trait = kind }
 							25 = { add_trait = trusting }
-						}	  
+						}	
 					}
 					#Decisive
 					25 = {
@@ -1699,7 +1699,7 @@ character_event = {
 							25 = { add_trait = kind }
 							25 = { add_trait = honest }
 							25 = { add_trait = lustful }
-						}   
+						} 
 					}
 				}
 
@@ -1919,10 +1919,10 @@ character_event = {
 			set_character_flag = taught_chinese_strategy
 			trigger_switch = {
 				on_trigger = has_character_flag
-				give_master_of_flame	= { add_trait = master_of_flame }
-				give_logistics_expert   = { add_trait = logistics_expert }
-				give_levy_coordinator   = { add_trait = levy_coordinator }
-				give_sapper			 = { add_trait = sapper }
+				give_master_of_flame = { add_trait = master_of_flame }
+				give_logistics_expert = { add_trait = logistics_expert }
+				give_levy_coordinator = { add_trait = levy_coordinator }
+				give_sapper	 = { add_trait = sapper }
 			}
 		}
 	}
@@ -1953,7 +1953,7 @@ character_event = {
 	is_triggered_only = yes
 	immediate = { 
 
-		FROMFROMFROM  = { save_event_target_as = imperial_marriage_spouse_1 }
+		FROMFROMFROM = { save_event_target_as = imperial_marriage_spouse_1 }
 
 		offmap_china = {
 			offmap_ruler = { 
@@ -2013,7 +2013,7 @@ character_event = {
 							60 = { 
 								trigger = { 
 									NOT = { offmap_china = { has_status = china_golden_age } } 
-								}  
+								} 
 								#Nothing 
 							}
 							15 = { add_trait = fair }
@@ -2056,7 +2056,7 @@ character_event = {
 							#Conservative 
 							25 = {
 								set_character_flag = archetype_conservative
-								
+
 								random = {
 									chance = 50
 									add_trait = zealous
@@ -2083,7 +2083,7 @@ character_event = {
 							#Supportive
 							25 = {
 								set_character_flag = archetype_supportive
-								
+
 								add_trait = humble
 								add_trait = patient
 								random_list = {
@@ -2095,7 +2095,7 @@ character_event = {
 									25 = { add_trait = charitable }
 									25 = { add_trait = kind }
 									25 = { add_trait = trusting }
-								}	  
+								}	
 							}
 							#Decisive
 							25 = {
@@ -2110,7 +2110,7 @@ character_event = {
 									factor = 0.5
 								}
 								set_character_flag = archetype_decisive
-								
+
 								add_trait = ambitious
 								add_trait = cynical
 								random_list = {
@@ -2141,7 +2141,7 @@ character_event = {
 									factor = 0.7
 								}
 								set_character_flag = archetype_sociable
-								
+
 								add_trait = gregarious
 								add_trait = charitable
 								random_list = {
@@ -2154,7 +2154,7 @@ character_event = {
 									33 = { add_trait = kind }
 									33 = { add_trait = honest }
 									33 = { add_trait = lustful }
-								}   
+								} 
 							}
 						}
 
@@ -2217,7 +2217,7 @@ character_event = {
 											add_trait = shrewd
 										}
 									}
-								}	  
+								}	
 							}
 
 							#Diplomacy
@@ -2268,7 +2268,7 @@ character_event = {
 											add_trait = shrewd
 										}
 									}
-								}	  
+								}	
 							}
 
 							#Intrigue
@@ -2329,7 +2329,7 @@ character_event = {
 										remove_trait = chaste
 										add_trait = lustful
 									}
-								}	  
+								}	
 							}
 
 							#Stewardship
@@ -2369,7 +2369,7 @@ character_event = {
 										}
 										add_trait = erudite
 									}
-								}	  
+								}	
 							}
 
 							#Learning
@@ -2406,12 +2406,12 @@ character_event = {
 											limit = { has_dlc = "Way of Life" }
 											add_trait = theologian
 										}
-										add_trait = erudite  
+										add_trait = erudite 
 									}
-								}	  
+								}	
 							}
 						}
-						
+
 						if = {
 							limit = {
 								offmap_china = {
@@ -2642,13 +2642,13 @@ character_event = {
 				set_character_flag = no_court_invites
 				set_character_flag = taught_chinese_strategy
 				set_character_flag = is_chinese_siege_engineer
-				
+	
 				remove_trait = weak
 				remove_trait = slow
 				remove_trait = imbecile
 				remove_trait = distractible
 				remove_trait = dull
-				
+	
 				remove_trait = craven
 				remove_trait = mystic
 				remove_trait = socializer
@@ -2666,9 +2666,9 @@ character_event = {
 				remove_trait = seductress
 				remove_trait = theologian
 				remove_trait = scholar
-				
+	
 				add_trait = sapper
-				
+	
 				if = {
 					limit = {
 						offmap_china = {
@@ -2677,7 +2677,7 @@ character_event = {
 					}
 					change_martial = 5
 				}
-				
+	
 				random_list = { # Flavor Randomization
 					15 = {
 						change_martial = 2
@@ -2746,13 +2746,13 @@ character_event = {
 				set_character_flag = no_court_invites
 				set_character_flag = taught_chinese_strategy
 				set_character_flag = is_chinese_siege_engineer
-				
+	
 				remove_trait = weak
 				remove_trait = slow
 				remove_trait = imbecile
 				remove_trait = distractible
 				remove_trait = dull
-				
+	
 				remove_trait = craven
 				remove_trait = mystic
 				remove_trait = socializer
@@ -2770,9 +2770,9 @@ character_event = {
 				remove_trait = seductress
 				remove_trait = theologian
 				remove_trait = scholar
-				
+	
 				add_trait = sapper
-				
+	
 				if = {
 					limit = {
 						offmap_china = {
@@ -2781,7 +2781,7 @@ character_event = {
 					}
 					change_martial = 5
 				}
-				
+	
 				random_list = { # Flavor Randomization
 					15 = {
 						change_martial = 2
@@ -2850,13 +2850,13 @@ character_event = {
 				set_character_flag = no_court_invites
 				set_character_flag = taught_chinese_strategy
 				set_character_flag = is_chinese_siege_engineer
-				
+	
 				remove_trait = weak
 				remove_trait = slow
 				remove_trait = imbecile
 				remove_trait = distractible
 				remove_trait = dull
-				
+	
 				remove_trait = craven
 				remove_trait = mystic
 				remove_trait = socializer
@@ -2874,9 +2874,9 @@ character_event = {
 				remove_trait = seductress
 				remove_trait = theologian
 				remove_trait = scholar
-				
+	
 				add_trait = sapper
-				
+	
 				if = {
 					limit = {
 						offmap_china = {
@@ -2885,7 +2885,7 @@ character_event = {
 					}
 					change_martial = 5
 				}
-				
+	
 				random_list = { # Flavor Randomization
 					15 = {
 						change_martial = 2
@@ -3420,7 +3420,7 @@ letter_event = {
 			text = EVTOPTA_JD_3021 # Join wars
 		}
 		trigger = {
-		 	event_target:chinese_invasion_instigator = { character = ROOT }
+			event_target:chinese_invasion_instigator = { character = ROOT }
 			independent = yes
 			war = no
 			NOR = {
@@ -3495,7 +3495,7 @@ narrative_event = { # NEWS: visible event for player (shatter realm invasion)
 			}
 		}
 		trigger = {
-		 	event_target:chinese_invasion_target = { character = ROOT }
+			event_target:chinese_invasion_target = { character = ROOT }
 		}
 		event_target:chinese_invasion_target = {
 			show_portrait = yes
@@ -3515,7 +3515,7 @@ narrative_event = { # NEWS: visible event for player (shatter realm invasion)
 			trigger = {	NOT = { event_target:chinese_invasion_target = { religion_group = ROOT } } }
 		}
 		trigger = {
-		 	NOR = {
+			NOR = {
 				event_target:chinese_invasion_target = { character = ROOT }
 				event_target:chinese_invasion_instigator = { character = ROOT }
 			}
@@ -3533,7 +3533,7 @@ narrative_event = { # NEWS: visible event for player (shatter realm invasion)
 			text = EVTOPTC_JD_3022 # Just as planned
 		}
 		trigger = {
-		 	event_target:chinese_invasion_instigator = { character = ROOT }
+			event_target:chinese_invasion_instigator = { character = ROOT }
 		}
 		event_target:chinese_invasion_target = {
 			show_portrait = yes
@@ -4804,7 +4804,7 @@ letter_event = {
 						set_character_flag = force_open_china_demands_backup
 					}
 					letter_event = { id = JD.60307 days = 5 }
-				}  
+				} 
 			}
 		}
 	}
@@ -5012,7 +5012,7 @@ character_event = {
 					is_chinese_administrator = { event_target:grace_courtier_liege = { set_variable = { which = "grace_refund" value = 1000 } } }
 					is_chinese_master_engineer = { event_target:grace_courtier_liege = { set_variable = { which = "grace_refund" value = 1000 } } }
 					is_chinese_siege_engineer = { event_target:grace_courtier_liege = { set_variable = { which = "grace_refund" value = 250 } } }
-					is_chinese_imperial_marriage = { event_target:grace_courtier_liege = {  set_variable = { which = "grace_refund" value = 1000 } } }
+					is_chinese_imperial_marriage = { event_target:grace_courtier_liege = { set_variable = { which = "grace_refund" value = 1000 } } }
 					is_chinese_strategist = { event_target:grace_courtier_liege = { set_variable = { which = "grace_refund" value = 750 } } }
 					is_chinese_physician = { event_target:grace_courtier_liege = { set_variable = { which = "grace_refund" value = 250 } } }
 				}
@@ -5053,7 +5053,7 @@ character_event = { #Bounce
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
-		FROM = { killer = {  letter_event = { id = JD.60314 } } }
+		FROM = { killer = { letter_event = { id = JD.60314 } } }
 	}
 }
 letter_event = {

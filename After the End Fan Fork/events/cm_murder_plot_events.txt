@@ -1,9 +1,9 @@
 ###########################################
-#                                         #
-# New Plot Events - characters in hiding  #
-#                                         #
-# ID CM.6000-CM.6999                      #
-#                                         #
+#										#
+# New Plot Events - characters in hiding #
+#										#
+# ID CM.6000-CM.6999					#
+#										#
 ###########################################
 
 # Written by Tobias Bodlund
@@ -11,7 +11,7 @@
 namespace = CM
 
 ###########################################
-# Hiding notifications                    #
+# Hiding notifications					#
 ###########################################
 
 
@@ -108,7 +108,7 @@ character_event = {
 			NOT = { FROM = { is_plot_target_of = ROOT } }
 			NOT = {	FROM = { any_known_plotter = { any_plot_backer = { character = ROOT }	} }	}
 			NOT = { FROM = { is_rival = ROOT } }
-			FROM = { any_child  = { character = ROOT } }
+			FROM = { any_child = { character = ROOT } }
 		}
 		tooltip = { FROM = { add_trait = in_hiding } }
 	}
@@ -142,7 +142,7 @@ character_event = {
 			NOT = { FROM = { is_plot_target_of = ROOT } }
 			NOT = {	FROM = { any_known_plotter = { any_plot_backer = { character = ROOT }	} }	}
 			NOT = { FROM = { is_rival = ROOT } }
-			FROM = { any_child  = { character = ROOT } }
+			FROM = { any_child = { character = ROOT } }
 		}
 		tooltip = { FROM = { remove_trait = in_hiding } }
 	}
@@ -176,7 +176,7 @@ character_event = {
 			NOT = { FROMFROM = { is_plot_target_of = ROOT } }
 			NOT = {	FROMFROM = { any_known_plotter = { any_plot_backer = { character = ROOT }	} }	}
 			NOT = { FROMFROM = { is_rival = ROOT } }
-			FROMFROM = { any_child  = { character = ROOT } }
+			FROMFROM = { any_child = { character = ROOT } }
 		}
 		tooltip = { FROMFROM = { add_trait = in_hiding } }
 	}
@@ -210,7 +210,7 @@ character_event = {
 			NOT = { FROM = { is_plot_target_of = ROOT } }
 			NOT = {	FROM = { any_known_plotter = { any_plot_backer = { character = ROOT }	} }	}
 			NOT = { FROM = { is_rival = ROOT } }
-			FROM = { any_child  = { character = ROOT } }
+			FROM = { any_child = { character = ROOT } }
 		}
 		tooltip = { FROM = { remove_trait = in_hiding } }
 	}
@@ -235,7 +235,7 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	immediate = {                    # Notify player and close family and plotters
+	immediate = {					# Notify player and close family and plotters
 		any_plotter = {
 			target = ROOT
 			limit = {
@@ -292,7 +292,7 @@ character_event = {
 
 
 ###########################################
-# Negative effects of hiding              #
+# Negative effects of hiding			#
 ###########################################
 
 # Goes insane
@@ -455,7 +455,7 @@ character_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = EVTOPTA_CM_6105  # Argh!
+		name = EVTOPTA_CM_6105 # Argh!
 		trigger = {
 			NOT = { trait = celibate }
 		}
@@ -469,7 +469,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPTB_CM_6105  # Finally she/he leaves me alone!
+		name = EVTOPTB_CM_6105 # Finally she/he leaves me alone!
 		trigger = {
 			trait = celibate
 		}
@@ -852,7 +852,7 @@ character_event = {
 }
 
 #############################################################
-# Clear plotters' murder flags if you die of other causes   #
+# Clear plotters' murder flags if you die of other causes #
 #############################################################
 
 # On action: on_death
@@ -920,7 +920,7 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 24
-		modifier = {   # If no real plot is afoot, the paranoia doesn't set in too often
+		modifier = { # If no real plot is afoot, the paranoia doesn't set in too often
 			factor = 10
 			trait = paranoid
 			NOT = {
@@ -1055,7 +1055,7 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 24
-		modifier = {   # If no real plot is afoot, the paranoia doesn't set in too often
+		modifier = { # If no real plot is afoot, the paranoia doesn't set in too often
 			factor = 10
 			trait = paranoid
 			NOT = {
@@ -1204,7 +1204,7 @@ character_event = {
 	
 	mean_time_to_happen = {
 		months = 24
-		modifier = {   # If no real plot is afoot, the paranoia doesn't set in too often
+		modifier = { # If no real plot is afoot, the paranoia doesn't set in too often
 			factor = 10
 			trait = paranoid
 			NOT = {
@@ -1376,7 +1376,7 @@ character_event = {
 }
 
 ##############################################
-# Murder attempts on character in hiding...  #
+# Murder attempts on character in hiding... #
 ##############################################
 
 # Assassin ninja-style
@@ -1570,11 +1570,11 @@ narrative_event = {
 	immediate = {
 		if = {
 			limit = { multiplayer = yes	}
-			
+
 			save_event_target_as = target_victim
 			FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 			clear_event_target = target_victim
-			
+
 			death = {
 				death_reason = death_murder
 				killer = FROMFROM
@@ -1586,13 +1586,13 @@ narrative_event = {
 		name = EVTOPTA_CM_6303
 		if = {
 			limit = { multiplayer = no	}
-			
+
 			hidden_tooltip = {
 				save_event_target_as = target_victim
 				FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 				clear_event_target = target_victim
 			}
-			
+
 			death = {
 				death_reason = death_murder
 				killer = FROMFROM
@@ -1844,7 +1844,7 @@ narrative_event = {
 	immediate = {
 		if = {
 			limit = { multiplayer = yes	}
-			
+
 			death = {
 				death_reason = death_murder_unknown_poison
 				killer = FROMFROM
@@ -1856,7 +1856,7 @@ narrative_event = {
 		name = EVTOPTA_CM_6313
 		if = {
 			limit = { multiplayer = no	}
-			
+
 			death = {
 				death_reason = death_murder_unknown_poison
 				killer = FROMFROM
@@ -1899,11 +1899,11 @@ narrative_event = {
 	immediate = {
 		if = {
 			limit = { multiplayer = yes	}
-			
+
 			save_event_target_as = target_victim
 			FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 			clear_event_target = target_victim
-			
+
 			death = {
 				death_reason = death_murder_poison
 				killer = FROMFROM
@@ -1915,13 +1915,13 @@ narrative_event = {
 		name = EVTOPTA_CM_6313
 		if = {
 			limit = { multiplayer = no	}
-			
+
 			hidden_tooltip = {
 				save_event_target_as = target_victim
 				FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 				clear_event_target = target_victim
 			}
-			
+
 			death = {
 				death_reason = death_murder_poison
 				killer = FROMFROM
@@ -2226,11 +2226,11 @@ narrative_event = {
 	immediate = {
 		if = {
 			limit = { multiplayer = yes	}
-			
+
 			save_event_target_as = target_victim
 			FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 			clear_event_target = target_victim
-			
+
 			death = {
 				death_reason = death_murder
 				killer = FROMFROM
@@ -2242,13 +2242,13 @@ narrative_event = {
 		name = EVTOPTA_CM_6323
 		if = {
 			limit = { multiplayer = no	}
-			
+
 			hidden_tooltip = {
 				save_event_target_as = target_victim
 				FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 				clear_event_target = target_victim
 			}
-			
+
 			death = {
 				death_reason = death_murder
 				killer = FROMFROM
@@ -2553,11 +2553,11 @@ narrative_event = {
 	immediate = {
 		if = {
 			limit = { multiplayer = yes	}
-			
+
 			save_event_target_as = target_victim
 			FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 			clear_event_target = target_victim
-			
+
 			death = {
 				death_reason = death_murder_snakes
 				killer = FROMFROM
@@ -2569,13 +2569,13 @@ narrative_event = {
 		name = EVTOPTA_CM_6333
 		if = {
 			limit = { multiplayer = no	}
-			
+
 			hidden_tooltip = {
 				save_event_target_as = target_victim
 				FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 				clear_event_target = target_victim
 			}
-			
+
 			death = {
 				death_reason = death_murder_snakes
 				killer = FROMFROM
@@ -2879,11 +2879,11 @@ narrative_event = {
 	immediate = {
 		if = {
 			limit = { multiplayer = yes	}
-			
+
 			save_event_target_as = target_victim
 			FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 			clear_event_target = target_victim
-			
+
 			death = {
 				death_reason = death_murder_strangle
 				killer = FROMFROM
@@ -2895,13 +2895,13 @@ narrative_event = {
 		name = EVTOPTA_CM_6343
 		if = {
 			limit = { multiplayer = no	}
-			
+
 			hidden_tooltip = {
 				save_event_target_as = target_victim
 				FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 				clear_event_target = target_victim
 			}
-			
+
 			death = {
 				death_reason = death_murder_strangle
 				killer = FROMFROM
@@ -3206,7 +3206,7 @@ narrative_event = {
 	immediate = {
 		if = {
 			limit = { multiplayer = yes	}
-			
+
 			save_event_target_as = target_victim
 			FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 			clear_event_target = target_victim
@@ -3222,13 +3222,13 @@ narrative_event = {
 		name = EVTOPTA_CM_6353
 		if = {
 			limit = { multiplayer = no	}
-			
+
 			hidden_tooltip = {
 				save_event_target_as = target_victim
 				FROMFROM = { character_event = { id = 10 } } # Consequences of discovery
 				clear_event_target = target_victim
 			}
-			
+
 			death = {
 				death_reason = death_murder_poison
 				killer = FROMFROM

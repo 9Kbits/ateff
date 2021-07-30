@@ -3,8 +3,8 @@ decisions = {
 	form_airmen_banner = {
 		is_high_prio = yes
 		only_playable = yes
-			
-			
+
+
 		potential = {
 			is_playable = yes
 			independent = yes
@@ -20,7 +20,7 @@ decisions = {
 			}
 			NOT = { has_global_flag = texas_airmen_guard }
 		}
-				
+	
 		allow = {
 			is_adult = yes
 			prisoner = no
@@ -39,10 +39,10 @@ decisions = {
 				}
 			}		
 		
-		 }
+		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 
 	form_utep_banner = {
@@ -57,16 +57,16 @@ decisions = {
 				region = custom_texas
 			}
 			OR = { culture_group = starfolk
-			   AND = { culture = comanche
-					   has_global_flag = comanche_opt_in
+			AND = { culture = comanche
+					has_global_flag = comanche_opt_in
 				}
 			}
-			
+
 			d_miners = {
 				has_holder = no
 			}
 		}
-			
+
 		allow = {
 			has_landed_title = c_el_paso
 			is_adult = yes
@@ -87,7 +87,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 		
 	form_red_banner = {
@@ -99,11 +99,11 @@ decisions = {
 			is_playable = yes
 			independent = yes
 			OR = { culture_group = starfolk
-			   AND = { culture = comanche
-					   has_global_flag = comanche_opt_in
+			AND = { culture = comanche
+					has_global_flag = comanche_opt_in
 				}
 			}
-			
+
 			d_red_raider = {
 				has_holder = no
 			}
@@ -130,7 +130,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 	
 	form_longhorn_banner = {
@@ -148,12 +148,12 @@ decisions = {
 					has_global_flag = comanche_opt_in
 				}
 			}
-			
+
 			d_longhorns = {
 				has_holder = no
 			}
 		}
-			
+
 		allow = {
 			is_adult = yes
 			prisoner = no
@@ -171,11 +171,11 @@ decisions = {
 					copy_title_laws = PREV
 				}
 			}		
-			
+
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 	
 	form_aggies_banner = {
@@ -192,12 +192,12 @@ decisions = {
 					has_global_flag = comanche_opt_in
 				}
 			}
-			
+
 			d_aggies = {
 				has_holder = no
 			}
 		}
-			
+
 		allow = {
 			is_adult = yes
 			prisoner = no
@@ -219,7 +219,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 	
 	form_first_cav_banner = {
@@ -231,11 +231,11 @@ decisions = {
 			is_playable = yes
 			independent = yes
 			OR = { culture_group = starfolk
-			   AND = { culture = comanche
-				   has_global_flag = comanche_opt_in
+			AND = { culture = comanche
+				has_global_flag = comanche_opt_in
 				}
 			}
-			
+
 			d_first_cav = {
 				has_holder = no
 			}
@@ -260,10 +260,10 @@ decisions = {
 				}
 			}	
 		
-		 }
+		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 		
 	comanche_opt_in = {
@@ -302,8 +302,8 @@ decisions = {
 			is_playable = yes
 			independent = yes
 			OR = { culture_group = starfolk
-			   AND = { culture = comanche
-				   has_global_flag = comanche_opt_in
+			AND = { culture = comanche
+				has_global_flag = comanche_opt_in
 				}
 			}
 
@@ -312,7 +312,7 @@ decisions = {
 			}
 			NOT = { has_global_flag = texas_restored }
 
-			
+
 		}
 		
 		allow = {
@@ -359,9 +359,9 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			
+
 			if = {
-			
+
 				limit = {
 					any_tributary = {
 						AND = {
@@ -369,7 +369,7 @@ decisions = {
 								any_realm_character = {
 									has_landed_title = c_san_antonio
 								}
-								
+
 								has_landed_title = c_san_antonio
 							}
 							#kings cannot grant banners to other kings as they are competing candidates
@@ -393,9 +393,9 @@ decisions = {
 				}
 			}
 
-			
+
 			if = {
-			
+
 				limit = {
 					any_realm_character = {
 						has_landed_title = c_san_antonio
@@ -416,7 +416,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 
 	grant_miners_banner = {
@@ -428,8 +428,8 @@ decisions = {
 			is_playable = yes
 			independent = yes
 			OR = { culture_group = starfolk
-			   AND = { culture = comanche
-				   has_global_flag = comanche_opt_in
+			AND = { culture = comanche
+				has_global_flag = comanche_opt_in
 				}
 			}
 
@@ -438,7 +438,7 @@ decisions = {
 				has_holder = no
 			}
 			NOT = { has_global_flag = texas_restored }
-			
+
 		}
 		
 		allow = {
@@ -485,7 +485,7 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			
+
 			if = {
 				limit = {
 					any_tributary = {
@@ -517,9 +517,9 @@ decisions = {
 				}
 			}
 
-			
+
 			if = {
-			
+
 				limit = {
 					any_realm_character = {
 						has_landed_title = c_el_paso
@@ -540,7 +540,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 
 
@@ -553,8 +553,8 @@ decisions = {
 			is_playable = yes
 			independent = yes
 			OR = { culture_group = starfolk
-			   AND = { culture = comanche
-				   has_global_flag = comanche_opt_in
+			AND = { culture = comanche
+				has_global_flag = comanche_opt_in
 				}
 			}
 
@@ -564,7 +564,7 @@ decisions = {
 			}
 			NOT = { has_global_flag = texas_restored }
 
-			
+
 		}
 		
 		allow = {
@@ -611,9 +611,9 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			
+
 			if = {
-			
+
 				limit = {
 					any_tributary = {
 						AND = {
@@ -621,7 +621,7 @@ decisions = {
 								any_realm_character = {
 									has_landed_title = c_lubbock
 								}
-								
+
 								has_landed_title = c_lubbock
 							}
 							#kings cannot grant banners to other kings as they are competing candidates
@@ -645,9 +645,9 @@ decisions = {
 				}
 			}
 
-			
+
 			if = {
-			
+
 				limit = {
 					any_realm_character = {
 						has_landed_title = c_lubbock
@@ -668,7 +668,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 	
 	
@@ -681,8 +681,8 @@ decisions = {
 			is_playable = yes
 			independent = yes
 			OR = { culture_group = starfolk
-			   AND = { culture = comanche
-				   has_global_flag = comanche_opt_in
+			AND = { culture = comanche
+				has_global_flag = comanche_opt_in
 				}
 			}
 			NOT = { has_global_flag = texas_restored }
@@ -692,7 +692,7 @@ decisions = {
 				has_holder = no
 			}
 
-			
+
 		}
 		
 		allow = {
@@ -739,9 +739,9 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			
+
 			if = {
-			
+
 				limit = {
 					any_tributary = {
 						AND = {
@@ -749,7 +749,7 @@ decisions = {
 								any_realm_character = {
 									has_landed_title = c_travis
 								}
-								
+
 								has_landed_title = c_travis
 							}
 							#kings cannot grant banners to other kings as they are competing candidates
@@ -773,9 +773,9 @@ decisions = {
 				}
 			}
 
-			
+
 			if = {
-			
+
 				limit = {
 					any_realm_character = {
 						has_landed_title = c_travis
@@ -796,7 +796,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 
 	grant_aggies_banner = {
@@ -808,8 +808,8 @@ decisions = {
 			is_playable = yes
 			independent = yes
 			OR = { culture_group = starfolk
-			   AND = { culture = comanche
-				   has_global_flag = comanche_opt_in
+			AND = { culture = comanche
+				has_global_flag = comanche_opt_in
 				}
 			}
 			NOT = { has_global_flag = texas_restored }
@@ -862,9 +862,9 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			
+
 			if = {
-			
+
 				limit = {
 					any_tributary = {
 						AND = {
@@ -872,7 +872,7 @@ decisions = {
 								any_realm_character = {
 									has_landed_title = c_brazos
 								}
-								
+
 								has_landed_title = c_brazos
 							}
 							#kings cannot grant banners to other kings as they are competing candidates
@@ -896,9 +896,9 @@ decisions = {
 				}
 			}
 
-			
+
 			if = {
-			
+
 				limit = {
 					any_realm_character = {
 						has_landed_title = c_brazos
@@ -919,7 +919,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 	
 	grant_first_cav_banner = {
@@ -931,8 +931,8 @@ decisions = {
 			is_playable = yes
 			independent = yes
 			OR = { culture_group = starfolk
-			   AND = { culture = comanche
-				   has_global_flag = comanche_opt_in
+			AND = { culture = comanche
+				has_global_flag = comanche_opt_in
 				}
 			}
 			NOT = { has_global_flag = texas_restored }
@@ -940,7 +940,7 @@ decisions = {
 			d_first_cav = {
 				has_holder = no
 			}
-			
+
 		}
 		
 		allow = {
@@ -987,9 +987,9 @@ decisions = {
 		}
 		effect = {
 			prestige = -500
-			
+
 			if = {
-			
+
 				limit = {
 					any_tributary = {
 						AND = {
@@ -997,7 +997,7 @@ decisions = {
 								any_realm_character = {
 									has_landed_title = c_centrex
 								}
-								
+
 								has_landed_title = c_centrex
 							}
 							#kings cannot grant banners to other kings as they are competing candidates
@@ -1021,9 +1021,9 @@ decisions = {
 				}
 			}
 
-			
+
 			if = {
-			
+
 				limit = {
 					any_realm_character = {
 						has_landed_title = c_centrex
@@ -1044,7 +1044,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 
 }

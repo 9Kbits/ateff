@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# Chinese Status, Policy & News Events	  #
-#										 #
-# ID JD.50000-JD.51000					  #
-#										 #
+#										#
+# Chinese Status, Policy & News Events	#
+#										#
+# ID JD.50000-JD.51000					#
+#										#
 ###########################################
 
 namespace = JD
@@ -205,7 +205,7 @@ narrative_event = {
 					}
 				}
 				FROM = {
-					NOT  = { dynasty = PREV }
+					NOT = { dynasty = PREV }
 				}
 			}
 		}
@@ -253,7 +253,7 @@ narrative_event = {
 					}
 				}
 				FROM = {
-					NOT  = { dynasty = PREV }
+					NOT = { dynasty = PREV }
 				}
 			}
 		}
@@ -335,7 +335,7 @@ narrative_event = {
 		name = EVTOPT_JD_50302_BROKEN_PEACE_DEAL
 		trigger = {
 			has_character_modifier = peace_deal_with_china
-			FROM = { FROM = { NOT  = { dynasty = PREV } } }
+			FROM = { FROM = { NOT = { dynasty = PREV } } }
 		}
 		if = {
 			limit = { has_character_flag = was_tributary_of_china }
@@ -1150,12 +1150,12 @@ character_event = {
 						prev_status = china_golden_age
 					}
 				}
-				
+	
 				FROM = {
 					set_offmap_flag = no_status_news
 					set_status = china_stable
 					clr_offmap_flag = no_status_news
-					
+
 					if = {
 						limit = { has_offmap_flag = china_badly_beaten_1 }
 						clr_offmap_flag = china_badly_beaten_1
@@ -1171,7 +1171,7 @@ character_event = {
 						set_offmap_flag = china_badly_beaten_2
 					}
 				}
-				
+	
 				any_player = {
 					limit = {
 						has_offmap_news_enabled = FROM
@@ -1191,17 +1191,17 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				FROM = {
 					set_offmap_flag = no_status_news
 					set_status = china_unrest
 					set_offmap_flag = china_had_unrest
 					clr_offmap_flag = no_status_news
-				
+	
 					clr_offmap_flag = china_badly_beaten_3
 					clr_offmap_flag = china_badly_beaten_2
 					clr_offmap_flag = china_badly_beaten_1
-					
+
 					if = {
 						limit = {
 							has_offmap_flag = china_mongols_won_2
@@ -1209,7 +1209,7 @@ character_event = {
 						set_offmap_flag = china_mongols_won_3
 						clr_offmap_flag = china_mongols_won_2
 					}
-					
+
 					if = {
 						limit = {
 							has_offmap_flag = china_mongols_won_1
@@ -1217,7 +1217,7 @@ character_event = {
 						set_offmap_flag = china_mongols_won_2
 						clr_offmap_flag = china_mongols_won_1
 					}
-					
+
 					if = {
 						limit = {
 							NOR = {
@@ -1228,10 +1228,10 @@ character_event = {
 						}
 						set_offmap_flag = china_mongols_won_1
 					}
-					
+
 					set_offmap_flag = no_succession_news
 				}
-				
+	
 				# A new ruler ascends to the Dragon Throne. The fallout is handled by JD.10005 and JD.50000 (from 'on_offmap_ruler_changed')
 				create_character = { #The father
 					age = 60
@@ -1297,7 +1297,7 @@ character_event = {
 					}
 					random_list = {
 						100 = {
-						
+
 						}
 						10 = {
 							religion = apostolic
@@ -1313,7 +1313,7 @@ character_event = {
 						}
 					}
 				}
-  			
+ 
 				any_player = {
 					limit = {
 						has_offmap_news_enabled = FROM
@@ -1321,7 +1321,7 @@ character_event = {
 					}
 					narrative_event = { id = JD.50162 }
 				}
-				
+	
 				random_list = {
 					50 = {
 						# modifier = {
@@ -1344,7 +1344,7 @@ character_event = {
 								# value = none
 							# }
 						# }
-						character_event = { id =  JD.10109 days = 15 } #Spawns a Jurchen tribe leader...
+						character_event = { id = JD.10109 days = 15 } #Spawns a Jurchen tribe leader...
 						set_character_flag = spawning_a_jurchen_invader
 						log = "China Logging:"
 						log = "Attempting to spawn a Jurchen Invader, as aftermath to event JD.50200 (end of Being Invaded by Mongols). Character should spawn in 15 days."
@@ -1704,12 +1704,12 @@ character_event = {
 						prev_status = china_golden_age
 					}
 				}
-				
+	
 				FROM = {
 					set_offmap_flag = no_status_news
 					set_status = china_stable
 					clr_offmap_flag = no_status_news
-					
+
 					if = {
 						limit = { has_offmap_flag = china_badly_beaten_1 }
 						clr_offmap_flag = china_badly_beaten_1
@@ -1725,7 +1725,7 @@ character_event = {
 						set_offmap_flag = china_badly_beaten_2
 					}
 				}
-				
+	
 				any_player = {
 					limit = {
 						has_offmap_news_enabled = FROM
@@ -1745,17 +1745,17 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				FROM = {
 					set_offmap_flag = no_status_news
 					set_status = china_unrest
 					set_offmap_flag = china_had_unrest
 					clr_offmap_flag = no_status_news
-				
+	
 					clr_offmap_flag = china_badly_beaten_3
 					clr_offmap_flag = china_badly_beaten_2
 					clr_offmap_flag = china_badly_beaten_1
-					
+
 					if = {
 						limit = {
 							has_offmap_flag = china_mongols_won_2
@@ -1763,7 +1763,7 @@ character_event = {
 						set_offmap_flag = china_mongols_won_3
 						clr_offmap_flag = china_mongols_won_2
 					}
-					
+
 					if = {
 						limit = {
 							has_offmap_flag = china_mongols_won_1
@@ -1771,7 +1771,7 @@ character_event = {
 						set_offmap_flag = china_mongols_won_2
 						clr_offmap_flag = china_mongols_won_1
 					}
-					
+
 					if = {
 						limit = {
 							NOR = {
@@ -1782,10 +1782,10 @@ character_event = {
 						}
 						set_offmap_flag = china_mongols_won_1
 					}
-					
+
 					set_offmap_flag = no_succession_news
 				}
-				
+	
 				# A new ruler ascends to the Dragon Throne. The fallout is handled by JD.10005 and JD.50000 (from 'on_offmap_ruler_changed')
 				create_character = { #The father
 					age = 60
@@ -1851,7 +1851,7 @@ character_event = {
 					}
 					random_list = {
 						100 = {
-						
+
 						}
 						10 = {
 							religion = apostolic
@@ -1867,7 +1867,7 @@ character_event = {
 						}
 					}
 				}
-  			
+ 
 				any_player = {
 					limit = {
 						has_offmap_news_enabled = FROM
@@ -1875,7 +1875,7 @@ character_event = {
 					}
 					narrative_event = { id = JD.50202 }
 				}
-				
+	
 				random_list = {
 					50 = {
 						# modifier = {
@@ -1898,7 +1898,7 @@ character_event = {
 								# value = none
 							# }
 						# }
-						character_event = { id =  JD.10109 days = 15 } #Spawns a Jurchen tribe leader...
+						character_event = { id = JD.10109 days = 15 } #Spawns a Jurchen tribe leader...
 						set_character_flag = spawning_a_jurchen_invader
 						log = "China Logging:"
 						log = "Attempting to spawn a Jurchen Invader, as aftermath to event JD.50200 (end of Being Invaded by Mongols). Character should spawn in 15 days."
@@ -2331,7 +2331,7 @@ character_event = {
 					set_status = china_stable
 					clr_offmap_flag = no_status_news
 				}
-				
+	
 				any_player = {
 					limit = {
 						has_offmap_news_enabled = FROM
@@ -2348,7 +2348,7 @@ character_event = {
 								# value = none
 							# }
 						# }
-						character_event = { id =  JD.10109 days = 15 } #Spawns a Jurchen tribe leader...
+						character_event = { id = JD.10109 days = 15 } #Spawns a Jurchen tribe leader...
 						set_character_flag = spawning_a_jurchen_invader
 						log = "China Logging:"
 						log = "Attempting to spawn a Jurchen Invader, as aftermath to event JD.50300 (end of Civil War - the loyalists won). Character should spawn in 15 days."
@@ -2383,7 +2383,7 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				FROM = {
 					set_offmap_flag = no_status_news
 					random_list = {
@@ -2391,9 +2391,9 @@ character_event = {
 						50 = { set_status = china_unrest set_offmap_flag = china_had_unrest }
 					}
 					clr_offmap_flag = no_status_news
-					
+
 					set_offmap_flag = no_succession_news
-					
+
 					if = {
 						limit = {
 							holder_scope = {
@@ -2403,7 +2403,7 @@ character_event = {
 						set_offmap_flag = foreign_dynasty_ousted
 					}
 				}
-				
+	
 				# A new ruler ascends to the Dragon Throne. The fallout is handled by JD.10005 and JD.50000 (from 'on_offmap_ruler_changed')
 				random_list = {
 					0 = {
@@ -2456,7 +2456,7 @@ character_event = {
 						set_offmap_holder = PREV
 					}
 				}
-  			
+ 
 				any_player = {
 					limit = {
 						has_offmap_news_enabled = FROM
@@ -2464,7 +2464,7 @@ character_event = {
 					}
 					narrative_event = { id = JD.50302 }
 				}
-				
+	
 				FROM = { clr_offmap_flag = foreign_dynasty_ousted }
 
 				random_list = {
@@ -2505,12 +2505,12 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				FROM = {
 					set_offmap_flag = no_status_news
 					set_status = china_stable
 					clr_offmap_flag = no_status_news
-					
+
 					set_offmap_flag = no_succession_news
 					holder_scope = {
 						death = {
@@ -2518,7 +2518,7 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				any_player = {
 					limit = {
 						has_offmap_news_enabled = FROM
@@ -2535,7 +2535,7 @@ character_event = {
 								# value = none
 							# }
 						# }
-						character_event = { id =  JD.10109 days = 15 } #Spawns a Jurchen tribe leader...
+						character_event = { id = JD.10109 days = 15 } #Spawns a Jurchen tribe leader...
 						set_character_flag = spawning_a_jurchen_invader
 						log = "China Logging:"
 						log = "Attempting to spawn a Jurchen Invader, as aftermath to event JD.50300 (end of Civil War - the rebels won (old dynasty pretender)). Character should spawn in 15 days."
@@ -2906,7 +2906,7 @@ character_event = {
 	}
 }
 
-character_event =  {
+character_event = {
 	id = JD.30503
 	
 	hide_window = yes
@@ -2919,7 +2919,7 @@ character_event =  {
 	}
 }
 
-character_event =  { # Clean up living members of the chinese dynasty
+character_event = { # Clean up living members of the chinese dynasty
 	id = JD.30504
 	
 	hide_window = yes

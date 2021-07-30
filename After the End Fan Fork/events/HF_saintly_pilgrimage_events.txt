@@ -84,7 +84,7 @@ character_event = {
 	}
 
 	#First Random Burial
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41300_1
 		name = EVTOPTA_HF_41300_2
 		name = EVTOPTA_HF_41300_3
@@ -386,7 +386,7 @@ character_event = {
 		#Cold Areas
 		if = {
 			limit = {
-			   OR = {
+			OR = {
 					event_target:fourth_burial_site = {
 						region = custom_canada
 					}
@@ -557,7 +557,7 @@ character_event = {
 	}
 
 	#Start journey
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41310
 		hidden_tooltip = {
 			random_list = {
@@ -598,7 +598,7 @@ character_event = {
 		character_event = { id = HF.41480 }
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41312
 		hidden_tooltip = {
 			random_list = {
@@ -639,7 +639,7 @@ character_event = {
 		character_event = { id = HF.41480 }
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41314
 		hidden_tooltip = {
 			random_list = {
@@ -669,7 +669,7 @@ character_event = {
 		character_event = { id = HF.41480 }
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41316
 		hidden_tooltip = {
 			random_list = {
@@ -723,7 +723,7 @@ character_event = {
 	}
 
 	#Travel together
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41320
 		hidden_tooltip = {
 			trigger_switch = {
@@ -753,7 +753,7 @@ character_event = {
 	}
 
 	#A true pilgrim travels alone
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41320
 		change_martial = 1
 		hidden_tooltip = {
@@ -804,7 +804,7 @@ character_event = {
 	}
 
 	#Pay for passage
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41340
 		prestige = -50
 		wealth = -100
@@ -819,7 +819,7 @@ character_event = {
 		}
 	}
 	#Fight your way out of it
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41340
 		prestige = 100
 		random_list = {
@@ -831,7 +831,7 @@ character_event = {
 			}
 			30 = {
 				modifier = {
-					factor = 0.5   
+					factor = 0.5 
 					combat_rating >= 20
 				}
 				modifier = {
@@ -917,39 +917,13 @@ character_event = {
 	}
 
 	#Continue on, into the cold winterlands of the north
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41350
 		trigger = {
 			check_variable = { which = "pilgrimage_person" value == 1 }
 		}
-	 	hidden_tooltip = {
-	 		random_list = {
-				50 = {
-					character_event = { id = HF.41360 days = 15 }
-				}
-	 			50 = {
-	 				character_event = { id = HF.41370 days = 15 }
-	 			}
-	 			50 = {
-	 				character_event = { id = HF.41375 days = 15 }
-	 			}
-				50 = {
-					character_event = { id = HF.41390 days = 15 }
-				}
-				1 = {
-					character_event = { id = HF.41410 days = 15 }
-				}
-	 		}
-	 	}   
-	}
-
-	option = {
-		name = EVTOPTA_HF_41350_ALT
-		trigger = {
-			check_variable = { which = "pilgrimage_person" value = 2 }
-		}
 		hidden_tooltip = {
-			random_list = {				
+			random_list = {
 				50 = {
 					character_event = { id = HF.41360 days = 15 }
 				}
@@ -966,7 +940,33 @@ character_event = {
 					character_event = { id = HF.41410 days = 15 }
 				}
 			}
-		}   
+		} 
+	}
+
+	option = {
+		name = EVTOPTA_HF_41350_ALT
+		trigger = {
+			check_variable = { which = "pilgrimage_person" value = 2 }
+		}
+		hidden_tooltip = {
+			random_list = {	
+				50 = {
+					character_event = { id = HF.41360 days = 15 }
+				}
+				50 = {
+					character_event = { id = HF.41370 days = 15 }
+				}
+				50 = {
+					character_event = { id = HF.41375 days = 15 }
+				}
+				50 = {
+					character_event = { id = HF.41390 days = 15 }
+				}
+				1 = {
+					character_event = { id = HF.41410 days = 15 }
+				}
+			}
+		} 
 	}
 }
 
@@ -995,7 +995,7 @@ character_event = {
 		character_event = { id = HF.41480 }
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41352
 		trigger = {
 			check_variable = { which = "pilgrimage_person" value == 1 }
@@ -1015,7 +1015,7 @@ character_event = {
 					character_event = { id = HF.41410 days = 15 }
 				}
 			}
-		}  
+		} 
 	}
 	option = {
 		name = EVTOPTA_HF_41352_ALT
@@ -1037,7 +1037,7 @@ character_event = {
 					character_event = { id = HF.41410 days = 15}
 				}
 			}
-		}   
+		} 
 	}
 }
 
@@ -1066,7 +1066,7 @@ character_event = {
 		character_event = { id = HF.41480 }
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41354
 		trigger = {
 			check_variable = { which = "pilgrimage_person" value == 1 }
@@ -1089,7 +1089,7 @@ character_event = {
 					character_event = { id = HF.41410 days = 15 }
 				}
 			}
-		}  
+		} 
 	}
 	option = {
 		name = EVTOPTA_HF_41354_ALT
@@ -1114,7 +1114,7 @@ character_event = {
 					character_event = { id = HF.41410 days = 15 }
 				}
 			}
-		}   
+		} 
 	}
 
 }
@@ -1133,7 +1133,7 @@ character_event = {
 		character_event = { id = HF.41480 }
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41356
 		hidden_tooltip = {
 			random_list = {
@@ -1150,7 +1150,7 @@ character_event = {
 					character_event = { id = HF.41410 days = 15 }
 				}
 			}
-		}  
+		} 
 	}
 }
 
@@ -1183,7 +1183,7 @@ character_event = {
 	}
 
 	#Maybe I should join him/her for the night ..
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41360
 		if = {
 			limit = {
@@ -1216,7 +1216,7 @@ character_event = {
 		}
 	}
 	#I will not be tainted by thy body!!
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41360
 		if = {
 			limit = {
@@ -1260,7 +1260,7 @@ character_event = {
 	}
 
 	#God calls upon me to help out!
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41365
 		prestige = 50
 		wealth = -50
@@ -1290,7 +1290,7 @@ character_event = {
 		}
 	}
 	#God calls upon me to move on!
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41365
 		prestige = -25
 		if = {
@@ -1376,7 +1376,7 @@ character_event = {
 	}
 
 	#Fight to the Death
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41370
 		prestige = 100
 		if = {
@@ -1475,7 +1475,7 @@ character_event = {
 		}
 	}
 	#Run away
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41370
 		prestige = -50
 		if = {
@@ -1557,7 +1557,7 @@ character_event = {
 	}
 
 	#I will cut my way out if I have to!!!
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41375
 		if = {
 			limit = {
@@ -1585,7 +1585,7 @@ character_event = {
 		}
 	}
 	#Calm logic will guide me out
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41375
 		prestige = 10
 		random_list = {
@@ -1661,7 +1661,7 @@ character_event = {
 	}
 
 	#Stay
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41390
 		add_character_modifier = {
 			name = good_nights_sleep
@@ -1678,7 +1678,7 @@ character_event = {
 		}
 	}
 	#Continue through the rain
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41390
 		prestige = 50
 		if = {
@@ -1738,7 +1738,7 @@ character_event = {
 	}
 
 	#Fight the devil's creature
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41400
 		if = {
 			limit = {
@@ -1833,7 +1833,7 @@ character_event = {
 		}
 	}
 	#Move on, from this infested place
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41400
 		random = {
 			chance = 40
@@ -1892,7 +1892,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41410
 		character_event = { id = HF.41411 days = 15 }
 	}
@@ -1906,7 +1906,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41411
 		if = { 
 			limit = {
@@ -1915,7 +1915,7 @@ character_event = {
 			remove_trait = zealous
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41411
 		if = {
 			limit = {
@@ -1974,7 +1974,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41412
 
 		if = { 
@@ -1996,9 +1996,9 @@ character_event = {
 					}
 				}
 			}
-		}	   
+		}	
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41412
 
 		random_list = {
@@ -2094,7 +2094,7 @@ character_event = {
 					}
 					create_bloodline = {
 						type = immortal_bloodline_01
-					}	   
+					}	
 				}
 				if = { 
 					limit = { 
@@ -2104,13 +2104,13 @@ character_event = {
 					create_bloodline = {
 						type = immortal_bloodline_01
 						inheritance = matrilineal
-					}	   
+					}	
 				}
 			}
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41413
 		add_trait = possessed 
 		character_event = { id = 38315 }
@@ -2151,7 +2151,7 @@ character_event = {
 		character_event = { id = HF.41480 }
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41419
 		hidden_tooltip = {
 			character_event = { id = HF.41420 days = 15 }
@@ -2197,7 +2197,7 @@ character_event = {
 	}
 
 	#The burial site is as impressive as I had hoped for
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41420
 		trigger = {
 			trait = zealous
@@ -2208,7 +2208,7 @@ character_event = {
 		}
 	}
 	#Not that impressive
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41420
 		trigger = {
 			trait = cynical 
@@ -2260,7 +2260,7 @@ character_event = {
 	}
 
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41424
 		hidden_tooltip = {
 			character_event = { id = HF.41425 days = 15 }
@@ -2294,7 +2294,7 @@ character_event = {
 			check_variable = { which = "pilgrimage_person" value == 4 }
 		}
 		text = EVTDESC_HF_41425_ALT
-	}	 picture = GFX_evt_icon
+	}	picture = GFX_evt_icon
 	border = GFX_event_normal_frame_religion
 	is_triggered_only = yes
 	trigger = {
@@ -2304,7 +2304,7 @@ character_event = {
 		character_event = { id = HF.41480 }
 	}
 	#The burial site is as impressive as I had hoped for
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41425
 		trigger = {
 			trait = zealous
@@ -2315,7 +2315,7 @@ character_event = {
 		}
 	}
 	#Not that impressive
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41425
 		trigger = {
 			trait = cynical 
@@ -2366,7 +2366,7 @@ character_event = {
 		character_event = { id = HF.41480 }
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41429
 		hidden_tooltip = {
 			character_event = { id = HF.41430 days = 15 }
@@ -2400,7 +2400,7 @@ character_event = {
 			check_variable = { which = "pilgrimage_person" value == 3 }
 		}
 		text = EVTDESC_HF_41430_ALT
-	}	 
+	}	
 	picture = GFX_evt_icon
 	border = GFX_event_normal_frame_religion
 	is_triggered_only = yes
@@ -2412,7 +2412,7 @@ character_event = {
 	}
 
 	#The burial site is as impressive as I had hoped for
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41430
 		trigger = {
 			trait = zealous
@@ -2423,7 +2423,7 @@ character_event = {
 		}
 	}
 	#Not that impressive
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41430
 		trigger = {
 			trait = cynical 
@@ -2463,7 +2463,7 @@ character_event = {
 		character_event = { id = HF.41480 }
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41434
 		hidden_tooltip = {
 			character_event = { id = HF.41435 days = 15 }
@@ -2482,7 +2482,7 @@ character_event = {
 	}
 	desc = {
 		text = EVTDESC_HF_41435_C
-	}  
+	} 
 	picture = GFX_evt_icon
 	border = GFX_event_normal_frame_religion
 	is_triggered_only = yes
@@ -2494,7 +2494,7 @@ character_event = {
 	}
 
 	#The burial site is as impressive as I had hoped for
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41435
 		trigger = {
 			trait = zealous
@@ -2505,7 +2505,7 @@ character_event = {
 		}
 	}
 	#Not that impressive
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_41435
 		trigger = {
 			trait = cynical 
@@ -2556,7 +2556,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_41450
 		remove_trait = on_pilgrimage
 		add_trait = pilgrim

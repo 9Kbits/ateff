@@ -14,14 +14,14 @@ narrative_event = {
 	title = "redcoats.1.name"
 	desc = redcoats.1.desc
 	major = yes
-	   
+	
 	picture = "GFX_evt_redcoat_rumors"
 	border = "GFX_event_narrative_frame_war"
-	   
+	
 	only_playable = yes
 	hide_from = yes
 	religion = catholic
-	   
+	
 	trigger = {
 		OR = {
 			AND = {
@@ -49,11 +49,11 @@ narrative_event = {
 			}
 		}
 		controls_religion = yes # Let it happen for the Pope - he's always around
-		   
+		
 		NOT = { has_global_flag = redcoat_rumors }
 		NOT = { has_global_flag = redcoat_arrival }
 	}
-	   
+	
 	mean_time_to_happen = {
 		years = 40
 		
@@ -78,7 +78,7 @@ narrative_event = {
 			year = 2825
 		}
 	}
-	   
+	
 	immediate = {
 		set_global_flag = redcoat_rumors
 		activate_title = { title = e_redcoat_dominion status = yes }
@@ -118,9 +118,9 @@ narrative_event = {
 			culture_techpoints = 1000
 			#character_event = { id = misc.3 } # Diversity
 		}
-		   
+		
 	}
-	   
+	
 	option = {
 		name = "redcoats.1.optA"
 	}
@@ -133,23 +133,23 @@ narrative_event = {
 	desc = "redcoats.2.desc"
 	major = yes
 	hide_new = yes
-	   
+	
 	picture = "GFX_evt_brit_troops"
 	border = "GFX_event_narrative_frame_war"
-	   
+	
 	only_playable = yes
-	   
+	
 	trigger = {
 		year = 2650
 		has_landed_title = e_redcoat_dominion
 		NOT = { year = 2841 }
 		NOT = { has_global_flag = redcoat_arrival }
 	}
-	   
+	
 	mean_time_to_happen = {
 		months = 12
 	}
-	   
+	
 	option = {
 		name = "OK"
 		trigger = {
@@ -255,7 +255,7 @@ narrative_event = {
 			character_event = { id = misc.3 } # Diversity
 			character_event = { id = misc.4 } # Physique
 		}
-		   
+		
 		create_character = {
 			random_traits = yes
 			dynasty = actually_culture
@@ -412,7 +412,7 @@ narrative_event = {
 			character_event = { id = misc.3 } # Diversity
 			character_event = { id = misc.4 } # Physique
 		}
-		   
+		
 		create_character = {
 			random_traits = yes
 			dynasty = actually_culture
@@ -506,11 +506,11 @@ narrative_event = {
 			character_event = { id = misc.3 } # Diversity
 			character_event = { id = misc.4 } # Physique
 		}
-		   
+		
  
 		random = {
 			chance = 50
-			   
+
 			create_character = {
 				random_traits = yes
 				dynasty = actually_culture
@@ -677,7 +677,7 @@ narrative_event = {
 				character_event = { id = misc.4 } # Physique
 			}
 		}
-		   
+		
 		# Some extra courtiers
 		create_character = {
 			random_traits = yes
@@ -870,12 +870,12 @@ character_event = {
 	id = 177503
 	title = redcoats.3.name
 	desc = "redcoats.3.desc"
-	   
+	
 	picture = "GFX_evt_brit_troops"
 	border = "GFX_event_normal_frame_war"
-	   
+	
 	only_playable = yes
-	   
+	
 	trigger = {
 		NOT = { year = 2900 }
 		has_landed_title = e_redcoat_dominion
@@ -892,11 +892,11 @@ character_event = {
 			}
 		}
 	}
-	   
+	
 	mean_time_to_happen = {
 		months = 1
 	}
-	   
+	
 	option = {
 		name = "OK"
 		set_global_flag = redcoat_reinf
@@ -904,7 +904,7 @@ character_event = {
 		trigger = {
 			has_landed_title = e_redcoat_dominion
 		}
-		   
+		
 		create_character = {
 			random_traits = yes
 			dynasty = random
@@ -986,7 +986,7 @@ character_event = {
 			character_event = { id = misc.3 } # Diversity
 			character_event = { id = misc.4 } # Physique
 		}
-		   
+		
 		random = {
 			chance = 50
 			create_character = {
@@ -1057,9 +1057,9 @@ character_event = {
 	picture = "GFX_evt_brit_laughing"
 	border = "GFX_event_normal_frame_war"
 	major = yes
-	   
+	
 	only_playable = yes
-	   
+	
 	trigger = {
 		primary_title = {
 			title = e_redcoat_dominion
@@ -1086,12 +1086,12 @@ character_event = {
 			}
 		}
 	}
-	   
+	
 	immediate = {
 		set_global_flag = redcoats_convert
 	}
-	   
-	option = {	  # ursuline
+	
+	option = {	# ursuline
 		name = "redcoats.4.optA"
 		trigger = {
 			has_landed_title = e_redcoat_dominion
@@ -1100,7 +1100,7 @@ character_event = {
 		capital_scope = {
 			religion = ursuline
 		}
-		   
+		
 		any_realm_character = {
 			limit = { religion = glorian }
 			religion = ursuline
@@ -1142,9 +1142,9 @@ character_event = {
 	picture = "GFX_evt_brit_laughing"
 	border = "GFX_event_normal_frame_religion"
 	major = yes
-	   
+	
 	only_playable = yes
-	   
+	
 	trigger = {
 		primary_title = {
 			title = e_redcoat_dominion
@@ -1171,12 +1171,12 @@ character_event = {
 			}
 		}
 	}
-	   
+	
 	immediate = {
 		set_global_flag = redcoats_convert
 	}
-	   
-	option = {	  # High Church
+	
+	option = {	# High Church
 		name = "EVTOPTA60010"
 		trigger = {
 			has_landed_title = e_redcoat_dominion
@@ -1225,12 +1225,12 @@ narrative_event = {
 	title = "redcoats.6.name"
 	desc = "redcoats.6.desc"
 	major = yes
-	   
+	
 	picture = "GFX_evt_brit_laughing"
 	border = "GFX_event_narrative_frame_war"
-	   
+	
 	is_triggered_only = yes
-	   
+	
 	trigger = {
 		NOT = { has_global_flag = redcoats_sack_DC }
 		OR = {
@@ -1250,9 +1250,9 @@ narrative_event = {
 					}
 				}
 			}
-		}			  
+		}
 	}
-	   
+	
 	major_trigger = {
 		NOT = {
 			has_landed_title = e_redcoat_dominion
@@ -1260,7 +1260,7 @@ narrative_event = {
 			top_liege = { has_landed_title = e_redcoat_dominion }
 		}
 	}
-	   
+	
 	immediate = {
 		set_global_flag = redcoats_sack_DC
 		any_playable_ruler = {
@@ -1275,7 +1275,7 @@ narrative_event = {
 			#narrative_event = { id = TOG.1 }
 		}
 	}
-	   
+	
 	option = {
 		name = "redcoats.6.optA"
 		trigger = { 
@@ -1676,15 +1676,15 @@ character_event = {
 									name = "CLAIMANT_ADVENTURE"
 									holder = ROOT
 								}
-								
+
 								set_character_flag = duchy_adventurer
-							
+	
 								spawn_unit = {
 									province = PREVPREVPREVPREV
 									home = PREVPREVPREVPREV
 									owner = THIS
 									match_character = PREV
-									match_mult = 0.5									
+									match_mult = 0.5	
 									match_min = 500
 									match_max = 2000
 									attrition = 0.25
@@ -1694,7 +1694,7 @@ character_event = {
 									home = PREVPREVPREVPREV
 									owner = THIS
 									match_character = PREV
-									match_mult = 0.5									
+									match_mult = 0.5	
 									match_min = 500
 									match_max = 2000
 									attrition = 0.25
@@ -1704,7 +1704,7 @@ character_event = {
 									home = PREVPREVPREVPREV
 									owner = THIS
 									match_character = PREV
-									match_mult = 0.5									
+									match_mult = 0.5	
 									match_min = 500
 									match_max = 2000
 									attrition = 0.25
@@ -1714,7 +1714,7 @@ character_event = {
 									home = PREVPREVPREVPREV
 									owner = THIS
 									match_character = PREV
-									match_mult = 0.5									
+									match_mult = 0.5	
 									match_min = 500
 									match_max = 2000
 									attrition = 0.25
@@ -1724,7 +1724,7 @@ character_event = {
 									home = PREVPREVPREVPREV
 									owner = THIS
 									match_character = PREV
-									match_mult = 0.5									
+									match_mult = 0.5	
 									match_min = 500
 									match_max = 2000
 									attrition = 0.25
@@ -1734,12 +1734,12 @@ character_event = {
 									home = PREVPREVPREVPREV
 									owner = THIS
 									match_character = PREV
-									match_mult = 0.5									
+									match_mult = 0.5	
 									match_min = 500
 									match_max = 2000
 									attrition = 0.25
 								}
-								
+
 								war = {
 									target = PREV
 									casus_belli = duchy_adventure
@@ -1925,10 +1925,10 @@ character_event = {
 									match_min = 500
 									match_max = 2000
 									attrition = 0.2
-								}								
+								}
 							}
 						}
-						
+
 						war = {
 							target = PREV
 							casus_belli = duchy_adventure
@@ -2127,7 +2127,7 @@ narrative_event = {
 					religion = falling_star
 				}
 			}
-			
+
 		}
 		
 		log = "60206: Renovator wins his first war!"

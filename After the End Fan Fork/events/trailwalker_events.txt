@@ -48,7 +48,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_trailwalker_1
 		piety = 25
-		custom_tooltip = { text =  TXT_sureshot_challenge_declined }
+		custom_tooltip = { text = TXT_sureshot_challenge_declined }
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -139,7 +139,7 @@ character_event = { # Fail spectacularly
 	option = {
 		name = EVTOPTA_trailwalker_3
 		clr_character_flag = sureshot_challenge_accepted
-		custom_tooltip = { text =  TXT_sureshot_super_fail }
+		custom_tooltip = { text = TXT_sureshot_super_fail }
 		if = {
 			limit = {
 				trait = proud
@@ -178,7 +178,7 @@ character_event = { # Fall just short
 	option = {
 		name = EVTOPTA_trailwalker_4
 		clr_character_flag = sureshot_challenge_accepted
-		custom_tooltip = { text =  TXT_sureshot_close_fail }
+		custom_tooltip = { text = TXT_sureshot_close_fail }
 		if = {
 			limit = {
 				trait = proud
@@ -217,7 +217,7 @@ character_event = { # Actually win somehow???
 	option = {
 		name = EVTOPTA_trailwalker_5
 		clr_character_flag = sureshot_challenge_accepted
-		custom_tooltip = { text =  TXT_sureshot_victory }
+		custom_tooltip = { text = TXT_sureshot_victory }
 		add_artifact = sureshot_bow
 		if = {
 			limit = {
@@ -244,12 +244,12 @@ character_event = { # Actually win somehow???
 }
 
 #character_event = { #Man in Black and Ring of Fire
-#    id = trailwalker.6
+#	id = trailwalker.6
 #	desc = EVTDESC_trailwalker_6
 #	border = GFX_event_normal_frame_religion
 #	picture = GFX_evt_bad_news
 #	trigger = {
-#	    has_concubinage = no
+#		has_concubinage = no
 #		has_polygamy = no
 #		any_lover = {
 #			is_abroad = no
@@ -257,12 +257,12 @@ character_event = { # Actually win somehow???
 #			is_alive = yes
 #			NOT = spouse
 #		}
-#    }
+#	}
 #	mean_time_to_happen = {
-#	    years = 50
+#		years = 50
 #	}
 #	option = {
-#	    name = EVTOPTA_trailwalker_6
+#		name = EVTOPTA_trailwalker_6
 #	}
 #}
 

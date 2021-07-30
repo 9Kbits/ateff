@@ -239,7 +239,7 @@ character_event = {
 
 		if = {
 			limit = {
-				trait = temperate				
+				trait = temperate	
 			}
 			prestige = 5
 		}
@@ -261,7 +261,7 @@ character_event = {
 			any_courtier = {
 				trait = gluttonous
 			}
-			NOT = { trait =  gluttonous}
+			NOT = { trait = gluttonous}
 		}
 		ai_chance = { 
 			factor = 10
@@ -331,7 +331,7 @@ character_event = {
 	option = {
 		name = EVTOPTD2010 # He/She must learn to enjoy life!
 		trigger = {
-			NOT = { trait =  temperate }
+			NOT = { trait = temperate }
 		}
 		ai_chance = {
 			factor = 10
@@ -409,7 +409,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				trait = greedy			
+				trait = greedy
 			}
 			prestige = 5
 		}		
@@ -472,7 +472,7 @@ character_event = {
 	option = {
 		name = EVTOPTC2020 # needs a lecture on charity!
 		trigger = {
-			NOT = { trait =  greedy }
+			NOT = { trait = greedy }
 		}		
 		ai_chance = {
 			factor = 10
@@ -586,7 +586,7 @@ character_event = {
 
 		if = {
 			limit = {
-				trait = charitable				
+				trait = charitable	
 			}
 			prestige = 5
 		}		
@@ -608,7 +608,7 @@ character_event = {
 			any_courtier = {
 				trait = greedy
 			}
-			NOT = { trait =  greedy }
+			NOT = { trait = greedy }
 		}
 		ai_chance = { 
 			factor = 10
@@ -636,7 +636,7 @@ character_event = {
 				who = FROM
 				years = 5
 			}
-			
+
 		}
 		FROM = {
 			prestige = 5
@@ -679,7 +679,7 @@ character_event = {
 	option = {
 		name = EVTOPTD2030 # Charity is for naive weaklings!
 		trigger = {
-			NOT = { trait =  charitable}
+			NOT = { trait = charitable}
 		}
 		ai_chance = {
 			factor = 10
@@ -822,7 +822,7 @@ character_event = {
 	option = {
 		name = EVTOPTC2040 # needs a lecture on diligence!
 		trigger = {
-			NOT = { trait =  slothful }
+			NOT = { trait = slothful }
 		}		
 		ai_chance = {
 			factor = 10
@@ -933,7 +933,7 @@ character_event = {
 					intrigue = 12
 				}
 				learning = 10
-				
+	
 			}
 			random_list = {
 				10 = { FROM = { change_diplomacy = 1 }}
@@ -945,7 +945,7 @@ character_event = {
 
 		if = {
 			limit = {
-				trait = diligent			
+				trait = diligent
 			}
 			prestige = 5
 		}		
@@ -967,7 +967,7 @@ character_event = {
 			any_courtier = {
 				trait = slothful
 			}
-			NOT = { trait =  slothful }
+			NOT = { trait = slothful }
 		}
 		ai_chance = { 
 			factor = 10
@@ -989,7 +989,7 @@ character_event = {
 					intrigue = 12
 				}
 				learning = 10
-				
+	
 			}
 			random_list = {
 				10 = { FROM = { change_diplomacy = 1}}
@@ -1133,7 +1133,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				trait = envious				
+				trait = envious	
 			}
 			prestige = 5
 		}
@@ -1196,7 +1196,7 @@ character_event = {
 	option = {
 		name = EVTOPTC2060 # Discourage
 		trigger = {
-			NOT = { trait =  envious }
+			NOT = { trait = envious }
 		}		
 		ai_chance = {
 			factor = 10
@@ -1331,7 +1331,7 @@ character_event = {
 			any_courtier = {
 				trait = envious
 			}
-			NOT = { trait =  envious }
+			NOT = { trait = envious }
 		}
 		ai_chance = { 
 			factor = 10
@@ -1481,7 +1481,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				trait = wroth				
+				trait = wroth	
 			}
 			prestige = 5
 		}		
@@ -1658,7 +1658,7 @@ character_event = {
 
 		if = {
 			limit = {
-				trait = patient			
+				trait = patient
 			}
 			prestige = 5
 		}
@@ -1709,7 +1709,7 @@ character_event = {
 				who = FROM
 				years = 5
 			}
-			
+
 		}
 		FROM = {
 			prestige = 5
@@ -1734,7 +1734,7 @@ character_event = {
 		FROM = {
 			random_list = {
 				90 = { }
-				10 = {	 
+				10 = {	
 					add_trait = wroth
 					hidden_tooltip = {
 						ROOT = {
@@ -1832,7 +1832,7 @@ character_event = {
 				trait = proud
 			}
 			prestige = 5
-			
+
 		}		
 		FROM = {
 			tooltip = {
@@ -2489,7 +2489,7 @@ character_event = {
 		
 		if = {
 			limit = {
-				trait = honest				
+				trait = honest	
 			}
 			prestige = 5
 		}
@@ -2552,7 +2552,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = honest
-			}			
+			}
 		}
 		FROM = {
 			remove_trait = honest
@@ -2638,7 +2638,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				trait = craven				
+				trait = craven	
 			}
 			prestige = 5
 		}
@@ -2763,7 +2763,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = craven
-			}			
+			}
 		}
 		if = {
 			limit = {
@@ -2773,7 +2773,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				trait = brave			
+				trait = brave
 			}
 			prestige = 5
 		}
@@ -2795,7 +2795,7 @@ character_event = {
 			any_courtier = {
 				trait = craven
 			}
-			NOT = { trait =  craven}
+			NOT = { trait = craven}
 		}		
 		ai_chance = { 
 			factor = 10
@@ -2823,7 +2823,7 @@ character_event = {
 				who = FROM
 				years = 5
 			}
-			
+
 		}
 		FROM = {
 			prestige = 5
@@ -2908,7 +2908,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = proud
-			}			
+			}
 		}
 		
 		if = {
@@ -2919,7 +2919,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				trait = shy			
+				trait = shy
 			}
 			prestige = 5
 		}
@@ -3109,7 +3109,7 @@ character_event = {
 
 		if = {
 			limit = {
-				trait = gregarious			
+				trait = gregarious
 			}
 			prestige = 5
 		}		
@@ -3644,7 +3644,7 @@ character_event = {
 		}
 		if = {
 			limit = {
-				trait = cruel			
+				trait = cruel
 			}
 			prestige = 5
 		}		
@@ -3851,7 +3851,7 @@ character_event = {
 		}
 		modifier = {
 			factor = 0.5
-			martial =  12
+			martial = 12
 		}
 		modifier = {
 			factor = 0.5
@@ -4242,7 +4242,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				father = { trait = cruel}
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -4268,8 +4268,8 @@ character_event = {
 			modifier = {
 				factor = 0
 				father = { trait = kind}
-			}			
-		}			
+			}
+		}
 		if = {
 			limit = {
 				OR = {
@@ -4283,7 +4283,7 @@ character_event = {
 		random_list = {
 			80 = {	FROM = { add_trait = wroth	hidden_tooltip = { ROOT = { character_event = { id = 38154}} character_event = { id = 38254}}}}
 			15 = {	FROM = { add_trait = deceitful	hidden_tooltip = { ROOT = { character_event = { id = 38155}} character_event = { id = 38255}}}}
-			 5 = {	FROM = { add_trait = stutter	hidden_tooltip = { ROOT = { character_event = { id = 38153}} character_event = { id = 38253}}}}
+			5 = {	FROM = { add_trait = stutter	hidden_tooltip = { ROOT = { character_event = { id = 38153}} character_event = { id = 38253}}}}
 		}
 	}
 	option = {
@@ -4294,11 +4294,11 @@ character_event = {
 				factor = 4
 				father = { trait = arbitrary}
 			}
-		}			
+		}
 		random_list = {
 			50 = {	FROM = { add_trait = stutter	hidden_tooltip = { ROOT = { character_event = { id = 38153}} character_event = { id = 38253}}}}
 			45 = {	FROM = { add_trait = diligent	hidden_tooltip = { ROOT = { character_event = { id = 38156}} character_event = { id = 38256}}}}
-			5 = {	FROM = { add_trait = trusting   hidden_tooltip = { ROOT = { character_event = { id = 38150}} character_event = { id = 38250} }}}
+			5 = {	FROM = { add_trait = trusting hidden_tooltip = { ROOT = { character_event = { id = 38150}} character_event = { id = 38250} }}}
 		}
 	}
 	option = {
@@ -4309,7 +4309,7 @@ character_event = {
 				factor = 4
 				father = { trait = slothful}
 			}
-		}			
+		}
 		random_list = {
 			50 = {	FROM = { add_trait = stutter	hidden_tooltip = { ROOT = { character_event = { id = 38153}} character_event = { id = 38253}}}}
 			50 = {	FROM = { add_trait = greedy	hidden_tooltip = { ROOT = { character_event = { id = 38152}} character_event = { id = 38252} }}}
@@ -4342,7 +4342,7 @@ character_event = {
 				factor = 2
 				father = { trait = arbitrary}
 			}
-		}			
+		}
 		random_list = {
 			50 = {	FROM = { add_trait = cynical	hidden_tooltip = { ROOT = { character_event = { id = 38158}} character_event = { id = 38258} }}}
 			30 = {	FROM = { add_trait = diligent	hidden_tooltip = { ROOT = { character_event = { id = 38156}} character_event = { id = 38256} }}}
@@ -4363,7 +4363,7 @@ character_event = {
 				factor = 2
 				father = { trait = kind}
 			}
-		}			
+		}
 		random_list = {
 			50 = {	FROM = { add_trait = trusting	hidden_tooltip = { ROOT = { character_event = { id = 38150}} character_event = { id = 38250} }}}
 			30 = {	FROM = { add_trait = deceitful	hidden_tooltip = { ROOT = { character_event = { id = 38155}} character_event = { id = 38255} }}}
@@ -4384,7 +4384,7 @@ character_event = {
 				factor = 2
 				father = { trait = wroth}
 			}
-		}			
+		}
 		if = {
 			limit = {
 				OR = {
@@ -4424,7 +4424,7 @@ character_event = {
 				factor = 2
 				father = { trait = slothful}
 			}
-		}			
+		}
 		random_list = {
 			50 = {	FROM = { add_trait = slothful	hidden_tooltip = { ROOT = { character_event = { id = 38151}} character_event = { id = 38251} }}}
 			30 = {	FROM = { add_trait = wroth	hidden_tooltip = { ROOT = { character_event = { id = 38154}} character_event = { id = 38254} }}}
@@ -4444,7 +4444,7 @@ character_event = {
 				factor = 2
 				father = { trait = diligent}
 			}
-		}			
+		}
 		random_list = {
 			50 = {	FROM = { add_trait = trusting	hidden_tooltip = { ROOT = { character_event = { id = 38150}} character_event = { id = 38250} }}}
 			30 = {	FROM = { add_trait = diligent	hidden_tooltip = { ROOT = { character_event = { id = 38156}} character_event = { id = 38256} }}}
@@ -4463,7 +4463,7 @@ character_event = {
 				factor = 2
 				father = { trait = cruel}
 			}
-		}			
+		}
 		random_list = {
 			50 = {	FROM = { add_trait = craven	hidden_tooltip = { ROOT = { character_event = { id = 38157}} character_event = { id = 38257} }}}
 			30 = {	FROM = { add_trait = diligent	hidden_tooltip = { ROOT = { character_event = { id = 38156}} character_event = { id = 38256} }}}
@@ -4488,7 +4488,7 @@ character_event = {
 				factor = 4
 				father = { trait = proud}
 			}
-		}			
+		}
 		if = {
 			limit = {
 				OR = {
@@ -4515,7 +4515,7 @@ character_event = {
 				factor = 4
 				father = { trait = diligent}
 			}
-		}			
+		}
 		random_list = {
 			50 = {	FROM = { add_trait = cynical	hidden_tooltip = { ROOT = { character_event = { id = 38158}} character_event = { id = 38258} }}}
 			25 = {	FROM = { add_trait = diligent	hidden_tooltip = { ROOT = { character_event = { id = 38156}} character_event = { id = 38256} }}}
@@ -4531,7 +4531,7 @@ character_event = {
 				factor = 4
 				father = { trait = wroth}
 			}
-		}			
+		}
 		random_list = {
 			50 = {	FROM = { add_trait = wroth	hidden_tooltip = { ROOT = { character_event = { id = 38154}} character_event = { id = 38254} }}}
 			30 = {	FROM = { add_trait = proud	hidden_tooltip = { ROOT = { character_event = { id = 38161}} character_event = { id = 38261} }}}
@@ -4550,7 +4550,7 @@ character_event = {
 				factor = 4
 				father = { trait = humble}
 			}
-		}			
+		}
 		random_list = {
 			70 = {	FROM = { add_trait = humble	hidden_tooltip = { ROOT = { character_event = { id = 38160}} character_event = { id = 38260 } }}}
 			20 = {	FROM = { add_trait = craven	hidden_tooltip = { ROOT = { character_event = { id = 38157}} character_event = { id = 38257} }}}
@@ -4717,7 +4717,7 @@ character_event = {
 			modifier = {
 				factor = 8
 				trait = zealous
-			}			
+			}
 		}		
 		random_list = {
 			70 = {	FROM = { add_trait = honest	hidden_tooltip = { ROOT = { character_event = { id = 38162}} character_event = { id = 38262 } }}}		
@@ -4738,7 +4738,7 @@ character_event = {
 			modifier = {
 				factor = 8
 				trait = zealous
-			}			
+			}
 		}		
 		random_list = {
 			70 = {	FROM = { add_trait = honest	hidden_tooltip = { ROOT = { character_event = { id = 38162}} character_event = { id = 38262 } }}}		
@@ -4911,7 +4911,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = zealous
-			}			
+			}
 		}
 		random_list = {
 			50 = {	FROM = { add_trait = kind	hidden_tooltip = { ROOT = { character_event = { id = 38168}} character_event = { id = 38268 } }}}
@@ -4931,7 +4931,7 @@ character_event = {
 			modifier = {
 				factor = 10
 				trait = zealous
-			}			
+			}
 		}
 		
 		random_list = {
@@ -4976,7 +4976,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = craven
-			}			
+			}
 		}		
 		random_list = {
 			95 = {	FROM = { add_trait = brave	hidden_tooltip = { ROOT = { character_event = { id = 38170}} character_event = { id = 38270 } }}}
@@ -5001,7 +5001,7 @@ character_event = {
 			modifier = {
 				factor = 2
 				trait = humble
-			}			
+			}
 		}		
 		random_list = {
 			50 = {	FROM = { add_trait = humble	hidden_tooltip = { ROOT = { character_event = { id = 38160}} character_event = { id = 38260 } }}}
@@ -5019,7 +5019,7 @@ character_event = {
 			modifier = {
 				factor = 2
 				trait = cruel
-			}			
+			}
 		}		
 		random_list = {
 			60 = {	FROM = { add_trait = slothful	hidden_tooltip = { ROOT = { character_event = { id = 38151}} character_event = { id = 38251} }}}
@@ -5047,7 +5047,7 @@ character_event = {
 			modifier = {
 				factor = 2
 				trait = humble
-			}			
+			}
 		}		
 		random_list = {
 			70 = {	FROM = { add_trait = trusting	hidden_tooltip = { ROOT = { character_event = { id = 38150}} character_event = { id = 38250} }}}
@@ -5066,7 +5066,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = cynical
-			}			
+			}
 		}		
 		random_list = {
 			90 = {	FROM = { add_trait = zealous	hidden_tooltip = { ROOT = { character_event = { id = 38169}} character_event = { id = 38269 } }}}
@@ -5084,7 +5084,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = zealous
-			}			
+			}
 		}		
 		random_list = {
 			70 = {	FROM = { add_trait = cynical	hidden_tooltip = { ROOT = { character_event = { id = 38158}} character_event = { id = 38258} }}}
@@ -5112,7 +5112,7 @@ character_event = {
 			modifier = {
 				factor = 2
 				trait = craven
-			}			
+			}
 		}		
 		random_list = {
 			60 = {	FROM = { add_trait = patient	hidden_tooltip = { ROOT = { character_event = { id = 38164}} character_event = { id = 38264} }}}
@@ -5132,7 +5132,7 @@ character_event = {
 			modifier = {
 				factor = 2
 				trait = arbitrary
-			}			
+			}
 		}		
 		random_list = {
 			50 = {	FROM = { add_trait = brave	hidden_tooltip = { ROOT = { character_event = { id = 38170}} character_event = { id = 38270 } }}}
@@ -5153,7 +5153,7 @@ character_event = {
 			modifier = {
 				factor = 8
 				trait = zealous
-			}			
+			}
 		}		
 		random_list = {
 			70 = {	FROM = { add_trait = honest	hidden_tooltip = { ROOT = { character_event = { id = 38162}} character_event = { id = 38262 } }}}		
@@ -5189,7 +5189,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = envious
-			}			
+			}
 		}		
 		random_list = {
 			80 = {	FROM = { add_trait = proud	hidden_tooltip = { ROOT = { character_event = { id = 38161}} character_event = { id = 38261} }}}
@@ -5209,11 +5209,11 @@ character_event = {
 			modifier = {
 				factor = 5
 				trait = diligent
-			}			
+			}
 			modifier = {
 				factor = 5
 				trait = ambitious
-			}			
+			}
 		}		
 		random_list = {
 			40 = {	FROM = { add_trait = ambitious	hidden_tooltip = { ROOT = { character_event = { id = 38178}} character_event = { id = 38278} }}}
@@ -5234,7 +5234,7 @@ character_event = {
 				FROM = { 
 					is_father = prev
 				}
-			}			
+			}
 		}		
 		random_list = {
 			70 = {	FROM = { add_trait = envious hidden_tooltip = { ROOT = { character_event = { id = 38171}} character_event = { id = 38271 } }}}		
@@ -5263,7 +5263,7 @@ character_event = {
 			modifier = {
 				factor = 5
 				trait = lustful
-			}			
+			}
 		}		
 		random_list = {
 			60 = {	
@@ -5317,7 +5317,7 @@ character_event = {
 			modifier = {
 				factor = 20
 				trait = chaste
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5381,7 +5381,7 @@ character_event = {
 			modifier = {
 				factor = 2
 				trait = arbitrary
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5400,7 +5400,7 @@ character_event = {
 			modifier = {
 				factor = 2
 				trait = cruel
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5446,7 +5446,7 @@ character_event = {
 			modifier = {
 				factor = 5
 				trait = zealous
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5465,7 +5465,7 @@ character_event = {
 			modifier = {
 				factor = 3
 				trait = just
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5494,7 +5494,7 @@ character_event = {
 			modifier = {
 				factor = 5
 				trait = kind
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5514,7 +5514,7 @@ character_event = {
 			modifier = {
 				factor = 5
 				trait = kind
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5543,7 +5543,7 @@ character_event = {
 			modifier = {
 				factor = 5
 				trait = arbitrary
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5564,7 +5564,7 @@ character_event = {
 			modifier = {
 				factor = 2
 				trait = proud
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5619,7 +5619,7 @@ character_event = {
 			modifier = {
 				factor = 3
 				trait = temperate
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5663,7 +5663,7 @@ character_event = {
 			modifier = {
 				factor = 5
 				trait = gluttonous
-			}			
+			}
 		}		
 		
 		random_list = {
@@ -5724,7 +5724,7 @@ character_event = {
 		name = EVTOPTA38221 #Let her do it
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 100
 				trait = arbitrary
@@ -5769,7 +5769,7 @@ character_event = {
 		name = EVTOPTB38221
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 100
 				trait = just
@@ -6113,7 +6113,7 @@ character_event = {
 		name = EVTOPTB38224 #Joke about bookworm
 		ai_chance = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 100
 				trait = cruel
@@ -6157,7 +6157,7 @@ character_event = {
 	}
 	
 	option = {
-		name =  EVTOPTC38224 #Encourage more activities with others.
+		name = EVTOPTC38224 #Encourage more activities with others.
 		FROM = {
 			random_list = {
 				50 = {
@@ -6526,7 +6526,7 @@ character_event = {
 		name = EVTOPTA38228 #Introduce him to visitors
 		ai_chance = {
 			factor = 99
-			
+
 			modifier = {
 				factor = 0.01
 				trait = shy
@@ -6563,7 +6563,7 @@ character_event = {
 		name = EVTOPTB38228 #Tell him to stop it!
 		ai_chance = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 100
 				trait = shy
@@ -6735,7 +6735,7 @@ character_event = {
 		name = EVTOPTB38229 #Make sure he does not hurt himself
 		ai_chance = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 100
 				trait = craven
@@ -6913,7 +6913,7 @@ character_event = {
 		name = EVTOPTA38230 #Teach about courtly love
 		ai_chance = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 100
 				trait = kind
@@ -6965,7 +6965,7 @@ character_event = {
 		name = EVTOPTB38230 #Lecture about virtues and sins
 		ai_chance = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 100
 				trait = zealous
@@ -7423,7 +7423,7 @@ character_event = {
 		FROM = {
 			random = {
 				chance = 60
-			
+
 				death = {
 					death_reason = death_trait
 				}
@@ -7469,7 +7469,7 @@ character_event = {
 		FROM = {
 			random = {
 				chance = 60
-			
+
 				death = {
 					death_reason = death_trait
 				}
@@ -7578,7 +7578,7 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 9
 				trait = zealous
@@ -7587,7 +7587,7 @@ character_event = {
 		FROM = {
 			random = {
 				chance = 20
-				
+	
 				remove_trait = homosexual
 				opinion = {
 					modifier = opinion_mad_at_guardian
@@ -7601,7 +7601,7 @@ character_event = {
 		name = EVTOPTB38234 #Try to beat it out of him/her
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 9
 				trait = cruel
@@ -7620,7 +7620,7 @@ character_event = {
 		FROM = {
 			random = {
 				chance = 10
-				
+	
 				remove_trait = homosexual
 				opinion = {
 					modifier = opinion_mad_at_guardian
@@ -7635,7 +7635,7 @@ character_event = {
 		FROM = {
 			random = {
 				chance = 25
-				
+	
 				add_trait = trusting
 				hidden_tooltip = {
 					ROOT = {
@@ -7664,7 +7664,7 @@ character_event = {
 		name = EVTOPTA38235 #the goal justifies the means. 
 		ai_chance= {
 			factor = 1
-			
+
 			modifier = {
 				factor = 100
 				trait = deceitful
@@ -7697,7 +7697,7 @@ character_event = {
 		name = EVTOPTB38235 #your tongue will cause you problems!
 		ai_chance= {
 			factor = 1
-			
+
 			modifier = {
 				factor = 100
 				trait = honest
@@ -7805,7 +7805,7 @@ character_event = {
 							}
 						} 
 						character_event = { 
-							id = 38277  #Notify gluttonous
+							id = 38277 #Notify gluttonous
 						} 
 					} 
 				}

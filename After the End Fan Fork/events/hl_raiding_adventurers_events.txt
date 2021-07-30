@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# Horse Lords Raiding Adventurers 		  #
-#										 #
-# ID HL.100-HL.199	  				  #
-#										 #
+#										#
+# Horse Lords Raiding Adventurers 		#
+#										#
+# ID HL.100-HL.199					#
+#										#
 ###########################################
 
 # Written by Joel Hansson
@@ -239,11 +239,11 @@ character_event = {
 						female = no
 						age = 25
 					}
-					if  = {
+					if = {
 						limit = {
 							is_seafarer = yes
 						}
-						
+
 						# Create a fleet, just to be sure
 						spawn_fleet = {
 							province = closest # closest sea zone
@@ -492,7 +492,7 @@ character_event = {
 						heavy_infantry = { 15 15 }
 					}
 				}
-				
+	
 			}
 			30 = { #420
 				modifier = {
@@ -712,7 +712,7 @@ character_event = {
 						heavy_infantry = { 15 15 }
 					}
 				}
-				
+	
 			}
 			30 = { #420
 				modifier = {
@@ -1041,7 +1041,7 @@ character_event = {
 						horse_archers = { 130 130 }
 					}
 				}
-				
+	
 			}
 			30 = { #315
 				modifier = {
@@ -1253,7 +1253,7 @@ character_event = {
 						horse_archers = { 130 130 }
 					}
 				}
-				
+	
 			}
 			30 = { #315
 				modifier = {
@@ -1531,7 +1531,7 @@ character_event = {
 					break = yes
 				}
 			}
-			
+
 			random_realm_province = {
 				ROOT = {
 					unsafe_war = {
@@ -1665,7 +1665,7 @@ character_event = {
 			capital_scope = {
 				log = "[Root.GetBestName]'s capital is in [This.GetName]"
 				save_event_target_as = last_province
-				
+	
 				holder_scope = {
 					top_liege = {
 						reverse_opinion = {
@@ -1717,7 +1717,7 @@ character_event = {
 			}
 		}
 		set_defacto_liege = THIS
-			
+
 		clan_title = {
 			set_title_adventurer = { title = THIS status = yes }
 			set_title_landless = { title = THIS status = yes }
@@ -1914,7 +1914,7 @@ character_event = {
 					break = yes
 				}
 			}
-			
+
 			random_realm_province = {
 				ROOT = {
 					war = {

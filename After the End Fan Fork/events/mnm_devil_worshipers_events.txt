@@ -1,9 +1,9 @@
 ###########################################
-#										 #
+#										#
 # M&M Satanists Society Events			#
-#										 #
-# ID MNM.7000-MNM.7999					  #
-#										 #
+#										#
+# ID MNM.7000-MNM.7999					#
+#										#
 ###########################################
 
 namespace = MNM
@@ -570,7 +570,7 @@ character_event = {
 
 		set_character_flag = willing_to_join
 		
-		hidden_effect = { character_event = { id = MNM.6998 } }  #to recruiter - via ping: make the offer?
+		hidden_effect = { character_event = { id = MNM.6998 } } #to recruiter - via ping: make the offer?
 		
 		ai_chance = {
 			factor = 50
@@ -667,7 +667,7 @@ character_event = {
 		clr_character_flag = being_recruited_by_starry_wisdom
 		clr_character_flag = being_recruited_by_the_unseelie
 		
-		hidden_effect = { character_event = { id = MNM.6998 } }  #to recruiter - via ping: recruit said no
+		hidden_effect = { character_event = { id = MNM.6998 } } #to recruiter - via ping: recruit said no
 		
 		ai_chance = {
 			factor = 50
@@ -1941,7 +1941,7 @@ character_event = {
 				clr_character_flag = event_MNM_7017
 				set_character_flag = event_MNM_7019
 				character_event = { id = MNM.7013 } 
-				
+	
 			}
 			break = yes
 		}
@@ -2191,7 +2191,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			character_event = { id = MNM.6988 }
 		}
 
@@ -2610,7 +2610,7 @@ character_event = {
 			if = {
 				limit = { event_target:satanists_recruiter = { always = yes } }
 				event_target:satanists_recruiter = { set_character_flag = recruitment_fail }
-				
+	
 				if = { limit = { has_character_flag = being_recruited_by_the_satanists }
 					random_society_member = {
 						limit = {
@@ -3352,7 +3352,7 @@ character_event = {
 	option = { 
 		name = EVTOPTA_MNM_7051
 		custom_tooltip = { text = EVTOPTA_MNM_7051_TT }
-	   	add_character_modifier = {
+		add_character_modifier = {
 			name = corrupting_magic_minor
 			years = 3
 		}
@@ -3746,7 +3746,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_add_slothful
 			}
 		}
@@ -3770,7 +3770,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_add_proud
 			}
 		}
@@ -3794,7 +3794,7 @@ character_event = {
 	}
 	desc = {
 		trigger = { 
-	   		event_target:corrupt_priest_target = { 
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_add_cruel
 			}
 		}
@@ -4069,7 +4069,7 @@ character_event = {
 	desc = {
 		trigger = {
 			event_target:corrupt_priest_target = {
-	   			AND = { 
+				AND = { 
 					has_character_flag = corrupt_priest_add_lustful
 					NOT = { has_opinion_modifier = { who = event_target:corrupt_priest_spell_caster modifier = opinion_successful_corruption } }
 				}
@@ -4182,9 +4182,9 @@ character_event = {
 	desc = {
 		trigger = {
 			event_target:corrupt_priest_target = {
-	   			AND = {
-	   				OR = {
-	   					has_character_flag = corrupt_priest_add_lustful
+				AND = {
+					OR = {
+						has_character_flag = corrupt_priest_add_lustful
 						has_character_flag = corrupt_priest_add_gluttonous
 						has_character_flag = corrupt_priest_add_greedy
 						has_character_flag = corrupt_priest_add_slothful
@@ -4194,7 +4194,7 @@ character_event = {
 						has_character_flag = corrupt_priest_add_deceitful
 						has_character_flag = corrupt_priest_add_arbitrary
 						has_character_flag = corrupt_priest_add_cruel
-	   				} 
+					} 
 					has_opinion_modifier = { who = event_target:corrupt_priest_spell_caster modifier = opinion_successful_corruption }
 				}
 			}
@@ -4373,7 +4373,7 @@ character_event = {
 	picture = GFX_evt_eavesdropping
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_remove_chaste
 			}
 		}
@@ -4381,7 +4381,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_remove_temperate
 			}
 		}
@@ -4389,7 +4389,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_remove_charitable
 			}
 		}
@@ -4397,7 +4397,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_remove_diligent
 			}
 		}
@@ -4405,7 +4405,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_remove_kind
 			}
 		}
@@ -4413,7 +4413,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_remove_patient
 			}
 		}
@@ -4421,7 +4421,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_remove_humble
 			}
 		}
@@ -4429,7 +4429,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_remove_honest
 			}
 		}
@@ -4437,7 +4437,7 @@ character_event = {
 	}
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {  
+			event_target:corrupt_priest_target = { 
 				has_character_flag = corrupt_priest_remove_just
 			}
 		}
@@ -4752,7 +4752,7 @@ character_event = {
 	picture = GFX_evt_shady_meeting
 	desc = {
 		trigger = {
-			event_target:corrupt_priest_target = {			
+			event_target:corrupt_priest_target = {
 				has_character_flag = corrupt_priest_remove_chaste
 			}
 		}
@@ -4996,7 +4996,7 @@ character_event = {
 	
 		if = {
 			limit = { has_dlc = "Reapers" }
-						
+
 			random_list = {
 				3 = { set_character_flag = dark_healing_nothing_happened }
 				7 = {
@@ -5850,7 +5850,7 @@ character_event = {
 					set_character_flag = supernatural_death_crows
 				}
 				20 = {
-					set_character_flag = supernatural_death_suicide			
+					set_character_flag = supernatural_death_suicide
 				}
 			}
 		}
@@ -6332,7 +6332,7 @@ character_event = {
 				modifier = {
 					factor = 0.1
 					has_character_flag = large_defense_against_dark_forces
-				}				
+				}	
 				random_list = {
 					10 = { give_has_bubonic_plague_effect = yes }
 					10 = { 
@@ -6714,7 +6714,7 @@ character_event = {
 					add_trait = one_eyed
 				}
 			}
-			
+
 			# Females should be able to lead armies
 			set_character_flag = special_marshal
 
@@ -6987,7 +6987,7 @@ character_event = { #demonic impregnation
 		text = EVTDESC_MNM_7507_SELF
 	}
 	desc = {
-		trigger = { NOT = {  FROM = { character = ROOT } } }
+		trigger = { NOT = { FROM = { character = ROOT } } }
 		text = EVTDESC_MNM_7507_OTHER
 	}
 
@@ -7145,7 +7145,7 @@ character_event = { #Announcement
 	
 	option = { 
 		name = EVTOPTA_MNM_7511
-		   
+		
 		clr_quest = quest_the_devil_worshipers_demonic_impregnation
 		if = {
 			limit = { FROM = { is_female = yes } }
@@ -7326,7 +7326,7 @@ character_event = {
 					character_event = { id = MNM.7028 } #demonic possession
 				}
 			}
-			
+
 			75 = { # AI bypasses missions at times
 				modifier = {
 					factor = 0
@@ -7420,7 +7420,7 @@ society_quest_event = {
 
 		random_realm_province = {
 			limit = {
-				NOT = { holder_scope =  { character = ROOT } }
+				NOT = { holder_scope = { character = ROOT } }
 				any_province_holding = {
 					holding_type = temple
 					holder_scope = { religion = ROOT }
@@ -7449,7 +7449,7 @@ society_quest_event = {
 			}
 		}
 	}
-	option  = {
+	option = {
 		name = DECLINE
 		custom_tooltip = { text = decline_quest_tooltip }
 
@@ -7484,7 +7484,7 @@ character_event = {
 	desc = EVTDESC_MNM_7111
 
 	immediate = {
-		FROM = { save_event_target_as =  dw_desecration_target}
+		FROM = { save_event_target_as = dw_desecration_target}
 		set_character_flag = desecration_in_progress
 	}
 
@@ -7520,13 +7520,13 @@ character_event = {
 			limit = {
 				is_quest_target_of = ROOT
 			}
-			save_event_target_as =  dw_desecration_target
+			save_event_target_as = dw_desecration_target
 		}
 	}
 
 
 	option = {
-		name  = EVTOPT_MNM_7112
+		name = EVTOPT_MNM_7112
 		set_character_flag = desecration_plotting
 		character_event = { id = MNM.7113 days = 7 }
 	}
@@ -8066,7 +8066,7 @@ society_quest_event = {
 				}
 				save_event_target_as = corrupt_priest_mission_target
 			}
-		}	  
+		}	
 		if = {
 			limit = { society_rank >= 3 }
 			random_character = {
@@ -8278,7 +8278,7 @@ society_quest_event = {
 				holder = ROOT
 			}
 		}
-			
+
 	}
 
 	option = {
@@ -8407,10 +8407,10 @@ character_event = {
 			minor_soul_corruption_effect = yes
 			event_target:possess_courtier_target = {
 				random = { #might kill you first year
-   					chance = 2
+ 					chance = 2
 					character_event = { id = MNM.7846 days = 180 random = 180 } 
-  				}
-  			}
+ 				}
+ 			}
 		}
 	}
 }
@@ -8597,7 +8597,7 @@ character_event = {
 				character_event = { id = MNM.20001 }
 				break = yes
 			}
-			
+
 			# Then look for someone in the same realm
 			random_society_member = {
 				limit = {
@@ -8619,7 +8619,7 @@ character_event = {
 				character_event = { id = MNM.20001 }
 				break = yes
 			}
-			
+
 			# Then look abroad...
 			random_society_member = {
 				limit = {
@@ -8734,10 +8734,10 @@ character_event = {
 	
 		random = {
 			chance = 50
-			
+
 			unprotected_sex_effect_event_target = yes
 			set_character_flag = orgy_sex
-			
+
 			# Hetero
 			if = {
 				limit = {
@@ -8753,7 +8753,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			# Homo
 			if = {
 				limit = {
@@ -8769,7 +8769,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			# Gain Lover?
 			if = {
 				limit = {
@@ -8978,7 +8978,7 @@ character_event = {
 				limit = { NOT = { is_rival = FROM } }
 				add_lover = FROM
 			}
-			
+
 			if = {
 				limit = { is_rival = FROM }
 				remove_rival = FROM
@@ -9024,7 +9024,7 @@ character_event = {
 				character_event = { id = misc.3 } # Diversity
 				character_event = { id = misc.4 } # Physique
 				set_character_flag = sex_dwarf
-				
+	
 				if = {
 					limit = {
 						ROOT = {
@@ -9255,7 +9255,7 @@ character_event = {
 				character_event = { id = MNM.20011 }
 				break = yes
 			}
-			
+
 			# Then look for someone in the same realm
 			random_society_member = {
 				limit = {
@@ -9271,7 +9271,7 @@ character_event = {
 				character_event = { id = MNM.20011 }
 				break = yes
 			}
-			
+
 			# Then look abroad...
 			random_society_member = {
 				limit = {
@@ -9537,7 +9537,7 @@ character_event = {
 							is_nomadic = yes
 						}
 					}
-					
+
 					any_province_holding = {
 						NOT = { holding_type = nomad }
 					}
@@ -9550,7 +9550,7 @@ character_event = {
 		}
 	}
 	
-	desc =  {
+	desc = {
 		trigger = {
 			has_dlc = "Reapers"
 			NOT = { has_character_flag = home_invasion_buddy_dies }
@@ -9558,14 +9558,14 @@ character_event = {
 		picture = GFX_evt_impalement
 		text = EVTDESC_MNM_20015
 	}
-	desc =  {
+	desc = {
 		trigger = {
 			NOT = { has_dlc = "Reapers" }
 			NOT = { has_character_flag = home_invasion_buddy_dies }
 		}
 		text = EVTDESC_MNM_20015
 	}
-	desc =  {
+	desc = {
 		trigger = {
 			has_dlc = "Reapers"
 			has_character_flag = home_invasion_buddy_dies
@@ -9573,7 +9573,7 @@ character_event = {
 		picture = GFX_evt_impalement
 		text = EVTDESC_MNM_20015_DEATH
 	}
-	desc =  {
+	desc = {
 		trigger = {
 			NOT = { has_dlc = "Reapers" }
 			has_character_flag = home_invasion_buddy_dies
@@ -10465,7 +10465,7 @@ character_event = {
 				character_event = { id = MNM.20031 }
 				break = yes
 			}
-			
+
 			# Then look for someone in the same realm
 			random_society_member = {
 				limit = {
@@ -10481,7 +10481,7 @@ character_event = {
 				character_event = { id = MNM.20031 }
 				break = yes
 			}
-			
+
 			# Then look abroad...
 			random_society_member = {
 				limit = {
@@ -10584,7 +10584,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		FROM = { character_event = { id = MNM.20034 days = 3  } }
+		FROM = { character_event = { id = MNM.20034 days = 3 } }
 	}
 }
 
@@ -10837,7 +10837,7 @@ narrative_event = {
 							set_character_flag = ds_possess
 						}
 					}
-					
+
 					set_character_flag = ds_disaster
 				}
 			}
@@ -11051,7 +11051,7 @@ narrative_event = {
 						remove_trait = dull
 					}
 				}
-				
+	
 				clr_character_flag = ds_better_ed
 			}
 			if = {
@@ -11211,7 +11211,7 @@ narrative_event = {
 					duration = -1
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_modifier = suspected_witch }
 				remove_character_modifier = suspected_witch
@@ -11399,7 +11399,7 @@ character_event = {
 				character_event = { id = MNM.20041 }
 				break = yes
 			}
-			
+
 			# Then look for someone in the same realm
 			random_society_member = {
 				limit = {
@@ -11417,7 +11417,7 @@ character_event = {
 				character_event = { id = MNM.20041 }
 				break = yes
 			}
-			
+
 			# Then look abroad...
 			random_society_member = {
 				limit = {
@@ -12255,7 +12255,7 @@ narrative_event = {
 	
 	immediate = {
 		if = {
-			limit =  { 
+			limit = { 
 				FROM = { has_character_flag = dw_double_cross }
 			}
 			FROM = { clr_character_flag = dw_double_cross }
@@ -12274,7 +12274,7 @@ narrative_event = {
 				ROOT = { set_character_flag = dw_double_cross }
 			}
 			if = {
-				limit =  { 
+				limit = { 
 					NOT = { has_character_flag = dw_double_cross }
 				}
 				random_courtier = {
@@ -12290,14 +12290,14 @@ narrative_event = {
 		}
 		
 		if = {
-			limit =  {
+			limit = {
 				NOT = { has_character_flag = dw_double_cross }
 			}
 			FROM = { character_event = { id = MNM.20065 } }
 		}
 		
 		if = {
-			limit =  {
+			limit = {
 				NOT = { trait = poet }
 			}
 			random = {
@@ -12343,7 +12343,7 @@ narrative_event = {
 		}
 		
 		if = {
-			limit =  {
+			limit = {
 				has_character_flag = dw_double_cross
 			}
 			event_target:dw_real_victim = { character_event = { id = MNM.20066 days = 3 } }
@@ -12590,7 +12590,7 @@ character_event = {
 					is_alive = no
 				}
 			}
-			
+
 			character_event = { id = MNM.20101 }
 			break = yes
 		}
@@ -12840,7 +12840,7 @@ character_event = {
 				factor = 2.0
 				trait = trusting
 			}
-			
+
 			set_character_flag = abduction_success
 		}
 	}
@@ -13104,8 +13104,8 @@ character_event = {
 	trigger = {
 		is_devil_worshiper_trigger = yes
 		OR = {
-   			has_character_modifier = known_satanist
-   			has_character_flag = was_ratted_out_by_fellow_member
+ 			has_character_modifier = known_satanist
+ 			has_character_flag = was_ratted_out_by_fellow_member
 		}
 	}
 	
@@ -13166,45 +13166,45 @@ character_event = {
 			10 = {
 				trigger = { has_character_flag = DW_was_attacked_by_the_slayer }
 				modifier = {
-   					factor = 1000
-  					has_character_flag = DW_was_attacked_by_the_slayer
-   				}
+ 					factor = 1000
+ 					has_character_flag = DW_was_attacked_by_the_slayer
+ 				}
 				set_character_flag = DW_was_attacked_by_the_slayer_again
 				clr_character_flag = DW_was_attacked_by_the_slayer
 			}
 			10 = {
 				trigger = { has_character_flag = DW_was_attacked_by_angry_villagers }
 				modifier = {
-   					factor = 1000
-  					has_character_flag = DW_was_attacked_by_angry_villagers
-   				}
+ 					factor = 1000
+ 					has_character_flag = DW_was_attacked_by_angry_villagers
+ 				}
 				set_character_flag = DW_was_attacked_by_angry_villagers_again
 				clr_character_flag = DW_was_attacked_by_angry_villagers
 			}
 			10 = {
 				trigger = { has_character_flag = DW_was_attacked_by_demon_hunters }
 				modifier = {
-   					factor = 1000
-  					has_character_flag = DW_was_attacked_by_demon_hunters
-   				}
+ 					factor = 1000
+ 					has_character_flag = DW_was_attacked_by_demon_hunters
+ 				}
 				set_character_flag = DW_was_attacked_by_demon_hunters_again
 				clr_character_flag = DW_was_attacked_by_demon_hunters
 			}
 			10 = {
 				trigger = { has_character_flag = DW_was_attacked_by_lone_demon_hunter }
 				modifier = {
-   					factor = 1000
-  					has_character_flag = DW_was_attacked_by_lone_demon_hunter
-   				}
+ 					factor = 1000
+ 					has_character_flag = DW_was_attacked_by_lone_demon_hunter
+ 				}
 				set_character_flag = DW_was_attacked_by_lone_demon_hunter_again
 				clr_character_flag = DW_was_attacked_by_lone_demon_hunter
 			}
 			10 = {
 				trigger = { has_character_flag = DW_was_attacked_by_righteous_knights }
 				modifier = {
-   					factor = 1000
-  					has_character_flag = DW_was_attacked_by_righteous_knights
-   				}
+ 					factor = 1000
+ 					has_character_flag = DW_was_attacked_by_righteous_knights
+ 				}
 				set_character_flag = DW_was_attacked_by_righteous_knights_again
 				clr_character_flag = DW_was_attacked_by_righteous_knights
 			}
@@ -13214,7 +13214,7 @@ character_event = {
 		hidden_effect = {
 			society = {
 				#first look for someone you like...
-  				random_society_member = {
+ 				random_society_member = {
 					limit = {
 						is_incapable = no
 						prisoner = no
@@ -13260,7 +13260,7 @@ character_event = {
 					save_event_target_as = other_member_to_blame
 					break = yes
 				}
-				
+	
 				# Then look for someone in the same realm
 				random_society_member = {
 					limit = {
@@ -13272,7 +13272,7 @@ character_event = {
 					save_event_target_as = other_member_to_blame
 					break = yes
 				}
-				
+	
 				# Then look abroad...
 				random_society_member = {
 					limit = {
@@ -13306,8 +13306,8 @@ character_event = {
 	trigger = {
 		is_devil_worshiper_trigger = yes
 		OR = {
-   			has_character_modifier = known_satanist
-   			has_character_flag = was_ratted_out_by_fellow_member
+ 			has_character_modifier = known_satanist
+ 			has_character_flag = was_ratted_out_by_fellow_member
 		}
 	}
 
@@ -13318,7 +13318,7 @@ character_event = {
 	}
 	desc = { #To set pictures...
 		trigger = {
-   			has_character_flag = DW_was_attacked_by_angry_villagers # Angry Villagers
+ 			has_character_flag = DW_was_attacked_by_angry_villagers # Angry Villagers
 			has_dlc = "Reapers"
 		}
 		text = EVTDESC_MNM_7855_B
@@ -13326,7 +13326,7 @@ character_event = {
 	}
 	desc = { #To set pictures (if NOT has Reapers)...
 		trigger = {
-   			has_character_flag = DW_was_attacked_by_angry_villagers
+ 			has_character_flag = DW_was_attacked_by_angry_villagers
 			NOT = { has_dlc = "Reapers" }
 		}
 		text = EVTDESC_MNM_7855_B
@@ -13359,7 +13359,7 @@ character_event = {
 	}
 	desc = { #To set pictures...
 		trigger = {
-   			has_character_flag = DW_was_attacked_by_angry_villagers_again # Angry Villagers II
+ 			has_character_flag = DW_was_attacked_by_angry_villagers_again # Angry Villagers II
 			has_dlc = "Reapers"
 		}
 		text = EVTDESC_MNM_7855_B_again
@@ -13367,7 +13367,7 @@ character_event = {
 	}
 	desc = { #To set pictures (if NOT has Reapers)...
 		trigger = {
-   			has_character_flag = DW_was_attacked_by_angry_villagers_again
+ 			has_character_flag = DW_was_attacked_by_angry_villagers_again
 			NOT = { has_dlc = "Reapers" }
 		}
 		text = EVTDESC_MNM_7855_B_again
@@ -13421,100 +13421,100 @@ character_event = {
 			10 = {
 				#Nothing happens
 				modifier = {
-   					factor = 0.9
-  					has_injury_trigger = yes
-   				}
-   				modifier = {
-   					factor = 0.9
-  					is_maimed_trigger = yes
-   				}
-   				modifier = {
-   					factor = 0.9
-   					has_severe_disability_trigger = yes
-   				}
-   				modifier = {
-   					factor = 0.9
-   					has_medium_disability_trigger = yes
-   				}
-   				modifier = {
-   					factor = 1.1
-   					is_smart_trigger = yes
-   				}
-   				modifier = {
-   					factor = 1.1
-   					is_strong_trigger = yes
-   				}
-   				custom_tooltip = { text = they_escape_TT }
+ 					factor = 0.9
+ 					has_injury_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					is_maimed_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					has_severe_disability_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					has_medium_disability_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+ 					is_smart_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+ 					is_strong_trigger = yes
+ 				}
+ 				custom_tooltip = { text = they_escape_TT }
 			}
 			30 = { #You are injured
  				modifier = {
-   					factor = 0.9
-  					combat_rating = 1
-   				}
+ 					factor = 0.9
+ 					combat_rating = 1
+ 				}
  				modifier = {
-   					factor = 0.9
-  					combat_rating = 2
-   				}
-   				modifier = {
-   					factor = 0.9
-  					combat_rating = 3
-   				}
-   				modifier = {
-   					factor = 0.9
-  					combat_rating = 4
-   				}
-   				modifier = {
-   					factor = 0.9
-  					combat_rating = 5
-   				}
-   				custom_tooltip = {
+ 					factor = 0.9
+ 					combat_rating = 2
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					combat_rating = 3
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					combat_rating = 4
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					combat_rating = 5
+ 				}
+ 				custom_tooltip = {
 					text = you_are_seriously_injured_TT
 					hidden_effect = { add_maimed_trait_effect = yes }
 				}
 			}
 			50 = { #You are slain in personal combat
 				modifier = {
-   					factor = 0.9
-  					combat_rating = 1
-   				}
+ 					factor = 0.9
+ 					combat_rating = 1
+ 				}
  				modifier = {
-   					factor = 0.9
-  					combat_rating = 2
-   				}
-   				modifier = {
-   					factor = 0.9
-  					combat_rating = 3
-   				}
-   				modifier = {
-   					factor = 0.9
-  					combat_rating = 4
-   				}
-   				modifier = {
-   					factor = 0.9
-  					combat_rating = 5
-   				}
-   				modifier = {
-   					factor = 0.9
-   					has_lifestyle_martial_trigger = yes
-   				}
-   				modifier = {
-   					factor = 0.9
-   					has_education_martial_trigger = yes
-   					has_top_tier_education_trait_trigger = yes
-   				}
-   				modifier = {
-   					factor = 1.1
+ 					factor = 0.9
+ 					combat_rating = 2
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					combat_rating = 3
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					combat_rating = 4
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					combat_rating = 5
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					has_lifestyle_martial_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 0.9
+ 					has_education_martial_trigger = yes
+ 					has_top_tier_education_trait_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 1.1
 					has_severe_disability_trigger = yes
-   				}
-   				modifier = {
-   					factor = 1.1
-	   				is_dumb_trigger = yes
-   				}
-   				modifier = {
-   					factor = 1.1
-   					is_weak_trigger = yes
-   				}
-   				custom_tooltip = {
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+					is_dumb_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+ 					is_weak_trigger = yes
+ 				}
+ 				custom_tooltip = {
 					text = you_are_killed_in_personal_combat_TT
 					hidden_effect = { death = { death_reason = death_duel } }
 				}
@@ -13575,43 +13575,43 @@ character_event = {
 
 		random_list = {
 			10 = {
-   				modifier = {
-   					factor = 0.9
-  					has_unattractive_trait_trigger = yes
-   				}
-   				modifier = {
-   					factor = 0.9
-   					is_unattractive_trigger = yes
-   				}
  				modifier = {
-   					factor = 1.1
-  					diplomacy = 10
-   				}
-   				modifier = {
-   					factor = 1.1
-  					diplomacy = 15
-   				}
-   				modifier = {
-   					factor = 1.1
-  					diplomacy = 17
-   				}
+ 					factor = 0.9
+ 					has_unattractive_trait_trigger = yes
+ 				}
  				modifier = {
-   					factor = 1.1
-  					diplomacy = 20
-   				}
-   				modifier = {
-   					factor = 1.1
-   					has_top_tier_education_trait_trigger = yes
-   					has_education_diplomacy_trigger = yes
-   				}
-   				modifier = {
-   					factor = 1.1
-  					has_attractive_trait_trigger = yes
-   				}
-   				modifier = {
-   					factor = 1.1
-   					is_attractive_trigger = yes
-   				}
+ 					factor = 0.9
+ 					is_unattractive_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+ 					diplomacy = 10
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+ 					diplomacy = 15
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+ 					diplomacy = 17
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+ 					diplomacy = 20
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+ 					has_top_tier_education_trait_trigger = yes
+ 					has_education_diplomacy_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+ 					has_attractive_trait_trigger = yes
+ 				}
+ 				modifier = {
+ 					factor = 1.1
+ 					is_attractive_trigger = yes
+ 				}
 				custom_tooltip = { text = they_accept_your_offer_TT }
 			}
 			20 = { #You are injured
@@ -13650,7 +13650,7 @@ character_event = {
 				trigger = {
 					OR = {
 						has_character_flag = DW_was_attacked_by_the_slayer
-						has_character_flag = DW_was_attacked_by_the_slayer_again   					
+						has_character_flag = DW_was_attacked_by_the_slayer_again 
 					}
 				}
 				custom_tooltip = {
@@ -13724,7 +13724,7 @@ character_event = {
 					text = they_drag_you_off_to_burn
 					hidden_effect = { death = { death_reason = death_execution_burning } }
 				}
-			}			
+			}
 		}
 		if = {
 			limit = {
@@ -13739,7 +13739,7 @@ character_event = {
 					text = they_saw_you_in_half
 					hidden_effect = { death = { death_reason = death_execution_sawing } }
 				}
-			}			
+			}
 		}
 		if = {
 			limit = {
@@ -13754,7 +13754,7 @@ character_event = {
 					text = they_impale_you
 					hidden_effect = { death = { death_reason = death_execution_impaling } }
 				}
-			}			
+			}
 		}
 
 		event_target:other_member_to_blame = {

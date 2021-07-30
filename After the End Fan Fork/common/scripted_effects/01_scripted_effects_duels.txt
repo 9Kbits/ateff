@@ -90,11 +90,11 @@ apply_degree_of_dishonorable_duel_effect = { #Needs to be run in the scope of th
 		#Medium dishonor
 		else_if = {
 			limit = {
-		 		OR = {
+				OR = {
 					age = 60 #target is old
 					has_medium_disability_trigger = yes #limits the character to some extent
 					character_disease_trigger = yes #Target has a *serious* disease (disregarding treatments)
-					
+
 					AND = { #Target has any disease, and has not been treated/treated well for it, while ALSO suffering from something minor...
 						OR = {
 							character_disease_trigger = yes
@@ -188,7 +188,7 @@ apply_any_applicable_harsh_penalties_effect = {
 			limit = {
 				is_female = yes #She's a woman
 				NOT = { is_member_of_roots_warrior_lodge_trigger = yes } #She is not a warrior
-									
+	
 				#FROM and ROOT do NOT have gender equality in some form
 				NAND = {
 					OR = {
@@ -227,7 +227,7 @@ apply_any_applicable_harsh_penalties_effect = {
 			limit = {
 				is_female = yes #She's a woman
 				NOT = { is_member_of_roots_warrior_lodge_trigger = yes } #She is not a warrior
-									
+	
 				#FROM and ROOT do NOT have gender equality in some form
 				NAND = {
 					OR = {
@@ -379,7 +379,7 @@ set_dueling_weapon_effect = {
 					capital_scope = {
 						region = world_caribbean
 					}
-					
+
 				}
 			}
 			10 = { set_character_flag = weapon_is_axe }
@@ -587,7 +587,7 @@ evaluate_extra_duel_result_score_effect = { # [SPECIAL CIRCUMSTANCES - OPTIONAL]
 
 	################################################################
 	# 2. SPECIAL FLAGS SET: Has a chance of opening up new text and 
-	#	 effects in the results... (for overview, see below)
+	#	effects in the results... (for overview, see below)
 
 	################################################################
 	# intrigue_options_available
@@ -886,7 +886,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				set_character_flag = clumsy_double_KO
 				event_target:combatant_2 = { set_character_flag = clumsy_double_KO }
 			}
-			
+
 			#mostly to deal with Kinslayer effect and tooltips...
 			set_character_flag = someone_died
 			event_target:combatant_2 = { set_character_flag = someone_died }
@@ -1033,7 +1033,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				}
 				value = 30
 			}
-			
+
 			set_character_flag = someone_died
 
 			event_target:combatant_2 = {
@@ -1116,7 +1116,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 						random = { #Chance no limbs are actually chopped off, adding *only* Severely Injured trait...
 							chance = 65
 							set_character_flag = severely_injured
-							
+	
 							additive_modifier = { #If you somehow ended up in here from a mock duel...
 								value = 25
 								has_character_flag = mock_duel
@@ -1144,7 +1144,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -1164,7 +1164,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.501 days = 7}
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_flag = mock_duel } #Room for future variation :)
 				character_event = { id = HFP.10105 } #"I wounded someone!" event
@@ -1239,7 +1239,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					random = { #Chance no limbs are actually chopped off, adding *only* Severely Injured trait...
 						chance = 65
 						set_character_flag = severely_injured
-						
+
 						additive_modifier = { #If you somehow ended up in here from a mock duel...
 							value = 25
 							has_character_flag = mock_duel
@@ -1266,7 +1266,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -1286,7 +1286,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.502 days = 7}
 				}
 			}
-			
+
 			event_target:combatant_2 = { character_event = { id = HFP.10105 } } #"I wounded someone" event
 		}
 		
@@ -1320,7 +1320,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				duel_result_score_the_best_trigger = yes #Score: you did the best
 				value = 10
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -1340,7 +1340,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.503 days = 7}
 				}
 			}
-			
+
 			if = {
 				limit = {
 					has_character_flag = is_legendary_duel #(special edition events)
@@ -1384,7 +1384,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				duel_result_score_the_worst_trigger = yes #Score: you did the worst
 				value = 10
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -1404,7 +1404,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.504 days = 7}
 				}
 			}
-			
+
 			event_target:combatant_2 = {
 				if = { #If this was a Claim Duel (tribals only)...
 					limit = {
@@ -1414,7 +1414,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				}
 				character_event = { id = HFP.10107 days = 1 } #"They ran away - I won" event
 			}
-			
+
 			character_event = { id = HFP.10108 } #"I ran away - I lost!" event
 		}
 
@@ -1460,11 +1460,11 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 						has_character_flag = mock_duel
 					}
 					set_character_flag = actually_injured
-					
+
 					random = { #Chance no limbs are actually chopped off, adding *only* Severely Injured trait...
 						chance = 65
 						set_character_flag = severely_injured
-						
+
 						additive_modifier = { #If you somehow ended up in here from a mock duel...
 							value = 25
 							has_character_flag = mock_duel
@@ -1499,7 +1499,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 						random = { #Chance no limbs are actually chopped off, adding *only* Severely Injured trait...
 							chance = 65
 							set_character_flag = severely_injured
-							
+	
 							additive_modifier = { #If you somehow ended up in here from a mock duel...
 								value = 25
 								has_character_flag = mock_duel
@@ -1515,7 +1515,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -1535,7 +1535,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.505 days = 7}
 				}
 			}
-			
+
 			character_event = { id = HFP.10109 } #"Both wounded - I won!" event
 		}
 		
@@ -1585,12 +1585,12 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					}
 					set_character_flag = actually_injured
 					event_target:combatant_2 = { set_character_flag = actually_injured }
-					
+
 					random = { #Chance no limbs are actually chopped off, adding *only* Severely Injured trait...
 						chance = 65
 						set_character_flag = severely_injured
 						event_target:combatant_2 = { set_character_flag = severely_injured }
-						
+
 						additive_modifier = { #If you somehow ended up in here from a mock duel...
 							value = 25
 							has_character_flag = mock_duel
@@ -1609,7 +1609,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -1629,7 +1629,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.506 days = 7}
 				}
 			}
-			
+
 			event_target:combatant_2 = { character_event = { id = HFP.10109 days = 1 } } #"Both wounded - I won!" event
 		}
 
@@ -1668,7 +1668,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				event_target:combatant_2 = { is_the_worst_duelist_trigger = yes } #Their Skill: the worst
 				value = 40
 			}
-			
+
 			event_target:combatant_2 = {
 				character_event = { id = HFP.11045 } #"I might die - do I choose to live as a prisoner? For the enemy_commander...
 			}
@@ -1739,8 +1739,8 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				}
 				value = 10
 			}
-			
-			
+
+
 			set_character_flag = someone_died
 			set_character_flag = actually_injured
 			set_character_flag = injury_kills
@@ -1766,7 +1766,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				is_member_of_any_warrior_lodge_trigger = yes
 				has_character_flag = is_legendary_duel
 				has_dlc = "Holy Fury"
-				
+	
 				NOR = {
 					has_character_flag = claim_duel@event_target:combatant_2
 					has_character_flag = mock_duel
@@ -1825,7 +1825,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				}
 				value = 10
 			}
-			
+
 
 			event_target:combatant_2 = {
 				set_character_flag = someone_died
@@ -1852,7 +1852,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				is_member_of_any_warrior_lodge_trigger = yes
 				has_character_flag = is_legendary_duel
 				has_dlc = "Holy Fury"
-				
+	
 				NOR = {
 					has_character_flag = WL_desc_X
 					has_character_flag = WL_desc_Y
@@ -1894,7 +1894,7 @@ send_duel_result_event_effect = { # Runs via the attacker/combatant_1
 				set_character_flag = clumsy_double_KO
 				event_target:combatant_2 = { set_character_flag = clumsy_double_KO }
 			}
-			
+
 			#mostly to deal with Kinslayer effect and tooltips...
 			set_character_flag = someone_died
 			event_target:combatant_2 = { set_character_flag = someone_died }
@@ -2268,7 +2268,7 @@ handle_claim_duel_result_effect = {
 							}
 						}
 					}
-					
+
 				}
 
 				if = { #If defender happens to have claims of their own, *they* take titles....
@@ -2815,7 +2815,7 @@ clr_duel_missions_effect = {
 					}
 					if = { #this missions gives more reward for deadly outcomes...
 						limit = { has_character_flag = someone_died }
-						add_society_currency_major_effect = yes	 
+						add_society_currency_major_effect = yes	
 					}
 					else = {
 						add_society_currency_medium_effect = yes
@@ -2865,11 +2865,11 @@ clr_duel_missions_effect = {
 					}
 					if = { #this missions gives more reward for deadly outcomes...
 						limit = { has_character_flag = someone_died }
-						add_society_currency_major_effect = yes	 
+						add_society_currency_major_effect = yes	
 					}
 					else = {
 						add_society_currency_medium_effect = yes
-					}				
+					}	
 				}
 				else = {
 					detract_society_currency_minor_effect = yes
@@ -3158,7 +3158,7 @@ increase_cowardly_status_effect = { # run in combatant_2/defender scope, with FR
 		hidden_effect = {
 			if = {
 				limit = { trait = craven }
-		 		spread_cowardice_trait_effect = yes #Send event to random subject
+				spread_cowardice_trait_effect = yes #Send event to random subject
 			}
 		}
 	}
@@ -3170,7 +3170,7 @@ increase_cowardly_status_effect = { # run in combatant_2/defender scope, with FR
 			}
 		}
 		hidden_effect = {
-		 	spread_cowardice_trait_effect = yes #Send event to random subject
+			spread_cowardice_trait_effect = yes #Send event to random subject
 		}
 	}
 	if = {
@@ -3181,7 +3181,7 @@ increase_cowardly_status_effect = { # run in combatant_2/defender scope, with FR
 			}
 		}
 		hidden_effect = {
-		 	spread_cowardice_trait_effect = yes #Send event to random subject
+			spread_cowardice_trait_effect = yes #Send event to random subject
 		}
 	}
 	else_if = {
@@ -3193,7 +3193,7 @@ increase_cowardly_status_effect = { # run in combatant_2/defender scope, with FR
 		}
 		give_nickname = nick_the_cowardly
 		hidden_effect = {
-		 	spread_cowardice_trait_effect = yes #Send event to random subject
+			spread_cowardice_trait_effect = yes #Send event to random subject
 		}
 	}
 }
@@ -3655,7 +3655,7 @@ duel_enemy_commander_effect = {
 				set_character_flag = add_duel_xp
 				set_character_flag = is_battlefield_duel
 				set_character_flag = already_taking_a_duel #To make sure an AI isn't going through a ton of duels at once...
-				
+	
 				set_dueling_weapon_effect = yes
 				reset_duel_timers_effect = yes
 				character_event = { id = HFP.10100 } #Actual Duel evaluation and result...
@@ -3676,7 +3676,7 @@ duel_enemy_commander_effect = {
 			#Chooses a weapon for mainly loc purposes (but has a tiny effect on outcomes, too)...
 			set_dueling_weapon_effect = yes #You get a weapon!
 			event_target:combatant_2 = { set_dueling_weapon_effect = yes } #and YOU get a weapon!
-			
+
 			#Chooses a body part for injury (if it occurs), also for loc purposes (effect handles both characters)
 			set_potential_injury_flag_effect = yes
 

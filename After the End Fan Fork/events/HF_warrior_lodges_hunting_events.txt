@@ -491,13 +491,13 @@ character_event = {
 			} 
 			if = { 
 				limit = { event_target:loyal_hunting_partner = { is_alive = yes } } 
-				 event_target:loyal_hunting_partner = { 
+				event_target:loyal_hunting_partner = { 
 					clr_character_flag = do_not_disturb 
 				}
 			}
 			if = { 
 				limit = { event_target:smart_hunting_partner = { is_alive = yes } } 
-				 event_target:smart_hunting_partner = { 
+				event_target:smart_hunting_partner = { 
 					clr_character_flag = do_not_disturb 
 				}
 			}
@@ -516,13 +516,13 @@ character_event = {
 			} 
 			if = { 
 				limit = { event_target:loyal_hunting_partner = { is_alive = yes } } 
-				 event_target:loyal_hunting_partner = { 
+				event_target:loyal_hunting_partner = { 
 					clr_character_flag = do_not_disturb 
 				}
 			}
 			if = { 
 				limit = { event_target:strong_hunting_partner = { is_alive = yes } } 
-				 event_target:strong_hunting_partner = { 
+				event_target:strong_hunting_partner = { 
 					clr_character_flag = do_not_disturb 
 				}
 			}
@@ -541,13 +541,13 @@ character_event = {
 			} 
 			if = { 
 				limit = { event_target:smart_hunting_partner = { is_alive = yes } } 
-				 event_target:smart_hunting_partner = { 
+				event_target:smart_hunting_partner = { 
 					clr_character_flag = do_not_disturb 
 				}
 			}
 			if = { 
 				limit = { event_target:strong_hunting_partner = { is_alive = yes } } 
-				 event_target:strong_hunting_partner = { 
+				event_target:strong_hunting_partner = { 
 					clr_character_flag = do_not_disturb 
 				}
 			}
@@ -1145,7 +1145,7 @@ character_event = {
 		name = EVTOPTBHF25603
 		trigger = { event_target:scoped_WL_co_hunter = { is_alive = yes } }
 		custom_tooltip = { text = TT_EVTOPTBHF25603 }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			random_list = {
 				70 = { #Co-hunter helps you.
 					modifier = { 
@@ -1245,16 +1245,16 @@ character_event = {
 	option = { 
 		name = EVTOPTCHF25603
 		random_list = { 
-			70 = {  
+			70 = { 
 				add_character_modifier = { name = badly_bruised duration = 60 } 
 				hidden_tooltip = { change_variable = { which = wl_ritual_hunting value = -3 } }
 			}
-			25 = {  
+			25 = { 
 				trigger = { NOT = { trait = wounded } }
 				add_trait = wounded
 				hidden_tooltip = { change_variable = { which = wl_ritual_hunting value = -6 } }
 			}
-			5 = {  
+			5 = { 
 				if = { 
 					limit = { has_dlc = "Reapers" } 
 					add_trait = mangled
@@ -1272,7 +1272,7 @@ character_event = {
 		}
 		ai_chance = { factor = 20 }
 	}
-	after = {  
+	after = { 
 		hidden_tooltip = { character_event = { id = HF.25616 days = 20 random = 15 } } #Find prey.
 	}
 }
@@ -1392,7 +1392,7 @@ character_event = {
 	}
 	option = { #Default.
 		name = EVTOPTCHF25604
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { owes_favor_to = event_target:scoped_WL_co_hunter } 
 			} 
@@ -1400,7 +1400,7 @@ character_event = {
 				add_favor = ROOT
 			}
 		}
-		opinion = {  
+		opinion = { 
 			who = event_target:scoped_WL_co_hunter
 			modifier = opinion_saved_me
 			years = 10
@@ -1491,7 +1491,7 @@ character_event = {
 	}
 	option = { #Default.
 		name = EVTOPTBHF25605
-		opinion = {  
+		opinion = { 
 			who = event_target:scoped_WL_co_hunter
 			modifier = left_me_to_die
 		} 
@@ -1504,7 +1504,7 @@ character_event = {
 		name = EVTOPTCHF25605
 		trigger = { trait = envious	NOT = { trait = paranoid } }
 		tooltip_info = envious 
-		event_target:scoped_WL_co_hunter = {  
+		event_target:scoped_WL_co_hunter = { 
 			death = { death_reason = death_accident }
 		} 
 		hidden_tooltip = { 
@@ -1516,7 +1516,7 @@ character_event = {
 		name = EVTOPTDHF25605
 		trigger = { trait = paranoid }
 		tooltip_info = paranoid 
-		event_target:scoped_WL_co_hunter = {  
+		event_target:scoped_WL_co_hunter = { 
 			death = { death_reason = death_accident }
 		} 
 		hidden_tooltip = { 
@@ -1528,7 +1528,7 @@ character_event = {
 		name = EVTOPTEHF25605
 		trigger = { trait = kind }
 		tooltip_info = kind 
-		reverse_opinion = {  
+		reverse_opinion = { 
 			who = event_target:scoped_WL_co_hunter
 			modifier = grace_to_forgive
 			years = 5
@@ -1613,7 +1613,7 @@ character_event = {
 		name = EVTOPTBHF25606
 		trigger = { event_target:scoped_WL_co_hunter = { is_alive = yes } }
 		custom_tooltip = { text = TT_EVTOPTBHF25606 }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			random_list = {
 				70 = { #Co-hunter saved.
 					modifier = { 
@@ -1664,16 +1664,16 @@ character_event = {
 	option = { 
 		name = EVTOPTCHF25606
 		random_list = { 
-			70 = {  
+			70 = { 
 				add_character_modifier = { name = badly_bruised duration = 60 } 
 				hidden_tooltip = { change_variable = { which = wl_ritual_hunting value = -2 } }
 			}
-			25 = {  
+			25 = { 
 				trigger = { NOT = { trait = wounded } }
 				add_trait = wounded
 				hidden_tooltip = { change_variable = { which = wl_ritual_hunting value = -3 } }
 			}
-			5 = {  
+			5 = { 
 				if = { 
 					limit = { has_dlc = "Reapers" NOR = { trait = mangled trait = maimed } } 
 					add_trait = mangled
@@ -1691,7 +1691,7 @@ character_event = {
 		}
 		ai_chance = { factor = 20 }
 	}
-	after = {  
+	after = { 
 		hidden_tooltip = { character_event = { id = HF.25616 days = 20 random = 15 } } #Find prey.
 	}
 }
@@ -1818,7 +1818,7 @@ character_event = {
 			limit = { NOR = { owes_favor_to = event_target:scoped_WL_co_hunter event_target:scoped_WL_co_hunter = { owes_favor_to = ROOT } } }
 			add_favor = event_target:scoped_WL_co_hunter
 		}
-		reverse_opinion = {  
+		reverse_opinion = { 
 			who = event_target:scoped_WL_co_hunter
 			modifier = opinion_saved_me
 			years = 10
@@ -2149,7 +2149,7 @@ character_event = {
 		}
 		ai_chance = { factor = 50 }
 	}
-	after = {  
+	after = { 
 		hidden_tooltip = { character_event = { id = HF.25616 days = 20 random = 15 } } #Find prey.
 	}
 }
@@ -2391,7 +2391,7 @@ character_event = {
 		}
 		ai_chance = { factor = 50 }
 	}
-	after = {  
+	after = { 
 		hidden_tooltip = { character_event = { id = HF.25616 days = 20 random = 15 } } #Find prey.
 	}
 }
@@ -2650,7 +2650,7 @@ character_event = {
 		}
 		ai_chance = { factor = 50 }
 	}
-	after = {  
+	after = { 
 		hidden_tooltip = { character_event = { id = HF.25616 days = 20 random = 15 } } #Find prey.
 	}
 }
@@ -3153,7 +3153,7 @@ character_event = {
 		}
 		ai_chance = { factor = 50 }
 	}
-	after = {  
+	after = { 
 		hidden_tooltip = { character_event = { id = HF.25616 days = 20 random = 15 } } #Find prey.
 	}
 }
@@ -3395,7 +3395,7 @@ character_event = {
 		}
 		ai_chance = { factor = 50 }
 	}
-	after = {  
+	after = { 
 		hidden_tooltip = { character_event = { id = HF.25616 days = 20 random = 15 } } #Find prey.
 	}
 }
@@ -3508,7 +3508,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = wl_ritual_hunting value = 2 } }
 		ai_chance = { factor = 50 }
 	}
-	after = {  
+	after = { 
 		hidden_tooltip = { character_event = { id = HF.25616 days = 20 random = 15 } } #Find prey.
 	}
 }
@@ -3584,7 +3584,7 @@ character_event = {
 
 	option = { #
 		name = EVTOPTZHF25615
-		trigger = {  has_character_modifier = lycanthropy }
+		trigger = { has_character_modifier = lycanthropy }
 		piety = 100
 		event_target:scoped_WL_co_hunter = { 
 			death = { death_reason = death_accident_generic_beast }
@@ -3830,7 +3830,7 @@ character_event = {
 character_event = {
 	id = HF.25617
 	title = EVTTITLEHF25600
-	desc  = EVTDESCAHF25617
+	desc = EVTDESCAHF25617
 	picture = { 
 		trigger = { 
 			OR = { 
@@ -3992,8 +3992,8 @@ character_event = {
 			#Overcome beast.
 			#Wounded, beast escapes.
 		add_blood_splatter_effect = yes
-		random_list = {  
-			30 = {  
+		random_list = { 
+			30 = { 
 				modifier = {
 					factor = 1.5
 					trait = strong
@@ -4093,7 +4093,7 @@ character_event = {
 				custom_tooltip = { text = TT_HF25618_BEAST_KILLED }
 				hidden_tooltip = { character_event = { id = HF.25620 } }
 			}
-			70 = {  
+			70 = { 
 				custom_tooltip = { text = TT_HF25618_BEAST_WOUNDS_ESCAPES }
 				hidden_tooltip = { character_event = { id = HF.25622 } }
 			}
@@ -4107,8 +4107,8 @@ character_event = {
 			#Wounded, beast escapes.
 			#Killed, beast escapes.
 		add_blood_splatter_effect = yes
-		random_list = {  
-			10 = {  
+		random_list = { 
+			10 = { 
 				modifier = {
 					factor = 1.5
 					trait = strong
@@ -4208,11 +4208,11 @@ character_event = {
 				custom_tooltip = { text = TT_HF25618_BEAST_KILLED }
 				hidden_tooltip = { character_event = { id = HF.25620 } }
 			}
-			60 = {  
+			60 = { 
 				custom_tooltip = { text = TT_HF25618_BEAST_WOUNDS_ESCAPES }
 				hidden_tooltip = { character_event = { id = HF.25622 } }
 			}
-			30 = {  
+			30 = { 
 				custom_tooltip = { text = TT_HF25618_BEAST_KILLS }
 				hidden_tooltip = { character_event = { id = HF.25623 } }
 			}
@@ -4230,8 +4230,8 @@ character_event = {
 		tiered_piety_negative_effect = yes
 			#Wounded, beast escapes.
 			#Killed, beast escapes.
-		random_list = {  
-			85 = {  
+		random_list = { 
+			85 = { 
 				modifier = {
 					factor = 1.5
 					trait = strong
@@ -4331,7 +4331,7 @@ character_event = {
 				custom_tooltip = { text = TT_HF25618_BEAST_WOUNDS_ESCAPES }
 				hidden_tooltip = { character_event = { id = HF.25622 } }
 			}
-			15 = {  
+			15 = { 
 				custom_tooltip = { text = TT_HF25618_BEAST_KILLS }
 				hidden_tooltip = { character_event = { id = HF.25623 } }
 			}
@@ -4351,8 +4351,8 @@ character_event = {
 		}
 			#Escape, beast eats co-hunter.
 			#Wounded, beast eats co-hunter.
-		random_list = {  
-			65 = {  
+		random_list = { 
+			65 = { 
 				modifier = {
 					factor = 1.5
 					trait = strong
@@ -4452,7 +4452,7 @@ character_event = {
 				custom_tooltip = { text = TT_HF25618_BEAST_EATS_COHUNTER }
 				hidden_tooltip = { character_event = { id = HF.25624 } }
 			}
-			35 = {  
+			35 = { 
 				custom_tooltip = { text = TT_HF25618_BEAST_WOUNDS_EATS_COHUNTER }
 				hidden_tooltip = { character_event = { id = HF.25625 } }
 			}
@@ -4472,8 +4472,8 @@ character_event = {
 		}
 			#Escape, beast eats co-hunter.
 			#Wounded, beast eats co-hunter.
-		random_list = {  
-			65 = {  
+		random_list = { 
+			65 = { 
 				modifier = {
 					factor = 1.5
 					trait = strong
@@ -4573,7 +4573,7 @@ character_event = {
 				custom_tooltip = { text = TT_HF25618_BEAST_EATS_COHUNTER }
 				hidden_tooltip = { character_event = { id = HF.25624 } }
 			}
-			35 = {  
+			35 = { 
 				custom_tooltip = { text = TT_HF25618_BEAST_WOUNDS_EATS_COHUNTER }
 				hidden_tooltip = { character_event = { id = HF.25625 } }
 			}
@@ -4696,8 +4696,8 @@ character_event = {
 		tiered_piety_reward_effect = yes
 			#Overcome beast.
 			#Wounded, beast escapes.
-		random_list = {  
-			50 = {  
+		random_list = { 
+			50 = { 
 				modifier = {
 					factor = 1.5
 					trait = strong
@@ -4797,7 +4797,7 @@ character_event = {
 				custom_tooltip = { text = TT_HF25618_BEAST_KILLED }
 				hidden_tooltip = { character_event = { id = HF.25620 } }
 			}
-			50 = {  
+			50 = { 
 				custom_tooltip = { text = TT_HF25618_BEAST_WOUNDS_ESCAPES }
 				hidden_tooltip = { character_event = { id = HF.25622 } }
 			}
@@ -4811,8 +4811,8 @@ character_event = {
 			#Overcome beast.
 			#Wounded, beast killed.
 			#Killed, beast escapes.
-		random_list = {  
-			30 = {  
+		random_list = { 
+			30 = { 
 				modifier = {
 					factor = 1.5
 					trait = strong
@@ -4912,11 +4912,11 @@ character_event = {
 				custom_tooltip = { text = TT_HF25618_BEAST_KILLED }
 				hidden_tooltip = { character_event = { id = HF.25620 } }
 			}
-			40 = {  
+			40 = { 
 				custom_tooltip = { text = TT_HF25618_BEAST_WOUNDS_KILLED }
 				hidden_tooltip = { character_event = { id = HF.25621 } }
 			}
-			10 = {  
+			10 = { 
 				custom_tooltip = { text = TT_HF25618_BEAST_WOUNDS_ESCAPES }
 				hidden_tooltip = { character_event = { id = HF.25622 } }
 			}
@@ -5937,7 +5937,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF25626
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = finnish_bear_burning
 			years = 2
 		}
@@ -6016,7 +6016,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF25630
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = pet_hunting_eagle
 			duration = -1
 		}

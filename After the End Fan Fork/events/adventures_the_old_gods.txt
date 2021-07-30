@@ -197,7 +197,7 @@ character_event = {
 					holder_scope = { tier = PREV }
 				}
 			}
-			
+
 			holder_scope = {
 				reverse_opinion = {
 					who = ROOT
@@ -219,7 +219,7 @@ character_event = {
 					days = 730
 				}
 			}
-			
+
 			if = {
 				limit = {
 					holder_scope = {
@@ -361,7 +361,7 @@ character_event = {
 						name = "CLAIMANT_ADVENTURE"
 						holder = ROOT
 					}
-					
+
 					random_claim = {
 						limit = {
 							has_holder = yes
@@ -718,9 +718,9 @@ character_event = {
 					holder_scope = { tier = PREV }
 				}
 			}
-			
+
 #			log = "TOG.1202: [Root.GetBestName] starts claim adventure for [This.GetName]"
-			
+
 			holder_scope = {
 				reverse_unsafe_war = {
 					target = ROOT
@@ -1017,7 +1017,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			random_realm_province = {
 				limit = {
 					OR = {
@@ -1044,7 +1044,7 @@ character_event = {
 						region = world_northeast
 					}
 				}
-				
+	
 				ROOT = {
 					opinion = {
 						who = PREVPREV
@@ -1229,7 +1229,7 @@ character_event = {
 								region = world_northeast
 							}
 						}
-						
+
 						ROOT = {
 							set_defacto_liege = ROOT
 							create_title = {
@@ -1241,9 +1241,9 @@ character_event = {
 								name = "CLAIMANT_ADVENTURE"
 								holder = ROOT
 							}
-							
+	
 							set_character_flag = duchy_adventurer
-						
+
 							spawn_unit = {
 								province = PREVPREVPREV
 								home = PREVPREVPREV
@@ -1317,12 +1317,12 @@ character_event = {
 			character_event = { id = misc.4 } # Physique 
 		} 
 		
-		if  = {
+		if = {
 			limit = {
 				NOT = { culture_group = plains }
 				NOT = { culture = metis }
 			}
-			
+
 			# Create a fleet, just to be sure
 			spawn_fleet = {
 				province = closest # closest sea zone

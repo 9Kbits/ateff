@@ -19,7 +19,7 @@ decisions = {
 		
 		effect = {
 			hidden_tooltip = {
-				narrative_event = { id = jewish.1 }				
+				narrative_event = { id = jewish.1 }	
 			}
 			piety = -250
 			add_character_modifier = { name = jewish_outrage years = 10 }
@@ -38,7 +38,7 @@ decisions = {
 		ai_target_filter = self
 		ai_check_interval = 24
 		
-		potential = {			
+		potential = {
 			is_playable = yes
 			is_adult = yes
 			religion_group = jewish_group
@@ -79,7 +79,7 @@ decisions = {
 			set_character_flag = talmud_studytimer
 			wealth = -50
 			hidden_tooltip = {
-				narrative_event = { id = jewish.150 }				
+				narrative_event = { id = jewish.150 }	
 			}
 		}
 		revoke_allowed = {
@@ -158,7 +158,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -183,7 +183,7 @@ decisions = {
 	}
 }
 
-targeted_decisions = {						
+targeted_decisions = {
 	bar_mitzvah = {
 		only_playable = yes
 		is_high_prio = yes
@@ -215,7 +215,7 @@ targeted_decisions = {
 					}
 					is_female = yes
 				}
-				
+	
 			}
 			is_child_of = FROM
 		}
@@ -256,7 +256,7 @@ targeted_decisions = {
 		
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.1
 				always = yes

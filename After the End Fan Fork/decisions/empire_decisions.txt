@@ -468,11 +468,11 @@ decisions = {
 				religion = nestorian
 			}
 			is_heretic = no
-			
+
 			is_title_active = d_knights_of_columbus
-			
+
 			has_landed_title = e_nys
-			
+
 			d_knights_of_columbus = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
@@ -524,11 +524,11 @@ decisions = {
 			is_alternate_start = no
 			religion_group = jewish_group
 			is_heretic = no
-			
+
 			is_title_active = d_shomrim
-			
+
 			has_landed_title = e_nys
-			
+
 			d_shomrim = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
@@ -721,15 +721,15 @@ decisions = {
 		
 		potential = {
 			is_alternate_start = no
-			
+
 			religion = anabaptist
-			
+
 			is_heretic = no
-			
+
 			is_title_active = d_lebanon_brethren
-			
+
 			has_landed_title = k_keystone
-			
+
 			d_lebanon_brethren = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
@@ -778,7 +778,7 @@ decisions = {
 		
 		potential = {
 			is_alternate_start = no
-			
+
 			NOT = {
 				has_game_rule = {
 					name = empire_decisions
@@ -834,7 +834,7 @@ decisions = {
 				new_bloodline = {
 					set_description = "bloodline_desc_grand_louisiana"
 				}	
-				sound_effect = bloodline_added			
+				sound_effect = bloodline_added
 			}
 			else_if = { #New Imperial Bloodline. (female)
 				limit = { 
@@ -847,7 +847,7 @@ decisions = {
 				new_bloodline = {
 					set_description = "bloodline_desc_grand_louisiana"
 				}	
-				sound_effect = bloodline_added			
+				sound_effect = bloodline_added
 			}
 			k_louisiana = {
 				de_jure_liege = e_grand_louisiana
@@ -903,7 +903,7 @@ decisions = {
 		
 		potential = {
 			is_alternate_start = no
-			
+
 			has_landed_title = e_mexico
 			is_title_active = d_dorados
 			d_dorados = {
@@ -1000,13 +1000,13 @@ decisions = {
 			completely_controls = d_los_angeles
 			completely_controls = d_berdoo
 			completely_controls = d_salton
-			completely_controls = d_los_padres			
+			completely_controls = d_los_padres
 			completely_controls = d_sacramento
 			completely_controls = d_goldengate
 			completely_controls = d_east_bay
 			completely_controls = d_salinas
 			completely_controls = d_wineland
-			
+
 		}
 		effect = {
 			set_global_flag = new_california_formed
@@ -1053,8 +1053,8 @@ decisions = {
 							de_jure_liege = e_new_california
 						}
 					}
-				}				
-				narrative_event = { id = ruin.3 }				
+				}	
+				narrative_event = { id = ruin.3 }	
 			}
 			any_demesne_title = {
 				limit = {
@@ -1110,7 +1110,7 @@ decisions = {
 			completely_controls = d_los_angeles
 			completely_controls = d_berdoo
 			completely_controls = d_salton
-			completely_controls = d_los_padres			
+			completely_controls = d_los_padres
 			completely_controls = d_sacramento
 			completely_controls = d_goldengate
 			completely_controls = d_east_bay
@@ -1156,8 +1156,8 @@ decisions = {
 							de_jure_liege = e_california
 						}
 					}
-				}				
-				narrative_event = { id = ruin.4 }				
+				}	
+				narrative_event = { id = ruin.4 }	
 			}
 			any_demesne_title = {
 				limit = {
@@ -1213,7 +1213,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				trait = cynical
@@ -1370,7 +1370,7 @@ decisions = {
 		
 		effect = {
 			hidden_tooltip = {
-				narrative_event = { id = ceticreform.1 }				
+				narrative_event = { id = ceticreform.1 }	
 			}
 		}
 		
@@ -1405,7 +1405,7 @@ decisions = {
 		
 		effect = {
 			hidden_tooltip = {
-				narrative_event = { id = cetic.700 }				
+				narrative_event = { id = cetic.700 }	
 			}
 		}
 		
@@ -1448,7 +1448,7 @@ decisions = {
 		
 		effect = {
 			hidden_tooltip = {
-				narrative_event = { id = cetic.800 }				
+				narrative_event = { id = cetic.800 }	
 			}
 		}
 		
@@ -1504,7 +1504,7 @@ decisions = {
 				religion = angeline
 				religion = exovedate
 			}
-		    OR = {	
+			OR = {	
 				NOT = { has_global_flag = metis_restored }
 			}
 		}
@@ -1588,11 +1588,11 @@ decisions = {
 #			completely_controls = d_coulee
 			completely_controls = d_green_bay
 			completely_controls = d_northwoods
-			completely_controls = d_chippewa			
+			completely_controls = d_chippewa
 			completely_controls = c_la_crosse
 			completely_controls = c_kickapoo
 			completely_controls = c_the_dells
-			
+
 			wealth = 200
 			prestige = 500
 		}
@@ -1709,7 +1709,7 @@ decisions = {
 			completely_controls = c_kenapocomoco
 			completely_controls = c_tippecanoe
 			completely_controls = c_high_land
-			
+
 			wealth = 200
 			prestige = 500
 		}
@@ -1819,7 +1819,7 @@ decisions = {
 			completely_controls = c_peoria
 			completely_controls = c_kaskaskia
 			completely_controls = c_galena
-			
+
 			wealth = 200
 			prestige = 500
 		}
@@ -1884,28 +1884,28 @@ decisions = {
 		is_high_prio = yes
 		ai_check_interval = 24
 		ai_will_do = {
-	        factor = 25
-	        modifier = {
-	            factor = 0.5
-	            trait = content
-	        }
-	        modifier = {
-	            factor = 0.5
-	            trait = craven
-	        }
-	        modifier = {
-	            factor = 2
-	        	trait = ambitious
-	        }
-	        modifier = {
-	            factor = 2
-	        	trait = brave
-	        }
-	        modifier = {
-	            factor = 2
-	        	trait = zealous
-	        }
-	    }
+			factor = 25
+			modifier = {
+				factor = 0.5
+				trait = content
+			}
+			modifier = {
+				factor = 0.5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = ambitious
+			}
+			modifier = {
+				factor = 2
+				trait = brave
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+		}
 		
 		potential = {
 			is_alternate_start = no
@@ -1941,8 +1941,8 @@ decisions = {
 					AND = {
 						e_dixie = { holder_scope = { NOT = { religion = catholic } } }
 						e_new_south = { holder_scope = { NOT = { religion = catholic } } }
-						
-						
+
+
 					}
 				}
 			}
@@ -1982,39 +1982,39 @@ decisions = {
 				limit = { tier = KING }
 				de_jure_liege = e_texarkana
 			}
-			
+
 			if = {
 				limit = {
 					has_landed_title = k_texarkana
 					NOT = { has_landed_title = k_old_star}
 				}
-				
+	
 				d_texarkana = {
 					de_jure_liege = k_texarkana
 				}
-				
+	
 				if = {
 					limit = {
 						has_landed_title = d_metroplex
 					}
-					d_metroplex = { de_jure_liege = k_texarkana }					
+					d_metroplex = { de_jure_liege = k_texarkana }
 				}
-				
+	
 				if = {
 					limit = {
 						has_landed_title = d_neches
 					}
-					d_neches = { de_jure_liege = k_texarkana }					
+					d_neches = { de_jure_liege = k_texarkana }
 				}
-				
+	
 				if = {
 					limit = {
 						has_landed_title = d_houston
 					}
-					d_houston = { de_jure_liege = k_texarkana }					
+					d_houston = { de_jure_liege = k_texarkana }
 				}
 			}
-			
+
 			hidden_tooltip = {
 				any_demesne_title = {
 					if = {
@@ -2061,13 +2061,13 @@ decisions = {
 			}
 			hidden_tooltip = { narrative_event = { id = tex.2 } } 
 			set_character_flag = founded_texarkana
-			
+
 			chronicle = {
 				entry = CHRONICLE_FOUNDED_TEXARKANA
 				picture = GFX_evt_coronation
 			}
-			
-			
+
+
 		}
 		revoke_allowed = {
 			always = no

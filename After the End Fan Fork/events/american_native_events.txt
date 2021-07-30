@@ -42,23 +42,23 @@ letter_event = {
 		name = EVTOPTA_native_2 # Go
 		ai_chance = {
 			factor = 2
-			modifier  = {
+			modifier = {
 				factor = 5
 				has_focus = focus_hunting
 			}
-			modifier  = {
+			modifier = {
 				factor = 0.1
 				is_inaccessible_trigger = yes
 			}
-			modifier  = {
+			modifier = {
 				factor = 2
 				opinion = { who = from value = -30 }
 			}
-			modifier  = {
+			modifier = {
 				factor = 5
 				opinion = { who = from value = -15 }
 			}
-			modifier  = {
+			modifier = {
 				factor = 5
 				opinion = { who = from value = 0 }
 			}
@@ -73,7 +73,7 @@ letter_event = {
 		name = EVTOPTB_native_2
 		ai_chance = {
 			factor = 1
-			modifier  = {
+			modifier = {
 				factor = 0
 				opinion = { who = from value = 25 }
 				NOT = { is_inaccessible_trigger = yes }
@@ -249,7 +249,7 @@ character_event = {
 }
 
 ###########################################
-# Flag management events				  #
+# Flag management events				#
 ###########################################
 
 # Clear all character flags and modifiers
@@ -269,7 +269,7 @@ character_event = {
 }
 
 ###########################################
-# Random events during hunt			   #
+# Random events during hunt			#
 ###########################################
 
 # Makes a friend (not gonna include the getting drunk part)
@@ -639,7 +639,7 @@ character_event = {
 			}
 			set_character_flag = buffalo_male_lover
 		}
-	}				
+	}	
 
 	trigger = {
 		NOT = { num_of_lovers = 4 }
@@ -873,7 +873,7 @@ character_event = {
 				character_event = { id = native.25 } # Buffalo kills servant
 			}
 			10 = {
-				character_event = { id = native.26 }  # Buffalo kills AI character
+				character_event = { id = native.26 } # Buffalo kills AI character
 			}
 		}
 	}
@@ -970,7 +970,7 @@ character_event = {
 					NOT = { trait = strategist }
 					is_smart_trigger = no
 					NOT = { trait = diligent }
-					
+
 				}
 				random_list = {
 					30 = { character_event = { id = native.28 } } # Drives herd over

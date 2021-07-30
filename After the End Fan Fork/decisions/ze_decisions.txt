@@ -105,12 +105,12 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 0.05
-			
+
 			modifier = { 
 				factor = 0
 				controls_religion = yes
 			}
-			
+
 		}
 	}
 
@@ -195,7 +195,7 @@ targetted_decisions = {
 				has_focus = focus_ch_heritage
 				character = FROM
 			}
-			
+
 			host = {
 				OR = {
 					character = FROM
@@ -259,7 +259,7 @@ targetted_decisions = {
 		}
 	}
 	
-	change_wards_focus_to_heritage  = {
+	change_wards_focus_to_heritage = {
 		only_playable = yes
 		filter = court
 		ai_target_filter = court
@@ -352,7 +352,7 @@ targetted_decisions = {
 			has_dlc = "Zeus"
 			is_playable = yes
 			NOT = { trait = incapable }
-			
+
 		}
 		potential = {
 			NOT = { trait = incapable }
@@ -532,7 +532,7 @@ targetted_decisions = {
 		
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.1
 				always = yes
@@ -564,7 +564,7 @@ targetted_decisions = {
 				has_focus = focus_ch_faith
 				character = FROM
 			}
-			
+
 			host = {
 				OR = {
 					character = FROM
@@ -572,7 +572,7 @@ targetted_decisions = {
 				}
 			}
 			NOT = { liege = { character = FROM } }
-			
+
 			NOT = {
 				educator = {
 					religion = ROOT
@@ -627,7 +627,7 @@ targetted_decisions = {
 		}
 	}
 	
-	change_wards_focus_to_faith  = {
+	change_wards_focus_to_faith = {
 		only_playable = yes
 		filter = court
 		ai_target_filter = court

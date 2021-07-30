@@ -105,7 +105,7 @@ character_event = {
 						job_chancellor = {
 							#Picks a reason for visiting
 							set_character_flag = cg_diplomatic_visit
-							
+	
 							character_event = { id = JD.20001 }
 						}
 					}
@@ -150,7 +150,7 @@ character_event = {
 							#Picks a reason for visiting
 							random_list = {
 								10 = { 
-								   trigger = { ROOT = { is_tributary = { type = offmap suzerain = event_target:target_governor } } }
+								trigger = { ROOT = { is_tributary = { type = offmap suzerain = event_target:target_governor } } }
 									set_character_flag = cg_oversee_tax_collection
 								}
 								10 = { 
@@ -255,7 +255,7 @@ character_event = { # Fallback (in case the visitor died/imprisoned)
 		FROM = { death_in_china_trigger = no }
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_JD_10023
 		prestige = -50
 		wealth = -15
@@ -270,7 +270,7 @@ character_event = { # Fallback (in case the visitor died/imprisoned)
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_JD_10023
 	}
 
@@ -379,19 +379,19 @@ character_event = {
 							event_target:corresponding_councilor = {
 								has_job_title = job_chancellor
 								NOT = { diplomacy = 8 }
-							}					   
+							}
 							event_target:corresponding_councilor = {
 								has_job_title = job_marshal
 								NOT = { martial = 8 }
-							}  
+							} 
 							event_target:corresponding_councilor = {
 								has_job_title = job_treasurer
 								NOT = { stewardship = 8 }
-							}  
+							} 
 							event_target:corresponding_councilor = {
 								has_job_title = job_spiritual
 								NOT = { learning = 8 }
-							}  
+							} 
 						}
 						factor = 0.5
 					}
@@ -540,7 +540,7 @@ character_event = {
 					custom_tooltip = { text = multilingual_tt }
 					tooltip = { add_grace_major_effect = yes }
 				}
-				
+	
 				hidden_effect = { character_event = { id = JD.20007 days = 3 } }
 			}
 			65 = { #Fail and fall asleep
@@ -550,7 +550,7 @@ character_event = {
 				tooltip = { detract_grace_major_effect = yes }
 				hidden_effect = { character_event = { id = JD.20008 days = 3 } }
 			}
-		}   
+		} 
 	}
 
 	#Wing it
@@ -657,7 +657,7 @@ character_event = {
 					has_character_modifier = multilingual
 				}
 			}
-			
+
 			add_character_modifier = {
 				name = student_of_language
 				duration = -1
@@ -1280,7 +1280,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTD_JD_10011
 		custom_tooltip = { text = EVTOPTD_JD_10011_TT }
 		clr_character_flag = is_sending_someone_to_china
@@ -1394,7 +1394,7 @@ character_event = {
 					factor = 1.2
 					is_disliked_by_China_trigger = no
 				}
-				
+	
 				if = {
 					limit = { NOT = { FROM = { is_alive = yes } } }
 					event_target:new_story_owner = { character_event = { id = JD.10013 } } #great
@@ -1645,7 +1645,7 @@ character_event = {
 				}
 				if = {
 					limit = { FROM = { is_alive = yes } }
-					FROM = { character_event = { id = JD.10019 } }  #Special case 2
+					FROM = { character_event = { id = JD.10019 } } #Special case 2
 				}
 			}
 		}
@@ -1737,7 +1737,7 @@ character_event = { # Things went great
 						}
 						20 = { 
 							trigger = { 
-							   ROOT = { has_education_martial_trigger = yes }
+							ROOT = { has_education_martial_trigger = yes }
 							}
 							modifier = {
 								factor = 2
@@ -1846,7 +1846,7 @@ character_event = { # Things went good
 	border = GFX_event_normal_frame_diplomacy
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_JD_10014
 		sound_effect = china_grace_gain
 		add_grace_minor_effect = yes
@@ -1865,7 +1865,7 @@ character_event = { # Things went decently
 	border = GFX_event_normal_frame_diplomacy
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_JD_10015
 		sound_effect = china_grace_gain
 		add_grace_trivial_effect = yes
@@ -1881,7 +1881,7 @@ character_event = { # Things went bad
 	border = GFX_event_normal_frame_diplomacy
 	is_triggered_only = yes
 	
-	option = {	  
+	option = {	
 		name = EVTOPTA_JD_10016
 		detract_grace_trivial_effect = yes
 		FROM = {
@@ -1899,7 +1899,7 @@ character_event = { # Things went terribly
 	border = GFX_event_normal_frame_diplomacy
 	is_triggered_only = yes
 	
-	option = {	  
+	option = {	
 		name = EVTOPTA_JD_10017
 		custom_tooltip = { text = EVTOPTA_JD_10017_TT }
 		detract_grace_minor_effect = yes
@@ -1960,7 +1960,7 @@ character_event = {
 		}
 		if = {
 			limit = { FROMFROM = { is_alive = yes } }
-			FROMFROM = { character_event = { id = JD.10018 } }  #Special case 2
+			FROMFROM = { character_event = { id = JD.10018 } } #Special case 2
 		}
 	}
 }
@@ -2056,7 +2056,7 @@ character_event = { # Special case 2 - The courtier you sent away to China has r
 							is_child_of = FROM
 							NOT = { is_child_of = ROOT }
 							is_adult = no
-						}			
+						}
 					}
 				}
 			}
@@ -2070,7 +2070,7 @@ character_event = { # Special case 2 - The courtier you sent away to China has r
 						any_child = {
 							is_child_of = FROM
 							is_adult = no
-						}			
+						}
 					}
 				}
 			}
@@ -2083,7 +2083,7 @@ character_event = { # Special case 2 - The courtier you sent away to China has r
 				remove_character_modifier = out_traveling
 
 				leave_court_for_china_effect = yes
-				
+	
 				if = { # They take their spouse with them
 					limit = { is_married = yes }
 					any_spouse = {
@@ -2121,7 +2121,7 @@ character_event = { # Special case 2 - The courtier you sent away to China has r
 		name = EVTOPTB_JD_10019
 		sound_effect = china_grace_gain
 		add_grace_medium_effect = yes
-		hidden_effect = {  FROM = { remove_character_modifier = out_traveling } }
+		hidden_effect = { FROM = { remove_character_modifier = out_traveling } }
 		reverse_opinion = {
 			who = FROM
 			modifier = opinion_angry
@@ -2190,7 +2190,7 @@ character_event = { # Fallback (in case the traveler died)
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_JD_10020
 		custom_tooltip = { text = EVTOPTA_JD_10020_TT }
 		clr_character_flag = is_sending_someone_to_china
@@ -2574,7 +2574,7 @@ character_event = {
 				NOT = { has_character_flag = ignore_refund }
 				NOT = { has_character_flag = had_opinions_about_host_court }
 			}
-			
+
 			set_character_flag = had_opinions_about_host_court
 			save_event_target_as = chinese_courtier
 			random_list = {
@@ -2715,14 +2715,14 @@ character_event = {
 							}
 						}
 					}
-					
+
 					liege = {
 						character_event = { id = JD.30011 }
 					}
 				}
 				5 = { # Berate
-				
-				
+	
+	
 					liege = {
 						character_event = { id = JD.30012 }
 					}
@@ -4123,7 +4123,7 @@ letter_event = {
 				}
 				set_character_flag = trade_competition_winner_modifier
 			}
-			else_if  = {
+			else_if = {
 				limit = { 
 					NOT = { any_artifact = { has_artifact_flag = brazilian } }
 				}
@@ -4472,7 +4472,7 @@ character_event = {		#Escaped Chinese Noble appears
 				years = 5
 			}
 		}
-			
+
 		hidden_effect = {
 			random_list = {
 				50 = { character_event = { id = JD.70005 days = 60 } }
@@ -4648,7 +4648,7 @@ character_event = {			#You let China know
 }
 
 character_event = {			#You let China know but the noble escapes
-	id =  JD.70008
+	id = JD.70008
 	has_dlc = "Jade Dragon"
 	desc = EVTDESC_JD_70008
 	picture = GFX_evt_chinese_bureaucrat
@@ -4806,7 +4806,7 @@ character_event = {
 			factor = 0.25
 		}
 
-		modifier = {	   
+		modifier = {	
 			any_demesne_province = {
 				trade_route = coffee_current
 			}
@@ -4938,7 +4938,7 @@ character_event = {
 							remove_trait = fair 
 						}
 						1 = { add_trait = dwarf }
-						1 = {  add_trait = weak }
+						1 = { add_trait = weak }
 					}
 					random = {
 						chance = 10
@@ -5009,7 +5009,7 @@ character_event = {
 								25 = { add_trait = charitable }
 								25 = { add_trait = kind }
 								25 = { add_trait = trusting }
-							}	  
+							}	
 						}
 						#Decisive
 						25 = {
@@ -5073,7 +5073,7 @@ character_event = {
 								20 = { add_trait = kind }
 								20 = { add_trait = honest }
 								20 = { add_trait = lustful }
-							}   
+							} 
 						}
 					} 
 				}
@@ -5248,7 +5248,7 @@ character_event = {
 								25 = { add_trait = charitable }
 								25 = { add_trait = kind }
 								25 = { add_trait = trusting }
-							}	  
+							}	
 						}
 						#Decisive
 						25 = {
@@ -5312,7 +5312,7 @@ character_event = {
 								20 = { add_trait = kind }
 								20 = { add_trait = honest }
 								20 = { add_trait = lustful }
-							}   
+							} 
 						}
 					} 
 				}
@@ -5321,7 +5321,7 @@ character_event = {
 				random_list = {
 					50 = { #Female
 						trigger = { has_game_rule = { name = gender value = all } }
-						
+
 						create_character = {
 							age = 30
 							religion = apostolic
@@ -5489,7 +5489,7 @@ character_event = {
 								25 = { add_trait = charitable }
 								25 = { add_trait = kind }
 								25 = { add_trait = trusting }
-							}	  
+							}	
 						}
 						#Decisive
 						25 = {
@@ -5567,7 +5567,7 @@ character_event = {
 								25 = { add_trait = kind }
 								25 = { add_trait = honest }
 								25 = { add_trait = lustful }
-							}   
+							} 
 						}
 					}
 
@@ -5786,7 +5786,7 @@ character_event = {
 								25 = { add_trait = wroth }
 								25 = { add_trait = proud }
 								25 = { add_trait = greedy }
-							}   
+							} 
 						}
 						20 = { #Herbalist
 							set_character_flag = archetype_supportive
@@ -5863,7 +5863,7 @@ character_event = {
 							set_focus = focus_seduction
 							remove_trait = clubfooted
 							remove_trait = harelip
-							remove_trait =  hunchback 
+							remove_trait = hunchback 
 							remove_trait = lisp
 							remove_trait = stutter
 							remove_trait = ugly
@@ -6227,7 +6227,7 @@ character_event = { # Traveling Teacher
 			remove_trait = imbecile
 			remove_trait = distractible
 			remove_trait = dull
-			
+
 			remove_trait = mystic
 			remove_trait = socializer
 			remove_trait = gamer
@@ -6243,14 +6243,14 @@ character_event = { # Traveling Teacher
 			remove_trait = seducer
 			remove_trait = seductress
 			remove_trait = theologian
-			
+
 			add_trait = poet
 			add_trait = scholar
 			add_trait = erudite
-			
+
 			set_character_flag = originated_from_chinese_court
 			set_character_flag = ignore_refund
-			
+
 			save_event_target_as = traveling_teacher
 		}
 		random_realm_province = {
@@ -6590,11 +6590,11 @@ character_event = { # Sokher Merchant
 				remove_trait = slow
 				remove_trait = imbecile
 				remove_trait = dull
-				
+	
 				wealth = 50
-				
+	
 				add_trait = shrewd
-				
+	
 				save_event_target_as = sokherim_merchant
 			}
 			random_realm_province = {

@@ -1,18 +1,18 @@
 ###########################################
-#										 #
-# Conclave Favor and Mercenary Events	  #
-# Written by Emil Tisander				  #
-#										  #
-# ID ZE.23000-ZE.25999	 				  #
-#										 #
+#										#
+# Conclave Favor and Mercenary Events	#
+# Written by Emil Tisander				#
+#										#
+# ID ZE.23000-ZE.25999					#
+#										#
 ###########################################
 
 ###########################################
-#										 #
-# Favor Events							  #
-# by Alexander Oltner					 #
-# ID ZE.22300-ZE.22800			  	  #
-#										 #
+#										#
+# Favor Events							#
+# by Alexander Oltner					#
+# ID ZE.22300-ZE.22800				#
+#										#
 ###########################################
 
 namespace = ZE
@@ -71,7 +71,7 @@ character_event = {
 		name = EVTOPTA_ZE_23000
 		ai_chance = {
 			factor = 50
-			
+
 			modifier = {
 				factor = 1.5
 				trait = humble
@@ -94,7 +94,7 @@ character_event = {
 		name = EVTOPTB_ZE_23000
 		ai_chance = {
 			factor = 50
-			
+
 			modifier = {
 				factor = 1.5
 				trait = proud
@@ -284,7 +284,7 @@ character_event = {
 		name = EVTOPTA_ZE_23006
 		ai_chance = {
 			factor = 60
-			
+
 			modifier = {
 				factor = 1.5
 				trait = kind
@@ -313,7 +313,7 @@ character_event = {
 		name = EVTOPTB_ZE_23006
 		ai_chance = {
 			factor = 40
-			
+
 			modifier = {
 				factor = 1.2
 				trait = cruel
@@ -818,7 +818,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 70
-			
+
 			modifier = {
 				factor = 0.5
 				trait = proud
@@ -1028,7 +1028,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 70
-			
+
 			modifier = {
 				factor = 0.5
 				trait = proud
@@ -1262,7 +1262,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 90
-			
+
 			modifier = {
 				factor = 0.5
 				trait = proud
@@ -1300,17 +1300,17 @@ letter_event = {
 		
 		ai_chance = {
 			factor = 50
-			
+
 			modifier = {
 				factor = 2
 				trait = charitable
 			}
-			
+
 			modifier = {
 				factor = 2
 				trait = kind
 			}
-			
+
 			modifier = {
 				factor = 2
 				opinion = { who = FROM value = 25 }
@@ -1328,12 +1328,12 @@ letter_event = {
 		
 		ai_chance = {
 			factor = 50
-			
+
 			modifier = {
 				factor = 3
 				trait = paranoid
 			}
-			
+
 			modifier = {
 				factor = 0
 				is_friend = FROM
@@ -1417,7 +1417,7 @@ letter_event = {
 		
 		ai_chance = {
 			factor = 20
-			
+
 			modifier = {
 				factor = 2
 				trait = humble
@@ -1458,12 +1458,12 @@ letter_event = {
 		
 		ai_chance = {
 			factor = 20
-			
+
 			modifier = {
 				factor = 2
 				trait = ambitious
 			}
-			
+
 			modifier = {
 				factor = 2
 				trait = stubborn
@@ -1547,12 +1547,12 @@ letter_event = {
 		
 		ai_chance = {
 			factor = 70
-			
+
 			modifier = {
 				factor = 5
 				trait = greedy
 			}
-			
+
 			modifier = {
 				factor = 5
 				NOT = { wealth = 100 }
@@ -1682,7 +1682,7 @@ character_event = {
 			NOT = {
 				location = {
 					is_capital = yes
-				}						
+				}
 			}
 		}
 		
@@ -1778,7 +1778,7 @@ character_event = {
 				NOT = {
 					location = {
 						is_capital = yes
-					}						
+					}
 				}
 			}
 			save_event_target_as = target_friend_land
@@ -1812,22 +1812,22 @@ character_event = {
 		
 		ai_chance = {
 			factor = 50
-			
+
 			modifier = {
 				factor = 0.5
 				trait = greedy
 			}
-			
+
 			modifier = {
 				factor = 0.5
 				trait = paranoid
 			}
-			
+
 			modifier = {
 				factor = 2
 				trait = charitable
 			}
-			
+
 			modifier = {
 				factor = 2
 				trait = kind
@@ -2158,7 +2158,7 @@ letter_event = {
 		
 		ai_chance = {
 			factor = 90
-			
+
 			modifier = {
 				factor = 0.5
 				trait = paranoid
@@ -2183,7 +2183,7 @@ letter_event = {
 		if = {
 			limit = {
 				FROM = {
-					trait = siege_leader  
+					trait = siege_leader 
 				}
 			}
 			event_target:commander_one = { 
@@ -2200,109 +2200,109 @@ letter_event = {
 		if = {
 			limit = {
 				FROM = {
-					trait = flat_terrain_leader   
+					trait = flat_terrain_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = flat_terrain_leader  
+				add_trait = flat_terrain_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = flat_terrain_leader  
+				add_trait = flat_terrain_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = flat_terrain_leader  
+				add_trait = flat_terrain_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = rough_terrain_leader   
+					trait = rough_terrain_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = rough_terrain_leader  
+				add_trait = rough_terrain_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = rough_terrain_leader  
+				add_trait = rough_terrain_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = rough_terrain_leader  
+				add_trait = rough_terrain_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = mountain_terrain_leader   
+					trait = mountain_terrain_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = mountain_terrain_leader  
+				add_trait = mountain_terrain_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = mountain_terrain_leader  
+				add_trait = mountain_terrain_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = mountain_terrain_leader  
+				add_trait = mountain_terrain_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = desert_terrain_leader   
+					trait = desert_terrain_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = desert_terrain_leader  
+				add_trait = desert_terrain_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = desert_terrain_leader  
+				add_trait = desert_terrain_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = desert_terrain_leader  
+				add_trait = desert_terrain_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = jungle_terrain_leader   
+					trait = jungle_terrain_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = jungle_terrain_leader  
+				add_trait = jungle_terrain_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = jungle_terrain_leader  
+				add_trait = jungle_terrain_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = jungle_terrain_leader  
+				add_trait = jungle_terrain_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = winter_soldier   
+					trait = winter_soldier 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = winter_soldier  
+				add_trait = winter_soldier 
 			}
 			event_target:commander_two = { 
-				add_trait = winter_soldier  
+				add_trait = winter_soldier 
 			}
 			event_target:commander_three = { 
-				add_trait = winter_soldier  
+				add_trait = winter_soldier 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = organizer  
+					trait = organizer 
 				}
 			}
 			event_target:commander_one = { 
@@ -2319,92 +2319,92 @@ letter_event = {
 		if = {
 			limit = {
 				FROM = {
-					trait = light_foot_leader   
+					trait = light_foot_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = light_foot_leader  
+				add_trait = light_foot_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = light_foot_leader  
+				add_trait = light_foot_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = light_foot_leader  
+				add_trait = light_foot_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = heavy_infantry_leader   
+					trait = heavy_infantry_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = heavy_infantry_leader  
+				add_trait = heavy_infantry_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = heavy_infantry_leader  
+				add_trait = heavy_infantry_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = heavy_infantry_leader  
+				add_trait = heavy_infantry_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = cavalry_leader   
+					trait = cavalry_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = cavalry_leader  
+				add_trait = cavalry_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = cavalry_leader  
+				add_trait = cavalry_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = cavalry_leader  
+				add_trait = cavalry_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = inspiring_leader   
+					trait = inspiring_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = inspiring_leader  
+				add_trait = inspiring_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = inspiring_leader  
+				add_trait = inspiring_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = inspiring_leader  
+				add_trait = inspiring_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = defensive_leader   
+					trait = defensive_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = defensive_leader  
+				add_trait = defensive_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = defensive_leader  
+				add_trait = defensive_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = defensive_leader  
+				add_trait = defensive_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = experimenter  
+					trait = experimenter 
 				}
 			}
 			event_target:commander_one = { 
@@ -2421,7 +2421,7 @@ letter_event = {
 		if = {
 			limit = {
 				FROM = {
-					trait = flanker  
+					trait = flanker 
 				}
 			}
 			event_target:commander_one = { 
@@ -2438,58 +2438,58 @@ letter_event = {
 		if = {
 			limit = {
 				FROM = {
-					trait = aggressive_leader   
+					trait = aggressive_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = aggressive_leader  
+				add_trait = aggressive_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = aggressive_leader  
+				add_trait = aggressive_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = aggressive_leader  
+				add_trait = aggressive_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = unyielding_leader   
+					trait = unyielding_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = unyielding_leader  
+				add_trait = unyielding_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = unyielding_leader  
+				add_trait = unyielding_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = unyielding_leader  
+				add_trait = unyielding_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = narrow_flank_leader   
+					trait = narrow_flank_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = narrow_flank_leader  
+				add_trait = narrow_flank_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = narrow_flank_leader  
+				add_trait = narrow_flank_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = narrow_flank_leader  
+				add_trait = narrow_flank_leader 
 			}
 			break = yes
 		}
 		if = {
 			limit = {
 				FROM = {
-					trait = trickster  
+					trait = trickster 
 				}
 			}
 			event_target:commander_one = { 
@@ -2506,17 +2506,17 @@ letter_event = {
 		if = {
 			limit = {
 				FROM = {
-					trait = war_elephant_leader   
+					trait = war_elephant_leader 
 				}
 			}
 			event_target:commander_one = { 
-				add_trait = war_elephant_leader  
+				add_trait = war_elephant_leader 
 			}
 			event_target:commander_two = { 
-				add_trait = war_elephant_leader  
+				add_trait = war_elephant_leader 
 			}
 			event_target:commander_three = { 
-				add_trait = war_elephant_leader  
+				add_trait = war_elephant_leader 
 			}
 			break = yes
 		}
@@ -2546,7 +2546,7 @@ letter_event = {
 # Liege accepted!
 letter_event = {
 	id = ZE.22802
-	desc =  EVTDESC_ZE_22802
+	desc = EVTDESC_ZE_22802
 
 	is_triggered_only = yes
 	
@@ -2569,7 +2569,7 @@ letter_event = {
 # Liege denied
 letter_event = {
 	id = ZE.22803
-	desc =  EVTDESC_ZE_22803
+	desc = EVTDESC_ZE_22803
 
 	is_triggered_only = yes
 	

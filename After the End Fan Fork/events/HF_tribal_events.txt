@@ -200,12 +200,12 @@ character_event = {
 		custom_tooltip = { text = TOOLTIP_EVTOPTAHF23806 } 
 		hidden_tooltip = {
 			any_courtier_or_vassal = { 
-				limit = { 					
+				limit = { 
 					age = 8 #Children get their own events.
 					NOR = {
 						prisoner = yes
 						has_character_flag = do_not_disturb
-						has_character_modifier = holding_large_feast  
+						has_character_modifier = holding_large_feast 
 						has_any_opinion_modifier = opinion_coronation_guest
 						has_any_opinion_modifier = opinion_great_tribal_festival_guest 
 						is_incapable = yes
@@ -229,7 +229,7 @@ character_event = {
 							liege = { character = ROOT } 
 							top_liege = { character = ROOT } 
 							has_character_flag = do_not_disturb
-							has_character_modifier = holding_large_feast  
+							has_character_modifier = holding_large_feast 
 							has_any_opinion_modifier = opinion_coronation_guest
 							has_any_opinion_modifier = opinion_great_tribal_festival_guest 
 							is_incapable = yes
@@ -291,7 +291,7 @@ letter_event = {
 						NOR = {
 							prisoner = yes
 							has_character_flag = do_not_disturb
-							has_character_modifier = holding_large_feast  
+							has_character_modifier = holding_large_feast 
 							has_any_opinion_modifier = opinion_coronation_guest
 							has_any_opinion_modifier = opinion_great_tribal_festival_guest 
 							is_incapable = yes
@@ -307,12 +307,12 @@ letter_event = {
 				any_child = {
 					limit = {
 						is_ruler = no
-						at_location = ROOT				
+						at_location = ROOT	
 						age = 8
 						NOR = {
 							prisoner = yes
 							has_character_flag = do_not_disturb
-							has_character_modifier = holding_large_feast  
+							has_character_modifier = holding_large_feast 
 							has_any_opinion_modifier = opinion_coronation_guest
 							has_any_opinion_modifier = opinion_great_tribal_festival_guest 
 							is_incapable = yes
@@ -425,14 +425,14 @@ letter_event = {
 	option = { #Refuse him.
 		name = EVTOPTBHF23810
 		if = {
-			limit = {  
+			limit = { 
 				same_society_as = FROM
 			}
 			detract_society_currency_medium_effect = yes
 		}
 		FROM = {
 			show_scope_change = no
-			opinion = {  
+			opinion = { 
 				modifier = insulted
 				months = 48
 				who = FROM
@@ -494,13 +494,13 @@ character_event = {
 	option = { #Spend time hunting and training.
 		name = EVTOPTAHF23811
 		custom_tooltip = { text = TOOLTIP_EVTOPTAHF23811 }
-		trigger = {  
+		trigger = { 
 			is_adult = yes
 			is_ruler = yes 
 			prisoner = no
-	   		OR = {
+			OR = {
 				can_enter_festival_physical_competitions_trigger = yes
-		   		has_game_rule = {
+				has_game_rule = {
 					name = gender
 					value = all
 				} 
@@ -547,12 +547,12 @@ character_event = {
 	option = { #Spend time grooming yourself.
 		name = EVTOPTBHF23811
 		custom_tooltip = { text = TOOLTIP_EVTOPTBHF23811 }
-		trigger = {  
+		trigger = { 
 			is_adult = yes
 			prisoner = no
-	   		OR = {
+			OR = {
 				can_enter_festival_physical_competitions_trigger = no
-		   		has_game_rule = {
+				has_game_rule = {
 					name = gender
 					value = all
 				} 
@@ -734,9 +734,9 @@ character_event = {
 							is_adult = yes
 							prisoner = no
 							NOT = { is_incapable = yes }
-					   		OR = {
+							OR = {
 								can_enter_festival_physical_competitions_trigger = yes
-						   		has_game_rule = {
+								has_game_rule = {
 									name = gender
 									value = all
 								} 
@@ -760,9 +760,9 @@ character_event = {
 							is_adult = yes
 							prisoner = no
 							NOT = { is_incapable = yes }
-					   		OR = {
+							OR = {
 								can_enter_festival_physical_competitions_trigger = yes
-						   		has_game_rule = {
+								has_game_rule = {
 									name = gender
 									value = all
 								} 
@@ -786,9 +786,9 @@ character_event = {
 							is_adult = yes
 							prisoner = no
 							NOT = { is_incapable = yes }
-					   		OR = {
+							OR = {
 								can_enter_festival_physical_competitions_trigger = yes
-						   		has_game_rule = {
+								has_game_rule = {
 									name = gender
 									value = all
 								} 
@@ -812,9 +812,9 @@ character_event = {
 							is_adult = yes
 							prisoner = no
 							NOT = { is_incapable = yes }
-					   		OR = {
+							OR = {
 								can_enter_festival_physical_competitions_trigger = yes
-						   		has_game_rule = {
+								has_game_rule = {
 									name = gender
 									value = all
 								} 
@@ -840,9 +840,9 @@ character_event = {
 							is_adult = yes
 							prisoner = no
 							NOT = { is_incapable = yes }
-					   		OR = {
+							OR = {
 								can_enter_festival_physical_competitions_trigger = no
-						   		has_game_rule = {
+								has_game_rule = {
 									name = gender
 									value = all
 								} 
@@ -904,9 +904,9 @@ character_event = {
 							is_adult = yes
 							prisoner = no
 							NOT = { is_incapable = yes }
-					   		OR = {
+							OR = {
 								can_enter_festival_physical_competitions_trigger = no
-						   		has_game_rule = {
+								has_game_rule = {
 									name = gender
 									value = all
 								} 
@@ -1866,7 +1866,7 @@ character_event = {
 		}
 		FROM = {
 			show_scope_change = no
-			apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
 		}
 		pacifists_lose_piety_effect = yes
 		add_character_modifier = {
@@ -1889,19 +1889,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -1954,7 +1954,7 @@ character_event = {
 		}
 		FROM = {
 			show_scope_change = no
-			apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
 		}
 		
 		pacifists_lose_piety_effect = yes
@@ -1978,19 +1978,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -2139,7 +2139,7 @@ character_event = {
 	option = {
 		name = EVTOPTAHF23836
 		custom_tooltip = { text = TOOLTIP_EVTOPTAHF23836 }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			random_list = { 
 				50 = { 
 					modifier = { 
@@ -2433,7 +2433,7 @@ character_event = {
 	option = {
 		name = EVTOPTAHF23841
 		custom_tooltip = { text = TOOLTIP_EVTOPTAHF23841 }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			random_list = { 
 				50 = { 
 					modifier = { 
@@ -2649,7 +2649,7 @@ character_event = {
 	option = {
 		name = EVTOPTAHF23845
 		custom_tooltip = { text = TOOLTIP_EVTOPTAHF23845 }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			random_list = { 
 				50 = { 
 					modifier = { 
@@ -3003,7 +3003,7 @@ character_event = {
 	
 	immediate = { 
 		random_list = { 
-			50 = {  
+			50 = { 
 				modifier = {
 					factor = 0.75
 					trait = timid
@@ -3114,7 +3114,7 @@ character_event = {
 				}
 				set_character_flag = flag_child_race_winner
 			} 
-			50 = {  
+			50 = { 
 				modifier = {
 					factor = 0.75
 					FROM = { trait = timid }
@@ -3391,7 +3391,7 @@ character_event = {
 	option = { #Climb.
 		name = EVTOPTAHF23854
 		random_list = { 
-			50 = {  
+			50 = { 
 				modifier = {
 					factor = 0.75
 					trait = timid
@@ -3499,7 +3499,7 @@ character_event = {
 				custom_tooltip = { text = TOOLTIP_EVTOPTAHF23854_SUCCESS }
 				hidden_tooltip = { character_event = { id = HF.23855 } }
 			} 
-			50 = {  
+			50 = { 
 				custom_tooltip = { text = TOOLTIP_EVTOPTAHF23854_FAILURE }
 				hidden_tooltip = { character_event = { id = HF.23856 } }
 			} 
@@ -3688,7 +3688,7 @@ character_event = {
 				character_event = { id = HF.23861 } #Guests decide if to participate as well (if allowed to)
 			}
 		}
-		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } }  #Brawling competition begins.
+		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } } #Brawling competition begins.
 	}
 }
 
@@ -3853,7 +3853,7 @@ character_event = {
 				character_event = { id = HF.23863 } #Guests decide if to participate as well (if allowed to)
 			}
 		}
-		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } }  #Drinking competition begins.
+		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } } #Drinking competition begins.
 	}
 }
 
@@ -4017,7 +4017,7 @@ character_event = {
 				character_event = { id = HF.23865 } #Guests decide if to participate as well (if allowed to)
 			}
 		}
-		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } }  #Eating competition begins.
+		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } } #Eating competition begins.
 	}
 }
 
@@ -4182,7 +4182,7 @@ character_event = {
 				character_event = { id = HF.23867 } #Guests decide if to participate as well (if allowed to)
 			}
 		}
-		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } }  #Taming competition begins.
+		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } } #Taming competition begins.
 	}
 }
 
@@ -4318,7 +4318,7 @@ character_event = {
 				character_event = { id = HF.23869 } #Guests decide if to participate as well (if allowed to)
 			}
 		}
-		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } }  #Beauty competition begins.
+		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } } #Beauty competition begins.
 	}
 }
 
@@ -4469,7 +4469,7 @@ character_event = {
 				character_event = { id = HF.23871 } #Guests decide if to participate as well (if allowed to)
 		}
 		}
-		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } }  #Poetry competition begins.
+		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } } #Poetry competition begins.
 	}
 }
 
@@ -4621,7 +4621,7 @@ character_event = {
 				character_event = { id = HF.23873 } #Guests decide if to participate as well (if allowed to)
 			}
 		}
-		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } }  #Singing competition begins.
+		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } } #Singing competition begins.
 	}
 }
 
@@ -4759,7 +4759,7 @@ character_event = {
 				character_event = { id = HF.23875 } #Guests decide if to participate as well (if allowed to)
 			}
 		}
-		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } }  #Tapestry competition begins.
+		hidden_tooltip = { character_event = { id = HF.23876 days = 20 } } #Tapestry competition begins.
 	}
 }
 
@@ -5140,9 +5140,9 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 3 } }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			event_target:tribal_festival_loser = { character_event = { id = HF.23881 } }
-			event_target:great_tribal_festival_host = {  
+			event_target:great_tribal_festival_host = { 
 				any_realm_character = { 
 					limit = { 
 						NOT = { event_target:tribal_festival_winner = { character = PREV } } 
@@ -5298,7 +5298,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 1 } }
 		event_target:tribal_festival_winner = { 
 			show_scope_change = no
-			opinion = {  
+			opinion = { 
 				modifier = opinion_victory_prize
 				years = 10
 				who = ROOT
@@ -5307,11 +5307,11 @@ character_event = {
 		}
 		ai_chance = { 
 			factor = 30
-			modifier = {  
+			modifier = { 
 				factor = 2
 				trait = charitable
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = greedy
 			}
@@ -5421,9 +5421,9 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 3 } }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			event_target:tribal_festival_loser = { character_event = { id = HF.23884 } }
-			event_target:great_tribal_festival_host = {  
+			event_target:great_tribal_festival_host = { 
 				any_realm_character = { 
 					limit = { 
 						NOT = { event_target:tribal_festival_winner = { character = PREV } } 
@@ -5536,7 +5536,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 1 } }
 		event_target:tribal_festival_winner = { 
 			show_scope_change = no
-			opinion = {  
+			opinion = { 
 				modifier = opinion_victory_prize
 				years = 10
 				who = ROOT
@@ -5545,11 +5545,11 @@ character_event = {
 		}
 		ai_chance = { 
 			factor = 30
-			modifier = {  
+			modifier = { 
 				factor = 2
 				trait = charitable
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = greedy
 			}
@@ -5657,10 +5657,10 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 3 } }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			gain_weight_small_effect = yes
 			event_target:tribal_festival_loser = { character_event = { id = HF.23887 } }
-			event_target:great_tribal_festival_host = {  
+			event_target:great_tribal_festival_host = { 
 				any_realm_character = { 
 					limit = { 
 						NOT = { event_target:tribal_festival_winner = { character = PREV } } 
@@ -5767,7 +5767,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 1 } }
 		event_target:tribal_festival_winner = { 
 			show_scope_change = no
-			opinion = {  
+			opinion = { 
 				modifier = opinion_victory_prize
 				years = 10
 				who = ROOT
@@ -5776,11 +5776,11 @@ character_event = {
 		}
 		ai_chance = { 
 			factor = 30
-			modifier = {  
+			modifier = { 
 				factor = 2
 				trait = charitable
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = greedy
 			}
@@ -5891,9 +5891,9 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 3 } }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			event_target:tribal_festival_loser = { character_event = { id = HF.23890 } }
-			event_target:great_tribal_festival_host = {  
+			event_target:great_tribal_festival_host = { 
 				any_realm_character = { 
 					limit = { 
 						NOT = { event_target:tribal_festival_winner = { character = PREV } } 
@@ -6000,7 +6000,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 1 } }
 		event_target:tribal_festival_winner = { 
 			show_scope_change = no
-			opinion = {  
+			opinion = { 
 				modifier = opinion_victory_prize
 				years = 10
 				who = ROOT
@@ -6009,11 +6009,11 @@ character_event = {
 		}
 		ai_chance = { 
 			factor = 30
-			modifier = {  
+			modifier = { 
 				factor = 2
 				trait = charitable
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = greedy
 			}
@@ -6116,9 +6116,9 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 3 } }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			event_target:tribal_festival_loser = { character_event = { id = HF.23893 } }
-			event_target:great_tribal_festival_host = {  
+			event_target:great_tribal_festival_host = { 
 				any_realm_character = { 
 					limit = { 
 						NOT = { event_target:tribal_festival_winner = { character = PREV } } 
@@ -6228,7 +6228,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 1 } }
 		event_target:tribal_festival_winner = { 
 			show_scope_change = no
-			opinion = {  
+			opinion = { 
 				modifier = opinion_victory_prize
 				years = 10
 				who = ROOT
@@ -6237,11 +6237,11 @@ character_event = {
 		}
 		ai_chance = { 
 			factor = 30
-			modifier = {  
+			modifier = { 
 				factor = 2
 				trait = charitable
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = greedy
 			}
@@ -6338,9 +6338,9 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 3 } }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			event_target:tribal_festival_loser = { character_event = { id = HF.23896 } }
-			event_target:great_tribal_festival_host = {  
+			event_target:great_tribal_festival_host = { 
 				any_realm_character = { 
 					limit = { 
 						NOT = { event_target:tribal_festival_winner = { character = PREV } } 
@@ -6450,7 +6450,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 1 } }
 		event_target:tribal_festival_winner = { 
 			show_scope_change = no
-			opinion = {  
+			opinion = { 
 				modifier = opinion_victory_prize
 				years = 10
 				who = ROOT
@@ -6459,11 +6459,11 @@ character_event = {
 		}
 		ai_chance = { 
 			factor = 30
-			modifier = {  
+			modifier = { 
 				factor = 2
 				trait = charitable
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = greedy
 			}
@@ -6561,9 +6561,9 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 3 } }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			event_target:tribal_festival_loser = { character_event = { id = HF.23899 } }
-			event_target:great_tribal_festival_host = {  
+			event_target:great_tribal_festival_host = { 
 				any_realm_character = { 
 					limit = { 
 						NOT = { event_target:tribal_festival_winner = { character = PREV } } 
@@ -6673,7 +6673,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 1 } }
 		event_target:tribal_festival_winner = { 
 			show_scope_change = no
-			opinion = {  
+			opinion = { 
 				modifier = opinion_victory_prize
 				years = 10
 				who = ROOT
@@ -6682,11 +6682,11 @@ character_event = {
 		}
 		ai_chance = { 
 			factor = 30
-			modifier = {  
+			modifier = { 
 				factor = 2
 				trait = charitable
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = greedy
 			}
@@ -6781,9 +6781,9 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 3 } }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			event_target:tribal_festival_loser = { character_event = { id = HF.23902 } }
-			event_target:great_tribal_festival_host = {  
+			event_target:great_tribal_festival_host = { 
 				any_realm_character = { 
 					limit = { 
 						NOT = { event_target:tribal_festival_winner = { character = PREV } } 
@@ -6884,7 +6884,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 1 } }
 		event_target:tribal_festival_winner = { 
 			show_scope_change = no
-			opinion = {  
+			opinion = { 
 				modifier = opinion_victory_prize
 				years = 10
 				who = ROOT
@@ -6893,11 +6893,11 @@ character_event = {
 		}
 		ai_chance = { 
 			factor = 30
-			modifier = {  
+			modifier = { 
 				factor = 2
 				trait = charitable
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = greedy
 			}
@@ -6929,7 +6929,7 @@ character_event = {
 		tooltip = { FROM = { transfer_scaled_wealth = { to = ROOT value = 1.0 min = 25 max = 150 } } }
 		hidden_tooltip = { change_variable = { which = "tribal_festival_divine_favor" value = 1 } }
 		tooltip = { 
-			opinion = {  
+			opinion = { 
 				modifier = opinion_victory_prize
 				years = 10
 				who = FROM

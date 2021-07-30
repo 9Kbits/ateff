@@ -78,7 +78,7 @@ society_decisions = { # Society decisions are only evaluated by members of socie
 				limit = { has_character_modifier = lost_rank_up_duel_cooldown }
 				custom_tooltip = {
 					text = recently_lost_rank_up_duel_tt
-					NOT = { has_character_modifier = lost_rank_up_duel_cooldown }				
+					NOT = { has_character_modifier = lost_rank_up_duel_cooldown }	
 				}
 			}
 			trigger_if = {
@@ -237,7 +237,7 @@ society_decisions = { # Society decisions are only evaluated by members of socie
 				set_character_flag = has_sent_request_to_rank_up
 				character_event = { id = HF.10060 } #sends event presenting choice: to duel a current Hero or nah?
 			}
-			
+
 			else = { #For everyone else...
 				#Rank up cost
 				if = {
@@ -257,7 +257,7 @@ society_decisions = { # Society decisions are only evaluated by members of socie
 					save_event_target_as = rank_up_target
 					set_character_flag = has_sent_request_to_rank_up
 					character_event = { id = MNM.10002 days = 20 random = 10 } # sends hidden delayed event to self, which then sends request to Leader of the society
-				
+	
 					#Conversus power for benedictines
 					if = {
 						limit = {
@@ -266,7 +266,7 @@ society_decisions = { # Society decisions are only evaluated by members of socie
 						}
 					character_event = { id = MNM.4600 days = 10 random = 350 }
 					}
-					
+
 					#Conversus power for leibowitz
 					if = {
 						limit = {
@@ -334,12 +334,12 @@ society_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = { wealth = 75 }
 			}
-			
+
 			modifier = {
 				factor = 0.1
 				NOT = { age = 30 }
@@ -583,7 +583,7 @@ society_decisions = {
 						ai = no
 						NOT = { primary_title = { title = d_men_in_black } }
 						AND = {
-							primary_title = { title = d_men_in_black } 							
+							primary_title = { title = d_men_in_black } 	
 							wealth = 50
 						}
 					}
@@ -940,7 +940,7 @@ targeted_decisions = {
 			NOT = { is_incapable = yes }
 			NOT = { has_character_modifier = recruitment_timer }
 			society_member_of = the_assassins
-			
+
 			#Only level 2 and 3 AIs recruit
 			OR = {
 				ai = no
@@ -1009,7 +1009,7 @@ targeted_decisions = {
 					text = assassins_recruit_block_tooltip
 					OR = {
 						NOT = { has_character_flag = assassins_attempted_recruitment }
-						interested_in_society = the_assassins					
+						interested_in_society = the_assassins
 					}
 					NOT = { has_character_flag = ongoing_recruitment }
 				}
@@ -1162,7 +1162,7 @@ targeted_decisions = {
 					hidden_effect = { FROM = { character_event = { id = MNM.6980 days = 1 } } }
 				}
 			}
-			
+
 		}
 
 		revoke_allowed = {
@@ -1229,7 +1229,7 @@ targeted_decisions = {
 					character = FROM
 					any_lover = { NOT = { character = FROM } }
 				}
-				any_lover = { any_spouse = { character = FROM  } } #Lover of spouse
+				any_lover = { any_spouse = { character = FROM } } #Lover of spouse
 				any_lover = { any_lover = { character = FROM } } #Lover of lover
 				ROOT = { any_claim = { any_claimant = { character = FROM } } } #Somneone sharing claims
 				AND = {
@@ -1405,7 +1405,7 @@ targeted_decisions = {
 		
 		effect = {
 			save_event_target_as = assassin_protege
-			
+
 			FROM = {
 				set_character_flag = is_using_train_protege_decision
 				character_event = { id = MNM.6250 }
@@ -1601,7 +1601,7 @@ society_decisions = {
 						limit = { NOT = { has_quest = quest_monastic_order_donate_to_charity } }
 						add_society_currency_minor_effect = yes
 					}
-					
+
 					if = {
 						limit = { has_quest = quest_monastic_order_donate_to_charity }
 						clr_quest = quest_monastic_order_donate_to_charity
@@ -1731,7 +1731,7 @@ targeted_decisions = {
 				}
 			}
 			ROOT = {
-			
+
 				NOT = { is_incapable = yes }
 
 				custom_tooltip = {
@@ -3210,7 +3210,7 @@ targeted_decisions = {
 			}
 			#Head of Religion
 			if = {
-				limit  = { 
+				limit = { 
 					controls_religion = yes
 				}
 				hidden_effect = { FROM = { character_event = { id = MNM.7500 } } }
@@ -3300,7 +3300,7 @@ targeted_decisions = {
 			}
 			#Holy Man
 			if = {
-				limit  = { 
+				limit = { 
 					OR = {
 						is_priest = yes
 						is_ascetic_trigger = yes
@@ -3393,7 +3393,7 @@ targeted_decisions = {
 			}
 			#Dwarf
 			if = {
-				limit  = { 
+				limit = { 
 					trait = dwarf
 				}
 				hidden_effect = { FROM = { character_event = { id = MNM.7502 } } }
@@ -3483,7 +3483,7 @@ targeted_decisions = {
 			}
 			#Child
 			if = {
-				limit  = { 
+				limit = { 
 					NOT = { age = 16 }
 				}
 				hidden_effect = { FROM = { character_event = { id = MNM.7503 } } }
@@ -3573,7 +3573,7 @@ targeted_decisions = {
 			}
 			#Virgin
 			if = {
-				limit  = { 
+				limit = { 
 					is_virgin_trigger = yes
 				}
 				hidden_effect = { FROM = { character_event = { id = MNM.7504 } } }
@@ -3814,7 +3814,7 @@ targeted_decisions = {
 				FROM = { 
 					character_event = { id = MNM.7507 }
 				}
-			}			
+			}
 		}
 	}
 	
@@ -3873,7 +3873,7 @@ targeted_decisions = {
 				FROM = { 
 					character_event = { id = MNM.7509 }
 				}
-			}			
+			}
 		}
 	}
 
@@ -3973,7 +3973,7 @@ targeted_decisions = {
 			}
 			ROOT = {
 				prisoner = no
-			
+
 				NOT = { is_incapable = yes }
 
 				is_inaccessible_trigger = no		
@@ -4688,7 +4688,7 @@ decisions = {
 			}
 			is_landed = yes
 			is_lowborn = no
-			
+
 			# Block player from action if they have already gotten all of the artifacts which they can obtain from this action
 			NAND = {
 				have_all_armorsmith_artifacts_all_flags_trigger = yes
@@ -4707,7 +4707,7 @@ decisions = {
 				}
 			}
 			is_inaccessible_trigger = no
-			
+
 			custom_tooltip = {
 				text = employ_a_smith_cooldown_tt
 				hidden_trigger = {

@@ -1,9 +1,9 @@
  ###########################################
-#										 #
-# Horse Lords Silk Route events 		  #
-#										 #
-# ID HL.5000-HL.5999	  				  #
-#										 #
+#										#
+# Horse Lords Silk Route events 		#
+#										#
+# ID HL.5000-HL.5999					#
+#										#
 ###########################################
 
 # Written by Joel Hansson
@@ -48,10 +48,10 @@ character_event = {
 		OR = {
 			AND = {
 				has_dlc = "Jade Dragon"
-		  	  	china_diplo_interaction_trigger = yes
-		  	}
-		  	AND = {
-		  		NOT = { has_dlc = "Jade Dragon" }
+				china_diplo_interaction_trigger = yes
+			}
+			AND = {
+				NOT = { has_dlc = "Jade Dragon" }
 				capital_scope = {
 					OR = {
 						region = world_south_america_caribbean
@@ -730,7 +730,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		event_target:chinese_envoy = { character_event = { id  = HL.5010 } }
+		event_target:chinese_envoy = { character_event = { id = HL.5010 } }
 	}
 }
 
@@ -741,7 +741,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		FROMFROM = { character_event = { id  = HL.5011 } }
+		FROMFROM = { character_event = { id = HL.5011 } }
 	}
 }
 

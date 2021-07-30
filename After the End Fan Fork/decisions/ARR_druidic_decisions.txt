@@ -1,5 +1,5 @@
 decisions = {
-	hold_an_aonach_tailteann  = {
+	hold_an_aonach_tailteann = {
 		only_playable = yes
 		ai_check_interval = 3
 		is_high_prio = yes
@@ -123,10 +123,10 @@ decisions = {
 		effect = {
 			custom_tooltip = {
 				text = prepare_divination
-				
+	
 				scaled_wealth = -0.20
 				set_character_flag = holding_divination
-				
+	
 				hidden_tooltip = {
 					character_event = { id = ancrel.0020 }
 				}
@@ -148,7 +148,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -204,7 +204,7 @@ decisions = {
 		effect = {
 			custom_tooltip = {
 				text = adopt_celtic_rites
-				
+	
 				scaled_wealth = -0.10
 				set_character_flag = adopted_celtic_rites
 				#hidden_tooltip = {
@@ -219,7 +219,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				trait = zealous
@@ -244,7 +244,7 @@ decisions = {
 				tier = king
 				tier = emperor
 			}
-			
+
 			religion = celtic_pagan_reformed
 
 			prisoner = no
@@ -374,7 +374,7 @@ decisions = {
 						culture = ROOT
 						female = yes
 						age = 17
-					}					
+					}
 				}
 			}
 			religion_authority = {
@@ -504,7 +504,7 @@ decisions = {
 			prisoner = no
 			age = 16
 			is_title_active = d_round_table
-			
+
 			OR = {
 				OR = {
 					has_landed_title = k_newfoundland
@@ -543,7 +543,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			d_round_table = {
 				holder_scope = {
 					liege = {
@@ -562,7 +562,7 @@ decisions = {
 		effect = {
 			prestige = -500
 			wealth = -500
-			
+
 			hidden_tooltip = {
 				d_round_table = {
 					holder_scope = {
@@ -601,7 +601,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_red_dragons
 			NOT = { has_character_modifier = expelled_d_red_dragons }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_red_dragons = {
@@ -614,7 +614,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -624,12 +624,12 @@ decisions = {
 		
 		effect = {
 			piety = -1000
-			
+
 			religion_authority = {
 				modifier = holy_order_expelled
 				years = 20
 			}
-			
+
 			hidden_tooltip = {
 				d_red_dragons = {
 					holder_scope = {
@@ -660,13 +660,13 @@ decisions = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 			religion = celtic_pagan_reformed
-			
+
 			is_title_active = d_red_dragons
-			
+
 			NOT = { has_character_modifier = expelled_d_red_dragons }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_red_dragons = {
 				holder_scope = {
 					liege = {
@@ -690,7 +690,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_red_dragons = {
 					holder_scope = {
@@ -700,11 +700,11 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 300
 		}
-			
+
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -740,7 +740,7 @@ decisions = {
 		}
 		effect = {
 			scaled_wealth = -0.5
-			
+
 			set_character_flag = inviting_druid_over
 
 			hidden_tooltip = {
@@ -749,7 +749,7 @@ decisions = {
 					days = 3
 				}
 			}
-			
+
 		}
 		ai_will_do = {
 			factor = 1
@@ -786,7 +786,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				trait = cynical
-			}			
+			}
 			modifier = {
 				factor = 2
 				primary_title = { higher_tier_than = DUKE }
@@ -811,7 +811,7 @@ decisions = {
 		}
 		effect = {
 			scaled_wealth = -0.5
-			
+
 			random_list = {
 				17 = {
 					create_character = {
@@ -1021,7 +1021,7 @@ decisions = {
 			modifier = {
 				factor = 0.5
 				trait = cynical
-			}			
+			}
 			modifier = {
 				factor = 2
 				primary_title = { higher_tier_than = DUKE }
@@ -1060,7 +1060,7 @@ decisions = {
 				}
 				give_minor_title = title_court_druid
 			}
-			
+
 		}
 		ai_will_do = {
 			factor = 1
@@ -1107,7 +1107,7 @@ decisions = {
 				}
 				give_minor_title = title_court_bard
 			}
-			
+
 		}
 		ai_will_do = {
 			factor = 1
@@ -1174,7 +1174,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -1233,7 +1233,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = {

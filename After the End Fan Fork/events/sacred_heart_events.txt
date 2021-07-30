@@ -570,14 +570,14 @@ character_event = {
 						NOT = { check_variable = { which = "challenger_skill" value = 6 } }
 						NOT = { check_variable = { which = "opponent_skill" value = 6 } }
 					}
-					
+
 					AND = {		# both fight okay
 						check_variable = { which = "challenger_skill" value = 6 }
 						check_variable = { which = "opponent_skill" value = 6 }
 						NOT = { check_variable = { which = "challenger_skill" value = 10 } }
 						NOT = { check_variable = { which = "opponent_skill" value = 10 } }
 					}
-					
+
 					AND = {		# both fight well
 						check_variable = { which = "challenger_skill" value = 10 }
 						check_variable = { which = "opponent_skill" value = 10 }
@@ -624,7 +624,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			# bounce off opponent so loser is FROM
 			FROM = { character_event = { id = sacredheart.63 days = 2 } }
 		}
@@ -1097,7 +1097,7 @@ character_event = {
 			modifier = { factor = 3	trait = homosexual }
 			modifier = { factor = 3	trait = bisexual }
 			modifier = { factor = 2	trait = seducer }
-			modifier = { factor = 2	trait = seductress  }
+			modifier = { factor = 2	trait = seductress }
 			modifier = { factor = 2	trait = cruel }
 			modifier = { factor = 1.5 trait = deceitful }
 			modifier = { factor = 1.5 trait = envious }

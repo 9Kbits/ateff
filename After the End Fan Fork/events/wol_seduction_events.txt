@@ -1107,10 +1107,10 @@ character_event = {
 					}
 				}
 			}
-			
+
 			piety = -100
 			prestige = -50
-			
+
 			break = yes
 		}
 		
@@ -1591,7 +1591,7 @@ character_event = {
 					NOT = { FROM = { fertility = 0.2 } }
 				}
 			}
-			break  = yes
+			break = yes
 		}
 		
 		if = {
@@ -2007,12 +2007,12 @@ character_event = {
 				}
 			}
 			repeat_event = { id = WoL.110 days = 20 random = 20 } # Fire again with no scope changes
-			
+
 			random = {
 				chance = 80
 				character_event = { id = WoL.115 } # Time to give up?
 			}
-			
+
 			break = yes
 		}
 		
@@ -2056,12 +2056,12 @@ character_event = {
 						}
 					}
 					repeat_event = { id = WoL.110 days = 20 random = 20 } # Fire again with no scope changes
-					
+
 					random = {
 						chance = 66
 						character_event = { id = WoL.115 } # Time to give up?
 					}
-					
+
 					break = yes
 				}
 				100 = {
@@ -2166,7 +2166,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			random_list = {
 				# Seduction attempts
 				13 = {
@@ -2315,7 +2315,7 @@ character_event = {
 					FROMFROM = { character_event = { id = WoL.220 } } # Gossiping Maid/Squire
 				}
 			}
-			
+
 			break = yes
 		}
 		
@@ -2331,7 +2331,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			random_list = {
 				# Gifts/wooing
 				34 = {
@@ -7410,7 +7410,7 @@ character_event = {
 									has_character_modifier = in_meditation
 									has_character_modifier = doing_penance
 								}
-								
+
 								at_location = PREV
 								OR = {
 									AND = {
@@ -9947,16 +9947,16 @@ character_event = {
 		
 		hidden_tooltip = {
 			FROMFROM = { character_event = { id = WoL.429 days = 1 } }
-			
+
 			# Chance of levelling up Seduction skill
 			character_event = { id = WoL.96 } 
-			
+
 			# Chance of impregnation
 			if = {
 				limit = { is_female = yes }
 				FROMFROM = { character_event = { id = WoL.97 } }
 			}
-			
+
 			if = {
 				limit = { is_female = no }
 				FROMFROM = { character_event = { id = WoL.98 } }
@@ -10407,7 +10407,7 @@ character_event = {
 					character_event = { id = 6359 days = 15 random = 5 } #Gives lover's pox
 				}
 			}
-			
+
 			# Chance of impregnation
 			if = {
 				limit = { is_female = yes }
@@ -10572,7 +10572,7 @@ character_event = {
 					modifier = opinion_seduced_lustful_worship
 					years = 30
 				}
-				
+	
 				random = {
 					chance = 25
 					character_event = { id = 6359 days = 15 random = 5 } # Give's lover's pox
@@ -11042,7 +11042,7 @@ character_event = {
 				years = 10
 				hidden = yes
 			}
-			
+
 			if = {
 				limit = {
 					OR = {
@@ -11060,7 +11060,7 @@ character_event = {
 				}
 				break = yes
 			}
-			
+
 			random_list = {
 				60 = {
 					character_event = { id = WoL.581 days = 1 } # Fail

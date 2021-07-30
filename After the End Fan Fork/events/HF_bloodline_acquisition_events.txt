@@ -855,7 +855,7 @@ character_event = { # Child of Destiny journey randomization tombola
 					}
 					character_event = { id = HF.237 }
 				}
-				
+	
 				fallback = {
 					child_of_destiny_journey_resume_effect = yes
 				}
@@ -3465,7 +3465,7 @@ character_event = { # Gain a friend
 					}
 					save_event_target_as = friend_target_2
 				}
-				
+	
 				random_realm_character = { # A competent character
 					limit = {
 						is_adult = yes
@@ -3821,9 +3821,9 @@ character_event = { # Child of Destiny launches Adventure
 								name = "CLAIMANT_ADVENTURE"
 								holder = event_target:child_of_destiny
 							}
-							
+	
 							set_character_flag = duchy_adventurer
-						
+
 							spawn_unit = {
 								province = PREVPREVPREV
 								home = PREVPREVPREV
@@ -3897,9 +3897,9 @@ character_event = { # Child of Destiny launches Adventure
 			spawn_fantastic_commander_effect = yes
 			spawn_fantastic_commander_effect = yes
 			spawn_fantastic_commander_effect = yes
-			
+
 			add_trait = disinherited
-			
+
 			# Notify Parents
 			father = { character_event = { id = HF.291 } }
 			mother = { character_event = { id = HF.291 } }

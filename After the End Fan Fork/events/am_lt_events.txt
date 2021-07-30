@@ -91,54 +91,54 @@ character_event = {
 				religion = ursuline
 			}
 		}
-   	}
+ 	}
 	border = GFX_event_normal_frame_religion
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    only_independent = yes
+	only_independent = yes
 
-    immediate = {
-    	random_realm_wonder = {
-    		limit = {
-    			has_wonder = wonder_mosque_center_islam
-    		}
-    		save_event_target_as = target_wonder
-    	}
-    	job_spiritual = {
-    		save_event_target_as = target_chaplain
-    	}
-    	if = {
-    		limit = {
-    			OR = {
-    				event_target:target_wonder = {
-    					has_wonder_flag = Center_rust_cult
-    					location = { religion = rust_cultist }
-    				}
-    				event_target:target_wonder = {
-    					has_wonder_flag = Center_muslim_cult
-    					location = { religion_group = muslim }
-    				}
-    				event_target:target_wonder = {
-    					has_wonder_flag = Center_norse_cult
-    					location = {
+	immediate = {
+		random_realm_wonder = {
+			limit = {
+				has_wonder = wonder_mosque_center_islam
+			}
+			save_event_target_as = target_wonder
+		}
+		job_spiritual = {
+			save_event_target_as = target_chaplain
+		}
+		if = {
+			limit = {
+				OR = {
+					event_target:target_wonder = {
+						has_wonder_flag = Center_rust_cult
+						location = { religion = rust_cultist }
+					}
+					event_target:target_wonder = {
+						has_wonder_flag = Center_muslim_cult
+						location = { religion_group = muslim }
+					}
+					event_target:target_wonder = {
+						has_wonder_flag = Center_norse_cult
+						location = {
 							OR = {
 								religion = norse_pagan
 								religion = norse_pagan_reformed
 							}
 						}
-    				}
+					}
 					event_target:target_wonder = {
-    					has_wonder_flag = Center_ursuline_cult
-    					location = { religion = ursuline }
-    				}
-    			}
-    		}
-    		event_target:target_wonder = { location = { set_province_flag = people_had_center_islam } }
-    	}
-    }
+						has_wonder_flag = Center_ursuline_cult
+						location = { religion = ursuline }
+					}
+				}
+			}
+			event_target:target_wonder = { location = { set_province_flag = people_had_center_islam } }
+		}
+	}
 
-    option = { #Convert
+	option = { #Convert
 		name = EVTOPTA_LT_20900
 		event_target:target_wonder = { clr_wonder_flag = Center_rust_cult }
 		event_target:target_wonder = { clr_wonder_flag = Center_muslim_cult }
@@ -154,7 +154,7 @@ character_event = {
 			event_target:target_wonder = {
 				set_wonder_flag = Center_rust_cult
 			}
-			
+
 		}
 		else_if = {
 			limit = { religion_group = muslim }
@@ -193,7 +193,7 @@ character_event = {
 			}
 		}
 	}
-    option = { #Not Convert
+	option = { #Not Convert
 		name = EVTOPTB_LT_20900
 		piety = -50
 		reverse_opinion = {
@@ -210,7 +210,7 @@ character_event = {
 				}
 				add_province_modifier = { modifier = religious_tolerance years = 10 }
 			}
-			
+
 		}
 	}
 }

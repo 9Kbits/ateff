@@ -172,7 +172,7 @@ targetted_decisions = {
 						duration = 1825
 						hidden = yes
 					}
-					character_event = { id = HF.23760 }  
+					character_event = { id = HF.23760 } 
 					if = { #Chance for Family Bloodline when using action on councilmembers.
 						limit = { 
 							higher_tier_than = COUNT 
@@ -484,7 +484,7 @@ decisions = {
 					random_list = {
 						100 = {
 							add_trait = sympathy_christendom
-							
+	
 							modifier = {
 								factor = 0
 								religion_group = christian
@@ -549,7 +549,7 @@ decisions = {
 						}
 						100 = {
 							add_trait = sympathy_oldworld
-							
+	
 							modifier = {
 								factor = 0
 								religion_group = oldworld
@@ -614,7 +614,7 @@ decisions = {
 						}
 						100 = {
 							add_trait = sympathy_pagans
-							
+	
 							modifier = {
 								factor = 0
 								religion_group = pagan_group
@@ -679,7 +679,7 @@ decisions = {
 						}
 						100 = {
 							add_trait = sympathy_pacific
-							
+	
 							modifier = {
 								factor = 0
 								religion_group = pacific
@@ -744,7 +744,7 @@ decisions = {
 						}
 						100 = {
 							add_trait = sympathy_judaism
-							
+	
 							modifier = {
 								factor = 0
 								religion_group = jewish_group
@@ -809,7 +809,7 @@ decisions = {
 						}
 						100 = {
 							add_trait = sympathy_indian
-							
+	
 							modifier = {
 								factor = 0
 								religion_group = indian_group
@@ -874,7 +874,7 @@ decisions = {
 						}
 						100 = {
 							add_trait = sympathy_cult_of_saints
-							
+	
 							modifier = {
 								factor = 0
 								religion_group = cult_of_saints
@@ -939,7 +939,7 @@ decisions = {
 						}
 						100 = {
 							add_trait = sympathy_latter_day_saints
-							
+	
 							modifier = {
 								factor = 0
 								religion_group = latter_day_saints
@@ -1004,7 +1004,7 @@ decisions = {
 						}
 						100 = {
 							add_trait = sympathy_islam
-							
+	
 							modifier = {
 								factor = 0
 								religion_group = muslim
@@ -1076,7 +1076,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = { # These are the most important reasons to gain a sympathy trait, if the AI has neither they are less likely to gain a trait
 				factor = 0.25
 				NOR = {
@@ -1097,7 +1097,7 @@ decisions = {
 				factor = 0
 				trait = zealous
 			}
-			
+
 			modifier = { # The AI needs a reason to do the decision at all
 				factor = 0
 				NOR = {
@@ -1131,7 +1131,7 @@ decisions = {
 		ai_check_interval = 70 #check only once every 70 months.
 		potential = {
 			is_adult = yes
-			
+
 			NOT = { trait = pagan_branch_1 }
 			NOT = { trait = pagan_branch_2 }
 			NOT = { trait = pagan_branch_3 }
@@ -1624,7 +1624,7 @@ title_decisions = {
 				set_character_flag = flag_dedicating_temple 
 				character_event = { id = HFATE.23200 }
 			}
-			
+
 		}
 		revoke_allowed = {
 			always = no
@@ -1754,8 +1754,8 @@ settlement_decisions = {
 					character_event = { id = HF.23470 }
 				}
 			}
-			hidden_tooltip = {  
-				if = {  
+			hidden_tooltip = { 
+				if = { 
 					limit = { FROM = { religion = norse_pagan } }
 					hidden_tooltip = {
 						location = {
@@ -1767,7 +1767,7 @@ settlement_decisions = {
 						add_building = tb_great_pillar_norse
 					}
 				}
-				if = {  
+				if = { 
 					limit = { FROM = { religion = revelationist } }
 					hidden_tooltip = {
 						location = {
@@ -1779,7 +1779,7 @@ settlement_decisions = {
 						add_building = tb_great_pillar_revelationist
 					}
 				}
-				if = {  
+				if = { 
 					limit = { FROM = { religion = occultist } }
 					hidden_tooltip = {
 						location = {
@@ -1791,7 +1791,7 @@ settlement_decisions = {
 						add_building = tb_great_pillar_occultist
 					}
 				}
-				if = {  
+				if = { 
 					limit = { FROM = { religion = celtic_pagan } }
 					hidden_tooltip = {
 						location = {
@@ -1803,7 +1803,7 @@ settlement_decisions = {
 						add_building = tb_great_pillar_celtic_pagan
 					}
 				}
-				if = {  
+				if = { 
 					limit = { FROM = { religion = aria_de_machete } }
 					hidden_tooltip = {
 						location = {
@@ -1815,7 +1815,7 @@ settlement_decisions = {
 						add_building = tb_great_pillar_aria_de_machete
 					}
 				}
-				if = {  
+				if = { 
 					limit = { FROM = { religion = trailwalker } }
 					hidden_tooltip = {
 						location = {
@@ -1920,7 +1920,7 @@ settlement_decisions = {
 					limit = {
 						OR = {
 							has_religion_feature = religion_cosmopolitan
-							
+	
 						}
 					}
 					tiered_piety_negative_effect = yes
@@ -1932,7 +1932,7 @@ settlement_decisions = {
 					character_event = { id = HF.23476 }
 				}
 			}
-			if = {  
+			if = { 
 				limit = { location = { has_province_flag = flag_great_pillar_norse } }
 				hidden_tooltip = {
 					location = {
@@ -1950,7 +1950,7 @@ settlement_decisions = {
 					}
 				}
 			}
-			if = {  
+			if = { 
 				limit = { location = { has_province_flag = flag_great_pillar_revelationist } }
 				hidden_tooltip = {
 					location = {
@@ -1968,7 +1968,7 @@ settlement_decisions = {
 					}
 				}
 			}
-			if = {  
+			if = { 
 				limit = { location = { has_province_flag = flag_great_pillar_occultist } }
 				hidden_tooltip = {
 					location = {
@@ -1986,7 +1986,7 @@ settlement_decisions = {
 					}
 				}
 			}
-			if = {  
+			if = { 
 				limit = { location = { has_province_flag = flag_great_pillar_celtic_pagan } }
 				hidden_tooltip = {
 					location = {
@@ -2004,7 +2004,7 @@ settlement_decisions = {
 					}
 				}
 			}
-			if = {  
+			if = { 
 				limit = { location = { has_province_flag = flag_great_pillar_aria_de_machete } }
 				hidden_tooltip = {
 					location = {
@@ -2022,7 +2022,7 @@ settlement_decisions = {
 					}
 				}
 			}
-			if = {  
+			if = { 
 				limit = { location = { has_province_flag = flag_great_pillar_trailwalker } }
 				hidden_tooltip = {
 					location = {
@@ -2059,7 +2059,7 @@ settlement_decisions = {
 				FROM = {
 					OR = {
 						has_religion_feature = religion_cosmopolitan
-						
+
 					}
 				}
 			}

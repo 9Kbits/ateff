@@ -27,13 +27,13 @@ narrative_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42001
 		trigger = {
 			religion = FROM
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTX_HFP_42001
 		trigger = {
 			NOT = {
@@ -42,7 +42,7 @@ narrative_event = {
 			religion_group = FROM
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42001
 		trigger = {
 			NOT = {
@@ -130,7 +130,7 @@ character_event = {
 	}
 
 	# Legitimize the beloved Crusader title
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42002
 		trigger = {
 			tier = DUKE
@@ -185,7 +185,7 @@ character_event = {
 	}
 
 	# Let go of the old Crusader title
-	option = {   
+	option = { 
 		name = EVTOPTB_HFP_42002
 		
 		if = {
@@ -239,7 +239,7 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42003
 		trigger = {
 			religion = FROM
@@ -248,7 +248,7 @@ narrative_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42001
 		trigger = {
 			NOT = {
@@ -432,9 +432,9 @@ character_event = {
 							}
 						}
 					}
-  					event_target:current_crusade_beneficiary = {
+ 					event_target:current_crusade_beneficiary = {
 						grant_title_no_opinion = PREV
-						
+
 					}
 				}
 				# Make a titular Duchy if there already is a Duke/Duchess for the title, and get a claim on the real Duchy title
@@ -639,7 +639,7 @@ character_event = {
 	}
 	option = { # I will take the land for myself
 		name = EVTOPTA_HFP_42000
-	   	add_character_modifier = {
+		add_character_modifier = {
 			name = settled_crusader_state
 			years = 15
 		}
@@ -977,13 +977,13 @@ narrative_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42001
 		trigger = {
 			religion = FROM
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTX_HFP_42001
 		trigger = {
 			NOT = {
@@ -992,7 +992,7 @@ narrative_event = {
 			religion_group = FROM
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42001
 		trigger = {
 			NOT = {
@@ -1025,7 +1025,7 @@ narrative_event = {
 				}
 				set_player_character = FROM
 			}
-  	  	}
+ 		}
 	}
 }
 
@@ -1127,7 +1127,7 @@ character_event = {
 		}
 	}
 	# Sounds like a pleasant experience
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42201
 		random_list = {
 			50 = {
@@ -1146,7 +1146,7 @@ character_event = {
 		}
 	}
 	# God calls upon me to fight, not mingle!
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42201
 		piety = 25
 		if = {
@@ -1202,7 +1202,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42202
 		trigger = {
 			OR = {
@@ -1660,7 +1660,7 @@ character_event = {
 		}
 		culture = event_target:current_location
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42202
 		set_character_flag = chose_a_friend
 		event_target:new_friend = {
@@ -1730,7 +1730,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42203
 		piety = 15
 		scaled_wealth = { value = -0.2 min = -50 max = -150 }
@@ -1760,7 +1760,7 @@ character_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42203
 		trigger = {
 			NOT = {
@@ -2068,7 +2068,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42204
 		scaled_wealth = { value = -0.7 min = -100 max = -300 }
 		trigger_switch = {
@@ -2107,7 +2107,7 @@ character_event = {
 			ceremonial_axe = { add_artifact = ceremonial_axe }
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42204
 		trigger = {
 			OR = {
@@ -2253,7 +2253,7 @@ character_event = {
 	}
 
 	# I will just have to deal
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42205
 		prestige = 50
 		if = {
@@ -2295,7 +2295,7 @@ character_event = {
 		}
 	}
 	# I will take it a bit easier from now on
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42205
 		prestige = -25
 		if = {
@@ -2368,7 +2368,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42206
 		trigger = {
 			NOT = {
@@ -2408,7 +2408,7 @@ character_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42206
 		trigger = {
 			NOT = {
@@ -2502,7 +2502,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42207
 		prestige = 10
 		piety = -20
@@ -2521,7 +2521,7 @@ character_event = {
 			add_trait = cruel
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42207
 		piety = 30
 		if = {
@@ -2776,7 +2776,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42208
 		trigger = {
 			OR = {
@@ -2847,7 +2847,7 @@ character_event = {
 			root_group = { event_target:current_location = { show_scope_change = no religion = ROOT } }
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42208
 		if = {
 			limit = {
@@ -2940,7 +2940,7 @@ character_event = {
 	}
 
 	# Laugh it off
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42209
 		prestige = -15
 		scaled_wealth = { value = -0.1 min = -20 max = -100 }
@@ -2979,7 +2979,7 @@ character_event = {
 		}
 	}
 	# That little thief!
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42209
 		prestige = 30
 		if = {
@@ -3080,7 +3080,7 @@ character_event = {
 	}
 
 	# Learn something from the man
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42210
 		if = {
 			limit = {
@@ -3099,7 +3099,7 @@ character_event = {
 		culture_techpoints = 20
 	}
 	# Kill him and take his things
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42210
 		if = {
 			limit = {
@@ -3164,7 +3164,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42211
 		piety = -25
 		scaled_wealth = { value = -0.1 min = -20 max = -200 }
@@ -3209,7 +3209,7 @@ character_event = {
 			factor = 1
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42211
 		if = {
 			limit = {
@@ -3390,7 +3390,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42212
 		piety = 50
 		scaled_wealth = { value = -0.2 min = -30 max = -300 } 
@@ -3403,7 +3403,7 @@ character_event = {
 			add_trait = zealous
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42212
 		piety = -50
 		if = {
@@ -3566,7 +3566,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42213
 		piety = 20
 		
@@ -3590,7 +3590,7 @@ character_event = {
 			add_friend = event_target:holy_order_meeting
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42213
 		piety = -20
 		event_target:holy_order_meeting = {
@@ -3737,10 +3737,10 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42214
-	   	prestige = -25
-	   	piety = 25
+		prestige = -25
+		piety = 25
 		if = {
 			limit = {
 				trait = lustful
@@ -3762,7 +3762,7 @@ character_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42214
 		prestige = 25
 		piety = -25
@@ -3825,7 +3825,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42215
 		trigger = {
 			NAND = {
@@ -3874,7 +3874,7 @@ character_event = {
 			change_martial = 1
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42215
 		trigger = {
 			NAND = {
@@ -4535,14 +4535,14 @@ character_event = {
 	picture = GFX_evt_peasants
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42321
 		piety = -25
 		ai_chance = {
 			factor = 10
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42321
 		piety = 50
 		trigger = {
@@ -4606,7 +4606,7 @@ character_event = {
 		set_character_flag = currently_considering_expelling_jews
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42322
 		if = {
 			limit = {
@@ -4626,7 +4626,7 @@ character_event = {
 			factor = 5
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42322
 		banish_religion = jewish
 		if = {
@@ -4736,7 +4736,7 @@ character_event = {
 	picture = GFX_evt_culture_change
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42324
 		if = {
 			limit = {
@@ -4770,7 +4770,7 @@ character_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42324
 		piety = 25
 		if = {
@@ -4817,7 +4817,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42325
 		prestige = -50
 		if = {
@@ -4833,7 +4833,7 @@ character_event = {
 		}
 		
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42325
 		custom_tooltip = { 
 			text = EVTOPTB_HFP_42323_TT 
@@ -4864,7 +4864,7 @@ character_event = {
 	picture = GFX_evt_peasants
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_42330
 		prestige = -100
 		piety = -25
@@ -4900,7 +4900,7 @@ character_event = {
 			factor = 0
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_42330
 		custom_tooltip = { 
 			text = EVTOPTB_HFP_42323_TT 

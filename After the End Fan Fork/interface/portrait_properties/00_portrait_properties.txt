@@ -161,7 +161,7 @@
 				AND = {
 					is_alive = yes
 					in_command = no
-					NOT = { has_job_title  = job_marshal }
+					NOT = { has_job_title = job_marshal }
 				}
 				AND = {
 					is_alive = no
@@ -611,7 +611,7 @@
 				is_offmap_tag_including_dead = offmap_china
 				location = { 
 					NOR = { 
-						region = custom_atlantic  
+						region = custom_atlantic 
 						region = custom_pacific
 					} 
 				}
@@ -641,7 +641,7 @@
 				is_offmap_tag_including_dead = offmap_china
 				location = { 
 					NOR = { 
-						region = world_caribbean   
+						region = world_caribbean 
 						region = world_south_america
 					} 
 				}
@@ -655,7 +655,7 @@
 	}
 }
 
-# p1 hair  --- WARNING! Property 1 MUST be Hair, otherwise the hair hiding helmets wont work ---
+# p1 hair --- WARNING! Property 1 MUST be Hair, otherwise the hair hiding helmets wont work ---
 1 = {
 	0 = { # Completely bald
 		factor = 1
@@ -851,7 +851,7 @@
 		}
 	}
 
-	6 = {  # Tonsure
+	6 = { # Tonsure
 		factor = 1
 		modifier = {
 			factor = 0
@@ -922,7 +922,7 @@
 		}
 	}
 	
-	7 = {  # Short
+	7 = { # Short
 		factor = 1
 		
 		# Does not suit Western females with African style headgear
@@ -969,7 +969,7 @@
 		factor = 1
 	}
 	
-	9 = {  # Short Uncouth
+	9 = { # Short Uncouth
 		factor = 1
 		modifier = {
 			factor = 5
@@ -1005,7 +1005,7 @@
 		}
 	}
 	
-	10 = {  # Long Uncouth
+	10 = { # Long Uncouth
 		factor = 1
 		
 		modifier = {
@@ -1584,7 +1584,7 @@
 		modifier = {
 			factor = 0
 			NOT = { trait = shieldmaiden }
-			NOT = { has_job_title  = job_marshal }
+			NOT = { has_job_title = job_marshal }
 			NAND = { 
 				has_minor_title = title_commander 
 				is_ruler = no 
@@ -3211,15 +3211,15 @@
 				spouse = { 
 					real_tier = emperor
 					NOT = { is_republic = yes }
-			 	}
+				}
 				spouse = { 
 					real_tier = king
 					NOT = { is_republic = yes }
-			 	}
+				}
 				spouse = { 
 					real_tier = duke
 					NOT = { is_republic = yes }
-			 	}
+				}
 			}
 		}
 		modifier = {
@@ -3313,7 +3313,7 @@
 				trait = scarred_type_10
 			}
 		}
-   	}
+ 	}
 
 	1 = { # scar 1 - TIER I
 		factor = 1
@@ -3331,7 +3331,7 @@
 				NOT = { trait = scarred }
 			}
 		}
-   	}
+ 	}
 
 	2 = { # scar 2 - TIER I
 		factor = 1
@@ -3349,7 +3349,7 @@
 				NOT = { trait = scarred }
 			}
 		}
-   	}
+ 	}
 
 	3 = { # scar 3 - TIER I
 		factor = 1
@@ -3367,7 +3367,7 @@
 				NOT = { trait = scarred }
 			}
 		}
-   	}
+ 	}
 
 	4 = { # scar 4 - TIER I
 		factor = 1
@@ -3385,7 +3385,7 @@
 				NOT = { trait = scarred }
 			}
 		}
-   	}
+ 	}
 	5 = { # scar 5 - TIER I
 		factor = 1
 		modifier = {
@@ -3402,7 +3402,7 @@
 				NOT = { trait = scarred }
 			}
 		}
-   	}
+ 	}
 	6 = { # scar 6 - TIER I
 		factor = 1
 		modifier = {
@@ -3419,7 +3419,7 @@
 				NOT = { trait = scarred }
 			}
 		}
-   	}
+ 	}
 	7 = { # scar 7 - TIER I
 		factor = 1
 		modifier = {
@@ -3436,7 +3436,7 @@
 				NOT = { trait = scarred }
 			}
 		}
-   	}
+ 	}
 	8 = { # scar 8 - TIER I
 		factor = 1
 		modifier = {
@@ -3453,7 +3453,7 @@
 				NOT = { trait = scarred }
 			}
 		}
-   	}
+ 	}
 	9 = { # scar 9 - TIER I
 		factor = 1
 		modifier = {
@@ -3470,7 +3470,7 @@
 				NOT = { trait = scarred }
 			}
 		}
-   	}
+ 	}
 	10 = { # scar 10 - TIER I
 		factor = 1
 		modifier = {
@@ -3487,7 +3487,7 @@
 				NOT = { trait = scarred }
 			}
 		}
-   	}
+ 	}
 }
 
 # p8 red dots
@@ -3514,7 +3514,7 @@
 				}
 			}
 		}
-  	}
+ 	}
 }
 
 # p9 boils
@@ -3563,7 +3563,7 @@
 		}
 	}
 	
-	1 =  {
+	1 = {
 		factor = 100
 		modifier = {
 			factor = 0
@@ -3586,14 +3586,14 @@
 		}
 	}
 	
-	2 =  {
+	2 = {
 		factor = 0
 		modifier = {
 			factor = 0
 		}
 	}
 	
-	3 =  {
+	3 = {
 		factor = 50
 		modifier = {
 			factor = 0
@@ -3613,14 +3613,14 @@
 		}
 	}
 	
-	4 =  {
+	4 = {
 		factor = 0
 		modifier = {
 			factor = 0
 		}
 	}
 	
-	5 =  {
+	5 = {
 		factor = 50
 		modifier = {
 			factor = 0
@@ -3640,7 +3640,7 @@
 		}
 	}
 	
-	6 =  {
+	6 = {
 		factor = 100
 		modifier = {
 			factor = 0
@@ -4418,7 +4418,7 @@
 		modifier = {
 			factor = 0
 			NAND = { 
-				in_command = yes  # Has to wear helmet instead.
+				in_command = yes # Has to wear helmet instead.
 				has_game_rule = {
 					name = martial_headgear
 					value = on
@@ -4446,7 +4446,7 @@
 		modifier = {
 			factor = 0
 			NAND = { 
-				in_command = yes  # Has to wear helmet instead.
+				in_command = yes # Has to wear helmet instead.
 				has_game_rule = {
 					name = martial_headgear
 					value = on
@@ -4600,7 +4600,7 @@
 		modifier = {
 			factor = 0
 			NAND = { 
-				in_command = yes  # Has to wear helmet instead.
+				in_command = yes # Has to wear helmet instead.
 				has_game_rule = {
 					name = martial_headgear
 					value = on
@@ -4628,7 +4628,7 @@
 		modifier = {
 			factor = 0
 			NAND = { 
-				in_command = yes  # Has to wear helmet instead.
+				in_command = yes # Has to wear helmet instead.
 				has_game_rule = {
 					name = martial_headgear
 					value = on
@@ -5008,35 +5008,35 @@
 			factor = 0
 			NOT = { trait = freckles }
 		}
-  	}
+ 	}
 	2 = { # freckles
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = freckles_2 }
 		}
-  	}
+ 	}
 	3 = { # freckles
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = freckles_3 }
 		}
-  	}
+ 	}
 	4 = { # freckles
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = freckles_4 }
 		}
-  	}
+ 	}
 	5 = { # freckles
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = freckles_5 }
 		}
-  	}
+ 	}
 }
 
 # p21 physique
@@ -5065,7 +5065,7 @@
 			factor = 0
 			age = 30
 		}
-  	}
+ 	}
 	2 = { 
 		factor = 100
 		modifier = {
@@ -5084,7 +5084,7 @@
 			factor = 0
 			age = 50
 		}
-  	}
+ 	}
 	3 = { 
 		factor = 100
 		modifier = {
@@ -5099,7 +5099,7 @@
 			factor = 0
 			NOT = { age = 50 }
 		}
-  	}
+ 	}
 	4 = { 
 		factor = 100
 		modifier = {
@@ -5110,7 +5110,7 @@
 			factor = 0
 			age = 30
 		}
-  	}
+ 	}
 	5 = { 
 		factor = 100
 		modifier = {
@@ -5125,7 +5125,7 @@
 			factor = 0
 			age = 50
 		}
-  	}
+ 	}
 	6 = { 
 		factor = 100
 		modifier = {
@@ -5136,7 +5136,7 @@
 			factor = 0
 			NOT = { age = 50 }
 		}
-  	}
+ 	}
 }
 
 #p22 malnourished
@@ -5159,7 +5159,7 @@
 			NOT = { trait = ill }
 			NOT = { trait = is_malnourished }
 		}
-  	}
+ 	}
 }
 
 #p23 black eye
@@ -5187,7 +5187,7 @@
 			has_character_modifier = black_eye
 			has_character_modifier = concussion 
 		}
-  	}
+ 	}
 	2 = { #Concussion.
 		factor = 100
 		modifier = {
@@ -5205,7 +5205,7 @@
 				trait = wounded
 			}
 		}
-  	}
+ 	}
 	3 = { #Concussion AND Black eye.
 		factor = 100
 		modifier = {
@@ -5218,7 +5218,7 @@
 				has_character_modifier = black_eye
 			}
 		}
-  	}
+ 	}
 }
 
 #p24 harelip
@@ -5237,7 +5237,7 @@
 			factor = 0
 			NOT = { trait = harelip }
 		}
-  	}
+ 	}
 }
 
 #To add new set of scars, add new _type_ hidden trait, edit the scar-assignment scripted effect, add entries in portrait properties, add new frame and ALL THREE tiers (regular, _mid, and _high).
@@ -5262,7 +5262,7 @@
 				trait = scarred_type_10
 			}
 		}
-   	}
+ 	}
 
 	1 = { # scar 1 - TIER II
 		factor = 1
@@ -5280,7 +5280,7 @@
 				NOT = { trait = scarred_mid }
 			}
 		}
-   	}
+ 	}
 
 	2 = { # scar 2 - TIER II
 		factor = 1
@@ -5298,7 +5298,7 @@
 				NOT = { trait = scarred_mid }
 			}
 		}
-   	}
+ 	}
 
 	3 = { # scar 3 - TIER II
 		factor = 1
@@ -5316,7 +5316,7 @@
 				NOT = { trait = scarred_mid }
 			}
 		}
-   	}
+ 	}
 
 	4 = { # scar 4 - TIER II
 		factor = 1
@@ -5334,7 +5334,7 @@
 				NOT = { trait = scarred_mid }
 			}
 		}
-   	}
+ 	}
 	5 = { # scar 5 - TIER II
 		factor = 1
 		modifier = {
@@ -5351,7 +5351,7 @@
 				NOT = { trait = scarred_mid }
 			}
 		}
-   	}
+ 	}
 	6 = { # scar 6 - TIER II
 		factor = 1
 		modifier = {
@@ -5368,7 +5368,7 @@
 				NOT = { trait = scarred_mid }
 			}
 		}
-   	}
+ 	}
 	7 = { # scar 7 - TIER II
 		factor = 1
 		modifier = {
@@ -5385,7 +5385,7 @@
 				NOT = { trait = scarred_mid }
 			}
 		}
-   	}
+ 	}
 	8 = { # scar 8 - TIER II
 		factor = 1
 		modifier = {
@@ -5402,7 +5402,7 @@
 				NOT = { trait = scarred_mid }
 			}
 		}
-   	}
+ 	}
 	9 = { # scar 9 - TIER II
 		factor = 1
 		modifier = {
@@ -5419,7 +5419,7 @@
 				NOT = { trait = scarred_mid }
 			}
 		}
-   	}
+ 	}
 	10 = { # scar 10 - TIER II
 		factor = 1
 		modifier = {
@@ -5436,7 +5436,7 @@
 				NOT = { trait = scarred_mid }
 			}
 		}
-   	}
+ 	}
 }
 
 # p26 high scars - Tier III
@@ -5460,7 +5460,7 @@
 				trait = scarred_type_10
 			}
 		}
-   	}
+ 	}
 
 	1 = { # scar 1 - TIER III
 		factor = 100
@@ -5478,7 +5478,7 @@
 				NOT = { trait = scarred_high }
 			}
 		}
-   	}
+ 	}
 
 	2 = { # scar 2 - TIER III
 		factor = 100
@@ -5496,7 +5496,7 @@
 				NOT = { trait = scarred_high }
 			}
 		}
-   	}
+ 	}
 
 	3 = { # scar 3 - TIER III
 		factor = 100
@@ -5514,7 +5514,7 @@
 				NOT = { trait = scarred_high }
 			}
 		}
-   	}
+ 	}
 
 	4 = { # scar 4 - TIER III
 		factor = 100
@@ -5532,7 +5532,7 @@
 				NOT = { trait = scarred_high }
 			}
 		}
-   	}
+ 	}
 	5 = { # scar 5 - TIER III
 		factor = 100
 		modifier = {
@@ -5549,7 +5549,7 @@
 				NOT = { trait = scarred_high }
 			}
 		}
-   	}
+ 	}
 	6 = { # scar 6 - TIER III
 		factor = 100
 		modifier = {
@@ -5566,7 +5566,7 @@
 				NOT = { trait = scarred_high }
 			}
 		}
-   	}
+ 	}
 	7 = { # scar 7 - TIER III
 		factor = 100
 		modifier = {
@@ -5583,7 +5583,7 @@
 				NOT = { trait = scarred_high }
 			}
 		}
-   	}
+ 	}
 	8 = { # scar 8 - TIER III
 		factor = 100
 		modifier = {
@@ -5600,7 +5600,7 @@
 				NOT = { trait = scarred_high }
 			}
 		}
-   	}
+ 	}
 	9 = { # scar 9 - TIER III
 		factor = 100
 		modifier = {
@@ -5617,7 +5617,7 @@
 				NOT = { trait = scarred_high }
 			}
 		}
-   	}
+ 	}
 	10 = { # scar 10 - TIER III
 		factor = 100
 		modifier = {
@@ -5634,7 +5634,7 @@
 				NOT = { trait = scarred_high }
 			}
 		}
-   	}
+ 	}
 }
 
 #p27 Blood Splatter
@@ -5645,10 +5645,10 @@
 			factor = 0
 			NOT = {
 				has_game_rule = {
-	   				name = blood_splatter_rule
+					name = blood_splatter_rule
 					value = off
-	   			}
-   			}
+				}
+ 			}
 			OR = {
 				has_character_modifier = blood_splatter_1
 				has_character_modifier = blood_splatter_2
@@ -5667,11 +5667,11 @@
 		modifier = {
 			factor = 0
 			has_game_rule = {
-   				name = blood_splatter_rule
+ 				name = blood_splatter_rule
 				value = off
-   			}
+ 			}
 		}
-  	}
+ 	}
 	2 = { #A lot.
 		factor = 100
 		modifier = {
@@ -5681,11 +5681,11 @@
 		modifier = {
 			factor = 0
 			has_game_rule = {
-   				name = blood_splatter_rule
+ 				name = blood_splatter_rule
 				value = off
-   			}
+ 			}
 		}
-  	}
+ 	}
 	3 = { #Bathory.
 		factor = 100
 		modifier = {
@@ -5695,19 +5695,19 @@
 		modifier = {
 			factor = 0
 			has_game_rule = {
-   				name = blood_splatter_rule
+ 				name = blood_splatter_rule
 				value = off
-   			}
+ 			}
 		}
-  	}
+ 	}
 	4 = { #Mud splatter.
 		factor = 100
 		modifier = {
 			factor = 0
 			has_game_rule = {
-   				name = blood_splatter_rule
+ 				name = blood_splatter_rule
 				value = off
-   			}
+ 			}
 		}
 		modifier = {
 			factor = 0
@@ -5721,7 +5721,7 @@
 				has_character_modifier = blood_splatter_3
 			}
 		}
-  	}
+ 	}
 }
 
 #p28 Tattoos
@@ -5767,168 +5767,168 @@
 			factor = 0
 			NOT = { trait = african_tattoo_1 }
 		}
-  	}
+ 	}
 	2 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_2 }
 		}
-  	}
+ 	}
 	3 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_3 }
 		}
-  	}
+ 	}
 	4 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_4 }
 		}
-  	}
+ 	}
 	5 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_5 }
 		}
-  	}
+ 	}
 	6 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_6 }
 		}
-  	}
+ 	}
 	7 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_7 }
 		}
-  	}
+ 	}
 	8 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_8 }
 		}
-  	}
+ 	}
 	9 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = norse_tattoo_1 }
 		}
-  	}
+ 	}
 	10 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = norse_tattoo_2 }
 		}
-  	}
+ 	}
 	11 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = norse_tattoo_3 }
 		}
-  	}
+ 	}
 	12 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = norse_tattoo_4 }
 		}
-  	}
+ 	}
 	13 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = norse_tattoo_5 }
 		}
-  	}
+ 	}
 	14 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = norse_tattoo_6 }
 		}
-  	}
+ 	}
 	15 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = slavic_tattoo_1 }
 		}
-  	}
+ 	}
 	16 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = slavic_tattoo_2 }
 		}
-  	}
+ 	}
 	17 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = slavic_tattoo_3 }
 		}
-  	}
+ 	}
 	18 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = slavic_tattoo_4 }
 		}
-  	}
+ 	}
 	19 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = slavic_tattoo_5 }
 		}
-  	}
+ 	}
 	20 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = slavic_tattoo_6 }
 		}
-  	}
+ 	}
 	21 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_9 }
 		}
-  	}
+ 	}
 	22 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_10 }
 		}
-  	}
+ 	}
 	23 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_11 }
 		}
-  	}
+ 	}
 	24 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { trait = african_tattoo_12 }
 		}
-  	}
+ 	}
 }
 
 #p29 Warpaint
@@ -5956,56 +5956,56 @@
 			factor = 0
 			NOT = { has_character_modifier = aztec_warpaint_1 }
 		}
-  	}
+ 	}
 	2 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { has_character_modifier = aztec_warpaint_2 }
 		}
-  	}
+ 	}
 	3 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { has_character_modifier = finnish_warpaint_1 }
 		}
-  	}
+ 	}
 	4 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { has_character_modifier = finnish_warpaint_2 }
 		}
-  	}
+ 	}
 	5 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { has_character_modifier = zun_warpaint_1 }
 		}
-  	}
+ 	}
 	6 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { has_character_modifier = zun_warpaint_2 }
 		}
-  	}
+ 	}
 	7 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { has_character_modifier = tengri_warpaint_1 }
 		}
-  	}
+ 	}
 	8 = { 
 		factor = 100
 		modifier = {
 			factor = 0
 			NOT = { has_character_modifier = tengri_warpaint_2 }
 		}
-  	}
+ 	}
 }
 
 #p30 Demon Child (fantasy only)
@@ -6016,9 +6016,9 @@
 			factor = 0
 			has_character_modifier = demon_horns
 			has_game_rule = {
-   				name = supernatural_events
+ 				name = supernatural_events
 				value = unrestricted
-   			}
+ 			}
  		}
  	}
 
@@ -6028,18 +6028,18 @@
 			factor = 0
 			NOT = { 
 				has_game_rule = {
-   					name = supernatural_events
+ 					name = supernatural_events
 					value = unrestricted
-   				}
+ 				}
 			}
 		}
 		modifier = {
 			factor = 0
 			NOT = {
 				has_character_modifier = demon_horns
-   			}
+ 			}
 		}
-  	}
+ 	}
 }
 
 #p31 frankish Culture Overlayer - Male
@@ -6546,7 +6546,7 @@
 			NOT = { year = 1180 }
 		}
 	}
-	11 = {  # Duchess Early
+	11 = { # Duchess Early
 		factor = 1
 		hide_layers = { 1 = { } }
 		trigger = {
@@ -6702,7 +6702,7 @@
 			}
 		}
 	}
-	2 = {  #Crusader King helmet - Male.
+	2 = { #Crusader King helmet - Male.
 		factor = 100
 		hide_layers = { 12 = { } } #Hide layer 12 (disfigured masks) when this frame is picked.
 		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
@@ -6801,7 +6801,7 @@
 			}
 		}
 	}
-	5 = {  #Teuton special headgear.
+	5 = { #Teuton special headgear.
 		factor = 100
 		hide_layers = { 12 = { } } #Hide layer 12 (disfigured masks) when this frame is picked.
 		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
@@ -6862,7 +6862,7 @@
 			}
 		}
 	}
-	7 = {  #Calatrava/Santiago special headgear.
+	7 = { #Calatrava/Santiago special headgear.
 		factor = 100
 		hide_layers = { 12 = { } } #Hide layer 12 (disfigured masks) when this frame is picked.
 		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.

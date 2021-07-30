@@ -46,7 +46,7 @@ character_event = { # Pillaging Repeating Event
 					NOT = { has_holding_modifier = stop_burning_land }
 					has_siege = no
 				}
-				
+	
 				if = {
 					limit = { NOT = { holding_type = tribal } }
 					ROOT = {
@@ -65,7 +65,7 @@ character_event = { # Pillaging Repeating Event
 						}
 					}
 				}
-				
+	
 				if = {
 					limit = { holding_type = tribal }
 					ROOT = { 
@@ -73,10 +73,10 @@ character_event = { # Pillaging Repeating Event
 						population = 150 
 					}
 				}
-				
+	
 				destroy_random_building = THIS
 				destroy_random_building = THIS
-				
+	
 				location = {
 					add_province_modifier = {
 						modifier = rampaging_nomads
@@ -90,7 +90,7 @@ character_event = { # Pillaging Repeating Event
 						years = 10
 					}
 				}
-				
+	
 				if = {
 					limit = {
 						NOT = { has_any_building = yes }
@@ -815,8 +815,8 @@ character_event = {
 			FROM = {
 				location = {
 					build_holding = {
-					   type = tribal
-					   holder = ROOT
+					type = tribal
+					holder = ROOT
 					}
 				}
 			}
@@ -858,8 +858,8 @@ character_event = {
 			FROM = {
 				location = {
 					build_holding = {
-					   type = tribal
-					   holder = ROOT
+					type = tribal
+					holder = ROOT
 					}
 					if = {
 						limit = {
@@ -890,8 +890,8 @@ character_event = {
 		FROM = {
 			location = {
 				build_holding = {
-				   type = tribal
-				   holder = ROOT
+				type = tribal
+				holder = ROOT
 				}
 				religion = FROMFROM
 				culture = FROMFROM

@@ -745,7 +745,7 @@ narrative_event = {
 					trait = shy
 					trait = cruel
 					trait = erudite
-					trait = paranoid  
+					trait = paranoid 
 					trait = diligent
 				}
 			}
@@ -1120,7 +1120,7 @@ character_event = {
 		}
 	}
 	immediate = {
-		set_global_flag = gaianism_under_threat    #set flag for CB
+		set_global_flag = gaianism_under_threat	#set flag for CB
 		any_playable_ruler = {
 			limit = {
 				religion = gaian
@@ -2675,20 +2675,20 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		clr_character_flag	= mountain_gaian_hike
-		clr_character_flag	= forest_gaian_hike
-		clr_character_flag	= river_gaian_hike
-		clr_character_flag	= hike_option_a
-		clr_character_flag	= hike_option_b
-		clr_character_flag	= hike_option_c
-		clr_character_flag	= hike_option_d
-		clr_character_flag	= hike_lost
-		clr_character_flag	= lost_in_forest
-		clr_character_flag  = lost_in_mountain
-		clr_character_flag  = was_lost
-		clr_character_flag  = encountered_bear_already
-		clr_character_flag  = encountered_rain_already
-		clr_character_flag  = hike_inecessible
+		clr_character_flag = mountain_gaian_hike
+		clr_character_flag = forest_gaian_hike
+		clr_character_flag = river_gaian_hike
+		clr_character_flag = hike_option_a
+		clr_character_flag = hike_option_b
+		clr_character_flag = hike_option_c
+		clr_character_flag = hike_option_d
+		clr_character_flag = hike_lost
+		clr_character_flag = lost_in_forest
+		clr_character_flag = lost_in_mountain
+		clr_character_flag = was_lost
+		clr_character_flag = encountered_bear_already
+		clr_character_flag = encountered_rain_already
+		clr_character_flag = hike_inecessible
 		hidden_tooltip = {
 		set_variable = { which = hike_completion value = 0 }
 		}
@@ -2715,15 +2715,15 @@ character_event = {
 		}}
 		trait = on_hike
 		OR = {
-			has_character_flag	= mountain_gaian_hike
-			has_character_flag	= forest_gaian_hike
-			has_character_flag	= river_gaian_hike
+			has_character_flag = mountain_gaian_hike
+			has_character_flag = forest_gaian_hike
+			has_character_flag = river_gaian_hike
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 	}
 	
@@ -2764,15 +2764,15 @@ character_event = {
 		value >= 3
 		}}
 		OR = {
-			has_character_flag	= mountain_gaian_hike
-			has_character_flag	= forest_gaian_hike
-			has_character_flag	= river_gaian_hike
+			has_character_flag = mountain_gaian_hike
+			has_character_flag = forest_gaian_hike
+			has_character_flag = river_gaian_hike
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 		NOT = { has_character_flag = encountered_rain_already }
 	}
@@ -2866,15 +2866,15 @@ character_event = {
 		value >= 3
 		}}
 		OR = {
-			has_character_flag	= mountain_gaian_hike
-			has_character_flag	= forest_gaian_hike
-			has_character_flag	= river_gaian_hike
+			has_character_flag = mountain_gaian_hike
+			has_character_flag = forest_gaian_hike
+			has_character_flag = river_gaian_hike
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 		NOT = { has_character_flag = encountered_bear_already }
 	}
@@ -3326,12 +3326,12 @@ character_event = {
 		which = hike_completion
 		value >= 3
 		}}
-		has_character_flag	= river_gaian_hike
+		has_character_flag = river_gaian_hike
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 	}
 	
@@ -3386,15 +3386,15 @@ character_event = {
 		value >= 3
 		}}
 		OR = {
-			has_character_flag	= mountain_gaian_hike
-			has_character_flag	= forest_gaian_hike
-			has_character_flag	= river_gaian_hike
+			has_character_flag = mountain_gaian_hike
+			has_character_flag = forest_gaian_hike
+			has_character_flag = river_gaian_hike
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 	}
 	
@@ -3464,14 +3464,14 @@ character_event = {
 		value >= 3
 		}}
 		OR = {
-			has_character_flag	= forest_gaian_hike
-			has_character_flag	= river_gaian_hike
+			has_character_flag = forest_gaian_hike
+			has_character_flag = river_gaian_hike
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 	}
 	
@@ -3572,14 +3572,14 @@ character_event = {
 		value >= 3
 		}}
 		OR = {
-			has_character_flag	= mountain_gaian_hike
-			has_character_flag	= forest_gaian_hike
+			has_character_flag = mountain_gaian_hike
+			has_character_flag = forest_gaian_hike
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 		NOR = {
 			has_character_flag = hike_lost
@@ -3623,10 +3623,10 @@ character_event = {
 			has_character_flag = lost_in_forest
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 	}
 	
@@ -3663,10 +3663,10 @@ character_event = {
 			has_character_flag = lost_in_forest
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 	}
 	
@@ -3711,10 +3711,10 @@ character_event = {
 			has_character_flag = lost_in_forest
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 	}
 	
@@ -3750,10 +3750,10 @@ long_character_event = {
 			has_character_flag = lost_in_forest
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 	}
 	
@@ -3791,10 +3791,10 @@ long_character_event = {
 			has_character_flag = lost_in_forest
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 	}
 	
@@ -3836,10 +3836,10 @@ character_event = {
 			has_character_flag = lost_in_forest
 		}
 		OR = {
-			has_character_flag	= hike_option_a
-			has_character_flag	= hike_option_b
-			has_character_flag	= hike_option_c
-			has_character_flag	= hike_option_d
+			has_character_flag = hike_option_a
+			has_character_flag = hike_option_b
+			has_character_flag = hike_option_c
+			has_character_flag = hike_option_d
 		}
 	}
 	
@@ -4724,7 +4724,7 @@ character_event = {
 
 character_event = {
 	id = gaian.1000
-	desc =  EVTDESC_yousholuldnotbeseeingthis
+	desc = EVTDESC_yousholuldnotbeseeingthis
 	picture = GFX_evt_courtiers_talking
 	religion = gaian
 	mean_time_to_happen = {
@@ -4836,7 +4836,7 @@ character_event = {
 				}
 				stewardship < 16
 				}
-				
+	
 				liege = {
 				primary_title = {
 						has_law = succ_gavelkind
@@ -4866,7 +4866,7 @@ character_event = {
 
 character_event = {
 	id = gaian.1001
-	desc =  EVTDESC_gaian_succ_eldership
+	desc = EVTDESC_gaian_succ_eldership
 	picture = GFX_evt_courtiers_talking
 	is_triggered_only = yes
 	
@@ -4892,7 +4892,7 @@ character_event = {
 
 character_event = {
 	id = gaian.1002
-	desc =  EVTDESC_gaian_succ_rel_gaian_elective
+	desc = EVTDESC_gaian_succ_rel_gaian_elective
 	picture = GFX_evt_courtiers_talking
 	is_triggered_only = yes
 	
@@ -4918,7 +4918,7 @@ character_event = {
 
 character_event = {
 	id = gaian.1003
-	desc =  EVTDESC_gaian_succ_mil_gaian_elective
+	desc = EVTDESC_gaian_succ_mil_gaian_elective
 	picture = GFX_evt_courtiers_talking
 	is_triggered_only = yes
 	
@@ -4944,7 +4944,7 @@ character_event = {
 
 character_event = {
 	id = gaian.1004
-	desc =  EVTDESC_gaian_succ_gavelkind
+	desc = EVTDESC_gaian_succ_gavelkind
 	picture = GFX_evt_courtiers_talking
 	is_triggered_only = yes
 	
@@ -4971,7 +4971,7 @@ character_event = {
 
 character_event = {
 	id = gaian.1005
-	desc =  EVTDESC_yousholuldnotbeseeingthis
+	desc = EVTDESC_yousholuldnotbeseeingthis
 	picture = GFX_evt_courtiers_talking
 	religion = gaian
 	mean_time_to_happen = {
@@ -5008,7 +5008,7 @@ character_event = {
 
 character_event = {
 	id = gaian.1006
-	desc =  EVTDESC_gaian_demiliterize
+	desc = EVTDESC_gaian_demiliterize
 	picture = GFX_evt_courtiers_talking
 	is_triggered_only = yes
 	
@@ -5057,7 +5057,7 @@ character_event = {
 
 character_event = {
 	id = gaian.2000
-	desc =  EVTDESC_gaian_militerize
+	desc = EVTDESC_gaian_militerize
 	picture = GFX_evt_armory
 	is_triggered_only = yes
 	
@@ -5100,7 +5100,7 @@ character_event = {
 
 character_event = {
 	id = gaian.2001
-	desc =  EVTDESC_gaian_demiliterize
+	desc = EVTDESC_gaian_demiliterize
 	picture = GFX_evt_armory
 	is_triggered_only = yes
 	
@@ -5159,7 +5159,7 @@ character_event = {
 character_event = {
 	id = gaian.5001
 	title = EVTITLE_neighbor_reclamation_war
-	desc =  EVTDESC_neighbor_reclamation_war
+	desc = EVTDESC_neighbor_reclamation_war
 	picture = GFX_evt_armory
 	is_triggered_only = yes
 	
@@ -5208,7 +5208,7 @@ character_event = {
 narrative_event = {
 	id = gaian.5002
 	title = EVTITLE_victoria_fallen
-	desc =  EVTDESC_victoria_fallen
+	desc = EVTDESC_victoria_fallen
 	picture = GFX_evt_magic_ritual
 	
 	trigger = {
@@ -5307,7 +5307,7 @@ narrative_event = {
 narrative_event = {
 	id = gaian.5003
 	title = EVTITLE_caledonia_fallen
-	desc =  EVTDESC_caledonia_fallen
+	desc = EVTDESC_caledonia_fallen
 	picture = GFX_evt_magic_ritual
 	
 	trigger = {
@@ -5406,7 +5406,7 @@ narrative_event = {
 narrative_event = {
 	id = gaian.5004
 	title = EVTITLE_cascadia_fallen
-	desc =  EVTDESC_cascadia_fallen
+	desc = EVTDESC_cascadia_fallen
 	picture = GFX_evt_magic_ritual
 	
 	trigger = {
@@ -5505,7 +5505,7 @@ narrative_event = {
 narrative_event = {
 	id = gaian.5005
 	title = EVTITLE_jefferson_fallen
-	desc =  EVTDESC_jefferson_fallen
+	desc = EVTDESC_jefferson_fallen
 	picture = GFX_evt_steppe_mercenaries
 	
 	trigger = {
@@ -5604,7 +5604,7 @@ narrative_event = {
 narrative_event = {
 	id = gaian.5006
 	title = EVTITLE_lincoln_fallen
-	desc =  EVTDESC_lincoln_fallen
+	desc = EVTDESC_lincoln_fallen
 	picture = GFX_evt_steppe_mercenaries
 	
 	trigger = {
@@ -5703,7 +5703,7 @@ narrative_event = {
 narrative_event = {
 	id = gaian.5007
 	title = EVTITLE_the_end_of_reclamation
-	desc =  EVTDESC_the_end_of_reclamation
+	desc = EVTDESC_the_end_of_reclamation
 	picture = GFX_evt_china_rebel_general
 	is_triggered_only = yes
 	
@@ -5747,7 +5747,7 @@ narrative_event = {
 narrative_event = {
 	id = gaian.5008
 	title = EVTITLE_sagebrush_fallen
-	desc =  EVTDESC_sagebrush_fallen
+	desc = EVTDESC_sagebrush_fallen
 	picture = GFX_evt_steppe_mercenaries
 	
 	trigger = {

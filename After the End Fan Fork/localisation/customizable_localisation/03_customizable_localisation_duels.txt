@@ -1633,7 +1633,7 @@ defined_text = {
 		trigger = {
 			is_female = yes #She's a woman
 			NOT = { is_member_of_roots_warrior_lodge_trigger = yes } #She is not a warrior
-								
+
 			#FROM and ROOT do NOT have gender equality in some form
 			NAND = {
 				OR = {
@@ -1870,7 +1870,7 @@ defined_text = { #Only cares about YOUR weapons, but needs "other_combatant" for
 	}
 	text = {
 		localisation_key = String_shoot_their_gun
-		trigger = {			
+		trigger = {
 			event_target:other_combatant = { is_using_gun_trigger = yes }
 		}
 	}
@@ -1901,7 +1901,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = String_shoot_my_gun_short
-		trigger = {			
+		trigger = {
 			event_target:other_combatant = { is_using_gun_trigger = yes }
 		}
 	}
@@ -1931,7 +1931,7 @@ defined_text = {
 	}
 	text = {
 		localisation_key = String_shoot_them_short
-		trigger = {			
+		trigger = {
 			is_using_gun_trigger = yes
 		}
 	}

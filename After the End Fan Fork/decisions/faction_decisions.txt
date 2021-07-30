@@ -52,7 +52,7 @@ plot_decisions = {
 		
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = { 
@@ -62,7 +62,7 @@ plot_decisions = {
 						power = 0.75
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0.1
 				NOT = { 
@@ -82,8 +82,8 @@ plot_decisions = {
 						power = 1.5
 					}
 				}
-			}			
-			
+			}
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -186,7 +186,7 @@ plot_decisions = {
 						power = 1.5
 					}
 				}
-			}					
+			}
 			modifier = {
 				factor = 0
 				NOT = { 
@@ -197,7 +197,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -237,7 +237,7 @@ plot_decisions = {
 		potential = {
 			is_playable = yes
 			leads_faction = faction_succ_feudal_elective
-			
+
 			OR = {
 				NOT = { has_character_flag = faction_succ_feudal_elective_ultimatum_taken }
 				had_character_flag = { flag = faction_succ_feudal_elective_ultimatum_taken days = 7 }
@@ -301,7 +301,7 @@ plot_decisions = {
 						power = 1.5
 					}
 				}
-			}				
+			}	
 			modifier = {
 				factor = 0
 				NOT = { 
@@ -312,7 +312,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -405,7 +405,7 @@ plot_decisions = {
 						power = 0.75
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0.1
 				NOT = { 
@@ -426,7 +426,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -531,7 +531,7 @@ plot_decisions = {
 						power = 0.75
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0.1
 				NOT = { 
@@ -552,7 +552,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -657,7 +657,7 @@ plot_decisions = {
 						power = 0.75
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0.1
 				NOT = { 
@@ -678,7 +678,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -766,7 +766,7 @@ plot_decisions = {
 		
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -787,11 +787,11 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {
-					religion = ROOT					
+					religion = ROOT
 					any_war = {
 						OR = {
 							AND = {
@@ -805,13 +805,13 @@ plot_decisions = {
 								}
 							}
 							AND = {
-								attacker = { character = PREV }			
+								attacker = { character = PREV }
 								using_cb = viking_invasion
 							}
 						}
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0.1
 				NOT = { 
@@ -831,7 +831,7 @@ plot_decisions = {
 						power = 1.5
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0
 				NOT = { 
@@ -871,7 +871,7 @@ plot_decisions = {
 				NOT = { war_with = ROOT }
 				NOT = { reverse_has_truce = ROOT }
 			}
-			
+
 			conditional_tooltip = {
 				trigger = {
 					liege = {
@@ -885,7 +885,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			custom_tooltip = {
 				text = UNOCCUPIED_DEMESNE_TITLE
 				hidden_tooltip = {
@@ -925,7 +925,7 @@ plot_decisions = {
 		
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = { 
@@ -936,7 +936,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0.1
 				NOT = { 
@@ -957,8 +957,8 @@ plot_decisions = {
 						power = 1.5
 					}
 				}
-			}			
-			
+			}
+
 			modifier = {
 				factor = 0
 				faction_claimant = {
@@ -987,7 +987,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = { # If liege is already fighting a claimant war, slow it down to avoid war spam
 				factor = 0.05
 				liege = {
@@ -996,7 +996,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				supported_claimant = {
@@ -1026,7 +1026,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -1151,7 +1151,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -1246,7 +1246,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -1338,7 +1338,7 @@ plot_decisions = {
 						power = 0.75
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0.1
 				NOT = { 
@@ -1359,7 +1359,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {
@@ -1451,7 +1451,7 @@ plot_decisions = {
 						power = 0.75
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0.1
 				NOT = { 
@@ -1472,7 +1472,7 @@ plot_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				liege = {

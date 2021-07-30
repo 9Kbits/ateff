@@ -31,7 +31,7 @@ character_event = {
 				founder = {
 					save_event_target_as = bloodline_founder
 				}
-			}			
+			}
 		}
 	}
 
@@ -39,7 +39,7 @@ character_event = {
 		name = EVTOPTA_HF_15000
 		add_character_modifier = {
 			modifier = told_story_nr_1
-			years = 5			
+			years = 5
 		}
 
 		tooltip_info = lunatic
@@ -50,7 +50,7 @@ character_event = {
 		name = EVTOPTB_HF_15000
 		add_character_modifier = {
 			modifier = told_story_nr_2
-			years = 5			
+			years = 5
 		}
 
 		tooltip_info_custom = available_because_dumb
@@ -65,7 +65,7 @@ character_event = {
 		name = EVTOPTC_HF_15000
 		add_character_modifier = {
 			modifier = told_story_nr_3
-			years = 5			
+			years = 5
 		}
 		trigger = {
 			event_target:bloodline_founder = { always = yes }
@@ -75,21 +75,21 @@ character_event = {
 		name = EVTOPTD_HF_15000
 		add_character_modifier = {
 			modifier = told_story_nr_4
-			years = 5			
+			years = 5
 		}
 	}
 	option = { # About religion
 		name = EVTOPTE_HF_15000
 		add_character_modifier = {
 			modifier = told_story_nr_5
-			years = 5			
+			years = 5
 		}
 	}
 	option = { # About your tribe
 		name = EVTOPTF_HF_15000
 		add_character_modifier = {
 			modifier = told_story_nr_6
-			years = 5			
+			years = 5
 		}
 		trigger = { is_tribal = yes }
 	}
@@ -156,7 +156,7 @@ character_event = {
 		}
 		any_demesne_province = {
 			is_land = yes
-		    region = custom_weather_region
+			region = custom_weather_region
 			has_rain_or_drought_modifier_trigger = yes
 		}
 	}
@@ -164,48 +164,48 @@ character_event = {
 	immediate = {
 		#save_event_target_as = rain_liege
 
-#	   while = { # As long as there are some provinces left to change the weather of...
-#		   limit = {
-#			   any_demesne_province = {
-#				   is_land = yes
-#				  region = custom_weather_region
-#				   NOT = { has_province_modifier = africa_weather_updated }
-#			   }
-#		   }
+#	while = { # As long as there are some provinces left to change the weather of...
+#		limit = {
+#			any_demesne_province = {
+#				is_land = yes
+#				region = custom_weather_region
+#				NOT = { has_province_modifier = africa_weather_updated }
+#			}
+#		}
 
 			### Current setup: Runs through all demesne provinces and chain-changes them (based on previous status and neighbor's status)
 			any_demesne_province = { #Change weather...
 				limit = {
 					is_land = yes
-				   region = custom_weather_region
+				region = custom_weather_region
 					NOT = { has_province_modifier = africa_weather_updated }
 				}
 				change_rain_effect = yes
 			}
-#			   preferred_limit = {
-#				   is_capital = yes #An attempt to make your capital the most important choice for the rain :p
-#				   is_land = yes
-#				  region = custom_weather_region
-#				   NOT = { has_province_modifier = africa_weather_updated }
-#			   }
+#			preferred_limit = {
+#				is_capital = yes #An attempt to make your capital the most important choice for the rain :p
+#				is_land = yes
+#				region = custom_weather_region
+#				NOT = { has_province_modifier = africa_weather_updated }
+#			}
 				#save_event_target_as = target_province
 
 
-#			   location = { duchy = { save_event_target_as = target_duchy_title } }
+#			location = { duchy = { save_event_target_as = target_duchy_title } }
 #
-#			   # Spread it to the duchy...			 
-#			   event_target:target_duchy_title = {
-#				   any_de_jure_vassal = {
-#					   location = {
-#						   if = {
-#							   limit = { NOT = { has_province_modifier = africa_weather_updated } }
-#							   event_target:target_province = { clone_weather_to_prev_effect = yes }
-#						   }
-#					   }
-#				   }
-#			   }
-#		   }
-#	   }   
+#			# Spread it to the duchy...
+#			event_target:target_duchy_title = {
+#				any_de_jure_vassal = {
+#					location = {
+#						if = {
+#							limit = { NOT = { has_province_modifier = africa_weather_updated } }
+#							event_target:target_province = { clone_weather_to_prev_effect = yes }
+#						}
+#					}
+#				}
+#			}
+#		}
+#	} 
 	}
 }
 
@@ -370,10 +370,10 @@ character_event = {
 				}
 				trigger = {
 					any_demesne_province = {
-						has_province_modifier = africa_light_rain					
+						has_province_modifier = africa_light_rain
 						NOT = { has_province_modifier = africa_rain_dance_1 }
 						NOT = { has_province_modifier = africa_rain_dance_2 }
-						
+
 						NOT = { #You've had it great for way too long...
 							had_province_flag = {
 								flag = africa_light_rain_flag
@@ -516,7 +516,7 @@ character_event = {
 						NOT = { has_province_modifier = africa_rain_dance_2 }
 					}
 				}
-			}			
+			}
 			10 = { # The Winds over [PrimaryTitle] (Drought)
 				character_event = { id = HF.15111 } 
 				modifier = {
@@ -560,7 +560,7 @@ character_event = {
 					factor = 0.5 # less likely if all the affected areas have taken precautions earlier...
 					NOT = {
 						any_demesne_province = {
-   							has_province_modifier = africa_drought
+ 							has_province_modifier = africa_drought
 							NOT = { has_province_modifier = africa_surplus_grain }
 						}
 					}
@@ -596,7 +596,7 @@ character_event = {
 					factor = 0.5 # less likely if all the affected areas have taken precautions earlier...
 					NOT = {
 						any_demesne_province = {
-   							has_province_modifier = africa_drought
+ 							has_province_modifier = africa_drought
 							NOT = { has_province_modifier = africa_surplus_grain }
 						}
 					}
@@ -605,7 +605,7 @@ character_event = {
 					factor = 0.5 # less likely if all the affected areas have taken precautions earlier...
 					NOT = {
 						any_demesne_province = {
-   							has_province_modifier = africa_drought
+ 							has_province_modifier = africa_drought
 							NOT = { has_province_modifier = local_relief_efforts_food }
 						}
 					}
@@ -618,7 +618,7 @@ character_event = {
 				}
 			}
 			40 = {
-				 #Nothing happens...
+				#Nothing happens...
 			}
 		}
 	}
@@ -703,7 +703,7 @@ character_event = {
 				}
 				OR = {
 					has_province_modifier = africa_rain_dance_1
-					has_province_modifier = africa_rain_dance_2   				
+					has_province_modifier = africa_rain_dance_2 	
 				}
 			}
 			save_event_target_as = rain_dance_province
@@ -760,7 +760,7 @@ character_event = {
 	immediate = {
 		random_demesne_province = {
 			limit = {
-   				has_province_modifier = africa_light_rain
+ 				has_province_modifier = africa_light_rain
 				NOT = { has_province_modifier = africa_rain_dance_1 }
 				NOT = { has_province_modifier = africa_rain_dance_2 }
 			}
@@ -1657,7 +1657,7 @@ character_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTC_HF_15121 #Tragic!
 
 		piety = -5
@@ -2089,9 +2089,9 @@ character_event = {
 				}
 				preferred_limit = {
 					NOT = { has_province_modifier = africa_surplus_grain }
-				}				
+				}	
 				save_event_target_as = starving_province
-				
+	
 				add_province_modifier = {
 					name = africa_drought_cooldown_2
 					duration = 365 #a year

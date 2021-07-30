@@ -1,9 +1,9 @@
 ###########################################
-#										 #
+#										#
 # Charlemagne Religious Events			#
-#										 #
-# ID CM.4000-CM.4999					  #
-#										 #
+#										#
+# ID CM.4000-CM.4999					#
+#										#
 ###########################################
 
 # Written by Tobias Bodlund
@@ -11,7 +11,7 @@
 namespace = CM
 
 ###########################################
-# Festival of Sol Invicta  CM.4100-CM.4199#
+# Festival of Sol Invicta CM.4100-CM.4199#
 ###########################################
 
 # Invite vassals to festival
@@ -59,19 +59,19 @@ letter_event = {
 				has_focus = focus_theology
 				religion = sol_invicta
 			}
-			modifier  = {
+			modifier = {
 				factor = 0.1
 				is_inaccessible_trigger = yes
 			}
-			modifier  = {
+			modifier = {
 				factor = 2
 				opinion = { who = from value = -30 }
 			}
-			modifier  = {
+			modifier = {
 				factor = 5
 				opinion = { who = from value = -15 }
 			}
-			modifier  = {
+			modifier = {
 				factor = 5
 				opinion = { who = from value = 0 }
 			}
@@ -90,7 +90,7 @@ letter_event = {
 				opinion = { who = FROM value = 25 }
 				NOT = { is_inaccessible_trigger = yes }
 			}
-			modifier  = {
+			modifier = {
 				factor = 5
 				NOT = {
 					religion = sol_invicta

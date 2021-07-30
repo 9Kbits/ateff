@@ -317,7 +317,7 @@ character_event = { #Relative expresses concern about your drinking
 			is_adult = yes
 			NOT = { is_incapable = yes }
 			NOT = { trait = drunkard }
-			
+
 		}
 		NOT = {
 			has_character_flag = relative_concerned_about_drinking
@@ -331,7 +331,7 @@ character_event = { #Relative expresses concern about your drinking
 				is_adult = yes
 				NOT = { is_incapable = yes }
 				NOT = { trait = drunkard }
-			
+
 			}
 			save_event_target_as = concerned_relative
 		}
@@ -344,7 +344,7 @@ character_event = { #Relative expresses concern about your drinking
 		custom_tooltip = { text = EVTOPTA_HFP_30000_TT}
 		
 		character_event = { id = HFP.30001 days = 30 random = 30}
-					
+
 	}
 
 	option = { #Lash out
@@ -386,11 +386,11 @@ character_event = { #Event to check character is still alive
 					}
 					character_event = { id = HFP.30003 days = 1}
 				}
-						
+
 				33 = {
 					character_event = { id = HFP.30004 days = 1}
 				}
-					
+
 				33 = {
 					character_event = { id = HFP.30005 days = 1}
 				}
@@ -657,7 +657,7 @@ character_event = { #Event where your court physician offers you a potion to mak
 						}
 						add_trait = ill
 					}
-					
+
 					if = { 
 						limit = {
 							has_dlc = "Reapers"
@@ -665,25 +665,25 @@ character_event = { #Event where your court physician offers you a potion to mak
 						add_symptom_effect = yes
 					}
 				}
-				
+	
 				40 = {
 					modifier = {
-					
+
 						event_target:physician = {
 							learning = 15
 						}
 						factor = 1.2
-					
+
 						event_target:physician = {
 							learning = 15
 						}
 						factor = 1.5
-						
+
 						event_target:physician = {
 							learning = 20
 						}
 						factor = 2
-						
+
 						event_target:physician = {
 							trait = physician
 						}
@@ -693,7 +693,7 @@ character_event = { #Event where your court physician offers you a potion to mak
 					hidden_tooltip = {
 					character_event = { id = 38314 days = 1 } # Notify lost Depressed
 					}
-					
+
 				}
 			}
 		}
@@ -898,7 +898,7 @@ character_event = {
 					factor = 3
 					mother_even_if_dead = { mother_even_if_dead = { trait = freckles_4 } }
 				}
-				
+	
 				modifier = { 
 					factor = 2
 					mother_even_if_dead = { trait = freckles }
@@ -963,7 +963,7 @@ character_event = {
 					factor = 3
 					mother_even_if_dead = { mother_even_if_dead = { trait = freckles } }
 				}
-				
+	
 				modifier = { 
 					factor = 2
 					mother_even_if_dead = { trait = freckles_2 }
@@ -1028,7 +1028,7 @@ character_event = {
 					factor = 3
 					mother_even_if_dead = { mother_even_if_dead = { trait = freckles_2 } }
 				}
-				
+	
 				modifier = { 
 					factor = 2
 					mother_even_if_dead = { trait = freckles_3 }
@@ -1092,7 +1092,7 @@ character_event = {
 		is_save_game = no
 	}
 	immediate = {
-		any_playable_ruler = {  
+		any_playable_ruler = { 
 			limit = {
 			ai = yes
 			OR = { 
@@ -1818,7 +1818,7 @@ character_event = {
 			if = {
 				limit = {
 					martial = 12
-					NOT = {  
+					NOT = { 
 						martial = 14
 					}
 				}
@@ -1827,16 +1827,16 @@ character_event = {
 			else_if = {
 				limit = {
 					martial = 14
-					NOT = {  
+					NOT = { 
 						martial = 18
 					}
 				}
 				liege = { change_variable = { which = byzantine_credibility_discharged_hero value = -2 } }
 			}
 			else_if = {
-				limit = {  
+				limit = { 
 					martial = 18
-					NOT = {  
+					NOT = { 
 						martial = 20
 					}
 				}
@@ -1845,7 +1845,7 @@ character_event = {
 			else_if = {
 				limit = {
 					martial = 20
-					NOT = {  
+					NOT = { 
 						martial = 24
 					}
 				}
@@ -1854,7 +1854,7 @@ character_event = {
 			else_if = {
 				limit = {
 					martial = 24
-					NOT = {  
+					NOT = { 
 						martial = 28
 					}
 				}
@@ -1932,7 +1932,7 @@ character_event = {
 							}
 							has_character_flag = special_marshal
 						}
-						
+
 						prisoner = no
 						NOT = { is_incapable = yes }
 						NOT = { is_inaccessible_trigger = yes }
@@ -1944,7 +1944,7 @@ character_event = {
 			}
 			if = {
 				limit = {
-					NOT = {  
+					NOT = { 
 						martial = 2
 					}
 				}
@@ -1953,7 +1953,7 @@ character_event = {
 			else_if = {
 				limit = {
 					martial = 2
-					NOT = {  
+					NOT = { 
 						martial = 4
 					}
 				}
@@ -1962,7 +1962,7 @@ character_event = {
 			else_if = {
 				limit = {
 					martial = 4
-					NOT = {  
+					NOT = { 
 						martial = 6
 					}
 				}
@@ -1971,7 +1971,7 @@ character_event = {
 			else_if = {
 				limit = {
 					martial = 6
-					NOT = {  
+					NOT = { 
 						martial = 8
 					}
 				}
@@ -1980,7 +1980,7 @@ character_event = {
 			else_if = {
 				limit = {
 					martial = 8
-					NOT = {  
+					NOT = { 
 						martial = 10
 					}
 				}
@@ -2035,7 +2035,7 @@ character_event = {
 							# }
 							# has_character_flag = special_marshal
 						# }
-						
+
 						# prisoner = no
 						# NOT = { trait = incapable }
 						# NOT = { is_inaccessible_trigger = yes }
@@ -2047,7 +2047,7 @@ character_event = {
 			# }
 			# if = {
 				# limit = {
-					# NOT = {  
+					# NOT = { 
 						# martial = 2
 					# }
 				# }
@@ -2056,7 +2056,7 @@ character_event = {
 			# else_if = {
 				# limit = {
 					# martial = 2
-					# NOT = {  
+					# NOT = { 
 						# martial = 4
 					# }
 				# }
@@ -2065,7 +2065,7 @@ character_event = {
 			# else_if = {
 				# limit = {
 					# martial = 4
-					# NOT = {  
+					# NOT = { 
 						# martial = 6
 					# }
 				# }
@@ -2074,7 +2074,7 @@ character_event = {
 			# else_if = {
 				# limit = {
 					# martial = 6
-					# NOT = {  
+					# NOT = { 
 						# martial = 8
 					# }
 				# }
@@ -2083,7 +2083,7 @@ character_event = {
 			# else_if = {
 				# limit = {
 					# martial = 8
-					# NOT = {  
+					# NOT = { 
 						# martial = 10
 					# }
 				# }
@@ -2119,7 +2119,7 @@ character_event = {
 			limit = {
 				can_still_be_marshal_byzantine_trigger = yes
 				martial = 12
-				NOT = {  
+				NOT = { 
 					martial = 14
 				}
 			}
@@ -2129,17 +2129,17 @@ character_event = {
 			limit = {
 				can_still_be_marshal_byzantine_trigger = yes
 				martial = 14
-				NOT = {  
+				NOT = { 
 					martial = 18
 				}
 			}
 			liege = { change_variable = { which = byzantine_credibility_discharged_hero value = -2 } }
 		}
 		else_if = {
-			limit = {  
+			limit = { 
 				can_still_be_marshal_byzantine_trigger = yes
 				martial = 18
-				NOT = {  
+				NOT = { 
 					martial = 20
 				}
 			}
@@ -2149,7 +2149,7 @@ character_event = {
 			limit = {
 				can_still_be_marshal_byzantine_trigger = yes
 				martial = 20
-				NOT = {  
+				NOT = { 
 					martial = 24
 				}
 			}
@@ -2159,7 +2159,7 @@ character_event = {
 			limit = {
 				can_still_be_marshal_byzantine_trigger = yes
 				martial = 24
-				NOT = {  
+				NOT = { 
 					martial = 28
 				}
 			}

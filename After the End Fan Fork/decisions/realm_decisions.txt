@@ -1,6 +1,6 @@
 decisions = {
 
-	hold_a_epic_tournament  = {
+	hold_a_epic_tournament = {
 		only_independent = yes
 		is_high_prio = yes
 		ai_check_interval = 24
@@ -228,7 +228,7 @@ decisions = {
 		}
 	}
 	
-	sadaqah_saddka  = {
+	sadaqah_saddka = {
 		only_playable = yes
 		ai_check_interval = 24
 		potential = {
@@ -272,7 +272,7 @@ decisions = {
 		}
 	}
 
-	hold_a_furusiyya  = {
+	hold_a_furusiyya = {
 		only_independent = yes
 		is_high_prio = yes
 		ai_check_interval = 24
@@ -853,7 +853,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.5 # Less likely to do it
 			}
@@ -997,7 +997,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.05 # Less likely to do it
 			}
@@ -1042,7 +1042,7 @@ decisions = {
 			is_playable = yes
 			tier = DUKE
 			NOT = { tier = KING }
-			
+
 			OR = {
 				has_dlc = "Charlemagne"
 				AND = {
@@ -1053,16 +1053,16 @@ decisions = {
 					}
 				}
 			}
-			
+
 			holy_order = no
-			
+
 			NOT = {
 				has_game_rule = {
 					name = dynamic_realms
 					value = off
 				}
 			}
-			
+
 			OR = {
 				ai = no
 				AND = {
@@ -1089,7 +1089,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			NOT = { has_character_flag = tried_to_create_kingdom }
 		}
 		allow = {
@@ -1097,7 +1097,7 @@ decisions = {
 			prisoner = no
 			NOT = { is_incapable = yes }
 			independent = yes
-			
+
 			conditional_tooltip = {
 				trigger = {
 					AND = {
@@ -1111,7 +1111,7 @@ decisions = {
 				prestige = 250
 				wealth = 50
 			}
-			
+
 			conditional_tooltip = {
 				trigger = {
 					NOT = {
@@ -1199,7 +1199,7 @@ decisions = {
 												kingdom = {
 													has_holder = no
 												}
-												
+	
 												NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
 												ROOT = {
 													completely_controls = PREV
@@ -1293,7 +1293,7 @@ decisions = {
 		potential = {
 			is_playable = yes
 			tier = KING
-			
+
 			OR = {
 				has_dlc = "Charlemagne"
 				AND = {
@@ -1310,9 +1310,9 @@ decisions = {
 					}
 				}
 			}
-			
+
 			holy_order = no
-			
+
 			NOT = { tier = EMPEROR }
 			OR = {
 				ai = no
@@ -1339,7 +1339,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			NOT = {
 				has_game_rule = {
 					name = dynamic_realms
@@ -1352,7 +1352,7 @@ decisions = {
 			prisoner = no
 			NOT = { is_incapable = yes }
 			independent = yes
-			
+
 			conditional_tooltip = {
 				trigger = {
 					AND = {
@@ -1366,7 +1366,7 @@ decisions = {
 				prestige = 2000
 				wealth = 200
 			}
-			
+
 			conditional_tooltip = {
 				trigger = {
 					NOT = {
@@ -1380,7 +1380,7 @@ decisions = {
 				prestige = 8000
 				wealth = 1000
 			}
-			
+
 			OR = {
 				realm_size = 180
 				custom_tooltip = {
@@ -1432,7 +1432,7 @@ decisions = {
 												NOT = {
 													empire = { has_holder = yes }
 												}
-												
+	
 												NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
 												ROOT = {
 													completely_controls = PREV
@@ -1451,7 +1451,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			if = {
 				limit = {
 					AND = {
@@ -1476,7 +1476,7 @@ decisions = {
 				}
 				wealth = -1000
 			}
-			
+
 			custom_tooltip = { text = form_new_empire_tooltip }
 			chronicle = {
 				entry = CHRONICLE_FOUNDED_NEW_KINGDOM_OR_EMPIRE
@@ -1564,7 +1564,7 @@ decisions = {
 		}
 	}
 	
-	convert_to_feudalism_indep  = {
+	convert_to_feudalism_indep = {
 		only_independent = yes
 		is_high_prio = yes
 		ai_check_interval = 12
@@ -1605,9 +1605,9 @@ decisions = {
 				limit = { ai = no }
 				set_character_flag = achievement_not_a_tribe
 			}
-			
-			
-			
+
+
+
 			if = {
 				limit = {
 					OR = {
@@ -1616,7 +1616,7 @@ decisions = {
 						religion = qingzhen
 					}
 				}
-				
+	
 				if = {
 					limit = {
 						ai = no
@@ -1628,13 +1628,13 @@ decisions = {
 				}
 				set_government_type = bureaucratic_government
 			}
-			
+
 			else_if = {
 				limit = {
 					religion = gaian
 					higher_tier_than = BARON
 				}
-				
+	
 				if = {
 					limit = {
 						ai = no
@@ -1646,14 +1646,14 @@ decisions = {
 				}
 				set_government_type = theocratic_feudal_government
 			}
-			
+
 			else_if = {
 				limit = {
 					religion_group = latter_day_saints
 					NOT = { religion = neogodbeite }
 					higher_tier_than = BARON
 				}
-				
+	
 				if = {
 					limit = {
 						ai = no
@@ -1665,7 +1665,7 @@ decisions = {
 				}
 				set_government_type = mormon_government
 			}
-			
+
 			else_if = {
 				limit = {
 					religion_group = muslim
@@ -1675,7 +1675,7 @@ decisions = {
 					}
 					higher_tier_than = BARON
 				}
-				
+	
 				if = {
 					limit = {
 						ai = no
@@ -1687,7 +1687,7 @@ decisions = {
 				}
 				set_government_type = ghazi_government
 			}
-			
+
 			else = {
 				if = {
 					limit = {
@@ -1700,7 +1700,7 @@ decisions = {
 				}
 				set_government_type = feudal_government
 			}
-			
+
 			if = {
 				limit = {
 					higher_tier_than = king
@@ -1709,7 +1709,7 @@ decisions = {
 					add_law = feudal_administration
 				}
 			}
-			
+
 			hidden_tooltip = {
 				any_demesne_title = {
 					limit = {
@@ -1726,7 +1726,7 @@ decisions = {
 						clr_province_flag = flag_great_pillar_aria_de_machete
 						clr_province_flag = flag_great_pillar_trailwalker
 					}
-					
+
 					if = {
 						limit = {
 							dejure_liege_title = {
@@ -1762,7 +1762,7 @@ decisions = {
 							}
 						}
 						location = {
-							build_holding  ={
+							build_holding ={
 								type = temple
 							}
 						}
@@ -1847,7 +1847,7 @@ decisions = {
 		
 		effect = {
 			set_character_flag = achievement_not_a_tribe
-			
+
 			if = {
 				limit = {
 					NOR = {
@@ -1855,7 +1855,7 @@ decisions = {
 						religion = gaian
 					}
 				}
-				
+	
 				if = {
 					limit = {
 						ai = no
@@ -1867,12 +1867,12 @@ decisions = {
 				}
 				set_government_type = feudal_government
 			}
-			
+
 			if = {
 				limit = {
 					religion = cetic
 				}
-				
+	
 				if = {
 					limit = {
 						ai = no
@@ -1884,13 +1884,13 @@ decisions = {
 				}
 				set_government_type = bureaucratic_government
 			}
-			
+
 			if = {
 				limit = {
 					religion = gaian
 					higher_tier_than = BARON
 				}
-				
+	
 				if = {
 					limit = {
 						ai = no
@@ -1902,7 +1902,7 @@ decisions = {
 				}
 				set_government_type = theocratic_feudal_government
 			}
-			
+
 			hidden_tooltip = {
 				if = {
 					limit = {
@@ -1922,7 +1922,7 @@ decisions = {
 							}
 						}
 					}
-					
+
 					capital_scope = {
 						random_province_holding = {
 							limit = {
@@ -1945,7 +1945,7 @@ decisions = {
 						}
 					}
 				}
-				
+	
 				any_demesne_title = {
 					limit = {
 						tier = baron
@@ -1966,7 +1966,7 @@ decisions = {
 						clr_province_flag = flag_great_pillar_aria_de_machete
 						clr_province_flag = flag_great_pillar_trailwalker
 					}
-					
+
 					if = {
 						limit = {
 							dejure_liege_title = {
@@ -2008,7 +2008,7 @@ decisions = {
 						}
 					}
 				}
-				
+	
 				liege = {
 					character_event = { id = 55100 } # Notify Liege
 				}
@@ -2035,7 +2035,7 @@ decisions = {
 					NOT = { culture_group = ROOT }
 				}
 			}
-			
+
 			modifier = {
 				factor = 0.1
 				liege = {
@@ -2047,7 +2047,7 @@ decisions = {
 		}
 	}
 	
-	convert_to_republic_indep  = {
+	convert_to_republic_indep = {
 		only_independent = yes
 		is_high_prio = yes
 		
@@ -2088,9 +2088,9 @@ decisions = {
 		effect = {
 			hidden_tooltip = {
 				create_family_palace = yes
-				
+	
 				set_government_type = merchant_republic_government
-				
+	
 				if = {
 					limit = {
 						NOT = {
@@ -2100,7 +2100,7 @@ decisions = {
 							}
 						}
 					}
-					
+
 					any_unique_dynasty_vassal = { # gives random vassals a family palace
 						count = 4
 						limit = {
@@ -2117,10 +2117,10 @@ decisions = {
 								dynasty = none 
 							}
 						}
-						
+
 						if = {
 							limit = { is_tribal = yes }
-							
+	
 							hidden_tooltip = {
 								any_demesne_title = {
 									limit = {
@@ -2137,7 +2137,7 @@ decisions = {
 										clr_province_flag = flag_great_pillar_aria_de_machete
 										clr_province_flag = flag_great_pillar_trailwalker
 									}
-									
+	
 									if = {
 										limit = {
 											dejure_liege_title = {
@@ -2181,11 +2181,11 @@ decisions = {
 								}
 							}
 						}
-						
+
 						create_family_palace = yes
 					}
 				}
-				
+	
 				any_demesne_title = {
 					limit = {
 						tier = baron
@@ -2201,7 +2201,7 @@ decisions = {
 						clr_province_flag = flag_great_pillar_aria_de_machete
 						clr_province_flag = flag_great_pillar_trailwalker
 					}
-					
+
 					if = {
 						limit = {
 							dejure_liege_title = {
@@ -2237,19 +2237,19 @@ decisions = {
 							}
 						}
 						location = {
-							build_holding  ={
+							build_holding ={
 								type = temple
 							}
 						}
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { ai = no }
 				set_character_flag = achievement_res_publica
 			}
-			
+
 			if = {
 				limit = {
 					ai = no
@@ -2259,7 +2259,7 @@ decisions = {
 					picture = GFX_evt_busy_trading_dock_republic
 				}
 			}
-			
+
 			set_government_type = merchant_republic_government
 		}
 		
@@ -2267,7 +2267,7 @@ decisions = {
 			factor = 0
 		}
 	}
-	convert_to_feudalism_indep_gaian  = {
+	convert_to_feudalism_indep_gaian = {
 		only_independent = yes
 		is_high_prio = yes
 		ai_check_interval = 12
@@ -2310,7 +2310,7 @@ decisions = {
 					add_law = feudal_administration
 				}
 			}
-			
+
 			hidden_tooltip = {
 				any_demesne_title = {
 					limit = {
@@ -2319,7 +2319,7 @@ decisions = {
 					}
 					convert_to = castle
 					refill_holding_levy = yes
-					
+
 					if = {
 						limit = {
 							dejure_liege_title = {
@@ -2355,7 +2355,7 @@ decisions = {
 							}
 						}
 						location = {
-							build_holding  ={
+							build_holding ={
 								type = temple
 							}
 						}
@@ -2382,7 +2382,7 @@ decisions = {
 		}
 		allow = {
 			war = no
-			
+
 			liege = {
 				OR = {
 					is_feudal = yes
@@ -2420,7 +2420,7 @@ decisions = {
 		
 		effect = {
 			set_character_flag = achievement_not_a_tribe
-			
+
 			chronicle = {
 						entry = CHRONICLE_ADOPTED_FEUDALISM
 						picture = GFX_evt_castle_construction
@@ -2445,7 +2445,7 @@ decisions = {
 							}
 						}
 					}
-					
+
 					capital_scope = {
 						random_province_holding = {
 							limit = {
@@ -2468,7 +2468,7 @@ decisions = {
 						}
 					}
 				}
-				
+	
 				any_demesne_title = {
 					limit = {
 						tier = baron
@@ -2489,7 +2489,7 @@ decisions = {
 						clr_province_flag = flag_great_pillar_aria_de_machete
 						clr_province_flag = flag_great_pillar_trailwalker
 					}
-					
+
 					if = {
 						limit = {
 							dejure_liege_title = {
@@ -2531,7 +2531,7 @@ decisions = {
 						}
 					}
 				}
-				
+	
 				liege = {
 					character_event = { id = 55100 } # Notify Liege
 				}
@@ -2558,7 +2558,7 @@ decisions = {
 					NOT = { culture_group = ROOT }
 				}
 			}
-			
+
 			modifier = {
 				factor = 0.1
 				liege = {
@@ -2570,11 +2570,11 @@ decisions = {
 		}
 	}
 	
-	convert_to_feudalism_indep_cenobitic  = {
+	convert_to_feudalism_indep_cenobitic = {
 			only_independent = yes
 			is_high_prio = yes
 			ai_check_interval = 12
-			
+
 			potential = {
 				is_playable = yes
 				is_tribal = yes
@@ -2598,7 +2598,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			effect = {
 				if = {
 					limit = { ai = no }
@@ -2617,7 +2617,7 @@ decisions = {
 						add_law = feudal_administration
 					}
 				}
-				
+	
 				hidden_tooltip = {
 					any_demesne_title = {
 						limit = {
@@ -2626,7 +2626,7 @@ decisions = {
 						}
 						convert_to = city
 						refill_holding_levy = yes
-						
+
 						if = {
 							limit = {
 								dejure_liege_title = {
@@ -2662,7 +2662,7 @@ decisions = {
 								}
 							}
 							location = {
-								build_holding  ={
+								build_holding ={
 									type = temple
 								}
 							}
@@ -2670,7 +2670,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			ai_will_do = {
 				factor = 1
 			}
@@ -2691,7 +2691,7 @@ decisions = {
 		}
 		allow = {
 			war = no
-			
+
 			liege = {
 				OR = {
 					is_feudal = yes
@@ -2730,7 +2730,7 @@ decisions = {
 		
 		effect = {
 			set_character_flag = achievement_not_a_tribe
-			
+
 			chronicle = {
 						entry = CHRONICLE_ADOPTED_FEUDALISM
 						picture = GFX_evt_castle_construction
@@ -2755,7 +2755,7 @@ decisions = {
 							}
 						}
 					}
-					
+
 					capital_scope = {
 						random_province_holding = {
 							limit = {
@@ -2778,7 +2778,7 @@ decisions = {
 						}
 					}
 				}
-				
+	
 				any_demesne_title = {
 					limit = {
 						tier = baron
@@ -2799,7 +2799,7 @@ decisions = {
 						clr_province_flag = flag_great_pillar_aria_de_machete
 						clr_province_flag = flag_great_pillar_trailwalker
 					}
-					
+
 					if = {
 						limit = {
 							dejure_liege_title = {
@@ -2841,7 +2841,7 @@ decisions = {
 						}
 					}
 				}
-				
+	
 				liege = {
 					character_event = { id = 55100 } # Notify Liege
 				}
@@ -2868,7 +2868,7 @@ decisions = {
 					NOT = { culture_group = ROOT }
 				}
 			}
-			
+
 			modifier = {
 				factor = 0.1
 				liege = {
@@ -2924,7 +2924,7 @@ targetted_decisions = {
 		
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				trait = zealous
@@ -2984,7 +2984,7 @@ targetted_decisions = {
 		
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				trait = cynical

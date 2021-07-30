@@ -212,7 +212,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 				set_character_flag = clumsy_double_KO
 				event_target:combatant_2 = { set_character_flag = clumsy_double_KO }
 			}
-			
+
 			#mostly to deal with Kinslayer effect and tooltips...
 			set_character_flag = someone_died
 			event_target:combatant_2 = { set_character_flag = someone_died }
@@ -412,7 +412,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 						random = { #Chance no limbs are actually chopped off, adding *only* Severely Injured trait...
 							chance = 90
 							set_character_flag = severely_injured
-							
+	
 							additive_modifier = { #If you somehow ended up in here from a mock duel...
 								value = 25
 								has_character_flag = mock_duel
@@ -440,7 +440,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -460,7 +460,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.501 days = 7}
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_flag = mock_duel } #Room for future variation :)
 				character_event = { id = HFP.16013 } #"I wounded someone!" event
@@ -535,7 +535,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					random = { #Chance no limbs are actually chopped off, adding *only* Severely Injured trait...
 						chance = 90
 						set_character_flag = severely_injured
-						
+
 						additive_modifier = { #If you somehow ended up in here from a mock duel...
 							value = 25
 							has_character_flag = mock_duel
@@ -562,7 +562,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -582,7 +582,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.502 days = 7}
 				}
 			}
-			
+
 			event_target:combatant_2 = { character_event = { id = HFP.16013 } } #"I wounded someone" event
 		}
 		
@@ -616,7 +616,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 				duel_result_score_the_best_trigger = yes #Score: you did the best
 				value = 10
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -636,7 +636,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.503 days = 7}
 				}
 			}
-			
+
 			if = {
 				limit = {
 					has_character_flag = is_legendary_duel #(special edition events)
@@ -672,7 +672,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 				duel_result_score_the_worst_trigger = yes #Score: you did the worst
 				value = 10
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -692,7 +692,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.504 days = 7}
 				}
 			}
-			
+
 			character_event = { id = HFP.16016 } #"I ran away - I lost!" event
 		}
 
@@ -738,11 +738,11 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 						has_character_flag = mock_duel
 					}
 					set_character_flag = actually_injured
-					
+
 					random = { #Chance no limbs are actually chopped off, adding *only* Severely Injured trait...
 						chance = 90
 						set_character_flag = severely_injured
-						
+
 						additive_modifier = { #If you somehow ended up in here from a mock duel...
 							value = 25
 							has_character_flag = mock_duel
@@ -777,7 +777,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 						random = { #Chance no limbs are actually chopped off, adding *only* Severely Injured trait...
 							chance = 90
 							set_character_flag = severely_injured
-							
+	
 							additive_modifier = { #If you somehow ended up in here from a mock duel...
 								value = 25
 								has_character_flag = mock_duel
@@ -793,7 +793,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -813,7 +813,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.505 days = 7}
 				}
 			}
-			
+
 			character_event = { id = HFP.16017 } #"Both wounded - I won!" event
 		}
 		
@@ -863,12 +863,12 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					}
 					set_character_flag = actually_injured
 					event_target:combatant_2 = { set_character_flag = actually_injured }
-					
+
 					random = { #Chance no limbs are actually chopped off, adding *only* Severely Injured trait...
 						chance = 90
 						set_character_flag = severely_injured
 						event_target:combatant_2 = { set_character_flag = severely_injured }
-						
+
 						additive_modifier = { #If you somehow ended up in here from a mock duel...
 							value = 25
 							has_character_flag = mock_duel
@@ -887,7 +887,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { has_character_flag = notify_instigating_hero } # Send a notification event to the Hero that instigated the fight, if there was one
 				clr_character_flag = notify_instigating_hero
@@ -907,7 +907,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 					character_event = { id = HFP.506 days = 7}
 				}
 			}
-			
+
 			event_target:combatant_2 = { character_event = { id = HFP.16017 days = 1 } } #"Both wounded - I won!" event
 		}
 		
@@ -975,8 +975,8 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 				}
 				value = 10
 			}
-			
-			
+
+
 			set_character_flag = someone_died
 			set_character_flag = actually_injured
 			set_character_flag = injury_kills
@@ -1002,7 +1002,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 				is_member_of_any_warrior_lodge_trigger = yes
 				has_character_flag = is_legendary_duel
 				has_dlc = "Holy Fury"
-				
+	
 				NOR = {
 					has_character_flag = claim_duel@event_target:combatant_2
 					has_character_flag = mock_duel
@@ -1061,7 +1061,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 				}
 				value = 10
 			}
-			
+
 
 			event_target:combatant_2 = {
 				set_character_flag = someone_died
@@ -1088,7 +1088,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 				is_member_of_any_warrior_lodge_trigger = yes
 				has_character_flag = is_legendary_duel
 				has_dlc = "Holy Fury"
-				
+	
 				NOR = {
 					has_character_flag = WL_desc_X
 					has_character_flag = WL_desc_Y
@@ -1130,7 +1130,7 @@ send_duel_result_event_mexican_effect = { # Runs via the attacker/combatant_1
 				set_character_flag = clumsy_double_KO
 				event_target:combatant_2 = { set_character_flag = clumsy_double_KO }
 			}
-			
+
 			#mostly to deal with Kinslayer effect and tooltips...
 			set_character_flag = someone_died
 			event_target:combatant_2 = { set_character_flag = someone_died }

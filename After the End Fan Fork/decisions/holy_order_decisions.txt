@@ -26,7 +26,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_knights_of_columbus
 			NOT = { has_character_modifier = expelled_d_knights_of_columbus }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_knights_of_columbus = {
@@ -39,7 +39,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -88,7 +88,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_knights_of_peter_claver
 			NOT = { has_character_modifier = expelled_d_knights_of_peter_claver }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_knights_of_peter_claver = {
@@ -101,7 +101,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -148,7 +148,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_st_ursulas_chosen
 			NOT = { has_character_modifier = expelled_d_st_ursulas_chosen }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_st_ursulas_chosen = {
@@ -161,7 +161,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -207,7 +207,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_fh
 			NOT = { has_character_modifier = expelled_d_fh }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_fh = {
@@ -220,7 +220,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -269,7 +269,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_men_in_black
 			NOT = { has_character_modifier = expelled_d_men_in_black }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_men_in_black = {
@@ -282,7 +282,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 			NOT = { society_member_of = the_assassins }
 		}
@@ -321,7 +321,7 @@ decisions = {
 		ai_check_interval = 80
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					OR = {
@@ -338,18 +338,18 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			is_title_active = d_knights_of_columbus
 			NOT = { government = order_government }
-			
+
 			d_knights_of_columbus = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_knights_of_columbus }
-			
+
 			OR = {
 				NOT = { is_title_active = d_knights_of_peter_claver }
 				AND = {
@@ -363,9 +363,9 @@ decisions = {
 					NOT = { culture = creole }
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_knights_of_columbus = {
 				holder_scope = {
 					liege = {
@@ -400,7 +400,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_knights_of_columbus = {
 					holder_scope = {
@@ -410,7 +410,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -433,7 +433,7 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -444,18 +444,18 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			is_title_active = d_knights_of_peter_claver
 			NOT = { government = order_government }
-			
+
 			d_knights_of_peter_claver = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_knights_of_peter_claver }
-			
+
 			OR = {
 				NOT = { is_title_active = d_knights_of_columbus }
 				OR = {
@@ -468,9 +468,9 @@ decisions = {
 					culture = creole
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_knights_of_peter_claver = {
 				holder_scope = {
 					liege = {
@@ -505,7 +505,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_knights_of_peter_claver = {
 					holder_scope = {
@@ -515,7 +515,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -537,7 +537,7 @@ decisions = {
 		ai_check_interval = 80
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -548,10 +548,10 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			is_title_active = d_st_ursulas_chosen
 			NOT = { government = order_government }
-			
+
 			d_st_ursulas_chosen = {
 				holder_scope = { 
 					religion = ROOT
@@ -559,9 +559,9 @@ decisions = {
 			}
 
 			NOT = { has_character_modifier = expelled_d_st_ursulas_chosen }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_st_ursulas_chosen = {
 				holder_scope = {
 					liege = {
@@ -596,7 +596,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_st_ursulas_chosen = {
 					holder_scope = {
@@ -606,7 +606,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -629,7 +629,7 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -640,17 +640,17 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			OR = {
 				religion = norse_pagan
 				religion = norse_pagan_reformed
 			}
-			
+
 			is_title_active = d_fh
 			NOT = { government = order_government }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_fh = {
 				holder_scope = {
 					liege = {
@@ -658,7 +658,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_fh }
 		}
 		
@@ -687,7 +687,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_fh = {
 					holder_scope = {
@@ -697,7 +697,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -720,7 +720,7 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -731,23 +731,23 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			NOT = { government = order_government }
 
 			is_title_active = d_men_in_black
-			
+
 			d_men_in_black = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_men_in_black }
 
 			NOT = { society_member_of = the_assassins }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_men_in_black = {
 				holder_scope = {
 					liege = {
@@ -773,7 +773,7 @@ decisions = {
 					years = 1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_men_in_black = {
 					holder_scope = {
@@ -783,7 +783,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -805,7 +805,7 @@ decisions = {
 		ai_check_interval = 80
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -816,21 +816,21 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			NOT = { government = order_government }
 
 			is_title_active = d_oppenheimer
-			
+
 			d_oppenheimer = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			NOT = { has_character_modifier = expelled_d_oppenheimer }
-			
+
 			d_oppenheimer = {
 				holder_scope = {
 					liege = {
@@ -856,7 +856,7 @@ decisions = {
 					years = 1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_oppenheimer = {
 					holder_scope = {
@@ -866,7 +866,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -897,7 +897,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_oppenheimer
 			NOT = { has_character_modifier = expelled_d_oppenheimer }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_oppenheimer = {
@@ -910,7 +910,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -950,16 +950,16 @@ decisions = {
 		
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = catholic
 				religion = neognostic
 				religion = sedevacantist
 				religion = nestorian
 			}
-			
+
 			is_heretic = no
-			
+
 			NOT = { has_character_modifier = expelled_d_knights_of_columbus }
 
 			NOT = {
@@ -972,13 +972,13 @@ decisions = {
 					}
 				}
 			}
-			
+
 			is_title_active = d_knights_of_columbus
-			
+
 			has_landed_title = k_columbia
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_knights_of_columbus = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
@@ -1047,7 +1047,7 @@ decisions = {
 		
 		effect = {
 			wealth = -500
-			
+
 			hidden_tooltip = {
 				d_knights_of_columbus = {
 					holder_scope = {
@@ -1082,7 +1082,7 @@ decisions = {
 				religion = sedevacantist
 				religion = nestorian
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_knights_of_peter_claver }
 
 			NOT = {
@@ -1095,11 +1095,11 @@ decisions = {
 					}
 				}
 			}
-			
+
 			is_title_active = d_knights_of_peter_claver
-			
+
 			has_landed_title = k_louisiana
-			
+
 			d_knights_of_peter_claver = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
@@ -1112,9 +1112,9 @@ decisions = {
 					primary_title = { title = d_knights_of_peter_claver }
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
@@ -1170,7 +1170,7 @@ decisions = {
 		
 		effect = {
 			wealth = -500
-			
+
 			hidden_tooltip = {
 				d_knights_of_peter_claver = {
 					holder_scope = {
@@ -1207,9 +1207,9 @@ decisions = {
 			higher_tier_than = DUKE
 			independent = yes
 			is_title_active = d_national_cathedral
-			
+
 			NOT = { has_character_modifier = expelled_d_national_cathedral }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_national_cathedral = {
@@ -1222,7 +1222,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -1261,7 +1261,7 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -1272,19 +1272,19 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			NOT = { government = order_government }
 
 			is_title_active = d_national_cathedral
-			
+
 			d_national_cathedral = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_national_cathedral }
-			
+
 			d_national_cathedral = {
 				holder_scope = {
 					liege = {
@@ -1292,7 +1292,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -1321,7 +1321,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_national_cathedral = {
 					holder_scope = {
@@ -1331,7 +1331,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -1362,7 +1362,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_lebanon_brethren
 			NOT = { has_character_modifier = expelled_d_lebanon_brethren }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_lebanon_brethren = {
@@ -1375,7 +1375,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -1413,7 +1413,7 @@ decisions = {
 		ai_check_interval = 80
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -1424,19 +1424,19 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			NOT = { government = order_government }
 
 			is_title_active = d_lebanon_brethren
-			
+
 			d_lebanon_brethren = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_lebanon_brethren }
-			
+
 			d_lebanon_brethren = {
 				holder_scope = {
 					liege = {
@@ -1444,7 +1444,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -1473,7 +1473,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_lebanon_brethren = {
 					holder_scope = {
@@ -1483,7 +1483,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -1511,7 +1511,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_judah_lions
 			NOT = { has_character_modifier = expelled_d_judah_lions }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_judah_lions = {
@@ -1524,7 +1524,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -1562,7 +1562,7 @@ decisions = {
 		ai_check_interval = 80
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -1573,21 +1573,21 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			NOT = { government = order_government }
 
 			is_title_active = d_judah_lions
-			
+
 			d_judah_lions = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_judah_lions }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_judah_lions = {
 				holder_scope = {
 					liege = {
@@ -1622,7 +1622,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_judah_lions = {
 					holder_scope = {
@@ -1632,7 +1632,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -1664,7 +1664,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_shomrim
 			NOT = { has_character_modifier = expelled_d_shomrim }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_shomrim = {
@@ -1677,7 +1677,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -1716,7 +1716,7 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -1727,21 +1727,21 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			NOT = { government = order_government }
 
 			is_title_active = d_shomrim
-			
+
 			d_shomrim = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			NOT = { has_character_modifier = expelled_d_shomrim }
-			
+
 			d_shomrim = {
 				holder_scope = {
 					liege = {
@@ -1776,7 +1776,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_shomrim = {
 					holder_scope = {
@@ -1786,7 +1786,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -1813,7 +1813,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_fm
 			NOT = { has_character_modifier = expelled_d_fm }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_fm = {
@@ -1826,7 +1826,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -1865,7 +1865,7 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = occultist_reformed
 		
 			OR = {
@@ -1880,13 +1880,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_fm
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			NOT = { has_character_modifier = expelled_d_fm }
-			
+
 			d_fm = {
 				holder_scope = {
 					liege = {
@@ -1921,7 +1921,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_fm = {
 					holder_scope = {
@@ -1931,7 +1931,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -1958,7 +1958,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_flaming_sword
 			NOT = { has_character_modifier = expelled_d_flaming_sword }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_flaming_sword = {
@@ -1971,7 +1971,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -2010,7 +2010,7 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = revelationist_reformed
 		
 			OR = {
@@ -2023,15 +2023,15 @@ decisions = {
 				}
 				ai = no
 			}
-			
+
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_flaming_sword
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			NOT = { has_character_modifier = expelled_d_flaming_sword }
-			
+
 			d_flaming_sword = {
 				holder_scope = {
 					liege = {
@@ -2066,7 +2066,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_flaming_sword = {
 					holder_scope = {
@@ -2076,7 +2076,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -2103,7 +2103,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_keepers_of_the_green_peace
 			NOT = { has_character_modifier = expelled_d_keepers_of_the_green_peace }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_keepers_of_the_green_peace = {
@@ -2116,7 +2116,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -2155,9 +2155,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = gaian
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -2170,13 +2170,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_keepers_of_the_green_peace
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			NOT = { has_character_modifier = expelled_d_keepers_of_the_green_peace }
-			
+
 			d_keepers_of_the_green_peace = {
 				holder_scope = {
 					liege = {
@@ -2211,7 +2211,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_keepers_of_the_green_peace = {
 					holder_scope = {
@@ -2221,7 +2221,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -2249,7 +2249,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_nauvoo_legion
 			NOT = { has_character_modifier = expelled_d_nauvoo_legion }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_nauvoo_legion = {
@@ -2262,7 +2262,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -2301,10 +2301,10 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion_group = latter_day_saints
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -2317,13 +2317,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_nauvoo_legion
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			NOT = { has_character_modifier = expelled_d_nauvoo_legion }
-			
+
 			d_nauvoo_legion = {
 				holder_scope = {
 					liege = {
@@ -2358,7 +2358,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_nauvoo_legion = {
 					holder_scope = {
@@ -2368,7 +2368,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -2395,7 +2395,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_oto
 			NOT = { has_character_modifier = expelled_d_oto }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_oto = {
@@ -2408,7 +2408,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -2447,9 +2447,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = glorian
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -2462,13 +2462,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_oto
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			NOT = { has_character_modifier = expelled_d_oto }
-			
+
 			d_oto = {
 				holder_scope = {
 					liege = {
@@ -2503,7 +2503,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_oto = {
 					holder_scope = {
@@ -2513,7 +2513,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -2540,7 +2540,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_masked_knights
 			NOT = { has_character_modifier = expelled_d_masked_knights }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_masked_knights = {
@@ -2553,7 +2553,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -2592,7 +2592,7 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -2605,19 +2605,19 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_masked_knights
-			
+
 			d_masked_knights = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_masked_knights }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_masked_knights = {
 				holder_scope = {
 					liege = {
@@ -2652,7 +2652,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_masked_knights = {
 					holder_scope = {
@@ -2662,7 +2662,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -2694,7 +2694,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_order_of_brotherhood
 			NOT = { has_character_modifier = expelled_d_order_of_brotherhood }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_order_of_brotherhood = {
@@ -2707,7 +2707,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -2746,7 +2746,7 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -2759,19 +2759,19 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_order_of_brotherhood
-			
+
 			d_order_of_brotherhood = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_order_of_brotherhood }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_order_of_brotherhood = {
 				holder_scope = {
 					liege = {
@@ -2806,7 +2806,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_order_of_brotherhood = {
 					holder_scope = {
@@ -2816,7 +2816,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -2847,7 +2847,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_st_pats
 			NOT = { has_character_modifier = expelled_d_st_pats }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_st_pats = {
@@ -2860,7 +2860,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -2898,7 +2898,7 @@ decisions = {
 		ai_check_interval = 80
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -2911,17 +2911,17 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_st_pats
-			
+
 			d_st_pats = {
 				holder_scope = { 
 					religion = ROOT
 				}
 			}
-			
+
 			NOT = { has_character_modifier = expelled_d_st_pats }
-			
+
 			d_st_pats = {
 				holder_scope = {
 					liege = {
@@ -2929,7 +2929,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -2958,7 +2958,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_st_pats = {
 					holder_scope = {
@@ -2968,7 +2968,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -3062,7 +3062,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_twelve_pairs_of_france
 			NOT = { has_character_modifier = expelled_d_twelve_pairs_of_france }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_twelve_pairs_of_france = {
@@ -3075,7 +3075,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -3114,10 +3114,10 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = celeste
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -3130,13 +3130,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_twelve_pairs_of_france
-			
+
 			NOT = { has_character_modifier = expelled_d_twelve_pairs_of_france }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_twelve_pairs_of_france = {
 				holder_scope = {
 					liege = {
@@ -3171,7 +3171,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_twelve_pairs_of_france = {
 					holder_scope = {
@@ -3181,7 +3181,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -3212,7 +3212,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_iron_workers
 			NOT = { has_character_modifier = expelled_d_iron_workers }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_iron_workers = {
@@ -3225,7 +3225,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -3264,13 +3264,13 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = rust_cultist
 				religion = chrome_cultist
 			}
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -3283,13 +3283,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_iron_workers
-			
+
 			NOT = { has_character_modifier = expelled_d_uaw }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_iron_workers = {
 				holder_scope = {
 					liege = {
@@ -3324,7 +3324,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_iron_workers = {
 					holder_scope = {
@@ -3334,7 +3334,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -3358,14 +3358,14 @@ decisions = {
 		
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = rust_cultist
 				religion = chrome_cultist
 			}
-			
+
 			is_heretic = no
-			
+
 			NOT = { has_character_modifier = expelled_d_iron_workers }
 
 			NOT = {
@@ -3378,13 +3378,13 @@ decisions = {
 					}
 				}
 			}
-			
+
 			is_title_active = d_iron_workers
-			
+
 			has_landed_title = k_allegheny
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_iron_workers = {
 				holder_scope = {
 					NOT = { has_truce = ROOT }
@@ -3453,7 +3453,7 @@ decisions = {
 		
 		effect = {
 			wealth = -500
-			
+
 			hidden_tooltip = {
 				d_iron_workers = {
 					holder_scope = {
@@ -3485,7 +3485,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_lightbringers
 			NOT = { has_character_modifier = expelled_d_lightbringers }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_lightbringers = {
@@ -3498,7 +3498,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -3537,9 +3537,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = sol_invicta
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -3552,13 +3552,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_lightbringers
-			
+
 			NOT = { has_character_modifier = expelled_d_lightbringers }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_lightbringers = {
 				holder_scope = {
 					liege = {
@@ -3593,7 +3593,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_lightbringers = {
 					holder_scope = {
@@ -3603,7 +3603,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -3630,7 +3630,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_dead_sun
 			NOT = { has_character_modifier = expelled_d_dead_sun }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_dead_sun = {
@@ -3643,7 +3643,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -3682,9 +3682,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = sol_invicta
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -3697,13 +3697,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_dead_sun
-			
+
 			NOT = { has_character_modifier = expelled_d_dead_sun }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_dead_sun = {
 				holder_scope = {
 					liege = {
@@ -3738,7 +3738,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_dead_sun = {
 					holder_scope = {
@@ -3748,7 +3748,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -3775,7 +3775,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_golden_bears
 			NOT = { has_character_modifier = expelled_d_golden_bears }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_golden_bears = {
@@ -3788,7 +3788,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -3827,9 +3827,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = cetic
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -3842,13 +3842,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_golden_bears
-			
+
 			NOT = { has_character_modifier = expelled_d_golden_bears }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_golden_bears = {
 				holder_scope = {
 					liege = {
@@ -3883,7 +3883,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_golden_bears = {
 					holder_scope = {
@@ -3893,7 +3893,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -3920,7 +3920,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_followers_ram
 			NOT = { has_character_modifier = expelled_d_followers_ram }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_followers_ram = {
@@ -3933,7 +3933,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -3972,9 +3972,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = hindu
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -3987,13 +3987,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_followers_ram
-			
+
 			NOT = { has_character_modifier = expelled_d_followers_ram }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_followers_ram = {
 				holder_scope = {
 					liege = {
@@ -4028,7 +4028,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_followers_ram = {
 					holder_scope = {
@@ -4038,7 +4038,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -4065,7 +4065,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_batallon_colombia
 			NOT = { has_character_modifier = expelled_d_batallon_colombia }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_batallon_colombia = {
@@ -4078,7 +4078,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -4117,9 +4117,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = patria_grande
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -4132,13 +4132,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_batallon_colombia
-			
+
 			NOT = { has_character_modifier = expelled_d_batallon_colombia }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_batallon_colombia = {
 				holder_scope = {
 					liege = {
@@ -4173,7 +4173,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_batallon_colombia = {
 					holder_scope = {
@@ -4183,7 +4183,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -4210,7 +4210,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_saint_expedit
 			NOT = { has_character_modifier = expelled_d_saint_expedit }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_saint_expedit = {
@@ -4223,7 +4223,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -4262,9 +4262,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = voodoo
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -4277,13 +4277,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_saint_expedit
-			
+
 			NOT = { has_character_modifier = expelled_d_saint_expedit }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_saint_expedit = {
 				holder_scope = {
 					liege = {
@@ -4318,7 +4318,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_saint_expedit = {
 					holder_scope = {
@@ -4328,7 +4328,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -4355,7 +4355,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_followers_ogun
 			NOT = { has_character_modifier = expelled_d_followers_ogun }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_followers_ogun = {
@@ -4368,7 +4368,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -4407,9 +4407,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = santeria
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -4422,13 +4422,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_followers_ogun
-			
+
 			NOT = { has_character_modifier = expelled_d_followers_ogun }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_followers_ogun = {
 				holder_scope = {
 					liege = {
@@ -4463,7 +4463,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_followers_ogun = {
 					holder_scope = {
@@ -4473,7 +4473,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -4500,7 +4500,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_warriors_guaicaipuro
 			NOT = { has_character_modifier = expelled_d_warriors_guaicaipuro }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_warriors_guaicaipuro = {
@@ -4513,7 +4513,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -4552,9 +4552,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = espiritista
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -4567,13 +4567,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_warriors_guaicaipuro
-			
+
 			NOT = { has_character_modifier = expelled_d_warriors_guaicaipuro }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_warriors_guaicaipuro = {
 				holder_scope = {
 					liege = {
@@ -4608,7 +4608,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_warriors_guaicaipuro = {
 					holder_scope = {
@@ -4618,7 +4618,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -4645,7 +4645,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_all_tribes
 			NOT = { has_character_modifier = expelled_d_all_tribes }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_all_tribes = {
@@ -4658,7 +4658,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -4697,9 +4697,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = peyotist
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -4712,13 +4712,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_all_tribes
-			
+
 			NOT = { has_character_modifier = expelled_d_all_tribes }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_all_tribes = {
 				holder_scope = {
 					liege = {
@@ -4753,7 +4753,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_all_tribes = {
 					holder_scope = {
@@ -4763,7 +4763,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -4790,7 +4790,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_capoeiristas
 			NOT = { has_character_modifier = expelled_d_capoeiristas }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_capoeiristas = {
@@ -4803,7 +4803,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -4842,9 +4842,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = candomble
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -4857,13 +4857,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_capoeiristas
-			
+
 			NOT = { has_character_modifier = expelled_d_capoeiristas }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_capoeiristas = {
 				holder_scope = {
 					liege = {
@@ -4898,7 +4898,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_capoeiristas = {
 					holder_scope = {
@@ -4908,7 +4908,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -4935,7 +4935,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_code_keepers
 			NOT = { has_character_modifier = expelled_d_code_keepers }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_code_keepers = {
@@ -4948,7 +4948,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -4987,9 +4987,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = brethren
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -5002,13 +5002,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_code_keepers
-			
+
 			NOT = { has_character_modifier = expelled_d_code_keepers }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_code_keepers = {
 				holder_scope = {
 					liege = {
@@ -5043,7 +5043,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_code_keepers = {
 					holder_scope = {
@@ -5053,7 +5053,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -5084,7 +5084,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_golden_archers
 			NOT = { has_character_modifier = expelled_d_golden_archers }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_golden_archers = {
@@ -5097,7 +5097,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -5136,14 +5136,14 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = consumerist
 				religion = monetarist
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -5156,13 +5156,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_golden_archers
-			
+
 			NOT = { has_character_modifier = expelled_d_golden_archers }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_golden_archers = {
 				holder_scope = {
 					liege = {
@@ -5197,7 +5197,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_golden_archers = {
 					holder_scope = {
@@ -5207,7 +5207,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -5238,7 +5238,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_round_table
 			NOT = { has_character_modifier = expelled_d_round_table }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_round_table = {
@@ -5251,7 +5251,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -5290,14 +5290,14 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = celtic_pagan_reformed
 				religion = celtic_pagan
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -5310,13 +5310,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_round_table
-			
+
 			NOT = { has_character_modifier = expelled_d_round_table }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_round_table = {
 				holder_scope = {
 					liege = {
@@ -5351,7 +5351,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_round_table = {
 					holder_scope = {
@@ -5361,7 +5361,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -5394,7 +5394,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_salvation_army
 			NOT = { has_character_modifier = expelled_d_salvation_army }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_salvation_army = {
@@ -5407,7 +5407,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -5446,16 +5446,16 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = evangelical
 				religion = charismatic
 				religion = antinomian
 				religion = postadventist
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -5468,13 +5468,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_salvation_army
-			
+
 			NOT = { has_character_modifier = expelled_d_salvation_army }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_salvation_army = {
 				holder_scope = {
 					liege = {
@@ -5509,7 +5509,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_salvation_army = {
 					holder_scope = {
@@ -5519,7 +5519,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -5550,7 +5550,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_three_fires
 			NOT = { has_character_modifier = expelled_d_three_fires }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_three_fires = {
@@ -5563,7 +5563,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -5602,14 +5602,14 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = midewiwin_reformed
 				religion = midewiwin
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -5622,13 +5622,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_three_fires
-			
+
 			NOT = { has_character_modifier = expelled_d_three_fires }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_three_fires = {
 				holder_scope = {
 					liege = {
@@ -5663,7 +5663,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_three_fires = {
 					holder_scope = {
@@ -5673,7 +5673,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -5704,7 +5704,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_taxet_warriors
 			NOT = { has_character_modifier = expelled_d_taxet_warriors }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_taxet_warriors = {
@@ -5717,7 +5717,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -5756,14 +5756,14 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = raven_tales_reformed
 				religion = raven_tales
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -5776,13 +5776,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_taxet_warriors
-			
+
 			NOT = { has_character_modifier = expelled_d_taxet_warriors }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_taxet_warriors = {
 				holder_scope = {
 					liege = {
@@ -5817,7 +5817,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_taxet_warriors = {
 					holder_scope = {
@@ -5827,7 +5827,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -5858,7 +5858,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_fruit_of_islam
 			NOT = { has_character_modifier = expelled_d_fruit_of_islam }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_fruit_of_islam = {
@@ -5871,7 +5871,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -5910,14 +5910,14 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = orientalist
 				religion = misrist
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -5930,13 +5930,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_fruit_of_islam
-			
+
 			NOT = { has_character_modifier = expelled_d_fruit_of_islam }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_fruit_of_islam = {
 				holder_scope = {
 					liege = {
@@ -5971,7 +5971,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_fruit_of_islam = {
 					holder_scope = {
@@ -5981,7 +5981,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -6013,7 +6013,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_guardians_of_tradition
 			NOT = { has_character_modifier = expelled_d_guardians_of_tradition }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_guardians_of_tradition = {
@@ -6026,7 +6026,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -6065,15 +6065,15 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = traditionalist
 				religion = revivalist
 				religion = transcendentalist
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -6086,13 +6086,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_guardians_of_tradition
-			
+
 			NOT = { has_character_modifier = expelled_d_guardians_of_tradition }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_guardians_of_tradition = {
 				holder_scope = {
 					liege = {
@@ -6127,7 +6127,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_guardians_of_tradition = {
 					holder_scope = {
@@ -6137,7 +6137,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -6164,7 +6164,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_coureurs_des_bois
 			NOT = { has_character_modifier = expelled_d_coureurs_des_bois }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_coureurs_des_bois = {
@@ -6177,7 +6177,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -6216,9 +6216,9 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = exovedate
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -6231,13 +6231,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_coureurs_des_bois
-			
+
 			NOT = { has_character_modifier = expelled_d_coureurs_des_bois }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_coureurs_des_bois = {
 				holder_scope = {
 					liege = {
@@ -6272,7 +6272,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_coureurs_des_bois = {
 					holder_scope = {
@@ -6282,7 +6282,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -6313,7 +6313,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_knights_st_flanelle
 			NOT = { has_character_modifier = expelled_d_knights_st_flanelle }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_knights_st_flanelle = {
@@ -6326,7 +6326,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -6365,14 +6365,14 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = ursuline
 				religion = angeline
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -6385,13 +6385,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_knights_st_flanelle
-			
+
 			NOT = { has_character_modifier = expelled_d_knights_st_flanelle }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_knights_st_flanelle = {
 				holder_scope = {
 					liege = {
@@ -6426,7 +6426,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_knights_st_flanelle = {
 					holder_scope = {
@@ -6436,7 +6436,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -6464,7 +6464,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_cedesi
 			NOT = { has_character_modifier = expelled_d_cedesi }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_cedesi = {
@@ -6477,7 +6477,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -6516,11 +6516,11 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			religion = aphite
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -6533,13 +6533,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_cedesi
-			
+
 			NOT = { has_character_modifier = expelled_d_cedesi }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_cedesi = {
 				holder_scope = {
 					liege = {
@@ -6574,7 +6574,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_cedesi = {
 					holder_scope = {
@@ -6584,7 +6584,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -6615,7 +6615,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_pony_express
 			NOT = { has_character_modifier = expelled_d_pony_express }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_pony_express = {
@@ -6628,7 +6628,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -6667,14 +6667,14 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = trailwalker_reformed
 				religion = trailwalker
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -6687,13 +6687,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_pony_express
-			
+
 			NOT = { has_character_modifier = expelled_d_pony_express }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_pony_express = {
 				holder_scope = {
 					liege = {
@@ -6728,7 +6728,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_pony_express = {
 					holder_scope = {
@@ -6738,7 +6738,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -6769,7 +6769,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_order_of_the_golden_bunny
 			NOT = { has_character_modifier = expelled_d_order_of_the_golden_bunny }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_order_of_the_golden_bunny = {
@@ -6782,7 +6782,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -6821,14 +6821,14 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = apostolic
 				religion = celeste
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -6841,13 +6841,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_order_of_the_golden_bunny
-			
+
 			NOT = { has_character_modifier = expelled_d_order_of_the_golden_bunny }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_order_of_the_golden_bunny = {
 				holder_scope = {
 					liege = {
@@ -6882,7 +6882,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_order_of_the_golden_bunny = {
 					holder_scope = {
@@ -6892,7 +6892,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -6923,7 +6923,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_legion_infernal
 			NOT = { has_character_modifier = expelled_d_legion_infernal }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_legion_infernal = {
@@ -6936,7 +6936,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -6975,14 +6975,14 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = aria_de_machete_reformed
 				religion = aria_de_machete
 			}
-			
+
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -6995,13 +6995,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_legion_infernal
-			
+
 			NOT = { has_character_modifier = expelled_d_legion_infernal }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_legion_infernal = {
 				holder_scope = {
 					liege = {
@@ -7036,7 +7036,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_legion_infernal = {
 					holder_scope = {
@@ -7046,7 +7046,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -7119,7 +7119,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_uaw
 			NOT = { has_character_modifier = expelled_d_uaw }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_uaw = {
@@ -7132,7 +7132,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -7171,13 +7171,13 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = rust_cultist
 				religion = chrome_cultist
 			}
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -7190,13 +7190,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_uaw
-			
+
 			NOT = { has_character_modifier = expelled_d_uaw }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_uaw = {
 				holder_scope = {
 					liege = {
@@ -7231,7 +7231,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_uaw = {
 					holder_scope = {
@@ -7241,7 +7241,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -7314,7 +7314,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_iatse
 			NOT = { has_character_modifier = expelled_d_iatse }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_iatse = {
@@ -7327,7 +7327,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -7366,13 +7366,13 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = rust_cultist
 				religion = chrome_cultist
 			}
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -7385,13 +7385,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_iatse
-			
+
 			NOT = { has_character_modifier = expelled_d_iatse }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_iatse = {
 				holder_scope = {
 					liege = {
@@ -7426,7 +7426,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_iatse = {
 					holder_scope = {
@@ -7436,7 +7436,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -7509,7 +7509,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_teamsters
 			NOT = { has_character_modifier = expelled_d_teamsters }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_teamsters = {
@@ -7522,7 +7522,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -7561,13 +7561,13 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = rust_cultist
 				religion = chrome_cultist
 			}
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -7580,13 +7580,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_teamsters
-			
+
 			NOT = { has_character_modifier = expelled_d_teamsters }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_teamsters = {
 				holder_scope = {
 					liege = {
@@ -7621,7 +7621,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_teamsters = {
 					holder_scope = {
@@ -7631,7 +7631,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -7704,7 +7704,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_afl
 			NOT = { has_character_modifier = expelled_d_afl }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_afl = {
@@ -7717,7 +7717,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -7756,13 +7756,13 @@ decisions = {
 
 		potential = {
 			is_playable = yes
-			
+
 			OR = {
 				religion = rust_cultist
 				religion = chrome_cultist
 			}
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -7775,13 +7775,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_afl
-			
+
 			NOT = { has_character_modifier = expelled_d_afl }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_afl = {
 				holder_scope = {
 					liege = {
@@ -7816,7 +7816,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_afl = {
 					holder_scope = {
@@ -7826,7 +7826,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -7854,7 +7854,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_chrismon_tree
 			NOT = { has_character_modifier = expelled_d_chrismon_tree }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_chrismon_tree = {
@@ -7867,7 +7867,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -7908,7 +7908,7 @@ decisions = {
 			is_playable = yes
 			religion = evangelical
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -7921,13 +7921,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_chrismon_tree
-			
+
 			NOT = { has_character_modifier = expelled_d_chrismon_tree }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_chrismon_tree = {
 				holder_scope = {
 					liege = {
@@ -7962,7 +7962,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_chrismon_tree = {
 					holder_scope = {
@@ -7972,7 +7972,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -7999,7 +7999,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_order_of_baptists
 			NOT = { has_character_modifier = expelled_d_order_of_baptists }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_order_of_baptists = {
@@ -8012,7 +8012,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -8053,7 +8053,7 @@ decisions = {
 			is_playable = yes
 			religion = evangelical
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -8066,13 +8066,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_order_of_baptists
-			
+
 			NOT = { has_character_modifier = expelled_d_order_of_baptists }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_order_of_baptists = {
 				holder_scope = {
 					liege = {
@@ -8107,7 +8107,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_order_of_baptists = {
 					holder_scope = {
@@ -8117,7 +8117,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}
@@ -8145,7 +8145,7 @@ decisions = {
 			independent = yes
 			is_title_active = d_pentecostal_oathsworn
 			NOT = { has_character_modifier = expelled_d_pentecostal_oathsworn }
-			
+
 			any_realm_province = {
 				any_province_lord = {
 					d_pentecostal_oathsworn = {
@@ -8158,7 +8158,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			has_dlc = "Sons of Abraham"
 		}
 		
@@ -8199,7 +8199,7 @@ decisions = {
 			is_playable = yes
 			religion = evangelical
 			is_heretic = no
-			
+
 			OR = {
 				AND = {
 					wealth = 1000
@@ -8212,13 +8212,13 @@ decisions = {
 			}
 
 			NOT = { government = order_government }
-			
+
 			is_title_active = d_pentecostal_oathsworn
-			
+
 			NOT = { has_character_modifier = expelled_d_pentecostal_oathsworn }
-			
+
 			has_dlc = "Sons of Abraham"
-			
+
 			d_pentecostal_oathsworn = {
 				holder_scope = {
 					liege = {
@@ -8253,7 +8253,7 @@ decisions = {
 					duration = -1
 				}
 			}
-			
+
 			hidden_tooltip = {
 				d_pentecostal_oathsworn = {
 					holder_scope = {
@@ -8263,7 +8263,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			wealth = -300
 			piety = 100
 		}

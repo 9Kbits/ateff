@@ -500,9 +500,9 @@ character_event = {
 				100 = {
 					modifier = {
 						factor = 0
-						has_province_modifier = harvest_festivals					
+						has_province_modifier = harvest_festivals
 					}
-					add_province_modifier = { 					
+					add_province_modifier = { 
 						name = harvest_festivals
 						years = 3
 					}
@@ -521,9 +521,9 @@ character_event = {
 				100 = {
 					modifier = {
 						factor = 0
-						has_province_modifier = inspired_peasantry					
+						has_province_modifier = inspired_peasantry
 					}
-					add_province_modifier = { 					
+					add_province_modifier = { 
 						name = inspired_peasantry
 						years = 3
 					}
@@ -542,9 +542,9 @@ character_event = {
 				100 = {
 					modifier = {
 						factor = 0
-						has_province_modifier = new_roads					
+						has_province_modifier = new_roads
 					}
-					add_province_modifier = { 					
+					add_province_modifier = { 
 						name = new_roads
 						years = 3
 					}
@@ -645,7 +645,7 @@ character_event = {
 	option = {
 		name = CURSES
 		event_target:smuggler_province = {
-			add_province_modifier = { 					
+			add_province_modifier = { 
 				name = smugglers_ring
 				years = 2
 			}
@@ -668,8 +668,8 @@ character_event = {
 # Drill Commanders
 character_event = {
 	id = MNM.70010
-	title =  MNM.70010.t
-	desc =  MNM.70010.d
+	title = MNM.70010.t
+	desc = MNM.70010.d
 	picture = GFX_evt_melee
 	border = GFX_event_normal_frame_war
 	
@@ -766,15 +766,15 @@ character_event = {
 	}
 	
 	option = {
-		name =  EXCELLENT
+		name = EXCELLENT
 		liege = { character_event = { id = MNM.70011 } }
 	}
 }
 
 character_event = {
 	id = MNM.70011
-	title =  MNM.70010.t
-	desc =  MNM.70011.d
+	title = MNM.70010.t
+	desc = MNM.70011.d
 	picture = GFX_evt_melee
 	border = GFX_event_normal_frame_war
 	
@@ -853,7 +853,7 @@ character_event = {
 	}
 
 	option = {
-		name =  EXCELLENT
+		name = EXCELLENT
 		prestige = 5
 		if = {
 			limit = {
@@ -1102,14 +1102,14 @@ character_event = {
 	}
 	
 	option = {
-		name =  EXCELLENT
+		name = EXCELLENT
 		liege = { character_event = { id = MNM.70013 } }
 	}
 }
 
 character_event = {
 	id = MNM.70013
-	desc =  MNM.70013.d
+	desc = MNM.70013.d
 	picture = GFX_evt_large_army
 	border = GFX_event_normal_frame_war
 	
@@ -1161,7 +1161,7 @@ character_event = {
 			remove_trait = distractible
 			remove_trait = dull
 			remove_trait = craven
-			
+
 			if = {
 				limit = {
 					trait = misguided_warrior
@@ -1169,7 +1169,7 @@ character_event = {
 				remove_trait = misguided_warrior
 				add_trait = tough_soldier
 			}
-			
+
 			remove_trait = mystic
 			remove_trait = socializer
 			remove_trait = gamer
@@ -1186,7 +1186,7 @@ character_event = {
 			remove_trait = seductress
 			remove_trait = theologian
 			remove_trait = scholar
-			
+
 			random_list = { # Flavor Randomization
 				15 = {
 					change_martial = 2
@@ -1236,7 +1236,7 @@ character_event = {
 		if = {
 			limit = {
 				OR = { 
-					NOT = { ROOT = { has_law = succ_byzantine_elective } }  #Either not Imperial...
+					NOT = { ROOT = { has_law = succ_byzantine_elective } } #Either not Imperial...
 					NOT = { #...Or there are no valid vassal candidates that can be commanders.
 						any_vassal = { 
 							higher_real_tier_than = BARON
@@ -1253,7 +1253,7 @@ character_event = {
 								}
 								has_character_flag = special_marshal
 							}
-					
+
 							prisoner = no
 							NOT = { is_incapable = yes }
 							NOT = { is_inaccessible_trigger = yes }
@@ -1348,7 +1348,7 @@ character_event = {
 		
 		trigger = {
 			OR = { 
-				NOT = { ROOT = { has_law = succ_byzantine_elective } }  #Either not Imperial...
+				NOT = { ROOT = { has_law = succ_byzantine_elective } } #Either not Imperial...
 				higher_real_tier_than = BARON #...Or potential commander is vassal...
 				NOT = { #...Or there are no valid vassal candidates that can be commanders.
 					any_vassal = { 
@@ -1366,7 +1366,7 @@ character_event = {
 							}
 							has_character_flag = special_marshal
 						}
-				
+	
 						prisoner = no
 						NOT = { is_incapable = yes }
 						NOT = { is_inaccessible_trigger = yes }
@@ -1533,7 +1533,7 @@ character_event = {
 			add_rival = event_target:marshal_character
 			random_list = {
 				40 = {
-					
+
 				}
 				45 = {
 					add_trait = wounded
@@ -1548,7 +1548,7 @@ character_event = {
 			add_rival = event_target:commander_character
 			random_list = {
 				40 = {
-					
+
 				}
 				45 = {
 					add_trait = wounded
@@ -1568,7 +1568,7 @@ character_event = {
 character_event = {
 	id = MNM.70016
 	title = MNM.70015.t
-	desc =  MNM.70016.d
+	desc = MNM.70016.d
 	picture = GFX_evt_melee
 	border = GFX_event_normal_frame_war
 	
@@ -1635,7 +1635,7 @@ character_event = {
 						factor = 0
 						has_province_modifier = sabotaged_buildings		
 					}
-					add_province_modifier = { 					
+					add_province_modifier = { 
 						name = sabotaged_buildings
 						duration = 720
 					}
@@ -1643,9 +1643,9 @@ character_event = {
 				100 = {
 					modifier = {
 						factor = 0
-						has_province_modifier = sabotaged_defences					
+						has_province_modifier = sabotaged_defences
 					}
-					add_province_modifier = { 					
+					add_province_modifier = { 
 						name = sabotaged_defences
 						duration = 720
 					}
@@ -1653,9 +1653,9 @@ character_event = {
 				100 = {
 					modifier = {
 						factor = 0
-						has_province_modifier = sabotaged_unrest					
+						has_province_modifier = sabotaged_unrest
 					}
-					add_province_modifier = { 					
+					add_province_modifier = { 
 						name = sabotaged_unrest
 						duration = 720
 					}
@@ -1979,7 +1979,7 @@ character_event = { # Hunt Apostates meta event
 					society_is_criminal = yes
 					has_character_modifier = highly_suspect
 				}
-				
+	
 				# There is someone moderately suspect
 				any_realm_character = {
 					prisoner = no
@@ -2005,7 +2005,7 @@ character_event = { # Hunt Apostates meta event
 					society_is_criminal = yes
 					has_character_modifier = under_suspicion
 				}
-				
+	
 				# Someone with a secret religion
 				any_realm_character = {
 					prisoner = no
@@ -2031,7 +2031,7 @@ character_event = { # Hunt Apostates meta event
 					age = 16
 					has_secret_religion_trait_trigger = yes
 				}
-				
+	
 				# A devil worshiper, and I'm amazingly good at my job
 				any_realm_character = {
 					prisoner = no
@@ -2064,7 +2064,7 @@ character_event = { # Hunt Apostates meta event
 						}
 					}
 				}
-				
+	
 				# Someone random, and I'm incompetent
 				any_realm_character = {
 					prisoner = no
@@ -2141,7 +2141,7 @@ character_event = { # Hunt Apostates meta event
 				save_event_target_as = highly_suspected_society_member
 				set_character_flag = apostate_extremely_suspect
 			}
-			
+
 			# Moderatley suspect people
 			random_realm_character = {
 				limit = {
@@ -2151,7 +2151,7 @@ character_event = { # Hunt Apostates meta event
 					NOT = { same_society_as = ROOT } # Nor your brethren 
 					NOT = { same_society_as = event_target:my_liege } # Nor liege's brethren
 					NAND = { # If you share the same secret religion, dont catch them
-						has_my_liege_secret_religion_truly_trigger = yes  
+						has_my_liege_secret_religion_truly_trigger = yes 
 						is_devil_worshiper_trigger = no
 					}
 					NAND = { # If they share secret religion with the liege, dont catch them
@@ -2171,7 +2171,7 @@ character_event = { # Hunt Apostates meta event
 				save_event_target_as = suspected_society_member
 				set_character_flag = apostate_moderate_suspect
 			}
-			
+
 			# Characters with a secret religion
 			random_realm_character = {
 				limit = {
@@ -2201,7 +2201,7 @@ character_event = { # Hunt Apostates meta event
 				save_event_target_as = suspected_apostate
 				set_character_flag = apostate_secret_religion
 			}
-			
+
 			# Devil worshipers without any suspicion
 			random_realm_character = {
 				limit = {
@@ -2238,7 +2238,7 @@ character_event = { # Hunt Apostates meta event
 				save_event_target_as = no_suspicion
 				set_character_flag = apostate_no_suspicion
 			}
-			
+
 			# Innocent person!
 			random_realm_character = {
 				limit = {
@@ -2314,7 +2314,7 @@ character_event = { # Hunt Apostates meta event
 					break = yes
 				}
 				80 = {
-					
+
 				}
 			}
 		}
@@ -2392,7 +2392,7 @@ character_event = { # Hunt Apostates meta event
 					break = yes
 				}
 				70 = {
-					
+
 				}
 			}
 		}
@@ -2450,7 +2450,7 @@ character_event = { # Hunt Apostates meta event
 					break = yes
 				}
 				75 = {
-					
+
 				}
 			}
 		}
@@ -2486,7 +2486,7 @@ character_event = { # Hunt Apostates meta event
 					break = yes
 				}
 				75 = {
-					
+
 				}
 			}
 		}
@@ -2526,7 +2526,7 @@ character_event = { # Hunt Apostates meta event
 					break = yes
 				}
 				95 = {
-					
+
 				}
 			}
 		}
@@ -2652,7 +2652,7 @@ character_event = { # Outcome event
 		
 		ai_chance = {
 			factor = 90
-			
+
 			modifier = {
 				factor = 2
 				trait = zealous
@@ -2717,7 +2717,7 @@ character_event = { # Outcome event
 		
 		ai_chance = {
 			factor = 1000
-			
+
 			modifier = {
 				factor = 2
 				trait = lunatic
@@ -2804,7 +2804,7 @@ character_event = { # What does the liege wish to do with the apostate?
 		
 		ai_chance = {
 			factor = 50
-			
+
 			modifier = {
 				factor = 2
 				trait = lunatic
@@ -2939,7 +2939,7 @@ character_event = { # What does the liege wish to do with the apostate?
 		
 		ai_chance = {
 			factor = 40
-			
+
 			modifier = {
 				factor = 2
 				trait = kind
@@ -3033,7 +3033,7 @@ character_event = { # What does the liege wish to do with the apostate?
 		
 		ai_chance = {
 			factor = 100
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -3113,7 +3113,7 @@ character_event = { # What does the liege wish to do with the apostate?
 		
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0
 				NOT = {

@@ -243,7 +243,7 @@ province_event = {
 			capital_scope = {
 				province_id = ROOT
 			}
-			
+
 			OR = {
 				primary_title = {
 					conquest_culture = PREV
@@ -450,12 +450,12 @@ character_event = {
 				NOT = { culture = yankee }
 				NOT = { ROOT = { culture_group = britannic } }
 			}
-			
+
 			OR = { # Not when Yanquito culture should appear
 				ROOT = { NOT = { culture_group = south_anglo } }
 				NOT = { culture_group = caribeno }
 			}
-			
+
 			OR = { # Not when Carpetbagger culture should appear
 				ROOT = {
 					NOR = {
@@ -474,7 +474,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			OR = { # Not when Nuyorican culture should appear
 				ROOT = { NOT = { culture = boricua } }
 				NOR = {
@@ -482,7 +482,7 @@ character_event = {
 					culture = hudsonian
 				}
 			}
-			
+
 			OR = { # Not when Omedulac culture should appear
 				ROOT = {
 					NOR = {
@@ -497,7 +497,7 @@ character_event = {
 					culture = chicagoan
 				}
 			}
-			
+
 			OR = { # Not when Omedulac culture should appear
 				ROOT = {
 					NOR = {

@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# Chinese Invasions				 		  #
-#										 #
-# ID JD.10100-JD.10200					  #
-#										 #
+#										#
+# Chinese Invasions						#
+#										#
+# ID JD.10100-JD.10200					#
+#										#
 ###########################################
 
 namespace = JD
@@ -112,7 +112,7 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				### Logging
 				log = "-------------------------------------"
 				log = "China Logging:"
@@ -156,7 +156,7 @@ character_event = {
 							}
 						}
 					}
-				}   			
+				} 
 				modifier = {
 					factor = 1.5
 					has_offmap_tmp_flag = WP_is_not_on_map
@@ -218,7 +218,7 @@ character_event = {
 								}
 							}
 						}
-						
+
 						#1. Selects an appropriate target... (worst case), prefer not attacking someone who supplies horses
 						random_independent_ruler = {
 							limit = {
@@ -241,7 +241,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#3. Selects an appropriate target... (worst case), pick someone who raids china if possible
 						random_independent_ruler = {
 							limit = {
@@ -252,7 +252,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#4. Finds someone within the appropriate geographical sphere... (better), prefer not attacking someone who supplies horses
 						random_independent_ruler = {
 							limit = {
@@ -275,7 +275,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#6. Finds someone within the appropriate geographical sphere... (better), pick someone who raids china if possible
 						random_independent_ruler = {
 							limit = {
@@ -288,7 +288,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#7. Finds someone liked by the emperor... (best), prefer not attacking someone who supplies horses
 						random_independent_ruler = {
 							limit = {
@@ -315,7 +315,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#9. Finds someone liked by the emperor... (best), pick someone who raids china if possible
 						random_independent_ruler = {
 							limit = {
@@ -330,7 +330,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#10. Selects an appropriate target... (worst case for border gore), prefer not attacking someone who supplies horses
 						random_independent_ruler = {
 							limit = {
@@ -341,7 +341,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#11. Selects an appropriate target... (worst case for border gore)
 						random_independent_ruler = {
 							limit = {
@@ -353,7 +353,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#12. Selects an appropriate target... (worst case for border gore), pick someone who raids china if possible
 						random_independent_ruler = {
 							limit = {
@@ -364,7 +364,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#13. Finds someone within the appropriate geographical sphere... (better, also good for border gore), prefer not attacking someone who supplies horses
 						random_independent_ruler = {
 							limit = {
@@ -387,7 +387,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#15. Finds someone within the appropriate geographical sphere... (better, also good for border gore), pick someone who raids china if possible
 						random_independent_ruler = {
 							limit = {
@@ -400,7 +400,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#16. Finds someone liked by the emperor... (best, also good for border gore), prefer not attacking someone who supplies horses
 						random_independent_ruler = {
 							limit = {
@@ -427,7 +427,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#18. Finds someone liked by the emperor... (best, also good for border gore), pick someone who raids china if possible
 						random_independent_ruler = {
 							limit = {
@@ -444,7 +444,7 @@ character_event = {
 						}
 					}
 
-					10 = {  # Going after bigger tributary...! (only if expansionist)
+					10 = { # Going after bigger tributary...! (only if expansionist)
 						trigger = {
 							has_policy = china_expansionist
 							any_independent_ruler = {
@@ -457,7 +457,7 @@ character_event = {
 							factor = 10
 							china_is_golden_age_expansionist_trigger = yes
 						}
-						
+
 						#1. Finds an appropriate target... (worst case), prefer not attacking someone who supplies horses
 						random_independent_ruler = {
 							limit = {
@@ -467,7 +467,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#2. Finds an appropriate target... (worst case)
 						random_independent_ruler = {
 							limit = {
@@ -478,7 +478,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#3. Finds an appropriate target... (worst case), pick someone who raids china if possible
 						random_independent_ruler = {
 							limit = {
@@ -490,7 +490,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#4. Finds someone with more counties... (better), prefer not attacking someone who supplies horses
 						random_independent_ruler = {
 							limit = {
@@ -511,7 +511,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#6. Finds someone with more counties... (better), pick someone who raids china if possible
 						random_independent_ruler = {
 							limit = {
@@ -523,7 +523,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#7. Finds someone who is liked by the Emperor (best), prefer not attacking someone who supplies horses
 						if = { limit = { has_policy = china_expansionist }
 							random_independent_ruler = {
@@ -537,7 +537,7 @@ character_event = {
 								save_event_target_as = chinese_invasion_target
 							}
 						}
-						
+
 						#8. Finds someone who is liked by the Emperor (best)
 						if = { limit = { has_policy = china_expansionist }
 							random_independent_ruler = {
@@ -552,7 +552,7 @@ character_event = {
 								save_event_target_as = chinese_invasion_target
 							}
 						}
-						
+
 						#9. Finds someone who is liked by the Emperor (best), pick someone who raids china if possible
 						if = { limit = { has_policy = china_expansionist }
 							random_independent_ruler = {
@@ -568,7 +568,7 @@ character_event = {
 								save_event_target_as = chinese_invasion_target
 							}
 						}
-						
+
 						#10. Finds an appropriate target neighboring them... (worst case for border gore), prefer not attacking someone who supplies horses
 						random_independent_ruler = {
 							limit = {
@@ -578,7 +578,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#11. Finds an appropriate target neighboring them... (worst case for border gore)
 						random_independent_ruler = {
 							limit = {
@@ -589,7 +589,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#12. Finds an appropriate target neighboring them... (worst case for border gore), pick someone who raids china if possible
 						random_independent_ruler = {
 							limit = {
@@ -601,7 +601,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#13. Finds someone with more counties that also neighbours them... (better, also good for border gore), prefer not attacking someone who supplies horses
 						random_independent_ruler = {
 							limit = {
@@ -611,7 +611,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#14. Finds someone with more counties that also neighbours them... (better, also good for border gore)
 						random_independent_ruler = {
 							limit = {
@@ -622,7 +622,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#15. Finds someone with more counties that also neighbours them... (better, also good for border gore), pick someone who raids china if possible
 						random_independent_ruler = {
 							limit = {
@@ -634,7 +634,7 @@ character_event = {
 							}
 							save_event_target_as = chinese_invasion_target
 						}
-						
+
 						#16. Finds someone who is liked by the Emperor that also neighbours them (best, also good for border gore), prefer not attacking someone who supplies horses
 						if = { limit = { has_policy = china_expansionist }
 							random_independent_ruler = {
@@ -648,7 +648,7 @@ character_event = {
 								save_event_target_as = chinese_invasion_target
 							}
 						}
-						
+
 						#17. Finds someone who is liked by the Emperor that also neighbours them (best, also good for border gore)
 						if = { limit = { has_policy = china_expansionist }
 							random_independent_ruler = {
@@ -663,7 +663,7 @@ character_event = {
 								save_event_target_as = chinese_invasion_target
 							}
 						}
-						
+
 						#18. Finds someone who is liked by the Emperor that also neighbours them (best, also good for border gore), pick someone who raids china if possible
 						if = { limit = { has_policy = china_expansionist }
 							random_independent_ruler = {
@@ -691,14 +691,14 @@ character_event = {
 					NOT = { has_offmap_tmp_flag = pretender_chinese_empire_exists }
 					NOT = { has_offmap_tmp_flag = major_invasion_fired }
 					NOT = { has_offmap_tmp_flag = attacked_small_neighbor }
-					
+
 					NOT = {
 						has_game_rule = {
 							name = chinese_invasions
 							value = no_major_invasions
 						}
 					}
-					
+
 					OR = {
 						#Can grab Jiuquan (dunuhang, etc)
 						AND = {
@@ -713,7 +713,7 @@ character_event = {
 								}
 							}
 						}
-						
+
 						#Can do a MEDIUM land grab
 						AND = {
 							has_policy = china_expansionist
@@ -817,7 +817,7 @@ character_event = {
 
 						#The WP will try to grab whatever they can within Jiuquan...
 						d_roraima = {
-							#add_claim = ROOT #No claim on the duchy title, as then they can grab more land than intended - they can usurp it afterwards instead					
+							#add_claim = ROOT #No claim on the duchy title, as then they can grab more land than intended - they can usurp it afterwards instead
 							any_direct_de_jure_vassal_title = {
 								add_claim = ROOT
 							}
@@ -835,7 +835,7 @@ character_event = {
 									}
 								}
 							}
-						}						
+						}
 						set_offmap_tmp_flag = should_claim_all_titles_war # Makes sure they will go after Jiuquan counties...
 						#change_variable = { which = global_major_invasions_launched value = 1 } # For logging purposes
 					}
@@ -1077,7 +1077,7 @@ character_event = {
 								NOT = { has_policy = china_expansionist }
 							}
 							#Target to big for non-expansionist China, Abort!
-							
+	
 							### Logging
 							log = "-------------------------------------"
 							log = "China Logging:"
@@ -1287,7 +1287,7 @@ character_event = {
 		### Depending on type of invasion, where the troops spawn will be different... Example below:
 		if = { #If the WP currently holds land on map, spawn Chinese Troops from their capital
 			limit = { has_offmap_tmp_flag = WP_is_on_map }
-			
+
 			random_realm_province = {
 				limit = { is_capital = yes }
 				save_event_target_as = chinese_invasion_spawn_point_province
@@ -1395,7 +1395,7 @@ narrative_event = { #NEWS: visible event for player (someone PEACEFULLY became a
 	}
 
 	
-	option = {	  
+	option = {	
 		name = EVTOPTA_JD_10105
 		show_portrait = event_target:chinese_invasion_target
 		custom_tooltip = { text = EVTOPTA_JD_10105_TT }
@@ -1456,7 +1456,7 @@ narrative_event = { # NEWS: visible event for player (tributary invasion)
 			}
 		}
 		trigger = {
-		 	event_target:chinese_invasion_target = { character = ROOT }
+			event_target:chinese_invasion_target = { character = ROOT }
 		}
 	}
 
@@ -1473,7 +1473,7 @@ narrative_event = { # NEWS: visible event for player (tributary invasion)
 		event_target:chinese_invasion_target = { show_portrait = yes }
 		
 		trigger = {
-		 	NOT = { event_target:chinese_invasion_target = { character = ROOT } }
+			NOT = { event_target:chinese_invasion_target = { character = ROOT } }
 		}
 	}
 }
@@ -1496,7 +1496,7 @@ character_event = {
 
 		if = { #If the WP currently holds land on map, spawn Chinese Troops from their capital
 			limit = { has_offmap_tmp_flag = WP_is_on_map }
-			
+
 			random_realm_province = {
 				limit = { is_capital = yes }
 				save_event_target_as = chinese_invasion_spawn_point_province
@@ -1557,7 +1557,7 @@ character_event = {
 							casus_belli = claim
 							target = event_target:chinese_invasion_target
 							thirdparty_title = PREV
-						}						
+						}
 					}
 				}
 			}
@@ -1607,7 +1607,7 @@ character_event = {
 					disband_on_peace = yes
 					maintenance_multiplier = 0.0
 					earmark = chinese_regiment
-				}			
+				}
 			}
 			else = {
 				spawn_unit = {
@@ -1814,7 +1814,7 @@ narrative_event = { # NEWS: Major invasion declared on <target>! (Visible event 
 			}
 		}
 		trigger = {
-		 	event_target:chinese_invasion_target = { character = ROOT }
+			event_target:chinese_invasion_target = { character = ROOT }
 		}
 	}
 
@@ -1842,7 +1842,7 @@ narrative_event = { # NEWS: Major invasion declared on <target>! (Visible event 
 		event_target:chinese_invasion_target = { show_portrait = yes }
 
 		trigger = {
-		 	NOT = { event_target:chinese_invasion_target = { character = ROOT } }
+			NOT = { event_target:chinese_invasion_target = { character = ROOT } }
 		}
 	}
 }
@@ -1878,7 +1878,7 @@ character_event = {
 					flag = attacked_small_neighbor
 					years = 3
 				}
-			}			
+			}
 		}
 	}
 
@@ -1992,7 +1992,7 @@ character_event = {
 				}
 				waiting_to_spawn_a_jurchen_invader = {
 					governor = {
-						character_event = { id =  JD.10109 days = 15 } #Spawns a Jurchen tribe leader...
+						character_event = { id = JD.10109 days = 15 } #Spawns a Jurchen tribe leader...
 					}
 					log = "China Logging:"
 					log = "Attempting to spawn a Jurchen Invader, via monthly pulse fallback event (since the old governor left office). Character should spawn in 15 days."
@@ -2138,7 +2138,7 @@ character_event = {
 }
 
 #########################################################################################################
-### Spawning Displaced Prince - Only in case of dynasty change...  (fires for the governor, from JD.50300, jd_chinese_status_and_policy_events file )
+### Spawning Displaced Prince - Only in case of dynasty change... (fires for the governor, from JD.50300, jd_chinese_status_and_policy_events file )
 #########################################################################################################
 character_event = {
 	id = JD.10113 #Sorry about the wrong ID order. Don't let it get to you!
@@ -2206,14 +2206,14 @@ character_event = {
 			else_if = {
 				limit = {
 					event_target:previousEmperor = {
-						any_dynasty_member_even_if_dead  = {
+						any_dynasty_member_even_if_dead = {
 							is_or_was_offmap_power_ruler = yes
 							is_female = no
 							could_be_parent_of = event_target:displaced_prince
 						}
 					}
 				}
-				
+	
 				event_target:previousEmperor = {
 					random_dynasty_member_even_if_dead = {
 						limit = {
@@ -2230,14 +2230,14 @@ character_event = {
 			else_if = {
 				limit = {
 					event_target:previousEmperor = {
-						any_dynasty_member_even_if_dead  = {
+						any_dynasty_member_even_if_dead = {
 							is_or_was_offmap_power_ruler = yes
 							is_female = yes
 							could_be_parent_of = event_target:displaced_prince
 						}
 					}
 				}
-				
+	
 				event_target:previousEmperor = {
 					random_dynasty_member_even_if_dead = {
 						limit = {
@@ -2260,7 +2260,7 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				event_target:previousEmperor = {
 					random_dynasty_member_even_if_dead = {
 						limit = {
@@ -2494,7 +2494,7 @@ character_event = {
 	}
 }
 
-character_event = {  # Checks ready to settle (declare war or negotiate) or continue raiding, repeating every 3 years. [Gating event]
+character_event = { # Checks ready to settle (declare war or negotiate) or continue raiding, repeating every 3 years. [Gating event]
 	id = JD.10111
 
 	has_dlc = "Jade Dragon"
@@ -2613,7 +2613,7 @@ character_event = { #"[Root.GetBestName] prepares to settle (declare war)"
 
 				break = yes
 			}
-			
+
 			if = { #Declare unsafe war on random target...
 				limit = { NOT = { higher_real_tier_than = DUKE } }	
 				clr_character_flag = raiding_adventurer
@@ -2637,7 +2637,7 @@ character_event = { #"[Root.GetBestName] prepares to settle (declare war)"
 					}
 					break = yes
 				}
-				
+	
 				random_realm_province = {
 					ROOT = {
 						unsafe_war = {
@@ -2778,11 +2778,11 @@ character_event = {
 
 	#If not at war and still holding an adventurer title... 
 	trigger = {
-	 	war = no
-	 	primary_title = { 
-	 		temporary = yes 
-	 		adventurer = yes
-	 	}
+		war = no
+		primary_title = { 
+			temporary = yes 
+			adventurer = yes
+		}
 	}
 
 	#...go forth and adventure!
@@ -3191,7 +3191,7 @@ character_event = {
 					}
 				}
 			}
-			old_general	= {
+			old_general = {
 				create_character = {
 					age = 48
 					random_traits = yes
@@ -3354,37 +3354,37 @@ character_event = {
 			change_variable = { which = "china_war_minimum_commander_martial" which = "rebel_general_martial" }
 			# Manipulate the parameter variables dependent on the current century.
 			china_war_modify_variables_by_century_effect = yes
-			
+
 			### Match mult calculation against the opponents troops.
 			export_to_variable = {
 				which = china_temp_troop_calc
 				value = realm_levies_plus_allies
 				who = FROM
 			}
-			
+
 			divide_variable = {
 				which = china_temp_troop_calc
 				value = 500
 			}
-			
+
 			multiply_variable = {
 				which = china_temp_troop_calc
 				which = china_war_target_match_mult
 			}
-			
+
 			change_variable = {
 				which = china_war_troop_quantity
 				which = china_temp_troop_calc
 			}
 			###
-			
+
 			any_courtier_or_vassal = { # Copy the variable to all courtiers and vassals
 				set_variable = {
 					which = china_war_minimum_commander_martial
 					which = PREV
 				}
 			}
-			
+
 			if = {
 				limit = {
 					NOT = {
@@ -3401,11 +3401,11 @@ character_event = {
 				china_spawn_commander_effect = yes
 				china_spawn_commander_effect = yes
 			}
-			
+
 			675 = { # Dunhuang
 				save_event_target_as = spawn_province
 			}
-			
+
 			china_war_spawn_troops_no_disband_effect = yes
 			# Requires the current things to function properly:
 			# event_target:spawn_province
@@ -3789,7 +3789,7 @@ narrative_event = {
 			}
 		}
 		trigger = {
-		 	event_target:chinese_invasion_target = { character = ROOT }
+			event_target:chinese_invasion_target = { character = ROOT }
 		}
 	}
 
@@ -3799,7 +3799,7 @@ narrative_event = {
 		event_target:chinese_invasion_target = { show_portrait = yes }
 
 		trigger = {
-		 	NOT = { event_target:chinese_invasion_target = { character = ROOT } }
+			NOT = { event_target:chinese_invasion_target = { character = ROOT } }
 		}
 	}
 }
@@ -3946,14 +3946,14 @@ narrative_event = {
 	option = {
 		name = EVT_OPTA_JD_60211
 		trigger = {
-		 	FROM = { is_liege_of = ROOT }
+			FROM = { is_liege_of = ROOT }
 		}
 	}
 
 	option = {
 		name = EVT_OPTB_JD_60211
 		trigger = {
-		 	NOT = { FROM = { is_liege_of = ROOT } }
+			NOT = { FROM = { is_liege_of = ROOT } }
 		}
 	}
 }

@@ -1,25 +1,25 @@
 namespace = okla_landmarks
 
 character_event = {
-    id = okla_landmarks.0
-    hide_window = yes
-    is_triggered_only = yes
+	id = okla_landmarks.0
+	hide_window = yes
+	is_triggered_only = yes
  
-    only_rulers = yes
+	only_rulers = yes
  
-    trigger = {
-        has_landed_title = k_papal_state
-        NOT = { has_global_flag = okla_landmarks_set }
-        has_game_rule = {
-            name = american_landmarks
-            value = on
-        }
-    }
- 
-    option = {
-		326 = {
-		  add_province_modifier = {name = landmark_port_of_catoosa duration = -1}
+	trigger = {
+		has_landed_title = k_papal_state
+		NOT = { has_global_flag = okla_landmarks_set }
+		has_game_rule = {
+			name = american_landmarks
+			value = on
 		}
-        set_global_flag = okla_landmarks_set
-    }
+	}
+ 
+	option = {
+		326 = {
+		add_province_modifier = {name = landmark_port_of_catoosa duration = -1}
+		}
+		set_global_flag = okla_landmarks_set
+	}
 }

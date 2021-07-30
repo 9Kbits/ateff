@@ -605,11 +605,11 @@ shattered_invasion = {
 	on_success = {
 		ROOT = {
 			prestige = 200
-			
+
 			hidden_tooltip = {
 				occupy_minors_of_occupied_settlements = FROM
 				gain_all_occupied_titles = { who = FROM type = invasion }
-				
+	
 				if = {
 					limit = {
 						has_nickname = no
@@ -623,7 +623,7 @@ shattered_invasion = {
 				}
 			}
 			participation_scaled_prestige = 200
-			
+
 			if = {
 				limit = {
 					uses_decadence = yes

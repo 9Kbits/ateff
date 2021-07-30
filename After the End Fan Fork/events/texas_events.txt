@@ -113,7 +113,7 @@ narrative_event={
 			new_bloodline = {
 				set_description = "bloodline_desc_texarkana"
 			}	
-			sound_effect = bloodline_added			
+			sound_effect = bloodline_added
 		}
 		else_if = { #New Imperial Bloodline. (female)
 			limit = { 
@@ -126,7 +126,7 @@ narrative_event={
 			new_bloodline = {
 				set_description = "bloodline_desc_texarkana"
 			}	
-			sound_effect = bloodline_added			
+			sound_effect = bloodline_added
 		}
 	}
 	
@@ -297,35 +297,35 @@ narrative_event = {
 	
 	desc = {
 		trigger = {
-			 has_global_flag = texas_secular_guard
+			has_global_flag = texas_secular_guard
 		}
 		text = EVTDESC_texas_4_secular
 	}
 	
 	desc = {
 		trigger = {
-			 has_global_flag = texas_red_raider_guard
+			has_global_flag = texas_red_raider_guard
 		}
 		text = EVTDESC_texas_4_red_raider
 	}
 	
 	desc = {
 		trigger = {
-			 has_global_flag = texas_knights_outrider_guard
+			has_global_flag = texas_knights_outrider_guard
 		}
 		text = EVTDESC_texas_4_knights_outrider
 	}
 	
 	desc = {
 		trigger = {
-			 has_global_flag = texas_airmen_guard
+			has_global_flag = texas_airmen_guard
 		}
 		text = EVTDESC_texas_4_airmen
 	}
 	
 	desc = {
 		trigger = {
-			 has_global_flag = texas_first_cav_guard
+			has_global_flag = texas_first_cav_guard
 		}
 		text = EVTDESC_texas_4_first_cav
 	}
@@ -529,7 +529,7 @@ narrative_event={
 			new_bloodline = {
 				set_description = "bloodline_desc_texas"
 			}	
-			sound_effect = bloodline_added			
+			sound_effect = bloodline_added
 		}
 		else_if = { #New Imperial Bloodline. (female)
 			limit = { 
@@ -542,7 +542,7 @@ narrative_event={
 			new_bloodline = {
 				set_description = "bloodline_desc_texas"
 			}	
-			sound_effect = bloodline_added			
+			sound_effect = bloodline_added
 		}
 		narrative_event = { id =texas.3}
 		
@@ -2300,12 +2300,12 @@ province_event = {
 	only_playable = yes
 	hide_window = yes
 	trigger = {
-		holder_scope = {  government = open_range_feudalism_government }
+		holder_scope = { government = open_range_feudalism_government }
 		OR = {
-			holder_scope = {  has_law = range_privileges_church_0 }
-			holder_scope = {  has_law = range_privileges_trade_0 }
+			holder_scope = { has_law = range_privileges_church_0 }
+			holder_scope = { has_law = range_privileges_trade_0 }
 		}
-		holder_scope = {  NOT = { has_character_modifier = had_party_localize } }
+		holder_scope = { NOT = { has_character_modifier = had_party_localize } }
 	}
 	immediate = {
 		holder_scope = { add_character_modifier = had_party_localize }
@@ -2337,11 +2337,11 @@ province_event = {
 	only_playable = yes
 	hide_window = yes
 	trigger = {
-		holder_scope = {  government = open_range_feudalism_government }
+		holder_scope = { government = open_range_feudalism_government }
 		
-		holder_scope = {  has_law = range_privileges_trade_1 }
+		holder_scope = { has_law = range_privileges_trade_1 }
 		
-		holder_scope = {  NOT = { has_character_modifier = had_party_localize } }
+		holder_scope = { NOT = { has_character_modifier = had_party_localize } }
 	}
 	immediate = {
 		holder_scope = { add_character_modifier = had_party_localize }
@@ -2373,9 +2373,9 @@ province_event = {
 	only_playable = yes
 	hide_window = yes
 	trigger = {
-		holder_scope = {  government = open_range_feudalism_government }
-		holder_scope = {  has_law = range_privileges_church_1 }
-		holder_scope = {  NOT = { has_character_modifier = had_party_localize } }
+		holder_scope = { government = open_range_feudalism_government }
+		holder_scope = { has_law = range_privileges_church_1 }
+		holder_scope = { NOT = { has_character_modifier = had_party_localize } }
 	}
 	immediate = {
 		holder_scope = { add_character_modifier = had_party_localize }

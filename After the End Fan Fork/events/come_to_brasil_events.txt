@@ -291,7 +291,7 @@ character_event = { #Boa Vista leg event tombola
 						}
 					}
 				}
-				narrative_event = { id = plscometobr.10 }  # Meet traveling merchant
+				narrative_event = { id = plscometobr.10 } # Meet traveling merchant
 				break = yes
 			}
 			50 = { # Messenger invites you to the Lords keep, travel time > 1
@@ -365,7 +365,7 @@ character_event = { #Boa Vista leg event tombola
 	}
 }
 
-narrative_event = {  # Unusually heavy rain, think of late parents.
+narrative_event = { # Unusually heavy rain, think of late parents.
 	id = plscometobr.6
 	has_dlc = "Jade Dragon"
 	
@@ -568,7 +568,7 @@ narrative_event = {  # Unusually heavy rain, think of late parents.
 	}
 }
 
-narrative_event = {  # Unusually heavy rain stops travel
+narrative_event = { # Unusually heavy rain stops travel
 	id = plscometobr.7
 	has_dlc = "Jade Dragon"
 	
@@ -866,7 +866,7 @@ narrative_event = {  # Unusually heavy rain stops travel
 	}
 }
 
-character_event = {  # Unusually heavy rain gives you pneumonia
+character_event = { # Unusually heavy rain gives you pneumonia
 	id = plscometobr.8
 	has_dlc = "Jade Dragon"
 	
@@ -897,7 +897,7 @@ character_event = {  # Unusually heavy rain gives you pneumonia
 	#}
 }
 
-narrative_event = {  # Good weather raises spirits (removes stressed trait, but has no effect on depressed)
+narrative_event = { # Good weather raises spirits (removes stressed trait, but has no effect on depressed)
 	id = plscometobr.9
 	has_dlc = "Jade Dragon"
 	
@@ -959,7 +959,7 @@ narrative_event = { #Encounter a merchant..!
 	picture = GFX_evt_brazil_stable
 	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
-   	portrait = event_target:brazilian_trader
+ 	portrait = event_target:brazilian_trader
 
 	trigger = {
 		trait = kow_tow_travels
@@ -971,7 +971,7 @@ narrative_event = { #Encounter a merchant..!
 		hidden_effect = {
 			offmap_china = {
 				governor = {
-					create_random_intriguer  = {
+					create_random_intriguer = {
 						age = 25
 						random_traits = yes
 						female = 50
@@ -990,7 +990,7 @@ narrative_event = { #Encounter a merchant..!
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_plscometobr_10 #I'd love to take it off your hands!
 		custom_tooltip = { text = EVTOPTA_plscometobr_10_TT }
 
@@ -1004,7 +1004,7 @@ narrative_event = { #Encounter a merchant..!
 						to = PREVPREV
 					}
 				}
-				death = { death_reason =  death_missing }
+				death = { death_reason = death_missing }
 			}
 		}
 	}
@@ -1044,13 +1044,13 @@ narrative_event = { #Encounter a merchant..!
 		tooltip_info = deceitful
 		trigger = { trait = deceitful }
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTD_plscometobr_10 #I have no use of whatever that is.
 		custom_tooltip = { text = EVTOPTD_plscometobr_10_TT }
 		hidden_effect = {
 			event_target:brazilian_trader = { #removes the trader from the game, along with their artifact (if you didn't trade)...
 				any_artifact = { destroy_artifact = yes }
-				death = { death_reason =  death_missing }
+				death = { death_reason = death_missing }
 			}
 		}
 	}
@@ -1250,7 +1250,7 @@ character_event = { #Follow up from accepting the invitation
 					trigger = {
 						event_target:target_host = {
 							is_rival = ROOT
-						}						
+						}
 					}
 					modifier = {
 						factor = 8
@@ -1430,7 +1430,7 @@ narrative_event = { #Follow up from option A
 					factor = 2
 					trait = elusive_shadow
 				}
-				
+	
 				set_character_flag = successful_murder
 			}
 			30 = { # Target dies, guards kill you
@@ -1682,10 +1682,10 @@ character_event = { #Amazon leg event tombola
 		# Fire a random travel event 
 		random_list = {
 			50 = {
-				character_event = { id = plscometobr.18 }  # Mercenary encounter (1/3). Hiring mercenaries will dramatically impact the rest of the journey.
+				character_event = { id = plscometobr.18 } # Mercenary encounter (1/3). Hiring mercenaries will dramatically impact the rest of the journey.
 				trigger = {
 					NOT = { has_character_flag = met_mercenaries }
-					 any_independent_ruler = {
+					any_independent_ruler = {
 						ai = yes
 						mercenary = yes
 						OR = {
@@ -1926,7 +1926,7 @@ narrative_event = { #Mercenaries wants root to pay a "river toll"...
 	option = { # Kill him (IMPALER ONLY)
 		name = EVTOPTC_plscometobr_20
 		tooltip_info = impaler
-	   	custom_tooltip = {
+		custom_tooltip = {
 			text = EVTOPTC_plscometobr_20_tt
 		}
 
@@ -1964,7 +1964,7 @@ narrative_event = { #Mercenaries wants root to pay a "river toll"...
 				custom_tooltip = { text = you_will_be_killed_in_a_duel_tt }
 			}
 		}
-   	}
+ 	}
 
 	after = {
 		clr_character_flag = china_stable
@@ -2159,22 +2159,22 @@ narrative_event = {
 					#Uninjured
 					modifier = { is_strong_trigger = yes factor = 2 }
 					modifier = { is_weak_trigger = yes factor = 0.5 }
-					modifier = { combat_rating = 2 factor = 2  }
-					modifier = { combat_rating < 0 factor = 0.5  } 
+					modifier = { combat_rating = 2 factor = 2 }
+					modifier = { combat_rating < 0 factor = 0.5 } 
 					modifier = { has_character_modifier = hired_body_guards factor = 3 }
-					
+
 				}
 				50 = {
 					#You get injured
 					modifier = { is_weak_trigger = yes factor = 1.5 }
-					modifier = { combat_rating < 0 factor = 1.5  } 
+					modifier = { combat_rating < 0 factor = 1.5 } 
 					modifier = { has_character_modifier = hired_body_guards factor = 0.5 }
 					hidden_effect = { add_trait = wounded }
 				}
 				20 = {
 					#You get severely injured
 					modifier = { is_weak_trigger = yes factor = 1.5 }
-					modifier = { combat_rating < 0 factor = 1.5  }
+					modifier = { combat_rating < 0 factor = 1.5 }
 					modifier = { has_character_modifier = hired_body_guards factor = 0.5 }
 					hidden_effect = { add_maimed_trait_effect = yes }
 				}
@@ -3387,7 +3387,7 @@ character_event = { #Overseas leg event tombola
 						}
 					}
 				}
-				narrative_event = { id = plscometobr.44 }  # Homesick (I really miss <person>)
+				narrative_event = { id = plscometobr.44 } # Homesick (I really miss <person>)
 				break = yes
 			}
 			50 = { # Attacked by pirates (results in prestige gain if pirate)
@@ -3513,7 +3513,7 @@ narrative_event = {
 	}
 
 	option = { #I will write a letter to my lover...
-		name = EVTOPTA_plscometobr_44	  
+		name = EVTOPTA_plscometobr_44	
 		custom_tooltip = { text = will_receive_a_letter }
 		event_target:person_missed = { set_character_flag = is_lover } #for follow up event
 
@@ -4184,7 +4184,7 @@ character_event = { # Within Brasil Tombola
 					NOT = { has_character_flag = read_bonifacio }
 				}
 			}
-			50 = {  # Visit the markets
+			50 = { # Visit the markets
 				trigger = { NOT = { has_character_flag = visited_market } }
 				narrative_event = { id = plscometobr.57 }
 			}
@@ -4595,7 +4595,7 @@ narrative_event = { #Visit the market
 		hidden_effect = {
 			offmap_china = {
 				governor = {
-					create_random_steward  = {
+					create_random_steward = {
 						age = 45
 						random_traits = yes
 						female = 50
@@ -4648,7 +4648,7 @@ narrative_event = { #Visit the market
 						to = PREVPREV
 					}
 				}
-				death = { death_reason =  death_missing }
+				death = { death_reason = death_missing }
 			}
 		}
 
@@ -4666,7 +4666,7 @@ narrative_event = { #Visit the market
 				any_artifact = {
 					count = 13
 					has_artifact_flag = brazilian
-				}			
+				}
 			}
 		}
 	}
@@ -4713,7 +4713,7 @@ narrative_event = { #Visit the market
 		hidden_effect = {
 			event_target:chinese_trader = { #removes the trader from the game, along with their artifact (if you didn't trade)...
 				any_artifact = { destroy_artifact = yes }
-				death = { death_reason =  death_missing }
+				death = { death_reason = death_missing }
 			}
 		}
 	}

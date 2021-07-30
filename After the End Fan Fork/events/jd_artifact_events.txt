@@ -85,7 +85,7 @@ character_event = {
 							dynasty = actually_culture
 							female = yes
 							random_traits = yes
-			   				historical = yes
+							historical = yes
 						}
 					}
 					50 = {
@@ -1742,12 +1742,12 @@ character_event = {
 					character_event = { id = JD.10062 days = 600 random = 1095 } #change direction/unhappy with work
 				}
 				10 = {
-					character_event = { id = JD.10063 days = 600  random = 1095 } #deal with writer's block
+					character_event = { id = JD.10063 days = 600 random = 1095 } #deal with writer's block
 				}
 				10 = {
-					character_event = { id = JD.10064 days = 600  random = 1095 } #stay up all night studying or not
+					character_event = { id = JD.10064 days = 600 random = 1095 } #stay up all night studying or not
 				}
-				
+	
 				# testing values....
 #				10 = {
 #					character_event = { id = JD.10061 days = 5 random = 5 } #invest more time/money/hire scribes 
@@ -1756,10 +1756,10 @@ character_event = {
 #					character_event = { id = JD.10062 days = 5 random = 5 } #change direction/unhappy with work
 #				}
 #				10 = {
-#					character_event = { id = JD.10063 days = 5  random = 5 } #deal with writer's block
+#					character_event = { id = JD.10063 days = 5 random = 5 } #deal with writer's block
 #				}
 #				10 = {
-#					character_event = { id = JD.10064 days = 5  random = 5 } #stay up all night studying or not
+#					character_event = { id = JD.10064 days = 5 random = 5 } #stay up all night studying or not
 #				}
 			}
 		}
@@ -1767,7 +1767,7 @@ character_event = {
 }
 
 
-character_event = { #Progress event type 1!  #invest more time/money/hire scribes
+character_event = { #Progress event type 1! #invest more time/money/hire scribes
 	id = JD.10061
 	picture = GFX_evt_monk
 	title = EVTTITLE_JD_10061
@@ -1808,9 +1808,9 @@ character_event = { #Progress event type 1!  #invest more time/money/hire scribe
 			trigger_switch = {
 				on_trigger = trait
 				erudite = { custom_tooltip = { text = available_because_trait_erudite_tt } }
-				scholar = { custom_tooltip =  { text = available_because_trait_scholar_tt } }
-				mastermind_theologian = { custom_tooltip =  { text = available_because_trait_mastermind_theologian_tt } }
-				lunatic = { custom_tooltip =  { text = available_because_trait_lunatic_tt } }
+				scholar = { custom_tooltip = { text = available_because_trait_scholar_tt } }
+				mastermind_theologian = { custom_tooltip = { text = available_because_trait_mastermind_theologian_tt } }
+				lunatic = { custom_tooltip = { text = available_because_trait_lunatic_tt } }
 			}
 			custom_tooltip = { text = higher_quality_of_book_TT }
 			set_higher_quality_of_book_flags_effect = yes
@@ -1964,7 +1964,7 @@ character_event = { #Progress event type 2! #Unhappy with work (gain stressed or
 					if = {
 						limit = {
 							has_job_title = job_chancellor
-	   						attribute_diff = { character = ROOT attribute = diplomacy value = 3 }
+							attribute_diff = { character = ROOT attribute = diplomacy value = 3 }
 						}
 						ROOT = {
 							show_scope_change = no
@@ -1975,7 +1975,7 @@ character_event = { #Progress event type 2! #Unhappy with work (gain stressed or
 					if = {
 						limit = {
 							has_job_title = job_spymaster
-	   						attribute_diff = { character = ROOT attribute = intrigue value = 3 }
+							attribute_diff = { character = ROOT attribute = intrigue value = 3 }
 						}
 						ROOT = {
 							show_scope_change = no
@@ -2082,7 +2082,7 @@ character_event = { #Progress event type 2! #Unhappy with work (gain stressed or
 }
 
 
-character_event = { #Progress event type 3!  #deal with writer's block (risk doing something stupid?
+character_event = { #Progress event type 3! #deal with writer's block (risk doing something stupid?
 	id = JD.10063
 	title = EVTTITLE_JD_10063
 	desc = EVTDESC_JD_10063
@@ -2131,9 +2131,9 @@ character_event = { #Progress event type 3!  #deal with writer's block (risk doi
 		custom_tooltip = { text = EVTOPTB_JD_10063_TT }
 		random_list = {
 			99 = {
-		 		add_trait = vomiting
+				add_trait = vomiting
 				set_character_flag = disease_not_serious
-		 		hidden_effect = { character_event = { id = HFP.14005 days = 10 random = 30 } } #remove vomiting
+				hidden_effect = { character_event = { id = HFP.14005 days = 10 random = 30 } } #remove vomiting
 			}
 			1 = {
 				death = { death_reason = death_drank_poison }
@@ -2160,7 +2160,7 @@ character_event = { #Progress event type 3!  #deal with writer's block (risk doi
 	}
 }
 ##
-character_event = { #Progress event type 4!  #stay up all night or not
+character_event = { #Progress event type 4! #stay up all night or not
 	id = JD.10064
 	title = EVTTITLE_JD_10064
 	picture = GFX_evt_daughter_asking_father
@@ -2458,7 +2458,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 								value = 10
 								OR = {
 									has_focus = focus_war
-									has_focus = focus_hunting							
+									has_focus = focus_hunting	
 								}
 							}
 							random_list = {
@@ -2597,7 +2597,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 								value = 10
 								OR = {
 									has_focus = focus_war
-									has_focus = focus_hunting					
+									has_focus = focus_hunting
 								}
 							}
 							additive_modifier = {
@@ -2696,7 +2696,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 										value = 10
 										OR = {
 											trait = lustful
-											trait = hedonist									
+											trait = hedonist	
 										}
 									}
 									trigger = { 
@@ -2978,7 +2978,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 											any_artifact = {
 												OR = {
 													artifact_type = court_etiquette_2
-													artifact_type = court_etiquette_3									
+													artifact_type = court_etiquette_3	
 												}
 											}
 										}
@@ -3116,7 +3116,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 											any_artifact = {
 												OR = {
 													artifact_type = court_etiquette_2
-													artifact_type = court_etiquette_3									
+													artifact_type = court_etiquette_3	
 												}
 											}
 										}
@@ -3198,7 +3198,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 										value = 5
 										OR = {
 											has_education_stewardship_trigger = yes
-											has_education_intrigue_trigger = yes									
+											has_education_intrigue_trigger = yes	
 										}
 									}
 									trigger = {
@@ -3293,7 +3293,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 										}
 										NOT = {
 											any_artifact = {
-												artifact_type = court_etiquette_3									
+												artifact_type = court_etiquette_3	
 											}
 										}
 									}
@@ -3304,7 +3304,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 										OR = {
 											AND = {
 												trait = lustful
-												trait = hedonist										
+												trait = hedonist		
 											}
 											trait = seducer
 											trait = seductress
@@ -3366,7 +3366,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 									new_artifact = {
 										set_name = the_hunchback_of_capital_rename
 										set_description = the_hunchback_of_capital_desc_rename
-									}								
+									}
 									additive_modifier = {
 										value = 10
 										has_lifestyle_diplomacy_trigger = yes
@@ -3465,7 +3465,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 									}
 								}
 								10 = {
-									add_artifact = contracts_of_the_americans  					
+									add_artifact = contracts_of_the_americans 
 									additive_modifier = {
 										value = 10
 										has_education_stewardship_trigger = yes
@@ -3484,7 +3484,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 									}
 								}
 								10 = {
-									add_artifact = speculum_regale							
+									add_artifact = speculum_regale	
 									additive_modifier = {
 										value = 10
 										is_smart_trigger = yes
@@ -3528,7 +3528,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 											}
 										}
 										OR = {
-											religion = catholic							
+											religion = catholic	
 											religion = ursuline
 											religion = high_church
 											religion = evangelical
@@ -3652,7 +3652,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 												artifact_type = the_well_dressed_chef
 												original_owner = { character = ROOT }
 											}
-										}							
+										}	
 									}
 								}
 								10 = {
@@ -4142,7 +4142,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 									has_focus = focus_scholarship
 								}
 							}
-							
+	
 							random_list = {
 								10 = {
 									add_artifact = hymns_to_highgod
@@ -4648,7 +4648,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 								has_character_flag = great_book_potential
 							}
 							random_list = {
-								
+
 								10 = {
 									add_artifact = the_legend_of_roots_ancestors_3
 									trigger = {
@@ -4852,7 +4852,7 @@ character_event = { #Outcome: Book is finished! It went Great/Good/Decent!
 		}
 	}
 
-	option = {  #How swell!
+	option = { #How swell!
 		name = {
 			text = EVTOPTA_JD_10070_A #I suppose we got a little sidetracked...
 			trigger = {
@@ -5172,7 +5172,7 @@ character_event = { #
 		offmap_china = {
 			governor = {
 				save_event_target_as = the_protector_general
-			}				
+			}	
 		}
 		random_list = {
 			40 = { #China sends their condolences...
@@ -5264,7 +5264,7 @@ character_event = { #
 					}
 					add_brazilian_artifact_effect = yes
 				}
-				
+	
 				event_target:chinese_artifact = {
 					set_name = the_chinese_royals_favorite
 					set_description = the_chinese_royals_favorite_desc
@@ -5439,7 +5439,7 @@ character_event = {
 	has_dlc = "Jade Dragon"
 	
 	immediate = {
-		if = {  #for loc + artifact purposes
+		if = { #for loc + artifact purposes
 			limit = { event_target:the_protector_general = { is_alive = no } }
 			offmap_china = { governor = { save_event_target_as = the_protector_general } }
 		}
@@ -5472,7 +5472,7 @@ character_event = {
 						any_artifact = { has_artifact_flag = royal_inheritance_gift@FROM }
 					}
 				}
-				character_event = { id = JD.10083 }  #Continue and send scenario 3...!
+				character_event = { id = JD.10083 } #Continue and send scenario 3...!
 			}
 			else = {
 				character_event = { id = JD.10081 } # else, send scenario 1 instead...
@@ -5521,7 +5521,7 @@ character_event = { #China sends their condolences, in the form of a LETTER...
 		offmap_china = {
 			governor = {
 				save_event_target_as = the_protector_general
-			}				
+			}	
 		}
 	}
 
@@ -5619,7 +5619,7 @@ character_event = { #China sends their condolences, in the form of a GIFT...
 			limit = { trait = depressed } 
 			random = {
 				chance = 50
-				remove_trait_depressed_effect = yes  #only happens if you ARE depressed
+				remove_trait_depressed_effect = yes #only happens if you ARE depressed
 			}
 		}
 		hidden_effect = {

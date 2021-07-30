@@ -35,12 +35,12 @@ letter_event = {
 			}
 		}
 		hidden_tooltip = { 
-			remove_opinion = {  
+			remove_opinion = { 
 				who = FROMFROM
 				modifier = opinion_baptism_sponsor_target
 			}
 			FROMFROM = { 
-				remove_opinion = {  
+				remove_opinion = { 
 					who = ROOT
 					modifier = opinion_baptism_sponsor_target
 				}
@@ -96,7 +96,7 @@ letter_event = {
 			piety = -100
 		}
 		narrative_event = { id = HF.20003 days = 12 random = 11 tooltip = EVTTOOLTIPHF20003 } #Big fluff event
-		custom_tooltip = {  #Have vassals make their own choice as well.
+		custom_tooltip = { #Have vassals make their own choice as well.
 			text = EVTTOOLTIPHF20005
 			hidden_tooltip = {
 				any_vassal = { letter_event = { id = HF.20005 days = 2 random = 8 } }
@@ -415,13 +415,13 @@ narrative_event = {
 						NOT = { vassal_of = ROOT }
 						OR = {
 							is_within_diplo_range = ROOT
-							religion =  event_target:converting_king
+							religion = event_target:converting_king
 						}
 						OR = { 
-							religion_group =  event_target:sponsoring_king
-							religion_group =  event_target:converting_king
+							religion_group = event_target:sponsoring_king
+							religion_group = event_target:converting_king
 						}
-					 }
+					}
 					narrative_event = { id = HF.20090 } #Notify all other rulers if Converter is King or above
 				} 
 			}
@@ -558,7 +558,7 @@ narrative_event = {
 						religion = event_target:sponsoring_king
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
-							higher_tier_than = BARON  
+							higher_tier_than = BARON 
 							has_minor_title = title_cardinal
 							has_minor_title = title_ursuline_cardinal
 							has_minor_title = title_mormon_cardinal
@@ -579,7 +579,7 @@ narrative_event = {
 							religion = event_target:sponsoring_king
 							NOT = { block_general_event_trigger = yes }
 							OR = { 
-								higher_tier_than = BARON  
+								higher_tier_than = BARON 
 								has_minor_title = title_cardinal
 								has_minor_title = title_ursuline_cardinal
 								has_minor_title = title_mormon_cardinal
@@ -616,10 +616,10 @@ narrative_event = {
 		set_character_flag = flag_converted_baptism
 		hidden_tooltip = { # Notify Sponsor of the event
 			event_target:sponsoring_king = {
-				narrative_event = { id = HF.20004 }  
+				narrative_event = { id = HF.20004 } 
 			}
 			any_realm_character = { limit = { NOT = { character = ROOT } }
-				narrative_event = { id = HF.20008 }  #Convert vassals and their courtiers
+				narrative_event = { id = HF.20008 } #Convert vassals and their courtiers
 			}
 		character_event = { id = HF.20036 days = 3 random = 3 } #A new priest arrives. (also starts the post-ceremony events) 
 		}
@@ -647,7 +647,7 @@ narrative_event = {
 					}
 				}
 				if = { 
-					limit =	{ 
+					limit = { 
 						event_target:converting_king = { 
 							any_vassal = { 
 								NOT = { religion = event_target:converting_king }
@@ -1100,8 +1100,8 @@ letter_event = {
 			factor = 100
 			modifier = {
 				factor = 0
-				NOT =  { religion = event_target:sponsoring_king }
-				any_demesne_title =  { 
+				NOT = { religion = event_target:sponsoring_king }
+				any_demesne_title = { 
 					OR = { 
 						holy_order = yes
 						mercenary = yes
@@ -1166,8 +1166,8 @@ letter_event = {
 			factor = 50
 			modifier = {
 				factor = 0
-				NOT =  { religion = event_target:sponsoring_king }
-				any_demesne_title =  { 
+				NOT = { religion = event_target:sponsoring_king }
+				any_demesne_title = { 
 					OR = { 
 						holy_order = yes
 						mercenary = yes
@@ -1294,13 +1294,13 @@ letter_event = {
 			}
 			modifier = {
 				factor = 1.5
-				NOT =  { religion = event_target:sponsoring_king }
+				NOT = { religion = event_target:sponsoring_king }
 				is_reformed_religion = yes
 			}
 			modifier = {
 				factor = 1.5
-				NOT =  { religion = event_target:sponsoring_king }
-				NOT =  { religion_group = pagan_group }
+				NOT = { religion = event_target:sponsoring_king }
+				NOT = { religion_group = pagan_group }
 			}
 			modifier = {
 				factor = 0.3
@@ -1376,7 +1376,7 @@ letter_event = {
 			}
 			modifier = {
 				factor = 0
-				NOT  = { trait = zealous }
+				NOT = { trait = zealous }
 				is_child_of = FROM
 			}
 			modifier = {
@@ -1413,37 +1413,37 @@ letter_event = {
 			}
 			modifier = {
 				factor = 0.75
-				event_target:sponsoring_king  = { religion = catholic }
+				event_target:sponsoring_king = { religion = catholic }
 			}
 			modifier = {
 				factor = 0.75
-				event_target:sponsoring_king  = { religion = evangelical }
+				event_target:sponsoring_king = { religion = evangelical }
 			}
 			modifier = {
 				factor = 0.75
-				event_target:sponsoring_king  = { religion = ursuline }
+				event_target:sponsoring_king = { religion = ursuline }
 			}
 			modifier = {
 				factor = 0.75
-				event_target:sponsoring_king  = { religion = mormon }
+				event_target:sponsoring_king = { religion = mormon }
 			}
 			modifier = {
 				factor = 0.75
-				event_target:sponsoring_king  = { religion = traditionalist }
+				event_target:sponsoring_king = { religion = traditionalist }
 			}
 			modifier = {
 				factor = 0.75
-				event_target:sponsoring_king  = { religion = imamite }
+				event_target:sponsoring_king = { religion = imamite }
 			}
 			modifier = {
 				factor = 1.15
-				NOT  = { religion = FROM }
-				NOT  = { is_reformed_religion = yes }
+				NOT = { religion = FROM }
+				NOT = { is_reformed_religion = yes }
 			}
 			modifier = {
 				factor = 1.35
-				NOT  = { religion = FROM }
-				OR  = { 
+				NOT = { religion = FROM }
+				OR = { 
 					is_reformed_religion = yes
 					NOT = { religion_group = pagan_group }
 				}
@@ -1614,21 +1614,21 @@ narrative_event = {
 	title = EVTTITLE20008
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion_group = christian }
 		}
 		text = EVTDESCHFA20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion_group = muslim }
 		}
 		text = EVTDESCHFB20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = {
 				OR = {
 					religion = americanist
@@ -1642,21 +1642,21 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion = norse_pagan_reformed }
 		}
 		text = EVTDESCHFC20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion = revelationist_reformed }
 		}
 		text = EVTDESCHFD20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = {
 				OR = {
 					religion = rust_cultist
@@ -1668,49 +1668,49 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion = occultist_reformed }
 		}
 		text = EVTDESCHFF20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion = glorian }
 		}
 		text = EVTDESCHFG20008 #NEEDS UPDATING!
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion = celtic_pagan_reformed }
 		}
 		text = EVTDESCHFH20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion = aria_de_machete_reformed }
 		}
 		text = EVTDESCHFH20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion_group = cult_of_saints }
 		}
 		text = EVTDESCHFI20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion_group = latter_day_saints }
 		}
 		text = EVTDESCHFL20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = {
 				OR = {
 					religion = consumerist
@@ -1722,21 +1722,21 @@ narrative_event = {
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion = atomicist }
 		}
 		text = EVTDESCHFN20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { religion_group = jewish_group }
 		}
 		text = EVTDESCHFO20008
 	}
 	desc = {
 		trigger = {
-			NOT  = { has_character_flag = ai_flag_refuse_conversion }
+			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			event_target:sponsoring_king = { OR = { religion_group = indian_group religion_group = pacific } }
 		}
 		text = EVTDESCHFP20008
@@ -1894,7 +1894,7 @@ narrative_event = {
 			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			NOT = { has_character_flag = liege_is_truebeliever } 
 			NOT = { religion_group = event_target:sponsoring_king } 
-			OR  = { 
+			OR = { 
 				is_ruler = yes 
 				liege = { 
 					NOR = { has_character_flag = ai_flag_refuse_conversion 
@@ -2219,7 +2219,7 @@ narrative_event = {
 			NOT = { has_character_flag = ai_flag_refuse_conversion }
 			NOT = { has_character_flag = liege_is_truebeliever } 
 			NOT = { religion_group = event_target:sponsoring_king } 
-			OR  = { 
+			OR = { 
 				is_ruler = yes 
 				liege = { 
 					NOR = { has_character_flag = ai_flag_refuse_conversion 
@@ -2601,7 +2601,7 @@ narrative_event = {
 						religion = event_target:sponsoring_king
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
-							higher_tier_than = BARON  
+							higher_tier_than = BARON 
 							has_minor_title = title_cardinal
 							has_minor_title = title_ursuline_cardinal
 							has_minor_title = title_mormon_cardinal
@@ -2622,7 +2622,7 @@ narrative_event = {
 							religion = event_target:sponsoring_king
 							NOT = { block_general_event_trigger = yes }
 							OR = { 
-								higher_tier_than = BARON  
+								higher_tier_than = BARON 
 								has_minor_title = title_cardinal
 								has_minor_title = title_ursuline_cardinal
 								has_minor_title = title_mormon_cardinal
@@ -2910,7 +2910,7 @@ character_event = {
 		}
 		any_realm_character = {	
 			limit = { has_character_flag = flag_vassal_asked_baptism } 
-			character_event = { id = HF.20032 }  
+			character_event = { id = HF.20032 } 
 		}
 		remove_opinion = { 
 			who = FROM
@@ -2981,7 +2981,7 @@ character_event = {
 		}
 		any_realm_character = {	
 			limit = { has_character_flag = flag_vassal_asked_baptism } 
-			character_event = { id = HF.20033 }  
+			character_event = { id = HF.20033 } 
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -3333,7 +3333,7 @@ character_event = {
 	
 	is_triggered_only = yes
 	
-	immediate = { 			
+	immediate = { 
 		set_secret_religion = FROM
 		join_society = secret_religious_cult
 		if = { 
@@ -3726,7 +3726,7 @@ character_event = {
 		hidden_tooltip = {
 			character_event = { id = HF.20118 days = 10 random = 10 } #Change name.
 			event_target:convert_lord_spiritual = { character_event = { id = HF.20110 days = 150 random = 50 } } #Priest flavor.
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -3751,7 +3751,7 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		random_list = {  
+		random_list = { 
 			#Picking the positive trait option gives piety, takes away prestige, has a chance to give the trait.
 
 			#Becoming Zealous after conversion 							flag_converter_zealous
@@ -3765,159 +3765,159 @@ character_event = {
 			#Skip a turn
 
 			16 = { #Zealous
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { has_character_flag = flag_converter_zealous }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { has_character_flag = flag_converter_zealous }
 				}
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { trait = zealous }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { trait = zealous }
 				}
-				 modifier = { 
-				 	factor = 0.75
-				 	event_target:converting_king = { pacifist = yes }
+				modifier = { 
+					factor = 0.75
+					event_target:converting_king = { pacifist = yes }
 				}
 				event_target:converting_king = { set_character_flag = flag_converter_zealous }
 				event_target:converting_king = { character_event = { id = HF.20039 days = 390 random = 190 } } }
 			1 = { #Cynical
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { has_character_flag = flag_converter_cynical }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { has_character_flag = flag_converter_cynical }
 				}
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { trait = cynical }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { trait = cynical }
 				}
 				event_target:converting_king = { set_character_flag = flag_converter_cynical }
 				event_target:converting_king = { character_event = { id = HF.20040 days = 390 random = 190 } } } 
 			11 = { #Kind
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { has_character_flag = flag_converter_kind }
-				}
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { trait = kind }
-				}
-				 modifier = { 
-				 	factor = 1.5
-				 	event_target:converting_king = { religion_group = christian }
-				}
-				 modifier = { 
-				 	factor = 1.5
-				 	event_target:converting_king = { religion_group = indian_group }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { has_character_flag = flag_converter_kind }
 				}
 				modifier = { 
-				 	factor = 1.5
-				 	event_target:converting_king = { religion_group = pacific }
+					factor = 0
+					event_target:converting_king = { trait = kind }
+				}
+				modifier = { 
+					factor = 1.5
+					event_target:converting_king = { religion_group = christian }
+				}
+				modifier = { 
+					factor = 1.5
+					event_target:converting_king = { religion_group = indian_group }
+				}
+				modifier = { 
+					factor = 1.5
+					event_target:converting_king = { religion_group = pacific }
 				}
 				event_target:converting_king = { set_character_flag = flag_converter_kind }
 				event_target:converting_king = { character_event = { id = HF.20041 days = 450 random = 190 } } } 
 			11 = { #Humble
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { has_character_flag = flag_converter_humble }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { has_character_flag = flag_converter_humble }
 				}
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { trait = humble }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { trait = humble }
 				}
-				 modifier = { 
-				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				modifier = { 
+					factor = 0.5
+					event_target:converting_king = { religion_group = pagan_group }
 				}
-				 modifier = { 
-				 	factor = 1.25
-				 	event_target:converting_king = { religion_group = indian_group }
+				modifier = { 
+					factor = 1.25
+					event_target:converting_king = { religion_group = indian_group }
 				}
-				 modifier = { 
-				 	factor = 1.25
-				 	event_target:converting_king = { religion_group = pacific }
+				modifier = { 
+					factor = 1.25
+					event_target:converting_king = { religion_group = pacific }
 				}
-				 modifier = { 
-				 	factor = 1.25
-				 	event_target:converting_king = { religion_group = christian }
+				modifier = { 
+					factor = 1.25
+					event_target:converting_king = { religion_group = christian }
 				}
 				event_target:converting_king = { set_character_flag = flag_converter_humble }
 				event_target:converting_king = { character_event = { id = HF.20042 days = 450 random = 190 } } } 
 			16 = { #Brave
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { has_character_flag = flag_converter_brave }
-				}
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { trait = brave }
-				}
-				 modifier = { 
-				 	factor = 1.5
-				 	event_target:converting_king = { religion_group = pagan_group }
-				}
-				 modifier = { 
-				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = indian_group }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { has_character_flag = flag_converter_brave }
 				}
 				modifier = { 
-				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = pacific }
+					factor = 0
+					event_target:converting_king = { trait = brave }
 				}
-				 modifier = { 
-				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = christian }
+				modifier = { 
+					factor = 1.5
+					event_target:converting_king = { religion_group = pagan_group }
+				}
+				modifier = { 
+					factor = 0.5
+					event_target:converting_king = { religion_group = indian_group }
+				}
+				modifier = { 
+					factor = 0.5
+					event_target:converting_king = { religion_group = pacific }
+				}
+				modifier = { 
+					factor = 0.5
+					event_target:converting_king = { religion_group = christian }
 				}
 				event_target:converting_king = { set_character_flag = flag_converter_brave }
 				event_target:converting_king = { character_event = { id = HF.20043 days = 450 random = 190 } } } 
 			15 = { #Charitable
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { has_character_flag = flag_converter_charitable }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { has_character_flag = flag_converter_charitable }
 				}
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { trait = charitable }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { trait = charitable }
 				}
-				 modifier = { 
-				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				modifier = { 
+					factor = 0.5
+					event_target:converting_king = { religion_group = pagan_group }
 				}
-				 modifier = { 
-				 	factor = 1.25
-				 	event_target:converting_king = { religion_group = cult_of_saints }
+				modifier = { 
+					factor = 1.25
+					event_target:converting_king = { religion_group = cult_of_saints }
 				}
-				 modifier = { 
-				 	factor = 1.25
-				 	event_target:converting_king = { religion_group = muslim }
+				modifier = { 
+					factor = 1.25
+					event_target:converting_king = { religion_group = muslim }
 				}
 				event_target:converting_king = { set_character_flag = flag_converter_charitable }
 				event_target:converting_king = { character_event = { id = HF.20044 days = 450 random = 190 } } } 
 			10 = { #Temperate
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { has_character_flag = flag_converter_temperate }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { has_character_flag = flag_converter_temperate }
 				}
-				 modifier = { 
-				 	factor = 0
-				 	event_target:converting_king = { trait = temperate }
+				modifier = { 
+					factor = 0
+					event_target:converting_king = { trait = temperate }
 				}
-				 modifier = { 
-				 	factor = 0.5
-				 	event_target:converting_king = { religion_group = pagan_group }
+				modifier = { 
+					factor = 0.5
+					event_target:converting_king = { religion_group = pagan_group }
 				}
-				 modifier = { 
-				 	factor = 1.25
-				 	event_target:converting_king = { religion_group = indian_group }
+				modifier = { 
+					factor = 1.25
+					event_target:converting_king = { religion_group = indian_group }
 				}
-				 modifier = { 
-				 	factor = 1.25
-				 	event_target:converting_king = { religion_group = pacific }
+				modifier = { 
+					factor = 1.25
+					event_target:converting_king = { religion_group = pacific }
 				}
-				 modifier = { 
-				 	factor = 1.25
-				 	event_target:converting_king = { religion_group = latter_day_saints }
+				modifier = { 
+					factor = 1.25
+					event_target:converting_king = { religion_group = latter_day_saints }
 				}
-				 modifier = { 
-				 	factor = 1.25
-				 	event_target:converting_king = { religion_group = christian }
+				modifier = { 
+					factor = 1.25
+					event_target:converting_king = { religion_group = christian }
 				}
 				event_target:converting_king = { set_character_flag = flag_converter_temperate }
 				event_target:converting_king = { character_event = { id = HF.20045 days = 450 random = 190 } } } 
@@ -3948,33 +3948,33 @@ character_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		random_list = {  
+		random_list = { 
 			#Fund Church Construction / Send Money / Send Inquisition / Do Nothing
 			60 = { event_target:sponsoring_king = { character_event = { id = HF.20047 days = 430 random = 130 } } } 
 
 			#Visit Converter / Do Nothing
 			40 = { 
-				 modifier = { 
-				 	factor = 0
-				 	event_target:sponsoring_king = { 
-				 		OR = { 
-				 			is_incapable = yes 
-				 			is_inaccessible_trigger = yes 
+				modifier = { 
+					factor = 0
+					event_target:sponsoring_king = { 
+						OR = { 
+							is_incapable = yes 
+							is_inaccessible_trigger = yes 
 							war = yes
-				 		} 
-				 	}
+						} 
+					}
 				}
-				 modifier = { #Only once per Baptism
-				 	factor = 0
-				 	event_target:converting_king = { has_character_flag = flag_baptism_sponsor_visit }
+				modifier = { #Only once per Baptism
+					factor = 0
+					event_target:converting_king = { has_character_flag = flag_baptism_sponsor_visit }
 				}
-				 modifier = { 
-				 	factor = 1.5
-				 	event_target:sponsoring_king = { trait = pilgrim }
+				modifier = { 
+					factor = 1.5
+					event_target:sponsoring_king = { trait = pilgrim }
 				}
-				 modifier = { 
-				 	factor = 1.25
-				 	event_target:sponsoring_king = { trait = gregarious }
+				modifier = { 
+					factor = 1.25
+					event_target:sponsoring_king = { trait = gregarious }
 				}
 				event_target:sponsoring_king = { character_event = { id = HF.20048 days = 430 random = 130 } } 
 			}
@@ -3998,7 +3998,7 @@ character_event = {
 		name = EVTOPTAHF20039
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4029,31 +4029,31 @@ character_event = {
 		piety = -25
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
 		}
 		ai_chance = { factor = 50 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = cynical
-			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = craven
-			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = slothful
-			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		religion_group = indian_group
+			modifier = { 
+				factor = 1.5
+				trait = cynical
 			}
 			modifier = { 
-		 		factor = 1.25
-		 		religion_group = pacific
+				factor = 1.25
+				trait = craven
+			}
+			modifier = { 
+				factor = 1.25
+				trait = slothful
+			}
+			modifier = { 
+				factor = 1.25
+				religion_group = indian_group
+			}
+			modifier = { 
+				factor = 1.25
+				religion_group = pacific
 			}
 		}
 	}
@@ -4075,7 +4075,7 @@ character_event = {
 		name = EVTOPTAHF20040
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4106,27 +4106,27 @@ character_event = {
 		piety = 25
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
 		}
 		ai_chance = { factor = 50 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = zealous
+			modifier = { 
+				factor = 1.5
+				trait = zealous
 			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = brave
+			modifier = { 
+				factor = 1.25
+				trait = brave
 			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = slothful
+			modifier = { 
+				factor = 1.25
+				trait = slothful
 			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		OR = {
+			modifier = { 
+				factor = 1.25
+				OR = {
 					religion_group = oldworld
 					religion_group = muslim
 				}
@@ -4152,7 +4152,7 @@ character_event = {
 		name = EVTOPTAHF20041
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4182,27 +4182,27 @@ character_event = {
 		piety = -25
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
 		}
 		ai_chance = { factor = 50 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = cruel
-			}			
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = greedy
+			modifier = { 
+				factor = 1.5
+				trait = cruel
 			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = slothful
+			modifier = { 
+				factor = 1.25
+				trait = greedy
 			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		religion_group = pagan_group
+			modifier = { 
+				factor = 1.25
+				trait = slothful
+			}
+			modifier = { 
+				factor = 1.25
+				religion_group = pagan_group
 			}
 		}
 	}
@@ -4224,7 +4224,7 @@ character_event = {
 		name = EVTOPTAHF20042
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4255,27 +4255,27 @@ character_event = {
 		piety = -25
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
 		}
 		ai_chance = { factor = 50 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = proud
+			modifier = { 
+				factor = 1.5
+				trait = proud
 			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = brave
+			modifier = { 
+				factor = 1.25
+				trait = brave
 			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = gregarious
+			modifier = { 
+				factor = 1.25
+				trait = gregarious
 			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		religion_group = pagan_group
+			modifier = { 
+				factor = 1.25
+				religion_group = pagan_group
 			}
 
 		}
@@ -4298,7 +4298,7 @@ character_event = {
 		name = EVTOPTAHF20043
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4329,31 +4329,31 @@ character_event = {
 		piety = -25
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
 		}
 		ai_chance = { factor = 50 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = craven
-			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = shy
-			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = slothful
-			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		religion_group = indian_group
+			modifier = { 
+				factor = 1.5
+				trait = craven
 			}
 			modifier = { 
-		 		factor = 1.25
-		 		religion_group = pacific
+				factor = 1.25
+				trait = shy
+			}
+			modifier = { 
+				factor = 1.25
+				trait = slothful
+			}
+			modifier = { 
+				factor = 1.25
+				religion_group = indian_group
+			}
+			modifier = { 
+				factor = 1.25
+				religion_group = pacific
 			}
 		}
 	}
@@ -4375,7 +4375,7 @@ character_event = {
 		name = EVTOPTAHF20044
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4405,31 +4405,31 @@ character_event = {
 		piety = -25
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
 		}
 		ai_chance = { factor = 50 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = greedy
-			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = paranoid
-			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = slothful
-			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		religion_group = pagan_group
+			modifier = { 
+				factor = 1.5
+				trait = greedy
 			}
 			modifier = { 
-		 		factor = 1.25
-		 		religion_group = oldworld
+				factor = 1.25
+				trait = paranoid
+			}
+			modifier = { 
+				factor = 1.25
+				trait = slothful
+			}
+			modifier = { 
+				factor = 1.25
+				religion_group = pagan_group
+			}
+			modifier = { 
+				factor = 1.25
+				religion_group = oldworld
 			}
 		}
 	}
@@ -4450,7 +4450,7 @@ character_event = {
 		name = EVTOPTAHF20045
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4483,27 +4483,27 @@ character_event = {
 		piety = -25
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
 		}
 		ai_chance = { factor = 50 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = lustful
-			}
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = shy
-			}
-		 	modifier = { 
-		 		factor = 1.5
-		 		religion_group = pagan_group
+			modifier = { 
+				factor = 1.5
+				trait = lustful
 			}
 			modifier = { 
-		 		factor = 1.5
-		 		religion_group = oldworld
+				factor = 1.25
+				trait = shy
+			}
+			modifier = { 
+				factor = 1.5
+				religion_group = pagan_group
+			}
+			modifier = { 
+				factor = 1.5
+				religion_group = oldworld
 			}
 		}
 	}
@@ -4527,7 +4527,7 @@ character_event = {
 		prestige = -50
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4582,25 +4582,25 @@ character_event = {
 		hidden_tooltip = { event_target:converting_king = { letter_event = { id = HF.20049 } } } 
 		ai_chance = { 
 			factor = 35 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = zealous
+			modifier = { 
+				factor = 1.5
+				trait = zealous
 			}
-		 	modifier = { 
-		 		factor = 0.5
-		 		trait = cynical
+			modifier = { 
+				factor = 0.5
+				trait = cynical
 			}
-		 	modifier = { 
-		 		factor = 0.25
-		 		NOT = { wealth = 300 }
+			modifier = { 
+				factor = 0.25
+				NOT = { wealth = 300 }
 			}
-		 	modifier = { 
-		 		factor = 0.1
-		 		NOT = { wealth = 0 }
+			modifier = { 
+				factor = 0.1
+				NOT = { wealth = 0 }
 			}
-		 	modifier = { 
-		 		factor = 0
-		 		NOT = { wealth = -50 }
+			modifier = { 
+				factor = 0
+				NOT = { wealth = -50 }
 			}
 		}
 	}
@@ -4608,36 +4608,36 @@ character_event = {
 		name = EVTOPTBHF20047
 		if = { 
 			limit = { ai = no } #Cheating AI
-		 	wealth = -100 
-		 }
+			wealth = -100 
+		}
 		piety = 300
 		custom_tooltip = { text = EVTTOOLTIPBHF20047 }
 		hidden_tooltip = { event_target:converting_king = { letter_event = { id = HF.20052 } } } 
 		ai_chance = { 
 			factor = 25 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = charitable
+			modifier = { 
+				factor = 1.5
+				trait = charitable
 			}
-		 	modifier = { 
-		 		factor = 0.5
-		 		trait = greedy
+			modifier = { 
+				factor = 0.5
+				trait = greedy
 			}
-		 	modifier = { 
-		 		factor = 0.25
-		 		NOT = { wealth = 200 }
+			modifier = { 
+				factor = 0.25
+				NOT = { wealth = 200 }
 			}
-		 	modifier = { 
-		 		factor = 0.1
-		 		NOT = { wealth = 0 }
+			modifier = { 
+				factor = 0.1
+				NOT = { wealth = 0 }
 			}
-		 	modifier = { 
-		 		factor = 0
-		 		NOT = { wealth = -50 }
+			modifier = { 
+				factor = 0
+				NOT = { wealth = -50 }
 			}
-		 	modifier = { 
-		 		factor = 0.01 #He already has enough gold.
-		 		event_target:converting_king = { wealth = 500 }
+			modifier = { 
+				factor = 0.01 #He already has enough gold.
+				event_target:converting_king = { wealth = 500 }
 			}
 		}
 	}
@@ -4657,25 +4657,25 @@ character_event = {
 		hidden_tooltip = { event_target:converting_king = { letter_event = { id = HF.20054 } } } 
 		ai_chance = { 
 			factor = 35 
-		 	modifier = { 
-		 		factor = 0.5
-		 		pacifist = yes
-			}
-		 	modifier = { 
-		 		factor = 1.75
-		 		religion_group = christian
+			modifier = { 
+				factor = 0.5
+				pacifist = yes
 			}
 			modifier = { 
-		 		factor = 1.75
-		 		religion_group = latter_day_saints
+				factor = 1.75
+				religion_group = christian
 			}
-		 	modifier = { 
-		 		factor = 0.5
-		 		NOT = { wealth = 0 }
+			modifier = { 
+				factor = 1.75
+				religion_group = latter_day_saints
 			}
-		 	modifier = { 
-		 		factor = 0
-		 		NOT = { wealth = -100 }
+			modifier = { 
+				factor = 0.5
+				NOT = { wealth = 0 }
+			}
+			modifier = { 
+				factor = 0
+				NOT = { wealth = -100 }
 			}
 		}
 	}
@@ -4683,16 +4683,16 @@ character_event = {
 		name = EVTOPTDHF20047
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				70 = { event_target:converting_king = { character_event = { id = HF.20037 days = 50 random = 50 } } } #Events for Converter
 				30 = { event_target:sponsoring_king = { character_event = { id = HF.20038 days = 100 random = 50 } } } #Events for Sponsor - Delayed to avoid spamming.
 			}
 		}
 		ai_chance = { 
 			factor = 5 
-		 	modifier = { 
-		 		factor = 10		 #If all other options have been exhausted, just skip a turn.
-		 		event_target:converting_king = { wealth = 500 }
+			modifier = { 
+				factor = 10		#If all other options have been exhausted, just skip a turn.
+				event_target:converting_king = { wealth = 500 }
 				NOT = { 
 					event_target:converting_king = { 
 						any_demesne_province = { 
@@ -4817,7 +4817,7 @@ letter_event = {
 		hidden_tooltip = { FROM = { letter_event = { id = HF.20050 days = 5 random = 5 } } }
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4837,7 +4837,7 @@ letter_event = {
 		hidden_tooltip = { FROM = { letter_event = { id = HF.20051 days = 5 random = 5 } } }
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4870,8 +4870,8 @@ letter_event = {
 		piety = 500
 		if = { 
 			limit = { ai = no } #Cheating AI
-		 	wealth = -300 
-		 }
+			wealth = -300 
+		}
 		ai_chance = { factor = 100 }
 	}
 }
@@ -4920,7 +4920,7 @@ letter_event = {
 		hidden_tooltip = { FROM = { letter_event = { id = HF.20053 days = 5 random = 5 } } }
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -4988,12 +4988,12 @@ letter_event = {
 				}
 				random_list = { 
 					60 = { 
-					 	modifier = { 
-					 		factor = 1.25
-					 		event_target:convert_lord_spiritual = { 
-					 			has_job_title = job_spiritual 
-					 			liege = { character = ROOT }
-					 		}
+						modifier = { 
+							factor = 1.25
+							event_target:convert_lord_spiritual = { 
+								has_job_title = job_spiritual 
+								liege = { character = ROOT }
+							}
 						}
 						province_event = { id = HF.20055 days = 15 random = 13 } } #Conversion successful
 					40 = { province_event = { id = HF.20056 days = 15 random = 13 } } #Conversion successful but revolt risk increased.
@@ -5003,7 +5003,7 @@ letter_event = {
 		hidden_tooltip = { FROM = { letter_event = { id = HF.20057 days = 5 random = 5 } } }
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -5023,7 +5023,7 @@ letter_event = {
 		hidden_tooltip = { FROM = { letter_event = { id = HF.20058 days = 5 random = 5 } } }
 		#Umbrella list for Umbrella lists
 		hidden_tooltip = {
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -5272,13 +5272,13 @@ character_event = {
 		set_character_flag = flag_converter_feast_4
 		hidden_tooltip = { event_target:sponsoring_king = { character_event = { id = HF.20065 days = 5 random = 5 } } }
 		ai_chance = { factor = 25
-		 	modifier = { 
-		 		factor = 0.1
-		 		NOT = { wealth = 100 }
+			modifier = { 
+				factor = 0.1
+				NOT = { wealth = 100 }
 			}
-		 	modifier = { 
-		 		factor = 0
-		 		NOT = { wealth = 50 }
+			modifier = { 
+				factor = 0
+				NOT = { wealth = 50 }
 			}
 		}
 	}
@@ -5289,9 +5289,9 @@ character_event = {
 		set_character_flag = flag_converter_feast_3
 		hidden_tooltip = { event_target:sponsoring_king = { character_event = { id = HF.20065 days = 5 random = 5 } } }
 		ai_chance = { factor = 25 
-		 	modifier = { 
-		 		factor = 0.1
-		 		NOT = { wealth = 100 }
+			modifier = { 
+				factor = 0.1
+				NOT = { wealth = 100 }
 			}
 		}
 	}
@@ -5302,9 +5302,9 @@ character_event = {
 		set_character_flag = flag_converter_feast_2
 		hidden_tooltip = { event_target:sponsoring_king = { character_event = { id = HF.20065 days = 5 random = 5 } } }
 		ai_chance = { factor = 25 
-		 	modifier = { 
-		 		factor = 0.1
-		 		NOT = { wealth = 50 }
+			modifier = { 
+				factor = 0.1
+				NOT = { wealth = 50 }
 			}
 		}
 	}
@@ -5314,13 +5314,13 @@ character_event = {
 		set_character_flag = flag_converter_feast_1
 		hidden_tooltip = { event_target:sponsoring_king = { character_event = { id = HF.20065 days = 5 random = 5 } } }
 		ai_chance = { factor = 25 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = greedy
+			modifier = { 
+				factor = 1.5
+				trait = greedy
 			}
-		 	modifier = { 
-		 		factor = 0.5
-		 		trait = charitable
+			modifier = { 
+				factor = 0.5
+				trait = charitable
 			}
 		}
 	}
@@ -5436,13 +5436,13 @@ character_event = {
 		set_character_flag = flag_missionary_welcome
 		hidden_tooltip = { FROM = { character_event = { id = HF.20067 } } }
 		ai_chance = { factor = 25 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = shy
+			modifier = { 
+				factor = 1.5
+				trait = shy
 			}
-		 	modifier = { 
-		 		factor = 0.5
-		 		trait = gregarious
+			modifier = { 
+				factor = 0.5
+				trait = gregarious
 			}
 		}
 	}
@@ -5451,13 +5451,13 @@ character_event = {
 		set_character_flag = flag_sponsor_no_welcome
 		hidden_tooltip = { FROM = { character_event = { id = HF.20067 } } }
 		ai_chance = { factor = 25 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = shy
+			modifier = { 
+				factor = 1.5
+				trait = shy
 			}
-		 	modifier = { 
-		 		factor = 0.5
-		 		trait = gregarious
+			modifier = { 
+				factor = 0.5
+				trait = gregarious
 			}
 		}
 	}
@@ -5514,16 +5514,16 @@ character_event = {
 		trigger = { NOT = { FROM = { has_character_flag = flag_sponsor_no_welcome } } }
 		custom_tooltip = { text = TOOLTIP_SPONSOR_VISIT_WELCOME_1 }
 		piety = 25
-		 if = { 
-		 	limit = { FROM = { has_character_flag = flag_missionary_welcome } }
+		if = { 
+			limit = { FROM = { has_character_flag = flag_missionary_welcome } }
 			FROM = { piety = 50 }
 		}
-		 if = { 
-		 	limit = { FROM = { has_character_flag = flag_converter_welcome } }
+		if = { 
+			limit = { FROM = { has_character_flag = flag_converter_welcome } }
 			FROM = { prestige = 50 }
 		}
-		 if = { 
-		 	limit = { FROM = { has_character_flag = flag_converter_missionary_welcome } }
+		if = { 
+			limit = { FROM = { has_character_flag = flag_converter_missionary_welcome } }
 			FROM = { 
 				prestige = 50
 				piety = 50 
@@ -5531,21 +5531,21 @@ character_event = {
 		}
 		hidden_tooltip = { FROM = { character_event = { id = HF.20068 } } }
 		ai_chance = { factor = 60 
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = shy
+			modifier = { 
+				factor = 0.9
+				trait = shy
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = paranoid
+			modifier = { 
+				factor = 0.9
+				trait = paranoid
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = cruel
+			modifier = { 
+				factor = 0.9
+				trait = cruel
 			}
-		 	modifier = { 
-		 		factor = 0.75
-		 		FROM = { has_character_flag = flag_sponsor_no_welcome }
+			modifier = { 
+				factor = 0.75
+				FROM = { has_character_flag = flag_sponsor_no_welcome }
 			}
 		}
 	}
@@ -5557,21 +5557,21 @@ character_event = {
 		FROM = { prestige = -50 }
 		hidden_tooltip = { FROM = { character_event = { id = HF.20068 } } }
 		ai_chance = { factor = 20 
-		 	modifier = { 
-		 		factor = 1.5
-		 		trait = shy
+			modifier = { 
+				factor = 1.5
+				trait = shy
 			}
-		 	modifier = { 
-		 		factor = 0.7
-		 		trait = paranoid
+			modifier = { 
+				factor = 0.7
+				trait = paranoid
 			}
-		 	modifier = { 
-		 		factor = 0.5
-		 		trait = gregarious
+			modifier = { 
+				factor = 0.5
+				trait = gregarious
 			}
-		 	modifier = { 
-		 		factor = 0.75
-		 		FROM = { has_character_flag = flag_sponsor_no_welcome }
+			modifier = { 
+				factor = 0.75
+				FROM = { has_character_flag = flag_sponsor_no_welcome }
 			}
 		}
 	}
@@ -5583,29 +5583,29 @@ character_event = {
 		hidden_tooltip = { FROM = { change_variable = { which = converter_goodwill value = -1 } } }
 		hidden_tooltip = { FROM = { character_event = { id = HF.20069 } } }
 		ai_chance = { factor = 40 
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = gregarious
+			modifier = { 
+				factor = 0.9
+				trait = gregarious
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = trusting
+			modifier = { 
+				factor = 0.9
+				trait = trusting
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = kind
+			modifier = { 
+				factor = 0.9
+				trait = kind
 			}
-		 	modifier = { 
-		 		factor = 0.8
-		 		FROM = { has_character_flag = flag_missionary_welcome }
+			modifier = { 
+				factor = 0.8
+				FROM = { has_character_flag = flag_missionary_welcome }
 			}
-		 	modifier = { 
-		 		factor = 0.6
-		 		FROM = { has_character_flag = flag_converter_welcome }
+			modifier = { 
+				factor = 0.6
+				FROM = { has_character_flag = flag_converter_welcome }
 			}
-		 	modifier = { 
-		 		factor = 0.4
-		 		FROM = { has_character_flag = flag_converter_missionary_welcome }
+			modifier = { 
+				factor = 0.4
+				FROM = { has_character_flag = flag_converter_missionary_welcome }
 			}
 		}
 	}
@@ -5652,16 +5652,16 @@ character_event = {
 				limit = { has_character_flag = flag_sponsor_no_welcome } 
 				prestige = -50
 			} 
-			 if = { 
-			 	limit = { has_character_flag = flag_missionary_welcome }
+			if = { 
+				limit = { has_character_flag = flag_missionary_welcome }
 				piety = 50
 			}
-			 if = { 
-			 	limit = { has_character_flag = flag_converter_welcome }
+			if = { 
+				limit = { has_character_flag = flag_converter_welcome }
 				prestige = 50
 			}
-			 if = { 
-			 	limit = { has_character_flag = flag_converter_missionary_welcome }
+			if = { 
+				limit = { has_character_flag = flag_converter_missionary_welcome }
 				prestige = 50
 				piety = 50 
 			}
@@ -5766,7 +5766,7 @@ character_event = {
 		}
 	}
 	
-	immediate = {  
+	immediate = { 
 		set_character_flag = flag_sponsor_visit_midway 	#Added to give piety boon in case the visit is interrupted by converter's death.
 	}
 
@@ -5780,39 +5780,39 @@ character_event = {
 			NOT = { FROM = { has_character_flag = flag_converter_feast_2 } } 
 		}
 		prestige = 100
-		 if = { 
-		 	limit = { FROM = { has_character_flag = flag_converter_feast_2 } }
+		if = { 
+			limit = { FROM = { has_character_flag = flag_converter_feast_2 } }
 			FROM = { prestige = 50 }
 		}
-		 if = { 
-		 	limit = { FROM = { has_character_flag = flag_converter_feast_3 } }
+		if = { 
+			limit = { FROM = { has_character_flag = flag_converter_feast_3 } }
 			FROM = { prestige = 150 }
 		}
-		 if = { 
-		 	limit = { FROM = { has_character_flag = flag_converter_feast_4 } }
+		if = { 
+			limit = { FROM = { has_character_flag = flag_converter_feast_4 } }
 			FROM = { prestige = 250	}
 		}
 		hidden_tooltip = { FROM = { character_event = { id = HF.20071 } } }
 		ai_chance = { factor = 60 
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = shy
+			modifier = { 
+				factor = 0.9
+				trait = shy
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = paranoid
+			modifier = { 
+				factor = 0.9
+				trait = paranoid
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = cruel
+			modifier = { 
+				factor = 0.9
+				trait = cruel
 			}
-		 	modifier = { 
-		 		factor = 1.2
-		 		religion_group = pagan_group
+			modifier = { 
+				factor = 1.2
+				religion_group = pagan_group
 			}
-		 	modifier = { 
-		 		factor = 0.75
-		 		FROM = { has_character_flag = flag_converter_feast_1 }
+			modifier = { 
+				factor = 0.75
+				FROM = { has_character_flag = flag_converter_feast_1 }
 			}
 		}
 	}
@@ -5823,43 +5823,43 @@ character_event = {
 			FROM = { has_character_flag = flag_converter_feast_2 } 
 		}
 		prestige = 100
-		 if = { 
-		 	limit = { FROM = { has_character_flag = flag_converter_feast_2 } }
+		if = { 
+			limit = { FROM = { has_character_flag = flag_converter_feast_2 } }
 			FROM = { prestige = 50 }
 		}
-		 if = { 
-		 	limit = { FROM = { has_character_flag = flag_converter_feast_3 } }
+		if = { 
+			limit = { FROM = { has_character_flag = flag_converter_feast_3 } }
 			FROM = { prestige = 150 }
 		}
-		 if = { 
-		 	limit = { FROM = { has_character_flag = flag_converter_feast_4 } }
+		if = { 
+			limit = { FROM = { has_character_flag = flag_converter_feast_4 } }
 			FROM = { prestige = 250	}
 		}
 		hidden_tooltip = { FROM = { character_event = { id = HF.20071 } } }
 		ai_chance = { factor = 60 
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = shy
-			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = paranoid
-			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = cruel
-			}
-		 	modifier = { 
-		 		factor = 1.2
-		 		religion_group = pagan_group
+			modifier = { 
+				factor = 0.9
+				trait = shy
 			}
 			modifier = { 
-		 		factor = 1.2
-		 		religion_group = oldworld
+				factor = 0.9
+				trait = paranoid
 			}
-		 	modifier = { 
-		 		factor = 0.75
-		 		FROM = { has_character_flag = flag_converter_feast_1 }
+			modifier = { 
+				factor = 0.9
+				trait = cruel
+			}
+			modifier = { 
+				factor = 1.2
+				religion_group = pagan_group
+			}
+			modifier = { 
+				factor = 1.2
+				religion_group = oldworld
+			}
+			modifier = { 
+				factor = 0.75
+				FROM = { has_character_flag = flag_converter_feast_1 }
 			}
 		}
 	}
@@ -5871,29 +5871,29 @@ character_event = {
 		trigger = { FROM = { has_character_flag = flag_converter_feast_1 } }
 		hidden_tooltip = { FROM = { character_event = { id = HF.20071 } } }
 		ai_chance = { factor = 20 
-		 	modifier = { 
-		 		factor = 1.75
-		 		trait = shy
-			}
-		 	modifier = { 
-		 		factor = 0.7
-		 		trait = paranoid
-			}
-		 	modifier = { 
-		 		factor = 0.5
-		 		trait = gregarious
-			}
-		 	modifier = { 
-		 		factor = 1.2
-		 		religion_group = pagan_group
+			modifier = { 
+				factor = 1.75
+				trait = shy
 			}
 			modifier = { 
-		 		factor = 1.2
-		 		religion_group = oldworld
+				factor = 0.7
+				trait = paranoid
 			}
-		 	modifier = { 
-		 		factor = 0.75
-		 		FROM = { has_character_flag = flag_converter_feast_1 }
+			modifier = { 
+				factor = 0.5
+				trait = gregarious
+			}
+			modifier = { 
+				factor = 1.2
+				religion_group = pagan_group
+			}
+			modifier = { 
+				factor = 1.2
+				religion_group = oldworld
+			}
+			modifier = { 
+				factor = 0.75
+				FROM = { has_character_flag = flag_converter_feast_1 }
 			}
 		}
 	}
@@ -5905,42 +5905,42 @@ character_event = {
 		hidden_tooltip = { FROM = { change_variable = { which = converter_goodwill value = -2 } } }
 		hidden_tooltip = { FROM = { character_event = { id = HF.20072 } } }
 		ai_chance = { factor = 40 
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = gregarious
+			modifier = { 
+				factor = 0.9
+				trait = gregarious
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = trusting
+			modifier = { 
+				factor = 0.9
+				trait = trusting
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = kind
+			modifier = { 
+				factor = 0.9
+				trait = kind
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = drunkard
+			modifier = { 
+				factor = 0.9
+				trait = drunkard
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		trait = gluttonous
+			modifier = { 
+				factor = 0.9
+				trait = gluttonous
 			}
-		 	modifier = { 
-		 		factor = 0.7
-		 		trait = hedonist
-		 		FROM = { NOT = { has_character_flag = flag_converter_feast_1 } }
+			modifier = { 
+				factor = 0.7
+				trait = hedonist
+				FROM = { NOT = { has_character_flag = flag_converter_feast_1 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
-		 		FROM = { has_character_flag = flag_converter_feast_2 }
+			modifier = { 
+				factor = 0.8
+				FROM = { has_character_flag = flag_converter_feast_2 }
 			}
-		 	modifier = { 
-		 		factor = 0.6
-		 		FROM = { has_character_flag = flag_converter_feast_3 }
+			modifier = { 
+				factor = 0.6
+				FROM = { has_character_flag = flag_converter_feast_3 }
 			}
-		 	modifier = { 
-		 		factor = 0.4
-		 		FROM = { has_character_flag = flag_converter_feast_4 }
+			modifier = { 
+				factor = 0.4
+				FROM = { has_character_flag = flag_converter_feast_4 }
 			}
 		}
 	}
@@ -5976,16 +5976,16 @@ character_event = {
 	option = { 
 		name = EVTOPTAHF20071
 		tooltip = { 
-			 if = { 
-			 	limit = { has_character_flag = flag_converter_feast_2 }
+			if = { 
+				limit = { has_character_flag = flag_converter_feast_2 }
 				prestige = 50
 			}
-			 if = { 
-			 	limit = { has_character_flag = flag_converter_feast_3 }
+			if = { 
+				limit = { has_character_flag = flag_converter_feast_3 }
 				prestige = 150
 			}
-			 if = { 
-			 	limit = { has_character_flag = flag_converter_feast_4 }
+			if = { 
+				limit = { has_character_flag = flag_converter_feast_4 }
 				prestige = 250
 			}
 		}
@@ -6053,52 +6053,52 @@ character_event = {
 			random_list = { 
 				50 = { #Persuasion success
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy  value = 3 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy value = 3 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy  value = 4 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy value = 4 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy  value = 5 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy value = 5 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy  value = 6 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy value = 6 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy  value = 7 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy value = 7 }
 					}
 					modifier = { factor = 1.5 
-						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy  value = 8 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy value = 8 }
 					}
 					modifier = { factor = 1.5 
-						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy  value = 9 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy value = 9 }
 					}
 					modifier = { factor = 1.75 
-						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy  value = 10 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = diplomacy value = 10 }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy  value = 3 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy value = 3 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy  value = 4 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy value = 4 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy  value = 5 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy value = 5 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy  value = 6 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy value = 6 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy  value = 7 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy value = 7 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy  value = 8 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy value = 8 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy  value = 9 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy value = 9 } }
 					}
 					modifier = { factor = 0.75 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy  value = 10 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = diplomacy value = 10 } }
 					}
 					modifier = { factor = 1.25 
 						trait = underhanded_rogue
@@ -6163,52 +6163,52 @@ character_event = {
 			random_list = { 
 				50 = { #Persuasion success
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = martial  value = 3 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = martial value = 3 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = martial  value = 4 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = martial value = 4 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = martial  value = 5 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = martial value = 5 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = martial  value = 6 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = martial value = 6 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = martial  value = 7 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = martial value = 7 }
 					}
 					modifier = { factor = 1.5 
-						attribute_diff = { character = event_target:sponsoring_king attribute = martial  value = 8 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = martial value = 8 }
 					}
 					modifier = { factor = 1.5 
-						attribute_diff = { character = event_target:sponsoring_king attribute = martial  value = 9 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = martial value = 9 }
 					}
 					modifier = { factor = 1.75 
-						attribute_diff = { character = event_target:sponsoring_king attribute = martial  value = 10 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = martial value = 10 }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial  value = 3 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial value = 3 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial  value = 4 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial value = 4 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial  value = 5 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial value = 5 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial  value = 6 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial value = 6 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial  value = 7 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial value = 7 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial  value = 8 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial value = 8 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial  value = 9 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial value = 9 } }
 					}
 					modifier = { factor = 0.75 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial  value = 10 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = martial value = 10 } }
 					}
 					modifier = { factor = 1.25 
 						trait = tough_soldier
@@ -6272,52 +6272,52 @@ character_event = {
 			random_list = { 
 				50 = { #Persuasion success
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue  value = 3 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue value = 3 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue  value = 4 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue value = 4 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue  value = 5 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue value = 5 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue  value = 6 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue value = 6 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue  value = 7 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue value = 7 }
 					}
 					modifier = { factor = 1.5 
-						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue  value = 8 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue value = 8 }
 					}
 					modifier = { factor = 1.5 
-						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue  value = 9 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue value = 9 }
 					}
 					modifier = { factor = 1.75 
-						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue  value = 10 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = intrigue value = 10 }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue  value = 3 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue value = 3 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue  value = 4 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue value = 4 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue  value = 5 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue value = 5 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue  value = 6 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue value = 6 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue  value = 7 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue value = 7 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue  value = 8 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue value = 8 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue  value = 9 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue value = 9 } }
 					}
 					modifier = { factor = 0.75 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue  value = 10 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = intrigue value = 10 } }
 					}
 					modifier = { factor = 1.25 
 						trait = flamboyant_schemer
@@ -6337,8 +6337,8 @@ character_event = {
 							OR = { 
 								is_female = yes
 								trait = homosexual
-						 	} 
-						 }
+							} 
+						}
 					}
 					modifier = { factor = 1.5 
 						trait = seductress
@@ -6346,7 +6346,7 @@ character_event = {
 							OR = { 
 								NOT = { is_female = yes } 
 								trait = homosexual
-						 	} 
+							} 
 						}
 					}
 					modifier = { factor = 1.4
@@ -6393,52 +6393,52 @@ character_event = {
 			random_list = { 
 				50 = { #Persuasion success
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = learning  value = 3 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = learning value = 3 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = learning  value = 4 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = learning value = 4 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = learning  value = 5 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = learning value = 5 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = learning  value = 6 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = learning value = 6 }
 					}
 					modifier = { factor = 1.25 
-						attribute_diff = { character = event_target:sponsoring_king attribute = learning  value = 7 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = learning value = 7 }
 					}
 					modifier = { factor = 1.5 
-						attribute_diff = { character = event_target:sponsoring_king attribute = learning  value = 8 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = learning value = 8 }
 					}
 					modifier = { factor = 1.5 
-						attribute_diff = { character = event_target:sponsoring_king attribute = learning  value = 9 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = learning value = 9 }
 					}
 					modifier = { factor = 1.75 
-						attribute_diff = { character = event_target:sponsoring_king attribute = learning  value = 10 }
+						attribute_diff = { character = event_target:sponsoring_king attribute = learning value = 10 }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning  value = 3 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning value = 3 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning  value = 4 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning value = 4 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning  value = 5 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning value = 5 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning  value = 6 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning value = 6 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning  value = 7 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning value = 7 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning  value = 8 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning value = 8 } }
 					}
 					modifier = { factor = 0.85 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning  value = 9 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning value = 9 } }
 					}
 					modifier = { factor = 0.75 
-						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning  value = 10 } }
+						event_target:sponsoring_king = { attribute_diff = { character = ROOT attribute = learning value = 10 } }
 					}
 					modifier = { factor = 1.25 
 						trait = martial_cleric
@@ -6549,8 +6549,8 @@ character_event = {
 		custom_tooltip = { text = visit_sponsor_impressed }
 		if = { 
 			limit = { 
-				FROM =  { 
-					OR = {  
+				FROM = { 
+					OR = { 
 						has_character_flag = flag_converter_diplomacy_check
 						has_character_flag = flag_converter_intrigue_check
 					}
@@ -6560,13 +6560,13 @@ character_event = {
 		}
 		if = { 
 			limit = { 
-				FROM =  { has_character_flag = flag_converter_martial_check	} 
+				FROM = { has_character_flag = flag_converter_martial_check	} 
 			} 
 			change_martial = 1
 		}
 		if = { 
 			limit = { 
-				FROM =  { has_character_flag = flag_converter_learning_check } 
+				FROM = { has_character_flag = flag_converter_learning_check } 
 			} 
 			change_learning = 1
 		}
@@ -6938,24 +6938,24 @@ character_event = {
 		name = EVTOPTAHF20078
 		hidden_tooltip = { FROM = { character_event = { id = HF.20082 } } }
 		ai_chance = { factor = 40 
-		 	modifier = { 
-		 		factor = 0.25
-		 		is_rival = FROM
+			modifier = { 
+				factor = 0.25
+				is_rival = FROM
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				NOT = { opinion = { who = from value = -20 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				NOT = { opinion = { who = from value = -40 } }
 			}
-		 	modifier = { 
-		 		factor = 0.25
+			modifier = { 
+				factor = 0.25
 				NOT = { opinion = { who = from value = -60 } }
 			}
-		 	modifier = { 
-		 		factor = 0.1
+			modifier = { 
+				factor = 0.1
 				NOT = { opinion = { who = from value = -80 } }
 			}
 		}
@@ -6964,45 +6964,45 @@ character_event = {
 		name = EVTOPTBHF20078
 		hidden_tooltip = { FROM = { character_event = { id = HF.20083 } } }
 		ai_chance = { factor = 60 
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = paranoid
+			modifier = { 
+				factor = 1.25
+				trait = paranoid
 			}
-		 	modifier = { 
-		 		factor = 0.5
-		 		is_lover = FROM
+			modifier = { 
+				factor = 0.5
+				is_lover = FROM
 			}
-		 	modifier = { 
-		 		factor = 0.75
-		 		is_friend = FROM
+			modifier = { 
+				factor = 0.75
+				is_friend = FROM
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		FROM = { check_variable = { which = converter_goodwill value = 2 } }
+			modifier = { 
+				factor = 0.9
+				FROM = { check_variable = { which = converter_goodwill value = 2 } }
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		FROM = { check_variable = { which = converter_goodwill value = 4 } }
+			modifier = { 
+				factor = 0.9
+				FROM = { check_variable = { which = converter_goodwill value = 4 } }
 			}
-		 	modifier = { 
-		 		factor = 0.9
-		 		FROM = { check_variable = { which = converter_goodwill value = 6 } }
+			modifier = { 
+				factor = 0.9
+				FROM = { check_variable = { which = converter_goodwill value = 6 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
-		 		FROM = { check_variable = { which = converter_goodwill value = 8 } }
+			modifier = { 
+				factor = 0.8
+				FROM = { check_variable = { which = converter_goodwill value = 8 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
-		 		FROM = { check_variable = { which = converter_goodwill value = 10 } }
+			modifier = { 
+				factor = 0.8
+				FROM = { check_variable = { which = converter_goodwill value = 10 } }
 			}
-		 	modifier = { 
-		 		factor = 0.7
-		 		FROM = { check_variable = { which = converter_goodwill value = 12 } }
+			modifier = { 
+				factor = 0.7
+				FROM = { check_variable = { which = converter_goodwill value = 12 } }
 			}
-		 	modifier = { 
-		 		factor = 0.5
-		 		FROM = { check_variable = { which = converter_goodwill value = 14 } }
+			modifier = { 
+				factor = 0.5
+				FROM = { check_variable = { which = converter_goodwill value = 14 } }
 			}
 		}
 	}
@@ -7063,80 +7063,80 @@ character_event = {
 		add_lover = FROM
 		hidden_tooltip = { FROM = { character_event = { id = HF.20084 } } }
 		ai_chance = { factor = 40 
-		 	modifier = { 
-		 		factor = 0
-		 		is_rival = FROM
+			modifier = { 
+				factor = 0
+				is_rival = FROM
 			}
-		 	modifier = { 
-		 		factor = 0.75
-		 		num_of_lovers = 1
+			modifier = { 
+				factor = 0.75
+				num_of_lovers = 1
 			}
-		 	modifier = { 
-		 		factor = 0
-		 		num_of_lovers = 3
+			modifier = { 
+				factor = 0
+				num_of_lovers = 3
 			}
-		 	modifier = { 
-		 		factor = 0
+			modifier = { 
+				factor = 0
 				FROM = { is_female = yes }
 				is_female = yes
 				NOT = { trait = homosexual }
 			}
-		 	modifier = { 
-		 		factor = 0
+			modifier = { 
+				factor = 0
 				FROM = { is_female = no }
 				is_female = no
 				NOT = { trait = homosexual }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				FROM = { has_ugly_trait_trigger = yes }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				FROM = { trait = harelip }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				FROM = { trait = hunchback }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				FROM = { trait = dwarf }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				FROM = { trait = stutter }
 			}
-		 	modifier = { 
-		 		factor = 0.7
+			modifier = { 
+				factor = 0.7
 				FROM = { trait = inbred }
 			}
-		 	modifier = { 
-		 		factor = 0.7
+			modifier = { 
+				factor = 0.7
 				FROM = { trait = disfigured }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				FROM = { trait = mangled }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				NOT = { opinion = { who = from value = 0 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				NOT = { opinion = { who = from value = -20 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				NOT = { opinion = { who = from value = -40 } }
 			}
-		 	modifier = { 
-		 		factor = 0.25
+			modifier = { 
+				factor = 0.25
 				NOT = { opinion = { who = from value = -60 } }
 			}
-		 	modifier = { 
-		 		factor = 0.1
+			modifier = { 
+				factor = 0.1
 				NOT = { opinion = { who = from value = -80 } }
 			}
 		}
@@ -7145,45 +7145,45 @@ character_event = {
 		name = EVTOPTBHF20079
 		hidden_tooltip = { FROM = { character_event = { id = HF.20085 } } }
 		ai_chance = { factor = 60 
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = paranoid
+			modifier = { 
+				factor = 1.25
+				trait = paranoid
 			}
-		 	modifier = { 
-		 		factor = 0.75
+			modifier = { 
+				factor = 0.75
 				FROM = { has_fair_trait_trigger = yes }
 			}
-		 	modifier = { 
-		 		factor = 0.75
-		 		is_friend = FROM
+			modifier = { 
+				factor = 0.75
+				is_friend = FROM
 			}
-		 	modifier = { 
-		 		factor = 0.8
-		 		FROM = { check_variable = { which = converter_goodwill value = 2 } }
+			modifier = { 
+				factor = 0.8
+				FROM = { check_variable = { which = converter_goodwill value = 2 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
-		 		FROM = { check_variable = { which = converter_goodwill value = 4 } }
+			modifier = { 
+				factor = 0.8
+				FROM = { check_variable = { which = converter_goodwill value = 4 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
-		 		FROM = { check_variable = { which = converter_goodwill value = 6 } }
+			modifier = { 
+				factor = 0.8
+				FROM = { check_variable = { which = converter_goodwill value = 6 } }
 			}
-		 	modifier = { 
-		 		factor = 0.7
-		 		FROM = { check_variable = { which = converter_goodwill value = 8 } }
+			modifier = { 
+				factor = 0.7
+				FROM = { check_variable = { which = converter_goodwill value = 8 } }
 			}
-		 	modifier = { 
-		 		factor = 0.7
-		 		FROM = { check_variable = { which = converter_goodwill value = 10 } }
+			modifier = { 
+				factor = 0.7
+				FROM = { check_variable = { which = converter_goodwill value = 10 } }
 			}
-		 	modifier = { 
-		 		factor = 0.6
-		 		FROM = { check_variable = { which = converter_goodwill value = 12 } }
+			modifier = { 
+				factor = 0.6
+				FROM = { check_variable = { which = converter_goodwill value = 12 } }
 			}
-		 	modifier = { 
-		 		factor = 0.4
-		 		FROM = { check_variable = { which = converter_goodwill value = 14 } }
+			modifier = { 
+				factor = 0.4
+				FROM = { check_variable = { which = converter_goodwill value = 14 } }
 			}
 		}
 	}
@@ -7228,36 +7228,36 @@ character_event = {
 		add_friend = FROM
 		hidden_tooltip = { FROM = { character_event = { id = HF.20086 } } }
 		ai_chance = { factor = 60 
-		 	modifier = { 
-		 		factor = 0
-		 		is_rival = FROM
+			modifier = { 
+				factor = 0
+				is_rival = FROM
 			}
-		 	modifier = { 
-		 		factor = 0.75
-		 		num_of_friends = 1
+			modifier = { 
+				factor = 0.75
+				num_of_friends = 1
 			}
-		 	modifier = { 
-		 		factor = 0.1
-		 		num_of_friends = 3
+			modifier = { 
+				factor = 0.1
+				num_of_friends = 3
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				NOT = { opinion = { who = from value = 0 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				NOT = { opinion = { who = from value = -20 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				NOT = { opinion = { who = from value = -40 } }
 			}
-		 	modifier = { 
-		 		factor = 0.25
+			modifier = { 
+				factor = 0.25
 				NOT = { opinion = { who = from value = -60 } }
 			}
-		 	modifier = { 
-		 		factor = 0.1
+			modifier = { 
+				factor = 0.1
 				NOT = { opinion = { who = from value = -80 } }
 			}
 		}
@@ -7266,61 +7266,61 @@ character_event = {
 		name = EVTOPTBHF20080
 		hidden_tooltip = { FROM = { character_event = { id = HF.20087 } } }
 		ai_chance = { factor = 40 
-		 	modifier = { 
-		 		factor = 1.25
-		 		trait = paranoid
+			modifier = { 
+				factor = 1.25
+				trait = paranoid
 			}
-		 	modifier = { 
-		 		factor = 0.75
-		 		is_friend = FROM
+			modifier = { 
+				factor = 0.75
+				is_friend = FROM
 			}
-		 	modifier = { 
-		 		factor = 0.75
+			modifier = { 
+				factor = 0.75
 				FROM = { has_fair_trait_trigger = yes }
 			}
-		 	modifier = { 
-		 		factor = 0.9
+			modifier = { 
+				factor = 0.9
 				FROM = { prestige = 300 }
 			}
-		 	modifier = { 
-		 		factor = 0.9
+			modifier = { 
+				factor = 0.9
 				FROM = { prestige = 500 }
 			}
-		 	modifier = { 
-		 		factor = 0.9
+			modifier = { 
+				factor = 0.9
 				FROM = { prestige = 700 }
 			}
-		 	modifier = { 
-		 		factor = 0.8
+			modifier = { 
+				factor = 0.8
 				FROM = { prestige = 900 }
 			}
-		 	modifier = { 
-		 		factor = 0.8
-		 		FROM = { check_variable = { which = converter_goodwill value = 2 } }
+			modifier = { 
+				factor = 0.8
+				FROM = { check_variable = { which = converter_goodwill value = 2 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
-		 		FROM = { check_variable = { which = converter_goodwill value = 4 } }
+			modifier = { 
+				factor = 0.8
+				FROM = { check_variable = { which = converter_goodwill value = 4 } }
 			}
-		 	modifier = { 
-		 		factor = 0.8
-		 		FROM = { check_variable = { which = converter_goodwill value = 6 } }
+			modifier = { 
+				factor = 0.8
+				FROM = { check_variable = { which = converter_goodwill value = 6 } }
 			}
-		 	modifier = { 
-		 		factor = 0.7
-		 		FROM = { check_variable = { which = converter_goodwill value = 8 } }
+			modifier = { 
+				factor = 0.7
+				FROM = { check_variable = { which = converter_goodwill value = 8 } }
 			}
-		 	modifier = { 
-		 		factor = 0.7
-		 		FROM = { check_variable = { which = converter_goodwill value = 10 } }
+			modifier = { 
+				factor = 0.7
+				FROM = { check_variable = { which = converter_goodwill value = 10 } }
 			}
-		 	modifier = { 
-		 		factor = 0.6
-		 		FROM = { check_variable = { which = converter_goodwill value = 12 } }
+			modifier = { 
+				factor = 0.6
+				FROM = { check_variable = { which = converter_goodwill value = 12 } }
 			}
-		 	modifier = { 
-		 		factor = 0.4
-		 		FROM = { check_variable = { which = converter_goodwill value = 14 } }
+			modifier = { 
+				factor = 0.4
+				FROM = { check_variable = { which = converter_goodwill value = 14 } }
 			}
 		}
 	}
@@ -7550,7 +7550,7 @@ character_event = {
 				entry = CHRONICLE_SPONSOR_VISIT
 				portrait = [converting_king.GetID]
 			}
-			random_list = {  
+			random_list = { 
 				40 = { event_target:converting_king = { character_event = { id = HF.20037 } } } #Events for Converter
 				60 = { event_target:sponsoring_king = { character_event = { id = HF.20038 } } } #Events for Sponsor
 			}
@@ -7621,7 +7621,7 @@ character_event = {
 	immediate = {
 		any_playable_ruler = { 
 			limit = { 
-				has_character_flag =  flag_sponsored_baptism
+				has_character_flag = flag_sponsored_baptism
 				has_opinion_modifier = { 
 					who = ROOT 
 					modifier = opinion_baptism_sponsor_target 
@@ -7702,12 +7702,12 @@ letter_event = {
 			}
 		}
 		hidden_tooltip = { 
-			remove_opinion = {  
+			remove_opinion = { 
 				who = FROM
 				modifier = opinion_baptism_sponsor_target
 			}
 			FROM = { 
-				remove_opinion = {  
+				remove_opinion = { 
 					who = ROOT
 					modifier = opinion_baptism_sponsor_target
 				}
@@ -7830,7 +7830,7 @@ character_event = {
 					religion = ROOT
 					NOT = { block_general_event_trigger = yes }
 					OR = { 
-						higher_tier_than = BARON  
+						higher_tier_than = BARON 
 						has_minor_title = title_cardinal
 						has_minor_title = title_ursuline_cardinal
 						has_minor_title = title_mormon_cardinal
@@ -7906,7 +7906,7 @@ character_event = {
 						religion = ROOT
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
-							higher_tier_than = BARON  
+							higher_tier_than = BARON 
 							has_minor_title = title_cardinal
 							has_minor_title = title_ursuline_cardinal
 							has_minor_title = title_mormon_cardinal
@@ -7928,7 +7928,7 @@ character_event = {
 						religion = ROOT
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
-							higher_tier_than = BARON  
+							higher_tier_than = BARON 
 							has_minor_title = title_cardinal
 							has_minor_title = title_ursuline_cardinal
 							has_minor_title = title_mormon_cardinal
@@ -7964,11 +7964,11 @@ character_event = {
 				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						is_adult = yes
 						society_member_of = the_satanists
-						NOR =  { 
+						NOR = { 
 							is_father = FROM
 							is_mother = FROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8053,11 +8053,11 @@ character_event = {
 				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						is_adult = yes
 						religion = ROOT
-						NOR =  { 
+						NOR = { 
 							is_father = FROM
 							is_mother = FROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8121,7 +8121,7 @@ character_event = {
 				religion = ROOT
 				NOT = { block_general_event_trigger = yes }
 				OR = { 
-					higher_tier_than = BARON  
+					higher_tier_than = BARON 
 					has_minor_title = title_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
@@ -8145,11 +8145,11 @@ character_event = {
 				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						is_adult = yes
 						religion = ROOT
-						NOR =  { 
+						NOR = { 
 							is_father = FROM
 							is_mother = FROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8247,16 +8247,16 @@ character_event = {
 			#Then for any courtier (prioritizing relatives).
 
 			if = { #Check for any powerful vassal.
-				limit =  { 
+				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						is_powerful_vassal = yes
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8267,14 +8267,14 @@ character_event = {
 				random_realm_character = {
 					limit = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						is_powerful_vassal = yes
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
 						dynasty = FROMFROM
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8309,16 +8309,16 @@ character_event = {
 			}
 
 			if = { #Check for a liked vassal.
-				limit =  { 
+				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
-						reverse_opinion =  { who = ROOT value = 20 }
+						NOT = { is_incapable = yes }
+						reverse_opinion = { who = ROOT value = 20 }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8330,13 +8330,13 @@ character_event = {
 				random_realm_character = {
 					limit = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						reverse_opinion = { who = ROOT value = 20 }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8365,15 +8365,15 @@ character_event = {
 				}
 			}
 			if = { #Check for any vassal.
-				limit =  { 
+				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8386,12 +8386,12 @@ character_event = {
 				random_realm_character = {
 					limit = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8416,15 +8416,15 @@ character_event = {
 				}
 			}
 			if = { #Check for any courtier.
-				limit =  { 
+				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = no
 						is_adult = yes
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8438,12 +8438,12 @@ character_event = {
 				random_realm_character = {
 					limit = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = no
 						is_adult = yes
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8484,17 +8484,17 @@ character_event = {
 			#Same as above, but check for society membership rather than religion.
 
 			if = { #Check for any powerful vassal.
-				limit =  { 
+				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						is_powerful_vassal = yes
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
 						society_member_of = the_satanists
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8505,7 +8505,7 @@ character_event = {
 				random_realm_character = {
 					limit = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						is_powerful_vassal = yes
 						religion = ROOT
@@ -8513,7 +8513,7 @@ character_event = {
 						is_adult = yes
 						society_member_of = the_satanists
 						dynasty = FROMFROM
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8548,17 +8548,17 @@ character_event = {
 			}
 
 			if = { #Check for a liked vassal.
-				limit =  { 
+				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
-						reverse_opinion =  { who = ROOT value = 20 }
+						NOT = { is_incapable = yes }
+						reverse_opinion = { who = ROOT value = 20 }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
 						society_member_of = the_satanists
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8570,14 +8570,14 @@ character_event = {
 				random_realm_character = {
 					limit = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						reverse_opinion = { who = ROOT value = 20 }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
 						society_member_of = the_satanists
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8606,16 +8606,16 @@ character_event = {
 				}
 			}
 			if = { #Check for any vassal.
-				limit =  { 
+				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
 						society_member_of = the_satanists
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8628,13 +8628,13 @@ character_event = {
 				random_realm_character = {
 					limit = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = yes
 						is_adult = yes
 						society_member_of = the_satanists
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8659,16 +8659,16 @@ character_event = {
 				}
 			}
 			if = { #Check for any courtier.
-				limit =  { 
+				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = no
 						is_adult = yes
 						society_member_of = the_satanists
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -8682,13 +8682,13 @@ character_event = {
 				random_realm_character = {
 					limit = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						religion = ROOT
 						is_ruler = no
 						is_adult = yes
 						society_member_of = the_satanists
-						NOR =  { 
+						NOR = { 
 							is_father = FROMFROM
 							is_mother = FROMFROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -9195,7 +9195,7 @@ character_event = {
 				} 
 			}
 			hidden_tooltip = { spouse = { character_event = { id = HF.20105 } } } #Spouse notified
-	 	}
+		}
 	}
 }
 
@@ -9432,7 +9432,7 @@ character_event = {
 						religion = ROOT
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
-							higher_tier_than = BARON  
+							higher_tier_than = BARON 
 							has_minor_title = title_cardinal
 							has_minor_title = title_ursuline_cardinal
 							has_minor_title = title_mormon_cardinal
@@ -9454,7 +9454,7 @@ character_event = {
 						religion = ROOT
 						NOT = { block_general_event_trigger = yes }
 						OR = { 
-							higher_tier_than = BARON  
+							higher_tier_than = BARON 
 							has_minor_title = title_cardinal
 							has_minor_title = title_ursuline_cardinal
 							has_minor_title = title_mormon_cardinal
@@ -9490,11 +9490,11 @@ character_event = {
 				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						is_adult = yes
 						society_member_of = the_satanists
-						NOR =  { 
+						NOR = { 
 							is_father = FROM
 							is_mother = FROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -9579,11 +9579,11 @@ character_event = {
 				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						is_adult = yes
 						religion = ROOT
-						NOR =  { 
+						NOR = { 
 							is_father = FROM
 							is_mother = FROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -9647,7 +9647,7 @@ character_event = {
 				religion = ROOT
 				NOT = { block_general_event_trigger = yes }
 				OR = { 
-					higher_tier_than = BARON  
+					higher_tier_than = BARON 
 					has_minor_title = title_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
@@ -9671,11 +9671,11 @@ character_event = {
 				limit = { 
 					any_realm_character = { 
 						top_liege = { character = ROOT } 
-						NOT =  { is_incapable = yes }
+						NOT = { is_incapable = yes }
 						is_theocracy = no
 						is_adult = yes
 						religion = ROOT
-						NOR =  { 
+						NOR = { 
 							is_father = FROM
 							is_mother = FROM
 							has_any_opinion_modifier = opinion_godfather 
@@ -9761,7 +9761,7 @@ character_event = {
 			#Chance to gain Sponsor's culture as well.
 			#Chance to gain militant monks. (event troops)
 
-			100 = {  #Offer chance to get Gavelkind.
+			100 = { #Offer chance to get Gavelkind.
 				trigger = { 
 					FROM = { 
 						primary_title = { has_law = succ_elective_gavelkind } 
@@ -9770,11 +9770,11 @@ character_event = {
 				}
 				FROM = { character_event = { id = HF.20112 } }
 			}
-			25 = {  #Improve capital's infrastructure. (province modifiers)
+			25 = { #Improve capital's infrastructure. (province modifiers)
 				trigger = { 
 					FROM = { 
 						capital_scope = { 
-							NOR = {  
+							NOR = { 
 								has_province_modifier = mass_baptism_capital_traders
 								has_province_modifier = mass_baptism_capital_missionaries
 								has_province_modifier = mass_baptism_capital_builders
@@ -9784,19 +9784,19 @@ character_event = {
 				}
 				FROM = { character_event = { id = HF.20113 } }
 			} 
-			25 = {  #Increase learning/stewardship/diplomacy.
+			25 = { #Increase learning/stewardship/diplomacy.
 				trigger = { 
 					ROOT = { 
 						OR = { 
-							attribute_diff = { character = FROM attribute = diplomacy  value = 1 } 
-							attribute_diff = { character = FROM attribute = learning  value = 1 } 
-							attribute_diff = { character = FROM attribute = stewardship  value = 1 } 
+							attribute_diff = { character = FROM attribute = diplomacy value = 1 } 
+							attribute_diff = { character = FROM attribute = learning value = 1 } 
+							attribute_diff = { character = FROM attribute = stewardship value = 1 } 
 						} 
 					} 
 				}
 				FROM = { character_event = { id = HF.20114 } }
 			}
-			10 = {  #Chance to gain technology.
+			10 = { #Chance to gain technology.
 				trigger = { 
 					FROM = { 
 						is_tribal = yes
@@ -9804,19 +9804,19 @@ character_event = {
 				}
 				FROM = { character_event = { id = HF.20115 } }
 			}
-			5 = {  #Chance to change culture.
+			5 = { #Chance to change culture.
 				trigger = { 
 					FROM = { 
 						NOR = { 
 							culture = ROOT 
 							has_character_flag = flag_converter_refused_chaplain_culture_conversion
 						} 
-						culture_group = ROOT  #Needs to be compatible already.
+						culture_group = ROOT #Needs to be compatible already.
 					} 
 				}
 				FROM = { character_event = { id = HF.20116 } }
 			} 
-			5 = {  #Chance to gain event troops.
+			5 = { #Chance to gain event troops.
 				trigger = { 
 					is_tribal = yes
 					culture = FROM #Completely integrated.
@@ -9825,7 +9825,7 @@ character_event = {
 				}
 				FROM = { character_event = { id = HF.20117 } }
 			}
-			1 = {  #Skip a turn.
+			1 = { #Skip a turn.
 				FROM = { character_event = { id = HF.20111 days = 1500 random = 500 } }
 			} 
 		}
@@ -10239,7 +10239,7 @@ character_event = {
 
 	option = {
 		name = EVTOPTBHF20118
-		tiered_prestige_reward_effect = yes   
+		tiered_prestige_reward_effect = yes 
 		tiered_piety_negative_effect = yes	
 		ai_chance = { 
 			factor = 10

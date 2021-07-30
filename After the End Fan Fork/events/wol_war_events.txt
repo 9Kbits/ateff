@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# Way of Life war events				  #
-#										 #
-# ID WoL.11000-WoL.11999				  #
-#										 #
+#										#
+# Way of Life war events				#
+#										#
+# ID WoL.11000-WoL.11999				#
+#										#
 ###########################################
 
 # Written by Joel Hansson
@@ -242,7 +242,7 @@ character_event = {
 			}
 			remove_character_modifier = recent_duel_victory
 		}
-		event_target:opponent = {			
+		event_target:opponent = {
 			opinion = {
 				modifier = opinion_fought_duel
 				who = ROOT
@@ -395,7 +395,7 @@ character_event = {
 				}
 				### effects
 				random_list = {
-					70 = {						
+					70 = {
 						add_character_modifier = {
 							modifier = recent_duel_victory
 							months = 12
@@ -470,7 +470,7 @@ character_event = {
 								modifier = recent_duel_victory
 								months = 12
 							}
-							long_character_event = { id = WoL.11006  } 
+							long_character_event = { id = WoL.11006 } 
 						}
 					}
 					30 = {
@@ -484,7 +484,7 @@ character_event = {
 								months = 12
 							}
 							set_character_flag = duel_maim
-							long_character_event = { id = WoL.11006  } 
+							long_character_event = { id = WoL.11006 } 
 						}
 					}
 				}
@@ -791,7 +791,7 @@ long_character_event = {
 		prestige = -50
 		if = {
 			limit = {
-				FROM = { has_character_flag  = duel_maim }
+				FROM = { has_character_flag = duel_maim }
 			}
 			maim_hand_effect = yes
 			if = {
@@ -3381,7 +3381,7 @@ character_event = {
 # Gain Brave / lose coward
 character_event = {
 	id = WoL.11205
-	is_triggered_only =  yes
+	is_triggered_only = yes
 	desc = EVTDESC_WOL_11205
 	picture = GFX_evt_melee
 	border = GFX_event_normal_frame_war

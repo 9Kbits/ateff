@@ -60,7 +60,7 @@ action_clan_sentiment = {
 
 				}
 			}
-			
+
 			OR = {
 				vassal_of = FROM
 				same_liege = FROM
@@ -161,13 +161,13 @@ action_collect_tribute = {
 		num_of_settlements = 1
 		any_province_lord = {
 			NOT = { character = FROM }
-			
+
 			FROM = {
 				job_treasurer = {
 					NOT = { character = PREVPREV } # Can't be sent to himself...
 				}
 			}
-			
+
 			OR = {
 				vassal_of = FROM
 				pays_tribute_to = FROM

@@ -121,7 +121,7 @@ character_event = {
 	
 	immediate = {
 		current_heir = {
-		  save_event_target_as = nomadic_heir
+		save_event_target_as = nomadic_heir
 		}
 		any_vassal = {
 			character_event = { id = GR.11 }
@@ -317,7 +317,7 @@ character_event = {
 					any_war = {
 						defender = { character = ROOT }
 						attacker = {
-							character = THIS			
+							character = THIS
 						}
 					}
 				}
@@ -1418,11 +1418,11 @@ character_event = { # Border Gore cleanser (Limited)
 						}
 					}
 					log = "Baronies in [This.GetName] considered for cleansing"
-					
+
 					county = {
 						save_event_target_as = barony_origin_province
 					}
-					
+
 					any_province_holding = {
 						limit = {
 							holder_scope = {
@@ -2662,11 +2662,11 @@ character_event = { # Border Gore cleanser (Significant)
 						}
 					}
 					log = "Baronies in [This.GetName] considered for cleansing"
-					
+
 					county = {
 						save_event_target_as = barony_origin_province
 					}
-					
+
 					any_province_holding = {
 						limit = {
 							holder_scope = {
@@ -3906,11 +3906,11 @@ character_event = { # Border Gore cleanser (Harsh)
 						}
 					}
 					log = "Baronies in [This.GetName] considered for cleansing"
-					
+
 					county = {
 						save_event_target_as = barony_origin_province
 					}
-					
+
 					any_province_holding = {
 						limit = {
 							holder_scope = {
@@ -5150,11 +5150,11 @@ character_event = { # Border Gore cleanser (Total)
 						}
 					}
 					log = "Baronies in [This.GetName] considered for cleansing"
-					
+
 					county = {
 						save_event_target_as = barony_origin_province
 					}
-					
+
 					any_province_holding = {
 						limit = {
 							holder_scope = {
@@ -6394,11 +6394,11 @@ character_event = { # Border Gore cleanser (Limited Naval)
 						}
 					}
 					log = "Baronies in [This.GetName] considered for cleansing"
-					
+
 					county = {
 						save_event_target_as = barony_origin_province
 					}
-					
+
 					any_province_holding = {
 						limit = {
 							holder_scope = {
@@ -7104,7 +7104,7 @@ character_event = { # Generate 'Fake Family' for characters without any
 				num_of_children < 1
 				age >= 40
 			}
-			
+
 			random_list = {
 				5 = {
 					create_character = {

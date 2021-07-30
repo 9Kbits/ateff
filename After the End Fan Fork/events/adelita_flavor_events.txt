@@ -13,7 +13,7 @@ namespace = dorado
 
 # Adelita comes to the aid of her liege (from event 79010)
 character_event = {
-	id = adelita.0  # Adelita defends liege
+	id = adelita.0 # Adelita defends liege
 	picture = GFX_evt_melee
 	border = GFX_event_normal_frame_war
 	
@@ -46,7 +46,7 @@ character_event = {
 	option = {
 		name = adelita.0_OPTB
 		custom_tooltip = { text = EVTOPTA_79000_TOOLTIP }
-				
+	
 		opinion = {
 			who = FROM
 			modifier = opinion_loyal_adelita
@@ -93,7 +93,7 @@ character_event = {
 
 		any_courtier_or_vassal = {
 			trait = adelita
-			NOT = { trait = incapable }						
+			NOT = { trait = incapable }
 			prisoner = no
 			has_minor_title = title_commander
 		}
@@ -446,7 +446,7 @@ character_event = {
 				is_adult = no
 				NOT = { has_character_modifier = pet_cat }
 			}
-					
+
 			add_cat_effect = yes
 
 			opinion = {
@@ -464,7 +464,7 @@ character_event = {
 		}
 
 		trigger = {
-			any_courtier = {			
+			any_courtier = {
 				is_child_of = ROOT
 				at_location = ROOT
 				is_adult = no
@@ -875,7 +875,7 @@ character_event = {
 				modifier = {
 					factor = 2
 					event_target:my_liege = { trait = duelist }
-				}				
+				}	
 				modifier = {
 					factor = 1.1
 					event_target:my_liege = { combat_rating = 10 }
@@ -941,7 +941,7 @@ character_event = {
 
 		ai_chance = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 10
 				NOT = {
@@ -967,7 +967,7 @@ character_event = {
 				factor = 0.5
 				event_target:my_liege = {
 					is_close_relative = ROOT
-   				}
+ 				}
 			}
 			modifier = {
 				factor = 1.1

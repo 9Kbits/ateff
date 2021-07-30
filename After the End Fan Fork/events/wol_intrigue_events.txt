@@ -334,7 +334,7 @@ character_event = {
 					is_alive = no
 				}
 			}
-			
+
 			character_event = { id = WoL.2061 }
 			break = yes
 		}
@@ -474,7 +474,7 @@ character_event = {
 					factor = 5.0
 					FROMFROM = { trait = schemer }
 				}
-				
+	
 				random = {
 					chance = 25
 					character_event = { id = WoL.2065 } # Time to give up?
@@ -496,9 +496,9 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				character_event = { id = WoL.2000 days = 1 } # Chance of levelling up Intrigue skills
-				
+	
 				if = {
 					limit = {
 						FROMFROM = {
@@ -509,7 +509,7 @@ character_event = {
 					FROMFROM = { character_event = { id = WoL.2070 } } # Plot uncovered 
 					break = yes
 				}
-				
+	
 				FROMFROM = {
 					random_backed_character = {
 						limit = {
@@ -520,7 +520,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			3000 = { # Adultery of spouse or consort uncovered
 				modifier = {
 					factor = 0
@@ -595,9 +595,9 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				character_event = { id = WoL.2000 days = 1 } # Chance of levelling up Intrigue skills
-				
+	
 				if = {
 					limit = {
 						FROMFROM = {
@@ -617,7 +617,7 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				if = {
 					limit = {
 						FROMFROM = {
@@ -640,10 +640,10 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				event_target:target_cheating_spouse = { character_event = { id = WoL.2140 } } # Adultery discovered
 			}
-			
+
 			1000 = { # Treason charges & blackmail. Allows imprisonment or faction prevention/joining.
 				modifier = {
 					factor = 0
@@ -659,12 +659,12 @@ character_event = {
 						NOT = { same_society_as = ROOT }
 					}
 				}
-				
+	
 				character_event = { id = WoL.2000 days = 1 } # Chance of levelling up Intrigue skills
-				
+	
 				character_event = { id = WoL.2080 }
 			}
-			
+
 			3000 = { # Chance to slander
 				modifier = {
 					factor = 0
@@ -710,9 +710,9 @@ character_event = {
 						}
 					}
 				}
-			
+
 				character_event = { id = WoL.2000 days = 1 } # Chance of levelling up Intrigue skills
-				
+	
 				character_event = { id = WoL.2100 }
 			}
 			400 = { # Chance to murder the target
@@ -726,7 +726,7 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				modifier = {
 					factor = 0
 					NOR = {
@@ -735,19 +735,19 @@ character_event = {
 						has_character_modifier = wol_schemer_2
 					}
 				}
-				
+	
 				modifier = {
 					factor = 0.25
 					has_character_modifier = wol_schemer_1
 				}
-				
+	
 				modifier = {
 					factor = 0.5
 					has_character_modifier = wol_schemer_2
 				}
-				
+	
 				character_event = { id = WoL.2000 days = 1 } # Chance of levelling up Intrigue skills
-				
+	
 				character_event = { id = WoL.2110 }
 			}
 			400 = { # Chance to abduct the target
@@ -761,7 +761,7 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				modifier = {
 					factor = 0
 					NOR = {
@@ -770,19 +770,19 @@ character_event = {
 						has_character_modifier = wol_schemer_2
 					}
 				}
-				
+	
 				modifier = {
 					factor = 0.25
 					has_character_modifier = wol_schemer_1
 				}
-				
+	
 				modifier = {
 					factor = 0.5
 					has_character_modifier = wol_schemer_2
 				}
-				
+	
 				character_event = { id = WoL.2000 days = 1 } # Chance of levelling up Intrigue skills
-				
+	
 				character_event = { id = WoL.2120 }
 			}
 		}
@@ -1025,7 +1025,7 @@ character_event = {
 				set_character_flag = charge_illegitimate
 				break = yes
 			}
-			
+
 			if = {
 				limit = {
 					FROMFROMFROM = {
@@ -1093,7 +1093,7 @@ character_event = {
 				set_character_flag = charge_deviant
 				break = yes
 			}
-			
+
 			random_list = {
 				10 = { set_character_flag = charge_traitor }
 				90 = { set_character_flag = charge_slanderer }
@@ -1288,7 +1288,7 @@ character_event = {
 		}
 		
 #		log = "WoL.2080: [Root.GetTitledName] slanders [target_spy_on.GetTitledName]!"
-			
+
 		clr_character_flag = charge_illegitimate
 		clr_character_flag = charge_heretic
 		clr_character_flag = charge_infidel
@@ -1676,7 +1676,7 @@ character_event = {
 		
 		hidden_tooltip = {
 			FROMFROMFROMFROM = { character_event = { id = WoL.2086 } }
-			
+
 			FROM = { character_event = { id = WoL.2084 days = 3 } } # Notify spy of blackmail
 		}
 	}
@@ -2483,7 +2483,7 @@ character_event = {
 				factor = 5.0
 				FROMFROMFROM = { trait = schemer }
 			}
-			
+
 			FROMFROMFROM = { character_event = { id = WoL.2101 days = 3 tooltip = EVTTOOLTIP_WOL_2101 } } # Target finds out about it
 		}
 	}
@@ -3181,7 +3181,7 @@ character_event = {
 					is_alive = no
 				}
 			}
-			
+
 			character_event = { id = WoL.2211 }
 			break = yes
 		}
@@ -3230,7 +3230,7 @@ character_event = {
 					factor = 0
 					has_character_flag = has_liberation_agent
 				}
-				
+	
 				event_target:target_captive = {
 					host = {
 						random_courtier = {
@@ -3267,16 +3267,16 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				character_event = { id = WoL.2232 }
 			}
-			
+
 			100 = { # Liberation attempt
 				modifier = {
 					factor = 0
 					NOT = { has_character_flag = has_liberation_agent }
 				}
-				
+	
 				event_target:target_agent = {
 					character_event = { id = WoL.2222 }
 				}
@@ -3301,7 +3301,7 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				letter_event = { id = WoL.2231 }
 			}
 		}
@@ -3597,12 +3597,12 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				event_target:target_captive = { 
 					character_event = { id = WoL.2223 }
 				}
 			}
-			
+
 			100 = { # Failure
 				modifier = {
 					factor = 1.5
@@ -3634,11 +3634,11 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				event_target:target_captive = { 
 					character_event = { id = WoL.2226 }
 				}
-				
+	
 				liege = {
 					ROOT = { imprison = PREV }
 				}
@@ -3770,7 +3770,7 @@ character_event = {
 				modifier = failed_escape
 				years = 5
 			}
-			
+
 			host = {
 				character_event = { id = WoL.2227 } # Notify jailor
 			}
@@ -3831,7 +3831,7 @@ character_event = {
 				modifier = the_oubliette
 				duration = -1
 			}
-			
+
 			hidden_tooltip = {
 				character_event = { id = WoL.2228 days = 3 } # Notify prisoner
 			}
@@ -3946,10 +3946,10 @@ letter_event = {
 				modifier = opinion_disappointed
 				months = 36
 			}
-			
+
 			clear_event_target = target_agent
 			clr_character_flag = has_liberation_agent
-			
+
 			character_event = { id = WoL.2210 days = 30 random = 60 } # Back to the tombola
 		}
 	}
@@ -4150,7 +4150,7 @@ character_event = {
 							}
 						}
 					}
-					
+
 					if = {
 						limit = {
 							job_spymaster = {

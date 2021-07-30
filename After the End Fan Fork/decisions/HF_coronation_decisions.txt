@@ -61,7 +61,7 @@ decisions = {
 							age = 11
 							custom_tooltip = {
 								text = TT_CHILD_IS_ASSERTIVE
-								hidden_tooltip = {  
+								hidden_tooltip = { 
 									OR = {
 									trait = ambitious
 									trait = quick
@@ -74,7 +74,7 @@ decisions = {
 								trigger = { has_regent = yes }
 								custom_tooltip = {
 									text = TT_REGENT_LIKES_CHILD
-									hidden_tooltip = {  
+									hidden_tooltip = { 
 										AND = { 
 											OR = {
 												has_regent = no
@@ -99,7 +99,7 @@ decisions = {
 				trigger = { has_character_flag = do_not_disturb }
 				custom_tooltip = {
 					text = TT_NOT_OTHERWISE_OCCUPIED
-					hidden_tooltip = {  
+					hidden_tooltip = { 
 						NOT = { has_character_flag = do_not_disturb } 
 					} 
 				} 
@@ -108,7 +108,7 @@ decisions = {
 				trigger = { has_character_flag = flag_preparing_coronation }
 				custom_tooltip = {
 					text = TT_NOT_PREPARING_CORONATION
-					hidden_tooltip = {  
+					hidden_tooltip = { 
 						NOT = { has_character_flag = flag_preparing_coronation } 
 					} 
 				} 
@@ -117,14 +117,14 @@ decisions = {
 				trigger = { has_character_modifier = coronation_request_cooldown }
 				custom_tooltip = {
 					text = TT_NOT_RECENTLY_ASKED_CORONATION
-					hidden_tooltip = {  
+					hidden_tooltip = { 
 						NOT = { has_character_modifier = coronation_request_cooldown } 
 					} 
 				} 
 			} 
 			custom_tooltip = { #In a war against an Excommunicated ruler/liege of an Antipope as part of a deal to be crowned. 
 				text = TT_NOT_FULFILLING_WAR_CORONATION
-				hidden_tooltip = {  
+				hidden_tooltip = { 
 					NOT = { has_character_flag = flag_antipope_for_coronation } 
 					NOT = { has_character_flag = flag_excommunicated_for_coronation } 
 					NOT = { has_character_flag = flag_pepin_for_coronation } 

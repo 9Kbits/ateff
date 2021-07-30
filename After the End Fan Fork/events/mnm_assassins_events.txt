@@ -1,9 +1,9 @@
 ###########################################
-#										 #
+#										#
 # M&M Assassins Society Events			#
-#										 #
-# ID MNM.6000-MNM.6999					  #
-#										 #
+#										#
+# ID MNM.6000-MNM.6999					#
+#										#
 ###########################################
 
 namespace = MNM
@@ -2269,7 +2269,7 @@ character_event = {
 
 		hidden_effect = {
 			random_list = {
-				60  = { #Die
+				60 = { #Die
 					random_list = {
 						75 = {	#Not discovered
 							modifier = {
@@ -3372,7 +3372,7 @@ character_event = {
 							random_list = {
 								50 = {}
 								50 = {
-									society_rank_up = 1					
+									society_rank_up = 1
 								}
 							}
 						}
@@ -3442,9 +3442,9 @@ character_event = {
 						save_event_target_as = assassins_target
 					}
 
-					else =  { 
+					else = { 
 						save_event_target_as = assassins_aggressor
-						
+
 						random_vassal = {
 							limit = { 
 								assassins_appropriate_target_trigger = yes
@@ -3606,7 +3606,7 @@ character_event = {
 								assassins_appropriate_target_trigger = yes
 								NOT = { religion = americanist }
 								NOT = { society_member_of = the_assassins }
-								
+
 								OR = {
 									is_evil_trigger = yes
 									trait = zealous
@@ -3989,57 +3989,57 @@ province_event = {
 #	id = MNM.6230
 #	hide_window = yes
 #	is_triggered_only = yes
-#   	trigger = {
-#   		FROM = {
-#   			tier = COUNT
-#   			location = { is_quest_target = yes }
-#   			OR = {
-#	   			location = { 
-#	   				any_quester_targeting_this = { 
-#	   					character = FROMFROM 
-#	   					NOT = { is_vassal_or_below = ROOT }
-#	   					has_quest = quest_the_assassins_convert_province
-#	   				} 
-#	   			}
-#	   			location = { 
-#	   				any_quester_targeting_this = { 
-#	   					is_vassal_or_below = FROMFROM 
-#	   					NOR = { 
-#	   						character = ROOT 
-#	   						is_vassal_or_below = ROOT
-#	   					}
-#	   					has_quest = quest_the_assassins_convert_province
-#	   				} 
-#	   			}
-#   			}
-#   		}
-#   	}
-#   	immediate = {
-#   		FROM = {
-#   			location = {
-#   				any_quester_targeting_this = {
-#		   			limit = {
-#		   				OR = {
-#		   					AND = {
-#		   						character = FROMFROM 
-#			   					NOT = { is_vassal_or_below = ROOT }
-#			   					has_quest = quest_the_assassins_convert_province
-#		   					}
-#		   					AND = {
-#		   						is_vassal_or_below = FROMFROM 
-#			   					NOR = { 
-#			   						character = ROOT 
-#			   						is_vassal_or_below = ROOT
-#			   					}
-#		   					}
-#		   				}
-#		   				has_quest = quest_the_assassins_convert_province
-#		   			}
+# 	trigger = {
+# 		FROM = {
+# 			tier = COUNT
+# 			location = { is_quest_target = yes }
+# 			OR = {
+#				location = { 
+#					any_quester_targeting_this = { 
+#						character = FROMFROM 
+#						NOT = { is_vassal_or_below = ROOT }
+#						has_quest = quest_the_assassins_convert_province
+#					} 
+#				}
+#				location = { 
+#					any_quester_targeting_this = { 
+#						is_vassal_or_below = FROMFROM 
+#						NOR = { 
+#							character = ROOT 
+#							is_vassal_or_below = ROOT
+#						}
+#						has_quest = quest_the_assassins_convert_province
+#					} 
+#				}
+# 			}
+# 		}
+# 	}
+# 	immediate = {
+# 		FROM = {
+# 			location = {
+# 				any_quester_targeting_this = {
+#					limit = {
+#						OR = {
+#							AND = {
+#								character = FROMFROM 
+#								NOT = { is_vassal_or_below = ROOT }
+#								has_quest = quest_the_assassins_convert_province
+#							}
+#							AND = {
+#								is_vassal_or_below = FROMFROM 
+#								NOR = { 
+#									character = ROOT 
+#									is_vassal_or_below = ROOT
+#								}
+#							}
+#						}
+#						has_quest = quest_the_assassins_convert_province
+#					}
 #					wealth = 5000
-#		   		}
-#   			}
-#   		}
-#   	}
+#				}
+# 			}
+# 		}
+# 	}
 #}
 
 #Mission completion
@@ -4373,24 +4373,24 @@ character_event = {
 	hide_from = yes
 
 	desc = {
-	 	trigger = {
-	 		OR = {
-	 			trait = paranoid
-	 			trait = schemer
-	 			intrigue = 15
-	 		}
-	 	}
-	 	text = EVTDESC_MNM_6209_A
+		trigger = {
+			OR = {
+				trait = paranoid
+				trait = schemer
+				intrigue = 15
+			}
+		}
+		text = EVTDESC_MNM_6209_A
 	}
 	desc = {
-	 	trigger = {
-	 		NOR = {
-	 			trait = paranoid
-	 			trait = schemer
-	 			intrigue = 15
-	 		}
-	 	}
-	 	text = EVTDESC_MNM_6209_B
+		trigger = {
+			NOR = {
+				trait = paranoid
+				trait = schemer
+				intrigue = 15
+			}
+		}
+		text = EVTDESC_MNM_6209_B
 	}
 
 	is_triggered_only = yes
@@ -4402,8 +4402,8 @@ character_event = {
 			limit = {
 				OR = {
 					trait = paranoid
-		 			trait = schemer
-		 			intrigue = 15
+					trait = schemer
+					intrigue = 15
 				}
 			}
 			custom_tooltip = { text = EVTOPTA_MNM_6209_TOOLTIP_A }
@@ -4413,8 +4413,8 @@ character_event = {
 			limit = {
 				NOR = {
 					trait = paranoid
-		 			trait = schemer
-		 			intrigue = 15
+					trait = schemer
+					intrigue = 15
 				}
 			}
 			custom_tooltip = { text = EVTOPTA_MNM_6209_TOOLTIP_B }
@@ -4440,7 +4440,7 @@ character_event = {
 				hidden_tooltip = { character_event = { id = 6061 days = 15 random = 10 } }
 			}
 		}
-		hidden_tooltip = { character_event =  { id = MNM.6210 days = 3 } }
+		hidden_tooltip = { character_event = { id = MNM.6210 days = 3 } }
 	}
 }
 
@@ -4478,7 +4478,7 @@ character_event = {
 
 		clr_character_flag = assassins_refused_to_pay_debt
 
-		hidden_effect = { event_target:assassin = { character_event =  { id = MNM.6215 } } }
+		hidden_effect = { event_target:assassin = { character_event = { id = MNM.6215 } } }
 
 		ai_chance = {
 			factor = 50
@@ -4515,7 +4515,7 @@ character_event = {
 		clr_character_flag = assassins_refused_to_pay_debt
 		set_character_flag = assassins_target_debt
 
-		hidden_effect = { event_target:assassin = { character_event =  { id = MNM.6216 } } }
+		hidden_effect = { event_target:assassin = { character_event = { id = MNM.6216 } } }
 
 		ai_chance = {
 			factor = 50
@@ -4561,7 +4561,7 @@ character_event = {
 
 		clr_character_flag = assassins_refused_to_pay_debt
 
-		hidden_effect = { event_target:assassin = { character_event =  { id = MNM.6215 } } }
+		hidden_effect = { event_target:assassin = { character_event = { id = MNM.6215 } } }
 
 		reverse_opinion = {
 			who = FROM
@@ -4604,7 +4604,7 @@ character_event = {
 		clr_character_flag = assassins_refused_to_pay_debt
 		set_character_flag = assassins_target_debt
 
-		hidden_effect = { event_target:assassin = { character_event =  { id = MNM.6216 } } }
+		hidden_effect = { event_target:assassin = { character_event = { id = MNM.6216 } } }
 
 		reverse_opinion = {
 			who = FROM
@@ -4650,7 +4650,7 @@ character_event = {
 
 		clr_character_flag = assassins_refused_to_pay_debt
 
-		hidden_effect = { event_target:assassin = { character_event =  { id = MNM.6215 } } }
+		hidden_effect = { event_target:assassin = { character_event = { id = MNM.6215 } } }
 
 		event_target:fire_town_province = {
 			add_province_modifier = {
@@ -4694,7 +4694,7 @@ character_event = {
 		clr_character_flag = assassins_refused_to_pay_debt
 		set_character_flag = assassins_target_debt
 
-		hidden_effect = { event_target:assassin = { character_event =  { id = MNM.6216 } } }
+		hidden_effect = { event_target:assassin = { character_event = { id = MNM.6216 } } }
 
 		event_target:fire_town_province = {
 			add_province_modifier = {
@@ -4716,7 +4716,7 @@ character_event = {
 			modifier = {
 				can_pay_assassins_debt = no
 				factor = 2
-			}			
+			}
 		}
 	}
 }
@@ -4876,7 +4876,7 @@ society_quest_event = {
 						}
 					}
 				}
-			
+
 				owner = {
 					top_liege = {
 						random_realm_province = {
@@ -5309,8 +5309,8 @@ character_event = {
 						AND = {
 							trait = paranoid
 							any_realm_character = {
-		 						same_sex = ROOT
-		 						NOT = { character = ROOT }
+								same_sex = ROOT
+								NOT = { character = ROOT }
 							}
 						}
 					}
@@ -5825,7 +5825,7 @@ character_event = {
 		}
 		#Recover
 		if = {
-			limit = { has_character_modifier =  withdrawal_symptoms }
+			limit = { has_character_modifier = withdrawal_symptoms }
 			random = {
 				chance = 40
 				character_event = { id = MNM.6806 }
@@ -5926,7 +5926,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_MNM_6810
 		if = {
-			limit  = {
+			limit = {
 				NOT = { trait = trusting }
 			}
 			add_trait = paranoid
@@ -5943,7 +5943,7 @@ character_event = {
 	option = {
 		name = EVTOPTC_MNM_6810
 		if = {
-			limit  = {
+			limit = {
 				NOT = { trait = diligent }
 			}
 			add_trait = slothful
@@ -6444,14 +6444,14 @@ character_event = {
 				}
 			}
 			random_realm_character = {
-		 		limit = {
-		 			same_sex = ROOT
-		 			NOT = { character = ROOT }
-		 		}
-		 		save_event_target_as = drug_cheater_lover
-		 	}
+				limit = {
+					same_sex = ROOT
+					NOT = { character = ROOT }
+				}
+				save_event_target_as = drug_cheater_lover
+			}
 			save_event_target_as = drug_cheater_spouse
-			
+
 		}
 	}
 
@@ -6826,7 +6826,7 @@ character_event = {
 
 	option = {
 		name = EVTOPTA_MNM_6840
-		tooltip = { FROMFROM  = { add_favor = ROOT } }
+		tooltip = { FROMFROM = { add_favor = ROOT } }
 		opinion = {
 			modifier = opinion_threatened_me
 			who = FROMFROM
@@ -7637,7 +7637,7 @@ character_event = { # Conversion event (for apprentice) if they are not already 
 
 	is_triggered_only = yes
 
-	option = { #I (apprentice)  will convert
+	option = { #I (apprentice) will convert
 		name = EVTOPTA_MNM_6258
 		
 		religion = americanist
@@ -7954,13 +7954,13 @@ character_event = {
 
 					set_character_flag = won_outwit
 
-	 				random_list = {
-	 					75 = { set_character_flag = modifier_outwit }
-	 					25 = { 
-	 						modifier = { OR = { is_smart_trigger = yes is_dumb_trigger = yes } factor = 0 }
-	 						set_character_flag = trait_shrewd
-	 					}
-	 				}
+					random_list = {
+						75 = { set_character_flag = modifier_outwit }
+						25 = { 
+							modifier = { OR = { is_smart_trigger = yes is_dumb_trigger = yes } factor = 0 }
+							set_character_flag = trait_shrewd
+						}
+					}
 				}
 				17 = { #Win - outstrong
 					modifier = { is_strong_trigger = yes factor = 2 }
@@ -7972,10 +7972,10 @@ character_event = {
 
 					random_list = {
 						75 = { set_character_flag = modifier_outstrong }
-	 					25 = { 
-	 						modifier = { OR = { is_strong_trigger = yes is_weak_trigger = yes } factor = 0 }
-	 						set_character_flag = trait_robust
-	 					}
+						25 = { 
+							modifier = { OR = { is_strong_trigger = yes is_weak_trigger = yes } factor = 0 }
+							set_character_flag = trait_robust
+						}
 					}
 				}
 				33 = {
@@ -7987,7 +7987,7 @@ character_event = {
 					modifier = { FROM = { trait = erudite } factor = 2 }
 					modifier = { FROM = { attribute_diff = { character = ROOT attribute = intrigue value = 3 } } factor = 2 }
 
-	 				set_character_flag = lost_outwit
+					set_character_flag = lost_outwit
 				}
 				17 = { #Lose - outstrong
 					modifier = { FROM = { is_strong_trigger = yes } factor = 2 }
@@ -8477,7 +8477,7 @@ character_event = {
 
 	after = {
 		hidden_effect = {
-			FROM  = {
+			FROM = {
 				clr_character_flag = not_interested
 				clr_character_flag = interested
 			}
@@ -8944,11 +8944,11 @@ character_event = {
 	option = {
 		name = EVTOPTB_MNM_6922
 
-	   	add_society_currency_major_effect = yes
+		add_society_currency_major_effect = yes
 
-	   	add_rival = FROM
+		add_rival = FROM
 
-	   	ai_chance = { factor = 10 }
+		ai_chance = { factor = 10 }
 	}
 	
 	#I will keep your secret safe

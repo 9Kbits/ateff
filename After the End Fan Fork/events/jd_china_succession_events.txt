@@ -28,7 +28,7 @@ namespace = JD
 #		set_character_flag = sent_event_01
 #	}
 #
-#	option = {	  
+#	option = {	
 #		name = EVTOPTA_JD_10001
 #		custom_tooltip = { text = EVTOPTA_JD_10001_TT }
 #		character_event = { id = JD.10002 }
@@ -56,7 +56,7 @@ namespace = JD
 #
 #	is_triggered_only = yes
 #
-#	option = {	  
+#	option = {	
 #		name = EVTOPTA_JD_10001
 #		custom_tooltip = { text = EVTOPTA_JD_10001_TT }
 #		set_character_flag = received_event_03
@@ -69,7 +69,7 @@ namespace = JD
 # From = Old ruler
 # FromFrom = Offmap
 
-#In case of dynasty change...  (fired from om_action: on_offmap_ruler_changed)
+#In case of dynasty change... (fired from om_action: on_offmap_ruler_changed)
 character_event = {
 	id = JD.10005
 	hide_window = yes
@@ -100,21 +100,21 @@ character_event = {
 		random_list = {
 			10 = {
 				modifier = {
-				 	factor = 10
-			 		OR = {
-				 		AND = {
-				 			culture = amazonense
-					 		governor = {
-					 			NOT = { culture = amazonense }
-					 		}
-					 	}
-					 	AND = {
-				 			culture = gaucho
-					 		governor = {
-					 			NOT = { culture = gaucho }
-					 		}
-					 	}
-			 		}
+					factor = 10
+					OR = {
+						AND = {
+							culture = amazonense
+							governor = {
+								NOT = { culture = amazonense }
+							}
+						}
+						AND = {
+							culture = gaucho
+							governor = {
+								NOT = { culture = gaucho }
+							}
+						}
+					}
 				}
 				modifier = {
 					factor = 1.5

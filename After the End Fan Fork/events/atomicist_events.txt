@@ -277,7 +277,7 @@ character_event = {
 				NOT = { religion = atomicist }
 				NOT = { trait = lunatic }
 			}
-			
+
 			set_character_flag = passing_atom_judgement
 			random_list = {
 				60 = { character_event = { id = atom.15003 } } # Character lives
@@ -285,7 +285,7 @@ character_event = {
 				5 = { character_event = { id = atom.15005 } } # Character goes insane
 				5 = { character_event = { id = atom.15006 } } # Character goes zealous
 				5 = { character_event = { id = atom.15007 } } # Character goes atomicist
-				10 = { character_event = { id = atom.15002 } }  # Character is freed
+				10 = { character_event = { id = atom.15002 } } # Character is freed
 			}
 		}
 		
@@ -298,14 +298,14 @@ character_event = {
 				NOT = { religion = atomicist }
 				trait = lunatic
 			}
-			
+
 			set_character_flag = passing_atom_judgement
 			random_list = {
 				60 = { character_event = { id = atom.15003 } } # Character lives
 				5 = { character_event = { id = atom.15004 } } # Character dies
 				5 = { character_event = { id = atom.15006 } } # Character goes zealous
 				5 = { character_event = { id = atom.15007 } } # Character goes atomicist
-				20 = { character_event = { id = atom.15002 } }  # Character is freed
+				20 = { character_event = { id = atom.15002 } } # Character is freed
 			}
 		}
 		
@@ -315,13 +315,13 @@ character_event = {
 				NOT = { has_character_flag = passing_atom_judgement }
 				NOT = { trait = lunatic }
 			}
-			
+
 			set_character_flag = passing_atom_judgement
 			random_list = {
 				60 = { character_event = { id = atom.15003 } } # Character lives
 				5 = { character_event = { id = atom.15004 } } # Character dies
 				5 = { character_event = { id = atom.15005 } } # Character goes insane
-				20 = { character_event = { id = atom.15002 } }  # Character is freed
+				20 = { character_event = { id = atom.15002 } } # Character is freed
 			}
 		}
 		
@@ -330,12 +330,12 @@ character_event = {
 				NOT = { is_incapable = yes }
 				NOT = { has_character_flag = passing_atom_judgement }
 			}
-			
+
 			set_character_flag = passing_atom_judgement
 			random_list = {
 				60 = { character_event = { id = atom.15003 } } # Character lives
 				5 = { character_event = { id = atom.15004 } } # Character dies
-				20 = { character_event = { id = atom.15002 } }  # Character is freed
+				20 = { character_event = { id = atom.15002 } } # Character is freed
 			}
 		}
 		
@@ -344,12 +344,12 @@ character_event = {
 				is_incapable = yes
 				NOT = { has_character_flag = passing_atom_judgement }
 			}
-			
+
 			set_character_flag = passing_atom_judgement
 			random_list = {
 				60 = { character_event = { id = atom.15003 } } # Character lives
 				40 = { character_event = { id = atom.15004 } } # Character dies
-				10 = { character_event = { id = atom.15002 } }  # Character is freed
+				10 = { character_event = { id = atom.15002 } } # Character is freed
 			}
 		}
 	}
@@ -1386,7 +1386,7 @@ narrative_event = {
 			new_bloodline = {
 				set_description = "bloodline_desc_isotopic"
 			}	
-			sound_effect = bloodline_added			
+			sound_effect = bloodline_added
 		}
 		else_if = { #Isotropic Blood (female)
 			limit = { 
@@ -1399,7 +1399,7 @@ narrative_event = {
 			new_bloodline = {
 				set_description = "bloodline_desc_isotopic"
 			}	
-			sound_effect = bloodline_added			
+			sound_effect = bloodline_added
 		}
 	}
 	

@@ -45,7 +45,7 @@ targetted_decisions = {
 			custom_tooltip = {
 				text = is_not_busy_trigger_tooltip
 				hidden_tooltip = {
-					# NOR  = { has_character_flag = do_not_disturb is_inaccessible_trigger = yes }
+					# NOR = { has_character_flag = do_not_disturb is_inaccessible_trigger = yes }
 					# Line above outcommented to account for Seclusion (below)
 					OR = {
 						in_seclusion = yes
@@ -155,7 +155,7 @@ targetted_decisions = {
 				}
 				imprison = no
 			}
-			
+
 			if = {
 				limit = { FROM = { is_female = no } }
 				mother = {
@@ -614,7 +614,7 @@ targetted_decisions = {
 				limit = { is_child_of = FROM }
 				hidden_tooltip = { FROM = { character_event = { id = HFP.23001 } } }
 			}
-			
+
 		}
 		
 		revoke_allowed = {
@@ -944,7 +944,7 @@ targetted_decisions = {
 			modifier = {
 				factor = 10
 				FROM = { trait = paranoid }
-			}					
+			}
 		}
 	}
 	
@@ -1149,7 +1149,7 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 1 
-			
+
 			modifier = {
 				factor = 0
 				ROOT = {
@@ -1393,7 +1393,7 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 1 
-			
+
 			modifier = {
 				factor = 0.5
 			}
@@ -1533,7 +1533,7 @@ targetted_decisions = {
 						}
 					}
 				}
-			}			
+			}
 		}
 	}
 	

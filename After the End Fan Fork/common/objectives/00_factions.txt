@@ -69,7 +69,7 @@ faction_succ_seniority = {
 					always = yes
 				}
 			}
-			
+
 			# The Crown Law title holder is my liege
 			crownlaw_title = {
 				holder_scope = {
@@ -80,7 +80,7 @@ faction_succ_seniority = {
 					}
 				}
 			}
-			
+
 			# The Crown Law title allows vassal infighting
 			crownlaw_title = {
 				NOT = {
@@ -123,7 +123,7 @@ faction_succ_seniority = {
 					using_cb = change_seniority_succession_law
 				}
 			}
-			
+
 			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
@@ -155,11 +155,11 @@ faction_succ_seniority = {
 					}
 				}
 			}
-			
+
 			##NOT = { religion_group = muslim }	
 			NOT = { in_faction = faction_succ_primogeniture }
 			NOT = { in_faction = faction_succ_feudal_elective }
-			NOT = { in_faction = faction_succ_gavelkind }			
+			NOT = { in_faction = faction_succ_gavelkind }
 		}		
 	}
 	
@@ -240,7 +240,7 @@ faction_succ_seniority = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}			
+				}
 			}
 		}		
 		
@@ -252,7 +252,7 @@ faction_succ_seniority = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}				
+				}	
 			}
 		}
 		
@@ -372,7 +372,7 @@ faction_succ_seniority = {
 					modifier = opinion_coerced_into_joining_faction
 				}
 			}
-		}			
+		}
 		
 		modifier = {
 			factor = 0
@@ -564,7 +564,7 @@ faction_succ_seniority = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
 				}
-			}			
+			}
 		}		
 		
 		modifier = {
@@ -580,7 +580,7 @@ faction_succ_seniority = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
 				}
-			}			
+			}
 		}
 		
 		modifier = {
@@ -788,7 +788,7 @@ faction_succ_primogeniture = {
 					always = yes
 				}
 			}
-			
+
 			# The Crown Law title holder is my liege
 			crownlaw_title = {
 				holder_scope = {
@@ -799,7 +799,7 @@ faction_succ_primogeniture = {
 					}
 				}
 			}
-			
+
 			# The Crown Law title allows vassal infighting
 			crownlaw_title = {
 				NOT = {
@@ -842,7 +842,7 @@ faction_succ_primogeniture = {
 					using_cb = change_primogeniture_succession_law
 				}
 			}
-			
+
 			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
@@ -874,7 +874,7 @@ faction_succ_primogeniture = {
 					}
 				}
 			}
-			
+
 			##NOT = { religion_group = muslim }	
 			NOT = { in_faction = faction_succ_seniority }
 			NOT = { in_faction = faction_succ_feudal_elective }
@@ -949,7 +949,7 @@ faction_succ_primogeniture = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}			
+				}
 			}
 		}		
 		
@@ -961,7 +961,7 @@ faction_succ_primogeniture = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}					
+				}
 			}
 		}
 		
@@ -1083,7 +1083,7 @@ faction_succ_primogeniture = {
 					modifier = opinion_coerced_into_joining_faction
 				}
 			}
-		}			
+		}
 		
 		modifier = {
 			factor = 0
@@ -1258,7 +1258,7 @@ faction_succ_primogeniture = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
 				}
-			}			
+			}
 		}		
 		
 		modifier = {
@@ -1274,7 +1274,7 @@ faction_succ_primogeniture = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
 				}
-			}			
+			}
 		}
 		
 		modifier = {
@@ -1489,7 +1489,7 @@ faction_succ_gavelkind = {
 					always = yes
 				}
 			}
-			
+
 			# The Crown Law title holder is my liege
 			crownlaw_title = {
 				holder_scope = {
@@ -1500,7 +1500,7 @@ faction_succ_gavelkind = {
 					}
 				}
 			}
-			
+
 			# The Crown Law title allows vassal infighting
 			crownlaw_title = {
 				NOT = {
@@ -1543,7 +1543,7 @@ faction_succ_gavelkind = {
 					using_cb = change_gavelkind_succession_law
 				}
 			}
-			
+
 			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
@@ -1573,7 +1573,7 @@ faction_succ_gavelkind = {
 					}
 				}
 			}
-			
+
 			##NOT = { religion_group = muslim }	
 			NOT = { in_faction = faction_succ_seniority }
 			NOT = { in_faction = faction_succ_primogeniture }
@@ -1713,7 +1713,7 @@ faction_succ_gavelkind = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}			
+				}
 			}
 		}		
 		
@@ -1725,7 +1725,7 @@ faction_succ_gavelkind = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}					
+				}
 			}
 		}
 		
@@ -1868,7 +1868,7 @@ faction_succ_gavelkind = {
 					modifier = opinion_coerced_into_joining_faction
 				}
 			}
-		}			
+		}
 		
 		modifier = {
 			factor = 0
@@ -1913,7 +1913,7 @@ faction_succ_gavelkind = {
 		
 		modifier = {
 			factor = 0
-			
+
 			OR = {
 				AND = {
 					NOT = { in_faction = faction_succ_gavelkind }
@@ -2004,7 +2004,7 @@ faction_succ_gavelkind = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
 				}
-			}			
+			}
 		}		
 		
 		modifier = {
@@ -2020,7 +2020,7 @@ faction_succ_gavelkind = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
 				}
-			}			
+			}
 		}
 		
 		modifier = {
@@ -2263,7 +2263,7 @@ faction_succ_feudal_elective = {
 					always = yes
 				}
 			}
-			
+
 			# The Crown Law title holder is my liege
 			crownlaw_title = {
 				holder_scope = {
@@ -2274,7 +2274,7 @@ faction_succ_feudal_elective = {
 					}
 				}
 			}
-			
+
 			# The Crown Law title allows vassal infighting
 			crownlaw_title = {
 				NOT = {
@@ -2327,7 +2327,7 @@ faction_succ_feudal_elective = {
 					using_cb = change_feudal_elective_succession_law
 				}
 			}
-			
+
 			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
@@ -2360,7 +2360,7 @@ faction_succ_feudal_elective = {
 					}
 				}
 			}
-			
+
 			#NOT = { religion_group = muslim }	
 			NOT = { in_faction = faction_succ_seniority }
 			NOT = { in_faction = faction_succ_primogeniture }
@@ -2508,7 +2508,7 @@ faction_succ_feudal_elective = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}			
+				}
 			}
 		}	
 		
@@ -2520,7 +2520,7 @@ faction_succ_feudal_elective = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}				
+				}	
 			}
 		}
 		
@@ -2716,7 +2716,7 @@ faction_succ_feudal_elective = {
 		
 		modifier = {
 			factor = 0
-			
+
 			OR = {
 				AND = {
 					NOT = { in_faction = faction_succ_feudal_elective }
@@ -2737,7 +2737,7 @@ faction_succ_feudal_elective = {
 					}
 				}
 			}
-			
+
 			NOT = {	
 				has_opinion_modifier = {
 					who = FROM
@@ -2808,7 +2808,7 @@ faction_succ_feudal_elective = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
 				}
-			}			
+			}
 		}		
 		
 		modifier = {
@@ -2824,7 +2824,7 @@ faction_succ_feudal_elective = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
 				}
-			}			
+			}
 		}
 		
 		modifier = {
@@ -3031,7 +3031,7 @@ faction_lower_crown_authority = {
 				any_demesne_title = {
 					temporary = yes
 				}
-			}			
+			}
 		}
 		primary_title = { higher_tier_than = BARON }
 		
@@ -3060,7 +3060,7 @@ faction_lower_crown_authority = {
 					using_cb = lower_crown_authority_law
 				}
 			}
-			
+
 			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
@@ -3175,7 +3175,7 @@ faction_lower_crown_authority = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}			
+				}
 			}
 		}		
 		
@@ -3187,7 +3187,7 @@ faction_lower_crown_authority = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}				
+				}	
 			}
 		}
 		
@@ -3317,7 +3317,7 @@ faction_lower_crown_authority = {
 					modifier = opinion_coerced_into_joining_faction
 				}
 			}
-		}			
+		}
 		
 		modifier = {
 			factor = 0
@@ -3627,7 +3627,7 @@ faction_lower_tribal_organization = {
 				any_demesne_title = {
 					temporary = yes
 				}
-			}			
+			}
 		}
 		primary_title = { higher_tier_than = BARON }
 		
@@ -3653,7 +3653,7 @@ faction_lower_tribal_organization = {
 					using_cb = lower_tribal_organization_law
 				}
 			}
-			
+
 			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
@@ -3784,7 +3784,7 @@ faction_lower_tribal_organization = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}			
+				}
 			}
 		}		
 		
@@ -3796,7 +3796,7 @@ faction_lower_tribal_organization = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}				
+				}	
 			}
 		}
 		
@@ -3937,7 +3937,7 @@ faction_lower_tribal_organization = {
 					modifier = opinion_coerced_into_joining_faction
 				}
 			}
-		}			
+		}
 		
 		modifier = {
 			factor = 0
@@ -4229,7 +4229,7 @@ faction_independence = {
 					using_cb = cb_faction_independence
 				}
 			}
-			
+
 			# Brits do not have independence revolt problems before 1350
 			OR = {
 				year = 1350
@@ -4243,7 +4243,7 @@ faction_independence = {
 					}
 				}
 			}
-			
+
 			# Not allowed to start factions like this if our capital borders the liege's capital
 			# NOT = {
 				# capital_scope = {
@@ -4256,12 +4256,12 @@ faction_independence = {
 					# }
 				# }
 			# }
-			
+
 			NOT = {
 				any_demesne_title = {
 					temporary = yes
 				}
-			}			
+			}
 		}
 		
 		OR = {
@@ -4334,7 +4334,7 @@ faction_independence = {
 					clan_opinion = { who = LIEGE value = 0 }
 				}
 			}
-			
+
 			# No independence factions in merchant republics
 			NOT = {
 				AND = {
@@ -4344,7 +4344,7 @@ faction_independence = {
 					}
 				}
 			}
-			
+
 			# Can't join factions when in blood oath with liege
 			OR = {
 				is_nomadic = no
@@ -4365,7 +4365,7 @@ faction_independence = {
 			ROOT = {
 				liege = {
 					tier = EMPEROR
-				}			
+				}
 			}
 		}
 		modifier = {
@@ -4429,7 +4429,7 @@ faction_independence = {
 			is_patrician = yes
 			is_merchant_republic = no
 		}
-				
+	
 		modifier = {
 			factor = 0
 			liege = {
@@ -4575,7 +4575,7 @@ faction_independence = {
 		
 		modifier = {
 			factor = 0.5
-			opinion = { who = LIEGE value = 20 } 			
+			opinion = { who = LIEGE value = 20 } 
 		}
 		modifier = {
 			factor = 0.5
@@ -4585,7 +4585,7 @@ faction_independence = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
 				}
-			}			
+			}
 		}
 		modifier = {
 			factor = 2.5
@@ -4711,7 +4711,7 @@ faction_independence = {
 			ROOT = {
 				liege = {
 					tier = EMPEROR
-				}			
+				}
 			}
 		}
 		modifier = {
@@ -4873,7 +4873,7 @@ faction_independence = {
 		# Try to exclude people who should rather support a claimant
 		modifier = {
 			factor = 0
-			
+
 			liege = {
 				OR = {
 					NOT = { culture = ROOT }
@@ -4915,7 +4915,7 @@ faction_independence = {
 					opinion = { who = LIEGE value = 80 }
 				}
 			}
-			
+
 			NOT = {	
 				has_opinion_modifier = {
 					who = FROM
@@ -4944,7 +4944,7 @@ faction_independence = {
 		
 		# modifier = {
 			# factor = 0
-			
+
 			# # Won't join this type of faction if our capital borders the liege's capital
 			# liege = {
 				# capital_scope = {
@@ -5064,7 +5064,7 @@ faction_independence = {
 					who = FROM
 					modifier = opinion_coerced_into_joining_faction
 				}
-			}			
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -5277,7 +5277,7 @@ faction_claimant = {
 				any_demesne_title = {
 					temporary = yes
 				}
-			}			
+			}
 		}
 		primary_title = { higher_tier_than = BARON }
 		
@@ -5288,7 +5288,7 @@ faction_claimant = {
 					always = yes
 				}
 			}
-			
+
 			# The Crown Law title holder is my liege
 			crownlaw_title = {
 				holder_scope = {
@@ -5299,7 +5299,7 @@ faction_claimant = {
 					}
 				}
 			}
-			
+
 			# The Crown Law title allows vassal infighting
 			crownlaw_title = {
 				NOT = {
@@ -5339,16 +5339,16 @@ faction_claimant = {
 		}
 		new_character = {
 			NOT = { has_landed_title = PREV }
-			
+
 			NOT = { is_vassal_or_below = FROM }
-			
+
 			OR = {
 				same_realm = FROM
 				FROM = {
 					liege = { independent = yes }
 				}
 			}
-			
+
 			OR = {
 				is_female = no
 				AND = {
@@ -5365,13 +5365,13 @@ faction_claimant = {
 					NOT = { has_religion_feature = religion_matriarchal }
 				}
 			}
-			
+
 			OR = {
 				ROOT = { has_law = succ_feudal_elective }
 				ROOT = { has_law = succ_hre_elective }
 				has_claim = ROOT
 			}
-			
+
 			NOR = {
 				has_landed_title = k_papal_state
 				has_landed_title = k_ursuline
@@ -5388,7 +5388,7 @@ faction_claimant = {
 					}
 				}
 			}
-			
+
 			ROOT = {
 				holder_scope = {
 					NOT = {
@@ -5433,7 +5433,7 @@ faction_claimant = {
 					}
 				}
 			}
-			
+
 			# Can't join factions when in blood oath with liege
 			OR = {
 				is_nomadic = no
@@ -5781,7 +5781,7 @@ faction_claimant = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}			
+				}
 			}
 		}
 		
@@ -6240,7 +6240,7 @@ faction_claimant = {
 					character = ROOT
 				}
 			}
-			
+
 			NOT = {
 				new_character = {
 					ROOT = {
@@ -6267,7 +6267,7 @@ faction_claimant = {
 					}
 				}
 			}
-			
+
 			NOT = {	
 				has_opinion_modifier = {
 					who = FROM
@@ -6686,7 +6686,7 @@ faction_antiking = {
 				any_demesne_title = {
 					temporary = yes
 				}
-			}			
+			}
 		}
 		
 		NOT = { has_character_modifier = faction_antiking_ultimatum_timer }
@@ -6705,7 +6705,7 @@ faction_antiking = {
 					using_cb = cb_install_antiking
 				}
 			}
-			
+
 			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
@@ -6813,7 +6813,7 @@ faction_antiking = {
 					trait = deceitful
 					trait = ambitious
 					trait = envious
-				}			
+				}
 			}
 		}
 		
@@ -7186,7 +7186,7 @@ faction_overthrow = {
 
 		holder_scope = {
 			independent = yes
-			
+
 			NOT = {
 				OR = {
 					reverse_has_opinion_modifier = {
@@ -8114,7 +8114,7 @@ faction_increase_council_power = {
 				any_demesne_title = {
 					temporary = yes
 				}
-			}			
+			}
 		}
 		primary_title = { higher_tier_than = BARON }
 		
@@ -8162,7 +8162,7 @@ faction_increase_council_power = {
 					using_cb = increase_council_power_war
 				}
 			}
-			
+
 			NOT = {
 				reverse_has_opinion_modifier = {
 					who = FROM
@@ -8281,7 +8281,7 @@ faction_increase_council_power = {
 		modifier = {
 			factor = 0
 			FROM = {
-				opinion = { who = LIEGE value = 50 } 			
+				opinion = { who = LIEGE value = 50 } 
 			}
 		}
 		
@@ -8432,7 +8432,7 @@ faction_increase_council_power = {
 	
 	# AI membership weight: ROOT is the prospective member. FROM is the faction leader. FROMFROM is the target title or character.
 	membership = {
-		factor = 1			
+		factor = 1
 		
 		modifier = {
 			factor = 0.5
@@ -8869,7 +8869,7 @@ faction_powerful_vassal_takeover = {
 					using_cb = powerful_vassal_takeover_war
 				}
 			}
-			
+
 			NOR = {
 				reverse_has_opinion_modifier = {
 					who = FROM
@@ -9003,7 +9003,7 @@ faction_powerful_vassal_takeover = {
 		modifier = {
 			factor = 0
 			FROM = {
-				opinion = { who = LIEGE value = -15 } 			
+				opinion = { who = LIEGE value = -15 } 
 			}
 		}
 		
@@ -9415,7 +9415,7 @@ faction_true_belivers = {
 		religion_group = pagan_group
 		is_reformed_religion = no
 		liege = { 
-			NOT = { religion = PREV	}			
+			NOT = { religion = PREV	}
 		}
 		primary_title = { higher_tier_than = BARON }
 		has_character_flag = flag_truebelievers_revolter

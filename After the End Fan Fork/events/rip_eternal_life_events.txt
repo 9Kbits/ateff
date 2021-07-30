@@ -103,7 +103,7 @@ narrative_event = {
 						is_inaccessible_trigger = no
 						ai = yes
 					}
-					
+
 					add_trait = depressed
 					save_event_target_as = eternal_life_sad_example	
 				}
@@ -380,18 +380,18 @@ narrative_event = {
 		trigger = {
 			OR = {
 				NOR = {
-				   	diplomacy = 12
-				  	martial = 12
-				   	intrigue = 12
-				   	learning = 12
+					diplomacy = 12
+					martial = 12
+					intrigue = 12
+					learning = 12
 				}
 				AND = {
 					is_dumb_trigger = yes
 					NOT = {
-					   diplomacy = 12
-					   martial = 12
-					   intrigue = 12
-					   learning = 12
+					diplomacy = 12
+					martial = 12
+					intrigue = 12
+					learning = 12
 					}
 				}
 			}
@@ -868,7 +868,7 @@ narrative_event = {
 							factor = 1.4
 							FROM = { diplomacy = 22 }
 						}
-						
+
 						change_diplomacy = 6
 					}
 				}
@@ -876,7 +876,7 @@ narrative_event = {
 			}
 		}
 		if = {
-			limit = { has_character_flag = martial_mystic }			
+			limit = { has_character_flag = martial_mystic }
 			create_character = {
 				random_traits = no
 				dynasty = none
@@ -933,7 +933,7 @@ narrative_event = {
 							factor = 1.4
 							FROM = { martial = 22 }
 						}
-						
+
 						change_martial = 6
 					}
 				}
@@ -997,7 +997,7 @@ narrative_event = {
 							factor = 1.4
 							FROM = { intrigue = 22 }
 						}
-						
+
 						change_intrigue = 6
 					}
 				}
@@ -1055,7 +1055,7 @@ narrative_event = {
 							factor = 1.4
 							FROM = { learning = 22 }
 						}
-						
+
 						change_learning = 15
 					}
 				}
@@ -1200,7 +1200,7 @@ narrative_event = {
 			}
 		}
 		if = {
-			limit = { has_character_flag = martial_mystic }			
+			limit = { has_character_flag = martial_mystic }
 			create_character = {
 				random_traits = no
 				dynasty = none
@@ -1259,7 +1259,7 @@ narrative_event = {
 							factor = 1.4
 							FROM = { martial = 22 }
 						}
-						
+
 						change_martial = 6
 					}
 				}
@@ -1291,7 +1291,7 @@ narrative_event = {
 			new_character = {
 				character_event = { id = misc.3 } #Diversity
 				character_event = { id = misc.4 } # Physique
-				
+	
 				set_character_flag = eternal_life_mystic
 
 				will_not_marry_effect = yes
@@ -1323,7 +1323,7 @@ narrative_event = {
 							factor = 1.4
 							FROM = { intrigue = 22 }
 						}
-						
+
 						change_intrigue = 6
 					}
 				}
@@ -1384,7 +1384,7 @@ narrative_event = {
 							factor = 1.4
 							FROM = { learning = 22 }
 						}
-						
+
 						change_learning = 15
 					}
 				}
@@ -1448,7 +1448,7 @@ narrative_event = {
 	hide_window = yes
 
 	option = {
-		FROM = { narrative_event = { id = RIP.21019 days = 1 } }				
+		FROM = { narrative_event = { id = RIP.21019 days = 1 } }	
 	}
 }
 
@@ -2264,7 +2264,7 @@ narrative_event = {
 		}
 		
 		hidden_tooltip = {
-			FROM = { narrative_event = { id = RIP.21115 }  
+			FROM = { narrative_event = { id = RIP.21115 } 
 					remove_opinion = {
 					who = ROOT
 					modifier = opinion_finished_mystic_task_1
@@ -2372,7 +2372,7 @@ narrative_event = {
 						factor = 1000
 						FROM = { has_character_flag = mystic_is_fraud }
 					}
-					narrative_event = { id = RIP.21126 days = 3 }  
+					narrative_event = { id = RIP.21126 days = 3 } 
 				}
 				20 = {
 					#success speech
@@ -2450,7 +2450,7 @@ narrative_event = {
 					}
 					create_bloodline = {
 						type = immortal_bloodline_01
-					}	   
+					}	
 				}
 				if = { 
 					limit = { 
@@ -2460,7 +2460,7 @@ narrative_event = {
 					create_bloodline = {
 						type = immortal_bloodline_01
 						inheritance = matrilineal
-					}	   
+					}	
 				}
 
 		if = {
@@ -2470,7 +2470,7 @@ narrative_event = {
 		
 		hidden_tooltip = {
 			event_target:eternal_life_mystic = { add_trait = immortal }
-			
+
 			FROM = {
 				remove_opinion = {
 					who = ROOT
@@ -2534,7 +2534,7 @@ narrative_event = {
 					}
 					create_bloodline = {
 						type = immortal_bloodline_01
-					}	   
+					}	
 				}
 				if = { 
 					limit = { 
@@ -2544,7 +2544,7 @@ narrative_event = {
 					create_bloodline = {
 						type = immortal_bloodline_01
 						inheritance = matrilineal
-					}	   
+					}	
 				}
 
 		if = {
@@ -2554,7 +2554,7 @@ narrative_event = {
 		
 		hidden_tooltip = {
 			event_target:eternal_life_mystic = { add_trait = immortal }
-			
+
 			FROM = {
 				remove_opinion = {
 					who = ROOT
@@ -3173,8 +3173,8 @@ narrative_event = {
 		hidden_tooltip = {
 			FROM = { narrative_event = { id = RIP.21215 days = 300 random = 300 } }
 			clr_character_flag = eternal_life_chose_defense
-			
-			FROM =  {
+
+			FROM = {
 				remove_opinion = {
 					who = ROOT
 					modifier = opinion_finished_mystic_task_1
@@ -3244,7 +3244,7 @@ narrative_event = {
 						factor = 1000
 						FROM = { has_character_flag = mystic_is_fraud }
 					}
-					
+
 					if = {
 						limit = { ROOT = { is_female = yes } }
 						create_character = {
@@ -3393,7 +3393,7 @@ narrative_event = {
 					}
 					create_bloodline = {
 						type = immortal_bloodline_01
-					}	   
+					}	
 				}
 				if = { 
 					limit = { 
@@ -3403,7 +3403,7 @@ narrative_event = {
 					create_bloodline = {
 						type = immortal_bloodline_01
 						inheritance = matrilineal
-					}	   
+					}	
 				}
 
 		if = {
@@ -3414,7 +3414,7 @@ narrative_event = {
 		hidden_tooltip = {
 			event_target:eternal_life_mystic = { add_trait = immortal }
 
-			FROM =  {
+			FROM = {
 				remove_opinion = {
 					who = ROOT
 					modifier = opinion_finished_mystic_task_2
@@ -3477,7 +3477,7 @@ narrative_event = {
 					}
 					create_bloodline = {
 						type = immortal_bloodline_01
-					}	   
+					}	
 				}
 				if = { 
 					limit = { 
@@ -3487,7 +3487,7 @@ narrative_event = {
 					create_bloodline = {
 						type = immortal_bloodline_01
 						inheritance = matrilineal
-					}	   
+					}	
 				}
 
 		if = {
@@ -3497,7 +3497,7 @@ narrative_event = {
 		
 		hidden_tooltip = {
 			event_target:eternal_life_mystic = { add_trait = immortal }
-			FROM =  {
+			FROM = {
 				remove_opinion = {
 					who = ROOT
 					modifier = opinion_finished_mystic_task_2
@@ -4212,7 +4212,7 @@ narrative_event = {
 						factor = 1000
 						FROM = { has_character_flag = mystic_is_fraud }
 					}
-					narrative_event = { id = RIP.21326 days = 5 }  
+					narrative_event = { id = RIP.21326 days = 5 } 
 				}
 				25 = {
 					#success search
@@ -4289,7 +4289,7 @@ narrative_event = {
 					}
 					create_bloodline = {
 						type = immortal_bloodline_01
-					}	   
+					}	
 				}
 				if = { 
 					limit = { 
@@ -4299,7 +4299,7 @@ narrative_event = {
 					create_bloodline = {
 						type = immortal_bloodline_01
 						inheritance = matrilineal
-					}	   
+					}	
 				}
 
 		if = {
@@ -4309,7 +4309,7 @@ narrative_event = {
 
 		hidden_tooltip = {
 			event_target:eternal_life_mystic = { add_trait = immortal }
-			FROM =  {
+			FROM = {
 				remove_opinion = {
 					who = ROOT
 					modifier = opinion_finished_mystic_task_2
@@ -4371,7 +4371,7 @@ narrative_event = {
 					}
 					create_bloodline = {
 						type = immortal_bloodline_01
-					}	   
+					}	
 				}
 				if = { 
 					limit = { 
@@ -4381,7 +4381,7 @@ narrative_event = {
 					create_bloodline = {
 						type = immortal_bloodline_01
 						inheritance = matrilineal
-					}	   
+					}	
 				}
 
 		if = {
@@ -4390,10 +4390,10 @@ narrative_event = {
 		}
 
 		hidden_tooltip = {
-			
+
 			event_target:eternal_life_mystic = { add_trait = immortal }
-			
-			FROM =  {
+
+			FROM = {
 				remove_opinion = {
 					who = ROOT
 					modifier = opinion_finished_mystic_task_2
@@ -4910,7 +4910,7 @@ narrative_event = {
 					set_character_flag = disease_not_serious 
 					character_event = { id = RIP.11011 days = 100 random = 300 }
 				}
-				
+	
 				add_trait = fatigue
 
 			}
@@ -5000,7 +5000,7 @@ narrative_event = {
 		
 		hidden_tooltip = {
 			FROM = { 
-				narrative_event = { id = RIP.21415 }  
+				narrative_event = { id = RIP.21415 } 
 				remove_opinion = {
 					who = ROOT
 					modifier = opinion_finished_mystic_task_1
@@ -5142,7 +5142,7 @@ narrative_event = {
 						factor = 1000
 						FROM = { has_character_flag = mystic_is_fraud }
 					}
-					narrative_event = { id = RIP.21427 days = 3 }  
+					narrative_event = { id = RIP.21427 days = 3 } 
 				}
 				25 = {
 					#success
@@ -5219,7 +5219,7 @@ narrative_event = {
 					}
 					create_bloodline = {
 						type = immortal_bloodline_01
-					}	   
+					}	
 				}
 				if = { 
 					limit = { 
@@ -5229,7 +5229,7 @@ narrative_event = {
 					create_bloodline = {
 						type = immortal_bloodline_01
 						inheritance = matrilineal
-					}	   
+					}	
 				}
 
 		if = {
@@ -5239,8 +5239,8 @@ narrative_event = {
 
 		hidden_tooltip = {
 			event_target:eternal_life_mystic = { add_trait = immortal }
-			
-			FROM =  {
+
+			FROM = {
 				remove_opinion = {
 					who = ROOT
 					modifier = opinion_finished_mystic_task_2
@@ -5358,7 +5358,7 @@ character_event = {
 					prisoner = no
 					NOT = { trait = in_hiding }
 					NOT = { is_incapable = yes }
-					
+
 					OR = {
 						NOR = {
 							has_character_modifier = in_seclusion
@@ -5385,7 +5385,7 @@ character_event = {
 					prisoner = no
 					NOT = { trait = in_hiding }
 					NOT = { is_incapable = yes }
-					
+
 					OR = {
 						NOR = {
 							has_character_modifier = in_seclusion
@@ -5409,7 +5409,7 @@ character_event = {
 					prisoner = yes
 					trait = in_hiding
 					is_incapable = yes
-					
+
 					AND = {
 						OR = {
 							has_character_modifier = in_seclusion
@@ -5420,7 +5420,7 @@ character_event = {
 						}
 					}
 				}
-				FROM = { NOT = { trait = elusive_shadow  } }
+				FROM = { NOT = { trait = elusive_shadow } }
 			}
 			ROOT = { job_spymaster = { narrative_event = { id = RIP.21500 } } }
 		}
@@ -5431,7 +5431,7 @@ character_event = {
 					prisoner = yes
 					trait = in_hiding
 					is_incapable = yes
-					
+
 					AND = {
 						OR = {
 							has_character_modifier = in_seclusion
@@ -5442,7 +5442,7 @@ character_event = {
 						}
 					}
 				}
-				FROM = { trait = elusive_shadow  }
+				FROM = { trait = elusive_shadow }
 			}
 			ROOT = { job_chancellor = { narrative_event = { id = RIP.21500 } } }
 		}
@@ -5457,7 +5457,7 @@ narrative_event = {
 	hide_window = yes
 
 	option = {
-		FROM =  { narrative_event = { id = RIP.21501 } } 
+		FROM = { narrative_event = { id = RIP.21501 } } 
 	}
 }
 
@@ -5585,7 +5585,7 @@ narrative_event = {
 						}
 						FROM = { narrative_event = { id = RIP.21504 } } 
 					}
-					
+
 				}
 				#No proof
 				30 = {
@@ -5619,7 +5619,7 @@ narrative_event = {
 				#Mystic discovers you
 				20 = {
 					event_target:eternal_life_mystic = { narrative_event = { id = RIP.21506 } } 
-				
+	
 				}
 			}
 		}
@@ -5650,14 +5650,14 @@ narrative_event = {
 	}
 }
 
-#Heir/relative/advisor  finds out that mystic is fraud
+#Heir/relative/advisor finds out that mystic is fraud
 narrative_event = {
 	id = RIP.21502
 	is_triggered_only = yes
 	hide_window = yes
 
 	option = {
-		FROM =  { narrative_event = { id = RIP.21503 days = 45 } } 
+		FROM = { narrative_event = { id = RIP.21503 days = 45 } } 
 	}
 }
 
@@ -5746,7 +5746,7 @@ narrative_event = {
 	hide_window = yes
 
 	option = {
-		FROM =  { narrative_event = { id = RIP.21505 days = 45 } } 
+		FROM = { narrative_event = { id = RIP.21505 days = 45 } } 
 	}
 }
 
@@ -5794,7 +5794,7 @@ narrative_event = {
 	hide_window = yes
 
 	option = {
-		FROM =  { narrative_event = { id = RIP.21507 days = 40 } }
+		FROM = { narrative_event = { id = RIP.21507 days = 40 } }
 	}
 }
 
@@ -5877,7 +5877,7 @@ narrative_event = {
 	hide_window = yes
 
 	option = {
-		FROM =  { narrative_event = { id = RIP.21509 } }
+		FROM = { narrative_event = { id = RIP.21509 } }
 		prisoner = no
 		leave_court_effect = yes
 	}

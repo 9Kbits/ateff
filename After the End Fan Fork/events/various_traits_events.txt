@@ -83,7 +83,7 @@ character_event = {
 		name = EVTOPTA65001
 		random = {
 			chance = 25
-			
+
 			change_diplomacy = -1
 			remove_trait = stressed
 		}
@@ -151,7 +151,7 @@ character_event = {
 		name = EVTOPTA65003
 		random = {
 			chance = 25
-			
+
 			change_martial = -1
 			remove_trait = stressed
 		}
@@ -218,7 +218,7 @@ character_event = {
 		name = EVTOPTA65005
 		random = {
 			chance = 25
-			
+
 			change_intrigue = -1
 			remove_trait = stressed
 		}
@@ -285,7 +285,7 @@ character_event = {
 		name = EVTOPTA65007
 		random = {
 			chance = 25
-			
+
 			change_stewardship = -1
 			remove_trait = stressed
 		}
@@ -355,7 +355,7 @@ character_event = {
 		name = EVTOPTA65009
 		random = {
 			chance = 25
-			
+
 			change_learning = -1
 			remove_trait = stressed
 		}
@@ -597,7 +597,7 @@ character_event = {
 			random = {
 				chance = 50
 				add_maimed_trait_effect = yes
-				
+	
 			}
 		}
 	}
@@ -626,12 +626,12 @@ character_event = {
 			}
 			random = {
 				chance = 25
-				
+	
 				add_trait = brave
 			}
 			random = {
 				chance = 75
-				
+	
 				death = {
 					death_reason = death_execution
 					killer = ROOT
@@ -679,7 +679,7 @@ character_event = {
 			}
 			random = {
 				chance = 25
-				
+	
 				if = {
 					limit = {
 						NOT = {
@@ -790,7 +790,7 @@ character_event = {
 				50 = {
 					add_maimed_trait_effect = yes
 					hidden_tooltip = { character_event = { id = 38281 } }
-			
+
 					opinion = {
 						modifier = opinion_cruel
 						who = ROOT
@@ -838,7 +838,7 @@ character_event = {
 			}
 			random = {
 				chance = 33
-				
+	
 				add_trait = stressed
 				hidden_tooltip = {
 					character_event = {
@@ -864,7 +864,7 @@ character_event = {
 			}
 			random = {
 				chance = 50
-				
+	
 				add_trait = depressed
 			}
 			opinion = {
@@ -923,7 +923,7 @@ character_event = {
 		piety = -5
 		random = {
 			chance = 25
-			
+
 			remove_trait = zealous
 		}
 	}
@@ -976,7 +976,7 @@ character_event = {
 		name = EVTOPTB65031 #Continue praying
 		random = {
 			chance = 1
-			
+
 			remove_trait = ill
 			hidden_tooltip = {
 				character_event = {
@@ -1041,7 +1041,7 @@ character_event = {
 		name = EVTOPTB65032 #Prayers are enough
 		random = {
 			chance = 10
-			
+
 			death = {
 				death_reason = death_trait
 			}
@@ -1344,7 +1344,7 @@ character_event = {
 		}
 		random = {
 			chance = 50
-			
+
 			add_trait = celibate
 		}
 	}
@@ -1369,7 +1369,7 @@ character_event = {
 		}
 		random = {
 			chance = 50
-			
+
 			add_trait = celibate
 		}
 	}
@@ -1377,7 +1377,7 @@ character_event = {
 		name = EVTOPTC65037
 		random = {
 			chance = 25
-			
+
 			add_trait = celibate
 		}
 	}
@@ -1601,7 +1601,7 @@ character_event = {
 				who = ROOT
 				years = 10
 			}
-			
+
 		}
 	}
 }
@@ -1644,7 +1644,7 @@ character_event = {
 		trigger = { is_female = no }
 		spouse = {
 			character_event = { id = 65047 tooltip = EVTTOOLTIP65047 }
-			
+
 		}
 	}
 	option = {
@@ -1662,7 +1662,7 @@ character_event = {
 		prestige = -20
 		random = {
 			chance = 25
-			
+
 			character_event = { id = 65046 tooltip = EVTTOOLTIP65046 }
 		}
 	}
@@ -1736,7 +1736,7 @@ character_event = {
 				in_command = yes
 				at_location = ROOT
 				NOT = { trait = drunkard }
-				NOT = { has_opinion_modifier = { who = ROOT  modifier= despise_drunkard } }
+				NOT = { has_opinion_modifier = { who = ROOT modifier= despise_drunkard } }
 			}
 		}
 		
@@ -2005,7 +2005,7 @@ character_event = {
 		name = EVTOPTA65053
 		random = {
 			chance = 25
-			
+
 			character_event = {
 				id = 65054
 				tooltip = EVTTOOLTIP65054
@@ -2086,7 +2086,7 @@ character_event = {
 		name = EVTOPTA65056 #Yes, you are a sinner that deserves it
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0.01
 				FROM = {
@@ -2170,7 +2170,7 @@ character_event = {
 		name = EVTOPTB65056 #Don't worry, I'll take care of you
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				trait = just
@@ -2253,7 +2253,7 @@ character_event = {
 		name = EVTOPTC65056 #Why do you bother me?
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 100
 				trait = arbitrary
@@ -2303,7 +2303,7 @@ character_event = {
 		FROM = {
 			random = {
 				chance = 10
-				
+	
 				remove_trait = ill
 				hidden_tooltip = {
 					character_event = {
@@ -2568,7 +2568,7 @@ character_event = {
 		name = EVTOPTB65065
 		random = {
 			chance = 25
-			
+
 			add_trait = slothful
 			hidden_tooltip = {
 				character_event = {
@@ -2790,7 +2790,7 @@ character_event = {
 		name = EVTOPTA65073
 		random = {
 			chance = 25
-			
+
 			add_trait = wounded
 			hidden_tooltip = {
 				character_event = {
@@ -2901,7 +2901,7 @@ character_event = {
 		add_trait = content
 		random = {
 			chance = 25
-			
+
 			fertility = -0.2
 		}
 	}
@@ -3254,7 +3254,7 @@ character_event = {
 		name = EVTOPTB65090
 		random = {
 			chance = 25
-			
+
 			add_trait = zealous
 			hidden_tooltip = {
 				character_event = {
@@ -3273,7 +3273,7 @@ character_event = {
 		name = EVTOPTC65090
 		random = {
 			chance = 10
-			
+
 			add_trait = ambitious
 			hidden_tooltip = {
 				character_event = {
@@ -3515,7 +3515,7 @@ character_event = {
 		prestige = 5
 		random_list = {
 			50 = {
-			
+
 			}
 			25 = {
 				add_trait = depressed
@@ -3761,7 +3761,7 @@ character_event = {
 		name = EVTOPTA65102
 		random = {
 			chance = 30
-			
+
 			add_trait = gregarious
 			hidden_tooltip = {
 				character_event = {
@@ -3804,7 +3804,7 @@ character_event = {
 		name = EVTOPTC65102
 		random = {
 			chance = 1
-			
+
 			remove_trait = lisp
 			hidden_tooltip = {
 				character_event = {
@@ -3932,7 +3932,7 @@ character_event = {
 		name = EVTOPTA65106
 		random = {
 			chance = 30
-			
+
 			add_trait = gregarious
 			hidden_tooltip = {
 				character_event = {
@@ -3975,7 +3975,7 @@ character_event = {
 		name = EVTOPTC65106
 		random = {
 			chance = 1
-			
+
 			remove_trait = lisp
 			hidden_tooltip = {
 				character_event = {
@@ -4937,7 +4937,7 @@ character_event = {
 		name = EVTOPTA65009
 		random = {
 			chance = 25
-			
+
 			change_learning = -1
 			remove_trait = stressed
 		}

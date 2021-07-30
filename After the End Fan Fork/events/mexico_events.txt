@@ -571,11 +571,11 @@ narrative_event = {
 						religion_group = mesoamerican
 						religion_group = cult_of_saints
 					}
-	    			NOT = {
-	    				any_owned_bloodline = {
-    						has_bloodline_flag = mexico_bloodline #Not if already member of a famous historical Roman Bloodline.
-    					}
-    				}
+					NOT = {
+						any_owned_bloodline = {
+							has_bloodline_flag = mexico_bloodline #Not if already member of a famous historical Roman Bloodline.
+						}
+					}
 				}
 				create_bloodline = {
 					type = mexican_emperor_male
@@ -583,7 +583,7 @@ narrative_event = {
 				new_bloodline = {
 					set_description = "bloodline_desc_mexican"
 				}	
-				sound_effect = bloodline_added			
+				sound_effect = bloodline_added
 			}
 		}
 		if = { #New Imperial Bloodline. (female)
@@ -593,11 +593,11 @@ narrative_event = {
 				is_alternate_start = no
 				OR = { 
 					religion_group = christian
-				    religion_group = mesoamerican
-			        religion_group = cult_of_saints
+					religion_group = mesoamerican
+					religion_group = cult_of_saints
 				}
-    			NOT = {
-    				any_owned_bloodline = {
+				NOT = {
+					any_owned_bloodline = {
 						has_bloodline_flag = mexican_bloodline #Not if already member of a famous historical Roman Bloodline.
 					}
 				}
@@ -607,7 +607,7 @@ narrative_event = {
 			}
 			new_bloodline = {
 				set_description = "bloodline_desc_mexican"
-			}				
+			}	
 			sound_effect = bloodline_added
 		}
 	}
@@ -736,7 +736,7 @@ narrative_event = {
 	desc = {
 		trigger = {
 			OR = {
-			    religion_group = christian
+				religion_group = christian
 				religion_group = cult_of_saints
 			}
 		}

@@ -16,7 +16,7 @@ society_quest_event = {
 	desc = EVTDESC_faculty_141
 
 	is_triggered_only = yes
-   
+ 
 	option = { 
 		name = ACCEPT
 		
@@ -62,7 +62,7 @@ character_event = {
 	# Give them money
 	option = { 
 		name = EVTOPTA_faculty_142		
-		FROM = {					
+		FROM = {
 			character_event = {
 				id = faculty.501
 			}		
@@ -103,7 +103,7 @@ character_event = {
 	# Nope
 	option = {
 		name = EVTOPTB_faculty_142		
-		FROMFROM = {					
+		FROMFROM = {
 			character_event = {
 				id = faculty.500
 			}
@@ -148,7 +148,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_faculty_150
 		trigger = {
-			martial = 15			
+			martial = 15
 		}
 		random_list = {
 			10 = {
@@ -191,11 +191,11 @@ narrative_event = {
 						trait = scholar
 						society_rank >= 2
 					}
-					
+
 				}
 				prestige = 10
 			}
-				
+	
 			100 = {
 				modifier = {
 					factor = 10
@@ -224,10 +224,10 @@ narrative_event = {
 						diplomacy = 20
 						trait = poet
 					}
-					
+
 				}
 				prestige = 10
-			}				
+			}	
 			100 = {
 				modifier = {
 					factor = 10
@@ -264,7 +264,7 @@ society_quest_event = {
 	id = faculty.161
 	desc = EVTDESC_faculty_161
 	is_triggered_only = yes
-   	capable_only = yes
+ 	capable_only = yes
 	
 	option = { 
 		name = ACCEPT
@@ -311,7 +311,7 @@ character_event = {
 	# High quality
 	option = { 
 		name = EVTOPTA_faculty_162		
-				
+	
 		ai_chance = {
 			factor = 0.01
 			modifier = {
@@ -405,7 +405,7 @@ character_event = {
 	# High quality
 	option = { 
 		name = EVTOPTA_faculty_163		
-				
+	
 		ai_chance = {
 			factor = 0.01
 			modifier = {
@@ -416,7 +416,7 @@ character_event = {
 				factor = 0.5
 				OR = {
 					trait = greedy
-					trait = hedonist					
+					trait = hedonist
 				}
 			}
 		}
@@ -579,7 +579,7 @@ character_event = {
 	option = { 
 		name = EVTOPTA_faculty_165
 		trigger = {
-			check_variable = { which = projectprogress value = 9}			
+			check_variable = { which = projectprogress value = 9}
 		}
 		character_event = {
 			id = faculty.501
@@ -643,7 +643,7 @@ character_event = {
 		clr_quest = { 
 			id = quest_faculty_quest_1 #remove the quest
 			id = quest_faculty_quest_2 #remove the quest
-			failure = yes				
+			failure = yes	
 		}
 		log = " [Root.GetBestName] failed in their mission for the Ivy League."
 		add_character_modifier = { #will delay the next quest for a while
@@ -661,7 +661,7 @@ character_event = {
 	is_triggered_only = yes
 	immediate = {
 		add_mission_succeed_influence_effect = yes #quest add society influence
-		change_society_currency = 200 #reward				
+		change_society_currency = 200 #reward	
 		clr_quest = { 
 			id = quest_faculty_quest_1 #remove the quest
 			id = quest_faculty_quest_2 #remove the quest

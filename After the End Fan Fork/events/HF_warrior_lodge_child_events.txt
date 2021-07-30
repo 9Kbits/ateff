@@ -346,7 +346,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF25401
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				change_martial = 1
 				change_learning = -2
@@ -359,7 +359,7 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTBHF25401
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				if = {
 					limit = { trait = stressed }
@@ -461,7 +461,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF25404
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				change_martial = 1
 				change_stewardship = -1
@@ -474,7 +474,7 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTBHF25404
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				if = {
 					limit = { trait = stressed }
@@ -576,7 +576,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF25407
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				change_martial = 1
 				change_diplomacy = -1
@@ -589,7 +589,7 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTBHF25407
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				if = {
 					limit = { trait = stressed }
@@ -693,7 +693,7 @@ character_event = {
 		name = EVTOPTAHF25410
 		trigger = { is_smart_trigger = yes }
 		tooltip_info_custom = available_due_to_smart
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				change_martial = 1
 				change_intrigue = 1
@@ -706,7 +706,7 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTBHF25410
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				if = { #First remove brains.
 					limit = { trait = dull }
@@ -861,7 +861,7 @@ character_event = {
 		name = EVTOPTAHF25413
 		trigger = { trait = groomed }
 		tooltip_info = groomed
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				if = {
 					limit = { trait = stressed }
@@ -888,7 +888,7 @@ character_event = {
 		name = EVTOPTAHF25413
 		trigger = { trait = proud NOT = { trait = groomed } }
 		tooltip_info = proud
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				if = {
 					limit = { trait = stressed }
@@ -913,7 +913,7 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTBHF25413
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				if = { #First remove looks.
 					limit = { trait = uncouth }
@@ -1887,7 +1887,7 @@ character_event = {
 			FROMFROM = { character_event = { id = HF.25432 } } #Inform parent of disgrace.
 			if = { 
 				limit = { has_nickname = no }
-				random_list = {  
+				random_list = { 
 					25 = { give_nickname = nick_the_merry }
 					25 = { give_nickname = nick_the_drunkard }
 					25 = { give_nickname = nick_the_fat }
@@ -1908,7 +1908,7 @@ character_event = {
 			FROMFROM = { character_event = { id = HF.25433 } } #Inform parent of disgrace.
 			if = { 
 				limit = { has_nickname = no }
-				random_list = {  
+				random_list = { 
 					25 = { give_nickname = nick_the_frail }
 					25 = { give_nickname = nick_the_recluse }
 					25 = { give_nickname = nick_the_wise }
@@ -1929,7 +1929,7 @@ character_event = {
 			FROMFROM = { character_event = { id = HF.25434 } } #Inform parent of disgrace.
 			if = { 
 				limit = { has_nickname = no }
-				random_list = {  
+				random_list = { 
 					25 = { give_nickname = nick_the_frail }
 					25 = { give_nickname = nick_the_fair }
 					25 = { give_nickname = nick_the_gracious }
@@ -1950,7 +1950,7 @@ character_event = {
 			FROMFROM = { character_event = { id = HF.25435 } } #Inform parent of disgrace.
 			if = { 
 				limit = { has_nickname = no }
-				random_list = {  
+				random_list = { 
 					25 = { give_nickname = nick_the_shadow }
 					25 = { give_nickname = nick_the_whisperer }
 					25 = { give_nickname = nick_the_twitchy }

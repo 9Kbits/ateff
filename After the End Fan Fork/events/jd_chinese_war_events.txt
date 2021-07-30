@@ -64,7 +64,7 @@ character_event = {
 		save_event_target_as = china_war_aggressor
 		FROM = {
 			save_event_target_as = china_war_opponent
-			
+
 			# Abort Kowtow chain if necessary
 			if = {
 				limit = {
@@ -75,7 +75,7 @@ character_event = {
 					id = plscometobr.60
 				}
 			}
-			
+
 			# Remove Kowtow trait if character is takes hostile actions
 			if = {
 				limit = {
@@ -274,7 +274,7 @@ character_event = {
 			672 = { # Boa Vista
 				save_event_target_as = spawn_province
 			}
-			
+
 			# Currently not compatible with hardcap 200k
 			#if = { # Spawning more than 11k troops will split the stack.
 			#	limit = {
@@ -357,7 +357,7 @@ character_event = {
 			# variable: china_war_troop_quality
 			# variable: china_war_troop_quantity
 		}
-			
+
 		FROM = { # Notify enemy of extra troops.
 			character_event = { id = JD.30045 }
 		}
@@ -726,7 +726,7 @@ narrative_event = { #NEWS: visible event for player (China lost a war)
 
 	fail_trigger_effect = { offmap_china = { clr_offmap_flag = no_war_news } }
 
-	option = {	  
+	option = {	
 		name = {
 			text = EVTOPTA_JD_10106
 			trigger = {
@@ -837,10 +837,10 @@ narrative_event = { #NEWS: visible event for player (China had White Peace in a 
 
 	fail_trigger_effect = { offmap_china = { clr_offmap_flag = no_war_news } }
 
-	option = {	  
+	option = {	
 		name = {
 			text = EVTOPTA_JD_10131
-			trigger = {  #if you, the player who receives this event, was in this war
+			trigger = { #if you, the player who receives this event, was in this war
 				ROOT = {
 					OR = {
 						character = FROM
@@ -851,7 +851,7 @@ narrative_event = { #NEWS: visible event for player (China had White Peace in a 
 		}
 		name = {
 			text = EVTOPTB_JD_10131
-			trigger = {  #if not
+			trigger = { #if not
 				ROOT = {
 					NOR = {
 						character = FROM

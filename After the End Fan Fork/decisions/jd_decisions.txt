@@ -435,7 +435,7 @@ decisions = {
 				clr_offmap_flag = china_sent_war_reinforcements
 				set_offmap_flag = china_sent_war_reinforcements
 			}
-			
+
 			### To manipulate the troop spawning for specific situations modify the parameter valiables (china_war_troop_quantity, china_war_troop_quality, china_war_target_match_mult, and china_war_minimum_commander_martial) after the following block.
 			set_variable = {
 				which = china_war_troop_quantity
@@ -456,13 +456,13 @@ decisions = {
 				value = 14
 			}
 			###
-			
-			
+
+
 			# Manipulate the parameter variables dependent on the current status in China.
 			china_war_modify_variables_by_status_effect = yes
 			# Manipulate the parameter variables dependent on the current century.
 			china_war_modify_variables_by_century_effect = yes
-			
+
 			### Match mult calculation against war enemies and sending notification events to enemy war leaders.
 			any_war = {
 				attacker = {
@@ -486,17 +486,17 @@ decisions = {
 										value = realm_levies
 										who = event_target:temp_war_ally_calc
 									}
-									
+	
 									divide_variable = {
 										which = china_temp_troop_calc
 										value = 500
 									}
-									
+	
 									multiply_variable = {
 										which = china_temp_troop_calc
 										which = china_war_target_match_mult
 									}
-									
+	
 									change_variable = {
 										which = china_war_troop_quantity
 										which = china_temp_troop_calc
@@ -527,17 +527,17 @@ decisions = {
 										value = realm_levies_plus_allies
 										who = event_target:temp_war_ally_calc
 									}
-									
+	
 									divide_variable = {
 										which = china_temp_troop_calc
 										value = 500
 									}
-									
+	
 									multiply_variable = {
 										which = china_temp_troop_calc
 										which = china_war_target_match_mult
 									}
-									
+	
 									change_variable = {
 										which = china_war_troop_quantity
 										which = china_temp_troop_calc
@@ -548,7 +548,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			# Hardcap at 50k troopspawn
 			if = {
 				limit = {	
@@ -611,11 +611,11 @@ decisions = {
 					}
 				}
 			}
-			
+
 			event_target:enemy = {
 				character_event = { id = JD.30047 }
 			}
-			
+
 			china_war_spawn_troops_effect = yes
 			# Requires the current things to function properly:
 			# event_target:spawn_province
@@ -644,9 +644,9 @@ decisions = {
 		allow = {
 			learning = 8
 			scaled_wealth = {
-			    value = 1
-			    min = 50
-			    max = 1002
+				value = 1
+				min = 50
+				max = 1002
 			}
 			custom_tooltip = {
 				text = not_currently_working_on_a_book_tt
@@ -665,8 +665,8 @@ decisions = {
 							AND = {
 								NOT = { has_character_flag = wrote_about_battle }
 								OR = {
-				    				martial = 10
-				    				has_education_martial_trigger = yes
+									martial = 10
+									has_education_martial_trigger = yes
 								}
 							}
 							AND = {
@@ -704,9 +704,9 @@ decisions = {
 				text = choose_a_topic_tt
 			}
 			scaled_wealth = {
-			    value = -1
-			    min = -50
-			    max = -1002
+				value = -1
+				min = -50
+				max = -1002
 			}
 
 			set_character_flag = currently_working_on_a_book

@@ -1,9 +1,9 @@
 #############################################
 #############################################
-#										 	#
-# ZE Childhood Events					  	#
+#											#
+# ZE Childhood Events						#
 # ID ZE.12000-ZE.12999, ZE.2100-ZE.2199		#
-#										 	#
+#											#
 #############################################
 #############################################
 
@@ -369,7 +369,7 @@ character_event = {
 		NOT = { is_inaccessible_trigger = yes }
 	}
 	
-	immediate = {  # Find courtier to use in events, set custom event target
+	immediate = { # Find courtier to use in events, set custom event target
 		set_character_flag = ze_child_haughty_events
 		random_list = { # Select event circumstances randomly but influenced by environment
 			10 = {
@@ -385,7 +385,7 @@ character_event = {
 								NOT = { has_character_modifier = the_oubliette }
 								NOT = { has_character_modifier = the_dungeon }
 							}
-						}					
+						}
 					}
 				}
 				set_character_flag = child_haughty_version_1
@@ -683,7 +683,7 @@ character_event = {
 			}
 			25 = {
 				FROM = {
-					show_scope_change = no				
+					show_scope_change = no	
 					tooltip = { add_trait = stressed }
 					set_character_flag = child_haughty_stressed
 				}
@@ -1021,7 +1021,7 @@ character_event = {
 		NOT = { is_inaccessible_trigger = yes }
 	}
 	
-	immediate = {  # Find courtier to use in events, set custom event target
+	immediate = { # Find courtier to use in events, set custom event target
 		set_character_flag = ze_child_affectionate_events
 		random_list = { # Select event circumstances randomly but influenced by environment
 			10 = {
@@ -1036,7 +1036,7 @@ character_event = {
 								NOT = { has_character_modifier = the_oubliette }
 								NOT = { has_character_modifier = the_dungeon }
 							}
-						}					
+						}
 					}
 				}
 				set_character_flag = child_affectionate_version_1
@@ -1328,7 +1328,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPTC_ZE_12012  # Didn't share toys - envy!
+		name = EVTOPTC_ZE_12012 # Didn't share toys - envy!
 		trigger = {
 			FROM = {
 				has_character_flag = child_affectionate_version_1_option_2
@@ -1609,7 +1609,7 @@ character_event = {
 		NOT = { is_inaccessible_trigger = yes }
 	}
 	
-	immediate = {  # Find courtier to use in events, set custom event target
+	immediate = { # Find courtier to use in events, set custom event target
 		set_character_flag = ze_child_timid_events
 		random_list = { # Select event circumstances randomly but influenced by environment
 			10 = {
@@ -1626,7 +1626,7 @@ character_event = {
 								NOT = { has_character_modifier = the_dungeon }
 								NOT = { is_inaccessible_trigger = yes }
 							}
-						}					
+						}
 					}
 				}
 				set_character_flag = child_timid_version_1
@@ -1785,7 +1785,7 @@ character_event = {
 	}
 	# Version 3
 	option = {
-		name = EVTOPTE_ZE_12020	#  I am being asked to sing at dinner - no way!
+		name = EVTOPTE_ZE_12020	# I am being asked to sing at dinner - no way!
 		trigger = {
 			has_character_flag = child_timid_version_3
 		}
@@ -2026,7 +2026,7 @@ character_event = {
 
 	# Version 1
 	option = {
-		name = EVTOPTA_ZE_12024  # I won't say anything
+		name = EVTOPTA_ZE_12024 # I won't say anything
 		trigger = {
 			has_character_flag = child_timid_version_1_option_1
 		}
@@ -2038,7 +2038,7 @@ character_event = {
 		FROM = { hidden_tooltip = { character_event = { id = ZE.12026 } } }
 	}
 	option = {
-		name = EVTOPTB_ZE_12024  # Step forward at the last minute
+		name = EVTOPTB_ZE_12024 # Step forward at the last minute
 		trigger = {
 			has_character_flag = child_timid_version_1_option_1
 		}
@@ -2195,7 +2195,7 @@ character_event = {
 		NOT = { is_inaccessible_trigger = yes }
 	}
 	
-	immediate = {  # Find courtier to use in events, set custom event target
+	immediate = { # Find courtier to use in events, set custom event target
 		set_character_flag = ze_child_rowdy_events
 		random_list = { # Select event circumstances randomly but influenced by environment
 			10 = {
@@ -2212,7 +2212,7 @@ character_event = {
 								NOT = { has_character_modifier = the_dungeon }
 								NOT = { is_inaccessible_trigger = yes }
 							}
-						}					
+						}
 					}
 				}
 				set_character_flag = child_rowdy_version_1
@@ -2317,7 +2317,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPTB_ZE_12030	#  Conflict with other child begins - back down
+		name = EVTOPTB_ZE_12030	# Conflict with other child begins - back down
 		trigger = {
 			has_character_flag = child_rowdy_version_1
 		}
@@ -2416,13 +2416,13 @@ character_event = {
 
 	# Version 1
 	desc = {
-		text = EVTDESCA_ZE_12032  # Child is messing with me
+		text = EVTDESCA_ZE_12032 # Child is messing with me
 		trigger = {
 			FROM = { has_character_flag = child_rowdy_version_1_option_1 }
 		}
 	}
 	desc = {
-		text = EVTDESCB_ZE_12032  # Child is unhappy but wants to be friends
+		text = EVTDESCB_ZE_12032 # Child is unhappy but wants to be friends
 		trigger = {
 			FROM = { has_character_flag = child_rowdy_version_1_option_2 }
 		}
@@ -2506,7 +2506,7 @@ character_event = {
 	}
 	# Version 2
 	option = {
-		name = EVTOPTD_ZE_12032  # Incited to do pranks - accept
+		name = EVTOPTD_ZE_12032 # Incited to do pranks - accept
 		trigger = {
 			FROM = {
 				has_character_flag = child_rowdy_version_2_option_1
@@ -2571,14 +2571,14 @@ character_event = {
 	}
 	# Version 2
 	desc = {
-		text = EVTDESCB_ZE_12034  # We do pranks!
+		text = EVTDESCB_ZE_12034 # We do pranks!
 		trigger = {
 			has_character_flag = child_rowdy_version_2_option_1
 			NOT = { has_character_flag = child_rowdy_version_2_option_1_2 }
 		}
 	}
 	desc = {
-		text = EVTDESCB2_ZE_12034  # What no pranks?
+		text = EVTDESCB2_ZE_12034 # What no pranks?
 		trigger = {
 			has_character_flag = child_rowdy_version_2_option_1_2
 		}
@@ -9875,10 +9875,10 @@ character_event = {
 }
 
 #############################################
-#										 	#
+#											#
 # Culture/religion shift events				#
 # ID ZE.2100-ZE.2199						#
-#										 	#
+#											#
 #############################################
 
 

@@ -56,7 +56,7 @@ targetted_decisions = {
 				trigger = { has_character_modifier = baptism_request_cooldown }
 				custom_tooltip = {
 					text = NOT_BEEN_ASKED_BAPTISM_RECENTLY
-					hidden_tooltip = {  
+					hidden_tooltip = { 
 						NOT = { has_character_modifier = baptism_request_cooldown } 
 					} 
 				} 
@@ -484,7 +484,7 @@ targetted_decisions = {
 									religion = ROOT
 									NOT = { block_general_event_trigger = yes }
 									OR = { 
-										higher_tier_than = BARON  
+										higher_tier_than = BARON 
 										has_minor_title = title_cardinal
 										has_minor_title = title_ursuline_cardinal
 										has_minor_title = title_mormon_cardinal
@@ -602,7 +602,7 @@ decisions = {
 					has_law = tribal_organization_2 
 					has_law = tribal_organization_3 
 					has_law = tribal_organization_4 
-				}  
+				} 
 			}
 		}
 		effect = {
@@ -615,7 +615,7 @@ decisions = {
 				#Properly handle AI behavior to try and choose the best possible sponsor.
 				#First check for a Player Empire.
 				if = { 
-					limit = {  
+					limit = { 
 						any_independent_ruler = { 
 							NOT = { has_character_modifier = baptism_request_cooldown }
 							NOT = { religion = ROOT }
@@ -699,7 +699,7 @@ decisions = {
 				}
 				#Then check for any Empire.
 				if = { 
-					limit = {  
+					limit = { 
 						any_independent_ruler = { 
 							NOT = { has_character_modifier = baptism_request_cooldown }
 							NOT = { religion = ROOT }
@@ -774,7 +774,7 @@ decisions = {
 				}
 				#Then check for a Player Kingdom.
 				if = { 
-					limit = {  
+					limit = { 
 						any_independent_ruler = { 
 							NOT = { has_character_modifier = baptism_request_cooldown }
 							NOT = { religion = ROOT }

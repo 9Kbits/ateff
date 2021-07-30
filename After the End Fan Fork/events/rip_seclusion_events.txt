@@ -1,8 +1,8 @@
 ###########################################
-#                                         #
-# RIP Seclusion Events           		  #
-# ID RIP.12000-RIP.12099                  #
-#                                         #
+#										#
+# RIP Seclusion Events				#
+# ID RIP.12000-RIP.12099				#
+#										#
 ###########################################
 
 # Written by Markus Olsén
@@ -566,7 +566,7 @@ character_event = {
 				}
 				has_character_modifier = in_seclusion
 			}
-			
+
 			remove_character_modifier = minor_food_shortage
 			remove_character_modifier = normal_food_shortage
 			add_character_modifier = {
@@ -597,7 +597,7 @@ character_event = {
 				factor = 2
 				trait = charitable
 			}
-			
+
 			modifier = {
 				factor = 2
 				reverse_opinion = { who = ROOT value = 50 }
@@ -624,7 +624,7 @@ character_event = {
 				factor = 2
 				trait = cruel
 			}
-			
+
 			modifier = {
 				factor = 2
 				reverse_opinion = { who = ROOT value = 10 }
@@ -650,7 +650,7 @@ character_event = {
 				factor = 2
 				trait = cruel
 			}
-			
+
 			modifier = {
 				factor = 2
 				NOT = { reverse_opinion = { who = ROOT value = 10 } }
@@ -677,7 +677,7 @@ character_event = {
 					trait = cannibal_trait
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				OR = {
@@ -688,7 +688,7 @@ character_event = {
 				}
 			}
 		}
-		event_target:target_greedy_courtier = {			
+		event_target:target_greedy_courtier = {
 			death = {
 				death_reason = death_execution_eaten_unknown
 				killer = ROOT
@@ -1243,7 +1243,7 @@ character_event = {
 		name = EVTOPTA_RIP_12005
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 2
 				trait = wroth
@@ -1430,7 +1430,7 @@ character_event = {
 		name = EVTOPTA_RIP_12007
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 10
 				trait = lustful
@@ -1455,7 +1455,7 @@ character_event = {
 		name = EVTOPTB_RIP_12007
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 10
 				trait = craven
@@ -1482,7 +1482,7 @@ character_event = {
 		name = EVTOPTA_RIP_12008
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 10
 				trait = lustful
@@ -1513,7 +1513,7 @@ character_event = {
 		name = EVTOPTB_RIP_12008
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 10
 				trait = craven
@@ -1605,7 +1605,7 @@ character_event = {
 		name = EVTOPTA_RIP_12011
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 0.5
 				trait = craven
@@ -1696,7 +1696,7 @@ character_event = {
 		}
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 2
 				trait = craven
@@ -1846,7 +1846,7 @@ character_event = {
 		name = EVTOPTA_RIP_12013
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 2
 				trait = craven
@@ -1881,7 +1881,7 @@ character_event = {
 		name = EVTOPTB_RIP_12013
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 2
 				trait = kind
@@ -1917,7 +1917,7 @@ character_event = {
 		name = EVTOPTA_RIP_12014
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 2
 				trait = craven
@@ -1957,7 +1957,7 @@ character_event = {
 		name = EVTOPTB_RIP_12014
 		ai_chance = {
 			factor = 25
-			
+
 			modifier = {
 				factor = 2
 				trait = brave
@@ -2025,7 +2025,7 @@ character_event = {
 	is_triggered_only = yes
 
 	option = {
-		FROM = { character_event =  { id = RIP.12032 } }
+		FROM = { character_event = { id = RIP.12032 } }
 	}
 }
 
@@ -2135,7 +2135,7 @@ character_event = {
 			remove_trait = chaste
 			remove_trait = ugly
 			save_event_target_as = seclusion_childs_lover
-			
+
 			random_list = {
 				33 = { } #Nothing
 				33 = { 
@@ -2158,11 +2158,11 @@ character_event = {
 
 		if = {
 			limit = { NOT = { has_character_flag = seclusion_child_kicked_out } }
-			FROM = { character_event =  { id = RIP.12034 days = 12 } }	
+			FROM = { character_event = { id = RIP.12034 days = 12 } }	
 		}
 		if = {
 			limit = { has_character_flag = seclusion_child_kicked_out } 
-			character_event =  { id = RIP.12035 days = 7 } 	
+			character_event = { id = RIP.12035 days = 7 } 	
 			character_event = { id = RIP.12037 } 
 		}
 	}
@@ -2195,7 +2195,7 @@ character_event = {
 	
 
 	immediate = {
-		event_target:seclusion_childs_lover = { add_character_modifier =  { name = in_seclusion duration = -1 } }
+		event_target:seclusion_childs_lover = { add_character_modifier = { name = in_seclusion duration = -1 } }
 	}
 
 	#Stay and get married
@@ -2228,9 +2228,9 @@ character_event = {
 	#Stay but don't get married
 	option = {
 		trigger = {
-		 	FROM = { NOT = { has_character_flag = escaping_seclusion } } 
-		 	NOT = { trait = paranoid }
-		 }
+			FROM = { NOT = { has_character_flag = escaping_seclusion } } 
+			NOT = { trait = paranoid }
+		}
 		name = EVTOPTB_RIP_12034
 		hidden_tooltip = { FROM = { character_event = { id = RIP.12035 } } }
 		hidden_tooltip = { event_target:seclusion_child = { character_event = { id = RIP.12037 } } }
@@ -2287,7 +2287,7 @@ character_event = {
 					factor = 1.5
 					trait = lustful
 				}
-				
+	
 			}
 			50 = { 
 				modifier = {
@@ -2382,7 +2382,7 @@ character_event = {
 	is_triggered_only = yes
 
 	option = {
-		FROM = { character_event =  { id = RIP.12039 } }
+		FROM = { character_event = { id = RIP.12039 } }
 	}
 }
 
@@ -2736,7 +2736,7 @@ character_event = {
 					}
 					modifier = {
 						factor = 0.1
-						ROOT = { any_courtier = { has_nickname = nick_the_bard  } }
+						ROOT = { any_courtier = { has_nickname = nick_the_bard } }
 					}
 					give_nickname = nick_the_bard
 				}
@@ -2783,7 +2783,7 @@ character_event = {
 
 					set_character_flag = sneaky_lover
 				}
-				
+	
 				10 = {
 					set_character_flag = sneaky_revolutionary
 					modifier = {
@@ -2802,7 +2802,7 @@ character_event = {
 				60 = {
 					modifier = {
 						factor = 0
-						NOT = {	 has_character_flag = did_not_trust_steward }	
+						NOT = {	has_character_flag = did_not_trust_steward }	
 						event_target:secluded_steward = {
 							NOR = {
 								trait = deceitful
@@ -2811,9 +2811,9 @@ character_event = {
 										who = ROOT
 										value = 25
 									}
-								}			
+								}
 							}
-						}					
+						}
 					}
 
 					set_character_flag = sneaky_assassin
@@ -2908,7 +2908,7 @@ character_event = {
 		
 		event_target:captured_sneaker = {
 			death = { death_reason = death_execution_beheading Killer = ROOT }
-			
+
 			hidden_tooltip = {
 				clr_character_flag = did_not_trust_steward
 				if = {
@@ -2970,7 +2970,7 @@ character_event = {
 			if = {
 				limit = {
 					has_character_flag = sneaky_lover
-					
+
 				}
 				event_target:secluded_friendly_ruler = {
 					character_event = { id = RIP.12058 }
@@ -3099,7 +3099,7 @@ character_event = {
 						character_event = { id = RIP.12059 days = 1}
 					}
 				}
-				
+	
 				#The rebels made it inside the castle
 				50 = {
 					modifier = {
@@ -3149,7 +3149,7 @@ character_event = {
 						factor = 1.5
 						has_character_modifier = aspiring_duelist
 					}
-					
+
 					character_event = { id = RIP.12064 }
 				}
 
@@ -3159,12 +3159,12 @@ character_event = {
 						factor = 1.5
 						trait = craven
 					}
-							
+	
 					opinion = {
 						who = FROM
 						modifier = opinion_regicide_traitor
 					}
-									
+	
 					character_event = { id = RIP.12065 }
 				}
 
@@ -3543,9 +3543,9 @@ narrative_event = {
 				has_character_modifier = in_seclusion
 			}
 			score_value = { #Prioritizes selecting an interesting courtier...
-	            value = 10
-	            interesting_courtier_selection_score = yes
-	        }
+				value = 10
+				interesting_courtier_selection_score = yes
+			}
 			save_event_target_as = bored_courtier_target
 		}
 		any_courtier = {
@@ -3558,9 +3558,9 @@ narrative_event = {
 				has_character_modifier = in_seclusion
 			}
 			score_value = { #Prioritizes selecting an interesting courtier...
-	            value = 10
-	            interesting_courtier_selection_score = yes
-	        }
+				value = 10
+				interesting_courtier_selection_score = yes
+			}
 			save_event_target_as = bored_courtier_target
 		}
 		event_target:bored_courtier_target = {
@@ -3996,7 +3996,7 @@ character_event = {
 		}
 	}
 	
-	# It was fun while it lasted. But who's that? -  if you have left seclusion
+	# It was fun while it lasted. But who's that? - if you have left seclusion
 	option = {
 		name = EVTOPTC_RIP_12074
 		hidden_tooltip = { character_event = { id = RIP.12076 days = 15 } }
@@ -4049,7 +4049,7 @@ character_event = {
 		custom_tooltip = { text = EVTOPTB_RIP_12075_TT }
 		event_target:partying_stranger = {
 			set_character_flag = optB
-			hidden_tooltip = { character_event = { id = RIP.12082  days = 10 random = 5 } }
+			hidden_tooltip = { character_event = { id = RIP.12082 days = 10 random = 5 } }
 		}
 		trigger = { NOT = { trait = lunatic } }
 	}
@@ -4559,7 +4559,7 @@ character_event = {
 					factor = 1.1
 					has_education_intrigue_trigger = yes
 				}
-				
+	
 				modifier = {
 					factor = 1.1
 					intrigue = 11
@@ -4639,7 +4639,7 @@ character_event = {
 					factor = 1.1
 					has_education_diplomacy_trigger = yes
 				}
-				
+	
 				modifier = {
 					factor = 1.1
 					diplomacy = 11
@@ -4752,8 +4752,8 @@ narrative_event = {
 					set_character_flag = injured_at_the_ball_flag
 				}
 			}
-			
-			random_list = { # this list selects how many dynasty members/children dies  (1/2/3)
+
+			random_list = { # this list selects how many dynasty members/children dies (1/2/3)
 				10 = { # selects 1 dynasty members/children
 					random_courtier = {
 						limit = {	
@@ -4838,7 +4838,7 @@ narrative_event = {
 							at_location = ROOT
 						}
 						set_character_flag = dies_at_the_ball_flag
-					}					
+					}
 					random_courtier = {
 						limit = {	
 							ROOT = {
@@ -4857,7 +4857,7 @@ narrative_event = {
 					}
 				}
 			}
-			
+
 			random_list = { #this list selects how many random courtiers die (2/4/6)
 				10 = { # Two random dies
 					random_courtier = { #selects random non-related courtier
@@ -5627,16 +5627,16 @@ character_event = { # Fires from on_become_imprisoned_any_reason (if you are In 
 		if = {
 			limit = {
 				OR = { # Still has some left over modifiers...
-		            has_character_modifier = tiny_food_shortage
-		            has_character_modifier = minor_food_shortage
-		            has_character_modifier = normal_food_shortage
-		            has_character_modifier = starving_food_shortage
-		        }
+					has_character_modifier = tiny_food_shortage
+					has_character_modifier = minor_food_shortage
+					has_character_modifier = normal_food_shortage
+					has_character_modifier = starving_food_shortage
+				}
 			}
-		    remove_character_modifier = tiny_food_shortage
-		    remove_character_modifier = minor_food_shortage
-		    remove_character_modifier = normal_food_shortage
-		    remove_character_modifier = starving_food_shortage
+			remove_character_modifier = tiny_food_shortage
+			remove_character_modifier = minor_food_shortage
+			remove_character_modifier = normal_food_shortage
+			remove_character_modifier = starving_food_shortage
 		}
 
 		if = {
@@ -5653,18 +5653,18 @@ character_event = { # Fires from on_become_imprisoned_any_reason (if you are In 
 			any_courtier = {
 				limit = {
 					OR = { # Still has some left over modifiers...
-			            has_character_modifier = in_seclusion
-			            has_character_modifier = tiny_food_shortage
-			            has_character_modifier = minor_food_shortage
-			            has_character_modifier = normal_food_shortage
-			            has_character_modifier = starving_food_shortage
-			        }
+						has_character_modifier = in_seclusion
+						has_character_modifier = tiny_food_shortage
+						has_character_modifier = minor_food_shortage
+						has_character_modifier = normal_food_shortage
+						has_character_modifier = starving_food_shortage
+					}
 				}
 				remove_character_modifier = in_seclusion
-			    remove_character_modifier = tiny_food_shortage
-			    remove_character_modifier = minor_food_shortage
-			    remove_character_modifier = normal_food_shortage
-			    remove_character_modifier = starving_food_shortage
+				remove_character_modifier = tiny_food_shortage
+				remove_character_modifier = minor_food_shortage
+				remove_character_modifier = normal_food_shortage
+				remove_character_modifier = starving_food_shortage
 			}
 		}
 	}

@@ -133,7 +133,7 @@ character_event = {
 		father = {
 			is_alive = yes
 			OR = {
-	        culture_group = norteno
+			culture_group = norteno
 			culture_group = starfolk
 			culture_group = plains
 			culture_group = west_anglo
@@ -279,7 +279,7 @@ character_event = {
 	
 	immediate = {
 		father = { character_event = { id = dorado.107 } }
-	    OR = {
+		OR = {
 		e_mexico = {
 			holder_scope = {
 				character_event = { id = dorado.107 }
@@ -330,7 +330,7 @@ character_event = {
 			}
 		}
 	}
-    FROM = { add_trait = dorado }
+	FROM = { add_trait = dorado }
 	}
 }
 
@@ -472,16 +472,16 @@ character_event = {
 			move_character = ROOT
 			add_trait = seducer
 			add_trait = dorado
-		    change_diplomacy = 2
+			change_diplomacy = 2
 		}
-	    create_character = {
+		create_character = {
 			random_traits = yes
 			dynasty = NONE
 			female = yes
 			age = 23
 			culture = chilango
 		}
-	    create_character = {
+		create_character = {
 			random_traits = yes
 			dynasty = NONE
 			age = 0
@@ -707,7 +707,7 @@ character_event = {
 			holder_scope = {
 				culture_group = mexicano
 				OR = {
-				    religion_group = cult_of_saints
+					religion_group = cult_of_saints
 					religion_group = christian
 					religion_group = mesoamerican
 				}
@@ -717,7 +717,7 @@ character_event = {
 			holder_scope = {
 				culture_group = mexicano
 				OR = {
-				    religion_group = cult_of_saints
+					religion_group = cult_of_saints
 					religion_group = christian
 					religion_group = mesoamerican
 				}
@@ -784,20 +784,20 @@ character_event = {
 	trigger = {
 		NOT = { religion_group = christian }
 		father = {
-		    NOT = { religion_group = christian }
+			NOT = { religion_group = christian }
 		}
 		NOT = { trait = zealous }
 		OR = {
-		    e_mexico = {
-			    holder_scope = {
-				    religion = cristo_rey
-			    }
-		    }
+			e_mexico = {
+				holder_scope = {
+					religion = cristo_rey
+				}
+			}
 			k_mexico = {
-			    holder_scope = {
-				    religion = cristo_rey
-			    }
-		    }
+				holder_scope = {
+					religion = cristo_rey
+				}
+			}
 		}
 	}
 	
@@ -1145,7 +1145,7 @@ character_event = {
 		father = {
 			is_alive = yes
 			OR = {
-	        culture_group = norteno
+			culture_group = norteno
 			culture_group = starfolk
 			culture_group = plains
 			culture_group = west_anglo
@@ -1257,7 +1257,7 @@ character_event = {
 	trigger = {
 		NOT = { religion = atomicist }
 		father = {
-		    NOT = { religion = atomicist }
+			NOT = { religion = atomicist }
 		}
 		NOT = { trait = zealous }
 	}
@@ -1314,7 +1314,7 @@ character_event = {
 	trigger = {
 		NOT = { religion = fidencista }
 		father = {
-		    NOT = { religion = fidencista }
+			NOT = { religion = fidencista }
 		}
 		NOT = { trait = zealous }
 	}

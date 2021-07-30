@@ -1,8 +1,8 @@
 ###########################################
-#                                         #
-# ZE Marshal Events                       #
-# ID ZE.4000-ZE.4999                      #
-#                                         #
+#										#
+# ZE Marshal Events					#
+# ID ZE.4000-ZE.4999					#
+#										#
 ###########################################
 
 # Written by Tobias Bodlund
@@ -29,7 +29,7 @@ character_event = {
 			NOT = { is_inaccessible_trigger = yes }
 		}
 		OR = { 
-			NOT = { ROOT = { has_law = succ_byzantine_elective } }  #Either not Imperial...
+			NOT = { ROOT = { has_law = succ_byzantine_elective } } #Either not Imperial...
 			NOT = { #...Or there are no valid vassal candidates that can be commanders.
 				any_vassal = { 
 					higher_real_tier_than = BARON
@@ -46,7 +46,7 @@ character_event = {
 						}
 						has_character_flag = special_marshal
 					}
-			
+
 					prisoner = no
 					NOT = { trait = incapable }
 					NOT = { is_inaccessible_trigger = yes }

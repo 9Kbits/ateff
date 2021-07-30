@@ -48,7 +48,7 @@ character_event = {
 				is_ill = yes
 			}
 			NOT = { character = ROOT }
-			NOT = { opinion = { who = ROOT value =  -40 } }
+			NOT = { opinion = { who = ROOT value = -40 } }
 			NOT = { 
 				has_character_flag = holmgang_target
 				has_character_flag = holmgang_challenger
@@ -59,7 +59,7 @@ character_event = {
 			}
 			NOT = { is_inaccessible_trigger = yes }
 			NOT = {
-				reverse_has_opinion_modifier = {  #checks if target is actually already loyal (thus not suitable for challening)
+				reverse_has_opinion_modifier = { #checks if target is actually already loyal (thus not suitable for challening)
 					who = ROOT
 					modifier = opinion_loyal_servant
 				}
@@ -134,7 +134,7 @@ character_event = {
 		set_character_flag = holmgang_target
 		set_character_flag = do_not_disturb
 		hidden_tooltip = { character_event = { id = TOG.5999 days = 50 } } # Safety catch flag clearing
-	}			
+	}
 }
 
 # Fellow Vassal Hates You (Invisible)
@@ -180,7 +180,7 @@ character_event = {
 					character = ROOT
 					liege = { character = ROOT }
 				}
-				NOT = { opinion = { who = ROOT value =  -40 } }
+				NOT = { opinion = { who = ROOT value = -40 } }
 				NOT = { 
 					has_character_flag = holmgang_target
 					has_character_flag = holmgang_challenger
@@ -191,7 +191,7 @@ character_event = {
 				}
 				NOT = { is_inaccessible_trigger = yes }
 				NOT = {
-					reverse_has_opinion_modifier = {  #checks if target is actually already loyal (thus not suitable for challening)
+					reverse_has_opinion_modifier = { #checks if target is actually already loyal (thus not suitable for challening)
 						who = ROOT
 						modifier = opinion_loyal_servant
 					}
@@ -276,7 +276,7 @@ character_event = {
 						character = ROOT
 						liege = { character = ROOT }
 					}
-					NOT = { opinion = { who = ROOT value =  -40 } }
+					NOT = { opinion = { who = ROOT value = -40 } }
 					NOT = { 
 						has_character_flag = holmgang_target
 						has_character_flag = holmgang_challenger
@@ -287,7 +287,7 @@ character_event = {
 					}
 					NOT = { is_inaccessible_trigger = yes }
 					NOT = {
-						reverse_has_opinion_modifier = {  #checks if target is actually already loyal (thus not suitable for challening)
+						reverse_has_opinion_modifier = { #checks if target is actually already loyal (thus not suitable for challening)
 							who = ROOT
 							modifier = opinion_loyal_servant
 						}
@@ -302,7 +302,7 @@ character_event = {
 		set_character_flag = holmgang_target
 		set_character_flag = do_not_disturb
 		hidden_tooltip = { character_event = { id = TOG.5999 days = 50 } } # Safety catch flag clearing
-	}				
+	}	
 }
 
 # Your Vassal Hates You (Invisible)
@@ -344,7 +344,7 @@ character_event = {
 				is_ill = yes
 			}
 			NOT = { character = ROOT }
-			NOT = { opinion = { who = ROOT value =  -40 } }
+			NOT = { opinion = { who = ROOT value = -40 } }
 			NOT = { 
 				has_character_flag = holmgang_target
 				has_character_flag = holmgang_challenger
@@ -355,7 +355,7 @@ character_event = {
 			}
 			NOT = { is_inaccessible_trigger = yes }
 			NOT = {
-				reverse_has_opinion_modifier = {  #checks if target is actually already loyal (thus not suitable for challening)
+				reverse_has_opinion_modifier = { #checks if target is actually already loyal (thus not suitable for challening)
 					who = ROOT
 					modifier = opinion_loyal_servant
 				}
@@ -435,7 +435,7 @@ character_event = {
 					is_ill = yes
 				}
 				NOT = { character = ROOT }
-				NOT = { opinion = { who = ROOT value =  -40 } }
+				NOT = { opinion = { who = ROOT value = -40 } }
 				NOT = { 
 					has_character_flag = holmgang_target
 					has_character_flag = holmgang_challenger
@@ -446,7 +446,7 @@ character_event = {
 				}
 				NOT = { is_inaccessible_trigger = yes }
 				NOT = {
-					reverse_has_opinion_modifier = {  #checks if target is actually already loyal (thus not suitable for challening)
+					reverse_has_opinion_modifier = { #checks if target is actually already loyal (thus not suitable for challening)
 						who = ROOT
 						modifier = opinion_loyal_servant
 					}
@@ -669,10 +669,10 @@ character_event = {
 				# 50%: Opponent wins: Scarred .................. TOG.5021
 				# 50%: Opponent wins ........................... TOG.5023
 
-			# Defender flees  .................................. TOG.5011
+			# Defender flees .................................. TOG.5011
 				# Opponent wins ................................ TOG.5024
 
-			# Defender wins  .................................. TOG.5009
+			# Defender wins .................................. TOG.5009
 				# Opponent flees .............................. TOG.5026
 
 
@@ -986,7 +986,7 @@ character_event = {
 #				}
 #			}
 		}
-	}	   
+	}	
 }
 
 # Challenge refused
@@ -1740,7 +1740,7 @@ character_event = {
 }
 
 ###########################################
-# Flag management						 #
+# Flag management						#
 ###########################################
 
 # Safety catch - clears character flags and modifiers

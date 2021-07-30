@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# Rajas of India feast events			 #
-#										 #
+#										#
+# Rajas of India feast events			#
+#										#
 # ID RoI.3000-RoI.3999					#
-#										 #
+#										#
 ###########################################
 
 # Written by Tobias Bodlund
@@ -11,7 +11,7 @@
 namespace = RoI
 
 ###########################################
-# Arrival of guru						 #
+# Arrival of guru						#
 ###########################################
 
 # Start looking for guru
@@ -72,7 +72,7 @@ character_event = {
 						who = ROOT
 						years = 100
 					}
-					random_list = {  # Small chance of having some unusual memorable trait
+					random_list = { # Small chance of having some unusual memorable trait
 						1 = { add_trait = blinded }
 						1 = { add_trait = dwarf }
 						50 = {}
@@ -351,7 +351,7 @@ character_event = {
 		}
 		custom_tooltip = { text = sacrilege_tooltip }
 		hidden_tooltip = {
-			any_realm_character  = {
+			any_realm_character = {
 				limit = {
 					OR = {
 						religion_group = pacific
@@ -364,7 +364,7 @@ character_event = {
 					modifier = opinion_sacrilege
 				}
 			}
-			any_playable_ruler  = {
+			any_playable_ruler = {
 				limit = {
 					OR = {
 						religion_group = pacific
@@ -647,7 +647,7 @@ character_event = {
 		}
 		custom_tooltip = { text = sacrilege_tooltip }
 		hidden_tooltip = {
-			any_realm_character  = {
+			any_realm_character = {
 				limit = { religion_group = pacific }
 				opinion = {
 					who = ROOT
@@ -655,7 +655,7 @@ character_event = {
 					modifier = opinion_sacrilege
 				}
 			}
-			any_playable_ruler  = {
+			any_playable_ruler = {
 				limit = { religion_group = pacific }
 				opinion = {
 					who = ROOT
@@ -728,7 +728,7 @@ character_event = {
 		}
 		custom_tooltip = { text = sacrilege_tooltip }
 		hidden_tooltip = {
-			any_realm_character  = {
+			any_realm_character = {
 				limit = { has_dharmic_religion_trigger = yes }
 				opinion = {
 					who = ROOT
@@ -736,7 +736,7 @@ character_event = {
 					modifier = opinion_sacrilege
 				}
 			}
-			any_playable_ruler  = {
+			any_playable_ruler = {
 				limit = { has_dharmic_religion_trigger = yes }
 				opinion = {
 					who = ROOT
@@ -1221,7 +1221,7 @@ character_event = {
 }
 
 ###########################################
-# Guru helps with Buddhist ambitions	  #
+# Guru helps with Buddhist ambitions	#
 ###########################################
 
 character_event = {
@@ -1412,7 +1412,7 @@ character_event = {
 #No caste system in AtE
 
 ###########################################
-# Guru meditation...					  #
+# Guru meditation...					#
 ###########################################
 
 character_event = {

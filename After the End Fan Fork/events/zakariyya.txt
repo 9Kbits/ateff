@@ -108,7 +108,7 @@ narrative_event = {
 				has_character_flag = peasant_girl
 			}
 			add_lover = ROOT
-		}				
+		}	
 		hidden_tooltip = {
 			character_event = { id = zakariyya.6 days = 1 }
 			remove_trait = flowered
@@ -125,7 +125,7 @@ narrative_event = {
 				has_character_flag = peasant_girl
 			}
 			add_friend = ROOT
-		}				
+		}	
 		hidden_tooltip = {
 			character_event = { id = zakariyya.6 days = 1 }
 			remove_trait = flowered
@@ -144,7 +144,7 @@ character_event = {
 	prisoner = no
 	is_triggered_only = yes
 	option = {
-		name = "EVTOPT_zkmarrybaja"   # Marry the Princess of Baja
+		name = "EVTOPT_zkmarrybaja" # Marry the Princess of Baja
 		set_character_flag = bajamarriage
 		k_baja_california = {
 			holder_scope = {
@@ -161,7 +161,7 @@ character_event = {
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVTOPT_zkmarryscholar"   # Marry the Countess of Joshua Tree
+		name = "EVTOPT_zkmarryscholar" # Marry the Countess of Joshua Tree
 		set_character_flag = joshuatreemarriage
 
 		c_joshua_tree = {
@@ -173,14 +173,14 @@ character_event = {
 		ai_chance = { factor = 1 }
 	}
 	option = {
-		name = "EVTOPT_zkmarrypeasant"   # Marry your Peasant Childhood Friend
+		name = "EVTOPT_zkmarrypeasant" # Marry your Peasant Childhood Friend
 		any_realm_character = {
 			limit = {
 				has_character_flag = peasant_girl
 			}
 			add_spouse = ROOT
 		}
-		ai_chance = { factor = 1 }				
+		ai_chance = { factor = 1 }	
 	}
 }
 
@@ -214,9 +214,9 @@ character_event = {
 
 	immediate = {
 		random_list = {
-			50 = {  character_event = { id = zakariyya.9 } }
-			25 = {  character_event = { id = zakariyya.10 } }
-			25 = {  character_event = { id = zakariyya.11 } }
+			50 = { character_event = { id = zakariyya.9 } }
+			25 = { character_event = { id = zakariyya.10 } }
+			25 = { character_event = { id = zakariyya.11 } }
 		}
 	}
 }
@@ -543,9 +543,9 @@ character_event = {
 		name = EVTOPT_zkbajawar
 		clr_character_flag = bajamarriage
 		random_list = {
-			50 = {  c_112120037 = { add_rival = ROOT } }
-			25 = {  c_112120037 = { remove_spouse = spouse } }
-			25 = {  c_112120037 = { add_lover = ROOT } }
+			50 = { c_112120037 = { add_rival = ROOT } }
+			25 = { c_112120037 = { remove_spouse = spouse } }
+			25 = { c_112120037 = { add_lover = ROOT } }
 		}
 		k_baja_california = {
 			holder_scope = {	

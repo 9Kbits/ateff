@@ -1,34 +1,34 @@
 namespace = atediscover
 
 narrative_event = {
-    id = atediscover.1
-    title = EVTNAME_atediscover_1
-    desc = EVTDESC_atediscover_1
-    picture = GFX_evt_relic_box
-    border = GFX_event_narrative_frame_religion
+	id = atediscover.1
+	title = EVTNAME_atediscover_1
+	desc = EVTDESC_atediscover_1
+	picture = GFX_evt_relic_box
+	border = GFX_event_narrative_frame_religion
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    has_dlc = "Mystics"
+	has_dlc = "Mystics"
 
-    option = { #it's their duty
-        name = EVTOPT_MAJOR_ARTIFACT_DUTY
-        prestige = 10
-        reverse_opinion = {
+	option = { #it's their duty
+		name = EVTOPT_MAJOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_extremely_disappointed
 			years = 20
 		}
-        add_artifact = ate_sword_of_st_peter
-        new_artifact = {
+		add_artifact = ate_sword_of_st_peter
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #monetary reward
-        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+	option = { #monetary reward
+		name = EVTOPT_MAJOR_ARTIFACT_MONEY
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -44,16 +44,16 @@ narrative_event = {
 			min = 50
 		}
 
-        add_artifact = ate_sword_of_st_peter
-        new_artifact = {
+		add_artifact = ate_sword_of_st_peter
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    
-    option = { #reward them with a favor
-        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+	}
+	
+	option = { #reward them with a favor
+		name = EVTOPT_MAJOR_ARTIFACT_FAVOR
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -63,20 +63,20 @@ narrative_event = {
 			modifier = opinion_found_major_artifact
 			years = 15
 		}
-        reverse_add_favor = FROM
-        add_artifact = ate_sword_of_st_peter
-        new_artifact = {
+		reverse_add_favor = FROM
+		add_artifact = ate_sword_of_st_peter
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #praise them (prestige reward)
-    	trigger = {
+	option = { #praise them (prestige reward)
+		trigger = {
 			diplomacy = 15
 		}
-        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+		name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_praised
 			years = 15
@@ -91,43 +91,43 @@ narrative_event = {
 			chance = 20
 			add_friend = FROM
 		}
-        add_artifact = ate_sword_of_st_peter
-        new_artifact = {
+		add_artifact = ate_sword_of_st_peter
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    after = { clr_artifact_flagsmodifiers_effect = yes }
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
 }
 
 narrative_event = {
-    id = atediscover.2
-    title = EVTNAME_atediscover_2
-    desc = EVTDESC_atediscover_2
-    picture = GFX_evt_relic_box
-    border = GFX_event_narrative_frame_religion
+	id = atediscover.2
+	title = EVTNAME_atediscover_2
+	desc = EVTDESC_atediscover_2
+	picture = GFX_evt_relic_box
+	border = GFX_event_narrative_frame_religion
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    has_dlc = "Mystics"
+	has_dlc = "Mystics"
 
-    option = { #it's their duty
-        name = EVTOPT_MAJOR_ARTIFACT_DUTY
-        prestige = 10
-        reverse_opinion = {
+	option = { #it's their duty
+		name = EVTOPT_MAJOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_extremely_disappointed
 			years = 20
 		}
-        add_artifact = ate_stone_of_st_francis
-        new_artifact = {
+		add_artifact = ate_stone_of_st_francis
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #monetary reward
-        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+	option = { #monetary reward
+		name = EVTOPT_MAJOR_ARTIFACT_MONEY
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -143,16 +143,16 @@ narrative_event = {
 			min = 50
 		}
 
-        add_artifact = ate_stone_of_st_francis
-        new_artifact = {
+		add_artifact = ate_stone_of_st_francis
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    
-    option = { #reward them with a favor
-        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+	}
+	
+	option = { #reward them with a favor
+		name = EVTOPT_MAJOR_ARTIFACT_FAVOR
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -162,20 +162,20 @@ narrative_event = {
 			modifier = opinion_found_major_artifact
 			years = 15
 		}
-        reverse_add_favor = FROM
-        add_artifact = ate_stone_of_st_francis
-        new_artifact = {
+		reverse_add_favor = FROM
+		add_artifact = ate_stone_of_st_francis
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #praise them (prestige reward)
-    	trigger = {
+	option = { #praise them (prestige reward)
+		trigger = {
 			diplomacy = 15
 		}
-        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+		name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_praised
 			years = 15
@@ -190,12 +190,12 @@ narrative_event = {
 			chance = 20
 			add_friend = FROM
 		}
-        add_artifact = ate_stone_of_st_francis
-        new_artifact = {
+		add_artifact = ate_stone_of_st_francis
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    after = { clr_artifact_flagsmodifiers_effect = yes }
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
 }
 
 character_event = {
@@ -395,34 +395,34 @@ character_event = {
 }
 
 narrative_event = {
-    id = atediscover.5
-    title = EVTNAME_atediscover_5
-    desc = EVTDESC_atediscover_5
-    picture = GFX_evt_relic_box
-    border = GFX_event_narrative_frame_religion
+	id = atediscover.5
+	title = EVTNAME_atediscover_5
+	desc = EVTDESC_atediscover_5
+	picture = GFX_evt_relic_box
+	border = GFX_event_narrative_frame_religion
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    has_dlc = "Mystics"
+	has_dlc = "Mystics"
 
-    option = { #it's their duty
-        name = EVTOPT_MAJOR_ARTIFACT_DUTY
-        prestige = 10
-        reverse_opinion = {
+	option = { #it's their duty
+		name = EVTOPT_MAJOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_extremely_disappointed
 			years = 20
 		}
-        add_artifact = fastest_gun
-        new_artifact = {
+		add_artifact = fastest_gun
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #monetary reward
-        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+	option = { #monetary reward
+		name = EVTOPT_MAJOR_ARTIFACT_MONEY
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -438,16 +438,16 @@ narrative_event = {
 			min = 50
 		}
 
-        add_artifact = fastest_gun
-        new_artifact = {
+		add_artifact = fastest_gun
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    
-    option = { #reward them with a favor
-        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+	}
+	
+	option = { #reward them with a favor
+		name = EVTOPT_MAJOR_ARTIFACT_FAVOR
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -457,20 +457,20 @@ narrative_event = {
 			modifier = opinion_found_major_artifact
 			years = 15
 		}
-        reverse_add_favor = FROM
-        add_artifact = fastest_gun
-        new_artifact = {
+		reverse_add_favor = FROM
+		add_artifact = fastest_gun
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #praise them (prestige reward)
-    	trigger = {
+	option = { #praise them (prestige reward)
+		trigger = {
 			diplomacy = 15
 		}
-        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+		name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_praised
 			years = 15
@@ -485,43 +485,43 @@ narrative_event = {
 			chance = 20
 			add_friend = FROM
 		}
-        add_artifact = fastest_gun
-        new_artifact = {
+		add_artifact = fastest_gun
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    after = { clr_artifact_flagsmodifiers_effect = yes }
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
 }
 
 narrative_event = {
-    id = atediscover.6
-    title = EVTNAME_atediscover_6
-    desc = EVTDESC_atediscover_6
-    picture = GFX_evt_relic_box
-    border = GFX_event_narrative_frame_religion
+	id = atediscover.6
+	title = EVTNAME_atediscover_6
+	desc = EVTDESC_atediscover_6
+	picture = GFX_evt_relic_box
+	border = GFX_event_narrative_frame_religion
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    has_dlc = "Mystics"
+	has_dlc = "Mystics"
 
-    option = { #it's their duty
-        name = EVTOPT_MAJOR_ARTIFACT_DUTY
-        prestige = 10
-        reverse_opinion = {
+	option = { #it's their duty
+		name = EVTOPT_MAJOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_extremely_disappointed
 			years = 20
 		}
-        add_artifact = pen_black_bart
-        new_artifact = {
+		add_artifact = pen_black_bart
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #monetary reward
-        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+	option = { #monetary reward
+		name = EVTOPT_MAJOR_ARTIFACT_MONEY
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -537,16 +537,16 @@ narrative_event = {
 			min = 50
 		}
 
-        add_artifact = pen_black_bart
-        new_artifact = {
+		add_artifact = pen_black_bart
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    
-    option = { #reward them with a favor
-        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+	}
+	
+	option = { #reward them with a favor
+		name = EVTOPT_MAJOR_ARTIFACT_FAVOR
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -556,20 +556,20 @@ narrative_event = {
 			modifier = opinion_found_major_artifact
 			years = 15
 		}
-        reverse_add_favor = FROM
-        add_artifact = pen_black_bart
-        new_artifact = {
+		reverse_add_favor = FROM
+		add_artifact = pen_black_bart
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #praise them (prestige reward)
-    	trigger = {
+	option = { #praise them (prestige reward)
+		trigger = {
 			diplomacy = 15
 		}
-        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+		name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_praised
 			years = 15
@@ -584,12 +584,12 @@ narrative_event = {
 			chance = 20
 			add_friend = FROM
 		}
-        add_artifact = pen_black_bart
-        new_artifact = {
+		add_artifact = pen_black_bart
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    after = { clr_artifact_flagsmodifiers_effect = yes }
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
 }
 
 character_event = {

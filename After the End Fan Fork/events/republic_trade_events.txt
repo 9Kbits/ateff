@@ -869,7 +869,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_REP_306
-		plot_target_province =  {
+		plot_target_province = {
 			seize_trade_post = ROOT
 		}
 		clr_character_flag = plot_seize_trade_post_decision_taken
@@ -932,24 +932,24 @@ letter_event = {
 			factor = 1
 			modifier = {
 				factor = 1.5
-				opinion = { who = FROM value =  25 }
+				opinion = { who = FROM value = 25 }
 			}
 			modifier = {
 				factor = 2
-				opinion = { who = FROM value =  50 }
+				opinion = { who = FROM value = 50 }
 			}
 			modifier = {
 				factor = 3
-				opinion = { who = FROM value =  75 }
+				opinion = { who = FROM value = 75 }
 			}
 			modifier = {
 				factor = 0
-				NOT = { opinion = { who = FROM value =  0 } }
+				NOT = { opinion = { who = FROM value = 0 } }
 			}
 		}
 		FROM = {
 			plot_target_char = {
-				letter_event = { id = REP.311 days = 5 tooltip =  EVTTOOLTIPREP.311 }
+				letter_event = { id = REP.311 days = 5 tooltip = EVTTOOLTIPREP.311 }
 				opinion = {
 					who = ROOT
 					modifier = opinion_disgruntled
@@ -971,11 +971,11 @@ letter_event = {
 			factor = 1
 			modifier = {
 				factor = 2
-				NOT = { opinion = { who = FROM value =  10 } }
+				NOT = { opinion = { who = FROM value = 10 } }
 			}
 			modifier = {
 				factor = 0
-				opinion = { who = FROM value =  90 }
+				opinion = { who = FROM value = 90 }
 			}
 		}
 		FROM = {
@@ -1034,7 +1034,7 @@ letter_event = {
 				months = 60
 			}
 		}
-		plot_target_province =  {
+		plot_target_province = {
 			seize_trade_post = ROOT
 		}
 	}
@@ -2004,7 +2004,7 @@ province_event = {
 					top_liege = {
 						NOR = {
 							is_vassal_or_below = PREVPREVPREV #this is backwards
-							opinion = { who = PREVPREVPREV value =  0 }
+							opinion = { who = PREVPREVPREV value = 0 }
 							has_opinion_modifier = { who = PREVPREVPREV modifier = opinion_bribed_tp }
 							has_opinion_modifier = { who = PREVPREVPREV modifier = opinion_thwarted_tp_destruction }
 							has_opinion_modifier = { who = PREVPREVPREV modifier = opinion_burned_tp }
@@ -2012,7 +2012,7 @@ province_event = {
 							war_with = PREVPREVPREV
 						}
 					}
-					
+
 					# Only if there is no non-aggression-pact with the trade post owner
 					NOT = {
 						has_non_aggression_pact_with = PREVPREV
@@ -2031,7 +2031,7 @@ province_event = {
 				ROOT = {
 					owner = {
 						top_liege = {
-							NOT = { opinion = { who = PREVPREVPREV value =  -20 } }
+							NOT = { opinion = { who = PREVPREVPREV value = -20 } }
 						}
 					}
 				}
@@ -2043,7 +2043,7 @@ province_event = {
 				ROOT = {
 					owner = {
 						top_liege = {
-							NOT = { opinion = { who = PREVPREVPREV value =  -40 } }
+							NOT = { opinion = { who = PREVPREVPREV value = -40 } }
 						}
 					}
 				}
@@ -2055,7 +2055,7 @@ province_event = {
 				ROOT = {
 					owner = {
 						top_liege = {
-							NOT = { opinion = { who = PREVPREVPREV value =  -60 } }
+							NOT = { opinion = { who = PREVPREVPREV value = -60 } }
 						}
 					}
 				}
@@ -2067,7 +2067,7 @@ province_event = {
 				ROOT = {
 					owner = {
 						top_liege = {
-							NOT = { opinion = { who = PREVPREVPREV value =  -80 } }
+							NOT = { opinion = { who = PREVPREVPREV value = -80 } }
 						}
 					}
 				}

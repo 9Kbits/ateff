@@ -1,5 +1,5 @@
 #########################################
-#									   #
+#									#
 # PET EVENTS, ID 77700 -				#
 # Written by Milla Isaksson & 			#
 # Mathilda Bjarnehed &					#
@@ -444,7 +444,7 @@ character_event = {
 				duration = -1
 			}
 			hidden_tooltip = { 
-				character_event = { id = 77802 days = 2555 random = 1000 }  # Cat dies
+				character_event = { id = 77802 days = 2555 random = 1000 } # Cat dies
 				event_target:new_cat_owner = { character_event = { id = 77855 days = 100 } } 
 			} 
 		}
@@ -503,7 +503,7 @@ character_event = {
 				duration = -1
 			}
 			hidden_tooltip = { 
-				character_event = { id = 77802 days = 2555 random = 1000 }  # Cat dies
+				character_event = { id = 77802 days = 2555 random = 1000 } # Cat dies
 				event_target:new_cat_owner = { character_event = { id = 77855 days = 100 } } 
 			}
 		}
@@ -512,7 +512,7 @@ character_event = {
 	#Keep cat
 	option = {
 		name = EVTOPTC_77851
-			
+
 		reverse_opinion = {
 			who = event_target:cat_hater
 			modifier = opinion_ignored_demands
@@ -851,7 +851,7 @@ character_event = {
 
 		random = {
 			chance = 50
-			hidden_tooltip = { remove_character_modifier = pet_cat  }
+			hidden_tooltip = { remove_character_modifier = pet_cat }
 			custom_tooltip = { text = EVTOPTC_77856_NOCAT }
 		}
 
@@ -1097,10 +1097,10 @@ character_event = {
 				is_inaccessible_trigger = no
 				NOR = { 
 					is_incapable = yes 
-			 		trait = cruel 
-			 		has_character_modifier = pet_cat
-			 		has_character_modifier = pet_hunting_dog
-			 	}
+					trait = cruel 
+					has_character_modifier = pet_cat
+					has_character_modifier = pet_hunting_dog
+				}
 			}
 			save_event_target_as = animal_caretaker
 		}
@@ -1114,10 +1114,10 @@ character_event = {
 					is_inaccessible_trigger = no
 					NOR = { 
 						is_incapable = yes 
-				 		trait = cruel 
-				 		has_character_modifier = pet_cat
-				 		has_character_modifier = pet_hunting_dog
-				 	}
+						trait = cruel 
+						has_character_modifier = pet_cat
+						has_character_modifier = pet_hunting_dog
+					}
 				}
 				save_event_target_as = animal_caretaker
 			}
@@ -1164,7 +1164,7 @@ character_event = {
 				duration = -1
 			}
 			hidden_tooltip = { 
-				character_event = { id = 77802 days = 2555 random = 1000 }  # Cat dies
+				character_event = { id = 77802 days = 2555 random = 1000 } # Cat dies
 				character_event = { id = 77855 days = 100 } 
 			}
 		}
@@ -1200,7 +1200,7 @@ character_event = {
 		random_list = {
 			25 = { remove_character_modifier = pet_hunting_dog }
 			25 = { remove_character_modifier = pet_cat }
-			50 = {  }
+			50 = { }
 		}
 	}
 

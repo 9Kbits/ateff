@@ -19,14 +19,14 @@ targetted_decisions = {
 					trait = devout
 				}
 			}
-			
+
 			custom_tooltip = {
-	            text = boon_tooltip_recent_boon
-	            hidden_tooltip = {
-	                FROM = { NOT = { has_character_modifier = boon_timer } }
-	                NOT = { has_character_modifier = boon_timer }
-	            }
-	        }
+				text = boon_tooltip_recent_boon
+				hidden_tooltip = {
+					FROM = { NOT = { has_character_modifier = boon_timer } }
+					NOT = { has_character_modifier = boon_timer }
+				}
+			}
 		}
 		effect = {
 			FROM = { piety = -500 }

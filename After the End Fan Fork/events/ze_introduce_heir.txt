@@ -1,34 +1,34 @@
 ###########################################
-#                                         #
-# Introduce Heir events				      #
-# by Alexander Oltner                     #
-# ID      	              				  #
-#                                         #
+#										#
+# Introduce Heir events					#
+# by Alexander Oltner					#
+# ID									#
+#										#
 ###########################################
 
 namespace = ZE
 
 # Tombola (reworked original script to stop MP spam)
 character_event = {
-    id = ZE.22899
-    hide_window = yes
-    is_triggered_only = yes
+	id = ZE.22899
+	hide_window = yes
+	is_triggered_only = yes
 
-    trigger = {
-    	event_target:introduced_heir = {
+	trigger = {
+		event_target:introduced_heir = {
 			is_alive = yes
 			prisoner = no
 		}
-    }
-    fail_trigger_effect = {
-    	clr_flags_introduce_heir_effect = yes
-    }
+	}
+	fail_trigger_effect = {
+		clr_flags_introduce_heir_effect = yes
+	}
 
-    immediate = {
-    	hidden_effect = {
-    		if = { #If you had at least 4 events already
-	    		limit = {
-	    			calc_true_if = {
+	immediate = {
+		hidden_effect = {
+			if = { #If you had at least 4 events already
+				limit = {
+					calc_true_if = {
 						amount = 4
 						has_character_flag = ZE_evt_heir_1
 						has_character_flag = ZE_evt_heir_2
@@ -41,23 +41,23 @@ character_event = {
 						has_character_flag = ZE_evt_heir_7
 						has_character_flag = ZE_evt_heir_8
 					}
-	    		}
-	    		character_event = { id = ZE.22901 days = 10 random = 10 } #Heir is groomed!
-	    		break = yes # Skip tombola, you're done!
-	    	}
+				}
+				character_event = { id = ZE.22901 days = 10 random = 10 } #Heir is groomed!
+				break = yes # Skip tombola, you're done!
+			}
 
-	    	random_list = {
-	    		100 = { #Vassal offers to teach heir the scripture for a favor
-	    			random = {
-	    				chance = 75
+			random_list = {
+				100 = { #Vassal offers to teach heir the scripture for a favor
+					random = {
+						chance = 75
 						character_event = { id = ZE.22902 days = 10 random = 5 } #send event
 						set_character_flag = ZE_evt_heir_1
 						break = yes
-	    			}					
+					}
 
-	    			trigger = {
-	    				NOT = { has_character_flag = ZE_evt_heir_1 }
-	    				any_vassal = {
+					trigger = {
+						NOT = { has_character_flag = ZE_evt_heir_1 }
+						any_vassal = {
 							ai = yes
 							religion = ROOT
 							prisoner = no
@@ -73,8 +73,8 @@ character_event = {
 								learning = 12
 							}
 						}
-	    			}
-	    		}
+					}
+				}
 				100 = { #Heir impresses visiting vassal
 					random = {
 						chance = 75
@@ -116,8 +116,8 @@ character_event = {
 							}
 						}
 					}
-	    		}
-	    		100 = { #Heir impresses visiting vassal (again!)
+				}
+				100 = { #Heir impresses visiting vassal (again!)
 					random = {
 						chance = 75
 						character_event = { id = ZE.22903 days = 21 random = 5 } # send event
@@ -158,7 +158,7 @@ character_event = {
 							}
 						}
 					}
-	    		}
+				}
 				100 = { #Heir accidently insults visiting vassal
 					random = {
 						chance = 75
@@ -166,7 +166,7 @@ character_event = {
 						set_character_flag = ZE_evt_heir_3
 						break = yes
 					}
-					
+
 					trigger = {
 						NOT = { has_character_flag = ZE_evt_heir_3 }
 						any_vassal = {
@@ -208,7 +208,7 @@ character_event = {
 						set_character_flag = ZE_evt_heir_3_B
 						break = yes
 					}
-					
+
 					trigger = {
 						NOT = { has_character_flag = ZE_evt_heir_3_B }
 						any_vassal = {
@@ -322,7 +322,7 @@ character_event = {
 							}
 						}
 					}
-				}			
+				}
 				10 = { #Heir underperforms and becomes depressed
 					random = {
 						chance = 10
@@ -411,10 +411,10 @@ character_event = {
 						}
 					}
 				}
-	    	}
+			}
 			repeat_event = { id = ZE.22899 days = 1 }
-    	}
-    }
+		}
+	}
 }
 
 

@@ -170,8 +170,8 @@ character_event = {
 		}
 		
 		hidden_tooltip = {
-			FROM = {  character_event = { id = 67003 } }
-		}			
+			FROM = { character_event = { id = 67003 } }
+		}
 	}
 	
 	option = {
@@ -197,7 +197,7 @@ character_event = {
 		set_character_flag = pope_respects_our_law
 		clr_character_flag = pope_wants_our_law_changed
 		hidden_tooltip = {
-			FROM = { character_event = { id = 67004  } }
+			FROM = { character_event = { id = 67004 } }
 		}		
 	}
 	
@@ -215,7 +215,7 @@ character_event = {
 		set_character_flag = pope_respects_our_law
 		clr_character_flag = pope_wants_our_law_changed
 		hidden_tooltip = {
-			FROM = {  character_event = { id = 67005 } }
+			FROM = { character_event = { id = 67005 } }
 		}	
 	}
 }
@@ -424,10 +424,10 @@ character_event = {
 			random_realm_lord = {
 				limit = {
 					is_theocracy = yes
-	    			NOT = { has_character_flag = pope_bribing }				
+					NOT = { has_character_flag = pope_bribing }	
 				}
 				set_character_flag = pope_bribing
-			
+
 				character_event = { id = 67011 days = 14 tooltip = EVTTOOLTIP67011 }
 			}
 		}
@@ -494,11 +494,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 4
-				opinion = { who = top_liege value =  60 }
+				opinion = { who = top_liege value = 60 }
 			}
 			modifier = {
 				factor = 100
-				opinion = { who = top_liege value =  90 }
+				opinion = { who = top_liege value = 90 }
 			}
 		}
 		prestige = 1
@@ -556,7 +556,7 @@ character_event = {
 				has_law = investiture_law_1 
 			}
 			any_realm_lord = {
-				OR = { tier = KING tier = DUKE    }
+				OR = { tier = KING tier = DUKE	}
 				NOT = { has_character_flag = pope_vassal_approached }
 				religion = ROOT
 				relative_power_to_liege = 0.05
@@ -592,7 +592,7 @@ character_event = {
 					religion = ROOT
 					relative_power_to_liege = 0.05
 				}	
-			
+
 				set_character_flag = pope_vassal_approached 
 				character_event = { id = 67021 days = 14 tooltip = EVTTOOLTIP67021 }
 			}
@@ -626,7 +626,7 @@ character_event = {
 			}
 		}
 		piety = 10
-		top_liege = { primary_title = { add_pressed_claim = ROOT  }}
+		top_liege = { primary_title = { add_pressed_claim = ROOT }}
 		random = {
 			chance = 33
 			top_liege = {
@@ -648,11 +648,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 4
-				opinion = { who = top_liege value =  60 }
+				opinion = { who = top_liege value = 60 }
 			}
 			modifier = {
 				factor = 100
-				opinion = { who = top_liege value =  80 }
+				opinion = { who = top_liege value = 80 }
 			}
 		}
 		piety = -20

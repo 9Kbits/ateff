@@ -2,8 +2,8 @@ decisions = {
 	
 	run_for_senate = {
 		is_high_prio = yes
-			
-			
+
+
 		potential = {
 			is_playable = yes
 			OR = {
@@ -14,11 +14,11 @@ decisions = {
 			NOT = { has_character_flag = running_for_office_attacker }
 			is_councillor = no
 		}
-				
+	
 		allow = {
 			prestige = 500
 			is_adult = yes
-			prisoner = no			
+			prisoner = no
 			liege = { 
 				any_voter = {
 					NOT = { has_character_modifier = orf_won_election }
@@ -41,7 +41,7 @@ decisions = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.2			 
+				factor = 0.2
 			}
 			modifier = {
 				factor = 2
@@ -75,12 +75,12 @@ decisions = {
 					}
 				}
 			}	
-		}  
+		} 
 	}
 	abandon_orf = {
 		is_high_prio = no
-			
-			
+
+
 		potential = {
 			is_playable = yes
 			government = open_range_feudalism_government
@@ -93,11 +93,11 @@ decisions = {
 				liege = { NOT = { government = open_range_feudalism_government } }
 			}
 		}
-				
+	
 		allow = {
 			prestige = 500
 			is_adult = yes
-			prisoner = no			
+			prisoner = no
 			OR = {
 				independent = yes
 				liege = { NOT = { government = open_range_feudalism_government } }
@@ -113,7 +113,7 @@ decisions = {
 			factor = 0.5
 			modifier = {
 				factor = 0
-				liege = { government = open_range_feudalism_government}			 
+				liege = { government = open_range_feudalism_government}
 			}
 			modifier = {
 				factor = 0
@@ -123,12 +123,12 @@ decisions = {
 				factor = 0
 				num_of_titles_in_realm >= 8
 			}	
-		}  
+		} 
 	}
 	adopt_orf = {
 		is_high_prio = no
-			
-			
+
+
 		potential = {
 			is_playable = yes
 			government = feudal_government
@@ -139,11 +139,11 @@ decisions = {
 				liege = { government = open_range_feudalism_government }
 			}
 		}
-				
+	
 		allow = {
 			prestige = 500
 			is_adult = yes
-			prisoner = no			
+			prisoner = no
 			OR = {
 				independent = yes
 				liege = { government = open_range_feudalism_government }
@@ -159,7 +159,7 @@ decisions = {
 			factor = 0.5
 			modifier = {
 				factor = 0
-				liege = { NOT = { government = open_range_feudalism_government}	}		 
+				liege = { NOT = { government = open_range_feudalism_government}	}		
 			}
 			modifier = {
 				factor = 0
@@ -169,12 +169,12 @@ decisions = {
 				factor = 0
 				num_of_titles_in_realm >= 8
 			}	
-		}  
+		} 
 	}
 	endorse_party = {
 		is_high_prio = no
-			
-			
+
+
 		potential = {
 			is_playable = yes
 			government = feudal_government
@@ -185,11 +185,11 @@ decisions = {
 				liege = { government = open_range_feudalism_government }
 			}
 		}
-				
+	
 		allow = {
 			prestige = 500
 			is_adult = yes
-			prisoner = no			
+			prisoner = no
 			OR = {
 				independent = yes
 				liege = { government = open_range_feudalism_government }
@@ -203,6 +203,6 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}  
+		} 
 	}
 }

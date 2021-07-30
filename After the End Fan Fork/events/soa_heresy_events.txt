@@ -204,16 +204,16 @@ province_event = {
 		owner = { piety = -10 }
 		
 		ai_chance = {
-        	factor = 95
-        }
+			factor = 95
+		}
 	}
 	
 	option = {
 		name = EVTOPTB39000 # The owner is of the same heresy
 		trigger = { owner = { religion = ROOT } }
 		ai_chance = {
-        	factor = 95
-        }
+			factor = 95
+		}
 	}
 	
 	option = {
@@ -225,12 +225,12 @@ province_event = {
 			}
 		}
 		ai_chance = {
-        	factor = 95
-        }
+			factor = 95
+		}
 	}
 	
 	option = {
-		name = EVTOPTD_SOA_4000 #  The owner is of the parent religion and interested in the heresy
+		name = EVTOPTD_SOA_4000 # The owner is of the parent religion and interested in the heresy
 		trigger = {
 			owner = {
 				owner = { is_parent_religion = ROOT }
@@ -257,20 +257,20 @@ province_event = {
 		}
 		
 		ai_chance = {
-        	factor = 5
-        	modifier = {
-        		factor = 0
+			factor = 5
+			modifier = {
+				factor = 0
 				owner = {
 					trait = zealous 
 				}
-        	}
-        	modifier = {
-        		factor = 2
+			}
+			modifier = {
+				factor = 2
 				owner = {
 					trait = cynical 
 				}
-        	}
-        }
+			}
+		}
 	}
 }
 
@@ -316,7 +316,7 @@ character_event = {
 			is_inaccessible_trigger = yes
 			trait = zealous
 		}
-			
+
 		
 		location = {
 			NOR = {
@@ -1256,7 +1256,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
-			
+
 	option = {
 		name = EVTOPTA_SOA_4114
 		religion_authority = {
@@ -1288,7 +1288,7 @@ character_event = {
 			}
 		}
 	}
-			
+
 	option = {
 		name = EVTOPTA_SOA_4120
 	}
@@ -1344,7 +1344,7 @@ character_event = {
 			}
 		}
 	}
-			
+
 	option = { # Reward the ruler with money
 		name = EVTOPTA_SOA_4122
 		trigger = {
@@ -1533,7 +1533,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
-			
+
 	option = {
 		name = EVTOPTA_SOA_4132
 		religion_authority = {
@@ -1581,7 +1581,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
-			
+
 	option = {
 		name = EVTOPTA_SOA_4134
 		religion_authority = {
@@ -1609,7 +1609,7 @@ narrative_event = {
 			total_years_played = 1
 		}
 	}
-			
+
 	option = {
 		name = EVTOPTA_SOA_4200
 		trigger = {

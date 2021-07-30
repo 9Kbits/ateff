@@ -67,7 +67,7 @@ character_event = {
 				40 = { add_trait = mastermind_theologian }
 			}
 
-			#Up  learning
+			#Up learning
 			random_list = {
 				25 = { change_learning = 3 }
 				25 = { change_learning = 4 }
@@ -173,7 +173,7 @@ character_event = {
 				limit = { religion_group = jewish_group }
 				remove_trait = chaste
 			}
-			
+
 			#Misc traits
 			remove_trait = deceitful
 			remove_trait = arbitrary
@@ -297,7 +297,7 @@ character_event = {
 							religion_group = christian
 							religion_group = jewish_group
 							religion_group = latter_day_saints
-							
+	
 						}
 					}
 					give_nickname = nick_the_pious
@@ -349,7 +349,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-	    has_character_flag = becoming_cajita
+		has_character_flag = becoming_cajita
 	}
 
 	option = {
@@ -360,13 +360,13 @@ character_event = {
 	}
 	
 	option = {
-	    name = EVTOPTB_FIDE_123
+		name = EVTOPTB_FIDE_123
 		clr_character_flag = becoming_cajita
 	}
 }
 
 character_event = {
-    id = fide.124
+	id = fide.124
 	title = EVTNAME_fide_fasting
 	desc = EVTDESC_FIDE_124
 	picture = GFX_evt_pilgrims_epic_journey_desert
@@ -375,7 +375,7 @@ character_event = {
 	#is_triggered_only = yes
 	
 	trigger = {
-	    has_character_flag = fasting_for_incarnation
+		has_character_flag = fasting_for_incarnation
 	}
 	
 	mean_time_to_happen = {
@@ -391,11 +391,11 @@ character_event = {
 			20 = {
 				add_trait = is_malnourished
 				clr_character_flag = fasting_for_incarnation
-                set_character_flag = fasting_for_incarnation1				
+				set_character_flag = fasting_for_incarnation1	
 			}
 			80 = {
-			    clr_character_flag = fasting_for_incarnation
-                set_character_flag = fasting_for_incarnation1				
+				clr_character_flag = fasting_for_incarnation
+				set_character_flag = fasting_for_incarnation1	
 
 			}
 		}
@@ -403,7 +403,7 @@ character_event = {
 }
 
 character_event = {
-    id = fide.125
+	id = fide.125
 	desc = EVTDESC_FIDE_125
 	picture = GFX_evt_religious_exultation_wol
 	border = GFX_event_normal_frame_religion
@@ -415,7 +415,7 @@ character_event = {
 	}	
 	
 	trigger = {
-	    has_character_flag = fasting_for_incarnation1
+		has_character_flag = fasting_for_incarnation1
 	}
 	
 	option = {
@@ -425,7 +425,7 @@ character_event = {
 			factor = 5
 			random_list = {
 				35 = {
-					give_pneumonic_effect = yes				
+					give_pneumonic_effect = yes	
 				}
 				65 = {
 					clr_character_flag = fasting_for_incarnation1
@@ -465,28 +465,28 @@ character_event = {
 			20 = {
 				add_trait = gluttonous
 				clr_character_flag = fasting_for_incarnation1	
-                set_character_flag = failed_fast_fide
+				set_character_flag = failed_fast_fide
 			}
 			20 = {
-			    add_trait = lustful
-			    clr_character_flag = fasting_for_incarnation1
-                set_character_flag = failed_fast_fide
-            }
+				add_trait = lustful
+				clr_character_flag = fasting_for_incarnation1
+				set_character_flag = failed_fast_fide
+			}
 			20 = {
-			    add_trait = wroth
-			    clr_character_flag = fasting_for_incarnation1
-                set_character_flag = failed_fast_fide
-            }
+				add_trait = wroth
+				clr_character_flag = fasting_for_incarnation1
+				set_character_flag = failed_fast_fide
+			}
 			20 = {
-			    add_trait = slothful
-			    clr_character_flag = fasting_for_incarnation1
-                set_character_flag = failed_fast_fide
-            }
+				add_trait = slothful
+				clr_character_flag = fasting_for_incarnation1
+				set_character_flag = failed_fast_fide
+			}
 			20 = {
-			    add_trait = greedy
-			    clr_character_flag = fasting_for_incarnation1
-                set_character_flag = failed_fast_fide
-            }
+				add_trait = greedy
+				clr_character_flag = fasting_for_incarnation1
+				set_character_flag = failed_fast_fide
+			}
 		}
 		remove_trait = in_hiding
 		custom_tooltip = { text = TXT_fide_give_up }
@@ -494,59 +494,59 @@ character_event = {
 }
 
 character_event = {
-    id = fide.127
+	id = fide.127
 	desc = EVT_DESC_fide.127
 	picture = GFX_evt_drunk
 	border = GFX_event_normal_frame_religion
 	
 	trigger = {
-	    has_character_flag = fasting_for_incarnation2
+		has_character_flag = fasting_for_incarnation2
 	}
 	
 	mean_time_to_happen = {
-	    days = 10
+		days = 10
 	}
 	
-    option = {
+	option = {
 		name = EVTOPTA_FIDE_127
 		ai_chance = {
 			factor = 5
 		}
 		random_list = {
-		    10 = {
-			    clr_character_flag = fasting_for_incarnation2
+			10 = {
+				clr_character_flag = fasting_for_incarnation2
 				set_character_flag = failed_fast_fide
 				remove_trait = in_hiding
 				custom_tooltip = { text = TXT_fide_give_up }
 			}
-            5 = {
-			    ROOT = {
-			        death = {
-				        death_reason = death_execution_eaten #whatever for now
-			        }
-		        }
+			5 = {
+				ROOT = {
+					death = {
+						death_reason = death_execution_eaten #whatever for now
+					}
+				}
 			}
 			85 = {
-			    clr_character_flag = fasting_for_incarnation2
+				clr_character_flag = fasting_for_incarnation2
 				set_character_flag = fasting_for_incarnation3
 			}
-	    }
+		}
 	}
 }
 
 narrative_event = { 
-    id = fide.128
+	id = fide.128
 	title = EVTNAME_fide_divine_vessel
 	desc = EVT_DESC_fide.128
 	picture = GFX_evt_tribal_shrine_cm
 	#border = GFX_event_normal_frame_religion
 	
 	trigger = {
-	    has_character_flag = fasting_for_incarnation3
+		has_character_flag = fasting_for_incarnation3
 	}
 	
 	mean_time_to_happen = {
-	    days = 1
+		days = 1
 	}
 	
 	option = {
@@ -621,25 +621,25 @@ narrative_event = {
 		}
 	}
 }
-	    
+		
 narrative_event = { 
-    id = fide.129
+	id = fide.129
 	title = EVTNAME_fide_failed_fast
 	desc = EVT_DESC_fide.129
 	picture = GFX_evt_lady_guadalupe
 	border = GFX_event_normal_frame_religion
 	
 	trigger = {
-	    has_character_flag = failed_fast_fide
+		has_character_flag = failed_fast_fide
 	}
 	
 	mean_time_to_happen = {
-	    days = 1
+		days = 1
 	}
 	
 	option = {
-	    name = EVTOPTA_fide.129
-	    piety = -500
+		name = EVTOPTA_fide.129
+		piety = -500
 	}
 }
 

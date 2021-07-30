@@ -85,7 +85,7 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				reverse_opinion = { who = FROM value = 40 }
@@ -175,7 +175,7 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				OR = {
@@ -234,7 +234,7 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				reverse_opinion = { who = FROM value = 40 }
@@ -541,81 +541,81 @@ targetted_decisions = {
 		}
 		ai_acceptance = {
 			factor = 0
-			
+
 			additive_modifier = {
 				value = 10
-				opinion = {who =  FROM value >=95}
+				opinion = {who = FROM value >=95}
 				localisation_key = REASON_OPINION
 			}
 			additive_modifier = {
 				value = 9
 				AND = {
-					opinion = {who =  FROM value >=85}
-					opinion = {who =  FROM value <95}
+					opinion = {who = FROM value >=85}
+					opinion = {who = FROM value <95}
 				}
 				localisation_key = REASON_OPINION
 			}
 			additive_modifier = {
 				value = 8
 				AND = {
-					opinion = {who =  FROM value >=75}
-					opinion = {who =  FROM value <85}
+					opinion = {who = FROM value >=75}
+					opinion = {who = FROM value <85}
 				}
 				localisation_key = REASON_OPINION
 			}
 			additive_modifier = {
 				value = 7
 				AND = {
-					opinion = {who =  FROM value >=65}
-					opinion = {who =  FROM value <75}
+					opinion = {who = FROM value >=65}
+					opinion = {who = FROM value <75}
 				}
 				localisation_key = REASON_OPINION
 			}
 			additive_modifier = {
 				value = 6
 				AND = {
-					opinion = {who =  FROM value >=55}
-					opinion = {who =  FROM value <65}
+					opinion = {who = FROM value >=55}
+					opinion = {who = FROM value <65}
 				}
 				localisation_key = REASON_OPINION
 			}
 			additive_modifier = {
 				value = 5
 				AND = {
-					opinion = {who =  FROM value >=45}
-					opinion = {who =  FROM value <55}
+					opinion = {who = FROM value >=45}
+					opinion = {who = FROM value <55}
 				}
 				localisation_key = REASON_OPINION
 			}
 			additive_modifier = {
 				value = 4
 				AND = {
-					opinion = {who =  FROM value >=35}
-					opinion = {who =  FROM value <45}
+					opinion = {who = FROM value >=35}
+					opinion = {who = FROM value <45}
 				}
 				localisation_key = REASON_OPINION
 			}
 			additive_modifier = {
 				value = 3
 				AND = {
-					opinion = {who =  FROM value >=25}
-					opinion = {who =  FROM value <35}
+					opinion = {who = FROM value >=25}
+					opinion = {who = FROM value <35}
 				}
 				localisation_key = REASON_OPINION
 			}
 			additive_modifier = {
 				value = 2
 				AND = {
-					opinion = {who =  FROM value >=15}
-					opinion = {who =  FROM value <25}
+					opinion = {who = FROM value >=15}
+					opinion = {who = FROM value <25}
 				}
 				localisation_key = REASON_OPINION
 			}
 			additive_modifier = {
 				value = 1
 				AND = {
-					opinion = {who =  FROM value >=5}
-					opinion = {who =  FROM value <15}
+					opinion = {who = FROM value >=5}
+					opinion = {who = FROM value <15}
 				}
 				localisation_key = REASON_OPINION
 			}
@@ -704,9 +704,9 @@ targetted_decisions = {
 				opinion = {who = FROM value <=-95}
 				localisation_key = REASON_OPINION
 			}
-			
-			
-			additive_modifier  = {#religion is hard to convert
+
+
+			additive_modifier = {#religion is hard to convert
 				value = -3
 				ROOT = {
 					is_hard_to_convert = yes

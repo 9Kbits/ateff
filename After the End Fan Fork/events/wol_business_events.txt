@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# Way of Life business events			 #
-#										 #
-# ID WoL.10000-WoL.10999				  #
-#										 #
+#										#
+# Way of Life business events			#
+#										#
+# ID WoL.10000-WoL.10999				#
+#										#
 ###########################################
 
 # Written by Joel Hansson
@@ -919,7 +919,7 @@ character_event = {
 					factor = 1.3
 					FROM = { stewardship = 10 }
 				}
-				
+	
 				modifier = {
 					factor = 1.3
 					FROM = { stewardship = 13 }
@@ -934,7 +934,7 @@ character_event = {
 					factor = 1.3
 					FROM = { stewardship = 10 }
 				}
-				
+	
 				modifier = {
 					factor = 1.3
 					FROM = { stewardship = 13 }
@@ -1422,7 +1422,7 @@ province_event = {
 			name = trade_route
 			duration = 10950
 		}
-		hidden_tooltip = {			
+		hidden_tooltip = {
 			add_province_modifier = {
 				name = refresh_trade_route_timer
 				duration = 9125
@@ -1481,7 +1481,7 @@ province_event = {
 			name = trade_route
 			duration = 10950
 		}
-		hidden_tooltip = {			
+		hidden_tooltip = {
 			add_province_modifier = {
 				name = refresh_trade_route_timer
 				duration = 9125
@@ -1906,7 +1906,7 @@ character_event = {
 		}
 		add_trait = cruel
 		hidden_tooltip = {
-			character_event = { id = WoL.10208 days = 120 }			
+			character_event = { id = WoL.10208 days = 120 }
 		}
 	}
 	
@@ -2100,7 +2100,7 @@ character_event = {
 	is_triggered_only = yes
 	hide_window = yes
 	immediate = {
-		FROM = {				
+		FROM = {	
 			random_list = {
 					10 = {
 						character_event = { id = WoL.10214 }
@@ -2212,7 +2212,7 @@ long_character_event = {
 							NOT = {
 								OR = {
 									has_province_modifier = leaning_tower
-									has_province_modifier = leaning_tower_bad									
+									has_province_modifier = leaning_tower_bad	
 								}
 							}
 						}
@@ -2262,7 +2262,7 @@ long_character_event = {
 							NOT = {
 								OR = {
 									has_province_modifier = leaning_tower
-									has_province_modifier = leaning_tower_bad									
+									has_province_modifier = leaning_tower_bad	
 								}
 							}
 						}
@@ -2933,7 +2933,7 @@ character_event = {
 			limit = { NOT = { trait = slothful } }
 			random = {
 				chance = 50
-				add_trait = diligent			
+				add_trait = diligent
 				hidden_tooltip = {
 					character_event ={
 						id = 38256 #Notify Diligent
@@ -2998,7 +2998,7 @@ character_event = {
 		name = EVTOPTC_WOL_10301
 		random = {
 			chance = 50
-			add_trait = cruel			
+			add_trait = cruel
 			hidden_tooltip = {
 				character_event ={
 					id = 38259 #Notify Cruel
@@ -3336,7 +3336,7 @@ character_event = {
 					}
 					factor = 0
 				}
-				random_demesne_province = {			
+				random_demesne_province = {
 					limit = {
 						any_province_holding = {
 							holding_type = city

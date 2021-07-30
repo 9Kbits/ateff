@@ -1056,7 +1056,7 @@ character_event = {
 				prisoner = no
 				is_close_relative = ROOT
 				OR = {
-					AND = {				
+					AND = {	
 						is_female = no
 						ROOT = {
 							OR = {
@@ -1065,7 +1065,7 @@ character_event = {
 							}
 						}
 					}
-					AND = {				
+					AND = {	
 						is_female = yes
 						ROOT = {
 							NOR = {
@@ -1104,7 +1104,7 @@ character_event = {
 				is_close_relative = FROM
 				NOT = { is_friend = ROOT }
 				OR = {
-					AND = {				
+					AND = {	
 						is_female = no
 						ROOT = {
 							OR = {
@@ -1113,7 +1113,7 @@ character_event = {
 							}
 						}
 					}
-					AND = {				
+					AND = {	
 						is_female = yes
 						ROOT = {
 							NOR = {
@@ -1466,7 +1466,7 @@ character_event = {
 							}
 						}
 					}
-					AND = {				
+					AND = {	
 						is_female = yes
 						ROOT = {
 							NOR = {
@@ -1479,10 +1479,10 @@ character_event = {
 					ROOT = { has_law = true_cognatic_succession }
 				}
 			}
-			
+
 			ROOT = { set_character_flag = found_second }
 			save_event_target_as = target_second
-			
+
 			ROOT = {
 				random_child = {
 					limit = {
@@ -1496,7 +1496,7 @@ character_event = {
 						NOT = { character = PREVPREV }
 						host = { character = ROOT }
 						OR = {
-							AND = {				
+							AND = {	
 								is_female = no
 								ROOT = {
 									OR = {
@@ -1505,7 +1505,7 @@ character_event = {
 									}
 								}
 							}
-							AND = {				
+							AND = {	
 								is_female = yes
 								ROOT = {
 									NOR = {

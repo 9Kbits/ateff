@@ -210,7 +210,7 @@ targeted_decisions = {
 		effect = {
 			piety = -100
 			FROM = { set_character_flag = praying_for_strength }
-			
+
 			if = {
 				limit = { character = FROM }
 				custom_tooltip = {
@@ -219,7 +219,7 @@ targeted_decisions = {
 					narrative_event = { id = machete.20 }
 				}
 			}
-			
+
 			if = {
 				limit = { NOT = { character = FROM } }
 				save_event_target_as = strength_prayer_target
@@ -296,7 +296,7 @@ targeted_decisions = {
 		effect = {
 			piety = -50
 			FROM = { set_character_flag = praying_for_fertility }
-			
+
 			if = {
 				limit = { character = FROM }
 				custom_tooltip = {
@@ -305,7 +305,7 @@ targeted_decisions = {
 					narrative_event = { id = machete.30 }
 				}
 			}
-			
+
 			if = {
 				limit = { NOT = { character = FROM } }
 				save_event_target_as = fertility_prayer_target

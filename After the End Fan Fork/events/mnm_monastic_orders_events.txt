@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# M&M Monastic Orders Events			  #
-#										 #
-# ID MNM.4000-MNM.4999					  #
-#										 #
+#										#
+# M&M Monastic Orders Events			#
+#										#
+# ID MNM.4000-MNM.4999					#
+#										#
 ###########################################
 
 #IDs:
@@ -54,7 +54,7 @@ letter_event = {
 	option = { 
 		name = EVTOPTA_MNM_44511
 
-	   FROM = {
+	FROM = {
 			show_scope_change = no
 			ROOT = {
 				show_scope_change = no
@@ -211,7 +211,7 @@ character_event = {
 				trigger = {
 					is_playable = yes
 					any_demesne_province = {
-						num_of_empty_holdings = 1			
+						num_of_empty_holdings = 1
 					}
 				}
 				modifier = {
@@ -847,7 +847,7 @@ character_event = {
 		}
 	}
 
-	#Fight it  (with reading from your library!)
+	#Fight it (with reading from your library!)
 	option = {
 		name = {
 			trigger = { has_character_flag = holy_seclusion_lustful }
@@ -2068,10 +2068,10 @@ character_event = {
 	immediate = { 
 		trigger_switch = {
 			on_trigger = has_character_flag 
-			understood_lesson 	= { FROM = { character_event = { id = MNM.4422 } } clr_character_flag = understood_lesson }
-			failed_lesson 		= { FROM = { character_event = { id = MNM.4423 } } clr_character_flag = failed_lesson }
-			kindly_rejected 	= { FROM = { character_event = { id = MNM.4424 } } clr_character_flag = kindly_rejected }
-			cruelly_rejected 	= { FROM = { character_event = { id = MNM.4425 } } clr_character_flag = cruelly_rejected }
+			understood_lesson = { FROM = { character_event = { id = MNM.4422 } } clr_character_flag = understood_lesson }
+			failed_lesson 	 = { FROM = { character_event = { id = MNM.4423 } } clr_character_flag = failed_lesson }
+			kindly_rejected = { FROM = { character_event = { id = MNM.4424 } } clr_character_flag = kindly_rejected }
+			cruelly_rejected = { FROM = { character_event = { id = MNM.4425 } } clr_character_flag = cruelly_rejected }
 		}
 	}
 }
@@ -3445,7 +3445,7 @@ character_event = {
 			60 = {
 				modifier = {
 					factor = 0.2
-					NOR = {			
+					NOR = {
 						primary_title = {
 							has_law = status_of_women_4
 						}
@@ -3565,7 +3565,7 @@ character_event = {
 				40 = { add_trait = mastermind_theologian }
 			}
 
-			#Up  learning
+			#Up learning
 			random_list = {
 				25 = { change_learning = 3 }
 				25 = { change_learning = 4 }
@@ -3671,7 +3671,7 @@ character_event = {
 				limit = { religion_group = jewish_group }
 				remove_trait = chaste
 			}
-			
+
 			#Misc traits
 			remove_trait = deceitful
 			remove_trait = arbitrary
@@ -3876,7 +3876,7 @@ character_event = {
 			}
 			save_event_target_as = benedictines_diligent_mentor
 		}
-   		random_society_member = {
+ 		random_society_member = {
 			limit = {
 				society_member_of = monastic_order_benedictine
 				society_rank = { rank == 4 }
@@ -4201,7 +4201,7 @@ character_event = {
 	desc = {
 		trigger = { #target is slothful
 			event_target:benedictines_diligent_mentee = {
-				has_character_flag =  MNM_4609_had_slothful
+				has_character_flag = MNM_4609_had_slothful
 			} 
 		}
 		text = EVTDESC_MNM_4609_SLOTHFUL
@@ -4280,7 +4280,7 @@ character_event = {
 			}
 			save_event_target_as = leibowitz_erudite_mentor
 		}
-   		random_society_member = {
+ 		random_society_member = {
 			limit = {
 				society_member_of = monastic_order_leibowitz
 				society_rank = { rank == 4 }
@@ -4664,7 +4664,7 @@ character_event = {
 	desc = {
 		trigger = { #target is slow
 			event_target:leibowitz_erudite_mentee = {
-				has_character_flag =  MNM_46091_had_slow
+				has_character_flag = MNM_46091_had_slow
 			} 
 		}
 		text = EVTDESC_MNM_46091_SLOW
@@ -4939,7 +4939,7 @@ letter_event = {
 
 	option = {
 		name = EVTOPT_MNM_4014
-			
+
 		wealth = -100
 		if = {
 			limit = { NOT = { has_quest = quest_monastic_order_donate_to_charity } }
@@ -4970,7 +4970,7 @@ letter_event = {
 				add_society_currency_major_effect = yes
 			}
 			else = {
-				add_society_currency_medium_effect = yes			
+				add_society_currency_medium_effect = yes
 			}
 		}
 
@@ -5306,7 +5306,7 @@ character_event = {
 				}
 				10 = {
 					modifier = {
-						factor =  0
+						factor = 0
 						OR = {
 							trait = ambitious
 							trait = content
@@ -5344,26 +5344,26 @@ character_event = {
 
 		trigger_switch = {
 			on_trigger = has_character_flag
-			purity_remove_cynical		= { remove_trait = cynical }
-			purity_remove_gluttonous	= { remove_trait = gluttonous }
-			purity_remove_greedy		= { remove_trait = greedy }
-			purity_remove_slothful		= { remove_trait = slothful }
-			purity_remove_envious		= { remove_trait = envious }
-			purity_remove_wroth			= { remove_trait = wroth }
-			purity_remove_proud			= { remove_trait = proud }
-			purity_remove_deceitful	 = { remove_trait = deceitful }
-			purity_remove_cruel			= { remove_trait = cruel }
-			purity_remove_lustful		= { remove_trait = lustful }
-			purity_add_humble			= { add_trait = humble }
-			purity_add_charitable		= { add_trait = charitable }
-			purity_add_chaste			= { add_trait = chaste }
-			purity_add_kind				= { add_trait = kind }
-			purity_add_temperate		= { add_trait = temperate }
-			purity_add_honest			= { add_trait = honest }
-			purity_remove_ambitious		= { remove_trait = ambitious }
-			purity_add_content			= { add_trait = content }
-			purity_add_patient			= { add_trait = patient }
-			purity_add_diligent			= { add_trait = diligent }
+			purity_remove_cynical	 = { remove_trait = cynical }
+			purity_remove_gluttonous = { remove_trait = gluttonous }
+			purity_remove_greedy	 = { remove_trait = greedy }
+			purity_remove_slothful	 = { remove_trait = slothful }
+			purity_remove_envious	 = { remove_trait = envious }
+			purity_remove_wroth		 = { remove_trait = wroth }
+			purity_remove_proud		 = { remove_trait = proud }
+			purity_remove_deceitful = { remove_trait = deceitful }
+			purity_remove_cruel		 = { remove_trait = cruel }
+			purity_remove_lustful	 = { remove_trait = lustful }
+			purity_add_humble		 = { add_trait = humble }
+			purity_add_charitable	 = { add_trait = charitable }
+			purity_add_chaste		 = { add_trait = chaste }
+			purity_add_kind			 = { add_trait = kind }
+			purity_add_temperate	 = { add_trait = temperate }
+			purity_add_honest		 = { add_trait = honest }
+			purity_remove_ambitious	 = { remove_trait = ambitious }
+			purity_add_content		 = { add_trait = content }
+			purity_add_patient		 = { add_trait = patient }
+			purity_add_diligent		 = { add_trait = diligent }
 		}
 
 		clr_character_flag = purity_remove_cynical
@@ -5403,7 +5403,7 @@ letter_event = {
 	}
 
 	option = {
-	 	name = EVTOPTA_MNM_4428
+		name = EVTOPTA_MNM_4428
 		add_artifact = ate_fingerbone_of_saint
 	}
 }
@@ -6116,7 +6116,7 @@ character_event = {
 				set_character_flag = monastic_artifact_fragment_of_true_cross
 			}
 			20 = {
-				modifier = { factor = 0 NOR = { religion_group = christian religion_group = mormon  } }
+				modifier = { factor = 0 NOR = { religion_group = christian religion_group = mormon } }
 				modifier = {
 					factor = 0
 					has_artifact = ate_weeping_statue
@@ -6891,7 +6891,7 @@ character_event = {
 			}
 			custom_tooltip = { text = holmgang_chances_terrible }
 			hidden_tooltip = {
-				random_list = {					
+				random_list = {
 					1 = {
 						character_event = { id = MNM.4620 days = 0 }
 					}
@@ -8143,7 +8143,7 @@ character_event = {
 }
 
 ############################################
-####   Advising a Poet: Hidden start	####
+#### Advising a Poet: Hidden start	####
 ############################################
 character_event = {
 	id = MNM.3260
@@ -8180,7 +8180,7 @@ character_event = {
 			}
 		}	
 	}
-	   
+	
 	immediate = {
 		# First look for someone at court
 		society = {
@@ -8202,7 +8202,7 @@ character_event = {
 				character_event = { id = MNM.3261 }
 				break = yes
 			}
-			
+
 			# Then look for someone in the same realm
 			random_society_member = {
 				limit = {
@@ -8222,7 +8222,7 @@ character_event = {
 				character_event = { id = MNM.3261 }
 				break = yes
 			}
-			
+
 			# Then look abroad...
 			random_society_member = {
 				limit = {
@@ -8617,7 +8617,7 @@ character_event = {
 			}
 		}	
 	}
-	   
+	
 	immediate = {
 		# First look for someone at court
 		society = {
@@ -8638,7 +8638,7 @@ character_event = {
 				character_event = { id = MNM.4201 }
 				break = yes
 			}
-			
+
 			# Then look for someone in the same realm
 			random_society_member = {
 				limit = {
@@ -8658,7 +8658,7 @@ character_event = {
 				character_event = { id = MNM.4201 }
 				break = yes
 			}
-			
+
 			# Then look abroad...
 			random_society_member = {
 				limit = {
@@ -8936,7 +8936,7 @@ character_event = { #Hidden start
 			}
 		}	
 	}
-	   
+	
 	immediate = {
 		# First look for someone at court
 		society = {
@@ -8954,7 +8954,7 @@ character_event = { #Hidden start
 				character_event = { id = MNM.4211 }
 				break = yes
 			}
-			
+
 			# Then look for someone in the same realm
 			random_society_member = {
 				limit = {
@@ -8970,7 +8970,7 @@ character_event = { #Hidden start
 				character_event = { id = MNM.4211 }
 				break = yes
 			}
-			
+
 			# Then look abroad...
 			random_society_member = {
 				limit = {
@@ -9226,7 +9226,7 @@ character_event = {
 			add_society_currency_major_effect = yes
 		}
 		else = {
-			add_society_currency_medium_effect = yes			
+			add_society_currency_medium_effect = yes
 		}
 	}
 
@@ -9282,7 +9282,7 @@ character_event = {
 			add_society_currency_large_effect = yes
 		}
 		else = {
-			add_society_currency_major_effect = yes			
+			add_society_currency_major_effect = yes
 		}
 
 		trigger = {
@@ -9342,7 +9342,7 @@ character_event = {
 		add_artifact = necronomicon
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_MNM_4218
 		custom_tooltip = { text = EVTOPTA_MNM_4218_TT }
 
@@ -9353,7 +9353,7 @@ character_event = {
 			destroy_artifact = yes
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_MNM_4218
 		custom_tooltip = { text = EVTOPTB_MNM_4218_TT }
 	}
@@ -10089,91 +10089,91 @@ character_event = {
 					set_character_flag = monastic_order_education_remove_lustful
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						trait = gluttonous 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_remove_gluttonous
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						trait = greedy 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_remove_greedy
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						trait = slothful 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_remove_slothful
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						trait = envious 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_remove_envious
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						trait = wroth 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_remove_wroth
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						trait = proud 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_remove_proud
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						trait = deceitful 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_remove_deceitful
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						trait = cruel 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_remove_cruel
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						trait = cynical 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_remove_cynical
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						trait = ambitious 
 						ROOT = { society_rank = 3 }
 					}
 					set_character_flag = monastic_order_education_remove_ambitious
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						NOT = { trait = humble } 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_add_humble
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						NOT = { trait = charitable } 
 						ROOT = { society_rank = 1 }
 					}
 					set_character_flag = monastic_order_education_add_charitable
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						NOT = { trait = chaste }
 						NOT = { religion_group = jewish_group }
 						ROOT = { society_rank = 2 }
@@ -10181,24 +10181,24 @@ character_event = {
 					set_character_flag = monastic_order_education_add_chaste
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						NOT = { trait = kind } 
 						ROOT = { society_rank = 2 }
 					}
 					set_character_flag = monastic_order_education_add_kind
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						NOT = { trait = temperate } 
 						ROOT = { society_rank = 2 }
 					}
 					set_character_flag = monastic_order_education_add_temperate
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						NOT = { trait = patient }
 						ROOT = { society_rank = 3 }
-					 }
+					}
 					set_character_flag = monastic_order_education_add_patient
 				}
 				1 = {
@@ -10209,14 +10209,14 @@ character_event = {
 					set_character_flag = monastic_order_education_add_diligent
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						NOT = { trait = honest } 
 						ROOT = { society_rank = 2 }
 					}
 					set_character_flag = monastic_order_education_add_honest
 				}
 				1 = {
-					trigger = {  
+					trigger = { 
 						NOT = { trait = content } 
 						ROOT = { society_rank = 3 }
 					}
@@ -10244,26 +10244,26 @@ character_event = {
 		name = EVT_OPTA_MNM_4304
 		trigger_switch = {
 			on_trigger = has_character_flag
-			monastic_order_education_remove_lustful		= { remove_trait = lustful }
-			monastic_order_education_remove_gluttonous	= { remove_trait = gluttonous }
-			monastic_order_education_remove_greedy		= { remove_trait = greedy }
-			monastic_order_education_remove_slothful	= { remove_trait = slothful }
-			monastic_order_education_remove_envious		= { remove_trait = envious }
-			monastic_order_education_remove_wroth		= { remove_trait = wroth }
-			monastic_order_education_remove_proud		= { remove_trait = proud }
-			monastic_order_education_remove_deceitful   = { remove_trait = deceitful }
-			monastic_order_education_remove_cruel		= { remove_trait = cruel }
-			monastic_order_education_remove_cynical		= { remove_trait = cynical }
-			monastic_order_education_remove_ambitious	= { remove_trait = ambitious }
-			monastic_order_education_add_humble			= { add_trait = humble }
-			monastic_order_education_add_charitable		= { add_trait = charitable }
-			monastic_order_education_add_chaste			= { add_trait = chaste }
-			monastic_order_education_add_kind			= { add_trait = kind }
-			monastic_order_education_add_temperate		= { add_trait = temperate }
-			monastic_order_education_add_patient		= { add_trait = patient }
-			monastic_order_education_add_diligent		= { add_trait = diligent }
-			monastic_order_education_add_honest			= { add_trait = honest }
-			monastic_order_education_add_content		= { add_trait = content }
+			monastic_order_education_remove_lustful	 = { remove_trait = lustful }
+			monastic_order_education_remove_gluttonous = { remove_trait = gluttonous }
+			monastic_order_education_remove_greedy	 = { remove_trait = greedy }
+			monastic_order_education_remove_slothful = { remove_trait = slothful }
+			monastic_order_education_remove_envious	 = { remove_trait = envious }
+			monastic_order_education_remove_wroth	 = { remove_trait = wroth }
+			monastic_order_education_remove_proud	 = { remove_trait = proud }
+			monastic_order_education_remove_deceitful = { remove_trait = deceitful }
+			monastic_order_education_remove_cruel	 = { remove_trait = cruel }
+			monastic_order_education_remove_cynical	 = { remove_trait = cynical }
+			monastic_order_education_remove_ambitious = { remove_trait = ambitious }
+			monastic_order_education_add_humble		 = { add_trait = humble }
+			monastic_order_education_add_charitable	 = { add_trait = charitable }
+			monastic_order_education_add_chaste		 = { add_trait = chaste }
+			monastic_order_education_add_kind		 = { add_trait = kind }
+			monastic_order_education_add_temperate	 = { add_trait = temperate }
+			monastic_order_education_add_patient	 = { add_trait = patient }
+			monastic_order_education_add_diligent	 = { add_trait = diligent }
+			monastic_order_education_add_honest		 = { add_trait = honest }
+			monastic_order_education_add_content	 = { add_trait = content }
 		}
 		FROM = { character_event = { id = MNM.4305 days = 1 } }
 	}
@@ -10291,26 +10291,26 @@ character_event = {
 			show_scope_change = no
 			trigger_switch = {
 				on_trigger = has_character_flag
-				monastic_order_education_remove_lustful		= { remove_trait = lustful }
-				monastic_order_education_remove_gluttonous	= { remove_trait = gluttonous }
-				monastic_order_education_remove_greedy		= { remove_trait = greedy }
-				monastic_order_education_remove_slothful	= { remove_trait = slothful }
-				monastic_order_education_remove_envious		= { remove_trait = envious }
-				monastic_order_education_remove_wroth		= { remove_trait = wroth }
-				monastic_order_education_remove_proud		= { remove_trait = proud }
-				monastic_order_education_remove_deceitful   = { remove_trait = deceitful }
-				monastic_order_education_remove_cruel		= { remove_trait = cruel }
-				monastic_order_education_remove_cynical		= { remove_trait = cynical }
-				monastic_order_education_remove_ambitious	= { remove_trait = ambitious }
-				monastic_order_education_add_humble			= { add_trait = humble }
-				monastic_order_education_add_charitable		= { add_trait = charitable }
-				monastic_order_education_add_chaste			= { add_trait = chaste }
-				monastic_order_education_add_kind			= { add_trait = kind }
-				monastic_order_education_add_temperate		= { add_trait = temperate }
-				monastic_order_education_add_patient		= { add_trait = patient }
-				monastic_order_education_add_diligent		= { add_trait = diligent }
-				monastic_order_education_add_honest			= { add_trait = honest }
-				monastic_order_education_add_content		= { add_trait = content }
+				monastic_order_education_remove_lustful	 = { remove_trait = lustful }
+				monastic_order_education_remove_gluttonous = { remove_trait = gluttonous }
+				monastic_order_education_remove_greedy	 = { remove_trait = greedy }
+				monastic_order_education_remove_slothful = { remove_trait = slothful }
+				monastic_order_education_remove_envious	 = { remove_trait = envious }
+				monastic_order_education_remove_wroth	 = { remove_trait = wroth }
+				monastic_order_education_remove_proud	 = { remove_trait = proud }
+				monastic_order_education_remove_deceitful = { remove_trait = deceitful }
+				monastic_order_education_remove_cruel	 = { remove_trait = cruel }
+				monastic_order_education_remove_cynical	 = { remove_trait = cynical }
+				monastic_order_education_remove_ambitious = { remove_trait = ambitious }
+				monastic_order_education_add_humble		 = { add_trait = humble }
+				monastic_order_education_add_charitable	 = { add_trait = charitable }
+				monastic_order_education_add_chaste		 = { add_trait = chaste }
+				monastic_order_education_add_kind		 = { add_trait = kind }
+				monastic_order_education_add_temperate	 = { add_trait = temperate }
+				monastic_order_education_add_patient	 = { add_trait = patient }
+				monastic_order_education_add_diligent	 = { add_trait = diligent }
+				monastic_order_education_add_honest		 = { add_trait = honest }
+				monastic_order_education_add_content	 = { add_trait = content }
 			}
 			clr_character_flag = monastic_order_education_remove_lustful
 			clr_character_flag = monastic_order_education_remove_gluttonous

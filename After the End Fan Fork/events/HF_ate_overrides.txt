@@ -506,7 +506,7 @@ character_event = {
 					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Abbess-General.
 						factor = 0.5
 						religion = ursuline
-						NOR = {  
+						NOR = { 
 							has_landed_title = k_quebec
 							has_landed_title = k_aurora
 							has_landed_title = k_michigan
@@ -516,7 +516,7 @@ character_event = {
 					}
 					modifier = { #If the Pope disliked him, less likely to be crowned by him.
 						factor = 0.5
-						NOT = {  
+						NOT = { 
 							reverse_opinion = { 
 								who = ROOT
 								value = 0 
@@ -671,14 +671,14 @@ character_event = {
 					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
 						factor = 0.5
 						religion = mormon
-						NOR = {  
+						NOR = { 
 							has_landed_title = k_deseret
 							has_landed_title = k_arixo
 						} 
 					}
 					modifier = { #If the Pope disliked him, less likely to be crowned by him.
 						factor = 0.5
-						NOT = {  
+						NOT = { 
 							reverse_opinion = { 
 								who = ROOT
 								value = 0 
@@ -833,7 +833,7 @@ character_event = {
 					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
 						factor = 0.5
 						religion = high_church
-						NOR = {  
+						NOR = { 
 							has_landed_title = k_ontario
 							has_landed_title = k_maritimes
 							has_landed_title = k_quebec
@@ -841,7 +841,7 @@ character_event = {
 					}
 					modifier = { #If the Pope disliked him, less likely to be crowned by him.
 						factor = 0.5
-						NOT = {  
+						NOT = { 
 							reverse_opinion = { 
 								who = ROOT
 								value = 0 
@@ -851,7 +851,7 @@ character_event = {
 					modifier = { #Historically more likely.
 						factor = 10
 						religion = high_church
-						OR = {  
+						OR = { 
 							has_landed_title = k_ontario
 							has_landed_title = k_maritimes
 						} 
@@ -1227,7 +1227,7 @@ narrative_event = {
 narrative_event = {
 	id = HFATE.24202
 	title = EVTTITLEHFATE24201
-	desc  = EVTDESCAHFATE24202
+	desc = EVTDESCAHFATE24202
 	picture = GFX_evt_death
 	border = GFX_event_narrative_frame_war
 	
@@ -2096,7 +2096,7 @@ narrative_event = {
 				inheritance = matrilineal
 			}		
 		}
-		any_playable_ruler = {  
+		any_playable_ruler = { 
 			limit = { 
 				ai = no 
 				is_within_diplo_range = ROOT
@@ -3871,7 +3871,7 @@ narrative_event = {
 				inheritance = matrilineal
 			}		
 		}
-		any_playable_ruler = {  
+		any_playable_ruler = { 
 			limit = { 
 				ai = no 
 				is_within_diplo_range = ROOT

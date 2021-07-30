@@ -104,7 +104,7 @@ character_event = {
 					change_learning = 2
 				}
 				60 = {
-					
+
 				}
 			}
 			if = {
@@ -377,7 +377,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 50
-			
+
 			modifier = {
 				factor = 2
 				trait = zealous
@@ -408,7 +408,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 50
-			
+
 			modifier = {
 				factor = 2
 				trait = cynical
@@ -481,7 +481,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 20
-			
+
 			modifier = {
 				factor = 3
 				trait = kind
@@ -503,7 +503,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 80
-			
+
 			modifier = {
 				factor = 2
 				trait = paranoid
@@ -577,7 +577,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 30
-			
+
 			modifier = {
 				factor = 2
 				trait = kind
@@ -603,7 +603,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 20
-			
+
 			modifier = {
 				factor = 5
 				trait = charitable
@@ -625,7 +625,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 20
-			
+
 			modifier = {
 				factor = 4
 				trait = greedy
@@ -643,7 +643,7 @@ character_event = {
 		
 		ai_chance = {
 			factor = 20
-			
+
 			modifier = {
 				factor = 2
 				OR = {
@@ -762,7 +762,7 @@ character_event = {
 						trait = shrewd
 					}
 				}
-				
+	
 				if = {
 					limit = {
 						trait = physician
@@ -777,7 +777,7 @@ character_event = {
 					add_trait = physician
 					FROM = { set_character_flag = physician_got_trait }
 				}
-				
+	
 				FROM = { character_event = { id = RIP.4532 } }
 			}
 			40 = { # Ok outcome
@@ -793,9 +793,9 @@ character_event = {
 					factor = 2
 					trait = content
 				}
-				
+	
 				change_learning = 1
-				
+	
 				FROM = { character_event = { id = RIP.4533 } }
 			}
 			20 = { # Bad outcome
@@ -807,7 +807,7 @@ character_event = {
 					factor = 2
 					trait = shy
 				}
-				
+	
 				FROM = { character_event = { id = RIP.4534 } }
 			}
 		}

@@ -96,7 +96,7 @@ character_event = { # No longer allowed to raid
 	
 	notification = yes
 	
-	option = {	 
+	option = {	
 		name = EVTOPTA_JD_4001
 	}
 }
@@ -201,9 +201,9 @@ character_event = { # Normal Outcome
 				remove_trait = ugly
 				remove_trait = dwarf
 				remove_trait = weak	
-				
+	
 				add_trait = fair
-				
+	
 				random = {
 					chance = 35
 					add_trait = strong
@@ -241,13 +241,13 @@ character_event = { # Normal Outcome
 				set_character_flag = taught_chinese_strategy
 				set_character_flag = is_chinese_siege_engineer
 				set_character_flag = ignore_refund
-				
+	
 				remove_trait = weak
 				remove_trait = slow
 				remove_trait = imbecile
 				remove_trait = distractible
 				remove_trait = dull
-				
+	
 				remove_trait = craven
 				remove_trait = mystic
 				remove_trait = socializer
@@ -265,9 +265,9 @@ character_event = { # Normal Outcome
 				remove_trait = seductress
 				remove_trait = theologian
 				remove_trait = scholar
-				
+	
 				add_trait = sapper
-				
+	
 				if = {
 					limit = {
 						offmap_china = {
@@ -276,7 +276,7 @@ character_event = { # Normal Outcome
 					}
 					change_martial = 5
 				}
-				
+	
 				random_list = { # Flavor Randomization
 					15 = {
 						change_martial = 2

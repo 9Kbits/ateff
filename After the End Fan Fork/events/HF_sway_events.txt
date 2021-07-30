@@ -1043,7 +1043,7 @@ character_event = {
 				}
 				modifier = { 
 					factor = 0
-					NOR = {  
+					NOR = { 
 						trait = misguided_warrior
 						trait = tough_soldier
 						trait = skilled_tactician
@@ -1067,7 +1067,7 @@ character_event = {
 				}
 				modifier = { 
 					factor = 0
-					NOR = {  
+					NOR = { 
 						trait = naive_appeaser
 						trait = underhanded_rogue
 						trait = charismatic_negotiator
@@ -1091,7 +1091,7 @@ character_event = {
 				}
 				modifier = { 
 					factor = 0
-					NOR = {  
+					NOR = { 
 						trait = indulgent_wastrel
 						trait = thrifty_clerk
 						trait = fortune_builder
@@ -1123,7 +1123,7 @@ character_event = {
 				}
 				modifier = { 
 					factor = 0
-					NOR = {  
+					NOR = { 
 						trait = detached_priest
 						trait = martial_cleric
 						trait = scholarly_theologian
@@ -1211,7 +1211,7 @@ character_event = {
 				}
 				character_event = { id = HF.42000 }
 			}
-			
+
 		################## TIER TWO EVENTS (Personality traits) #################### 
 
 			1 = { #Lustful event.
@@ -1235,7 +1235,7 @@ character_event = {
 				}
 				modifier = { 
 					factor = 0
-					NOT = {  trait = lustful }
+					NOT = { trait = lustful }
 				}
 				persistent_event_target:sway_target = { character_event = { id = HF.21050 } }
 			}
@@ -1260,7 +1260,7 @@ character_event = {
 				}
 				modifier = { 
 					factor = 0
-					NOT = {  trait = gluttonous }
+					NOT = { trait = gluttonous }
 				}
 				persistent_event_target:sway_target = { character_event = { id = HF.21055 } }
 			}
@@ -1285,7 +1285,7 @@ character_event = {
 				}
 				modifier = { 
 					factor = 0
-					NOT = {  trait = slothful }
+					NOT = { trait = slothful }
 				}
 				persistent_event_target:sway_target = { character_event = { id = HF.21060 } }
 			}
@@ -1310,7 +1310,7 @@ character_event = {
 				}
 				modifier = { 
 					factor = 0
-					NOT = {  trait = wroth }
+					NOT = { trait = wroth }
 				}
 				persistent_event_target:sway_target = { character_event = { id = HF.21065 } }
 			}
@@ -1335,7 +1335,7 @@ character_event = {
 				}
 				modifier = { 
 					factor = 0
-					NOT = {  trait = proud }
+					NOT = { trait = proud }
 				}
 				persistent_event_target:sway_target = { character_event = { id = HF.21070 } }
 			}
@@ -1421,7 +1421,7 @@ character_event = {
 									any_defender = { character = ROOT } 
 									any_attacker = { character = persistent_event_target:sway_target } 
 								}
-							}  
+							} 
 						}
 					}
 				}
@@ -1517,7 +1517,7 @@ character_event = {
 				modifier = { 
 					factor = 0
 					persistent_event_target:sway_target = { 
-						NOT = {  
+						NOT = { 
 							opinion = {
 								who = ROOT
 								value = -40
@@ -1738,7 +1738,7 @@ character_event = {
 
 	immediate = { 
 		FROM = { character_event = { id = HF.21002 } }
-	#	if = {  - Older check, no longer needed
+	#	if = { - Older check, no longer needed
 	#		limit = { NOT = { is_within_diplo_range = FROM } }
 	#		
 	#	}
@@ -1841,7 +1841,7 @@ character_event = {
 			who = FROM
 			modifier = opinion_grateful
 			years = 5
-		 }
+		}
 		ai_chance = { factor = 0 }
 	}
 }
@@ -2618,7 +2618,7 @@ character_event = {
 		if = { 
 			limit = { FROM = { has_character_flag = flag_appease_big_gift } } 
 			prestige = 100
-			opinion = {  
+			opinion = { 
 				who = FROM
 				modifier = opinion_swayed_2
 				years = 10
@@ -2627,7 +2627,7 @@ character_event = {
 		if = { 
 			limit = { FROM = { has_character_flag = flag_appease_medium_gift } } 
 			prestige = 50
-			opinion = {  
+			opinion = { 
 				who = FROM
 				modifier = opinion_swayed_1
 				years = 5
@@ -2636,7 +2636,7 @@ character_event = {
 		if = { 
 			limit = { FROM = { has_character_flag = flag_appease_small_gift } } 
 			prestige = 25
-			opinion = {  
+			opinion = { 
 				who = FROM
 				modifier = opinion_swayed_0
 				years = 5
@@ -2648,7 +2648,7 @@ character_event = {
 	option = { #Still don't care.
 		name = EVTOPTBHFP21022
 		FROM = { 
-			opinion =  { 
+			opinion = { 
 				who = ROOT
 				modifier = opinion_offended
 				years = 2
@@ -2657,23 +2657,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21024 days = 15 } } }
 		ai_chance = { 
 			factor = 1
-			modifier = {  
+			modifier = { 
 				factor = 5
 				trait = shy
 			}
-			modifier = {  
+			modifier = { 
 				factor = 5
 				trait = greedy
 			}
-			modifier = {  
+			modifier = { 
 				factor = 5
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 5
 				trait = cruel
 			}
-			modifier = {  
+			modifier = { 
 				factor = 5
 				FROM = { has_character_flag = flag_appease_small_gift }
 			}
@@ -2711,10 +2711,10 @@ character_event = {
 		name = EVTOPTAHFP21023
 		if = { 
 			limit = { has_character_flag = flag_appease_big_gift } 
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -2724,10 +2724,10 @@ character_event = {
 		}
 		if = { 
 			limit = { has_character_flag = flag_appease_medium_gift } 
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -2737,10 +2737,10 @@ character_event = {
 		}
 		if = { 
 			limit = { has_character_flag = flag_appease_small_gift } 
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_0
 						years = 5
@@ -2766,7 +2766,7 @@ character_event = {
 	option = {
 		name = EVTOPTAHFP21024
 		tooltip = { 
-			opinion =  { 
+			opinion = { 
 				who = FROM
 				modifier = opinion_offended
 				years = 2
@@ -2872,7 +2872,7 @@ character_event = {
 		if = { 
 			limit = { FROM = { has_character_flag = flag_appease_big_gift } } 
 			prestige = 300
-			opinion = {  
+			opinion = { 
 				who = FROM
 				modifier = opinion_swayed_2
 				years = 10
@@ -2881,7 +2881,7 @@ character_event = {
 		if = { 
 			limit = { FROM = { has_character_flag = flag_appease_medium_gift } } 
 			prestige = 150
-			opinion = {  
+			opinion = { 
 				who = FROM
 				modifier = opinion_swayed_1
 				years = 5
@@ -2890,7 +2890,7 @@ character_event = {
 		if = { 
 			limit = { FROM = { has_character_flag = flag_appease_small_gift } } 
 			prestige = 59
-			opinion = {  
+			opinion = { 
 				who = FROM
 				modifier = opinion_swayed_0
 				years = 5
@@ -2902,7 +2902,7 @@ character_event = {
 	option = { #Still don't care.
 		name = EVTOPTBHFP21027
 		FROM = { 
-			opinion =  { 
+			opinion = { 
 				who = ROOT
 				modifier = opinion_offended
 				years = 2
@@ -2911,28 +2911,28 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21029 days = 10 } } }
 		ai_chance = { 
 			factor = 1
-			modifier = {  
+			modifier = { 
 				factor = 10
 				is_tribal = no
 				is_nomadic = no
 			}
-			modifier = {  
+			modifier = { 
 				factor = 5
 				trait = shy
 			}
-			modifier = {  
+			modifier = { 
 				factor = 5
 				trait = greedy
 			}
-			modifier = {  
+			modifier = { 
 				factor = 5
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 5
 				trait = cruel
 			}
-			modifier = {  
+			modifier = { 
 				factor = 5
 				FROM = { has_character_flag = flag_appease_small_gift }
 			}
@@ -2970,10 +2970,10 @@ character_event = {
 		name = EVTOPTAHFP21028
 		if = { 
 			limit = { has_character_flag = flag_appease_big_gift } 
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -2983,10 +2983,10 @@ character_event = {
 		}
 		if = { 
 			limit = { has_character_flag = flag_appease_medium_gift } 
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -2996,10 +2996,10 @@ character_event = {
 		}
 		if = { 
 			limit = { has_character_flag = flag_appease_small_gift } 
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_0
 						years = 5
@@ -3024,7 +3024,7 @@ character_event = {
 	option = {
 		name = EVTOPTAHFP21029
 		tooltip = { 
-			opinion =  { 
+			opinion = { 
 				who = FROM
 				modifier = opinion_offended
 				years = 2
@@ -3132,7 +3132,7 @@ character_event = {
 
 	option = { #Impressed
 		name = EVTOPTAHFP21032
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_1
 			years = 5
@@ -3140,7 +3140,7 @@ character_event = {
 		if = { 
 			limit = { 
 				FROM = { 
-					attribute_diff = { character = FROM attribute = martial  value = 2 }
+					attribute_diff = { character = FROM attribute = martial value = 2 }
 					has_character_flag = flag_appease_discuss_strategy # Only if talking about real strategy to somebody that understands it and knows less than the Appeaser.
 				} 
 			} 
@@ -3149,26 +3149,26 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21033 days = 10 } } }
 		ai_chance = { 
 			factor = 70 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.7
 				FROM = { 
 					has_character_flag = flag_appease_brag_military 
 					NOT = { diplomacy = 10 }
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.7
 				FROM = { 
 					has_character_flag = flag_appease_discuss_strategy 
@@ -3183,142 +3183,142 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21034 days = 10 } } }
 		ai_chance = { 
 			factor = 30
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = brave
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = martial  value = 2 }
+				attribute_diff = { character = FROM attribute = martial value = 2 }
 			}
-			modifier = {  
-				factor = 1.5
-				FROM = { has_character_flag = flag_appease_discuss_strategy }
-				attribute_diff = { character = FROM attribute = martial  value = 4 }
-			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_character_flag = flag_appease_discuss_strategy }
-				attribute_diff = { character = FROM attribute = martial  value = 6 }
+				attribute_diff = { character = FROM attribute = martial value = 4 }
 			}
-			modifier = {  
+			modifier = { 
+				factor = 1.5
+				FROM = { has_character_flag = flag_appease_discuss_strategy }
+				attribute_diff = { character = FROM attribute = martial value = 6 }
+			}
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					has_character_flag = flag_appease_brag_military 
 					diplomacy = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_brag_military 
 					diplomacy = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_brag_military 
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_brag_military 
 					diplomacy = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_brag_military 
 					diplomacy = 20
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { 
 					has_character_flag = flag_appease_discuss_strategy 
 					martial = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_discuss_strategy 
 					martial = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_discuss_strategy 
 					martial = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_discuss_strategy 
 					martial = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_discuss_strategy 
 					martial = 20
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.85
 				FROM = { trait = tough_soldier }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { trait = skilled_tactician }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = brilliant_strategist }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = strategist }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				trait = misguided_warrior
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = tough_soldier
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = skilled_tactician
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = brilliant_strategist
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = trusting
 				FROM = { has_character_flag = flag_appease_brag_military }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = craven
 				FROM = { has_character_flag = flag_appease_brag_military }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.35
 				trait = paranoid
 				FROM = { has_character_flag = flag_appease_brag_military }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 5
 				FROM = { trait = craven }
 			}
@@ -3368,10 +3368,10 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21033
-		tooltip = {  
-			FROM = {  
+		tooltip = { 
+			FROM = { 
 				show_scope_change = no
-				opinion = {  
+				opinion = { 
 					who = ROOT
 					modifier = opinion_swayed_1
 					years = 5
@@ -3506,7 +3506,7 @@ character_event = {
 	option = { #Really Impressed
 		name = EVTOPTAHFP21037
 		trigger = { FROM = { has_character_flag = flag_appease_send_diploembassy } }
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_2
 			years = 10
@@ -3514,23 +3514,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21038 days = 10 } } }
 		ai_chance = { 
 			factor = 70 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
@@ -3539,7 +3539,7 @@ character_event = {
 	}
 	option = { #Impressed
 		name = EVTOPTBHFP21037
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_0
 			years = 5
@@ -3547,23 +3547,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21038 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
@@ -3576,62 +3576,62 @@ character_event = {
 		ai_chance = { 
 			factor = 20
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					diplomacy = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					diplomacy = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					diplomacy = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					diplomacy = 20
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.85
 				FROM = { trait = underhanded_rogue }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { trait = charismatic_negotiator }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = grey_eminence }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = socializer }
 			}
@@ -3662,12 +3662,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21038
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_appease_send_diploembassy }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -3675,12 +3675,12 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_appease_send_diploletter }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_0
 						years = 5
@@ -3848,7 +3848,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21042 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = greedy
 			}
@@ -3896,7 +3896,7 @@ character_event = {
 	option = { #Really Impressed
 		name = EVTOPTAHFP21042
 		trigger = { FROM = { has_character_flag = flag_appease_send_stewletter } }
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_2
 			years = 10
@@ -3904,27 +3904,27 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21043 days = 10 } } }
 		ai_chance = { 
 			factor = 70 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.3
 				FROM = { has_character_flag = flag_appease_send_stewletter }
 				trait = slothful
@@ -3933,7 +3933,7 @@ character_event = {
 	}
 	option = { #Impressed
 		name = EVTOPTBHFP21042
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_0
 			years = 5
@@ -3945,27 +3945,27 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21043 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.3
 				FROM = { has_character_flag = flag_appease_send_stewletter }
 				trait = slothful
@@ -3979,51 +3979,51 @@ character_event = {
 		ai_chance = { 
 			factor = 20
 			#Relative stewardship
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_character_flag = flag_appease_send_stewletter }
-				attribute_diff = { character = FROM attribute = stewardship  value = 2 }
+				attribute_diff = { character = FROM attribute = stewardship value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_character_flag = flag_appease_send_stewletter }
-				attribute_diff = { character = FROM attribute = stewardship  value = 4 }
+				attribute_diff = { character = FROM attribute = stewardship value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_character_flag = flag_appease_send_stewletter }
-				attribute_diff = { character = FROM attribute = stewardship  value = 6 }
+				attribute_diff = { character = FROM attribute = stewardship value = 6 }
 			}
 			#Raw stewardship
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					has_character_flag = flag_appease_send_stewletter
 					stewardship = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_send_stewletter
 					stewardship = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_send_stewletter
 					stewardship = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_send_stewletter
 					stewardship = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_send_stewletter
@@ -4031,74 +4031,74 @@ character_event = {
 				}
 			}
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_character_flag = flag_appease_tell_prosperity }
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_character_flag = flag_appease_tell_prosperity }
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_character_flag = flag_appease_tell_prosperity }
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					has_character_flag = flag_appease_tell_prosperity
 					diplomacy = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_tell_prosperity
 					diplomacy = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_tell_prosperity
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_tell_prosperity
 					diplomacy = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_tell_prosperity
 					diplomacy = 20
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.85
 				FROM = { trait = indulgent_wastrel }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { trait = thrifty_clerk }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = fortune_builder }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = midas_touched }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = administrator }
 			}
@@ -4136,12 +4136,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21043
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_appease_send_stewletter }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -4149,12 +4149,12 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_appease_share_wealth }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -4162,12 +4162,12 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_appease_tell_prosperity }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_0
 						years = 5
@@ -4280,7 +4280,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21047 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = greedy
 			}
@@ -4336,7 +4336,7 @@ character_event = {
 			chance = 30 
 			change_learning = 1 
 		}
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_1
 			years = 5
@@ -4344,27 +4344,27 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21048 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = greedy
 			}
@@ -4372,7 +4372,7 @@ character_event = {
 	}
 	option = { #Impressed
 		name = EVTOPTBHFP21047
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_0
 			years = 5
@@ -4391,27 +4391,27 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21048 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = greedy
 			}
@@ -4424,79 +4424,79 @@ character_event = {
 		ai_chance = { 
 			factor = 50
 			#Relative learning
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = learning  value = 2 }
+				attribute_diff = { character = FROM attribute = learning value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = learning  value = 4 }
+				attribute_diff = { character = FROM attribute = learning value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = learning  value = 6 }
+				attribute_diff = { character = FROM attribute = learning value = 6 }
 			}
 			#Raw learning
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					learning = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					learning = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					learning = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					learning = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					learning = 20
 				}
 			}
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.85
 				FROM = { trait = detached_priest }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { trait = martial_cleric }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = scholarly_theologian }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = mastermind_theologian }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = scholar }
 			}
@@ -4534,12 +4534,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21048
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_appease_gift_book }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -4547,17 +4547,17 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				OR = { 
 					has_character_flag = flag_appease_offer_prayers
 					has_character_flag = flag_appease_lend_books 
 				} 
 			}
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_0
 						years = 5
@@ -4684,7 +4684,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21052 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = greedy
 			}
@@ -4693,7 +4693,7 @@ character_event = {
 	option = { #Go yourself
 		name = EVTOPTCHFP21051
 		custom_tooltip = { text = tooltip_21051_C } 
-		trigger = {  
+		trigger = { 
 			OR = { 
 				AND = { 
 					FROM = { is_female = yes } 
@@ -4745,7 +4745,7 @@ character_event = {
 	option = { #Really Impressed
 		name = EVTOPTAHFP21052
 		trigger = { trait = lustful }
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_2
 			years = 10
@@ -4784,19 +4784,19 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21053 days = 10 } } }
 		ai_chance = { 
 			factor = 60 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { 
 					age = 40
@@ -4805,7 +4805,7 @@ character_event = {
 					age = 40
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { 
 					has_unattractive_trait_trigger = yes
@@ -4814,7 +4814,7 @@ character_event = {
 					trait = blinded
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { 
 					has_attractive_trait_trigger = yes
@@ -4823,23 +4823,23 @@ character_event = {
 					trait = blinded
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.2
 				trait = chaste
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = celibate
 			}
-			modifier = {  #Not compatible
+			modifier = { #Not compatible
 				factor = 0
 				OR = { 
 					AND = { 
@@ -4857,7 +4857,7 @@ character_event = {
 	option = { #Impressed
 		name = EVTOPTBHFP21052
 		trigger = { NOT = { FROM = { has_character_flag = flag_appease_lustful_present } } }
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_1
 			years = 5
@@ -4865,39 +4865,39 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21053 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = greedy
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.2
 				trait = chaste
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = celibate
 			}
-			modifier = {  #Not compatible
+			modifier = { #Not compatible
 				factor = 0
 				OR = { 
 					AND = { 
@@ -4918,51 +4918,51 @@ character_event = {
 		ai_chance = { 
 			factor = 20
 			#Relative learning (for letter)
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = learning  value = 2 }
+				attribute_diff = { character = FROM attribute = learning value = 2 }
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = learning  value = 4 }
+				attribute_diff = { character = FROM attribute = learning value = 4 }
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = learning  value = 6 }
+				attribute_diff = { character = FROM attribute = learning value = 6 }
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 			}
 			#Raw learning
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 				FROM = { 
 					learning = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 				FROM = { 
 					learning = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 				FROM = { 
 					learning = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 				FROM = { 
 					learning = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 				FROM = { 
@@ -4970,73 +4970,73 @@ character_event = {
 				}
 			}
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
 				FROM = { 
 					diplomacy = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
 				FROM = { 
 					diplomacy = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
 				FROM = { 
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
 				FROM = { 
 					diplomacy = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
 				FROM = { 
 					diplomacy = 20
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_lustful_present
 					higher_tier_than = ROOT 	#Intimidated. 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = seducer }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = seductress }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { trait = schemer }
 			}
@@ -5054,60 +5054,60 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21054 days = 10 } } }
 		ai_chance = { 
 			factor = 10
-			modifier = {  
+			modifier = { 
 				factor = 5
 				trait = celibate
 			}
-			modifier = {  
+			modifier = { 
 				factor = 3
 				trait = chaste
 			}
 			#Relative learning (for letter)
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = learning  value = 2 }
+				attribute_diff = { character = FROM attribute = learning value = 2 }
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = learning  value = 4 }
+				attribute_diff = { character = FROM attribute = learning value = 4 }
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = learning  value = 6 }
+				attribute_diff = { character = FROM attribute = learning value = 6 }
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 			}
 			#Raw learning
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 				FROM = { 
 					learning = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 				FROM = { 
 					learning = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 				FROM = { 
 					learning = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 				FROM = { 
 					learning = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 				FROM = { 
@@ -5115,77 +5115,77 @@ character_event = {
 				}
 			}
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
 				FROM = { 
 					diplomacy = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
 				FROM = { 
 					diplomacy = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
 				FROM = { 
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
 				FROM = { 
 					diplomacy = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				NOT = { FROM = { has_character_flag = flag_appease_dirty_letter } }
 				FROM = { 
 					diplomacy = 20
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_lustful_present
 					higher_tier_than = ROOT 	#Intimidated. 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.65
 				FROM = { has_character_flag = flag_appease_dirty_letter }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = seducer }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = seductress }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { trait = schemer }
 			}
@@ -5223,12 +5223,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21053
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_appease_lustful_present }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -5236,17 +5236,17 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				OR = { 
 					has_character_flag = flag_appease_send_prostitutes
 					has_character_flag = flag_appease_dirty_letter 
 				} 
 			}
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -5284,9 +5284,9 @@ character_event = {
 		name = EVTOPTAHFP21054
 		if = { 
 			limit = { has_character_flag = flag_appeasement_lustful_repulsed } 
-			FROM = {  
+			FROM = { 
 			show_scope_change = no
-				opinion = {  
+				opinion = { 
 					who = ROOT
 					modifier = opinion_disgusted
 					years = 5
@@ -5339,7 +5339,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21057 } } }
 		scaled_wealth = -0.5
 		ai_chance = { factor = 60 
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = greedy
 			}
@@ -5384,7 +5384,7 @@ character_event = {
 
 	option = { #Really Impressed
 		name = EVTOPTAHFP21057
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_2
 			years = 10
@@ -5415,39 +5415,39 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21058 days = 10 } } }
 		ai_chance = { 
 			factor = 20 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.2
 				trait = temperate
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = gluttonous
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = is_fat
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_character_flag = flag_appease_exotic_food }
 			}
@@ -5457,7 +5457,7 @@ character_event = {
 		name = EVTOPTBHFP21057
 		gain_weight_small_effect = yes
 		weight_trait_check_effect = yes
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_1
 			years = 5
@@ -5480,35 +5480,35 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21058 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.2
 				trait = temperate
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = gluttonous
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = is_fat
 			}
@@ -5520,50 +5520,50 @@ character_event = {
 		ai_chance = { 
 			factor = 20
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					diplomacy = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					diplomacy = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					diplomacy = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					diplomacy = 20
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_glutton_dinner
@@ -5578,74 +5578,74 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21059 days = 10 } } }
 		ai_chance = { 
 			factor = 10
-			modifier = {  
+			modifier = { 
 				factor = 3
 				trait = temperate
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = is_malnourished
 			}
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					diplomacy = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					diplomacy = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					diplomacy = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					diplomacy = 20
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_glutton_dinner
 					higher_tier_than = ROOT 	#Intimidated. 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = hedonist }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = socializer }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_focus = focus_carousing }
 			}
@@ -5674,12 +5674,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21058
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_crit_swayed_glutton }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -5687,14 +5687,14 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { has_character_flag = flag_crit_swayed_glutton } 
 			}
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -5732,9 +5732,9 @@ character_event = {
 		name = EVTOPTAHFP21059
 		if = { 
 			limit = { has_character_flag = flag_repulsed_glutton } 
-			FROM = {  
+			FROM = { 
 			show_scope_change = no
-				opinion = {  
+				opinion = { 
 					who = ROOT
 					modifier = opinion_disgusted
 					years = 5
@@ -5788,7 +5788,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21062 } } }
 		ai_chance = { 
 			factor = 60 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = gardener
 			}
@@ -5803,7 +5803,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21062 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				is_ill = yes
 			}
@@ -5837,7 +5837,7 @@ character_event = {
 
 	option = { #Really Impressed
 		name = EVTOPTAHFP21062
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_2
 			years = 10
@@ -5860,39 +5860,39 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21063 days = 10 } } }
 		ai_chance = { 
 			factor = 20 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.2
 				trait = diligent
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = slothful
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = gardener
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_character_flag = flag_appease_sloth_letter }
 			}
@@ -5900,7 +5900,7 @@ character_event = {
 	}
 	option = { #Impressed
 		name = EVTOPTBHFP21062
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_1
 			years = 5
@@ -5909,35 +5909,35 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21063 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.2
 				trait = diligent
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = slothful
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = gardener
 			}
@@ -5949,20 +5949,20 @@ character_event = {
 		ai_chance = { 
 			factor = 20
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					has_character_flag = flag_appease_sloth_letter
@@ -5972,7 +5972,7 @@ character_event = {
 					}
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_sloth_letter
@@ -5982,7 +5982,7 @@ character_event = {
 					}
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_sloth_letter
@@ -5992,7 +5992,7 @@ character_event = {
 					}
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_sloth_letter
@@ -6002,7 +6002,7 @@ character_event = {
 					}
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_sloth_letter
@@ -6012,7 +6012,7 @@ character_event = {
 					}
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_sloth_sights
@@ -6042,23 +6042,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21064 days = 10 } } }
 		ai_chance = { 
 			factor = 10
-			modifier = {  
+			modifier = { 
 				factor = 3
 				trait = diligent
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = proud
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = hedonist }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = socializer }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_focus = focus_carousing }
 			}
@@ -6087,12 +6087,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21063
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_crit_swayed_slothful }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -6100,14 +6100,14 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { has_character_flag = flag_crit_swayed_slothful } 
 			}
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -6145,9 +6145,9 @@ character_event = {
 		name = EVTOPTAHFP21064
 		if = { 
 			limit = { has_character_flag = flag_repulsed_slothful } 
-			FROM = {  
+			FROM = { 
 			show_scope_change = no
-				opinion = {  
+				opinion = { 
 					who = ROOT
 					modifier = opinion_disgusted
 					years = 5
@@ -6196,7 +6196,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21067 } } }
 		ai_chance = { 
 			factor = 60 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = gardener
 			}
@@ -6210,7 +6210,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21067 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = humble
 			}
@@ -6255,7 +6255,7 @@ character_event = {
 				has_character_flag = flag_appease_wroth_demand
 			}
 		}
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_1
 			years = 5
@@ -6263,35 +6263,35 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21068 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.7
 				trait = brave
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.2
 				trait = patient
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = craven
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = duelist
 			}
@@ -6303,17 +6303,17 @@ character_event = {
 		ai_chance = { 
 			factor = 20
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 		}
 	}
@@ -6323,23 +6323,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21069 days = 10 } } }
 		ai_chance = { 
 			factor = 10
-			modifier = {  
+			modifier = { 
 				factor = 3
 				trait = patient
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = proud
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = gregarious }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = brave }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_focus = focus_war }
 			}
@@ -6368,12 +6368,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21068
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_crit_swayed_wroth }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -6381,14 +6381,14 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { has_character_flag = flag_crit_swayed_wroth } 
 			}
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -6426,9 +6426,9 @@ character_event = {
 		name = EVTOPTAHFP21069
 		if = { 
 			limit = { has_character_flag = flag_repulsed_wroth } 
-			FROM = {  
+			FROM = { 
 			show_scope_change = no
-				opinion = {  
+				opinion = { 
 					who = ROOT
 					modifier = opinion_disgusted
 					years = 5
@@ -6476,7 +6476,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21072 } } }
 		ai_chance = { 
 			factor = 60 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = poet
 			}
@@ -6492,7 +6492,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21072 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = greedy
 			}
@@ -6526,7 +6526,7 @@ character_event = {
 
 	option = { #Really Impressed
 		name = EVTOPTAHFP21072
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_2
 			years = 10
@@ -6535,39 +6535,39 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21073 days = 10 } } }
 		ai_chance = { 
 			factor = 20 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.7
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.2
 				trait = humble
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = proud
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = gardener
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_character_flag = flag_appease_proud_letter }
 			}
@@ -6575,7 +6575,7 @@ character_event = {
 	}
 	option = { #Impressed
 		name = EVTOPTBHFP21072
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_1
 			years = 5
@@ -6584,35 +6584,35 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21073 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.2
 				trait = diligent
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = slothful
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = gardener
 			}
@@ -6624,55 +6624,55 @@ character_event = {
 		ai_chance = { 
 			factor = 20
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					has_character_flag = flag_appease_proud_letter
 					diplomacy = 10 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_proud_letter
 					diplomacy = 12 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_proud_letter
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_proud_letter
 					diplomacy = 18 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_proud_letter
 					diplomacy = 20 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_proud_statue
@@ -6687,23 +6687,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21074 days = 10 } } }
 		ai_chance = { 
 			factor = 10
-			modifier = {  
+			modifier = { 
 				factor = 3
 				trait = humble
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = proud
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { prestige = 500 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				FROM = { trait = socializer }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_focus = focus_rulership }
 			}
@@ -6732,12 +6732,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21073
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_crit_swayed_proud }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -6745,14 +6745,14 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { has_character_flag = flag_crit_swayed_proud } 
 			}
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -6790,9 +6790,9 @@ character_event = {
 		name = EVTOPTAHFP21074
 		if = { 
 			limit = { has_character_flag = flag_repulsed_proud } 
-			FROM = {  
+			FROM = { 
 			show_scope_change = no
-				opinion = {  
+				opinion = { 
 					who = ROOT
 					modifier = opinion_disgusted
 					years = 5
@@ -6866,7 +6866,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21077 } } }
 		ai_chance = { 
 			factor = 60 
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = proud
 			}
@@ -6999,7 +6999,7 @@ character_event = {
 			limit = { 
 				FROM = { has_character_flag = flag_appease_kind_approach }
 			} 
-			opinion = {  
+			opinion = { 
 				who = FROM
 				modifier = opinion_swayed_2
 				years = 10
@@ -7023,7 +7023,7 @@ character_event = {
 			limit = { 
 				FROM = { NOT = { has_character_flag = flag_appease_kind_approach } }
 			} 
-			opinion = {  
+			opinion = { 
 				who = FROM
 				modifier = opinion_swayed_1
 				years = 5
@@ -7086,39 +7086,39 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21078 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = cruel
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = kind
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = humble
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = gregarious
 			}
@@ -7147,7 +7147,7 @@ character_event = {
 		ai_chance = { 
 			factor = 30
 			#Physician's skill
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				NOT = { trait = trusting }
 				FROM = { 
@@ -7157,42 +7157,42 @@ character_event = {
 					}
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				trait = zealous
 				FROM = { has_character_flag = flag_appease_kind_religion }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5	#Boring subject
 				trait = cynical
 				FROM = { has_character_flag = flag_appease_kind_religion }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					diplomacy = 10
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					diplomacy = 12
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					diplomacy = 18
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					diplomacy = 20
@@ -7242,12 +7242,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21078
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_appease_kind_approach }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -7255,14 +7255,14 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { has_character_flag = flag_appease_kind_approach } 
 			}
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -7539,7 +7539,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21086 } } }
 		ai_chance = { 
 			factor = 60 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = impaler
 			}
@@ -7553,7 +7553,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21086 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = cruel
 			}
@@ -7605,7 +7605,7 @@ character_event = {
 				trait = envious
 			} 
 		}
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_2
 			years = 10
@@ -7614,35 +7614,35 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21087 days = 10 } } }
 		ai_chance = { 
 			factor = 20 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = trusting
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = socializer
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = proud
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = impaler
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_character_flag = flag_appease_cruel_letter }
 			}
@@ -7670,7 +7670,7 @@ character_event = {
 				} 
 			} 
 		}
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_1
 			years = 5
@@ -7679,35 +7679,35 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21087 days = 10 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = trusting
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = humble
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.2
 				trait = kind
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = impaler
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = charitable
 			}
@@ -7719,55 +7719,55 @@ character_event = {
 		ai_chance = { 
 			factor = 20
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					has_character_flag = flag_appease_cruel_letter
 					diplomacy = 10 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_cruel_letter
 					diplomacy = 12 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_cruel_letter
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_cruel_letter
 					diplomacy = 18 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_cruel_letter
 					diplomacy = 20 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_cruel_letter
@@ -7788,23 +7788,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21088 days = 10 } } }
 		ai_chance = { 
 			factor = 10
-			modifier = {  
+			modifier = { 
 				factor = 4
 				trait = kind
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				trait = charitable
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = humble
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { trait = impaler }
 			}
@@ -7844,12 +7844,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21087
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_crit_swayed_cruel }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -7857,14 +7857,14 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { has_character_flag = flag_crit_swayed_cruel } 
 			}
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -7913,9 +7913,9 @@ character_event = {
 		name = EVTOPTAHFP21088
 		if = { 
 			limit = { has_character_flag = flag_repulsed_cruel } 
-			FROM = {  
+			FROM = { 
 			show_scope_change = no
-				opinion = {  
+				opinion = { 
 					who = ROOT
 					modifier = opinion_disgusted
 					years = 5
@@ -7986,11 +7986,11 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21091 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = lustful
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_fair_trait_trigger = yes }
 			}
@@ -8004,7 +8004,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21091 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				lower_tier_than = FROM
 			}
@@ -8017,7 +8017,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21091 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { 
 					OR = { 
@@ -8027,7 +8027,7 @@ character_event = {
 					} 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { 
 					OR = { 
@@ -8080,7 +8080,7 @@ character_event = {
 				trait = proud
 			} 
 		}
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_2
 			years = 10
@@ -8089,23 +8089,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21092 days = 10 } } }
 		ai_chance = { 
 			factor = 20 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.4
 				FROM = { has_character_flag = flag_appease_poet_looks }
 				NOT = { trait = trusting }
@@ -8117,7 +8117,7 @@ character_event = {
 					trait = disfigured 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_character_flag = flag_appease_poet_looks }
 				has_fair_trait_trigger = yes
@@ -8129,15 +8129,15 @@ character_event = {
 					trait = disfigured 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = proud
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.25
 				trait = humble
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_character_flag = flag_appease_poet_realm }
 			}
@@ -8165,7 +8165,7 @@ character_event = {
 				} 
 			} 
 		}
-		opinion = {  
+		opinion = { 
 			who = FROM
 			modifier = opinion_swayed_1
 			years = 5
@@ -8174,23 +8174,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21092 days = 10 } } }
 		ai_chance = { 
 			factor = 20 
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					trait = shy
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.1
 				FROM = { 
 					trait = gregarious
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.4
 				FROM = { has_character_flag = flag_appease_poet_looks }
 				NOT = { trait = trusting }
@@ -8202,7 +8202,7 @@ character_event = {
 					trait = disfigured 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { has_character_flag = flag_appease_poet_looks }
 				has_fair_trait_trigger = yes
@@ -8214,15 +8214,15 @@ character_event = {
 					trait = disfigured 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = proud
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.25
 				trait = humble
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { has_character_flag = flag_appease_poet_realm }
 			}
@@ -8234,50 +8234,50 @@ character_event = {
 		ai_chance = { 
 			factor = 20
 			#Relative diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 2 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 4 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = diplomacy  value = 6 }
+				attribute_diff = { character = FROM attribute = diplomacy value = 6 }
 			}
 			#Raw diplomacy
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				FROM = { 
 					diplomacy = 10 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					diplomacy = 12 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					diplomacy = 15
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					diplomacy = 18 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					diplomacy = 20 
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				FROM = { 
 					has_character_flag = flag_appease_poet_deeds
@@ -8287,7 +8287,7 @@ character_event = {
 					piety = 0
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { 
 					has_character_flag = flag_appease_poet_realm
@@ -8310,23 +8310,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21093 days = 10 } } }
 		ai_chance = { 
 			factor = 10
-			modifier = {  
+			modifier = { 
 				factor = 4
 				NOT = { learning = 6 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = greedy
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = humble
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.8
 				trait = trusting
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.9
 				FROM = { trait = socializer }
 			}
@@ -8355,12 +8355,12 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP21092
-		if = {  
+		if = { 
 			limit = { has_character_flag = flag_crit_swayed_poet }
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_2
 						years = 10
@@ -8368,14 +8368,14 @@ character_event = {
 				}
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { has_character_flag = flag_crit_swayed_poet } 
 			}
-			tooltip = {  
-				FROM = {  
+			tooltip = { 
+				FROM = { 
 				show_scope_change = no
-					opinion = {  
+					opinion = { 
 						who = ROOT
 						modifier = opinion_swayed_1
 						years = 5
@@ -8414,9 +8414,9 @@ character_event = {
 		name = EVTOPTAHFP21093
 		if = { 
 			limit = { has_character_flag = flag_repulsed_poet } 
-			FROM = {  
+			FROM = { 
 			show_scope_change = no
-				opinion = {  
+				opinion = { 
 					who = ROOT
 					modifier = opinion_antagonized_1
 					years = 5
@@ -8425,9 +8425,9 @@ character_event = {
 		}
 		if = { 
 			limit = { NOT = { has_character_flag = flag_repulsed_poet } } 
-			FROM = {  
+			FROM = { 
 			show_scope_change = no
-				opinion = {  
+				opinion = { 
 					who = ROOT
 					modifier = opinion_antagonized_0
 					years = 5
@@ -8468,7 +8468,7 @@ character_event = {
 				OR = { 
 					any_attacker = { character = FROM }
 					any_defender = { character = FROM }
-				}  
+				} 
 			} 
 		} 
 	}
@@ -10038,7 +10038,7 @@ character_event = {
 						trait = mystic
 						trait = socializer
 						trait = gamer
-						trait = hedonist  
+						trait = hedonist 
 					}
 				}
 				set_character_flag = flag_appease_visit_inside
@@ -10509,7 +10509,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = drunkard } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -10554,7 +10554,7 @@ character_event = {
 				}
 			}
 			tiered_prestige_reward_effect = yes
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -10570,7 +10570,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = trusting } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -10614,7 +10614,7 @@ character_event = {
 				}
 			}
 			tiered_prestige_reward_effect = yes
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -10630,7 +10630,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = trusting } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -10674,7 +10674,7 @@ character_event = {
 				}
 			}
 			tiered_prestige_reward_effect = yes
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -10690,7 +10690,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = content } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -10734,7 +10734,7 @@ character_event = {
 				}
 			}
 			tiered_prestige_reward_effect = yes
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -10750,7 +10750,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = chaste } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -10835,7 +10835,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -10851,7 +10851,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = temperate } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -10936,7 +10936,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -10952,7 +10952,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = charitable } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -11037,7 +11037,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -11053,7 +11053,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = diligent } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -11138,7 +11138,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -11154,7 +11154,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = patient } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -11239,7 +11239,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -11255,7 +11255,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = kind } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -11344,7 +11344,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -11360,7 +11360,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = humble } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -11445,7 +11445,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -11461,7 +11461,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = lustful } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -11552,10 +11552,10 @@ character_event = {
 							set_character_flag = flag_sway_turning_lustful
 							character_event = { id = HF.21124 days = 12 } 
 						} 
-					}  
+					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -11571,7 +11571,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = gluttonous } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -11656,7 +11656,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -11672,7 +11672,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = greedy } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -11757,7 +11757,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -11773,7 +11773,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = slothful } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -11858,7 +11858,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -11874,7 +11874,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = wroth } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -11959,7 +11959,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -11975,7 +11975,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = envious } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -12060,7 +12060,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -12076,7 +12076,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = proud } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -12161,7 +12161,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -12177,7 +12177,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = ambitious } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -12262,7 +12262,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -12278,7 +12278,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = arbitrary } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -12363,7 +12363,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -12379,7 +12379,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = brave } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -12464,7 +12464,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -12480,7 +12480,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = content } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -12565,7 +12565,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -12581,7 +12581,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = craven } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -12666,7 +12666,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -12682,7 +12682,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = cruel } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -12767,7 +12767,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -12788,10 +12788,10 @@ character_event = {
 							trait = zealous 
 							NOT = { religion = ROOT } 
 						}
-					}  
+					} 
 				} 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -12880,7 +12880,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -12896,7 +12896,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = deceitful } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -12981,7 +12981,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -12997,7 +12997,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = erudite } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -13041,7 +13041,7 @@ character_event = {
 				}
 			}
 			tiered_prestige_reward_effect = yes
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -13057,7 +13057,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = gregarious } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -13142,7 +13142,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -13158,7 +13158,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = honest } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -13243,7 +13243,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -13259,7 +13259,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = just } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -13344,7 +13344,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -13360,7 +13360,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = paranoid } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -13445,7 +13445,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -13461,7 +13461,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = shy } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -13546,7 +13546,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -13562,7 +13562,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = stubborn } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -13606,7 +13606,7 @@ character_event = {
 				}
 			}
 			tiered_prestige_reward_effect = yes
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -13622,7 +13622,7 @@ character_event = {
 			limit = { 
 				persistent_event_target:sway_target = { trait = trusting } 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -13707,7 +13707,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -13726,7 +13726,7 @@ character_event = {
 					trait = zealous
 				} 
 			}
-			persistent_event_target:sway_target	= {
+			persistent_event_target:sway_target = {
 				show_scope_change = no
 				opinion = { 
 					modifier = opinion_swayed_3
@@ -13829,7 +13829,7 @@ character_event = {
 					} 
 				} 
 			}
-			set_character_flag = flag_appease_visit_failure_1  #Localization check
+			set_character_flag = flag_appease_visit_failure_1 #Localization check
 		}
 		ai_chance = { 
 			factor = 40
@@ -13992,10 +13992,10 @@ character_event = {
 			clr_character_flag = flag_appease_visit_outside
 
 			clr_character_flag = flag_appease_visit_swayed_3 
-			clr_character_flag = flag_appease_visit_swayed_2  
-			clr_character_flag = flag_appease_visit_swayed_1  
-			clr_character_flag = flag_appease_visit_swayed_0  
-			clr_character_flag = flag_appease_visit_failure_1  
+			clr_character_flag = flag_appease_visit_swayed_2 
+			clr_character_flag = flag_appease_visit_swayed_1 
+			clr_character_flag = flag_appease_visit_swayed_0 
+			clr_character_flag = flag_appease_visit_failure_1 
 		}
 		hidden_tooltip = { 
 			random_list = { 
@@ -16522,7 +16522,7 @@ character_event = {
 
 
 					AND = { ROOT = { NOT = { has_character_flag = flag_appeased_family_was_tortured } } has_opinion_modifier = { who = ROOT modifier = opinion_tortured_family } }
-					AND = {  ROOT = { NOT = { has_character_flag = flag_appeased_family_was_tortured } } has_opinion_modifier = { who = ROOT modifier = opinion_tortured_close_kin } }
+					AND = { ROOT = { NOT = { has_character_flag = flag_appeased_family_was_tortured } } has_opinion_modifier = { who = ROOT modifier = opinion_tortured_close_kin } }
 					AND = { ROOT = { NOT = { has_character_flag = flag_appeased_family_was_tortured } } has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_family } }
 					AND = { ROOT = { NOT = { has_character_flag = flag_appeased_family_was_tortured } } has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_close_kin } }
 					AND = { ROOT = { NOT = { has_character_flag = flag_appeased_child_was_executed } } has_opinion_modifier = { who = ROOT modifier = opinion_executed_child } }
@@ -16550,7 +16550,7 @@ character_event = {
 
 
 					AND = { ROOT = { NOT = { has_character_flag = flag_appeased_family_was_tortured } } has_opinion_modifier = { who = ROOT modifier = opinion_tortured_family } }
-					AND = {  ROOT = { NOT = { has_character_flag = flag_appeased_family_was_tortured } } has_opinion_modifier = { who = ROOT modifier = opinion_tortured_close_kin } }
+					AND = { ROOT = { NOT = { has_character_flag = flag_appeased_family_was_tortured } } has_opinion_modifier = { who = ROOT modifier = opinion_tortured_close_kin } }
 					AND = { ROOT = { NOT = { has_character_flag = flag_appeased_family_was_tortured } } has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_family } }
 					AND = { ROOT = { NOT = { has_character_flag = flag_appeased_family_was_tortured } } has_opinion_modifier = { who = ROOT modifier = opinion_mutilated_close_kin } }
 					AND = { ROOT = { NOT = { has_character_flag = flag_appeased_child_was_executed } } has_opinion_modifier = { who = ROOT modifier = opinion_executed_child } }
@@ -16876,7 +16876,7 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21141 } } }
 		ai_chance = { 
 			factor = 60 
-			modifier = {  
+			modifier = { 
 				factor = 0
 				OR = { 
 					trait = deceitful
@@ -16888,15 +16888,15 @@ character_event = {
 					trait = arbitrary
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = craven
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = trusting
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = just
 			}
@@ -16924,31 +16924,31 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21141 } } }
 		ai_chance = { 
 			factor = 40 
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = stubborn
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = proud
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = brave
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.1
 				trait = ambitious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = craven
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = content
 			}
@@ -16961,39 +16961,39 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21141 } } }
 		ai_chance = { 
 			factor = 20 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = grey_eminence
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = intricate_webweaver
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = elusive_shadow
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = deceitful
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = schemer
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = craven
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = stubborn
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = trusting
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0.5
 				any_war = {
 					OR = { 
@@ -17003,7 +17003,7 @@ character_event = {
 					war_score = 25
 				}
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0.01
 				any_war = {
 					OR = { 
@@ -17013,7 +17013,7 @@ character_event = {
 					war_score = 50
 				}
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0
 				any_war = {
 					OR = { 
@@ -17131,19 +17131,19 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21142 } } }
 		ai_chance = { 
 			factor = 30 
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = craven
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = stubborn
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = proud
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				trait = brave
 			}
@@ -17199,31 +17199,31 @@ character_event = {
 				factor = 1.5
 				FROM = { relative_power = { who = ROOT power = 40 } }
 			} 
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0.75
 				ROOT = { relative_power = { who = FROM power = 2 } }
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0.75
 				ROOT = { relative_power = { who = FROM power = 5 } }
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0.75
 				ROOT = { relative_power = { who = FROM power = 10 } }
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0.75
 				ROOT = { relative_power = { who = FROM power = 20 } }
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0.25
 				ROOT = { relative_power = { who = FROM power = 30 } }
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0.1
 				ROOT = { relative_power = { who = FROM power = 60 } }
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0.5
 				any_war = {
 					OR = { 
@@ -17233,7 +17233,7 @@ character_event = {
 					war_score = 25
 				}
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0.01
 				any_war = {
 					OR = { 
@@ -17243,7 +17243,7 @@ character_event = {
 					war_score = 50
 				}
 			}
-			modifier = {  #Not if I'm winning.
+			modifier = { #Not if I'm winning.
 				factor = 0
 				any_war = {
 					OR = { 
@@ -17283,31 +17283,31 @@ character_event = {
 					war_score = -70
 				}
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = kind
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = charitable
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.25
 				trait = stubborn
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.25
 				trait = cruel
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.25
 				trait = envious
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.25
 				trait = proud
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = zealous
 				NOT = { religion = FROM }
@@ -17323,23 +17323,23 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21144 } } }
 		ai_chance = { 
 			factor = 30 
-			modifier = {  
+			modifier = { 
 				factor = 0.25
 				NOT = { opinion = { who = FROM value = 0 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.25
 				trait = stubborn
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.15
 				trait = craven
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = paranoid
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = trusting
 			}
@@ -17361,75 +17361,75 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21145 } } }
 		ai_chance = { 
 			factor = 30 
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				opinion = { who = FROM value = 10 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				opinion = { who = FROM value = 20 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.85
 				opinion = { who = FROM value = 30 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.85
 				opinion = { who = FROM value = 40 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				opinion = { who = FROM value = 50 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				opinion = { who = FROM value = 60 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				opinion = { who = FROM value = 70 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				opinion = { who = FROM value = 80 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				opinion = { who = FROM value = 90 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.15
 				NOT = { opinion = { who = FROM value = 0 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.15
 				NOT = { opinion = { who = FROM value = -10 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				NOT = { opinion = { who = FROM value = -20 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				NOT = { opinion = { who = FROM value = -30 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				NOT = { opinion = { who = FROM value = -40 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				NOT = { opinion = { who = FROM value = -50 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				NOT = { opinion = { who = FROM value = -60 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				NOT = { opinion = { who = FROM value = -70 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 2
 				NOT = { opinion = { who = FROM value = -80 } }
 			}
@@ -17438,7 +17438,7 @@ character_event = {
 	option = { #Reciprocate honors.
 		name = EVTOPTEHF21141
 		trigger = { 
-			FROM = {  
+			FROM = { 
 				has_character_flag = flag_appease_war_compliment
 			} 
 		}
@@ -17453,35 +17453,35 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21146 } } }
 		ai_chance = { 
 			factor = 50 
-			modifier = {  
+			modifier = { 
 				factor = 1.15
-				FROM = { attribute_diff = { character = ROOT attribute = martial  value = 2 } }
+				FROM = { attribute_diff = { character = ROOT attribute = martial value = 2 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.15
-				FROM = { attribute_diff = { character = ROOT attribute = martial  value = 4 } }
+				FROM = { attribute_diff = { character = ROOT attribute = martial value = 4 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.15
-				FROM = { attribute_diff = { character = ROOT attribute = martial  value = 6 } }
+				FROM = { attribute_diff = { character = ROOT attribute = martial value = 6 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
-				FROM = { attribute_diff = { character = ROOT attribute = martial  value = 8 } }
+				FROM = { attribute_diff = { character = ROOT attribute = martial value = 8 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				FROM = { attribute_diff = { character = ROOT attribute = martial  value = 10 } }
+				FROM = { attribute_diff = { character = ROOT attribute = martial value = 10 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { trait = brave }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { trait = brilliant_strategist }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				FROM = { trait = strategist }
 			}
@@ -17490,7 +17490,7 @@ character_event = {
 	option = { #Refuse honors.
 		name = EVTOPTFHF21141
 		trigger = { 
-			FROM = {  
+			FROM = { 
 				has_character_flag = flag_appease_war_compliment
 			} 
 		}
@@ -17500,95 +17500,95 @@ character_event = {
 		hidden_tooltip = { FROM = { character_event = { id = HF.21147 } } }
 		ai_chance = { 
 			factor = 30 
-			modifier = {  
+			modifier = { 
 				factor = 1.15
-				attribute_diff = { character = FROM attribute = martial  value = 2 }
+				attribute_diff = { character = FROM attribute = martial value = 2 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.15
-				attribute_diff = { character = FROM attribute = martial  value = 4 }
+				attribute_diff = { character = FROM attribute = martial value = 4 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.15
-				attribute_diff = { character = FROM attribute = martial  value = 6 }
+				attribute_diff = { character = FROM attribute = martial value = 6 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
-				attribute_diff = { character = FROM attribute = martial  value = 8 }
+				attribute_diff = { character = FROM attribute = martial value = 8 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
-				attribute_diff = { character = FROM attribute = martial  value = 10 }
+				attribute_diff = { character = FROM attribute = martial value = 10 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				opinion = { who = FROM value = 10 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.95
 				opinion = { who = FROM value = 20 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.85
 				opinion = { who = FROM value = 30 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.85
 				opinion = { who = FROM value = 40 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				opinion = { who = FROM value = 50 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				opinion = { who = FROM value = 60 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				opinion = { who = FROM value = 70 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.75
 				opinion = { who = FROM value = 80 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				opinion = { who = FROM value = 90 }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.15
 				NOT = { opinion = { who = FROM value = 0 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.15
 				NOT = { opinion = { who = FROM value = -10 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				NOT = { opinion = { who = FROM value = -20 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				NOT = { opinion = { who = FROM value = -30 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.25
 				NOT = { opinion = { who = FROM value = -40 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				NOT = { opinion = { who = FROM value = -50 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				NOT = { opinion = { who = FROM value = -60 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 1.75
 				NOT = { opinion = { who = FROM value = -70 } }
 			}
-			modifier = {  
+			modifier = { 
 				factor = 2
 				NOT = { opinion = { who = FROM value = -80 } }
 			}
@@ -17641,105 +17641,105 @@ character_event = {
 			limit = { NOT = { trait = deceitful } } 
 			add_trait = deceitful
 		}
-		random_list = {  
+		random_list = { 
 			50 = { 
-				modifier = {  
+				modifier = { 
 					factor = 1.25
 					FROM = { trait = craven }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.5
 					FROM = { trait = trusting }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
 					FROM = { trait = slow }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.5
 					FROM = { trait = imbecile }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.5
 					FROM = { trait = inbred }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
 					FROM = { trait = weak }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 0.75
 					FROM = { trait = paranoid }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 0.75
 					FROM = { trait = quick }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 0.5
 					FROM = { trait = genius }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 0.75
 					FROM = { trait = shrewd }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 0.75
 					FROM = { trait = brave }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 0.75
 					FROM = { trait = strong }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 0.75
 					FROM = { trait = duelist }
 				}
 
 
-				modifier = {  
+				modifier = { 
 					factor = 1.5
 					trait = schemer
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
 					trait = quick
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.5
 					trait = genius
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
 					trait = shrewd
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
 					trait = strong
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
 					trait = duelist
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
-					attribute_diff = { character = FROM attribute = intrigue  value = 2 }
+					attribute_diff = { character = FROM attribute = intrigue value = 2 }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
-					attribute_diff = { character = FROM attribute = intrigue  value = 4 }
+					attribute_diff = { character = FROM attribute = intrigue value = 4 }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
-					attribute_diff = { character = FROM attribute = intrigue  value = 6 }
+					attribute_diff = { character = FROM attribute = intrigue value = 6 }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
-					attribute_diff = { character = FROM attribute = intrigue  value = 8 }
+					attribute_diff = { character = FROM attribute = intrigue value = 8 }
 				}
-				modifier = {  
+				modifier = { 
 					factor = 1.25
-					attribute_diff = { character = FROM attribute = intrigue  value = 10 }
+					attribute_diff = { character = FROM attribute = intrigue value = 10 }
 				}
 				custom_tooltip = { text = tooltip_21144_ambush_succeeds }
 				hidden_tooltip = { FROM = { character_event = { id = HF.21148 } } } 
@@ -17753,35 +17753,35 @@ character_event = {
 		tiered_piety_negative_effect = yes
 		ai_chance = { 
 			factor = 20
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = deceitful
 			} 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = schemer
 			} 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = cruel
 			} 
-			modifier = {  
+			modifier = { 
 				factor = 1.5
 				trait = arbitrary
 			} 
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = honest
 			} 
-			modifier = {  
+			modifier = { 
 				factor = 0.5
 				trait = brave
 			} 
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = just
 			} 
-			modifier = {  
+			modifier = { 
 				factor = 0
 				trait = kind
 			} 

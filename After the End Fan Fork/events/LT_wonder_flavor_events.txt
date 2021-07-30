@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# Wonder Flavor Events		  		  #			 
-#										 #
+#										#
+# Wonder Flavor Events				#
+#										#
 # ID LT.20000-							#
-#										 #
+#										#
 ###########################################
 
 # Written by Pedro Santos (so far)
@@ -59,8 +59,8 @@ character_event = {
 			}
 		}
  
-	 	random_list = {
-	 		10 = {
+		random_list = {
+			10 = {
  				trigger = {
 					ROOT = {
 						any_realm_wonder_upgrade = {
@@ -182,7 +182,7 @@ character_event = {
 					}
 				}	
 			}
-	 		10 = {
+			10 = {
  				trigger = {
 					ROOT = {
 						any_realm_wonder_upgrade = {
@@ -235,7 +235,7 @@ character_event = {
 					}
 				}
 			}
-	 		10 = {
+			10 = {
  				trigger = {
 					ROOT = {
 						any_realm_wonder_upgrade = {
@@ -300,7 +300,7 @@ character_event = {
 					}
 				}
 			}
-	 		10 = {
+			10 = {
  				trigger = {
 					ROOT = {
 						any_realm_wonder_upgrade = {
@@ -353,7 +353,7 @@ character_event = {
 					}
 				}
 			}
-	 		10 = {
+			10 = {
  				trigger = {
 					ROOT = {
 						any_realm_wonder_upgrade = {
@@ -384,7 +384,7 @@ character_event = {
 						set_character_flag = book_author_Morgan
 						set_character_flag = book_author_nationality_American
 						set_character_flag = book_theme_Medicine
-	   				}
+					}
 					10 = {
 						trigger = {
 							NOR = { 
@@ -395,7 +395,7 @@ character_event = {
 						set_character_flag = book_author_Fleming
 						set_character_flag = book_author_nationality_Old_World
 						set_character_flag = book_theme_Medicine
-	   				}
+					}
 					30 = {
 						trigger = {
 							NOR = { 
@@ -406,7 +406,7 @@ character_event = {
 						set_character_flag = book_author_Sagan
 						set_character_flag = book_author_nationality_American
 						set_character_flag = book_theme_Astronomy
-	   				}
+					}
 				}
 			}
 			1 = { #it should almost never happen, unless the player has all books or found all books of a specific type.
@@ -426,7 +426,7 @@ character_event = {
 						value > 500
 					}
 				}
-#				
+#	
 			}
 			random_realm_province = {
 				limit = {
@@ -502,9 +502,9 @@ character_event = {
 						move_character = PREV
 					}
 					realm = { save_event_target_as = book_province_realm }
-			 	}
+				}
 			}
-			
+
 			random_courtier = {
 				limit = { 
 					prisoner = no
@@ -550,19 +550,19 @@ character_event = {
 			random_list = {
 				10 = { #The Book is found
 					modifier = {
-	  					factor = 2
-	  					event_target:emissary = { trait = diligent }
+						factor = 2
+						event_target:emissary = { trait = diligent }
 					}
 					modifier = {
 						factor = 2
-	  					event_target:emissary = { trait = scholar }
-	  				}
+						event_target:emissary = { trait = scholar }
+					}
 					character_event = { id = LT.20040 days = 100 random = 50 }
 					# ?? How to make time depend on distance?
 				}
 				10 = { #emissary needs more money
 					modifier = {
-	  					factor = 5
+						factor = 5
 						trait = deceitful
 						opinion < 20
 					}
@@ -597,18 +597,18 @@ character_event = {
 			random_list = {
 				10 = { #The Book is found
 					modifier = {
-	  					factor = 2
-	  					event_target:emissary = { trait = diligent }
+						factor = 2
+						event_target:emissary = { trait = diligent }
 					}
 					modifier = {
 						factor = 2
-	  					event_target:emissary = { trait = scholar }
-	  				}
+						event_target:emissary = { trait = scholar }
+					}
 					character_event = { id = LT.20020 days = 100 random = 50 }
 				}
 				10 = { #emissary needs more money
 					modifier = {
-	  					factor = 5
+						factor = 5
 						trait = deceitful
 						opinion < 20
 					}
@@ -820,15 +820,15 @@ letter_event = {
 						}
 					}
 					modifier = {
-      					factor = 10
-				    	event_target:emissary = {
+						factor = 10
+						event_target:emissary = {
 							opinion = { who = ROOT value < -10 }	
 						}
-				    }
-				    modifier = {
-      					factor = 10
-				    	trait = deceitful
-				    }
+					}
+					modifier = {
+						factor = 10
+						trait = deceitful
+					}
 					character_event = { id = LT.20035 days = 50 random = 20 }
 				}
 				20 = { #It was just a rumor
@@ -995,10 +995,10 @@ character_event = {
 				70 = {
 					trigger = { is_alive = yes }
 					modifier = {
-      					factor = 2
-				    	ROOT = { intrigue = 25 }
-				    }
-				    death = { death_reason = death_murder_unknown killer = ROOT }
+						factor = 2
+						ROOT = { intrigue = 25 }
+					}
+					death = { death_reason = death_murder_unknown killer = ROOT }
 				}
 				30 = {
 					trigger = { is_alive = yes }
@@ -1196,7 +1196,7 @@ character_event = {
 			else = {
 				clr_character_flag = looking_for_a_book
 				clear_flags_with_prefix = book_theme_
-				#clear_flags_with_prefix = book_author_  -> For not repeating real books
+				#clear_flags_with_prefix = book_author_ -> For not repeating real books
 			}
 		}
 		ai_chance = {
@@ -1376,14 +1376,14 @@ character_event = {
 	id = LT.20060
 	title = EVT_TITLE_LT_20060
 	picture = GFX_placeholder#GFX_evt_gathering_of_minds
-	desc =  {
+	desc = {
 		trigger = {
 			NOT = { event_target:the_book = { has_artifact_flag = fake_antique_book } }
 		}
 		text = EVTDESC_LT_20060_real_book
 		picture = GFX_evt_gathering_of_minds
 	}
-	desc =  {
+	desc = {
 		trigger = {
 			event_target:the_book = { has_artifact_flag = fake_antique_book }
 		}
@@ -1472,9 +1472,9 @@ character_event = {
 		add_character_modifier = { name = artifact_patron years = 2 }
 		economy_techpoints = 50
 		chronicle = {
-  			entry = CHRONICLE_FOUND_REAL_BOOK
-  			#portrait = [Root.GetID]
-   		}
+ 			entry = CHRONICLE_FOUND_REAL_BOOK
+ 			#portrait = [Root.GetID]
+ 		}
 	}
 	option = { #Great, anyway!
 		name = EVTOPTA_LT_20060_fake_book
@@ -2032,10 +2032,10 @@ character_event = {
 
 	after = {
 		hidden_effect = {
-			event_target:smith = { character_event = { id = LT.20209 days = 50 random = 10  } } #ping event
+			event_target:smith = { character_event = { id = LT.20209 days = 50 random = 10 } } #ping event
 			clr_character_flag = weaponsmith
-	   		clr_character_flag = armorsmith
-	   	}
+			clr_character_flag = armorsmith
+		}
 	}
 }
 
@@ -2089,7 +2089,7 @@ character_event = {
 			hidden_effect = {
 				add_artifact = sword_tier_2_new
 			}
-			set_character_flag = sword_tier_2   
+			set_character_flag = sword_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -2109,10 +2109,10 @@ character_event = {
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_scimitar } }
-		   	hidden_effect = {
+			hidden_effect = {
 				add_artifact = scimitar_tier_2_new
 			}
-			set_character_flag = scimitar_tier_2   
+			set_character_flag = scimitar_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -2123,7 +2123,7 @@ character_event = {
 			hidden_effect = {
 				add_artifact = lance_tier_2_new
 			}
-			set_character_flag = lance_tier_2   
+			set_character_flag = lance_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -2134,7 +2134,7 @@ character_event = {
 			hidden_effect = {
 				add_artifact = axe_tier_2_new
 			}
-			set_character_flag = axe_tier_2   
+			set_character_flag = axe_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -2145,7 +2145,7 @@ character_event = {
 			hidden_effect = {
 				add_artifact = mace_tier_2_new
 			}
-			set_character_flag = mace_tier_2   
+			set_character_flag = mace_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -2153,10 +2153,10 @@ character_event = {
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_bow } }
-		  	hidden_effect = {
+			hidden_effect = {
 				add_artifact = bow_tier_2_new
 			}
-			set_character_flag = bow_tier_2   
+			set_character_flag = bow_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -2269,19 +2269,19 @@ character_event = {
 
 				if = {
 					limit = { event_target:target_character = { is_evil_trigger = yes } }
-					hidden_effect = {  character_event = { id = LT.20310 } }
+					hidden_effect = { character_event = { id = LT.20310 } }
 				}
 				else = {
 					event_target:target_character = {
 						show_scope_change = no
-   						opinion = {
+ 						opinion = {
 							modifier = opinion_threatened_me
 							who = ROOT
 							months = 24
 						}
- 				   	}
- 				   	prestige = -20
- 				}  	
+ 					}
+ 					prestige = -20
+ 				} 	
 			}
 		}
 	}
@@ -2330,18 +2330,18 @@ character_event = {
 
 				if = {
 					limit = { event_target:target_character = { is_evil_trigger = yes } }
-					hidden_effect = {  character_event = { id = LT.20310 } }
+					hidden_effect = { character_event = { id = LT.20310 } }
 				}
 				else = {
 					event_target:target_character = {
 						show_scope_change = no
-   						opinion = {
+ 						opinion = {
 							modifier = opinion_threatened_me
 							who = ROOT
 							months = 24
 						}
- 				   	}
- 				   	prestige = -20
+ 					}
+ 					prestige = -20
  				}
 			}
 		}
@@ -2522,7 +2522,7 @@ character_event = { #invitation
 
 	immediate = {}
 
-	option = {  # accept
+	option = { # accept
 		name = EVTOPTA_LT_20405
 		hidden_effect = { FROMFROM = { character_event = { id = LT.20410 } } }
 		ai_chance = {
@@ -2578,7 +2578,7 @@ character_event = { #What happens at the meeting
 	portrait = event_target:target_character
 
 
-	option = {  # Friendly Chat
+	option = { # Friendly Chat
 		name = EVTOPTA_LT_20410
 		hidden_effect = { FROM = { character_event = { id = LT.20421 days = 1 } } }
 		tooltip = {
@@ -2619,7 +2619,7 @@ character_event = { #What happens at the meeting
 		}
 	}
 
-	option = {  # Try to seduce
+	option = { # Try to seduce
 		name = EVTOPTB_LT_20410
 		trigger = {
 			NOT = { is_lover = FROM }
@@ -2644,7 +2644,7 @@ character_event = { #What happens at the meeting
 	}
 
 
-	option = {  # Continuing Romance
+	option = { # Continuing Romance
 		name = EVTOPTD_LT_20410
 		trigger = {
 			is_lover = FROM
@@ -2672,7 +2672,7 @@ character_event = { #What happens at the meeting
 	}
 
 
-	option = {  # Attempt Murder
+	option = { # Attempt Murder
 		name = EVTOPTC_LT_20410
 		hidden_effect = { FROM = { character_event = { id = LT.20441 days = 1 } } }
 		FROM = { clr_character_flag = dummy } #For portrait to appear in option
@@ -2707,7 +2707,7 @@ character_event = { #The target refused my invitation
 
 	immediate = {}
 
-	option = {  # ok
+	option = { # ok
 		name = EVTOPTA_LT_20412
 		if = {
 			limit = { FROM = { NOT = { has_character_flag = polite_refuse } } }
@@ -2982,7 +2982,7 @@ character_event = { #We are lovers now
 		}
 	}
 
-	option = {  	
+	option = { 	
 		name = {
 			text = EVTOPTA_LT_20432_A # I just want them more
 			trigger = {
@@ -3026,7 +3026,7 @@ character_event = { #Lovers make love
 
 	is_triggered_only = yes
 
-	option = {  # ok
+	option = { # ok
 		name = EVTOPTA_LT_20432
 		random = { 
 			chance = 30
@@ -3046,7 +3046,7 @@ character_event = { #I was refused!
 
 	is_triggered_only = yes
 
-	option = {  # ok
+	option = { # ok
 		name = EVTOPTA_LT_20434
 		reverse_opinion = {
 			modifier = opinion_dislike
@@ -3098,7 +3098,7 @@ character_event = { #Murder attempt Reaction. This event can happen to either ch
 				character_event = { id = LT.20450 days = 3 }
 				FROM = { character_event = { id = LT.20460 } }
 			}
-			25 = {  #Dead
+			25 = { #Dead
 				custom_tooltip = { text = EVTOPTA_LT_20441_TT_dead }
 				character_event = { id = LT.20455 days = 3 }
 				FROM = { character_event = { id = LT.20465 } }
@@ -3106,28 +3106,28 @@ character_event = { #Murder attempt Reaction. This event can happen to either ch
 		}
 
 		ai_chance = {
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 50 } }
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 40 } }
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 30 } }
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 20 } }
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 10 } }
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 55 } }
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 45 } }
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 35 } }
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 25 } }
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 15 } }
-			modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 05 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -05 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -10 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -20 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -30 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -40 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -50 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -15 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -25 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -35 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -45 } }
-			modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -55 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 50 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 40 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 30 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 20 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 10 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 55 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 45 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 35 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 25 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 15 } }
+			modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 05 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -05 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -10 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -20 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -30 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -40 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -50 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -15 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -25 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -35 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -45 } }
+			modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -55 } }
 		}
 	}
 	option = { #Fight
@@ -3137,34 +3137,34 @@ character_event = { #Murder attempt Reaction. This event can happen to either ch
 		random_list = {
 			50 = {
 				custom_tooltip = { text = EVTOPTB_LT_20441_TT_win }
-				character_event = { id = LT.20465  }
+				character_event = { id = LT.20465 }
 				FROM = { character_event = { id = LT.20455 } }
 			}
-			50 = {  #Dead
+			50 = { #Dead
 				custom_tooltip = { text = EVTOPTB_LT_20441_TT_lose }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 50 } }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 40 } }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 30 } }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 20 } }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 10 } }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 55 } }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 45 } }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 35 } }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 25 } }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 15 } }
-				modifier = { factor = 0.75 combat_rating_diff = { character = FROM  value = 05 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -05 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -10 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -20 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -30 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -40 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -50 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -15 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -25 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -35 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -45 } }
-				modifier = { factor = 1.5 combat_rating_diff = { character = FROM  value < -55 } }
-				character_event = { id = LT.20455  }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 50 } }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 40 } }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 30 } }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 20 } }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 10 } }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 55 } }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 45 } }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 35 } }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 25 } }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 15 } }
+				modifier = { factor = 0.75 combat_rating_diff = { character = FROM value = 05 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -05 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -10 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -20 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -30 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -40 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -50 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -15 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -25 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -35 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -45 } }
+				modifier = { factor = 1.5 combat_rating_diff = { character = FROM value < -55 } }
+				character_event = { id = LT.20455 }
 				FROM = { character_event = { id = LT.20465 } }
 			}
 		}
@@ -3197,7 +3197,7 @@ character_event = {
 
 	is_triggered_only = yes
 
-	option = {  # ok
+	option = { # ok
 		name = EVTOPTA_LT_20450
 		random = { 
 			chance = 50 
@@ -3216,7 +3216,7 @@ character_event = {
 
 	is_triggered_only = yes
 
-	option = {  # ok
+	option = { # ok
 		name = EVTOPTA_LT_20455
 		death = { death_reason = death_murder }
 	}
@@ -3239,7 +3239,7 @@ character_event = {
 
 	is_triggered_only = yes
 
-	option = {  # ok
+	option = { # ok
 		name = EVTOPTA_LT_20450
 		random = { 
 			chance = 50 
@@ -3268,7 +3268,7 @@ character_event = {
 
 	is_triggered_only = yes
 
-	option = {  # ok
+	option = { # ok
 		name = EVTOPTA_LT_20465
 	}
 	after = { clr_character_flag = murder_fight } 
@@ -3399,14 +3399,14 @@ character_event = {
 		custom_tooltip = { text = EVTOPTA_LT_20510_TT }
 		scaled_wealth = { value = -0.5 min = -100 max = -400}
 		set_character_flag = big_burial
-		character_event = { id = LT.20520  days = 10 }
+		character_event = { id = LT.20520 days = 10 }
 	}
 	option = { #A Reasonable amount 
 		name = EVTOPTB_LT_20510
 		custom_tooltip = { text = EVTOPTB_LT_20510_TT }
 		scaled_wealth = { value = -0.3 min = -50 max = -200}
 		set_character_flag = normal_burial
-		character_event = { id = LT.20520  days = 5}
+		character_event = { id = LT.20520 days = 5}
 	}
 	option = { #The cheapest
 		name = EVTOPTC_LT_20510
@@ -3638,11 +3638,11 @@ character_event = {
 		event_target:target_artifact_1 = {
 			show_scope_change = no
 			custom_tooltip = { text = EVTOPTA_LT_20601_TT }
-			if = { 		limit = { quality == 5 }  ROOT = { piety = 500 prestige = 500 } }
-			else_if = { limit = { quality == 4 }  ROOT = { piety = 400 prestige = 300 } }
-			else_if = { limit = { quality == 3 }  ROOT = { piety = 300 prestige = 100 } }
-			else_if = { limit = { quality == 2 }  ROOT = { piety = 200 } }
-			else = { 							  ROOT = { piety = 100 } }
+			if = { 		limit = { quality == 5 } ROOT = { piety = 500 prestige = 500 } }
+			else_if = { limit = { quality == 4 } ROOT = { piety = 400 prestige = 300 } }
+			else_if = { limit = { quality == 3 } ROOT = { piety = 300 prestige = 100 } }
+			else_if = { limit = { quality == 2 } ROOT = { piety = 200 } }
+			else = { 							ROOT = { piety = 100 } }
 		}
 		hidden_effect = {
 			if = { 
@@ -3650,7 +3650,7 @@ character_event = {
 				event_target:target_artifact_1 = { unsafe_destroy_artifact = yes }
 				event_target:target_upgrade = { set_wonder_upgrade_flag = is_storing_relic }
 			}
-			else = { character_event = { id = LT.20610 } }   #cheated?
+			else = { character_event = { id = LT.20610 } } #cheated?
 		}
 	}
 
@@ -3661,11 +3661,11 @@ character_event = {
 		event_target:target_artifact_2 = {
 			show_scope_change = no
 			custom_tooltip = { text = EVTOPTA_LT_20601_TT }
-			if = { 		limit = { quality == 5 }  ROOT = { piety = 500 prestige = 500 } }
-			else_if = { limit = { quality == 4 }  ROOT = { piety = 400 prestige = 300 } }
-			else_if = { limit = { quality == 3 }  ROOT = { piety = 300 prestige = 100 } }
-			else_if = { limit = { quality == 2 }  ROOT = { piety = 200 } }
-			else = { 							  ROOT = { piety = 100 } }
+			if = { 		limit = { quality == 5 } ROOT = { piety = 500 prestige = 500 } }
+			else_if = { limit = { quality == 4 } ROOT = { piety = 400 prestige = 300 } }
+			else_if = { limit = { quality == 3 } ROOT = { piety = 300 prestige = 100 } }
+			else_if = { limit = { quality == 2 } ROOT = { piety = 200 } }
+			else = { 							ROOT = { piety = 100 } }
 		}
 		hidden_effect = {
 			if = { 
@@ -3673,7 +3673,7 @@ character_event = {
 				event_target:target_artifact_2 = { unsafe_destroy_artifact = yes }
 				event_target:target_upgrade = { set_wonder_upgrade_flag = is_storing_relic }
 			}
-			else = { character_event = { id = LT.20610 } }   #cheated?
+			else = { character_event = { id = LT.20610 } } #cheated?
 		}
 	}
 
@@ -3684,11 +3684,11 @@ character_event = {
 		event_target:target_artifact_3 = {
 			show_scope_change = no
 			custom_tooltip = { text = EVTOPTA_LT_20601_TT }
-			if = { 		limit = { quality == 5 }  ROOT = { piety = 500 prestige = 500 } }
-			else_if = { limit = { quality == 4 }  ROOT = { piety = 400 prestige = 300 } }
-			else_if = { limit = { quality == 3 }  ROOT = { piety = 300 prestige = 100 } }
-			else_if = { limit = { quality == 2 }  ROOT = { piety = 200 } }
-			else = { 							  ROOT = { piety = 100 } }
+			if = { 		limit = { quality == 5 } ROOT = { piety = 500 prestige = 500 } }
+			else_if = { limit = { quality == 4 } ROOT = { piety = 400 prestige = 300 } }
+			else_if = { limit = { quality == 3 } ROOT = { piety = 300 prestige = 100 } }
+			else_if = { limit = { quality == 2 } ROOT = { piety = 200 } }
+			else = { 							ROOT = { piety = 100 } }
 		}
 		hidden_effect = {
 			if = { 
@@ -3696,7 +3696,7 @@ character_event = {
 				event_target:target_artifact_3 = { unsafe_destroy_artifact = yes }
 				event_target:target_upgrade = { set_wonder_upgrade_flag = is_storing_relic }
 			}
-			else = { character_event = { id = LT.20610 } }   #cheated?
+			else = { character_event = { id = LT.20610 } } #cheated?
 		}
 	}
 
@@ -3707,11 +3707,11 @@ character_event = {
 #		event_target:target_artifact_4 = {
 #			show_scope_change = no
 #			custom_tooltip = { text = EVTOPTA_LT_20601_TT }
-#			if = { 		limit = { quality == 5 }  ROOT = { piety = 500 prestige = 500 } }
-#			else_if = { limit = { quality == 4 }  ROOT = { piety = 400 prestige = 300 } }
-#			else_if = { limit = { quality == 3 }  ROOT = { piety = 300 prestige = 100 } }
-#			else_if = { limit = { quality == 2 }  ROOT = { piety = 200 } }
-#			else = { 							  ROOT = { piety = 100 } }
+#			if = { 		limit = { quality == 5 } ROOT = { piety = 500 prestige = 500 } }
+#			else_if = { limit = { quality == 4 } ROOT = { piety = 400 prestige = 300 } }
+#			else_if = { limit = { quality == 3 } ROOT = { piety = 300 prestige = 100 } }
+#			else_if = { limit = { quality == 2 } ROOT = { piety = 200 } }
+#			else = { 							ROOT = { piety = 100 } }
 #		}
 #		hidden_effect = {
 #			if = { 
@@ -3719,7 +3719,7 @@ character_event = {
 #				event_target:target_artifact_4 = { unsafe_destroy_artifact = yes }
 #				event_target:target_upgrade = { set_wonder_upgrade_flag = is_storing_relic }
 #			}
-#			else = { character_event = { id = LT.20610 } }   #cheated?
+#			else = { character_event = { id = LT.20610 } } #cheated?
 #		}
 #	}	
 
@@ -3741,7 +3741,7 @@ character_event = {
 
 	is_triggered_only = yes
 
-	option = {  # ok
+	option = { # ok
 		name = EVTOPTA_LT_20610
 		death = { death_reason = death_murder_unknown_lightning }
 	}
@@ -3781,7 +3781,7 @@ province_event = {
 			}
 		}
 	}
-	option = {  # ok
+	option = { # ok
 		name = EVTOPTA_LT_20700
 		custom_tooltip = { text = EVTOPTA_LT_20700_TT }
 	}
@@ -3797,7 +3797,7 @@ character_event = {
 	id = LT.20799
 	hide_window = yes
 	trigger = {
-		FROM = {  NOT = { has_wonder_flag = was_ruined  } }
+		FROM = { NOT = { has_wonder_flag = was_ruined } }
 	}
 
 
@@ -3822,7 +3822,7 @@ character_event = {
 
 				if = {
 					limit = {
-						wonder_stage = 3  #it was a high stage building
+						wonder_stage = 3 #it was a high stage building
 					}
 					set_flag = wonder_stage_3
 				}
@@ -3863,9 +3863,9 @@ character_event = {
 	picture = GFX_evt_end_of_days
 	border = GFX_event_normal_frame_war
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    only_independent = yes
+	only_independent = yes
 
 
 	trigger = {
@@ -3878,8 +3878,8 @@ character_event = {
 			}
 		}
 		any_courtier = {
-    		is_inaccessible_or_incapable_trigger = no
-	    }
+			is_inaccessible_or_incapable_trigger = no
+		}
 	}
 	
 	immediate = { 
@@ -4110,49 +4110,49 @@ character_event = {
 				religion = sol_invicta
 			}
 		}
-   	}
+ 	}
 	border = GFX_event_normal_frame_religion
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    only_independent = yes
+	only_independent = yes
 
-    immediate = {
-    	random_realm_wonder = {
-    		limit = {
-    			has_wonder = wonder_basilica_guadalupe
-    		}
-    		save_event_target_as = target_wonder
-    	}
-    	job_spiritual = {
-    		save_event_target_as = target_chaplain
-    	}
-    	if = {
-    		limit = {
-    			OR = {
-    				event_target:target_wonder = {
-    					has_wonder_flag = Guadalupe_catholic_cult
-    					location = { religion = catholic }
-    				}
-    				event_target:target_wonder = {
-    					has_wonder_flag = Guadalupe_sacred_heart_cult
-    					location = { religion = sacred_heart }
-    				}
-    				event_target:target_wonder = {
-    					has_wonder_flag = Guadalupe_mictlantec_cult
-    					location = { religion = mictlantec }
-    				}
+	immediate = {
+		random_realm_wonder = {
+			limit = {
+				has_wonder = wonder_basilica_guadalupe
+			}
+			save_event_target_as = target_wonder
+		}
+		job_spiritual = {
+			save_event_target_as = target_chaplain
+		}
+		if = {
+			limit = {
+				OR = {
 					event_target:target_wonder = {
-    					has_wonder_flag = Guadalupe_sol_invicta_cult
-    					location = { religion = sol_invicta }
-    				}
-    			}
-    		}
-    		event_target:target_wonder = { location = { set_province_flag = people_had_hagia_sophia } }
-    	}
-    }
+						has_wonder_flag = Guadalupe_catholic_cult
+						location = { religion = catholic }
+					}
+					event_target:target_wonder = {
+						has_wonder_flag = Guadalupe_sacred_heart_cult
+						location = { religion = sacred_heart }
+					}
+					event_target:target_wonder = {
+						has_wonder_flag = Guadalupe_mictlantec_cult
+						location = { religion = mictlantec }
+					}
+					event_target:target_wonder = {
+						has_wonder_flag = Guadalupe_sol_invicta_cult
+						location = { religion = sol_invicta }
+					}
+				}
+			}
+			event_target:target_wonder = { location = { set_province_flag = people_had_hagia_sophia } }
+		}
+	}
 
-    option = { #Convert
+	option = { #Convert
 		name = EVTOPTA_LT_20900
 		event_target:target_wonder = { clr_wonder_flag = Guadalupe_sacred_heart_cult }
 		event_target:target_wonder = { clr_wonder_flag = Guadalupe_catholic_cult }
@@ -4163,7 +4163,7 @@ character_event = {
 			event_target:target_wonder = {
 				set_wonder_flag = Guadalupe_catholic_cult
 			}
-			
+
 		}
 		else_if = {
 			limit = { religion = sacred_heart }
@@ -4200,7 +4200,7 @@ character_event = {
 			}
 		}
 	}
-    option = { #Not Convert
+	option = { #Not Convert
 		name = EVTOPTB_LT_20900
 		piety = -50
 		reverse_opinion = {
@@ -4217,7 +4217,7 @@ character_event = {
 				}
 				add_province_modifier = { modifier = religious_tolerance years = 10 }
 			}
-			
+
 		}
 	}
 }
@@ -4234,7 +4234,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { is_nomadic = yes }  #Nomads get their own event ( HL.4813 )
+		NOT = { is_nomadic = yes } #Nomads get their own event ( HL.4813 )
 		FROM = {
 			OR = {
 				holding_type = city
@@ -4304,7 +4304,7 @@ character_event = {
 			100 = { prestige = -50 }
 			0 = { prestige = -20 }
 		}
-				
+	
 		FROM = {
 			destroy_random_building = THIS
 			location = {

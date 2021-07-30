@@ -120,7 +120,7 @@ character_event = {
 		random = {
 			chance = 15
 			add_trait = proud 
-			hidden_tooltip = { character_event = { id = 38261 }  }
+			hidden_tooltip = { character_event = { id = 38261 } }
 		}
 	}	
 	option = {
@@ -145,7 +145,7 @@ character_event = {
 		random = {
 			chance = 15
 			add_trait = humble 
-			hidden_tooltip = { character_event = { id = 38260 }  }
+			hidden_tooltip = { character_event = { id = 38260 } }
 		}
 		
 	}	
@@ -319,7 +319,7 @@ character_event = {
 				who = ROOT
 				modifier = ignores_local_saints
 				years = 2
-			}				
+			}	
 		}
 	}	
 }	
@@ -535,7 +535,7 @@ character_event = {
 			random = {
 				chance = 10
 				add_trait = proud 
-				hidden_tooltip = { character_event = { id = 38261 }  }
+				hidden_tooltip = { character_event = { id = 38261 } }
 			}
 		}
 		scaled_wealth = -0.2
@@ -556,7 +556,7 @@ character_event = {
 		random = {
 			chance = 15
 			add_trait = humble 
-			hidden_tooltip = { character_event = { id = 38260 }  }
+			hidden_tooltip = { character_event = { id = 38260 } }
 		}
 		
 	}	
@@ -618,7 +618,7 @@ character_event = {
 				modifier = approves_of_my_behaviour
 				who = ROOT
 				years = 2
-			}			
+			}
 			add_trait = lustful
 		}
 	}
@@ -745,8 +745,8 @@ character_event = {
 			NOT = { trait = greedy }
 		}
 		if = {
-			limit = { spouse = { trait = stressed  } }
-			spouse = { remove_trait = stressed  }
+			limit = { spouse = { trait = stressed } }
+			spouse = { remove_trait = stressed }
 		}
 		add_trait = charitable
 		character_event = { id = 73005 days = 10 tooltip = EVTTOOLTIP73005 }
@@ -937,7 +937,7 @@ character_event = {
 	}
 
 	option = {
-		name = EVTOPTA73009  #Welcome him to your court
+		name = EVTOPTA73009 #Welcome him to your court
 		scaled_wealth = -0.2
 		create_random_soldier = {
 			random_traits = yes
@@ -1180,7 +1180,7 @@ character_event = {
 			}
 			remove_trait = proud
 			piety = -20
-		}				
+		}	
 	}
 	option = {
 		name = EVTOPTC73011 	#I do not fear death...
@@ -1245,7 +1245,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = asked_for_job
-		liege = {  set_character_flag = asked_marshal_petition }
+		liege = { set_character_flag = asked_marshal_petition }
 	}
 	
 	option = {
@@ -1275,7 +1275,7 @@ letter_event = {
 		FROM = {
 			clr_character_flag = asked_for_job
 			give_job_title = job_marshal
-			hidden_tooltip = {  letter_event = { id = 73205  } }
+			hidden_tooltip = { letter_event = { id = 73205 } }
 		}
 		clr_character_flag = asked_marshal_petition
 		
@@ -1291,7 +1291,7 @@ letter_event = {
 		job_marshal = {
 			letter_event = { id = 73202 tooltip = EVTTOOLTIP73202 }
 		}
-		hidden_tooltip = { FROM  = { character_event = { id = 73203 days = 128 random = 63  }	} }
+		hidden_tooltip = { FROM = { character_event = { id = 73203 days = 128 random = 63 }	} }
 	}
 	option = {
 		name = EVTOPTC73201 
@@ -1397,7 +1397,7 @@ letter_event = {
 		FROM = {
 			clr_character_flag = asked_for_job
 			give_job_title = job_marshal
-			hidden_tooltip = {  letter_event = { id = 73205  } }
+			hidden_tooltip = { letter_event = { id = 73205 } }
 		}
 		clr_character_flag = asked_marshal_petition
 		
@@ -1469,7 +1469,7 @@ character_event = {
 	}
 	immediate = {
 		set_character_flag = asked_for_job
-		liege = {  set_character_flag = asked_spymaster_petition }
+		liege = { set_character_flag = asked_spymaster_petition }
 	}
 	
 	option = {
@@ -1501,7 +1501,7 @@ letter_event = {
 		FROM = {
 			clr_character_flag = asked_for_job
 			give_job_title = job_spymaster
-			hidden_tooltip = {  letter_event = { id = 73215  } }
+			hidden_tooltip = { letter_event = { id = 73215 } }
 		}
 		clr_character_flag = asked_spymaster_petition
 	}
@@ -1516,7 +1516,7 @@ letter_event = {
 		job_spymaster = {
 			letter_event = { id = 73212 tooltip = EVTTOOLTIP73212 }
 		}
-		hidden_tooltip = { FROM  = { character_event = { id = 73213 days = 128 random = 63  }	} }
+		hidden_tooltip = { FROM = { character_event = { id = 73213 days = 128 random = 63 }	} }
 	}
 	option = {
 		name = EVTOPTC73211 
@@ -1621,7 +1621,7 @@ letter_event = {
 		FROM = {
 			clr_character_flag = asked_for_job
 			give_job_title = job_spymaster
-			hidden_tooltip = {  letter_event = { id = 73215  } }
+			hidden_tooltip = { letter_event = { id = 73215 } }
 		}
 		clr_character_flag = asked_spymaster_petition
 	}
@@ -1694,7 +1694,7 @@ character_event = {
 	}
 	immediate = {
 		set_character_flag = asked_for_job
-		liege = {  set_character_flag = asked_treasurer_petition }
+		liege = { set_character_flag = asked_treasurer_petition }
 	}
 	
 	option = {
@@ -1723,7 +1723,7 @@ letter_event = {
 		FROM = {
 			clr_character_flag = asked_for_job
 			give_job_title = job_treasurer
-			hidden_tooltip = {  letter_event = { id = 73225  } }
+			hidden_tooltip = { letter_event = { id = 73225 } }
 		}
 		clr_character_flag = asked_treasurer_petition
 		
@@ -1739,7 +1739,7 @@ letter_event = {
 		job_treasurer = {
 			letter_event = { id = 73222 tooltip = EVTTOOLTIP73222 }
 		}
-		hidden_tooltip = { FROM  = { character_event = { id = 73223 days = 128 random = 63  }	} }
+		hidden_tooltip = { FROM = { character_event = { id = 73223 days = 128 random = 63 }	} }
 	}
 	option = {
 		name = EVTOPTC73221 
@@ -1914,7 +1914,7 @@ character_event = {
 				same_liege = ROOT
 				NOT = { learning = ROOT }
 				NOT = { has_minor_title = title_regent }
-				NOT = { ROOT = { religion_head = { character = PREVPREV } } }  # Won't claim to be a better chaplain than your religious head...
+				NOT = { ROOT = { religion_head = { character = PREVPREV } } } # Won't claim to be a better chaplain than your religious head...
 			}
 			religion = ROOT
 			NOT = {
@@ -1936,7 +1936,7 @@ character_event = {
 	}
 	immediate = {
 		set_character_flag = asked_for_job
-		liege = {  set_character_flag = asked_lord_spiritual_petition }
+		liege = { set_character_flag = asked_lord_spiritual_petition }
 	}
 	
 	option = {
@@ -1972,7 +1972,7 @@ letter_event = {
 		FROM = {
 			clr_character_flag = asked_for_job
 			give_job_title = job_spiritual
-			hidden_tooltip = {  letter_event = { id = 73235  } }
+			hidden_tooltip = { letter_event = { id = 73235 } }
 		}
 		clr_character_flag = asked_lord_spiritual_petition
 		
@@ -1988,7 +1988,7 @@ letter_event = {
 		job_spiritual = {
 			letter_event = { id = 73232 tooltip = EVTTOOLTIP73232 }
 		}
-		hidden_tooltip = { FROM  = { character_event = { id = 73233 days = 128 random = 63  }	} }
+		hidden_tooltip = { FROM = { character_event = { id = 73233 days = 128 random = 63 }	} }
 	}
 	option = {
 		name = EVTOPTC73231 
@@ -2093,7 +2093,7 @@ letter_event = {
 		FROM = {
 			clr_character_flag = asked_for_job
 			give_job_title = job_spiritual
-			hidden_tooltip = {  letter_event = { id = 73235  } }
+			hidden_tooltip = { letter_event = { id = 73235 } }
 		}
 		clr_character_flag = asked_lord_spiritual_petition
 		
@@ -2167,7 +2167,7 @@ character_event = {
 	}
 	immediate = {
 		set_character_flag = asked_for_job
-		liege = {  set_character_flag = asked_chancellor_petition }
+		liege = { set_character_flag = asked_chancellor_petition }
 	}
 	
 	option = {
@@ -2196,7 +2196,7 @@ letter_event = {
 		FROM = {
 			clr_character_flag = asked_for_job
 			give_job_title = job_chancellor
-			hidden_tooltip = {  letter_event = { id = 73245  } }
+			hidden_tooltip = { letter_event = { id = 73245 } }
 		}
 		clr_character_flag = asked_chancellor_petition
 		
@@ -2212,7 +2212,7 @@ letter_event = {
 		job_chancellor = {
 			letter_event = { id = 73242 tooltip = EVTTOOLTIP73242 }
 		}
-		hidden_tooltip = { FROM  = { character_event = { id = 73243 days = 128 random = 63  }	} }
+		hidden_tooltip = { FROM = { character_event = { id = 73243 days = 128 random = 63 }	} }
 	}
 	option = {
 		name = EVTOPTC73241 
@@ -2314,7 +2314,7 @@ letter_event = {
 		FROM = {
 			clr_character_flag = asked_for_job
 			give_job_title = job_chancellor
-			hidden_tooltip = {  letter_event = { id = 73245  } }
+			hidden_tooltip = { letter_event = { id = 73245 } }
 		}
 		clr_character_flag = asked_chancellor_petition
 		

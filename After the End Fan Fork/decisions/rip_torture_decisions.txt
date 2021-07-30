@@ -51,7 +51,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			hidden_tooltip = {
 				random_list = {
 					#Normal torture options
@@ -61,7 +61,7 @@ targetted_decisions = {
 								# Racks
 								FROM = { character_event = { id = RIP.20001 } }
 								character_event = { id = RIP.20002 } 
-								
+
 							}
 
 							10 = {
@@ -76,7 +76,7 @@ targetted_decisions = {
 								FROM = { character_event = { id = RIP.20005} }
 								character_event = { id = RIP.20006 } 
 							}
-							
+	
 							20 = {
 								# Heat exposure
 								modifier = {
@@ -101,7 +101,7 @@ targetted_decisions = {
 								modifier = {
 									factor = 0
 									NAND = {
-										
+		
 										OR = { 
 											month = 11
 											NOT = { month = 2}
@@ -184,7 +184,7 @@ targetted_decisions = {
 					}
 				}	
 			}
-			
+
 			tooltip = {
 				add_character_modifier = { name = tortured years = 2 }
 				opinion = {
@@ -202,7 +202,7 @@ targetted_decisions = {
 				}
 				prisoner = no
 			}
-			
+
 			FROM = {
 				show_scope_change = no
 				hidden_tooltip = { clear_prison_reasons = ROOT }
@@ -256,7 +256,7 @@ targetted_decisions = {
 
 		ai_will_do = {
 			factor = 0.1
-			
+
 			modifier = {
 				factor = 0
 				OR = {
@@ -459,7 +459,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			if = {
 				limit = { 
 					has_game_rule = {
@@ -469,12 +469,12 @@ targetted_decisions = {
 				}
 				prisoner = no
 			}
-			
+
 			opinion = {
 				modifier = opinion_mutilated_me
 				who = FROM
 			}
-			
+
 			FROM = {
 				show_scope_change = no
 				piety = -50
@@ -489,7 +489,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			hidden_tooltip = {
 				mother = {
 					opinion = {
@@ -535,7 +535,7 @@ targetted_decisions = {
 						}
 					}
 				}
-				
+	
 				FROM = { clear_prison_reasons = ROOT }
 
 			}
@@ -546,7 +546,7 @@ targetted_decisions = {
 
 		ai_will_do = {
 			factor = 0.66
-			
+
 			modifier = {
 				factor = 0
 				OR = {
@@ -611,7 +611,7 @@ targetted_decisions = {
 							# Poem 1
 							character_event = { id = RIP.20023 }
 							ROOT = { character_event = { id = RIP.20024 } }
-							
+	
 						}
 
 						10 = {
@@ -644,7 +644,7 @@ targetted_decisions = {
 				modifier = opinion_bad_poetry
 				who = FROM
 			}
-			
+
 			hidden_effect = { FROM = { clear_prison_reasons = ROOT } }
 		}
 		revoke_allowed = {
@@ -653,7 +653,7 @@ targetted_decisions = {
 
 		ai_will_do = {
 			factor = 0.1
-			
+
 			modifier = {
 				factor = 0
 				reverse_opinion = { who = FROM value = 40 }
@@ -758,7 +758,7 @@ targetted_decisions = {
 						character_event = { id = RIP.15007}
 						ROOT = { character_event = { id = RIP.15008} }
 						}
-						
+
 						# the Stocks
 						33 = {
 							modifier = {
@@ -785,7 +785,7 @@ targetted_decisions = {
 							character_event = { id = RIP.15003}
 							ROOT = { character_event = { id = RIP.15004} }
 						}
-							
+	
 						# walk of shame
 						33 = {
 							modifier = {
@@ -810,7 +810,7 @@ targetted_decisions = {
 					}
 				}
 			}
-				
+	
 			if = {
 				limit = { 
 					has_game_rule = {
@@ -820,7 +820,7 @@ targetted_decisions = {
 				}
 				prisoner = no
 			}
-			
+
 			add_character_modifier = {
 				name = publicly_humiliated
 				years = 10
@@ -883,7 +883,7 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 0.1
-			
+
 			modifier = {
 				factor = 0
 				reverse_opinion = { who = FROM value = 40 }
@@ -900,7 +900,7 @@ targetted_decisions = {
 				factor = 10
 				is_pretender = yes
 				is_rival = ROOT
-				
+	
 				FROM = {
 					OR = {
 						is_pretender = yes
@@ -1143,13 +1143,13 @@ targetted_decisions = {
 								}
 									set_character_flag = dont_even_exist	
 							}
-							
+	
 							# Religious groups without heads (add here and in RIP.11510 if they gain them):
 							# american_native
 							# cult_of_saints
 							# mesoamerican_gods
 							# pirate
-							
+	
 							character_event = { id = RIP.11510 }
 						}
 					}

@@ -1185,7 +1185,7 @@ character_event = {
 		name = "EVTOPTB30027" #No
 		ai_chance = { 
 			factor = 40 
-			
+
 			modifier = {
 				factor = 2
 				FROM = {
@@ -1630,7 +1630,7 @@ character_event = {
 			any_courtier = {
 				is_councillor = yes
 				NOT = { character = ROOT }
-				NOT = { opinion = { who = ROOT  value = 30 } }
+				NOT = { opinion = { who = ROOT value = 30 } }
 				OR = {
 					trait = envious
 					trait = wroth 
@@ -1668,7 +1668,7 @@ character_event = {
 				limit = {
 					is_councillor = yes
 					NOT = { character = ROOT }
-					NOT = { opinion = { who = ROOT  value = 30 } }
+					NOT = { opinion = { who = ROOT value = 30 } }
 					OR = {
 						trait = envious
 						trait = wroth 
@@ -3022,7 +3022,7 @@ character_event = {
 				who = ROOT
 				years = 5
 			}
-		}				
+		}	
 	}
 	option = {
 		name = "EVTOPTB30062"
@@ -3036,7 +3036,7 @@ character_event = {
 				who = ROOT
 				years = 5
 			}
-		}				
+		}	
 	}
 }
 
@@ -3212,7 +3212,7 @@ character_event = {
 				years = 5
 			}
 		}
-		clr_character_flag = husband_accepted_marshal				
+		clr_character_flag = husband_accepted_marshal	
 	}
 	option = {
 		name = "EVTOPTB30065"
@@ -3226,7 +3226,7 @@ character_event = {
 				years = 5
 			}
 		}
-		clr_character_flag = husband_denied_marshal			
+		clr_character_flag = husband_denied_marshal
 	}
 }
 
@@ -3416,7 +3416,7 @@ character_event = {
 				who = ROOT
 				years = 5
 			}
-		}				
+		}	
 	}
 }
 
@@ -3608,7 +3608,7 @@ character_event = {
 				years = 5
 			}
 		}
-		clr_character_flag = husband_denied_spymaster			
+		clr_character_flag = husband_denied_spymaster
 	}
 }
 
@@ -3643,7 +3643,7 @@ character_event = {
 			OR = {
 				any_lover = { character = ROOT }
 				reverse_opinion = { who = ROOT value = 40 }
-			}			
+			}
 			is_councillor = no
 			can_be_spiritual_trigger = yes
 			learning = 10
@@ -4526,7 +4526,7 @@ character_event = {
 			40 = {
 				set_character_flag = failed_picnic
 			}
-		}				
+		}	
 	}
 	
 	option = {
@@ -4585,7 +4585,7 @@ character_event = {
 			40 = {
 				set_character_flag = perfect_hunt
 			}
-		}				
+		}	
 	}
 	
 	option = {
@@ -4644,7 +4644,7 @@ character_event = {
 			40 = {
 				set_character_flag = failed_dinner
 			}
-		}				
+		}	
 	}
 	
 	option = {
@@ -4697,7 +4697,7 @@ character_event = {
 	option = { #Friends forever!
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 2
 				has_character_flag = failed_lake
@@ -4742,7 +4742,7 @@ character_event = {
 	option = { #Too bad!
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 2
 				has_character_flag = perfect_lake
@@ -4964,7 +4964,7 @@ character_event = {
 			limit = { NOT = { trait = lustful } }
 			random = {
 				chance = 40
-				
+	
 				add_trait = lustful
 				hidden_tooltip = {
 					character_event = {
@@ -4977,7 +4977,7 @@ character_event = {
 			limit = { immortal = no }
 			random = {
 				chance = 10
-				
+	
 				death = {
 					death_reason = death_accident
 				}
@@ -5003,7 +5003,7 @@ character_event = {
 			limit = { NOT = { trait = lustful } }
 			random = {
 				chance = 40
-				
+	
 				add_trait = lustful
 				hidden_tooltip = {
 					character_event = {
@@ -5016,7 +5016,7 @@ character_event = {
 			limit = { immortal = no }
 			random = {
 				chance = 30
-				
+	
 				death = {
 					death_reason = death_accident
 				}
@@ -5044,7 +5044,7 @@ character_event = {
 			limit = { NOT = { trait = lustful } }
 			random = {
 				chance = 40
-				
+	
 				add_trait = lustful
 				hidden_tooltip = {
 					character_event = {
@@ -5057,7 +5057,7 @@ character_event = {
 			limit = { immortal = no }
 			random = {
 				chance = 10
-				
+	
 				death = {
 					death_reason = death_accident
 				}
@@ -5083,7 +5083,7 @@ character_event = {
 			limit = { NOT = { trait = lustful } }
 			random = {
 				chance = 40
-				
+	
 				add_trait = lustful
 				hidden_tooltip = {
 					character_event = {
@@ -5096,7 +5096,7 @@ character_event = {
 			limit = { immortal = no }
 			random = {
 				chance = 10
-				
+	
 				death = {
 					death_reason = death_accident
 				}
@@ -5131,7 +5131,7 @@ character_event = {
 		clr_character_flag = gentle_loving
 		random = {
 			chance = 60
-			
+
 			add_trait = lustful
 			hidden_tooltip = {
 				character_event = {
@@ -5143,7 +5143,7 @@ character_event = {
 			limit = { immortal = no }
 			random = {
 				chance = 10
-				
+	
 				death = {
 					death_reason = death_accident
 				}
@@ -5165,7 +5165,7 @@ character_event = {
 		clr_character_flag = gentle_loving
 		random = {
 			chance = 40
-			
+
 			add_trait = lustful
 			hidden_tooltip = {
 				character_event = {
@@ -5177,7 +5177,7 @@ character_event = {
 			limit = { immortal = no }
 			random = {
 				chance = 20
-				
+	
 				death = {
 					death_reason = death_accident
 				}
@@ -5201,7 +5201,7 @@ character_event = {
 		clr_character_flag = sweet_love
 		random = {
 			chance = 30
-			
+
 			add_trait = lustful
 			hidden_tooltip = {
 				character_event = {
@@ -5213,7 +5213,7 @@ character_event = {
 			limit = { immortal = no }
 			random = {
 				chance = 20
-				
+	
 				spouse = {
 					character_event = {
 						id = 30104
@@ -5235,7 +5235,7 @@ character_event = {
 		clr_character_flag = sweet_love
 		random = {
 			chance = 20
-			
+
 			add_trait = lustful
 			hidden_tooltip = {
 				character_event = {
@@ -5247,7 +5247,7 @@ character_event = {
 			limit = { immortal = no }
 			random = {
 				chance = 40
-				
+	
 				spouse = {
 					character_event = {
 						id = 30104

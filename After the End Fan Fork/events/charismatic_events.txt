@@ -12,7 +12,7 @@ narrative_event = {
 	option = {
 		name = EVTOPT_charismatic.1
 		custom_tooltip = {
- 		   text = CHARISMATIC_GIFT_OF_PROPHECY
+ 		text = CHARISMATIC_GIFT_OF_PROPHECY
 		}
 		hidden_effect = {
 			random_list = {
@@ -132,8 +132,8 @@ narrative_event = {
 									tier = DUKE
 								}
 								num_of_realm_counties = {
-  							  		value = 0
-    								title = THIS
+ 									value = 0
+									title = THIS
 								}
 							}
 						}
@@ -188,40 +188,40 @@ narrative_event = {
 	desc=EVTDESC_charismatic.10
 	picture=GFX_evt_bishop
 	is_triggered_only=yes
-  	immediate = {
+ 	immediate = {
 		random_demesne_province = {
-    		limit = { 
-    			any_neighbor_province = {
-    				NOT = {
-    					owner = { character = ROOT } 
-    				} 
-    			} 
-    		}
-    		random_neighbor_province = {
-    			limit = { 
-    				NOT = {
-    					owner = { 
-    						character = ROOT 
-    					} 
-    				} 
-    			}
-    			county ={
-    				ROOT ={
+			limit = { 
+				any_neighbor_province = {
+					NOT = {
+						owner = { character = ROOT } 
+					} 
+				} 
+			}
+			random_neighbor_province = {
+				limit = { 
+					NOT = {
+						owner = { 
+							character = ROOT 
+						} 
+					} 
+				}
+				county ={
+					ROOT ={
 						save_persistent_event_target = { 
 							name = prophesied_province
 							scope = PREV
 						}
 					}
 				}
-    		}
-    	}   
-  	}
+			}
+		} 
+ 	}
 	option = {
 		name = EVTOPT_charismatic.10
 		set_character_flag = charismatic_prophecy_current
 		add_character_modifier = {
-	    	name = charismatic_conquest_prophecy
-    		years = 4
+			name = charismatic_conquest_prophecy
+			years = 4
 		}
 		persistent_event_target:prophesied_province={
 			add_claim = ROOT
@@ -317,8 +317,8 @@ narrative_event = {
 		set_character_flag = charismatic_prophecy_current
 		set_character_flag = charismatic_prophecy_peace_flag
 		add_character_modifier = {
-	    		name = charismatic_peace_prophecy_3
-    			years = 4			
+				name = charismatic_peace_prophecy_3
+				years = 4
 			}
 		}
 	}
@@ -425,8 +425,8 @@ narrative_event = {
 		set_character_flag = charismatic_prophecy_current
 		set_character_flag = charismatic_prophecy_family_flag
 		add_character_modifier = {
-	    		name = charismatic_family_prophecy
-    			years = 4			
+				name = charismatic_family_prophecy
+				years = 4
 			}
 	}
 }
@@ -528,7 +528,7 @@ narrative_event = {
 	desc=EVTDESC_charismatic.19
 	picture=GFX_evt_bishop
 	is_triggered_only=yes
-  	immediate = {
+ 	immediate = {
 		random_list = {
 			10 = {
 				mult_modifier = {
@@ -549,7 +549,7 @@ narrative_event = {
 							character = ROOT
 						}
 					}
-    				ROOT ={
+					ROOT ={
 						save_persistent_event_target = { 
 							name = prophesied_to_die
 							scope = PREV
@@ -572,7 +572,7 @@ narrative_event = {
 							character = ROOT
 						}
 					}
-    				ROOT ={
+					ROOT ={
 						save_persistent_event_target = { 
 							name = prophesied_to_die
 							scope = PREV
@@ -595,7 +595,7 @@ narrative_event = {
 							character = ROOT
 						}
 					}
-    				ROOT ={
+					ROOT ={
 						save_persistent_event_target = { 
 							name = prophesied_to_die
 							scope = PREV
@@ -613,7 +613,7 @@ narrative_event = {
 					}
 				}
 				random_neighbor_independent_ruler = {
-    				ROOT ={
+					ROOT ={
 						save_persistent_event_target = { 
 							name = prophesied_to_die
 							scope = PREV
@@ -623,13 +623,13 @@ narrative_event = {
 			}
 
 		} 
-  	}
+ 	}
 	option = {
 		name = EVTOPT_charismatic.19
 		set_character_flag = charismatic_prophecy_current
 		add_character_modifier = {
-	    		name = charismatic_death_prophecy_3
-    			years = 1			
+				name = charismatic_death_prophecy_3
+				years = 1
 			}
 		persistent_event_target:prophesied_to_die={
 			opinion = {
@@ -751,8 +751,8 @@ narrative_event = {
 		set_character_flag = charismatic_prophecy_current
 		set_character_flag = charismatic_prophecy_friend_flag
 		add_character_modifier = {
-	    		name = charismatic_friend_prophecy
-    			years = 3			
+				name = charismatic_friend_prophecy
+				years = 3
 		}	
 	}
 }
@@ -838,29 +838,29 @@ narrative_event = {
 	desc=EVTDESC_charismatic.25
 	picture=GFX_evt_bishop
 	is_triggered_only=yes
-  	immediate = {
+ 	immediate = {
 		random_demesne_province = {
-    		limit = { 
-    			any_neighbor_province = {
-    				owner = { character = ROOT } 
-    			} 
-    		}
-    		duchy ={
-    			ROOT ={
+			limit = { 
+				any_neighbor_province = {
+					owner = { character = ROOT } 
+				} 
+			}
+			duchy ={
+				ROOT ={
 					save_persistent_event_target = { 
 							name = prophesied_duchy
 							scope = PREV
 					}
 				}
-    		}
-    	}   
-  	}
+			}
+		} 
+ 	}
 	option = {
 		name = EVTOPT_charismatic.25
 		set_character_flag = charismatic_prophecy_current
 		add_character_modifier = {
-	    		name = charismatic_duchy_prophecy
-    			years = 5		
+				name = charismatic_duchy_prophecy
+				years = 5		
 			}
 		}
 		persistent_event_target:prophesied_duchy={
@@ -959,35 +959,35 @@ narrative_event = {
 	desc=EVTDESC_charismatic.28
 	picture=GFX_evt_bishop
 	is_triggered_only=yes
-  	immediate = {
+ 	immediate = {
 		random_demesne_province = {
-    		limit = { 
-    			duchy = {
-    				owner = { character = ROOT } 
-    				NOT = {
-    					num_of_realm_counties = {
-  						  	value = 0
-   							title = THIS
+			limit = { 
+				duchy = {
+					owner = { character = ROOT } 
+					NOT = {
+						num_of_realm_counties = {
+ 							value = 0
+ 							title = THIS
 						}
-    				}
-    			}
-    		}
-    		kingdom ={
-    			ROOT ={
+					}
+				}
+			}
+			kingdom ={
+				ROOT ={
 					save_persistent_event_target = { 
 							name = prophesied_kingdom
 							scope = PREV
 					}
 				}
-    		}
-    	}   
-  	}
+			}
+		} 
+ 	}
 	option = {
 		name = EVTOPT_charismatic.28
 		set_character_flag = charismatic_prophecy_current
 		add_character_modifier = {
-	    		name = charismatic_kingdom_prophecy
-    			years = 6		
+				name = charismatic_kingdom_prophecy
+				years = 6		
 			}
 		persistent_event_target:prophesied_kingdom={
 			add_claim = ROOT
@@ -1090,8 +1090,8 @@ narrative_event = {
 		set_character_flag = charismatic_prophecy_current
 		set_character_flag = charismatic_prophecy_old_children_flag
 		add_character_modifier = {
-	    	name = charismatic_old_children_prophecy
-    		years = 4			
+			name = charismatic_old_children_prophecy
+			years = 4
 		}
 	}
 }
@@ -1211,8 +1211,8 @@ narrative_event = {
 		set_character_flag = charismatic_prophecy_current
 		set_character_flag = charismatic_prophecy_wealth_flag
 		add_character_modifier = {
-	    	name = charismatic_wealth_prophecy
-			years = 5			
+			name = charismatic_wealth_prophecy
+			years = 5
 		}
 	}
 }
@@ -1305,8 +1305,8 @@ narrative_event = {
 		prestige = -25
 		set_character_flag = charismatic_prophecy_current
 		add_character_modifier = {
-	    		name = charismatic_failed_prophecy
-    			years = 2
+				name = charismatic_failed_prophecy
+				years = 2
 		}
 		if = {
 			limit = {

@@ -100,7 +100,7 @@ narrative_event = {
 		NOT = { 
 			religion_head = { 
 				OR = { 
-					any_war = { using_cb = crusade }  
+					any_war = { using_cb = crusade } 
 					any_war = { using_cb = new_crusade } 
 				} 
 			} 
@@ -114,7 +114,7 @@ narrative_event = {
 		days = 1
 		modifier = {
 			factor = 0.01
-			 NOT = { total_years_played = 40 }
+			NOT = { total_years_played = 40 }
 		}
 		modifier = {
 			factor = 2
@@ -409,7 +409,7 @@ character_event = {
 
 	is_triggered_only = yes
 
-	trigger = {  
+	trigger = { 
 		has_character_flag = flag_childrens_crusade_leader
 	}
 
@@ -1239,7 +1239,7 @@ narrative_event = {
 			limit = { 
 				check_variable = { which = children_crusade_progress value = 3 }
 			}
-			set_variable =  { which = children_crusade_progress value = 0 }
+			set_variable = { which = children_crusade_progress value = 0 }
 			move_childrens_crusade_region_effect = yes 
 		}
 		else_if = { 
@@ -1894,7 +1894,7 @@ character_event = {
 	desc = EVTDESCAHF25813
 	picture = GFX_evt_childrens_crusade
 	border = GFX_event_normal_frame_religion
-	portrait =  event_target:childrens_crusade_leader
+	portrait = event_target:childrens_crusade_leader
 	hide_new = yes
 
 	is_triggered_only = yes
@@ -1982,7 +1982,7 @@ character_event = {
 			}
 		}
 		if = { 
-			limit = { trait = kind  NOT = { trait = stressed } } 
+			limit = { trait = kind NOT = { trait = stressed } } 
 			add_trait = stressed
 		}
 		tiered_prestige_negative_effect = yes
@@ -2303,7 +2303,7 @@ narrative_event = {
 		name = EVTOPTCHF25818
 		trigger = { 
 			event_target:childrens_crusade_leader = { persistent_event_target:childrens_crusade_sponsor_per = { character = ROOT } }
-			NOT = { has_character_flag = flag_childrens_crusade_sponsor_joins_war }  
+			NOT = { has_character_flag = flag_childrens_crusade_sponsor_joins_war } 
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -2354,34 +2354,34 @@ narrative_event = {
 
 		#Translate morale variable into morale modifier.
 		if = { 
-			limit = {  
+			limit = { 
 				NOT = { check_variable = { which = children_crusade_morale value = -15 } } 
 			}
 			add_character_modifier = { name = children_crusade_morale_0 duration = 1000 }
 		}
 		if = { 
-			limit = {  
+			limit = { 
 				check_variable = { which = children_crusade_morale value = -15 }
 				NOT = { check_variable = { which = children_crusade_morale value = -7 } } 
 			}
 			add_character_modifier = { name = children_crusade_morale_1 duration = 1000 }
 		}
 		if = { 
-			limit = {  
+			limit = { 
 				check_variable = { which = children_crusade_morale value = -7 }
 				NOT = { check_variable = { which = children_crusade_morale value = -3 } } 
 			}
 			add_character_modifier = { name = children_crusade_morale_2 duration = 1000 }
 		}
 		if = { 
-			limit = {  
+			limit = { 
 				check_variable = { which = children_crusade_morale value = -3 }
 				NOT = { check_variable = { which = children_crusade_morale value = 2 } } 
 			}
 			add_character_modifier = { name = children_crusade_morale_3 duration = 1000 }
 		}
 		if = { 
-			limit = {  
+			limit = { 
 				check_variable = { which = children_crusade_morale value = 2 }
 			}
 			add_character_modifier = { name = children_crusade_morale_4 duration = 1000 }
@@ -2405,7 +2405,7 @@ narrative_event = {
 		}
 
 		if = { 
-			limit = {  
+			limit = { 
 				persistent_event_target:childrens_crusade_sponsor_per = { has_character_flag = flag_childrens_crusade_sponsor_joins_war }
 			}
 			persistent_event_target:childrens_crusade_sponsor_per = { join_attacker_wars = ROOT join_defender_wars = ROOT }
@@ -2459,7 +2459,7 @@ narrative_event = {
 	option = { 
 		name = EVTOPTAHF25823
 		if = { 
-			limit = {  
+			limit = { 
 				FROM = { persistent_event_target:childrens_crusade_sponsor_per = { character = ROOT } }
 			}
 			tiered_prestige_negative_effect = yes
@@ -2500,7 +2500,7 @@ narrative_event = {
 	option = { 
 		name = EVTOPTAHF25825
 		if = { 
-			limit = {  
+			limit = { 
 				FROM = { persistent_event_target:childrens_crusade_sponsor_per = { character = ROOT } }
 			}
 			tiered_prestige_negative_effect = yes
@@ -2549,7 +2549,7 @@ narrative_event = {
 				trait = zealous
 			}
 			independent = yes
-			capital_scope = {  
+			capital_scope = { 
 				region = world_northeast
 			}
 			lower_real_tier_than = KING

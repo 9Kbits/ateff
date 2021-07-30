@@ -542,7 +542,7 @@ letter_event = {
 			modifier = {
 				factor = 0
 				FROM = { NOT = { plot_power = 1.0 } }
-			}				
+			}	
 			modifier = {
 				factor = 1.25
 				is_weak_trigger = yes
@@ -633,7 +633,7 @@ letter_event = {
 			modifier = {
 				factor = 0.5
 				FROM = { plot_power = 4.0 }
-			}			
+			}
 		}
 		FROM = {
 			letter_event = { id = 8100 days = 3 tooltip = "EVTTOOLTIP8100" }
@@ -671,7 +671,7 @@ letter_event = {
 		ai_chance = {
 			factor = 20
 			modifier = {
-				factor = 0			
+				factor = 0
 				NOT = {
 					FROM = {
 						faction_power = 
@@ -817,7 +817,7 @@ letter_event = {
 						power = 4.0
 					}
 				}
-			}				
+			}	
 		}
 		hidden_tooltip = {
 			if = {
@@ -900,7 +900,7 @@ letter_event = {
 		ai_chance = {
 			factor = 20
 			modifier = {
-				factor = 0			
+				factor = 0
 				NOT = {
 					FROM = {
 						faction_power = 
@@ -1128,7 +1128,7 @@ letter_event = {
 		ai_chance = {
 			factor = 20
 			modifier = {
-				factor = 0			
+				factor = 0
 				NOT = {
 					FROM = {
 						faction_power = 
@@ -1383,7 +1383,7 @@ letter_event = {
 		ai_chance = {
 			factor = 20
 			modifier = {
-				factor = 0			
+				factor = 0
 				NOT = {
 					FROM = {
 						faction_power = 
@@ -1432,7 +1432,7 @@ letter_event = {
 				}
 				character_event = { id = 8091 }
 			}
-			
+
 			FROM = {
 				letter_event = { id = 8066 }
 				any_faction_backer = {
@@ -1613,7 +1613,7 @@ letter_event = {
 		ai_chance = {
 			factor = 10
 			modifier = {
-				factor = 0			
+				factor = 0
 				NOT = {
 					FROM = {
 						faction_power = 
@@ -1623,7 +1623,7 @@ letter_event = {
 						}
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0
 				FROM = { NOT = { plot_power = 1.0 } }
@@ -1870,7 +1870,7 @@ letter_event = {
 		ai_chance = {
 			factor = 10
 			modifier = {
-				factor = 0			
+				factor = 0
 				NOT = {
 					FROM = {
 						faction_power = 
@@ -1880,7 +1880,7 @@ letter_event = {
 						}
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0
 				FROM = { NOT = { plot_power = 1.0 } }
@@ -2376,7 +2376,7 @@ letter_event = {
 		ai_chance = {
 			factor = 5
 			modifier = {
-				factor = 0			
+				factor = 0
 				NOT = {
 					FROM = {
 						faction_power = 
@@ -2633,7 +2633,7 @@ letter_event = {
 		ai_chance = {
 			factor = 5
 			modifier = {
-				factor = 0			
+				factor = 0
 				NOT = {
 					FROM = {
 						faction_power = 
@@ -2643,7 +2643,7 @@ letter_event = {
 						}
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 0.001
 				has_nickname = nick_the_conqueror
@@ -2927,7 +2927,7 @@ letter_event = {
 			if = {
 				limit = {
 					prisoner = yes
-					host = { character = FROM  }
+					host = { character = FROM }
 				}
 				prisoner = no
 			}
@@ -2960,7 +2960,7 @@ letter_event = {
 							}
 						}
 					}
-				
+	
 					usurp_title_plus_barony_if_unlanded_and_vassals_no_adj = { target = PREVPREV type = faction_demand }
 				}
 			}
@@ -19449,7 +19449,7 @@ letter_event = {
 						}
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 1.25
 				is_weak_trigger = yes
@@ -19815,7 +19815,7 @@ letter_event = {
 						}
 					}
 				}
-			}			
+			}
 			modifier = {
 				factor = 1.25
 				is_weak_trigger = yes
@@ -19911,7 +19911,7 @@ letter_event = {
 									has_law = revoke_title_voting_power_1
 									has_law = grant_title_voting_power_1
 									has_law = imprison_voting_power_1
-									has_law = war_voting_power_1						
+									has_law = war_voting_power_1
 								}
 								add_law_w_cooldown = succ_hre_elective
 							}
@@ -19926,7 +19926,7 @@ letter_event = {
 									has_law = revoke_title_voting_power_1
 									has_law = grant_title_voting_power_1
 									has_law = imprison_voting_power_1
-									has_law = war_voting_power_1						
+									has_law = war_voting_power_1
 								}
 								add_law_w_cooldown = succ_feudal_elective
 							}
@@ -19943,7 +19943,7 @@ letter_event = {
 										has_law = revoke_title_voting_power_1
 										has_law = grant_title_voting_power_1
 										has_law = imprison_voting_power_1
-										has_law = war_voting_power_1						
+										has_law = war_voting_power_1
 									}
 								}
 								add_law_w_cooldown = succ_gavelkind
@@ -20242,18 +20242,18 @@ character_event = {
 			}
 			if = {
 				limit = { 
-					NOT =  { has_law = succ_byzantine_elective } 
-					OR =  { 
+					NOT = { has_law = succ_byzantine_elective } 
+					OR = { 
 						title = e_dixie 
 						has_title_flag = alternate_hre
 					} 
-					NOT =  { has_law = succ_feudal_elective } 
+					NOT = { has_law = succ_feudal_elective } 
 				}
 				add_law_w_cooldown = succ_hre_elective
 			}
 			if = {
 				limit = { 
-					NOR =  { 
+					NOR = { 
 						title = e_dixie 
 						has_title_flag = alternate_hre
 						has_law = succ_feudal_elective 

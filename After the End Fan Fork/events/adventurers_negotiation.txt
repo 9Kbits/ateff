@@ -104,7 +104,7 @@ character_event = {
 			}
 		}
 
-   		#If they can't afford your province, pick a vassal province (also a big chance to happen even if they can afford it)
+ 		#If they can't afford your province, pick a vassal province (also a big chance to happen even if they can afford it)
 		random_list = {
 			80 = {
 				random_vassal = {
@@ -330,7 +330,7 @@ letter_event = {
 
 	is_triggered_only = yes
 
-  
+ 
 	#Sell your province 
 	option = {
 		trigger = { 
@@ -419,7 +419,7 @@ letter_event = {
 				limit = { is_female = no }
 				add_spouse_matrilineal = event_target:raiding_adventurer
 			}
-			 if = {
+			if = {
 				limit = { is_female = yes }
 				add_spouse = event_target:raiding_adventurer
 			}
@@ -541,7 +541,7 @@ character_event = {
 			}
 			log = "Adventurer [This.GetBestName]([This.GetID]) is forced to haggle since [This.GetSheHe] can't afford the province."
 		}
-			
+
 		random_list = {
 			50 = { #Deal
 				trigger = { check_variable = { which = adventurer_treasury value = 0 } }
@@ -580,7 +580,7 @@ character_event = {
 					set_character_flag = no_haggling
 					log = "[This.GetBestName]([This.GetID]) can't even afford the reduced haggle price."
 				}
-				
+	
 				if = {
 					limit = {
 						NOT = { check_variable = { which = adventurer_treasury value = 0 } }
@@ -647,7 +647,7 @@ letter_event = {
 				}
 			}
 		} 
-	   
+	
 		#Changes opinions/prestige if not your province 
 		if = {
 			limit = { NOT = { event_target:selling_province = { owner = { character = ROOT } } } }
@@ -737,7 +737,7 @@ letter_event = {
 			log = "Displaced royal: [raiding_adventurer.GetBestName] settled after buying the province [selling_province.GetName] to the price of [transfer_money.GetValue] ducats, from [Root.GetBestName]."
 		}
 		else = {
-		  log = "Adventurer [raiding_adventurer.GetBestName] settled after buying the province [selling_province.GetName] to the price of [transfer_money.GetValue] ducats."
+		log = "Adventurer [raiding_adventurer.GetBestName] settled after buying the province [selling_province.GetName] to the price of [transfer_money.GetValue] ducats."
 		}
 
 		#Chance to convert to your religion (unless it's a Chinese royal...)
@@ -825,10 +825,10 @@ letter_event = {
 			if = {
 				limit = { FROM = { has_character_flag = haggle_price } }
 				event_target:raiding_adventurer = {
-			   	multiply_variable = { which = province_offer value = -1 }
-			   	wealth = province_offer
-			   	clr_character_flag = raiding_adventurer #flag set in hl_raiding_adventurers_events.txt
-			   }	
+				multiply_variable = { which = province_offer value = -1 }
+				wealth = province_offer
+				clr_character_flag = raiding_adventurer #flag set in hl_raiding_adventurers_events.txt
+			}	
 			}
 
 			#Non-Aggression Pact
@@ -1078,7 +1078,7 @@ letter_event = { # Religion flip notification event
 	
 	is_triggered_only = yes
 	
-	option = {	 
+	option = {	
 		name = EXCELLENT
 	}
 }
@@ -1122,7 +1122,7 @@ letter_event = { # Religion flip notification event
 #			limit = {
 #				NOT = { has_character_flag = negotiating_with_adventurer }
 #				ai = no
-#			
+#
 #			}
 #			character_event = {
 #				id = ADV.1

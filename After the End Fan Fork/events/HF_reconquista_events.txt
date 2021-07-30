@@ -7,7 +7,7 @@ namespace = HF
 # Clean up event post-Reconquista
 character_event = {
 	id = HF.49200
-   	hide_window = yes
+ 	hide_window = yes
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
 	trigger = {
@@ -269,7 +269,7 @@ letter_event = {
 
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49212
 
 		opinion = {
@@ -323,7 +323,7 @@ narrative_event = {
 
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49220
 
 		if = {
@@ -367,7 +367,7 @@ narrative_event = {
 
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49221
 		#add_artifact = crown_wrapped_helmet
 		if = {
@@ -696,7 +696,7 @@ character_event = {
 	has_dlc = "Holy Fury"
 
 	# Invest some gold 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49241
 		trigger = {
 			NOT = {
@@ -845,7 +845,7 @@ character_event = {
 		}
 	}
 	# Invest quite a lot of gold
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_49241
 		if = {
 			limit = {
@@ -1461,15 +1461,15 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49243
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_49243
 
 		trigger = {
 			OR = { 
-				NOT = { ROOT = { has_law = succ_byzantine_elective } }  #Either not Imperial...
+				NOT = { ROOT = { has_law = succ_byzantine_elective } } #Either not Imperial...
 				NOT = { #...Or there are no valid vassal candidates that can be commanders.
 					any_vassal = { 
 						higher_real_tier_than = BARON
@@ -1486,7 +1486,7 @@ character_event = {
 							}
 							has_character_flag = special_marshal
 						}
-				
+	
 						prisoner = no
 						NOT = { is_incapable = yes }
 						NOT = { is_inaccessible_trigger = yes }
@@ -1622,7 +1622,7 @@ character_event = {
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49244
 		if = {
 			limit = {
@@ -1733,7 +1733,7 @@ character_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_49244
 		if = {
 			limit = {
@@ -1889,7 +1889,7 @@ character_event = {
 		has_global_flag = active_reconquista
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49249
 	}
 
@@ -1926,7 +1926,7 @@ character_event = {
 											religion_group = cult_of_saints
 										}
 									}
-								}							
+								}	
 							}
 						}
 					}
@@ -2697,7 +2697,7 @@ narrative_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49451
 		trigger = {
 			religion_group = FROM
@@ -2741,7 +2741,7 @@ narrative_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49452
 		trigger = {
 			religion_group = cult_of_saints
@@ -2897,7 +2897,7 @@ character_event = {
 				}
 				#1 = {
 				#	trigger = { religion = sacred_heart }
-   				#	add_artifact = crown_wrapped_helmet
+ 				#	add_artifact = crown_wrapped_helmet
 				#}
 			}
 			add_random_commander_trait_effect = yes
@@ -3037,7 +3037,7 @@ character_event = {
 		clr_character_flag = reconquista_sponsor
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_49463
 		trigger_switch = {
 			on_trigger = tier
@@ -3059,7 +3059,7 @@ character_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_49463
 		trigger_switch = {
 			on_trigger = tier
@@ -3157,7 +3157,7 @@ character_event = {
 						}
 					}
 				}
-				
+	
 			}
 		}
 		any_war = {

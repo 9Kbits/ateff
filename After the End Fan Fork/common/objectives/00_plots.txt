@@ -60,7 +60,7 @@ plot_gain_title = {
 	allow = {
 		holder_scope = {
 			NOT = { spouse = { character = FROM } }
-			NOT = { reverse_has_truce = FROM  }
+			NOT = { reverse_has_truce = FROM }
 		}
 		OR = {
 			FROM = {
@@ -132,7 +132,7 @@ plot_gain_title = {
 				FROM = { trait = envious }
 				FROM = { trait = deceitful }
 				FROM = { trait = ambitious }
-			}			
+			}
 		}		
 		modifier = {
 			factor = 0
@@ -700,17 +700,17 @@ plot_kill_character = {
 		hidden_tooltip = {
 			OR = {
 				ai = no # Human
-				
+	
 				# Pretender to a title
 				any_pretender_title = {
 					always = yes
 				}
-				
+	
 				# Heir to a title
 				any_heir_title = {
 					always = yes
 				}
-				
+	
 				# Character's child is heir or pretender to a title that I don't hold
 				any_child = {
 					OR = {
@@ -723,7 +723,7 @@ plot_kill_character = {
 						}
 					}
 				}
-				
+	
 				# Spouse is pretender to a title
 				spouse = {
 					any_pretender_title = {
@@ -738,7 +738,7 @@ plot_kill_character = {
 				spouse = {
 					has_lover = yes
 				}
-				
+	
 				# Is nuts...
 				trait = lunatic
 				trait = possessed
@@ -763,7 +763,7 @@ plot_kill_character = {
 	allow = {
 		NOT = { is_child_of = FROM } # Not my own children
 		OR = {
-			NOT = { character = FROM }  # Not against myself! (unself I am bonkers)
+			NOT = { character = FROM } # Not against myself! (unself I am bonkers)
 			trait = lunatic
 		}
 		NOT = { any_spouse = { character = FROM } } # This case is covered by another plot
@@ -801,7 +801,7 @@ plot_kill_character = {
 						NOT = { opinion = { who = ROOT value = 0 } }
 					}
 				}
-				
+	
 				# Kill a ruler if I'm the heir
 				AND = {
 					any_heir_title = {
@@ -815,7 +815,7 @@ plot_kill_character = {
 						NOT = { opinion = { who = ROOT value = 0 } }
 					}
 				}
-				
+	
 				# Gets rid of obstacles in the way of a child's succession
 				AND = {
 					any_child = {
@@ -837,7 +837,7 @@ plot_kill_character = {
 						NOT = { opinion = { who = ROOT value = 0 } }
 					}
 				}
-				
+	
 				# Get rid of the current heir to a title the character's spouse is a pretender to
 				AND = {
 					spouse = {	
@@ -854,7 +854,7 @@ plot_kill_character = {
 						NOT = { opinion = { who = ROOT value = 0 } }
 					}
 				}
-				
+	
 				# Get rid of a ruler the spouse is heir to
 				AND = {
 					spouse = {
@@ -890,7 +890,7 @@ plot_kill_character = {
 						NOT = { opinion = { who = ROOT value = 0 } }
 					}
 				}
-				
+	
 				# Go nuts...
 				AND = {
 					same_liege = ROOT
@@ -902,12 +902,12 @@ plot_kill_character = {
 						}
 					}
 				}
-				
+	
 				# Rivals
 				any_rival = {
 					character = ROOT
 				}
-				
+	
 				ROOT = { is_murder_quest_target_of_prev_trigger = yes }
 			}
 		}
@@ -1150,7 +1150,7 @@ plot_kill_spouse = {
 		OR = {
 			# Human
 			FROM = { ai = no }
-			
+
 			# Male plotter without sons wanting to kill an old/barren wife
 			AND = {
 				age = 40
@@ -1170,7 +1170,7 @@ plot_kill_spouse = {
 					NOT = { opinion = { who = ROOT value = 50 } }
 				}
 			}
-			
+
 			# Female plotter disliking her husband but loving her child - the legal heir
 			FROM = {
 				is_female = yes
@@ -1184,7 +1184,7 @@ plot_kill_spouse = {
 					their_opinion = { who = FROM value = 75 }
 				}
 			}
-			
+
 			# Spouse has a lover...
 			AND = {
 				has_lover = yes
@@ -1581,7 +1581,7 @@ plot_weaken_fellow_vassal = {
 					NOT = { 
 						has_opinion_modifier = {
 							modifier = opinion_plot_weaken_fellow_vassal
-							who = FROM			
+							who = FROM
 						}
 					}
 				}
@@ -2102,12 +2102,12 @@ plot_seize_trade_post = {
 			NOT = { 
 				has_opinion_modifier = { who = FROM modifier = opinion_seized_tp }
 			}
-			
+
 			# Only if there is no non-aggression-pact with the trade post owner
 			FROM = {
 				NOT = {
 					has_non_aggression_pact_with = PREV
-				}			
+				}
 			}
 		}
 		

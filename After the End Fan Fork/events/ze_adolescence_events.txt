@@ -1,9 +1,9 @@
 #############################################
 #############################################
-#										 	#
-# ZE Adolescence Events					  	#
+#											#
+# ZE Adolescence Events						#
 # ID ZE.13000-ZE.13999						#
-#										 	#
+#											#
 #############################################
 #############################################
 
@@ -285,7 +285,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_haughty
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = haughty_to_proud
 				modifier = {
@@ -381,7 +381,7 @@ character_event = {
 				educator = { trait = ambitious }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13002 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13002 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13001 } # Go direct to trait change
@@ -504,7 +504,7 @@ character_event = {
 		show_trait = ambitious
 	}
 	option = {
-		name = EVTOPTB_ZE_13002  # Do not intervene
+		name = EVTOPTB_ZE_13002 # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13001 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = haughty_to_proud } }
@@ -634,7 +634,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_affectionate
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = affectionate_to_kind
 				modifier = {
@@ -713,7 +713,7 @@ character_event = {
 				educator = { trait = charitable }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13012 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13012 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13011 } # Go direct to trait change
@@ -814,7 +814,7 @@ character_event = {
 		show_trait = charitable
 	}
 	option = {
-		name = EVTOPTB_ZE_13012  # Do not intervene
+		name = EVTOPTB_ZE_13012 # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13011 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = affectionate_to_kind } }
@@ -922,7 +922,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_timid
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = timid_to_humble
 				modifier = {
@@ -999,7 +999,7 @@ character_event = {
 				educator = { trait = content }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13022 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13022 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13021 } # Go direct to trait change
@@ -1100,7 +1100,7 @@ character_event = {
 		show_trait = content
 	}
 	option = {
-		name = EVTOPTB_ZE_13022  # Do not intervene
+		name = EVTOPTB_ZE_13022 # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13021 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = timid_to_humble } }
@@ -1209,7 +1209,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_rowdy
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = rowdy_to_strong
 				modifier = {
@@ -1317,7 +1317,7 @@ character_event = {
 				educator = { trait = brave }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13032 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13032 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13031 } # Go direct to trait change
@@ -1495,7 +1495,7 @@ character_event = {
 		show_trait = brave
 	}
 	option = {
-		name = EVTOPTB_ZE_13032  # Do not intervene
+		name = EVTOPTB_ZE_13032 # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13031 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = rowdy_to_strong } }
@@ -1735,7 +1735,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_willful
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = willful_to_ambitious
 				modifier = {
@@ -1806,7 +1806,7 @@ character_event = {
 				educator = { trait = proud }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13042 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13042 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13041 } # Go direct to trait change
@@ -1907,7 +1907,7 @@ character_event = {
 		show_trait = proud
 	}
 	option = {
-		name = EVTOPTB_ZE_13042_B  # Do not intervene
+		name = EVTOPTB_ZE_13042_B # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13041 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = willful_to_ambitious } }
@@ -2016,7 +2016,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_brooding
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = brooding_to_just
 				modifier = {
@@ -2117,7 +2117,7 @@ character_event = {
 				educator = { trait = temperate }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13052 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13052 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13051 } # Go direct to trait change
@@ -2239,7 +2239,7 @@ character_event = {
 		show_trait = temperate
 	}
 	option = {
-		name = EVTOPTB_ZE_13052  # Do not intervene
+		name = EVTOPTB_ZE_13052 # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13051 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = brooding_to_just } }
@@ -2369,7 +2369,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_indolent
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = indolent_to_charitable
 				modifier = {
@@ -2434,7 +2434,7 @@ character_event = {
 						OR = { 
 							trait = gluttonous
 							trait = sturdy
-							trait = is_fat  
+							trait = is_fat 
 						} 
 					}
 				}
@@ -2508,7 +2508,7 @@ character_event = {
 				educator = { trait = gregarious }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13062 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13062 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13061 } # Go direct to trait change
@@ -2597,7 +2597,7 @@ character_event = {
 		remove_trait = indolent
 		add_trait = sturdy
 		hidden_tooltip = { 
-			random_list = {  
+			random_list = { 
 				70 = {
 					modifier = { 
 						factor = 1.5
@@ -2681,7 +2681,7 @@ character_event = {
 		show_trait = gregarious
 	}
 	option = {
-		name = EVTOPTB_ZE_13062  # Do not intervene
+		name = EVTOPTB_ZE_13062 # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13061 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = indolent_to_charitable } }
@@ -2815,7 +2815,7 @@ character_event = {
 		remove_trait = indolent
 		add_trait = sturdy
 		hidden_tooltip = { 
-			random_list = {  
+			random_list = { 
 				70 = {
 					modifier = { 
 						factor = 1.5
@@ -2861,7 +2861,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_playful
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			15 = {
 				set_character_flag = playful_to_gregarious
 				modifier = {
@@ -2897,7 +2897,7 @@ character_event = {
 				}
 			}
 			1 = {
-				set_character_flag = playful_to_lunatic  # This should be RARE but affected by modifiers/traumas
+				set_character_flag = playful_to_lunatic # This should be RARE but affected by modifiers/traumas
 				modifier = {
 					factor = 0
 					trait = lunatic
@@ -2934,7 +2934,7 @@ character_event = {
 				educator = { trait = cruel }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13072 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13072 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13071 } # Go direct to trait change
@@ -3035,7 +3035,7 @@ character_event = {
 		show_trait = cruel
 	}
 	option = {
-		name = EVTOPTB_ZE_13072  # Do not intervene
+		name = EVTOPTB_ZE_13072 # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13071 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = playful_to_gregarious } }
@@ -3144,7 +3144,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_conscientious
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = conscientious_to_diligent
 				modifier = {
@@ -3201,7 +3201,7 @@ character_event = {
 				educator = { trait = just }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13082 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13082 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13081 } # Go direct to trait change
@@ -3311,7 +3311,7 @@ character_event = {
 		show_trait = just
 	}
 	option = {
-		name = EVTOPTB_ZE_13082  # Do not intervene
+		name = EVTOPTB_ZE_13082 # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13081 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = conscientious_to_diligent } }
@@ -3403,7 +3403,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_fussy
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = fussy_to_patient
 				modifier = {
@@ -3480,7 +3480,7 @@ character_event = {
 				educator = { trait = diligent }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13092 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13092 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13091 } # Go direct to trait change
@@ -3581,7 +3581,7 @@ character_event = {
 		show_trait = diligent
 	}
 	option = {
-		name = EVTOPTB_ZE_13092  # Do not intervene
+		name = EVTOPTB_ZE_13092 # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13091 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = fussy_to_patient } }
@@ -3694,7 +3694,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_curious
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = curious_to_cynical
 				modifier = {
@@ -4023,7 +4023,7 @@ character_event = {
 				educator = { trait = patient }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13102 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13102 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13101 } # Go direct to trait change
@@ -4250,13 +4250,13 @@ character_event = {
 	}
 	option = {
 		name = {
-			text = EVTOPTB_ZE_13102  # Do not intervene
+			text = EVTOPTB_ZE_13102 # Do not intervene
 			trigger = {
 				FROM = { is_female = no }
 			}
 		}
 		name = {
-			text = EVTOPTC_ZE_13102  # Do not intervene
+			text = EVTOPTC_ZE_13102 # Do not intervene
 			trigger = {
 				FROM = { is_female = yes }
 			}
@@ -4636,7 +4636,7 @@ character_event = {
 	
 	immediate = {
 		set_character_flag = was_idolizer
-		random_list = {  # Select outcome
+		random_list = { # Select outcome
 			10 = {
 				set_character_flag = idolizer_to_zealous
 				modifier = {
@@ -4735,7 +4735,7 @@ character_event = {
 				educator = { trait = kind }
 				prisoner = no
 			}
-			educator = { character_event = { id = ZE.13112 } }  # Let educator decide on intervention
+			educator = { character_event = { id = ZE.13112 } } # Let educator decide on intervention
 			break = yes
 		}
 		character_event = { id = ZE.13111 } # Go direct to trait change
@@ -4848,7 +4848,7 @@ character_event = {
 		show_trait = kind
 	}
 	option = {
-		name = EVTOPTB_ZE_13112  # Do not intervene
+		name = EVTOPTB_ZE_13112 # Do not intervene
 		hidden_tooltip = { FROM = { character_event = { id = ZE.13111 } } } # Go to normal trait change
 		if = {
 			limit = { FROM = { has_character_flag = idolizer_to_zealous } }
@@ -4938,7 +4938,7 @@ character_event = {
 		remove_trait = idolizer
 		add_trait = feeble
 		hidden_tooltip = { 
-			random_list = {  
+			random_list = { 
 				70 = {
 					modifier = { 
 						factor = 1.5
@@ -6760,8 +6760,8 @@ character_event = {
 				1 = { add_trait = charitable } 
 				1 = { add_trait = slothful} 
 				1 = { add_trait = gluttonous } 
-		 	}
-		 	remove_trait = indolent
+			}
+			remove_trait = indolent
 		}
 		if = {
 			limit = {
@@ -6882,5 +6882,5 @@ character_event = {
 			} 
 			remove_trait = idolizer
 		}
-	}  		
+	} 		
 }

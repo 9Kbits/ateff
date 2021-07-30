@@ -715,10 +715,10 @@ targetted_decisions = {
 					NOT = { religion = ROOT }
 				}
 			}
-			
+
 			controls_religion = no
 			holy_order = no
-			
+
 			has_dlc = "Rajas of India"
 		}
 		allow = {
@@ -977,7 +977,7 @@ targetted_decisions = {
 			#NOT = {
 				#AND = {
 					#has_dlc = "Charlemagne"
-					#has_landed_title = e_byzantium  # May instead renounce iconoclasm
+					#has_landed_title = e_byzantium # May instead renounce iconoclasm
 					#has_landed_title = c_byzantion
 					#religion = iconoclast
 					#is_heresy_of = orthodox
@@ -996,9 +996,9 @@ targetted_decisions = {
 					modifier = ruler_converted_from
 				}
 			}
-			
+
 			abandon_heresy = yes
-			
+
 			if = {
 				limit = { higher_tier_than = BARON }
 				hidden_tooltip = {
@@ -1068,11 +1068,11 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.5 # Slow it down a bit
 			}
-			
+
 			modifier = { # Do not flip if we're in a huge Northern empire
 				factor = 0
 				top_liege = {
@@ -1099,7 +1099,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0.01
 				capital_scope = {
@@ -1190,11 +1190,11 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.5 # Slow it down a bit
 			}
-			
+
 			modifier = { # Do not flip if we're in a huge Southern empire
 				factor = 0
 				top_liege = { culture_group = south_anglo }
@@ -1214,7 +1214,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0.01
 				capital_scope = {
@@ -1225,7 +1225,7 @@ targetted_decisions = {
 				factor = 2.0
 				liege = { culture = yanquito }
 			}
-			
+
 			modifier = {
 				factor = 1.1
 				num_culture_realm_provs = {
@@ -1303,11 +1303,11 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.5 # Slow it down a bit
 			}
-			
+
 			modifier = { # Do not flip if we're in a huge Boricua empire
 				factor = 0
 				top_liege = { culture = boricua }
@@ -1327,7 +1327,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0.01
 				capital_scope = {
@@ -1376,11 +1376,11 @@ targetted_decisions = {
 		}
 		convert_to_neomoor = {
 			only_playable = yes
-			
+
 			filter = self
 			ai_target_filter = self
 			ai_check_interval = 60
-			
+
 			potential = {
 				is_playable = yes
 				OR = {
@@ -1420,11 +1420,11 @@ targetted_decisions = {
 			}
 			ai_will_do = {
 				factor = 1
-				
+	
 				modifier = {
 					factor = 0.5 # Slow it down a bit
 				}
-				
+	
 				modifier = { # Do not flip if we're in a huge Gulf Coast empire
 					factor = 0
 					top_liege = {
@@ -1449,7 +1449,7 @@ targetted_decisions = {
 						}
 					}
 				}
-				
+	
 				modifier = {
 					factor = 0.01
 					capital_scope = {
@@ -1539,11 +1539,11 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.5 # Slow it down a bit
 			}
-			
+
 			modifier = {
 				factor = 2.0
 				liege = { culture_group = louisianais }
@@ -1626,11 +1626,11 @@ targetted_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.5 # Slow it down a bit
 			}
-			
+
 			modifier = {
 				factor = 2.0
 				liege = { culture_group = louisianais }
@@ -1722,7 +1722,7 @@ targetted_decisions = {
 				limit = { religion = aria_de_machete }
 				religion = aria_de_machete_reformed
 			}
-			
+
 			hidden_tooltip = {
 				any_courtier = {
 					limit = {
@@ -1878,7 +1878,7 @@ targetted_decisions = {
 				religion_authority = {
 					modifier = ruler_converted_from
 				}
-			
+
 				if = {
 					limit = {
 						trait = cynical
@@ -1978,8 +1978,8 @@ targetted_decisions = {
 						chance = 50
 						add_trait = sympathy_nautical
 					}
-				}					
-			
+				}
+
 				religion = ROOT
 				abdicate_holy_order_if_religion_changes_effect = yes
 
@@ -2008,7 +2008,7 @@ targetted_decisions = {
 					}
 					add_trait = marian_santa_muerte
 				}
-				
+	
 				#When spouse is Cetic
 				if = {
 					limit = {
@@ -2042,7 +2042,7 @@ targetted_decisions = {
 					}
 					add_trait = way_fist
 				}
-				
+	
 				#When spouse is Patria Grande
 				if = {
 					limit = {
@@ -2068,7 +2068,7 @@ targetted_decisions = {
 					}
 					add_trait = patria_manuelita
 				}
-				
+	
 				#When spouse is Apostolic
 				if = {
 					limit = {
@@ -2094,7 +2094,7 @@ targetted_decisions = {
 					}
 					add_trait = apostolic_pedro
 				}
-				
+	
 				if = {
 					limit = {
 						ROOT = {
@@ -2127,7 +2127,7 @@ targetted_decisions = {
 					}
 					add_trait = pagan_branch_4
 				}
-			
+
 				#When spouse is Hindu
 				if = {
 					limit = {
@@ -2185,7 +2185,7 @@ targetted_decisions = {
 					}
 					add_trait = shugendo_shinto
 				}
-				
+	
 				if = {
 					limit = {
 						ROOT = {
@@ -2243,7 +2243,7 @@ targetted_decisions = {
 					add_trait = peyotist_manitous
 				}
 
-				
+	
 				hidden_tooltip = {
 					religion_authority = {
 						modifier = ruler_converted_to
@@ -2285,7 +2285,7 @@ decisions = {
 			}
 			controls_religion = no
 			NOT = { has_character_modifier = baptism_request_cooldown }
-			
+
 			war = yes
 			any_war = {
 				defender = { character = ROOT }
@@ -2321,7 +2321,7 @@ decisions = {
 		effect = {
 			prestige = -500
 			piety = 100
-			
+
 			hidden_tooltip = {
 				any_war = {
 					limit = {
@@ -2425,62 +2425,62 @@ decisions = {
 						limit = { religion_group = pagan_group }
 						add_trait = sympathy_pagans
 					}
-					
+
 					if = {
 						limit = { religion_group = afro_syncretic }
 						add_trait = sympathy_afro_syncretic
 					}
-					
+
 					if = {
 						limit = { religion_group = american_native }
 						add_trait = sympathy_american_native
 					}
-					
+
 					if = {
 						limit = { religion_group = amero_syncretic }
 						add_trait = sympathy_amero_syncretic
 					}
-					
+
 					if = {
 						limit = { religion_group = christian }
 						add_trait = sympathy_christendom
 					}
-					
+
 					if = {
 						limit = { religion_group = muslim }
 						add_trait = sympathy_islam
 					}
-					
+
 					if = {
 						limit = { religion_group = cult_of_saints }
 						add_trait = sympathy_cult_of_saints
 					}
-					
+
 					if = {
 						limit = { religion_group = pacific }
 						add_trait = sympathy_pacific
 					}
-					
+
 					if = {
 						limit = { religion_group = latter_day_saints }
 						add_trait = sympathy_latter_day_saints
 					}
-					
+
 					if = {
 						limit = { religion_group = mesoamerican_gods }
 						add_trait = sympathy_mesoamerican_gods
 					}
-					
+
 					if = {
 						limit = { religion_group = oldworld }
 						add_trait = sympathy_oldworld
 					}
-					
+
 					if = {
 						limit = { religion_group = jewish_group }
 						add_trait = sympathy_judaism
 					}
-					
+
 					if = {
 						limit = { religion_group = indian_group }
 						add_trait = sympathy_indian

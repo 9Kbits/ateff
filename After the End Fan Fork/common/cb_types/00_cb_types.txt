@@ -550,7 +550,7 @@ other_claim = {
 					}
 				}
 			}
-			
+
 			# Anti-Popes take all the gold of the Vatican.
 			if = {
 				limit = {
@@ -603,7 +603,7 @@ other_claim = {
 					}
 				}
 			}
-			
+
 			if = {
 				limit = {
 					holder_scope = {
@@ -614,7 +614,7 @@ other_claim = {
 					set_character_flag = other_claim_tmp_flag
 				}
 			}
-			
+
 			if = {
 				limit = {
 					ROOT = {
@@ -628,7 +628,7 @@ other_claim = {
 			}
 
 			usurp_title_plus_barony_if_unlanded = { target = ROOT type = claim }
-			
+
 			hidden_tooltip = {
 				ROOT = { 
 					any_child = { 
@@ -658,7 +658,7 @@ other_claim = {
 						move_character = ROOT 
 					}
 				}
-			
+
 				# If we were erroneously vassalized, break free
 				if = {
 					limit = {
@@ -673,7 +673,7 @@ other_claim = {
 					}
 					ROOT = { set_defacto_liege = ROOT }
 				}
-			
+
 				# try and vassalize, but only conditionally
 				if = {
 					limit = {
@@ -717,7 +717,7 @@ other_claim = {
 						set_defacto_liege = ROOT
 					}
 				}
-				
+	
 				# If we have become independent from our mutual liege, restore that vassal tie
 				if = {
 					limit = {
@@ -736,7 +736,7 @@ other_claim = {
 						}
 					}
 				}
-				
+	
 				ROOT = { 
 					clr_character_flag = other_claim_tmp_flag 
 					clr_character_flag = claimant_is_vassal_ruler_flag 
@@ -963,7 +963,7 @@ claim_on_liege = {
 		
 		FROM = {
 			hidden_tooltip = { disband_event_forces = faction_loyalists }
-			
+
 			if = {
 				limit = { NOT = { has_dlc = "Zeus" } }
 				any_demesne_title = { # All titles
@@ -1027,7 +1027,7 @@ claim_on_liege = {
 			limit = {
 				higher_tier_than = FROM
 			}
-			
+
 			FROM = {
 				set_defacto_liege = ROOT
 			}
@@ -1247,7 +1247,7 @@ claim_on_liege_plot = {
 		}
 		
 		FROM = {
-			
+
 			hidden_tooltip = { disband_event_forces = faction_loyalists }
 		
 			if = {
@@ -1630,7 +1630,7 @@ other_claim_on_liege = {
 			}
 		}
 	}
-			
+
 	is_valid_title = {
 		NOT = { 
 			holder_scope = { 
@@ -1699,7 +1699,7 @@ other_claim_on_liege = {
 
 		FROM = {
 			hidden_tooltip = { disband_event_forces = faction_loyalists }
-			
+
 			if = {
 				limit = { NOT = { has_dlc = "Zeus" } }
 				any_demesne_title = { # All titles
@@ -1844,7 +1844,7 @@ other_claim_on_liege = {
 					set_defacto_liege = ROOT
 				}
 			}
-			
+
 			if = {
 				limit = {
 					FROM = { 
@@ -2276,7 +2276,7 @@ change_seniority_succession_law = {
 	on_success = {
 		FROM = {
 			hidden_tooltip = { disband_event_forces = faction_loyalists }
-			
+
 			if = {
 				limit = { NOT = { has_dlc = "Zeus" } }
 				any_demesne_title = { # All titles
@@ -2480,7 +2480,7 @@ change_primogeniture_succession_law = {
 	on_success = {
 		FROM = {
 			hidden_tooltip = { disband_event_forces = faction_loyalists }
-			
+
 			if = {
 				limit = { NOT = { has_dlc = "Zeus" } }
 				any_demesne_title = { # All titles
@@ -2946,7 +2946,7 @@ invasion = {
 			ROOT = {
 				occupy_minors_of_occupied_settlements = FROM
 				gain_all_occupied_titles = FROM
-				
+	
 				if = {
 					limit = {
 						has_nickname = no
@@ -2958,14 +2958,14 @@ invasion = {
 						10 = { give_nickname = nick_the_conqueror }
 					}
 				}
-				
+	
 				if = {
 					limit = {
 						has_nickname = nick_the_bastard
 					}
 					give_nickname = nick_the_conqueror
 				}
-				
+	
 				#if = {
 				#	limit = {
 				#		has_dlc = "Legacy of Rome"
@@ -2977,11 +2977,11 @@ invasion = {
 				#	}
 				#	character_event = { id = LoR.30 days = 12 }
 				#}
-				
+	
 				if = {
 					limit = {
 						NOT = {
-							has_character_flag = consumerist_prophet							
+							has_character_flag = consumerist_prophet	
 							}
 						}
 					disband_event_forces = yes
@@ -3381,7 +3381,7 @@ tribal_invasion = {
 			ROOT = {
 				occupy_minors_of_occupied_settlements = FROM
 				gain_all_occupied_titles = { who = FROM type = invasion }
-				
+	
 				if = {
 					limit = {
 						has_nickname = no
@@ -3426,7 +3426,7 @@ tribal_invasion = {
 		FROM = {
 			show_scope_change = no
 			prestige = 100
-			
+
 			hidden_tooltip = {
 				if = {
 					limit = {
@@ -3478,7 +3478,7 @@ tribal_invasion = {
 					}
 				}
 			}
-			
+
 			#if = {
 			#	limit = { 
 			#		has_dlc = "Legacy of Rome"
@@ -3689,7 +3689,7 @@ crusade = {
 							has_global_flag = orientalist_jihad_unlocked # you forgot to do this i believe
 						}
 					}
-					
+
 					AND = {
 						religion = rust_cultist
 						custom_tooltip = {
@@ -3697,7 +3697,7 @@ crusade = {
 							has_global_flag = rust_cultist_industrial_actions_unlocked
 						}
 					}
-					
+
 					AND = {
 						religion = patria_grande
 						custom_tooltip = {
@@ -3705,7 +3705,7 @@ crusade = {
 							has_global_flag = patria_grande_liberation_wars_unlocked
 						}
 					}
-					
+
 					religion = revivalist # doesn't need no fancy event to begin declaring jihads
 				}
 			}
@@ -3752,9 +3752,9 @@ crusade = {
 			any_realm_title = {
 				de_jure_liege_or_above = PREVPREV
 			}
-			
+
 			independent = yes # Don't declare Crusades on revolters - chances are high the war will invalidate
-			
+
 			num_of_realm_counties = {
 				value = 6
 				title = PREV
@@ -3847,12 +3847,12 @@ crusade = {
 						NOT = { religion = ROOT }
 					}
 				}
-				
+	
 				best_crusade_claimant = {
 					always = yes # There is a "best" claimant
 				}
 			}
-			
+
 			# Claimants must be of ROOT's religion, and are ranked by strength of claim and actual contribution to the war
 			best_crusade_claimant = {
 				if = {
@@ -3944,7 +3944,7 @@ crusade = {
 						}
 					}
 					usurp_title_only = { target = PREV type = holy_war }
-					
+
 					if = {
 						limit = {
 							NOT = { culture = PREV }
@@ -4044,7 +4044,7 @@ crusade = {
 			religion_authority = {
 				modifier = lost_crusade
 				years = 20
-			}			
+			}
 		}
 		
 		hidden_tooltip = {
@@ -4095,7 +4095,7 @@ crusade = {
 			#	}
 			#	hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
 			#}
-			
+
 			hidden_tooltip = {
 				if = {
 					limit = {
@@ -4375,9 +4375,9 @@ new_crusade = {
 			any_realm_title = {
 				de_jure_liege_or_above = PREVPREV
 			}
-			
+
 			independent = yes # Don't declare Crusades on revolters - chances are high the war will invalidate
-			
+
 			OR = {
 				num_of_realm_counties = {
 					value = 6
@@ -4475,7 +4475,7 @@ new_crusade = {
 			religion_authority = {
 				modifier = lost_crusade
 				years = 20
-			}			
+			}
 		}
 
 		hidden_tooltip = {
@@ -5052,7 +5052,7 @@ new_crusade = {
 						}
 					}
 					#Nope
-					
+
 					distribute_crusade_target_title = yes
 					#The Crusader King becomes an Emperor and gets a bloodline
 					crusader_king = {
@@ -5146,7 +5146,7 @@ new_crusade = {
 							}
 						}
 					}
-					
+
 					#Nope
 
 					if = {
@@ -5246,7 +5246,7 @@ new_crusade = {
 					}
 				}
 			}
-			
+
 			# Achievement
 			any_attacker = {
 				limit = {
@@ -5361,7 +5361,7 @@ new_crusade = {
 				clr_character_flag = crusade_beneficiary_stance
 				clr_character_flag = crusade_papal_stance
 			}
-			
+
 			# Special bloodline for the recipient of the first Catholic Crusade
 			if = {
 				limit = {
@@ -5408,7 +5408,7 @@ new_crusade = {
 					}
 				}
 			}
-			
+
 			# Special bloodline for the recipient of the first Ursuline Crusade
 			if = {
 				limit = {
@@ -5455,7 +5455,7 @@ new_crusade = {
 					}
 				}
 			}
-			
+
 			# Checks if First Crusade (Catholic)
 			if = {
 				limit = {
@@ -5466,7 +5466,7 @@ new_crusade = {
 				}
 				set_global_flag = first_catholic_crusade_complete
 			}
-			
+
 			# Checks if First Crusade (Ursuline)
 			if = {
 				limit = {
@@ -5579,7 +5579,7 @@ new_crusade = {
 			#	}
 			#	hidden_tooltip = { character_event = { id = LoR.30 days = 12 } }
 			#}
-			
+
 			hidden_tooltip = {
 				if = {
 					limit = {
@@ -5900,7 +5900,7 @@ religious = {
 				NOT = { religion_group = FROM }
 				is_heresy_of = FROM
 				is_parent_religion = FROM
-				
+	
 				AND = {
 					OR = {
 						religion_group = oldworld
@@ -6659,7 +6659,7 @@ bid_for_independence = {
 	can_use = {
 		ROOT = {
 			de_facto_liege = FROM
-			
+
 			higher_tier_than = BARON
 			OR = {
 				ai = yes
@@ -6668,7 +6668,7 @@ bid_for_independence = {
 				higher_tier_than = COUNT
 			}
 			mercenary = no
-			
+
 			OR = {
 				is_nomadic = no
 				NOT = {
@@ -6700,7 +6700,7 @@ bid_for_independence = {
 					in_revolt = no
 				}
 			}
-			
+
 			# No independence factions in merchant republics
 			NOT = {
 				AND = {
@@ -8086,7 +8086,7 @@ coastal_republic = {
 		
 		location = {
 			port = yes
-			
+
 			# Must have a trade post there already
 			OR = {
 				PREV = {
@@ -8105,7 +8105,7 @@ coastal_republic = {
 					}
 				}
 			}
-			
+
 			# Not allowed to use this CB to take cities in the capital province of a rival merchant republic
 			FROM = { 
 				OR = {
@@ -8743,7 +8743,7 @@ decadence_invasion = {
 							tier = PREVPREV
 						}
 						usurp_title_plus_barony_if_unlanded = { target = ROOT type = revolt }
-						
+
 						if = {
 							limit = {
 								higher_tier_than = BARON
@@ -8754,10 +8754,10 @@ decadence_invasion = {
 					}
 				}
 			}
-			
+
 			set_defacto_liege = ROOT
 			imprison = ROOT
-			
+
 			hidden_tooltip = {
 				if = {
 					limit = {
@@ -8775,7 +8775,7 @@ decadence_invasion = {
 		hidden_tooltip = {
 			ROOT = { 
 				disband_event_forces = decadence_revolters
-				
+	
 				# Powerful vassals can choose independence
 				any_vassal = {
 						limit = {
@@ -8973,7 +8973,7 @@ cb_faction_independence = {
 		}
 
 		FROM = {
-			
+
 			hidden_tooltip = { disband_event_forces = faction_loyalists }
 			if = {
 				limit = { NOT = { has_dlc = "Zeus" } }
@@ -9434,7 +9434,7 @@ embargo_cb = {
 					}
 				}
 			}
-			
+
 			ROOT = {
 				prestige = -200
 				transfer_scaled_wealth = {
@@ -9524,7 +9524,7 @@ embargo_cb = {
 			ROOT = {
 				opinion = { who = FROM value = -25 }
 			}
-		}			
+		}
 	}		
 }
 
@@ -9558,7 +9558,7 @@ seize_trade_post = {
 
 			OR = {
 				NOT = { same_realm = FROM }
-				
+	
 				# We cannot overtly attack much weaker Patricians in the same republic
 				NOT = { 
 					num_of_trade_post_diff = {
@@ -9789,7 +9789,7 @@ viking_invasion = {
 			religion_authority = {
 				modifier = won_viking_invasion
 			}
-			
+
 			hidden_tooltip = {
 				if = {
 					limit = {
@@ -9890,7 +9890,7 @@ viking_invasion = {
 						enemy = FROM
 						type = invasion
 					}
-					
+
 					# Settle the special invasion forces
 					disband_event_forces = prepared_invasion
 					any_demesne_title = {
@@ -9899,7 +9899,7 @@ viking_invasion = {
 						refill_holding_levy = yes
 					}
 				}
-				
+	
 				if = {
 					limit = {
 						FROM = { is_liege_or_above = ROOT }
@@ -10143,7 +10143,7 @@ pagan_subjugation = {
 		FROM = {
 			piety = -100
 			prestige = -100
-			
+
 			if = {
 				limit = {
 					is_reformed_religion = ROOT
@@ -10151,11 +10151,11 @@ pagan_subjugation = {
 				}
 				religion = ROOT # Reformed pagans are forced to convert back
 			}
-			
+
 			custom_tooltip = {
 				text = tribal_subjugation_tip
 			}
-				
+	
 			hidden_tooltip = {
 				opinion = {
 					modifier = opinion_subjugated 
@@ -10166,7 +10166,7 @@ pagan_subjugation = {
 						modifier = opinion_subjugated 
 						who = ROOT
 					}
-				}				
+				}	
 				any_demesne_title = {
 					limit = {
 						higher_tier_than = ROOT
@@ -11137,14 +11137,14 @@ kingdom_adventure = { # Used mainly for Pirates venturing into South America
 		}
 		FROM = {
 			prestige = -500
-			piety = -250			
+			piety = -250
 		}
 	}
 
 	on_success_title = {
 		custom_tooltip = {
 			text = other_invasion_succ_tip
-			hidden_tooltip = {				
+			hidden_tooltip = {	
 				FROM = { # The adventurer takes ANY demesne title, including the targeted Kingdom, within the area of the targeted kingdom
 					any_demesne_title = {
 						limit = {
@@ -11157,14 +11157,14 @@ kingdom_adventure = { # Used mainly for Pirates venturing into South America
 						usurp_title = { target = ROOT type = host }
 					}
 				}
-				
+	
 				if = { # Claim the targeted Kingdom if it isn't held by anyone
 					limit = {
 						has_holder = no
 					}
 					usurp_title = { target = ROOT type = host }
 				}
-				
+	
 				if = { # Create a Kingdom if the adventurer does not have one by this point
 					limit = {
 						ROOT = {
@@ -11198,7 +11198,7 @@ kingdom_adventure = { # Used mainly for Pirates venturing into South America
 				#		grant_title = ROOT
 				#	}
 				#}
-				
+	
 				ROOT = { # Preserve Vassals under the targeted kingdom
 					vassalize_or_take_under_title = { # Take all vassals held by the target under the title
 						title = PREV
@@ -11243,7 +11243,7 @@ kingdom_adventure = { # Used mainly for Pirates venturing into South America
 				#		culture = ROOT
 				#	}
 				#}
-				
+	
 				# Special case: Sultanate of Rum might start yet another war
 				#if = {
 				#	limit = {
@@ -11640,7 +11640,7 @@ pagan_holy_war = { #
 					}
 					change_variable = { which = strengthen_religion value = 1 }
 				}
-			}			
+			}
 		}
 	}
 
@@ -12718,7 +12718,7 @@ dejure_county_claim = {
 							has_character_modifier = expelled_d_st_pats
 						}
 					}
-					
+
 					AND = {
 						primary_title = { title = d_lightbringers }
 						ROOT = {
@@ -13482,7 +13482,7 @@ dejure_barony_claim = {
 					}
 				}
 			}
-			
+
 			usurp_title_plus_barony_if_unlanded = { target = event_target:target_taker type = claim }
 		}
 	
@@ -14228,7 +14228,7 @@ depose_antipope = {
 				modifier = deposed_antipope
 				years = 50
 			}
-			
+
 			if = {
 				limit = {
 					rightful_religious_head_scope = {
@@ -14239,7 +14239,7 @@ depose_antipope = {
 				}
 				excommunicate = no
 			}
-			
+
 			rightful_religious_head_scope = {
 				opinion = {
 					who = ROOT
@@ -14251,7 +14251,7 @@ depose_antipope = {
 		FROM = { 
 			piety = -500
 			prestige = -250
-			
+
 			rightful_religious_head_scope = {
 				remove_claim = k_papal_state
 				remove_claim = k_ursuline
@@ -14406,7 +14406,7 @@ cb_install_antiking = {
 				modifier = deposed_antipope
 				years = 50
 			}
-			
+
 			if = {
 				limit = {
 					religion = catholic
@@ -14451,7 +14451,7 @@ cb_install_antiking = {
 		FROM = { 
 			piety = -500
 			prestige = -250
-			
+
 			hidden_tooltip = {
 				rightful_religious_head_scope = {
 					remove_claim = k_papal_state
@@ -14459,7 +14459,7 @@ cb_install_antiking = {
 					remove_claim = k_high_church
 				}
 			}
-			
+
 			primary_title = {
 				usurp_title = { target = ROOT type = revolt }
 			}
@@ -14799,7 +14799,7 @@ manifest_destiny_invasion = {
 	check_de_jure_tier = KING # this scans all de jure kingdoms for the counties which are held by or vassals(or below) of selected character. Only valid if is_permanent = yes
 	
 	can_use = {
-		ROOT = {			
+		ROOT = {
 			has_character_flag = renovator_himself
 		}
 		
@@ -14870,7 +14870,7 @@ manifest_destiny_invasion = {
 	on_success = {
 		ROOT = {
 			prestige = 200
-			
+
 			hidden_tooltip = {
 				if = {
 					limit = {
@@ -14885,7 +14885,7 @@ manifest_destiny_invasion = {
 				}
 			}
 			participation_scaled_prestige = 200
-			
+
 			if = {
 				limit = {
 					uses_decadence = yes
@@ -14940,7 +14940,7 @@ manifest_destiny_invasion = {
 		FROM = {
 			prestige = 100
 		}
-		FROM = {			
+		FROM = {
 			participation_scaled_prestige = 100
 		}
 		any_defender = {
@@ -14962,7 +14962,7 @@ manifest_destiny_invasion = {
 			decadence = 10
 		}
 		FROM = {
-			prestige = 200			
+			prestige = 200
 			participation_scaled_prestige = 200
 		}
 		any_defender = {
@@ -15072,7 +15072,7 @@ rivalry_cb = {
 		
 		FROM = { 
 			prestige = -250
-			
+
 			imprison = ROOT
 			opinion = {
 				modifier = opinion_humiliated_rival
@@ -16637,14 +16637,14 @@ cb_minor_clan_revolt = {
 			primary_title = {
 				set_title_nomad = { title = THIS status = no }
 			}
-			
+
 			set_government_type = feudal_government
 		}
 	
 		ROOT = {		
 			set_government_type = nomadic_government
 			set_defacto_liege = FROM
-			
+
 			hidden_tooltip = {
 				remove_opinion = {
 					who = FROM
@@ -16918,7 +16918,7 @@ nomad_subjugation = {
 		FROM = {
 			piety = -100
 			prestige = -100
-			
+
 			if = {
 				limit = {
 					is_reformed_religion = ROOT
@@ -16926,11 +16926,11 @@ nomad_subjugation = {
 				}
 				religion = ROOT # Reformed pagans are forced to convert back
 			}
-			
+
 			custom_tooltip = {
 				text = tribal_subjugation_tip
 			}
-				
+	
 			hidden_tooltip = {
 				opinion = {
 					modifier = opinion_subjugated 
@@ -16942,7 +16942,7 @@ nomad_subjugation = {
 						who = ROOT
 					}
 				}
-				
+	
 				any_demesne_title = {
 					limit = {
 						higher_tier_than = ROOT
@@ -16951,7 +16951,7 @@ nomad_subjugation = {
 					ROOT = { grant_title_no_opinion = { target = PREV type = invasion } }
 					add_pressed_claim = PREV
 				}
-				
+	
 				any_demesne_title = {
 					limit = {
 						tier = ROOT
@@ -17166,7 +17166,7 @@ nomad_invasion = {
 			ROOT = {
 				occupy_minors_of_occupied_settlements = FROM
 				gain_all_occupied_titles = { who = FROM type = invasion }
-				
+	
 				if = {
 					limit = {
 						has_nickname = no
@@ -17254,7 +17254,7 @@ nomad_invasion = {
 	on_fail = {
 		FROM = {
 			prestige = 100
-			
+
 			hidden_tooltip = {
 				if = {
 					limit = {
@@ -17304,7 +17304,7 @@ nomad_invasion = {
 					}
 				}
 			}
-			
+
 			#if = {
 			#	limit = { 
 			#		has_dlc = "Legacy of Rome"
@@ -18178,7 +18178,7 @@ powerful_vassal_takeover_war = { # Started from faction
 							has_law = revoke_title_voting_power_1
 							has_law = grant_title_voting_power_1
 							has_law = imprison_voting_power_1
-							has_law = war_voting_power_1						
+							has_law = war_voting_power_1
 						}
 						add_law_w_cooldown = succ_hre_elective
 					}
@@ -18195,7 +18195,7 @@ powerful_vassal_takeover_war = { # Started from faction
 							has_law = revoke_title_voting_power_1
 							has_law = grant_title_voting_power_1
 							has_law = imprison_voting_power_1
-							has_law = war_voting_power_1						
+							has_law = war_voting_power_1
 						}
 						add_law_w_cooldown = succ_feudal_elective
 					}
@@ -18211,7 +18211,7 @@ powerful_vassal_takeover_war = { # Started from faction
 								has_law = revoke_title_voting_power_1
 								has_law = grant_title_voting_power_1
 								has_law = imprison_voting_power_1
-								has_law = war_voting_power_1						
+								has_law = war_voting_power_1
 							}
 						}
 						add_law_w_cooldown = succ_gavelkind

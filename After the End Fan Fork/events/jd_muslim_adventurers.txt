@@ -261,12 +261,12 @@ character_event = {
 							}
 						}
 					}
-					
+
 					random_realm_province = {
 						limit = {
 							region = custom_pirate_invasion_target_region
 						}
-						
+
 						ROOT = {
 							opinion = {
 								who = PREVPREV
@@ -291,7 +291,7 @@ character_event = {
 					}
 				}
 				end_inaccessibility_effect = yes #removes in hiding or in_seclusion
-				
+	
 				set_character_flag = was_pirate_invader
 				set_character_flag = do_not_disturb
 				set_global_flag = pirate_invader_spawned
@@ -408,7 +408,7 @@ character_event = {
 						limit = {
 							region = custom_pirate_invasion_target_region
 						}
-						
+
 						ROOT = {
 							set_defacto_liege = ROOT
 							create_title = {
@@ -420,9 +420,9 @@ character_event = {
 								name = "CLAIMANT_ADVENTURE"
 								holder = ROOT
 							}
-							
+	
 							set_character_flag = duchy_adventurer
-						
+
 							spawn_unit = {
 								province = PREVPREVPREV
 								home = PREVPREVPREV

@@ -18,7 +18,7 @@ liberate_texas = {
 		hidden_tooltip = { fire_haruspicy_event_effect = yes }
 		if = {
 			limit = { defender = { is_offmap_governor = offmap_china } }
-			attacker = {  
+			attacker = { 
 				sound_effect = china_angered_emperor
 				detract_grace_super_huge_effect = yes
 			}
@@ -86,7 +86,7 @@ liberate_texas = {
 		hidden_tooltip = { 
 			any_attacker = {
 				limit = { NOT = { character = ROOT } }
-				
+	
 				participation_scaled_prestige = 50
 				if = {
 					limit = {
@@ -224,7 +224,7 @@ liberate_texas = {
 						}
 					}
 				}
-				
+	
 				event_target:new_ruler = {
 					vassalize_or_take_under_title = {
 						title = PREV
@@ -234,7 +234,7 @@ liberate_texas = {
 					}
 					set_defacto_liege = THIS
 				}
-				
+	
 				if = {
 					limit = {
 						has_holder = yes
@@ -258,11 +258,11 @@ liberate_texas = {
 						}
 					}
 				}
-				
+	
 				ROOT = {
 					make_tributary = { who = event_target:new_ruler tributary_type = permanent }
 				}
-				
+	
 				#cb doesn't work? why not brute force?
 				event_target:new_ruler = {
 					any_realm_province = {

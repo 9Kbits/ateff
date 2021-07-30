@@ -200,20 +200,20 @@ province_event = { #prosperity gain
 						has_disease = yes
 					}
 				}
-				
+	
 				trigger_switch = {
-					on_trigger	= terrain
-					farmlands	= { change_variable = { which = prosperity_value value = 10 } } #gain depends on terrain type
-					plains		= { change_variable = { which = prosperity_value value = 8 } }
-					steppe 		= { change_variable = { which = prosperity_value value = 8 } }
-					forest 		= { change_variable = { which = prosperity_value value = 6 } }
-					hills		= { change_variable = { which = prosperity_value value = 6 } }
-					jungle		= { change_variable = { which = prosperity_value value = 4 } }
-					desert		= { change_variable = { which = prosperity_value value = 4 } }
-					mountain	= { change_variable = { which = prosperity_value value = 2 } }
-					arctic		= { change_variable = { which = prosperity_value value = 2 } }
+					on_trigger = terrain
+					farmlands = { change_variable = { which = prosperity_value value = 10 } } #gain depends on terrain type
+					plains	 = { change_variable = { which = prosperity_value value = 8 } }
+					steppe 	 = { change_variable = { which = prosperity_value value = 8 } }
+					forest 	 = { change_variable = { which = prosperity_value value = 6 } }
+					hills	 = { change_variable = { which = prosperity_value value = 6 } }
+					jungle	 = { change_variable = { which = prosperity_value value = 4 } }
+					desert	 = { change_variable = { which = prosperity_value value = 4 } }
+					mountain = { change_variable = { which = prosperity_value value = 2 } }
+					arctic	 = { change_variable = { which = prosperity_value value = 2 } }
 				}
-				
+	
 				if = { # Coastal provinces prosper quicker because they get more trade/disease
 					limit = {
 						port = yes
@@ -223,7 +223,7 @@ province_event = { #prosperity gain
 					}
 					change_variable = { which = prosperity_value value = 2 }
 				}
-				
+	
 				if = { # Coastal Mountains/Arctic, i.e. Aden, prosper quicker than non-coastal terrain of the same type
 					limit = {
 						port = yes
@@ -237,7 +237,7 @@ province_event = { #prosperity gain
 					}
 					change_variable = { which = prosperity_value value = 4 }
 				}
-				
+	
 				if = { # Coastal Desert/Jungle, i.e. Mecca, prosper quicker than non-coastal terrain of the same type 
 					limit = {
 						port = yes
@@ -594,7 +594,7 @@ province_event = { # Province Modifier Tombola
 	
 	immediate = {
 		random_list = {
-			
+
 			10 = { # Jewish Settlement
 				modifier = {
 					factor = 0

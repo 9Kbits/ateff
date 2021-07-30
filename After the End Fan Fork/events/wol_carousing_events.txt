@@ -1,9 +1,9 @@
 ###########################################
-#										 #
+#										#
 # Way of Life carousing events			#
-#										 #
+#										#
 # ID WoL.4000-WoL.4999					#
-#										 #
+#										#
 ###########################################
 
 # Written by Tobias Bodlund
@@ -284,7 +284,7 @@ character_event = {
 						}
 					}
 				}
-				character_event = { id = WoL.4015 }  # Cancel carousing due to no one accepting invitation
+				character_event = { id = WoL.4015 } # Cancel carousing due to no one accepting invitation
 				break = yes
 			}
 		}
@@ -295,7 +295,7 @@ character_event = {
 					is_incapable = yes
 				}
 			}
-			character_event = { id = WoL.4011 }  # Cancel carousing due to unforeseen circumstances
+			character_event = { id = WoL.4011 } # Cancel carousing due to unforeseen circumstances
 			break = yes
 		}
 		character_event = { id = WoL.4030 } # ... or start the party!
@@ -444,7 +444,7 @@ character_event = {
 		}
 	}
 	
-	immediate = {		 # Select interesting party event
+	immediate = {		# Select interesting party event
 		random_list = {
 			2 = {
 				modifier = {
@@ -495,7 +495,7 @@ character_event = {
 					factor = 1.5
 					trait = gluttonous
 				}
-				character_event = { id = WoL.4100 }  # Cannibal, eat your guest? (or guest may eat host)
+				character_event = { id = WoL.4100 } # Cannibal, eat your guest? (or guest may eat host)
 			}
 			20 = {
 				modifier = {
@@ -537,7 +537,7 @@ character_event = {
 						}
 					}
 				}
-				character_event = { id = WoL.4110 }  # Party fling if both lustful
+				character_event = { id = WoL.4110 } # Party fling if both lustful
 			}
 			30 = {
 				trigger = {
@@ -1184,7 +1184,7 @@ character_event = {
 # Fight starts - you can't control your rage
 character_event = {
 	id = WoL.4131
-	desc =  EVTDESC_WoL_4131
+	desc = EVTDESC_WoL_4131
 	picture = GFX_evt_feast
 	border = GFX_event_normal_frame_diplomacy
 
@@ -1337,7 +1337,7 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_WoL_4133 # Fought  (both are at risk of injury)
+		name = EVTOPTA_WoL_4133 # Fought (both are at risk of injury)
 		trigger = {
 			has_character_flag = party_fight_fight
 		}
@@ -1826,7 +1826,7 @@ character_event = {
 				10 = { # Player 1 wins
 					modifier = {
 						factor = 3
-						is_smart_trigger = yes  # MORE
+						is_smart_trigger = yes # MORE
 					}
 					FROM = { set_character_flag = game_player_winner }
 				}
@@ -1935,7 +1935,7 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_WoL_4800  # This was fun
+		name = EVTOPTA_WoL_4800 # This was fun
 		prestige = 20
 		clr_character_flag = played_games_today
 		clr_character_flag = game_play_for_money

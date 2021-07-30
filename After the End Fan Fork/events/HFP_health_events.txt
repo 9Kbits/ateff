@@ -37,7 +37,7 @@ namespace=HFP
 
 #	option = { #I will fast for a week
 #		name = EVTOPTAHFP20600
-#		lose_weight_medium_effect = yes  	#Reduces the variable's score
+#		lose_weight_medium_effect = yes 	#Reduces the variable's score
 #		weight_trait_check_effect = yes 	#Checks what is the variable's score after reduction and either removes is_fat, adds is_malnourished, or both, depending on the circumstance.
 #	}
 
@@ -155,7 +155,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			 }
+			}
 			change_variable = { which = physique_variable value = 2 }
 		}
 		if = { 
@@ -177,7 +177,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 1 }
 		}
@@ -199,7 +199,7 @@ character_event = {
 			random_list = { 
 				50 = { change_variable = { which = physique_variable value = -1 } } 
 				50 = { change_variable = { which = physique_variable value = 1 } } 
-				10 = {  } 
+				10 = { } 
 			}
 		}
 		if = { 
@@ -210,7 +210,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 2 }
 		}
@@ -232,7 +232,7 @@ character_event = {
 			random_list = { 
 				50 = { change_variable = { which = physique_variable value = -2 } } 
 				50 = { change_variable = { which = physique_variable value = 2 } }
-				10 = {  } 
+				10 = { } 
 			}
 		}
 		if = { 
@@ -246,7 +246,7 @@ character_event = {
 			random_list = { 
 				50 = { change_variable = { which = physique_variable value = -1 } } 
 				50 = { change_variable = { which = physique_variable value = 1 } } 
-				10 = {  } 
+				10 = { } 
 			}
 		}
 		if = { 
@@ -448,7 +448,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 				NOT = { check_variable = { which = physique_variable value = -1 } }
 			}
 			change_variable = { which = physique_variable value = 1 }
@@ -460,7 +460,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 				check_variable = { which = physique_variable value = 1 }
 			}
 			change_variable = { which = physique_variable value = -1 }
@@ -472,7 +472,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 				NOT = { check_variable = { which = physique_variable value = -1 } }
 			}
 			change_variable = { which = physique_variable value = 1 }
@@ -484,7 +484,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 				check_variable = { which = physique_variable value = 1 }
 			}
 			change_variable = { which = physique_variable value = -1 }
@@ -496,7 +496,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 1 }
 		}
@@ -508,7 +508,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 1 }
 		}
@@ -540,7 +540,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 1 }
 		}
@@ -857,7 +857,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 1 }
 		}
@@ -991,7 +991,7 @@ character_event = {
 			change_variable = { which = physique_variable value = 1 }
 		}
 		if = { 
-			limit = {  #Works for balance agaisnt both extremes.
+			limit = { #Works for balance agaisnt both extremes.
 				has_character_modifier = hard_diet
 				NOR = { 
 					trait = diligent 
@@ -1013,7 +1013,7 @@ character_event = {
 			change_variable = { which = physique_variable value = 10 }
 		}
 		if = { 
-			limit = {  #Works for balance agaisnt both extremes.
+			limit = { #Works for balance agaisnt both extremes.
 				has_character_modifier = hard_diet
 				trait = diligent
 				check_variable = { which = physique_variable value = 1 }
@@ -1029,7 +1029,7 @@ character_event = {
 			change_variable = { which = physique_variable value = 12 }
 		}
 		if = { 
-			limit = {  #Works for balance agaisnt both extremes.
+			limit = { #Works for balance agaisnt both extremes.
 				has_character_modifier = hard_diet
 				trait = slothful
 				check_variable = { which = physique_variable value = 1 }
@@ -1272,14 +1272,14 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 1 }
 		}
 		if = { 
 			limit = { #Lazy princess
 				has_minor_title = title_prince
-				NOR = {  
+				NOR = { 
 					has_law = status_of_women_3
 					has_law = status_of_women_4
 					has_law = enatic_succession
@@ -1295,7 +1295,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 2 }
 		}
@@ -1314,14 +1314,14 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 2 }
 		}
 		if = { 
 			limit = { #Lazy Imperial princess
 				has_minor_title = title_prince
-				NOR = {  
+				NOR = { 
 					has_law = status_of_women_3
 					has_law = status_of_women_4
 					has_law = enatic_succession
@@ -1337,7 +1337,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 3 }
 		}
@@ -1350,7 +1350,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 2 }
 		}
@@ -1361,7 +1361,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 3 }
 		}
@@ -1372,7 +1372,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = -1 }
 		}
@@ -1383,7 +1383,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = -1 }
 		}
@@ -1394,7 +1394,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 				NOT = { check_variable = { which = physique_variable value = -1 } }
 			}
 			change_variable = { which = physique_variable value = 1 }
@@ -1406,7 +1406,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 				check_variable = { which = physique_variable value = 1 }
 			}
 			change_variable = { which = physique_variable value = -1 }
@@ -1418,7 +1418,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 				NOT = { check_variable = { which = physique_variable value = -1 } }
 			}
 			change_variable = { which = physique_variable value = 2 }
@@ -1430,7 +1430,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 				check_variable = { which = physique_variable value = 1 }
 			}
 			change_variable = { which = physique_variable value = -2 }
@@ -1443,7 +1443,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = 1 }
 		}
@@ -1454,7 +1454,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 			}
 			change_variable = { which = physique_variable value = -1 }
 		}
@@ -1465,7 +1465,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 				NOT = { check_variable = { which = physique_variable value = -1 } }
 			}
 			change_variable = { which = physique_variable value = 1 }
@@ -1477,7 +1477,7 @@ character_event = {
 					prisoner = no
 					has_character_modifier = house_arrest
 				}
-			
+
 				check_variable = { which = physique_variable value = 1 }
 			}
 			change_variable = { which = physique_variable value = -1 }
@@ -1981,7 +1981,7 @@ character_event = {
 
 	immediate = { 
 		random_list = { #First pick a reason.
-			1 = {  
+			1 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = gluttonous }
@@ -2002,21 +2002,21 @@ character_event = {
 				}
 				set_character_flag = flag_fat_for_depression
 			} 
-			3 = {  
+			3 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = slothful }
 				}
 				set_character_flag = flag_fat_for_sloth
 			} 
-			10 = {  
+			10 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = hedonist }
 				}
 				set_character_flag = flag_fat_for_hedonism
 			} 
-			10 = {  
+			10 = { 
 				modifier = {
 					factor = 0
 					NOT = { has_focus = focus_family }
@@ -2038,14 +2038,14 @@ character_event = {
 				}
 				set_character_flag = flag_fat_for_family
 			} 
-			10 = {  
+			10 = { 
 				modifier = {
 					factor = 0
 					NOT = { has_focus = focus_carousing }
 				}
 				set_character_flag = flag_fat_for_carousing
 			}
-			20 = {  
+			20 = { 
 				modifier = {
 					factor = 0
 					NOT = { has_focus = focus_family }
@@ -2064,7 +2064,7 @@ character_event = {
 				}
 				set_character_flag = flag_fat_for_content
 			}
-			30 = {  
+			30 = { 
 				modifier = {
 					factor = 0
 					NOT = { has_character_flag = survivor_mom }
@@ -2079,7 +2079,7 @@ character_event = {
 				}
 				set_character_flag = flag_fat_for_lust
 			}
-			30 = {  
+			30 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = eunuch }
@@ -2090,14 +2090,14 @@ character_event = {
 				}
 				set_character_flag = flag_fat_for_lust
 			}
-			10 = {  
+			10 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = wroth }
 				}
 				set_character_flag = flag_fat_for_wroth
 			}
-			5 = {  
+			5 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = drunkard }
@@ -2105,7 +2105,7 @@ character_event = {
 				set_character_flag = flag_fat_for_drunkard
 			} 
 		}
-		if = {  
+		if = { 
 			limit = {
 				has_fat_for_flag_trigger = no #Fallback
 			}
@@ -2422,7 +2422,7 @@ character_event = {
 			clr_character_flag = flag_primed_physique
 		}
 		weight_trait_check_effect = yes
-		if = {  
+		if = { 
 			limit = { 
 				OR = { 
 					has_character_flag = flag_fat_for_gluttony 
@@ -2436,15 +2436,15 @@ character_event = {
 					has_character_flag = flag_fat_for_drunkard
 				}
 			}
-			if = {  
+			if = { 
 				limit = { trait = stressed }
 				custom_tooltip = { text = tooltip_physique_loses_stressed }
 			}
-			if = {  
+			if = { 
 				limit = { trait = depressed }
 				custom_tooltip = { text = tooltip_physique_loses_depressed }
 			}
-			if = {  
+			if = { 
 				limit = { 
 					OR = { 
 						has_character_flag = flag_fat_for_hedonism 
@@ -2551,18 +2551,18 @@ character_event = {
 			}
 		}
 
-		if = {  
+		if = { 
 			limit = { 
 				OR = { 
 					has_character_flag = flag_fat_for_family 
 					has_character_flag = flag_fat_for_content 
 				}
 			}
-			if = {  
+			if = { 
 				limit = { trait = stressed }
 				custom_tooltip = { text = tooltip_physique_loses_stressed }
 			}
-			if = {  
+			if = { 
 				limit = { trait = depressed }
 				custom_tooltip = { text = tooltip_physique_loses_depressed }
 			}
@@ -2638,15 +2638,15 @@ character_event = {
 			}
 		}
 
-		if = {  
+		if = { 
 			limit = { 
 				has_character_flag = flag_fat_for_lust
 			}
-			if = {  
+			if = { 
 				limit = { trait = stressed }
 				custom_tooltip = { text = tooltip_physique_loses_stressed }
 			}
-			if = {  
+			if = { 
 				limit = { trait = depressed }
 				custom_tooltip = { text = tooltip_physique_loses_depressed }
 			}
@@ -3508,7 +3508,7 @@ character_event = {
 			OR = { 
 				has_character_flag = flag_fat_for_gluttony 
 				has_character_flag = flag_fat_for_boredom
-			}  
+			} 
 		} 
 		custom_tooltip = { text = tooltip_20622_A } 
 		if = { 
@@ -3641,8 +3641,8 @@ character_event = {
 		name = EVTOPTFHFP20622
 		trigger = { 
 			OR = { 
-				has_character_flag = flag_fat_for_family  
-				has_character_flag = flag_fat_for_content  
+				has_character_flag = flag_fat_for_family 
+				has_character_flag = flag_fat_for_content 
 			} 
 		} 
 		custom_tooltip = { text = tooltip_20622_F } 
@@ -4019,7 +4019,7 @@ character_event = {
 
 	immediate = { 
 		random_list = { #First pick a reason.
-			1 = {  
+			1 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = temperate }
@@ -4040,14 +4040,14 @@ character_event = {
 				}
 				set_character_flag = flag_malnourished_for_depression
 			} 
-			1 = {  
+			1 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = slothful }
 				}
 				set_character_flag = flag_malnourished_for_sloth
 			} 
-			20 = {  
+			20 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = scholar }
@@ -4055,7 +4055,7 @@ character_event = {
 				}
 				set_character_flag = flag_malnourished_for_study
 			} 
-			20 = {  
+			20 = { 
 				modifier = {
 					factor = 0
 					trait = cynical 
@@ -4077,28 +4077,28 @@ character_event = {
 				}
 				set_character_flag = flag_malnourished_for_faith
 			} 
-			20 = {  
+			20 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = paranoid }
 				}
 				set_character_flag = flag_malnourished_for_paranoia
 			}
-			10 = {  
+			10 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = diligent }
 				}
 				set_character_flag = flag_malnourished_for_diligence
 			} 
-			20 = {  
+			20 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = cannibal_trait }
 				}
 				set_character_flag = flag_malnourished_for_cannibal
 			} 
-			2 = {  
+			2 = { 
 				modifier = {
 					factor = 0
 					NOT = { trait = craven }
@@ -4106,7 +4106,7 @@ character_event = {
 				set_character_flag = flag_malnourished_for_craven
 			} 
 		}
-		if= {  
+		if= { 
 			limit = {
 				has_malnourished_for_flag_trigger = no
 			}
@@ -4421,7 +4421,7 @@ character_event = {
 			clr_character_flag = flag_primed_physique
 		}
 		weight_trait_check_effect = yes
-		if = {  
+		if = { 
 			limit = { 
 				OR = { 
 					has_character_flag = flag_malnourished_for_temperance 
@@ -4433,19 +4433,19 @@ character_event = {
 					has_character_flag = flag_malnourished_for_boredom
 				}
 			}
-			if = {  
+			if = { 
 				limit = { 
 					NOT = { has_character_flag = flag_malnourished_for_study } 
 				}
 				custom_tooltip = { text = tooltip_physique_gains_diligent } #Or related attribute.
 			}
-			if = {  
+			if = { 
 				limit = { 
 					has_character_flag = flag_malnourished_for_study 
 				}
 				custom_tooltip = { text = tooltip_physique_becomes_learned_B }
 			}
-			if = {  
+			if = { 
 				limit = { 
 					has_character_flag = flag_malnourished_for_faith 
 				}
@@ -4531,7 +4531,7 @@ character_event = {
 			}
 		}
 
-		if = {  
+		if = { 
 			limit = { 
 				OR = { 
 					has_character_flag = flag_malnourished_for_sloth 
@@ -4540,14 +4540,14 @@ character_event = {
 					has_character_flag = flag_malnourished_for_craven
 				}
 			}
-			if = {  
+			if = { 
 				limit = { 
 					trait = stressed 
 					NOT = { has_character_flag = flag_malnourished_for_paranoia }
 				}
 				custom_tooltip = { text = tooltip_physique_loses_stressed }
 			}
-			if = {  
+			if = { 
 				limit = { 
 					OR = { 
 						has_character_flag = flag_malnourished_for_paranoia 
@@ -5395,7 +5395,7 @@ character_event = {
 				has_character_flag = flag_malnourished_for_temperance 
 				has_character_flag = flag_malnourished_for_boredom
 				has_character_flag = flag_malnourished_for_craven 
-			}  
+			} 
 		} 
 		custom_tooltip = { text = tooltip_20646_A } 
 		if = { 
@@ -5418,7 +5418,7 @@ character_event = {
 			OR = { 
 				has_character_flag = flag_malnourished_for_stress 
 				has_character_flag = flag_malnourished_for_cannibal
-			}  
+			} 
 		} 
 		custom_tooltip = { text = tooltip_20646_B } 
 		if = { 
@@ -6310,7 +6310,7 @@ character_event = {
 			}
 			#...Or has ill intent.
 			AND = { 
-				is_ill_trigger = no  	#Respectable, average person.
+				is_ill_trigger = no 	#Respectable, average person.
 				has_negative_congenital_trigger = no
 				NOT = { trait = possessed } 
 				NOT = { trait = lunatic } 
@@ -6734,7 +6734,7 @@ character_event = {
 				modifier = {
 					factor = 0
 					NOT = { 
-						is_ill_trigger = no  	#Respectable, average person.
+						is_ill_trigger = no 	#Respectable, average person.
 						has_negative_congenital_trigger = no
 						NOT = { trait = possessed } 
 						NOT = { trait = lunatic } 
@@ -7216,7 +7216,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_20652_B }
 		lose_weight_medium_effect = yes
 		hidden_tooltip = { FROM = { character_event = { id = HFP.20655 } } }
-		hidden_tooltip = { character_event = { id = HFP.20657  days = 30 } } #Results
+		hidden_tooltip = { character_event = { id = HFP.20657 days = 30 } } #Results
 		ai_chance = { 
 			factor = 50
 			modifier = {
@@ -7396,7 +7396,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_20653_B }
 		gain_weight_medium_effect = yes
 		hidden_tooltip = { FROM = { character_event = { id = HFP.20654 } } }
-		hidden_tooltip = { character_event = { id = HFP.20656  days = 30 } } #Results
+		hidden_tooltip = { character_event = { id = HFP.20656 days = 30 } } #Results
 		ai_chance = { 
 			factor = 50
 			modifier = {
@@ -8688,7 +8688,7 @@ character_event = {
 			limit = { NOT = { has_nickname = yes } } 
 			ROOT = { give_nickname = nick_the_leechlord }
 		}
-		tooltip = {  
+		tooltip = { 
 			FROMFROM = {
 				death = { 
 					death_reason = death_execution_hanging
@@ -8947,7 +8947,7 @@ character_event = {
 			modifier = opinion_trusted_servant 
 			months = 1200
 		}
-		tooltip = {  
+		tooltip = { 
 			FROM = {
 				death = { 
 					death_reason = death_murder_unknown
@@ -9003,7 +9003,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHFP20684
-		tooltip = {  
+		tooltip = { 
 			FROMFROM = {
 				death = { 
 					death_reason = death_murder_unknown

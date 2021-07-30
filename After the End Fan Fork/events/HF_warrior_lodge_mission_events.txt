@@ -149,13 +149,13 @@ character_event = {
 					age = 16
 					society = {
 						any_society_member = {
-			                ai = yes
-			                age = 16
+							ai = yes
+							age = 16
 							NOT = { character = ROOT }
-			                is_inaccessible_or_incapable_trigger = no
-			                NOT = { has_character_modifier = bedridden_illness }
-				            NOT = { has_character_modifier = severe_illness }
-				            NOT = { has_character_flag = call_to_legend_active }
+							is_inaccessible_or_incapable_trigger = no
+							NOT = { has_character_modifier = bedridden_illness }
+							NOT = { has_character_modifier = severe_illness }
+							NOT = { has_character_flag = call_to_legend_active }
 						}
 					}
 				}
@@ -171,49 +171,49 @@ character_event = {
 					OR = {
 						AND = {
 							any_society_member = {
-				           		NOT = { same_society_as = ROOT }
-				           		is_member_of_any_warrior_lodge_trigger = yes
-				                is_inaccessible_or_incapable_trigger = no
-				                NOT = { has_character_modifier = bedridden_illness }
-					            NOT = { has_character_modifier = severe_illness }
+								NOT = { same_society_as = ROOT }
+								is_member_of_any_warrior_lodge_trigger = yes
+								is_inaccessible_or_incapable_trigger = no
+								NOT = { has_character_modifier = bedridden_illness }
+								NOT = { has_character_modifier = severe_illness }
 								NOT = { any_spouse = { character = ROOT } }
-				                is_adult = yes
-				                ai = yes
+								is_adult = yes
+								ai = yes
 								is_within_diplo_range = ROOT
-				            }
+							}
 						}
 						AND = {
 							any_rival = {
-				                is_inaccessible_or_incapable_trigger = no
-				                NOT = { has_character_modifier = bedridden_illness }
-					            NOT = { has_character_modifier = severe_illness }
-				                is_adult = yes
-				                ai = yes
+								is_inaccessible_or_incapable_trigger = no
+								NOT = { has_character_modifier = bedridden_illness }
+								NOT = { has_character_modifier = severe_illness }
+								is_adult = yes
+								ai = yes
 								ROOT = { capital_scope = { distance = { where = PREV distance < 1000 } } }
-			            	}
+							}
 						}
 						AND = {
 							any_realm_character = {
-				                is_inaccessible_or_incapable_trigger = no
-				                NOT = { has_character_modifier = bedridden_illness }
-					            NOT = { has_character_modifier = severe_illness }
-					            NOT = { any_spouse = { character = ROOT } }
-				                ai = yes
-				                is_adult = yes
-				            }
+								is_inaccessible_or_incapable_trigger = no
+								NOT = { has_character_modifier = bedridden_illness }
+								NOT = { has_character_modifier = severe_illness }
+								NOT = { any_spouse = { character = ROOT } }
+								ai = yes
+								is_adult = yes
+							}
 						}
 						AND = {
 							any_neighbor_independent_ruler = {
 								any_realm_character = {
-					                is_inaccessible_or_incapable_trigger = no
-					                NOT = { has_character_modifier = bedridden_illness }
-						            NOT = { has_character_modifier = severe_illness }
-						            NOT = { any_spouse = { character = ROOT } }
-					                is_adult = yes
-					                ai = yes
+									is_inaccessible_or_incapable_trigger = no
+									NOT = { has_character_modifier = bedridden_illness }
+									NOT = { has_character_modifier = severe_illness }
+									NOT = { any_spouse = { character = ROOT } }
+									is_adult = yes
+									ai = yes
 									ROOT = { capital_scope = { distance = { where = PREV distance < 1000 } } }
 								}
-				            }
+							}
 						}
 					}
 				}
@@ -227,42 +227,42 @@ character_event = {
 					is_landed = yes
 					NOT = { society_member_of = warrior_lodge_mexican }
 					any_independent_ruler = {
-				        any_realm_title = {
-				            tier = COUNT
-				            ROOT = {
-				                can_use_cb = { #against target
-				                    target = PREVPREV
-				                    thirdparty_title = PREV
-				                    casus_belli = pagan_county_conquest
-				                }
-				            }
-				            location = {
-					            OR = {
-						            AND = { #Either you can travel via water to them...
-							        	is_coastal = yes
-							        	can_naval_path_to = { target = event_target:home_capital distance < 1000 }
-						            }
-						            AND = {
-							            #Or they are accessible via land...
-							            event_target:home_capital = { is_coastal = no }
-								        can_land_path_to = { target = event_target:home_capital distance < 1000 }
-						            }
-						            AND = { #Or not a coastal place...
-							        	is_coastal = no
-							        	can_land_path_to = { target = event_target:home_capital distance < 1000 }
-							        	#event_target:home_capital = { distance = { where = PREV distance < 1000 } }
-						            }
-						        }
-				            }
-				        }
-				        holder_scope = {
-				        	top_liege = {
-				        		NOT = { has_truce = ROOT }
-						        # target should not be stronger than 120% of your strength, and not weaker than 50% of your strength:
-						        NOT = { relative_power = { who = ROOT power = 1.2 } }
-						        relative_power = { who = ROOT power = 0.5 }
-				        	}
-				        }
+						any_realm_title = {
+							tier = COUNT
+							ROOT = {
+								can_use_cb = { #against target
+									target = PREVPREV
+									thirdparty_title = PREV
+									casus_belli = pagan_county_conquest
+								}
+							}
+							location = {
+								OR = {
+									AND = { #Either you can travel via water to them...
+										is_coastal = yes
+										can_naval_path_to = { target = event_target:home_capital distance < 1000 }
+									}
+									AND = {
+										#Or they are accessible via land...
+										event_target:home_capital = { is_coastal = no }
+										can_land_path_to = { target = event_target:home_capital distance < 1000 }
+									}
+									AND = { #Or not a coastal place...
+										is_coastal = no
+										can_land_path_to = { target = event_target:home_capital distance < 1000 }
+										#event_target:home_capital = { distance = { where = PREV distance < 1000 } }
+									}
+								}
+							}
+						}
+						holder_scope = {
+							top_liege = {
+								NOT = { has_truce = ROOT }
+								# target should not be stronger than 120% of your strength, and not weaker than 50% of your strength:
+								NOT = { relative_power = { who = ROOT power = 1.2 } }
+								relative_power = { who = ROOT power = 0.5 }
+							}
+						}
 					}
 				}
 
@@ -272,20 +272,20 @@ character_event = {
 			}
 			20 = {
 				trigger = {
-			        is_playable = yes
-	    		    is_adult = yes	        		
-	        		any_child = {
-	        			is_child_of = PREV
-	        			is_in_society = no
-	        			is_alive = yes
-	        			age = 12
-					    prisoner = no
-	        			NOT = { has_character_flag = flag_child_abandoned_lodge }
-				        OR = { #AIs should only strive to recruit their main heir
-				            PREV = { ai = no }
-				            is_primary_heir = PREV
-				        }
-	        		}
+					is_playable = yes
+					is_adult = yes
+					any_child = {
+						is_child_of = PREV
+						is_in_society = no
+						is_alive = yes
+						age = 12
+						prisoner = no
+						NOT = { has_character_flag = flag_child_abandoned_lodge }
+						OR = { #AIs should only strive to recruit their main heir
+							PREV = { ai = no }
+							is_primary_heir = PREV
+						}
+					}
 				}
 
 				event_target:lodge_hero = {
@@ -344,13 +344,13 @@ character_event = {
 					age = 16
 					society = {
 						any_society_member = {
-			                ai = yes
-			                age = 16
+							ai = yes
+							age = 16
 							NOT = { character = ROOT }
-			                is_inaccessible_or_incapable_trigger = no
-			                NOT = { has_character_modifier = bedridden_illness }
-				            NOT = { has_character_modifier = severe_illness }
-				            NOT = { has_character_flag = call_to_legend_active }
+							is_inaccessible_or_incapable_trigger = no
+							NOT = { has_character_modifier = bedridden_illness }
+							NOT = { has_character_modifier = severe_illness }
+							NOT = { has_character_flag = call_to_legend_active }
 						}
 					}
 				}
@@ -691,7 +691,7 @@ society_quest_event = {
 			}
 		}
 	}
-	option  = {
+	option = {
 		name = DECLINE
 		custom_tooltip = { text = decline_quest_tooltip }
 
@@ -873,7 +873,7 @@ society_quest_event = {
 			}
 		}
 	}
-	option  = {
+	option = {
 		name = DECLINE
 		custom_tooltip = { text = decline_quest_tooltip }
 
@@ -1052,10 +1052,10 @@ society_quest_event = {
 			any_society_member = {
 				ai = yes
 				age = 16
-                NOT = { character = ROOT }
-	            is_inaccessible_or_incapable_trigger = no
-                NOT = { has_character_modifier = bedridden_illness }
-	            NOT = { has_character_modifier = severe_illness }
+				NOT = { character = ROOT }
+				is_inaccessible_or_incapable_trigger = no
+				NOT = { has_character_modifier = bedridden_illness }
+				NOT = { has_character_modifier = severe_illness }
 			}
 		}
 	}
@@ -1093,12 +1093,12 @@ society_quest_event = {
 					is_within_diplo_range = ROOT
 				}
 				score_value = { #Prioritizes selecting some kind of warrior...
-	                value = 10
-	                matching_soldier_score = yes
-	            }
-	            save_event_target_as = duel_target
+					value = 10
+					matching_soldier_score = yes
+				}
+				save_event_target_as = duel_target
 			}
-			
+
 		}
 		else_if = { #second best choice (same, but outside of diplo-range)...
 			limit = {
@@ -1129,41 +1129,41 @@ society_quest_event = {
 					NOT = { has_character_flag = call_to_legend_active }
 				}
 				score_value = { #Prioritizes selecting some kind of warrior...
-	                value = 10
-	                matching_soldier_score = yes
-	            }
-	            save_event_target_as = duel_target
+					value = 10
+					matching_soldier_score = yes
+				}
+				save_event_target_as = duel_target
 			}
 		}
 		else_if = { #third best option (now also injured or old folks allowed)...
 			limit = {
 				any_society_member = {
 					same_society_as = ROOT
-	                ai = yes
+					ai = yes
 					age = 16
-	                NOT = { character = ROOT }
-		            is_inaccessible_or_incapable_trigger = no
-	                NOT = { has_character_modifier = bedridden_illness }
-		            NOT = { has_character_modifier = severe_illness }
-		            NOT = { has_character_flag = call_to_legend_active }
-	            }
+					NOT = { character = ROOT }
+					is_inaccessible_or_incapable_trigger = no
+					NOT = { has_character_modifier = bedridden_illness }
+					NOT = { has_character_modifier = severe_illness }
+					NOT = { has_character_flag = call_to_legend_active }
+				}
 			}
 			any_society_member = {
 				limit = {
 					same_society_as = ROOT
 					ai = yes
 					age = 16
-	                NOT = { character = ROOT }
-		            is_inaccessible_or_incapable_trigger = no
-	                NOT = { has_character_modifier = bedridden_illness }
-		            NOT = { has_character_modifier = severe_illness }
-		            NOT = { has_character_flag = call_to_legend_active }
+					NOT = { character = ROOT }
+					is_inaccessible_or_incapable_trigger = no
+					NOT = { has_character_modifier = bedridden_illness }
+					NOT = { has_character_modifier = severe_illness }
+					NOT = { has_character_flag = call_to_legend_active }
 				}
 				score_value = { #Prioritizes selecting some kind of warrior...
-	                value = 10
-	                matching_soldier_score = yes
-	            }
-	            save_event_target_as = duel_target
+					value = 10
+					matching_soldier_score = yes
+				}
+				save_event_target_as = duel_target
 			}
 		}
 	}
@@ -1180,7 +1180,7 @@ society_quest_event = {
 			}
 		}
 	}
-	option  = {
+	option = {
 		name = DECLINE
 		custom_tooltip = { text = decline_quest_tooltip }
 
@@ -1235,16 +1235,16 @@ character_event = {
 
 # Notification "I have failed my mission duel <dead character>..."
 character_event = {
-    id = HF.10503
-    picture = GFX_evt_battle
-    border = GFX_event_normal_frame_war
-    has_dlc = "Holy Fury"
+	id = HF.10503
+	picture = GFX_evt_battle
+	border = GFX_event_normal_frame_war
+	has_dlc = "Holy Fury"
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    desc = {
-    	text = EVTDESC_HF_10503_duel
-    	trigger = {
+	desc = {
+		text = EVTDESC_HF_10503_duel
+		trigger = {
 			OR = {
 				has_quest = quest_warrior_lodge_duel_honor
 				has_quest = quest_warrior_lodge_duel_deadly
@@ -1252,70 +1252,70 @@ character_event = {
 			}
 			NOT = { has_quest = quest_warrior_lodge_war	}
 			NOT = { has_quest = quest_warrior_lodge_recruit	}
-    	}
-    }
-    desc = {
-    	text = EVTDESC_HF_10503_war
-    	trigger = {
+		}
+	}
+	desc = {
+		text = EVTDESC_HF_10503_war
+		trigger = {
 			has_quest = quest_warrior_lodge_war
 			NOT = { has_quest = quest_warrior_lodge_duel_honor	}
 			NOT = { has_quest = quest_warrior_lodge_duel_deadly	}
 			NOT = { has_quest = quest_warrior_lodge_wrestle_honor }
 			NOT = { has_quest = quest_warrior_lodge_recruit	}
-    	}
-    }
-    desc = {
-    	text = EVTDESC_HF_10503_recruit
-    	trigger = {
+		}
+	}
+	desc = {
+		text = EVTDESC_HF_10503_recruit
+		trigger = {
 			has_quest = quest_warrior_lodge_recruit
 			NOT = { has_quest = quest_warrior_lodge_duel_honor	}
 			NOT = { has_quest = quest_warrior_lodge_duel_deadly	}
 			NOT = { has_quest = quest_warrior_lodge_war	}
 			NOT = { has_quest = quest_warrior_lodge_wrestle_honor }
-    	}
-    }
+		}
+	}
 
-    trigger = {
-    	OR = {
-	    	has_quest = quest_warrior_lodge_duel_honor
-	    	has_quest = quest_warrior_lodge_duel_deadly
-	    	has_quest = quest_warrior_lodge_war
-	    	has_quest = quest_warrior_lodge_recruit
+	trigger = {
+		OR = {
+			has_quest = quest_warrior_lodge_duel_honor
+			has_quest = quest_warrior_lodge_duel_deadly
+			has_quest = quest_warrior_lodge_war
+			has_quest = quest_warrior_lodge_recruit
 			has_quest = quest_warrior_lodge_wrestle_honor
-    	}
-    }
+		}
+	}
 
-    notification = yes
+	notification = yes
 
-    option = { #Alas
-        name = ALAS
-        character_event = { id = HF.10504 days = 1 } # ACTUAL cleanup
-    }
+	option = { #Alas
+		name = ALAS
+		character_event = { id = HF.10504 days = 1 } # ACTUAL cleanup
+	}
 }
 
 character_event = { #*Actual* clean up, because the event above can't handle all the instant stuff
-    id = HF.10504
-    hide_window = yes
-    is_triggered_only = yes
-    immediate = {
-    	if = {
-        	limit = {
-        		has_quest = quest_warrior_lodge_war
-        	}
-        	add_character_modifier = {
+	id = HF.10504
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_quest = quest_warrior_lodge_war
+			}
+			add_character_modifier = {
 				name = quest_cooldown_timer
 				hidden = yes
 				days = 1000
 			}
-        }
+		}
 
-        clr_quest = { id = quest_warrior_lodge_wrestle_honor failure = yes }
+		clr_quest = { id = quest_warrior_lodge_wrestle_honor failure = yes }
 		clr_quest = { id = quest_warrior_lodge_duel_honor failure = yes }
-        clr_quest = { id = quest_warrior_lodge_duel_deadly failure = yes }
-        clr_quest = { id = quest_warrior_lodge_war failure = yes }
-        clr_quest = { id = quest_warrior_lodge_recruit failure = yes }
-        clr_character_flag = deadly_duel@FROM	
-    }
+		clr_quest = { id = quest_warrior_lodge_duel_deadly failure = yes }
+		clr_quest = { id = quest_warrior_lodge_war failure = yes }
+		clr_quest = { id = quest_warrior_lodge_recruit failure = yes }
+		clr_character_flag = deadly_duel@FROM	
+	}
 }
 
 #MISSION: 
@@ -1359,212 +1359,212 @@ society_quest_event = {
 		if = { #Best case... (a society member of *another* warrior lodge, who matches or is below your PCS)
 			limit = {
 				any_society_member = {
-	           		NOT = { same_society_as = ROOT }
-	           		is_member_of_any_warrior_lodge_trigger = yes
-	                is_inaccessible_or_incapable_trigger = no
-	                NOT = { has_character_modifier = bedridden_illness }
-		            NOT = { has_character_modifier = severe_illness }
+					NOT = { same_society_as = ROOT }
+					is_member_of_any_warrior_lodge_trigger = yes
+					is_inaccessible_or_incapable_trigger = no
+					NOT = { has_character_modifier = bedridden_illness }
+					NOT = { has_character_modifier = severe_illness }
 					NOT = { any_spouse = { character = ROOT } }
-	                is_adult = yes
-	                ai = yes
+					is_adult = yes
+					ai = yes
 					is_within_diplo_range = ROOT
 					top_liege = {
 						any_demesne_title = {
 							lower_tier_than = DUKE
 						}
 					}
-	            }		
+				}		
 			}
 			any_society_member = {
 				limit = {
-	           		NOT = { same_society_as = ROOT }
-	           		is_member_of_any_warrior_lodge_trigger = yes
-	                is_inaccessible_or_incapable_trigger = no
-	                NOT = { has_character_modifier = bedridden_illness }
-		            NOT = { has_character_modifier = severe_illness }
-	                NOT = { any_spouse = { character = ROOT } }
-	                is_adult = yes
-	                ai = yes
-	                is_within_diplo_range = ROOT
+					NOT = { same_society_as = ROOT }
+					is_member_of_any_warrior_lodge_trigger = yes
+					is_inaccessible_or_incapable_trigger = no
+					NOT = { has_character_modifier = bedridden_illness }
+					NOT = { has_character_modifier = severe_illness }
+					NOT = { any_spouse = { character = ROOT } }
+					is_adult = yes
+					ai = yes
+					is_within_diplo_range = ROOT
 					top_liege = {
 						any_demesne_title = {
 							lower_tier_than = DUKE
 						}
 					}
-                }
-                score_value = { #Prioritizes selecting some kind of character you wouldn't get along with...
-                	value = 10
-                	potential_rival_score = yes
-	            }
-	            score_value = { #Extra weight for characters you've encountered before...
-	                value = 10
-	                disliked_target_selection_score = yes
-	            }
-	            score_value = { #Reduced chance to pick people currently at war (unable to duel)...
-	                value = 10
-	            	at_war_reduction_score = yes
-	            }
-	            
+				}
+				score_value = { #Prioritizes selecting some kind of character you wouldn't get along with...
+					value = 10
+					potential_rival_score = yes
+				}
+				score_value = { #Extra weight for characters you've encountered before...
+					value = 10
+					disliked_target_selection_score = yes
+				}
+				score_value = { #Reduced chance to pick people currently at war (unable to duel)...
+					value = 10
+					at_war_reduction_score = yes
+				}
+	
 				save_event_target_as = duel_target
 				break = yes
-            }	
+			}	
 		}
 		if = { #2nd best case (a rival) - PCS is second prio...
 			limit = {
 				any_rival = {
-	                is_inaccessible_or_incapable_trigger = no
-	                NOT = { has_character_modifier = bedridden_illness }
-		            NOT = { has_character_modifier = severe_illness }
-	                is_adult = yes
-	                ai = yes
+					is_inaccessible_or_incapable_trigger = no
+					NOT = { has_character_modifier = bedridden_illness }
+					NOT = { has_character_modifier = severe_illness }
+					is_adult = yes
+					ai = yes
 					ROOT = { capital_scope = { distance = { where = PREV distance < 1000 } } }
-	            }
+				}
 			}
 			any_rival = {
 				limit = {
-	                is_inaccessible_or_incapable_trigger = no
-	                NOT = { has_character_modifier = bedridden_illness }
-		            NOT = { has_character_modifier = severe_illness }
-	                is_adult = yes
-	                ai = yes
-	                ROOT = { capital_scope = { distance = { where = PREV distance < 1000 } } }
-                }
-                score_value = { #Prioritizes selecting some kind of character you wouldn't get along with...
-                	value = 10
-                	potential_rival_score = yes
-	            }
-	            score_value = { #Extra weight for characters you've encountered before...
-	                value = 10
-	                disliked_target_selection_score = yes
-	            }
+					is_inaccessible_or_incapable_trigger = no
+					NOT = { has_character_modifier = bedridden_illness }
+					NOT = { has_character_modifier = severe_illness }
+					is_adult = yes
+					ai = yes
+					ROOT = { capital_scope = { distance = { where = PREV distance < 1000 } } }
+				}
+				score_value = { #Prioritizes selecting some kind of character you wouldn't get along with...
+					value = 10
+					potential_rival_score = yes
+				}
+				score_value = { #Extra weight for characters you've encountered before...
+					value = 10
+					disliked_target_selection_score = yes
+				}
 				save_event_target_as = duel_target
 				break = yes
-            }
+			}
 		}
 		if = { #3rd best case (a realm character) who fits the bill...
 			limit = {
 				any_realm_character = {
-	                is_inaccessible_or_incapable_trigger = no
-	                NOT = { has_character_modifier = bedridden_illness }
-		            NOT = { has_character_modifier = severe_illness }
-		            NOT = { any_spouse = { character = ROOT } }
-	                ai = yes
-	                is_adult = yes
-	            }
+					is_inaccessible_or_incapable_trigger = no
+					NOT = { has_character_modifier = bedridden_illness }
+					NOT = { has_character_modifier = severe_illness }
+					NOT = { any_spouse = { character = ROOT } }
+					ai = yes
+					is_adult = yes
+				}
 			}
 			any_realm_character = {
 				limit = {
-	                is_inaccessible_or_incapable_trigger = no
-	                NOT = { has_character_modifier = bedridden_illness }
-		            NOT = { has_character_modifier = severe_illness }
-		            NOT = { any_spouse = { character = ROOT } }
-	                ai = yes
-	                is_adult = yes
-                }
-                score_value = { #Prioritizes selecting some kind of character you wouldn't get along with...
-                	value = 10
-                	potential_rival_score = yes
-	            }
-	            score_value = { #Extra weight for characters you've encountered before...
-	                value = 10
-	                disliked_target_selection_score = yes
-	            }
+					is_inaccessible_or_incapable_trigger = no
+					NOT = { has_character_modifier = bedridden_illness }
+					NOT = { has_character_modifier = severe_illness }
+					NOT = { any_spouse = { character = ROOT } }
+					ai = yes
+					is_adult = yes
+				}
+				score_value = { #Prioritizes selecting some kind of character you wouldn't get along with...
+					value = 10
+					potential_rival_score = yes
+				}
+				score_value = { #Extra weight for characters you've encountered before...
+					value = 10
+					disliked_target_selection_score = yes
+				}
 				save_event_target_as = duel_target
 				break = yes
-            }
+			}
 		}
 		if = { #4th case (a *neighbor's* realm character) who fits the bill...
 			limit = {
 				any_neighbor_independent_ruler = {
 					any_realm_character = {
-		                is_inaccessible_or_incapable_trigger = no
-		                NOT = { has_character_modifier = bedridden_illness }
-			            NOT = { has_character_modifier = severe_illness }
-			            NOT = { any_spouse = { character = ROOT } }
-		                is_adult = yes
-		                ai = yes
+						is_inaccessible_or_incapable_trigger = no
+						NOT = { has_character_modifier = bedridden_illness }
+						NOT = { has_character_modifier = severe_illness }
+						NOT = { any_spouse = { character = ROOT } }
+						is_adult = yes
+						ai = yes
 						ROOT = { capital_scope = { distance = { where = PREV distance < 1000 } } }
 					}
-	            }
+				}
 			}
 			random_neighbor_independent_ruler = {
 				limit = {
 					any_realm_character = {
-		                is_inaccessible_or_incapable_trigger = no
-		                NOT = { has_character_modifier = bedridden_illness }
-			            NOT = { has_character_modifier = severe_illness }
-			            NOT = { any_spouse = { character = ROOT } }
-		                is_adult = yes
-		                ai = yes
+						is_inaccessible_or_incapable_trigger = no
+						NOT = { has_character_modifier = bedridden_illness }
+						NOT = { has_character_modifier = severe_illness }
+						NOT = { any_spouse = { character = ROOT } }
+						is_adult = yes
+						ai = yes
 						ROOT = { capital_scope = { distance = { where = PREV distance < 1000 } } }
 					}
 				}
 				any_realm_character = {
 					limit = {
-		                is_inaccessible_or_incapable_trigger = no
-		                NOT = { has_character_modifier = bedridden_illness }
-			            NOT = { has_character_modifier = severe_illness }
-			            NOT = { any_spouse = { character = ROOT } }
-		                is_adult = yes
-		                ai = yes
+						is_inaccessible_or_incapable_trigger = no
+						NOT = { has_character_modifier = bedridden_illness }
+						NOT = { has_character_modifier = severe_illness }
+						NOT = { any_spouse = { character = ROOT } }
+						is_adult = yes
+						ai = yes
 						is_within_diplo_range = ROOT
 						ROOT = { capital_scope = { distance = { where = PREV distance < 1000 } } }
-	                }
-	                score_value = { #Prioritizes selecting some kind of character you wouldn't get along with...
-	                	value = 10
-	                	potential_rival_score = yes
-		            }
-		            score_value = { #Extra weight for characters you've encountered before...
-		                value = 10
-		                disliked_target_selection_score = yes
-		            }
+					}
+					score_value = { #Prioritizes selecting some kind of character you wouldn't get along with...
+						value = 10
+						potential_rival_score = yes
+					}
+					score_value = { #Extra weight for characters you've encountered before...
+						value = 10
+						disliked_target_selection_score = yes
+					}
 					save_event_target_as = duel_target
 					break = yes
 				}
-            }
+			}
 		}
 		if = { # Warrior Lodge members who are without diplomatic range, such as mercenaries
 			limit = {
 				any_society_member = {
-	           		NOT = { same_society_as = ROOT }
-	           		is_member_of_any_warrior_lodge_trigger = yes
-	                is_inaccessible_or_incapable_trigger = no
-	                NOT = { has_character_modifier = bedridden_illness }
-		            NOT = { has_character_modifier = severe_illness }
+					NOT = { same_society_as = ROOT }
+					is_member_of_any_warrior_lodge_trigger = yes
+					is_inaccessible_or_incapable_trigger = no
+					NOT = { has_character_modifier = bedridden_illness }
+					NOT = { has_character_modifier = severe_illness }
 					NOT = { any_spouse = { character = ROOT } }
-	                is_adult = yes
-	                ai = yes
+					is_adult = yes
+					ai = yes
 					is_within_diplo_range = ROOT
-	            }		
+				}		
 			}
 			any_society_member = {
 				limit = {
-	           		NOT = { same_society_as = ROOT }
-	           		is_member_of_any_warrior_lodge_trigger = yes
-	                is_inaccessible_or_incapable_trigger = no
-	                NOT = { has_character_modifier = bedridden_illness }
-		            NOT = { has_character_modifier = severe_illness }
-	                NOT = { any_spouse = { character = ROOT } }
-	                is_adult = yes
-	                ai = yes
-	                is_within_diplo_range = ROOT
-                }
-                score_value = { #Prioritizes selecting some kind of character you wouldn't get along with...
-                	value = 10
-                	potential_rival_score = yes
-	            }
-	            score_value = { #Extra weight for characters you've encountered before...
-	                value = 10
-	                disliked_target_selection_score = yes
-	            }
-	            score_value = { #Reduced chance to pick people currently at war (unable to duel)...
-	                value = 10
-	            	at_war_reduction_score = yes
-	            }
-	            
+					NOT = { same_society_as = ROOT }
+					is_member_of_any_warrior_lodge_trigger = yes
+					is_inaccessible_or_incapable_trigger = no
+					NOT = { has_character_modifier = bedridden_illness }
+					NOT = { has_character_modifier = severe_illness }
+					NOT = { any_spouse = { character = ROOT } }
+					is_adult = yes
+					ai = yes
+					is_within_diplo_range = ROOT
+				}
+				score_value = { #Prioritizes selecting some kind of character you wouldn't get along with...
+					value = 10
+					potential_rival_score = yes
+				}
+				score_value = { #Extra weight for characters you've encountered before...
+					value = 10
+					disliked_target_selection_score = yes
+				}
+				score_value = { #Reduced chance to pick people currently at war (unable to duel)...
+					value = 10
+					at_war_reduction_score = yes
+				}
+	
 				save_event_target_as = duel_target
 				break = yes
-            }	
+			}	
 		}
 	}
 	
@@ -1581,7 +1581,7 @@ society_quest_event = {
 			}
 		}
 	}
-	option  = {
+	option = {
 		name = DECLINE
 		custom_tooltip = { text = decline_quest_tooltip }
 
@@ -1623,42 +1623,42 @@ society_quest_event = {
 		NOT = { is_inaccessible_trigger = yes }
 		is_landed = yes
 		any_independent_ruler = {
-	        any_realm_title = {
-	            tier = COUNT
-	            ROOT = {
-	                can_use_cb = { #against target
-	                    target = PREVPREV
-	                    thirdparty_title = PREV
-	                    casus_belli = pagan_county_conquest
-	                }
-	            }
-	            location = {
-		            OR = {
-			            AND = { #Either you can travel via water to them...
-				        	is_coastal = yes
-				        	can_naval_path_to = { target = event_target:home_capital distance < 1000 }
-			            }
-			            AND = {
-				            #Or they are accessible via land...
-				            event_target:home_capital = { is_coastal = no }
-					        can_land_path_to = { target = event_target:home_capital distance < 1000 }
-			            }
-			            AND = { #Or not a coastal place...
-				        	is_coastal = no
-				        	can_land_path_to = { target = event_target:home_capital distance < 1000 }
-				        	#event_target:home_capital = { distance = { where = PREV distance < 1000 } }
-			            }
-			        }
-	            }
-	            holder_scope = {
-		        	top_liege = {
-		        		NOT = { has_truce = ROOT }
-				        # target should not be stronger than 120% of your strength, and not weaker than 50% of your strength. 
-				        NOT = { relative_power = { who = ROOT power = 1.2 } }
-				        relative_power = { who = ROOT power = 0.5 }
-		        	}
-		        }
-	        }
+			any_realm_title = {
+				tier = COUNT
+				ROOT = {
+					can_use_cb = { #against target
+						target = PREVPREV
+						thirdparty_title = PREV
+						casus_belli = pagan_county_conquest
+					}
+				}
+				location = {
+					OR = {
+						AND = { #Either you can travel via water to them...
+							is_coastal = yes
+							can_naval_path_to = { target = event_target:home_capital distance < 1000 }
+						}
+						AND = {
+							#Or they are accessible via land...
+							event_target:home_capital = { is_coastal = no }
+							can_land_path_to = { target = event_target:home_capital distance < 1000 }
+						}
+						AND = { #Or not a coastal place...
+							is_coastal = no
+							can_land_path_to = { target = event_target:home_capital distance < 1000 }
+							#event_target:home_capital = { distance = { where = PREV distance < 1000 } }
+						}
+					}
+				}
+				holder_scope = {
+					top_liege = {
+						NOT = { has_truce = ROOT }
+						# target should not be stronger than 120% of your strength, and not weaker than 50% of your strength. 
+						NOT = { relative_power = { who = ROOT power = 1.2 } }
+						relative_power = { who = ROOT power = 0.5 }
+					}
+				}
+			}
 		}
 	}
 
@@ -1674,88 +1674,88 @@ society_quest_event = {
 	immediate = {
 		#Declare a county conquest against someone
 		random_independent_ruler = {
-		    limit = {
-		        any_realm_title = {
-		            tier = COUNT
-		            ROOT = {
-		                can_use_cb = { #against target
-		                    target = PREVPREV
-		                    thirdparty_title = PREV
-		                    casus_belli = pagan_county_conquest
-		                }
-		            }
-		            location = {
-			            OR = {
-				            AND = { #Either you can travel via water to them...
-					        	is_coastal = yes
-					        	can_naval_path_to = { target = event_target:home_capital distance < 1000 }
-				            }
-				            AND = {
-					            #Or they are accessible via land...
-					            event_target:home_capital = { is_coastal = no }
-						        can_land_path_to = { target = event_target:home_capital distance < 1000 }
-				            }
-				            AND = { #Or not a coastal place...
-					        	is_coastal = no
-					        	can_land_path_to = { target = event_target:home_capital distance < 1000 }
-					        	#event_target:home_capital = { distance = { where = PREV distance < 1000 } }
-				            }
-				        }
-		            }
-		            holder_scope = {
-			        	top_liege = {
-			        		NOT = { has_truce = ROOT }
-					        # target should not be stronger than 120% of your strength, and not weaker than 50% of your strength. 
-					        NOT = { relative_power = { who = ROOT power = 1.2 } }
-					        relative_power = { who = ROOT power = 0.5 }
-			        	}
-			        }
-		        }
-		    }
-		    random_realm_title = {
-		        limit = {
-		            tier = COUNT
-		            ROOT = {
-		                can_use_cb = { #against target
-		                    target = PREVPREV
-		                    thirdparty_title = PREV
-		                    casus_belli = pagan_county_conquest
-		                }
-		            }
-		            location = {
-			            OR = {
-				            AND = { #Either you can travel via water to them...
-					        	is_coastal = yes
-					        	can_naval_path_to = { target = event_target:home_capital distance < 1000 }
-				            }
-				            AND = {
-					            #Or they are accessible via land...
-					            event_target:home_capital = { is_coastal = no }
-						        can_land_path_to = { target = event_target:home_capital distance < 1000 }
-				            }
-				            AND = { #Or not a coastal place...
-					        	is_coastal = no
-					        	can_land_path_to = { target = event_target:home_capital distance < 1000 }
-					        	#event_target:home_capital = { distance = { where = PREV distance < 1000 } }
-				            }
-				        }
-		            }
-		            holder_scope = {
-			        	top_liege = {
-			        		NOT = { has_truce = ROOT }
-					        # target should not be stronger than 120% of your strength, and not weaker than 50% of your strength. 
-					        NOT = { relative_power = { who = ROOT power = 1.2 } }
-					        relative_power = { who = ROOT power = 0.5 }
-			        	}
-			        }
-		        }
-	            save_event_target_as = my_war_target
-		        holder_scope = {
-		            top_liege = {
-		                save_event_target_as = my_war_target_holder
-		            }
-		        }
-		    }
+			limit = {
+				any_realm_title = {
+					tier = COUNT
+					ROOT = {
+						can_use_cb = { #against target
+							target = PREVPREV
+							thirdparty_title = PREV
+							casus_belli = pagan_county_conquest
+						}
+					}
+					location = {
+						OR = {
+							AND = { #Either you can travel via water to them...
+								is_coastal = yes
+								can_naval_path_to = { target = event_target:home_capital distance < 1000 }
+							}
+							AND = {
+								#Or they are accessible via land...
+								event_target:home_capital = { is_coastal = no }
+								can_land_path_to = { target = event_target:home_capital distance < 1000 }
+							}
+							AND = { #Or not a coastal place...
+								is_coastal = no
+								can_land_path_to = { target = event_target:home_capital distance < 1000 }
+								#event_target:home_capital = { distance = { where = PREV distance < 1000 } }
+							}
+						}
+					}
+					holder_scope = {
+						top_liege = {
+							NOT = { has_truce = ROOT }
+							# target should not be stronger than 120% of your strength, and not weaker than 50% of your strength. 
+							NOT = { relative_power = { who = ROOT power = 1.2 } }
+							relative_power = { who = ROOT power = 0.5 }
+						}
+					}
+				}
+			}
+			random_realm_title = {
+				limit = {
+					tier = COUNT
+					ROOT = {
+						can_use_cb = { #against target
+							target = PREVPREV
+							thirdparty_title = PREV
+							casus_belli = pagan_county_conquest
+						}
+					}
+					location = {
+						OR = {
+							AND = { #Either you can travel via water to them...
+								is_coastal = yes
+								can_naval_path_to = { target = event_target:home_capital distance < 1000 }
+							}
+							AND = {
+								#Or they are accessible via land...
+								event_target:home_capital = { is_coastal = no }
+								can_land_path_to = { target = event_target:home_capital distance < 1000 }
+							}
+							AND = { #Or not a coastal place...
+								is_coastal = no
+								can_land_path_to = { target = event_target:home_capital distance < 1000 }
+								#event_target:home_capital = { distance = { where = PREV distance < 1000 } }
+							}
+						}
+					}
+					holder_scope = {
+						top_liege = {
+							NOT = { has_truce = ROOT }
+							# target should not be stronger than 120% of your strength, and not weaker than 50% of your strength. 
+							NOT = { relative_power = { who = ROOT power = 1.2 } }
+							relative_power = { who = ROOT power = 0.5 }
+						}
+					}
+				}
+				save_event_target_as = my_war_target
+				holder_scope = {
+					top_liege = {
+						save_event_target_as = my_war_target_holder
+					}
+				}
+			}
 		}
 	}
 
@@ -1771,7 +1771,7 @@ society_quest_event = {
 			}
 		}
 	}
-	option  = {
+	option = {
 		name = DECLINE
 		custom_tooltip = { text = decline_quest_tooltip }
 
@@ -1799,7 +1799,7 @@ letter_event = {
 
 	immediate = { 
 		hidden_effect = {
-			
+
 			if = { #Find some folks who are impressed by your victory...
 				limit = { has_character_flag = won_war@event_target:defender_target }
 				any_society_member = {
@@ -1897,10 +1897,10 @@ letter_event = {
 					limit = { has_character_flag = impressed@ROOT }
 					show_scope_change = no
 					opinion = {
-			            who = ROOT
-			            modifier = opinion_conquered_new_land
-			            years = 10
-			        }
+						who = ROOT
+						modifier = opinion_conquered_new_land
+						years = 10
+					}
 					clr_character_flag = impressed@ROOT
 				}
 				add_society_currency_major_effect = yes
@@ -2133,7 +2133,7 @@ society_quest_event = {
 	
 	trigger = {
 		is_landed = yes
-	    is_adult = yes	        		
+		is_adult = yes
 		FROM = { is_alive = yes }
 		is_member_of_any_warrior_lodge_trigger = yes
 		same_society_as = FROM
@@ -2145,12 +2145,12 @@ society_quest_event = {
 			is_alive = yes
 			is_in_society = no
 			age = 12
-		    prisoner = no
+			prisoner = no
 			NOT = { has_character_flag = flag_child_abandoned_lodge }
-	        OR = { #AIs should only strive to recruit their main heir
-	            PREV = { ai = no }
-	            is_primary_heir = PREV
-	        }
+			OR = { #AIs should only strive to recruit their main heir
+				PREV = { ai = no }
+				is_primary_heir = PREV
+			}
 		}
 	}
 
@@ -2158,21 +2158,21 @@ society_quest_event = {
 
 	immediate = {
 		random_child = { #Select a child to recruit
-		    limit = {
-		    	is_alive = yes
+			limit = {
+				is_alive = yes
 				age = 12
 				is_in_society = no
-			    prisoner = no
+				prisoner = no
 				NOT = { has_character_flag = flag_child_abandoned_lodge }
-		        OR = { #AIs should only strive to recruit their main heir
-		            PREV = { ai = no }
-		            is_primary_heir = PREV
-		        }
-		    }
-		    preferred_limit = {
-		    	is_primary_heir = PREV
-		    }
-		    save_event_target_as = recruit_to_be
+				OR = { #AIs should only strive to recruit their main heir
+					PREV = { ai = no }
+					is_primary_heir = PREV
+				}
+			}
+			preferred_limit = {
+				is_primary_heir = PREV
+			}
+			save_event_target_as = recruit_to_be
 		}
 	}
 
@@ -2188,7 +2188,7 @@ society_quest_event = {
 			}
 		}
 	}
-	option  = {
+	option = {
 		name = DECLINE
 		custom_tooltip = { text = decline_quest_tooltip }
 

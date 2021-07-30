@@ -41,7 +41,7 @@ character_event = {
 			has_character_modifier = demon_child_non_pagan
 			has_character_modifier = corrupting_magic_minor
 			has_character_modifier = corrupting_magic_major
-			
+
 			any_claim = { title = k_papal_state } # Antipopes
 			any_claim = { title = k_ursuline } # Antipopes
 			any_claim = { title = k_high_church } # Antipopes
@@ -362,7 +362,7 @@ character_event = {
 							NOT = {
 								family = event_target:saint_person
 							}
-						   religion_group = ROOT
+						religion_group = ROOT
 						}
 						narrative_event = { id = HF.40006 }
 					}
@@ -408,7 +408,7 @@ narrative_event = {
 	portrait = event_target:saint_person
 	has_dlc = "Holy Fury"
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_40006
 		if = {
 			limit = {
@@ -520,7 +520,7 @@ province_event = {
 				rightful_religious_head_scope = {
 					character_event = { id = HF.40020 }
 				}
-			}	 	
+			}		
 		}
 	}
 }
@@ -880,7 +880,7 @@ character_event = {
 					on_trigger = religion_group
 					christian = {
 						remove_trait = beatified
-						add_trait = saint   
+						add_trait = saint 
 						if = {
 							limit = {
 								is_female = yes
@@ -893,7 +893,7 @@ character_event = {
 					}
 					cult_of_saints = {
 						remove_trait = beatified
-						add_trait = saint   
+						add_trait = saint 
 						if = {
 							limit = {
 								is_female = yes
@@ -906,7 +906,7 @@ character_event = {
 					}
 					latter_day_saints = {
 						remove_trait = beatified
-						add_trait = saint   
+						add_trait = saint 
 						if = {
 							limit = {
 								is_female = yes
@@ -1016,7 +1016,7 @@ character_event = {
 						}
 					}
 					event_target:random_saint_realm_province = {
-						setting_up_saintly_burial_site_effect = yes			 
+						setting_up_saintly_burial_site_effect = yes
 					}
 				}
 			}
@@ -1921,7 +1921,7 @@ character_event = {
 						if = {
 							limit = {
 								event_target:saint_person = {
-								   OR = {
+								OR = {
 										religion_group = christian
 										religion_group = cult_of_saints
 										religion_group = latter_day_saints
@@ -2236,7 +2236,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_04
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -2254,7 +2254,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_04
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -2272,7 +2272,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_04
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -2290,7 +2290,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_04
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -2614,7 +2614,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_05
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -2632,7 +2632,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_05
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -2650,7 +2650,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_05
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -2668,7 +2668,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_05
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -2987,7 +2987,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_06
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -3005,7 +3005,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_06
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -3023,7 +3023,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_06
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -3041,7 +3041,7 @@ character_event = {
 								else = {
 									create_bloodline = {
 										type = saintly_bloodline_latter_day_saints_06
-									   religion = ROOT
+									religion = ROOT
 									}
 								}
 							}
@@ -3109,11 +3109,11 @@ province_event = {
 	hide_window = yes
 	has_dlc = "Holy Fury"
 
-   	immediate = {
-   		owner = {
+ 	immediate = {
+ 		owner = {
 			character_event = { id = HF.40022 }
-   		}
-   	}
+ 		}
+ 	}
 }
 
 #Notification sent out to all players
@@ -3125,7 +3125,7 @@ character_event = {
 	notification = yes
 	has_dlc = "Holy Fury"
 
-	option = {	  
+	option = {	
 		name = OK
 	}
 }
@@ -3186,7 +3186,7 @@ narrative_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_40025
 		show_portrait = FROM
 		if = {
@@ -3230,8 +3230,8 @@ character_event = {
 
 	trigger = {
 		OR = {
-   			trait = drunkard
-   			trait = hedonist
+ 			trait = drunkard
+ 			trait = hedonist
 		}
 		#year = 900
 		OR = {
@@ -3450,7 +3450,7 @@ character_event = {
 				NOT = {
 					family = event_target:saint_person
 				}
-			   religion_group = ROOT
+			religion_group = ROOT
 			}
 			narrative_event = { id = HF.40055}
 		}
@@ -3494,7 +3494,7 @@ narrative_event = {
 						trait = drunkard
 						trait = hedonist
 						event_target:saint_person = {
-						   family = ROOT
+						family = ROOT
 						}
 					}
 				}
@@ -3559,7 +3559,7 @@ narrative_event = {
 				OR = {
 					trait = drunkard
 					trait = hedonist
-				}				
+				}	
 				event_target:saint_person = {
 					family = ROOT
 				}
@@ -3575,7 +3575,7 @@ narrative_event = {
 			OR = {
 				trait = drunkard
 				trait = hedonist
-			}			
+			}
 			NOT = {
 				event_target:saint_person = {
 					family = ROOT
@@ -3597,7 +3597,7 @@ narrative_event = {
 					trait = drunkard
 					trait = hedonist
 				}
-				
+	
 			}
 		}
 		show_portrait = bishopric_holder
@@ -3610,7 +3610,7 @@ narrative_event = {
 			OR = {
 				trait = drunkard
 				trait = hedonist
-			}			
+			}
 			event_target:saint_person = {
 				family = ROOT
 			}
@@ -3634,7 +3634,7 @@ province_event = {
 			province_event = { id = HF.40057 days = 5 }
 		}
 		else = {
-		   province_event = { id = HF.40057 days = 180 random = 500 }
+		province_event = { id = HF.40057 days = 180 random = 500 }
 		}
 	}
 }
@@ -3838,7 +3838,7 @@ narrative_event = {
 			OR = {
 				trait = drunkard
 				trait = hedonist
-			}			
+			}
 			NOT = {
 				event_target:saint_person = {
 					family = ROOT
@@ -3883,7 +3883,7 @@ narrative_event = {
 			OR = {
 				trait = drunkard
 				trait = hedonist
-			}			
+			}
 			event_target:saint_person = {
 				family = ROOT
 			}
@@ -4087,7 +4087,7 @@ character_event = {
 							}
 						}
 					}
-					
+
 				}
 			}
 			AND = {
@@ -4348,7 +4348,7 @@ character_event = {
 			character_event = { id = HF.40092 days = 5 }
 		}
 		else = {
-		   character_event = { id = HF.40092  days = 180 random = 300 }
+		character_event = { id = HF.40092 days = 180 random = 300 }
 		}
 	}
 }
@@ -4507,7 +4507,7 @@ character_event = {
 				}
 			}
 			any_playable_ruler = {
-				limit = {  
+				limit = { 
 					religion = ROOT
 					event_target:papal_attacker = {
 						NOT = {
@@ -4625,7 +4625,7 @@ narrative_event = {
 					trait = drunkard
 					trait = seducer
 					trait = lustful
-					trait = lunatic				
+					trait = lunatic	
 				}
 			}
 		}
@@ -4711,7 +4711,7 @@ narrative_event = {
 	}
 
 	#Support the war to depose the Pope
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_40093
 		trigger = {
 			independent = yes
@@ -4753,7 +4753,7 @@ narrative_event = {
 		}
 	}
 	#Support the Pope
-	option = {	  
+	option = {	
 		name = EVTOPTB_HF_40093
 		trigger = {
 			independent = yes
@@ -4848,7 +4848,7 @@ narrative_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_40094
 		trigger = {
 			NOT = {
@@ -4878,7 +4878,7 @@ narrative_event = {
 	is_triggered_only = yes
 	has_dlc = "Holy Fury"
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HF_40095
 		trigger = {
 			NOT = {

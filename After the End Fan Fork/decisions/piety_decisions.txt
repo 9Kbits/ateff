@@ -1,5 +1,5 @@
 targetted_decisions = {
-	shia_spiritual_guidance = {  ### Imamite School power : targeted decision to remove one of target's vices
+	shia_spiritual_guidance = { ### Imamite School power : targeted decision to remove one of target's vices
 		ai_check_interval = 12
 		potential = {
 			NOT = { trait = incapable }
@@ -25,7 +25,7 @@ targetted_decisions = {
 				in_command = no
 				OR= { #improved spacing
 					trait = jadidi
-				    trait = ansari
+					trait = ansari
 				}
 			}
 			is_inaccessible_trigger = no
@@ -39,7 +39,7 @@ targetted_decisions = {
 			}
 			NOT = {
 				has_opinion_modifier = {	###opinion modifier 10yrs cooldown
-					who =  FROM
+					who = FROM
 					modifier = opinion_spiritual_guidance
 				}
 			}
@@ -195,8 +195,8 @@ targetted_decisions = {
 		}
 	}
 	
-    become_defenders_of_the_faith = {
-        only_playable = yes	
+	become_defenders_of_the_faith = {
+		only_playable = yes	
 		filter = self
 		ai_target_filter = self
 		ai_check_interval = 60
@@ -221,7 +221,7 @@ targetted_decisions = {
 		}
 		
 		effect = {
-		    piety = -200
+			piety = -200
 			add_character_modifier = {
 				modifier = defenders_of_the_faith
 				duration = -1 #did this instead of 100 years
@@ -235,16 +235,16 @@ targetted_decisions = {
 		
 		ai_will_do = {
 			factor = 1
-	    }
+		}
 	}
 		
-    become_renewers_of_the_faith = {
+	become_renewers_of_the_faith = {
 		only_playable = yes
 		filter = self
 		ai_target_filter = self
 		ai_check_interval = 60
 		
-	    
+		
 		potential = {	
 			is_playable = yes
 			religion = imamite
@@ -265,7 +265,7 @@ targetted_decisions = {
 		}
 		
 		effect = {
-		    piety = -200
+			piety = -200
 			add_character_modifier = {
 				modifier = renewers_of_the_faith
 				duration = -1 #did this instead of 100 years
@@ -287,7 +287,7 @@ targetted_decisions = {
 		ai_target_filter = self
 		ai_check_interval = 50
 		
-	    
+		
 		potential = {	
 			is_playable = yes
 			religion = gaian
@@ -309,9 +309,9 @@ targetted_decisions = {
 		}
 		
 		effect = {
-		    piety = -200
+			piety = -200
 			character_event = { id = gaian.1 tooltip = EVTTOOLTIP_GOHIKING }
-			set_character_flag  = hike_inecessible
+			set_character_flag = hike_inecessible
 		}
 		
 		revoke_allowed = {
@@ -348,7 +348,7 @@ targetted_decisions = {
 		}
 		
 		effect = {
-		    piety = -200
+			piety = -200
 			long_character_event = { id = eva.110 tooltip = EVTTOOLTIP_EVA_110 }
 			set_character_flag = mini_evangelical_stopper_branch
 		}

@@ -1109,7 +1109,7 @@ spawn_byz_effect = {
 				set_coa = event_target:title_coa
 				set_name="ALT_BYZ"
 				adjective="ALT_BYZ_ADJ"
-				
+	
 				any_de_jure_vassal_title = {
 					holder_scope = {
 						if = {
@@ -1547,7 +1547,7 @@ spawn_byz_effect = {
 				set_coa = event_target:title_coa
 				set_name="ALT_BYZ"
 				adjective="ALT_BYZ_ADJ"
-				
+	
 				any_de_jure_vassal_title = {
 					holder_scope = {
 						if = {
@@ -2350,7 +2350,7 @@ spawn_one_bloodline_effect = {
 						set_description = "bloodline_description_random_world_1"
 					}
 					set_character_flag = random_world_bloodline
-					
+
 				}
 				20 = {
 					create_bloodline = {
@@ -2360,7 +2360,7 @@ spawn_one_bloodline_effect = {
 						set_description = "bloodline_description_random_world_2"
 					}
 					set_character_flag = random_world_bloodline
-					
+
 				}
 				5 = {
 					create_bloodline = {
@@ -2377,7 +2377,7 @@ spawn_one_bloodline_effect = {
 					add_trait = fair
 					give_nickname = nick_the_fair
 				}
-				
+	
 			}
 		}
 		else_if = {
@@ -2404,7 +2404,7 @@ spawn_one_bloodline_effect = {
 					}
 					set_character_flag = random_world_bloodline
 				}
-				
+	
 				5 = {
 					create_bloodline = {
 						type = random_world_bloodline_male_3
@@ -2420,7 +2420,7 @@ spawn_one_bloodline_effect = {
 					add_trait = fair
 					give_nickname = nick_the_fair
 				}
-				
+	
 			}
 		}
 		else_if = {
@@ -2556,12 +2556,12 @@ spawn_one_bloodline_effect = {
 					add_trait = strong
 					add_trait = giant
 				}
-				
+	
 				20 = {
 					give_nickname = nick_the_mythological_creature
 					add_trait = strong
 				}
-				
+	
 				10 = {
 				give_nickname = nick_the_lawgiver
 				}
@@ -2629,7 +2629,7 @@ spawn_one_bloodline_effect = {
 					give_nickname = nick_the_wolf
 					add_trait = strong
 				}
-				
+	
 				1 = {
 					give_nickname = nick_tiny
 					remove_trait = slothful
@@ -2708,7 +2708,7 @@ spawn_one_artifact_effect = {
 			is_adult = yes
 			higher_tier_than = count
 			NOR = {
-					
+
 				has_character_flag = random_world_artifact
 				any_independent_ruler = {
 					has_character_flag = random_world_artifact
@@ -2718,7 +2718,7 @@ spawn_one_artifact_effect = {
 				}
 			}
 		}
-			
+
 		save_event_target_as = random_world_artifact_holder
 		random_list = {
 			20 = {
@@ -2814,7 +2814,7 @@ spawn_one_artifact_effect = {
 					}
 				}
 			}
-			
+
 			10 = {
 				set_character_flag = random_world_artifact
 				add_artifact = random_world_mythological_heart_1
@@ -2824,11 +2824,11 @@ spawn_one_artifact_effect = {
 								set_name="random_world_mythological_heart_1"
 								set_description = "random_world_mythological_heart_1_desc"
 							}
-							
+	
 					}
 				}
 			}
-			
+
 			10 = {
 				set_character_flag = random_world_artifact
 				add_artifact = random_world_mythological_blood
@@ -2838,11 +2838,11 @@ spawn_one_artifact_effect = {
 								set_name="random_world_mythological_blood_1"
 								set_description = "random_world_mythological_blood_desc_1"
 							}
-							
+	
 					}
 				}
 			}
-			
+
 			10 = {
 				set_character_flag = random_world_artifact
 				add_artifact = random_world_mythological_eye
@@ -2852,12 +2852,12 @@ spawn_one_artifact_effect = {
 								set_name="random_world_mythological_eye_1"
 								set_description = "random_world_mythological_eye_desc_1"
 							}
-							
+	
 					}
 				}
 			}
-			
-			
+
+
 			1 = {
 				set_character_flag = random_world_artifact
 				add_artifact = random_world_book_of_dev 

@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# M&M Monastic Artifacts Events		   #
-#										 #
-# ID MNM.9000-MNM.9999					  #
-#										 #
+#										#
+# M&M Monastic Artifacts Events		#
+#										#
+# ID MNM.9000-MNM.9999					#
+#										#
 ###########################################
 
 #IDs:
@@ -142,7 +142,7 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 						has_artifact = ate_stone_of_st_francis
 					}
 				}
-				
+	
 				modifier = {
 					factor = 0
 					AND = {
@@ -154,7 +154,7 @@ character_event = { #We should expand this event chain to accommodate more AtE r
 						has_artifact = pen_black_bart
 					}
 				}
-				
+	
 				modifier = {
 					factor = 0
 					AND = {
@@ -727,11 +727,11 @@ character_event = {
 		add_artifact_search_payment_effect = yes
 		hidden_effect = {
 			#Start searching
-			FROM = {  #the councilor
+			FROM = { #the councilor
 				set_character_flag = relic_hunter
 				save_event_target_as = relic_hunter
 				character_event = { id = MNM.9007 days = 30 } # The looping evaluation for progress increase/decrease begins...
-			}  
+			} 
 		}
 		ai_chance = { factor = 100 }
 	}
@@ -776,7 +776,7 @@ character_event = {
 		add_artifact_search_payment_effect = yes
 		hidden_effect = {
 			#Start searching
-			FROM = {  #the councilor
+			FROM = { #the councilor
 				set_character_flag = relic_hunter
 				save_event_target_as = relic_hunter
 				character_event = { id = MNM.9007 days = 30 } # The looping evaluation for progress increase/decrease begins...
@@ -977,7 +977,7 @@ character_event = {
 									limit = {
 										the_hunt_for_an_artifact_has_made_enough_progress_trigger = yes
 									}
-									character_event = { id = MNM.9035 }  #progress nearing end notification
+									character_event = { id = MNM.9035 } #progress nearing end notification
 								}
 								else = { character_event = { id = MNM.9031 } }
 							}
@@ -1318,7 +1318,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9806 } #Horn of Gabriel
 				}
-				
+	
 				20 = {
 					modifier = { factor = 0 NOR = { religion_group = christian religion_group = cult_of_saints religion_group = latter_day_saints } }
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_medium } }
@@ -1329,7 +1329,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9807 } #Fragment of the True Cross
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -1469,7 +1469,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9814 } #Ancient Torah
 				}
-				
+	
 				20 = {
 					modifier = { factor = 0 NOT = { religion_group = jewish_group } }
 					modifier = { factor = 0 NOT = { has_character_modifier = relic_rumor_minor } }
@@ -1497,7 +1497,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9854 } #Jewish Banner
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1548,7 +1548,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9825 } #Nauvoo Fragment
 				}
-				
+	
 				##Pagan artifacts##
 				#Germanic artifacts
 				20 = {
@@ -1601,7 +1601,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9602 } #Mjolnir
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1618,7 +1618,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9605 } #Juan's Machete
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1635,7 +1635,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9606 } #Harp of Florentino
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1652,7 +1652,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9650 } #Excalibur
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1666,7 +1666,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = atediscover.1 } #ate_sword_of_st_peter
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1680,7 +1680,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = atediscover.2 } #ate_stone_of_st_francis
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1697,7 +1697,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = atediscover.5 } #fastest_gun
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1731,7 +1731,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9603 } #Fetish of Souls
 				}
-				
+	
 				#Finnish artifacts
 				10 = {
 					modifier = { 
@@ -1749,7 +1749,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9604 } #Sampo/Mill of Fortune
 				}
-				
+	
 				#Americanist Artifacts
 				10 = {
 					modifier = { 
@@ -1788,7 +1788,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9618 } #The Constitution
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -1807,7 +1807,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9619 } #Presidential Portrait
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1826,7 +1826,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9620 } #Washington's Teeth
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1845,7 +1845,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9621 } #Stamp Collection
 				}
-				
+	
 				#Consumerist Artifacts
 				10 = {
 					modifier = { 
@@ -1863,7 +1863,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9622 } #Platinum Chip
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -1880,7 +1880,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9623 } #Treasury Bond
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -1897,7 +1897,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9624 } #Coin Collection
 				}
-				
+	
 				#Atomicist Artifacts
 				10 = {
 					modifier = { 
@@ -1929,7 +1929,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9626 } #Demon Core
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -1945,7 +1945,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9627 } #Holy Isotope
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -1961,7 +1961,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9628 } #Geiger Counter
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -1977,7 +1977,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9629 } #Radium Watch
 				}
-				
+	
 				#Pirate artifacts
 				10 = {
 					modifier = { 
@@ -1994,7 +1994,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9630 } #Chest of Booty
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2010,7 +2010,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9631 } #Treasure Map
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -2027,7 +2027,7 @@ character_event = {
 					character_event = { id = MNM.9632 } #Fragment of Queen Anne's Revenge
 				}
 
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2043,7 +2043,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9633 } #Blackbeard's Black Beard
 				}
-				
+	
 				#Cetic/Shinto artifacts#
 				5 = {
 					modifier = { 
@@ -2063,7 +2063,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9634 } #Maltese Falcon
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -2079,7 +2079,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9635 } #Emperor's Sword
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -2097,7 +2097,7 @@ character_event = {
 					character_event = { id = MNM.9636 } #Idol of America Kami
 				}
 
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -2113,7 +2113,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9637 } #Ruby Slipper
 				}
-				
+	
 				#Gaian/Nousthreskeia Artifacts#
 				5 = {
 					modifier = { 
@@ -2131,7 +2131,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9638 } #Heart of the Oasis
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -2147,7 +2147,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9639 } #Core of Methuselah
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2164,7 +2164,7 @@ character_event = {
 					character_event = { id = MNM.9640 } #Everlasting Flower Wreath
 				}
 
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2180,7 +2180,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9641 } #Redwood Core
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2198,7 +2198,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9642 } #Healing Crystal
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2214,7 +2214,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = atediscover.3 }
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2230,7 +2230,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = atediscover.9 }
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2246,7 +2246,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = atediscover.4 }
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2263,7 +2263,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = atediscover.7 }
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2280,7 +2280,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = atediscover.8 }
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2299,7 +2299,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = atediscover.10 }
 				}
-				
+	
 				#Native American Artifacts#
 				5 = {
 					modifier = { 
@@ -2316,7 +2316,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9643 } #Sitting Bull's Rifle
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -2336,7 +2336,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9644 } #Skull of Geronimo
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2353,7 +2353,7 @@ character_event = {
 					character_event = { id = MNM.9645 } #Ancient War Bonnet
 				}
 
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2369,7 +2369,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9646 } #Ancient Izze-Kloth
 				}
-				
+	
 				#Mesoamerican Artifacts#
 				5 = {
 					modifier = { 
@@ -2386,7 +2386,7 @@ character_event = {
 					#Insert artifact event here
 					narrative_event = { id = MNM.9647 } #Montezuma's Headdress
 				}
-				
+	
 				10 = {
 					modifier = { 
 						factor = 0 
@@ -2402,7 +2402,7 @@ character_event = {
 					#Insert artifact event here
 					character_event = { id = MNM.9648 } #Crystal Skull
 				}
-				
+	
 				20 = {
 					modifier = { 
 						factor = 0 
@@ -2757,7 +2757,7 @@ character_event = {
 	is_triggered_only = yes
 	has_dlc = "Mystics"
 	
-	option = {	  
+	option = {	
 		name = EVTOPTA_MNM_9028
 		custom_tooltip = { text = EVTOPTA_MNM_9028_TT }
 
@@ -2788,7 +2788,7 @@ character_event = {
 
 		hidden_effect = { multiply_variable = { which = relic_score value = 0.5 } }
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_MNM_9028
 	}
 }
@@ -6136,34 +6136,34 @@ narrative_event = {
 
 #Juan's Machete
 narrative_event = {
-    id = MNM.9605
-    title = EVTNAME_MNM_9605
-    desc = EVTDESC_MNM_9605
-    picture = GFX_evt_pagan_artifacts
-    border = GFX_event_narrative_frame_religion
+	id = MNM.9605
+	title = EVTNAME_MNM_9605
+	desc = EVTDESC_MNM_9605
+	picture = GFX_evt_pagan_artifacts
+	border = GFX_event_narrative_frame_religion
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    has_dlc = "Mystics"
+	has_dlc = "Mystics"
 
-    option = { #it's their duty
-        name = EVTOPT_MAJOR_ARTIFACT_DUTY
-        prestige = 10
-        reverse_opinion = {
+	option = { #it's their duty
+		name = EVTOPT_MAJOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_extremely_disappointed
 			years = 20
 		}
-        add_artifact = ate_juans_machete
-        new_artifact = {
+		add_artifact = ate_juans_machete
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #monetary reward
-        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+	option = { #monetary reward
+		name = EVTOPT_MAJOR_ARTIFACT_MONEY
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -6179,16 +6179,16 @@ narrative_event = {
 			min = 50
 		}
 
-        add_artifact = ate_juans_machete
-        new_artifact = {
+		add_artifact = ate_juans_machete
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    
-    option = { #reward them with a favor
-        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+	}
+	
+	option = { #reward them with a favor
+		name = EVTOPT_MAJOR_ARTIFACT_FAVOR
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -6198,20 +6198,20 @@ narrative_event = {
 			modifier = opinion_found_major_artifact
 			years = 15
 		}
-        reverse_add_favor = FROM
-        add_artifact = ate_juans_machete
-        new_artifact = {
+		reverse_add_favor = FROM
+		add_artifact = ate_juans_machete
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #praise them (prestige reward)
-    	trigger = {
+	option = { #praise them (prestige reward)
+		trigger = {
 			diplomacy = 15
 		}
-        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+		name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_praised
 			years = 15
@@ -6226,44 +6226,44 @@ narrative_event = {
 			chance = 20
 			add_friend = FROM
 		}
-        add_artifact = ate_juans_machete
-        new_artifact = {
+		add_artifact = ate_juans_machete
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    after = { clr_artifact_flagsmodifiers_effect = yes }
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
 }
 
 #Harp of Florentino
 narrative_event = {
-    id = MNM.9606
-    title = EVTNAME_MNM_9606
-    desc = EVTDESC_MNM_9606
-    picture = GFX_evt_pagan_artifacts
-    border = GFX_event_narrative_frame_religion
+	id = MNM.9606
+	title = EVTNAME_MNM_9606
+	desc = EVTDESC_MNM_9606
+	picture = GFX_evt_pagan_artifacts
+	border = GFX_event_narrative_frame_religion
 
-    is_triggered_only = yes
+	is_triggered_only = yes
 
-    has_dlc = "Mystics"
+	has_dlc = "Mystics"
 
-    option = { #it's their duty
-        name = EVTOPT_MAJOR_ARTIFACT_DUTY
-        prestige = 10
-        reverse_opinion = {
+	option = { #it's their duty
+		name = EVTOPT_MAJOR_ARTIFACT_DUTY
+		prestige = 10
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_extremely_disappointed
 			years = 20
 		}
-        add_artifact = ate_harp_of_florentino
-        new_artifact = {
+		add_artifact = ate_harp_of_florentino
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #monetary reward
-        name = EVTOPT_MAJOR_ARTIFACT_MONEY
+	option = { #monetary reward
+		name = EVTOPT_MAJOR_ARTIFACT_MONEY
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -6279,16 +6279,16 @@ narrative_event = {
 			min = 50
 		}
 
-        add_artifact = ate_harp_of_florentino
-        new_artifact = {
+		add_artifact = ate_harp_of_florentino
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    
-    option = { #reward them with a favor
-        name = EVTOPT_MAJOR_ARTIFACT_FAVOR
+	}
+	
+	option = { #reward them with a favor
+		name = EVTOPT_MAJOR_ARTIFACT_FAVOR
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_rewarded
 			years = 15
@@ -6298,20 +6298,20 @@ narrative_event = {
 			modifier = opinion_found_major_artifact
 			years = 15
 		}
-        reverse_add_favor = FROM
-        add_artifact = ate_harp_of_florentino
-        new_artifact = {
+		reverse_add_favor = FROM
+		add_artifact = ate_harp_of_florentino
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
+	}
 
-    option = { #praise them (prestige reward)
-    	trigger = {
+	option = { #praise them (prestige reward)
+		trigger = {
 			diplomacy = 15
 		}
-        name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
+		name = EVTOPT_MAJOR_ARTIFACT_PRESTIGE
 
-        reverse_opinion = {
+		reverse_opinion = {
 			who = FROM
 			modifier = opinion_was_praised
 			years = 15
@@ -6326,12 +6326,12 @@ narrative_event = {
 			chance = 20
 			add_friend = FROM
 		}
-        add_artifact = ate_harp_of_florentino
-        new_artifact = {
+		add_artifact = ate_harp_of_florentino
+		new_artifact = {
 			set_creation_date = 1.1.1
 		}
-    }
-    after = { clr_artifact_flagsmodifiers_effect = yes }
+	}
+	after = { clr_artifact_flagsmodifiers_effect = yes }
 }
 
 ##Americanist##
@@ -9752,7 +9752,7 @@ character_event = {
 					modifier = { factor = 2 primary_title = { has_law = status_of_women_3 } }
 					modifier = { factor = 2 primary_title = { has_law = status_of_women_4 } }
 					modifier = { factor = 6 has_game_rule = { name = gender value = all } } 
-					create_random_steward  = {
+					create_random_steward = {
 						age = 45
 						random_traits = yes
 						female = yes
@@ -9769,12 +9769,12 @@ character_event = {
 						set_character_flag = ai_flag_refuse_marriage
 						set_character_flag = ai_flag_refuse_concubinage
 						set_character_flag = cannot_marry
-			   			set_character_flag = no_court_invites
+						set_character_flag = no_court_invites
 						will_not_marry_effect = yes
 					}
 				} 
 				85 = { #Man
-					create_random_steward  = {
+					create_random_steward = {
 						age = 45
 						random_traits = yes
 						female = no
@@ -9790,7 +9790,7 @@ character_event = {
 						save_event_target_as = smith
 						set_character_flag = ai_flag_refuse_marriage
 						set_character_flag = cannot_marry
-			   			set_character_flag = no_court_invites
+						set_character_flag = no_court_invites
 						will_not_marry_effect = yes
 					}
 				}
@@ -10009,7 +10009,7 @@ character_event = {
 					set_character_flag = goldsmith_fail
 				}
 				10 = { #Steal
-				  	modifier = { factor = 1.3 FROM = { trait = envious } }
+					modifier = { factor = 1.3 FROM = { trait = envious } }
 					modifier = { factor = 0.2 FROM = { trait = charitable } }
 					modifier = { factor = 0.2 FROM = { trait = content } }
 					modifier = { factor = 1.5 FROM = { trait = ambitious } }
@@ -10046,8 +10046,8 @@ character_event = {
 			}
 		}
 	}
-   
-   	#I can't afford that much 
+ 
+ 	#I can't afford that much 
 	option = {
 		name = {
 			trigger = {
@@ -10140,7 +10140,7 @@ character_event = {
 
 		hidden_effect = { FROM = { character_event = { id = MNM.9110 days = 5 } } }
 
-	   	ai_chance = { factor = 15 }
+		ai_chance = { factor = 15 }
 	}
 }	
 
@@ -10166,10 +10166,10 @@ character_event = {
 	
 		trigger_switch = {
 			on_trigger = has_character_flag
-			amazing_jewels		= { event_target:smith_employer = { character_event = { id = MNM.40001 } } }
-			expensive_jewels	= { event_target:smith_employer = { character_event = { id = MNM.9105 } } }
-			good_jewels			= { event_target:smith_employer = { character_event = { id = MNM.9106 } } }
-			cheap_jewels		= { event_target:smith_employer = { character_event = { id = MNM.9107 } } }
+			amazing_jewels	 = { event_target:smith_employer = { character_event = { id = MNM.40001 } } }
+			expensive_jewels = { event_target:smith_employer = { character_event = { id = MNM.9105 } } }
+			good_jewels		 = { event_target:smith_employer = { character_event = { id = MNM.9106 } } }
+			cheap_jewels	 = { event_target:smith_employer = { character_event = { id = MNM.9107 } } }
 		}
 	}
 }
@@ -10613,7 +10613,7 @@ character_event = {
 	
 	#I want my expensive stuff
 	option = {
-		trigger = { FROM  = { has_character_flag = expensive_jewels } }
+		trigger = { FROM = { has_character_flag = expensive_jewels } }
 		name = EVTOPTA_MNM_9109
 		custom_tooltip = { text = EVTOPTA_MNM_9109_TT_NEW }
 
@@ -10632,14 +10632,14 @@ character_event = {
 
 	#Settle for less expensive stuff
 	option = {
-		trigger = { FROM  = { has_character_flag = expensive_jewels } }
+		trigger = { FROM = { has_character_flag = expensive_jewels } }
 		name = EVTOPTB_MNM_9109
 		custom_tooltip = { text = EVTOPTB_MNM_9109_TT_NEW }
 	}
 
 	#I want my good stuff
 	option = {
-		trigger = { FROM  = { has_character_flag = good_jewels } }
+		trigger = { FROM = { has_character_flag = good_jewels } }
 		name = EVTOPTC_MNM_9109
 		custom_tooltip = { text = EVTOPTC_MNM_9109_TT_NEW }
 
@@ -10657,7 +10657,7 @@ character_event = {
 
 	#Settle for less good stuff
 	option = {
-		trigger = { FROM  = { has_character_flag = good_jewels } }
+		trigger = { FROM = { has_character_flag = good_jewels } }
 		name = EVTOPTD_MNM_9109
 		custom_tooltip = { text = EVTOPTD_MNM_9109_TT_NEW }
 	}
@@ -10820,7 +10820,7 @@ character_event = {
 					modifier = { factor = 2 primary_title = { has_law = status_of_women_3 } }
 					modifier = { factor = 2 primary_title = { has_law = status_of_women_4 } }
 					modifier = { factor = 6 has_game_rule = { name = gender value = all } } 
-					create_random_steward  = {
+					create_random_steward = {
 						age = 45
 						random_traits = yes
 						female = yes
@@ -10837,12 +10837,12 @@ character_event = {
 						set_character_flag = ai_flag_refuse_marriage
 						set_character_flag = ai_flag_refuse_concubinage
 						set_character_flag = cannot_marry
-			   			set_character_flag = no_court_invites
+						set_character_flag = no_court_invites
 						will_not_marry_effect = yes
 					}
 				} 
 				85 = { #Man
-					create_random_steward  = {
+					create_random_steward = {
 						age = 45
 						random_traits = yes
 						female = no
@@ -10858,7 +10858,7 @@ character_event = {
 						save_event_target_as = smith
 						set_character_flag = ai_flag_refuse_marriage
 						set_character_flag = cannot_marry
-			   			set_character_flag = no_court_invites
+						set_character_flag = no_court_invites
 						will_not_marry_effect = yes
 					}
 				}
@@ -10950,8 +10950,8 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_MNM_9115_b
-		 custom_tooltip = { text = EVTOPTA_MNM_9115_TT }
-		  hidden_effect = {
+		custom_tooltip = { text = EVTOPTA_MNM_9115_TT }
+		hidden_effect = {
 			save_event_target_as = smith_employer
 			event_target:smith = { 
 				character_event = { id = MNM.9116 days = 7 } 
@@ -11059,7 +11059,7 @@ character_event = {
 
 	#Sword
 	option = { 
-		trigger = { NOR = { religion_group = afro_syncretic religion_group = muslim has_dharmic_religion_trigger = yes culture_group = starfolk  government = open_range_feudalism_government} has_character_flag = weaponsmith }
+		trigger = { NOR = { religion_group = afro_syncretic religion_group = muslim has_dharmic_religion_trigger = yes culture_group = starfolk government = open_range_feudalism_government} has_character_flag = weaponsmith }
 		name = EVTOPTA_MNM_9118
 		custom_tooltip = { text = EVTOPTA_MNM_9118_TT }
 		hidden_tooltip = { FROM = { set_character_flag = weapon_sword } }
@@ -11077,7 +11077,7 @@ character_event = {
 	
 	#Saber
 	option = {
-		trigger = { OR = {culture_group = starfolk  government = open_range_feudalism_government } has_character_flag = weaponsmith }
+		trigger = { OR = {culture_group = starfolk government = open_range_feudalism_government } has_character_flag = weaponsmith }
 		name = EVTOPTH_MNM_9118
 		custom_tooltip = { text = EVTOPTH_MNM_9118_TT }
 		hidden_tooltip = { FROM = { set_character_flag = weapon_saber } }
@@ -11164,7 +11164,7 @@ character_event = {
 #And how much are you willing to pay?
 character_event = {
 	id = MNM.9120
-	desc =  EVTDESC_MNM_9120_NEW
+	desc = EVTDESC_MNM_9120_NEW
 	picture = GFX_evt_weaponsmith
 	border = GFX_event_normal_frame_economy
 
@@ -11183,7 +11183,7 @@ character_event = {
 		trigger = { 
 			tier = EMPEROR
 		}
-	   	if = {
+		if = {
 			limit = { FROM = { has_character_flag = weapon_sword } }
 			custom_tooltip = { text = EVTOPTA_MNM_9120_TT_SWORD_EMPEROR }
 		}
@@ -11197,7 +11197,7 @@ character_event = {
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_lance } }
-		   	custom_tooltip = { text = EVTOPTA_MNM_9120_TT_LANCE_EMPEROR }
+			custom_tooltip = { text = EVTOPTA_MNM_9120_TT_LANCE_EMPEROR }
 		}
 		if = {
 			limit = { FROM = { has_character_flag = weapon_axe } }
@@ -11496,8 +11496,8 @@ character_event = {
 			}
 		}
 	}
-   
-   	#I can't afford that much 
+ 
+ 	#I can't afford that much 
 	option = {
 		name = {
 			trigger = {
@@ -11668,7 +11668,7 @@ character_event = {
 		name = EVTOPTD_MNM_9120
 		custom_tooltip = { text = EVTOPTD_MNM_9120_TT }
 
-	   	ai_chance = { 
+		ai_chance = { 
 			factor = 15 
 			modifier = {
 				NOR = {
@@ -11706,10 +11706,10 @@ character_event = {
 
 		trigger_switch = {
 			on_trigger = has_character_flag
-			amazing_weapons 		= { event_target:smith_employer = { character_event = { id = MNM.40000 } } }
-			expensive_weapons		= { event_target:smith_employer = { character_event = { id = MNM.9122 } } }
-			good_weapons			= { event_target:smith_employer = { character_event = { id = MNM.9123 } } }
-			cheap_weapons			= { event_target:smith_employer = { character_event = { id = MNM.9124 } } }
+			amazing_weapons 	 = { event_target:smith_employer = { character_event = { id = MNM.40000 } } }
+			expensive_weapons	 = { event_target:smith_employer = { character_event = { id = MNM.9122 } } }
+			good_weapons		 = { event_target:smith_employer = { character_event = { id = MNM.9123 } } }
+			cheap_weapons		 = { event_target:smith_employer = { character_event = { id = MNM.9124 } } }
 		}
 	}
 }
@@ -11737,7 +11737,7 @@ character_event = {
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = {
 			text = EVTOPTA_MNM_40000_SWORD
 			trigger = { FROM = { has_character_flag = weapon_sword } }
@@ -11804,7 +11804,7 @@ character_event = {
 			add_artifact = armor_tier_4_guardian
 		}
 	}
-	option = {	  
+	option = {	
 		name = {
 			text = EVTOPTB_MNM_40000_SWORD
 			trigger = { FROM = { has_character_flag = weapon_sword } }
@@ -12216,7 +12216,7 @@ character_event = {
 			hidden_tooltip = {
 				add_artifact = sword_tier_2_new
 			}
-			set_character_flag = sword_tier_2   
+			set_character_flag = sword_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -12227,7 +12227,7 @@ character_event = {
 			hidden_tooltip = {
 				add_artifact = scimitar_tier_2_new
 			}
-			set_character_flag = scimitar_tier_2   
+			set_character_flag = scimitar_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -12238,7 +12238,7 @@ character_event = {
 			hidden_tooltip = {
 				add_artifact = saber_tier_2_new
 			}
-			set_character_flag = saber_tier_2   
+			set_character_flag = saber_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -12249,7 +12249,7 @@ character_event = {
 			hidden_tooltip = {
 				add_artifact = lance_tier_2_new
 			}
-			set_character_flag = lance_tier_2   
+			set_character_flag = lance_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -12260,7 +12260,7 @@ character_event = {
 			hidden_tooltip = {
 				add_artifact = axe_tier_2_new
 			}
-			set_character_flag = axe_tier_2   
+			set_character_flag = axe_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -12271,7 +12271,7 @@ character_event = {
 			hidden_tooltip = {
 				add_artifact = mace_tier_2_new
 			}
-			set_character_flag = mace_tier_2   
+			set_character_flag = mace_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -12282,7 +12282,7 @@ character_event = {
 			hidden_tooltip = {
 				add_artifact = bow_tier_2_new
 			}
-			set_character_flag = bow_tier_2   
+			set_character_flag = bow_tier_2 
 			new_artifact = {
 				set_name = artifact_name
 				set_description = artifact_description_smith_tier_2
@@ -12498,7 +12498,7 @@ character_event = {
 	
 	#I want my expensive stuff
 	option = {
-		trigger = { FROM  = { has_character_flag = expensive_weapons } }
+		trigger = { FROM = { has_character_flag = expensive_weapons } }
 		name = EVTOPTA_MNM_9109
 		custom_tooltip = { text = EVTOPTA_MNM_9129_TT_NEW }
 
@@ -12516,14 +12516,14 @@ character_event = {
 
 	#Settle for less expensive stuff
 	option = {
-		trigger = { FROM  = { has_character_flag = expensive_weapons } }
+		trigger = { FROM = { has_character_flag = expensive_weapons } }
 		name = EVTOPTB_MNM_9109
 		custom_tooltip = { text = EVTOPTB_MNM_9129_TT_NEW }
 	}
 
 	#I want my good stuff
 	option = {
-		trigger = { FROM  = { has_character_flag = good_weapons } }
+		trigger = { FROM = { has_character_flag = good_weapons } }
 		name = EVTOPTC_MNM_9109
 		custom_tooltip = { text = EVTOPTA_MNM_9129_TT_NEW }
 
@@ -12541,7 +12541,7 @@ character_event = {
 
 	#Settle for less good stuff
 	option = {
-		trigger = { FROM  = { has_character_flag = good_weapons } }
+		trigger = { FROM = { has_character_flag = good_weapons } }
 		name = EVTOPTD_MNM_9109
 		custom_tooltip = { text = EVTOPTB_MNM_9129_TT_NEW }
 	}
@@ -12691,7 +12691,7 @@ character_event = {
 				set_character_flag = weaponsmith
 				character_event = { id = MNM.9115 days = 50 random = 50 }
 			}
-	   	}
+		}
 		ai_chance = {
 			factor = 10
 			modifier = {
@@ -12711,7 +12711,7 @@ character_event = {
 				set_character_flag = armorsmith
 				character_event = { id = MNM.9115 days = 50 random = 50 }
 			}
-	   	}
+		}
 		ai_chance = {
 			factor = 10
 			modifier = {
@@ -12727,7 +12727,7 @@ character_event = {
 			hidden_effect = {
 				character_event = { id = MNM.9100 days = 50 random = 50 }
 			}
-	   	}
+		}
 		ai_chance = {
 			factor = 10
 			modifier = {
@@ -12850,7 +12850,7 @@ character_event = {
 					new_artifact = { set_artifact_flag = stolen_by_smith }
 				}
 			}
-			good_jewels = {  
+			good_jewels = { 
 				if = {
 					limit = { 
 						FROM = {
@@ -14263,7 +14263,7 @@ character_event = {
 					character_event = { id = MNM.9910 }
 				}
 			}
-			
+
 			6000 = { #chance of no artifact stealing
 				modifier = {
 					factor = 0.2
@@ -14780,7 +14780,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_MNM_9907
 		trigger = {
-			FROM  = { NOT = { has_character_flag = looted_artifact_destroy_duplicate } }
+			FROM = { NOT = { has_character_flag = looted_artifact_destroy_duplicate } }
 		}
 		
 		tooltip = {
@@ -14813,7 +14813,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_MNM_9907
 		trigger = {
-			FROM =  { has_character_flag = looted_artifact_destroy_duplicate }
+			FROM = { has_character_flag = looted_artifact_destroy_duplicate }
 		}
 		
 		random_artifact = {
@@ -15017,7 +15017,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_MNM_9907
 		trigger = {
-			FROM  = { NOT = { has_character_flag = looted_artifact_destroy_duplicate } }
+			FROM = { NOT = { has_character_flag = looted_artifact_destroy_duplicate } }
 		}
 		
 		tooltip = {
@@ -15050,7 +15050,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_MNM_9907
 		trigger = {
-			FROM =  { has_character_flag = looted_artifact_destroy_duplicate }
+			FROM = { has_character_flag = looted_artifact_destroy_duplicate }
 		}
 		
 		random_artifact = {
@@ -15255,7 +15255,7 @@ character_event = {
 	option = {
 		name = EVTOPTA_MNM_9911
 		trigger = {
-			FROM  = { NOT = { has_character_flag = looted_artifact_destroy_duplicate } }
+			FROM = { NOT = { has_character_flag = looted_artifact_destroy_duplicate } }
 		}
 		
 		tooltip = {
@@ -15288,7 +15288,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_MNM_9911
 		trigger = {
-			FROM =  { has_character_flag = looted_artifact_destroy_duplicate }
+			FROM = { has_character_flag = looted_artifact_destroy_duplicate }
 		}
 		
 		random_artifact = {

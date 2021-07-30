@@ -1,8 +1,8 @@
 ###########################################
-#										 #
-# RIP Epidemic Events		   		  #
-# ID RIP.13000-RIP.13999				  #
-#										 #
+#										#
+# RIP Epidemic Events				#
+# ID RIP.13000-RIP.13999				#
+#										#
 ###########################################
 
 # Written by:
@@ -740,7 +740,7 @@ character_event = { #head of religion chimes in. could be player.
 				factor = 2
 				is_virtous = yes
 			}
-		}			
+		}
 	}
 
 	option = {
@@ -903,10 +903,10 @@ character_event = { #if you keep jews, stuff happens
 					NOT = { has_province_flag = pogrom_target }
 					any_province_holding = {
 						holding_type = city
-						
+
 					}
 				}
-			}			
+			}
 			random_demesne_province = {
 				limit = {
 					owner = { character = ROOT }
@@ -1138,7 +1138,7 @@ character_event = {
 					set_character_flag = bg_accused_witch
 					add_rival = event_target:bg_rival_1
 				}
-				
+	
 				character_event = { id = RIP.13204 }
 			}
 			50 = {
@@ -1726,7 +1726,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = bg_imprisoned_witches value = 1 } }
 	}
 	option = {
-		trigger = { event_target:bg_dislike_2  = { always = yes } }
+		trigger = { event_target:bg_dislike_2 = { always = yes } }
 		name = EVTOPTB_RIP_13208
 		custom_tooltip = { text = EVTOPTB_RIP_13208_TOOLTIP }
 		event_target:bg_dislike_2 = { 
@@ -1748,7 +1748,7 @@ character_event = {
 		hidden_tooltip = { change_variable = { which = bg_imprisoned_witches value = 1 } }
 	}
 	option = {
-		trigger = { event_target:bg_dislike_3  = { always = yes } }
+		trigger = { event_target:bg_dislike_3 = { always = yes } }
 		name = EVTOPTC_RIP_13208
 		custom_tooltip = { text = EVTOPTC_RIP_13208_TOOLTIP }
 		event_target:bg_dislike_3 = { 
@@ -2167,7 +2167,7 @@ character_event = {
 
 		trigger = {
 			capital_scope = {
-				num_of_empty_holdings = 2			
+				num_of_empty_holdings = 2
 			}
 			NOT = { has_character_flag = in_seclusion }
 		}
@@ -2796,13 +2796,13 @@ character_event = {
 				limit = { has_character_modifier = in_seclusion }
 				set_character_flag = exposed_to_outside
 				event_target:vagrant_child_1 = {
-					add_character_modifier =  { name = in_seclusion duration = -1 }	
+					add_character_modifier = { name = in_seclusion duration = -1 }	
 				}
 				event_target:vagrant_child_2 = {
-					add_character_modifier =  { name = in_seclusion duration = -1 }
+					add_character_modifier = { name = in_seclusion duration = -1 }
 				}
 			}
-			
+
 			random_list = {
 				#construction succeeds
 				40 = {
@@ -2896,7 +2896,7 @@ character_event = {
 		}
 
 		capital_scope = {
-			build_holding  ={
+			build_holding ={
 				type = temple
 			}
 		}

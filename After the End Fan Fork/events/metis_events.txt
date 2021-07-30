@@ -33,7 +33,7 @@ narrative_event={
 			new_bloodline = {
 				set_description = "bloodline_desc_metis_confederacy"
 			}	
-			sound_effect = bloodline_added			
+			sound_effect = bloodline_added
 		}
 		else_if = { #New Imperial Bloodline. (female)
 			limit = { 
@@ -46,14 +46,14 @@ narrative_event={
 			new_bloodline = {
 				set_description = "bloodline_desc_metis_confederacy"
 			}	
-			sound_effect = bloodline_added			
+			sound_effect = bloodline_added
 		}
 	}
 	option = {
 		name = EVTOPT_metis_confederacy_coreligionist
 		trigger = {
 			NOT = { has_landed_title = e_usa }
-            NOT = { has_landed_title = e_metis_confederacy }
+			NOT = { has_landed_title = e_metis_confederacy }
 			e_metis_confederacy = {
 				holder_scope = {
 					culture_group = ROOT

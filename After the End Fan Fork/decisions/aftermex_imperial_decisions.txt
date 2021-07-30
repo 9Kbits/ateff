@@ -47,11 +47,11 @@ decisions = {
 				has_landed_title = k_mexico
 			}
 			NOT = {
-				any_realm_character  = {
+				any_realm_character = {
 					trait = destapado
 				}
 			}
-			any_realm_character  = {
+			any_realm_character = {
 				trait = tapado
 			}
 		}
@@ -64,7 +64,7 @@ decisions = {
 				trigger = { has_character_flag = do_not_disturb }
 				custom_tooltip = {
 					text = TT_NOT_OTHERWISE_OCCUPIED
-					hidden_tooltip = {  
+					hidden_tooltip = { 
 						NOT = { has_character_flag = do_not_disturb } 
 					} 
 				} 
@@ -72,8 +72,8 @@ decisions = {
 			conditional_tooltip = {
 				trigger = { has_character_modifier = destape_cooldown }
 				custom_tooltip = {
-					text = TT_TAPADO_NOT_OTHERWISE_OCCUPIED  # needs localization
-					hidden_tooltip = {  
+					text = TT_TAPADO_NOT_OTHERWISE_OCCUPIED # needs localization
+					hidden_tooltip = { 
 						any_courtier_or_vassal = {
 							liege = { character = ROOT }
 							AND = {
@@ -87,7 +87,7 @@ decisions = {
 		}
 		
 		effect = {
-			custom_tooltip = { text = begin_destape_tooltip }  # needs localization
+			custom_tooltip = { text = begin_destape_tooltip } # needs localization
 			add_character_modifier = {
 				name = holding_destape_ceremony
 				duration = -1
@@ -103,7 +103,7 @@ decisions = {
 			}
 			hidden_tooltip = {
 				character_event = { 
-					id = destape.4  
+					id = destape.4 
 				}
 			}
 		}

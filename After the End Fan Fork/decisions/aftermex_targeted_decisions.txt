@@ -35,7 +35,7 @@ targetted_decisions = {
 			}
 		}
 
-		allow = {			
+		allow = {
 			conditional_tooltip = {
 				trigger = {
 					FROM = { religion_openly_fidencista_trigger = yes }
@@ -55,7 +55,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			conditional_tooltip = {
 				trigger = {
 					FROM = { has_norteno_culture_trigger = yes }
@@ -76,15 +76,15 @@ targetted_decisions = {
 				}
 			}
 
-            #### For everyone, regardless...
-            is_adult = yes
-            custom_tooltip = {
+			#### For everyone, regardless...
+			is_adult = yes
+			custom_tooltip = {
 				text = is_not_incapable_inbred_or_imbecile_tt
 				NOT = { trait = incapable }
 				NOT = { trait = inbred }
 				NOT = { trait = imbecile }
 			}
-            custom_tooltip = { #must not have refused or been recently relieved of this duty...
+			custom_tooltip = { #must not have refused or been recently relieved of this duty...
 				text = make_adelita_custom_tooltip_3
 				hidden_tooltip = { NOT = { has_character_modifier = recently_relieved_adelita_timer } }
 			}
@@ -103,7 +103,7 @@ targetted_decisions = {
 
 		ai_will_do = {
 			factor = 0.1
-			
+
 			modifier = {
 				factor = 1.5
 				reverse_opinion = { who = FROM value = 40 }
@@ -180,7 +180,7 @@ targetted_decisions = {
 
 		ai_will_do = {
 			factor = 0.1
-			
+
 			modifier = {
 				factor = 10
 				FROM = { is_rival = ROOT }
@@ -248,15 +248,15 @@ targetted_decisions = {
 				ROOT = {is_close_relative = FROM}
 			}
 		}
-					
-		allow = {			
-            custom_tooltip = {
+
+		allow = {
+			custom_tooltip = {
 				text = is_not_incapable_inbred_or_imbecile_tt
 				NOT = { trait = incapable }
 				NOT = { trait = inbred }
 				NOT = { trait = imbecile }
 			}
-            custom_tooltip = { #must not have refused or been recently relieved of this duty...
+			custom_tooltip = { #must not have refused or been recently relieved of this duty...
 				text = designate_tapado_custom_tooltip_3
 				hidden_tooltip = { NOT = { has_character_modifier = relieved_tapado_cooldown } }
 			}
@@ -321,7 +321,7 @@ targetted_decisions = {
 
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 100
 				FROM = { is_rival = ROOT }

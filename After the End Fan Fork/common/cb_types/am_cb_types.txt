@@ -242,7 +242,7 @@ colonization = {
 						}
 						culture = ROOT
 						religion = ROOT
-						
+
 						# Make it a merchant republic
 						random_province_holding = {
 							limit = { holding_type = city }
@@ -267,7 +267,7 @@ colonization = {
 						enemy = FROM
 						type = invasion
 					}
-					
+
 					# Settle the colonists
 					any_demesne_title = {
 						limit = { tier = BARON }
@@ -498,7 +498,7 @@ consumerist_rising = {
 						title = PREV
 						enemy = FROM
 					}
-					
+
 					any_demesne_title = {
 						limit = { tier = BARON }
 						remove_holding_modifier = recently_conquered
@@ -506,7 +506,7 @@ consumerist_rising = {
 					}
 					usurp_title = { target = PREV type = invasion }
 				}
-				
+	
 				if = {
 					limit = {
 						FROM = { is_liege_or_above = ROOT }
@@ -976,7 +976,7 @@ reconquista_michoacan = {
 		ROOT = {
 			has_character_flag = currently_reconquering_mexico
 			not_reconquista_check_trigger = yes
-			
+
 			any_realm_province = {
 				OR = {
 					AND = {
@@ -1212,7 +1212,7 @@ reconquista_mixteca = {
 		ROOT = {
 			has_character_flag = currently_reconquering_mexico
 			not_reconquista_check_trigger = yes
-			
+
 			any_realm_province = {
 				OR = {
 					AND = {
@@ -1448,7 +1448,7 @@ reconquista_oaxaca = {
 		ROOT = {
 			has_character_flag = currently_reconquering_mexico
 			not_reconquista_check_trigger = yes
-			
+
 			any_realm_province = {
 				OR = {
 					AND = {
@@ -1909,7 +1909,7 @@ reconquista_mexico = {
 		ROOT = {
 			has_character_flag = currently_reconquering_mexico
 			not_reconquista_check_trigger = yes
-			
+
 			any_realm_province = {
 				OR = {
 					AND = {
@@ -2143,7 +2143,7 @@ reconquista_bajio = {
 		ROOT = {
 			has_character_flag = currently_reconquering_mexico
 			not_reconquista_check_trigger = yes
-			
+
 			any_realm_province = {
 				OR = {
 					AND = {
@@ -2380,7 +2380,7 @@ reconquista_chichimeca = {
 		ROOT = {
 			has_character_flag = currently_reconquering_mexico
 			not_reconquista_check_trigger = yes
-			
+
 			any_realm_province = {
 				OR = {
 					AND = {
@@ -2614,7 +2614,7 @@ reconquista_huasteca = {
 		ROOT = {
 			has_character_flag = currently_reconquering_mexico
 			not_reconquista_check_trigger = yes
-			
+
 			any_realm_province = {
 				OR = {
 					AND = {
@@ -2906,7 +2906,7 @@ cetic_holy_war = { #Adapted from Buddhist holy war
 							has_global_flag = northern_campaign_resumed
 						}
 					}
-							
+	
 					any_neighbor_province = {
 						OR = {
 							AND = {
@@ -3501,7 +3501,7 @@ maghrebjihad = {
 						}
 						culture = ROOT
 						religion = ROOT
-						
+
 						county = { grant_title = ROOT }
 						duchy = { grant_title = ROOT }
 						# Give them the old capital too
@@ -3519,7 +3519,7 @@ maghrebjihad = {
 						enemy = FROM
 						type = invasion
 					}
-					
+
 					# Settle the colonists
 					any_demesne_title = {
 						limit = { tier = BARON }
@@ -4802,7 +4802,7 @@ tributary_cetic_cb = { # New
 			trait = strong_emperor
 			NOT = {
 				has_character_modifier = low_bureaucracy
-			}				
+			}	
 		}
 
 		NAND = {
@@ -4931,7 +4931,7 @@ tributary_cetic_cb = { # New
 				}
 				any_war = {
 					using_cb = tributary_cetic_cb
-				}				
+				}	
 			}
 		}
 	}
@@ -4950,14 +4950,14 @@ tributary_cetic_cb = { # New
 		ROOT = { 
 			save_event_target_as = tribute_war_suzerain
 			prestige = -250
-			
+
 			#While expanding does increase imperial majesty, the addition of new and independently governed realms dilutes imperial authority... or something...
 			if = {
 				limit = { FROM = { primary_title = { tier = DUKE } } }
 				custom_tooltip = {
 					text = impauth_decrease_2_TT
 					hidden_tooltip = {
-						change_variable = { which = global_imp_auth  value = -2 }
+						change_variable = { which = global_imp_auth value = -2 }
 					}
 				}
 			}
@@ -4966,7 +4966,7 @@ tributary_cetic_cb = { # New
 				custom_tooltip = {
 					text = impauth_decrease_5_TT
 					hidden_tooltip = {
-						change_variable = { which = global_imp_auth  value = -5 }
+						change_variable = { which = global_imp_auth value = -5 }
 					}
 				}
 			}
@@ -4975,7 +4975,7 @@ tributary_cetic_cb = { # New
 				custom_tooltip = {
 					text = impauth_decrease_10_TT
 					hidden_tooltip = {
-						change_variable = { which = global_imp_auth  value = -10 }
+						change_variable = { which = global_imp_auth value = -10 }
 					}
 				}
 			}
@@ -5386,7 +5386,7 @@ heavenly_uprising = {
 						title = PREV
 						enemy = FROM
 					}
-					
+
 					any_demesne_title = {
 						limit = { tier = BARON }
 						remove_holding_modifier = recently_conquered
@@ -5399,7 +5399,7 @@ heavenly_uprising = {
 						add_law = true_cognatic_succession
 					}
 				}
-				
+	
 				if = {
 					limit = {
 						FROM = { is_liege_or_above = ROOT }
@@ -6481,20 +6481,20 @@ mexican_invasion = {
 	sort_priority = 750
 
 	can_use = {
-	    region = custom_oldworld_mexico 
+		region = custom_oldworld_mexico 
 		is_titular = no
 		FROM = {
 			NOT = {
-			    religion_group = ROOT
+				religion_group = ROOT
 			}
 			in_revolt = no
 		}
 		ROOT = {
 			mercenary = no
 			OR = {
-			    has_landed_title = e_mexico
+				has_landed_title = e_mexico
 				has_landed_title = k_mexico
-		    }
+			}
 		}
 		NOT = { ROOT = { has_character_flag = mexican_invasion} }
 	}
@@ -6502,7 +6502,7 @@ mexican_invasion = {
 	can_use_gui = {
 		check_if_crusader_trigger = yes
 		OR = {
-		    has_landed_title = e_mexico
+			has_landed_title = e_mexico
 			has_landed_title = k_mexico
 		}
 	}
@@ -6510,11 +6510,11 @@ mexican_invasion = {
 	is_valid = {
 		FROM = {
 			NOT = {
-			    religion_group = ROOT
-		    }
+				religion_group = ROOT
+			}
 		}
 		NOT = { same_realm = FROM }
-	    independent = yes
+		independent = yes
 	}
 
 	on_add = {
@@ -6590,7 +6590,7 @@ mexican_invasion = {
 }
 
 mexican_authority_reestablish = {
-    name = CB_NAME_MEXICAN_INVASION
+	name = CB_NAME_MEXICAN_INVASION
 	war_name = WAR_NAME_MEXICAN_INVASION
 	sprite = 11
 	truce_days = 3650
@@ -6605,11 +6605,11 @@ mexican_authority_reestablish = {
 	sort_priority = 750
 	
 	can_use = {
-	    region = custom_oldworld_mexico 
+		region = custom_oldworld_mexico 
 		is_titular = no
 		FROM = {
 			NOT = {
-			    religion_group = ROOT
+				religion_group = ROOT
 			}
 			in_revolt = no
 			lower_tier_than = ROOT
@@ -6620,18 +6620,18 @@ mexican_authority_reestablish = {
 		ROOT = {
 			mercenary = no
 			OR = {
-			    has_landed_title = e_mexico
+				has_landed_title = e_mexico
 				has_landed_title = k_mexico
-		    }
+			}
 		}
 	}
 	
 	can_use_gui = {
-	    ROOT = {
-		    OR = {
-		    has_landed_title = e_mexico
+		ROOT = {
+			OR = {
+			has_landed_title = e_mexico
 			has_landed_title = k_mexico
-		    }
+			}
 		}
 		FROM = {
 			is_landed = yes
@@ -6642,7 +6642,7 @@ mexican_authority_reestablish = {
 	is_valid = {
 		FROM = { religion_group = ROOT }
 		NOT = { same_realm = FROM }
-	    independent = yes
+		independent = yes
 	}
 	
 	on_add = {

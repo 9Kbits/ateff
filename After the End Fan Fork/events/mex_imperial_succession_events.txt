@@ -64,14 +64,14 @@ character_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = EVTOPTA_destape_4  # ready the ceremony
+		name = EVTOPTA_destape_4 # ready the ceremony
 		hidden_tooltip = {
 			narrative_event = { id = destape.6 days = 30 } # ceremony start
 			any_realm_character = {
 				limit = {
 					age = 16
 					NOT = { trait = incapable }
-					prisoner = no    
+					prisoner = no	
 				}
 				clr_character_flag = destape_has_ended
 				character_event = { id = destape.5 }
@@ -79,7 +79,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPTB_destape_4  # I'm not ready
+		name = EVTOPTB_destape_4 # I'm not ready
 		hidden_tooltip = {
 			letter_event = {
 				id = destape.7
@@ -100,7 +100,7 @@ character_event = {
 	trigger = { NOT = { is_inaccessible_trigger = yes } }
 
 	option = {
-		name = EVTOPTA_destape_5  # of course
+		name = EVTOPTA_destape_5 # of course
 		set_character_flag = attending_destape
 		set_character_flag = do_not_disturb
 		hidden_tooltip = { character_event = { id = destape.11 days = 300 } } # Safety catch flag clearing
@@ -119,7 +119,7 @@ narrative_event = {
 	war = no
 
 	option = {
-		name = EVTOPTA_destape_6  # time for the dedazo
+		name = EVTOPTA_destape_6 # time for the dedazo
 		
 		trigger = {
 		}
@@ -150,7 +150,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTB_destape_6
 		trigger = {
-			war = yes   # cancel the ceremony in time of war
+			war = yes # cancel the ceremony in time of war
 		}
 		scaled_wealth = 0.5
 		hidden_tooltip = {
@@ -217,12 +217,12 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTA_destape_9  # fall in line
+		name = EVTOPTA_destape_9 # fall in line
 		trigger = {
 		}
 		ai_chance = {
 			factor = 100
-			modifier  = {
+			modifier = {
 				factor = 0.2
 				ai = yes
 				is_rival = FROM
@@ -235,7 +235,7 @@ narrative_event = {
 	}
 
 	option = {
-		name = EVTOPTB_destape_9  # Oppose the destapado
+		name = EVTOPTB_destape_9 # Oppose the destapado
 		trigger = {
 		}
 		ai_chance = {
@@ -268,7 +268,7 @@ character_event = {
 }
 
 ###########################################
-# Flag management                         #
+# Flag management						#
 ###########################################
 
 # Safety catch - clears character flags and modifiers

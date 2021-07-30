@@ -19,7 +19,7 @@ targetted_decisions = {
 		ai_target_filter = court
 		ai = no
 		
-		from_potential = {			
+		from_potential = {
 			has_dlc = "Way of Life"
 			has_lover = yes
 		}
@@ -92,10 +92,10 @@ targetted_decisions = {
 			prisoner = no
 			NOT = { is_lover = FROM }
 			NOT = { is_former_lover = FROM }
-			
+
 			NOT = { is_consort = FROM }
 			NOT = { any_spouse = { character = FROM } }
-			
+
 			OR = {
 				AND = {
 					NOT = { is_child_of = FROM }
@@ -108,7 +108,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			OR = {
 				AND = {
 					FROM = { NOT = { trait = homosexual } }
@@ -157,7 +157,7 @@ targetted_decisions = {
 						modifier = opinion_seducing
 						years = 1000
 					}
-					
+
 					if = {
 						limit = {
 							is_close_relative = ROOT
@@ -165,7 +165,7 @@ targetted_decisions = {
 						character_event = { id = WoL.102 days = 1 } # Warning - Incest scandal risk
 						break = yes
 					}
-					
+
 					if = {
 						limit = {
 							same_sex = ROOT
@@ -173,7 +173,7 @@ targetted_decisions = {
 						character_event = { id = WoL.104 days = 1 } # Warning - Homosexual scandal risk
 						break = yes
 					}
-					
+
 					if = {
 						limit = {
 							religion_group = christian
@@ -187,7 +187,7 @@ targetted_decisions = {
 						character_event = { id = WoL.103 days = 1 } # Warning - Priest scandal risk
 						break = yes
 					}
-					
+
 					if = {
 						limit = { 
 							age_diff = {
@@ -198,7 +198,7 @@ targetted_decisions = {
 						character_event = { id = WoL.101 days = 1 } # Warning - Age scandal risk
 						break = yes
 					}
-					
+
 					character_event = { id = WoL.100 days = 1 } # No warning - Let the chase begin!
 				}
 			}
@@ -244,7 +244,7 @@ targetted_decisions = {
 					num_of_children = 8
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				num_of_lovers = 1
@@ -254,12 +254,12 @@ targetted_decisions = {
 				NOT = { trait = seductress }
 				NOT = { has_focus = focus_seduction }
 			}
-			
+
 			modifier = {
 				factor = 0.25
 				ai = no
 			}
-			
+
 			modifier = {
 				factor = 0.1
 				is_ruler = no
@@ -272,7 +272,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 10
 				FROM = {
@@ -284,7 +284,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0
 				OR = {
@@ -311,7 +311,7 @@ targetted_decisions = {
 					NOT = { trait = lunatic }
 				}
 			}
-			
+
 			modifier = {
 				factor = 0.5
 				trait = uncouth
@@ -333,7 +333,7 @@ targetted_decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 10
 				trait = fair
@@ -696,7 +696,7 @@ targetted_decisions = {
 			NOT = { character = FROM }							# Can't do this decision on yourself...
 		}
 		allow = {
-			same_realm = FROM   # Can only invite characters in same realm!
+			same_realm = FROM # Can only invite characters in same realm!
 			NOT = { has_character_modifier = organizing_party }
 			NOT = { has_character_modifier = party_carousing }
 			war = no
@@ -713,7 +713,7 @@ targetted_decisions = {
 				}
 			}
 			FROM = {
-				
+	
 				war = no
 				NOT = { has_character_modifier = party_timer }
 				OR = {
@@ -940,7 +940,7 @@ targetted_decisions = {
 #					custom_tooltip = {
 #						text = duel_tooltip_valid_target
 #						hidden_tooltip = { ### Not female or challenger religion accepts female warriors
-#							 OR = {
+#							OR = {
 #								is_female = no
 #
 #								#Both FROM and ROOT have gender equality
@@ -1115,7 +1115,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0
 				NOT = { wealth = 50 }

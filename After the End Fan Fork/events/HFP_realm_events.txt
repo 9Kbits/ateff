@@ -6,7 +6,7 @@ narrative_event = {
 	picture = GFX_evt_western_knights_byzantine
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_40013
 
 		prestige = 500
@@ -21,7 +21,7 @@ narrative_event = {
 	picture = GFX_evt_western_knights_byzantine
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_40014
 		
 		prestige = 500
@@ -30,49 +30,49 @@ narrative_event = {
 
 # Archduke of Palmetto
 narrative_event = {
-    id = HFP.40022
-    title = EVTTITLE_HFP_40022
-    desc = {
-        trigger = {
-            e_dixie = {
-                OR = {
-                    has_law = succ_feudal_elective
-                    has_law = succ_hre_elective
-                }
-            }
-        }
-        text = EVTDESC_HFP_40022
-    }
-    desc = {
-        trigger = {
-            e_dixie = {
-                NOR = {
-                    has_law = succ_feudal_elective
-                    has_law = succ_hre_elective
-                }
-            }
-        }
-        text = EVTDESC_HFP_40022_2
-    }
-    picture = GFX_evt_book_carolingian_script
-    is_triggered_only = yes
+	id = HFP.40022
+	title = EVTTITLE_HFP_40022
+	desc = {
+		trigger = {
+			e_dixie = {
+				OR = {
+					has_law = succ_feudal_elective
+					has_law = succ_hre_elective
+				}
+			}
+		}
+		text = EVTDESC_HFP_40022
+	}
+	desc = {
+		trigger = {
+			e_dixie = {
+				NOR = {
+					has_law = succ_feudal_elective
+					has_law = succ_hre_elective
+				}
+			}
+		}
+		text = EVTDESC_HFP_40022_2
+	}
+	picture = GFX_evt_book_carolingian_script
+	is_triggered_only = yes
 
-    option = {      
-        name = EVTOPTA_HFP_40022
-        trigger = {
-        	has_landed_title = k_magnolia_archduchy
-        }
+	option = {	
+		name = EVTOPTA_HFP_40022
+		trigger = {
+			has_landed_title = k_magnolia_archduchy
+		}
 
-        prestige = 500
-    }
-    option = {      
-        name = EVTOPTB_HFP_40022
-        trigger = {
-        	NOT = {
-        		has_landed_title = k_magnolia_archduchy
-        	}
-        }
-    }
+		prestige = 500
+	}
+	option = {	
+		name = EVTOPTB_HFP_40022
+		trigger = {
+			NOT = {
+				has_landed_title = k_magnolia_archduchy
+			}
+		}
+	}
 }
 
 # Restore the HCC
@@ -91,7 +91,7 @@ narrative_event = {
 	}
 
 	# Rejoin the Empire (South Anglo Culture Group in proper area only)
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_40024
 		trigger = {
 			OR = {
@@ -159,9 +159,9 @@ narrative_event = {
 				lower_tier_than = DUKE
 			}
 		}
-	}  
+	} 
 	# Choose not to rejoin the Empire (South Anglo Culture Group only)
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_40024
 		trigger = {
 			OR = {
@@ -203,7 +203,7 @@ letter_event = {
 	picture = GFX_evt_throne_room
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_40025
 	}
 }
@@ -217,7 +217,7 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	is_triggered_only = yes
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_HFP_40027
 		trigger = {
 			religion_group = latter_day_saints
@@ -250,7 +250,7 @@ narrative_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_HFP_40027
 		trigger = {
 			NOT = {

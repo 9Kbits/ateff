@@ -1,9 +1,9 @@
 ###########################################
-#										 #
-# M&M Grand Debate Events				 #
-#										 #
-# MNM.5000-5299						   #
-#										 #
+#										#
+# M&M Grand Debate Events				#
+#										#
+# MNM.5000-5299						#
+#										#
 ###########################################
 
 #IDs:
@@ -62,7 +62,7 @@ character_event = {
 		name = EVTOPTA_MNM_1981
 		ai_chance = {
 			factor = 100
-			modifier  = {
+			modifier = {
 				factor = 0.001
 				ai = yes
 				is_inaccessible_trigger = yes
@@ -871,7 +871,7 @@ character_event = {
 							years = 5
 						}
 					}
-					
+
 					random_list = { # Select outcome
 						10 = { # Good outcome - Upgrade your education trait
 							modifier = {
@@ -1213,7 +1213,7 @@ character_event = { # Gain Poet trait (or not)
 		custom_tooltip = { text = EVTOPTA_MNM_5201_TT }
 		add_trait = poet
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_MNM_5201 #Steer my arguments back to logos
 		custom_tooltip = { text = EVTOPTB_MNM_5201_TT }
 		hidden_effect = { change_variable = { which = debate_score value = 1 } }
@@ -1271,11 +1271,11 @@ character_event = { # Sway a rival
 
 	option = {
 		name = EVTOPTA_MNM_5202 # I am glad we can see beyond our differences
-	 	reverse_opinion = {
+		reverse_opinion = {
 			who = event_target:rival_debater_target
 			modifier = opinion_scholarly_appreciation
 			years = 10
-		}   
+		} 
 	}
 }
 
@@ -1340,31 +1340,31 @@ character_event = { # Develop a crush of some sort (on random hermetic present a
 
 	option = {
 		name = EVTOPTA_MNM_5203 # I am not sure what these feelings are
-	 	if = {
-	 		limit = {
-	 			event_target:striking_debater_target = {
+		if = {
+			limit = {
+				event_target:striking_debater_target = {
 					NOR = {
 						is_lover = ROOT
 						ROOT_possibly_romantically_interested_trigger = yes
 					}
 				}
-	 		}
-		 	random_list = {
-		 		10 = {
-			 		opinion = {
+			}
+			random_list = {
+				10 = {
+					opinion = {
 						who = event_target:striking_debater_target
 						modifier = opinion_scholarly_appreciation
 						years = 10
 					}
 				}
 				10 = {
-			 		opinion = {
+					opinion = {
 						who = event_target:striking_debater_target
 						modifier = opinion_budding_friendship
 						years = 10
 					}
 					hidden_effect = {
-				 		reverse_opinion = {
+						reverse_opinion = {
 							who = event_target:striking_debater_target
 							modifier = opinion_budding_friendship
 							years = 10
@@ -1376,33 +1376,33 @@ character_event = { # Develop a crush of some sort (on random hermetic present a
 					add_trait_envious_effect = yes
 				}
 			}
-	 	}
+		}
 
-	 	if = {
-	 		limit = {
-	 			event_target:striking_debater_target = {
+		if = {
+			limit = {
+				event_target:striking_debater_target = {
 					OR = {
 						is_lover = ROOT
 						ROOT_possibly_romantically_interested_trigger = yes
 					}
 				}
-	 		}
-		 	random_list = {
-		 		35 = {
-			 		opinion = {
+			}
+			random_list = {
+				35 = {
+					opinion = {
 						who = event_target:striking_debater_target
 						modifier = opinion_scholarly_appreciation
 						years = 10
 					}
 				}
 				25 = {
-			 		opinion = {
+					opinion = {
 						who = event_target:striking_debater_target
 						modifier = opinion_budding_romance
 						years = 10
 					}
 					hidden_effect = {
-				 		reverse_opinion = {
+						reverse_opinion = {
 							who = event_target:striking_debater_target
 							modifier = opinion_budding_romance
 							years = 10
@@ -1410,13 +1410,13 @@ character_event = { # Develop a crush of some sort (on random hermetic present a
 					}
 				}
 				20 = {
-			 		opinion = {
+					opinion = {
 						who = event_target:striking_debater_target
 						modifier = opinion_budding_friendship
 						years = 10
 					}
 					hidden_effect = {
-				 		reverse_opinion = {
+						reverse_opinion = {
 							who = event_target:striking_debater_target
 							modifier = opinion_budding_friendship
 							years = 10
@@ -1429,7 +1429,7 @@ character_event = { # Develop a crush of some sort (on random hermetic present a
 					hidden_tooltip = { character_event = { id = 38271 } }
 				}
 			}
-	 	}
+		}
 	}
 }
 
@@ -1616,7 +1616,7 @@ character_event = { #The Mediator
 		}
 	}
 
-	option = {	  
+	option = {	
 		name = EVTOPTA_MNM_5207 #member 1 is pleased, 2 not so much
  		
  		reverse_opinion = {
@@ -1630,7 +1630,7 @@ character_event = { #The Mediator
 			years = 10
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_MNM_5207 #member 2 is pleased, 1 not so much
 
 		reverse_opinion = {
@@ -1644,8 +1644,8 @@ character_event = { #The Mediator
 			years = 10
 		}
 	}
-	option = {	  
-		name = EVTOPTC_MNM_5207  # both are pleased
+	option = {	
+		name = EVTOPTC_MNM_5207 # both are pleased
 		tooltip_info = diplomacy
 
 		reverse_opinion = {
@@ -1665,7 +1665,7 @@ character_event = { #The Mediator
 			diplomacy = 17
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTD_MNM_5207 #nothing happens
 	}
 }
@@ -1760,7 +1760,7 @@ character_event = {
 			}
 		}
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTB_MNM_5208 #I respect my fellow scholars!
 		custom_tooltip = { text = EVTOPTB_MNM_5208_TT }
 
@@ -1877,7 +1877,7 @@ character_event = {
 			}
 		}
 	}
-   
+ 
 	option = {
 		name = {
 			text = EVTOPTA_MNM_5209_love_target # I will write a letter to them
@@ -2006,7 +2006,7 @@ character_event = {
 		tooltip_info = poet
 		trigger = { trait = poet }
 	}
-	option = {	  
+	option = {	
 		name = EVTOPTC_MNM_5209 # I will focus on the debate
 		custom_tooltip = { text = EVTOPTC_MNM_5209_TT }
 		hidden_effect = { change_variable = { which = debate_score value = 1 } }
@@ -2165,7 +2165,7 @@ character_event = { # Mental break-down
 #Complain about lodgings / be homesick
 character_event = {
 	id = MNM.5100
-	desc =  EVTDESC_MNM_5100
+	desc = EVTDESC_MNM_5100
 	picture = GFX_evt_secret_ceremony
 	border = GFX_event_normal_frame_religion
 	
@@ -2494,7 +2494,7 @@ character_event = { # Outcome of planting notes
 	desc = {
 		text = EVTDESCA_MNM_5106
 		trigger = {
-			FROM  = { has_character_flag = embarrassingly_misinformed }
+			FROM = { has_character_flag = embarrassingly_misinformed }
 		}
 	}
 	desc = {
@@ -2513,7 +2513,7 @@ character_event = { # Outcome of planting notes
 	option = {
 		name = EVTOPTA_MNM_5106
 		trigger = {
-			FROM  = { has_character_flag = embarrassingly_misinformed }
+			FROM = { has_character_flag = embarrassingly_misinformed }
 		}
 		
 		add_character_modifier = {

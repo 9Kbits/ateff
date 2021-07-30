@@ -9,7 +9,7 @@
 # Written by Sara Wendel-Örtqvist
 
 ##################################################
-#			MAKING FRIENDS AND RIVALS 			 #
+#			MAKING FRIENDS AND RIVALS 			#
 ##################################################
 
 ### You've made friends with another child in the court ###
@@ -41,7 +41,7 @@ character_event = {
 				is_abroad = no
 				prisoner = no
 				at_location = ROOT
-				
+	
 				NOT = {
 					trait = craven
 				}
@@ -78,7 +78,7 @@ character_event = {
 					is_abroad = no
 					prisoner = no
 					at_location = ROOT
-					
+
 					NOT = {
 						trait = craven
 					}
@@ -339,7 +339,7 @@ character_event = {
 		name = EVTOPTA100006
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				trait = brave
@@ -362,7 +362,7 @@ character_event = {
 		name = EVTOPTB100006
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0.01
 				trait = brave
@@ -1471,7 +1471,7 @@ character_event = {
 				remove_trait = shy
 				hidden_tooltip = {
 					character_event = {
-						id = 38295  #Notify Removed Shy
+						id = 38295 #Notify Removed Shy
 					}
 				}
 			}
@@ -3771,7 +3771,7 @@ character_event = {
 					trait = ambitious
 				}
 				piety = 5
-			}			
+			}
 		}
 		hidden_tooltip = {
 			event_target:doll_stealer = {
@@ -3782,7 +3782,7 @@ character_event = {
 					tooltip = EVTTOOLTIP100101
 				}
 			}
-			
+
 		}
 	}
 	option = {
@@ -4280,7 +4280,7 @@ character_event = {
 				is_councillor = yes
 				#at_location = ROOT
 				same_liege = ROOT
-				
+	
 				NOT = {
 					sibling = ROOT
 				}
@@ -4442,7 +4442,7 @@ character_event = {
 					trait = diligent
 				}
 			}
-			
+
 			random = {
 				chance = 15
 				add_trait = diligent
@@ -4593,7 +4593,7 @@ character_event = {
 					trait = diligent
 				}
 			}
-			
+
 			random = {
 				chance = 15
 				add_trait = diligent
@@ -4951,7 +4951,7 @@ character_event = {
 }
 
 ##################################################
-#				FRIENDSHIP EVENTS 				 #
+#				FRIENDSHIP EVENTS 				#
 ##################################################
 
 ### Friend at war - send help? ###
@@ -4999,7 +4999,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA100150
-		trigger = {  
+		trigger = { 
 			any_friend = {
 				is_inaccessible_trigger = no
 				war = yes
@@ -5640,7 +5640,7 @@ character_event = {
 		name = EVTOPTA100170
 		ai_chance = {
 			factor = 5
-			
+
 			modifier = {
 				factor = 20
 				NOT = { num_of_friends = 5 }
@@ -5663,7 +5663,7 @@ character_event = {
 		name = EVTOPTB100170
 		ai_chance = {
 			factor = 5
-			
+
 			modifier = {
 				factor = 20
 				num_of_friends = 5
@@ -6107,7 +6107,7 @@ character_event = {
 					tooltip = EVTTOOLTIP100184
 				}
 			}
-		}				
+		}	
 	}
 	option = {
 		name = EVTOPTE100180
@@ -6520,7 +6520,7 @@ character_event = {
 		name = EVTOPTA100194
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0.01
 				scaled_wealth = 0.5
@@ -6550,7 +6550,7 @@ character_event = {
 		name = EVTOPTB100194
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				scaled_wealth = 0.5
@@ -6852,7 +6852,7 @@ character_event = {
 		name = EVTOPTA100204
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0.01
 				scaled_wealth = 0.5
@@ -6882,7 +6882,7 @@ character_event = {
 		name = EVTOPTB100204
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				scaled_wealth = 0.5
@@ -7151,7 +7151,7 @@ character_event = {
 				name = friendly_innovations
 				duration = 1460
 			}
-		}			
+		}
 	}
 }
 
@@ -7187,7 +7187,7 @@ character_event = {
 		name = EVTOPTA100214
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0.01
 				scaled_wealth = 0.5
@@ -7217,7 +7217,7 @@ character_event = {
 		name = EVTOPTB100214
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				scaled_wealth = 0.5
@@ -7471,7 +7471,7 @@ character_event = {
 		name = EVTOPTC100221
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				trait = greedy
@@ -7558,7 +7558,7 @@ character_event = {
 		name = EVTOPTA100224
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0.01
 				scaled_wealth = 0.5
@@ -7588,7 +7588,7 @@ character_event = {
 		name = EVTOPTB100224
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				scaled_wealth = 0.5
@@ -7920,7 +7920,7 @@ character_event = {
 		name = EVTOPTA100234
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0.01
 				scaled_wealth = 0.5
@@ -7950,7 +7950,7 @@ character_event = {
 		name = EVTOPTB100234
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				scaled_wealth = 0.5
@@ -8874,7 +8874,7 @@ character_event = {
 }
 
 ##################################################
-#				RIVALRY EVENTS 					 #
+#				RIVALRY EVENTS 					#
 ##################################################
 
 ### My friend's rival tried to kill/maim/wound him/her! ###
@@ -9299,7 +9299,7 @@ character_event = {
 		name = EVTOPTA100410
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 5
 				trait = brave
@@ -9308,7 +9308,7 @@ character_event = {
 				factor = 5
 				trait = just
 			}
-			
+
 			modifier = {
 				factor = 0.01
 				trait = kind
@@ -9419,7 +9419,7 @@ character_event = {
 		name = EVTOPTC100411
 		ai_chance = {
 			factor = 1
-			
+
 			modifier = {
 				factor = 0.01
 				is_ruler = yes
@@ -10858,7 +10858,7 @@ character_event = {
 		name = EVTOTPA100451
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0.01
 				trait = gregarious
@@ -10896,7 +10896,7 @@ character_event = {
 		name = EVTOTPB100451
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				trait = gregarious
@@ -11413,7 +11413,7 @@ character_event = {
 				days = 7
 				random = 7
 				tooltip = EVTTOOLTIP100481
-			}				
+			}	
 		}
 	}
 }
@@ -11528,7 +11528,7 @@ letter_event = {
 #						num_of_traits = 4
 #					}
 #				}
-#				change_intrigue = 1				
+#				change_intrigue = 1	
 #			}
 #		}
 #	}
@@ -11542,7 +11542,7 @@ letter_event = {
 #				is_ruler = yes
 #				same_liege = ROOT
 #				prisoner = no
-#				
+#	
 #				OR = {
 #					leads_faction = faction_succ_seniority
 #					leads_faction = faction_succ_primogeniture
@@ -11783,7 +11783,7 @@ character_event = {
 		name = EVTOPTA100501
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				trait = zealous
@@ -11807,7 +11807,7 @@ character_event = {
 		name = EVTOPTB100501
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0.01
 				trait = zealous
@@ -13150,7 +13150,7 @@ character_event = {
 		name = EVTOPTB100530 #Kill
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				is_maimed_trigger = yes
@@ -13171,14 +13171,14 @@ character_event = {
 				days = 7
 				random = 7
 				tooltip = EVTTOOLTIP100533
-			}			
+			}
 		}
 	}
 	option = {
 		name = EVTOPTC100530 #Maim/wound
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				is_maimed_trigger = yes
@@ -14218,7 +14218,7 @@ character_event = {
 		name = EVTOPTB100540 #Kill
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				is_maimed_trigger = yes
@@ -14240,14 +14240,14 @@ character_event = {
 				days = 7
 				random = 7
 				tooltip = EVTTOOLTIP100543
-			}			
+			}
 		}
 	}
 	option = {
 		name = EVTOPTC100540 #Maim/wound
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				is_maimed_trigger = yes
@@ -15416,7 +15416,7 @@ character_event = {
 		name = EVTOPTA100234
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 0.01
 				scaled_wealth = 0.5
@@ -15446,7 +15446,7 @@ character_event = {
 		name = EVTOPTB100234
 		ai_chance = {
 			factor = 10
-			
+
 			modifier = {
 				factor = 10
 				scaled_wealth = 0.5

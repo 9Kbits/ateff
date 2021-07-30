@@ -213,7 +213,7 @@ character_event = { # Great warrior character arrives
 		
 		trigger = {
 			OR = { 
-				NOT = { ROOT = { has_law = succ_byzantine_elective } }  #Either not Imperial...
+				NOT = { ROOT = { has_law = succ_byzantine_elective } } #Either not Imperial...
 				NOT = { #...Or there are no valid vassal candidates that can be commanders.
 					any_vassal = { 
 						higher_real_tier_than = BARON
@@ -230,7 +230,7 @@ character_event = { # Great warrior character arrives
 							}
 							has_character_flag = special_marshal
 						}
-				
+	
 						prisoner = no
 						NOT = { is_incapable = yes }
 						NOT = { is_inaccessible_trigger = yes }
@@ -2026,7 +2026,7 @@ character_event = {
 	option = {
 		name = EVTOPTZHF24027
 		custom_tooltip = { text = TT_EVTOPTZHF24027 }
-		trigger = {  
+		trigger = { 
 			OR = {
 				trait = lunatic
 				trait = possessed
@@ -2515,7 +2515,7 @@ narrative_event = {
 narrative_event = {
 	id = HF.24202
 	title = EVTTITLEHF24201
-	desc  = EVTDESCAHF24202
+	desc = EVTDESCAHF24202
 	picture = GFX_evt_death
 	border = GFX_event_narrative_frame_war
 	
@@ -3390,7 +3390,7 @@ narrative_event = {
 				inheritance = matrilineal
 			}		
 		}
-		any_playable_ruler = {  
+		any_playable_ruler = { 
 			limit = { 
 				ai = no 
 				is_within_diplo_range = ROOT
@@ -4764,7 +4764,7 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	has_dlc = "Holy Fury"
-			
+
 	trigger = { 
 		NOT = {
 			any_owned_bloodline = { 
@@ -6045,7 +6045,7 @@ narrative_event = {
 character_event = {
 	id = HF.24062
 	title = EVTTITLEHF24062
-	desc  = EVTDESCAHF24062
+	desc = EVTDESCAHF24062
 	picture = GFX_evt_library
 	border = GFX_event_normal_frame_religion
 	
@@ -6151,7 +6151,7 @@ character_event = {
 character_event = {
 	id = HF.24063
 	title = EVTTITLEHF24062
-	desc  = EVTDESCAHF24063
+	desc = EVTDESCAHF24063
 	picture = GFX_evt_church_council
 	border = GFX_event_normal_frame_religion
 	
@@ -6511,7 +6511,7 @@ narrative_event = {
 character_event = {
 	id = HF.24065
 	title = EVTTITLEHF24065
-	desc  = EVTDESCAHF24065
+	desc = EVTDESCAHF24065
 	picture = GFX_evt_library
 	border = GFX_event_normal_frame_economy
 	
@@ -6629,7 +6629,7 @@ character_event = {
 character_event = {
 	id = HF.24066
 	title = EVTTITLEHF24065
-	desc  = EVTDESCAHF24066
+	desc = EVTDESCAHF24066
 	picture = GFX_evt_busy_trading_dock_republic
 	border = GFX_event_normal_frame_economy
 	
@@ -6793,7 +6793,7 @@ narrative_event = {
 character_event = {
 	id = HF.24068
 	title = EVTTITLEHF24068
-	desc  = EVTDESCAHF24068
+	desc = EVTDESCAHF24068
 	picture = GFX_evt_bishop
 	border = GFX_event_normal_frame_religion
 	
@@ -6907,7 +6907,7 @@ character_event = {
 character_event = {
 	id = HF.24069
 	title = EVTTITLEHF24068
-	desc  = EVTDESCBHF24069
+	desc = EVTDESCBHF24069
 	picture = GFX_evt_bishop
 	border = GFX_event_normal_frame_religion
 	
@@ -8440,7 +8440,7 @@ character_event = {
 
 		hidden_effect = {
 			random_list = {
-				60  = { #Die
+				60 = { #Die
 					random_list = {
 						75 = {	#Not discovered
 							modifier = {
@@ -9066,7 +9066,7 @@ character_event = { # Knight character arrives
 		
 		trigger = {
 			OR = { 
-				NOT = { ROOT = { has_law = succ_byzantine_elective } }  #Either not Imperial...
+				NOT = { ROOT = { has_law = succ_byzantine_elective } } #Either not Imperial...
 				NOT = { #...Or there are no valid vassal candidates that can be commanders.
 					any_vassal = { 
 						higher_real_tier_than = BARON
@@ -9083,7 +9083,7 @@ character_event = { # Knight character arrives
 							}
 							has_character_flag = special_marshal
 						}
-				
+	
 						prisoner = no
 						NOT = { is_incapable = yes }
 						NOT = { is_inaccessible_trigger = yes }
@@ -9200,7 +9200,7 @@ character_event = { # Knight character arrives
 		
 		trigger = {
 			OR = { 
-				NOT = { ROOT = { has_law = succ_byzantine_elective } }  #Either not Imperial...
+				NOT = { ROOT = { has_law = succ_byzantine_elective } } #Either not Imperial...
 				NOT = { #...Or there are no valid vassal candidates that can be commanders.
 					any_vassal = { 
 						higher_real_tier_than = BARON
@@ -9217,7 +9217,7 @@ character_event = { # Knight character arrives
 							}
 							has_character_flag = special_marshal
 						}
-				
+	
 						prisoner = no
 						NOT = { is_incapable = yes }
 						NOT = { is_inaccessible_trigger = yes }
@@ -9408,13 +9408,13 @@ character_event = {
 			trait = content
 		}
 		NOT = { has_character_flag = special_marshal }
-		liege = {  
+		liege = { 
 			OR = { 
 				NOT = { religion = ROOT }
 				NOT = { reverse_opinion = { who = ROOT value = -40 } }
 				is_rival = ROOT
 			}
-			any_neighbor_independent_ruler = {  
+			any_neighbor_independent_ruler = { 
 				age = 16
 				NOT = { is_incapable = yes }
 				any_owned_bloodline = { 
@@ -9430,8 +9430,8 @@ character_event = {
 	immediate = {
 		random = {
 			chance = 5 
-			random_neighbor_independent_ruler = {  
-				limit = {  
+			random_neighbor_independent_ruler = { 
+				limit = { 
 					any_owned_bloodline = { 
 						has_bloodline_flag = bloodline_knights
 						bloodline_is_active_for = PREV
@@ -10205,7 +10205,7 @@ character_event = {
 	option = { 
 		name = EVTOPTDHF24139
 		trigger = { 
-			OR = {  
+			OR = { 
 				ai = no
 				NOR = {
 					has_opinion_modifier = { 
@@ -10238,7 +10238,7 @@ character_event = {
 	option = { 
 		name = EVTOPTEHF24139
 		trigger = { 
-			OR = {  
+			OR = { 
 				ai = no
 				NOR = {
 					has_opinion_modifier = { 
@@ -11029,7 +11029,7 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTCHF24152
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			remove_character_modifier = dynastic_meddling_cooldown
 			FROM = { remove_character_modifier = dynastic_meddling_target_cooldown }
 		}
@@ -11322,7 +11322,7 @@ character_event = {
 	}
 	option = { # Revert.
 		name = EVTOPTCHF24152
-		trigger = {  
+		trigger = { 
 			event_target:meddling_target = {
 				OR = { 
 					culture = event_target:scoped_founder 
@@ -11330,7 +11330,7 @@ character_event = {
 				}
 			}
 		}
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			remove_character_modifier = dynastic_meddling_cooldown
 			event_target:meddling_target = { remove_character_modifier = dynastic_meddling_target_cooldown }
 		}
@@ -11577,7 +11577,7 @@ character_event = {
 	}
 	option = { # Revert.
 		name = EVTOPTCHF24152
-		trigger = {  
+		trigger = { 
 			event_target:meddling_target = {
 				OR = { 
 					trait = is_fat
@@ -11585,7 +11585,7 @@ character_event = {
 				}
 			}
 		}
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			remove_character_modifier = dynastic_meddling_cooldown
 			event_target:meddling_target = { remove_character_modifier = dynastic_meddling_target_cooldown }
 		}
@@ -11957,7 +11957,7 @@ character_event = {
 		name = EVTOPTBHF24158
 		reverse_opinion = { who = FROM modifier = opinion_denied_advice years = 5 }
 		hidden_tooltip = { FROM = { character_event = { id = HF.24164 } } }
-		ai_chance = {  
+		ai_chance = { 
 			factor = 10
 			modifier = { 
 				factor = 2
@@ -12116,7 +12116,7 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		reverse_opinion = { who = FROM modifier = opinion_denied_advice years = 5 }
 		hidden_tooltip = { FROM = { character_event = { id = HF.24166 } } }
-		ai_chance = {  
+		ai_chance = { 
 			factor = 10
 			modifier = { 
 				factor = 2
@@ -12262,7 +12262,7 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		reverse_opinion = { who = FROM modifier = opinion_denied_advice years = 5 }
 		hidden_tooltip = { FROM = { character_event = { id = HF.24168 } } }
-		ai_chance = {  
+		ai_chance = { 
 			factor = 10
 			modifier = { 
 				factor = 2
@@ -12403,7 +12403,7 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		reverse_opinion = { who = FROM modifier = opinion_denied_advice years = 5 }
 		hidden_tooltip = { FROM = { character_event = { id = HF.24170 } } }
-		ai_chance = {  
+		ai_chance = { 
 			factor = 10
 			modifier = { 
 				factor = 2
@@ -12543,7 +12543,7 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		reverse_opinion = { who = FROM modifier = opinion_denied_advice years = 5 }
 		hidden_tooltip = { FROM = { character_event = { id = HF.24172 } } }
-		ai_chance = {  
+		ai_chance = { 
 			factor = 10
 			modifier = { 
 				factor = 2
@@ -13101,7 +13101,7 @@ narrative_event = {
 	title = EVTTITLEHF24220
 	desc = { 
 		trigger = { 
-			any_owned_bloodline = {  
+			any_owned_bloodline = { 
 				has_bloodline_flag = libertador_bloodline
 			}
 		} 
@@ -13110,7 +13110,7 @@ narrative_event = {
 	desc = { 
 		trigger = { 
 			NOT = { 
-				any_owned_bloodline = {  
+				any_owned_bloodline = { 
 					has_bloodline_flag = libertador_bloodline
 				}
 			}
@@ -13146,7 +13146,7 @@ narrative_event = {
 		
 		modifier = {
 			factor = 4
-			any_owned_bloodline = {  
+			any_owned_bloodline = { 
 				has_bloodline_flag = libertador_bloodline
 			}
 		}
@@ -13303,7 +13303,7 @@ narrative_event = {
 	title = EVTTITLEHF24220
 	desc = { 
 		trigger = { 
-			any_owned_bloodline = {  
+			any_owned_bloodline = { 
 				has_bloodline_flag = libertador_bloodline
 			}
 		} 
@@ -13312,7 +13312,7 @@ narrative_event = {
 	desc = { 
 		trigger = { 
 			NOT = { 
-				any_owned_bloodline = {  
+				any_owned_bloodline = { 
 					has_bloodline_flag = libertador_bloodline
 				}
 			}
@@ -14643,7 +14643,7 @@ narrative_event = {
 	title = EVTTITLEHF24228
 	desc = { 
 		trigger = { 
-			any_owned_bloodline = {  
+			any_owned_bloodline = { 
 				has_bloodline_flag = libertador_bloodline
 			}
 		} 
@@ -14652,7 +14652,7 @@ narrative_event = {
 	desc = { 
 		trigger = { 
 			NOT = { 
-				any_owned_bloodline = {  
+				any_owned_bloodline = { 
 					has_bloodline_flag = libertador_bloodline
 				}
 			}
@@ -14693,7 +14693,7 @@ narrative_event = {
 				inheritance = matrilineal
 			}		
 		}
-		any_playable_ruler = {  
+		any_playable_ruler = { 
 			limit = { 
 				ai = no 
 				is_within_diplo_range = ROOT
@@ -14708,8 +14708,8 @@ narrative_event = {
 	title = EVTTITLEHF24228
 	desc = { 
 		trigger = { 
-			FROM = {  
-				any_owned_bloodline = {  
+			FROM = { 
+				any_owned_bloodline = { 
 					has_bloodline_flag = libertador_bloodline
 				}
 			}
@@ -14720,7 +14720,7 @@ narrative_event = {
 		trigger = { 
 			NOT = { 
 				FROM = { 
-					any_owned_bloodline = {  
+					any_owned_bloodline = { 
 						has_bloodline_flag = libertador_bloodline
 					}
 				}
@@ -14743,8 +14743,8 @@ character_event = {
 	id = HF.24230
 	desc = { 
 		trigger = { 
-			ROOT = {  
-				any_owned_bloodline = {  
+			ROOT = { 
+				any_owned_bloodline = { 
 					has_bloodline_flag = bloodline_bolivar
 				}
 			}
@@ -14755,7 +14755,7 @@ character_event = {
 		trigger = { 
 			NOT = { 
 				ROOT = { 
-					any_owned_bloodline = {  
+					any_owned_bloodline = { 
 						has_bloodline_flag = bloodline_guevara
 					}
 				}
@@ -14778,8 +14778,8 @@ character_event = {
 		NOT = { trait = depressed }
 		prisoner = no
 		NOT = { check_variable = { which = bloodline_won_wars value = 10 } }
-		any_owned_bloodline = {  
-			OR = {  
+		any_owned_bloodline = { 
+			OR = { 
 				has_bloodline_flag = bloodline_bolivar
 				has_bloodline_flag = bloodline_guevara
 			}
@@ -14799,7 +14799,7 @@ character_event = {
 	option = { 
 		name = EVTOPTBHF24230
 		if = { 
-			limit = {  
+			limit = { 
 				NOT = { trait = depressed }
 			}
 			random = { 

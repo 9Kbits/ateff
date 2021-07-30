@@ -236,7 +236,7 @@ title_commander = {
 								}
 								has_character_flag = special_marshal
 							}
-							
+	
 							prisoner = no
 							NOT = { is_incapable = yes }
 							NOT = { is_inaccessible_trigger = yes }
@@ -280,7 +280,7 @@ title_commander = {
 				liege = { has_law = succ_byzantine_elective }
 			}
 			character_event = { id = HFP.20803 days = 1 } #Make sure the commander is not being made a sub-vassal.
-			
+
 		}
 		hidden_effect = {
 			remove_character_modifier = hidden_commander_bonus
@@ -1326,7 +1326,7 @@ title_pelleteux_du_palais = {
 		OR = {
 			is_feudal = yes
 			religion = angeline
-			
+
 		}
 		NOT = { has_landed_title = e_usa }
 	}
@@ -2217,7 +2217,7 @@ title_councilmember_king = {
 				}
 				can_be_councilmember_king_trigger = yes
 			}
-			
+
 			FROM = { 
 				opinion = { who = ROOT modifier = opinion_resigned_from_council }
 			}
@@ -2290,7 +2290,7 @@ title_councilmember_emperor = {
 				}
 				can_be_councilmember_king_trigger = yes
 			}
-			
+
 			FROM = { 
 				opinion = { who = ROOT modifier = opinion_resigned_from_council }
 			}

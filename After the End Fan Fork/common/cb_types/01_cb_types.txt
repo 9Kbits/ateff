@@ -2036,7 +2036,7 @@ liberate_religion = { # New6
 											has_global_flag = orientalist_jihad_unlocked # you forgot to do this i believe
 										}
 									}
-									
+	
 									AND = {
 										religion = rust_cultist
 										custom_tooltip = {
@@ -2044,7 +2044,7 @@ liberate_religion = { # New6
 											has_global_flag = rust_cultist_industrial_actions_unlocked
 										}
 									}
-									
+	
 									religion = revivalist # doesn't need no fancy event to begin declaring jihads
 								}
 								any_neighbor_province = {
@@ -2102,7 +2102,7 @@ liberate_religion = { # New6
 		hidden_tooltip = { 
 			any_attacker = {
 				limit = { NOT = { character = ROOT } }
-				
+	
 				participation_scaled_piety = 100
 				participation_scaled_prestige = 50
 				if = {
@@ -2263,7 +2263,7 @@ liberate_religion = { # New6
 						}
 					}
 				}
-				
+	
 				event_target:new_ruler = {
 					vassalize_or_take_under_title = {
 						title = PREV
@@ -2275,7 +2275,7 @@ liberate_religion = { # New6
 					}
 					set_defacto_liege = THIS
 				}
-				
+	
 				if = {
 					limit = {
 						has_holder = yes
@@ -2299,7 +2299,7 @@ liberate_religion = { # New6
 						}
 					}
 				}
-				
+	
 				ROOT = {
 					hidden_tooltip = {
 						if = {
@@ -2420,7 +2420,7 @@ liberate_religion = { # New6
 					}
 					change_variable = { which = strengthen_religion value = 1 }
 				}
-			}			
+			}
 		}
 	}
 
@@ -2669,7 +2669,7 @@ unjust_conquest = { # New7
 				piety = -25
 				scaled_wealth = { value = -1.0 min = -100 }
 			}
-			
+
 			if = {
 				limit = {
 					tier = DUKE
@@ -2698,7 +2698,7 @@ unjust_conquest = { # New7
 				piety = -50
 				scaled_wealth = { value = -1.0 min = -100 }
 			}
-			
+
 			if = {
 				limit = {
 					tier = KING
@@ -2727,7 +2727,7 @@ unjust_conquest = { # New7
 				piety = -100
 				scaled_wealth = { value = -1.0 min = -100 }
 			}
-			
+
 			if = {
 				limit = {
 					tier = EMPEROR
@@ -2756,7 +2756,7 @@ unjust_conquest = { # New7
 				piety = -200
 				scaled_wealth = { value = -1.0 min = -100 }
 			}
-						
+
 			if = { # Opinion hit for same religion
 				limit = {
 					religion = FROM
@@ -3351,7 +3351,7 @@ tributary_permanent_cb = { # New8
 				}
 				any_war = {
 					using_cb = tributary_cetic_cb
-				}				
+				}	
 			}
 		}
 	}
@@ -3673,7 +3673,7 @@ tributary_nomad_cb = { # New9
 				}
 				any_war = {
 					using_cb = tributary_cetic_cb
-				}				
+				}	
 			}
 		}
 	}
@@ -4021,7 +4021,7 @@ offmap_submission = {
 		FROM = {
 			piety = -100
 			prestige = -100
-			
+
 			if = { # Remove Raid China if active
 				limit = {
 					has_character_modifier = china_raid_active
@@ -4035,11 +4035,11 @@ offmap_submission = {
 					}
 				}
 			}
-			
+
 			custom_tooltip = {
 				text = offmap_submission_tip
 			}
-				
+	
 			hidden_tooltip = {
 				ROOT = {
 					if = {
@@ -5085,7 +5085,7 @@ invasion_of_china_cb = {
 						set_offmap_holder = event_target:invasion_of_china_claimant
 						clr_offmap_flag = no_succession_news
 						clr_offmap_flag = rename_override
-						
+
 						if = {
 							limit = {
 								NOR = {
@@ -5662,7 +5662,7 @@ flower_war_cb = { #Given to Mictlantecs and Thelemics (if they have the feature)
 		FROM = {
 			piety = -100
 			prestige = -100
-			
+
 			if = {
 				limit = {
 					is_reformed_religion = ROOT
@@ -5670,11 +5670,11 @@ flower_war_cb = { #Given to Mictlantecs and Thelemics (if they have the feature)
 				}
 				religion = ROOT # Reformed pagans are forced to convert back
 			}
-			
+
 			custom_tooltip = {
 				text = flower_war_cb_tooltip
 			}
-				
+	
 			hidden_tooltip = {
 				any_courtier = { #Sacrifice part of the court.
 					limit = {
@@ -5714,7 +5714,7 @@ flower_war_cb = { #Given to Mictlantecs and Thelemics (if they have the feature)
 						modifier = opinion_abducted_peasants 
 						who = ROOT
 					}
-				}				
+				}	
 				any_demesne_province = {
 					add_province_modifier = { name = bloodthirsty_flower_war_province years = 10 stacking = yes } 
 					change_variable = { which = prosperity_value value = -40 }
@@ -6061,8 +6061,8 @@ childrens_crusade = {
 					narrative_event = { id = HF.25828 } #Notify everyone that the crusade has succeeded.
 				}
 			}
-			
-			
+
+
 			# Vassalize and convert all infidels under the title.
 				ROOT = {
 					vassalize_or_take_under_title = {
@@ -6091,7 +6091,7 @@ childrens_crusade = {
 							}
 						}
 						usurp_title_only = { target = PREV type = holy_war }
-						
+
 						if = {
 							limit = {
 								NOT = { culture = PREV }
@@ -6175,7 +6175,7 @@ childrens_crusade = {
 			religion_authority = {
 				modifier = lost_crusade
 				years = 20
-			}			
+			}
 		}
 	}
 
@@ -6403,7 +6403,7 @@ matriarchal_deposition_war = {
 		hidden_tooltip = { 
 			any_attacker = {
 				limit = { NOT = { character = ROOT } }
-				
+	
 				participation_scaled_piety = 50
 				participation_scaled_prestige = 25
 				if = {
@@ -6751,7 +6751,7 @@ matriarchal_deposition_war = {
 					}
 					change_variable = { which = strengthen_religion value = 1 }
 				}
-			}			
+			}
 		}
 	}
 
@@ -6887,7 +6887,7 @@ patriarchal_deposition_war = {
 		hidden_tooltip = { 
 			any_attacker = {
 				limit = { NOT = { character = ROOT } }
-				
+	
 				participation_scaled_piety = 50
 				participation_scaled_prestige = 25
 				if = {
@@ -7232,7 +7232,7 @@ patriarchal_deposition_war = {
 					}
 					change_variable = { which = strengthen_religion value = 1 }
 				}
-			}			
+			}
 		}
 	}
 
@@ -7639,7 +7639,7 @@ shepherds_crusade_invasion = {
 						}
 					}
 				}
-				
+	
 				character_event = { id = HFP.41090 days = 1 }
 				character_event = { id = HFP.41090 days = 3 }
 
@@ -7886,7 +7886,7 @@ northern_crusade_war = {
 					character_event = { id = HFP.41090 days = 1 }
 					character_event = { id = HFP.41090 days = 3 }
 				}
-			
+
 				# Become the Teutonic State, if they aren't already
 				if = {
 					limit = {
@@ -8076,7 +8076,7 @@ northern_crusade_war = {
 					}
 					any_playable_ruler = {
 						narrative_event = { id = HF.49113 }
-					}				
+					}	
 				}
 				else = {
 					set_variable = {

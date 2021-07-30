@@ -137,7 +137,7 @@ character_event = {
 			1 = { #Prestige for prestige/opinion.
 				trigger = { 
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							is_inaccessible_trigger = yes
 							is_incapable = yes
 							prisoner = yes
@@ -147,11 +147,11 @@ character_event = {
 				}
 				persistent_event_target:antagonize_target = { character_event = { id = HF.22011 } }
 			}
-			
+
 			1 = { #Generic Bad rumors.
 				trigger = { 
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							is_inaccessible_trigger = yes
 							is_incapable = yes
 							prisoner = yes
@@ -168,7 +168,7 @@ character_event = {
 			30 = { #Main slander event.
 				trigger = { #Character must have at LEAST one trait.
 					persistent_event_target:antagonize_target = { 
-						OR = {  
+						OR = { 
 							AND = { is_close_relative = ROOT dynasty = ROOT }
 							NOT = { religion_group = ROOT }
 							is_heresy_of = ROOT
@@ -235,7 +235,7 @@ character_event = {
 				modifier = { 
 					factor = 0
 					persistent_event_target:antagonize_target = { 
-						OR = {  
+						OR = { 
 							is_inaccessible_trigger = yes
 							is_incapable = yes
 							prisoner = yes
@@ -259,7 +259,7 @@ character_event = {
 				modifier = { #Should rarely fire as first event.
 					factor = 0.1
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_1 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_2 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_3 }
@@ -286,23 +286,23 @@ character_event = {
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				persistent_event_target:antagonize_target = { character_event = { id = HF.22050 } }
 			}
@@ -318,7 +318,7 @@ character_event = {
 				modifier = { #Should rarely fire as first event.
 					factor = 0.5
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_1 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_2 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_3 }
@@ -351,23 +351,23 @@ character_event = {
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				persistent_event_target:antagonize_target = { 
 					add_character_modifier = {
@@ -391,7 +391,7 @@ character_event = {
 				modifier = { #Should rarely fire as first event.
 					factor = 0.5
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_1 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_2 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_3 }
@@ -424,23 +424,23 @@ character_event = {
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				persistent_event_target:antagonize_target = { 
 					add_character_modifier = {
@@ -458,7 +458,7 @@ character_event = {
 				modifier = { #Should rarely fire as first event.
 					factor = 0.5
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_1 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_2 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_3 }
@@ -491,23 +491,23 @@ character_event = {
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				persistent_event_target:antagonize_target = { 
 					add_character_modifier = {
@@ -525,7 +525,7 @@ character_event = {
 				modifier = { #Should rarely fire as first event.
 					factor = 0.5
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_1 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_2 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_3 }
@@ -558,23 +558,23 @@ character_event = {
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				persistent_event_target:antagonize_target = { 
 					add_character_modifier = {
@@ -592,7 +592,7 @@ character_event = {
 				modifier = { #Should rarely fire as first event.
 					factor = 0.5
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_1 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_2 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_3 }
@@ -625,23 +625,23 @@ character_event = {
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				persistent_event_target:antagonize_target = { 
 					add_character_modifier = {
@@ -659,7 +659,7 @@ character_event = {
 				modifier = { #Should rarely fire as first event.
 					factor = 0.5
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_1 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_2 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_3 }
@@ -692,23 +692,23 @@ character_event = {
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				persistent_event_target:antagonize_target = { 
 					add_character_modifier = {
@@ -726,7 +726,7 @@ character_event = {
 				modifier = { #Should rarely fire as first event.
 					factor = 0.5
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_1 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_2 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_3 }
@@ -756,26 +756,26 @@ character_event = {
 					NOT = { 
 						intrigue = 12
 					}
-				}				
+				}	
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				persistent_event_target:antagonize_target = { 
 					add_character_modifier = {
@@ -797,7 +797,7 @@ character_event = {
 				modifier = { #Should rarely fire as first event.
 					factor = 0.5
 					persistent_event_target:antagonize_target = { 
-						NOR = {  
+						NOR = { 
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_1 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_2 }
 							has_opinion_modifier = { who = ROOT modifier = opinion_antagonized_3 }
@@ -809,26 +809,26 @@ character_event = {
 					NOT = { 
 						intrigue = 12
 					}
-				}				
+				}	
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = {
 					factor = 1.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				persistent_event_target:antagonize_target = { character_event = { id = HF.22120 } }
 			}
@@ -846,7 +846,7 @@ character_event = {
 
 	immediate = { 
 		FROM = { character_event = { id = HF.22002 } }
-	#	if = {  - Older check, no longer needed
+	#	if = { - Older check, no longer needed
 	#		limit = { NOT = { is_within_diplo_range = FROM } }
 	#		
 	#	}
@@ -1448,27 +1448,27 @@ character_event = {
 				}
 				modifier = {
 					factor = 0.75
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = {
 					factor = 0.75
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = {
 					factor = 0.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = {
 					factor = 0.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = {
 					factor = 0.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				modifier = {
 					factor = 0.5
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 12 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 12 } }
 				}
 				set_character_flag = flag_generic_antagonize_failure
 				FROM = { character_event = { id = HF.22018 } } 
@@ -2703,7 +2703,7 @@ character_event = {
 		}
 		FROM = {
 			show_scope_change = no
-			apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
 		}
 		
 		pacifists_lose_piety_effect = yes
@@ -2732,19 +2732,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -2794,7 +2794,7 @@ character_event = {
 			factor = 10 
 			modifier = { 
 				factor = 0.25
-				FROM  = { ai = yes }
+				FROM = { ai = yes }
 			}
 		}
 	}
@@ -2826,7 +2826,7 @@ character_event = {
 		}
 		FROM = {
 			show_scope_change = no
-			apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
 		}
 		
 		pacifists_lose_piety_effect = yes
@@ -2855,19 +2855,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -2896,7 +2896,7 @@ character_event = {
 		}
 		FROM = {
 			show_scope_change = no
-			apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
 		}
 
 		pacifists_lose_piety_effect = yes
@@ -2925,19 +2925,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -2946,7 +2946,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_22022_Z }
 		trigger = { 
 			NOT = { trait = lunatic }
-			ROOT = { attribute_diff = { character = FROM attribute = diplomacy  value = 12 } }
+			ROOT = { attribute_diff = { character = FROM attribute = diplomacy value = 12 } }
 		}
 		tooltip_info = diplomacy
 		FROM = {
@@ -2965,7 +2965,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_22022_A }
 		trigger = { 
 			NOT = { trait = lunatic }
-			ROOT = { attribute_diff = { character = FROM attribute = intrigue  value = 5 } }
+			ROOT = { attribute_diff = { character = FROM attribute = intrigue value = 5 } }
 		}
 		tooltip_info = intrigue
 		opinion = { 
@@ -3880,7 +3880,7 @@ character_event = {
 		set_character_flag = flag_antagonize_cause_unrest
 		if = { 
 			limit = { ai = no } 
-			scaled_wealth = { value = -1.5 min = -100 max = -250 }  
+			scaled_wealth = { value = -1.5 min = -100 max = -250 } 
 		} 
 		hidden_tooltip = { character_event = { id = HF.22052 } }
 		ai_chance = { factor = 40 }
@@ -4050,23 +4050,23 @@ character_event = {
 			25 = { #Failure. - Antagonized is notified.
 				modifier = { 
 					factor = 0.85
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 2 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 2 } }
 				}
 				modifier = { 
 					factor = 0.85
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 4 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 4 } }
 				}
 				modifier = { 
 					factor = 0.85
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 6 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 6 } }
 				}
 				modifier = { 
 					factor = 0.85
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 8 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 8 } }
 				}
 				modifier = { 
 					factor = 0.85
-					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue  value = 10 } }
+					ROOT = { attribute_diff = { character = persistent_event_target:antagonize_target attribute = intrigue value = 10 } }
 				}
 				modifier = { 
 					factor = 0
@@ -4074,23 +4074,23 @@ character_event = {
 				}
 				modifier = { 
 					factor = 1.25
-					persistent_event_target:antagonize_target = { attribute_diff = { character = ROOT attribute = intrigue  value = 2 } }
+					persistent_event_target:antagonize_target = { attribute_diff = { character = ROOT attribute = intrigue value = 2 } }
 				}
 				modifier = { 
 					factor = 1.25
-					persistent_event_target:antagonize_target = { attribute_diff = { character = ROOT attribute = intrigue  value = 4 } }
+					persistent_event_target:antagonize_target = { attribute_diff = { character = ROOT attribute = intrigue value = 4 } }
 				}
 				modifier = { 
 					factor = 1.25
-					persistent_event_target:antagonize_target = { attribute_diff = { character = ROOT attribute = intrigue  value = 6 } }
+					persistent_event_target:antagonize_target = { attribute_diff = { character = ROOT attribute = intrigue value = 6 } }
 				}
 				modifier = { 
 					factor = 1.25
-					persistent_event_target:antagonize_target = { attribute_diff = { character = ROOT attribute = intrigue  value = 8 } }
+					persistent_event_target:antagonize_target = { attribute_diff = { character = ROOT attribute = intrigue value = 8 } }
 				}
 				modifier = { 
 					factor = 1.25
-					persistent_event_target:antagonize_target = { attribute_diff = { character = ROOT attribute = intrigue  value = 10 } }
+					persistent_event_target:antagonize_target = { attribute_diff = { character = ROOT attribute = intrigue value = 10 } }
 				}
 				persistent_event_target:antagonize_target = { character_event = { id = HF.22067 days = 4 } }
 			}
@@ -4121,7 +4121,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22053
-		event_target:scoped_claim = {  
+		event_target:scoped_claim = { 
 			add_claim = ROOT
 		} 
 		persistent_event_target:antagonize_target = { 
@@ -4147,9 +4147,9 @@ character_event = {
 	option = { 
 		name = EVTOPTAHF22054
 		tooltip = { 
-			event_target:scoped_claim = {  
+			event_target:scoped_claim = { 
 				add_claim = FROM
-			}  
+			} 
 			opinion = { 
 				who = FROM 
 				modifier = opinion_antagonized_2
@@ -4180,7 +4180,7 @@ character_event = {
 				years = 10
 			}
 		}
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			opinion = { 
 				who = persistent_event_target:antagonize_target 
 				modifier = opinion_antagonize_vassalize_claim 
@@ -4201,7 +4201,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22056
-		custom_tooltip = { text = tooltip_HF22056_A }  
+		custom_tooltip = { text = tooltip_HF22056_A } 
 		tooltip = { 
 			opinion = { 
 				who = FROM 
@@ -4224,7 +4224,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22057
-		persistent_event_target:antagonize_target  = { 
+		persistent_event_target:antagonize_target = { 
 			show_scope_change = no 
 			capital_scope = { 
 				add_province_modifier = {
@@ -4255,7 +4255,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22058
-		tooltip  = {  
+		tooltip = { 
 			opinion = { 
 				who = FROM 
 				modifier = opinion_antagonized_2
@@ -4282,7 +4282,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22059
-		persistent_event_target:antagonize_target  = {  
+		persistent_event_target:antagonize_target = { 
 			capital_scope = { 
 				add_province_modifier = {
 					modifier = thieves_guild 
@@ -4312,7 +4312,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22060
-		tooltip  = {  
+		tooltip = { 
 			opinion = { 
 				who = FROM 
 				modifier = opinion_antagonized_2
@@ -4340,7 +4340,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22061
-		persistent_event_target:antagonize_target  = {  
+		persistent_event_target:antagonize_target = { 
 			add_character_modifier = {
 				modifier = antagonize_slandering_vassals 
 				years = 10
@@ -4368,7 +4368,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22062
-		tooltip  = {  
+		tooltip = { 
 			add_character_modifier = {
 				modifier = antagonize_slandering_vassals 
 				years = 10
@@ -4394,7 +4394,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22063
-		persistent_event_target:antagonize_target  = {  
+		persistent_event_target:antagonize_target = { 
 			add_character_modifier = {
 				modifier = antagonize_slandering_relatives 
 				years = 10
@@ -4422,7 +4422,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22064
-		tooltip  = {  
+		tooltip = { 
 			add_character_modifier = {
 				modifier = antagonize_slandering_relatives 
 				years = 10
@@ -4448,7 +4448,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22065
-		persistent_event_target:antagonize_target  = {  
+		persistent_event_target:antagonize_target = { 
 			spouse = {
 				show_scope_change = no
 				opinion = { 
@@ -4480,7 +4480,7 @@ character_event = {
 
 	option = { 
 		name = EVTOPTAHF22066
-		tooltip  = {  
+		tooltip = { 
 			spouse = {
 				show_scope_change = no
 				opinion = { 
@@ -4559,7 +4559,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22070_A }
 		if = { 
 			limit = { NOR = { trait = cruel trait = kind } } 
-			random = {  
+			random = { 
 				chance = 25
 				add_trait = cruel
 				hidden_tooltip = { character_event = { id = 38259 } }
@@ -4567,7 +4567,7 @@ character_event = {
 		}
 		if = { 
 			limit = { trait = kind } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = kind
 				hidden_tooltip = { character_event = { id = 38307 } }
@@ -4628,7 +4628,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22071_B }
 		if = { 
 			limit = { trait = paranoid } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = paranoid
 			}
@@ -4757,7 +4757,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22076_A }
 		if = { 
 			limit = { NOR = { trait = cruel trait = kind } } 
-			random = {  
+			random = { 
 				chance = 25
 				add_trait = cruel
 				hidden_tooltip = { character_event = { id = 38259 } }
@@ -4765,7 +4765,7 @@ character_event = {
 		}
 		if = { 
 			limit = { trait = kind } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = kind
 				hidden_tooltip = { character_event = { id = 38307 } }
@@ -4803,7 +4803,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22077_B }
 		if = { 
 			limit = { trait = wroth } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = wroth
 			}
@@ -4910,7 +4910,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22082_A }
 		if = { 
 			limit = { NOR = { trait = cruel trait = kind } } 
-			random = {  
+			random = { 
 				chance = 25
 				add_trait = cruel
 				hidden_tooltip = { character_event = { id = 38259 } }
@@ -4918,7 +4918,7 @@ character_event = {
 		}
 		if = { 
 			limit = { trait = kind } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = kind
 				hidden_tooltip = { character_event = { id = 38307 } }
@@ -4955,7 +4955,7 @@ character_event = {
 		tooltip_info = greedy
 		if = { 
 			limit = { trait = humble } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = humble
 			}
@@ -4996,7 +4996,7 @@ character_event = {
 		remove_character_modifier = luxurious_crown_modifier
 		tiered_prestige_negative_effect = yes
 		if = { 
-			limit = { NOT = { trait = stressed }  } 
+			limit = { NOT = { trait = stressed } } 
 			add_trait = stressed
 		}
 		opinion = { 
@@ -5058,7 +5058,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22088_A }
 		if = { 
 			limit = { NOR = { trait = cruel trait = kind } } 
-			random = {  
+			random = { 
 				chance = 25
 				add_trait = cruel
 				hidden_tooltip = { character_event = { id = 38259 } }
@@ -5066,7 +5066,7 @@ character_event = {
 		}
 		if = { 
 			limit = { trait = kind } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = kind
 				hidden_tooltip = { character_event = { id = 38307 } }
@@ -5104,7 +5104,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22089_B }
 		if = { 
 			limit = { trait = arbitrary } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = arbitrary
 			}
@@ -5214,7 +5214,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22094_A }
 		if = { 
 			limit = { NOR = { trait = cruel trait = kind } } 
-			random = {  
+			random = { 
 				chance = 25
 				add_trait = cruel
 				hidden_tooltip = { character_event = { id = 38259 } }
@@ -5222,7 +5222,7 @@ character_event = {
 		}
 		if = { 
 			limit = { trait = kind } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = kind
 				hidden_tooltip = { character_event = { id = 38307 } }
@@ -5260,7 +5260,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22095_B }
 		if = { 
 			limit = { trait = kind } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = kind
 			}
@@ -5365,7 +5365,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22100_A }
 		if = { 
 			limit = { NOR = { trait = cruel trait = kind } } 
-			random = {  
+			random = { 
 				chance = 25
 				add_trait = cruel
 				hidden_tooltip = { character_event = { id = 38259 } }
@@ -5373,7 +5373,7 @@ character_event = {
 		}
 		if = { 
 			limit = { trait = kind } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = kind
 				hidden_tooltip = { character_event = { id = 38307 } }
@@ -5419,7 +5419,7 @@ character_event = {
 		tooltip_info = envious
 		if = { 
 			limit = { trait = content } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = content
 			}
@@ -5521,7 +5521,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22106_A }
 		if = { 
 			limit = { NOR = { trait = cruel trait = kind } } 
-			random = {  
+			random = { 
 				chance = 25
 				add_trait = cruel
 				hidden_tooltip = { character_event = { id = 38259 } }
@@ -5529,7 +5529,7 @@ character_event = {
 		}
 		if = { 
 			limit = { trait = kind } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = kind
 				hidden_tooltip = { character_event = { id = 38307 } }
@@ -5565,7 +5565,7 @@ character_event = {
 		custom_tooltip = { text = tooltip_HF22107_B }
 		if = { 
 			limit = { trait = shy } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = shy
 			}
@@ -5898,7 +5898,7 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		tooltip = { 
 			FROM = { 
-				add_character_modifier = {  
+				add_character_modifier = { 
 					name = undermined_spy_network_1
 					months = 24
 					stacking = yes
@@ -5916,7 +5916,7 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		tooltip = { 
 			FROM = { 
-				add_character_modifier = {  
+				add_character_modifier = { 
 					name = undermined_spy_network_2
 					months = 24
 					stacking = yes
@@ -5932,7 +5932,7 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		tooltip = { 
 			FROM = { 
-				add_character_modifier = {  
+				add_character_modifier = { 
 					name = vicious_rumors
 					months = 24
 					stacking = yes
@@ -5950,7 +5950,7 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		tooltip = { 
 			FROM = { 
-				add_character_modifier = {  
+				add_character_modifier = { 
 					name = vicious_rumors_2
 					months = 24
 					stacking = yes
@@ -5966,7 +5966,7 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		tooltip = { 
 			FROM = { 
-				if = {  
+				if = { 
 					limit = { 
 						trait = lunatic
 						trait = depressed
@@ -5974,14 +5974,14 @@ character_event = {
 					} 
 					random = { 
 						chance = 25 
-						add_character_modifier = {  
+						add_character_modifier = { 
 							name = tormented_modifier
 							months = 50
 							stacking = yes
 						} 
 					}
 				}
-				if = {  
+				if = { 
 					limit = { 
 						NOT = { trait = lunatic }
 						trait = depressed
@@ -5989,22 +5989,22 @@ character_event = {
 					} 
 					random = { chance = 25 add_trait = lunatic }
 				}
-				if = {  
+				if = { 
 					limit = { 
 						NOT = { trait = depressed }
 						trait = stressed 
 					} 
 					random = { chance = 25 add_trait = depressed }
 				}
-				if = {  
+				if = { 
 					limit = { NOT = { trait = stressed } } 
 					random = { chance = 25 add_trait = stressed }
-				}  
+				} 
 			} 
 		} 
 		if = { 
 			limit = { NOR = { trait = cruel trait = kind } } 
-			random = {  
+			random = { 
 				chance = 25
 				add_trait = cruel
 				hidden_tooltip = { character_event = { id = 38259 } }
@@ -6012,7 +6012,7 @@ character_event = {
 		}
 		if = { 
 			limit = { trait = kind } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = kind
 				hidden_tooltip = { character_event = { id = 38307 } }
@@ -6029,33 +6029,33 @@ character_event = {
 		tiered_prestige_negative_effect = yes
 		tooltip = { 
 			FROM = { 
-				if = {  
+				if = { 
 					limit = { 
 						trait = lunatic
 						trait = depressed
 						trait = stressed 
 					} 
-					add_character_modifier = {  
+					add_character_modifier = { 
 						name = tormented_modifier
 						months = 50
 						stacking = yes
 					} 
 				}
-				if = {  
+				if = { 
 					limit = { 
 						trait = depressed
 						trait = stressed 
 					} 
 					random = { chance = 50 add_trait = lunatic }
 				}
-				if = {  
+				if = { 
 					limit = { 
 						NOT = { trait = depressed }
 						trait = stressed 
 					} 
 					add_trait = depressed
 				} 
-				if = {  
+				if = { 
 					limit = { NOT = { trait = stressed } } 
 					add_trait = stressed
 				} 
@@ -6063,7 +6063,7 @@ character_event = {
 		} 
 		if = { 
 			limit = { NOR = { trait = cruel trait = kind } } 
-			random = {  
+			random = { 
 				chance = 25
 				add_trait = cruel
 				hidden_tooltip = { character_event = { id = 38259 } }
@@ -6071,7 +6071,7 @@ character_event = {
 		}
 		if = { 
 			limit = { trait = kind } 
-			random = {  
+			random = { 
 				chance = 25
 				remove_trait = kind
 				hidden_tooltip = { character_event = { id = 38307 } }
@@ -6099,14 +6099,14 @@ character_event = {
 	option = { #Counterespionage
 		name = EVTOPTAHF22129
 		trigger = { intrigue = 14 }
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = undermined_spy_network_1
 			months = 24
 			stacking = yes
 		}
 		tooltip = { 
 			FROM = { 
-				add_character_modifier = {  
+				add_character_modifier = { 
 					name = counterespionage_modifier
 					months = 24
 					stacking = yes
@@ -6118,7 +6118,7 @@ character_event = {
 	} 
 	option = { #Take modifier
 		name = EVTOPTBHF22129
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = undermined_spy_network_1
 			months = 24
 			stacking = yes
@@ -6140,14 +6140,14 @@ character_event = {
 	option = { #Counterespionage
 		name = EVTOPTAHF22129
 		trigger = { intrigue = 14 }
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = undermined_spy_network_2
 			months = 24
 			stacking = yes
 		}
 		tooltip = { 
 			FROM = { 
-				add_character_modifier = {  
+				add_character_modifier = { 
 					name = counterespionage_modifier
 					months = 24
 					stacking = yes
@@ -6159,7 +6159,7 @@ character_event = {
 	} 
 	option = { #Take modifier
 		name = EVTOPTBHF22129
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = undermined_spy_network_2
 			months = 24
 			stacking = yes
@@ -6185,7 +6185,7 @@ character_event = {
 			is_rival = FROM
 			this_can_duel_with_from_trigger = yes
 		}
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = vicious_rumors
 			months = 24
 			stacking = yes
@@ -6206,7 +6206,7 @@ character_event = {
 		}
 		FROM = {
 			show_scope_change = no
-			apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
 		}
 		
 		pacifists_lose_piety_effect = yes
@@ -6235,25 +6235,25 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
 	option = { #Take modifier
 		name = EVTOPTBHF22124
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = vicious_rumors
 			months = 24
 			stacking = yes
@@ -6280,7 +6280,7 @@ character_event = {
 			is_rival = FROM
 			this_can_duel_with_from_trigger = yes
 		}
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = vicious_rumors_2
 			months = 24
 			stacking = yes
@@ -6301,7 +6301,7 @@ character_event = {
 		}
 		FROM = {
 			show_scope_change = no
-			apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
 		}
 		pacifists_lose_piety_effect = yes
 		add_character_modifier = {
@@ -6329,25 +6329,25 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
 	option = { #Take modifier
 		name = EVTOPTBHF22124
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = vicious_rumors_2
 			months = 24
 			stacking = yes
@@ -6373,7 +6373,7 @@ character_event = {
 			is_rival = FROM
 			this_can_duel_with_from_trigger = yes
 		}
-		if = {  
+		if = { 
 			limit = { 
 				trait = lunatic
 				trait = depressed
@@ -6381,28 +6381,28 @@ character_event = {
 			} 
 			random = { 
 				chance = 25 
-				add_character_modifier = {  
+				add_character_modifier = { 
 					name = tormented_modifier
 					months = 50
 					stacking = yes
 				} 
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				trait = depressed
 				trait = stressed 
 			} 
 			random = { chance = 25 add_trait = lunatic }
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { trait = depressed }
 				trait = stressed 
 			} 
 			random = { chance = 25 add_trait = depressed }
 		} 
-		if = {  
+		if = { 
 			limit = { NOT = { trait = stressed } } 
 			random = { chance = 25 add_trait = stressed }
 		} 
@@ -6422,7 +6422,7 @@ character_event = {
 		}
 		FROM = {
 			show_scope_change = no
-			apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
 		}
 		pacifists_lose_piety_effect = yes
 		add_character_modifier = {
@@ -6450,25 +6450,25 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
 	option = { #Take modifier
 		name = EVTOPTBHF22126
-		if = {  
+		if = { 
 			limit = { 
 				trait = lunatic
 				trait = depressed
@@ -6476,28 +6476,28 @@ character_event = {
 			} 
 			random = { 
 				chance = 25 
-				add_character_modifier = {  
+				add_character_modifier = { 
 					name = tormented_modifier
 					months = 50
 					stacking = yes
 				} 
 			}
 		}
-		if = {  
+		if = { 
 			limit = { 
 				trait = depressed
 				trait = stressed 
 			} 
 			random = { chance = 25 add_trait = lunatic }
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { trait = depressed }
 				trait = stressed 
 			} 
 			random = { chance = 25 add_trait = depressed }
 		} 
-		if = {  
+		if = { 
 			limit = { NOT = { trait = stressed } } 
 			random = { chance = 25 add_trait = stressed }
 		} 
@@ -6522,33 +6522,33 @@ character_event = {
 			is_rival = FROM
 			this_can_duel_with_from_trigger = yes
 		}
-		if = {  
+		if = { 
 			limit = { 
 				trait = lunatic
 				trait = depressed
 				trait = stressed 
 			} 
-			add_character_modifier = {  
+			add_character_modifier = { 
 				name = tormented_modifier
 				months = 50
 				stacking = yes
 			} 
 		}
-		if = {  
+		if = { 
 			limit = { 
 				trait = depressed
 				trait = stressed 
 			} 
 			random = { chance = 50 add_trait = lunatic }
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { trait = depressed }
 				trait = stressed 
 			} 
 			add_trait = depressed
 		} 
-		if = {  
+		if = { 
 			limit = { NOT = { trait = stressed } } 
 			add_trait = stressed
 		} 
@@ -6568,7 +6568,7 @@ character_event = {
 		}
 		FROM = {
 			show_scope_change = no
-			apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
 		}
 		pacifists_lose_piety_effect = yes
 		add_character_modifier = {
@@ -6596,51 +6596,51 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
 	option = { #Take modifier
 		name = EVTOPTBHF22126
-		if = {  
+		if = { 
 			limit = { 
 				trait = lunatic
 				trait = depressed
 				trait = stressed 
 			} 
-			add_character_modifier = {  
+			add_character_modifier = { 
 				name = tormented_modifier
 				months = 50
 				stacking = yes
 			} 
 		}
-		if = {  
+		if = { 
 			limit = { 
 				trait = depressed
 				trait = stressed 
 			} 
 			random = { chance = 50 add_trait = lunatic }
 		}
-		if = {  
+		if = { 
 			limit = { 
 				NOT = { trait = depressed }
 				trait = stressed 
 			} 
 			add_trait = depressed
 		} 
-		if = {  
+		if = { 
 			limit = { NOT = { trait = stressed } } 
 			add_trait = stressed
 		} 
@@ -6658,7 +6658,7 @@ character_event = {
 
 	option = { #Take modifier
 		name = EVTOPTAHF22128
-		add_character_modifier = {  
+		add_character_modifier = { 
 			name = counterespionage_modifier
 			months = 24
 			stacking = yes

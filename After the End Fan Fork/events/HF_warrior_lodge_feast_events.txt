@@ -592,7 +592,7 @@ character_event = {
 			} 
 			if = { 
 				limit = { event_target:arm_wrestling_opponent_2 = { is_alive = yes } } 
-				 event_target:arm_wrestling_opponent_2 = { 
+				event_target:arm_wrestling_opponent_2 = { 
 					clr_character_flag = arm_wrestling_strong
 					clr_character_flag = arm_wrestling_medium
 					clr_character_flag = arm_wrestling_weak
@@ -601,7 +601,7 @@ character_event = {
 			}
 			if = { 
 				limit = { event_target:arm_wrestling_opponent_3 = { is_alive = yes } } 
-				 event_target:arm_wrestling_opponent_3 = { 
+				event_target:arm_wrestling_opponent_3 = { 
 					clr_character_flag = arm_wrestling_strong
 					clr_character_flag = arm_wrestling_medium
 					clr_character_flag = arm_wrestling_weak
@@ -629,7 +629,7 @@ character_event = {
 			} 
 			if = { 
 				limit = { event_target:arm_wrestling_opponent_1 = { is_alive = yes } } 
-				 event_target:arm_wrestling_opponent_1 = { 
+				event_target:arm_wrestling_opponent_1 = { 
 					clr_character_flag = arm_wrestling_strong
 					clr_character_flag = arm_wrestling_medium
 					clr_character_flag = arm_wrestling_weak
@@ -638,7 +638,7 @@ character_event = {
 			}
 			if = { 
 				limit = { event_target:arm_wrestling_opponent_3 = { is_alive = yes } } 
-				 event_target:arm_wrestling_opponent_3 = { 
+				event_target:arm_wrestling_opponent_3 = { 
 					clr_character_flag = arm_wrestling_strong
 					clr_character_flag = arm_wrestling_medium
 					clr_character_flag = arm_wrestling_weak
@@ -671,7 +671,7 @@ character_event = {
 			} 
 			if = { 
 				limit = { event_target:arm_wrestling_opponent_1 = { is_alive = yes } } 
-				 event_target:arm_wrestling_opponent_1 = { 
+				event_target:arm_wrestling_opponent_1 = { 
 					clr_character_flag = arm_wrestling_strong
 					clr_character_flag = arm_wrestling_medium
 					clr_character_flag = arm_wrestling_weak
@@ -680,7 +680,7 @@ character_event = {
 			}
 			if = { 
 				limit = { event_target:arm_wrestling_opponent_2 = { is_alive = yes } } 
-				 event_target:arm_wrestling_opponent_2 = { 
+				event_target:arm_wrestling_opponent_2 = { 
 					clr_character_flag = arm_wrestling_strong
 					clr_character_flag = arm_wrestling_medium
 					clr_character_flag = arm_wrestling_weak
@@ -989,7 +989,7 @@ character_event = {
 		trigger = { intrigue = 8 }
 		tooltip_info = intrigue
 		custom_tooltip = { text = TOOLTIP_EVTOPTDHF25205 }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			if = { 
 				limit = { event_target:arm_wrestling_fighter_1 = { character = ROOT } }
 				event_target:arm_wrestling_fighter_2 = { character_event = { id = HF.25206 } }
@@ -1022,7 +1022,7 @@ character_event = {
 		}
 		tooltip_info_custom = available_because_pretty
 		custom_tooltip = { text = TOOLTIP_EVTOPTDHF25205 }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			if = { 
 				limit = { event_target:arm_wrestling_fighter_1 = { character = ROOT } }
 				event_target:arm_wrestling_fighter_2 = { character_event = { id = HF.25209 } }
@@ -1044,7 +1044,7 @@ character_event = {
 		}
 		tooltip_info_custom = available_because_pretty
 		custom_tooltip = { text = TOOLTIP_EVTOPTDHF25205 }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			if = { 
 				limit = { event_target:arm_wrestling_fighter_1 = { character = ROOT } }
 				event_target:arm_wrestling_fighter_2 = { character_event = { id = HF.25209 } }
@@ -1060,7 +1060,7 @@ character_event = {
 		name = EVTOPTDHF25205
 		detract_society_currency_trivial_effect = yes
 		custom_tooltip = { text = TOOLTIP_EVTOPTDHF25205 }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			if = { 
 				limit = { event_target:arm_wrestling_fighter_1 = { character = ROOT } }
 				event_target:arm_wrestling_fighter_2 = { character_event = { id = HF.25212 } }
@@ -1246,14 +1246,14 @@ character_event = {
 	option = { #Wrong sex.
 		name = EVTOPTCHF25209
 		trigger = { 
-			OR = {  
-				AND = {  
+			OR = { 
+				AND = { 
 					FROM = { is_female = yes }
-					prefers_men_trigger = yes  
+					prefers_men_trigger = yes 
 				}
-				AND = {  
+				AND = { 
 					FROM = { is_female = no }
-					prefers_men_trigger = no  
+					prefers_men_trigger = no 
 				}
 			}
 		}
@@ -1263,14 +1263,14 @@ character_event = {
 		name = EVTOPTDHF25209
 		trigger = { 
 			NOT = { trait = lustful	} 
-			OR = {  
-				AND = {  
+			OR = { 
+				AND = { 
 					FROM = { is_female = yes }
-					prefers_men_trigger = no  
+					prefers_men_trigger = no 
 				}
-				AND = {  
+				AND = { 
 					FROM = { is_female = no }
-					prefers_men_trigger = yes  
+					prefers_men_trigger = yes 
 				}
 			}
 		}
@@ -1296,14 +1296,14 @@ character_event = {
 		}
 		trigger = { 
 			trait = lustful
-			OR = {  
-				AND = {  
+			OR = { 
+				AND = { 
 					FROM = { is_female = yes }
-					prefers_men_trigger = no  
+					prefers_men_trigger = no 
 				}
-				AND = {  
+				AND = { 
 					FROM = { is_female = no }
-					prefers_men_trigger = yes  
+					prefers_men_trigger = yes 
 				}
 			}
 		}
@@ -1644,24 +1644,24 @@ character_event = {
 			who = ROOT
 			years = 15
 		}
-	    #REQUIRED event targets for setting up duel evaluation!
-	    hidden_tooltip = { 
-	    	save_event_target_as = combatant_1 #the person issuing the duel...
-	    	FROM = { save_event_target_as = combatant_2 } #the target of the duel...
-	    }
-	    FROM = {
-	    	show_scope_change = no
-	    	apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
-	    }
+		#REQUIRED event targets for setting up duel evaluation!
+		hidden_tooltip = { 
+			save_event_target_as = combatant_1 #the person issuing the duel...
+			FROM = { save_event_target_as = combatant_2 } #the target of the duel...
+		}
+		FROM = {
+			show_scope_change = no
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
+		}
 
-	    pacifists_lose_piety_effect = yes
-	    add_character_modifier = {
-	        modifier = recent_duel_timer
-	        duration = 365
-	        hidden = yes
-	    }
-	    hidden_tooltip = {
-	        if = {
+		pacifists_lose_piety_effect = yes
+		add_character_modifier = {
+			modifier = recent_duel_timer
+			duration = 365
+			hidden = yes
+		}
+		hidden_tooltip = {
+			if = {
 				limit = {
 					society_member_of = warrior_lodge_mexican
 				}
@@ -1670,7 +1670,7 @@ character_event = {
 			else = {
 				FROM = { character_event = { id = HFP.10095 days = 1 } }
 			}
-	    }
+		}
 		ai_chance = { 
 			factor = 40
 			modifier = { 
@@ -1688,19 +1688,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -2015,25 +2015,25 @@ character_event = {
 			who = ROOT
 			years = 15
 		}
-	    #REQUIRED event targets for setting up duel evaluation!
-	    hidden_tooltip = { 
-	    	save_event_target_as = combatant_1 #the person issuing the duel...
-	    	FROM = { save_event_target_as = combatant_2 } #the target of the duel...
-	    }
-	    FROM = {
-	    	show_scope_change = no
-	    	apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
-	    }
-	    
-	    pacifists_lose_piety_effect = yes
-	    add_character_modifier = {
-	        modifier = recent_duel_timer
-	        duration = 365
-	        hidden = yes
-	    }
-	    hidden_tooltip = {
-	        FROM = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
-	    }
+		#REQUIRED event targets for setting up duel evaluation!
+		hidden_tooltip = { 
+			save_event_target_as = combatant_1 #the person issuing the duel...
+			FROM = { save_event_target_as = combatant_2 } #the target of the duel...
+		}
+		FROM = {
+			show_scope_change = no
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
+		}
+		
+		pacifists_lose_piety_effect = yes
+		add_character_modifier = {
+			modifier = recent_duel_timer
+			duration = 365
+			hidden = yes
+		}
+		hidden_tooltip = {
+			FROM = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
+		}
 		ai_chance = { 
 			factor = 40
 			modifier = { 
@@ -2051,19 +2051,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -2348,18 +2348,18 @@ character_event = {
 				society_member_of = warrior_lodge_rust_cultist
 			}
 		}
-		trigger = {  
-			OR = {  
+		trigger = { 
+			OR = { 
 				wealth = 500
-				AND = {  
+				AND = { 
 					OR = { is_tribal = yes is_nomadic = yes }
 					wealth = 100
 				}
 			}
 		}
 		custom_tooltip = { text = tooltip_betting_hardest_side }
-		if = {  
-			limit = {  
+		if = { 
+			limit = { 
 				NOR = { 
 					is_tribal = yes
 					is_nomadic = yes
@@ -2368,8 +2368,8 @@ character_event = {
 			custom_tooltip = { text = tooltip_betting_500_gold }
 			set_character_flag = flag_betting_money_500
 		}
-		if = {  
-			limit = {  
+		if = { 
+			limit = { 
 				OR = { 
 					is_tribal = yes
 					is_nomadic = yes
@@ -2399,18 +2399,18 @@ character_event = {
 				society_member_of = warrior_lodge_rust_cultist
 			}
 		}
-		trigger = {  
-			OR = {  
+		trigger = { 
+			OR = { 
 				wealth = 250
-				AND = {  
+				AND = { 
 					OR = { is_tribal = yes is_nomadic = yes }
 					wealth = 50
 				}
 			}
 		}
 		custom_tooltip = { text = tooltip_betting_hard_side }
-		if = {  
-			limit = {  
+		if = { 
+			limit = { 
 				NOR = { 
 					is_tribal = yes
 					is_nomadic = yes
@@ -2419,8 +2419,8 @@ character_event = {
 			custom_tooltip = { text = tooltip_betting_250_gold }
 			set_character_flag = flag_betting_money_250
 		}
-		if = {  
-			limit = {  
+		if = { 
+			limit = { 
 				OR = { 
 					is_tribal = yes
 					is_nomadic = yes
@@ -2450,18 +2450,18 @@ character_event = {
 				society_member_of = warrior_lodge_rust_cultist
 			}
 		}
-		trigger = {  
-			OR = {  
+		trigger = { 
+			OR = { 
 				wealth = 100
-				AND = {  
+				AND = { 
 					OR = { is_tribal = yes is_nomadic = yes }
 					wealth = 25
 				}
 			}
 		}
 		custom_tooltip = { text = tooltip_betting_easy_side }
-		if = {  
-			limit = {  
+		if = { 
+			limit = { 
 				NOR = { 
 					is_tribal = yes
 					is_nomadic = yes
@@ -2470,8 +2470,8 @@ character_event = {
 			custom_tooltip = { text = tooltip_betting_100_gold }
 			set_character_flag = flag_betting_money_100
 		}
-		if = {  
-			limit = {  
+		if = { 
+			limit = { 
 				OR = { 
 					is_tribal = yes
 					is_nomadic = yes
@@ -2502,8 +2502,8 @@ character_event = {
 			}
 		}
 		custom_tooltip = { text = tooltip_betting_easiest_side }
-		if = {  
-			limit = {  
+		if = { 
+			limit = { 
 				NOR = { 
 					is_tribal = yes
 					is_nomadic = yes
@@ -2512,8 +2512,8 @@ character_event = {
 			custom_tooltip = { text = tooltip_betting_50_gold }
 			set_character_flag = flag_betting_money_50
 		}
-		if = {  
-			limit = {  
+		if = { 
+			limit = { 
 				OR = { 
 					is_tribal = yes
 					is_nomadic = yes
@@ -2731,25 +2731,25 @@ character_event = {
 		}
 		tiered_prestige_negative_effect = yes
 		warrior_lodge_dice_game_cleanup_effect = yes
-	    #REQUIRED event targets for setting up duel evaluation!
-	    hidden_tooltip = { 
-	    	save_event_target_as = combatant_1 #the person issuing the duel...
-	    	event_target:random_society_winner = { save_event_target_as = combatant_2 } #the target of the duel...
-	    }
-	    event_target:random_society_winner = {
-	    	show_scope_change = no
-	    	apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
-	    }
-	    
-	    pacifists_lose_piety_effect = yes
-	    add_character_modifier = {
-	        modifier = recent_duel_timer
-	        duration = 365
-	        hidden = yes
-	    }
-	    hidden_tooltip = {
-	        event_target:random_society_winner = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
-	    }
+		#REQUIRED event targets for setting up duel evaluation!
+		hidden_tooltip = { 
+			save_event_target_as = combatant_1 #the person issuing the duel...
+			event_target:random_society_winner = { save_event_target_as = combatant_2 } #the target of the duel...
+		}
+		event_target:random_society_winner = {
+			show_scope_change = no
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
+		}
+		
+		pacifists_lose_piety_effect = yes
+		add_character_modifier = {
+			modifier = recent_duel_timer
+			duration = 365
+			hidden = yes
+		}
+		hidden_tooltip = {
+			event_target:random_society_winner = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
+		}
 		ai_chance = { 
 			factor = 20
 			modifier = { 
@@ -2767,19 +2767,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -3001,25 +3001,25 @@ character_event = {
 		}
 		tiered_prestige_negative_effect = yes
 		warrior_lodge_dice_game_cleanup_effect = yes
-	    #REQUIRED event targets for setting up duel evaluation!
-	    hidden_tooltip = { 
-	    	save_event_target_as = combatant_1 #the person issuing the duel...
-	    	event_target:random_society_winner = { save_event_target_as = combatant_2 } #the target of the duel...
-	    }
-	    event_target:random_society_winner = {
-	    	show_scope_change = no
-	    	apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
-	    }
+		#REQUIRED event targets for setting up duel evaluation!
+		hidden_tooltip = { 
+			save_event_target_as = combatant_1 #the person issuing the duel...
+			event_target:random_society_winner = { save_event_target_as = combatant_2 } #the target of the duel...
+		}
+		event_target:random_society_winner = {
+			show_scope_change = no
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
+		}
 
-	    pacifists_lose_piety_effect = yes
-	    add_character_modifier = {
-	        modifier = recent_duel_timer
-	        duration = 365
-	        hidden = yes
-	    }
-	    hidden_tooltip = {
-	        event_target:random_society_winner = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
-	    }
+		pacifists_lose_piety_effect = yes
+		add_character_modifier = {
+			modifier = recent_duel_timer
+			duration = 365
+			hidden = yes
+		}
+		hidden_tooltip = {
+			event_target:random_society_winner = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
+		}
 		ai_chance = { 
 			factor = 20
 			modifier = { 
@@ -3037,19 +3037,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -3222,25 +3222,25 @@ character_event = {
 		}
 		tiered_prestige_negative_effect = yes
 		warrior_lodge_dice_game_cleanup_effect = yes
-	    #REQUIRED event targets for setting up duel evaluation!
-	    hidden_tooltip = { 
-	    	save_event_target_as = combatant_1 #the person issuing the duel...
-	    	event_target:random_society_winner = { save_event_target_as = combatant_2 } #the target of the duel...
-	    }
-	    event_target:random_society_winner = {
-	    	show_scope_change = no
-	    	apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
-	    }
-	    
-	    pacifists_lose_piety_effect = yes
-	    add_character_modifier = {
-	        modifier = recent_duel_timer
-	        duration = 365
-	        hidden = yes
-	    }
-	    hidden_tooltip = {
-	        event_target:random_society_winner = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
-	    }
+		#REQUIRED event targets for setting up duel evaluation!
+		hidden_tooltip = { 
+			save_event_target_as = combatant_1 #the person issuing the duel...
+			event_target:random_society_winner = { save_event_target_as = combatant_2 } #the target of the duel...
+		}
+		event_target:random_society_winner = {
+			show_scope_change = no
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
+		}
+		
+		pacifists_lose_piety_effect = yes
+		add_character_modifier = {
+			modifier = recent_duel_timer
+			duration = 365
+			hidden = yes
+		}
+		hidden_tooltip = {
+			event_target:random_society_winner = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
+		}
 		ai_chance = { 
 			factor = 20
 			modifier = { 
@@ -3258,19 +3258,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -3627,25 +3627,25 @@ character_event = {
 		tooltip_info = arbitrary
 		tiered_prestige_negative_effect = yes
 		warrior_lodge_dice_game_cleanup_effect = yes
-	    #REQUIRED event targets for setting up duel evaluation!
-	    hidden_tooltip = { 
-	    	save_event_target_as = combatant_1 #the person issuing the duel...
-	    	event_target:random_society_winner = { save_event_target_as = combatant_2 } #the target of the duel...
-	    }
-	    event_target:random_society_winner = { 
-	    	show_scope_change = no
-	    	apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
-	    }
+		#REQUIRED event targets for setting up duel evaluation!
+		hidden_tooltip = { 
+			save_event_target_as = combatant_1 #the person issuing the duel...
+			event_target:random_society_winner = { save_event_target_as = combatant_2 } #the target of the duel...
+		}
+		event_target:random_society_winner = { 
+			show_scope_change = no
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
+		}
 
-	    pacifists_lose_piety_effect = yes
-	    add_character_modifier = {
-	        modifier = recent_duel_timer
-	        duration = 365
-	        hidden = yes
-	    }
-	    hidden_tooltip = {
-	        event_target:random_society_winner = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
-	    }
+		pacifists_lose_piety_effect = yes
+		add_character_modifier = {
+			modifier = recent_duel_timer
+			duration = 365
+			hidden = yes
+		}
+		hidden_tooltip = {
+			event_target:random_society_winner = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
+		}
 		ai_chance = { 
 			factor = 20
 			modifier = { 
@@ -3663,19 +3663,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -3922,25 +3922,25 @@ character_event = {
 		tooltip_info = arbitrary
 		tiered_prestige_negative_effect = yes
 		warrior_lodge_dice_game_cleanup_effect = yes
-	    #REQUIRED event targets for setting up duel evaluation!
-	    hidden_tooltip = { 
-	    	save_event_target_as = combatant_1 #the person issuing the duel...
-	    	event_target:random_society_winner = { save_event_target_as = combatant_2 } #the target of the duel...
-	    }	    
-	    event_target:random_society_winner = {
-	    	show_scope_change = no
-	    	apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
-	    }
+		#REQUIRED event targets for setting up duel evaluation!
+		hidden_tooltip = { 
+			save_event_target_as = combatant_1 #the person issuing the duel...
+			event_target:random_society_winner = { save_event_target_as = combatant_2 } #the target of the duel...
+		}		
+		event_target:random_society_winner = {
+			show_scope_change = no
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
+		}
 
-	    pacifists_lose_piety_effect = yes
-	    add_character_modifier = {
-	        modifier = recent_duel_timer
-	        duration = 365
-	        hidden = yes
-	    }
-	    hidden_tooltip = {
-	        event_target:random_society_winner = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
-	    }
+		pacifists_lose_piety_effect = yes
+		add_character_modifier = {
+			modifier = recent_duel_timer
+			duration = 365
+			hidden = yes
+		}
+		hidden_tooltip = {
+			event_target:random_society_winner = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
+		}
 		ai_chance = { 
 			factor = 20
 			modifier = { 
@@ -3958,19 +3958,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = event_target:random_society_winner attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -4933,7 +4933,7 @@ character_event = {
 			} 
 			if = { 
 				limit = { event_target:flyting_potential_opponent_2 = { is_alive = yes } } 
-				 event_target:flyting_potential_opponent_2 = { 
+				event_target:flyting_potential_opponent_2 = { 
 					clr_character_flag = flyting_strong
 					clr_character_flag = flyting_medium
 					clr_character_flag = flyting_weak
@@ -4942,7 +4942,7 @@ character_event = {
 			}
 			if = { 
 				limit = { event_target:flyting_potential_opponent_3 = { is_alive = yes } } 
-				 event_target:flyting_potential_opponent_3 = { 
+				event_target:flyting_potential_opponent_3 = { 
 					clr_character_flag = flyting_strong
 					clr_character_flag = flyting_medium
 					clr_character_flag = flyting_weak
@@ -4971,7 +4971,7 @@ character_event = {
 			} 
 			if = { 
 				limit = { event_target:flyting_potential_opponent_1 = { is_alive = yes } } 
-				 event_target:flyting_potential_opponent_1 = { 
+				event_target:flyting_potential_opponent_1 = { 
 					clr_character_flag = flyting_strong
 					clr_character_flag = flyting_medium
 					clr_character_flag = flyting_weak
@@ -4980,7 +4980,7 @@ character_event = {
 			}
 			if = { 
 				limit = { event_target:flyting_potential_opponent_3 = { is_alive = yes } } 
-				 event_target:flyting_potential_opponent_3 = { 
+				event_target:flyting_potential_opponent_3 = { 
 					clr_character_flag = flyting_strong
 					clr_character_flag = flyting_medium
 					clr_character_flag = flyting_weak
@@ -5009,7 +5009,7 @@ character_event = {
 			} 
 			if = { 
 				limit = { event_target:flyting_potential_opponent_1 = { is_alive = yes } } 
-				 event_target:flyting_potential_opponent_1 = { 
+				event_target:flyting_potential_opponent_1 = { 
 					clr_character_flag = flyting_strong
 					clr_character_flag = flyting_medium
 					clr_character_flag = flyting_weak
@@ -5018,7 +5018,7 @@ character_event = {
 			}
 			if = { 
 				limit = { event_target:flyting_potential_opponent_2 = { is_alive = yes } } 
-				 event_target:flyting_potential_opponent_2 = { 
+				event_target:flyting_potential_opponent_2 = { 
 					clr_character_flag = flyting_strong
 					clr_character_flag = flyting_medium
 					clr_character_flag = flyting_weak
@@ -5145,7 +5145,7 @@ character_event = {
 	option = { #Insulting Opponent's prowess. - Normal
 		name = EVTOPTAHF25254
 		trigger = { 
-			NOR = {  
+			NOR = { 
 				is_lover = FROM
 				is_close_relative = FROM
 			}
@@ -5155,11 +5155,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25255 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25255 } } 
 			}
 		}
 		ai_chance = { factor = 50 }
@@ -5167,7 +5167,7 @@ character_event = {
 	option = { #Insulting Opponent's prowess. - As a relative.
 		name = EVTOPTAHF25254
 		trigger = { 
-			OR = {  
+			OR = { 
 				is_close_relative = FROM
 				is_lover = FROM
 			}
@@ -5178,11 +5178,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25255 } }
+				event_target:flyting_contender_1 = { character_event = { id = HF.25255 } }
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25255 } } 
 			}
 		}
 		ai_chance = { factor = 80 }
@@ -5191,7 +5191,7 @@ character_event = {
 	option = { #Insulting Opponent's character. - Normal
 		name = EVTOPTBHF25254
 		trigger = { 
-			NOT = {  
+			NOT = { 
 				trait = poet
 			}
 		}
@@ -5200,11 +5200,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25257 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25257 } } 
 			}
 		}
 		ai_chance = { factor = 80 }
@@ -5220,11 +5220,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25257 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25257 } } 
 			}
 		}
 		ai_chance = { factor = 100 }
@@ -5232,7 +5232,7 @@ character_event = {
 	option = { #Insulting Opponent's accomplishments. - Normal
 		name = EVTOPTCHF25254
 		trigger = { 
-			NOT = {  
+			NOT = { 
 				FROM = { vassal_of = ROOT }
 			}
 		}
@@ -5242,11 +5242,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25259 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25259 } } 
 			}
 		}
 		ai_chance = { 
@@ -5281,11 +5281,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25259 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25259 } } 
 			}
 		}
 		ai_chance = { 
@@ -5311,7 +5311,7 @@ character_event = {
 	option = { #Insulting Opponent's family. - Normal
 		name = EVTOPTDHF25254
 		trigger = { 
-			NOR = {  
+			NOR = { 
 				is_close_relative = FROM
 				dynasty = FROM
 				trait = cruel
@@ -5323,11 +5323,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25261 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25261 } } 
 			}
 		}
 		ai_chance = { 
@@ -5349,7 +5349,7 @@ character_event = {
 	option = { #Insulting Opponent's family. - Cruel
 		name = EVTOPTDHF25254
 		trigger = { 
-			NOR = {  
+			NOR = { 
 				is_close_relative = FROM
 				dynasty = FROM
 			}
@@ -5362,11 +5362,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25261 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25261 } } 
 			}
 		}
 		ai_chance = { 
@@ -5467,7 +5467,7 @@ character_event = {
 				has_character_flag = insulting_accomplishments_liege
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
-			}  
+			} 
 			trait = seducer
 		}
 		tooltip_info = seducer
@@ -5565,7 +5565,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_lover = FROM
 				is_close_relative = FROM
 			}
@@ -5575,11 +5575,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25255 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25255 } } 
 			}
 		}
 		ai_chance = { factor = 50 }
@@ -5597,7 +5597,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			OR = {  
+			OR = { 
 				is_close_relative = FROM
 				is_lover = FROM
 			}
@@ -5608,11 +5608,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25255 } }
+				event_target:flyting_contender_1 = { character_event = { id = HF.25255 } }
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25255 } } 
 			}
 		}
 		ai_chance = { factor = 80 }
@@ -5631,7 +5631,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOT = {  
+			NOT = { 
 				trait = poet
 			}
 		}
@@ -5640,11 +5640,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25257 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25257 } } 
 			}
 		}
 		ai_chance = { factor = 80 }
@@ -5670,11 +5670,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25257 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25257 } } 
 			}
 		}
 		ai_chance = { factor = 100 }
@@ -5692,7 +5692,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOT = {  
+			NOT = { 
 				FROM = { vassal_of = ROOT }
 			}
 		}
@@ -5702,11 +5702,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25259 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25259 } } 
 			}
 		}
 		ai_chance = { 
@@ -5751,11 +5751,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25259 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25259 } } 
 			}
 		}
 		ai_chance = { 
@@ -5791,7 +5791,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_close_relative = FROM
 				dynasty = FROM
 				trait = cruel
@@ -5803,11 +5803,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25261 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25261 } } 
 			}
 		}
 		ai_chance = { 
@@ -5839,7 +5839,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_close_relative = FROM
 				dynasty = FROM
 			}
@@ -5852,11 +5852,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25261 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25261 } } 
 			}
 		}
 		ai_chance = { 
@@ -5939,7 +5939,7 @@ character_event = {
 		}
 		tooltip_info = humble
 		custom_tooltip = { text = TT_FLYTING_INSULT_MILD_REACTION }
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			warrior_lodge_flyting_winner_selection_effect = yes
 		}
 		ai_chance = { factor = 50 }
@@ -6003,7 +6003,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_lover = FROM
 				is_close_relative = FROM
 			}
@@ -6013,11 +6013,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25255 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25255 } } 
 			}
 		}
 		ai_chance = { factor = 50 }
@@ -6035,7 +6035,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			OR = {  
+			OR = { 
 				is_close_relative = FROM
 				is_lover = FROM
 			}
@@ -6046,11 +6046,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25255 } }
+				event_target:flyting_contender_1 = { character_event = { id = HF.25255 } }
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25255 } } 
 			}
 		}
 		ai_chance = { factor = 80 }
@@ -6069,7 +6069,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOT = {  
+			NOT = { 
 				trait = poet
 			}
 		}
@@ -6078,11 +6078,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25257 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25257 } } 
 			}
 		}
 		ai_chance = { factor = 80 }
@@ -6108,11 +6108,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25257 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25257 } } 
 			}
 		}
 		ai_chance = { factor = 100 }
@@ -6130,7 +6130,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOT = {  
+			NOT = { 
 				FROM = { vassal_of = ROOT }
 			}
 		}
@@ -6140,11 +6140,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25259 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25259 } } 
 			}
 		}
 		ai_chance = { 
@@ -6189,11 +6189,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25259 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25259 } } 
 			}
 		}
 		ai_chance = { 
@@ -6229,7 +6229,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_close_relative = FROM
 				dynasty = FROM
 				trait = cruel
@@ -6241,11 +6241,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25261 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25261 } } 
 			}
 		}
 		ai_chance = { 
@@ -6277,7 +6277,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_close_relative = FROM
 				dynasty = FROM
 			}
@@ -6290,11 +6290,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25261 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25261 } } 
 			}
 		}
 		ai_chance = { 
@@ -6441,7 +6441,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_lover = FROM
 				is_close_relative = FROM
 			}
@@ -6451,11 +6451,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25255 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25255 } } 
 			}
 		}
 		ai_chance = { factor = 50 }
@@ -6473,7 +6473,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			OR = {  
+			OR = { 
 				is_close_relative = FROM
 				is_lover = FROM
 			}
@@ -6484,11 +6484,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25255 } }
+				event_target:flyting_contender_1 = { character_event = { id = HF.25255 } }
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25255 } } 
 			}
 		}
 		ai_chance = { factor = 80 }
@@ -6507,7 +6507,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOT = {  
+			NOT = { 
 				trait = poet
 			}
 		}
@@ -6516,11 +6516,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25257 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25257 } } 
 			}
 		}
 		ai_chance = { factor = 80 }
@@ -6546,11 +6546,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25257 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25257 } } 
 			}
 		}
 		ai_chance = { factor = 100 }
@@ -6568,7 +6568,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOT = {  
+			NOT = { 
 				FROM = { vassal_of = ROOT }
 			}
 		}
@@ -6578,11 +6578,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25259 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25259 } } 
 			}
 		}
 		ai_chance = { 
@@ -6627,11 +6627,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25259 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25259 } } 
 			}
 		}
 		ai_chance = { 
@@ -6667,7 +6667,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_close_relative = FROM
 				dynasty = FROM
 				trait = cruel
@@ -6679,11 +6679,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25261 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25261 } } 
 			}
 		}
 		ai_chance = { 
@@ -6715,7 +6715,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_close_relative = FROM
 				dynasty = FROM
 			}
@@ -6728,11 +6728,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25261 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25261 } } 
 			}
 		}
 		ai_chance = { 
@@ -6897,7 +6897,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_lover = FROM
 				is_close_relative = FROM
 			}
@@ -6907,11 +6907,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25255 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25255 } } 
 			}
 		}
 		ai_chance = { factor = 50 }
@@ -6929,7 +6929,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			OR = {  
+			OR = { 
 				is_close_relative = FROM
 				is_lover = FROM
 			}
@@ -6940,11 +6940,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25255 } }
+				event_target:flyting_contender_1 = { character_event = { id = HF.25255 } }
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25255 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25255 } } 
 			}
 		}
 		ai_chance = { factor = 80 }
@@ -6963,7 +6963,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOT = {  
+			NOT = { 
 				trait = poet
 			}
 		}
@@ -6972,11 +6972,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25257 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25257 } } 
 			}
 		}
 		ai_chance = { factor = 80 }
@@ -7002,11 +7002,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25257 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25257 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25257 } } 
 			}
 		}
 		ai_chance = { factor = 100 }
@@ -7024,7 +7024,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOT = {  
+			NOT = { 
 				FROM = { vassal_of = ROOT }
 			}
 		}
@@ -7034,11 +7034,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25259 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25259 } } 
 			}
 		}
 		ai_chance = { 
@@ -7083,11 +7083,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25259 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25259 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25259 } } 
 			}
 		}
 		ai_chance = { 
@@ -7123,7 +7123,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_close_relative = FROM
 				dynasty = FROM
 				trait = cruel
@@ -7135,11 +7135,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25261 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25261 } } 
 			}
 		}
 		ai_chance = { 
@@ -7171,7 +7171,7 @@ character_event = {
 				has_character_flag = insulting_family
 				has_character_flag = insulting_family_cruel
 			} 
-			NOR = {  
+			NOR = { 
 				is_close_relative = FROM
 				dynasty = FROM
 			}
@@ -7184,11 +7184,11 @@ character_event = {
 		hidden_tooltip = { 
 			if = { #Receiver could be either.
 				limit = { event_target:flyting_contender_2 = { character = ROOT } }
-				event_target:flyting_contender_1 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_1 = { character_event = { id = HF.25261 } } 
 			}
 			if = { 
 				limit = { event_target:flyting_contender_1 = { character = ROOT } }
-				event_target:flyting_contender_2 = { character_event =  { id = HF.25261 } } 
+				event_target:flyting_contender_2 = { character_event = { id = HF.25261 } } 
 			}
 		}
 		ai_chance = { 
@@ -7219,11 +7219,11 @@ character_event = {
 	immediate = {
 		if = { #Receiver could be either.
 			limit = { event_target:flyting_contender_2 = { character = ROOT } }
-			event_target:flyting_contender_1 = { character_event =  { id = HF.25263 } } 
+			event_target:flyting_contender_1 = { character_event = { id = HF.25263 } } 
 		}
 		if = { 
 			limit = { event_target:flyting_contender_1 = { character = ROOT } }
-			event_target:flyting_contender_2 = { character_event =  { id = HF.25263 } } 
+			event_target:flyting_contender_2 = { character_event = { id = HF.25263 } } 
 		}
 	}
 }
@@ -7576,25 +7576,25 @@ character_event = {
 				}
 			}
 		}
-	    #REQUIRED event targets for setting up duel evaluation!
-	    hidden_tooltip = { 
-	    	save_event_target_as = combatant_1 #the person issuing the duel...
-	    	FROM = { save_event_target_as = combatant_2 } #the target of the duel...
-	    }
-	    FROM = {
-	    	show_scope_change = no
-	    	apply_degree_of_dishonorable_duel_effect = yes  #checks a bunch of age and health statuses...
-	    }
-	    
-	    pacifists_lose_piety_effect = yes
-	    add_character_modifier = {
-	        modifier = recent_duel_timer
-	        duration = 365
-	        hidden = yes
-	    }
-	    hidden_tooltip = {
-	        FROM = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
-	    }
+		#REQUIRED event targets for setting up duel evaluation!
+		hidden_tooltip = { 
+			save_event_target_as = combatant_1 #the person issuing the duel...
+			FROM = { save_event_target_as = combatant_2 } #the target of the duel...
+		}
+		FROM = {
+			show_scope_change = no
+			apply_degree_of_dishonorable_duel_effect = yes #checks a bunch of age and health statuses...
+		}
+		
+		pacifists_lose_piety_effect = yes
+		add_character_modifier = {
+			modifier = recent_duel_timer
+			duration = 365
+			hidden = yes
+		}
+		hidden_tooltip = {
+			FROM = { character_event = { id = HFP.10095 days = 1 } } #Duel evaluation (hidden) + result event as follow-up.
+		}
 		ai_chance = { 
 			factor = 40
 			modifier = { 
@@ -7612,19 +7612,19 @@ character_event = {
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 5 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 5 } }
 			}
 			modifier = { 
 				factor = 1.25
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 10 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 10 } }
 			}
 			modifier = { 
 				factor = 1.5
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 15 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 15 } }
 			}
 			modifier = { 
 				factor = 1.75
-				ROOT = { attribute_diff = { character = FROM attribute = combat_rating  value = 20 } }
+				ROOT = { attribute_diff = { character = FROM attribute = combat_rating value = 20 } }
 			}
 		}
 	}
@@ -8372,13 +8372,13 @@ character_event = {
 		name = EVTOPTBHF25289
 		custom_tooltip = { text = TT_EVTOPTBHF25289 }
 		tooltip = { 
-			FROM =  { 
+			FROM = { 
 				tiered_prestige_negative_effect = yes 
 				detract_society_currency_medium_effect = yes
 			} 
 		}
 		hidden_tooltip = { 
-			FROM =  { character_event = { id = HF.25290 } } #Inform the guy. 
+			FROM = { character_event = { id = HF.25290 } } #Inform the guy. 
 		}
 		ai_chance = { factor = 100 }
 	}

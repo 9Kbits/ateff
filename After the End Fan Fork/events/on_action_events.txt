@@ -81,7 +81,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			if = {
 				limit = {
 					NOT = { dynasty = ROOT }
@@ -102,7 +102,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			top_liege = {
 				opinion = {
 					who = ROOT
@@ -124,7 +124,7 @@ character_event = {
 					months = 60
 				}
 			}
-			
+
 			if = {
 				limit = {
 					mother = {
@@ -157,7 +157,7 @@ character_event = {
 					add_rival = ROOT
 				}
 			}
-			
+
 			any_child = {
 				limit = {
 					NOT = { character = ROOT }
@@ -170,7 +170,7 @@ character_event = {
 				}
 				add_rival = ROOT
 			}
-			
+
 			any_sibling = {
 				limit = {
 					NOT = { character = ROOT }
@@ -211,7 +211,7 @@ character_event = {
 				modifier = opinion_murder_attempt
 				months = 600
 			}
-			
+
 			any_liege = {
 				limit = {
 					is_close_relative = PREV
@@ -224,7 +224,7 @@ character_event = {
 					months = 60
 				}
 			}
-			
+
 			if = {
 				limit = {
 					NOT = { dynasty = ROOT }
@@ -237,7 +237,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			if = {
 				limit = {
 					mother = {
@@ -268,7 +268,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			any_child = {
 				limit = {
 					NOT = { character = ROOT }
@@ -280,7 +280,7 @@ character_event = {
 					months = 120
 				}
 			}
-			
+
 			any_sibling = {
 				limit = {
 					NOT = { character = ROOT }
@@ -354,7 +354,7 @@ character_event = {
 						is_female = yes
 						PREV = { is_female = no } # No one cares if two women fool around
 					}
-					
+
 					if = {
 						limit = {
 							is_married = yes
@@ -363,7 +363,7 @@ character_event = {
 						}
 						give_nickname = nick_the_unfaithful
 					}
-					
+
 					if = {
 						limit = {
 							is_pregnant = yes
@@ -374,7 +374,7 @@ character_event = {
 						}
 						father_of_unborn_known = yes
 					}
-					
+
 					if = {
 						limit = {
 							age_diff = {
@@ -390,7 +390,7 @@ character_event = {
 						}
 					}
 
-					
+
 					any_consort = { #Extra check for concubines
 						limit = { character = FROM }
 						opinion = {
@@ -427,7 +427,7 @@ character_event = {
 						}
 					}
 
-					
+
 					any_spouse = {
 						limit = { PREVPREV = { is_female = no } }
 						opinion = {
@@ -463,7 +463,7 @@ character_event = {
 							remove_friend = PREVPREV
 						}
 					}
-					
+
 					if = {
 						limit = {
 							is_close_relative = PREV
@@ -489,10 +489,10 @@ character_event = {
 						}
 					}
 				}
-				
+	
 				if = {
 					limit = { is_female = no }
-					
+
 					any_spouse = {
 						if = {
 							limit = { gender_equality_trigger = no }
@@ -525,7 +525,7 @@ character_event = {
 							}
 							add_rival = PREVPREV
 						}
-						
+
 						if = {
 							limit = { is_lover = PREV }
 							remove_lover = PREV
@@ -539,7 +539,7 @@ character_event = {
 							remove_friend = PREVPREV
 						}
 					}
-					
+
 					if = {
 						limit = { same_sex = PREV }
 						if = {
@@ -561,7 +561,7 @@ character_event = {
 							}
 						}
 					}
-					
+
 					if = {
 						limit = {
 							is_close_relative = PREV
@@ -594,7 +594,7 @@ character_event = {
 					}
 				}
 			}
-			
+
 			# Fire this event for the adulterer too
 			if = {
 				limit = {
@@ -605,7 +605,7 @@ character_event = {
 				ROOT = { save_event_target_as = target_adulterer }
 				character_event = { id = 20 }
 			}
-			
+
 #			log = "20: Adultery discovered between [Root.GetTitledName] and [This.GetTitledName]!"
 		}
 		
@@ -715,7 +715,7 @@ character_event = {
 				modifier = opinion_arrest_attempt
 				months = 120
 			}
-			
+
 			FROM = {
 				character_event = { id = 40002 } 
 			}
@@ -777,7 +777,7 @@ character_event = {
 		FROM = {
 			ROOT = { save_event_target_as = kinslayer_target }
 			add_kinslayer_trait_effect = yes
-		}			
+		}
 	}
 
 	option = {
@@ -943,7 +943,7 @@ character_event = {
 					NOT = { character = FROM }
 				}
 			}
-			hidden_tooltip = { host = { character_event = { id = 40020 days = 5 }  } }
+			hidden_tooltip = { host = { character_event = { id = 40020 days = 5 } } }
 		}
 	}
 }
@@ -996,7 +996,7 @@ character_event = {
 					NOT = { character = FROM }
 				}
 			}
-			hidden_tooltip = { host = { character_event = { id = 40020 days = 5 }  } }
+			hidden_tooltip = { host = { character_event = { id = 40020 days = 5 } } }
 		}
 	}
 }
@@ -1073,7 +1073,7 @@ character_event = {
 					NOT = { character = FROM }
 				}
 			}
-			hidden_tooltip = { host = { character_event = { id = 40020 days = 5 }  } }
+			hidden_tooltip = { host = { character_event = { id = 40020 days = 5 } } }
 		}
 	}
 }
@@ -1260,26 +1260,26 @@ character_event = {
 			factor = 1000
 		}
 		if = {
-		 	limit = { realm_intrigue = 16 }
+			limit = { realm_intrigue = 16 }
 			random = {
 				chance = 70
 				reverse_imprison = FROMFROM
 			}
 		}
 		if = {
-		 	limit = { 
-		 		realm_intrigue = 9
-		 		NOT = { realm_intrigue = 16 } 
-		 	}
+			limit = { 
+				realm_intrigue = 9
+				NOT = { realm_intrigue = 16 } 
+			}
 			random = {
 				chance = 50
 				reverse_imprison = FROMFROM
 			}
 		}
 		if = {
-		 	limit = { 
-		 		NOT = { realm_intrigue = 9 } 
-		 	}
+			limit = { 
+				NOT = { realm_intrigue = 9 } 
+			}
 			random = {
 				chance = 30
 				reverse_imprison = FROMFROM
@@ -1292,9 +1292,9 @@ character_event = {
 			same_realm = FROMFROM
 			independent = yes
 			FROMFROM = {
-		 		prisoner = yes
+				prisoner = yes
 				NOT = { host = { character = ROOT } }
-				NOT = { has_opinion_modifier = { who = ROOT  modifier = i_attempted_murder } }
+				NOT = { has_opinion_modifier = { who = ROOT modifier = i_attempted_murder } }
 			}
 		}
 		ai_chance = {
@@ -1310,7 +1310,7 @@ character_event = {
 			same_realm = FROMFROM
 			independent = yes
 			FROMFROM = {
-		 		prisoner = yes
+				prisoner = yes
 				host = { character = ROOT }
 			}
 		}
@@ -1328,7 +1328,7 @@ character_event = {
 		trigger = {
 			NOT = {	same_realm = FROMFROM }
 			FROMFROM = {
-				NOT = { has_opinion_modifier = { who = ROOT  modifier = i_attempted_murder } }
+				NOT = { has_opinion_modifier = { who = ROOT modifier = i_attempted_murder } }
 			}
 		}
 		name = "EVTOPTC40020"		# Someone in another realm.
@@ -1341,7 +1341,7 @@ character_event = {
 		send_assassin = FROMFROM
 	}
 	option = {
-		name = "EVTOPTD40020"		#we dont dare do anything..  (player option, incase of worry.)
+		name = "EVTOPTD40020"		#we dont dare do anything.. (player option, incase of worry.)
 		ai_chance = {
 			factor = 1
 		}
@@ -1359,7 +1359,7 @@ character_event = {
 	is_triggered_only = yes 
 	
 	option = {
-		name = "EVTOPTA40021"	 # give claim
+		name = "EVTOPTA40021"	# give claim
 		ai_chance = {
 			factor = 2
 			modifier = {
@@ -1381,7 +1381,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = "EVTOPTB40021"	 # attempt to imprison
+		name = "EVTOPTB40021"	# attempt to imprison
 		trigger = {
 			any_realm_character = { 
 				has_character_flag= we_are_evil_assasinator
@@ -1396,7 +1396,7 @@ character_event = {
 			}
 		}
 		any_realm_character = { 
-			limit = { has_character_flag = we_are_evil_assasinator  }
+			limit = { has_character_flag = we_are_evil_assasinator }
 			opinion = {
 				modifier = opinion_betrayed
 				who = FROM
@@ -1410,12 +1410,12 @@ character_event = {
 		}
 		hidden_tooltip = { FROM = { character_event = { id = 40024 days = 1 random = 2 } } }		
 		if = {
-		 	limit = { realm_intrigue = 16 }
+			limit = { realm_intrigue = 16 }
 			random_list = {
 				70 = { 	
 					random_realm_character = { 
 						limit = { 
-							has_character_flag = we_are_evil_assasinator  
+							has_character_flag = we_are_evil_assasinator 
 							prisoner = no
 						}
 						imprison = yes 
@@ -1434,15 +1434,15 @@ character_event = {
 			}
 		}
 		if = {
-		 	limit = { 
-		 		realm_intrigue = 9
-		 		NOT = { realm_intrigue = 16 } 
-		 	}
+			limit = { 
+				realm_intrigue = 9
+				NOT = { realm_intrigue = 16 } 
+			}
 			random_list = {
 				50 = { 	
 					random_realm_character = { 
 						limit = { 
-							has_character_flag = we_are_evil_assasinator  
+							has_character_flag = we_are_evil_assasinator 
 							prisoner = no
 						}
 						imprison = yes 
@@ -1461,14 +1461,14 @@ character_event = {
 			}
 		}
 		if = {
-		 	limit = { 
-		 		NOT = { realm_intrigue = 9 }
-		 	}
+			limit = { 
+				NOT = { realm_intrigue = 9 }
+			}
 			random_list = {
 				30 = { 	
 					random_realm_character = { 
 						limit = { 
-							has_character_flag = we_are_evil_assasinator  
+							has_character_flag = we_are_evil_assasinator 
 							prisoner = no
 						}
 						imprison = yes 
@@ -1478,7 +1478,7 @@ character_event = {
 				70 = {
 					random_realm_character = { 
 						limit = { 
-							has_character_flag = we_are_evil_assasinator  
+							has_character_flag = we_are_evil_assasinator 
 							prisoner = no
 						}
 						clr_character_flag = we_are_evil_assasinator
@@ -1488,7 +1488,7 @@ character_event = {
 		}		
 	}
 	option = {
-		name = "EVTOPTD40021"	 # do nothing
+		name = "EVTOPTD40021"	# do nothing
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -1501,10 +1501,10 @@ character_event = {
 			modifier = not_supportive_liege
 			years = 2
 		}		
-		hidden_tooltip = { FROM = { character_event = { id = 40025 days = 3 random = 5  } } }		
+		hidden_tooltip = { FROM = { character_event = { id = 40025 days = 3 random = 5 } } }		
 		piety = -10
 		random_realm_character = { 
-			limit = { has_character_flag = we_are_evil_assasinator  }
+			limit = { has_character_flag = we_are_evil_assasinator }
 			clr_character_flag = we_are_evil_assasinator
 		}
 	}
@@ -1519,7 +1519,7 @@ character_event = {
 	is_triggered_only = yes 
 	
 	option = {
-		name = "EVTOPTA40022"	 # ok
+		name = "EVTOPTA40022"	# ok
 		prestige = -10
 		reverse_opinion = {
 			who = FROM
@@ -1538,7 +1538,7 @@ character_event = {
 	
 
 	option = {
-		name = "EVTOPTA40023"	 # ok
+		name = "EVTOPTA40023"	# ok
 		prestige = 5
 	}
 }
@@ -1551,7 +1551,7 @@ character_event = {
 	is_triggered_only = yes 
 	
 	option = {
-		name = "EVTOPTA40024"	 # ok
+		name = "EVTOPTA40024"	# ok
 		prestige = 5
 	}
 }
@@ -1564,7 +1564,7 @@ character_event = {
 	is_triggered_only = yes 
 	
 	option = {
-		name = "EVTOPTA40025"	 # ok
+		name = "EVTOPTA40025"	# ok
 		prestige = -5
 	}
 }
@@ -4545,7 +4545,7 @@ narrative_event = {
 					ROOT = {
 						OR = {
 							has_religion_feature = religion_cosmopolitan
-							
+	
 						}
 					}
 				}
@@ -4682,7 +4682,7 @@ narrative_event = {
 				limit = { #Switch to matriarchy.
 					ROOT = { 
 						has_religion_feature = religion_matriarchal 
-						NOR = {  
+						NOR = { 
 							is_merchant_republic = yes
 							is_republic = yes
 						}
@@ -4722,7 +4722,7 @@ narrative_event = {
 							has_religion_feature = religion_feature_aria_de_machete 
 							has_religion_feature = religion_feature_midewiwin
 						}
-						NOR = {  
+						NOR = { 
 							is_merchant_republic = yes
 							is_republic = yes
 						}
@@ -5184,7 +5184,7 @@ narrative_event = {
 				limit = { 
 					has_religion_feature = religion_temporal_head 
 					religion = midewiwin_reformed 
-			
+
 				}
 				add_artifact = scepter_midewiwin_fylkir
 			}
@@ -5192,7 +5192,7 @@ narrative_event = {
 				limit = { 
 					has_religion_feature = religion_temporal_head
 					religion = trailwalker_reformed 
-			
+
 				}
 				add_artifact = crown_trailwalker_fylkir
 			}
@@ -5384,7 +5384,7 @@ narrative_event = {
 				ROOT = { has_religion_feature = religion_no_leader }
 				ai = yes
 			}		
-			hidden_tooltip = {  
+			hidden_tooltip = { 
 				character_event = { id = HF.23016 days = 20 random = 20 }
 			}
 		}
@@ -5723,7 +5723,7 @@ character_event = {
 	immediate = {
 		if = {
 			limit = {
-				had_character_flag = { flag = do_not_disturb days = 1800 }  # Clears if flag has stayed on for 5 years approx
+				had_character_flag = { flag = do_not_disturb days = 1800 } # Clears if flag has stayed on for 5 years approx
 			}
 			clr_character_flag = do_not_disturb
 		}
@@ -5973,14 +5973,14 @@ character_event = {
 	
 	trigger = {
 		OR = {
-		  	AND = {
+			AND = {
 				OR = {
 					any_courtier = {
 						has_minor_title = title_appointed_regent
 					}
 					any_vassal = {
 						has_minor_title = title_appointed_regent
-				 	}
+					}
 				}
 				current_heir = {
 					is_ruler = yes
@@ -5989,7 +5989,7 @@ character_event = {
 							has_minor_title = title_appointed_regent
 						}
 						any_vassal = {
-						   has_minor_title = title_appointed_regent
+						has_minor_title = title_appointed_regent
 						}
 					}
 				}
@@ -6027,7 +6027,7 @@ character_event = {
 							has_minor_title = title_appointed_regent
 						}
 						any_vassal = {
-						   has_minor_title = title_appointed_regent
+						has_minor_title = title_appointed_regent
 						}
 					}
 				}

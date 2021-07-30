@@ -736,7 +736,7 @@ character_event = {
 			add_trait = bastard
 
 			dynasty = mother
-			
+
 			mother = {
 				remove_spouse = yes
 				if = {
@@ -917,13 +917,13 @@ character_event = {
 			add_trait = bastard
 		}
 		
-	   	transfer_crown_on_abdication_effect = yes
+		transfer_crown_on_abdication_effect = yes
 		abdicate = yes
 
 		if = {
 			limit = {
 				religion_group = christian
-			}				
+			}	
 			add_trait = nun
 		}
 	}
@@ -1257,7 +1257,7 @@ character_event = {
 			}
 			add_society_currency_massive_effect = yes
 			set_society_grandmaster = yes
-			
+
 			society = {
 				any_society_member = {
 					limit = { NOT = { character = ROOT } }
@@ -1293,11 +1293,11 @@ character_event = {
 		name = EVTOPTZ_SOA_3020
 		trigger = { 
 			has_game_rule = {
-   				name = supernatural_events
+ 				name = supernatural_events
 				value = unrestricted
-   			}
-   		}
-		 add_character_modifier = { modifier = demon_horns duration = -1 }
+ 			}
+ 		}
+		add_character_modifier = { modifier = demon_horns duration = -1 }
 		ai_chance = { factor = 80 }
 	}
 	option = { 
@@ -1907,13 +1907,13 @@ character_event = {
 						name = known_witch
 						duration = -1
 					}
-					
+
 					if = {
 						limit = { has_dlc = "Mystics" }
 						religion = ROOT
 						join_society = the_satanists
 					}
-					
+
 					opinion = {
 						who = ROOT
 						modifier = opinion_the_chosen_one
@@ -1967,13 +1967,13 @@ character_event = {
 						name = known_witch
 						duration = -1
 					}
-					
+
 					if = {
 						limit = { has_dlc = "Mystics" }
 						religion = ROOT
 						join_society = the_satanists
 					}
-					
+
 					opinion = {
 						who = ROOT
 						modifier = opinion_the_chosen_one
@@ -2028,13 +2028,13 @@ character_event = {
 						name = known_witch
 						duration = -1
 					}
-					
+
 					if = {
 						limit = { has_dlc = "Mystics" }
 						religion = ROOT
 						join_society = the_satanists
 					}
-					
+
 					opinion = {
 						who = ROOT
 						modifier = opinion_the_chosen_one
@@ -2124,26 +2124,26 @@ character_event = {
 				set_character_flag = special_treasurer
 				set_character_flag = special_chancellor
 				set_character_flag = special_spymaster
-				
+	
 				set_character_flag = witch_nanny
-				
+	
 				add_character_modifier = {
 					name = suspected_witch
 					duration = -1
 				}
-				
+	
 				if = {
 					limit = { has_dlc = "Mystics" }
 					join_society = the_satanists
 				}
-				
+	
 				if = {
 					limit = {
 						religion_group = christian
 					}
 					add_trait = nun
 				}
-				
+	
 				FROM = {
 					reverse_opinion = {
 						who = PREV
@@ -2197,26 +2197,26 @@ character_event = {
 				set_character_flag = special_treasurer
 				set_character_flag = special_chancellor
 				set_character_flag = special_spymaster
-				
+	
 				set_character_flag = witch_nanny
-				
+	
 				add_character_modifier = {
 					name = suspected_witch
 					duration = -1
 				}
-				
+	
 				if = {
 					limit = { has_dlc = "Mystics" }
 					join_society = the_satanists
 				}
-				
+	
 				if = {
 					limit = {
 						religion_group = christian
 					}
 					add_trait = nun
 				}
-				
+	
 				FROM = {
 					reverse_opinion = {
 						who = PREV

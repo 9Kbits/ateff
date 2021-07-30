@@ -1070,7 +1070,7 @@ can_be_chancellor_trigger = {
 						}
 						is_landed = yes
 						trait = nun
-						
+
 					}
 				}
 				OR = {
@@ -1171,7 +1171,7 @@ can_be_marshal_trigger = {
 							}
 						}
 						is_landed = yes
-						
+
 					}
 				}
 				OR = {
@@ -1268,7 +1268,7 @@ can_be_treasurer_trigger = {
 						}
 						is_landed = yes
 						trait = nun
-						
+
 					}
 				}
 				OR = {
@@ -1422,7 +1422,7 @@ can_be_spymaster_trigger = {
 						}
 						is_landed = yes
 						trait = nun
-						
+
 					}
 				}
 				OR = {
@@ -5796,7 +5796,7 @@ has_unsafe_secret_religion = {
 		AND = {
 			NOT = { has_dlc = "The Sword of Islam" }
 			OR = {
-				
+	
 			}
 		}
 		AND = {
@@ -5808,7 +5808,7 @@ has_unsafe_secret_religion = {
 		}
 		AND = {
 			NOT = { has_dlc = "The Old Gods" }
-			OR = {				
+			OR = {	
 				secret_religion = revelationist
 				secret_religion = revelationist_reformed
 				secret_religion = rust_cultist
@@ -5981,7 +5981,7 @@ selected_ingredient_is_sleep_inducing_trigger = {
 		OR = {
 			artifact_type = ingredient_herb7
 			artifact_type = ingredient_herb3
-			artifact_type = ingredient_herb9			
+			artifact_type = ingredient_herb9
 		}
 	}
 }
@@ -7053,7 +7053,7 @@ this_has_friendly_opinion_modifier_of_prev_trigger = {
 		has_opinion_modifier = { who = PREV modifier = opinion_swayed_3 }
 	}
 }
-			
+
 #checks whether PREV has one of the following opinion modifiers against the currently scoped character
 prev_has_friendly_opinion_modifier_of_this_trigger = {
 	OR = {
@@ -7815,7 +7815,7 @@ this_has_lame_nickname_trigger = {
 		has_nickname = nick_the_lewd
 		has_nickname = nick_the_lecher
 		has_nickname = nick_the_unchaste
-		has_nickname = nick_the_culture			
+		has_nickname = nick_the_culture
 		has_nickname = nick_the_rel_group		
 		has_nickname = nick_the_pilgrim
 		has_nickname = nick_the_viking
@@ -8211,19 +8211,19 @@ this_has_super_cool_nickname_trigger = {
 		has_nickname = nick_the_black_boar
 		has_nickname = nick_the_apostate
 		has_nickname = nick_the_hawk_of_quarysh
-		has_nickname = nick_the_submissive 			
-		has_nickname = nick_the_deliverer			
-		has_nickname = nick_the_purified			
+		has_nickname = nick_the_submissive 
+		has_nickname = nick_the_deliverer
+		has_nickname = nick_the_purified
 		has_nickname = nick_the_illuminated		
-		has_nickname = nick_the_exalted			
-		has_nickname = nick_the_awoken 			
+		has_nickname = nick_the_exalted
+		has_nickname = nick_the_awoken 
 		has_nickname = nick_the_bleeding_eyes		
-		has_nickname = nick_the_sky_rider			
+		has_nickname = nick_the_sky_rider
 		has_nickname = nick_the_civilized 
 		has_nickname = nick_the_missionary 		
 		has_nickname = nick_the_proselytizer 		
-		has_nickname = nick_the_adjudicator	 	
-		has_nickname = nick_the_enlightened				
+		has_nickname = nick_the_adjudicator		
+		has_nickname = nick_the_enlightened	
 		has_nickname = nick_the_waking_teacher 	
 		has_nickname = nick_the_whirling_spell	
 		has_nickname = nick_the_horse_shepherd	
@@ -8722,7 +8722,7 @@ parent_for_elective_succession_trigger = {
 			OR = { #Either defacto direct vassal, or independent ruler who is dejure vassal.
 				vassal_of = ROOT 
 				AND = { 
-			 		any_dejure_liege = { title = ROOT } 
+					any_dejure_liege = { title = ROOT } 
 					independent = yes
 				}
 			}
@@ -9150,7 +9150,7 @@ can_still_be_commander_byzantine_trigger = {
 							}
 							has_character_flag = special_marshal
 						}
-						
+
 						prisoner = no
 						NOT = { is_incapable = yes }
 						NOT = { is_inaccessible_trigger = yes }
@@ -9239,7 +9239,7 @@ can_still_be_marshal_byzantine_trigger = {
 							}
 						}
 						is_landed = yes
-						
+
 					}
 				}
 				OR = {
@@ -9915,12 +9915,12 @@ have_all_weaponsmith_artifacts_all_flags_trigger = {
 have_all_weaponsmith_mace_all_flags_trigger = {
 	has_artifact = mace_tier_4_foe_hammer
 	has_artifact = mace_tier_3_foe_hammer
-    has_artifact = mace_tier_4_bone_breaker
-    has_artifact = mace_tier_3_bone_breaker
-    has_artifact = mace_tier_4_shatterer
-    has_artifact = mace_tier_3_shatterer
-    has_artifact = mace_tier_2_new
-    has_artifact = mace_tier_1_new
+	has_artifact = mace_tier_4_bone_breaker
+	has_artifact = mace_tier_3_bone_breaker
+	has_artifact = mace_tier_4_shatterer
+	has_artifact = mace_tier_3_shatterer
+	has_artifact = mace_tier_2_new
+	has_artifact = mace_tier_1_new
 }
 
 have_all_weaponsmith_axe_all_flags_trigger = {
@@ -9931,7 +9931,7 @@ have_all_weaponsmith_axe_all_flags_trigger = {
 	has_artifact = axe_tier_4_marauder
 	has_artifact = axe_tier_3_marauder
 	has_artifact = axe_tier_2_new
-    has_artifact = axe_tier_1_new
+	has_artifact = axe_tier_1_new
 }
 
 have_all_weaponsmith_lance_all_flags_trigger = {
@@ -9942,18 +9942,18 @@ have_all_weaponsmith_lance_all_flags_trigger = {
 	has_artifact = lance_tier_4_piercer
 	has_artifact = lance_tier_3_piercer
 	has_artifact = lance_tier_2_new
-    has_artifact = lance_tier_1_new
+	has_artifact = lance_tier_1_new
 }
 
 have_all_weaponsmith_swords_all_flags_trigger = {
 	has_artifact = sword_tier_4_heartseeker
 	has_artifact = sword_tier_3_heartseeker
 	has_artifact = sword_tier_4_vengeance
-    has_artifact = sword_tier_3_vengeance
-    has_artifact = sword_tier_4_fury
-    has_artifact = sword_tier_3_fury
-    has_artifact = sword_tier_2_new
-    has_artifact = sword_tier_1_new
+	has_artifact = sword_tier_3_vengeance
+	has_artifact = sword_tier_4_fury
+	has_artifact = sword_tier_3_fury
+	has_artifact = sword_tier_2_new
+	has_artifact = sword_tier_1_new
 }
 
 have_all_weaponsmith_scimitar_all_flags_trigger = {
@@ -9964,7 +9964,7 @@ have_all_weaponsmith_scimitar_all_flags_trigger = {
 	has_artifact = scimitar_tier_4_conquest
 	has_artifact = scimitar_tier_3_conquest
 	has_artifact = scimitar_tier_2_new
-    has_artifact = scimitar_tier_1_new
+	has_artifact = scimitar_tier_1_new
 }
 
 have_all_weaponsmith_bow_all_flags_trigger = {
@@ -9992,7 +9992,7 @@ have_duplicate_goldsmith_artifacts_flag_okay_trigger = {
 					has_artifact = the_lily_crown
 					has_artifact = noble_scepter
 				has_artifact = engraved_sword
-		 	}
+			}
 		}
 		AND = {
 			OR = {
@@ -10028,7 +10028,7 @@ have_duplicate_goldsmith_artifacts_flag_okay_trigger = {
 			}
 			AND = {
 				has_artifact = iron_crown
-	 			has_artifact = engraved_sword
+				has_artifact = engraved_sword
 			}
 		}
 		AND = {
@@ -10052,7 +10052,7 @@ have_duplicate_goldsmith_artifacts_flag_good_trigger = {
 					has_artifact = crown_of_pearls
 				has_artifact = ruby_scepter
 				has_artifact = golden_sword
-		 	}
+			}
 		}
 		AND = {
 			OR = {
@@ -10110,9 +10110,9 @@ have_duplicate_goldsmith_artifacts_flag_expensive_trigger = {
 			AND = 
 			{
 					has_artifact = crown_of_majesty
-			 	has_artifact = emerald_scepter
+				has_artifact = emerald_scepter
 				has_artifact = sword_of_heroes
-		 	}
+			}
 		}
 		AND = {
 			OR = {
@@ -10170,9 +10170,9 @@ have_duplicate_goldsmith_artifacts_flag_amazing_trigger = {
 			AND = 
 			{
 					has_artifact = crown_of_majesty_2
-			 	has_artifact = emerald_scepter_2
+				has_artifact = emerald_scepter_2
 				has_artifact = sword_of_heroes_2
-		 	}
+			}
 		}
 		AND = {
 			OR = {

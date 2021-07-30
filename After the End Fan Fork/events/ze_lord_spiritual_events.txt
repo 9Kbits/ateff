@@ -1,8 +1,8 @@
 ###########################################
-#										 #
+#										#
 # ZE Lord Spiritual Events				#
-# ID ZE.5000-ZE.5999					  #
-#										 #
+# ID ZE.5000-ZE.5999					#
+#										#
 ###########################################
 
 # Written by Tobias Bodlund
@@ -40,7 +40,7 @@ character_event = {
 			NOR = {
 				trait = craven
 				trait = slothful
-				 has_character_flag = lord_spiritual_wants_to_proselytize_ze
+				has_character_flag = lord_spiritual_wants_to_proselytize_ze
 				has_job_action = action_inquisition
 				is_inaccessible_trigger = yes
 				has_character_flag = do_not_disturb
@@ -208,8 +208,8 @@ letter_event = {
 		random_demesne_province = {
 			limit = { has_empty_holding = yes }
 			build_holding = {
-			   type = temple
-			   holder = ROOT
+			type = temple
+			holder = ROOT
 			}
 		}
 	}
@@ -276,19 +276,19 @@ character_event = {
 				save_event_target_as = ze_5020_province
 				trigger_switch = {
 					on_trigger = religion_group
-					christian 			= { PREV = { add_trait = sympathy_christendom } }
-					muslim 				= { PREV = { add_trait = sympathy_islam } }
-					pagan_group 		= { PREV = { add_trait = sympathy_pagans } }
-					afro_syncretic		= { PREV = { add_trait = sympathy_afro_syncretic } }
-					american_native 	= { PREV = { add_trait = sympathy_american_native } }
-					amero_syncretic 	= { PREV = { add_trait = sympathy_amero_syncretic } }
-					cult_of_saints		= { PREV = { add_trait = sympathy_cult_of_saints } }
-					pacific 	 		= { PREV = { add_trait = sympathy_pacific } }
-					latter_day_saints	= { PREV = { add_trait = sympathy_latter_day_saints } }
-					mesoamerican_gods 	= { PREV = { add_trait = sympathy_mesoamerican_gods } }
-					oldworld  			= { PREV = { add_trait = sympathy_oldworld } }
-					nautical 		 		= { PREV = { add_trait = sympathy_nautical } }
-					jewish_group 		= { PREV = { add_trait = sympathy_judaism } }
+					christian 		 = { PREV = { add_trait = sympathy_christendom } }
+					muslim 			 = { PREV = { add_trait = sympathy_islam } }
+					pagan_group 	 = { PREV = { add_trait = sympathy_pagans } }
+					afro_syncretic	 = { PREV = { add_trait = sympathy_afro_syncretic } }
+					american_native = { PREV = { add_trait = sympathy_american_native } }
+					amero_syncretic = { PREV = { add_trait = sympathy_amero_syncretic } }
+					cult_of_saints	 = { PREV = { add_trait = sympathy_cult_of_saints } }
+					pacific 		 = { PREV = { add_trait = sympathy_pacific } }
+					latter_day_saints = { PREV = { add_trait = sympathy_latter_day_saints } }
+					mesoamerican_gods = { PREV = { add_trait = sympathy_mesoamerican_gods } }
+					oldworld 		 = { PREV = { add_trait = sympathy_oldworld } }
+					nautical 			 = { PREV = { add_trait = sympathy_nautical } }
+					jewish_group 	 = { PREV = { add_trait = sympathy_judaism } }
 				}
 			}
 		}
@@ -310,7 +310,7 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_ZE_5020  # Strange, why convert?
+		name = EVTOPTA_ZE_5020 # Strange, why convert?
 		event_target:target_courtier = {
 			event_target:ze_5020_province = {
 				reverse_religion = PREV
@@ -319,7 +319,7 @@ character_event = {
 		hidden_tooltip = {
 			random_list = {
 				80 = {
-					character_event = { id = ZE.5022 days = 100 }  # Convert one more...
+					character_event = { id = ZE.5022 days = 100 } # Convert one more...
 				}
 				20 = {
 					character_event = { id = ZE.5027 days = 100 } # Letters discovered!
@@ -387,7 +387,7 @@ character_event = {
 	}
 
 	option = {
-		name = EVTOPTA_ZE_5022  # Strange, why convert?
+		name = EVTOPTA_ZE_5022 # Strange, why convert?
 		event_target:target_courtier = {
 			event_target:ze_5020_province = {
 				reverse_religion = PREV
@@ -396,7 +396,7 @@ character_event = {
 		hidden_tooltip = {
 			random_list = {
 				80 = {
-					repeat_event = { id = ZE.5022 days = 100 }  # Convert one more...
+					repeat_event = { id = ZE.5022 days = 100 } # Convert one more...
 				}
 				20 = {
 					character_event = { id = ZE.5027 days = 100 } # Letters discovered!
@@ -439,7 +439,7 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_ZE_5027  # Accuse him of treason!
+		name = EVTOPTA_ZE_5027 # Accuse him of treason!
 		job_spiritual = {
 			remove_title = job_spiritual
 			add_character_modifier = {
@@ -454,7 +454,7 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPTB_ZE_5027  # Depose but forgive him on condition he stops misbehaving.
+		name = EVTOPTB_ZE_5027 # Depose but forgive him on condition he stops misbehaving.
 		job_spiritual = {
 			remove_title = job_spiritual
 			add_character_modifier = {
@@ -598,7 +598,7 @@ letter_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_ZE_5040  # Allow him to return home
+		name = EVTOPTA_ZE_5040 # Allow him to return home
 		trigger = {
 			OR = {
 				trait = kind
@@ -620,7 +620,7 @@ letter_event = {
 		}
 	}
 	option = {
-		name = EVTOPTB_ZE_5040  # Allow him to return home
+		name = EVTOPTB_ZE_5040 # Allow him to return home
 		trigger = {
 			NOR = {
 				trait = kind
@@ -642,7 +642,7 @@ letter_event = {
 		}
 	}
 	option = {
-		name = EVTOPTC_ZE_5040  # Insist that he stays
+		name = EVTOPTC_ZE_5040 # Insist that he stays
 		job_spiritual = {
 			opinion = {
 				who = ROOT

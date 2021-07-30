@@ -16,7 +16,7 @@ decisions = {
 			has_sufi_societies_religion_ibadi = yes
 			NOT = { 
 				monastic_order_ibadi = {
-					society_has_members = yes								
+					society_has_members = yes
 				}
 			}
 		}
@@ -102,7 +102,7 @@ decisions = {
 			has_sufi_societies_religion_shiite = yes
 			NOT = { 
 				monastic_order_shiite = {
-					society_has_members = yes								
+					society_has_members = yes
 				}
 			}
 		}
@@ -188,7 +188,7 @@ decisions = {
 			has_sufi_societies_religion_sunni = yes
 			NOT = { 
 				monastic_order_sunni = {
-					society_has_members = yes								
+					society_has_members = yes
 				}
 			}
 		}
@@ -379,10 +379,10 @@ society_decisions = {
 							new_character = { save_event_target_as = ascetic }
 						}
 					}
-			
+
 					event_target:ascetic = {
 						join_root_sufi_order_society = yes
-					
+
 						#Set correct education
 						random = {
 							chance = 50
@@ -394,8 +394,8 @@ society_decisions = {
 								30 = { add_trait = mastermind_theologian }
 							}
 						}
-			
-						#Up  learning
+
+						#Up learning
 						random_list = {
 							25 = { change_learning = 1 }
 							25 = { change_learning = 2 }
@@ -404,13 +404,13 @@ society_decisions = {
 							25 = { change_learning = 5 }
 							25 = { change_learning = 6 }
 						}
-			
+
 						#Set some interesting traits 
-			
+
 						#Nun/monk traits
 						# add_trait = hafiz
 						# add_trait = mystic
-			
+
 						#Nice congential
 						# random_list = {
 							# 10 = {
@@ -435,7 +435,7 @@ society_decisions = {
 							# }
 							# 100 = { }
 						# }
-			
+
 						#Lifestyle
 						remove_lifestyle_trait_effect = yes
 						random_list = {
@@ -444,7 +444,7 @@ society_decisions = {
 							10 = { add_trait = theologian }
 							15 = { add_trait = mystic }
 						}
-			
+
 						random = {
 							chance = 33
 							add_trait = sufi_zahid
@@ -489,7 +489,7 @@ society_decisions = {
 							remove_trait = slothful
 							remove_trait = diligent
 						}
-			
+
 						#Misc traits
 						remove_trait = deceitful
 						remove_trait = arbitrary
@@ -518,7 +518,7 @@ society_decisions = {
 								add_trait = physician
 							}
 						}
-			
+
 						#Nicknames
 						# random_list = {
 							# 10 = {
@@ -599,7 +599,7 @@ society_decisions = {
 		effect = {
 			set_character_flag = ascetic_arriving
 			detract_society_currency_medium_effect = yes
-			
+
 			custom_tooltip = {
 				text = monastic_orders_invite_ascetic_sufi_tt
 				character_event = { id = SUFI.4432 days = 7 }
@@ -964,7 +964,7 @@ society_decisions = {
 						limit = { NOT = { has_quest = quest_monastic_order_donate_to_charity } }
 						add_society_currency_minor_effect = yes
 					}
-					
+
 					if = {
 						limit = { has_quest = quest_monastic_order_donate_to_charity }
 						clr_quest = quest_monastic_order_donate_to_charity
@@ -1086,7 +1086,7 @@ society_decisions = {
 }
 
 targetted_decisions = {
-	monastic_orders_spiritual_guidance_sufi = {  ### Monastic Order Rank 2 power : targeted decision to remove one of target's vices
+	monastic_orders_spiritual_guidance_sufi = { ### Monastic Order Rank 2 power : targeted decision to remove one of target's vices
 		ai_check_interval = 12
 		potential = {
 			NOT = { is_incapable = yes }
@@ -1125,7 +1125,7 @@ targetted_decisions = {
 			}
 			NOT = {
 				has_opinion_modifier = {	###opinion modifier 10yrs cooldown
-					who =  FROM
+					who = FROM
 					modifier = opinion_spiritual_guidance
 				}
 			}
@@ -1281,7 +1281,7 @@ targetted_decisions = {
 		}
 	}
 	
-	monastic_orders_teach_virtue_sufi = {  ### Monastic Order Rank 3 power : targeted decision to give target a virtue
+	monastic_orders_teach_virtue_sufi = { ### Monastic Order Rank 3 power : targeted decision to give target a virtue
 		ai_check_interval = 12
 		potential = {
 			NOT = { is_incapable = yes }
@@ -1319,7 +1319,7 @@ targetted_decisions = {
 			}
 			NOT = {
 				has_opinion_modifier = {	###opinion modifier 10yrs cooldown
-					who =  FROM
+					who = FROM
 					modifier = opinion_teach_virtue
 				}
 			}

@@ -10,103 +10,103 @@ namespace = HFP
 
 # Knights Hospitaller wants an island
 character_event = {
-    id = HFP.44000
-    hide_window = yes
-    is_triggered_only = yes
+	id = HFP.44000
+	hide_window = yes
+	is_triggered_only = yes
 
-    trigger = {
-    	NOT = {
+	trigger = {
+		NOT = {
 			has_alternate_start_parameter = { key = religion_names value = random }
 		}
-    	NOR = {
-    		has_landed_title = c_virgin_islands
-    		any_realm_lord = {
-    			has_landed_title = c_virgin_islands
-    		}
-    		has_landed_title = c_turks_and_caicos
-    		any_realm_lord = {
-    			has_landed_title = c_turks_and_caicos
-    		}
-    		has_landed_title = c_isla_de_pinos
-    		any_realm_lord = {
-    			has_landed_title = c_isla_de_pinos
-    		}
+		NOR = {
+			has_landed_title = c_virgin_islands
+			any_realm_lord = {
+				has_landed_title = c_virgin_islands
+			}
+			has_landed_title = c_turks_and_caicos
+			any_realm_lord = {
+				has_landed_title = c_turks_and_caicos
+			}
+			has_landed_title = c_isla_de_pinos
+			any_realm_lord = {
+				has_landed_title = c_isla_de_pinos
+			}
 			has_landed_title = c_tortuga
-    		any_realm_lord = {
-    			has_landed_title = c_tortuga
-    		}
+			any_realm_lord = {
+				has_landed_title = c_tortuga
+			}
 			has_landed_title = c_guantanamo
-    		any_realm_lord = {
-    			has_landed_title = c_guantanamo
-    		}
-    		has_landed_title = c_la_gonave
-    		any_realm_lord = {
-    			has_landed_title = c_la_gonave
-    		}
+			any_realm_lord = {
+				has_landed_title = c_guantanamo
+			}
+			has_landed_title = c_la_gonave
+			any_realm_lord = {
+				has_landed_title = c_la_gonave
+			}
 			has_landed_title = c_florida_keys
-    		any_realm_lord = {
-    			has_landed_title = c_florida_keys
-    		}
+			any_realm_lord = {
+				has_landed_title = c_florida_keys
+			}
 			has_landed_title = c_cayman
-    		any_realm_lord = {
-    			has_landed_title = c_cayman
-    		}
-    		d_french_antilles = {
-    			any_direct_de_jure_vassal_title = {
-    				owner = {
-    					OR = {
-    						character = ROOT
-    						any_liege = {
-    							character = ROOT
-    						}
-    					}
-    				}
-    			}
-    		}
-    		d_windward_isles = {
-    			any_direct_de_jure_vassal_title = {
-    				owner = {
-    					OR = {
-    						character = ROOT
-    						any_liege = {
-    							character = ROOT
-    						}
-    					}
-    				}
-    			}
-    		}
-    		d_leeward_antilles = {
-    			any_direct_de_jure_vassal_title = {
-    				owner = {
-    					OR = {
-    						character = ROOT
-    						any_liege = {
-    							character = ROOT
-    						}
-    					}
-    				}
-    			}
-    		}
-    		d_trinidad_and_tobago = {
-    			any_direct_de_jure_vassal_title = {
-    				owner = {
-    					OR = {
-    						character = ROOT
-    						any_liege = {
-    							character = ROOT
-    						}
-    					}
-    				}
-    			}
-    		}
-    	}
-    }
+			any_realm_lord = {
+				has_landed_title = c_cayman
+			}
+			d_french_antilles = {
+				any_direct_de_jure_vassal_title = {
+					owner = {
+						OR = {
+							character = ROOT
+							any_liege = {
+								character = ROOT
+							}
+						}
+					}
+				}
+			}
+			d_windward_isles = {
+				any_direct_de_jure_vassal_title = {
+					owner = {
+						OR = {
+							character = ROOT
+							any_liege = {
+								character = ROOT
+							}
+						}
+					}
+				}
+			}
+			d_leeward_antilles = {
+				any_direct_de_jure_vassal_title = {
+					owner = {
+						OR = {
+							character = ROOT
+							any_liege = {
+								character = ROOT
+							}
+						}
+					}
+				}
+			}
+			d_trinidad_and_tobago = {
+				any_direct_de_jure_vassal_title = {
+					owner = {
+						OR = {
+							character = ROOT
+							any_liege = {
+								character = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
-    immediate = {
-    	event_target:title_owner = {
-    		letter_event = { id = HFP.44001 }
-    	}
-    }
+	immediate = {
+		event_target:title_owner = {
+			letter_event = { id = HFP.44001 }
+		}
+	}
 }
 
 # Knights Hospitaller asks to receive an island 
@@ -130,11 +130,11 @@ letter_event = {
 					years = 10
 				}
 				opinion = {
-	                modifier = in_non_aggression_pact
-	                years = 10
-	                who = ROOT
-	            }
-            }
+					modifier = in_non_aggression_pact
+					years = 10
+					who = ROOT
+				}
+			}
 		}
 
 		custom_tooltip = {

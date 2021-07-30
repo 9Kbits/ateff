@@ -233,7 +233,7 @@ character_event = {
 				religion = ROOT
 				NOT = { block_general_event_trigger = yes }
 				OR = { 
-					higher_tier_than = BARON  
+					higher_tier_than = BARON 
 					has_minor_title = title_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
@@ -284,7 +284,7 @@ character_event = {
 				religion = ROOT
 				NOT = { block_general_event_trigger = yes }
 				OR = { 
-					higher_tier_than = BARON  
+					higher_tier_than = BARON 
 					has_minor_title = title_cardinal
 					has_minor_title = title_ursuline_cardinal
 					has_minor_title = title_mormon_cardinal
@@ -442,7 +442,7 @@ character_event = {
 						NOT = { has_landed_title = d_quorum_of_the_twelve }
 						NOT = { has_landed_title = k_high_church }
 						NOT = { has_landed_title = d_cristo_rey }
-					}			
+					}
 					opinion = {
 						modifier = opinion_offended
 						years = 10
@@ -653,7 +653,7 @@ letter_event = {
 				FROM = { letter_event = { id = HF.20202 } } #Priest asks for nothing, proceed with coronation.
 			} 
 		
-			50 = {  
+			50 = { 
 				modifier = {
 					factor = 1.5
 					trait = greedy
@@ -992,7 +992,7 @@ letter_event = {
 							vassal_of = FROM
 							ROOT_FROM = {
 								NOT = { 
-									current_heir = { character = PREVPREV  }
+									current_heir = { character = PREVPREV }
 								}
 							}
 							NOR = { 
@@ -1015,7 +1015,7 @@ letter_event = {
 							vassal_of = FROM
 							FROM = {
 								NOT = { 
-									current_heir = { character = PREVPREV  }
+									current_heir = { character = PREVPREV }
 								}
 							}
 							NOR = { 
@@ -1038,7 +1038,7 @@ letter_event = {
 							vassal_of = FROM
 							FROM = {
 								NOT = { 
-									current_heir = { character = PREVPREV  }
+									current_heir = { character = PREVPREV }
 								}
 							}
 							NOR = { 
@@ -1061,7 +1061,7 @@ letter_event = {
 							vassal_of = FROM
 							FROM = {
 								NOT = { 
-									current_heir = { character = PREVPREV  }
+									current_heir = { character = PREVPREV }
 								}
 							}
 							NOR = { 
@@ -1084,7 +1084,7 @@ letter_event = {
 							vassal_of = FROM
 							FROM = {
 								NOT = { 
-									current_heir = { character = PREVPREV  }
+									current_heir = { character = PREVPREV }
 								}
 							}
 							NOR = { 
@@ -1487,7 +1487,7 @@ letter_event = {
 				}
 				FROM = { letter_event = { id = HF.20212 } } #I want gold.
 			}
-			30 = {  
+			30 = { 
 				modifier = {
 					factor = 0
 					FROM = { NOT = { primary_title = { has_law = investiture_law_1 } } }
@@ -1517,7 +1517,7 @@ letter_event = {
 				}
 				FROM = { letter_event = { id = HF.20213 } } #I want you to enact Papal Investiture.
 			}
-			30 = {  
+			30 = { 
 				trigger = {
 					FROM = { war = no } #Wartime coronation.
 				}
@@ -1563,7 +1563,7 @@ letter_event = {
 				}
 				FROM = { letter_event = { id = HF.20214 } } #I want you to depose excommunicated ruler.
 			}
-			30 = {  
+			30 = { 
 				trigger = {
 					FROM = { war = no } #Wartime coronation.
 				}
@@ -1661,7 +1661,7 @@ letter_event = {
 				}
 				FROM = { letter_event = { id = HF.20235 } } #Wishes to have orgy.
 			}
-			5 = {  
+			5 = { 
 				trigger = { #Check if holy orders exist.
 					OR = { 
 						is_title_active = d_knights_of_columbus 
@@ -1733,7 +1733,7 @@ letter_event = {
 				}
 				FROM = { letter_event = { id = HF.20217 } } #Give lands to the Holy Orders.
 			}
-			15 = {  
+			15 = { 
 				modifier = {
 					factor = 0
 					NOT = {
@@ -2402,10 +2402,10 @@ letter_event = {
 			}
 		}
 		hidden_tooltip = { 
-	   		FROM = { 
-	   			character_event = { id = HF.20234 } 
-	   		} 
-	   	}
+			FROM = { 
+				character_event = { id = HF.20234 } 
+			} 
+		}
 		hidden_tooltip = { character_event = { id = HF.20300 } } #Go to budget event
 		ai_chance = { factor = 100 }
 	}
@@ -2413,7 +2413,7 @@ letter_event = {
 		name = EVTOPTBHF20211
 		custom_tooltip = { text = coronation_canceled }
 		#clr_character_flag = flag_preparing_coronation #Replaced by timed modifier
-			 # The Pope remembers what he wants, cheaty spammy player.
+			# The Pope remembers what he wants, cheaty spammy player.
 		FROM = { 
 				show_scope_change = no	
 			opinion = {
@@ -2472,7 +2472,7 @@ letter_event = {
 		if = { 
 			limit = { real_tier = KING }
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -2502,7 +2502,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2 min = 600 max = 1200 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -2522,7 +2522,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.35 min = 500 max = 900 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					piety = 350
 					FROM = { 
 						opinion = { 
@@ -2540,7 +2540,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.25 min = 400 max = 750 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -2581,7 +2581,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}  
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -2619,7 +2619,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}   
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -2646,7 +2646,7 @@ letter_event = {
 		if = { 
 			limit = { real_tier = EMPEROR }
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -2676,7 +2676,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2.5 min = 750 max = 1500 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -2696,7 +2696,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2.0 min = 600 max = 1000 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					piety = 350
 					FROM = { 
 						opinion = { 
@@ -2714,7 +2714,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.75 min = 500 max = 850 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -2755,7 +2755,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}  
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -2793,7 +2793,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}   
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -3016,7 +3016,7 @@ letter_event = {
 		if = { 
 			limit = { real_tier = KING }
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3046,7 +3046,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2 min = 600 max = 1200 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3066,7 +3066,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.35 min = 500 max = 900 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					piety = 350
 					FROM = { 
 						opinion = { 
@@ -3084,7 +3084,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.25 min = 400 max = 750 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3125,7 +3125,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}  
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -3163,7 +3163,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}   
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -3190,7 +3190,7 @@ letter_event = {
 		if = { 
 			limit = { real_tier = EMPEROR }
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3220,7 +3220,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2.5 min = 750 max = 1500 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3240,7 +3240,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2.0 min = 600 max = 1000 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					piety = 350
 					FROM = { 
 						opinion = { 
@@ -3258,7 +3258,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.75 min = 500 max = 850 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3299,7 +3299,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}  
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -3337,7 +3337,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}   
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -3511,7 +3511,7 @@ letter_event = {
 		if = { 
 			limit = { real_tier = KING }
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3541,7 +3541,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2 min = 600 max = 1200 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3561,7 +3561,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.35 min = 500 max = 900 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					piety = 350
 					FROM = { 
 						opinion = { 
@@ -3579,7 +3579,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.25 min = 400 max = 750 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3620,7 +3620,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}  
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -3658,7 +3658,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}   
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -3685,7 +3685,7 @@ letter_event = {
 		if = { 
 			limit = { real_tier = EMPEROR }
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3715,7 +3715,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2.5 min = 750 max = 1500 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3735,7 +3735,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2.0 min = 600 max = 1000 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					piety = 350
 					FROM = { 
 						opinion = { 
@@ -3753,7 +3753,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.75 min = 500 max = 850 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -3794,7 +3794,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}  
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -3832,7 +3832,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}   
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -3899,7 +3899,7 @@ letter_event = {
 
 	immediate = {
 		#Check if there is an available bordering province, in order to limit bordergore.
-		if  = { 
+		if = { 
 			limit = {
 				any_demesne_title = {
 					can_be_given_away = yes
@@ -3939,7 +3939,7 @@ letter_event = {
 				}
 				preferred_limit = { #Try to give them counties as well.
 					any_de_jure_vassal_title = {
-						owner =  { character = ROOT } 
+						owner = { character = ROOT } 
 					}
 				}
 				save_event_target_as = scoped_duchy
@@ -3954,7 +3954,7 @@ letter_event = {
 				}
 				preferred_limit = { #Try to give them counties as well.
 					any_de_jure_vassal_title = {
-						owner =  { character = ROOT } 
+						owner = { character = ROOT } 
 					}
 				}
 			}
@@ -4006,12 +4006,12 @@ letter_event = {
 					limit = { 
 						vassal_of = ROOT 
 						lower_tier_than = event_target:scoped_grandmaster
-						NOT = { owner =  { character = ROOT } } 
+						NOT = { owner = { character = ROOT } } 
 					}
 					set_defacto_liege = event_target:scoped_grandmaster
 				} 
 				any_de_jure_vassal_title = { 	#Take over dejure titles under the Duchy
-					limit = { owner =  { character = ROOT }  }
+					limit = { owner = { character = ROOT } }
 					grant_title = event_target:scoped_grandmaster
 				}
 			}
@@ -4041,12 +4041,12 @@ letter_event = {
 							limit = { 
 								vassal_of = ROOT 
 								lower_tier_than = PREVPREVPREV
-								NOT = { owner =  { character = ROOT } } 
+								NOT = { owner = { character = ROOT } } 
 							}
 							set_defacto_liege = PREVPREVPREV
 						} 
 						any_de_jure_vassal_title = {
-							limit = { owner =  { character = ROOT } }
+							limit = { owner = { character = ROOT } }
 							grant_title = PREVPREVPREV
 						}
 					}
@@ -4062,7 +4062,7 @@ letter_event = {
 		#clr_character_flag = flag_preparing_coronation #Replaced by timed modifier
 		# The Pope remembers what he wants, cheaty spammy player.
 		FROM = {
-				show_scope_change = no	 
+				show_scope_change = no	
 			opinion = {
 				modifier = opinion_requested_land_holyorder
 				years = 10
@@ -4101,7 +4101,7 @@ letter_event = {
 		if = { 
 			limit = { real_tier = KING }
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -4131,7 +4131,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2 min = 600 max = 1200 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -4151,7 +4151,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.35 min = 500 max = 900 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					piety = 350
 					FROM = { 
 						opinion = { 
@@ -4169,7 +4169,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.25 min = 400 max = 750 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -4210,7 +4210,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}  
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -4248,7 +4248,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}   
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -4275,7 +4275,7 @@ letter_event = {
 		if = { 
 			limit = { real_tier = EMPEROR }
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -4305,7 +4305,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2.5 min = 750 max = 1500 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -4325,7 +4325,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 2.0 min = 600 max = 1000 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					piety = 350
 					FROM = { 
 						opinion = { 
@@ -4343,7 +4343,7 @@ letter_event = {
 				transfer_scaled_wealth = { to = FROM value = 1.75 min = 500 max = 850 } 
 			}
 			if = { 
-				limit = {  
+				limit = { 
 					NOT = { 
 						piety = 350
 					} 
@@ -4384,7 +4384,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}  
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -4422,7 +4422,7 @@ letter_event = {
 				limit = { 
 					NOT = { 
 						piety = 350
-					}   
+					} 
 					FROM = { 
 						opinion = { 
 							who = ROOT 
@@ -4634,9 +4634,9 @@ character_event = {
 		clr_character_flag = flag_antipope_for_coronation
 		clr_character_flag = flag_excommunicated_for_coronation
 		set_character_flag = flag_crowned_by_pope
-		religion_head = {  #otherwise the scope would have been lost.
+		religion_head = { #otherwise the scope would have been lost.
 			save_event_target_as = coronation_priest
-				show_scope_change = no	 
+				show_scope_change = no	
 			opinion = {
 				modifier = opinion_supposed_to_crown
 				months = 1
@@ -4710,7 +4710,7 @@ character_event = {
 	option = {
 		name = EVTOPTAHF20226
 		set_character_flag = flag_crowned_by_pope
-		religion_head = {  #otherwise the scope would have been lost.
+		religion_head = { #otherwise the scope would have been lost.
 			save_event_target_as = coronation_priest 
 				show_scope_change = no	
 			opinion = {
@@ -4756,7 +4756,7 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	has_character_flag = flag_excommunicated_for_coronation  
+	has_character_flag = flag_excommunicated_for_coronation 
 
 	trigger = {
 		any_war = {
@@ -4778,7 +4778,7 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	has_character_flag = flag_pepin_for_coronation   
+	has_character_flag = flag_pepin_for_coronation 
 
 	trigger = {
 		any_war = {
@@ -5329,7 +5329,7 @@ character_event = {
 			if = { 
 				limit = {
 					is_female = yes
-					NOT = { religion = ursuline }					
+					NOT = { religion = ursuline }
 					NOT = { age = 40 }
 					fertility = 0.4
 				}
@@ -5558,7 +5558,7 @@ letter_event = {
 		random_artifact = { 
 			limit = { 
 				OR = {
-					has_artifact_flag = christian  
+					has_artifact_flag = christian 
 					has_artifact_flag = latter_day_saints
 				}
 				NOT = { has_artifact_flag = rare } 
@@ -5630,7 +5630,7 @@ letter_event = {
 		random_artifact = { 
 			limit = { 
 				OR = {
-					has_artifact_flag = christian  
+					has_artifact_flag = christian 
 					has_artifact_flag = latter_day_saints
 				}
 				OR = { 
@@ -5757,7 +5757,7 @@ character_event = {
 		hidden_tooltip = {
 			character_event = { id = HF.20305 days = 11 } #Ceremony actually starts
 			any_vassal = {
-				limit =  {
+				limit = {
 					prisoner = no
 					NOT = { has_character_flag = do_not_disturb }
 					NOT = { has_character_modifier = holding_large_feast }
@@ -5823,7 +5823,7 @@ character_event = {
 		hidden_tooltip = {
 			character_event = { id = HF.20305 days = 11 } #Ceremony actually starts
 			any_vassal = {
-				limit =  {
+				limit = {
 					prisoner = no
 					NOT = { has_character_flag = do_not_disturb }
 					NOT = { has_character_modifier = holding_large_feast }
@@ -6483,7 +6483,7 @@ character_event = {
 	option = {
 		name = EVTOPTAHF20310
 		show_portrait = event_target:potential_friend
-		event_target:potential_friend = {  
+		event_target:potential_friend = { 
 			character_event = { id = HF.20307 tooltip = EVTTOOLTIPAHF20307 }
 		}
 		ai_chance = { 	
@@ -6663,7 +6663,7 @@ character_event = {
 		event_target:coronation_ruler = { is_alive = yes } #Check if the ruler supposed to be crowned is still alive. (check for guests)
 	}
 	immediate = { 
-		event_target:coronation_ruler = { set_character_flag = flag_coronation_learning_boost  } #to avoid the same event happening twice during the coronation.
+		event_target:coronation_ruler = { set_character_flag = flag_coronation_learning_boost } #to avoid the same event happening twice during the coronation.
 	}
 
 	is_triggered_only = yes
@@ -6831,7 +6831,7 @@ character_event = {
 				}
 				50 = {
 					character_event = { id = HF.20318 } #Failure
-				
+	
 				}
 			}
 
@@ -6851,7 +6851,7 @@ character_event = {
 	option = {
 		name = EVTOPTBHF20316
 		ai_chance = { 	
-			factor = 10			
+			factor = 10
 		}
 	}
 	after = { hidden_tooltip = { event_target:coronation_ruler = { character_event = { id = HF.20365 days = 3 random = 5 } } } } #Second row of random events, else coronation itself.
@@ -6915,7 +6915,7 @@ character_event = {
 				} 
 				character_event = { id = HF.20319 }
 			}
-			event_target:coronation_priest = {  
+			event_target:coronation_priest = { 
 				character_event = { id = HF.20319 }
 			}
 		}		
@@ -6982,7 +6982,7 @@ character_event = {
 				} 
 				character_event = { id = HF.20320 }
 			}
-			event_target:coronation_priest = {  
+			event_target:coronation_priest = { 
 				character_event = { id = HF.20320 }
 			}
 		}		
@@ -7138,7 +7138,7 @@ character_event = {
 	}
 
 	immediate = { 
-		event_target:coronation_ruler = { set_character_flag = flag_coronation_gain_ambitious  } #to avoid the same event happening twice during the coronation.
+		event_target:coronation_ruler = { set_character_flag = flag_coronation_gain_ambitious } #to avoid the same event happening twice during the coronation.
 	}
 	is_triggered_only = yes
 	
@@ -7404,7 +7404,7 @@ character_event = {
 		event_target:coronation_ruler = { is_alive = yes } #Check if the ruler supposed to be crowned is still alive. (check for guests)
 	}
 	immediate = { 
-		event_target:coronation_ruler = { set_character_flag = flag_coronation_pope_talk  } #to avoid the same event happening twice during the coronation.
+		event_target:coronation_ruler = { set_character_flag = flag_coronation_pope_talk } #to avoid the same event happening twice during the coronation.
 	}
 
 	is_triggered_only = yes
@@ -8393,7 +8393,7 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { event_target:coronation_ruler = { character_event = { id = HF.20364 } } }
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -8430,7 +8430,7 @@ character_event = {
 		trigger = { diplomacy = 10 }
 		prestige = 75
 		piety = 25
-		 event_target:coronation_priest = {
+		event_target:coronation_priest = {
 				show_scope_change = no	
 			opinion = {
 				who = ROOT
@@ -8447,7 +8447,7 @@ character_event = {
 			}
 		}
 		hidden_tooltip = { FROM = { character_event = { id = HF.20343 } } }
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -8455,7 +8455,7 @@ character_event = {
 		name = EVTOPTBHF20364
 		piety = 75
 		hidden_tooltip = { FROM = { character_event = { id = HF.20344 } } }
-		 event_target:coronation_priest = {
+		event_target:coronation_priest = {
 				show_scope_change = no	
 			opinion = {
 				who = ROOT
@@ -8483,7 +8483,7 @@ character_event = {
 		name = EVTOPTCHF20364
 		prestige = 75
 		hidden_tooltip = { FROM = { character_event = { id = HF.20345 } } }
-		 event_target:coronation_priest = {
+		event_target:coronation_priest = {
 				show_scope_change = no	
 			opinion = {
 				who = ROOT
@@ -8491,7 +8491,7 @@ character_event = {
 				months = 30
 			}
 		}
-		 FROM = {
+		FROM = {
 				show_scope_change = no	
 			opinion = {
 				who = ROOT
@@ -8545,7 +8545,7 @@ character_event = {
 				months = 30
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -8575,7 +8575,7 @@ character_event = {
 				months = 30
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -8605,7 +8605,7 @@ character_event = {
 				months = 30
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -8662,7 +8662,7 @@ character_event = {
 			remove_trait = slow
 			remove_trait = imbecile
 			remove_trait = dull
-			
+
 			remove_trait = mystic
 			remove_trait = socializer
 			remove_trait = gamer
@@ -8733,7 +8733,7 @@ character_event = {
 		}
 		hidden_tooltip = { 
 			random_list = { 
-				30 = {  } 
+				30 = { } 
 				40 = { #Court Love
 					trigger = { 
 						is_female = yes
@@ -8854,10 +8854,10 @@ character_event = {
 					}
 					hidden_tooltip = { character_event = { id = HF.20350 days = 2 random = 2 } }
 
-				 } 
+				} 
 			} 
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -8871,7 +8871,7 @@ character_event = {
 				}
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 0
 		}
 	}
@@ -8918,12 +8918,12 @@ character_event = {
 					} 
 					character_event = { id = HF.20349 days = 1 }
 				}
-				event_target:coronation_priest = {  
+				event_target:coronation_priest = { 
 					character_event = { id = HF.20349 days = 1 }
 				}
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 80
 			modifier = { 
 				factor = 0
@@ -8953,7 +8953,7 @@ character_event = {
 		tooltip_info = diplomacy
 		event_target:coronation_knight = { add_friend = ROOT }
 		hidden_tooltip = { add_friend = event_target:coronation_knight }
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 10
 		}
 	}
@@ -8967,7 +8967,7 @@ character_event = {
 				}
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 10
 		}
 	}
@@ -9010,7 +9010,7 @@ character_event = {
 				}
  			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -9035,7 +9035,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTAHF20349
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -9073,7 +9073,7 @@ character_event = {
 				add_trait = robust
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 80
 			modifier = { 
 				factor = 0.5
@@ -9096,7 +9096,7 @@ character_event = {
 				add_trait = willful
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 20
 			modifier = { 
 				factor = 0
@@ -9138,7 +9138,7 @@ character_event = {
 			remove_trait = slow
 			remove_trait = imbecile
 			remove_trait = dull
-			
+
 			remove_trait = mystic
 			remove_trait = socializer
 			remove_trait = gamer
@@ -9209,7 +9209,7 @@ character_event = {
 				years = 100
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -9224,7 +9224,7 @@ character_event = {
 				years = 100
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 50
 		}
 	}
@@ -9237,7 +9237,7 @@ character_event = {
 				}
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 0
 		}
 	}
@@ -9283,14 +9283,14 @@ character_event = {
 			set_character_flag = flag_new_rivalry
 		}
 		event_target:coronation_ruler = { character_event = { id = HF.20353 } }
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
 	option = {
 		name = EVTOPTBHF20352
 		trigger = { NOT = { is_rival = FROM } } 
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 0
 		}
 	}
@@ -9331,7 +9331,7 @@ character_event = {
 			clr_character_flag = flag_new_rivalry 
 		}
 		FROM = { character_event = { id = HF.20354 } }
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -9339,7 +9339,7 @@ character_event = {
 		name = EVTOPTBHF20353
 		FROM = { clr_character_flag = flag_new_rivalry }
 		add_rival = FROM
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 0
 		}
 	}
@@ -9365,7 +9365,7 @@ character_event = {
 	option = {
 		name = EVTOPTAHF20354
 		remove_rival = FROM
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -9412,7 +9412,7 @@ character_event = {
 			add_trait = paranoid
 			hidden_tooltip = { character_event = { id = 38275 } } 
 		} 
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 50
 		}
 	}
@@ -9432,7 +9432,7 @@ character_event = {
 			limit = { trait = stressed } 
 			piety = -30
 		} 
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 50
 		}
 	}
@@ -9482,7 +9482,7 @@ character_event = {
 				character_event = { id = HF.20357 }
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -9524,7 +9524,7 @@ character_event = {
 				modifier = opinion_offended
 				months = 60
 			}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -9594,7 +9594,7 @@ character_event = {
 			}
 		}
 		tooltip_info = diplomacy
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 90
 		}
 	}
@@ -9641,7 +9641,7 @@ character_event = {
 				character_event = { id = HF.20359 }
 			}
 		}
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 10
 		}
 	}
@@ -9678,7 +9678,7 @@ character_event = {
 	
 	option = {
 		name = EVTOPTAHF20359
-		ai_chance = { 	 
+		ai_chance = { 	
 			factor = 100
 		}
 	}
@@ -9731,7 +9731,7 @@ character_event = {
 				NOR = { 
 					trait = diligent 
 					trait = slothful
-				}  
+				} 
 			} 
 			random = { 
 				chance = 50
@@ -9911,13 +9911,13 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		if =  { 
+		if = { 
 			limit = { 
 				NOT = { check_variable = { which = coronation_count value = 2 } } 
 			}
 			random_coronation_events_effect = yes	
 		}
-		if =  { 
+		if = { 
 			limit = { 
 				check_variable = { which = coronation_count value = 2 } 
 			}
@@ -10162,7 +10162,7 @@ character_event = {
 			days = 7300 #20 years
 		}
 		#Notify all guests, then conclude the ceremony.
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			character_event = { id = HF.20371 } #Self-Coronation scandal.
 			character_event = { id = HF.20369 days = 3 random = 3 } #wrap up, clear all flags.
 			any_vassal = { 
@@ -10267,7 +10267,7 @@ character_event = {
 			}
 		}
 		#Notify all guests, then conclude the ceremony.
-		hidden_tooltip = {  
+		hidden_tooltip = { 
 			character_event = { id = HF.20369 days = 3 random = 3 } #wrap up, clear all flags.
 			any_vassal = { 
 				limit = { 
@@ -10523,13 +10523,13 @@ character_event = {
 				FROM = { 
 					has_character_flag = flag_secluded_coronation 
 					NOT = { has_character_flag = flag_crowned_by_pope } 
-				}  
+				} 
 			} 
 			prestige = -25
 		}
 		if = { 
 			limit = { 
-				FROM = { has_character_flag = flag_regular_coronation }  
+				FROM = { has_character_flag = flag_regular_coronation } 
 			} 
 			prestige = 50
 		}
@@ -10909,7 +10909,7 @@ character_event = {
 					modifier = { #More distant/Less powerful Kingdom less likely to be crowned by the Pope.
 						factor = 0.5
 						religion = catholic
-						NOR = {  
+						NOR = { 
 							has_landed_title = k_michigan
 							has_landed_title = k_ohio
 							has_landed_title = k_chicagoland
@@ -10921,7 +10921,7 @@ character_event = {
 					}
 					modifier = { #If the Pope disliked him, less likely to be crowned by him.
 						factor = 0.5
-						NOT = {  
+						NOT = { 
 							reverse_opinion = { 
 								who = ROOT
 								value = 0 
@@ -10931,7 +10931,7 @@ character_event = {
 					modifier = { #Historically more likely.
 						factor = 10
 						religion = catholic
-						OR = {  
+						OR = { 
 							has_landed_title = k_platte
 							has_landed_title = k_comancheria
 						} 
@@ -11083,7 +11083,7 @@ character_event = {
 			religion = high_church
 			religion = cristo_rey
 		}
-		NOR =  { 
+		NOR = { 
 			trait = crowned_by_priest
 			trait = crowned_by_bishop
 			trait = crowned_by_pope
@@ -11117,7 +11117,7 @@ character_event = {
 			religion = high_church
 			religion = cristo_rey
 		}
-		NOR =  { 
+		NOR = { 
 			trait = crowned_by_priest
 			trait = crowned_by_bishop
 			trait = crowned_by_pope
@@ -11138,7 +11138,7 @@ character_event = {
 			20 = { 
 				modifier = { 
 					factor = 0
-					NOT	= { 
+					NOT = { 
 						any_vassal = { 
 							is_theocracy = yes
 							count = 2
@@ -11418,7 +11418,7 @@ character_event = {
 			limit = { 
 				is_theocracy = yes
 				religion = ROOT
-			 }
+			}
 			opinion = {
 				modifier = opinion_uncrowned_ruler
 				years = 1
@@ -11902,7 +11902,7 @@ character_event = {
 		name = EVTOPTAHF20387
 		tooltip = { 
 			FROM = { 
-				remove_title = job_spiritual  
+				remove_title = job_spiritual 
 				add_character_modifier = { 
 					name = resigned_in_anger
 					duration = -1
@@ -11913,7 +11913,7 @@ character_event = {
 			FROM = { 
 			remove_opinion = { 
 					who = ROOT
-					modifier = opinion_fired_from_council  
+					modifier = opinion_fired_from_council 
 				}
 			}
 		} 
@@ -11942,7 +11942,7 @@ character_event = {
 			trait = crowned_by_myself
 		}
 		has_character_modifier = crowned_in_barn
-	 } 
+	} 
 
 	option = {
 		name = EVTOPTAHF20388
@@ -11998,7 +11998,7 @@ character_event = {
 			trait = crowned_by_myself
 		}
 		has_character_modifier = extravagant_coronation
-	 } 
+	} 
 
 	option = { #Use excitement to build trade
 		name = EVTOPTAHF20389
@@ -12065,7 +12065,7 @@ character_event = {
 			trait = crowned_by_myself
 		}
 		has_character_modifier = extravagant_coronation
-	 } 
+	} 
 
 	option = { 
 		name = EVTOPTAHF20390
@@ -12094,7 +12094,7 @@ character_event = {
 			trait = crowned_by_myself
 		}
 		has_character_modifier = extravagant_coronation
-	 } 
+	} 
 
 	option = { #Use excitement to build trade
 		name = EVTOPTAHF20391
@@ -12144,7 +12144,7 @@ character_event = {
 				trait = crowned_by_myself
 			}
 		}
-	 } 
+	} 
 	option = { 
 		name = EVTOPTAHF20392
 		trigger = { trait = humble } 
@@ -12220,7 +12220,7 @@ character_event = {
 			}
 			in_command = no
 		}
-	 } 
+	} 
 
 	immediate = { 
 		current_heir = { character_event = { id = HF.20394 days = 4 random = 4 } }
@@ -12489,14 +12489,14 @@ character_event = {
 				20 = { 
 					modifier = {
 						factor = 0
-						NOT = { FROM = { is_evil_trigger = yes } }  
+						NOT = { FROM = { is_evil_trigger = yes } } 
 					}
 					set_character_flag = flag_homage_evil
 				}
 				20 = { 
 					modifier = {
 						factor = 0
-						NOT = { FROM = { has_virtue_trigger = yes } }  
+						NOT = { FROM = { has_virtue_trigger = yes } } 
 					}
 					set_character_flag = flag_homage_good
 				}
@@ -12723,7 +12723,7 @@ character_event = {
 	}
 }
 
-#The HRE crown and the prince.  (this will also never fire)
+#The HRE crown and the prince. (this will also never fire)
 character_event = {
 	id = HF.20400
 	hide_window = yes
@@ -12937,7 +12937,7 @@ character_event = {
 			religion = high_church
 		}
 		NOT = { check_variable = { which = uncrowned_count value = 30 } } #Stop at minus thirty.
-		NOR =  { 
+		NOR = { 
 			trait = crowned_by_priest
 			trait = crowned_by_bishop
 			trait = crowned_by_pope
@@ -12969,8 +12969,8 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = { 
-		OR =  { 
-			AND =  { 
+		OR = { 
+			AND = { 
 				has_landed_title = e_dixie
 				any_artifact = { artifact_type = crown_hcc }
 				e_dixie = {
@@ -12979,7 +12979,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = e_dixie
 				any_artifact = { artifact_type = sword_of_the_states }
 				e_dixie = {
@@ -12988,7 +12988,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = e_caribbean
 				any_artifact = { artifact_type = crown_lion_judah }
 				e_caribbean = { 
@@ -12997,7 +12997,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_norse_pagan_reformed 
 				any_artifact = { artifact_type = crown_fylkir }
 				d_norse_pagan_reformed = { 
@@ -13006,7 +13006,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_celtic_pagan_reformed 
 				any_artifact = { artifact_type = crown_celtic_fylkir }
 				d_celtic_pagan_reformed = { 
@@ -13015,7 +13015,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_aria_de_machete_reformed 
 				any_artifact = { artifact_type = crown_aria_de_machete_fylkir }
 				d_aria_de_machete_reformed = { 
@@ -13024,7 +13024,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_revelationist_reformed 
 				any_artifact = { artifact_type = crown_revelationist_fylkir }
 				d_revelationist_reformed = { 
@@ -13033,7 +13033,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_occultist_reformed 
 				any_artifact = { artifact_type = crown_occultist_fylkir }
 				d_occultist_reformed = { 
@@ -13042,7 +13042,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_midewiwin_reformed
 				any_artifact = { artifact_type = scepter_midewiwin_fylkir }
 				d_midewiwin_reformed = { 
@@ -13051,7 +13051,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_raven_tales_reformed
 				any_artifact = { artifact_type = crown_raven_tales_fylkir }
 				d_raven_tales_reformed = { 
@@ -13060,7 +13060,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_trailwalker_reformed 
 				any_artifact = { artifact_type = crown_trailwalker_fylkir }
 				d_trailwalker_reformed = { 
@@ -13069,7 +13069,7 @@ character_event = {
 					} 
 				} 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = e_california
 				any_artifact = { artifact_type = crown_california }
 				e_california = { 
@@ -13411,8 +13411,8 @@ character_event = {
 			has_character_flag = flag_crowned_by_bishop
 			has_character_flag = flag_crowned_by_pope
 			has_character_flag = flag_antipope_for_coronation 
-			has_character_flag = flag_excommunicated_for_coronation  
-			has_character_flag = flag_pepin_for_coronation  
+			has_character_flag = flag_excommunicated_for_coronation 
+			has_character_flag = flag_pepin_for_coronation 
 		} 
 
 		#Previous religion
@@ -13707,14 +13707,14 @@ character_event = {
 				20 = { 
 					modifier = {
 						factor = 0
-						NOT = { ROOT = { is_evil_trigger = yes } }  
+						NOT = { ROOT = { is_evil_trigger = yes } } 
 					}
 					set_character_flag = flag_homage_evil
 				}
 				20 = { 
 					modifier = {
 						factor = 0
-						NOT = { ROOT = { has_virtue_trigger = yes } }  
+						NOT = { ROOT = { has_virtue_trigger = yes } } 
 					}
 					set_character_flag = flag_homage_good
 				}
@@ -14638,145 +14638,145 @@ character_event = {
 	has_dlc = "Holy Fury"
 
 	trigger = { 
-		OR =  { 
-			AND =  { 
+		OR = { 
+			AND = { 
 				has_landed_title = e_dixie
 				any_artifact = { artifact_type = crown_hcc } 
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = e_caribbean 
 				any_artifact = { artifact_type = crown_lion_judah }
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_norse_pagan_reformed 
 				any_artifact = { artifact_type = crown_fylkir }
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_celtic_pagan_reformed 
 				any_artifact = { artifact_type = crown_celtic_fylkir }
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_aria_de_machete_reformed 
 				any_artifact = { artifact_type = crown_aria_de_machete_fylkir }
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_revelationist_reformed 
 				any_artifact = { artifact_type = crown_revelationist_fylkir }
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_occultist_reformed 
 				any_artifact = { artifact_type = crown_occultist_fylkir }
 			}
-			#AND =  { 
+			#AND = { 
 			#	has_landed_title = d_thelemic_reformed 
 			#	any_artifact = { artifact_type = crown_thelemic_fylkir }
 			#}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_midewiwin_reformed
 				any_artifact = { artifact_type = scepter_midewiwin_fylkir }
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_raven_tales_reformed
 				any_artifact = { artifact_type = crown_raven_tales_fylkir }
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = d_trailwalker_reformed 
 				any_artifact = { artifact_type = crown_trailwalker_fylkir }
 			}
-			AND =  { 
+			AND = { 
 				has_landed_title = e_california
 				any_artifact = { artifact_type = crown_california }
 			}
-		#	AND =  { 
+		#	AND = { 
 		#		has_landed_title = k_italy 
 		#		any_artifact = { artifact_type = iron_crown_of_lombardy }
 		#	}
-		#	AND =  { 
+		#	AND = { 
 		#		any_artifact = { artifact_type = cursed_diamond_crown }
 		#	}
 		}
 	}
 	
 	immediate = {
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = e_dixie
 				any_artifact = { artifact_type = crown_hcc }
 			}
 			add_trait = dead_crown_hcc
 		}
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = e_caribbean
 				any_artifact = { artifact_type = crown_lion_judah }
 			}
 			add_trait = dead_crown_judah
 		}
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = d_norse_pagan_reformed 
 				any_artifact = { artifact_type = crown_fylkir }
 			}
 			add_trait = dead_crown_fylkir
 		}
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = d_celtic_pagan_reformed 
 				any_artifact = { artifact_type = crown_celtic_fylkir }
 			}
 			add_trait = dead_crown_celtic_fylkir
 		}
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = d_aria_de_machete_reformed 
 				any_artifact = { artifact_type = crown_aria_de_machete_fylkir }
 			}
 			add_trait = dead_crown_aria_de_machete_fylkir
 		}
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = d_revelationist_reformed 
 				any_artifact = { artifact_type = crown_revelationist_fylkir }
 			}
 			add_trait = dead_crown_revelationist_fylkir
 		}
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = d_occultist_reformed 
 				any_artifact = { artifact_type = crown_occultist_fylkir }
 			}
 			add_trait = dead_crown_occultist_fylkir
 		}
-		#if =  { 
-		#	limit =  { 
+		#if = { 
+		#	limit = { 
 		#		has_landed_title = d_thelemic_reformed 
 		#		any_artifact = { artifact_type = crown_thelemic_fylkir }
 		#	}
 		#	add_trait = dead_crown_thelemic_fylkir
 		#}
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = d_midewiwin_reformed
 				any_artifact = { artifact_type = scepter_midewiwin_fylkir }
 			}
 			add_trait = dead_scepter_midewiwin_fylkir
 		}
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = d_raven_tales_reformed
 				any_artifact = { artifact_type = crown_raven_tales_fylkir }
 			}
 			add_trait = dead_crown_raven_tales_fylkir
 		}
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = e_california
 				any_artifact = { artifact_type = crown_california }
 			}
 			add_trait = dead_crown_california
 		}
-		if =  { 
-			limit =  { 
+		if = { 
+			limit = { 
 				has_landed_title = d_trailwalker_reformed 
 				any_artifact = { artifact_type = crown_trailwalker_fylkir }
 			}
@@ -14857,7 +14857,7 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	has_character_flag = flag_excommunicated_for_coronation  
+	has_character_flag = flag_excommunicated_for_coronation 
 
 	trigger = {
 		OR = {
@@ -14880,7 +14880,7 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	has_character_flag = flag_pepin_for_coronation   
+	has_character_flag = flag_pepin_for_coronation 
 
 	trigger = {
 		OR = {

@@ -6,7 +6,7 @@ targeted_decisions = {
 		ai = no
 		
 		from_potential = {
-			
+
 		}
 		potential = {
 			is_tributary = yes
@@ -35,7 +35,7 @@ targeted_decisions = {
 		ai = no
 		
 		from_potential = {
-			
+
 		}
 		potential = {
 			is_landed = yes
@@ -58,7 +58,7 @@ targeted_decisions = {
 					years = 10
 				}
 			}
-			
+
 			FROM = {
 				set_truce = {
 					who = ROOT
@@ -191,7 +191,7 @@ targeted_decisions = {
 				}
 			}
 			character_event = { id = RIP.30000 days = 3 }
-			
+
 			hidden_tooltip = {
 				opinion = {
 					who = FROM
@@ -242,9 +242,9 @@ targeted_decisions = {
 					save_event_target_as = target_defender
 				}
 			}
-			
+
 			reverse_remove_favor = FROM
-			
+
 			character_event = { id = RIP.30010 days = 3 }
 		}
 		
@@ -297,7 +297,7 @@ targeted_decisions = {
 				}
 			}
 			character_event = { id = RIP.30020 days = 3 }
-			
+
 			hidden_tooltip = {
 				opinion = {
 					who = FROM
@@ -348,9 +348,9 @@ targeted_decisions = {
 					save_event_target_as = target_attacker
 				}
 			}
-			
+
 			reverse_remove_favor = FROM
-			
+
 			character_event = { id = RIP.30030 days = 3 }
 		}
 		
@@ -406,7 +406,7 @@ targeted_decisions = {
 		effect = {
 			prestige = -100
 			character_event = { id = RIP.30040 days = 3 }
-			
+
 			hidden_tooltip = {
 				opinion = {
 					who = FROM
@@ -546,7 +546,7 @@ targeted_decisions = {
 					who = FROM
 					years = 10
 				}
-				
+	
 				any_spouse = {
 					limit = { liege = { character = FROM } }
 					opinion = {
@@ -557,7 +557,7 @@ targeted_decisions = {
 				}
 			}
 
-			
+
 			if = { # Move to a same-religion court
 				limit = {
 					any_playable_ruler = {
@@ -593,7 +593,7 @@ targeted_decisions = {
 				}
 				break = yes
 			}
-			
+
 			if = { # Move to any court where the character likes me
 				limit = {
 					any_playable_ruler = {
@@ -656,7 +656,7 @@ targeted_decisions = {
 					move_character = event_target:new_court
 				}
 			}
-			
+
 		}
 		revoke_allowed = {
 			always = no
@@ -949,7 +949,7 @@ decisions = {
 				factor = 1.4
 				NOT = { health = 1 }
 			}
-			
+
 			modifier = {
 				factor = 0
 				OR = {
@@ -1026,7 +1026,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 0.5
-			
+
 			modifier = {
 				factor = 0
 				AND = {
@@ -1228,7 +1228,7 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 0.2
-			
+
 			modifier = {
 				factor = 0
 				NOT = {
@@ -1242,7 +1242,7 @@ decisions = {
 					}
 				}
 			}
-			
+
 			modifier = {
 				factor = 0.01
 				OR = {
@@ -1383,7 +1383,7 @@ decisions = {
 					NOT = { has_character_modifier = starving_food_shortage }
 				}
 			}
-			
+
 			modifier = {
 				factor = 0.5
 				trait = paranoid
@@ -1436,7 +1436,7 @@ title_decisions = {
 		
 		ai_will_do = {
 			factor = 0.1
-			
+
 			modifier = {
 				factor = 0.1
 				owner = { independent = no }

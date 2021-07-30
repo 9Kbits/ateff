@@ -5,18 +5,18 @@ decisions = {
 		potential = {
 			has_dlc = "Mystics"
 			religion = fidencista
-			
+
 			NOT = { has_character_flag = ascetic_arriving }
 			NOT = { has_character_modifier = recently_invited_ascetic }
 		}
 
 		allow = {
-			
+
 		}
 
 		effect = {
 			set_character_flag = ascetic_arriving
-			
+
 			custom_tooltip = {
 				text = monastic_orders_invite_ascetic_tt
 				character_event = { id = FIDE.120 days = 7 }
@@ -51,7 +51,7 @@ decisions = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 			religion = fidencista
-		    NOT = { has_trait = cajita }
+			NOT = { has_trait = cajita }
 			NOT = { has_character_flag = becoming_cajita }
 		}
 
@@ -76,7 +76,7 @@ decisions = {
 				trait = drunkard
 				trait = cynical
 			}
-			
+
 		}
 
 		effect = {
@@ -84,7 +84,7 @@ decisions = {
 			FROM = {
 				character_event = { id = fide.123 }
 			}
-			
+
 		}
 
 		revoke_allowed = {
