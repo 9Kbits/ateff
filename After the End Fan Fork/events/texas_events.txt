@@ -2298,17 +2298,18 @@ province_event = {
 	id = texas.72
 	desc = EVTDESC_texas_72
 	only_playable = yes
-	hide_window = yes
+	is_triggered_only = yes
 	trigger = {
-		holder_scope = { government = open_range_feudalism_government }
-		OR = {
-			holder_scope = { has_law = range_privileges_church_0 }
-			holder_scope = { has_law = range_privileges_trade_0 }
+		holder_scope = { 
+			top_liege = { government = open_range_feudalism_government }
+			OR = {
+				has_law = range_privileges_church_0
+				has_law = range_privileges_trade_0
+			}
+			has_character_modifier = had_party_localize 
 		}
-		holder_scope = { NOT = { has_character_modifier = had_party_localize } }
 	}
 	immediate = {
-		holder_scope = { add_character_modifier = had_party_localize }
 		create_random_soldier = {
 			random_traits = yes
 			dynasty = none
@@ -2326,8 +2327,13 @@ province_event = {
 			add_trait = party_populist
 		}
 	}
-	mean_time_to_happen = {
-		years = 10
+	
+	option = {
+		name = EVTOPTA_texas_75
+		#you gain election buff that i will code after the election
+		trigger = {
+			top_liege = { government = open_range_feudalism_government }
+		}
 	}
 }
 
@@ -2335,16 +2341,18 @@ province_event = {
 	id = texas.73
 	desc = EVTDESC_texas_73
 	only_playable = yes
-	hide_window = yes
+	is_triggered_only = yes
 	trigger = {
-		holder_scope = { government = open_range_feudalism_government }
-		
-		holder_scope = { has_law = range_privileges_trade_1 }
-		
-		holder_scope = { NOT = { has_character_modifier = had_party_localize } }
+		holder_scope = { 
+			top_liege = { government = open_range_feudalism_government }
+			OR = {
+				has_law = range_privileges_church_0
+				has_law = range_privileges_trade_0
+			}
+			has_character_modifier = had_party_localize 
+		}
 	}
 	immediate = {
-		holder_scope = { add_character_modifier = had_party_localize }
 		create_random_soldier = {
 			random_traits = yes
 			dynasty = none
@@ -2362,8 +2370,12 @@ province_event = {
 			add_trait = party_magnate
 		}
 	}
-	mean_time_to_happen = {
-		years = 15
+	option = {
+		name = EVTOPTA_texas_75
+		#you gain election buff that i will code after the election
+		trigger = {
+			top_liege = { government = open_range_feudalism_government }
+		}
 	}
 }
 
@@ -2371,14 +2383,18 @@ province_event = {
 	id = texas.74
 	desc = EVTDESC_texas_74
 	only_playable = yes
-	hide_window = yes
+	is_triggered_only = yes
 	trigger = {
-		holder_scope = { government = open_range_feudalism_government }
-		holder_scope = { has_law = range_privileges_church_1 }
-		holder_scope = { NOT = { has_character_modifier = had_party_localize } }
+		holder_scope = { 
+			top_liege = { government = open_range_feudalism_government }
+			OR = {
+				has_law = range_privileges_church_0
+				has_law = range_privileges_trade_0
+			}
+			has_character_modifier = had_party_localize 
+		}
 	}
 	immediate = {
-		holder_scope = { add_character_modifier = had_party_localize }
 		create_random_soldier = {
 			random_traits = yes
 			dynasty = none
@@ -2397,15 +2413,19 @@ province_event = {
 			add_trait = zealous
 		}
 	}
-	mean_time_to_happen = {
-		years = 15
+	option = {
+		name = EVTOPTA_texas_75
+		#you gain election buff that i will code after the election
+		trigger = {
+			top_liege = { government = open_range_feudalism_government }
+		}
 	}
 }
 
 character_event = {#rangers trying to organize
 	id = texas.75
 	desc = EVTDESC_texas_75
-	
+	triggered_only = yes
 	trigger = { government = open_range_feudalism_government }
 	
 	option = {

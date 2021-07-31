@@ -1,0 +1,192 @@
+government_flavor = {
+	name = gov_open_range_feudalism_base
+	graphics = GFX_evt_prairie
+	priority = 1
+	trigger = {
+		government = open_range_feudalism_government
+		OR = {
+			AND = {
+				has_law = orf_senate_type_law_0
+				has_law = range_senate_size_1
+			}
+			AND = {
+				has_law = orf_senate_type_law_0
+				has_law = range_senate_size_2
+			}
+			has_law = range_senate_size_0
+		}
+	}
+}
+
+# After the End religion specific flavor overrides
+government_flavor = {
+	name = gov_americanist_open_range_feudalism_base
+	graphics = GFX_evt_prairie
+	priority = 3
+	trigger = {
+		government = open_range_feudalism_government
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+		OR = {
+			AND = {
+				has_law = orf_senate_type_law_0
+				has_law = range_senate_size_1
+			}
+			AND = {
+				has_law = orf_senate_type_law_0
+				has_law = range_senate_size_2
+			}
+			has_law = range_senate_size_0
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_open_range_feudalism_council
+	graphics = GFX_evt_council_around_table
+	priority = 1
+	trigger = {
+		government = open_range_feudalism_government
+		OR = {
+			AND = {
+				has_law = orf_senate_type_law_0
+				has_law = range_senate_size_3
+			}
+			has_law = range_senate_size_1
+			has_law = range_senate_size_2
+		}
+	}
+}
+
+# After the End religion specific flavor overrides
+government_flavor = {
+	name = gov_americanist_open_range_feudalism_council
+	graphics = GFX_evt_council_around_table
+	priority = 3
+	trigger = {
+		government = open_range_feudalism_government
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+		OR = {
+			AND = {
+				has_law = orf_senate_type_law_0
+				has_law = range_senate_size_3
+			}
+			has_law = range_senate_size_1
+			has_law = range_senate_size_2
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_open_range_feudalism_council_3
+	graphics = GFX_evt_throne_room
+	priority = 2
+	trigger = {
+		government = open_range_feudalism_government
+		OR = {
+			AND = {
+				has_law = orf_senate_type_law_0
+				has_law = range_senate_size_4
+			}
+			has_law = range_senate_size_3
+		}
+	}
+}
+
+# After the End religion specific flavor overrides
+government_flavor = {
+	name = gov_americanist_open_range_feudalism_council_3
+	graphics = GFX_evt_throne_room
+	priority = 4
+	trigger = {
+		government = open_range_feudalism_government
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+		OR = {
+			AND = {
+				has_law = orf_senate_type_law_0
+				has_law = range_senate_size_4
+			}
+			has_law = range_senate_size_3
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_open_range_feudalism_kingdom_monarchy
+	graphics = GFX_evt_throne_room
+	priority = 2
+	trigger = {
+		government = open_range_feudalism_government
+		AND = {
+			has_law = orf_senate_type_law_1
+			has_law = range_senate_size_4
+		}
+	}
+}
+
+# After the End religion specific flavor overrides
+government_flavor = {
+	name = gov_americanist_open_range_kingdom_monarchy
+	graphics = GFX_evt_throne_room
+	priority = 4
+	trigger = {
+		government = open_range_feudalism_government
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+		AND = {
+			has_law = orf_senate_type_law_1
+			has_law = range_senate_size_4
+		}
+	}
+}
+
+government_flavor = {
+	name = gov_open_range_feudalism_kingdom_royal_republic
+	graphics = GFX_evt_throne_room
+	priority = 2
+	trigger = {
+		government = open_range_feudalism_government
+		AND = {
+			has_law = orf_senate_type_law_2
+			has_law = range_senate_size_4
+		}
+	}
+}
+
+# After the End religion specific flavor overrides
+government_flavor = {
+	name = gov_americanist_open_range_kingdom_royal_republic
+	graphics = GFX_evt_throne_room
+	priority = 4
+	trigger = {
+		government = open_range_feudalism_government
+		OR = {
+			religion = americanist
+			religion = hamiltonian
+			religion = jeffersonian
+			religion = libertarian
+		}
+		AND = {
+			has_law = orf_senate_type_law_2
+			has_law = range_senate_size_4
+		}
+	}
+}

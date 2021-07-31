@@ -687,6 +687,10 @@ character_event = {
 					factor = 1.25
 					event_target:orf_election_opponent_attacker = { has_character_flag = endorsed_by_liege }
 				}
+				mult_modifier = {
+					factor =0.75
+					event_target:orf_election_opponent_attacker = { has_character_modifier = rebellious_range_party }
+				}
 	
 				event_target:orf_election_opponent_attacker = { set_character_flag = election_won }
 				event_target:orf_election_opponent_attacker = { narrative_event = { id = orfelection.10 days = 5} }
@@ -785,6 +789,10 @@ character_event = {
 				mult_modifier = {
 					factor = 1.25
 					event_target:orf_election_opponent_defender = { has_character_flag = endorsed_by_liege }
+				}
+				mult_modifier = {
+					factor =0.75
+					event_target:orf_election_opponent_defender = { has_character_modifier = rebellious_range_party }
 				}
 
 				event_target:orf_election_opponent_defender = { set_character_flag = election_won }

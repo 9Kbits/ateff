@@ -23,6 +23,7 @@ laws = {
 			holder_scope = {
 				government = open_range_feudalism_government
 			}
+			holder_scope = { independent = yes }
 		}
 		revoke_allowed = {
 			always = no
@@ -64,7 +65,8 @@ laws = {
 				}
 			}		
 		}
-		global_revolt_risk = 0.05
+		demesne_size = 1
+		feudal_opinion = -5
 	}
 	range_senate_size_1 = {
 		group = range_senate_size
@@ -95,6 +97,7 @@ laws = {
 			holder_scope = {
 				government = open_range_feudalism_government
 			}
+			holder_scope = { independent = yes }
 		}
 		revoke_allowed = {
 			always = no
@@ -159,6 +162,7 @@ laws = {
 			holder_scope = {
 				government = open_range_feudalism_government
 			}
+			holder_scope = { independent = yes }
 		}
 		revoke_allowed = {
 			always = no
@@ -225,6 +229,7 @@ laws = {
 			holder_scope = {
 				government = open_range_feudalism_government
 			}
+			holder_scope = { independent = yes }
 		}
 		revoke_allowed = {
 			always = no
@@ -281,15 +286,13 @@ laws = {
 				tier = KING
 				tier = EMPEROR
 			}
-			OR = {
-				has_law = orf_senate_type_law_1
-				has_law = orf_senate_type_law_2
-			}
+			has_law = orf_senate_type_law_2
 		}
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
 			}
+			holder_scope = { independent = yes }
 		}
 		revoke_allowed = {
 			always = no
@@ -332,7 +335,8 @@ laws = {
 			}
 		}
 		vassal_limit = 30
-		feudal_opinion = 10
+		feudal_opinion = 5
+		demesne_size = 1
 	}
 	
 
@@ -345,6 +349,7 @@ laws = {
 
 		potential = {
 			holder_scope = { government = open_range_feudalism_government } 
+			holder_scope = { independent = yes }
 		}
 		ai_will_do = { factor = 0 }
 		ai_will_revoke = { factor = 0 }
@@ -388,6 +393,7 @@ laws = {
 
 		potential = {
 			holder_scope = { government = open_range_feudalism_government } 
+			holder_scope = { independent = yes }
 		}
 		ai_will_do = {
 			factor = 1
@@ -426,9 +432,10 @@ laws = {
 				revoke_law = orf_senate_type_law_2
 				#revoke_law = orf_senate_type_law_3
 			}
-			feudal_vassal_min_levy = 0.45
-			feudal_opinion = 10
 		}
+			
+		feudal_opinion = 10
+		global_levy_size = 0.15
 	}
 	orf_senate_type_law_2 = {
 		group = orf_senate_type_law
@@ -443,6 +450,7 @@ laws = {
 		}
 		potential = {
 			holder_scope = { government = open_range_feudalism_government } 
+			holder_scope = { independent = yes }
 		}
 		ai_will_do = {
 			factor = 10
@@ -476,10 +484,10 @@ laws = {
 			}
 		}
 		
-		city_vassal_min_levy = 0.45
-		temple_vassal_min_levy = 0.45
-		feudal_vassal_min_levy = 0.45
+		demesne_size = 1
 		feudal_opinion = -5
+		temple_opinion = 10
+		city_opinion = 10
 	}
 
 
