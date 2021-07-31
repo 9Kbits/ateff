@@ -1426,15 +1426,18 @@
 	trait=chaste
 	disallow_random_traits=yes
 	give_nickname=nick_the_dove
-	2649.8.10={birth=yes}
-	2660.1.1={
-	effect={
+	2649.8.10={birth=yes
+		effect={
 			set_character_flag=no_historical_family
 			set_character_flag=diversity
 			set_character_flag=physique
-			{add_friend=1384010}
-			{add_friend=1911151}
-			{add_friend=2200016}
+		}
+	}
+	2660.1.1={
+		effect={
+			add_friend=1384010
+			add_friend=1911151
+			add_friend=2200016
 		}
 	}
 	2690.3.24={death=yes}
@@ -3320,7 +3323,7 @@ name="Gelett"
 	trait=ambitious
 	trait=shrewd
 	trait=proud
-	2323.1.1={birth=yes}
+	2321.1.1={birth=yes}
 	2355.1.1={add_spouse=2500113}
 	2357.12.3={
 		death={
@@ -3393,8 +3396,9 @@ name="Elfie"
 	trait=sympathy_judaism
 	father=2500119
 	mother=2500113
-	2356.7.5={ birth=yes }
-	2415.9.2={ death=yes }
+	2348.7.5={birth=yes}
+	2365.3.1={add_spouse=2500113}
+	2415.9.2={death=yes}
 }
 2500124={
 	name="Catarina"
