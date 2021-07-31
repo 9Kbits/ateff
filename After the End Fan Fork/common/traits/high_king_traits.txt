@@ -1,34 +1,35 @@
 #high king candidate
 
+
 party_populist = {
 	martial = 1
 	opposites = {
-		trait = party_magnate
-		trait = party_theocratic
+		party_magnate
+		party_theocratic
 	}
 }
 party_magnate = {
 	diplomacy = 1
 	opposites = {
-		trait = party_populist
+		party_populist
 	}
 }
 party_royalist = {
 	stewardship = 1
 	opposites = {
-		trait = party_opposition
+		party_opposition
 	}
 }
 party_theocratic = {
 	learning = 1
 	opposites = {
-		trait = party_populist
+		party_populist
 	}
 }
 party_opposition = {
 	intrigue = 1
 	opposites = {
-		trait = party_royalist
+		party_royalist
 	}
 }
 
