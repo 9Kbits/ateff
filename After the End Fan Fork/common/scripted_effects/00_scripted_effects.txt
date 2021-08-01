@@ -24732,20 +24732,6 @@ transfer_crown_on_abdication_effect = {
 				} 
 			}
 	}
-	#if = {
-	#	limit = { 
-	#		has_landed_title = d_thelemic_reformed
-	#		any_artifact = { artifact_type = crown_thelemic_fylkir }
-	#	}
-	#		current_heir = { save_event_target_as = crown_thelemic_fylkir_heir }
-	#		any_artifact = { 
-	#			limit = { artifact_type = crown_thelemic_fylkir }
-	#			transfer_artifact = {
-	#				from = PREV
-	#				to = event_target:crown_thelemic_fylkir_heir
-	#			} 
-	#		}
-	#}
 	if = {
 		limit = { 
 			has_landed_title = d_celtic_pagan_reformed
@@ -28266,68 +28252,6 @@ reformation_god_names_changes_effect = { #Reforming religion with certain Doctri
 	
 				break = yes
 			}
-
-			#if = { #A ruler reforms Thelemic.
-			#	limit = {
-			#		has_dlc = "Holy Fury" 
-			#		religion = thelemic_reformed
-			#		OR = { 
-			#			has_religion_feature = religion_matriarchal
-			#			has_religion_feature = religion_patriarchal
-			#			has_religion_feature = religion_dogmatic
-			#			has_religion_feature = religion_proselytizing
-			#		}
-			#	}
-			#	remove_god_names = yes
-			#	remove_evil_god_names = yes
-			#	if = { #Religion is not sexist, add just Proselytizing set.
-			#		limit = {
-			#			NOR = {
-			#				has_religion_feature = religion_matriarchal
-			#				has_religion_feature = religion_patriarchal
-			#			}
-			#			has_religion_feature = religion_proselytizing
-			#		}
-			#		set_high_god_name = GOD_RA_HOOR_KHUIT
-			#		add_god_name = GOD_RA_HOOR_KHUIT_2
-			#		add_evil_god_name = GOD_JESUS
-			#	}
-			#	if = { #Religion is not sexist, add just Dogmatic set.
-			#		limit = {
-			#			NOR = {
-			#				has_religion_feature = religion_matriarchal
-			#				has_religion_feature = religion_patriarchal
-			#			}
-			#			has_religion_feature = religion_dogmatic
-			#		}
-			#		set_high_god_name = GOD_THE_QUEEN
-			#		add_god_name = GOD_THE_QUEEN_2
-			#		add_evil_god_name = GOD_JESUS
-			#	}
-			#	if = { #Religion is Patriarchal
-			#		limit = {
-			#			has_religion_feature = religion_patriarchal
-			#		}
-			#		set_high_god_name = GOD_THE_KING 
-			#		add_god_name = GOD_THE_KING_2	
-			#		add_god_name = GOD_HADIT 
-			#		add_god_name = GOD_RA_HOOR_KHUIT
-			#		add_evil_god_name = GOD_JESUS
-			#	}
-			#	if = { #Religion is Matriarchal
-			#		limit = {
-			#			has_religion_feature = religion_matriarchal
-			#		}
-			#		set_high_god_name = GOD_THE_QUEEN
-			#		add_god_name = GOD_THE_QUEEN_2
-			#		add_god_name = GOD_NUIT
-			#		add_evil_god_name = GOD_HADIT 
-			#		add_evil_god_name = GOD_RA_HOOR_KHUIT 
-			#		add_evil_god_name = GOD_JESUS
-			#	}
-			#	
-			#	break = yes
-			#}
 
 			if = { #A ruler reforms Celtic Paganism
 				limit = {

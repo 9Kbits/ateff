@@ -13202,21 +13202,6 @@ character_event = {
 			}
 			current_heir = { character_event = { id = HF.20407 days = 1 } }
 		}
-		#if = { 
-		#	limit = { 
-		#		has_landed_title = d_thelemic_reformed
-		#		any_artifact = { artifact_type = crown_thelemic_fylkir }
-		#	}
-		#	d_thelemic_reformed = { 
-		#		current_heir = { save_event_target_as = worthy_thelemic_fylkir_crown }
-		#	}
-		#	player_heir = { save_event_target_as = unworthy_thelemic_fylkir_crown }
-		#	any_artifact = { 
-		#		limit = { artifact_type = crown_thelemic_fylkir }
-		#		save_event_target_as = inheriting_artifact_thelemiccrown
-		#	}
-		#	current_heir = { character_event = { id = HF.20407 days = 1 } }
-		#}
 		if = { 
 			limit = { 
 				has_landed_title = d_midewiwin_reformed
@@ -14374,10 +14359,6 @@ character_event = {
 				FROM = { title = d_occultist_reformed } 
 				FROMFROM = { any_artifact = { artifact_type = crown_occultist_fylkir } } 
 			} 
-			#AND = {
-			#	FROM = { title = d_thelemic_reformed } 
-			#	FROMFROM = { any_artifact = { artifact_type = crown_thelemic_fylkir } } 
-			#} 
 			AND = {
 				FROM = { title = d_midewiwin_reformed } 
 				FROMFROM = { any_artifact = { artifact_type = scepter_midewiwin_fylkir } } 
@@ -14457,18 +14438,6 @@ character_event = {
 				}
 			}
 		}
-		#if = {
-		#	limit = {
-		#		FROM = { title = d_thelemic_reformed } 
-		#		FROMFROM = { any_artifact = { artifact_type = crown_thelemic_fylkir } } 
-		#	} 
-		#	FROMFROM = { 
-		#		any_artifact = { 
-		#			limit = { artifact_type = crown_thelemic_fylkir }
-		#			save_event_target_as = inheriting_artifact_thelemiccrown 
-		#		}
-		#	}
-		#}
 		if = {
 			limit = {
 				FROM = { title = d_celtic_pagan_reformed } 
@@ -14667,10 +14636,6 @@ character_event = {
 				has_landed_title = d_occultist_reformed 
 				any_artifact = { artifact_type = crown_occultist_fylkir }
 			}
-			#AND = { 
-			#	has_landed_title = d_thelemic_reformed 
-			#	any_artifact = { artifact_type = crown_thelemic_fylkir }
-			#}
 			AND = { 
 				has_landed_title = d_midewiwin_reformed
 				any_artifact = { artifact_type = scepter_midewiwin_fylkir }
@@ -14747,13 +14712,6 @@ character_event = {
 			}
 			add_trait = dead_crown_occultist_fylkir
 		}
-		#if = { 
-		#	limit = { 
-		#		has_landed_title = d_thelemic_reformed 
-		#		any_artifact = { artifact_type = crown_thelemic_fylkir }
-		#	}
-		#	add_trait = dead_crown_thelemic_fylkir
-		#}
 		if = { 
 			limit = { 
 				has_landed_title = d_midewiwin_reformed

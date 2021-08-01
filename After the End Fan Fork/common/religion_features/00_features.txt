@@ -1173,54 +1173,6 @@ religion_doctrine = {
 			factor = 50
 		}
 	}
-	#religion_feature_thelemic = {
-	#	picture = GFX_religion_feature_thelemic
-	#	potential = {
-	#		has_game_started = yes
-	#		religion = thelemic_reformed
-	#		NOR = {
-	#			has_alternate_start_parameter = { key = religion_names value = random }
-	#		}
-	#	}
-	#	trigger = {
-	#		religion = thelemic_reformed
-	#		NOR = { 
-	#			has_selected_religion_feature = religion_seafaring #Redundant
-	#			has_selected_religion_feature = religion_ritual_sacrifice #Redundant
-	#			has_selected_religion_feature = religion_relentless #Redundant
-	#		}
-	#	}
-	#	effect = {
-	#		custom_tooltip = { text = tooltip_religion_feature_aztec_sacrifices }
-	#		custom_tooltip = { text = tooltip_religion_feature_bloodthirsty_mechanics }
-	#		custom_tooltip = { text = tooltip_religion_feature_anti_attrition }
-	#		custom_tooltip = { text = tooltip_religion_feature_offensive }
-	#		#custom_tooltip = { text = tooltip_religion_feature_rivermovement }
-	#		custom_tooltip = { text = tooltip_religion_feature_seafaring }
-	#		custom_tooltip = { text = tooltip_religion_feature_ship_maintenance }
-	#		hidden_tooltip = { 
-	#			set_ignores_defensive_attrition = yes
-	#			set_seafaring = yes
-	#			set_allow_rivermovement = yes
-	#			set_unit_modifier = { 
-	#				light_infantry_offensive = 0.1
-	#				heavy_infantry_offensive = 0.1
-	#				light_cavalry_offensive = 0.1 
-	#				knights_offensive = 0.1 
-	#				pikemen_offensive = 0.1 
-	#				archers_offensive = 0.1
-	#				horse_archers_offensive = 0.1
-	#				camel_cavalry_offensive = 0.1
-	#				war_elephants_offensive = 0.1
-	#				key = "THELEMIC_RELENTLESS_RELIGION"
-	#			}
-	#		}
-	#	}
-	#	ai_will_do = {
-	#		factor = 50
-	#	}
-	#}
-	
 	religion_feature_celtic = { 
 		picture = GFX_religion_feature_celtic
 		potential = {

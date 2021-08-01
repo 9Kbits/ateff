@@ -243,9 +243,11 @@ dino_head = {
 		}
 	}
 	allowed_gift = {
-		religion = americanist
-		religion = trailwalker
-		religion = revelationist
+		OR = {
+			religion = americanist
+			religion = trailwalker
+			religion = revelationist
+		}
 	}
 	flags = { religious americanist trailwalker revelationist art decor rare }
 	stacking = no
@@ -375,9 +377,9 @@ toy_pirate_sword = {
 		morale_defence = 0.1
 	}
 	active = {
-			religion = brethren
-		}
+		religion = brethren
 		is_adult = yes
+	}
 	allowed_gift = {
 			religion = brethren
 	}

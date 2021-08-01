@@ -82,42 +82,6 @@ israel_female = {
 	}
 }
 
-roman_emperor_male = {
-	monthly_character_prestige = 0.25
-	bloodline_effect_roman_culture = 1
-	christian_opinion = 5
-	#hellenic_pagan_opinion = 5
-	#hellenic_pagan_reformed_opinion = 5
-	inheritance = patrilineal
-	allow_bastards = yes
-	flags = { bloodline_faster_roman created_bloodline }
-	picture = GFX_bloodlines_symbol_roman
-	active = {
-		OR = {
-			religion_group = christian
-			#religion_openly_hellenic_or_reformed_trigger = yes
-		}
-	}
-}
-
-roman_emperor_female = {
-	monthly_character_prestige = 0.25
-	bloodline_effect_roman_culture = 1
-	christian_opinion = 5
-	#hellenic_pagan_opinion = 5
-	#hellenic_pagan_reformed_opinion = 5
-	inheritance = matrilineal
-	allow_bastards = yes
-	flags = { bloodline_faster_roman created_bloodline }
-	picture = GFX_bloodlines_symbol_roman
-	active = {
-		OR = {
-			religion_group = christian
-			#religion_openly_hellenic_or_reformed_trigger = yes
-		}
-	}
-}
-
 phalaris_male = {
 	bloodline_effect_brazen_bull = 1
 	christian_opinion = -10
@@ -241,7 +205,6 @@ bloodthirsty_male_bloodline = {
 		OR = {
 			religion = mictlantec
 			has_religion_feature = religion_ritual_sacrifice
-			has_religion_feature = religion_feature_thelemic
 		}
 	}
 	flags = { bloodline_created_bloodthirsty bloodline_prestige_sacrifice created_bloodline }
@@ -260,7 +223,6 @@ bloodthirsty_female_bloodline = {
 		OR = {
 			religion = mictlantec
 			has_religion_feature = religion_ritual_sacrifice
-			has_religion_feature = religion_feature_thelemic
 		}
 	}
 	flags = { bloodline_created_bloodthirsty bloodline_prestige_sacrifice created_bloodline }
@@ -1525,7 +1487,7 @@ iron_chief = {
 	inheritance = patrilineal
 	allow_bastards = yes
 	picture = GFX_bloodlines_symbol_horse
-	flags = { iron_chief_line }
+	flags = { created_bloodline iron_chief_line }
 }
 heir_riel_male = {
 	metis_opinion = 5
@@ -1581,19 +1543,6 @@ isotopic_female = {
 	}
 	picture = GFX_bloodlines_symbol_isotope
 	flags = { bloodline_isotopic theologian_saintly_bloodline }
-}
-
-iron_chief = {
-	combat_rating = 5
-	plains_opinion = 5
-	monthly_character_prestige = 0.1
-	command_modifier = {
-		morale_offence = 0.05
-	}
-	inheritance = patrilineal
-	allow_bastards = yes
-	picture = GFX_bloodlines_symbol_horse
-	flags = { created_bloodline }
 }
 
 john_wayne = {
