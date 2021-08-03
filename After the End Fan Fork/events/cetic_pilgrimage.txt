@@ -1227,8 +1227,10 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_cetic_pilgrim_sympathy_red
-		NOT = {
-			has_secret_religion = yes
+		trigger = {
+			NOT = {
+				has_secret_religion = yes
+			}
 		}
 		piety = -25
 		set_secret_religion = gaian
