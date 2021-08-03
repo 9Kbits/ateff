@@ -10262,8 +10262,8 @@ character_event = {
 				limit = {
 					has_character_modifier = high_bureaucracy
 					higher_real_tier_than = KING
+					check_variable = { which = global_bureau_number value > 70 }
 				}
-				check_variable = { which = global_bureau_number value > 70 }
 				change_variable = { which = global_bureau_number value = 0.5 }
 			}
 			if = {
