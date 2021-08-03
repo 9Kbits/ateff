@@ -220,7 +220,16 @@ targeted_decisions = {
 			is_child_of = FROM
 		}
 		allow = {
-			age = 12
+			OR = {
+				AND = {
+					is_female = yes
+					age = 12
+				}
+				AND = {
+					is_female = no
+					age = 13
+				}
+			}
 			NOR = {
 				is_landed = yes
 				prisoner = yes

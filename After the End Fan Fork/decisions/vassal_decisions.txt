@@ -536,7 +536,14 @@ targetted_decisions = {
 		}
 		ai_acceptance = {
 			factor = 0
-
+			additive_modifier = {
+				value = 500
+				AND = {
+					is_abroad = no
+					prisoner = yes
+				}
+				localisation_key = REASON_IMPRISONED
+			}
 			additive_modifier = {
 				value = 10
 				opinion = {who = FROM value >=95}
