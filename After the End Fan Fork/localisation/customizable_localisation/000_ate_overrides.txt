@@ -2792,6 +2792,79 @@ defined_text = { #WIP
 	}
 }
 
+defined_text = { 
+	name = GetFertilityGoddess
+	
+	text = {
+		trigger = {
+			OR = { 
+				religion = norse_pagan
+				religion = norse_pagan_reformed
+			}
+		}
+		localisation_key = string_goddess_freyja
+	}
+	text = {
+		trigger = {
+			OR = { 
+				religion = rust_cultist
+				religion = chrome_cultist
+			}
+		}
+		localisation_key = string_goddess_riveter
+	}
+	text = {
+		trigger = {
+			OR = { 
+				religion = americanist
+				religion = jeffersonian
+				religion = hamiltonian
+				religion = libertarian
+			}
+		}
+		localisation_key = string_goddess_virginia
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = occultist
+				religion = occultist_reformed
+			}
+		}
+		localisation_key = string_goddess_shub_niggurath
+	}
+	text = {
+		trigger = {
+			religion = gaian
+		}
+		localisation_key = string_goddess_earth_mother
+	}
+	text = {
+		trigger = {
+			OR = {
+				religion = voodoo
+				religion = brethren
+			}
+		}
+		localisation_key = string_goddess_la_sirene
+	}
+	text = {
+		trigger = {
+			religion = candomble
+		}
+		localisation_key = string_goddess_yemanja
+	}
+	text = {
+		trigger = {
+			religion = espiritista
+		}
+		localisation_key = string_goddess_maria_lionza
+	}
+	fallback_text = {
+		localisation_key = string_fallback_old_goddess 
+	}
+}
+
 ###WEATHER, TIME###
 defined_text = {
 	name = GetWeatherAdjective # WIP

@@ -9666,41 +9666,6 @@ defined_text = {
 	}
 }
 
-defined_text = { 
-	name = GetFertilityGoddess
-	
-	text = {
-		trigger = {
-			OR = { 
-				religion = norse_pagan
-				religion = norse_pagan_reformed
-			}
-		}
-		localisation_key = string_goddess_freyja
-	}
-	text = {
-		trigger = {
-			OR = { 
-				religion = baltic_pagan
-				religion = baltic_pagan_reformed
-			}
-		}
-		localisation_key = string_goddess_zemyna
-	}
-	text = {
-		trigger = {
-			OR = { 
-				religion = finnish_pagan
-				religion = finnish_pagan_reformed
-			}
-		}
-		localisation_key = string_goddess_akka
-	}
-	fallback_text = {
-		localisation_key = string_fallback_old_goddess 
-	}
-}
-
 defined_text = {
 	name = GetAgeAdjective #"the [GetAgeAdjective] [From.GetManWoman]" would read "the old man", for instance
 	text = {
