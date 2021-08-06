@@ -569,7 +569,6 @@ character_event = {
 
 character_event = {
 	id = orfelection.8
-	title = EVTTITLE_orf_election_waiting_results
 	
 	picture = GFX_evt_battle
 	
@@ -835,6 +834,7 @@ narrative_event = {
 		trigger = { 
 			event_target:orf_election_opponent_attacker = { has_character_flag = election_won } 
 			has_character_flag = running_for_office_attacker
+			has_character_flag = election_won
 		}
 		event_target:orf_election_opponent_attacker = { clr_character_flag = election_won } 
 		if = {
@@ -933,6 +933,7 @@ narrative_event = {
 		trigger = { 
 			event_target:orf_election_opponent_defender = { has_character_flag = election_won } 
 			has_character_flag = running_for_office_defender
+			has_character_flag = election_won
 		}
 		
 		add_character_modifier = {
@@ -967,7 +968,8 @@ narrative_event = {
 		name = EVTOPTA_orf_running_for_office_attacker_lost
 		trigger = { 
 			event_target:orf_election_opponent_defender = { has_character_flag = election_won } 
-			has_character_flag = running_for_office_attacker
+			has_character_flag = election_attacker
+			NOT = { has_character_flag = election_won }
 		}
 		add_character_modifier = {
 			name = orf_election_lost_cooldown
@@ -1003,6 +1005,7 @@ narrative_event = {
 		trigger = { 
 			event_target:orf_election_opponent_attacker = { has_character_flag = election_won } 
 			has_character_flag = running_for_office_defender
+			NOT = { has_character_flag = election_won }
 		}
 		add_character_modifier = {
 			name = orf_election_lost_cooldown
