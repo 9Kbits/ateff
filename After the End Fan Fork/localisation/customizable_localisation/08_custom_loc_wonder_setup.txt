@@ -1,0 +1,579 @@
+#
+# 	Custom loc for setting names and descs of wonders and upgrades
+#
+#	GetWonderName ................................... Fancy Name! Use to set/update the name of a Wonder
+# 	GetWonderAdjCap ................................. An adjective for the Wonder, eg. "Great", "Bloody"
+# 	GetWonderAdj .................................... An adjective for the Wonder, eg. "great", "bloody"
+#	GetWonderTypeShortCap ........................... Building type: "Cathedral", "Pyramid", or "Harbor"
+#	GetWonderTypeShort .............................. Building type: "cathedral", "pyramid", or "harbor"
+#	GetWonderFluffNounCap ........................... Use with an 'of', to read things like "of <Shadows>"
+#
+
+#	GetWonderDesc ................................... Fancy Desc! Use to set/update the desc of a Wonder
+#	GetWonderAgeDesc ................................
+# 	GetWonderPurpose ................................
+# 	GetRandomUpgradeDesc ............................
+
+
+
+# A Fancy Name! Use this to set/update the name of a wonder (probably best done via on_actions after completing a stage or upgrade)
+
+
+
+# An adjective for the Wonder, eg. "Great", "Bloody"
+#Great, Grand, Holy, Magnificent, Glorious, Bloody, Fortified, Royal, Grand Royal, Silent
+#Golden, Iron, Towering, Looming, Divine, Verdant, Soaring, Hallowed, Ancient, Old
+
+
+#Shadows, Light, Secrets, Death, Pain, Screams, Romance, Treasures, holy
+
+defined_text = {
+	name = GetWonderFluffNounCap
+
+	text = {
+		trigger = { has_wonder_flag = is_temple }
+		localisation_key = String_Shadows
+	}
+	text = {
+		trigger = { has_wonder_flag = is_temple }
+		localisation_key = String_Light
+	}
+	
+	text = {
+		trigger = { has_wonder_flag = is_temple }
+		localisation_key = String_Secrets
+	}
+	text = {
+		trigger = {any_upgrade_on_wonder = { has_wonder_upgrade_flag = body_stash } }
+		localisation_key = String_Secrets
+	}
+	text = {
+		trigger = {
+			any_upgrade_on_wonder = {
+				has_wonder_upgrade_flag = scary
+			}
+		}
+		localisation_key = String_Death
+	}
+	text = {
+		trigger = {
+			any_upgrade_on_wonder = {
+				has_wonder_upgrade_flag = scary
+			}
+		}
+		localisation_key = String_Pain
+	}
+
+	text = {
+		trigger = {
+			any_upgrade_on_wonder = {
+				has_wonder_upgrade_flag = scary
+			}
+		}
+		localisation_key = String_Screams
+	}
+
+	text = {
+		trigger = {
+			any_upgrade_on_wonder = {
+				count = 3 #to do Add more romantic places as this isnt currently possible
+				has_wonder_upgrade_flag = romantic
+			}
+		}
+		localisation_key = String_Romance
+	}
+
+	text = {
+		trigger = {
+			any_upgrade_on_wonder = {
+				count = 2
+				has_wonder_upgrade_flag = valuable
+			}
+		}
+		localisation_key = String_Treasures
+	}
+	
+
+	#In case it cannot find anything...
+    fallback_text = {
+        localisation_key = String_Wonder_Province
+    }
+}
+
+
+# Used when updating the desc of a wonder.
+defined_text = {
+	name = GetWonderDesc
+	#Dependent on event-targets: upgrade_00, upgrade_01 and upgrade_02
+	text = {
+		trigger = { #for baby wonders (adds upgrade mention)
+			has_wonder_upgrade = yes
+			NOT = { num_of_wonder_upgrades = 3 }
+			NOT = { wonder_age = 15 }
+		}
+		localisation_key = String_Wonder_Desc00
+	}
+	text = { #for wonders that build no upgrades, but stages instead: no upgrade addendum
+		trigger = {
+			has_wonder_upgrade = no
+		}
+		localisation_key = String_Wonder_Desc01
+	}
+	text = { #Variant 1: mentions an upgrade
+		trigger = { num_of_wonder_upgrades = 2 }
+		localisation_key = String_Wonder_Desc02
+	}
+	text = { #Variant 2: mentions an upgrade
+		trigger = { num_of_wonder_upgrades = 5 }
+		localisation_key = String_Wonder_Desc03
+	}
+}
+
+defined_text = {
+	name = GetWonderAgeDesc
+
+	text = {
+		trigger = { NOT = { wonder_age = 1 } }
+		localisation_key = String_months
+	}
+	text = {
+		trigger = {
+			wonder_age = 1
+			NOT = { wonder_age = 20 }
+		}
+		localisation_key = String_years
+	}
+	text = {
+		trigger = {
+			wonder_age = 20
+			NOT = { wonder_age = 100 }
+		}
+		localisation_key = String_decades
+	}
+	text = {
+		trigger = {
+			wonder_age = 80
+			NOT = { wonder_age = 100 }
+		}
+		localisation_key = String_almost_a_century
+	}
+	text = {
+		trigger = {
+			wonder_age = 100
+			NOT = { wonder_age = 150 }
+		}
+		localisation_key = String_ages
+	}
+	text = {
+		trigger = {
+			wonder_age = 100
+			NOT = { wonder_age = 150 }
+		}
+		localisation_key = String_more_than_a_hundred_years
+	}
+	text = {
+		trigger = {
+			wonder_age = 250
+		}
+		localisation_key = String_hundreds_of_years
+	}
+	text = {
+		trigger = {
+			wonder_age = 250
+		}
+		localisation_key = String_as_long_as_anyone_can_remember
+	}
+	text = {
+		trigger = {
+			wonder_age = 250
+		}
+		localisation_key = String_centuries
+	}
+	text = {
+		trigger = {
+			wonder_age = 350
+		}
+		localisation_key = String_time_immemorial
+	}
+
+	#In case it cannot find anything...
+    fallback_text = {
+        localisation_key = String_a_long_time
+    }
+}
+
+defined_text = {
+	name = GetRandomUpgradeDesc
+	# Needs to be in an upgrade scope!
+	# Present tense: Eg. <The> "[upgradeName] are said to keep demons at bay".
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = scary
+			has_wonder_upgrade_flag = is_singular
+		}
+		localisation_key = String_upgrade_sends_chills
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = scary
+			has_wonder_upgrade_flag = is_plural
+		}
+		localisation_key = String_upgrade_send_chills
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = defensive
+			has_wonder_upgrade_flag = is_singular
+		}
+		localisation_key = String_upgrade_promises_safety
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = defensive
+			has_wonder_upgrade_flag = is_plural
+		}
+		localisation_key = String_upgrade_promises_safety
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = decorative
+			has_wonder_upgrade_flag = is_singular
+		}
+		localisation_key = String_upgrade_is_a_work_of_art
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = decorative
+			has_wonder_upgrade_flag = is_plural
+		}
+		localisation_key = String_upgrade_are_beautifully_made
+	}
+	text = {
+		trigger = {
+			OR = {
+				has_wonder_upgrade_flag = statues
+				has_wonder_upgrade = upgrade_gargoyles
+			}
+		}
+		localisation_key = String_statues_keep_demons_away
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade = upgrade_dome
+		}
+		localisation_key = String_dome_is_second_sky
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade = upgrade_herb_garden
+		}
+		localisation_key = String_said_to_be_the_envy_of_gardeners
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade = upgrade_pet_graveyard
+		}
+		localisation_key = String_brings_comfort_to_pet_owners
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade = upgrade_watch_tower
+		}
+		localisation_key = String_lends_moral_support
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = scary
+			has_wonder_upgrade_flag = is_singular
+			OR = {
+				has_wonder_upgrade = upgrade_moat_water
+				has_wonder_upgrade = upgrade_moat_water
+			}
+		}
+		localisation_key = String_keeps_people_on_their_toes
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade = upgrade_roads
+		}
+		localisation_key = String_improves_accessibility
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = defensive
+			NOT = { has_wonder_upgrade_flag = decorative }
+		}
+		localisation_key = String_contribute_to_heightened_security
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = heating
+		}
+		localisation_key = String_bring_luxury_during_colder_seasons
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = entertainment
+		}
+		localisation_key = String_acts_as_entertainment
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = towering
+		}
+		localisation_key = String_can_be_seen_from_far_away
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade = upgrade_torture_chamber
+		}
+		localisation_key = String_signals_expected_obedience
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = produces_alcohol
+			has_wonder_upgrade_flag = is_singular
+		}
+		localisation_key = String_rumored_to_be_the_best
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade = upgrade_road_tolls
+			has_wonder_upgrade_flag = is_plural
+		}
+		localisation_key = String_bring_in_cash
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = air_bnb
+		}
+		localisation_key = String_offers_relaxation
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = contemplative
+		}
+		localisation_key = String_inspires_awe
+	}
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = body_stash
+		}
+		localisation_key = String_remains_a_rumor
+	}
+
+	fallback_text = {
+		localisation_key = String_most_recently_added
+	}
+}
+
+
+# Because the regular one probably does not need the water shenanigans... (GetTerrain, that is)
+defined_text = { #Needs a province scope
+	name = GetWonderTerrain
+	
+	use_first_valid = yes # Defaults to no
+
+	text = {
+		trigger = {
+			is_using_ocean_background_trigger = yes
+		}
+		localisation_key = string_coast
+	}
+	text = {
+		trigger = {
+			terrain = forest
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_forest
+	}
+	text = {
+		trigger = {
+			terrain = hills
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_hills
+	}
+	text = {
+		trigger = {
+			terrain = mountain
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_mountains
+	}
+	text = {
+		trigger = {
+			terrain = plains
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_plains
+	}
+	text = {
+		trigger = {
+			terrain = farmlands
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_farmlands
+	}
+	text = {
+		trigger = {
+			terrain = steppe
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_steppe
+	}
+	text = {
+		trigger = {
+			terrain = desert
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_desert
+	}
+	text = {
+		trigger = {
+			terrain = jungle
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_jungle
+	}
+	text = {
+		trigger = {
+			terrain = arctic
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_arctic
+	}
+	fallback_text = {
+		localisation_key = string_terrain
+	}
+}
+
+defined_text = { ### Needs a province scope - USE ONLY TOGETHER WITH GetWonderTerrain! ###
+	name = GetInOnWonderTerrainCap
+	
+	use_first_valid = yes # Defaults to no
+
+	text = {
+		trigger = {
+			is_using_ocean_background_trigger = yes
+		}
+		localisation_key = string_On
+	}
+	text = {
+		trigger = {
+			terrain = forest
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_In
+	}
+	text = {
+		trigger = {
+			terrain = hills
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_In
+	}
+	text = {
+		trigger = {
+			terrain = mountain
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_In
+	}
+	text = {
+		trigger = {
+			terrain = plains
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_On
+	}
+	text = {
+		trigger = {
+			terrain = farmlands
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_On
+	}
+	text = {
+		trigger = {
+			terrain = steppe
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_On
+	}
+	text = {
+		trigger = {
+			terrain = desert
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_In
+	}
+	text = {
+		trigger = {
+			terrain = jungle
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_In
+	}
+	text = {
+		trigger = {
+			terrain = arctic
+			is_using_ocean_background_trigger = no
+		}
+		localisation_key = string_In
+	}
+	fallback_text = {
+		localisation_key = string_In
+	}
+}
+
+
+defined_text = { 
+	name = GetHagiaSophiaUse
+	
+	use_first_valid = yes # Defaults to no
+
+	text = {
+		trigger = {
+			has_wonder_flag = Hagia_Sophia_orthodox_cult
+			#always = yes
+		}
+		localisation_key = string_Hagia_Sophia_Orthodox
+	}
+	text = {
+		trigger = {
+			has_wonder_flag = Hagia_Sophia_catholic_cult
+		}
+		localisation_key = string_Hagia_Sophia_Latin
+	}
+	text = {
+		trigger = {
+			has_wonder_flag = Hagia_Sophia_muslim_cult
+		}
+		localisation_key = string_Hagia_Sophia_Muslim
+	}
+
+
+	fallback_text = {
+		localisation_key = string_pride_of_constantinople
+	}
+}
+
+
+
+### TEMPLATE
+#defined_text = {
+#	name = GetWonderAdj
+#
+#	use_first_valid = yes # Defaults to no
+#
+#	text = {
+#		trigger = { has_wonder_upgrade = upgrade_spikes }
+#		localisation_key = String_Bloody
+#	}
+#	text = {
+#		trigger = { has_wonder_flag = is_temple }
+#		localisation_key = String_temple
+#	}
+#}
+#

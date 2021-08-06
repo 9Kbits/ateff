@@ -1,0 +1,228 @@
+defined_text = {
+	name = GetBookTheme
+	text = {
+		trigger = { has_character_flag = book_theme_Drama }
+		localisation_key = String_Drama
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Poetry }
+		localisation_key = String_Poetry
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Architecture }
+		localisation_key = String_Architecture
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Philosophy }
+		localisation_key = String_Philosophy
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_History }
+		localisation_key = String_History
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Astronomy }
+		localisation_key = String_Astronomy
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Medicine }
+		localisation_key = String_Medical
+	}
+}
+
+defined_text = {
+	name = GetBookThemeWithArticle
+	text = {
+		trigger = { has_character_flag = book_theme_Drama }
+		localisation_key = String_aDrama
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Poetry }
+		localisation_key = String_aPoetry
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Architecture }
+		localisation_key = String_anArchitecture
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Philosophy }
+		localisation_key = String_aPhilosophy
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_History }
+		localisation_key = String_aHistory
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Astronomy }
+		localisation_key = String_anAstronomy
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Medicine }
+		localisation_key = String_aMedical
+	}
+}
+
+defined_text = {
+	name = GetBookThemeCap
+	text = {
+		trigger = { has_character_flag = book_theme_Drama }
+		localisation_key = String_ADrama
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Poetry }
+		localisation_key = String_APoetry
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Architecture }
+		localisation_key = String_AnArchitecture
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Philosophy }
+		localisation_key = String_APhilosophy
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_History }
+		localisation_key = String_AHistory
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Astronomy }
+		localisation_key = String_AnAstronomy
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Medicine }
+		localisation_key = String_AMedical
+	}
+}
+
+defined_text = {
+	name = GetAuthorTitle
+	text = {
+		trigger = { has_character_flag = book_theme_Drama }
+		localisation_key = String_Writer
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Poetry }
+		localisation_key = String_Poet
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Architecture }
+		localisation_key = String_Architect
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Philosophy }
+		localisation_key = String_Philosopher
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_History }
+		localisation_key = String_Historian
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Astronomy }
+		localisation_key = String_Astronomer
+	}
+	text = {
+		trigger = { has_character_flag = book_theme_Medicine }
+		localisation_key = String_Medic
+	}
+}
+
+defined_text = {
+    name = GetAlcoholContainerType
+    text = {
+        localisation_key = String_bottle
+    }
+    text = {
+        localisation_key = String_case
+    }
+    text = {
+        localisation_key = String_cask
+    }
+    text = {
+        localisation_key = String_barrel
+    }    
+}
+
+defined_text = {
+    name = GetAlcoholContainerTypeCap
+    text = {
+        localisation_key = String_Bottle
+    }
+    text = {
+        localisation_key = String_Case
+    }
+    text = {
+        localisation_key = String_Cask
+    }
+    text = {
+        localisation_key = String_Barrel
+    }    
+}
+
+
+
+defined_text = {
+	name = GetScaryCD
+	
+	text = {
+		trigger = {
+			has_character_modifier = used_scary_upgrade_cd
+		}
+		localisation_key = string_scary_cd
+	}
+}
+
+
+defined_text = {
+	name = GetSingularS
+	
+	text = {
+		trigger = {
+			has_wonder_upgrade_flag = is_singular
+		}
+		localisation_key = String_s
+	}
+}
+
+#Add the word "politely" in the midle of the sentence, if the character has the flag.
+defined_text = {
+	name = GetPoliteRefuse
+	
+	text = {
+		trigger = {
+			has_character_flag = polite_refuse
+		}
+		localisation_key = String_politely
+	}
+}
+
+
+#Add the setence if the character did a big burial.
+defined_text = {
+	name = GetBigBurialHaterSentence
+	
+	text = {
+		trigger = {
+			has_character_flag = big_burial
+		}
+		localisation_key = big_burial_hater_Sentence
+	}
+}
+
+#Add the word unfinished if the wonder is not finished
+
+defined_text = {
+	name = GetUnfinished
+	
+	text = {
+		trigger = {
+			NOT = { is_at_max_stage = yes }
+		}
+		localisation_key = String_unfinished
+	}
+}
+
+
+
+
+
+
