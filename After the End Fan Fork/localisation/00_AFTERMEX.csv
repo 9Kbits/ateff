@@ -143,6 +143,10 @@ cucaracha_desc;The Scourge of Mexico, Luis "la Cucaracha" de Armas was a former 
 lamanita_emperor_male;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 lamanita_emperor_female;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
 bloodline_desc_lamanita;Like the prophets and great teachers of the faith before [Root.GetFirstName] has fulfilled the ancient prophecies and legends and restored the Lamanites into righteousness with God founding a new holy bloodline.;;;;;;;;;;;;;x
+
+restaurador_male;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+restaurador_female;Blood of [This.GetFirstNameWithNick];;;;;;;;;;;;;x
+bloodline_desc_mexican;Like the prophets and great teachers of the faith before [Root.GetFirstName] has fulfilled tghteousness with God founding a newbloodline.;;;;;;;;;;;;;x
  
 ###########Nicknames########### 
  
@@ -303,14 +307,17 @@ born_in_the_caul_desc;This character has been in the waters since birth, an ausp
 adelita;Adelita;;;;;;;;;;;;;x
 adelita_desc;No one knows or even remembers why before the Event a bunch of women, all named Adela, began serving as warriors in the armies of great Caudillos. Nowadays a class of respected female warriors, called Adelitas, have become a revered part of Mexican martial tradition.;;;;;;;;;;;;;x
 
+dorado;Dorado;;;;;;;;;;;;;x
+dorado_desc;Named after the legendary armies of a Great Northern Mexican Caudillo of the times before the event, the Dorados are a group who serves (or used to serve i don't remember) the Mexican Benemérito as a sort of personal guard. Although their ranks are open to mostly cowboy foreign peoples, they also admit Northern Mexican vaquero cultures.;;;;;;;;;;;;;x
+
 ###########Government########### 
  
  
 mex_imperial_government;Ancient Regime;;;;;;;;;;;;;x
 mex_imperial_government_desc;The leaders of the Mexican Empire have long claimed that their system of governance is a direct continuation of the administration of Old Mexico. While their claim is unverifiable, it is unquestionable that their system retains many of the qualities of centralized government that Old Mexico possessed. In this system, all land and water within imperial territory is originally owned by the crown, who has the right to transfer this ownership to particular. Hence, private property is a privilege created by the Emperor. This permits the Emperor to grant and revoke titles at will.;;;;;;x
-# mex_elective;Dedocracia;;;;;;;;;;;;;x
-# succ_mex_elective;Dedocracia;;;;;;;;;;;;;x
-# succ_mex_elective_desc;The Mexican Empire follows an ancient tradition of succession in which the Benemérito must secretly select his heir — known as the "Tapado" and then reveal him in a ceremony known as "el Destape." During the ceremony, the Benemérito points to his chosen successor and the most powerful individuals of the realm must decide whether to accept the charge or to defy his wishes and nominate their own candidate. Only commanders of the Empire, the Benemérito's council and immediate family are able to be selected as the "Tapado" and care should be taken in the selection — as the secrecy of the process is vital to the stability of the Empire. Should one discover who is to be the nextBenemérito, the cunning minds of the court of Mexico may be able to undermine the Empire with their ambitions.;;;;;;x
+mex_elective;Dedocracia;;;;;;;;;;;;;x
+succ_mex_elective;Dedocracia;;;;;;;;;;;;;x
+succ_mex_elective_desc;The Mexican Empire follows an ancient tradition of succession in which the Benemérito must secretly select his heir — known as the "Tapado" and then reveal him in a ceremony known as "el Destape." During the ceremony, the Benemérito points to his chosen successor and the most powerful individuals of the realm must decide whether to accept the charge or to defy his wishes and nominate their own candidate. Only commanders of the Empire, the Benemérito's council and immediate family are able to be selected as the "Tapado" and care should be taken in the selection — as the secrecy of the process is vital to the stability of the Empire. Should one discover who is to be the nextBenemérito, the cunning minds of the court of Mexico may be able to undermine the Empire with their ambitions.;;;;;;x
 
 #gov_mex;Dictadura Perfecta;;;;;;;;;;;;;x
 gov_king_mex;Dictadura imperfecta;;;;;;;;;;;;;x
@@ -425,13 +432,27 @@ EVTTOOLTIPMXR.20;The Empire is restored!;;;;;;;;;x
 EVTTOOLTIPMXR.210;Enforce Cristero Orthodoxy;;;;;;;;;x
 
 EVTNAMEMXR.210;The Mexican Schism has Ended;;;;;;;;;x
-EVTDESCMXR.210;At last the Great Schism between the Cristeros and the Sacred Heart faithful has been mended. After his victory near Toluca in 2541, Benemérito Wenceslao el Tizón elevated the Missionaries of the Sacred Heart after being visited by the Virgin of Guadalupe. 
-
-
-With the spread of Orthodoxy and the reunification of the Pentarchy, including the vital episcopal see of Rome, the Catholic faith now holds little sway over the people of Europe. There will be those who still cling to it, but they will be few in number and the Pentarchy can once more claim universal male over all of Christendom.;;;;;;;;;x
+EVTDESCMXR.210;At last the Great Schism between the Cristeros and the Sacred Heart faithful has been mended. After his victory near Toluca in 2541, Benemérito Wenceslao el Tizón elevated the Missionaries of the Sacred Heart to the state church after being visited by the Virgin of Guadalupe. The power of the Prelature was broken and the faith schismed, the followers of the Sacred Heart taking it upon themselves to venerate folk saints and idols. With the Benemérito of the Empire now being a Cristero the reunification of the two sister churches can now begin.;;;;;;;;;x
 EVTOPTAMXR.200;¡Viva Cristo Rey!;;;;;;;;;x
 
-EVTNAMEMXR.210;The title is restored!;;;;;;;;;x
+EVTNAMEMXR.210;The Cristeros pressure the Heterodox;;;;;;;;;x
 EVTDESCMXR.210;Enforce desc Orthodoxy;;;;;;;;;x
-EVTOPTAMXR.211;The Empire is restored!;;;;;;;;;x
-EVTOPTBMXR.211;Enforce No Orthodoxy;;;;;;;;;x
+EVTOPTAMXR.211;I will remain faithful.;;;;;;;;;x
+EVTOPTBMXR.211;New church same God.;;;;;;;;;x
+
+EVTNAMEMXR.20;Restoration of Mexico;;;;;;;;;x
+EVTDESCMXR.20;SPEEEEEECH about Reformation;;;;;;;;;x
+EVTDESCMXR20_HF;Same speech.;;;;;;;;;x
+EVTOPTALoR.20;Response to the Event.;;;;;;;;;x
+
+EVTNAMEMXR.21;Informed about Restoration of Rome;;;;;;;;;x
+EVTDESCMXR.21;Informed about Restoration;;;;;;;;;x
+EVTDESCMXR21_HF;Informed about Restoration;;;;;;;;;x
+EVTOPTAMXR.21;Response to the Event.;;;;;;;;;x
+
+
+EVTNAMEMXR.40;Mexican Borders Restored;;;;;;;;;x
+EVTDESCMXR.40;Even after the restoration of the Empire many years ago, many still failed to believe that the Ancient Empire of México City had enough power to fully restore the borders they used to have before the Event, those who had doubted have been silenced for good. \n[Root.GetTitledFirstName] has succeeded where even Benemérito Julián de Jesús Jacaranda and all the other Beneméritos of the Jacaranda Dynasty had failed, [Root.GetSubjectPronounCap] has absorbed all realms within Old México back into the fold and brought to the land a new era of Union, Religion and Independence. \nLa República’s old borders have finally been restored, but the stories tell that Old México used to be Greater México - the Great Mexican Eagle is not done yet.;;;;;;;;;x
+EVTDESCLoR40_HELLENIC;Even after the restoration of the Empire many years ago, many still failed to believe that the Ancient Empire of México City had enough power to fully restore the borders they used to have before the Event, those who had doubted have been silenced for good. \n[Root.GetTitledFirstName] has succeeded where the not even the Emperors of the Triple Alliance could not prosper, [Root.GetSubjectPronounCap] has absorbed all realms within Old México back into the fold and brought to the land a new era of Union, Religion and Independence. \nOnce more a tyrannical empire extends its tentacles out of México City and into the land. We have resisted for over a thousand years, and we shall continue to do so! ;;;;;;;;;x
+EVTDESCMXR40_GENERIC;EVTDESCMXR.40;Even after the restoration of the Empire many years ago, many still failed to believe that the Ancient Empire of México City had enough power to fully restore the borders they used to have before the Event, those who had doubted have been silenced for good. \n[Root.GetTitledFirstName] has succeeded where even Benemérito Julián de Jesús Jacaranda and all the other Beneméritos of the Jacaranda Dynasty had failed, [Root.GetSubjectPronounCap] has absorbed all realms within Old México back into the fold and brought to the land a new era of Union, Religion and Independence. \nLet us hope the eagle doesn’t not venture into our vicinity.;;;;;;;;;x
+EVTOPTAMXR.40;A new epoch is beginning;;;;;;;;;x
