@@ -3936,73 +3936,43 @@ character_event = { #ping the court chaplain
 
 	trigger = {
 		AND = {
-			OR = {
-				AND = {
-				OR = {
-						trait = greedy
-						trait = envious
-						trait = wroth
-						trait = slothful
-						trait = gluttonous
-						trait = lustful
-						trait = cruel
-						trait = drunkard
-						trait = craven
-						trait = hedonist
-						trait = impaler
-						trait = paranoid
-						trait = kinslayer
-						has_character_modifier = adulterer
-						has_character_modifier = adultress
-						has_character_modifier = incestuous_adulterer
-						has_character_modifier = incestuous_adultress
-						has_character_modifier = known_murderer
-						has_character_modifier = uncivilized_dueler
-					}
-				job_spiritual = {
-					opinion = {
-						who = ROOT
-						value < -10
-						}
-					}
-				}
-				AND = {
-					calc_true_if = {
-						amount >= 2
-						trait = greedy
-						trait = envious
-						trait = wroth
-						trait = slothful
-						trait = gluttonous
-						trait = lustful
-						trait = cruel
-						trait = drunkard
-						trait = craven
-						trait = hedonist
-						trait = impaler
-						trait = paranoid
-						trait = kinslayer
-						has_character_modifier = adulterer
-						has_character_modifier = adultress
-						has_character_modifier = incestuous_adulterer
-						has_character_modifier = incestuous_adultress
-						has_character_modifier = known_murderer
-						has_character_modifier = uncivilized_dueler
-					}
-				job_spiritual = { 
-					opinion = {
-						who = ROOT
-						value < 10
-						}
+			calc_true_if = {
+				amount >= 3
+				trait = greedy
+				trait = envious
+				trait = wroth
+				trait = slothful
+				trait = gluttonous
+				trait = lustful
+				trait = cruel
+				trait = drunkard
+				trait = craven
+				trait = hedonist
+				trait = impaler
+				trait = paranoid
+				trait = kinslayer
+				has_character_modifier = adulterer
+				has_character_modifier = adultress
+				has_character_modifier = incestuous_adulterer
+				has_character_modifier = incestuous_adultress
+				has_character_modifier = known_murderer
+				has_character_modifier = uncivilized_dueler
+			}
+			job_spiritual = { 
+				opinion = {
+					who = ROOT
+					value < -15
 					}
 				}
 			}
-		NOT = { trait = discharged }
+		NOR = {
+			trait = discharged 
+			trait = honorably_discharged 
+		}
 		any_courtier_or_vassal = {
 			has_job_title = job_spiritual
 		}
 		is_feudal=yes
-		}
 	}
 	
 	mean_time_to_happen = {
@@ -4093,6 +4063,7 @@ letter_event = { #the court chaplain sends a letter
 	option = {
 		name = EVTOPTA_discharged_gaian
 		abdicate = yes
+		add_trait = honorably_discharged
 		piety = 50
 	}
 	option = {
@@ -4172,6 +4143,7 @@ letter_event = { #the court chaplain event to screw you up
 		name = EVTOPTA_discharged_gaian
 		abdicate = yes
 		piety = 50
+		add_trait = honorably_discharged
 	}
 	option = {
 		name = EVTOPTB_discharged_gaian
@@ -5841,5 +5813,89 @@ narrative_event = {
 	
 	immediate = {
 		set_global_flag = global_cycle_that_binds
+	}
+}
+
+narrative_event = {
+	id = gaian.5010
+	title = EVTITLE_the_great_unbind
+	desc = EVTDESC_the_great_unbind
+	picture = GFX_evt_steppe_mercenaries
+	
+	is_triggered_only = yes
+	
+	major = yes
+	
+	major_trigger = {
+		OR = {
+		capital_scope = {
+			NOT = {
+				distance = {
+					who = ROOT
+					value = 700	# Same part of the world
+				}
+			}
+		}
+		religion = gaian
+		}
+	}
+	
+	option = {
+		name = EVTOPTA_the_great_unbind
+		trigger = {
+			OR = {
+				religion = raven_tales
+				religion = raven_tales_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTB_the_great_unbind
+		trigger = {
+			religion = gaian
+		}
+		piety = -250
+		prestige = -500
+	}
+	option = {
+		name = EVTOPTC_the_great_unbind
+		trigger = {
+			OR = {
+			religion = trailwalker
+			religion = trailwalker_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_the_great_unbind
+		trigger = {
+			OR = {
+			religion = peyotist
+			religion = nazarene
+			religion = true_cross
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_the_great_unbind
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTF_the_great_unbind
+		trigger = {
+			NOR = {
+				religion = peyotist
+				religion = cetic
+				religion = trailwalker
+				religion = trailwalker_reformed
+				religion = raven_tales
+				religion = raven_tales_reformed
+				religion = gaian
+				religion = nazarene
+				religion = true_cross
+			}
+		}
 	}
 }
