@@ -280,7 +280,7 @@ decisions = {
 			is_adult = yes
 			prisoner = no
 			NOT = { is_capable = yes }
-			has_landed_title = c_austin
+			has_landed_title = c_travis
 			prestige = 1000
 		}
 		
@@ -322,15 +322,15 @@ decisions = {
 			prestige = 500
 			OR = {
 				any_realm_character = {
-					has_landed_title = c_san_antonio
+					has_landed_title = c_bexar
 				}
 				any_tributary = {
 					AND = {
 						OR = {
 							any_realm_character = {
-								has_landed_title = c_san_antonio
+								has_landed_title = c_bexar
 							}
-							has_landed_title = c_san_antonio
+							has_landed_title = c_bexar
 						}
 						#kings cannot grant banners to other kings as they are competing candidates
 						NOT = { tier = KING }
@@ -367,10 +367,10 @@ decisions = {
 						AND = {
 							OR = {
 								any_realm_character = {
-									has_landed_title = c_san_antonio
+									has_landed_title = c_bexar
 								}
 
-								has_landed_title = c_san_antonio
+								has_landed_title = c_bexar
 							}
 							#kings cannot grant banners to other kings as they are competing candidates
 							NOT = { tier = KING }
@@ -378,7 +378,7 @@ decisions = {
 						}
 					}
 				}
-				c_san_antonio = {
+				c_bexar = {
 					holder_scope = {
 						top_liege = {
 							activate_title = { title = d_airmen status = yes }
@@ -398,10 +398,10 @@ decisions = {
 
 				limit = {
 					any_realm_character = {
-						has_landed_title = c_san_antonio
+						has_landed_title = c_bexar
 					}
 				}
-				c_san_antonio = {
+				c_bexar = {
 					holder_scope = {
 						activate_title = { title = d_airmen status = yes }
 						primary_title = {
