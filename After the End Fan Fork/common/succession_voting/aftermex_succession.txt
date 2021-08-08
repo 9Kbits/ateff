@@ -11,12 +11,13 @@ mex_elective = {
 		 additive_modifier = { #Emperor is always an Elector.
 			 value = 50
 			 FROMFROM = { 
-				# holder_scope = { character = ROOT }
+				 holder_scope = { character = ROOT }
 			 }
 		 }
 		additive_modifier = { #Aquí vive el presidente; el que manda vive enfrente...
 			value = 10
 			vassal_of = FROMFROM 
+			is_adult = yes
 			OR = { 
 				has_job_title = job_chancellor
 				has_job_title = job_marshal

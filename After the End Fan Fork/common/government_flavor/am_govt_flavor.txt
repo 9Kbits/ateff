@@ -1007,3 +1007,23 @@ government_flavor = {
 		}
 	}
 }
+
+government_flavor = {
+	name = gov_king_mex
+	graphics = GFX_evt_camaraderie
+	priority = 2
+	trigger = {
+		government = mex_imperial_government
+		NOT = { tier = EMPEROR }
+	}
+}
+
+government_flavor = {
+	name = gov_mex
+	graphics = GFX_evt_throne_room_byzantine
+	priority = 2
+	trigger = {
+		government = mex_imperial_government
+		tier = EMPEROR
+	}
+}
