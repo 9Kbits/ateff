@@ -5677,7 +5677,7 @@ narrative_event = {
 	id = gaian.5007
 	title = EVTITLE_the_end_of_reclamation
 	desc = EVTDESC_the_end_of_reclamation
-	picture = GFX_evt_china_rebel_general
+	picture = GFX_evt_the_great_unbind
 	is_triggered_only = yes
 	
 	major = yes
@@ -5696,8 +5696,9 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_the_great_unbind
 		trigger = {
-			NOT = {
-				religion = gaian
+			OR = {
+				religion = raven_tales
+				religion = raven_tales_reformed
 			}
 		}
 	}
@@ -5706,7 +5707,49 @@ narrative_event = {
 		trigger = {
 			religion = gaian
 		}
-		piety = -150
+		piety = -250
+		prestige = -500
+	}
+	option = {
+		name = EVTOPTC_the_great_unbind
+		trigger = {
+			OR = {
+			religion = trailwalker
+			religion = trailwalker_reformed
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_the_great_unbind
+		trigger = {
+			OR = {
+			religion = peyotist
+			religion = nazarene
+			religion = true_cross
+			}
+		}
+	}
+	option = {
+		name = EVTOPTE_the_great_unbind
+		trigger = {
+			religion = cetic
+		}
+	}
+	option = {
+		name = EVTOPTF_the_great_unbind
+		trigger = {
+			NOR = {
+				religion = peyotist
+				religion = cetic
+				religion = trailwalker
+				religion = trailwalker_reformed
+				religion = raven_tales
+				religion = raven_tales_reformed
+				religion = gaian
+				religion = nazarene
+				religion = true_cross
+			}
+		}
 	}
 	
 	immediate = {
@@ -5813,89 +5856,5 @@ narrative_event = {
 	
 	immediate = {
 		set_global_flag = global_cycle_that_binds
-	}
-}
-
-narrative_event = {
-	id = gaian.5010
-	title = EVTITLE_the_great_unbind
-	desc = EVTDESC_the_great_unbind
-	picture = GFX_evt_steppe_mercenaries
-	
-	is_triggered_only = yes
-	
-	major = yes
-	
-	major_trigger = {
-		OR = {
-		capital_scope = {
-			NOT = {
-				distance = {
-					who = ROOT
-					value = 700	# Same part of the world
-				}
-			}
-		}
-		religion = gaian
-		}
-	}
-	
-	option = {
-		name = EVTOPTA_the_great_unbind
-		trigger = {
-			OR = {
-				religion = raven_tales
-				religion = raven_tales_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_the_great_unbind
-		trigger = {
-			religion = gaian
-		}
-		piety = -250
-		prestige = -500
-	}
-	option = {
-		name = EVTOPTC_the_great_unbind
-		trigger = {
-			OR = {
-			religion = trailwalker
-			religion = trailwalker_reformed
-			}
-		}
-	}
-	option = {
-		name = EVTOPTD_the_great_unbind
-		trigger = {
-			OR = {
-			religion = peyotist
-			religion = nazarene
-			religion = true_cross
-			}
-		}
-	}
-	option = {
-		name = EVTOPTE_the_great_unbind
-		trigger = {
-			religion = cetic
-		}
-	}
-	option = {
-		name = EVTOPTF_the_great_unbind
-		trigger = {
-			NOR = {
-				religion = peyotist
-				religion = cetic
-				religion = trailwalker
-				religion = trailwalker_reformed
-				religion = raven_tales
-				religion = raven_tales_reformed
-				religion = gaian
-				religion = nazarene
-				religion = true_cross
-			}
-		}
 	}
 }
