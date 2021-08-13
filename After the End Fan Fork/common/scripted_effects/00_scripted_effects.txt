@@ -4006,7 +4006,10 @@ add_crusade_trait_effect = {
 	}
 	if = {
 		limit = {
-			religion = glorian
+			OR = {
+				religion = glorian
+				religion = thelema
+			}
 		}
 		add_trait = order_of_the_garter
 		break = yes
@@ -10091,6 +10094,38 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
+					religion = cristo_rey
+				}
+				has_character_flag = character_was_cristo_rey
+			}
+		}
+		set_secret_religion = cristo_rey
+		clr_character_flag = character_was_cristo_rey
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
+					religion = reformista
+				}
+				has_character_flag = character_was_reformista
+			}
+		}
+		set_secret_religion = reformista
+		clr_character_flag = character_was_reformista
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
 					religion = sacred_heart
 				}
 				has_character_flag = character_was_sacred_heart
@@ -10114,6 +10149,38 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 		}
 		set_secret_religion = patria_grande
 		clr_character_flag = character_was_patria_grande
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
+					religion = navegante
+				}
+				has_character_flag = character_was_navegante
+			}
+		}
+		set_secret_religion = navegante
+		clr_character_flag = character_was_navegante
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
+					religion = fidencista
+				}
+				has_character_flag = character_was_fidencista
+			}
+		}
+		set_secret_religion = fidencista
+		clr_character_flag = character_was_fidencista
 		break = yes
 	}
 	if = {
@@ -10242,6 +10309,38 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 		}
 		set_secret_religion = strangite
 		clr_character_flag = character_was_strangite
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
+					religion = lamanita
+				}
+				has_character_flag = character_was_lamanita
+			}
+		}
+		set_secret_religion = lamanita
+		clr_character_flag = character_was_lamanita
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
+					religion = fuiregi
+				}
+				has_character_flag = character_was_fuiregi
+			}
+		}
+		set_secret_religion = fuiregi
+		clr_character_flag = character_was_fuiregi
 		break = yes
 	}
 	if = {
@@ -10562,6 +10661,22 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 		}
 		set_secret_religion = glorian
 		clr_character_flag = character_was_glorian
+		break = yes
+	}
+	if = {
+		limit = {
+			OR = {
+				AND = {
+					NOT = {
+						has_character_was_religion_flag_trigger = yes
+					}
+					religion = thelema
+				}
+				has_character_flag = character_was_thelema
+			}
+		}
+		set_secret_religion = thelema
+		clr_character_flag = character_was_thelema
 		break = yes
 	}
 	if = {
@@ -11080,12 +11195,28 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_edenite
 	}
 	if = {
+		limit = { religion = cristo_rey }
+		set_character_flag = character_was_cristo_rey
+	}
+	if = {
+		limit = { religion = reformista }
+		set_character_flag = character_was_reformista
+	}
+	if = {
 		limit = { religion = sacred_heart }
 		set_character_flag = character_was_sacred_heart
 	}
 	if = {
 		limit = { religion = patria_grande }
 		set_character_flag = character_was_patria_grande
+	}
+	if = {
+		limit = { religion = navegante }
+		set_character_flag = character_was_navegante
+	}
+	if = {
+		limit = { religion = fidencista }
+		set_character_flag = character_was_fidencista
 	}
 	if = {
 		limit = { religion = cetic }
@@ -11118,6 +11249,14 @@ add_religion_char_flag_effect = {
 	if = {
 		limit = { religion = strangite }
 		set_character_flag = character_was_strangite
+	}
+	if = {
+		limit = { religion = lamanita }
+		set_character_flag = character_was_lamanita
+	}
+	if = {
+		limit = { religion = fuiregi }
+		set_character_flag = character_was_fuiregi
 	}
 	if = {
 		limit = { religion = sol_invicta }
@@ -11198,6 +11337,10 @@ add_religion_char_flag_effect = {
 	if = {
 		limit = { religion = glorian }
 		set_character_flag = character_was_glorian
+	}
+	if = {
+		limit = { religion = thelema }
+		set_character_flag = character_was_thelema
 	}
 	if = {
 		limit = { religion = norse_pagan_reformed }
@@ -11329,8 +11472,12 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_nazarene
 	clr_character_flag = character_was_true_cross
 	clr_character_flag = character_was_edenite
+	clr_character_flag = character_was_cristo_rey
+	clr_character_flag = character_was_reformista
 	clr_character_flag = character_was_sacred_heart
 	clr_character_flag = character_was_patria_grande
+	clr_character_flag = character_was_navegante
+	clr_character_flag = character_was_fidencista
 	clr_character_flag = character_was_cetic
 	clr_character_flag = character_was_gaian
 	clr_character_flag = character_was_shinto
@@ -11339,6 +11486,8 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_neogodbeite
 	clr_character_flag = character_was_woolleyite
 	clr_character_flag = character_was_strangite
+	clr_character_flag = character_was_lamanita
+	clr_character_flag = character_was_fuiregi
 	clr_character_flag = character_was_sol_invicta
 	clr_character_flag = character_was_mictlantec
 	clr_character_flag = character_was_qabantajik
@@ -11359,6 +11508,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_occultist_reformed
 	clr_character_flag = character_was_occultist
 	clr_character_flag = character_was_glorian
+	clr_character_flag = character_was_thelema
 	clr_character_flag = character_was_norse_pagan_reformed
 	clr_character_flag = character_was_norse_pagan
 	clr_character_flag = character_was_celtic_pagan_reformed
@@ -11618,6 +11768,20 @@ event_target_old_religion_from_flag_effect = {
 		}
 	}
 	if = {
+		limit = { has_character_flag = character_was_cristo_rey }
+		random_character = {
+			limit = { religion = cristo_rey }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_reformista }
+		random_character = {
+			limit = { religion = reformista }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
 		limit = { has_character_flag = character_was_sacred_heart }
 		random_character = {
 			limit = { religion = sacred_heart }
@@ -11628,6 +11792,20 @@ event_target_old_religion_from_flag_effect = {
 		limit = { has_character_flag = character_was_patria_grande }
 		random_character = {
 			limit = { religion = patria_grande }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_navegante }
+		random_character = {
+			limit = { religion = navegante }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_fidencista }
+		random_character = {
+			limit = { religion = fidencista }
 			save_event_target_as = old_religion
 		}
 	}
@@ -11684,6 +11862,20 @@ event_target_old_religion_from_flag_effect = {
 		limit = { has_character_flag = character_was_strangite }
 		random_character = {
 			limit = { religion = strangite }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_lamanita }
+		random_character = {
+			limit = { religion = lamanita }
+			save_event_target_as = old_religion
+		}
+	}
+	if = {
+		limit = { has_character_flag = character_was_fuiregi }
+		random_character = {
+			limit = { religion = fuiregi }
 			save_event_target_as = old_religion
 		}
 	}
@@ -11828,9 +12020,9 @@ event_target_old_religion_from_flag_effect = {
 		}
 	}
 	if = {
-		limit = { has_character_flag = character_was_thelemic }
+		limit = { has_character_flag = character_was_thelema }
 		random_character = {
-			limit = { religion = glorian }
+			limit = { religion = thelema }
 			save_event_target_as = old_religion
 		}
 	}
@@ -13831,6 +14023,28 @@ flip_secret_religious_community_provinces = {
 				}
 			}
 		}
+		secret_religious_society_cristo_rey = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_cristo_rey_community
+					}
+					religion = cristo_rey
+					remove_province_modifier = secret_cristo_rey_community
+				}
+			}
+		}
+		secret_religious_society_reformista = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_reformista_community
+					}
+					religion = reformista
+					remove_province_modifier = secret_reformista_community
+				}
+			}
+		}
 		secret_religious_society_sacred_heart = {
 			ROOT = {
 				any_demesne_province = {
@@ -13850,6 +14064,28 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = patria_grande
 					remove_province_modifier = secret_patria_grande_community
+				}
+			}
+		}
+		secret_religious_society_navegante = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_navegante_community
+					}
+					religion = navegante
+					remove_province_modifier = secret_navegante_community
+				}
+			}
+		}
+		secret_religious_society_fidencista = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_fidencista_community
+					}
+					religion = fidencista
+					remove_province_modifier = secret_fidencista_community
 				}
 			}
 		}
@@ -13938,6 +14174,28 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = strangite
 					remove_province_modifier = secret_strangite_community
+				}
+			}
+		}
+		secret_religious_society_lamanita = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_lamanita_community
+					}
+					religion = lamanita
+					remove_province_modifier = secret_lamanita_community
+				}
+			}
+		}
+		secret_religious_society_fuiregi = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_fuiregi_community
+					}
+					religion = fuiregi
+					remove_province_modifier = secret_fuiregi_community
 				}
 			}
 		}
@@ -14158,6 +14416,17 @@ flip_secret_religious_community_provinces = {
 					}
 					religion = glorian
 					remove_province_modifier = secret_glorian_community
+				}
+			}
+		}
+		secret_religious_society_thelema = {
+			ROOT = {
+				any_demesne_province = {
+					limit = {
+						has_province_modifier = secret_thelema_community
+					}
+					religion = thelema
+					remove_province_modifier = secret_thelema_community
 				}
 			}
 		}
@@ -18474,6 +18743,28 @@ root_secret_religion_provinces_convert_effect = {
 					}
 				}
 			}
+			secret_religious_society_cristo_rey = { 
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_cristo_rey_community
+						}
+						religion = cristo_rey
+						remove_province_modifier = secret_cristo_rey_community
+					}
+				}
+			}
+			secret_religious_society_reformista = { 
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_reformista_community
+						}
+						religion = reformista
+						remove_province_modifier = secret_reformista_community
+					}
+				}
+			}
 			secret_religious_society_sacred_heart = { 
 				PREV = {
 					any_demesne_province = {
@@ -18493,6 +18784,28 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = patria_grande
 						remove_province_modifier = secret_patria_grande_community
+					}
+				}
+			}
+			secret_religious_society_navegante = {
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_navegante_community
+						}
+						religion = navegante
+						remove_province_modifier = secret_navegante_community
+					}
+				}
+			}
+			secret_religious_society_fidencista = {
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_fidencista_community
+						}
+						religion = fidencista
+						remove_province_modifier = secret_fidencista_community
 					}
 				}
 			}
@@ -18581,6 +18894,28 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = strangite
 						remove_province_modifier = secret_strangite_community
+					}
+				}
+			}
+			secret_religious_society_lamanita = {
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_lamanita_community
+						}
+						religion = lamanita
+						remove_province_modifier = secret_lamanita_community
+					}
+				}
+			}
+			secret_religious_society_fuiregi = {
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_fuiregi_community
+						}
+						religion = fuiregi
+						remove_province_modifier = secret_fuiregi_community
 					}
 				}
 			}
@@ -18779,6 +19114,17 @@ root_secret_religion_provinces_convert_effect = {
 						}
 						religion = glorian
 						remove_province_modifier = secret_glorian_community
+					}
+				}
+			}
+			secret_religious_society_thelema = { 
+				PREV = {
+					any_demesne_province = {
+						limit = {
+							has_province_modifier = secret_thelema_community
+						}
+						religion = thelema
+						remove_province_modifier = secret_thelema_community
 					}
 				}
 			}

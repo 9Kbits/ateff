@@ -768,7 +768,10 @@ has_crusade_trait_trigger = {
 			trait = danite
 		}
 		AND = {
-			religion = glorian
+			OR = {
+				religion = glorian
+				religion = thelema
+			}
 			trait = order_of_the_garter
 		}
 		AND = {
@@ -2355,11 +2358,23 @@ true_religion_nazarene_trigger = {
 true_religion_true_cross_trigger = { #how many other religions are we missing????
 	true_religion = true_cross
 }
+true_religion_cristo_rey_trigger = { #how many other religions are we missing????
+	true_religion = cristo_rey
+}
+true_religion_reformista_trigger = { #how many other religions are we missing????
+	true_religion = reformista
+}
 true_religion_sacred_heart_trigger = {
 	true_religion = sacred_heart
 }
 true_religion_patria_grande_trigger = {
 	true_religion = patria_grande
+}
+true_religion_navegante_trigger = {
+	true_religion = navegante
+}
+true_religion_fidencista_trigger = {
+	true_religion = fidencista
 }
 true_religion_cetic_trigger = {
 	true_religion = cetic
@@ -2384,6 +2399,12 @@ true_religion_woolleyite_trigger = {
 }
 true_religion_strangite_trigger = {
 	true_religion = strangite
+}
+true_religion_lamanita_trigger = {
+	true_religion = lamanita
+}
+true_religion_fuiregi_trigger = {
+	true_religion = fuiregi
 }
 true_religion_sol_invicta_trigger = {
 	true_religion = sol_invicta
@@ -2444,6 +2465,9 @@ true_religion_occultist_trigger = {
 }
 true_religion_glorian_trigger = {
 	true_religion = glorian
+}
+true_religion_thelema_trigger = {
+	true_religion = thelema
 }
 true_religion_norse_pagan_reformed_trigger = {
 	true_religion = norse_pagan_reformed
@@ -3236,6 +3260,11 @@ is_glorian_secret_religious_society_member_trigger = {
 	society_member_of = secret_religious_society_glorian
 }
 
+is_thelema_secret_religious_society_member_trigger = {
+	society_member_of = secret_religious_cult
+	society_member_of = secret_religious_society_thelema
+}
+
 is_norse_secret_religious_society_member_trigger = {
 	society_member_of = secret_religious_cult
 	OR = {
@@ -3626,12 +3655,28 @@ is_in_prevs_interesting_society_trigger = {
 			PREV = { interested_in_society = secret_religious_society_edenite }
 		}
 		AND = {
+			society_member_of = secret_religious_society_cristo_rey
+			PREV = { interested_in_society = secret_religious_society_cristo_rey }
+		}
+		AND = {
+			society_member_of = secret_religious_society_reformista
+			PREV = { interested_in_society = secret_religious_society_reformista }
+		}
+		AND = {
 			society_member_of = secret_religious_society_sacred_heart
 			PREV = { interested_in_society = secret_religious_society_sacred_heart }
 		}
 		AND = {
 			society_member_of = secret_religious_society_patria_grande
 			PREV = { interested_in_society = secret_religious_society_patria_grande }
+		}
+		AND = {
+			society_member_of = secret_religious_society_navegante
+			PREV = { interested_in_society = secret_religious_society_navegante }
+		}
+		AND = {
+			society_member_of = secret_religious_society_fidencista
+			PREV = { interested_in_society = secret_religious_society_fidencista }
 		}
 		AND = {
 			society_member_of = secret_religious_society_cetic
@@ -3664,6 +3709,14 @@ is_in_prevs_interesting_society_trigger = {
 		AND = {
 			society_member_of = secret_religious_society_strangite
 			PREV = { interested_in_society = secret_religious_society_strangite }
+		}
+		AND = {
+			society_member_of = secret_religious_society_lamanita
+			PREV = { interested_in_society = secret_religious_society_lamanita }
+		}
+		AND = {
+			society_member_of = secret_religious_society_fuiregi
+			PREV = { interested_in_society = secret_religious_society_fuiregi }
 		}
 		AND = {
 			society_member_of = secret_religious_society_sol_invicta
@@ -3740,6 +3793,10 @@ is_in_prevs_interesting_society_trigger = {
 		AND = {
 			society_member_of = secret_religious_society_glorian
 			PREV = { interested_in_society = secret_religious_society_glorian }
+		}\
+		AND = {
+			society_member_of = secret_religious_society_thelema
+			PREV = { interested_in_society = secret_religious_society_thelema }
 		}
 		AND = {
 			society_member_of = secret_religious_society_norse_pagan_reformed
@@ -4051,6 +4108,18 @@ has_any_char_old_religion = {
 			}
 		}
 		AND = {
+			has_character_flag = character_was_cristo_rey
+			any_character = {
+				religion = cristo_rey
+			}
+		}
+		AND = {
+			has_character_flag = character_was_reformista
+			any_character = {
+				religion = reformista
+			}
+		}
+		AND = {
 			has_character_flag = character_was_sacred_heart
 			any_character = {
 				religion = sacred_heart
@@ -4060,6 +4129,18 @@ has_any_char_old_religion = {
 			has_character_flag = character_was_patria_grande
 			any_character = {
 				religion = patria_grande
+			}
+		}
+		AND = { 
+			has_character_flag = character_was_navegante
+			any_character = {
+				religion = navegante
+			}
+		}
+		AND = { 
+			has_character_flag = character_was_fidencista
+			any_character = {
+				religion = fidencista
 			}
 		}
 		AND = {
@@ -4108,6 +4189,18 @@ has_any_char_old_religion = {
 			has_character_flag = character_was_neogodbeite
 			any_character = {
 				religion = neogodbeite
+			}
+		}
+		AND = { 
+			has_character_flag = character_was_lamanita
+			any_character = {
+				religion = lamanita
+			}
+		}
+		AND = { 
+			has_character_flag = character_was_fuiregi
+			any_character = {
+				religion = fuiregi
 			}
 		}
 		AND = { 
@@ -4234,6 +4327,12 @@ has_any_char_old_religion = {
 			has_character_flag = character_was_glorian
 			any_character = {
 				religion = glorian
+			}
+		}
+		AND = { 
+			has_character_flag = character_was_thelema
+			any_character = {
+				religion = thelema
 			}
 		}
 		AND = { 
@@ -4809,6 +4908,20 @@ looting_artifact_event_religious_artifacts_trigger = {
 		NAND = {
 			any_artifact = {
 				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = cristo_rey
+				ROOT = { religion = cristo_rey }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = reformista
+				ROOT = { religion = reformista }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = sacred_heart
 				ROOT = { religion = sacred_heart }
 			}
@@ -4818,6 +4931,20 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = patria_grande
 				ROOT = { religion = patria_grande }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = navegante
+				ROOT = { religion = navegante }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = fidencista
+				ROOT = { religion = fidencista }
 			}
 		}
 		NAND = {
@@ -4874,6 +5001,20 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = strangite
 				ROOT = { religion = strangite }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = lamanita
+				ROOT = { religion = lamanita }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = fuiregi
+				ROOT = { religion = fuiregi }
 			}
 		}
 		NAND = {
@@ -5007,6 +5148,13 @@ looting_artifact_event_religious_artifacts_trigger = {
 				has_artifact_flag = looted_artifact_tooltip_1
 				has_artifact_flag = glorian
 				ROOT = { religion = glorian }
+			}
+		}
+		NAND = {
+			any_artifact = {
+				has_artifact_flag = looted_artifact_tooltip_1
+				has_artifact_flag = thelema
+				ROOT = { religion = thelema }
 			}
 		}
 		NAND = {
@@ -9355,8 +9503,12 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_nazarene
 		has_character_flag = character_was_true_cross
 		has_character_flag = character_was_edenite
+		has_character_flag = character_was_cristo_rey
+		has_character_flag = character_was_reformista
 		has_character_flag = character_was_sacred_heart
 		has_character_flag = character_was_patria_grande
+		has_character_flag = character_was_navegante
+		has_character_flag = character_was_fidencista
 		has_character_flag = character_was_cetic
 		has_character_flag = character_was_gaian
 		has_character_flag = character_was_shinto
@@ -9365,6 +9517,8 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_neogodbeite
 		has_character_flag = character_was_woolleyite
 		has_character_flag = character_was_strangite
+		has_character_flag = character_was_lamanita
+		has_character_flag = character_was_fuiregi
 		has_character_flag = character_was_sol_invicta
 		has_character_flag = character_was_mictlantec
 		has_character_flag = character_was_qabantajik
@@ -9385,6 +9539,7 @@ has_character_was_religion_flag_trigger = {
 		has_character_flag = character_was_occultist_reformed
 		has_character_flag = character_was_occultist
 		has_character_flag = character_was_glorian
+		has_character_flag = character_was_thelema
 		has_character_flag = character_was_norse_pagan_reformed
 		has_character_flag = character_was_norse_pagan
 		has_character_flag = character_was_celtic_pagan

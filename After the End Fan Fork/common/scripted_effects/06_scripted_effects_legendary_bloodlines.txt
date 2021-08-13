@@ -1743,6 +1743,10 @@ set_bloodline_founder_religion_flag_effect = {
 		new_bloodline = { set_bloodline_flag = requires_glorian_religion }
 	}
 	else_if = {
+		limit = { religion = thelema }
+		new_bloodline = { set_bloodline_flag = requires_thelema_religion }
+	}
+	else_if = {
 		limit = { religion_openly_celtic_or_reformed_trigger = yes }
 		new_bloodline = { set_bloodline_flag = requires_celtic_pagan_religion }
 	}
@@ -1867,12 +1871,32 @@ set_bloodline_founder_religion_flag_effect = {
 		new_bloodline = { set_bloodline_flag = requires_true_cross_religion }
 	}
 	else_if = {
+		limit = { religion = edenite }
+		new_bloodline = { set_bloodline_flag = requires_edenite_religion }
+	}
+	else_if = {
+		limit = { religion = cristo_rey }
+		new_bloodline = { set_bloodline_flag = requires_cristo_rey_religion }
+	}
+	else_if = {
+		limit = { religion = reformista }
+		new_bloodline = { set_bloodline_flag = requires_reformista_religion }
+	}
+	else_if = {
 		limit = { religion = sacred_heart }
 		new_bloodline = { set_bloodline_flag = requires_sacred_heart_religion }
 	}
 	else_if = {
 		limit = { religion = patria_grande }
 		new_bloodline = { set_bloodline_flag = requires_patria_grande_religion }
+	}
+	else_if = {
+		limit = { religion = navegante }
+		new_bloodline = { set_bloodline_flag = requires_navegante_religion }
+	}
+	else_if = {
+		limit = { religion = fidencista }
+		new_bloodline = { set_bloodline_flag = requires_fidencista_religion }
 	}
 	else_if = {
 		limit = { religion = cetic }
@@ -1905,6 +1929,14 @@ set_bloodline_founder_religion_flag_effect = {
 	else_if = {
 		limit = { religion = strangite }
 		new_bloodline = { set_bloodline_flag = requires_strangite_religion }
+	}
+	else_if = {
+		limit = { religion = lamanita }
+		new_bloodline = { set_bloodline_flag = requires_lamanita_religion }
+	}
+	else_if = {
+		limit = { religion = fuiregi }
+		new_bloodline = { set_bloodline_flag = requires_fuiregi_religion }
 	}
 	else_if = {
 		limit = { religion = sol_invicta }
