@@ -472,7 +472,7 @@ targetted_decisions = {
 					#}
 				#}
 			#}
-			has_regent = no
+			FROM = {has_regent = no}
 			NOT = {
 				religion = FROM
 			}
@@ -706,8 +706,30 @@ targetted_decisions = {
 				opinion = {who = FROM value <=-95}
 				localisation_key = REASON_OPINION
 			}
-
-
+			additive_modifier = {
+				value = -5
+				ROOT = {
+					OR = {
+						trait = devout
+						trait = zealous
+					}
+				}
+				localisation_key = REASON_FIRM_BELIEVER
+			}
+			additive_modifier = {
+				value = 1
+				ROOT = {
+					trait = cynical
+				}
+				localisation_key = REASON_CYNICAL
+			}
+			additive_modifier = {
+				value = -100
+				ROOT = {
+					has_character_flag = ai_flag_refuse_conversion #you shouldn't be able to convert wandering jewish/muslim courtiers
+				}
+				localisation_key = REASON_TRUE_BELIEVER
+			}
 			additive_modifier = {#religion is hard to convert
 				value = -3
 				ROOT = {
