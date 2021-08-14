@@ -533,7 +533,6 @@ character_event = {
 
 character_event = {
 	id = orfelection.7
-	title = EVTTITLE_orf_election_inform
 	
 	picture = GFX_evt_battle
 	
@@ -544,18 +543,14 @@ character_event = {
 	}
 	
 	desc = {
-		text = EVTDESC_orf_election_inform
+		text = EVTDESC_orf_election_waiting_results
 	}
 	option = { 
-		name = EVTOPTA_orf_election_inform_run_against
+		name = EVTOPTA_orf_election_waiting_results
 		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.4 days = 5 } }
 		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.4 days = 5 } }
 		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.8 days = 125 } }
-		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.7 days = 125 } }
-	}
-	option = { 
-		name = EVTOPTA_orf_election_inform_resign
-		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.5 days = 5 } }
+		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.8 days = 125 } }
 	}
 }
 
@@ -2597,8 +2592,8 @@ character_event = {
 }
 
 character_event = {
-	is_triggered_only = yes
 	id = orfelection.24
+	is_triggered_only = yes
 	desc ={
 		trigger = { has_character_flag = endorsed_by_liege}
 		text = EVTDESC_orfelection_24_endorsed
