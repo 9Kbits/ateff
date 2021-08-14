@@ -80,7 +80,6 @@ character_event = {
 			modifier = { factor = 2 trait = humble }
 			modifier = { factor = 1.5 trait = lustful }
 			modifier = { factor = 1.5 trait = gregarious }
-			modifier = { factor = 0.1 culture = sefardi }
 			modifier = { factor = 0.1 culture = neoladino }
 			modifier = { factor = 5 culture = yiddish }
 		}
@@ -157,10 +156,10 @@ narrative_event = {
 	option = {
 		name = EVTOPT_praise_rabbi
 		add_character_modifier = { name = haredi_learning years = 1 }
-		clr_character_flag = { random_torah_verse_1 }
-		clr_character_flag = { random_torah_verse_2 }
-		clr_character_flag = { random_torah_verse_3 }
-		clr_character_flag = { random_torah_verse_4 }
+		clr_character_flag = random_torah_verse_1
+		clr_character_flag = random_torah_verse_2
+		clr_character_flag = random_torah_verse_3
+		clr_character_flag = random_torah_verse_4
 		narrative_event = { id = jewish.13 days = 2 }
 	}
 }
@@ -339,41 +338,35 @@ character_event = { #training to read Torah
 				70 = {#child does well
 					mult_modifier = {#good rabbi
 						factor = 1.3
-						trigger = {
-							job_spiritual = {
-								holder_scope = {
-									OR = {
-										learning >= 15
-										trait = theologian
-									}
+						job_spiritual = {
+							holder_scope = {
+								OR = {
+									learning >= 15
+									trait = theologian
 								}
 							}
 						}
 					}
 					mult_modifier = {#good child
 						factor = 1.5
-						trigger = {
-							bar_mitzvah_target = {
-								OR = {
-									trait = idolizer
-									has_character_flag = was_idolizer
-									trait = curious
-									has_character_flag = was_curious
-									trait = timid
-									has_character_flag = was_timid
-									trait = genius
-									trait = quick
-								}
+						event_target:bar_mitzvah_target = {
+							OR = {
+								trait = idolizer
+								has_character_flag = was_idolizer
+								trait = curious
+								has_character_flag = was_curious
+								trait = timid
+								has_character_flag = was_timid
+								trait = genius
+								trait = quick
 							}
 						}
 					}
 					mult_modifier = {#child education focus is learning
 						factor = 2
-						trigger = {
-							bar_mitzvah_target = {
-								has_dlc = "Zeus"
-								has_focus = focus_ed_learning
-							}
+						event_target:bar_mitzvah_target = {
+							has_dlc = "Zeus"
+							has_focus = focus_ed_learning
 						}
 					}
 					set_character_flag = torah_success
@@ -381,50 +374,42 @@ character_event = { #training to read Torah
 				30 = {#child fails
 					mult_modifier = {#imbecile/inbred
 						factor = 5
-						trigger = {
-							bar_mitzvah_target = {
-								OR = {
-									trait = imbecile
-									trait = inbred
-								}
+						event_target:bar_mitzvah_target = {
+							OR = {
+								trait = imbecile
+								trait = inbred
 							}
 						}
 					}
 					mult_modifier = {#slow/stutter/cynical
 						factor = 2
-						trigger = {
-							bar_mitzvah_target = {
-								OR = {
-									trait = stutter
-									trait = slow
-									trait = cynical
-								}
+						event_target:bar_mitzvah_target = {
+							OR = {
+								trait = stutter
+								trait = slow
+								trait = cynical
 							}
 						}
 					}
 					mult_modifier = {#bad chilhood traits
 						factor = 1.5
-						trigger = {
-							bar_mitzvah_target = {
-								OR = {
-									trait = rowdy
-									has_character_flag = was_rowdy
-									trait = haughty
-									has_character_flag = was_haughty
-									trait = indolent
-									has_character_flag = was_indolent
-									learning <= 3
-								}
+						event_target:bar_mitzvah_target = {
+							OR = {
+								trait = rowdy
+								has_character_flag = was_rowdy
+								trait = haughty
+								has_character_flag = was_haughty
+								trait = indolent
+								has_character_flag = was_indolent
+								learning <= 3
 							}
 						}
 					}
 					mult_modifier = {#bad rabbi
 						factor = 1.3
-						trigger = {
-							job_spiritual = {
-								holder_scope = {
-									learning <= 8
-								}
+						job_spiritual = {
+							holder_scope = {
+								learning <= 8
 							}
 						}
 					}
@@ -492,7 +477,7 @@ character_event = { #training to read Torah
 					}
 					mult_modifier = {#good child
 						factor = 1.5
-						bar_mitzvah_target = {
+						event_target:bar_mitzvah_target = {
 							OR = {
 								trait = idolizer
 								has_character_flag = was_idolizer
@@ -507,7 +492,7 @@ character_event = { #training to read Torah
 					}
 					mult_modifier = {#child education focus is learning
 						factor = 2
-						bar_mitzvah_target = {
+						event_target:bar_mitzvah_target = {
 							has_dlc = "Zeus"
 							has_focus = focus_ed_learning
 						}
@@ -517,7 +502,7 @@ character_event = { #training to read Torah
 				40 = {#child fails
 					mult_modifier = {#imbecile/inbred
 						factor = 5
-						bar_mitzvah_target = {
+						event_target:bar_mitzvah_target = {
 							OR = {
 								trait = imbecile
 								trait = inbred
@@ -526,7 +511,7 @@ character_event = { #training to read Torah
 					}
 					mult_modifier = {#slow/stutter/cynical
 						factor = 2
-						bar_mitzvah_target = {
+						event_target:bar_mitzvah_target = {
 							OR = {
 								trait = stutter
 								trait = slow
@@ -536,7 +521,7 @@ character_event = { #training to read Torah
 					}
 					mult_modifier = {#bad chilhood traits
 						factor = 1.5
-						bar_mitzvah_target = {
+						event_target:bar_mitzvah_target = {
 							OR = {
 								trait = rowdy
 								has_character_flag = was_rowdy
@@ -594,18 +579,16 @@ character_event = { #training to read Torah
 				30 = {#succeds
 					mult_modifier = {#can't succeed unless child have education focus of learning
 						factor = 0
-						trigger = {
-							NOT = {
-								bar_mitzvah_target = {
-									has_dlc = "Zeus"
-									has_focus = focus_ed_learning
-								}
+						NOT = {
+							event_target:bar_mitzvah_target = {
+								has_dlc = "Zeus"
+								has_focus = focus_ed_learning
 							}
 						}
 					}
 					mult_modifier = {#good child
 						factor = 1.5
-						bar_mitzvah_target = {
+						event_target:bar_mitzvah_target = {
 							OR = {
 								trait = idolizer
 								has_character_flag = was_idolizer
@@ -623,7 +606,7 @@ character_event = { #training to read Torah
 				70 = {#fails
 					mult_modifier = {#imbecile/inbred
 						factor = 5
-						bar_mitzvah_target = {
+						event_target:bar_mitzvah_target = {
 							OR = {
 								trait = imbecile
 								trait = inbred
@@ -632,7 +615,7 @@ character_event = { #training to read Torah
 					}
 					mult_modifier = {#slow/stutter/cynical
 						factor = 2
-						bar_mitzvah_target = {
+						event_target:bar_mitzvah_target = {
 							OR = {
 								trait = stutter
 								trait = slow
@@ -642,7 +625,7 @@ character_event = { #training to read Torah
 					}
 					mult_modifier = {#bad childhood traits
 						factor = 1.5
-						bar_mitzvah_target = {
+						event_target:bar_mitzvah_target = {
 							OR = {
 								trait = rowdy
 								has_character_flag = was_rowdy
