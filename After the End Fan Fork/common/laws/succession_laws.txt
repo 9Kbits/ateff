@@ -89,11 +89,11 @@ succession_laws = {
 					title = e_usa
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = e_mexico
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = k_mexico
 				}
 			}
@@ -240,11 +240,11 @@ succession_laws = {
 					title = e_usa
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = e_mexico
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = k_mexico
 				}
 			}
@@ -388,11 +388,11 @@ succession_laws = {
 					title = e_usa
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = e_mexico
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = k_mexico
 				}
 			}
@@ -545,11 +545,11 @@ succession_laws = {
 					title = e_usa
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = e_mexico
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = k_mexico
 				}
 			}
@@ -755,11 +755,11 @@ succession_laws = {
 					title = e_usa
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = e_mexico
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = k_mexico
 				}
 			}
@@ -962,11 +962,11 @@ succession_laws = {
 					title = e_usa
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = e_mexico
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = k_mexico
 				}
 			}
@@ -1099,11 +1099,11 @@ succession_laws = {
 					title = e_usa
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = e_mexico
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = k_mexico
 				}
 			}
@@ -1203,66 +1203,6 @@ succession_laws = {
 		}
 	}
 
-	succ_mex_elective = {
-		oldest_child_opinion = -5
-		child_opinion = -5
-		dynasty_opinion = -5
-		feudal_opinion = 5
-		potential = {
-			holder_scope = {
-				OR = {
-					has_landed_title = e_mexico
-					has_landed_title = k_mexico
-				}
-				NOT = { religion_group = pagan_group }
-				is_nomadic = no
-				is_merchant_republic = no
-				is_patrician = no
-			#	OR = {
-			#		culture_group = mexicano
-			#		culture_group = norteno
-			#		culture_group = mesoamerican
-			#		religion = sacred_heart
-			#		religion = cristo_rey
-			#		religion = fidencista
-			#	}
-			#	OR = {
-			#		independent = yes
-			#		NOT = {
-			#			any_demesne_title = {
-			#				is_vice_royalty = yes
-			#			}
-			#		}
-			#	}
-			}
-			#OR = {
-			#	is_landless_type_title = no
-			#	is_tribal_type_title = yes
-			#	temporary = yes
-			#}
-			#is_primary_type_title = no
-			NOT = { holder_scope = { government = military_governorate } }
-
-		}
-		allow = {
-			custom_tooltip = {
-				text = not_forced_tt
-				hidden_tooltip = {
-					holder_scope = { NOT = { has_character_flag = liege_forced_succ_law } }
-				}
-			}
-		}
-		effect = {
-			succession = {
-				base_type = feudal_elective
-				voting_rules = mex_elective
-			}
-		}
-		revoke_allowed = {
-			always = no
-		}			
-	}
-
 	succ_byzantine_elective = {
 		oldest_child_opinion = -5
 		child_opinion = -5
@@ -1270,7 +1210,11 @@ succession_laws = {
 		feudal_opinion = -5
 		potential = {
 			holder_scope = {
-				has_landed_title = e_usa
+				OR = {
+					has_landed_title = e_usa
+					has_landed_title = e_mexico
+					has_landed_title = k_mexico
+				}
 				NOT = { religion_group = pagan_group }
 				is_nomadic = no
 				is_merchant_republic = no
@@ -1335,11 +1279,11 @@ succession_laws = {
 					title = e_usa
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = e_mexico
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = k_mexico
 				}
 			}
@@ -1476,11 +1420,11 @@ succession_laws = {
 					title = e_usa
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = e_mexico
 				}
 				AND = {
-					has_law = succ_mex_elective 
+					has_law = succ_byzantine_elective 
 					title = k_mexico
 				}
 			}
