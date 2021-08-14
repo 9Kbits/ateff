@@ -5591,7 +5591,6 @@ gaian_reclamation_cb = {
 	is_permanent = yes
 	check_all_titles = yes
 	hostile_against_others = no
-	check_de_jure_tier = COUNT
 	sort_priority = 600
 	
 	can_use_gui = {
@@ -5646,12 +5645,13 @@ gaian_reclamation_cb = {
 	
 	
 	can_use_title = {
-		any_de_jure_vassal_title = {
+		tier = COUNT
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
 			holder_scope = {
-				OR = {
-					character = FROM
-					is_vassal_or_below_of = FROM
-				}
+				is_liege_or_above = FROM
 			}
 		}
 		location = {
