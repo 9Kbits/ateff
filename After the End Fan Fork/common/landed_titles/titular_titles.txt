@@ -2329,12 +2329,12 @@ e_ontarian = {
 	creation_requires_capital = no	
 }
 
-e_occidental = {
+e_sonorense = {
 	color={ 130 130 10 }
 	color2={ 210 50 20 }
 	capital = 793 # c_hermosillo
 	
-	culture = occidental
+	culture = sonorense
 	allow = {
 		NOT = {
 			has_game_rule = {
@@ -2344,10 +2344,10 @@ e_occidental = {
 		}
 		war = no
 		NOT = { tier = emperor }
-		culture = occidental
+		culture = sonorense
 		OR = {
 			realm_size = 150
-			e_occidental = { OR = { is_titular = no has_holder = yes } }
+			e_sonorense = { OR = { is_titular = no has_holder = yes } }
 		}
 	}
 	short_name = yes
