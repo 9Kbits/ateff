@@ -1847,6 +1847,20 @@ liberate_religion = { # New6
 					}
 				}
 			}
+			if = {
+				limit = {
+					has_game_rule = { name = holy_war_cooldown_rule value = short }
+				}
+				custom_tooltip = {
+					text = holy_war_cooldown_ctt
+					hidden_tooltip = {
+						add_character_modifier = {
+							name = holy_war_cooldown
+							duration = 730
+						}
+					}
+				}
+			}
 			piety = -200
 		}
 		hidden_tooltip = {
