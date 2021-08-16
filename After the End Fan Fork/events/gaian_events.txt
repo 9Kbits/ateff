@@ -5121,6 +5121,9 @@ character_event = {
 				NOR = {
 					has_character_modifier = refused_reclamation
 					has_character_modifier = gaian_took_part_in_reclamation
+					event_target:reclamation_war_targ = {
+						reverse_has_truce = PREV
+					}
 				}
 				OR = {
 					any_realm_province = {
@@ -5188,6 +5191,9 @@ character_event = {
 				NOR = {
 					has_character_modifier = refused_reclamation
 					has_character_modifier = gaian_took_part_in_reclamation
+					event_target:reclamation_war_targ = {
+						reverse_has_truce = ROOT 
+					}
 				}
 				OR = {
 					any_realm_province = {
@@ -6031,5 +6037,43 @@ narrative_event = {
 	
 	immediate = {
 		set_global_flag = global_cycle_that_binds
+	}
+}
+
+character_event = {
+	id = gaian.6000
+	hide_window = yes
+	religion = gaian
+	only_playable = yes
+	mean_time_to_happen = {
+		days = 2
+	}
+	trigger = {
+		religion = gaian
+		government = theocratic_feudal_government
+		primary_title = {
+			NOR = {
+				has_law = succ_eldership
+				has_law = succ_rel_gaian_elective
+				has_law = succ_mil_gaian_elective
+				has_law = succ_gavelkind
+			}
+		}
+	}
+	immediate = {
+		random_list = {
+			25 = {
+				primary_title = { add_law = { law = succ_eldership opinion_effect = no }}
+			}
+			25 = {
+				primary_title = { add_law = { law = succ_rel_gaian_elective opinion_effect = no }}
+			}
+			25 = {
+				primary_title = { add_law = { law = succ_mil_gaian_elective opinion_effect = no }}
+			}
+			25 = {
+				primary_title = { add_law = { law = succ_gavelkind opinion_effect = no }}
+			}
+		}
 	}
 }
