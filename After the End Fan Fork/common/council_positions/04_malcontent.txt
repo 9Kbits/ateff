@@ -25,10 +25,6 @@ malcontent = {
 	potential = { # The player also needs to obey the potential triggers when choosing a position.
 		NOT = { trait = horse }
 		NOT = { trait = cat }
-		OR = {
-			NOT = { liege = { government = open_range_feudalism_government } }
-			trait = party_malcontent
-		}
 	}
 	
 	default_selection = {
