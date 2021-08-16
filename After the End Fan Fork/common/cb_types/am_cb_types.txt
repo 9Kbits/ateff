@@ -5122,6 +5122,7 @@ gaian_reclamation_cb = {
 			religion = gaian
 			is_nomadic = no
 			has_global_flag = global_cycle_that_binds
+			war = no
 			NOT = { has_global_flag = the_great_unbind }
 			NOT = { same_realm = FROM }
 			OR = {
@@ -5159,7 +5160,6 @@ gaian_reclamation_cb = {
 		}
 	}
 	
-	
 	can_use_title = {
 		tier = COUNT
 		OR = {
@@ -5171,7 +5171,57 @@ gaian_reclamation_cb = {
 			}
 		}
 		location = {
-			region = custom_gaian_core_region
+		region = custom_gaian_core_region
+		OR = {
+			dejure_liege_title = {
+			owner = {
+				OR = {
+					character = ROOT
+					is_liege_or_above = ROOT
+					}
+				}
+			}
+		any_neighbor_province = {
+			OR = {
+				AND = {
+					has_owner = yes
+					owner = {
+						OR = {
+							character = ROOT
+							is_liege_or_above = ROOT
+							}
+						}
+					}
+				AND = {
+					is_land = no
+						any_neighbor_province = {
+							OR = {
+								AND = {
+									has_owner = yes
+									owner = {
+										OR = {
+											character = ROOT
+											is_liege_or_above = ROOT
+										}
+									}
+								}
+							AND = {
+								is_land = no
+								any_neighbor_province = {
+									owner = {
+											OR = {
+												character = ROOT
+												is_liege_or_above = ROOT
+											}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 

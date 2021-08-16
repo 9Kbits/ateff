@@ -5122,6 +5122,129 @@ character_event = {
 			has_character_modifier = refused_reclamation
 			has_character_modifier = gaian_took_part_in_reclamation
 				}
+			event_target:reclamation_war_targ = {
+				any_realm_province = {
+					OR = {
+						dejure_liege_title = {
+							owner = {
+								OR = {
+									character = PREVPREV
+									is_liege_or_above = PREVPREV
+								}
+							}
+						}
+						location = {
+							any_neighbor_province = {
+								OR = {
+									AND = {
+										has_owner = yes
+										owner = {
+											OR = {
+												character = PREVPREV
+												is_liege_or_above = PREVPREV
+											}
+										}
+									}
+									AND = {
+										is_land = no
+										any_neighbor_province = {
+											OR = {
+												AND = {
+													has_owner = yes
+													owner = {
+														OR = {
+															character = PREVPREV
+															is_liege_or_above = PREVPREV
+														}
+													}
+												}
+												AND = {
+													is_land = no
+													any_neighbor_province = {
+														owner = {
+															OR = {
+																character = PREVPREV
+																is_liege_or_above = PREVPREV
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					}
+				}
+			}
+			character_event = { id = gaian.5001 days=2 } 
+		}
+		any_vassal = {
+			limit = {
+			war = no
+			religion = gaian
+			NOT = {
+			has_character_modifier = refused_reclamation
+			has_character_modifier = gaian_took_part_in_reclamation
+				}
+			event_target:reclamation_war_targ = {
+				any_realm_province = {
+					OR = {
+						dejure_liege_title = {
+							owner = {
+								OR = {
+									character = PREVPREV
+									is_liege_or_above = PREVPREV
+								}
+							}
+						}
+						location = {
+							any_neighbor_province = {
+								OR = {
+									AND = {
+										has_owner = yes
+										owner = {
+											OR = {
+												character = PREVPREV
+												is_liege_or_above = PREVPREV
+											}
+										}
+									}
+									AND = {
+										is_land = no
+										any_neighbor_province = {
+											OR = {
+												AND = {
+													has_owner = yes
+													owner = {
+														OR = {
+															character = PREVPREV
+															is_liege_or_above = PREVPREV
+														}
+													}
+												}
+												AND = {
+													is_land = no
+													any_neighbor_province = {
+														owner = {
+															OR = {
+																character = PREVPREV
+																is_liege_or_above = PREVPREV
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+					}
+				}
 			}
 			character_event = { id = gaian.5001 days=2 } 
 		}
