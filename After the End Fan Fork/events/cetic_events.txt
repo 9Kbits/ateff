@@ -10059,6 +10059,36 @@ character_event = {
 				which = yearly_bureaucracy_change
 				which = passive_bureaucracy
 			}
+			if = {
+				limit = {
+					check_variable = { which = yearly_bureaucracy_change value = 4 }
+					primary_title = {
+						check_variable = { which = bureau_number value < 50 }
+					}
+				}
+				change_variable = { which = passive_bureaucracy value = -3 }
+				change_variable = { which = yearly_bureaucracy_change value = -3 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = yearly_bureaucracy_change value = 3 }
+					primary_title = {
+						check_variable = { which = bureau_number value < 50 }
+					}
+				}
+				change_variable = { which = passive_bureaucracy value = -2 }
+				change_variable = { which = yearly_bureaucracy_change value = -2 }
+			}
+			if = {
+				limit = {
+					check_variable = { which = yearly_bureaucracy_change value = 3 }
+					primary_title = {
+						check_variable = { which = bureau_number value < 50 }
+					}
+				}
+				change_variable = { which = passive_bureaucracy value = -2 }
+				change_variable = { which = yearly_bureaucracy_change value = -2 }
+			}
 		}
 		
 		hidden_tooltip = {
@@ -10323,6 +10353,45 @@ character_event = {
 		# }
 	# }
 # }
+
+#Average Bureaucracy Calculation (five_year_pulse)
+character_event = {
+	id = cetic.546
+	hide_window = yes
+	is_triggered_only = yes
+	only_rulers = yes
+	religion = catholic
+	
+	trigger = {
+		has_landed_title = k_papal_state
+	}
+	
+	immediate = {
+		set_variable = { which = global_bureaucrat_count value = 0 }
+		set_variable = { which = global_bureau_number value = 0 }
+		
+		any_playable_ruler = {
+			limit = {
+				has_character_modifier = bureaucracy
+			}
+			change_variable = { which = global_bureaucrat_count value = 1 }
+		}
+		
+		any_playable_ruler = {
+			limit = {
+				has_character_modifier = bureaucracy
+			}
+			primary_title = {
+				change_variable = {
+					which = global_bureau_number
+					which = bureau_number
+				}
+			}
+		}
+		
+		divide_variable = { which = global_bureau_number which = global_bureaucrat_count }
+	}
+}
 
 # **************************Variable Boundary Events***********************
 

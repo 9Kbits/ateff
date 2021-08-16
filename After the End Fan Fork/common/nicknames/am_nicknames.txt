@@ -1769,6 +1769,27 @@ nick_fire_and_brimstone = {
 		}
 	}
 }
+nick_the_big = {
+	allow = {
+		is_adult = yes
+		OR = {
+			trait = is_fat
+			trait = robust
+			trait = giant
+		}
+	}
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			trait = proud
+		}
+		modifier = {
+			factor = 1.5
+			trait = strong
+		}
+	}
+}
 nick_triumvir_of_beecee = {}
 nick_the_devil_dog = {}
 nick_the_heartbreaker = {}

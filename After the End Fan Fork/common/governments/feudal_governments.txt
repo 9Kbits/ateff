@@ -669,18 +669,14 @@ feudal_governments = {
 		frame_suffix = "_orf"
 		potential = {
 			OR = {
-				OR = {
-					culture_group = norteno
-					culture = neomexicano
-					culture_group = starfolk
-					culture = arixan
-					culture = comanche
-				}	
-	
-				##other ways here.
 				capital_scope = {
 					region = custom_range_range
 				}
+				culture_group = norteno
+				culture = neomexicano
+				culture_group = starfolk
+				culture = arixan
+				culture = comanche
 			}
 			is_patrician = no
 			NOT = { is_government_potential = mormon_government }
@@ -748,11 +744,11 @@ feudal_governments = {
 				is_government_potential = military_governorate
 			}
 			OR = {
-				primary_title = { 
+				primary_title = {
 					OR = {
 					title = e_mexico
 					title = k_mexico
-						}	
+					}	
 				}
 				top_liege = {
 					primary_title = { 
