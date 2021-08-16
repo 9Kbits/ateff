@@ -1,41 +1,4 @@
-restore_mexican_empire = {
-		only_independent = yes
-		is_high_prio = yes
-		ai_check_interval = 24
-		
-		potential = {
-			is_playable = yes
-			has_dlc = "Legacy of Rome"
-			has_landed_title = k_mexico
-			is_adult = yes
-			prisoner = no
-			NOT = { trait = incapable }
-			NOT = { has_global_flag = mexico_restored }
-			NOR = {
-				has_alternate_start_parameter = { key = religion_names value = random }
-			}
-		}
-		allow = {
-			primary_title = { title = k_mexico }
-			prestige = 3000
-			completely_controls = d_mexico
-			completely_controls = d_puebla
-			completely_controls = d_veracruz
-			completely_controls = d_jalisco
-			completely_controls = d_oaxaca
-			completely_controls = d_michoacan
-			completely_controls = d_guerrero
-			completely_controls = d_guanajato
-		}
-		effect = {
-			set_global_flag = mexico_restored
-			narrative_event = { id = MXR.20 tooltip = EVTTOOLTIPMXR.20 }
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
+decisions = {       
 	enforce_orthodoxy = {
 		only_independent = yes
 		is_high_prio = yes
@@ -235,6 +198,7 @@ restore_mexican_empire = {
 			factor = 0
 		}
 	}
+}
 	
 narrative_event = {
 	id = MXR.210
