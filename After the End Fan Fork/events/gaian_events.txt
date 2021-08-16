@@ -5203,6 +5203,18 @@ character_event = {
 									}
 								}
 								AND = {
+									borders_major_river = yes
+									any_neighbor_province = {
+									has_owner = yes
+										owner = {
+											OR = {
+											character = event_target:reclamation_war_targ
+											is_liege_or_above = event_target:reclamation_war_targ
+											}
+										}
+									}
+								}
+								AND = {
 									is_land = no
 									any_neighbor_province = {
 										OR = {
@@ -5216,12 +5228,52 @@ character_event = {
 												}
 											}
 											AND = {
-												is_land = no
+												borders_major_river = yes
 												any_neighbor_province = {
+												has_owner = yes
 													owner = {
 														OR = {
-															character = event_target:reclamation_war_targ
-															is_liege_or_above = event_target:reclamation_war_targ
+														character = event_target:reclamation_war_targ
+														is_liege_or_above = event_target:reclamation_war_targ
+														}
+													}
+												}
+											}
+											AND = {
+												is_land = no
+												any_neighbor_province = {
+													OR = {
+														AND = {
+															has_owner = yes
+															owner = {
+																OR = {
+																	character = event_target:reclamation_war_targ
+																	is_liege_or_above = event_target:reclamation_war_targ
+																}
+															}
+														}
+														AND = {
+															borders_major_river = yes
+															any_neighbor_province = {
+															has_owner = yes
+																owner = {
+																	OR = {
+																	character = event_target:reclamation_war_targ
+																	is_liege_or_above = event_target:reclamation_war_targ
+																	}
+																}
+															}
+														}
+														AND = {
+															is_land = no
+															any_neighbor_province = {
+																owner = {
+																	OR = {
+																		character = event_target:reclamation_war_targ
+																		is_liege_or_above = event_target:reclamation_war_targ
+																	}
+																}
+															}
 														}
 													}
 												}
