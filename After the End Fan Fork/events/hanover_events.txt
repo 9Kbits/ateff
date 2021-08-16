@@ -582,6 +582,7 @@ narrative_event = {
 	has_character_flag = anastasia
 	trigger = {
 		is_landed = yes
+		NOT = {has_landed_title = e_dixie}
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -620,6 +621,9 @@ narrative_event = {
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	is_triggered_only = yes
+	trigger = {
+		NOT = {has_landed_title = e_dixie}
+	}
 	option = {
 		name = "EVTOPT_anaambitious"
 		custom_tooltip = { text = TXT_anaambitious }
@@ -637,6 +641,9 @@ narrative_event = {
 	border = GFX_event_narrative_frame_intrigue
 	prisoner = no
 	is_triggered_only = yes
+	trigger = {
+		NOT = {has_landed_title = e_dixie}
+	}
 	option = {
 		name = "EVTOPT_anastasia3a"
 		custom_tooltip = { text = TXT_anastasia3a }
@@ -683,6 +690,9 @@ narrative_event = {
 	border = GFX_event_narrative_frame_intrigue
 	prisoner = no
 	is_triggered_only = yes
+	trigger = {
+		NOT = {has_landed_title = e_dixie}
+	}
 	option = {
 		name = "EVTOPT_anastasia4a"
 		custom_tooltip = { text = TXT_anastasia4a }
@@ -714,6 +724,7 @@ narrative_event = {
 				is_married = no
 			}
 		}
+		NOT = {has_landed_title = e_dixie}
 	}
 	
 	mean_time_to_happen = { days = 30 }
@@ -777,6 +788,7 @@ narrative_event = {
 	prisoner = no
 	is_triggered_only = yes
 	
+	
 	option = {
 		name = "EVTOPT_anastasiaEMP1a"
 		d_inner_banks = {
@@ -822,6 +834,9 @@ narrative_event = {
 	border = GFX_event_narrative_frame_diplomacy
 	prisoner = no
 	is_triggered_only = yes
+	trigger = {
+		NOT = {has_landed_title = e_dixie}
+	}
 	
 	option = {
 		name = "EVTOPT_anastasiaEMP2a"
@@ -838,6 +853,9 @@ narrative_event = {
 	border = GFX_event_narrative_frame_intrigue
 	prisoner = no
 	is_triggered_only = yes
+	trigger = {
+		NOT = {has_landed_title = e_dixie}
+	}
 	
 	option = {
 		name = "EVTOPT_anastasiaEMP3a"
@@ -894,7 +912,12 @@ narrative_event = {
 		has_dlc = "Holy Fury"
 		e_dixie = {
 			holder_scope = {
-				has_character_flag = anastasia_war
+				OR = {
+					has_character_flag = anastasia_war
+					#adding it if Anastasia got the empire in another way
+					has_character_flag = anastasia2
+					has_character_flag = anastasia
+				}
 				NOT = {
 					any_owned_bloodline = {
 						has_bloodline_flag = matilde_bloodline
@@ -920,6 +943,7 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPT_anabloodline
+		limit = {has_character_flag = anastasia_war}
 		if = { 
 			limit = { 
 				this_has_cool_nickname_trigger = no
