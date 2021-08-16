@@ -1,5 +1,4 @@
-decisions = { 
-	restore_mexican_empire = {
+restore_mexican_empire = {
 		only_independent = yes
 		is_high_prio = yes
 		ai_check_interval = 24
@@ -12,7 +11,7 @@ decisions = {
 			prisoner = no
 			NOT = { trait = incapable }
 			NOT = { has_global_flag = mexico_restored }
-			NOT = {
+			NOR = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 		}
@@ -236,7 +235,6 @@ decisions = {
 			factor = 0
 		}
 	}
-}
 	
 narrative_event = {
 	id = MXR.210
