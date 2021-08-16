@@ -297,7 +297,6 @@ character_event = {
 
 character_event = {
 	id = orfelection.3
-	title = EVTTITLE_orf_election_inform
 	
 	picture = GFX_evt_battle
 	
@@ -306,11 +305,14 @@ character_event = {
 	trigger = {
 		has_character_flag = running_for_office_defender
 	}
+	desc = EVTDESC_orf_election_inform
 	
-	desc = {
-		text = EVTDESC_orf_election_inform
-	}
 	option = { 
+		name = EVTOPTA_orfelection_i_resist
+		ai_chance = {
+			factor = 90
+		}
+		
 		name = EVTOPTA_orf_election_inform_run_against
 		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.4 days = 5 } }
 		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.4 days = 5 } }
@@ -318,6 +320,23 @@ character_event = {
 		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.7 days = 125 } }
 	}
 	option = { 
+		name = EVTOPTA_orfelection_i_resign
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 3
+				trait = coward
+			}
+			modifier = {
+				factor = 3
+				trait = ugly
+			}
+			modifier = {
+				factor = 2
+				trait = content
+			}
+		}
+	
 		name = EVTOPTA_orf_election_inform_resign
 		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.5 days = 5 } }
 	}
@@ -402,7 +421,6 @@ character_event = {
 
 character_event = {
 	id = orfelection.5
-	title = EVTTITLE_orf_election_resigned
 	
 	picture = GFX_evt_battle
 	
