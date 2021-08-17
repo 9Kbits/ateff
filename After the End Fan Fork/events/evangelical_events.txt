@@ -1290,107 +1290,6 @@ narrative_event = {
 	}
 }
 
-#Ruler converts to heresy after the Council of Augusta
-#character_event = {
-#	id = eva.31
-#	desc = { text = EVTDESC_eva.31A trigger = { NOT = { has_global_flag = monk_ignored } } }
-#	desc = { text = EVTDESC_eva.31B trigger = { has_global_flag = monk_ignored } }
-#	picture = GFX_evt_heretic
-#	border = GFX_event_normal_frame_religion
-#	
-#	only_rulers = yes
-#	religion = evangelical
-#	min_age = 16
-#	prisoner = no
-#	
-#	trigger = {
-#		religion = evangelical
-#		#vassal_of = e_dixie	# vassal_of requires a character, not a title
-#		
-#		has_global_flag = westphalian_treatise
-#		has_global_flag = evangelical_reformation
-#		NOT = { has_global_flag = end_wildfire_reformation }
-#		
-#		NOT = { has_global_flag = imperial_church_established }
-#		NOT = { has_character_flag = remain_evangelical }
-#		NOT = { has_landed_title = e_dixie }
-#		NOT = { has_landed_title = k_evangelical }
-#		NOT = { holy_order = yes }
-#	}
-#	
-#	mean_time_to_happen = {
-#		months = 6
-#	}
-#	
-#	option = {
-#		name = EVTOPTA_eva.31
-#		ai_chance = {
-#			factor = 20
-#			modifier = { factor = 2 trait = cynical }
-#			modifier = { factor = 2 trait = ambitious }
-#		}
-#		religion = charismatic
-#		add_trait = heresiarch
-#		capital_scope = {
-#			religion = charismatic
-#		}
-#		any_courtier = {
-#			limit = { is_landed = no }
-#			religion = charismatic
-#		}
-#	}
-#	
-#	option = {
-#		name = EVTOPTB_eva.31
-#		ai_chance = {
-#			factor = 20
-#			modifier = { factor = 2 trait = cynical }
-#			modifier = { factor = 2 trait = ambitious }
-#		}
-#		religion = antinomian
-#		add_trait = heresiarch
-#		capital_scope = {
-#			religion = antinomian
-#		}
-#		any_courtier = {
-#			limit = { is_landed = no }
-#			religion = antinomian
-#		}
-#	}
-#	
-#	option = {
-#		name = EVTOPTC_eva.31
-#		ai_chance = {
-#			factor = 20
-#			modifier = { factor = 2 trait = cynical }
-#			modifier = { factor = 2 trait = ambitious }
-#		}
-#		religion = postadventist
-#		add_trait = heresiarch
-#		capital_scope = {
-#			religion = postadventist
-#		}
-#		any_courtier = {
-#			limit = { is_landed = no }
-#			religion = postadventist
-#		}
-#	}
-#	
-#	option = {
-#		name = EVTOPTD_eva.31
-#		set_character_flag = remain_evangelical
-#		ai_chance = {
-#			factor = 60 
-#			modifier = { factor = 2 trait = humble }
-#			modifier = { factor = 2 trait = content }
-#			modifier = { factor = 2 trait = craven }
-#			modifier = { factor = 5 trait = zealous }
-#		}
-#		random = { chance = 50 add_trait = zealous }
-#		piety = 25
-#	}
-#}
-
 character_event = {
 	id = eva.32
 	desc = EVTDESC_bounce
@@ -4240,6 +4139,7 @@ narrative_event = {
 		
 	immediate = {
 		set_global_flag = westphalia_fix
+		religion_authority = { modifier = ma_evangelical_fix }
 	}
 	
 	option = {
@@ -4309,6 +4209,7 @@ narrative_event = {
 		
 	immediate = {
 		set_global_flag = westphalia_fix
+		religion_authority = { modifier = ma_evangelical_fix }
 	}
 	
 	option = {
