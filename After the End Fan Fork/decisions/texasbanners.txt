@@ -12,7 +12,7 @@ decisions = {
 				culture_group = starfolk
 				AND = { 
 					culture = comanche
-					has_global_flag = comanche_opt_in
+					has_landed_title = k_comancheria
 				}
 			}
 			d_airmen = {
@@ -58,7 +58,7 @@ decisions = {
 			}
 			OR = { culture_group = starfolk
 			AND = { culture = comanche
-					has_global_flag = comanche_opt_in
+					has_landed_title = k_comancheria
 				}
 			}
 
@@ -100,7 +100,7 @@ decisions = {
 			independent = yes
 			OR = { culture_group = starfolk
 			AND = { culture = comanche
-					has_global_flag = comanche_opt_in
+					has_landed_title = k_comancheria
 				}
 			}
 
@@ -145,7 +145,7 @@ decisions = {
 				culture_group = starfolk
 				AND = { 
 					culture = comanche
-					has_global_flag = comanche_opt_in
+					has_landed_title = k_comancheria
 				}
 			}
 
@@ -189,7 +189,7 @@ decisions = {
 			OR = { culture_group = starfolk
 				AND = { 
 					culture = comanche
-					has_global_flag = comanche_opt_in
+					has_landed_title = k_comancheria
 				}
 			}
 
@@ -232,7 +232,7 @@ decisions = {
 			independent = yes
 			OR = { culture_group = starfolk
 			AND = { culture = comanche
-				has_global_flag = comanche_opt_in
+					has_landed_title = k_comancheria
 				}
 			}
 
@@ -265,33 +265,6 @@ decisions = {
 			factor = 1
 		} 
 	}
-		
-	comanche_opt_in = {
-		
-		is_high_prio = no
-		only_playable = yes
-	
-		potential = {
-			culture = comanche
-			has_landed_title = k_comancheria
-		}
-		
-		allow = { 
-			is_adult = yes
-			prisoner = no
-			NOT = { is_capable = yes }
-			has_landed_title = c_travis
-			prestige = 1000
-		}
-		
-		effect = {
-			prestige = -1000
-			#replace when event is done.
-			#narrative_event = { id = tex_king.!!!! }
-			set_global_flag = comanche_opt_in
-		}
-	}
-	
 
 	grant_airmen_banner = {
 		is_high_prio = no
@@ -303,7 +276,7 @@ decisions = {
 			independent = yes
 			OR = { culture_group = starfolk
 			AND = { culture = comanche
-				has_global_flag = comanche_opt_in
+					has_landed_title = k_comancheria
 				}
 			}
 
@@ -429,7 +402,7 @@ decisions = {
 			independent = yes
 			OR = { culture_group = starfolk
 			AND = { culture = comanche
-				has_global_flag = comanche_opt_in
+			has_landed_title = k_comancheria
 				}
 			}
 
@@ -554,7 +527,7 @@ decisions = {
 			independent = yes
 			OR = { culture_group = starfolk
 			AND = { culture = comanche
-				has_global_flag = comanche_opt_in
+			has_landed_title = k_comancheria
 				}
 			}
 
@@ -682,7 +655,7 @@ decisions = {
 			independent = yes
 			OR = { culture_group = starfolk
 			AND = { culture = comanche
-				has_global_flag = comanche_opt_in
+			has_landed_title = k_comancheria
 				}
 			}
 			NOT = { has_global_flag = texas_restored }
@@ -809,7 +782,7 @@ decisions = {
 			independent = yes
 			OR = { culture_group = starfolk
 			AND = { culture = comanche
-				has_global_flag = comanche_opt_in
+			has_landed_title = k_comancheria
 				}
 			}
 			NOT = { has_global_flag = texas_restored }
@@ -932,7 +905,7 @@ decisions = {
 			independent = yes
 			OR = { culture_group = starfolk
 			AND = { culture = comanche
-				has_global_flag = comanche_opt_in
+			has_landed_title = k_comancheria
 				}
 			}
 			NOT = { has_global_flag = texas_restored }
