@@ -420,8 +420,8 @@ targetted_decisions = {
 		from_potential = {
 			is_playable = yes
 			has_regent = no
-			NOT = { has_law = religion_tolerance_0 }
-			NOR = { 
+			NOT = {top_liege = {has_law = religion_tolerance_0}}
+			NOR = {
 				government = merchant_republic_government
 				religion = reform
 				religion = anabaptist

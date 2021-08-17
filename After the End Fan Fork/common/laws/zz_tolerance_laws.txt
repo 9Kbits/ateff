@@ -1,4 +1,11 @@
-
+law_groups = {
+    culture_tolerance = {
+        law_type = realm
+    }
+	religion_tolerance = {
+		law_type = realm
+	}
+}
 laws = {
 
 # CULTURE TOLERANCE
@@ -101,10 +108,7 @@ laws = {
 			}
 		}
 		allow = {
-			OR = {
-				has_law = culture_tolerance_0
-				has_law = culture_tolerance_2
-			}
+			always = yes
 		}
 		revoke_allowed = {
 			always = no
@@ -257,26 +261,6 @@ laws = {
 	religion_tolerance_0 = {
 		show_as_title = yes
 		group = religion_tolerance
-		
-		default_selection = {
-			factor = 0
-			additive_modifier = { 
-				value = 10
-				holder_scope = { 
-					OR = {
-						religion = reform
-						#religion = ruhi
-						#religion = neuhumanist
-						#religion = haskalah
-					}
-					is_feudal = yes
-				}	
-			}
-			additive_modifier = { 
-				value = 10
-				title = e_carribean
-			}
-		}
 		
 		potential = {
 			holder_scope = {
@@ -539,7 +523,19 @@ laws = {
 		show_as_title = yes
 		group = religion_tolerance
 		default = yes
-
+		allow = {
+			OR = {
+				has_law = religion_tolerance_1
+				has_law = religion_tolerance_3
+				AND = {
+					NOT = {has_law = religion_tolerance_0}
+					NOT = {has_law = religion_tolerance_1}
+					NOT = {has_law = religion_tolerance_2}
+					NOT = {has_law = religion_tolerance_3}
+					NOT = {has_law = religion_tolerance_4}
+				}
+			}
+		}
 		potential = {
 			holder_scope = {
 				is_tribal = no
@@ -547,12 +543,7 @@ laws = {
 				independent = yes
 			}
 		}
-		allow = {
-			OR = {
-				has_law = religion_tolerance_1
-				has_law = religion_tolerance_3
-			}
-		}
+		
 		revoke_allowed = {
 			always = no
 		}
