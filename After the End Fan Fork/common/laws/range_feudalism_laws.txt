@@ -16,14 +16,25 @@ laws = {
 	range_senate_size_0 = {
 		group = range_senate_size
 		allow = {
-			has_law = range_senate_size_1
+			OR = {
+				has_law = range_senate_size_1
+			
+				AND = {
+					NOT = {	has_law = range_senate_size_0 }
+					NOT = {	has_law = range_senate_size_1 }
+					NOT = {	has_law = range_senate_size_2 }
+					NOT = {	has_law = range_senate_size_3 }
+					NOT = {	has_law = range_senate_size_4 }
+				}
+			}
 			has_law = orf_senate_type_law_0
 		}
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
+				independent = yes
 			}
-			holder_scope = { independent = yes }
+			 
 		}
 		revoke_allowed = {
 			always = no
@@ -96,8 +107,9 @@ laws = {
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
+				independent = yes
 			}
-			holder_scope = { independent = yes }
+			 
 		}
 		revoke_allowed = {
 			always = no
@@ -161,8 +173,9 @@ laws = {
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
+				independent = yes
 			}
-			holder_scope = { independent = yes }
+			 
 		}
 		revoke_allowed = {
 			always = no
@@ -228,8 +241,9 @@ laws = {
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
+				independent = yes
 			}
-			holder_scope = { independent = yes }
+			 
 		}
 		revoke_allowed = {
 			always = no
@@ -291,8 +305,9 @@ laws = {
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
+				independent = yes
 			}
-			holder_scope = { independent = yes }
+			 
 		}
 		revoke_allowed = {
 			always = no
@@ -344,12 +359,20 @@ laws = {
 		group = orf_senate_type_law
 		default = yes
 		allow = {
-			NOT = { has_law = orf_senate_type_law_2 }
+			OR = {
+				has_law = orf_senate_type_law_1
+			
+				AND = {
+					NOT = {	has_law = orf_senate_type_law_1 }
+					NOT = {	has_law = orf_senate_type_law_2 }
+					NOT = {	has_law = orf_senate_type_law_0 }
+				}
+			}
 		}
 
 		potential = {
-			holder_scope = { government = open_range_feudalism_government } 
-			holder_scope = { independent = yes }
+			holder_scope = { government = open_range_feudalism_government
+				independent = yes } 
 		}
 		ai_will_do = { factor = 0 }
 		ai_will_revoke = { factor = 0 }
@@ -392,8 +415,8 @@ laws = {
 		}
 
 		potential = {
-			holder_scope = { government = open_range_feudalism_government } 
-			holder_scope = { independent = yes }
+			holder_scope = { government = open_range_feudalism_government 
+			independent = yes }
 		}
 		ai_will_do = {
 			factor = 1
@@ -449,8 +472,11 @@ laws = {
 			}
 		}
 		potential = {
-			holder_scope = { government = open_range_feudalism_government } 
-			holder_scope = { independent = yes }
+			holder_scope = { 
+				government = open_range_feudalism_government 
+				independent = yes
+				} 
+			 
 		}
 		ai_will_do = {
 			factor = 10
@@ -494,7 +520,13 @@ laws = {
 	range_privileges_trade_0 = {
 		group = range_privileges_trade
 		allow = {
-			has_law = range_privileges_trade
+			OR = {
+				has_law = range_privileges_trade_1
+				AND = {
+					NOT = { has_law = range_privileges_trade_0 }
+					NOT = { has_law = range_privileges_trade_1 }
+				}
+			}
 			holder_scope = {
 				OR = {
 					independent = yes
@@ -505,6 +537,7 @@ laws = {
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
+				independent = yes
 	
 			}
 		}
@@ -547,6 +580,7 @@ laws = {
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
+				independent = yes
 			}
 		}
 		revoke_allowed = {
@@ -585,18 +619,25 @@ laws = {
 	range_privileges_church_0 = {
 		group = range_privileges_church
 		allow = {
-			has_law = range_privileges_church_1
+			OR = {
+				has_law = range_privileges_church_1
+				AND = {
+					NOT = { has_law = range_privileges_church_0 }
+					NOT = { has_law = range_privileges_church_1 }
+				}
+			}
 			holder_scope = {
 				OR = {
 					independent = yes
 					liege = { has_law = range_privileges_church_0 }
+
 				}
 			}
 		}
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
-	
+				independent = yes
 			}
 		}
 		revoke_allowed = {
@@ -638,6 +679,7 @@ laws = {
 		potential = {
 			holder_scope = {
 				government = open_range_feudalism_government
+				independent = yes
 			}
 		}
 		revoke_allowed = {
