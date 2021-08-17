@@ -376,9 +376,6 @@ character_event = {
 			5 = {
 				character_event = {id = orfelection.21 days = 25}
 			}
-			5 = {
-				character_event = {id = orfelection.11 days = 25}
-			}
 			character_event = {id = orfelection.4 days = 35 }
 		}
  
@@ -565,10 +562,6 @@ character_event = {
 	}
 	option = { 
 		name = EVTOPTA_orf_election_waiting_results
-		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.4 days = 5 } }
-		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.4 days = 5 } }
-		event_target:orf_election_opponent_attacker = { character_event = { id = orfelection.8 days = 125 } }
-		event_target:orf_election_opponent_defender = { character_event = { id = orfelection.8 days = 125 } }
 	}
 }
 
@@ -1169,6 +1162,46 @@ character_event = {
 	}
 }
 
+
+character_event = {#if defender dies, called from on_death
+	id = orfelection.103
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_character_flag = running_for_office_attacker
+	}
+	immediate = {
+	}
+}
+
+character_event = {
+	id = orfelection.104
+	is_triggered_only = yes
+	desc = EVTDESC_orfelec_101
+	option = {
+		name = EVTOPTA_orfelec_101
+		clr_character_flag = running_for_office_defender
+		clr_character_flag = orf_election_running
+		clr_character_flag = orfelec_good_11
+		clr_character_flag = orfelec_neutral_11
+		clr_character_flag = orfelec_bad_11
+		clr_character_flag = orfelec_good_13
+		clr_character_flag = orfelec_neutral_13
+		clr_character_flag = orfelec_bad_13
+		clr_character_flag = orfelec_good_15
+		clr_character_flag = orfelec_neutral_15
+		clr_character_flag = orfelec_bad_15
+		clr_character_flag = orfelec_good_17
+		clr_character_flag = orfelec_neutral_17
+		clr_character_flag = orfelec_bad_17
+		clr_character_flag = orfelec_good_19
+		clr_character_flag = orfelec_neutral_19
+		clr_character_flag = orfelec_bad_19
+		clr_character_flag = orfelec_good_21
+		clr_character_flag = orfelec_neutral_21
+		clr_character_flag = orfelec_bad_21
+	}
+}
 #TODO AI_will_do, and connect it to the rest of the chain
 character_event ={#local speech
 	id = orfelection.11

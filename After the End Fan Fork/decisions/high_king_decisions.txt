@@ -17,6 +17,10 @@ decisions = {
 			e_texas = {
 				has_holder = no
 			}
+			
+			any_realm_province = {
+				de_jure_liege = d_alamo
+			}
 		}	
 		allow = {
 			is_adult = yes
@@ -51,6 +55,10 @@ decisions = {
 				has_holder = no
 			}
 			#has_landed_title = c_el_paso
+			
+			any_realm_province = {
+				de_jure_liege = d_transpecos
+			}
 		}	
 		allow = {
 			is_adult = yes
@@ -84,7 +92,9 @@ decisions = {
 			e_texas = {
 				has_holder = no
 			}
-			#has_landed_title = c_lubbock
+			any_realm_province = {
+				de_jure_liege = d_estacado
+			}
 		}	
 		allow = {
 			is_adult = yes
@@ -118,7 +128,9 @@ decisions = {
 			e_texas = {
 				has_holder = no
 			}
-			#has_landed_title = c_texarkana
+			any_realm_province = {
+				de_jure_liege = d_arklatex
+			}
 		}	
 		allow = {
 			is_adult = yes
@@ -152,6 +164,9 @@ decisions = {
 			e_texas = {
 				has_holder = no
 			}
+			any_realm_province = {
+				de_jure_liege = d_violet_crown
+			}
 			#has_landed_title = c_travis
 		}	
 		allow = {
@@ -182,6 +197,14 @@ decisions = {
 			}
 			k_star_coast = {
 				has_holder = no
+			}
+			OR = {
+				any_realm_province = {
+					de_jure_liege = d_houston
+				}
+				any_realm_province = {
+					de_jure_liege = d_galveston
+				}
 			}
 			#has_landed_title = c_harris
 		}	
