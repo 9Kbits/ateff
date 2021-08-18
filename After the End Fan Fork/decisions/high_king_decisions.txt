@@ -503,6 +503,25 @@ decisions = {
 					de_jure_liege = e_texas
 				}
 			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { culture = comanche }
+						k_comancheria = { has_holder = no }
+						k_redland = { has_holder = no }
+					}
+				}
+				
+				activate_title = { title = k_redland status = yes }
+				k_comancheria = {
+					any_direct_de_jure_vassal_title = {
+						de_jure_liege = k_redland
+					}
+				}
+				k_redland = {
+					de_jure_liege = e_heartland
+				}
+			}
 		}
 	}
 
