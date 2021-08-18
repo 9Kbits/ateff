@@ -404,7 +404,13 @@ decisions = {
 	
 				#if comanche right to texas is invalidated, new mexico would be by extension 
 				d_new_mexico = {
-					de_jure_liege = k_new_mexico
+					de_jure_liege = k_highlands
+				}
+				d_mesilla = {
+					de_jure_liege = k_highlands
+				}
+				k_comancheria = {
+					de_jure_liege = e_heartland
 				}
 				#dejures highlands out of Texan Comancheria
 				d_estacado = {
@@ -446,10 +452,19 @@ decisions = {
 						copy_title_laws = PREV
 					}
 				}
+				k_comancheria = {
+					de_jure_liege = e_heartland
+				}
 	
 				#if comanche right to texas is invalidated, new mexico would be by extension 
 				d_new_mexico = {
 					de_jure_liege = k_new_mexico
+				}
+				d_mesilla = {
+					de_jure_liege = k_new_mexico
+				}
+				k_new_mexico = {
+					de_jure_liege = e_the_rockies
 				}
 				#creates the kingdom of panhandle out of Texan Comancheria
 				d_estacado = {
