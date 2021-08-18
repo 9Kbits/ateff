@@ -17,7 +17,11 @@ party_royalist_loc;Royalist;;;;;;;;;;;;;x
 party_opposition_loc;Opposition;;;;;;;;;;;;;x
 
 
+adopt_orf;Adopt Open Range Feudalism;;;;;;;;;;;;;x
+adopt_orf_desc;While difficult smaller realms do sometimes adopt the ways of the range, freeing their serfs but setting aside new rights and privilegs for their nobles;;;;;;;;;;;;;x
 
+abandon_orf;Abandon Open Range Feudalism;;;;;;;;;;;;;x
+abandon_orf_desc;While difficult smaller realms do sometimes abandon the ways of the range, handing out the range as personal fiefdoms to the more powerful nobles;;;;;;;;;;;;;x
 
 #CODE;ENGLISH;FRENCH;GERMAN;;SPANISH;;;;;;;;;x
 ca_orf_range_marshal_1;Heroic Statue;FRENCH;GERMAN;;SPANISH;;;;;;;;;;;;;x
@@ -55,12 +59,14 @@ EVTOPT_orfelec_resolve_bad_x;generic;;;;;;;;;;;;x
 #this is what is shown on all options
 ORFELECCUSTOM; The results will depend on your abilities and skills;;;;;;;;;;;;x
 
+run_for_senate;Run For Senate.;;;;;;;;;;;;x
+run_for_senate;By the laws of this land I have the right to run for the senate.;;;;;;;;;;;;x
 
 EVTDESC_orf_election_campaign;By the very nature of the Range and the nobles that range cattle, the voter base is spread out and has sharply contrasting priorities between those in the cities and those men and women traveling between them. Where to campaign and how often can make the difference between an election for senate won or lost.;;;;;;;;;;;;x
 EVTOPTA_orf_election_campaign_range;I will spend the next month in the Range.;;;;;;;;;;;;x
 EVTOPTA_orf_election_campaign_towns;I will spend the next month in the Towns.;;;;;;;;;;;;x
-EVTOPTA__orf_election_campaign_ask_for_endorsement;The support of the [ROOT.GetLiege.GetTitledFirstName] could mean everything.;;;;;;;;;;;;x
-
+EVTOPTA_orf_election_campaign_ask_for_endorsement;I'll ask [ROOT.GetLiege.GetTitledFirstName] for support.;;;;;;;;;;;;x
+EVTOPTA_orf_election_campaign_done_campaigning;The election is almost over.;;;;;;;;;;;;x
 EVTTITLE_orf_election_resigned;[FROM.GetTitledFirstName] has decided to not run against you, and with this departure you quickly and easily secure the seat.;;;;;;;;;;;;x
 EVTOPTA_orf_election_resigned_that_was_easy; That wasn't so hard;;;;;;;;;;;;x
 
@@ -76,6 +82,8 @@ EVTOPTA_orfelec_101;The realm has decided;;;;;;;;;;;;x
 
 EVTDESC_orf_running_for_office_attacker_won;[orf_election_opponent_attacker.GetTitledFirstName] stands as senator elect, having overcome [orf_election_opponent_defender.GetTitledFirstName] in a tight election. The politics of the senate already begin to shift with those that had dealings with [orf_election_opponent_defender.GetTitledFirstName] now having to reconsider their plans and many already considering how they will deal with this new senator.;;;;;;;;;;;;x
 EVTDESC_orf_running_for_office_defender_won;[orf_election_opponent_defender.GetTitledFirstName] stands as senator elect, having overcome [orf_election_opponent_attacker.GetTitledFirstName]'s attempt to replace them. The politics of the senate Continue as normal, with those that had dealings with [orf_election_opponent_defender.GetTitledFirstName] secure in the knowledge they will be there to fulfill them.;;;;;;;;;;;;x
+EVTDESC_orf_running_for_office_attacker_won_loser;Despite your best efforts, [orf_election_opponent_attacker.GetTitledFirstName] stands as senator elect, having overcome [orf_election_opponent_defender.GetTitledFirstName] in a tight election. The politics of the senate already begin to shift with those that had dealings with [orf_election_opponent_defender.GetTitledFirstName] now having to reconsider their plans and many already considering how they will deal with this new senator.;;;;;;;;;;;;x
+EVTDESC_orf_running_for_office_defender_won_loser;Despite your best efforts, [orf_election_opponent_defender.GetTitledFirstName] stands as senator elect, having overcome [orf_election_opponent_attacker.GetTitledFirstName]'s attempt to replace them. The politics of the senate Continue as normal, with those that had dealings with [orf_election_opponent_defender.GetTitledFirstName] secure in the knowledge they will be there to fulfill them.;;;;;;;;;;;;x
 EVTOPTA_orf_running_for_office_attacker_won;I stand ready to represent my consituents;;;;;;;;;;;;x
 EVTOPTA_orf_running_for_office_defender_won;I stand ready to represent my consituents;;;;;;;;;;;;x
 EVTOPTA_orf_running_for_office_attacker_lost;These might be a long 4 years;;;;;;;;;;;;x
@@ -94,7 +102,7 @@ EVTOPTC_orfelec_problem_minor_meeting;Try to say whatever they want to hear, how
 EVTDESC_orfelec_resolve_good_minor_meeting;You draw the crowd's attention from your reserved seat at the feast table's head, and instantly every eye in the room is on you. Your nerve nearly slips, but you go right into your prepared speech. Minutes pass, and the crowd remains silent as they hang on every syllable that exits your mouth as you speak about yourself and what they now believe to be your almost countless qualifications for the prestigious title of Senator. Finally, as you finish your speech with an ancient and famous quote, there is a silence, and then an applause!;;;;;;;;;;;;x
 EVTDESC_orfelec_resolve_neutral_minor_meeting;You draw the crowd's attention from your reserved seat at the feast table's head, and instantly every eye in the room is on you. Your nerve nearly slips, and then it does. Your thoughts become inconsistent and you forget large parts of the speech you had memorized beforehand, but you substitute those parts well enough so as to not seem insane. Your speech ends on a fairly forgettable note. Your scalp begins to burn in embarrassment but quickly cools when you realize most of the barbeques attendees had either stopped paying attention at this point or never started, more interested in their drinks, meals, or prior conversations than whatever it is you stumbled through.;;;;;;;;;;;;x
 EVTDESC_orfelec_resolve_bad_minor_meeting;You draw the crowd's attention from your reserved seat at the feast table's head, and instantly every eye in the room is on you. Your nerve slips so fast you don't even realize how wildly you're jumping between the handful of bullet points you had memorized beforehand. The sheer pressure from both the utter silence of the hall and seeing everyone's eyes upon you causes you to stutter several times. You think you hear muffled laughter during one of your pauses. You manage to conclude your speech in a way you only realize afterwards sounds like a dirty joke. The silent room stays silent for multiple seconds too long, and you can see the previously lively room drain of color.;;;;;;;;;;;;x
-EVTOPT_orfelec_resolve_good_minor_meeting;The [ROOT.GetParty] cause has sway!;;;;;;;;;;;;x
+EVTOPT_orfelec_resolve_good_minor_meeting;My cause has sway!;;;;;;;;;;;;x
 EVTOPT_orfelec_resolve_neutral_minor_meeting;Could have been worse!;;;;;;;;;;;;x
 EVTOPT_orfelec_resolve_bad_minor_meeting;By [ROOT.Religion.GetHighGodNameCap] the embarrassment might just kill me!;;;;;;;;;;;;x
 
@@ -109,7 +117,7 @@ EVTOPTC_orfelec_problem_merchants;Best to not interfere with their dealings, lea
 EVTDESC_orfelec_resolve_good_merchants;Evidently, the traveling merchants are quite impressed with your lands, they've sold out their stock and your business-minded courtiers are abuzz with the possibility of attracting more of their kind. The people of [ROOT.Capital.GetName] proudly show off the various trinkets they've purchased. Their leader even stops by your court, wishing to speak with you. He compliments your people and promises that he'll be back someday, and adds that he'll make sure to recommend your lands to any of his friends he comes across. Not only do your people benefit from such an arrangement, but you also look quite good in the eyes of the voters for attracting new business. ;;;;;;;;;;;;x
 EVTDESC_orfelec_resolve_neutral_merchants;The merchants who recently have come to your lands seem to have made a decent enough profit, though by all reports they were very eager to leave [ROOT.Capital.GetName] and get back onto the roads. Your citizens have enjoyed the visit and those who made some purchases are in good enough cheer, but nothing especially notable happened during their short stay. You suppose there wasn't much else you could have hoped for, they've been through dozens of places just like yours and have moved on from each one, why would [ROOT.Capital.GetName] be any different? While you didn't manage to impress the merchants in the process, you still managed to come off as at least somewhat business minded, perhaps that will be enough to sway some voters.;;;;;;;;;;;;x
 EVTDESC_orfelec_resolve_bad_merchants;Evidently, the traveling merchants who've come into town find [ROOT.Capital.GetName] rather disagreeable. After several incidents in town including a particularly nasty bar fight involving two of the merchants and a local troublemaker, the whole caravan has packed up their goods and left town, cursing your name and threatening to warn others to avoid these accursed lands. It may not harm your existing prosperity, but you're left with nothing to show for the whole situation other than a few broken barstools and disappointment. You can already imagine some amongst your rivals laughing at your expense, both at your inability to provide proper hospitality and the wild tales being told of your people's misconduct, which reflects rather poorly on you as their ruler, and as an extension, your electability.;;;;;;;;;;;;x
-EVTOPT_orfelec_resolve_good_merchants;A vote for [ROOT.GetTitledFirstName] is a vote for prosperity!;;;;;;;;;;;;x
+EVTOPT_orfelec_resolve_good_merchants;A vote for me is a vote for prosperity!;;;;;;;;;;;;x
 EVTOPT_orfelec_resolve_neutral_merchants;Business as usual on the campaign trail then...;;;;;;;;;;;;x
 EVTOPT_orfelec_resolve_bad_merchants;You suppose it was all a rather poor investment.;;;;;;;;;;;;x
 
@@ -125,7 +133,7 @@ EVTDESC_orfelec_resolve_neutral_rangers;Evidently not much can be done with the 
 EVTDESC_orfelec_resolve_bad_rangers;Things don't go nearly as well as you had hoped, instead of toning down their escapades, they escalate them. It started with a drunken duel with one of your citizens that night, the ranger beat the other man half to death for no reason other than the man looked at him funny. From there, the rest of their little gang turned their antics into a reign of terror. What followed was a night of bar fights, a prison break to free their friends, two robberies, and an incident involving a guardsman's horse with women's undergarments on it's head. Eventually your guardsmen were able to regain control and arrest the troublemakers once and for all, but the entire night left a deep mark on the minds of your people, who saw your attempts to fix things completely fail and make things worse. It will take a long time for you to live this down, and until then the story of the Rowdy Rangers has become the laughingstock of the land. Unfortunately, that means plenty of people who might have voted for you also hear about the incident, making you look weaker as a candidate.;;;;;;;;;;;;x
 EVTOPT_orfelec_resolve_good_rangers;Vote [ROOT.GetBestName] for peace and quiet!;;;;;;;;;;;;x
 EVTOPT_orfelec_resolve_neutral_rangers;Keeping the peace is hard work...;;;;;;;;;;;;x
-EVTOPT_orfelec_resolve_bad_rangers;You can already hear [opponent name] shouting "[ROOT.GetTitledFirstName] is weak on crime";;;;;;;;;;;;x
+EVTOPT_orfelec_resolve_bad_rangers;You can already hear your opponent shouting "[ROOT.GetTitledFirstName] is weak on crime";;;;;;;;;;;;x
 
 #situation
 EVTDESC_orfelec_problem_destitute_ranger;Recently, there's been talk of a once-proud ranger family that have fallen on hard times, their debts have caught up to them and the family patriarch had to sell most of the family’s property to stay afloat, now after what was left of their herd died of sickness they’re on the verge of losing everything. Truely a sorry state of affairs, but perhaps you can do something about it. While most people at court merely shake their heads in pity, you see the chance to help these people and, perhaps more cynically, potentially look very electable in the process. Even if they get back on their feet, it’s unlikely this one family would be able to do too much to help you win the election, but if you’re seen as generous and helpful to those who’ve fallen on bad times, it may win you some support.;;;;;;;;;;;;x
@@ -157,9 +165,9 @@ EVTDESC_orfelec_problem_range_squatters_neutral;It requires a bit more effort th
 EVTOPT_orfelec_resolve_destitute_ranger_neutral;Who would have known dealing with vagrants would be so complicated.;;;;;;;;;;;x
 EVTDESC_orfelec_problem_range_squatters_bad;The family takes your efforts to send them away very poorly. When they hear of your decision, one of the elder sons of the family approaches you and all but begs you to let them stay, when that doesn't work he comes at you with his fists but one of your guardsmen knocks him down before he can reach you. From there matters quickly devolved. A half dozen of the menfolk, and two women, rush to grab whatever they can use as weapons to protect their home, pitchforks, improvised spears and even a rusty old saber are brandished at you and your men, daring you to come and drag them out by force. Not wanting to cause a massacre during the election, you order your men to disperse them non-lethally, but even that leads to a brawl that leaves three of your soldiers injured and one of the women who took up arms dead. The remaining squatters left conscious stare at you with hate in their eyes as they're led out at saberpoint by your guardsmen and arrested. When you return home the tales your guardsmen tell don't exactly paint you favorably, and word spreads of your brutality. To make matters worse later that week you hear the incident used as a reason why you're unfit as a candidate, and it seems many voters seem to agree with the sentiment.;;;;;;;;;;;x
 EVTOPT_orfelec_resolve_destitute_ranger_bad;It's not land to freely build an estate on, I couldn't have just let them stay!;;;;;;;;;;;x
-
-
-EVTDESC_texas_50;As a member of congress you are able to join one of the many available political parties.;;;;;;;;;;;;x
+reconsider_party_allegiance;Reconsider Party Allegiance;;;;;;;;;;;;x
+reconsider_party_allegiance;Who you align yourself with isn't something to change on a whim, but to change is sometimes to survive.;;;;;;;;;;;;x
+EVTDESC_texas_50;The movements and allegiances of the ranges stretch back hundreds of years, the groups and causes entrenched in their ways. Ultimately however the allegiance to those parties shifts with time and politics. Who will you support?;;;;;;;;;;;;x
 EVTOPTA_texas_50;Populist Party;;;;;;;;;;;;x
 EVTOPTB_texas_50;Magnate Party;;;;;;;;;;;;x
 EVTOPTC_texas_50;Royalist Party;;;;;;;;;;;;x
