@@ -110,7 +110,7 @@ character_event = {
 	}
 }
 
-character_event = {
+long_character_event = {
 	id = pelayo.7 # This one is for Luis to declare war on you
 	title= EVTTITLE_pelayo7
 	desc = "EVTDESC_pelayo7"
@@ -142,13 +142,12 @@ character_event = {
 			}
 		}
 		c_2302227 = { character_event = { id = pelayo.8 days = 1 }}
+		set_character_flag = luisawnser
 	}
 	option = {
 		name = "EVTOPTB_pelayomo7"
 		prestige = 150
 		piety = -100
-	}
-	immediate = {
 		set_character_flag = luisawnser
 	}
 }
@@ -194,6 +193,7 @@ character_event = {
 		name = "EVTOPTB_pelayomo9"
 		prestige = 200
 		piety = 200
+		clr_character_flag = pelayo4
 	}
 }
 
@@ -206,6 +206,7 @@ character_event = {
 	trigger = {
 		has_character_flag = pelayo5
 		c_1875001 = { has_landed_title = k_comancheria }
+		NOT = { has_character_flag = pelayocatholic }
 	}
 	mean_time_to_happen = {
 		months = 6
@@ -217,11 +218,13 @@ character_event = {
 		c_1875001 = {
 			add_friend = ROOT
 		}
+		set_character_flag = pelayocatholic
 	}
 	option = {
 		name = "EVTOPTB_pelayomo10"
 		prestige = 500
 		piety = 500
+		set_character_flag = pelayocatholic
 	}
 }
 
