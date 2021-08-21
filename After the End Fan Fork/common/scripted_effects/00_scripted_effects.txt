@@ -10334,13 +10334,13 @@ add_secret_religion_trait_trigger_is_religion_or_old_religion_flag_clear_flag_af
 					NOT = {
 						has_character_was_religion_flag_trigger = yes
 					}
-					religion = fuiregi
+					religion = furiegi
 				}
-				has_character_flag = character_was_fuiregi
+				has_character_flag = character_was_furiegi
 			}
 		}
-		set_secret_religion = fuiregi
-		clr_character_flag = character_was_fuiregi
+		set_secret_religion = furiegi
+		clr_character_flag = character_was_furiegi
 		break = yes
 	}
 	if = {
@@ -11255,8 +11255,8 @@ add_religion_char_flag_effect = {
 		set_character_flag = character_was_lamanita
 	}
 	if = {
-		limit = { religion = fuiregi }
-		set_character_flag = character_was_fuiregi
+		limit = { religion = furiegi }
+		set_character_flag = character_was_furiegi
 	}
 	if = {
 		limit = { religion = sol_invicta }
@@ -11487,7 +11487,7 @@ clr_religion_char_flag_effect = {
 	clr_character_flag = character_was_woolleyite
 	clr_character_flag = character_was_strangite
 	clr_character_flag = character_was_lamanita
-	clr_character_flag = character_was_fuiregi
+	clr_character_flag = character_was_furiegi
 	clr_character_flag = character_was_sol_invicta
 	clr_character_flag = character_was_mictlantec
 	clr_character_flag = character_was_qabantajik
@@ -11873,9 +11873,9 @@ event_target_old_religion_from_flag_effect = {
 		}
 	}
 	if = {
-		limit = { has_character_flag = character_was_fuiregi }
+		limit = { has_character_flag = character_was_furiegi }
 		random_character = {
-			limit = { religion = fuiregi }
+			limit = { religion = furiegi }
 			save_event_target_as = old_religion
 		}
 	}
@@ -14188,14 +14188,14 @@ flip_secret_religious_community_provinces = {
 				}
 			}
 		}
-		secret_religious_society_fuiregi = {
+		secret_religious_society_furiegi = {
 			ROOT = {
 				any_demesne_province = {
 					limit = {
-						has_province_modifier = secret_fuiregi_community
+						has_province_modifier = secret_furiegi_community
 					}
-					religion = fuiregi
-					remove_province_modifier = secret_fuiregi_community
+					religion = furiegi
+					remove_province_modifier = secret_furiegi_community
 				}
 			}
 		}
@@ -18908,14 +18908,14 @@ root_secret_religion_provinces_convert_effect = {
 					}
 				}
 			}
-			secret_religious_society_fuiregi = {
+			secret_religious_society_furiegi = {
 				PREV = {
 					any_demesne_province = {
 						limit = {
-							has_province_modifier = secret_fuiregi_community
+							has_province_modifier = secret_furiegi_community
 						}
-						religion = fuiregi
-						remove_province_modifier = secret_fuiregi_community
+						religion = furiegi
+						remove_province_modifier = secret_furiegi_community
 					}
 				}
 			}
