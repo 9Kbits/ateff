@@ -1374,126 +1374,126 @@ targetted_decisions = {
 				}
 			}
 		}
-		convert_to_neomoor = {
-			only_playable = yes
+	}
+	convert_to_neomoor = {
+		only_playable = yes
 
-			filter = self
-			ai_target_filter = self
-			ai_check_interval = 60
+		filter = self
+		ai_target_filter = self
+		ai_check_interval = 60
 
-			potential = {
-				is_playable = yes
-				OR = {
-					religion = orientalist
-					religion = misrist
-				}
-				any_realm_province = {
-					culture = neomoor
-				}
-				#NOT = { government = chinese_imperial_government }
-				NOT = {
-					has_alternate_start_parameter = { key = culture_names value = random }
-				}
+		potential = {
+			is_playable = yes
+			OR = {
+				religion = orientalist
+				religion = misrist
 			}
-			allow = {
-				OR = {
-					religion = orientalist
-					religion = misrist
-				}
-			}
-			effect = {
+			any_realm_province = {
 				culture = neomoor
-				any_courtier = {
-					limit = {
-						OR = {
-							religion = orientalist
-							religion = misrist
-						}
-						employer = { character = ROOT }
-						dynasty = ROOT
+			}
+			#NOT = { government = chinese_imperial_government }
+			NOT = {
+				has_alternate_start_parameter = { key = culture_names value = random }
+			}
+		}
+		allow = {
+			OR = {
+				religion = orientalist
+				religion = misrist
+			}
+		}
+		effect = {
+			culture = neomoor
+			any_courtier = {
+				limit = {
+					OR = {
+						religion = orientalist
+						religion = misrist
 					}
+					employer = { character = ROOT }
+					dynasty = ROOT
+				}
+				culture = neomoor
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0.5 # Slow it down a bit
+			}
+
+			modifier = { # Do not flip if we're in a huge Gulf Coast empire
+				factor = 0
+				top_liege = {
+					OR = {
+						religion = orientalist
+						religion = misrist
+					}
+				}
+				149 = { # Atlanta
+					owner = {
+						same_realm = ROOT
+					}
+				}
+				1124 = { # New Orleans
+					owner = {
+						same_realm = ROOT
+					}
+				}
+				1097 = { # Miami
+					owner = {
+						same_realm = ROOT
+					}
+				}
+			}
+
+			modifier = {
+				factor = 0.01
+				capital_scope = {
+					NOT = { culture = neomoor }
+				}
+			}
+			modifier = {
+				factor = 2.0
+				liege = { culture = neomoor }
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 2
 					culture = neomoor
 				}
 			}
-			revoke_allowed = {
-				always = no
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 4
+					culture = neomoor
+				}
 			}
-			ai_will_do = {
-				factor = 1
-	
-				modifier = {
-					factor = 0.5 # Slow it down a bit
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 6
+					culture = neomoor
 				}
-	
-				modifier = { # Do not flip if we're in a huge Gulf Coast empire
-					factor = 0
-					top_liege = {
-						OR = {
-							religion = orientalist
-							religion = misrist
-						}
-					}
-					149 = { # Atlanta
-						owner = {
-							same_realm = ROOT
-						}
-					}
-					1124 = { # New Orleans
-						owner = {
-							same_realm = ROOT
-						}
-					}
-					1097 = { # Miami
-						owner = {
-							same_realm = ROOT
-						}
-					}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 8
+					culture = neomoor
 				}
-	
-				modifier = {
-					factor = 0.01
-					capital_scope = {
-						NOT = { culture = neomoor }
-					}
-				}
-				modifier = {
-					factor = 2.0
-					liege = { culture = neomoor }
-				}
-				modifier = {
-					factor = 1.1
-					num_culture_realm_provs = {
-						value = 2
-						culture = neomoor
-					}
-				}
-				modifier = {
-					factor = 1.1
-					num_culture_realm_provs = {
-						value = 4
-						culture = neomoor
-					}
-				}
-				modifier = {
-					factor = 1.1
-					num_culture_realm_provs = {
-						value = 6
-						culture = neomoor
-					}
-				}
-				modifier = {
-					factor = 1.1
-					num_culture_realm_provs = {
-						value = 8
-						culture = neomoor
-					}
-				}
-				modifier = {
-					factor = 1.1
-					num_culture_realm_provs = {
-						value = 10
-						culture = neomoor
-					}
+			}
+			modifier = {
+				factor = 1.1
+				num_culture_realm_provs = {
+					value = 10
+					culture = neomoor
 				}
 			}
 		}
