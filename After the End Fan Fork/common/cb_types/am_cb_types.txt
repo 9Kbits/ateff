@@ -3003,11 +3003,13 @@ cetic_holy_war = { #Adapted from Buddhist holy war
 		}
 		FROM = {
 			any_realm_title = {
-				OR = {
-					region = custom_california
-					AND = {
-						region = custom_pacific_nw
-						has_global_flag = northern_campaign_resumed
+				location = {
+					OR = {
+						region = custom_california
+						AND = {
+							region = custom_pacific_nw
+							has_global_flag = northern_campaign_resumed
+						}
 					}
 				}
 			}
