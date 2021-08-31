@@ -4811,6 +4811,25 @@
 	}
 	8 = { 
 		factor = 0
+		hide_layers = { 5 = { } } #Hide layer 5 (headgear) when this frame is picked.
+		modifier = {
+			factor = 0
+			in_command = yes
+			has_game_rule = {
+				name = martial_headgear
+				value = on
+			}
+		}
+		modifier = { #Texan Crown
+			factor = 0
+			NOR = { 
+				any_artifact = {
+					artifact_type = crown_texas
+					is_artifact_equipped = yes 
+				}
+				trait = dead_crown_texas
+			}
+		}
 	}
 	9 = { 
 		factor = 100
