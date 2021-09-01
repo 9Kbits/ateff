@@ -3261,8 +3261,20 @@ low_quality_bike = {
 }
 
 crown_texas = {
-	monthly_character_prestige = 0.1
-	active = {
+	monthly_character_prestige = 0.4
+	monthly_character_piety = 0.7
+	stewardship = 2
+	diplomacy = 2
+	vassal_opinion = 5
+	starfolk_opinion = 10
+	comanche_opinion = 5
+	quality = 4
+	active = {	
+		OR = {
+			has_landed_title = e_texas
+			culture = comanche
+			culture_group = starfolk
+		}
 	}
 	flags = { texas_crown unique crown jewelry crown_jewel }
 	picture = "GFX_crown_texas"

@@ -715,7 +715,6 @@ narrative_event={
 character_event = {
 	id = texas.49
 	desc = EVTDESC_texas_49
-	is_triggered_only = yes
 	
 	
 	
@@ -777,8 +776,98 @@ character_event = {
 	id = texas.50
 	desc = EVTDESC_texas_50
 	ai = no
+	#pre-triggers
 	min_age = 16
+	only_rulers = yes
+	trigger = {
+		OR = {
+			government = open_range_feudalism_government
+			liege = {
+				government = open_range_feudalism_government
+			}
+			AND = {
+				has_job_title = yes
+				liege = {
+					government = open_range_feudalism_government
+				}
+			}
+		}
+		NOR = {
+			trait = party_populist
+			trait = party_magnate
+			trait = party_royalist
+			trait = party_theocratic
+			trait = party_opposition
+		}
+	}
 	
+	mean_time_to_happen = {
+		days = 10
+	}
+	
+	option = {
+		name = EVTOPTA_texas_50
+		add_trait = party_populist
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 2 trait = just }
+			modifier = { factor = 1.5 trait = ambitious }
+			modifier = { factor = 5 tier = BARON }
+			modifier = { factor = 10 government = republic_government }
+		}
+	}
+	option = {
+		name = EVTOPTB_texas_50
+		add_trait = party_magnate
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 3 trait = ambitious }
+			modifier = { factor = 2 trait = arbitrary }
+			modifier = { factor = 1.5 trait = greedy }
+			modifier = { factor = 1.5 trait = proud }
+			modifier = { factor = 0.1 trait = content }
+			modifier = { factor = 0.1 trait = slothful }
+			modifier = { factor = 10 government = merchant_republic_government }
+		}
+	}
+	option = {
+		name = EVTOPTC_texas_50
+		add_trait = party_royalist
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 4 trait = content }
+			modifier = { factor = 2 trait = humble }
+			modifier = { factor = 1.5 trait = craven }
+			modifier = { factor = 0.5 trait = ambitious }
+			modifier = {
+				factor = 2
+				opinion = { who = liege value = 150 }
+			}
+			modifier = {
+				factor = 0
+				opinion = { who = liege value = 75 }
+			}
+		}
+	}
+	option = {
+		name = EVTOPTD_texas_50
+		add_trait = party_theocratic
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5 trait = zealous }
+			modifier = { factor = 4 trait = devout }
+			modifier = { factor = 0 trait = cynical }
+			modifier = { factor = 10 government = theocracy_government }
+		}
+	}
+}
+character_event = {
+	id = texas.51
+	desc = EVTDESC_texas_50
+	ai = no
+	#pre-triggers
+	min_age = 16
+	has_job_title = yes
 	trigger = {
 		OR = {
 			government = open_range_feudalism_government
