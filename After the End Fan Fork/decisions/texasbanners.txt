@@ -1,0 +1,1023 @@
+decisions = {
+	
+	form_airmen_banner = {
+		is_high_prio = no
+		only_playable = yes
+
+
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { 
+				culture_group = starfolk
+				AND = { 
+					culture = comanche
+					has_landed_title = k_comancheria
+				}
+			}
+			d_airmen = {
+				has_holder = no
+			}
+			NOT = { has_global_flag = texas_airmen_guard }
+		}
+	
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_bexar
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.1 }
+			activate_title = { title = d_airmen status = yes }
+			primary_title = {
+				d_airmen = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}		
+		
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+
+	form_utep_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			capital_scope = {
+				region = custom_texas
+			}
+			OR = { culture_group = starfolk
+			AND = { culture = comanche
+					has_landed_title = k_comancheria
+				}
+			}
+
+			d_miners = {
+				has_holder = no
+			}
+		}
+
+		allow = {
+			has_landed_title = c_el_paso
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.2 }
+			activate_title = { title = d_miners status = yes }
+			primary_title = {
+				d_miners = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+		
+	form_red_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+			AND = { culture = comanche
+					has_landed_title = k_comancheria
+				}
+			}
+
+			d_red_raider = {
+				has_holder = no
+			}
+			NOT = { has_global_flag = texas_red_raider_guard }
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_lubbock
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.3 }
+			activate_title = { title = d_red_raider status = yes }
+			primary_title = {
+				d_red_raider = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}		
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+	
+	form_longhorn_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { 
+				culture_group = starfolk
+				AND = { 
+					culture = comanche
+					has_landed_title = k_comancheria
+				}
+			}
+
+			d_longhorns = {
+				has_holder = no
+			}
+		}
+
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_travis
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.4 }
+			activate_title = { title = d_longhorns status = yes }
+			primary_title = {
+				d_longhorns = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}		
+
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+	
+	form_aggies_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+				AND = { 
+					culture = comanche
+					has_landed_title = k_comancheria
+				}
+			}
+
+			d_aggies = {
+				has_holder = no
+			}
+		}
+
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_brazos
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.5 }
+			activate_title = { title = d_aggies status = yes }
+			primary_title = {
+				d_aggies = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}		
+		
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+	
+	form_first_cav_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+			AND = { culture = comanche
+					has_landed_title = k_comancheria
+				}
+			}
+
+			d_first_cav = {
+				has_holder = no
+			}
+			NOT = { has_global_flag = texas_first_cav_guard }
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			has_landed_title = c_centrex
+		}
+		effect = {
+			prestige = -500
+			narrative_event = { id = tex_king.6 }
+			activate_title = { title = d_first_cav status = yes }
+			primary_title = {
+				d_first_cav = {
+					grant_title = ROOT
+					copy_title_laws = PREV
+				}
+			}	
+		
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+
+	grant_airmen_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+			AND = { culture = comanche
+					has_landed_title = k_comancheria
+				}
+			}
+
+			d_airmen = {
+				has_holder = no
+			}
+			NOT = { has_global_flag = texas_restored }
+
+
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			OR = {
+				any_realm_character = {
+					has_landed_title = c_bexar
+				}
+				any_tributary = {
+					AND = {
+						OR = {
+							any_realm_character = {
+								has_landed_title = c_bexar
+							}
+							has_landed_title = c_bexar
+						}
+						#kings cannot grant banners to other kings as they are competing candidates
+						NOT = { tier = KING }
+						NOT = { tier = EMPEROR }
+					}
+				}
+			}
+			OR = {
+				has_landed_title = k_rio_grande
+				has_landed_title = k_old_star
+				has_landed_title = k_comancheria
+				custom_tooltip = {
+					text = HOLD_TEXAN_KINGDOM_TITULAR
+					hidden_tooltip = {
+						OR = {
+							has_landed_title = k_westex
+							has_landed_title = k_highlands
+							has_landed_title = k_yellowrose
+							has_landed_title = k_texarkana
+							has_landed_title = k_silvercrown
+							has_landed_title = k_new_mexico
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = -500
+
+			if = {
+
+				limit = {
+					any_tributary = {
+						AND = {
+							OR = {
+								any_realm_character = {
+									has_landed_title = c_bexar
+								}
+
+								has_landed_title = c_bexar
+							}
+							#kings cannot grant banners to other kings as they are competing candidates
+							NOT = { tier = KING }
+							NOT = { tier = EMPEROR }
+						}
+					}
+				}
+				c_bexar = {
+					holder_scope = {
+						top_liege = {
+							activate_title = { title = d_airmen status = yes }
+							primary_title = {
+								d_longhorns = {
+									grant_title = PREVPREV
+									copy_title_laws = PREV
+								}
+							}	
+						}
+					}
+				}
+			}
+
+
+			if = {
+
+				limit = {
+					any_realm_character = {
+						has_landed_title = c_bexar
+					}
+				}
+				c_bexar = {
+					holder_scope = {
+						activate_title = { title = d_airmen status = yes }
+						primary_title = {
+							d_airmen = {
+								grant_title = PREVPREV
+								copy_title_laws = PREV
+							}
+						}	
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+
+	grant_miners_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+			AND = { culture = comanche
+			has_landed_title = k_comancheria
+				}
+			}
+
+
+			d_miners = {
+				has_holder = no
+			}
+			NOT = { has_global_flag = texas_restored }
+
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			OR = {
+				any_realm_character = {
+					has_landed_title = c_el_paso
+				}
+				any_tributary = {
+					AND = {
+						OR = {
+							any_realm_character = {
+								has_landed_title = c_el_paso
+							}
+							has_landed_title = c_el_paso
+						}
+						#kings cannot grant banners to other kings as they are competing candidates
+						NOT = { tier = KING }
+						NOT = { tier = EMPEROR }
+					}
+				}
+			}
+			OR = {
+				has_landed_title = k_rio_grande
+				has_landed_title = k_old_star
+				has_landed_title = k_comancheria
+				custom_tooltip = {
+					text = HOLD_TEXAN_KINGDOM_TITULAR
+					hidden_tooltip = {
+						OR = {
+							has_landed_title = k_westex
+							has_landed_title = k_highlands
+							has_landed_title = k_yellowrose
+							has_landed_title = k_texarkana
+							has_landed_title = k_silvercrown
+							has_landed_title = k_new_mexico
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = -500
+
+			if = {
+				limit = {
+					any_tributary = {
+						AND = {
+							OR = {
+								any_realm_character = {
+									has_landed_title = c_el_paso
+								}
+								has_landed_title = c_el_paso
+							}
+							#kings cannot grant banners to other kings as they are competing candidates
+							NOT = { tier = KING }
+							NOT = { tier = EMPEROR }
+						}
+					}
+				}
+				c_el_paso = {
+					holder_scope = {
+						top_liege = {
+							activate_title = { title = d_miners status = yes }
+							primary_title = {
+								d_longhorns = {
+									grant_title = PREVPREV
+									copy_title_laws = PREV
+								}
+							}	
+						}
+					}
+				}
+			}
+
+
+			if = {
+
+				limit = {
+					any_realm_character = {
+						has_landed_title = c_el_paso
+					}
+				}
+				c_el_paso = {
+					holder_scope = {
+						activate_title = { title = d_miners status = yes }
+						primary_title = {
+							d_miners = {
+								grant_title = PREVPREV
+								copy_title_laws = PREV
+							}
+						}	
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+
+
+	grant_red_raider_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+			AND = { culture = comanche
+			has_landed_title = k_comancheria
+				}
+			}
+
+
+			d_red_raider = {
+				has_holder = no
+			}
+			NOT = { has_global_flag = texas_restored }
+
+
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			OR = {
+				any_realm_character = {
+					has_landed_title = c_lubbock
+				}
+				any_tributary = {
+					AND = {
+						OR = {
+							any_realm_character = {
+								has_landed_title = c_lubbock
+							}
+							has_landed_title = c_lubbock
+						}
+						#kings cannot grant banners to other kings as they are competing candidates
+						NOT = { tier = KING }
+						NOT = { tier = EMPEROR }
+					}
+				}
+			}
+			OR = {
+				has_landed_title = k_rio_grande
+				has_landed_title = k_old_star
+				has_landed_title = k_comancheria
+				custom_tooltip = {
+					text = HOLD_TEXAN_KINGDOM_TITULAR
+					hidden_tooltip = {
+						OR = {
+							has_landed_title = k_westex
+							has_landed_title = k_highlands
+							has_landed_title = k_yellowrose
+							has_landed_title = k_texarkana
+							has_landed_title = k_silvercrown
+							has_landed_title = k_new_mexico
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = -500
+
+			if = {
+
+				limit = {
+					any_tributary = {
+						AND = {
+							OR = {
+								any_realm_character = {
+									has_landed_title = c_lubbock
+								}
+
+								has_landed_title = c_lubbock
+							}
+							#kings cannot grant banners to other kings as they are competing candidates
+							NOT = { tier = KING }
+							NOT = { tier = EMPEROR }
+						}
+					}
+				}
+				c_lubbock = {
+					holder_scope = {
+						top_liege = {
+							activate_title = { title = d_red_raider status = yes }
+							primary_title = {
+								d_red_raider = {
+									grant_title = PREVPREV
+									copy_title_laws = PREV
+								}
+							}	
+						}
+					}
+				}
+			}
+
+
+			if = {
+
+				limit = {
+					any_realm_character = {
+						has_landed_title = c_lubbock
+					}
+				}
+				c_lubbock = {
+					holder_scope = {
+						activate_title = { title = d_red_raider status = yes }
+						primary_title = {
+							d_red_raider = {
+								grant_title = PREVPREV
+								copy_title_laws = PREV
+							}
+						}	
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+	
+	
+	grant_longhorns_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+			AND = { culture = comanche
+			has_landed_title = k_comancheria
+				}
+			}
+			NOT = { has_global_flag = texas_restored }
+
+
+			d_longhorns = {
+				has_holder = no
+			}
+
+
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			OR = {
+				any_realm_character = {
+					has_landed_title = c_travis
+				}
+				any_tributary = {
+					AND = {
+						OR = {
+							any_realm_character = {
+								has_landed_title = c_travis
+							}
+							has_landed_title = c_travis
+						}
+						#kings cannot grant banners to other kings as they are competing candidates
+						NOT = { tier = KING }
+						NOT = { tier = EMPEROR }
+					}
+				}
+			}
+			OR = {
+				has_landed_title = k_rio_grande
+				has_landed_title = k_old_star
+				has_landed_title = k_comancheria
+				custom_tooltip = {
+					text = HOLD_TEXAN_KINGDOM_TITULAR
+					hidden_tooltip = {
+						OR = {
+							has_landed_title = k_westex
+							has_landed_title = k_highlands
+							has_landed_title = k_yellowrose
+							has_landed_title = k_texarkana
+							has_landed_title = k_silvercrown
+							has_landed_title = k_new_mexico
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = -500
+
+			if = {
+
+				limit = {
+					any_tributary = {
+						AND = {
+							OR = {
+								any_realm_character = {
+									has_landed_title = c_travis
+								}
+
+								has_landed_title = c_travis
+							}
+							#kings cannot grant banners to other kings as they are competing candidates
+							NOT = { tier = KING }
+							NOT = { tier = EMPEROR }
+						}
+					}
+				}
+				c_travis = {
+					holder_scope = {
+						top_liege = {
+							activate_title = { title = d_longhorns status = yes }
+							primary_title = {
+								d_longhorns = {
+									grant_title = PREVPREV
+									copy_title_laws = PREV
+								}
+							}	
+						}
+					}
+				}
+			}
+
+
+			if = {
+
+				limit = {
+					any_realm_character = {
+						has_landed_title = c_travis
+					}
+				}
+				c_travis = {
+					holder_scope = {
+						activate_title = { title = d_longhorns status = yes }
+						primary_title = {
+							d_longhorns = {
+								grant_title = PREVPREV
+								copy_title_laws = PREV
+							}
+						}	
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+
+	grant_aggies_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+			AND = { culture = comanche
+			has_landed_title = k_comancheria
+				}
+			}
+			NOT = { has_global_flag = texas_restored }
+			d_aggies = {
+				has_holder = no
+			}
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			OR = {
+				any_realm_character = {
+					has_landed_title = c_brazos
+				}
+				any_tributary = {
+					AND = {
+						OR = {
+							any_realm_character = {
+								has_landed_title = c_brazos
+							}
+							has_landed_title = c_brazos
+						}
+						#kings cannot grant banners to other kings as they are competing candidates
+						NOT = { tier = KING }
+						NOT = { tier = EMPEROR }
+					}
+				}
+			}
+			OR = {
+				has_landed_title = k_rio_grande
+				has_landed_title = k_old_star
+				has_landed_title = k_comancheria
+				custom_tooltip = {
+					text = HOLD_TEXAN_KINGDOM_TITULAR
+					hidden_tooltip = {
+						OR = {
+							has_landed_title = k_westex
+							has_landed_title = k_highlands
+							has_landed_title = k_yellowrose
+							has_landed_title = k_texarkana
+							has_landed_title = k_silvercrown
+							has_landed_title = k_new_mexico
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = -500
+
+			if = {
+
+				limit = {
+					any_tributary = {
+						AND = {
+							OR = {
+								any_realm_character = {
+									has_landed_title = c_brazos
+								}
+
+								has_landed_title = c_brazos
+							}
+							#kings cannot grant banners to other kings as they are competing candidates
+							NOT = { tier = KING }
+							NOT = { tier = EMPEROR }
+						}
+					}
+				}
+				c_brazos = {
+					holder_scope = {
+						top_liege = {
+							activate_title = { title = d_aggies status = yes }
+							primary_title = {
+								d_aggies = {
+									grant_title = PREVPREV
+									copy_title_laws = PREV
+								}
+							}	
+						}
+					}
+				}
+			}
+
+
+			if = {
+
+				limit = {
+					any_realm_character = {
+						has_landed_title = c_brazos
+					}
+				}
+				c_brazos = {
+					holder_scope = {
+						activate_title = { title = d_aggies status = yes }
+						primary_title = {
+							d_aggies = {
+								grant_title = PREVPREV
+								copy_title_laws = PREV
+							}
+						}	
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+	
+	grant_first_cav_banner = {
+		is_high_prio = no
+		only_playable = yes
+		
+		
+		potential = {
+			is_playable = yes
+			independent = yes
+			OR = { culture_group = starfolk
+			AND = { culture = comanche
+			has_landed_title = k_comancheria
+				}
+			}
+			NOT = { has_global_flag = texas_restored }
+
+			d_first_cav = {
+				has_holder = no
+			}
+
+		}
+		
+		allow = {
+			is_adult = yes
+			prisoner = no
+			NOT = { is_incapable = yes }
+			prestige = 500
+			OR = {
+				any_realm_character = {
+					has_landed_title = c_centrex
+				}
+				any_tributary = {
+					AND = {
+						OR = {
+							any_realm_character = {
+								has_landed_title = c_centrex
+							}
+							has_landed_title = c_centrex
+						}
+						#kings cannot grant banners to other kings as they are competing candidates
+						NOT = { tier = KING }
+						NOT = { tier = EMPEROR }
+					}
+				}
+			}
+			OR = {
+				has_landed_title = k_rio_grande
+				has_landed_title = k_old_star
+				has_landed_title = k_comancheria
+				custom_tooltip = {
+					text = HOLD_TEXAN_KINGDOM_TITULAR
+					hidden_tooltip = {
+						OR = {
+							has_landed_title = k_westex
+							has_landed_title = k_highlands
+							has_landed_title = k_yellowrose
+							has_landed_title = k_texarkana
+							has_landed_title = k_silvercrown
+							has_landed_title = k_new_mexico
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = -500
+
+			if = {
+
+				limit = {
+					any_tributary = {
+						AND = {
+							OR = {
+								any_realm_character = {
+									has_landed_title = c_centrex
+								}
+
+								has_landed_title = c_centrex
+							}
+							#kings cannot grant banners to other kings as they are competing candidates
+							NOT = { tier = KING }
+							NOT = { tier = EMPEROR }
+						}
+					}
+				}
+				c_centrex = {
+					holder_scope = {
+						top_liege = {
+							activate_title = { title = d_first_cav status = yes }
+							primary_title = {
+								d_longhorns = {
+									grant_title = PREVPREV
+									copy_title_laws = PREV
+								}
+							}	
+						}
+					}
+				}
+			}
+
+
+			if = {
+
+				limit = {
+					any_realm_character = {
+						has_landed_title = c_centrex
+					}
+				}
+				c_centrex = {
+					holder_scope = {
+						activate_title = { title = d_first_cav status = yes }
+						primary_title = {
+							d_first_cav = {
+								grant_title = PREVPREV
+								copy_title_laws = PREV
+							}
+						}	
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+
+}

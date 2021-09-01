@@ -1,0 +1,159 @@
+namespace = orfrange
+
+character_event = {
+	id = orfrange.1
+	title = EVTTITLE_range_loss
+	
+	desc = {
+		trigger = { government = open_range_feudalism_government }
+		text = EVTDESC_range_loss_ranger
+	}
+	desc = {
+		trigger = { government = open_range_feudalism_government }
+		text = EVTDESC_range_loss_feudal
+	}
+	
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+		days = 60
+	}
+	
+	trigger = {
+		NOT = { had_flag = range_shrinkage days = 100 }
+		OR = {
+			AND = {
+				NOT = { government = open_range_feudalism_government }
+				any_province_holding = {
+					OR = {
+						has_building = open_range_1
+						has_building = open_range_2
+						has_building = open_range_3
+						has_building = open_range_4
+						has_building = open_range_5
+						has_building = open_range_6
+						has_building = open_range_7
+					}
+				}
+			}
+			AND = {
+				num_of_empty_holdings = 0
+				NOT = { num_of_empty_holdings = 1 }
+				any_province_holding = {
+					OR = {
+						has_building = open_range_2
+						has_building = open_range_3
+						has_building = open_range_4
+						has_building = open_range_5
+						has_building = open_range_6
+						has_building = open_range_7
+					}
+				}
+			}
+			AND = {
+				num_of_empty_holdings = 1
+				NOT = { num_of_empty_holdings = 2 }
+				any_province_holding = {
+					OR = {
+						has_building = open_range_3
+						has_building = open_range_4
+						has_building = open_range_5
+						has_building = open_range_6
+						has_building = open_range_7
+					}
+				}
+			}
+			AND = {
+				num_of_empty_holdings = 2
+				NOT = { num_of_empty_holdings = 3 }
+				any_province_holding = {
+					OR = {
+						has_building = open_range_4
+						has_building = open_range_5
+						has_building = open_range_6
+						has_building = open_range_7
+					}
+				}
+			}
+			AND = {
+				num_of_empty_holdings = 3
+				NOT = { num_of_empty_holdings = 4 }
+				any_province_holding = {
+					OR = {
+						has_building = open_range_5
+						has_building = open_range_6
+						has_building = open_range_7
+					}
+				}
+			}
+			AND = {
+				num_of_empty_holdings = 4
+				NOT = { num_of_empty_holdings = 5 }
+				any_province_holding = {
+					OR = {
+						has_building = open_range_6
+						has_building = open_range_7
+					}
+				}
+			}
+			AND = {
+				num_of_empty_holdings = 5
+				NOT = { num_of_empty_holdings = 6 }
+				any_province_holding = {
+					OR = {
+						has_building = open_range_7
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		any_province_holding = {
+			if = {
+				limit = { has_building = open_range_2}
+				remove_building = open_range_2
+				add_building = open_range_1
+			}
+			if = {
+				limit = { has_building = open_range_3}
+				remove_building = open_range_3
+				add_building = open_range_2
+			}
+			if = {
+				limit = { has_building = open_range_4}
+				remove_building = open_range_4
+				add_building = open_range_3
+			}
+			if = {
+				limit = { has_building = open_range_5}
+				remove_building = open_range_5
+				add_building = open_range_4
+			}
+			if = {
+				limit = { has_building = open_range_6}
+				remove_building = open_range_6
+				add_building = open_range_5
+			}
+			if = {
+				limit = { has_building = open_range_7}
+				remove_building = open_range_7
+				add_building = ca_range_6
+			}
+		}
+		set_province_flag = range_shrinkage
+		add_province_modifier = {
+			name = range_shrinkage_mod
+			days = 120
+		}
+		
+	}
+	option = { 
+		name = EVTOPTA_rangeloss_feudal
+		trigger = { government = open_range_feudalism_government }
+	}
+	option = { 
+		name = EVTOPTA_rangeloss_ranger
+		trigger = { NOT = { government = open_range_feudalism_government } }
+	}
+}

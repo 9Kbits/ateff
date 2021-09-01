@@ -1,0 +1,245 @@
+decisions = {
+	reconsider_party_allegiance = {
+		is_high_prio = no
+
+
+		potential = {
+			is_playable = yes
+			liege = { government = open_range_feudalism_government }
+		}
+	
+		allow = {
+			prestige = 50
+			is_adult = yes
+			prisoner = no
+			liege = { government = open_range_feudalism_government }
+		}
+		
+		effect = {
+			prestige = -50
+			character_event = {id = texas.50 }
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 0
+				liege = { NOT = { government = open_range_feudalism_government}	}		
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
+			}	
+		} 
+	}	
+	run_for_senate = {
+		is_high_prio = yes
+
+
+		potential = {
+			is_playable = yes
+			OR = {
+				liege = { has_law = range_senate_size_1 }
+				liege = { has_law = range_senate_size_2 }
+				liege = { has_law = range_senate_size_3 }
+				liege = { has_law = range_senate_size_4 }
+			}
+			NOT = { has_character_flag = running_for_office_attacker }
+			is_councillor = no
+			independent = no
+		}
+	
+		allow = {
+			prestige = 25
+			is_adult = yes
+			prisoner = no
+			liege = { 
+				any_voter = {
+					NOT = { has_character_modifier = orf_won_election }
+					NOT = { has_character_flag = temp_block_orf }
+					NOT = { has_character_flag = orf_election_running }
+					NOT = { has_character_flag = running_for_office_defender }
+				}
+			}
+			NOT = { has_character_modifier = orf_election_lost_cooldown }
+			OR = {
+				liege = { has_law = orf_senate_type_law_2 }
+				government = open_range_feudalism_government
+			}
+		}
+		
+		effect = {
+			prestige = -25
+			character_event = { id = orfelection.1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.2
+			}
+			modifier = {
+				factor = 2
+				liege = { has_character_modifier = endorsed_populist }
+				trait = party_populist
+			}
+			modifier = {
+				factor = 2
+				liege = { has_character_modifier = endorsed_magnate }
+				trait = party_magnate
+			}
+			modifier = {
+				factor = 2
+				liege = { has_character_modifier = endorsed_theocratic }
+				trait = party_theocratic
+			}
+		
+			modifier = {
+				factor = 0
+				NOT = { 
+					liege = { 
+						any_voter = {
+							limit = { 
+								NOT = { has_character_modifier = orf_won_election }
+								NOT = { has_character_flag = temp_block_orf }
+								NOT = { has_character_flag = orf_election_running }
+								NOT = { has_character_flag = running_for_office_defender }
+							}
+							count >=1
+						}
+					}
+				}
+			}	
+		} 
+	}
+	abandon_orf = {
+		is_high_prio = no
+
+
+		potential = {
+			is_playable = yes
+			government = open_range_feudalism_government
+			OR = {
+				NOT = {
+					capital_scope = {
+						region = custom_range_range
+					}
+				}
+				liege = { NOT = { government = open_range_feudalism_government } }
+			}
+		}
+	
+		allow = {
+			prestige = 500
+			is_adult = yes
+			prisoner = no
+			OR = {
+				independent = yes
+				liege = { NOT = { government = open_range_feudalism_government } }
+			}
+			num_of_titles_in_realm <= 15
+		}
+		
+		effect = {
+			prestige = -500
+			set_government_type = feudal_government
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				liege = { government = open_range_feudalism_government}
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
+			}	
+		} 
+	}
+	adopt_orf = {
+		is_high_prio = no
+
+
+		potential = {
+			is_playable = yes
+			government = feudal_government
+			OR = {
+				capital_scope = {
+					region = custom_range_range
+				}
+				liege = { government = open_range_feudalism_government }
+			}
+		}
+	
+		allow = {
+			prestige = 500
+			is_adult = yes
+			prisoner = no
+			OR = {
+				independent = yes
+				liege = { government = open_range_feudalism_government }
+			}
+			num_of_titles_in_realm <= 15
+		}
+		
+		effect = {
+			prestige = -500
+			set_government_type = open_range_feudalism_government
+		}
+		ai_will_do = {
+			factor = 0.5
+			modifier = {
+				factor = 0
+				liege = { NOT = { government = open_range_feudalism_government}	}		
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
+			}	
+		} 
+	}
+	endorse_party = {
+		is_high_prio = no
+
+
+		potential = {
+			is_playable = yes
+			government = feudal_government
+			OR = {
+				capital_scope = {
+					region = custom_range_range
+				}
+				liege = { government = open_range_feudalism_government }
+			}
+		}
+	
+		allow = {
+			prestige = 500
+			is_adult = yes
+			prisoner = no
+			OR = {
+				independent = yes
+				liege = { government = open_range_feudalism_government }
+			}
+			num_of_titles_in_realm <= 15
+		}
+		
+		effect = {
+			prestige = -500
+			character_event = { id = texas.49 }
+		}
+		ai_will_do = {
+			factor = 1
+		} 
+	}
+}
