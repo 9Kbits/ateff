@@ -1281,28 +1281,6 @@ character_event = {
 	}
 }
 
-# Son returns home as an Atomicist Zealot
-character_event = {
-	id = dorado.134
-	desc = EVTDESCDORA.134
-	picture = GFX_evt_viking_throneroom_oldgods
-	border = GFX_event_normal_frame_war
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTADORA.134
-		FROM = {
-			move_character = ROOT
-			add_trait = zealous
-			add_trait = dorado
-			add_trait = lunatic
-			add_trait = atom_bless
-			religion = atomicist
-		}
-	}
-}
-
 # Son returns home as a Fidencista Mystic (Son)
 character_event = {
 	id = dorado.135

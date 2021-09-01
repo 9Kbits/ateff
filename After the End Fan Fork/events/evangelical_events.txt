@@ -1520,7 +1520,7 @@ character_event = {
 	desc = EVTDESC_eva.115
 	
 	picture = GFX_evt_book_carolingian_script
-	border = GFX_event_frame_religion
+	border = GFX_event_normal_frame_religion
 	religion = evangelical
 	is_triggered_only = yes
 
@@ -3656,7 +3656,7 @@ province_event = {
 	option = {
 		name = EVTOPTD_eva.701 #suppress the revival violently
 		remove_province_modifier = religious_tension
-		remove_province_modifier = high_church
+		remove_province_modifier = high_church_revival
 		add_province_modifier = {
 			name = religious_unrest
 			duration = 60 
