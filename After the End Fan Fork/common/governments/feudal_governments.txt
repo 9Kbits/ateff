@@ -647,69 +647,7 @@ feudal_governments = {
 		## Modifiers
 		court_size_modifier = 15
 	}
-	
-	open_range_feudalism_government = {
-		preferred_holdings = { CASTLE }
-		allowed_holdings = { 
-			CASTLE 
-			FORT
-			HOSPITAL
-		}
-		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
-			TRIBAL
-		}
-		accepts_liege_governments = { # Gets the wrong religion modifier instead
-			bureaucratic_government
-			theocratic_feudal_government
 
-		}
-		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
-			tribal_government
-		}
-		frame_suffix = "_orf"
-		potential = {
-			OR = {
-				capital_scope = {
-					region = custom_range_range
-				}
-				culture_group = norteno
-				culture = neomexicano
-				culture_group = starfolk
-				culture = arixan
-				culture = comanche
-			}
-			is_patrician = no
-			NOT = { is_government_potential = mormon_government }
-			NOT = { is_government_potential = mex_imperial_government }
-			NOT = { is_government_potential = bureaucratic_government }
-			NOT = { is_government_potential = theocratic_feudal_government }
-		}
-		
-		character_modifier = {
-			short_reign_length = 2
-		}	
-		
-		color = { 204 79 45 }
-		
-		barons_need_dynasty = yes
-		can_imprison_without_reason = no
-		can_revoke_without_reason = no
-		can_build_tribal = no
-		
-		
-		ignore_in_vassal_limit_calculation = {
-			tribal_government
-		}
-		capital_move_delay = 600
-		
-		## Modifiers
-		court_size_modifier = 10
-		#min_vassal_tax = -0.5
-		#max_vassal_tax = -0.1
-		#max_vassal_levy = -0.7
-		#min_vassal_levy = -0.2
-	}
-	
 	mex_imperial_government = {
 		preferred_holdings = { CITY CASTLE }
 		allowed_holdings = {
