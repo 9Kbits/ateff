@@ -11343,9 +11343,11 @@ character_event = {
 		name = EVTOPTA3521
 		if = {
 			limit = {
-				religion_group = christian
-				religion_group = cult_of_saints
-				religion_group = latter_day_saints
+				OR = {
+					religion_group = christian
+					religion_group = cult_of_saints
+					religion_group = latter_day_saints
+				}
 			}
 			add_trait = chaste
 			break = yes
