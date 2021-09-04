@@ -323,7 +323,15 @@ castle = {
 	# Barracks, gives heavy infantry and pikemen
 	ca_barracks_1 = {
 		desc = ca_barracks_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		potential = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		}
+		is_active_trigger = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+		}
 		gold_cost = 100
 		build_time = 365
 		heavy_infantry = 30
@@ -334,7 +342,15 @@ castle = {
 	}
 	ca_barracks_2 = {
 		desc = ca_barracks_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		potential = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		}
+		is_active_trigger = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+		}
 		prerequisites = { ca_wall_1 }
 		upgrades_from = ca_barracks_1
 		gold_cost = 120
@@ -347,7 +363,15 @@ castle = {
 	}
 	ca_barracks_3 = {
 		desc = ca_barracks_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		potential = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		}
+		is_active_trigger = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+		}
 		prerequisites = { ca_wall_2 }
 		upgrades_from = ca_barracks_2
 		gold_cost = 200
@@ -360,7 +384,15 @@ castle = {
 	}
 	ca_barracks_4 = {
 		desc = ca_barracks_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 3 }
+		potential = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		}
+		is_active_trigger = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 3
+		}
 		upgrades_from = ca_barracks_3
 		gold_cost = 300
 		build_time = 1095
@@ -372,7 +404,15 @@ castle = {
 	}
 	ca_barracks_5 = {
 		desc = ca_barracks_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 5 }
+		potential = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		}
+		is_active_trigger = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 5
+		}
 		upgrades_from = ca_barracks_4
 		gold_cost = 400
 		build_time = 2190
@@ -384,7 +424,15 @@ castle = {
 	}
 	ca_barracks_6 = {
 		desc = ca_barracks_1_desc
-		trigger = { TECH_CASTLE_CONSTRUCTION = 7 }
+		potential = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		}
+		is_active_trigger = {
+			FROM = { NOT = { government = open_range_feudalism_government } }
+		} 
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 7
+		}
 		upgrades_from = ca_barracks_5
 		gold_cost = 500
 		build_time = 2190

@@ -3261,14 +3261,24 @@ low_quality_bike = {
 }
 
 crown_texas = {
-	monthly_character_prestige = 0.4
-	monthly_character_piety = 0.7
+#	HCC crown stats for comparison
+#	monthly_character_prestige = 1.0
+#	monthly_character_piety = 1.0
+#	diplomacy = 4
+#	quality = 5
+#	church_opinion = 10
+
+	monthly_character_prestige = 1.0
 	stewardship = 2
-	diplomacy = 2
-	vassal_opinion = 5
-	starfolk_opinion = 10
+	diplomacy = 1
+	martial = 1
+	command_modifier = {
+		light_cavalry = 0.15
+	}
+	starfolk_opinion = 5
 	comanche_opinion = 5
 	quality = 4
+
 	active = {	
 		OR = {
 			has_landed_title = e_texas
