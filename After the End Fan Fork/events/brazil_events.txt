@@ -37,7 +37,7 @@ character_event = {
 		FROM = {
 			is_offmap_tag = offmap_china
 			NOT = {
-				religion = candomble #not much point in the war then
+				offmap_ruler = { religion = candomble } #not much point in the war then
 			}
 			NOR = {
 				has_status = brasil_religious_civil_war_candomble # Resolution handled by (NOT YET)
@@ -125,16 +125,6 @@ narrative_event = {
 	has_dlc = "Jade Dragon"
 	
 	is_triggered_only = yes
-	
-	immediate = {
-		offmap_china = {
-			ruler = {
-				save_event_target_as = portrait_target
-			}
-		}
-	}
-	
-	portrait = event_target:portrait_target
 	
 	option = {
 		name = EVTOPT_JD_50281
@@ -381,16 +371,6 @@ narrative_event = {
 	
 	is_triggered_only = yes
 	
-	immediate = {
-		offmap_china = {
-			ruler = {
-				save_event_target_as = portrait_target
-			}
-		}
-	}
-	
-	portrait = event_target:portrait_target
-	
 	option = {
 		name = EVTOPT_JD_50301
 	}
@@ -426,16 +406,6 @@ narrative_event = {
 	
 	is_triggered_only = yes
 	hide_new = yes
-	
-	immediate = {
-		offmap_china = {
-			ruler = {
-				save_event_target_as = portrait_target
-			}
-		}
-	}
-	
-	portrait = event_target:portrait_target
 	
 	option = {
 		trigger = {
@@ -473,7 +443,7 @@ character_event = {
 		FROM = {
 			is_offmap_tag = offmap_china
 			NOT = {
-				religion = charismatic #not much point in the war then
+				offmap_ruler = { religion = charismatic } #not much point in the war then
 			}
 			NOR = {
 				has_status = brasil_religious_civil_war_candomble # Resolution handled by (NOT YET)
@@ -561,16 +531,6 @@ narrative_event = {
 	has_dlc = "Jade Dragon"
 	
 	is_triggered_only = yes
-	
-	immediate = {
-		offmap_china = {
-			ruler = {
-				save_event_target_as = portrait_target
-			}
-		}
-	}
-	
-	portrait = event_target:portrait_target
 	
 	option = {
 		name = EVTOPT_JD_50281
@@ -817,16 +777,6 @@ narrative_event = {
 	
 	is_triggered_only = yes
 	
-	immediate = {
-		offmap_china = {
-			ruler = {
-				save_event_target_as = portrait_target
-			}
-		}
-	}
-	
-	portrait = event_target:portrait_target
-	
 	option = {
 		name = EVTOPT_JD_50301
 	}
@@ -862,16 +812,6 @@ narrative_event = {
 	
 	is_triggered_only = yes
 	hide_new = yes
-	
-	immediate = {
-		offmap_china = {
-			ruler = {
-				save_event_target_as = portrait_target
-			}
-		}
-	}
-	
-	portrait = event_target:portrait_target
 	
 	option = {
 		trigger = {

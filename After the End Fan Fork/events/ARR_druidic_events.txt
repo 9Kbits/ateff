@@ -6700,12 +6700,13 @@ character_event = {
 	religion = celtic_pagan
 
 	trigger = {
-		has_game_rule = {
-			name = acr_unfit_king_beta
-			value = on
-		}
-		NOT = { has_character_modifier = unfit_gaelic_king }
-		is_maimed_trigger = yes
+		#has_game_rule = {
+		#	name = acr_unfit_king_beta
+		#	value = on
+		#}
+		#NOT = { has_character_modifier = unfit_gaelic_king }
+		#is_maimed_trigger = yes
+		always = no #Keys off nonexistent game rule, dummied out
 	}
 
 	option = {
@@ -9226,11 +9227,6 @@ character_event = {
 	
 	immediate = {
 		FROM = { 
-			opinion = {
-				modifier = opinion_patron
-				who = ROOT
-				years = 20
-			}
 			reverse_opinion = {
 				modifier = opinion_new_courtier
 				who = ROOT
@@ -9413,11 +9409,6 @@ character_event = {
 				new_character = {
 					character_event = { id = misc.3 } # Diversity
 					character_event = { id = misc.4 } # Physique
-					opinion = {
-						modifier = opinion_patron
-						who = ROOT
-						years = 5
-					}
 				}
 			}
 		}

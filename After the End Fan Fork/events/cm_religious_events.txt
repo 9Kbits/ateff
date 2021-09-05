@@ -494,3 +494,36 @@ character_event = {
 		}
 	}
 }
+
+# Notification event when donating money to the Muslim orders
+# This is referenced by another event in circumstances that I don't think should happen, but let's leave it in just in case - Dryhad
+letter_event = {
+	id = CM.4399
+	desc = {
+        text = EVTDESC_CM_4399
+        trigger = {
+			NOT = {
+				has_alternate_start_parameter = {
+					key = religion_names
+					value = random
+				}
+			}
+        }
+    }
+	desc = {
+        text = HOLY_ORDER_DONATE_MONEY_ALT
+        trigger = {
+			has_alternate_start_parameter = {
+				key = religion_names
+				value = random
+			}
+        }
+    }
+	border = GFX_event_letter_frame_religion
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_CM_4399
+	}
+}
