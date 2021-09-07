@@ -331,7 +331,6 @@ narrative_event = {
 			name = imperial_authority
 			duration = -1
 		}
-		add_trait = weak_emperor
 		ai_chance = { factor = 100 }
 	}
 	
@@ -2627,7 +2626,7 @@ letter_event = {
 		add_character_modifier = { name = imperial_favor duration = 1500 }
 		hidden_tooltip = {
 			remove_character_modifier = imperial_censure
-			FROM = { letter_event = { id = 238 } }
+			FROM = { diploresponse_event = { id = 238 } }
 		}
 		ai_chance = {
 			factor = 10
@@ -2645,7 +2644,7 @@ letter_event = {
 		piety = -25
 		prestige = -25
 		hidden_tooltip = {
-			FROM = { letter_event = { id = 239 } }
+			FROM = { diploresponse_event = { id = 239 } }
 		}
 		ai_chance = {
 			factor = 10
@@ -2693,7 +2692,7 @@ narrative_event = {
 		trigger = {
 			religion = cetic
 			de_jure_liege = e_california
-			NOT = { de_facto_liege = e_california }
+			NOT = { de_facto_liege_title = e_california }
 			NOR = {
 				has_character_flag = imperial_claimant
 				has_landed_title = e_california
@@ -2740,7 +2739,7 @@ narrative_event = {
 		trigger = {
 			religion = cetic
 			de_jure_liege = e_california
-			NOT = { de_facto_liege = e_california }
+			NOT = { de_facto_liege_title = e_california }
 			NOR = {
 				has_character_flag = imperial_claimant
 				has_landed_title = e_california
@@ -2808,7 +2807,7 @@ narrative_event = {
 		trigger = {
 			religion = cetic
 			de_jure_liege = e_california
-			NOT = { de_facto_liege = e_california }
+			NOT = { de_facto_liege_title = e_california }
 			NOR = {
 				has_character_flag = imperial_claimant
 				has_landed_title = e_california
@@ -2852,7 +2851,7 @@ narrative_event = {
 		trigger = {
 			religion = cetic
 			de_jure_liege = e_california
-			de_facto_liege = e_california
+			de_facto_liege_title = e_california
 		}
 		set_character_flag = stayed_neutral_imperial_war
 	}
@@ -6606,7 +6605,7 @@ character_event = {
 				}
 			}
 			AND = {
-				completely_controls = k_death_valley
+				completely_controls = k_nevada
 				NOT = {
 					has_global_flag = dv_get
 				}
@@ -6696,7 +6695,7 @@ character_event = {
 		if = {
 			limit = {
 				AND = {
-					completely_controls = k_death_valley
+					completely_controls = k_nevada
 					NOT = {
 						has_global_flag = dv_get
 					}
@@ -8840,7 +8839,7 @@ character_event = {
 		scaled_wealth = -0.50
 		custom_tooltip = {
 			text = reform_bare_TT
-			text = getback_180_TT
+			#text = getback_180_TT
 			hidden_tooltip = {
 				random_list = {
 					60 = { #poor reform
@@ -8892,7 +8891,7 @@ character_event = {
 		scaled_wealth = -1
 		custom_tooltip = {
 			text = reform_good_TT
-			text = getback_180_TT
+			#text = getback_180_TT
 			hidden_tooltip = {
 				random_list = {
 					25 = { #poor reform
@@ -8944,7 +8943,7 @@ character_event = {
 		scaled_wealth = -2
 		custom_tooltip = {
 			text = reform_alot_TT
-			text = getback_180_TT
+			#text = getback_180_TT
 			hidden_tooltip = {
 				random_list = {
 					10 = { #poor reform
@@ -9010,10 +9009,10 @@ character_event = {
 	option = {
 		name = opta_disappointing
 		custom_tooltip = {
-			name = bureau_decrease_3_TT
+			text = bureau_decrease_3_TT
 		}
 		custom_tooltip = {
-			name = globalbureau_decrease_05_TT
+			text = globalbureau_decrease_05_TT
 		}
 		add_character_modifier = {
 			modifier = poor_reforms
@@ -9039,10 +9038,10 @@ character_event = {
 	option = {
 		name = EVTOPTACETIC531
 		custom_tooltip = {
-			name = bureau_increase_3_TT
+			text = bureau_increase_3_TT
 		}
 		custom_tooltip = {
-			name = globalbureau_increase_02_TT
+			text = globalbureau_increase_02_TT
 		}
 	}
 }
@@ -9064,10 +9063,10 @@ character_event = {
 	option = {
 		name = EVTOPTACETIC532
 		custom_tooltip = {
-			name = bureau_increase_3_TT
+			text = bureau_increase_3_TT
 		}
 		custom_tooltip = {
-			name = globalbureau_increase_05_TT
+			text = globalbureau_increase_05_TT
 		}
 		add_character_modifier = {
 			modifier = good_reforms

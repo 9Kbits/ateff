@@ -100,7 +100,7 @@ province_event = {
 		port = yes
 		any_province_holding = { holding_type = city }
 		county = {
-			NOT = { de_facto_liege = e_novorusskiy }
+			NOT = { de_facto_liege_title = e_novorusskiy }
 			OR = {
 				de_jure_liege = d_goldengate
 				de_jure_liege = d_redwoods
@@ -904,6 +904,7 @@ character_event = {
 		wealth = 500 
 		spawn_unit = {
 			owner = FROM
+			province = closest_to_capital
 			troops =
 			{	
 				pikemen = { 800 800 }
@@ -1055,7 +1056,7 @@ province_event = {
 		port = yes
 		any_province_holding = { holding_type = city }
 		county = {
-			NOT = { de_facto_liege = e_edokko }
+			NOT = { de_facto_liege_title = e_edokko }
 			OR = {
 				de_jure_liege = d_juneau
 				de_jure_liege = d_alexander
@@ -1578,6 +1579,7 @@ character_event = {
 		wealth = 500 
 		spawn_unit = {
 			owner = FROM
+			province = closest_to_capital
 			troops =
 			{	
 				pikemen = { 800 800 }
@@ -3790,7 +3792,6 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTB_revivalist3
-		trigger = { has_landed_title = k_redcoat_outpost }
 		trigger = { has_landed_title = k_redcoat_outpost }
 		set_global_flag = redcoat_landing
 		military_techpoints = 2000

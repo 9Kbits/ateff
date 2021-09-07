@@ -15,9 +15,7 @@ character_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		holder_scope = {
-				government = cenobitic_government
-		}
+		government = cenobitic_government
 	}
 	
 	immediate = {
@@ -47,7 +45,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 	prisoner = no
 	is_triggered_only = yes
-		effect = {
+		immediate = {
 			FROM = { piety = -50 }
 			set_mountain_name_effect = yes
 
