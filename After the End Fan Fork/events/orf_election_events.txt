@@ -413,26 +413,26 @@ character_event = {
 		set_character_flag = towns_campaign
 	}
 	
-	option = {
-		name = EVTOPTA__orf_election_campaign_ask_for_endorsement
-		trigger = { 
-			OR = {
-				liege = { dynasty = ROOT }
-				liege = { is_friend = ROOT }
-				liege = { is_lover = ROOT }
-
-			}
-			NOT = {
-				had_character_flag = {
-					flag = orf_election_running
-					days = 80
-				}
-			}
-			NOT = { has_character_flag = endorsed_campaign }
-		}
-		set_character_flag = endorsed_campaign
-		liege = { character_event = {id = orfelection.23 days = 25} }
-	}
+#	option = {
+#		name = EVTOPTA__orf_election_campaign_ask_for_endorsement
+#		trigger = { 
+#			OR = {
+#				liege = { dynasty = ROOT }
+#				liege = { is_friend = ROOT }
+#				liege = { is_lover = ROOT }
+#
+#			}
+#			NOT = {
+#				had_character_flag = {
+#					flag = orf_election_running
+#					days = 80
+#				}
+#			}
+#			NOT = { has_character_flag = endorsed_campaign }
+#		}
+#		set_character_flag = endorsed_campaign
+#		liege = { character_event = {id = orfelection.23 days = 25} }
+#	}
 	
 	option = {
 		Trigger = {
