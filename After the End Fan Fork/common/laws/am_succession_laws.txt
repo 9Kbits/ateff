@@ -95,33 +95,6 @@ succession_laws = {
 		}
 	}
 
-	succ_cenobitic_elective = {
-		oldest_child_opinion = -5
-		child_opinion = -5
-		dynasty_opinion = -5
-		feudal_opinion = 5
-		potential = {
-			temporary = no
-			holder_scope = {
-				government = cenobitic_government
-				OR = {
-					religion = edenite
-					religion = angeline
-				}
-			}
-		}
-		effect = {
-			succession = {
-				base_type = feudal_elective
-				voting_rules = cenobitic_elective
-			}
-			elective_voting_rules = cenobitic_elective
-		}
-		revoke_allowed = {
-			always = no
-		}
-	}
-
 	succ_mil_gaian_elective = {
 		oldest_child_opinion = -5
 		child_opinion = -5

@@ -68,7 +68,6 @@ feudal_governments = {
 				}
 			}
 			NOT = { is_government_potential = bureaucratic_government }
-			NOT = { is_government_potential = cenobitic_government }
 			NOT = { is_government_potential = ghazi_government }
 			NOT = { is_government_potential = roman_imperial_government }
 			NOT = { is_government_potential = mex_imperial_government }
@@ -672,7 +671,8 @@ feudal_governments = {
 				capital_scope = {
 					region = custom_range_range
 				}
-				culture_group = norteno
+				culture = altiplanense
+				culture = bravo
 				culture = neomexicano
 				culture_group = starfolk
 				culture = arixan
@@ -787,67 +787,3 @@ feudal_governments = {
 		court_size_modifier = 15
 		commander_limit = 11
 	}
-
-	cenobitic_government = {
-		preferred_holdings = { CITY TEMPLE }
-		allowed_holdings = { 
-			CITY 
-			TEMPLE
-			FORT
-			HOSPITAL
-		}
-		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
-			TRIBAL
-		}
-		accepts_liege_governments = { # Gets the wrong religion modifier instead
-			bureaucratic_government
-			theocracy_government
-			feudal_government
-			ghazi_government
-		}
-		free_revoke_on_governments_religion = { # Tribal vassals of other religions can have their titles revoked for free
-			tribal_government
-		}
-		frame_suffix = "_cenobiticgovernment"
-		potential = {
-			OR = {
-				religion = edenite
-				religion = angeline
-			}
-			is_patrician = no
-			NOT = { is_government_potential = roman_imperial_government }
-			NOT = { is_government_potential = order_government }
-			NOT = { is_government_potential = colonial_government }
-			NOT = { is_government_potential = military_governorate }
-			NOT = { is_government_potential = mex_imperial_government }
-		}
-		
-		vassal_call_to_arms = {
-			bureaucratic_government
-			theocracy_government
-			feudal_government
-			ghazi_government
-			cenobitic_government
-		}
-		
-		color = { 216 205 170 }
-		
-		uses_piety_for_law_change = yes
-		dukes_called_kings = yes
-		barons_need_dynasty = yes
-		ignores_de_jure_laws = yes
-		can_imprison_without_reason = no
-
-		can_build_tribal = no
-		
-		ignore_in_vassal_limit_calculation = {
-			tribal_government
-		}
-		capital_move_delay = 200
-		## Modifiers
-		court_size_modifier = 10
-		#min_vassal_tax = 0.1
-		aggression = -2
-	}
-
-}
