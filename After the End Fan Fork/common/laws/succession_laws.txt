@@ -852,10 +852,19 @@ succession_laws = {
 						holder_scope = {
 							show_scope_change = no
 							primary_title = {
-								show_scope_change = no
+								show_scope_change = no							
 								OR = {
-									has_law = ze_administration_laws_1
-									has_law = ze_administration_laws_2
+									OR = {
+										has_law = ze_administration_laws_1
+										has_law = ze_administration_laws_2
+									}
+									AND = {
+										OR = {
+											has_law = orf_senate_type_law_1
+											has_law = orf_senate_type_law_2
+										}			
+										government = open_range_feudalism_government
+									}
 								}
 							}
 						}
@@ -1512,10 +1521,19 @@ succession_laws = {
 				holder_scope = {
 					show_scope_change = no
 					primary_title = {
-						show_scope_change = no
+						show_scope_change = no				
 						OR = {
-							has_law = ze_administration_laws_1
-							has_law = ze_administration_laws_2
+							OR = {
+								has_law = ze_administration_laws_1
+								has_law = ze_administration_laws_2
+							}
+							AND = {
+								OR = {
+									has_law = orf_senate_type_law_1
+									has_law = orf_senate_type_law_2
+								}			
+								government = open_range_feudalism_government
+							}
 						}
 					}
 				}

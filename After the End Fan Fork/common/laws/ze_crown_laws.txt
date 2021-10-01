@@ -166,9 +166,15 @@ de_jure_laws = {
 				has_law = vassal_wars_law_0
 				has_law = vassal_wars_law_2
 			}
-			holder_scope = {
+			OR = {
 				primary_title = {
 					has_law = ze_administration_laws_2
+				}
+				AND = {
+					primary_title = {
+						has_law = orf_senate_type_law_1
+					}					
+					government = open_range_feudalism_government
 				}
 			}
 		}
@@ -218,8 +224,16 @@ de_jure_laws = {
 		allow = {
 			has_law = vassal_wars_law_1
 			holder_scope = {
-				primary_title = {
-					has_law = ze_administration_laws_2
+				OR = {
+					primary_title = {
+						has_law = ze_administration_laws_2
+					}
+					AND = {
+						primary_title = {
+							has_law = orf_senate_type_law_2
+						}					
+						government = open_range_feudalism_government
+					}
 				}
 			}
 		}
