@@ -354,7 +354,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTA_FIDE_123
-		clr_character_flag = becoming_cajita
 		set_character_flag = fasting_for_incarnation
 		add_trait = in_hiding
 	}
@@ -384,9 +383,6 @@ character_event = {
 	
 	option = {
 		name = EVTOPTA_FIDE_124
-		ai_chance = {
-			factor = 10
-		}
 		random_list = {
 			20 = {
 				add_trait = is_malnourished
@@ -395,9 +391,11 @@ character_event = {
 			}
 			80 = {
 				clr_character_flag = fasting_for_incarnation
-				set_character_flag = fasting_for_incarnation1	
-
+				set_character_flag = fasting_for_incarnation1
 			}
+		}
+		ai_chance = {
+			factor = 10
 		}
 	}
 }
@@ -418,11 +416,12 @@ character_event = {
 		has_character_flag = fasting_for_incarnation1
 	}
 	
-	option = {
+	option = { #what the fuck is this???
 		name = EVTOPTA_FIDE_125
-		ai_chance = {
-
-			factor = 5
+		if = {
+			limit = {
+				has_dlc = "Reapers"
+			}
 			random_list = {
 				35 = {
 					give_pneumonic_effect = yes	
@@ -432,9 +431,29 @@ character_event = {
 					set_character_flag = fasting_for_incarnation2
 				}
 			}
+			
+		}
+		else_if = {
+			limit = {
+				NOT = { has_dlc = "Reapers" }
+			}
+			random_list = {
+				35 = {
+					add_trait = ill
+					clr_character_flag = fasting_for_incarnation1
+					set_character_flag = fasting_for_incarnation2
+				}
+				65 = {
+					clr_character_flag = fasting_for_incarnation1
+					set_character_flag = fasting_for_incarnation2
+
+				}
+			}
+		}
+		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 100
+				factor = 2
 				trait = ambitious
 				trait = devout
 				trait = temperate
@@ -442,24 +461,9 @@ character_event = {
 				trait = diligent
 			}
 		}
-		random_list = {
-			35 = {
-				add_trait = ill
-				clr_character_flag = fasting_for_incarnation1
-				set_character_flag = fasting_for_incarnation2
-			}
-			65 = {
-				clr_character_flag = fasting_for_incarnation1
-				set_character_flag = fasting_for_incarnation2
-
-			}
-		}
 	}
 	option = {
 		name = EVTOPTB_FIDE_125
-		ai_chance = {
-			factor = 1
-		}
 		piety = -150
 		random_list = {
 			20 = {
@@ -490,6 +494,9 @@ character_event = {
 		}
 		remove_trait = in_hiding
 		custom_tooltip = { text = TXT_fide_give_up }
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 
@@ -522,9 +529,10 @@ character_event = {
 			5 = {
 				ROOT = {
 					death = {
-						death_reason = death_execution_eaten #whatever for now
+						death_reason = death_poor_health #whatever for now
 					}
 				}
+				clr_character_flag = becoming_cajita
 			}
 			85 = {
 				clr_character_flag = fasting_for_incarnation2
@@ -554,6 +562,7 @@ narrative_event = {
 		add_trait = cajita
 		remove_trait = in_hiding
 		clr_character_flag = fasting_for_incarnation3
+		clr_character_flag = becoming_cajita
 		piety = 500
 		religion_authority = { modifier = a_god_made_flesh }
 		hidden_tooltip = {
@@ -572,6 +581,7 @@ narrative_event = {
 		add_trait = cajita
 		remove_trait = in_hiding
 		clr_character_flag = fasting_for_incarnation3
+		clr_character_flag = becoming_cajita
 		piety = 500
 		religion_authority = { modifier = a_god_made_flesh }
 		hidden_tooltip = {
@@ -590,6 +600,7 @@ narrative_event = {
 		add_trait = cajita
 		remove_trait = in_hiding
 		clr_character_flag = fasting_for_incarnation3
+		clr_character_flag = becoming_cajita
 		piety = 500
 		religion_authority = { modifier = a_god_made_flesh }
 		hidden_tooltip = {
@@ -608,6 +619,7 @@ narrative_event = {
 		add_trait = cajita
 		remove_trait = in_hiding
 		clr_character_flag = fasting_for_incarnation3
+		clr_character_flag = becoming_cajita
 		piety = 500
 		religion_authority = { modifier = a_god_made_flesh }
 		hidden_tooltip = {
@@ -640,6 +652,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_fide.129
 		piety = -500
+		clr_character_flag = becoming_cajita
 	}
 }
 

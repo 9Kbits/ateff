@@ -6454,6 +6454,15 @@ defined_text = {
 	}
 }
 defined_text = {
+	name = GetReligiousCommunityName_libertarian
+	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
+		localisation_key = alt_start_community_name_libertarian
+	}
+	text = { trigger = { NOT = { has_alternate_start_parameter = { key = religion_names value = random } } }
+		localisation_key = secret_religious_society_REAL_libertarian
+	}
+}
+defined_text = {
 	name = GetReligiousCommunityName_atomicist
 	text = { trigger = { has_alternate_start_parameter = { key = religion_names value = random } }
 		localisation_key = alt_start_community_name_atomicist

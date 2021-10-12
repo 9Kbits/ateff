@@ -335,7 +335,7 @@ divine_egg = {
 	allowed_gift = { religion = atomicist }
 	quality = 4
 	flags = { oldworld religious atomicist metal egg very_rare }
-	picture = "GFX_relicbox_iron"
+	picture = "GFX_divine_egg"
 }
 
 old_world_engine = {
@@ -3166,98 +3166,6 @@ sureshot_bow = {
 	stacking = no
 	picture = "GFX_eagle"
 	slot = weapon
-}
-
-#wheeler warbikes
-high_quality_bike = {
-	sex_appeal_opinion = 10
-	monthly_character_prestige = 0.15
-	health = 0.5
-	command_modifier = {
-		flank = 0.1
-		speed = 0.1
-		morale_offence = 0.1
-	}
-	active = {
-		OR = {
-			culture_group = californian
-			culture = hawaiian
-			culture = californiano
-			culture = chino
-		}
-	}
-	allowed_gift = {
-		OR = {
-			culture_group = californian
-			culture = hawaiian
-			culture = californiano
-			culture = chino
-		}
-	}
-	quality = 3
-	stacking = no
-	flags = { created }
-	picture = "GFX_brazilian_book_action" #placeholder. Probably.
-}
-
-normal_quality_bike = {
-	sex_appeal_opinion = 5
-	monthly_character_prestige = 0.1
-	health = 0.3
-	command_modifier = {
-		flank = 0.05
-		speed = 0.05
-	}
-	active = {
-		OR = {
-			culture_group = californian
-			culture = hawaiian
-			culture = californiano
-			culture = chino
-		}
-	}
-	allowed_gift = {
-		OR = {
-			culture_group = californian
-			culture = hawaiian
-			culture = californiano
-			culture = chino
-		}
-	}
-	quality = 2
-	stacking = no
-	flags = { created }
-	picture = "GFX_brazilian_book_action" #placeholder. Probably.
-}
-
-low_quality_bike = {
-	sex_appeal_opinion = -5
-	monthly_character_prestige = 0.1
-	health = 0.1
-	command_modifier = {
-		flank = 0.05
-		speed = -0.1
-	}
-	active = {
-		OR = {
-			culture_group = californian
-			culture = hawaiian
-			culture = californiano
-			culture = chino
-		}
-	}
-	allowed_gift = {
-		OR = {
-			culture_group = californian
-			culture = hawaiian
-			culture = californiano
-			culture = chino
-		}
-	}
-	quality = 1
-	stacking = no
-	flags = { created }
-	picture = "GFX_brazilian_book_action" #placeholder. Probably.
 }
 
 crown_texas = {

@@ -8,7 +8,7 @@ decisions = {
 			NOT = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
-			NOT = { has_character_flag = changedjewishbranch }
+			NOT = { had_character_flag = changedjewishbranch  years < 10}
 		}
 		
 		allow = {
@@ -22,7 +22,16 @@ decisions = {
 				narrative_event = { id = jewish.1 }	
 			}
 			piety = -250
-			add_character_modifier = { name = jewish_outrage years = 10 }
+			if ={
+				limit = {#I don't want an opinion malus to fire if you are choosing the trait for the first time
+					OR = { 
+						trait = jewish_yashvai
+						trait = jewish_derekh_eretz
+						trait = jewish_chassid
+					}
+				}
+				add_character_modifier = { name = jewish_outrage years = 10 }
+			}
 			set_character_flag = changedjewishbranch
 		}
 		

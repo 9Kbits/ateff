@@ -51,8 +51,14 @@ decisions = {
 				has_alternate_start_parameter = { key = religion_names value = random }
 			}
 			religion = fidencista
-			NOT = { has_trait = cajita }
-			NOT = { has_character_flag = becoming_cajita }
+			NOT = { trait = cajita }
+			NOR = {
+				has_character_flag = becoming_cajita 
+				has_character_flag = fasting_for_incarnation
+				has_character_flag = fasting_for_incarnation1
+				has_character_flag = fasting_for_incarnation2
+				has_character_flag = fasting_for_incarnation3
+			}
 		}
 
 		allow = {
