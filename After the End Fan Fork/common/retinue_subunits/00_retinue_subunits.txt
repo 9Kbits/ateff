@@ -750,9 +750,10 @@ RETTYPE_CUL_PUREPECHA =
 	}
 	
 	modifier = {
-		knights_defensive = 0.4
-		knights_morale = 0.2
-		pikemen_defensive = 0.2
+		archers_offensive = 0.2
+		archers_defensive = 0.2
+		pikemen_offensive = 0.2
+		pikemen_defensive = 0.3
 		pikemen_morale = 0.1
 	}
 }
@@ -803,6 +804,26 @@ RETTYPE_CUL_CALI =
 		heavy_infantry_morale = 0.1
 		pikemen_defensive = 0.4
 		pikemen_morale = 0.1
+	}
+}
+
+RETTYPE_CUL_YAQUI =
+{
+	first_type = 0
+	first_amount = 100
+	second_type = 3
+	second_amount = 200
+	
+	potential = {
+		is_nomadic = no
+		culture = yaqui
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.2
+		light_cavalry_offensive = 0.3
+		light_cavalry_morale = 0.2
+		horse_archers_offensive = 0.2
 	}
 }
 
