@@ -1,7 +1,5 @@
 decisions = {
 
-
-
 	form_tex_k_yellowrose = {
 		potential = {
 			culture_group = starfolk
@@ -21,6 +19,9 @@ decisions = {
 			any_realm_province = {
 				de_jure_liege = d_alamo
 			}
+			NOT = {
+				has_character_flag = tex_yellowrose
+			}
 		}	
 		allow = {
 			is_adult = yes
@@ -34,6 +35,9 @@ decisions = {
 			k_yellowrose = {
 				grant_title = ROOT
 				copy_title_laws = PREV
+			}
+			hidden_tooltip = {
+			set_character_flag = tex_yellowrose
 			}
 			narrative_event = { id = tex_king.7 }
 		}
@@ -59,6 +63,9 @@ decisions = {
 			any_realm_province = {
 				de_jure_liege = d_transpecos
 			}
+			NOT = {
+				has_character_flag = tex_westex
+			}
 		}	
 		allow = {
 			is_adult = yes
@@ -72,6 +79,9 @@ decisions = {
 			k_westex = {
 				grant_title = ROOT
 				copy_title_laws = PREV
+			}
+			hidden_tooltip = {
+			set_character_flag = tex_westex
 			}
 			narrative_event = { id = tex_king.12 }
 		}
@@ -95,6 +105,9 @@ decisions = {
 			any_realm_province = {
 				de_jure_liege = d_estacado
 			}
+			NOT = {
+				has_character_flag = tex_highlands
+			}
 		}	
 		allow = {
 			is_adult = yes
@@ -109,10 +122,12 @@ decisions = {
 				grant_title = ROOT
 				copy_title_laws = PREV
 			}
+			hidden_tooltip = {
+			set_character_flag = tex_highlands
+			}
 			narrative_event = { id = tex_king.11 }
 		}
 	}
-
 
 	form_tex_k_texarkana = {
 		potential = {
@@ -131,6 +146,9 @@ decisions = {
 			any_realm_province = {
 				de_jure_liege = d_arklatex
 			}
+			NOT = {
+				has_character_flag = tex_texarkana
+			}
 		}	
 		allow = {
 			is_adult = yes
@@ -145,10 +163,12 @@ decisions = {
 				grant_title = ROOT
 				copy_title_laws = PREV
 			}
+			hidden_tooltip = {
+			set_character_flag = tex_texarkana
+			}
 			narrative_event = { id = tex_king.10 }
 		}
 	}
-
 
 	form_tex_k_silvercrown = {
 		potential = {
@@ -168,6 +188,9 @@ decisions = {
 				de_jure_liege = d_violet_crown
 			}
 			#has_landed_title = c_travis
+			NOT = {
+				has_character_flag = tex_silvercrown
+			}
 		}	
 		allow = {
 			is_adult = yes
@@ -182,10 +205,12 @@ decisions = {
 				grant_title = ROOT
 				copy_title_laws = PREV
 			}
+			hidden_tooltip = {
+			set_character_flag = tex_silvercrown
+			}
 			narrative_event = { id = tex_king.8 }
 		}
 	}
-
 
 	form_tex_k_star_coast = {
 		potential = {
@@ -207,6 +232,9 @@ decisions = {
 				}
 			}
 			#has_landed_title = c_harris
+			NOT = {
+				has_character_flag = tex_starcoast
+			}
 		}	
 		allow = {
 			is_adult = yes
@@ -224,11 +252,12 @@ decisions = {
 				grant_title = ROOT
 				copy_title_laws = PREV
 			}
+			hidden_tooltip = {
+			set_character_flag = tex_starcoast
+			}
 			narrative_event = { id = tex_king.9 }
 		}
 	}
-
-
 
 	form_e_texas = {
 		is_high_prio = yes
