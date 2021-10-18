@@ -721,6 +721,7 @@ narrative_event = {
 	trigger = {
 		e_dixie = {
 			holder_scope = {
+				age = 16
 				is_married = no
 				NOT = { has_character_flag = rejected_anastasia }
 			}
@@ -863,9 +864,6 @@ narrative_event = {
 	border = GFX_event_narrative_frame_intrigue
 	prisoner = no
 	is_triggered_only = yes
-	trigger = {
-		NOT = {has_landed_title = e_dixie}
-	}
 	
 	option = {
 		name = "EVTOPT_anastasiaEMP3a"
