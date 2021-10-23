@@ -2,6 +2,7 @@ namespace = orfelection
 
 character_event = {
 	id = orfelection.1
+	picture = GFX_evt_battle
 	
 	desc = EVTDESC_orf_candidates_to_run_against
 	
@@ -1045,6 +1046,7 @@ character_event = {
 character_event = {#if defender dies, called from on_death
 	id = orfelection.100
 	hide_window = yes
+	picture = GFX_evt_battle
 	is_triggered_only = yes
 	trigger = {
 		has_character_flag = running_for_office_defender
@@ -1128,6 +1130,7 @@ character_event = {
 	id = orfelection.101
 	is_triggered_only = yes
 	desc = EVTDESC_orfelec_101
+	picture = GFX_evt_battle
 	option = {
 		name = EVTOPTA_orfelec_101
 		clr_character_flag = running_for_office_attacker
@@ -1158,6 +1161,7 @@ character_event = {#if defender dies, called from on_death
 	id = orfelection.103
 	hide_window = yes
 	is_triggered_only = yes
+	picture = GFX_evt_battle
 	trigger = {
 		has_character_flag = running_for_office_attacker
 	}
@@ -1169,6 +1173,7 @@ character_event = {
 	id = orfelection.104
 	is_triggered_only = yes
 	desc = EVTDESC_orfelec_101
+	picture = GFX_evt_battle
 	option = {
 		name = EVTOPTA_orfelec_101
 		clr_character_flag = running_for_office_defender
@@ -1543,6 +1548,7 @@ character_event ={#local speech
 
 character_event ={#resolved
 	id = orfelection.12
+	picture = GFX_evt_battle
 	desc = {
 		trigger = { has_character_flag = orfelec_good_11}
 		text =EVTDESC_orfelec_resolve_good_minor_meeting
@@ -1579,6 +1585,7 @@ character_event ={#resolved
 character_event ={#Merchants arrive
 	id = orfelection.13
 	desc = EVTDESC_orfelec_problem_merchants
+	picture = GFX_evt_battle
 	
 	only_playable = yes
 	capable_only = yes
@@ -1760,6 +1767,7 @@ character_event ={#resolved
 		trigger = { has_character_flag = orfelec_bad_13}
 		text =EVTDESC_orfelec_resolve_bad_merchants
 	}
+	picture = GFX_evt_battle
 	only_playable = yes
 	capable_only = yes
 	is_triggered_only = yes
@@ -1785,6 +1793,7 @@ character_event ={#a problem occurs
 	capable_only = yes
 	is_triggered_only = yes#i..think? maybe we will do a tombola, maybe we will have a MTTH on election events
 	
+	picture = GFX_evt_battle
 	
 	immediate = {
 		character_event = {id = orfelection.16 days = 7}
@@ -1987,6 +1996,7 @@ character_event ={#a problem occurs
 
 character_event ={#resolved
 	id = orfelection.16
+	picture = GFX_evt_battle
 	desc = {
 		text =EVTDESC_orfelec_resolve_good_rangers
 		trigger = { has_character_flag = orfelec_good_15}
@@ -2021,7 +2031,7 @@ character_event ={#resolved
 character_event ={
 	id = orfelection.17	
 	desc = EVTDESC_orfelec_problem_destitute_ranger
-	#picture = something
+	picture = GFX_evt_battle
 	
 	only_playable = yes
 	capable_only = yes
@@ -2075,7 +2085,7 @@ character_event ={#resolved
 		}
 		text = EVTDESC_orfelec_problem_destitute_ranger_resolve_bad_worse
 	}
-	#picture = something
+	picture = GFX_evt_battle
 	
 	only_playable = yes
 	capable_only = yes
@@ -2213,7 +2223,7 @@ character_event ={#resolved
 character_event ={
 	id = orfelection.19
 	desc = EVTDESC_orfelec_problem_range_squatters
-	#picture = something
+	picture = GFX_evt_battle
 	
 	only_playable = yes
 	capable_only = yes
@@ -2244,6 +2254,7 @@ character_event ={
 
 character_event ={#resolved
 	id = orfelection.20
+	picture = GFX_evt_battle
 	desc = {
 		trigger = { has_character_flag = orfelec_good}
 		text = EVTDESC_orfelec_problem_range_squatters_good
@@ -2318,7 +2329,7 @@ character_event ={#resolved
 character_event ={
 	id = orfelection.21
 	desc = EVTDESC_orfelec_problem_range_ambush
-	#picture = something
+	picture = GFX_evt_battle
 	
 	only_playable = yes
 	capable_only = yes
@@ -2362,7 +2373,7 @@ character_event ={#resolved
 		trigger = { has_character_flag = orfelec_bad}
 		text = EVTDESC_orfelec_problem_range_ambush_death
 	}
-	#picture = something
+	picture = GFX_evt_battle
 	
 	only_playable = yes
 	capable_only = yes
@@ -2635,6 +2646,7 @@ character_event = {
 
 character_event = {
 	id = orfelection.24
+	picture = GFX_evt_battle
 	is_triggered_only = yes
 	desc ={
 		trigger = { has_character_flag = endorsed_by_liege}
