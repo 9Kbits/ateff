@@ -1851,7 +1851,7 @@ decisions = {
 			NOT = { trait = incapable }
 			prestige = 1000
 			has_landed_title = k_ozarks
-			has_landed_title = k_lousiana
+			has_landed_title = k_louisiana
 			OR = {
 				has_landed_title = k_old_star
 				has_landed_title = k_texarkana
@@ -1859,11 +1859,9 @@ decisions = {
 			custom_tooltip = {
 				text = form_texarkana_tooltip_1
 				hidden_tooltip = {
-					AND = {
+					OR = {
 						e_dixie = { holder_scope = { NOT = { religion = catholic } } }
 						e_new_south = { holder_scope = { NOT = { religion = catholic } } }
-
-
 					}
 				}
 			}

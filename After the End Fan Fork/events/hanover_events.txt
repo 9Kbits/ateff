@@ -721,6 +721,7 @@ narrative_event = {
 	trigger = {
 		e_dixie = {
 			holder_scope = {
+				age = 16
 				is_married = no
 				NOT = { has_character_flag = rejected_anastasia }
 			}
@@ -758,7 +759,7 @@ narrative_event = {
 				}
 			}
 		}
-		NOT = { has_character_flag = helped_hand }
+		NOT = { has_global_flag = anastaisa_helped_hand }
 	}
 	
 	mean_time_to_happen = { days = 30 }
@@ -863,13 +864,11 @@ narrative_event = {
 	border = GFX_event_narrative_frame_intrigue
 	prisoner = no
 	is_triggered_only = yes
-	trigger = {
-		NOT = {has_landed_title = e_dixie}
-	}
 	
 	option = {
 		name = "EVTOPT_anastasiaEMP3a"
 		add_trait = incapable
+		set_global_flag = anastaisa_helped_hand
 	}
 }
 
@@ -920,6 +919,7 @@ narrative_event = {
 
 	trigger = { 
 		has_dlc = "Holy Fury"
+		has_character_flag = anastasia_war #Fuck this event.
 		e_dixie = {
 			holder_scope = {
 				OR = {

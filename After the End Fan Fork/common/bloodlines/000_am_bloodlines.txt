@@ -22,6 +22,23 @@ yudkow = { #Emperors of California
 	picture = GFX_bloodlines_symbol_cetic #tbd
 	flags = { historical_bloodline bloodline_heroes }
 }
+dellarocca = {
+	picture = GFX_bloodlines_placeholder_symbol
+	inheritance = all_descendants
+	allow_bastards = yes
+	gothamite_opinion = 10
+	americanist_opinion = 5
+	martial = 1
+	command_modifier = {
+		morale_defence = 0.10
+	}
+	combat_rating = 5
+	monthly_character_prestige = 0.1
+	active = {
+		culture = gothamite
+	}
+	flags = { historical_bloodline }
+}
 soady = { #Vikings
 	command_modifier = {
 		morale_offence = 0.10
