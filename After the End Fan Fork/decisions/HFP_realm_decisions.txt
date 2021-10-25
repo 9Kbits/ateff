@@ -389,24 +389,34 @@ decisions = {
 					province = 150 #Athens
 					province = 148 #Chattahoochee
 					province = 203 #Oconee
-					province = 204 #Deepstep
-					province = 205 #Ocmulgee
 					province = 1030 #Lagrange
 					province = 157 #Augusta
 					province = 159 #Ogeechee
 					province = 158 #Savannah
 					province = 208 #Dublin
 					province = 206 #Hinesville
+					province = 205 #Peach
+					province = 204 #Sandersville
+					province = 207 #Golden Isles
+					province = 979 #Toombs
+					province = 980 #Hazlehurst
+					province = 1000 #Okefenokee
+					province = 1001 #Ochlockonee
+					province = 1002 #Blackshear
+					province = 1031 #Benning
 				}
 			}
 			top_liege = {
 				has_landed_title = e_dixie
 			}
 			lower_tier_than = KING
+			is_alternate_start = no
 			k_georgia = {
+				is_titular = no
+			}
+			k_georgia_grand_duchy = {
 				is_titular = yes
 			}
-			is_alternate_start = no
 		}
 		allow = {
 			prestige = 3000
@@ -422,39 +432,47 @@ decisions = {
 			completely_controls = c_athens 
 			completely_controls = c_chattahoochee
 			completely_controls = c_oconee
-			completely_controls = c_deepstep
-			completely_controls = c_ocmulgee
 			completely_controls = c_lagrange
 			completely_controls = c_augusta
 			completely_controls = c_ogeechee
 			completely_controls = c_savannah
 			completely_controls = c_dublin
 			completely_controls = c_hinesville
+			completely_controls = c_peach
+			completely_controls = c_sandersville
+			completely_controls = c_golden_isles
+			completely_controls = c_toombs
+			completely_controls = c_hazlehurst
+			completely_controls = c_okefenokee
+			completely_controls = c_ochlockonee
+			completely_controls = c_blackshear
+			completely_controls = c_benning
+
 		}
 		effect = {
 			hidden_tooltip = {
 				primary_title = {
-					k_georgia = {
+					k_georgia_grand_duchy = {
 						copy_title_laws = PREV
 					}
 				}
 			}
-			grant_title_no_opinion = k_georgia
+			grant_title_no_opinion = k_georgia_grand_duchy
 			hidden_tooltip = {
 				d_peachtree = {
-					de_jure_liege = k_georgia
+					de_jure_liege = k_georgia_grand_duchy
 				}
 				d_savannah = {
-					de_jure_liege = k_georgia
+					de_jure_liege = k_georgia_grand_duchy
 				}
 				d_altamaha = {
-					de_jure_liege = k_georgia
+					de_jure_liege = k_georgia_grand_duchy
 				}
 				d_sowega = {
-					de_jure_liege = k_georgia
+					de_jure_liege = k_georgia_grand_duchy
 				}
-				d_wiregrass = {
-					de_jure_liege = k_georgia
+				d_d_agusta = {
+					de_jure_liege = k_georgia_grand_duchy
 				}
 				e_dixie = {
 					owner = {
@@ -837,14 +855,21 @@ decisions = {
 					province = 150 #Athens
 					province = 148 #Chattahoochee
 					province = 203 #Oconee
-					province = 204 #Deepstep
-					province = 205 #Ocmulgee
 					province = 1030 #Lagrange
 					province = 157 #Augusta
 					province = 159 #Ogeechee
 					province = 158 #Savannah
 					province = 208 #Dublin
 					province = 206 #Hinesville
+					province = 205 #Peach
+					province = 204 #Sandersville
+					province = 207 #Golden Isles
+					province = 979 #Toombs
+					province = 980 #Hazlehurst
+					province = 1000 #Okefenokee
+					province = 1001 #Ochlockonee
+					province = 1002 #Blackshear
+					province = 1031 #Benning
 				}
 			}
 			e_dixie = {
@@ -867,14 +892,21 @@ decisions = {
 			completely_controls = c_athens 
 			completely_controls = c_chattahoochee
 			completely_controls = c_oconee
-			completely_controls = c_deepstep
-			completely_controls = c_ocmulgee
 			completely_controls = c_lagrange
 			completely_controls = c_augusta
 			completely_controls = c_ogeechee
 			completely_controls = c_savannah
 			completely_controls = c_dublin
 			completely_controls = c_hinesville
+			completely_controls = c_peach
+			completely_controls = c_sandersville
+			completely_controls = c_golden_isles
+			completely_controls = c_toombs
+			completely_controls = c_hazlehurst
+			completely_controls = c_okefenokee
+			completely_controls = c_ochlockonee
+			completely_controls = c_blackshear
+			completely_controls = c_benning
 		}
 		effect = {
 			hidden_tooltip = {
@@ -890,7 +922,7 @@ decisions = {
 				d_sowega = {
 					de_jure_liege = k_georgia
 				}
-				d_wiregrass = {
+				d_agusta = {
 					de_jure_liege = k_georgia
 				}
 				primary_title = {
