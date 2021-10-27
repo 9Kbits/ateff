@@ -34,7 +34,7 @@ laws = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.01
+				factor = 0.0005
 			}
 			modifier = {
 				factor = 10
@@ -202,7 +202,7 @@ laws = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.01
+				factor = 0.0005
 			}
 			modifier = {
 				factor = 0
@@ -271,7 +271,7 @@ laws = {
 		}
 		allow = {
 			has_law = religion_tolerance_1
-			TECH_CULTURE_FLEX>=1
+			TECH_CULTURE_FLEX>=3
 		}
 
 		revoke_allowed = {
@@ -312,10 +312,10 @@ laws = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.01
+				factor = 0.005
 			}
 			modifier = {
-				factor = 5
+				factor = 25
 				holder_scope = {
 					OR = {
 						religion = anabaptist
@@ -324,9 +324,30 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 10
+				factor = 5
 				holder_scope = {
 					OR = {
+						trait = kind
+						trait = sympathy_christendom
+						trait = sympathy_afro_syncretic
+						trait = sympathy_american_native
+						trait = sympathy_cult_of_saints
+						trait = sympathy_mesoamerican_gods
+						trait = sympathy_nautical
+						trait = sympathy_indian
+						trait = sympathy_judaism
+						trait = sympathy_pagans
+						trait = sympathy_islam
+						trait = sympathy_oldworld	
+					}
+				}
+			}
+			modifier = {
+				factor = 0
+				holder_scope = {
+					NOR = {
+						religion = anabaptist
+						religion = reform
 						trait = kind
 						trait = sympathy_christendom
 						trait = sympathy_afro_syncretic
@@ -397,7 +418,7 @@ laws = {
 				has_law = religion_tolerance_0
 				has_law = religion_tolerance_2
 			}
-			TECH_CULTURE_FLEX>=1
+			TECH_CULTURE_FLEX>=2
 		}
 
 		revoke_allowed = {
@@ -436,7 +457,7 @@ laws = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.01
+				factor = 0.005
 			}
 			modifier = {
 				factor = 10
@@ -480,10 +501,32 @@ laws = {
 				}
 			}
 			modifier = {
-				factor = 0
+				factor = 0.5
 				has_law = religion_tolerance_0
 				holder_scope = {
 					OR = {
+						trait = kind
+						trait = sympathy_christendom
+						trait = sympathy_afro_syncretic
+						trait = sympathy_american_native
+						trait = sympathy_cult_of_saints
+						trait = sympathy_mesoamerican_gods
+						trait = sympathy_nautical
+						trait = sympathy_indian
+						trait = sympathy_judaism
+						trait = sympathy_pagans
+						trait = sympathy_islam
+						trait = sympathy_oldworld
+					}
+				}
+			}
+			modifier = {
+				factor = 20
+				has_law = religion_tolerance_0
+				holder_scope = {
+					NOR = {
+						religion = anabaptist
+						religion = reform
 						trait = kind
 						trait = sympathy_christendom
 						trait = sympathy_afro_syncretic
@@ -664,7 +707,7 @@ laws = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.01
+				factor = 0.005
 			}
 			modifier = {
 				factor = 20
@@ -816,7 +859,7 @@ laws = {
 		ai_will_do = {
 			factor = 1
 			modifier = {
-				factor = 0.01
+				factor = 0.005
 			}
 			modifier = {
 				factor = 0
