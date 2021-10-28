@@ -1175,7 +1175,7 @@ decisions = {
 			factor = 100
 		}
 	}
-	call_british_invasion = { #wow we need to update this!
+	call_british_invasion = { #I think this works?
 		only_playable = yes
 		is_high_prio = yes
 		ai_check_interval = 12
@@ -1188,8 +1188,11 @@ decisions = {
 		allow = {
 			has_landed_title = k_redcoat_outpost
 			NOT = { is_title_active = e_redcoat_dominion }
-			hidden_tooltip = { religion = glorian }
-			custom_tooltip = { text = TXT_is_reformed_thelemic }
+			hidden_tooltip = {
+				religion = glorian
+				controls_religion = yes
+			}
+			custom_tooltip = { text = TXT_is_governor_general }
 		}
 		effect = {
 			primary_title = {
