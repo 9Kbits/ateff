@@ -7,6 +7,57 @@ e_aztlan = {
 	arixan = "Saguaro"
 	plautdietsch = "Reiherland"
 	capital = 799 # Chihuahua
+	
+	k_new_mexico = {
+		color={ 231 229 36 }
+		color2={ 137 253 243 }
+	
+		tejano = "Nuevo Méjico"
+		bravo = "Nuevo México"
+		altiplanense = "Nuevo México"
+		choyero = "Nuevo México"
+		menomex = "Nuevo México"
+		chino = "Nuevo México"
+		sonorense = "Nuevo México"
+		neomexicano = "Nuevo México"
+		navajo = "Yootó Hahoodzo"
+		southron = "South Virginia"
+
+		capital = 339 # Santa Fe
+	
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_new_mexico = {
+						is_titular = yes
+					}
+				}
+				k_new_mexico = {
+					is_titular = no
+				}
+			}
+		}
+	}
+	
+	 = {
+		color={ 255 75 48 }
+		color2={ 137 253 243 }
+		
+		capital = 439 # Phoenix
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_arizona = {
+						is_titular = yes
+					}
+				}
+				k_arizona = {
+					is_titular = no
+				}
+			}
+		}
+	}
 
 	k_arixo = {
 		color = { 146 62 176 }
@@ -34,6 +85,19 @@ e_aztlan = {
 		apache = "Abaachi"
 
 		capital = 439 # Phoenix
+		
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					k_arixo = {
+						is_titular = yes
+					}
+				}
+				k_arixo = {
+					is_titular = no
+				}
+			}
+		}
 
 		d_gadsden = {
 			color = { 222 232 116 }

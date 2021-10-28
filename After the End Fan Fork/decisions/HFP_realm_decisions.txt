@@ -6,7 +6,112 @@ decisions = {
 	
 	#Deleted
 	
-	#Deleted
+	create_new_mexico = {
+		only_independent = yes
+		is_high_prio = yes
+		ai_check_interval = 60
+		potential = {
+			NOT = {
+				higher_tier_than = DUKE
+			}
+			culture = neomexicano
+			k_new_mexico = {
+				has_holder = no
+			}
+			k_new_mexico = {
+				is_titular = yes
+			}
+			NOR = {
+				has_alternate_start_setting = {
+					setting = dejure
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random
+				}
+				has_alternate_start_setting = {
+					setting = title_names
+					value = random_including_duchies
+				}
+			}
+		}
+		
+		allow = {
+			is_adult = yes
+			independent = yes
+			war = no
+			culture = neomexicano
+			has_landed_title = d_new_mexico
+			NOT = {
+				is_incapable = yes
+			}
+			completely_controls = d_new_mexico
+			completely_controls = c_los_alamos
+			completely_controls = c_white_sands
+			completely_controls = c_hidalgo
+			conditional_tooltip = {
+				trigger = {
+					ai = no
+				}
+
+				prestige = 1000
+			}
+			wealth = 100
+		}
+		
+		effect = {
+			wealth = -100
+			primary_title = {
+				save_event_target_as = current_primary_title
+			}
+			k_new_mexico = {
+				show_scope_change = no
+				grant_title = ROOT
+				copy_title_laws = event_target:current_primary_title
+			}
+			d_new_mexico = {
+				show_scope_change = no
+				de_jure_liege = k_new_mexico
+			}
+			d_mesila = {
+				show_scope_change = no
+				de_jure_liege = k_new_mexico
+			}
+			d_mogollon = {
+				show_scope_change = no
+				de_jure_liege = k_new_mexico
+			}
+			if = {
+				limit = {
+					has_landed_title = d_apacheria
+				}
+				d_apacheria = {
+					show_scope_change = no
+					de_jure_liege = k_new_mexico
+				}
+			}
+			if = {
+				limit = {
+					k_arixo = {
+						has_holder = no
+					}
+				}
+				d_gadsden = {
+					show_scope_change = no
+					de_jure_liege = k_arizona
+				}
+				d_arizona = {
+					show_scope_change = no
+					de_jure_liege = k_arizona
+				}
+				d_colorado_river = {
+					show_scope_change = no
+					de_jure_liege = k_arizona
+				}
+			}
+		}
+	}
 	
 	create_tennessee = {
 		only_independent = yes
