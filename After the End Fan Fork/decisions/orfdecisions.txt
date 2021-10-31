@@ -144,22 +144,18 @@ decisions = {
 		
 		effect = {
 			prestige = -500
+			any_demesne_title = {
+				set_title_flag = range_dissolution
+				clr_title_flag = range_established
+			}
 			set_government_type = feudal_government
 		}
 		ai_will_do = {
-			factor = 0.5
+			factor = 1
 			modifier = {
 				factor = 0
 				liege = { government = open_range_feudalism_government}
 			}
-			modifier = {
-				factor = 0
-				num_of_titles_in_realm >= 8
-			}
-			modifier = {
-				factor = 0
-				num_of_titles_in_realm >= 8
-			}	
 		} 
 	}
 	adopt_orf = {
@@ -191,9 +187,13 @@ decisions = {
 		effect = {
 			prestige = -500
 			set_government_type = open_range_feudalism_government
+			any_demesne_title = {
+				set_title_flag = range_established
+				clr_title_flag = range_dissolution
+			}
 		}
 		ai_will_do = {
-			factor = 0.5
+			factor = 1
 			modifier = {
 				factor = 0
 				liege = { NOT = { government = open_range_feudalism_government}	}		
@@ -202,10 +202,6 @@ decisions = {
 				factor = 0
 				num_of_titles_in_realm >= 8
 			}
-			modifier = {
-				factor = 0
-				num_of_titles_in_realm >= 8
-			}	
 		} 
 	}
 	endorse_party = {
