@@ -76,6 +76,7 @@ feudal_governments = {
 			#NOT = { is_government_potential = colonial_government }
 			NOT = { is_government_potential = military_governorate }
 			NOT = { is_government_potential = open_range_feudalism_government }
+			NOT = { has_character_flag = ORF_embrace }
 			NOT = { is_government_potential = theocratic_feudal_government }
 			#Removed Chinese Imperial stuff
 			is_patrician = no
@@ -653,8 +654,6 @@ feudal_governments = {
 			CASTLE 
 			FORT
 			HOSPITAL
-		}
-		allowed_holdings_culture = { # Will not get the wrong government type penalty for tribes of the same culture
 			TRIBAL
 		}
 		accepts_liege_governments = { # Gets the wrong religion modifier instead
@@ -668,33 +667,45 @@ feudal_governments = {
 		frame_suffix = "_orf"
 		potential = {
 			OR = {
-				capital_scope = {
-					region = custom_range_range
+				has_character_flag = ORF_embrace
+				OR = {
+					capital_scope = {
+						region = custom_range_range
+					}
+					culture = altiplanense
+					culture = bravo
+					culture = neomexicano
+					culture_group = starfolk
+					culture = arixan
+					culture = comanche
+					culture = sioux
+					culture = crow
 				}
-				culture = altiplanense
-				culture = bravo
-				culture = neomexicano
-				culture_group = starfolk
-				culture = arixan
-				culture = comanche
-				primary_title = {
-					has_title_flag = range_established
+				AND = {
+					has_game_started = no
+					is_save_game = no
+					OR = {
+						has_landed_title = d_oklahoma
+						has_landed_title = d_chisholm
+						has_landed_title = c_panhandle
+						has_landed_title = d_verdigris
+						has_landed_title = k_platte
+						has_landed_title = d_kansas
+						has_landed_title = c_rushmore
+						has_landed_title = c_bismarck
+					}
 				}
 			}
+			NOT = { has_character_flag = ORF_reject }
 			is_patrician = no
 			NOT = { is_government_potential = mormon_government }
 			NOT = { is_government_potential = mex_imperial_government }
 			NOT = { is_government_potential = bureaucratic_government }
 			NOT = { is_government_potential = theocratic_feudal_government }
-			NOT = {
-				primary_title = {
-					has_title_flag = range_dissolution
-				}			
-			}
 		}
 		
 		character_modifier = {
-			short_reign_length = 2
+			short_reign_length = -1
 		}	
 		
 		color = { 204 79 45 }
@@ -795,3 +806,4 @@ feudal_governments = {
 		court_size_modifier = 15
 		commander_limit = 11
 	}
+}

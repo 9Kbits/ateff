@@ -121,14 +121,6 @@ decisions = {
 		potential = {
 			is_playable = yes
 			government = open_range_feudalism_government
-			OR = {
-				NOT = {
-					capital_scope = {
-						region = custom_range_range
-					}
-				}
-				liege = { NOT = { government = open_range_feudalism_government } }
-			}
 		}
 	
 		allow = {
@@ -144,17 +136,19 @@ decisions = {
 		
 		effect = {
 			prestige = -500
-			any_demesne_title = {
-				set_title_flag = range_dissolution
-				clr_title_flag = range_established
-			}
+			set_character_flag = ORF_reject
+			clr_character_flag = ORF_embrace
 			set_government_type = feudal_government
 		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
 				factor = 0
-				liege = { government = open_range_feudalism_government}
+				NOT = { liege = { government = feudal_government} }
+			}
+			modifier = {
+				factor = 0
+				num_of_titles_in_realm >= 8
 			}
 		} 
 	}
@@ -168,7 +162,16 @@ decisions = {
 			OR = {
 				capital_scope = {
 					region = custom_range_range
-				}
+				} 
+				has_character_flag = ORF_embrace
+				culture = altiplanense
+				culture = bravo
+				culture = neomexicano
+				culture_group = starfolk
+				culture = arixan
+				culture = comanche
+				culture = sioux
+				culture = prairielander
 				liege = { government = open_range_feudalism_government }
 			}
 		}
@@ -187,10 +190,8 @@ decisions = {
 		effect = {
 			prestige = -500
 			set_government_type = open_range_feudalism_government
-			any_demesne_title = {
-				set_title_flag = range_established
-				clr_title_flag = range_dissolution
-			}
+			set_character_flag = ORF_embrace
+			clr_character_flag = ORF_reject
 		}
 		ai_will_do = {
 			factor = 1
@@ -202,40 +203,6 @@ decisions = {
 				factor = 0
 				num_of_titles_in_realm >= 8
 			}
-		} 
-	}
-	endorse_party = {
-		is_high_prio = no
-
-
-		potential = {
-			is_playable = yes
-			government = feudal_government
-			OR = {
-				capital_scope = {
-					region = custom_range_range
-				}
-				liege = { government = open_range_feudalism_government }
-			}
-		}
-	
-		allow = {
-			prestige = 75
-			is_adult = yes
-			prisoner = no
-			OR = {
-				independent = yes
-				liege = { government = open_range_feudalism_government }
-			}
-			num_of_titles_in_realm <= 15
-		}
-		
-		effect = {
-			prestige = -75
-			character_event = { id = texas.49 }
-		}
-		ai_will_do = {
-			factor = 1
 		} 
 	}
 }

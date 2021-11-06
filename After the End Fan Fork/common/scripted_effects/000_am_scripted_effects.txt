@@ -1332,3 +1332,11 @@ remove_nestorian_patron_saint_effect = {
 	remove_character_modifier = nestorian_mar_nestor
 	remove_character_modifier = nestorian_mar_abba
 }
+
+
+startup_orf = {
+	if = {
+		limit = { has_character_flag = ORF_embrace }
+		set_government_type = open_range_feudalism_government
+	}
+}

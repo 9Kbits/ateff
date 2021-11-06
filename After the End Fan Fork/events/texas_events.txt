@@ -14,7 +14,13 @@ narrative_event = {
 	trigger = {
 		is_playable = yes
 		capital_scope = { region = custom_texas }
-		NOT = { has_global_flag = texas_setup_done }
+		NOT = {
+			had_global_flag = {
+				flag = texas_setup_done
+				days >= 1
+			}
+		}
+		NOT = { has_flag = seen_texas_1 }
 	}
 	
 	desc = {
@@ -43,6 +49,7 @@ narrative_event = {
 	
 	immediate = {
 		set_global_flag = texas_setup_done
+		set_character_flag = seen_texas_1
 	}
 	
 	option = { 

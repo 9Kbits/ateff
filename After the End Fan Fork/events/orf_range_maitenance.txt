@@ -1,0 +1,164 @@
+namespace = ORFmaint
+
+#events to preserve orf status
+#startup
+character_event = {
+	id = ORFmaint.11
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		is_feudal = yes
+		is_landed = yes
+		is_save_game = no
+		NOT = { has_character_flag = ORF_embrace }
+		NOT = { has_character_flag = ORF_reject }
+		independent = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					capital_scope = {
+						region = custom_range_range
+					} 
+					has_character_flag = ORF_embrace
+					culture = altiplanense
+					culture = bravo
+					culture = neomexicano
+					culture_group = starfolk
+					culture = arixan
+					culture = comanche
+					culture = sioux
+				}			
+			}
+			any_realm_character = {
+				limit = { 
+					is_landed = yes
+					is_feudal = yes
+				}
+				clr_character_flag = ORF_reject
+				set_character_flag = ORF_embrace
+				set_government_type = open_range_feudalism_government
+			}
+			set_character_flag = ORF_embrace
+		}	
+		else = {
+			set_character_flag = ORF_reject
+			any_realm_character = {
+				limit = { 
+					is_landed = yes
+					is_feudal = yes
+				}
+				clr_character_flag = ORF_embrace
+				set_character_flag = ORF_reject
+				set_government_type = feudal_government
+			}
+		}	
+		set_character_flag = startup_orf_done
+	}
+}
+
+#new holder
+character_event = {
+	id = ORFmaint.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		NOT = { has_character_flag = ORF_reject }
+		NOT = { has_character_flag = ORF_embrace }
+		is_feudal = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				FROMFROM = { has_character_flag = ORF_embrace }		
+			}
+			set_character_flag = ORF_embrace
+		}	
+		else_if = {
+			limit = {
+				FROMFROM = { has_character_flag = ORF_reject }		
+			}
+			set_character_flag = ORF_reject
+		}
+		else_if = {
+			limit = {
+				OR = {
+					capital_scope = {
+						region = custom_range_range
+					} 
+					has_character_flag = ORF_embrace
+					culture = altiplanense
+					culture = bravo
+					culture = neomexicano
+					culture_group = starfolk
+					culture = arixan
+					culture = comanche
+					culture = sioux
+				}		
+			}
+			set_character_flag = ORF_embrace
+		}
+		else = {
+			set_character_flag = ORF_reject
+		}
+	}
+}
+
+
+character_event = {
+	id = ORFmaint.31
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		NOT = { has_character_flag = ORF_embrace }
+		NOT = { has_character_flag = ORF_reject }
+		is_feudal = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					capital_scope = {
+						region = custom_range_range
+					} 
+					has_character_flag = ORF_embrace
+					culture = altiplanense
+					culture = bravo
+					culture = neomexicano
+					culture_group = starfolk
+					culture = arixan
+					culture = comanche
+					culture = sioux
+				}			
+			}
+			set_character_flag = ORF_embrace
+		}	
+		else = {
+			set_character_flag = ORF_reject
+		}	
+	}
+}
+character_event = {
+	id = ORFmaint.41
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			has_character_flag = ORF_reject
+			has_character_flag = ORF_embrace
+		}
+	}
+
+	immediate = {
+		clr_character_flag = ORF_reject
+		clr_character_flag = ORF_embrace
+	}
+}

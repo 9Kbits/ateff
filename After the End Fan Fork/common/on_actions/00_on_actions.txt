@@ -73,6 +73,7 @@ on_startup = {
 		NC.5000
 		
 		
+		ORFmaint.11
 	}
 }
 
@@ -2876,8 +2877,11 @@ on_navy_returns_with_loot = {
 
 # ROOT is the creating character, FROM is the title
 on_create_title = {
-	events = {
+	events = {	
 		CM.10021
+
+		#if sudden new character with title shows up and should be orf
+		ORFmaint.31
 	}
 }
 
@@ -2925,6 +2929,9 @@ on_new_holder = {
 		#cetic.504 #Removes title flags for bureaucracy
 		
 		#col.1 # Delete Colonizer Titles
+		
+		#preserve range
+		ORFmaint.21
 		
 		mesoamerica.400 #Granting of new bloodline
 
