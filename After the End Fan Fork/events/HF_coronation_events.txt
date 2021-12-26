@@ -6261,12 +6261,12 @@ character_event = {
 			#A wise priest joins the court.
 			#King becomes rival of one of his vassals.
 
-			#King is embarassed of secluded coronation, chance to gain stressed or paranoid.
+			#King is embarrassed of secluded coronation, chance to gain stressed or paranoid.
 			#King's vassals are offended by secluded coronation (chance to avoid with high diplomacy).
 			#Coronation_priest is disappointed by secluded ceremony.
-			#King is disraught by secluded ceremony (chance to lose ambitious, gain content/slothful).
+			#King is distraught by secluded ceremony (chance to lose ambitious, gain content/slothful).
 			#King reflects upon secluded coronation (chance to lose proud, gain humble).
-			#King's Councillor becomes his rival due to secluded coronation.
+			#King's Councilor becomes his rival due to secluded coronation.
 			hidden_tooltip = { set_variable = { which = coronation_count value = 0 } } 
 			hidden_tooltip = { character_event = { id = HF.20365 days = 3 random = 3 } } # First and second row of random list.
 		hidden_tooltip = { character_event = { id = HF.20366 days = 32 } } #THE CORONATION ITSELF # For safety reasons, just in case guests die in the middle of the feast and prevent the last event from firing.
@@ -9371,7 +9371,7 @@ character_event = {
 	}
 }
 
-#Secluded King: poor coronation makes you embarassed. Chance for paranoid or stressed.
+#Secluded King: poor coronation makes you embarrassed. Chance for paranoid or stressed.
 character_event = {
 	id = HF.20355
 	desc = {
@@ -11130,7 +11130,7 @@ character_event = {
 	}
 
 	immediate = { 
-		#Random negative flavour.
+		#Random negative flavor.
 		random_list = { 
 			20 = { 
 				character_event = { id = HF.20376 days = 100 random = 100 } #Peasants are upset.
