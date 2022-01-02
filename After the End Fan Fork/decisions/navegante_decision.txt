@@ -1,0 +1,32 @@
+decisions = {
+	navegante_form_head = {
+		only_playable = yes
+		ai_check_interval = 120
+		
+		potential = {
+			religion = navegante
+			d_navegante = { has_holder = no }
+			NOT = {
+				has_alternate_start_parameter = { key = religion_names value = random }
+			}
+			is_playable = yes
+		}
+		
+		allow = {
+			primary_title = { higher_tier_than = DUKE }
+			num_of_holy_sites = 2 #personally controls 3 holy sites
+			piety = 500
+			wealth = 250
+		}
+		
+		effect = {
+			wealth = -250
+			piety = -500
+			narrative_event = { id = nazarene.44 }
+			custom_tooltip = { text = TXT_navegante_form_head }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
