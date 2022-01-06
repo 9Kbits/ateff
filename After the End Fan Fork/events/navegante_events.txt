@@ -10,10 +10,32 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	trigger = {
-		NOT = { has_global_flag = true_navegante_head_formed }
+		NOT = { has_global_flag = navegante_head_formed }
 	}
 	
 	immediate = {
-		set_global_flag = true_navegante_head_formed
+		set_global_flag = navegante_head_formed
 		d_navegante = { grant_title = ROOT }
 	}
+	
+	option = {
+		name = EVTOPTA_navegante_100
+		trigger = {
+			religion = navegante
+			NOT = { has_landed_title = d_navegante }
+		}
+	}
+	option = {
+		name = EVTOPTB_navegante_100
+		trigger = {
+			religion = navegante
+			has_landed_title = d_navegante
+		}
+	}
+	option = {
+		name = EVTOPTC_navegante_100
+		trigger = {
+			NOT = { religion = navegante }
+		}
+	}
+}
