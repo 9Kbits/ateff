@@ -375,7 +375,7 @@ narrative_event = {
 			ROOT = {
 				create_character = {
 					name="Karen"
-					dynasty = culture
+					dynasty = 1830091
 					culture = utahn
 					female = yes
 					age = 37
@@ -963,6 +963,14 @@ narrative_event = {
 
 	is_triggered_only = yes
 	major = yes
+	
+	immediate = {
+		e_heaven = {
+			holder_scope = {
+				narrative_event = { id = hanovers.14 }
+			}
+		}
+	}
 
 	option = {
 		name = EVTOPTA_heavenlykingdom_success
@@ -1065,5 +1073,16 @@ province_event = {
 	
 	option = {
 		name = EVTOPT_heavenlykingdom_conversion
+	}
+}
+
+narrative_event = {
+	id = heavenlykingdom.11
+	hide_window = yes
+	
+	immediate = {
+            save_event_target_as = mormon_gf
+			set_character_flag = mormon_gf
+			narrative_event = { id = heavenlykingdom.12 }
 	}
 }
