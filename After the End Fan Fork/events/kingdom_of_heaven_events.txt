@@ -113,9 +113,9 @@ province_event = {
 	border = GFX_event_normal_frame_religion
 	
 	trigger = {
-		NOT = { religion = true_cross }
+		NOT = { religion = neogodbeite }
 		holder_scope = {
-			NOT = { religion = true_cross }
+			NOT = { religion = neogodbeite }
 		}
 		has_global_flag = heavenlykingdom_mormon_mission
 		NOT = { has_global_flag = heavenlykingdom_mormon_mission_successful }
@@ -137,7 +137,7 @@ province_event = {
 	}
 		
 	immediate = {
-		religion = true_cross
+		religion = neogodbeite
 		set_province_flag = heavenlykingdom_epicenter
 		set_global_flag = heavenlykingdom_mormon_mission_successful
 	}
@@ -150,7 +150,7 @@ province_event = {
 			prestige = -50
 		}
 		random_neighbor_province = {
-			religion = true_cross
+			religion = neogodbeite
 		}
 	}
 		
@@ -221,15 +221,15 @@ province_event = {
 		name = EVTOPT_heavenlykingdom_ignoredmormons
 		trigger = { has_global_flag = heavenlykingdom_mormon_mission_ignored }
 
-		religion = true_cross
+		religion = neogodbeite
 		remove_province_modifier = true_cross_unrest
 		add_province_modifier = { name = true_cross_revolt duration = 912 }
 		random_neighbor_province = {
-			religion = true_cross
+			religion = neogodbeite
 		}
 		
 		any_neighbor_province = {
-			limit = { religion = true_cross }
+			limit = { religion = neogodbeite }
 			add_province_modifier = { name = true_cross_revolt duration = 912 }
 		}
 	}
@@ -250,7 +250,7 @@ narrative_event = {
 	only_playable = yes
 
 	trigger = {
-		religion = true_cross
+		religion = mormon
 		NOT = { has_global_flag = heavenlykingdom_karen_deseret }
 		OR = {
 			AND = { #if mormon pope is independent, send it to him
@@ -260,7 +260,7 @@ narrative_event = {
 			AND = {#if mormon pope is vassalized, send it to his liege
 				controls_religion = no
 				any_vassal = {
-					religion = true_cross
+					religion = mormon
 					controls_religion = yes
 				}
 			}	
@@ -395,7 +395,7 @@ narrative_event = {
 					trait = holy_warrior
 					trait = inspiring_leader
 					trait = brave
-					trait = possessed
+					trait = reincarnation
 					attributes = {
 						learning = 8
 						diplomacy = 6
@@ -417,14 +417,14 @@ narrative_event = {
 							wealth = 5000
 							prestige = 1000
 							give_nickname = nick_moroni_reborn
-							religion = true_cross
+							religion = mormon
 							add_trait = peasant_leader
 					}
 					else = {
 						wealth = 2500
 						prestige = 500
 						give_nickname = nick_the_heresiarch
-						religion = true_cross
+						religion = neogodbeite
 						add_trait = heresiarch
 					}
 					create_title = {
@@ -917,7 +917,7 @@ narrative_event = {
 			trigger = { NOT = { has_global_flag = heavenlykingdom_mormonsupports_karen } }
 		}
 		trigger = {
-			religion = true_cross
+			religion = neogodbeite
 			NOT = { has_character_flag = broke_california_again }
 		}
 	}
@@ -932,7 +932,7 @@ narrative_event = {
 		}
 		trigger = {
 			NOR = {
-				religion = true_cross
+				religion = neogodbeite
 				religion = cetic
 				has_character_flag = broke_california_again
 			}
@@ -973,14 +973,14 @@ narrative_event = {
 	option = {
 		name = EVTOPTB_heavenlykingdom_success
 		trigger = {
-			religion = true_cross
+			religion_group = latter_day_saints
 		}
 	}
 	option = {
 		name = EVTOPTC_heavenlykingdom_success
 		trigger = {
 			NOR = {
-				religion = true_cross
+				religion_group = latter_day_saints
 				religion = cetic
 			}
 		}
@@ -1006,14 +1006,14 @@ narrative_event = {
 	option = {
 		name = EVTOPTB_heavenlykingdom_fail
 		trigger = {
-			religion = true_cross
+			religion_group = latter_day_saints
 		}
 	}
 	option = {
 		name = EVTOPTC_heavenlykingdom_fail
 		trigger = {
 			NOR = {
-				religion = true_cross
+				religion_group = latter_day_saints
 				religion = cetic
 			}
 		}
@@ -1031,11 +1031,11 @@ province_event = {
 		OR = {
 			AND = {
 				has_global_flag = heavenlykingdom_mormonsupports_karen
-				NOT = { religion = true_cross }
+				NOT = { religion = mormon }
 			}
 			AND = {
 				NOT = { has_global_flag = heavenlykingdom_mormonsupports_karen }
-				NOT = { religion = true_cross }
+				NOT = { religion = neogodbeite }
 			}
 		}
 		e_heaven = { has_holder = yes }		
@@ -1056,10 +1056,10 @@ province_event = {
 	immediate = {
 		if = {
 			limit = { has_global_flag = heavenlykingdom_mormonsupports_karen }
-			religion = true_cross
+			religion = mormon
 		}
 		else = {
-			religion = true_cross
+			religion = neogodbeite
 		}
 	}
 	
