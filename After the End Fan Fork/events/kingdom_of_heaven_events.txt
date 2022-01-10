@@ -376,7 +376,7 @@ narrative_event = {
 				create_character = {
 					name="Karen"
 					dynasty = culture
-					culture = calaotian
+					culture = valleyan
 					female = yes
 					age = 37
 					health = 6.5
@@ -395,7 +395,7 @@ narrative_event = {
 					trait = holy_warrior
 					trait = inspiring_leader
 					trait = brave
-					trait = reincarnation
+					trait = reincarnation_mormon
 					attributes = {
 						learning = 8
 						diplomacy = 6
@@ -406,7 +406,7 @@ narrative_event = {
 				}
 	
 				new_character = { #rejigger troop counts so its not just consumerist uprising 2
-					set_dynasty_name = "Heavenly Empress"
+					set_dynasty_name = "Morris"
 					set_character_flag = heavenly_kingdom_cb
 					set_character_flag = moroni_incarnate
 					#save_global_event_target_as = karen_moroni_incarnate
@@ -985,6 +985,26 @@ narrative_event = {
 			}
 		}
 	}
+	option = {
+		name = EVTOPTD_heavenlykingdom_success
+		tooltip_info = yes
+
+        if = {
+            limit = {
+                event_target:mormon_gf = {
+                    is_alive = yes
+                    ai = yes
+                    any_demesne_title = {
+                        tier = COUNT
+                    }
+                }
+            }
+            custom_tooltip = {
+                text = player_character_gf_TT
+                set_player_character = event_target:mormon_gf
+            }
+        }
+    }
 }
 
 narrative_event = {
@@ -1065,5 +1085,16 @@ province_event = {
 	
 	option = {
 		name = EVTOPT_heavenlykingdom_conversion
+	}
+}
+
+narrative_event = {
+	id = heavenlykingdom.11
+	hide_window = yes
+	
+	immediate = {
+            save_event_target_as = mormon_gf
+			set_character_flag = mormon_gf
+			narrative_event = { id = heavenlykingdom.8 }
 	}
 }
