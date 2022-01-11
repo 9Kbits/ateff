@@ -132,12 +132,32 @@ e_heaven = {
 
 	capital = 2046 # c_sacramento
 	
-	name_tier = king
+	title_prefix = HEAVENLY_KINGDOM_OF
 	
-	short_name = yes
+	title = "KING"
+	title_female = "QUEEN"
+	
+#	short_name = yes
 	
 	allow = {
-		always = no # Only created through special event
+		conditional_tooltip = {
+			trigger = {
+				NOT = {
+					religion_group = latter_day_saints
+				}
+			}
+			religion_group = latter_day_saints
+		}
+		conditional_tooltip = {
+			trigger = {
+				e_heaven = {
+					is_titular = yes
+				}
+			}
+			e_heaven = {
+				is_titular = no
+			}
+		}
 	}
 }
 

@@ -891,6 +891,34 @@ narrative_event = {
 	option = {
 		name = "EVTOPTA_hcc_heartbreaker_war"
 		add_claim = e_dixie
+		create_title = {
+			tier = EMPEROR
+			landless = yes
+			temporary = yes
+			culture = ROOT
+			name = HEARTBREAKER_REVOLT
+			holder = ROOT
+		}
+		capital_scope = {
+            ROOT = {
+                spawn_unit = {
+					owner = THIS
+                    province = PREV
+					home = ROOT
+
+					troops = {
+						archers = { 1000 1000 }
+						light_infantry = { 3000 3000 }
+						heavy_infantry = { 2000 2000 }
+						light_cavalry = { 1000 1000 }
+					}
+
+					attrition = 1.0
+					disband_on_peace = yes
+					maintenance_multiplier = 0
+				}
+			}
+		}
 		e_dixie = {
 			holder_scope = {
 				reverse_war = {
