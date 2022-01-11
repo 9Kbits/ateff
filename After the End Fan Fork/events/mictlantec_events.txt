@@ -155,37 +155,12 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPT_mictlan_picksac
-		hidden_tooltip = {
-			if = {
-				limit = { 
-					any_courtier = {
-						prisoner = yes
-						host = { character = ROOT }
-					}
-				}
-				any_courtier = {
-					limit = { 
-						prisoner = yes 
-						host = { character = ROOT }
-					}
-					character_event = { id = mictlan.11 }
-				}
-				character_event = { id = mictlan.20 days = 2 }
-			}
-			if = {
-				limit = { 
-					NOT = {
-						any_courtier = {
-							prisoner = yes
-							host = { character = ROOT }
-						}
-					}
-				}
-				character_event = { id = mictlan.15 }
-			}
+		hidden_tooltip = {		
+			character_event = { id = mictlan.20 days = 2 }
 		}
 		custom_tooltip = { text = TXT_choose_sac }
 		ai_chance = { factor = 10 }
+		cash = -100
 	}
 	
 	option = {
@@ -200,19 +175,6 @@ narrative_event = {
 	}
 }
 
-narrative_event = {
-	id = mictlan.11
-	title = EVTNAME_mictlan_victim
-	desc = EVTDESC_mictlan_victim
-	picture = GFX_evt_mictlantec_sacrifice
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_mictlan_victim
-		FROM = { character_event = { id = mictlan.12 } }
-	}
-}
 
 narrative_event = {
 	id = mictlan.12
