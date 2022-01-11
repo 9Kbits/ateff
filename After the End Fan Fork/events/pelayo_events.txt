@@ -120,6 +120,7 @@ long_character_event = {
 		has_landed_title = k_sierra_madre
 		c_2302227 = {
 			has_landed_title = d_transpecos #You can't have this event fire if the Don lost
+			NOT = { has_landed_title = k_sierra_madre }
 		}
 		NOT = { has_character_flag = luisawnser }
 	}
@@ -175,6 +176,7 @@ character_event = {
 	prisoner = no
 	trigger = {
 		has_character_flag = pelayo4
+		has_character_flag = victory_royale
 	}
 	mean_time_to_happen = {
 		days = 15
