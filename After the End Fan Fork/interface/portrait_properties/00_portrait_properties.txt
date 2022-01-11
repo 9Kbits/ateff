@@ -4766,12 +4766,16 @@
 			factor = 0
 			NOR = { 
 				any_artifact = {
-					artifact_type = dogwood_crown
-					artifact_type = restored_dogwood_crown
+					OR = {
+						artifact_type = dogwood_crown
+						artifact_type = restored_dogwood_crown
+					}
 					is_artifact_equipped = yes 
 				}
-				trait = dead_dogwood_crown
-				trait = dead_restored_dogwood_crown
+				OR = {
+					trait = dead_dogwood_crown
+					trait = dead_restored_dogwood_crown
+				}
 			}
 		}
 	}
