@@ -1,4 +1,4 @@
-decisions = {       
+decisions = {      
 	enforce_orthodoxy = {
 		only_independent = yes
 		is_high_prio = yes
@@ -111,6 +111,7 @@ decisions = {
 		effect = {
 			narrative_event = { id = MXR.210 tooltip = EVTTOOLTIPMXR.210}
 			set_global_flag = orthodoxy_enforced
+
 		}
 		ai_will_do = {
 			factor = 1
@@ -197,69 +198,5 @@ decisions = {
 		ai_will_do = {
 			factor = 0
 		}
-	}
-}
-	
-narrative_event = {
-	id = MXR.210
-	title = EVTNAMEMXR.210
-	desc = EVTDESCMXR.210
-	
-	picture = GFX_evt_icon
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTAMXR.200
-
-		if = {
-			limit = { religion = cristo_rey }
-		}
-		if = {
-			limit = { religion = reformista }
-		}
-
-		set_global_flag = orthodoxy_enforced
-		give_nickname = nick_the_saint
-		hidden_tooltip = {
-			any_playable_ruler = {
-				limit = {
-					religion = sacred_heart
-					controls_religion = no
-				}
-				narrative_event = { id = MXR.211 }
-			}
-		}
-	}
-}
-
-# Convert or Not?
-narrative_event = {
-	id = MXR.211
-	title = EVTNAMEMXR.210
-	desc = EVTDESCMXR.210
-	
-	picture = GFX_evt_icon
-	
-	is_triggered_only = yes
-	
-	option = { # Yes
-		name = EVTOPTAMXR.211
-		ai_chance = { factor = 75 }
-		religion = FROM
-		any_courtier = {
-			limit = {
-				religion = sacred_heart
-				liege = { character = ROOT }
-			}
-			religion = FROM
-		}
-		capital_scope = {
-			religion = FROM
-		}
-	}
-	option = { # No
-		name = EVTOPTBMXR.211
-		ai_chance = { factor = 25 }
 	}
 }
