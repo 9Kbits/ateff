@@ -89,4 +89,29 @@ character_event = { # Make all existing descendants also yashamal descendants
 	}
 }
 
-#Sandman stuff: TODO maybe
+character_event = {
+	id = orientalist.4
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	has_dlc = "The Old Gods"
+	has_global_flag = ya_shamal_declared
+	
+	trigger = {
+		OR = {
+			mother = { trait = ya_shamal }
+			father = { trait = ya_shamal }
+			mother = { trait = ya_shamal_descendant }
+			father = { trait = ya_shamal_descendant } 
+		}
+		NOT = { trait = ya_shamal_descendant }
+	}
+	
+	immediate = {
+		add_trait = ya_shamal_descendant
+		any_child = {
+			character_event = { id = orientalist.4 }
+		}
+	}
+}
