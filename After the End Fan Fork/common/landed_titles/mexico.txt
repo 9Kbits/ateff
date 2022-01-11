@@ -28,67 +28,73 @@ e_mexico = {
 	k_colima = {
 		color={ 45 141 236 }
 		color2={ 255 255 255 }
+		
+		#Crusade target weight
+		lamanita = 100
 
 		capital = 1749 # c_colima
-	}
 	
-	allow = {
-		conditional_tooltip = {
-			trigger = {
-				e_mexico = {
-					any_direct_de_jure_vassal_title = {
-						owner = {
-							NOT = {
-								religion_group = ROOT
+		allow = {
+			conditional_tooltip = {
+				trigger = {
+					e_mexico = {
+						any_direct_de_jure_vassal_title = {
+							owner = {
+								NOT = {
+									religion_group = ROOT
+								}
 							}
 						}
 					}
+					has_dlc = "Holy Fury"
 				}
-				has_dlc = "Holy Fury"
-			}
 
-			custom_tooltip = {
-				text = e_mexico_allow_TT
+				custom_tooltip = {
+					text = e_mexico_allow_TT
 
-				always = no
-			}
-		}
-		conditional_tooltip = {
-			trigger = {
-				has_global_flag = active_reconquista
-			}
-
-			custom_tooltip = {
-				text = active_reconquista_condition_TT
-
-				always = no
-			}
-		}
-	}
-
-	gain_effect = {
-		if = {
-			limit = {
-				NOT = {
-					has_global_flag = reconquista_finished
+					always = no
 				}
 			}
+			conditional_tooltip = {
+				trigger = {
+					has_global_flag = active_reconquista
+				}
 
-			any_playable_ruler = {
-				narrative_event = { id = HF.49451 }
+				custom_tooltip = {
+					text = active_reconquista_condition_TT
+
+					always = no
+				}
 			}
+		}
 
-			ROOT = {
-				narrative_event = { id = HF.49451 }
+		gain_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = reconquista_finished
+					}
+				}
+
+				any_playable_ruler = {
+					narrative_event = { id = HF.49451 }
+				}
+
+				ROOT = {
+					narrative_event = { id = HF.49451 }
+				}
+
+				set_global_flag = reconquista_finished
 			}
-
-			set_global_flag = reconquista_finished
 		}
 	}
 
 	k_bajio = {
 		color={ 246 249 176 }
 		color2={ 255 255 255 }
+		
+		#Crusade target weight
+		lamanita = 100
 		
 		capital = 1788 # c_guanajuato
 		
@@ -271,6 +277,9 @@ e_mexico = {
 		color={ 201 41 24 }
 		color2={ 255 255 255 }
 		
+		#Crusade target weight
+		lamanita = 100
+		
 		capital = 1736 # c_zacatecas
 		
 		d_salado = {
@@ -450,6 +459,9 @@ e_mexico = {
 		color={ 67 145 161 }
 		color2={ 255 255 255 }
 		
+		#Crusade target weight
+		lamanita = 100
+		
 		capital = 1740 # c_guadalajara
 		
 		nahua = "Xalixco"
@@ -614,6 +626,9 @@ e_mexico = {
 	k_mexico = {
 		color = { 0 104 71 }
 		color2= { 220 220 0 }
+		
+		#Crusade target weight
+		lamanita = 500
 		
 		capital = 1767 # c_mexico
 	
@@ -938,6 +953,9 @@ e_mexico = {
 		color={ 0.65 0.5 0.05 }
 		color2={ 255 255 255 }
 		
+		#Crusade target weight
+		lamanita = 500
+		
 		capital = 1778 # c_xalapa
 		
 		d_veracruz = {
@@ -1134,6 +1152,9 @@ e_mexico = {
 	k_michoacan = {
 		color={ 84 50 90 }
 		color2={ 255 255 255 }
+		
+		#Crusade target weight
+		lamanita = 100
 		
 		capital = 1754 # c_patzcuaro
 		
@@ -1356,6 +1377,9 @@ e_mexico = {
 	k_oaxaca = {
 		color={ 91 61 155 } 
 		color2={ 255 255 255 }
+		
+		#Crusade target weight
+		lamanita = 500
 		
 		capital = 1793 # c_oaxaca
 		
@@ -1606,6 +1630,9 @@ e_mexico = {
 	k_mixteca = {
 		color={ 150 0 0 }
 		color2={ 255 255 255 }
+		
+		#Crusade target weight
+		lamanita = 500
 		
 		capital = 1801 # c_chilpancingo
 		
