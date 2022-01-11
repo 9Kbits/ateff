@@ -1030,6 +1030,8 @@ character_event = {
 			remove_trait = marian_guadalupe
 			remove_trait = marian_el_santo
 			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
 		}
 		add_trait = marian_guadalupe
 		ai_chance = {
@@ -1057,6 +1059,8 @@ character_event = {
 			remove_trait = marian_guadalupe
 			remove_trait = marian_el_santo
 			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
 		}
 		add_trait = marian_el_santo
 		ai_chance = {
@@ -1077,6 +1081,50 @@ character_event = {
 	
 	option = {
 		name = EVTOPTD_sacredheart_150
+		character_event = { id = sacredheart.151 }
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+# Choose patron deity
+character_event = {
+	id = sacredheart.151
+	desc = EVTDESC_sacredheart_150
+	picture = GFX_evt_bishop
+	is_triggered_only = yes
+	
+	option = {
+		name = EVTOPTA_sacredheart_151
+		trigger = {
+			NOT = { trait = marian_san_charbel }
+		}
+		hidden_tooltip = {
+			remove_trait = marian_guadalupe
+			remove_trait = marian_el_santo
+			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
+		}
+		add_trait = marian_san_charbel
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = mastermind_theologian }
+			modifier = { factor = 4	trait = scholarly_theologian }
+			modifier = { factor = 3	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 4	trait = theologian }
+			modifier = { factor = 3	trait = scholar }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.5 trait = humble }
+			modifier = { factor = 0.2 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTB_sacredheart_151
 		trigger = {
 			NOT = { trait = marian_santa_muerte }
 		}
@@ -1084,6 +1132,8 @@ character_event = {
 			remove_trait = marian_guadalupe
 			remove_trait = marian_el_santo
 			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
 		}
 		add_trait = marian_santa_muerte
 		ai_chance = {
@@ -1106,6 +1156,43 @@ character_event = {
 			modifier = { factor = 0.3 trait = just }
 			modifier = { factor = 0.3 trait = honest }
 			modifier = { factor = 0.3 trait = content }
+		}
+	}
+	
+	option = {
+		name = EVTOPTC_sacredheart_151
+		trigger = {
+			NOT = { trait = marian_san_juditas }
+		}
+		hidden_tooltip = {
+			remove_trait = marian_guadalupe
+			remove_trait = marian_el_santo
+			remove_trait = marian_santa_muerte
+			remove_trait = marian_san_charbel
+			remove_trait = marian_san_juditas
+		}
+		add_trait = marian_san_juditas
+		ai_chance = {
+			factor = 10
+			modifier = { factor = 5	trait = mastermind_theologian }
+			modifier = { factor = 4	trait = scholarly_theologian }
+			modifier = { factor = 3	trait = martial_cleric }
+			modifier = { factor = 2	trait = detached_priest }
+			modifier = { factor = 4	trait = theologian }
+			modifier = { factor = 3	trait = scholar }
+			modifier = { factor = 2	trait = mystic }
+			modifier = { factor = 2	trait = zealous }
+			modifier = { factor = 1.5 trait = diligent }
+			modifier = { factor = 1.5 trait = humble }
+			modifier = { factor = 0.2 trait = cynical }
+		}
+	}
+	
+	option = {
+		name = EVTOPTD_sacredheart_151
+		character_event = { id = sacredheart.150 }
+		ai_chance = {
+			factor = 50
 		}
 	}
 }
