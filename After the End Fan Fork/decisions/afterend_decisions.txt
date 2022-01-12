@@ -4718,43 +4718,6 @@ decisions = {
 			modifier = { factor = 2	trait = brave }
 		}
 	}
-	
-	charismatic_prophecy = {
-		is_high_prio = yes
-		ai_check_interval = 12
-		potential = {
-			religion = charismatic
-			is_adult = yes
-			NOT = { 
-				trait = incapable 
-			}	
-			NOT = {
-				has_character_flag = charismatic_prophecy_current
-			}
-		}
-		allow = {
-			piety = 50
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = { 
-				factor = 5 
-				OR = {
-					trait = zealous
-				}
-			}
-		}
-		effect = {
-			piety = -50
-			custom_tooltip = {
- 			text = CHARISMATIC_GIFT_OF_PROPHECY
-			}
-			hidden_effect={
-				narrative_event = { id = charismatic.1 }
-			}
-		}
-	}
-	
 	cristero_peasant_army = {
 		is_high_prio = yes
 		ai_check_interval = 12

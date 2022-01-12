@@ -10800,6 +10800,144 @@ castle = {
 		
 		extra_tech_building_start = 0.8
 	}
+	#Raramuri Rarajipari Arena
+	ca_culture_raramuri_1 = {
+		desc = ca_culture_raramuri_1_desc
+		potential = {
+			OR = {
+				terrain = hills
+				terrain = mountains
+			}
+			OR = {
+				culture = raramuri
+				has_building = ca_culture_raramuri_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = raramuri
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 0
+			ROOT = {
+				culture = raramuri
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		light_infantry = 10
+		archers = 20
+		global_movement_speed = 0.01
+		ai_creation_factor = 101
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_raramuri_2 = {
+		desc = ca_culture_raramuri_1_desc
+		potential = {
+			OR = {
+				terrain = hills
+				terrain = mountains
+			}
+			OR = {
+				culture = raramuri
+				has_building = ca_culture_raramuri_1
+				has_building = ca_culture_raramuri_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = raramuri
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				culture = raramuri
+			}
+		}
+		upgrades_from = ca_culture_raramuri_1
+		gold_cost = 300
+		build_time = 1095
+		light_infantry = 30
+		archers = 40
+		global_movement_speed = 0.02
+		ai_creation_factor = 100
+
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_raramuri_3 = {
+		desc = ca_culture_raramuri_1_desc
+		potential = {
+			OR = {
+				terrain = hills
+				terrain = mountains
+			}
+			OR = {
+				culture = raramuri
+				has_building = ca_culture_raramuri_1
+				has_building = ca_culture_raramuri_2
+				has_building = ca_culture_raramuri_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = raramuri
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				culture = raramuri
+			}
+		}
+		upgrades_from = ca_culture_raramuri_2
+		gold_cost = 400
+		build_time = 2190
+		light_infantry = 80
+		archers = 40
+		global_movement_speed = 0.03
+		ai_creation_factor = 99
+
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_raramuri_4 = {
+		desc = ca_culture_raramuri_1_desc
+		potential = {
+			OR = {
+				terrain = hills
+				terrain = mountains
+			}
+			OR = {
+				culture = raramuri
+				has_building = ca_culture_raramuri_1
+				has_building = ca_culture_raramuri_2
+				has_building = ca_culture_raramuri_3
+				has_building = ca_culture_raramuri_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = raramuri
+			}
+		}
+		trigger = {
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				culture = raramuri
+			}
+		}
+		upgrades_from = ca_culture_raramuri_3
+		gold_cost = 500
+		build_time = 2190
+		light_infantry = 120
+		archers = 60
+		global_movement_speed = 0.05
+		ai_creation_factor = 98
+
+		extra_tech_building_start = 0.8
+	}
 	
 	#Yaqui Cavalry
 	ca_culture_yaqui_1 = {
@@ -10841,20 +10979,20 @@ castle = {
 				terrain = mountains
 			}
 			OR = {
-				culture = scottish
+				culture = yaqui
 				has_building = ca_culture_yaqui_1
 				has_building = ca_culture_yaqui_2
 			}
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = scottish
+				culture = yaqui
 			}
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 1
 			ROOT = {
-				culture = scottish
+				culture = yaqui
 			}
 		}
 		upgrades_from = ca_culture_yaqui_1
@@ -10878,7 +11016,7 @@ castle = {
 				terrain = mountains
 			}
 			OR = {
-				culture = scottish
+				culture = yaqui
 				has_building = ca_culture_yaqui_1
 				has_building = ca_culture_yaqui_2
 				has_building = ca_culture_yaqui_3
@@ -10886,13 +11024,13 @@ castle = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = scottish
+				culture = yaqui
 			}
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 2
 			ROOT = {
-				culture = scottish
+				culture = yaqui
 			}
 		}
 		upgrades_from = ca_culture_yaqui_2
@@ -10915,7 +11053,7 @@ castle = {
 				terrain = mountains
 			}
 			OR = {
-				culture = scottish
+				culture = yaqui
 				has_building = ca_culture_yaqui_1
 				has_building = ca_culture_yaqui_2
 				has_building = ca_culture_yaqui_3
@@ -10924,13 +11062,13 @@ castle = {
 		}
 		is_active_trigger = {
 			ROOT = {
-				culture = scottish
+				culture = yaqui
 			}
 		}
 		trigger = {
 			TECH_CASTLE_CONSTRUCTION = 4
 			ROOT = {
-				culture = scottish
+				culture = yaqui
 			}
 		}
 		upgrades_from = ca_culture_yaqui_3

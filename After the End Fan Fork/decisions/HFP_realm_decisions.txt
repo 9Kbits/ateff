@@ -14,7 +14,10 @@ decisions = {
 			NOT = {
 				higher_tier_than = DUKE
 			}
-			culture = neomexicano
+			OR = {
+				culture = neomexicano
+				culture = arixan
+			}
 			k_new_mexico = {
 				has_holder = no
 			}
@@ -41,7 +44,10 @@ decisions = {
 			is_adult = yes
 			independent = yes
 			war = no
-			culture = neomexicano
+			OR = {
+				culture = neomexicano
+				culture = arixan
+			}
 			has_landed_title = d_new_mexico
 			NOT = {
 				is_incapable = yes
@@ -576,7 +582,7 @@ decisions = {
 				d_sowega = {
 					de_jure_liege = k_georgia_grand_duchy
 				}
-				d_d_agusta = {
+				d_agusta = {
 					de_jure_liege = k_georgia_grand_duchy
 				}
 				e_dixie = {

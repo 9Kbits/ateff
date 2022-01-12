@@ -1028,12 +1028,13 @@ character_event = {
 	religion = patria_grande
 	
 	trigger = {
+		is_save_game = no
 		has_character_flag = bayardo
 	}
 	
 	immediate = {
 		narrative_event = { id = patria.45 years = 2 }
-		character_event = { id = patria.46 years = 3 }
+		long_character_event = { id = patria.46 years = 3 }
 	}
 }
 
@@ -1042,9 +1043,9 @@ narrative_event = {
 	title = EVTTITLE_patria_45
 	desc = EVTDESC_patria_45
 	picture = GFX_evt_melee
-	border = GFX_event_normal_frame_diplomacy
+	border = GFX_event_narrative_frame_diplomacy
 	is_triggered_only = yes
-	religion = patria_grande
+	# religion = patria_grande
 	
 	trigger = {
 		has_character_flag = bayardo
@@ -1059,11 +1060,11 @@ narrative_event = {
 	}
 }
 
-character_event = {
+long_character_event = {
 	id = patria.46
 	desc = EVTDESC_patria_46
 	picture = GFX_evt_knight_kneeling
-	border = GFX_event_normal_frame_diplomacy
+	border =  GFX_event_long_frame_war
 	is_triggered_only = yes
 	religion = patria_grande
 	

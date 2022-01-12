@@ -753,7 +753,7 @@ character_event = {
 					trait = freckles_5
 				} 
 			}
-			real_father_even_if_dead = { 
+			father_even_if_dead = { 
 				OR = { 
 					trait = freckles_3
 					trait = freckles_2
@@ -773,7 +773,7 @@ character_event = {
 					#}
 				} 
 			}
-			real_father_even_if_dead = { 
+			father_even_if_dead = { 
 				OR = { 
 					graphical_culture = norsegfx
 					graphical_culture = saxongfx
@@ -784,8 +784,8 @@ character_event = {
 					#}
 				} 
 			}
-			real_father_even_if_dead = { 
-				real_father_even_if_dead = { 
+			father_even_if_dead = { 
+				father_even_if_dead = { 
 					OR = { 
 						graphical_culture = norsegfx
 						graphical_culture = saxongfx
@@ -822,12 +822,12 @@ character_event = {
 				}
 				modifier = { 
 					factor = 5
-					real_father_even_if_dead = { trait = freckles_5 }
+					father_even_if_dead = { trait = freckles_5 }
 				}
 				#Grandparents
 				modifier = { 
 					factor = 4
-					real_father_even_if_dead = { real_father_even_if_dead = { trait = freckles_5 } }
+					father_even_if_dead = { father_even_if_dead = { trait = freckles_5 } }
 				}
 				modifier = { 
 					factor = 4
@@ -840,12 +840,12 @@ character_event = {
 				}
 				modifier = { 
 					factor = 3
-					real_father_even_if_dead = { trait = freckles_4 }
+					father_even_if_dead = { trait = freckles_4 }
 				}
 				#Grandparents
 				modifier = { 
 					factor = 2
-					real_father_even_if_dead = { real_father_even_if_dead = { trait = freckles_4 } }
+					father_even_if_dead = { father_even_if_dead = { trait = freckles_4 } }
 				}
 				modifier = { 
 					factor = 2
@@ -854,7 +854,7 @@ character_event = {
 				#Multiplier bonus	
 				modifier = { 
 					factor = 2
-					real_father_even_if_dead = { trait = freckles_4 }
+					father_even_if_dead = { trait = freckles_4 }
 					mother_even_if_dead = { trait = freckles_4 }
 				}
 				#The thickest versions should only appear if a parent already has the freckles gene, not appear out of nowhere.
@@ -868,7 +868,7 @@ character_event = {
 							trait = freckles_5
 						} 	
 					}
-					real_father_even_if_dead = { 
+					father_even_if_dead = { 
 						OR = { 
 							trait = freckles_3
 							trait = freckles_2
@@ -887,12 +887,12 @@ character_event = {
 				}
 				modifier = { 
 					factor = 4
-					real_father_even_if_dead = { trait = freckles_4 }
+					father_even_if_dead = { trait = freckles_4 }
 				}
 				#Grandparents
 				modifier = { 
 					factor = 3
-					real_father_even_if_dead = { real_father_even_if_dead = { trait = freckles_4 } }
+					father_even_if_dead = { father_even_if_dead = { trait = freckles_4 } }
 				}
 				modifier = { 
 					factor = 3
@@ -905,12 +905,12 @@ character_event = {
 				}
 				modifier = { 
 					factor = 2
-					real_father_even_if_dead = { trait = freckles }
+					father_even_if_dead = { trait = freckles }
 				}
 				#Grandparents
 				modifier = { 
 					factor = 1.5
-					real_father_even_if_dead = { real_father_even_if_dead = { trait = freckles } }
+					father_even_if_dead = { father_even_if_dead = { trait = freckles } }
 				}
 				modifier = { 
 					factor = 1.5
@@ -919,7 +919,7 @@ character_event = {
 				#Multiplier bonus	
 				modifier = { 
 					factor = 2
-					real_father_even_if_dead = { trait = freckles }
+					father_even_if_dead = { trait = freckles }
 					mother_even_if_dead = { trait = freckles }
 				}
 				#The thickest versions should only appear if a parent already has the freckles gene, not appear out of nowhere.
@@ -933,7 +933,7 @@ character_event = {
 							trait = freckles_5
 						} 	
 					}
-					real_father_even_if_dead = { 
+					father_even_if_dead = { 
 						OR = { 
 							trait = freckles_3
 							trait = freckles_2
@@ -952,12 +952,12 @@ character_event = {
 				}
 				modifier = { 
 					factor = 4
-					real_father_even_if_dead = { trait = freckles }
+					father_even_if_dead = { trait = freckles }
 				}
 				#Grandparents
 				modifier = { 
 					factor = 3
-					real_father_even_if_dead = { real_father_even_if_dead = { trait = freckles } }
+					father_even_if_dead = { father_even_if_dead = { trait = freckles } }
 				}
 				modifier = { 
 					factor = 3
@@ -970,12 +970,12 @@ character_event = {
 				}
 				modifier = { 
 					factor = 2
-					real_father_even_if_dead = { trait = freckles_2 }
+					father_even_if_dead = { trait = freckles_2 }
 				}
 				#Grandparents
 				modifier = { 
 					factor = 1.5
-					real_father_even_if_dead = { real_father_even_if_dead = { trait = freckles_2 } }
+					father_even_if_dead = { father_even_if_dead = { trait = freckles_2 } }
 				}
 				modifier = { 
 					factor = 1.5
@@ -984,7 +984,7 @@ character_event = {
 				#Multiplier bonus	
 				modifier = { 
 					factor = 2
-					real_father_even_if_dead = { trait = freckles_2 }
+					father_even_if_dead = { trait = freckles_2 }
 					mother_even_if_dead = { trait = freckles_2 }
 				}
 				#The thickest versions should only appear if a parent already has the freckles gene, not appear out of nowhere.
@@ -998,7 +998,7 @@ character_event = {
 							trait = freckles_5
 						} 	
 					}
-					real_father_even_if_dead = { 
+					father_even_if_dead = { 
 						OR = { 
 							trait = freckles_3
 							trait = freckles_2
@@ -1017,12 +1017,12 @@ character_event = {
 				}
 				modifier = { 
 					factor = 4
-					real_father_even_if_dead = { trait = freckles_2 }
+					father_even_if_dead = { trait = freckles_2 }
 				}
 				#Grandparents
 				modifier = { 
 					factor = 3
-					real_father_even_if_dead = { real_father_even_if_dead = { trait = freckles_2 } }
+					father_even_if_dead = { father_even_if_dead = { trait = freckles_2 } }
 				}
 				modifier = { 
 					factor = 3
@@ -1035,12 +1035,12 @@ character_event = {
 				}
 				modifier = { 
 					factor = 2
-					real_father_even_if_dead = { trait = freckles_3 }
+					father_even_if_dead = { trait = freckles_3 }
 				}
 				#Grandparents
 				modifier = { 
 					factor = 1.5
-					real_father_even_if_dead = { real_father_even_if_dead = { trait = freckles_3 } }
+					father_even_if_dead = { father_even_if_dead = { trait = freckles_3 } }
 				}
 				modifier = { 
 					factor = 1.5
@@ -1049,7 +1049,7 @@ character_event = {
 				#Multiplier bonus	
 				modifier = { 
 					factor = 2
-					real_father_even_if_dead = { trait = freckles_3 }
+					father_even_if_dead = { trait = freckles_3 }
 					mother_even_if_dead = { trait = freckles_3 }
 				}
 			}
@@ -1061,12 +1061,12 @@ character_event = {
 				}
 				modifier = { 
 					factor = 2
-					real_father_even_if_dead = { trait = freckles_3 }
+					father_even_if_dead = { trait = freckles_3 }
 				}
 				#Grandparents
 				modifier = { 
 					factor = 1.5
-					real_father_even_if_dead = { real_father_even_if_dead = { trait = freckles_3 } }
+					father_even_if_dead = { father_even_if_dead = { trait = freckles_3 } }
 				}
 				modifier = { 
 					factor = 1.5

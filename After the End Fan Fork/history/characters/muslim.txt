@@ -188,14 +188,12 @@
 	disallow_random_traits=yes
 	give_nickname=nick_the_pure
 	2320.1.15={birth=yes}
-	2368.4.1={add_spouse=2500113}
 	2389.9.11={death=yes}
 }
 2200009={
 	name="Musa" #Governor, bent the knee
 	dynasty=2030000# Abbas
 	father=2200008
-	mother=2500113
 	culture=anjalusi
 	religion=imamite
 	trait=sayyid2
@@ -1012,8 +1010,7 @@
 }
 2200051={
 	name="Friedrich" 
-	dynasty=2029091
-	father=6900006
+	dynasty=2029081
 	female=no
 	martial=7
 	diplomacy=4
@@ -1063,9 +1060,7 @@
 }
 2200053={
 	name="Sigfried" 
-	dynasty=2029091
-	father=2200051
-	mother=2200052
+	dynasty=0
 	female=no
 	martial=9
 	diplomacy=4
@@ -1086,7 +1081,7 @@
 }
 2200054={
 	name="Irasvel"
-	dynasty=2029091
+	dynasty=0
 	dna="ccbjdjbdibg"
 	father=2200051
 	mother=2200052
@@ -1501,7 +1496,6 @@
 	name="Ahmad" #Alawiyya Rebellion Host
 	dynasty=2030000# Abbas
 	father=2200008
-	mother=2500113
 	culture=anjalusi
 	religion=alawiyya
 	trait=sayyid2
@@ -3189,40 +3183,6 @@
 	2593.6.21={add_spouse=1384027}
 	2601.2.14={death=yes}
 }
-2500113={
-	name="Sari"
-	culture=greek
-	female=yes
-	dynasty=1851169 #taylor
-	religion=reform
-	trait=grey_eminence
-	trait=fair
-	trait=seductress
-	trait=ambitious
-	trait=lustful
-	trait=kind
-	trait=charitable
-	trait=brave
-	trait=kinslayer
-	trait=sympathy_islam
-	disallow_random_traits=yes
-	give_nickname=nick_the_temptress
-	2330.7.2={birth=yes
-		culture=angeleno
-	}
-	2347.6.21={add_spouse=2500114}
-	2348.3.15={add_spouse=2500115}
-	2350.1.2={add_spouse=2500116}
-	2353.1.1={add_spouse=2500117}
-	2353.9.1={add_spouse=2500118}
-	2355.1.1={add_spouse=2500119}
-	2358.1.1={add_spouse=2500120}
-	2360.9.1={add_spouse=2500121}
-	2365.3.1={add_spouse=2500122}
-	2365.3.1={add_spouse=2500123}
-	2368.4.1={add_spouse=2200008}
-	2390.12.25={death=yes}
-}
 2500114={
 	name="Sean"
 	culture=valleyan
@@ -3237,7 +3197,6 @@
 	disallow_random_traits=yes
 	give_nickname=nick_the_big
 	2300.7.2={birth=yes}
-	2347.6.21={add_spouse=2500113}
 	2348.3.14={death={
 			death_reason=death_murder
 			killer=2500115
@@ -3259,7 +3218,6 @@ name="Ammon"
 	disallow_random_traits=yes
 	give_nickname=nick_the_suspicious
 	2330.8.1={birth=yes}
-	2348.3.15={add_spouse=2500113}
 	2350.1.1={death={
 			death_reason=death_battle
 			killer=2500116
@@ -3280,7 +3238,6 @@ name="Guy"
 	disallow_random_traits=yes
 	give_nickname=nick_the_avenger
 	2320.8.1={birth=yes}
-	2350.1.2={add_spouse=2500113}
 	2352.1.1={death=yes}
 	}
 2500117={
@@ -3295,10 +3252,8 @@ name="Maximiliano"
 	trait=infirm
 	disallow_random_traits=yes
 	2305.8.1={birth=yes}
-	2353.1.1={add_spouse=2500113}
 	2353.8.1={death={
 			death_reason=death_murder_unknown
-			killer=2500113
 		}
 	}
 }
@@ -3314,7 +3269,6 @@ name="Gelett"
 	trait=greedy
 	disallow_random_traits=yes
 	2300.8.1={birth=yes}
-	2353.9.1={add_spouse=2500113}
 	2354.10.1={death=yes}
 	}
 2500119={
@@ -3327,11 +3281,9 @@ name="Gelett"
 	trait=shrewd
 	trait=proud
 	2321.1.1={birth=yes}
-	2355.1.1={add_spouse=2500113}
 	2357.12.3={
 		death={
 			death_reason=death_murder
-			killer=2500113
 		}
 	}
 }
@@ -3347,7 +3299,6 @@ name="Peter"
 	trait=just
 	disallow_random_traits=yes
 	2310.8.1={birth=yes}
-	2358.1.1={add_spouse=2500113}
 	2359.10.1={death={
 			death_reason=death_accident
 		}
@@ -3365,7 +3316,6 @@ name="Don"
 	trait=schemer
 	disallow_random_traits=yes
 	2340.8.1={birth=yes}
-	2360.9.1={add_spouse=2500113}
 	2364.10.1={death=yes}
 	}
 2500122={
@@ -3381,7 +3331,6 @@ name="Elfie"
 	trait=humble
 	disallow_random_traits=yes
 	2320.8.1={birth=yes}
-	2365.3.1={add_spouse=2500113}
 	2367.10.1={death=yes}
 	}
 2500123={
@@ -3398,9 +3347,7 @@ name="Elfie"
 	trait=sympathy_islam
 	trait=sympathy_judaism
 	father=2500119
-	mother=2500113
 	2348.7.5={birth=yes}
-	2365.3.1={add_spouse=2500113}
 	2415.9.2={death=yes}
 }
 2500124={
@@ -3430,7 +3377,6 @@ name="Elfie"
 	dynasty=1851168 #gus
 	religion=hamiltonian
 	father=2500115
-	mother=2500113
 	trait=fortune_builder
 	trait=fair
 	trait=quick
@@ -3452,7 +3398,6 @@ name="Elfie"
 	trait=quick
 	trait=architect
 	father=2500116
-	mother=2500113
 	2351.1.1={birth=yes}
 	2416.1.1={death=yes}
 }
@@ -3493,7 +3438,6 @@ name="Elfie"
 	trait=midas_touched
 	trait=lustful
 	father=2500117
-	mother=2500113
 	2353.11.5={birth=yes} #born after her father was killed
 	2389.6.21={add_spouse=2500143}
 	2430.1.1={death=yes}
@@ -3513,7 +3457,6 @@ name="Elfie"
 	trait=gregarious
 	give_nickname=nick_the_bohemian
 	father=2500118
-	mother=2500113
 	2354.7.1={birth=yes}
 	2425.1.1={death={
 			death_reason= death_execution_beheading #was executed for being the leader of the bohemians
@@ -3536,7 +3479,6 @@ name="Elfie"
 	trait=charitable 
 	give_nickname=nick_the_belle
 	father=2500120
-	mother=2500113
 	2359.10.1={birth=yes}
 	2376.3.1={add_spouse=2200183}
 	2430.1.1={death=yes}
@@ -3553,7 +3495,6 @@ name="Elfie"
 	trait=fair
 	trait=fortune_builder
 	father=2500121
-	mother=2500113
 	2364.1.1={birth=yes}
 	2440.1.1={death=yes}
 }
@@ -3570,7 +3511,6 @@ name="Elfie"
 	trait=ambitious
 	trait=shrewd
 	father=2500122
-	mother=2500113
 	2367.1.1={birth=yes}
 	2440.1.1={death=yes}
 }

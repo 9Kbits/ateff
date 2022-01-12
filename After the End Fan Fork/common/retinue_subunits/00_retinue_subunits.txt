@@ -559,6 +559,9 @@ RETTYPE_CUL_IRISH =
 	potential = {
 		is_nomadic = no
 		culture_group = north_atlantic
+		NOT = {
+			culture = new_english
+		}
 	}
 	
 	modifier = {
@@ -1657,42 +1660,6 @@ RETTYPE_CUL_HIGHLANDER =
 		heavy_infantry_offensive = 0.4
 		heavy_infantry_morale = 0.4
 		archers_offensive = 0.2
-	}
-}
-
-RETTYPE_CUL_GALLOWGLASS = 
-{
-	first_type = 1
-	first_amount = 200
-	
-	potential = {
-		is_nomadic = no
-		culture = eirish
-	}
-	
-	modifier = {
-		heavy_infantry_defensive = 0.5
-		heavy_infantry_morale = 0.3
-	}
-}
-
-RETTYPE_CUL_REDSHANK = 
-{
-	first_type = 0
-	first_amount = 250
-	second_type = 5
-	second_amount = 250
-	
-	potential = {
-		is_nomadic = no
-		culture = eirish
-	}
-	
-	modifier = {
-		light_infantry_offensive = 0.5
-		light_infantry_morale = 0.3
-		archers_offensive = 0.2
-		archers_morale = 0.2
 	}
 }
 

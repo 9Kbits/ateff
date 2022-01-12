@@ -4066,17 +4066,25 @@ character_event = {
 
 	desc = {
 		trigger = { 
-			has_character_modifier = follower_of_serpent 
-			event_target:god_plot_target = { character = ROOT }
-		}
-		text = EVTDESC_TOG_7522_SERPENT
-	}
-	desc = {
-		trigger = { 
+			OR = {
+				religion = trailwalker
+				religion = trailwalker_reformed
+			}
 			has_character_modifier = follower_of_the_nameless 
 			event_target:god_plot_target = { character = ROOT }
 		}
 		text = EVTDESC_TOG_7522_THE_NAMELESS
+	}
+	desc = {
+		trigger = {
+			OR = {
+				religion = revelationist
+				religion = revelationist_reformed
+			}
+			has_character_modifier = follower_of_serpent 
+			event_target:god_plot_target = { character = ROOT }
+		}
+		text = EVTDESC_TOG_7522_SERPENT
 	}
 	
 	trigger = {

@@ -4439,6 +4439,7 @@
 				trait = dead_scepter_midewiwin_fylkir
 				trait = dead_cursed_diamond_crown
 				trait = dead_dogwood_crown
+				trait = dead_restored_dogwood_crown
 				trait = dead_brazilian_beret
 				trait = dead_crown_texas
 			}
@@ -4467,6 +4468,7 @@
 					artifact_type = scepter_midewiwin_fylkir
 					artifact_type = cursed_diamond_crown
 					artifact_type = dogwood_crown
+					artifact_type = restored_dogwood_crown
 					artifact_type = brazilian_beret
 					artifact_type = crown_texas
 				}
@@ -4621,6 +4623,7 @@
 				trait = dead_scepter_midewiwin_fylkir
 				trait = dead_cursed_diamond_crown
 				trait = dead_dogwood_crown
+				trait = dead_restored_dogwood_crown
 				trait = dead_brazilian_beret
 				trait = dead_crown_texas
 			}
@@ -4649,6 +4652,7 @@
 					artifact_type = scepter_midewiwin_fylkir
 					artifact_type = cursed_diamond_crown
 					artifact_type = dogwood_crown
+					artifact_type = restored_dogwood_crown
 					artifact_type = brazilian_beret
 					artifact_type = crown_texas
 				}
@@ -4762,10 +4766,16 @@
 			factor = 0
 			NOR = { 
 				any_artifact = {
-					artifact_type = dogwood_crown
+					OR = {
+						artifact_type = dogwood_crown
+						artifact_type = restored_dogwood_crown
+					}
 					is_artifact_equipped = yes 
 				}
-				trait = dead_dogwood_crown
+				OR = {
+					trait = dead_dogwood_crown
+					trait = dead_restored_dogwood_crown
+				}
 			}
 		}
 	}
