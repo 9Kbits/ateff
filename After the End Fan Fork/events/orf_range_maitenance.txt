@@ -62,6 +62,45 @@ character_event = {
 
 #new holder
 character_event = {
+	id = ORFmaint.12
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		OR = {
+			has_character_flag = ORF_reject
+			has_character_flag = ORF_embrace
+		}
+		is_feudal = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				has_character_flag = ORF_embrace
+			}
+			any_demesne_title = {
+				set_title_flag = ORF_embrace
+			}
+			
+		}	
+		else_if = {
+			limit = {
+				FROMFROM = { has_character_flag = ORF_reject }		
+			}
+			set_character_flag = ORF_reject
+			limit = {
+				has_character_flag = ORF_reject
+			}
+			any_demesne_title = {
+				set_title_flag = ORF_reject
+			}
+		}
+	}
+}
+
+#new holder
+character_event = {
 	id = ORFmaint.21
 	is_triggered_only = yes
 	hide_window = yes
@@ -110,6 +149,54 @@ character_event = {
 }
 
 
+#new holder
+character_event = {
+	id = ORFmaint.22
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		NOT = { has_character_flag = ORF_reject }
+		NOT = { has_character_flag = ORF_embrace }
+		is_feudal = yes
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				capital_scope = { has_title_flag = ORF_embrace }		
+			}
+			set_character_flag = ORF_embrace
+		}	
+		else_if = {
+			limit = {
+				capital_scope = { has_title_flag = ORF_reject }		
+			}
+			set_character_flag = ORF_reject
+		}
+		else_if = {
+			limit = {
+				OR = {
+					capital_scope = {
+						region = custom_range_range
+					} 
+					has_character_flag = ORF_embrace
+					culture = altiplanense
+					culture = bravo
+					culture = neomexicano
+					culture_group = starfolk
+					culture = arixan
+					culture = comanche
+					culture = sioux
+				}		
+			}
+			set_character_flag = ORF_embrace
+		}
+		else = {
+			set_character_flag = ORF_reject
+		}
+	}
+}
 character_event = {
 	id = ORFmaint.31
 	is_triggered_only = yes
