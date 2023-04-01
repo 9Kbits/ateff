@@ -1,9 +1,9 @@
-##Female councillor events, reserved numbers 77760-77795
+##Female councilor events, reserved numbers 77760-77795
 
 
-###RANDOM NEW FEMALE COUNCILLOR CANDIDATE###
+###RANDOM NEW FEMALE COUNCILOR CANDIDATE###
 
-#Creates the councillor
+#Creates the councilor
 character_event = {
 	id = 77777
 
@@ -378,7 +378,7 @@ character_event = {
 	}
 }
 
-#Ping event for new councillor character
+#Ping event for new councilor character
 character_event = {
 	id = 77778
 
@@ -804,7 +804,7 @@ character_event = {
 	}
 }
 
-###FEMALE RELATIVE COUNCILLOR CANDIDATE###
+###FEMALE RELATIVE COUNCILOR CANDIDATE###
 
 #Finds a talented female relative
 character_event = {
@@ -876,22 +876,22 @@ character_event = {
 				}
 	
 				OR = {
-					#Diplomacy woman who can't be councillor
+					#Diplomacy woman who can't be councilor
 					AND = {
 						diplomacy = 15
 						NOT = { ROOT = { primary_title = { has_law = status_of_women_2 } } }
 					}
 
-					#Martial woman who can't be councillor
+					#Martial woman who can't be councilor
 					martial = 15
 
-					#Stewardship woman who can't be councillor
+					#Stewardship woman who can't be councilor
 					AND = {
 						stewardship = 15
 						NOT = { ROOT = { primary_title = { has_law = status_of_women_2 } } }
 					}
 
-					#Spymaster woman who can't be councillor
+					#Spymaster woman who can't be councilor
 					AND = {
 						intrigue = 15
 						NOR = {
@@ -1263,7 +1263,7 @@ character_event = {
 	}
 }
 
-###FEMALE LANDED VASSAL WANTS TO BECOME COUNCILLOR###
+###FEMALE LANDED VASSAL WANTS TO BECOME COUNCILOR###
 character_event = {
 	id = 77760
 
@@ -1334,7 +1334,7 @@ character_event = {
 				}
 
 				OR = {
-					#Diplomacy woman who can't be councillor
+					#Diplomacy woman who can't be councilor
 					AND = {
 						OR = {
 							diplomacy = 13
@@ -1350,7 +1350,7 @@ character_event = {
 						NOT = { ROOT = { primary_title = { has_law = status_of_women_2 } } }
 					}
 
-					#Martial woman who can't be councillor
+					#Martial woman who can't be councilor
 					OR = {
 							martial = 13
 							AND = {
@@ -1362,7 +1362,7 @@ character_event = {
 							}
 						}
 
-					#Stewardship woman who can't be councillor
+					#Stewardship woman who can't be councilor
 					AND = {
 						OR = {
 							stewardship = 13
@@ -1377,7 +1377,7 @@ character_event = {
 						NOT = { ROOT = { primary_title = { has_law = status_of_women_2 } } }
 					}
 
-					#Spymaster woman who can't be councillor
+					#Spymaster woman who can't be councilor
 					AND = {
 						OR = {
 							intrigue = 13

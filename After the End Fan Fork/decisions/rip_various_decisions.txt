@@ -1141,7 +1141,7 @@ decisions = {
 				name = in_seclusion
 				duration = -1
 			}
-			if = { # If you are a councillor, stop working and return home
+			if = { # If you are a councilor, stop working and return home
 				limit = {
 					host = { NOT = { character = ROOT } }
 					OR = {
@@ -1154,7 +1154,7 @@ decisions = {
 			}
 			hidden_tooltip = {
 				character_event = { id = RIP.12000 }
-				any_courtier = { # Unlanded councillors stop working in order to go into seclusion with their liege
+				any_courtier = { # Unlanded councilors stop working in order to go into seclusion with their liege
 					limit = {
 						prisoner = no
 						is_councillor = yes
@@ -1167,7 +1167,7 @@ decisions = {
 						duration = -1
 					}
 				}
-				any_courtier = { # Unlanded non-councillors join their liege in seclusion
+				any_courtier = { # Unlanded non-councilors join their liege in seclusion
 					limit = {
 						prisoner = no
 						is_councillor = no
@@ -1180,7 +1180,7 @@ decisions = {
 						duration = -1
 					}
 				}
-				any_courtier = { # Landed councillors return home while you, their liege, is in seclusion
+				any_courtier = { # Landed councilors return home while you, their liege, is in seclusion
 					limit = {
 						prisoner = no
 						OR = {
@@ -1214,7 +1214,7 @@ decisions = {
 				any_vassal = {
 					character_event = { id = RIP.12001 days = 7 random = 7 }
 				}
-				if = { #Notify employer that councillor is going into seclusion
+				if = { #Notify employer that councilor is going into seclusion
 					limit = { 
 						is_councillor = yes 
 						liege = { ai = no }
@@ -1358,7 +1358,7 @@ decisions = {
 					}
 				}
 
-				if = { #Notify employer that councillor is going into seclusion
+				if = { #Notify employer that councilor is going into seclusion
 					limit = { 
 						is_councillor = yes 
 						#liege = { ai = no }
